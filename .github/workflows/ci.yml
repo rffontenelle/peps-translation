@@ -12,8 +12,11 @@ on:
 permissions:
   contents: write
 
-env:
-  LANGUAGE: pt_BR
+inputs:
+  language:
+    description: 'Language to build and update translations'
+    required: true
+    default: 'pt_BR'
 
 jobs:
   test:
@@ -58,7 +61,7 @@ jobs:
 
       - name: Add/Update message catalog files
         run: |
-          sphinx-intl update -d ../locales -p build/ -l ${{ env.LANGUAGE }}
+          sphinx-intl update -d ../locales -p build/ -l ${{ inputs.language }}
         working-directory: peps
 
       - name: Commit and push changes
