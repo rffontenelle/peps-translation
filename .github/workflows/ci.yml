@@ -9,6 +9,9 @@ on:
       - main
   workflow_dispatch:
 
+permissions:
+  content: write
+
 env:
   LANGUAGE: pt_BR
 
@@ -58,10 +61,9 @@ jobs:
           sphinx-intl update -d ../locales -p build/ -l ${{ env.LANGUAGE }}
         working-directory: peps
 
-      - name: Run the Action
-        uses: devops-infra/action-commit-push@master
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          github_token: "${{ secrets.GITHUB_TOKEN }}"
           commit_message: "Translation update"
-          force: false
-          target_branch: main
+          file_pattern: .gitmodules locale/**/*.po
+          add_options: '-A'
