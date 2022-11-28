@@ -1,0 +1,15 @@
+diff --git a/build.py b/build.py
+index bbf061e3..3c12a3f1 100755
+--- a/build.py
++++ b/build.py
+@@ -26,6 +26,10 @@ def create_parser():
+                           dest="builder", const="dirhtml",
+                           help='Render PEPs to "index.html" files within "pep-NNNN" directories. '
+                                'Cannot be used with "-f" or "-l".')
++    builders.add_argument("-g", "--gettext", action="store_const",
++                          dest="builder", const="gettext",
++                          help='Regenerate POT files docs to html files. '
++                               'Cannot be used with "-f" or "-l" or "-d".')
+ 
+     # flags / options
+     parser.add_argument("-w", "--fail-on-warning", action="store_true",

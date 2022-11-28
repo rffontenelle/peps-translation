@@ -1,0 +1,63 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+env:
+  LANGUAGE: pt_BR
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          persist-credentials: true
+          submodules: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          cache: pip
+          path: |
+            requirements.txt
+            peps/requirements.txt
+
+      - name: Install gettext
+        run: |
+          sudo apt update -y && sudo apt install gettext -y
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install -U pip
+          pip install -r requirements.txt -r peps/requirements.txt
+
+      - name: Enable gettext
+        run: |
+          git apply ../add-gettext-builder.diff
+        working-directory: peps
+
+      - name: Generate POT files
+        run: |
+          python build gettext
+        working-directory: peps
+
+      - name: Add/Update message catalog files
+        run: |
+          sphinx-intl update -d ../locales -p build/ -l ${{ env.LANGUAGE }}
+        working-directory: peps
+
+      #- name: Run the Action
+      #  uses: devops-infra/action-commit-push@master
+      #  with:
+      #    github_token: "${{ secrets.GITHUB_TOKEN }}"
+      #    commit_message: "Translation update"
+      #    force: false
+      #    target_branch: main
