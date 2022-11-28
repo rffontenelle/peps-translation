@@ -21,6 +21,10 @@ jobs:
           persist-credentials: true
           submodules: true
 
+      - name: Update submodule
+        run: |
+          git submodule update
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
@@ -39,7 +43,7 @@ jobs:
           python -m pip install -U pip
           pip install -r requirements.txt -r peps/requirements.txt
 
-      - name: Enable gettext
+      - name: Patch build.py to add --gettext flag
         run: |
           git apply ../add-gettext-builder.diff
         working-directory: peps
@@ -54,10 +58,10 @@ jobs:
           sphinx-intl update -d ../locales -p build/ -l ${{ env.LANGUAGE }}
         working-directory: peps
 
-      #- name: Run the Action
-      #  uses: devops-infra/action-commit-push@master
-      #  with:
-      #    github_token: "${{ secrets.GITHUB_TOKEN }}"
-      #    commit_message: "Translation update"
-      #    force: false
-      #    target_branch: main
+      - name: Run the Action
+        uses: devops-infra/action-commit-push@master
+        with:
+          github_token: "${{ secrets.GITHUB_TOKEN }}"
+          commit_message: "Translation update"
+          force: false
+          target_branch: main
