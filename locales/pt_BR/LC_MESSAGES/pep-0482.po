@@ -1,0 +1,276 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the PEPs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PEPs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-28 20:07+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+
+#: ../pep-0482.txt
+msgid "Author"
+msgstr ""
+
+#: ../pep-0482.txt:5
+msgid "Łukasz Langa <lukasz@python.org>"
+msgstr ""
+
+#: ../pep-0482.txt
+msgid "Discussions-To"
+msgstr ""
+
+#: ../pep-0482.txt:6
+msgid "python-ideas@python.org"
+msgstr ""
+
+#: ../pep-0482.txt
+msgid "Status"
+msgstr ""
+
+#: ../pep-0482.txt:7
+msgid "Final"
+msgstr ""
+
+#: ../pep-0482.txt
+msgid "Type"
+msgstr ""
+
+#: ../pep-0482.txt:8
+msgid "Informational"
+msgstr ""
+
+#: ../pep-0482.txt
+msgid "Topic"
+msgstr ""
+
+#: ../pep-0482.txt:9
+msgid "Typing"
+msgstr ""
+
+#: ../pep-0482.txt
+msgid "Created"
+msgstr ""
+
+#: ../pep-0482.txt:11
+msgid "08-Jan-2015"
+msgstr ""
+
+#: ../pep-0482.txt
+msgid "Post-History"
+msgstr ""
+
+#: ../pep-0482.txt:16
+msgid "Abstract"
+msgstr ""
+
+#: ../pep-0482.txt:18
+msgid ""
+"This PEP is one of three related to type hinting.  This PEP gives a "
+"literature overview of related work.  The main spec is :pep:`484`."
+msgstr ""
+
+#: ../pep-0482.txt:23
+msgid "Existing Approaches for Python"
+msgstr ""
+
+#: ../pep-0482.txt:27
+msgid "mypy"
+msgstr ""
+
+#: ../pep-0482.txt:29
+msgid ""
+"(This section is a stub, since mypy [mypy]_ is essentially what we're "
+"proposing.)"
+msgstr ""
+
+#: ../pep-0482.txt:34
+msgid "Reticulated Python"
+msgstr ""
+
+#: ../pep-0482.txt:36
+msgid ""
+"Reticulated Python [reticulated]_ by Michael Vitousek is an example of a "
+"slightly different approach to gradual typing for Python. It is described"
+" in an actual academic paper [reticulated-paper]_ written by Vitousek "
+"with Jeremy Siek and Jim Baker (the latter of Jython fame)."
+msgstr ""
+
+#: ../pep-0482.txt:43
+msgid "PyCharm"
+msgstr ""
+
+#: ../pep-0482.txt:45
+msgid ""
+"PyCharm by JetBrains has been providing a way to specify and check types "
+"for about four years.  The type system suggested by PyCharm [pycharm]_ "
+"grew from simple class types to tuple types, generic types, function "
+"types, etc. based on feedback of many users who shared their experience "
+"of using type hints in their code."
+msgstr ""
+
+#: ../pep-0482.txt:53
+msgid "Others"
+msgstr ""
+
+#: ../pep-0482.txt:55
+msgid ""
+"TBD: Add sections on pyflakes [pyflakes]_, pylint [pylint]_, numpy "
+"[numpy]_, Argument Clinic [argumentclinic]_, pytypedecl [pytypedecl]_, "
+"numba [numba]_, obiwan [obiwan]_."
+msgstr ""
+
+#: ../pep-0482.txt:61
+msgid "Existing Approaches in Other Languages"
+msgstr ""
+
+#: ../pep-0482.txt:64
+msgid "ActionScript"
+msgstr ""
+
+#: ../pep-0482.txt:66
+msgid ""
+"ActionScript [actionscript]_ is a class-based, single inheritance, "
+"object-oriented superset of ECMAScript.  It supports inferfaces and "
+"strong runtime-checked static typing.  Compilation supports a “strict "
+"dialect” where type mismatches are reported at compile-time."
+msgstr ""
+
+#: ../pep-0482.txt:71 ../pep-0482.txt:107 ../pep-0482.txt:128
+#: ../pep-0482.txt:163
+msgid "Example code with types::"
+msgstr ""
+
+#: ../pep-0482.txt:96
+msgid "Dart"
+msgstr ""
+
+#: ../pep-0482.txt:98
+msgid ""
+"Dart [dart]_ is a class-based, single inheritance, object-oriented "
+"language with C-style syntax.  It supports interfaces, abstract classes, "
+"reified generics, and optional typing."
+msgstr ""
+
+#: ../pep-0482.txt:102
+msgid ""
+"Types are inferred when possible.  The runtime differentiates between two"
+" modes of execution: *checked mode* aimed for development (catching type "
+"errors at runtime) and *production mode* recommended for speed execution "
+"(ignoring types and asserts)."
+msgstr ""
+
+#: ../pep-0482.txt:122
+msgid "Hack"
+msgstr ""
+
+#: ../pep-0482.txt:124
+msgid ""
+"Hack [hack]_ is a programming language that interoperates seamlessly with"
+" PHP.  It provides opt-in static type checking, type aliasing, generics, "
+"nullable types, and lambdas."
+msgstr ""
+
+#: ../pep-0482.txt:149
+msgid "TypeScript"
+msgstr ""
+
+#: ../pep-0482.txt:151
+msgid ""
+"TypeScript [typescript]_ is a typed superset of JavaScript that adds "
+"interfaces, classes, mixins and modules to the language."
+msgstr ""
+
+#: ../pep-0482.txt:154
+msgid ""
+"Type checks are duck typed.  Multiple valid function signatures are "
+"specified by supplying overloaded function declarations.  Functions and "
+"classes can use generics as type parameterization.  Interfaces can have "
+"optional fields.  Interfaces can specify array and dictionary types. "
+"Classes can have constructors that implicitly add arguments as fields. "
+"Classes can have static fields.  Classes can have private fields. Classes"
+" can have getters/setters for fields (like property).  Types are "
+"inferred."
+msgstr ""
+
+#: ../pep-0482.txt:199
+msgid "References"
+msgstr ""
+
+#: ../pep-0482.txt:202
+msgid "http://mypy-lang.org"
+msgstr ""
+
+#: ../pep-0482.txt:205
+msgid "https://github.com/mvitousek/reticulated"
+msgstr ""
+
+#: ../pep-0482.txt:208
+msgid "http://wphomes.soic.indiana.edu/jsiek/files/2014/03/retic-python.pdf"
+msgstr ""
+
+#: ../pep-0482.txt:211
+msgid "https://github.com/JetBrains/python-skeletons#types"
+msgstr ""
+
+#: ../pep-0482.txt:214
+msgid "http://pypi.python.org/pypi/obiwan"
+msgstr ""
+
+#: ../pep-0482.txt:217
+msgid "http://numba.pydata.org"
+msgstr ""
+
+#: ../pep-0482.txt:220
+msgid "https://github.com/google/pytypedecl"
+msgstr ""
+
+#: ../pep-0482.txt:223
+msgid "https://docs.python.org/3/howto/clinic.html"
+msgstr ""
+
+#: ../pep-0482.txt:226
+msgid "http://www.numpy.org"
+msgstr ""
+
+#: ../pep-0482.txt:229
+msgid "http://www.typescriptlang.org"
+msgstr ""
+
+#: ../pep-0482.txt:232
+msgid "http://hacklang.org"
+msgstr ""
+
+#: ../pep-0482.txt:235
+msgid "https://www.dartlang.org"
+msgstr ""
+
+#: ../pep-0482.txt:238
+msgid "http://livedocs.adobe.com/specs/actionscript/3/"
+msgstr ""
+
+#: ../pep-0482.txt:241
+msgid "https://github.com/pyflakes/pyflakes/"
+msgstr ""
+
+#: ../pep-0482.txt:244
+msgid "http://www.pylint.org"
+msgstr ""
+
+#: ../pep-0482.txt:248
+msgid "Copyright"
+msgstr ""
+
+#: ../pep-0482.txt:250
+msgid "This document has been placed in the public domain."
+msgstr ""
+

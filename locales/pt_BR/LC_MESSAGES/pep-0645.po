@@ -1,0 +1,296 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the PEPs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PEPs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-28 20:07+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+
+#: ../pep-0645.rst
+msgid "Author"
+msgstr ""
+
+#: ../pep-0645.rst:3
+msgid "Maggie Moss <maggiebmoss@gmail.com>"
+msgstr ""
+
+#: ../pep-0645.rst
+msgid "Sponsor"
+msgstr ""
+
+#: ../pep-0645.rst:4
+msgid "Guido van Rossum <guido@python.org>"
+msgstr ""
+
+#: ../pep-0645.rst
+msgid "Status"
+msgstr ""
+
+#: ../pep-0645.rst:5
+msgid "Withdrawn"
+msgstr ""
+
+#: ../pep-0645.rst
+msgid "Type"
+msgstr ""
+
+#: ../pep-0645.rst:6
+msgid "Standards Track"
+msgstr ""
+
+#: ../pep-0645.rst
+msgid "Created"
+msgstr ""
+
+#: ../pep-0645.rst:8
+msgid "25-Aug-2020"
+msgstr ""
+
+#: ../pep-0645.rst
+msgid "Resolution"
+msgstr ""
+
+#: ../pep-0645.rst:9
+msgid ""
+"https://mail.python.org/archives/list/typing-"
+"sig@python.org/message/E75SPV6DDHLEEFSA5MBN5HUOQWDMUQJ2/"
+msgstr ""
+
+#: ../pep-0645.rst:13
+msgid "Abstract"
+msgstr ""
+
+#: ../pep-0645.rst:14
+msgid ""
+"This PEP proposes adding a ``?`` operator for types to allow writing "
+"``int?`` in place of ``Optional[int]``."
+msgstr ""
+
+#: ../pep-0645.rst:18
+msgid "PEP Withdrawal"
+msgstr ""
+
+#: ../pep-0645.rst:20
+msgid ""
+"The notation ``T|None`` introduced by :pep:`604` to write ``Optional[T]``"
+" is a fine alternative to ``T?`` and does not require new syntax."
+msgstr ""
+
+#: ../pep-0645.rst:23
+msgid ""
+"Using ``T?`` to mean ``T|None`` is also inconsistent with TypeScript "
+"where it roughly means ``NotRequired[T]``. Such inconsistency would "
+"likely confuse folks coming from TypeScript to Python."
+msgstr ""
+
+#: ../pep-0645.rst:27
+msgid ""
+"The above represents the consensus of `typing-sig "
+"<https://mail.python.org/archives/list/typing-sig@python.org/>`_ and the "
+"sponsor of this PEP."
+msgstr ""
+
+#: ../pep-0645.rst:33
+msgid "Motivation"
+msgstr ""
+
+#: ../pep-0645.rst:34
+msgid ""
+"Types have become a valuable and powerful part of the Python language. "
+"However, many type annotations are verbose and add considerable friction "
+"to using type annotations. By improving the typing syntax, adding types "
+"to Python code becomes simpler and improves the development experience "
+"for Python users."
+msgstr ""
+
+#: ../pep-0645.rst:38
+msgid ""
+"In a similar vein, a PEP to introduce short hand syntax for :pep:`Union "
+"types <604>` has been approved and implemented."
+msgstr ""
+
+#: ../pep-0645.rst:43
+msgid "Rationale"
+msgstr ""
+
+#: ../pep-0645.rst:45
+#, python-format
+msgid ""
+"Types in Python can be quite verbose, this can be a hindrance when "
+"working towards type adoption. Making types more ergonomic, as was done "
+"with the Union type in :pep:`604` (e.g., int | str), would reduce the "
+"effort needed to add types to new and existing Python code. The Optional "
+"annotation is used frequently in both partially and fully typed Python "
+"code bases. In a small sampling of `5 well-typed open source projects, on"
+" average 7% of annotations "
+"<https://gist.github.com/MaggieMoss/fd8dfe002b2702fae243dbf81a62624e>`_ "
+"[2] included at least one optional type. This indicates that updating the"
+" syntax has the potential to make types more concise, reduce code length "
+"and improve readability."
+msgstr ""
+
+#: ../pep-0645.rst:52
+msgid ""
+"Simplifying the syntax for optionals has been `discussed previously "
+"<https://github.com/python/typing/issues/429>`_ [3] within the typing "
+"community. The consensus during these conversations has been that ``?`` "
+"is the preferred operator. There is no native support for unary ``?`` in "
+"Python and this will need to be added to the runtime."
+msgstr ""
+
+#: ../pep-0645.rst:56
+msgid ""
+"Adding the ? sigil to the Python grammar has been proposed previously in "
+":pep:`505`, which is currently in a deferred state. :pep:`505` proposes "
+"a:"
+msgstr ""
+
+#: ../pep-0645.rst:59
+msgid "\"None coalescing\" binary operator ``??``"
+msgstr ""
+
+#: ../pep-0645.rst:61
+msgid "\"None-aware attribute access\" operator ``?.`` (\"maybe dot\")"
+msgstr ""
+
+#: ../pep-0645.rst:63
+msgid "\"None-aware indexing\" operator ``?[]`` (\"maybe subscript\")"
+msgstr ""
+
+#: ../pep-0645.rst:66
+msgid ""
+"Should :pep:`505` be approved in the future, it would not interfere with "
+"the typing specific ``?`` proposed in this PEP. As well, since all uses "
+"of the ``?`` would be conceptually related, it would not be confusing in "
+"terms of learning Python or a hindrance to quick visual comprehension."
+msgstr ""
+
+#: ../pep-0645.rst:69
+msgid ""
+"The proposed syntax, with the postfix operator, mimics the optional "
+"syntax found in other typed languages, like C#, TypeScript and Swift. The"
+" widespread adoption and popularity of these languages means that Python "
+"developers are likely already familiar with this syntax.::"
+msgstr ""
+
+#: ../pep-0645.rst:78
+msgid ""
+"Adding this syntax would also follow the often used pattern of using "
+"builtin types as annotations. For example, ``list``, ``dict`` and "
+"``None``. This would allow more annotations to be added to Python code "
+"without importing from ``typing``."
+msgstr ""
+
+#: ../pep-0645.rst:83
+msgid "Specification"
+msgstr ""
+
+#: ../pep-0645.rst:85
+msgid ""
+"The new optional syntax should be accepted for function, variable, "
+"attribute and parameter annotations."
+msgstr ""
+
+#: ../pep-0645.rst:96
+msgid ""
+"The new optional syntax should be equivalent to the existing "
+"typing.Optional syntax"
+msgstr ""
+
+#: ../pep-0645.rst:102
+msgid ""
+"The new optional syntax should have the same identity as the existing "
+"typing.Optional syntax."
+msgstr ""
+
+#: ../pep-0645.rst:109
+msgid "It should also be equivalent to a Union with None."
+msgstr ""
+
+#: ../pep-0645.rst:119
+msgid ""
+"Since the new Union syntax specified in :pep:`604` is supported in "
+"``isinstance`` and ``issubclass``, the new optional syntax should be "
+"supported in both ``isinstance`` and ``issubclass``,"
+msgstr ""
+
+#: ../pep-0645.rst:126
+msgid ""
+"A new dunder method will need to be implemented to allow the ``?`` "
+"operator to be overloaded for other functionality."
+msgstr ""
+
+#: ../pep-0645.rst:130
+msgid "Backwards Compatibility"
+msgstr ""
+
+#: ../pep-0645.rst:132
+msgid ""
+"``?`` is currently unused in Python syntax, therefore this PEP is fully "
+"backwards compatible."
+msgstr ""
+
+#: ../pep-0645.rst:135
+msgid "Reference Implementation"
+msgstr ""
+
+#: ../pep-0645.rst:137
+msgid ""
+"A reference implementation can be found `here "
+"<https://github.com/python/cpython/compare/main...MaggieMoss:new-"
+"optional-syntax-postfix>`_."
+msgstr ""
+
+#: ../pep-0645.rst:140
+msgid "Rejected Ideas"
+msgstr ""
+
+#: ../pep-0645.rst:142
+msgid "Discussed alternatives were"
+msgstr ""
+
+#: ../pep-0645.rst:144
+msgid "The ``~`` operator was considered in place of ``?``."
+msgstr ""
+
+#: ../pep-0645.rst:145
+msgid "A prefix operator (``?int``)."
+msgstr ""
+
+#: ../pep-0645.rst:149
+msgid "References"
+msgstr ""
+
+#: ../pep-0645.rst:151
+msgid ""
+"Use of Optional Annotations in Open Source Python projects "
+"(https://gist.github.com/MaggieMoss/fd8dfe002b2702fae243dbf81a62624e)"
+msgstr ""
+
+#: ../pep-0645.rst:153
+msgid ""
+"Github Issue Discussion of Optional syntax "
+"(https://github.com/python/typing/issues/429)"
+msgstr ""
+
+#: ../pep-0645.rst:157
+msgid "Copyright"
+msgstr ""
+
+#: ../pep-0645.rst:159
+msgid ""
+"This document is placed in the public domain or under the "
+"CC0-1.0-Universal license, whichever is more permissive."
+msgstr ""
+
