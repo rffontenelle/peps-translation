@@ -46,7 +46,7 @@ jobs:
 
       - name: Generate POT files
         run: |
-          python build.py gettext
+          python build.py --gettext
         working-directory: peps
 
       - name: Add/Update message catalog files
