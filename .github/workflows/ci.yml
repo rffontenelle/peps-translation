@@ -65,5 +65,5 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "Translation update"
-          file_pattern: .gitmodules locale/**/*.po
+          file_pattern: .gitmodules locales/**/*.po
           add_options: '-A'
