@@ -68,8 +68,8 @@ msgstr ""
 #: ../pep-0347.txt:17
 msgid ""
 "The Python source code is currently managed in a CVS repository on "
-"sourceforge.net.  This PEP proposes to move it to a Subversion repository"
-" on svn.python.org."
+"sourceforge.net.  This PEP proposes to move it to a Subversion repository on "
+"svn.python.org."
 msgstr ""
 
 #: ../pep-0347.txt:23
@@ -78,8 +78,8 @@ msgstr ""
 
 #: ../pep-0347.txt:25
 msgid ""
-"This change has two aspects: moving from CVS to Subversion, and moving "
-"from SourceForge to python.org.  For each, a rationale will be given."
+"This change has two aspects: moving from CVS to Subversion, and moving from "
+"SourceForge to python.org.  For each, a rationale will be given."
 msgstr ""
 
 #: ../pep-0347.txt:30
@@ -88,8 +88,8 @@ msgstr ""
 
 #: ../pep-0347.txt:32
 msgid ""
-"CVS has a number of limitations that have been eliminated by Subversion."
-"  For the development of Python, the most notable improvements are:"
+"CVS has a number of limitations that have been eliminated by Subversion.  "
+"For the development of Python, the most notable improvements are:"
 msgstr ""
 
 #: ../pep-0347.txt:36
@@ -106,9 +106,9 @@ msgstr ""
 
 #: ../pep-0347.txt:43
 msgid ""
-"atomic, fast tagging: a cvs tag might take many minutes; a Subversion tag"
-" (svn cp) will complete quickly, and atomically. Likewise, branches are "
-"very efficient."
+"atomic, fast tagging: a cvs tag might take many minutes; a Subversion tag "
+"(svn cp) will complete quickly, and atomically. Likewise, branches are very "
+"efficient."
 msgstr ""
 
 #: ../pep-0347.txt:47
@@ -123,19 +123,19 @@ msgstr ""
 msgid ""
 "SourceForge has kindly provided an important infrastructure for the past "
 "years.  Unfortunately, the attention that SF received has also caused "
-"repeated overload situations in the past, to which the SF operators could"
-" not always respond in a timely manner.  In particular, for CVS, they had"
-" to reduce the load on the primary CVS server by introducing a second, "
-"read-only CVS server for anonymous access.  This server is regularly "
-"synchronized, but lags behind the read-write CVS repository between "
-"synchronizations.  As a result, users without commit access can see "
-"recent changes to the repository only after a delay."
+"repeated overload situations in the past, to which the SF operators could "
+"not always respond in a timely manner.  In particular, for CVS, they had to "
+"reduce the load on the primary CVS server by introducing a second, read-only "
+"CVS server for anonymous access.  This server is regularly synchronized, but "
+"lags behind the read-write CVS repository between synchronizations.  As a "
+"result, users without commit access can see recent changes to the repository "
+"only after a delay."
 msgstr ""
 
 #: ../pep-0347.txt:64
 msgid ""
-"On python.org, it would be possible to make the repository accessible for"
-" anonymous access."
+"On python.org, it would be possible to make the repository accessible for "
+"anonymous access."
 msgstr ""
 
 #: ../pep-0347.txt:69
@@ -144,14 +144,14 @@ msgstr ""
 
 #: ../pep-0347.txt:71
 msgid ""
-"To move the Python CVS repository, the following steps need to be "
-"executed.  The steps are elaborated upon in the following sections."
+"To move the Python CVS repository, the following steps need to be executed.  "
+"The steps are elaborated upon in the following sections."
 msgstr ""
 
 #: ../pep-0347.txt:74
 msgid ""
-"Collect SSH keys for all current committers, along with usernames to "
-"appear in commit messages."
+"Collect SSH keys for all current committers, along with usernames to appear "
+"in commit messages."
 msgstr ""
 
 #: ../pep-0347.txt:77
@@ -185,8 +185,8 @@ msgstr ""
 #: ../pep-0347.txt:93
 msgid ""
 "After some discussion, svn+ssh was selected as the best method for write "
-"access to the repository. Developers can continue to use their SSH keys, "
-"but they must be installed on python.org."
+"access to the repository. Developers can continue to use their SSH keys, but "
+"they must be installed on python.org."
 msgstr ""
 
 #: ../pep-0347.txt:97
@@ -204,8 +204,8 @@ msgstr ""
 
 #: ../pep-0347.txt:109
 msgid ""
-"As the usernames, the real names should be used instead of the SF account"
-" names, so that people can be better identified in log messages."
+"As the usernames, the real names should be used instead of the SF account "
+"names, so that people can be better identified in log messages."
 msgstr ""
 
 #: ../pep-0347.txt:114
@@ -215,9 +215,9 @@ msgstr ""
 #: ../pep-0347.txt:116
 msgid ""
 "Administrator access to the pythondev account should be granted to all "
-"current admins of the Python SF project. To distinguish between shell "
-"login and svnserve login, admins need to maintain two keys. Using "
-"OpenSSH, the following procedure can be used to create a second key::"
+"current admins of the Python SF project. To distinguish between shell login "
+"and svnserve login, admins need to maintain two keys. Using OpenSSH, the "
+"following procedure can be used to create a second key::"
 msgstr ""
 
 #: ../pep-0347.txt:126
@@ -242,16 +242,16 @@ msgstr ""
 
 #: ../pep-0347.txt:142
 msgid ""
-"Since this tarball is generated only once a day, some time must pass "
-"after the repository freeze before the tarball can be picked up.  It "
-"should be verified that the last commit, as recorded on the python-"
-"commits mailing list, is indeed included in the tarball."
+"Since this tarball is generated only once a day, some time must pass after "
+"the repository freeze before the tarball can be picked up.  It should be "
+"verified that the last commit, as recorded on the python-commits mailing "
+"list, is indeed included in the tarball."
 msgstr ""
 
 #: ../pep-0347.txt:147
 msgid ""
-"After the conversion, the converted CVS tarball should be kept forever on"
-" www.python.org/archive/python-cvsroot-<date>.tar.bz2"
+"After the conversion, the converted CVS tarball should be kept forever on "
+"www.python.org/archive/python-cvsroot-<date>.tar.bz2"
 msgstr ""
 
 #: ../pep-0347.txt:152
@@ -260,43 +260,43 @@ msgstr ""
 
 #: ../pep-0347.txt:154
 msgid ""
-"The Python CVS repository contains two modules: distutils and python. The"
-" python module is further structured into dist and nondist, where dist "
-"only contains src (the python code proper). nondist contains various "
+"The Python CVS repository contains two modules: distutils and python. The "
+"python module is further structured into dist and nondist, where dist only "
+"contains src (the python code proper). nondist contains various "
 "subdirectories."
 msgstr ""
 
 #: ../pep-0347.txt:159
 msgid ""
 "These should be reorganized in the Subversion repository to get shorter "
-"URLs, following the <project>/{trunk,tags,branches} structure.  A project"
-" will be created for each nondist directory, plus for src (called "
-"python), plus distutils.  Reorganizing the repository is best done in the"
-" CVS tree, as shown below."
+"URLs, following the <project>/{trunk,tags,branches} structure.  A project "
+"will be created for each nondist directory, plus for src (called python), "
+"plus distutils.  Reorganizing the repository is best done in the CVS tree, "
+"as shown below."
 msgstr ""
 
 #: ../pep-0347.txt:165
 msgid ""
 "The fsfs backend should be used as the repository format (which requires "
-"Subversion 1.1).  The fsfs backend has the advantage of being more "
-"backup-friendly, as it allows incremental repository backups, without "
-"requiring any dump commands to be run."
+"Subversion 1.1).  The fsfs backend has the advantage of being more backup-"
+"friendly, as it allows incremental repository backups, without requiring any "
+"dump commands to be run."
 msgstr ""
 
 #: ../pep-0347.txt:170
 msgid ""
-"The conversion should be done using the cvs2svn utility, available e.g. "
-"in the cvs2svn Debian package.  As cvs2svn does not currently support the"
-" project/trunk structure, each project needs to be converted separately."
-"  To get each conversion result into a separate directory in the target "
+"The conversion should be done using the cvs2svn utility, available e.g. in "
+"the cvs2svn Debian package.  As cvs2svn does not currently support the "
+"project/trunk structure, each project needs to be converted separately.  To "
+"get each conversion result into a separate directory in the target "
 "repository, svnadmin load must be used."
 msgstr ""
 
 #: ../pep-0347.txt:176
 msgid ""
 "Subversion has a different view on binary-vs-text files than CVS. To "
-"correctly carry the CVS semantics forward, svn:eol-style should be set to"
-" native on all files that are not marked binary in the CVS."
+"correctly carry the CVS semantics forward, svn:eol-style should be set to "
+"native on all files that are not marked binary in the CVS."
 msgstr ""
 
 #: ../pep-0347.txt:181
@@ -317,17 +317,17 @@ msgstr ""
 
 #: ../pep-0347.txt:214
 msgid ""
-"The repository should be published at http://svn.python.org/projects. "
-"Read-write access should be granted to all current SF committers through "
+"The repository should be published at http://svn.python.org/projects. Read-"
+"write access should be granted to all current SF committers through "
 "svn+ssh://pythondev@svn.python.org/; read-only anonymous access through "
 "WebDAV should also be granted."
 msgstr ""
 
 #: ../pep-0347.txt:220
 msgid ""
-"As an option, websvn (available e.g. from the Debian websvn package) "
-"could be provided. Unfortunately, in the test installation, websvn breaks"
-" because it runs out of memory."
+"As an option, websvn (available e.g. from the Debian websvn package) could "
+"be provided. Unfortunately, in the test installation, websvn breaks because "
+"it runs out of memory."
 msgstr ""
 
 #: ../pep-0347.txt:224
@@ -342,10 +342,10 @@ msgstr ""
 
 #: ../pep-0347.txt:231
 msgid ""
-"It appears that CVS cannot be disabled entirely.  Only the user interface"
-" can be removed from the project page; the repository itself remains "
-"available.  If desired, write access to the python and distutils modules "
-"can be disabled through a CVS commitinfo entry."
+"It appears that CVS cannot be disabled entirely.  Only the user interface "
+"can be removed from the project page; the repository itself remains "
+"available.  If desired, write access to the python and distutils modules can "
+"be disabled through a CVS commitinfo entry."
 msgstr ""
 
 #: ../pep-0347.txt:238
@@ -354,8 +354,8 @@ msgstr ""
 
 #: ../pep-0347.txt:240
 msgid ""
-"Several alternatives had been suggested to the procedure above. The "
-"rejected alternatives are shortly discussed here:"
+"Several alternatives had been suggested to the procedure above. The rejected "
+"alternatives are shortly discussed here:"
 msgstr ""
 
 #: ../pep-0347.txt:243
@@ -368,18 +368,18 @@ msgstr ""
 #: ../pep-0347.txt:248
 msgid ""
 "Several people suggested to create the project/trunk structure through "
-"standard cvs2svn, followed by renames. This would have the disadvantage "
-"that old revisions use different path names than recent revisions; the "
-"suggested approach through dump files works without renames."
+"standard cvs2svn, followed by renames. This would have the disadvantage that "
+"old revisions use different path names than recent revisions; the suggested "
+"approach through dump files works without renames."
 msgstr ""
 
 #: ../pep-0347.txt:254
 msgid ""
-"Several people also expressed concern about the administrative overhead "
-"that hosting the repository on python.org would cause to pydotorg admins."
-"  As a specific alternative, BerliOS has been suggested.  The pydotorg "
-"admins themselves haven\\'t objected to the additional workload; "
-"migrating the repository again if they get overworked is an option."
+"Several people also expressed concern about the administrative overhead that "
+"hosting the repository on python.org would cause to pydotorg admins.  As a "
+"specific alternative, BerliOS has been suggested.  The pydotorg admins "
+"themselves haven\\'t objected to the additional workload; migrating the "
+"repository again if they get overworked is an option."
 msgstr ""
 
 #: ../pep-0347.txt:261
@@ -390,16 +390,16 @@ msgstr ""
 
 #: ../pep-0347.txt:264
 msgid ""
-"Subversion over WebDAV, using SSL and basic authentication, with "
-"pydotorg-generated passwords mailed to the user. People did not like that"
-" approach, since they would need to store the password on disk (because "
-"they can't remember it); this is a security risk."
+"Subversion over WebDAV, using SSL and basic authentication, with pydotorg-"
+"generated passwords mailed to the user. People did not like that approach, "
+"since they would need to store the password on disk (because they can't "
+"remember it); this is a security risk."
 msgstr ""
 
 #: ../pep-0347.txt:270
 msgid ""
-"Subversion over WebDAV, using SSL client certificates. This would work, "
-"but would require us to administer a certificate authority."
+"Subversion over WebDAV, using SSL client certificates. This would work, but "
+"would require us to administer a certificate authority."
 msgstr ""
 
 #: ../pep-0347.txt:273
@@ -412,10 +412,10 @@ msgstr ""
 
 #: ../pep-0347.txt:279
 msgid ""
-"Greg Stein suggested http://www.wush.net/subversion.php. They offer 5 GB "
-"for $90/month, with 200 GB download/month. The data is on a RAID drive "
-"and fully backed up. Anonymous access and email commit notifications are "
-"supported. wush.net elaborated the following details:"
+"Greg Stein suggested http://www.wush.net/subversion.php. They offer 5 GB for "
+"$90/month, with 200 GB download/month. The data is on a RAID drive and fully "
+"backed up. Anonymous access and email commit notifications are supported. "
+"wush.net elaborated the following details:"
 msgstr ""
 
 #: ../pep-0347.txt:285
@@ -426,9 +426,8 @@ msgstr ""
 
 #: ../pep-0347.txt:288
 msgid ""
-"The default repository URL would be "
-"http://python.wush.net/svn/projectname/, but anything else could be "
-"arranged"
+"The default repository URL would be http://python.wush.net/svn/projectname/, "
+"but anything else could be arranged"
 msgstr ""
 
 #: ../pep-0347.txt:291
@@ -438,22 +437,22 @@ msgstr ""
 #: ../pep-0347.txt:293
 msgid ""
 "They have a Web interface for management of the various SVN repositories "
-"that we want to host, and to manage user accounts. While svn+ssh would be"
-" supported, the user interface does not yet support it."
+"that we want to host, and to manage user accounts. While svn+ssh would be "
+"supported, the user interface does not yet support it."
 msgstr ""
 
 #: ../pep-0347.txt:298
 msgid ""
-"For offsite mirroring/backup, they suggest to use rsync instead of "
-"download of repository tarballs."
+"For offsite mirroring/backup, they suggest to use rsync instead of download "
+"of repository tarballs."
 msgstr ""
 
 #: ../pep-0347.txt:301
 msgid ""
-"Bob Ippolito reported that they had used wush.net for a commercial "
-"project for about 6 months, after which time they left wush.net, because "
-"the service was down for three days, with nobody reachable, and no "
-"explanation when it came back."
+"Bob Ippolito reported that they had used wush.net for a commercial project "
+"for about 6 months, after which time they left wush.net, because the service "
+"was down for three days, with nobody reachable, and no explanation when it "
+"came back."
 msgstr ""
 
 #: ../pep-0347.txt:308
@@ -463,4 +462,3 @@ msgstr ""
 #: ../pep-0347.txt:310
 msgid "This document has been placed in the public domain."
 msgstr ""
-

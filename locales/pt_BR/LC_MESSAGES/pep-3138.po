@@ -73,9 +73,9 @@ msgstr ""
 msgid ""
 "This PEP proposes a new string representation form for Python 3000. In "
 "Python prior to Python 3000, the repr() built-in function converted "
-"arbitrary objects to printable ASCII strings for debugging and logging.  "
-"For Python 3000, a wider range of characters, based on the Unicode "
-"standard, should be considered 'printable'."
+"arbitrary objects to printable ASCII strings for debugging and logging.  For "
+"Python 3000, a wider range of characters, based on the Unicode standard, "
+"should be considered 'printable'."
 msgstr ""
 
 #: ../pep-3138.txt:25
@@ -84,12 +84,12 @@ msgstr ""
 
 #: ../pep-3138.txt:27
 msgid ""
-"The current repr() converts 8-bit strings to ASCII using following "
-"algorithm."
+"The current repr() converts 8-bit strings to ASCII using following algorithm."
 msgstr ""
 
 #: ../pep-3138.txt:30 ../pep-3138.txt:97
-msgid "Convert CR, LF, TAB and '\\\\' to '\\\\r', '\\\\n', '\\\\t', '\\\\\\\\'."
+msgid ""
+"Convert CR, LF, TAB and '\\\\' to '\\\\r', '\\\\n', '\\\\t', '\\\\\\\\'."
 msgstr ""
 
 #: ../pep-3138.txt:32
@@ -120,44 +120,44 @@ msgstr ""
 
 #: ../pep-3138.txt:45
 msgid ""
-"Convert 21-bit characters (>= 0x10000) and surrogate pair characters to "
-"'\\\\U00xxxxxx'."
+"Convert 21-bit characters (>= 0x10000) and surrogate pair characters to '\\"
+"\\U00xxxxxx'."
 msgstr ""
 
 #: ../pep-3138.txt:48
 msgid ""
-"This algorithm converts any string to printable ASCII, and repr() is used"
-" as a handy and safe way to print strings for debugging or for logging.  "
+"This algorithm converts any string to printable ASCII, and repr() is used as "
+"a handy and safe way to print strings for debugging or for logging.  "
 "Although all non-ASCII characters are escaped, this does not matter when "
-"most of the string's characters are ASCII.  But for other languages, such"
-" as Japanese where most characters in a string are not ASCII, this is "
-"very inconvenient."
+"most of the string's characters are ASCII.  But for other languages, such as "
+"Japanese where most characters in a string are not ASCII, this is very "
+"inconvenient."
 msgstr ""
 
 #: ../pep-3138.txt:55
 msgid ""
-"We can use ``print(aJapaneseString)`` to get a readable string, but we "
-"don't have a similar workaround for printing strings from collections "
-"such as lists or tuples.  ``print(listOfJapaneseStrings)`` uses repr() to"
-" build the string to be printed, so the resulting strings are always hex-"
-"escaped.  Or when ``open(japaneseFilename)`` raises an exception, the "
-"error message is something like ``IOError: [Errno 2] No such file or "
-"directory: '\\u65e5\\u672c\\u8a9e'``, which isn't helpful."
+"We can use ``print(aJapaneseString)`` to get a readable string, but we don't "
+"have a similar workaround for printing strings from collections such as "
+"lists or tuples.  ``print(listOfJapaneseStrings)`` uses repr() to build the "
+"string to be printed, so the resulting strings are always hex-escaped.  Or "
+"when ``open(japaneseFilename)`` raises an exception, the error message is "
+"something like ``IOError: [Errno 2] No such file or directory: "
+"'\\u65e5\\u672c\\u8a9e'``, which isn't helpful."
 msgstr ""
 
 #: ../pep-3138.txt:63
 msgid ""
-"Python 3000 has a lot of nice features for non-Latin users such as non-"
-"ASCII identifiers, so it would be helpful if Python could also progress "
-"in a similar way for printable output."
+"Python 3000 has a lot of nice features for non-Latin users such as non-ASCII "
+"identifiers, so it would be helpful if Python could also progress in a "
+"similar way for printable output."
 msgstr ""
 
 #: ../pep-3138.txt:67
 msgid ""
-"Some users might be concerned that such output will mess up their console"
-" if they print binary data like images.  But this is unlikely to happen "
-"in practice because bytes and strings are different types in Python 3000,"
-" so printing an image to the console won't mess it up."
+"Some users might be concerned that such output will mess up their console if "
+"they print binary data like images.  But this is unlikely to happen in "
+"practice because bytes and strings are different types in Python 3000, so "
+"printing an image to the console won't mess it up."
 msgstr ""
 
 #: ../pep-3138.txt:72
@@ -172,8 +172,8 @@ msgstr ""
 msgid ""
 "Add a new function to the Python C API ``int Py_UNICODE_ISPRINTABLE "
 "(Py_UNICODE ch)``.  This function returns 0 if repr() should escape the "
-"Unicode character ``ch``; otherwise it returns 1.  Characters that should"
-" be escaped are defined in the Unicode character database as:"
+"Unicode character ``ch``; otherwise it returns 1.  Characters that should be "
+"escaped are defined in the Unicode character database as:"
 msgstr ""
 
 #: ../pep-3138.txt:84
@@ -220,8 +220,8 @@ msgstr ""
 
 #: ../pep-3138.txt:106
 msgid ""
-"Convert non-printable characters (Py_UNICODE_ISPRINTABLE() returns 0) to "
-"'\\\\xXX', '\\\\uXXXX' or '\\\\U00xxxxxx'."
+"Convert non-printable characters (Py_UNICODE_ISPRINTABLE() returns 0) to '\\"
+"\\xXX', '\\\\uXXXX' or '\\\\U00xxxxxx'."
 msgstr ""
 
 #: ../pep-3138.txt:109
@@ -238,38 +238,36 @@ msgstr ""
 
 #: ../pep-3138.txt:115
 msgid ""
-"Add a new function to the Python C API ``PyObject *PyObject_ASCII "
-"(PyObject *o)``.  This function converts any python object to a string "
-"using PyObject_Repr() and then hex-escapes all non-ASCII characters.  "
+"Add a new function to the Python C API ``PyObject *PyObject_ASCII (PyObject "
+"*o)``.  This function converts any python object to a string using "
+"PyObject_Repr() and then hex-escapes all non-ASCII characters.  "
 "``PyObject_ASCII()`` generates the same string as ``PyObject_Repr()`` in "
 "Python 2."
 msgstr ""
 
 #: ../pep-3138.txt:121
 msgid ""
-"Add a new built-in function, ``ascii()``.  This function converts any "
-"python object to a string using repr() and then hex-escapes all non-ASCII"
-" characters.  ``ascii()`` generates the same string as ``repr()`` in "
-"Python 2."
+"Add a new built-in function, ``ascii()``.  This function converts any python "
+"object to a string using repr() and then hex-escapes all non-ASCII "
+"characters.  ``ascii()`` generates the same string as ``repr()`` in Python 2."
 msgstr ""
 
 #: ../pep-3138.txt:126
 #, python-format
 msgid ""
-"Add a ``'%a'`` string format operator.  ``'%a'`` converts any python "
-"object to a string using repr() and then hex-escapes all non-ASCII "
-"characters.  The ``'%a'`` format operator generates the same string as "
-"``'%r'`` in Python 2.  Also, add ``'!a'`` conversion flags to the "
-"``string.format()`` method and add ``'%A'`` operator to the "
-"PyUnicode_FromFormat().  They convert any object to an ASCII string as "
-"``'%a'`` string format operator."
+"Add a ``'%a'`` string format operator.  ``'%a'`` converts any python object "
+"to a string using repr() and then hex-escapes all non-ASCII characters.  The "
+"``'%a'`` format operator generates the same string as ``'%r'`` in Python 2.  "
+"Also, add ``'!a'`` conversion flags to the ``string.format()`` method and "
+"add ``'%A'`` operator to the PyUnicode_FromFormat().  They convert any "
+"object to an ASCII string as ``'%a'`` string format operator."
 msgstr ""
 
 #: ../pep-3138.txt:134
 msgid ""
-"Add an ``isprintable()`` method to the string type. ``str.isprintable()``"
-" returns False if repr() would escape any character in the string; "
-"otherwise returns True.  The ``isprintable()`` method calls the "
+"Add an ``isprintable()`` method to the string type. ``str.isprintable()`` "
+"returns False if repr() would escape any character in the string; otherwise "
+"returns True.  The ``isprintable()`` method calls the "
 "``Py_UNICODE_ISPRINTABLE()`` function internally."
 msgstr ""
 
@@ -280,36 +278,35 @@ msgstr ""
 #: ../pep-3138.txt:144
 msgid ""
 "The repr() in Python 3000 should be Unicode, not ASCII based, just like "
-"Python 3000 strings.  Also, conversion should not be affected by the "
-"locale setting, because the locale is not necessarily the same as the "
-"output device's locale.  For example, it is common for a daemon process "
-"to be invoked in an ASCII setting, but writes UTF-8 to its log files.  "
-"Also, web applications might want to report the error information in more"
-" readable form based on the HTML page's encoding."
+"Python 3000 strings.  Also, conversion should not be affected by the locale "
+"setting, because the locale is not necessarily the same as the output "
+"device's locale.  For example, it is common for a daemon process to be "
+"invoked in an ASCII setting, but writes UTF-8 to its log files.  Also, web "
+"applications might want to report the error information in more readable "
+"form based on the HTML page's encoding."
 msgstr ""
 
 #: ../pep-3138.txt:152
 msgid ""
 "Characters not supported by the user's console could be hex-escaped on "
-"printing, by the Unicode encoder's error-handler.  If the error-handler "
-"of the output file is 'backslashreplace', such characters are hex-escaped"
-" without raising UnicodeEncodeError.  For example, if the default "
-"encoding is ASCII, ``print('Hello ¢')`` will print 'Hello \\\\xa2'.  If "
-"the encoding is ISO-8859-1, 'Hello ¢' will be printed."
+"printing, by the Unicode encoder's error-handler.  If the error-handler of "
+"the output file is 'backslashreplace', such characters are hex-escaped "
+"without raising UnicodeEncodeError.  For example, if the default encoding is "
+"ASCII, ``print('Hello ¢')`` will print 'Hello \\\\xa2'.  If the encoding is "
+"ISO-8859-1, 'Hello ¢' will be printed."
 msgstr ""
 
 #: ../pep-3138.txt:160
 msgid ""
-"The default error-handler for sys.stdout is 'strict'.  Other applications"
-" reading the output might not understand hex-escaped characters, so "
+"The default error-handler for sys.stdout is 'strict'.  Other applications "
+"reading the output might not understand hex-escaped characters, so "
 "unsupported characters should be trapped when writing. If unsupported "
-"characters must be escaped, the error-handler should be changed "
-"explicitly.  Unlike sys.stdout, sys.stderr doesn't raise "
-"UnicodeEncodingError by default, because the default error-handler is "
-"'backslashreplace'.  So printing error messages containing non-ASCII "
-"characters to sys.stderr will not raise an exception.  Also, information "
-"about uncaught exceptions (exception object, traceback) is printed by the"
-" interpreter without raising exceptions."
+"characters must be escaped, the error-handler should be changed explicitly.  "
+"Unlike sys.stdout, sys.stderr doesn't raise UnicodeEncodingError by default, "
+"because the default error-handler is 'backslashreplace'.  So printing error "
+"messages containing non-ASCII characters to sys.stderr will not raise an "
+"exception.  Also, information about uncaught exceptions (exception object, "
+"traceback) is printed by the interpreter without raising exceptions."
 msgstr ""
 
 #: ../pep-3138.txt:172
@@ -329,11 +326,10 @@ msgstr ""
 #: ../pep-3138.txt:179
 msgid ""
 "Strings to be printed for debugging are not only contained by lists or "
-"dicts, but also in many other types of object.  File objects contain a "
-"file name in Unicode, exception objects contain a message in Unicode, "
-"etc.  These strings should be printed in readable form when repr()ed.  It"
-" is unlikely to be possible to implement a tool to print all possible "
-"object types."
+"dicts, but also in many other types of object.  File objects contain a file "
+"name in Unicode, exception objects contain a message in Unicode, etc.  These "
+"strings should be printed in readable form when repr()ed.  It is unlikely to "
+"be possible to implement a tool to print all possible object types."
 msgstr ""
 
 #: ../pep-3138.txt:186
@@ -344,10 +340,10 @@ msgstr ""
 #, python-format
 msgid ""
 "For interactive sessions, we can write hooks to restore hex escaped "
-"characters to the original characters.  But these hooks are called only "
-"when printing the result of evaluating an expression entered in an "
-"interactive Python session, and don't work for the ``print()`` function, "
-"for non-interactive sessions or for ``logging.debug(\"%r\", ...)``, etc."
+"characters to the original characters.  But these hooks are called only when "
+"printing the result of evaluating an expression entered in an interactive "
+"Python session, and don't work for the ``print()`` function, for non-"
+"interactive sessions or for ``logging.debug(\"%r\", ...)``, etc."
 msgstr ""
 
 #: ../pep-3138.txt:195
@@ -356,27 +352,27 @@ msgstr ""
 
 #: ../pep-3138.txt:197
 msgid ""
-"It is difficult to implement a subclass to restore hex-escaped characters"
-" since there isn't enough information left by the time it's a string to "
-"undo the escaping correctly in all cases.  For example, "
-"``print(\"\\\\\"+\"u0041\")`` should be printed as '\\\\u0041', not 'A'. "
-"But there is no chance to tell file objects apart."
+"It is difficult to implement a subclass to restore hex-escaped characters "
+"since there isn't enough information left by the time it's a string to undo "
+"the escaping correctly in all cases.  For example, ``print(\"\\\\\"+"
+"\"u0041\")`` should be printed as '\\\\u0041', not 'A'. But there is no "
+"chance to tell file objects apart."
 msgstr ""
 
 #: ../pep-3138.txt:203
 msgid ""
-"Make the encoding used by unicode_repr() adjustable, and make the "
-"existing repr() the default."
+"Make the encoding used by unicode_repr() adjustable, and make the existing "
+"repr() the default."
 msgstr ""
 
 #: ../pep-3138.txt:206
 msgid ""
 "With adjustable repr(), the result of using repr() is unpredictable and "
 "would make it impossible to write correct code involving repr(). And if "
-"current repr() is the default, then the old convention remains intact and"
-" users may expect ASCII strings as the result of repr().  Third party "
-"applications or libraries could be confused when a custom repr() function"
-" is used."
+"current repr() is the default, then the old convention remains intact and "
+"users may expect ASCII strings as the result of repr().  Third party "
+"applications or libraries could be confused when a custom repr() function is "
+"used."
 msgstr ""
 
 #: ../pep-3138.txt:215
@@ -385,10 +381,10 @@ msgstr ""
 
 #: ../pep-3138.txt:217
 msgid ""
-"Changing repr() may break some existing code, especially testing code. "
-"Five of Python's regression tests fail with this modification.  If you "
-"need repr() strings without non-ASCII character as Python 2, you can use "
-"the following function. ::"
+"Changing repr() may break some existing code, especially testing code. Five "
+"of Python's regression tests fail with this modification.  If you need "
+"repr() strings without non-ASCII character as Python 2, you can use the "
+"following function. ::"
 msgstr ""
 
 #: ../pep-3138.txt:225
@@ -405,17 +401,17 @@ msgstr ""
 
 #: ../pep-3138.txt:239
 msgid ""
-"For a console that uses a Unicode-based encoding, for example, en_US.utf8"
-" or de_DE.utf8, the backslashreplace trick doesn't work and all printable"
-" characters are not escaped.  This will cause a problem of similarly "
-"drawing characters in Western, Greek and Cyrillic languages.  These "
-"languages use similar (but different) alphabets (descended from a common "
-"ancestor) and contain letters that look similar but have different "
-"character codes.  For example, it is hard to distinguish Latin 'a', 'e' "
-"and 'o' from Cyrillic 'а', 'е' and 'о'. (The visual representation, of "
-"course, very much depends on the fonts used but usually these letters are"
-" almost indistinguishable.)  To avoid the problem, the user can adjust "
-"the terminal encoding to get a result suitable for their environment."
+"For a console that uses a Unicode-based encoding, for example, en_US.utf8 or "
+"de_DE.utf8, the backslashreplace trick doesn't work and all printable "
+"characters are not escaped.  This will cause a problem of similarly drawing "
+"characters in Western, Greek and Cyrillic languages.  These languages use "
+"similar (but different) alphabets (descended from a common ancestor) and "
+"contain letters that look similar but have different character codes.  For "
+"example, it is hard to distinguish Latin 'a', 'e' and 'o' from Cyrillic 'а', "
+"'е' and 'о'. (The visual representation, of course, very much depends on the "
+"fonts used but usually these letters are almost indistinguishable.)  To "
+"avoid the problem, the user can adjust the terminal encoding to get a result "
+"suitable for their environment."
 msgstr ""
 
 #: ../pep-3138.txt:254
@@ -430,22 +426,22 @@ msgstr ""
 
 #: ../pep-3138.txt:259
 msgid ""
-"Complicated to implement, and in general, this is not seen as a good "
-"idea. [2]_"
+"Complicated to implement, and in general, this is not seen as a good idea. "
+"[2]_"
 msgstr ""
 
 #: ../pep-3138.txt:262
 msgid ""
-"Use character names to escape characters, instead of hex character codes."
-"  For example, ``repr('\\u03b1')`` can be converted to ``\"\\N{GREEK "
-"SMALL LETTER ALPHA}\"``."
+"Use character names to escape characters, instead of hex character codes.  "
+"For example, ``repr('\\u03b1')`` can be converted to ``\"\\N{GREEK SMALL "
+"LETTER ALPHA}\"``."
 msgstr ""
 
 #: ../pep-3138.txt:266
 msgid ""
 "Using character names can be very verbose compared to hex-escape. e.g., "
-"``repr(\"\\ufbf9\")`` is converted to ``\"\\N{ARABIC LIGATURE UIGHUR "
-"KIRGHIZ YEH WITH HAMZA ABOVE WITH ALEF MAKSURA ISOLATED FORM}\"``."
+"``repr(\"\\ufbf9\")`` is converted to ``\"\\N{ARABIC LIGATURE UIGHUR KIRGHIZ "
+"YEH WITH HAMZA ABOVE WITH ALEF MAKSURA ISOLATED FORM}\"``."
 msgstr ""
 
 #: ../pep-3138.txt:271
@@ -455,9 +451,9 @@ msgstr ""
 #: ../pep-3138.txt:273
 msgid ""
 "Stuff written to stdout might be consumed by another program that might "
-"misinterpret the \\\\ escapes.  For interactive sessions, it is possible "
-"to make the 'backslashreplace' error-handler the default, but this may "
-"add confusion of the kind \"it works in interactive mode but not when "
+"misinterpret the \\\\ escapes.  For interactive sessions, it is possible to "
+"make the 'backslashreplace' error-handler the default, but this may add "
+"confusion of the kind \"it works in interactive mode but not when "
 "redirecting to a file\"."
 msgstr ""
 
@@ -477,14 +473,14 @@ msgstr ""
 
 #: ../pep-3138.txt:290
 msgid ""
-"Multibyte string on string\\::string_print "
-"(http://bugs.python.org/issue479898)"
+"Multibyte string on string\\::string_print (http://bugs.python.org/"
+"issue479898)"
 msgstr ""
 
 #: ../pep-3138.txt:293
 msgid ""
-"[Python-3000] Displaying strings containing unicode escapes "
-"(https://mail.python.org/pipermail/python-3000/2008-April/013366.html)"
+"[Python-3000] Displaying strings containing unicode escapes (https://mail."
+"python.org/pipermail/python-3000/2008-April/013366.html)"
 msgstr ""
 
 #: ../pep-3138.txt:297
@@ -494,4 +490,3 @@ msgstr ""
 #: ../pep-3138.txt:299
 msgid "This document has been placed in the public domain."
 msgstr ""
-

@@ -77,29 +77,27 @@ msgstr ""
 
 #: ../pep-3123.txt:23
 msgid ""
-"Standard C defines that an object must be accessed only through a pointer"
-" of its type, and that all other accesses are undefined behavior, with a "
-"few exceptions. In particular, the following code has undefined "
-"behavior::"
+"Standard C defines that an object must be accessed only through a pointer of "
+"its type, and that all other accesses are undefined behavior, with a few "
+"exceptions. In particular, the following code has undefined behavior::"
 msgstr ""
 
 #: ../pep-3123.txt:45
 msgid ""
-"The problem here is that the storage is both accessed as if it where "
-"struct ``PyObject``, and as struct ``FooObject``."
+"The problem here is that the storage is both accessed as if it where struct "
+"``PyObject``, and as struct ``FooObject``."
 msgstr ""
 
 #: ../pep-3123.txt:48
 msgid ""
-"Historically, compilers did not have any problems with this code. "
-"However, modern compilers use that clause as an optimization opportunity,"
-" finding that ``f->ob_refcnt`` and ``o->ob_refcnt`` cannot possibly refer"
-" to the same memory, and that therefore the function should return 0, "
-"without having to fetch the value of ob_refcnt at all in the return "
-"statement. For GCC, Python now uses ``-fno-strict-aliasing`` to work "
-"around that problem; with other compilers, it may just see undefined "
-"behavior. Even with GCC, using ``-fno-strict-aliasing`` may pessimize the"
-" generated code unnecessarily."
+"Historically, compilers did not have any problems with this code. However, "
+"modern compilers use that clause as an optimization opportunity, finding "
+"that ``f->ob_refcnt`` and ``o->ob_refcnt`` cannot possibly refer to the same "
+"memory, and that therefore the function should return 0, without having to "
+"fetch the value of ob_refcnt at all in the return statement. For GCC, Python "
+"now uses ``-fno-strict-aliasing`` to work around that problem; with other "
+"compilers, it may just see undefined behavior. Even with GCC, using ``-fno-"
+"strict-aliasing`` may pessimize the generated code unnecessarily."
 msgstr ""
 
 #: ../pep-3123.txt:61
@@ -109,17 +107,17 @@ msgstr ""
 #: ../pep-3123.txt:63
 msgid ""
 "Standard C has one specific exception to its aliasing rules precisely "
-"designed to support the case of Python: a value of a struct type may also"
-" be accessed through a pointer to the first field. E.g. if a struct "
-"starts with an ``int``, the ``struct *`` may also be cast to an ``int "
-"*``, allowing to write int values into the first field."
+"designed to support the case of Python: a value of a struct type may also be "
+"accessed through a pointer to the first field. E.g. if a struct starts with "
+"an ``int``, the ``struct *`` may also be cast to an ``int *``, allowing to "
+"write int values into the first field."
 msgstr ""
 
 #: ../pep-3123.txt:69
 msgid ""
-"For Python, ``PyObject_HEAD`` and ``PyObject_VAR_HEAD`` will be changed "
-"to not list all fields anymore, but list a single field of type "
-"``PyObject``/``PyVarObject``::"
+"For Python, ``PyObject_HEAD`` and ``PyObject_VAR_HEAD`` will be changed to "
+"not list all fields anymore, but list a single field of type ``PyObject``/"
+"``PyVarObject``::"
 msgstr ""
 
 #: ../pep-3123.txt:87
@@ -131,17 +129,17 @@ msgstr ""
 #: ../pep-3123.txt:101
 msgid ""
 "The above definitions of ``PyObject_HEAD`` are normative, so extension "
-"authors MAY either use the macro, or put the ``ob_base`` field explicitly"
-" into their structs."
+"authors MAY either use the macro, or put the ``ob_base`` field explicitly "
+"into their structs."
 msgstr ""
 
 #: ../pep-3123.txt:105
 msgid ""
 "As a convention, the base field SHOULD be called ob_base. However, all "
-"accesses to ob_refcnt and ob_type MUST cast the object pointer to "
-"PyObject* (unless the pointer is already known to have that type), and "
-"SHOULD use the respective accessor macros. To simplify access to ob_type,"
-" ob_refcnt, and ob_size, macros::"
+"accesses to ob_refcnt and ob_type MUST cast the object pointer to PyObject* "
+"(unless the pointer is already known to have that type), and SHOULD use the "
+"respective accessor macros. To simplify access to ob_type, ob_refcnt, and "
+"ob_size, macros::"
 msgstr ""
 
 #: ../pep-3123.txt:115
@@ -168,9 +166,9 @@ msgstr ""
 msgid ""
 "To support modules that compile with both Python 2.6 and Python 3.0, the "
 "``Py_*`` macros are added to Python 2.6. The macros ``Py_INCREF`` and "
-"``Py_DECREF`` will be changed to cast their argument to ``PyObject *``, "
-"so that module authors can also explicitly declare the ``ob_base`` field "
-"in modules designed for Python 2.6."
+"``Py_DECREF`` will be changed to cast their argument to ``PyObject *``, so "
+"that module authors can also explicitly declare the ``ob_base`` field in "
+"modules designed for Python 2.6."
 msgstr ""
 
 #: ../pep-3123.txt:146
@@ -180,4 +178,3 @@ msgstr ""
 #: ../pep-3123.txt:148
 msgid "This document has been placed in the public domain."
 msgstr ""
-

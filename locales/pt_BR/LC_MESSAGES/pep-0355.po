@@ -67,14 +67,14 @@ msgstr ""
 
 #: ../pep-0355.txt:17
 msgid ""
-"This PEP has been rejected (in this form).  The proposed path class is "
-"the ultimate kitchen sink; but the notion that it's better to implement "
-"**all** functionality that uses a path as a method on a single class is "
-"an anti-pattern.  (E.g. why not ``open()``?  Or ``execfile()``?) "
-"Subclassing from str is a particularly bad idea; many string operations "
-"make no sense when applied to a path.  This PEP has lingered, and while "
-"the discussion flares up from time to time, it's time to put this PEP out"
-" of its misery.  A less far-fetched proposal might be more palatable."
+"This PEP has been rejected (in this form).  The proposed path class is the "
+"ultimate kitchen sink; but the notion that it's better to implement **all** "
+"functionality that uses a path as a method on a single class is an anti-"
+"pattern.  (E.g. why not ``open()``?  Or ``execfile()``?) Subclassing from "
+"str is a particularly bad idea; many string operations make no sense when "
+"applied to a path.  This PEP has lingered, and while the discussion flares "
+"up from time to time, it's time to put this PEP out of its misery.  A less "
+"far-fetched proposal might be more palatable."
 msgstr ""
 
 #: ../pep-0355.txt:29
@@ -83,10 +83,9 @@ msgstr ""
 
 #: ../pep-0355.txt:31
 msgid ""
-"This PEP describes a new class, ``Path``, to be added to the ``os`` "
-"module, for handling paths in an object oriented fashion.  The \"weak\" "
-"deprecation of various related functions is also discussed and "
-"recommended."
+"This PEP describes a new class, ``Path``, to be added to the ``os`` module, "
+"for handling paths in an object oriented fashion.  The \"weak\" deprecation "
+"of various related functions is also discussed and recommended."
 msgstr ""
 
 #: ../pep-0355.txt:38
@@ -95,27 +94,27 @@ msgstr ""
 
 #: ../pep-0355.txt:40
 msgid ""
-"The ideas expressed in this PEP are not recent, but have been debated in "
-"the Python community for many years.  Many have felt that the API for "
-"manipulating file paths as offered in the os.path module is inadequate.  "
-"The first proposal for a ``Path`` object was raised by Just van Rossum on"
-" python-dev in 2001 [2]_.  In 2003, Jason Orendorff released version 1.0 "
-"of the \"path module\" which was the first public implementation that "
-"used objects to represent paths [3]_."
+"The ideas expressed in this PEP are not recent, but have been debated in the "
+"Python community for many years.  Many have felt that the API for "
+"manipulating file paths as offered in the os.path module is inadequate.  The "
+"first proposal for a ``Path`` object was raised by Just van Rossum on python-"
+"dev in 2001 [2]_.  In 2003, Jason Orendorff released version 1.0 of the "
+"\"path module\" which was the first public implementation that used objects "
+"to represent paths [3]_."
 msgstr ""
 
 #: ../pep-0355.txt:49
 msgid ""
-"The path module quickly became very popular and numerous attempts were "
-"made to get the path module included in the Python standard library; "
-"[4]_, [5]_, [6]_, [7]_."
+"The path module quickly became very popular and numerous attempts were made "
+"to get the path module included in the Python standard library; [4]_, [5]_, "
+"[6]_, [7]_."
 msgstr ""
 
 #: ../pep-0355.txt:53
 msgid ""
-"This PEP summarizes the ideas and suggestions people have expressed about"
-" the path module and proposes that a modified version should be included "
-"in the standard library."
+"This PEP summarizes the ideas and suggestions people have expressed about "
+"the path module and proposes that a modified version should be included in "
+"the standard library."
 msgstr ""
 
 #: ../pep-0355.txt:59
@@ -124,9 +123,9 @@ msgstr ""
 
 #: ../pep-0355.txt:61
 msgid ""
-"Dealing with filesystem paths is a common task in any programming "
-"language, and very common in a high-level language like Python. Good "
-"support for this task is needed, because:"
+"Dealing with filesystem paths is a common task in any programming language, "
+"and very common in a high-level language like Python. Good support for this "
+"task is needed, because:"
 msgstr ""
 
 #: ../pep-0355.txt:65
@@ -144,9 +143,9 @@ msgstr ""
 
 #: ../pep-0355.txt:72
 msgid ""
-"Currently, Python has a large number of different functions scattered "
-"over half a dozen modules for handling paths.  This makes it hard for "
-"newbies and experienced developers to choose the right method."
+"Currently, Python has a large number of different functions scattered over "
+"half a dozen modules for handling paths.  This makes it hard for newbies and "
+"experienced developers to choose the right method."
 msgstr ""
 
 #: ../pep-0355.txt:77
@@ -156,35 +155,35 @@ msgid ""
 msgstr ""
 
 #: ../pep-0355.txt:80
-msgid "One \"unified\" object provides all functionality from previous functions."
+msgid ""
+"One \"unified\" object provides all functionality from previous functions."
 msgstr ""
 
 #: ../pep-0355.txt:83
 msgid ""
-"Subclassability - the ``Path`` object can be extended to support paths "
-"other than filesystem paths.  The programmer does not need to learn a new"
-" API, but can reuse their knowledge of Path to deal with the extended "
-"class."
+"Subclassability - the ``Path`` object can be extended to support paths other "
+"than filesystem paths.  The programmer does not need to learn a new API, but "
+"can reuse their knowledge of Path to deal with the extended class."
 msgstr ""
 
 #: ../pep-0355.txt:88
 msgid ""
-"With all related functionality in one place, the right approach is easier"
-" to learn as one does not have to hunt through many different modules for"
-" the right functions."
+"With all related functionality in one place, the right approach is easier to "
+"learn as one does not have to hunt through many different modules for the "
+"right functions."
 msgstr ""
 
 #: ../pep-0355.txt:92
 msgid ""
 "Python is an object oriented language.  Just like files, datetimes and "
-"sockets are objects so are paths, they are not merely strings to be "
-"passed to functions.  ``Path`` objects is inherently a pythonic idea."
+"sockets are objects so are paths, they are not merely strings to be passed "
+"to functions.  ``Path`` objects is inherently a pythonic idea."
 msgstr ""
 
 #: ../pep-0355.txt:97
 msgid ""
-"``Path`` takes advantage of properties.  Properties make for more "
-"readable code::"
+"``Path`` takes advantage of properties.  Properties make for more readable "
+"code::"
 msgstr ""
 
 #: ../pep-0355.txt:103
@@ -207,18 +206,17 @@ msgstr ""
 
 #: ../pep-0355.txt:118
 msgid ""
-"A ``Path`` object can be created either by using the classmethod "
-"``Path.cwd``, by instantiating the class with a string representing a "
-"path or by using the default constructor which is equivalent to "
-"``Path(\".\")``."
+"A ``Path`` object can be created either by using the classmethod ``Path."
+"cwd``, by instantiating the class with a string representing a path or by "
+"using the default constructor which is equivalent to ``Path(\".\")``."
 msgstr ""
 
 #: ../pep-0355.txt:123
 msgid ""
-"``Path`` provides common pathname manipulation, pattern expansion, "
-"pattern matching and other high-level file operations including copying."
-"  Basically ``Path`` provides everything path-related except the "
-"manipulation of file contents, for which file objects are better suited."
+"``Path`` provides common pathname manipulation, pattern expansion, pattern "
+"matching and other high-level file operations including copying.  Basically "
+"``Path`` provides everything path-related except the manipulation of file "
+"contents, for which file objects are better suited."
 msgstr ""
 
 #: ../pep-0355.txt:129
@@ -234,8 +232,8 @@ msgstr ""
 #: ../pep-0355.txt:136
 msgid ""
 "This class defines the following public interface (docstrings have been "
-"extracted from the reference implementation, and shortened for brevity; "
-"see the reference implementation for more detail)::"
+"extracted from the reference implementation, and shortened for brevity; see "
+"the reference implementation for more detail)::"
 msgstr ""
 
 #: ../pep-0355.txt:281
@@ -244,8 +242,7 @@ msgstr ""
 
 #: ../pep-0355.txt:283 ../pep-0355.txt:503
 msgid ""
-"In this section, \"a ==> b\" means that b can be used as a replacement "
-"for a."
+"In this section, \"a ==> b\" means that b can be used as a replacement for a."
 msgstr ""
 
 #: ../pep-0355.txt:286
@@ -276,17 +273,16 @@ msgstr ""
 
 #: ../pep-0355.txt:329
 msgid ""
-"Introducing this module to the standard library introduces a need for the"
-" \"weak\" deprecation of a number of existing modules and functions.  "
-"These modules and functions are so widely used that they cannot be truly "
-"deprecated, as in generating DeprecationWarning.  Here \"weak "
-"deprecation\" means notes in the documentation only."
+"Introducing this module to the standard library introduces a need for the "
+"\"weak\" deprecation of a number of existing modules and functions.  These "
+"modules and functions are so widely used that they cannot be truly "
+"deprecated, as in generating DeprecationWarning.  Here \"weak deprecation\" "
+"means notes in the documentation only."
 msgstr ""
 
 #: ../pep-0355.txt:336
 msgid ""
-"The table below lists the existing functionality that should be "
-"deprecated."
+"The table below lists the existing functionality that should be deprecated."
 msgstr ""
 
 #: ../pep-0355.txt:340
@@ -765,31 +761,29 @@ msgstr ""
 
 #: ../pep-0355.txt:408
 msgid ""
-"A number contentious issues have been resolved since this PEP first "
-"appeared on python-dev:"
+"A number contentious issues have been resolved since this PEP first appeared "
+"on python-dev:"
 msgstr ""
 
 #: ../pep-0355.txt:411
 msgid ""
-"The ``__div__()`` method was removed.  Overloading the / (division) "
-"operator may be \"too much magic\" and make path concatenation appear to "
-"be division.  The method can always be re-added later if the BDFL so "
-"desires.  In its place, ``__new__()`` got an ``*args`` argument that "
-"accepts both ``Path`` and string objects.  The ``*args`` are concatenated"
-" with ``os.path.join()`` which is used to construct the ``Path`` object."
-"  These changes obsoleted the problematic ``joinpath()`` method which was"
-" removed."
+"The ``__div__()`` method was removed.  Overloading the / (division) operator "
+"may be \"too much magic\" and make path concatenation appear to be "
+"division.  The method can always be re-added later if the BDFL so desires.  "
+"In its place, ``__new__()`` got an ``*args`` argument that accepts both "
+"``Path`` and string objects.  The ``*args`` are concatenated with ``os.path."
+"join()`` which is used to construct the ``Path`` object.  These changes "
+"obsoleted the problematic ``joinpath()`` method which was removed."
 msgstr ""
 
 #: ../pep-0355.txt:420
 msgid ""
-"The methods and the properties ``getatime()/atime``, "
-"``getctime()/ctime``, ``getmtime()/mtime`` and ``getsize()/size`` "
-"duplicated each other.  These methods and properties have been merged to "
-"``atime()``, ``ctime()``, ``mtime()`` and ``size()``.  The reason they "
-"are not properties instead, is because there is a possibility that they "
-"may change unexpectedly.  The following example is not guaranteed to "
-"always pass the assertion::"
+"The methods and the properties ``getatime()/atime``, ``getctime()/ctime``, "
+"``getmtime()/mtime`` and ``getsize()/size`` duplicated each other.  These "
+"methods and properties have been merged to ``atime()``, ``ctime()``, "
+"``mtime()`` and ``size()``.  The reason they are not properties instead, is "
+"because there is a possibility that they may change unexpectedly.  The "
+"following example is not guaranteed to always pass the assertion::"
 msgstr ""
 
 #: ../pep-0355.txt:434
@@ -816,48 +810,48 @@ msgstr ""
 
 #: ../pep-0355.txt:447
 msgid ""
-"A deprecation schedule needs to be set up.  How much functionality should"
-" ``Path`` implement?  How much of existing functionality should it "
-"deprecate and when?"
+"A deprecation schedule needs to be set up.  How much functionality should "
+"``Path`` implement?  How much of existing functionality should it deprecate "
+"and when?"
 msgstr ""
 
 #: ../pep-0355.txt:451
 msgid ""
-"The name obviously has to be either \"path\" or \"Path,\" but where "
-"should it live?  In its own module or in ``os``?"
+"The name obviously has to be either \"path\" or \"Path,\" but where should "
+"it live?  In its own module or in ``os``?"
 msgstr ""
 
 #: ../pep-0355.txt:454
 msgid ""
-"Due to ``Path`` subclassing either ``str`` or ``unicode``, the following "
-"non-magic, public methods are available on ``Path`` objects::"
+"Due to ``Path`` subclassing either ``str`` or ``unicode``, the following non-"
+"magic, public methods are available on ``Path`` objects::"
 msgstr ""
 
 #: ../pep-0355.txt:465
 msgid ""
-"On python-dev it has been argued whether this inheritance is sane or not."
-"  Most persons debating said that most string methods doesn't make sense "
-"in the context of filesystem paths -- they are just dead weight.  The "
-"other position, also argued on python-dev, is that inheriting from string"
-" is very convenient because it allows code to \"just work\" with ``Path``"
-" objects without having to be adapted for them."
+"On python-dev it has been argued whether this inheritance is sane or not.  "
+"Most persons debating said that most string methods doesn't make sense in "
+"the context of filesystem paths -- they are just dead weight.  The other "
+"position, also argued on python-dev, is that inheriting from string is very "
+"convenient because it allows code to \"just work\" with ``Path`` objects "
+"without having to be adapted for them."
 msgstr ""
 
 #: ../pep-0355.txt:473
 msgid ""
-"One of the problems is that at the Python level, there is no way to make "
-"an object \"string-like enough,\" so that it can be passed to the builtin"
-" function ``open()`` (and other builtins expecting a string or buffer), "
-"unless the object inherits from either ``str`` or ``unicode``.  "
-"Therefore, to not inherit from string requires changes in CPython's core."
+"One of the problems is that at the Python level, there is no way to make an "
+"object \"string-like enough,\" so that it can be passed to the builtin "
+"function ``open()`` (and other builtins expecting a string or buffer), "
+"unless the object inherits from either ``str`` or ``unicode``.  Therefore, "
+"to not inherit from string requires changes in CPython's core."
 msgstr ""
 
 #: ../pep-0355.txt:480
 msgid ""
-"The functions and modules that this new module is trying to replace "
-"(``os.path``, ``shutil``, ``fnmatch``, ``glob`` and parts of ``os``) are "
-"expected to be available in future Python versions for a long time, to "
-"preserve backwards compatibility."
+"The functions and modules that this new module is trying to replace (``os."
+"path``, ``shutil``, ``fnmatch``, ``glob`` and parts of ``os``) are expected "
+"to be available in future Python versions for a long time, to preserve "
+"backwards compatibility."
 msgstr ""
 
 #: ../pep-0355.txt:487
@@ -866,8 +860,8 @@ msgstr ""
 
 #: ../pep-0355.txt:489
 msgid ""
-"Currently, the ``Path`` class is implemented as a thin wrapper around the"
-" standard library modules ``fnmatch``, ``glob``, ``os``, ``os.path`` and "
+"Currently, the ``Path`` class is implemented as a thin wrapper around the "
+"standard library modules ``fnmatch``, ``glob``, ``os``, ``os.path`` and "
 "``shutil``.  The intention of this PEP is to move functionality from the "
 "aforementioned modules to ``Path`` while they are being deprecated."
 msgstr ""
@@ -914,33 +908,32 @@ msgstr ""
 
 #: ../pep-0355.txt:551
 msgid ""
-"\"(idea) subclassable string: path object?\", van Rossum, 2001 "
-"https://mail.python.org/pipermail/python-dev/2001-August/016663.html"
+"\"(idea) subclassable string: path object?\", van Rossum, 2001 https://mail."
+"python.org/pipermail/python-dev/2001-August/016663.html"
 msgstr ""
 
 #: ../pep-0355.txt:554
 msgid ""
-"\"path module v1.0 released\", Orendorff, 2003 "
-"https://mail.python.org/pipermail/python-announce-"
-"list/2003-January/001984.html"
+"\"path module v1.0 released\", Orendorff, 2003 https://mail.python.org/"
+"pipermail/python-announce-list/2003-January/001984.html"
 msgstr ""
 
 #: ../pep-0355.txt:557
 msgid ""
-"\"Some RFE for review\", Birkenfeld, 2005 "
-"https://mail.python.org/pipermail/python-dev/2005-June/054438.html"
+"\"Some RFE for review\", Birkenfeld, 2005 https://mail.python.org/pipermail/"
+"python-dev/2005-June/054438.html"
 msgstr ""
 
 #: ../pep-0355.txt:560
 msgid ""
-"\"path module\", Orendorff, 2003 https://mail.python.org/pipermail"
-"/python-list/2003-July/174289.html"
+"\"path module\", Orendorff, 2003 https://mail.python.org/pipermail/python-"
+"list/2003-July/174289.html"
 msgstr ""
 
 #: ../pep-0355.txt:563
 msgid ""
-"\"PRE-PEP: new Path class\", Roth, 2004 https://mail.python.org/pipermail"
-"/python-list/2004-January/201672.html"
+"\"PRE-PEP: new Path class\", Roth, 2004 https://mail.python.org/pipermail/"
+"python-list/2004-January/201672.html"
 msgstr ""
 
 #: ../pep-0355.txt:566
@@ -954,4 +947,3 @@ msgstr ""
 #: ../pep-0355.txt:572
 msgid "This document has been placed in the public domain."
 msgstr ""
-

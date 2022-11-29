@@ -93,28 +93,28 @@ msgstr ""
 
 #: ../pep-0417.txt:30
 msgid ""
-"There are many mock object libraries available for Python [2]_. Of these,"
-" mock is overwhelmingly the most popular, with as many downloads on PyPI "
-"as the other mocking libraries combined."
+"There are many mock object libraries available for Python [2]_. Of these, "
+"mock is overwhelmingly the most popular, with as many downloads on PyPI as "
+"the other mocking libraries combined."
 msgstr ""
 
 #: ../pep-0417.txt:34
 msgid ""
-"An advantage of mock is that it is a mocking library and not a framework."
-" It provides a configurable and flexible mock object, without being "
-"opinionated about how you write your tests. The mock api is now well "
-"battle-tested and stable."
+"An advantage of mock is that it is a mocking library and not a framework. It "
+"provides a configurable and flexible mock object, without being opinionated "
+"about how you write your tests. The mock api is now well battle-tested and "
+"stable."
 msgstr ""
 
 #: ../pep-0417.txt:39
 msgid ""
-"mock also handles safely monkeypatching and unmonkeypatching objects "
-"during the scope of a test. This is hard to do safely and many developers"
-" / projects mimic this functionality (often incorrectly). A standardised "
-"way to do this, handling the complexity of patching in the presence of "
-"the descriptor protocol (etc) is useful. People are asking for a "
-"\"patch\" [3]_ feature to unittest. Doing this via mock.patch is "
-"preferable to re-implementing part of this functionality in unittest."
+"mock also handles safely monkeypatching and unmonkeypatching objects during "
+"the scope of a test. This is hard to do safely and many developers / "
+"projects mimic this functionality (often incorrectly). A standardised way to "
+"do this, handling the complexity of patching in the presence of the "
+"descriptor protocol (etc) is useful. People are asking for a \"patch\" [3]_ "
+"feature to unittest. Doing this via mock.patch is preferable to re-"
+"implementing part of this functionality in unittest."
 msgstr ""
 
 #: ../pep-0417.txt:50
@@ -123,8 +123,8 @@ msgstr ""
 
 #: ../pep-0417.txt:52
 msgid ""
-"Addition of mock to the Python standard library was discussed and agreed "
-"to at the Python Language Summit 2012."
+"Addition of mock to the Python standard library was discussed and agreed to "
+"at the Python Language Summit 2012."
 msgstr ""
 
 #: ../pep-0417.txt:57
@@ -134,16 +134,15 @@ msgstr ""
 #: ../pep-0417.txt:59
 msgid ""
 "As of release 0.8, which is current at the time of writing, mock is "
-"compatible with Python 2.4-3.2. Moving into the Python standard library "
-"will allow for the removal of some Python 2 specific \"compatibility "
-"hacks\"."
+"compatible with Python 2.4-3.2. Moving into the Python standard library will "
+"allow for the removal of some Python 2 specific \"compatibility hacks\"."
 msgstr ""
 
 #: ../pep-0417.txt:64
 msgid ""
 "mock 0.8 introduced a new feature, \"auto-speccing\", obsoletes an older "
-"mock feature called \"mocksignature\". The \"mocksignature\" "
-"functionality can be removed from mock altogether prior to inclusion."
+"mock feature called \"mocksignature\". The \"mocksignature\" functionality "
+"can be removed from mock altogether prior to inclusion."
 msgstr ""
 
 #: ../pep-0417.txt:71
@@ -169,4 +168,3 @@ msgstr ""
 #: ../pep-0417.txt:81
 msgid "This document has been placed in the public domain."
 msgstr ""
-

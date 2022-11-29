@@ -71,9 +71,9 @@ msgstr ""
 
 #: ../pep-0299.txt:18
 msgid ""
-"Many Python modules are also intended to be callable as standalone "
-"scripts.  This PEP proposes that a special function called ``__main__()``"
-" should serve this purpose."
+"Many Python modules are also intended to be callable as standalone scripts.  "
+"This PEP proposes that a special function called ``__main__()`` should serve "
+"this purpose."
 msgstr ""
 
 #: ../pep-0299.txt:24
@@ -82,8 +82,8 @@ msgstr ""
 
 #: ../pep-0299.txt:26
 msgid ""
-"There should be one simple and universal idiom for invoking a module as a"
-" standalone script."
+"There should be one simple and universal idiom for invoking a module as a "
+"standalone script."
 msgstr ""
 
 #: ../pep-0299.txt:29
@@ -93,17 +93,17 @@ msgstr ""
 #: ../pep-0299.txt:34
 msgid ""
 "is unclear to programmers of languages like C and C++.  It also does not "
-"permit invocation of the standalone function when the module is imported."
-"  The variant::"
+"permit invocation of the standalone function when the module is imported.  "
+"The variant::"
 msgstr ""
 
 #: ../pep-0299.txt:41
 msgid ""
-"is sometimes seen, but there exists no standard name for the function, "
-"and because arguments are taken from sys.argv it is not possible to pass "
+"is sometimes seen, but there exists no standard name for the function, and "
+"because arguments are taken from sys.argv it is not possible to pass "
 "specific arguments without changing the argument list seen by all other "
-"modules.  (Imagine a threaded Python program, with two threads wishing to"
-" invoke the standalone functionality of different modules with different "
+"modules.  (Imagine a threaded Python program, with two threads wishing to "
+"invoke the standalone functionality of different modules with different "
 "argument lists)"
 msgstr ""
 
@@ -119,9 +119,9 @@ msgstr ""
 
 #: ../pep-0299.txt:57
 msgid ""
-"then the module behaves as though the following lines existed at the end "
-"of the module (except that the attribute __sys may not be used or assumed"
-" to exist elsewhere in the script)::"
+"then the module behaves as though the following lines existed at the end of "
+"the module (except that the attribute __sys may not be used or assumed to "
+"exist elsewhere in the script)::"
 msgstr ""
 
 #: ../pep-0299.txt:65
@@ -130,10 +130,10 @@ msgstr ""
 
 #: ../pep-0299.txt:69
 msgid ""
-"It is up to ``mymodule`` to document thread-safety issues or other issues"
-" which might restrict use of ``__main__``.  (Other issues might include "
-"use of mutually exclusive GUI modules, non-sharable resources like "
-"hardware devices, reassignment of ``sys.stdin``/``stdout``, etc)"
+"It is up to ``mymodule`` to document thread-safety issues or other issues "
+"which might restrict use of ``__main__``.  (Other issues might include use "
+"of mutually exclusive GUI modules, non-sharable resources like hardware "
+"devices, reassignment of ``sys.stdin``/``stdout``, etc)"
 msgstr ""
 
 #: ../pep-0299.txt:76
@@ -143,8 +143,8 @@ msgstr ""
 #: ../pep-0299.txt:78
 msgid ""
 "In ``modules/main.c``, the block near line 385 (after the "
-"``PyRun_AnyFileExFlags`` call) will be changed so that the above code (or"
-" its C equivalent) is executed."
+"``PyRun_AnyFileExFlags`` call) will be changed so that the above code (or "
+"its C equivalent) is executed."
 msgstr ""
 
 #: ../pep-0299.txt:84
@@ -157,22 +157,22 @@ msgstr ""
 
 #: ../pep-0299.txt:88
 msgid ""
-"Yes.  Many ``__main__`` will naturally return ``None``, which "
-"``sys.exit`` translates into a \"success\" return code.  In those that "
-"return a numeric result, it behaves just like the argument to "
-"``sys.exit()`` or the return value from C's main()."
+"Yes.  Many ``__main__`` will naturally return ``None``, which ``sys.exit`` "
+"translates into a \"success\" return code.  In those that return a numeric "
+"result, it behaves just like the argument to ``sys.exit()`` or the return "
+"value from C's main()."
 msgstr ""
 
 #: ../pep-0299.txt:93
 msgid ""
-"Should the argument list to ``__main__`` include ``argv[0]``, or just the"
-" \"real\" arguments ``argv[1:]``?"
+"Should the argument list to ``__main__`` include ``argv[0]``, or just the "
+"\"real\" arguments ``argv[1:]``?"
 msgstr ""
 
 #: ../pep-0299.txt:96
 msgid ""
-"``argv[0]`` is included for symmetry with ``sys.argv`` and easy "
-"transition to the new standard idiom."
+"``argv[0]`` is included for symmetry with ``sys.argv`` and easy transition "
+"to the new standard idiom."
 msgstr ""
 
 #: ../pep-0299.txt:101
@@ -181,10 +181,10 @@ msgstr ""
 
 #: ../pep-0299.txt:103
 msgid ""
-"In a short discussion on python-dev [1], two major backwards "
-"compatibility problems were brought up and Guido pronounced that he "
-"doesn't like the idea anyway as it's \"not worth the change (in docs, "
-"user habits, etc.) and there's nothing particularly broken.\""
+"In a short discussion on python-dev [1], two major backwards compatibility "
+"problems were brought up and Guido pronounced that he doesn't like the idea "
+"anyway as it's \"not worth the change (in docs, user habits, etc.) and "
+"there's nothing particularly broken.\""
 msgstr ""
 
 #: ../pep-0299.txt:110
@@ -193,8 +193,8 @@ msgstr ""
 
 #: ../pep-0299.txt:112
 msgid ""
-"Georg Brandl, \"What about PEP 299\", https://mail.python.org/pipermail"
-"/python-dev/2006-March/062951.html"
+"Georg Brandl, \"What about PEP 299\", https://mail.python.org/pipermail/"
+"python-dev/2006-March/062951.html"
 msgstr ""
 
 #: ../pep-0299.txt:117
@@ -204,4 +204,3 @@ msgstr ""
 #: ../pep-0299.txt:119
 msgid "This document has been placed in the public domain."
 msgstr ""
-

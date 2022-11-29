@@ -87,8 +87,8 @@ msgstr ""
 
 #: ../pep-0409.txt:19
 msgid ""
-"One of the open issues from :pep:`3134` is suppressing context:  "
-"currently there is no way to do it.  This PEP proposes one."
+"One of the open issues from :pep:`3134` is suppressing context:  currently "
+"there is no way to do it.  This PEP proposes one."
 msgstr ""
 
 #: ../pep-0409.txt:24
@@ -109,18 +109,17 @@ msgstr ""
 
 #: ../pep-0409.txt:32
 msgid ""
-"When writing libraries, or even just custom classes, it can become "
-"necessary to raise exceptions; moreover it can be useful, even necessary,"
-" to change from one exception to another.  To take an example from my dbf"
-" module::"
+"When writing libraries, or even just custom classes, it can become necessary "
+"to raise exceptions; moreover it can be useful, even necessary, to change "
+"from one exception to another.  To take an example from my dbf module::"
 msgstr ""
 
 #: ../pep-0409.txt:42
 msgid ""
 "Whatever the original exception was (``ValueError``, ``TypeError``, or "
 "something else) is irrelevant.  The exception from this point on is a "
-"``DbfError``, and the original exception is of no value.  However, if "
-"this exception is printed, we would currently see both."
+"``DbfError``, and the original exception is of no value.  However, if this "
+"exception is printed, we would currently see both."
 msgstr ""
 
 #: ../pep-0409.txt:49
@@ -146,7 +145,8 @@ msgid "``raise NewException() from None``"
 msgstr ""
 
 #: ../pep-0409.txt:59
-msgid "Follows existing syntax of explicitly declaring the originating exception"
+msgid ""
+"Follows existing syntax of explicitly declaring the originating exception"
 msgstr ""
 
 #: ../pep-0409.txt:62
@@ -179,14 +179,14 @@ msgstr ""
 
 #: ../pep-0409.txt:80
 msgid ""
-"It has the advantage of using the existing pattern of explicitly setting "
-"the cause::"
+"It has the advantage of using the existing pattern of explicitly setting the "
+"cause::"
 msgstr ""
 
 #: ../pep-0409.txt:85
 msgid ""
-"but because the cause is ``None`` the previous context is not displayed "
-"by the default exception printing routines."
+"but because the cause is ``None`` the previous context is not displayed by "
+"the default exception printing routines."
 msgstr ""
 
 #: ../pep-0409.txt:90
@@ -195,24 +195,24 @@ msgstr ""
 
 #: ../pep-0409.txt:92
 msgid ""
-"Note: after acceptance of this PEP, a cleaner implementation mechanism "
-"was proposed and accepted in :pep:`415`. Refer to that PEP for more "
-"details on the implementation actually used in Python 3.3."
+"Note: after acceptance of this PEP, a cleaner implementation mechanism was "
+"proposed and accepted in :pep:`415`. Refer to that PEP for more details on "
+"the implementation actually used in Python 3.3."
 msgstr ""
 
 #: ../pep-0409.txt:96
 msgid ""
 "Currently, ``None`` is the default for both ``__context__`` and "
-"``__cause__``. In order to support ``raise ... from None`` (which would "
-"set ``__cause__`` to ``None``) we need a different default value for "
-"``__cause__``.  Several ideas were put forth on how to implement this at "
-"the language level:"
+"``__cause__``. In order to support ``raise ... from None`` (which would set "
+"``__cause__`` to ``None``) we need a different default value for "
+"``__cause__``.  Several ideas were put forth on how to implement this at the "
+"language level:"
 msgstr ""
 
 #: ../pep-0409.txt:101
 msgid ""
-"Overwrite the previous exception information (side-stepping the issue and"
-" leaving ``__cause__`` at ``None``)."
+"Overwrite the previous exception information (side-stepping the issue and "
+"leaving ``__cause__`` at ``None``)."
 msgstr ""
 
 #: ../pep-0409.txt:104
@@ -231,8 +231,8 @@ msgstr ""
 #: ../pep-0409.txt:111
 msgid ""
 "Rejected as this encourages the use of two different objects types for "
-"``__cause__`` with one of them (boolean) not allowed to have the full "
-"range of possible values (``True`` would never be used)."
+"``__cause__`` with one of them (boolean) not allowed to have the full range "
+"of possible values (``True`` would never be used)."
 msgstr ""
 
 #: ../pep-0409.txt:115
@@ -241,9 +241,8 @@ msgstr ""
 
 #: ../pep-0409.txt:117
 msgid ""
-"Rejected as possibly confusing, possibly being mistakenly raised by "
-"users, and not being a truly unique value as ``None``, ``True``, and "
-"``False`` are."
+"Rejected as possibly confusing, possibly being mistakenly raised by users, "
+"and not being a truly unique value as ``None``, ``True``, and ``False`` are."
 msgstr ""
 
 #: ../pep-0409.txt:120
@@ -271,8 +270,8 @@ msgstr ""
 
 #: ../pep-0409.txt:132
 msgid ""
-"Error information is not thrown away, so custom code can trace the entire"
-" exception chain even if the default code does not."
+"Error information is not thrown away, so custom code can trace the entire "
+"exception chain even if the default code does not."
 msgstr ""
 
 #: ../pep-0409.txt:137
@@ -281,8 +280,8 @@ msgstr ""
 
 #: ../pep-0409.txt:139
 msgid ""
-"To support ``raise Exception from None``, ``__context__`` will stay as it"
-" is, but ``__cause__`` will start out as ``Ellipsis`` and will change to "
+"To support ``raise Exception from None``, ``__context__`` will stay as it "
+"is, but ``__cause__`` will start out as ``Ellipsis`` and will change to "
 "``None`` when the ``raise Exception from None`` method is used."
 msgstr ""
 
@@ -345,13 +344,14 @@ msgid "if ``__cause__`` is anything else, ``__cause__`` will be printed."
 msgstr ""
 
 #: ../pep-0409.txt:160
-msgid "In both of the latter cases the exception chain will stop being followed."
+msgid ""
+"In both of the latter cases the exception chain will stop being followed."
 msgstr ""
 
 #: ../pep-0409.txt:162
 msgid ""
-"Because the default value for ``__cause__`` is now ``Ellipsis`` and "
-"``raise Exception from Cause`` is simply syntactic sugar for::"
+"Because the default value for ``__cause__`` is now ``Ellipsis`` and ``raise "
+"Exception from Cause`` is simply syntactic sugar for::"
 msgstr ""
 
 #: ../pep-0409.txt:169
@@ -363,7 +363,8 @@ msgid "Patches"
 msgstr ""
 
 #: ../pep-0409.txt:177
-msgid "There is a patch for CPython implementing this attached to `Issue 6210`_."
+msgid ""
+"There is a patch for CPython implementing this attached to `Issue 6210`_."
 msgstr ""
 
 #: ../pep-0409.txt:181
@@ -381,4 +382,3 @@ msgstr ""
 #: ../pep-0409.txt:196
 msgid "This document has been placed in the public domain."
 msgstr ""
-

@@ -77,8 +77,8 @@ msgstr ""
 msgid ""
 ":pep:`492` and :pep:`525` introduce support for native coroutines and "
 "asynchronous generators using ``async`` / ``await`` syntax.  This PEP "
-"proposes to add asynchronous versions of list, set, dict comprehensions "
-"and generator expressions."
+"proposes to add asynchronous versions of list, set, dict comprehensions and "
+"generator expressions."
 msgstr ""
 
 #: ../pep-0530.txt:25
@@ -88,27 +88,25 @@ msgstr ""
 #: ../pep-0530.txt:27
 msgid ""
 "Python has extensive support for synchronous comprehensions, allowing to "
-"produce lists, dicts, and sets with a simple and concise syntax.  We "
-"propose implementing similar syntactic constructions for the asynchronous"
-" code."
+"produce lists, dicts, and sets with a simple and concise syntax.  We propose "
+"implementing similar syntactic constructions for the asynchronous code."
 msgstr ""
 
 #: ../pep-0530.txt:32
 msgid ""
-"To illustrate the readability improvement, consider the following "
-"example::"
+"To illustrate the readability improvement, consider the following example::"
 msgstr ""
 
 #: ../pep-0530.txt:40
 msgid ""
-"With the proposed asynchronous comprehensions syntax, the above code "
-"becomes as short as::"
+"With the proposed asynchronous comprehensions syntax, the above code becomes "
+"as short as::"
 msgstr ""
 
 #: ../pep-0530.txt:45
 msgid ""
-"The PEP also makes it possible to use the ``await`` expressions in all "
-"kinds of comprehensions::"
+"The PEP also makes it possible to use the ``await`` expressions in all kinds "
+"of comprehensions::"
 msgstr ""
 
 #: ../pep-0530.txt:52
@@ -122,8 +120,8 @@ msgstr ""
 #: ../pep-0530.txt:57
 msgid ""
 "We propose to allow using ``async for`` inside list, set and dict "
-"comprehensions.  Pending :pep:`525` approval, we can also allow creation "
-"of asynchronous generator expressions."
+"comprehensions.  Pending :pep:`525` approval, we can also allow creation of "
+"asynchronous generator expressions."
 msgstr ""
 
 #: ../pep-0530.txt:61
@@ -148,8 +146,8 @@ msgstr ""
 
 #: ../pep-0530.txt:71
 msgid ""
-"It is allowed to use ``async for`` along with  ``if`` and ``for`` clauses"
-" in asynchronous comprehensions and generator expressions::"
+"It is allowed to use ``async for`` along with  ``if`` and ``for`` clauses in "
+"asynchronous comprehensions and generator expressions::"
 msgstr ""
 
 #: ../pep-0530.txt:78
@@ -162,8 +160,8 @@ msgstr ""
 msgid ""
 "In principle, asynchronous generator expressions are allowed in any "
 "context.  However, in Python 3.6, due to ``async`` and ``await`` soft-"
-"keyword status, asynchronous generator expressions are only allowed in an"
-" ``async def`` function.  Once ``async`` and ``await`` become reserved "
+"keyword status, asynchronous generator expressions are only allowed in an "
+"``async def`` function.  Once ``async`` and ``await`` become reserved "
 "keywords in Python 3.7, this restriction will be removed."
 msgstr ""
 
@@ -173,8 +171,8 @@ msgstr ""
 
 #: ../pep-0530.txt:92
 msgid ""
-"We propose to allow the use of ``await`` expressions in both asynchronous"
-" and synchronous comprehensions::"
+"We propose to allow the use of ``await`` expressions in both asynchronous "
+"and synchronous comprehensions::"
 msgstr ""
 
 #: ../pep-0530.txt:111
@@ -187,8 +185,8 @@ msgstr ""
 
 #: ../pep-0530.txt:117
 msgid ""
-"The proposal requires one change on the grammar level: adding the "
-"optional \"async\" keyword to ``comp_for``::"
+"The proposal requires one change on the grammar level: adding the optional "
+"\"async\" keyword to ``comp_for``::"
 msgstr ""
 
 #: ../pep-0530.txt:122
@@ -226,7 +224,8 @@ msgid "References"
 msgstr ""
 
 #: ../pep-0530.txt:147
-msgid "https://mail.python.org/pipermail/python-ideas/2016-September/042141.html"
+msgid ""
+"https://mail.python.org/pipermail/python-ideas/2016-September/042141.html"
 msgstr ""
 
 #: ../pep-0530.txt:149
@@ -243,8 +242,8 @@ msgstr ""
 
 #: ../pep-0530.txt:157
 msgid ""
-"I thank Guido van Rossum, Victor Stinner and Elvis Pranskevichus for "
-"their feedback, code reviews, and discussions around this PEP."
+"I thank Guido van Rossum, Victor Stinner and Elvis Pranskevichus for their "
+"feedback, code reviews, and discussions around this PEP."
 msgstr ""
 
 #: ../pep-0530.txt:162
@@ -254,4 +253,3 @@ msgstr ""
 #: ../pep-0530.txt:164
 msgid "This document has been placed in the public domain."
 msgstr ""
-

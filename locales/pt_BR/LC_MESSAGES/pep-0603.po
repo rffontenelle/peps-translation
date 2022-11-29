@@ -69,17 +69,17 @@ msgstr ""
 
 #: ../pep-0603.rst:17
 msgid ""
-"A *persistent data structure* is defined as a data structure that "
-"preserves the previous version of the data when the data is modified. "
-"Such data structures are effectively *immutable*, as operations on them "
-"do not update the structure in-place, but instead always yield a new "
-"updated structure (see [0]_ for more details.)"
+"A *persistent data structure* is defined as a data structure that preserves "
+"the previous version of the data when the data is modified. Such data "
+"structures are effectively *immutable*, as operations on them do not update "
+"the structure in-place, but instead always yield a new updated structure "
+"(see [0]_ for more details.)"
 msgstr ""
 
 #: ../pep-0603.rst:23
 msgid ""
-"This PEP proposes to add a new fully persistent and immutable mapping "
-"type called ``frozenmap`` to the ``collections`` module."
+"This PEP proposes to add a new fully persistent and immutable mapping type "
+"called ``frozenmap`` to the ``collections`` module."
 msgstr ""
 
 #: ../pep-0603.rst:26
@@ -95,8 +95,8 @@ msgstr ""
 #: ../pep-0603.rst:33
 msgid ""
 "Python has two immutable collection types: ``tuple`` and ``frozenset``.  "
-"These types can be used to represent immutable lists and sets. However, a"
-" way to represent immutable *mappings* does not yet exist, and this PEP "
+"These types can be used to represent immutable lists and sets. However, a "
+"way to represent immutable *mappings* does not yet exist, and this PEP "
 "proposes a ``frozenmap`` to implement an immutable *mapping*."
 msgstr ""
 
@@ -117,47 +117,47 @@ msgid "provides an API for efficient creation of \"modified\" versions."
 msgstr ""
 
 #: ../pep-0603.rst:45
-msgid "The following use cases illustrate why an immutable mapping is desirable:"
+msgid ""
+"The following use cases illustrate why an immutable mapping is desirable:"
 msgstr ""
 
 #: ../pep-0603.rst:48
 msgid ""
-"Immutable mappings are hashable which allows their use as dictionary keys"
-" or set elements."
+"Immutable mappings are hashable which allows their use as dictionary keys or "
+"set elements."
 msgstr ""
 
 #: ../pep-0603.rst:51
 msgid ""
-"This hashable property permits functions decorated with "
-"``@functools.lru_cache()`` to accept immutable mappings as arguments. "
-"Unlike an immutable mapping, passing a plain ``dict`` to such a function "
-"results in error."
+"This hashable property permits functions decorated with ``@functools."
+"lru_cache()`` to accept immutable mappings as arguments. Unlike an immutable "
+"mapping, passing a plain ``dict`` to such a function results in error."
 msgstr ""
 
 #: ../pep-0603.rst:56
 msgid ""
-"Immutable mappings can hold complex state. Since immutable mappings can "
-"be copied by reference, transactional mutation of state can be "
-"efficiently implemented."
+"Immutable mappings can hold complex state. Since immutable mappings can be "
+"copied by reference, transactional mutation of state can be efficiently "
+"implemented."
 msgstr ""
 
 #: ../pep-0603.rst:60
 msgid ""
-"Immutable mappings can be used to safely share dictionaries across thread"
-" and asynchronous task boundaries. The immutability makes it easier to "
-"reason about threads and asynchronous tasks."
+"Immutable mappings can be used to safely share dictionaries across thread "
+"and asynchronous task boundaries. The immutability makes it easier to reason "
+"about threads and asynchronous tasks."
 msgstr ""
 
 #: ../pep-0603.rst:64
 msgid ""
 "Lastly, CPython [1]_ already contains the main portion of the C code "
-"required for the ``frozenmap`` implementation.  The C code already exists"
-" to implement the ``contextvars`` module (see :pep:`567` for more "
-"details.) Exposing this C code via a public collection type drastically "
-"increases the number of users of the code.  This leads to increased code "
-"quality by discovering bugs and improving performance which without a "
-"``frozenmap`` collection would be very challenging because most programs "
-"use the ``contextvars`` module indirectly."
+"required for the ``frozenmap`` implementation.  The C code already exists to "
+"implement the ``contextvars`` module (see :pep:`567` for more details.) "
+"Exposing this C code via a public collection type drastically increases the "
+"number of users of the code.  This leads to increased code quality by "
+"discovering bugs and improving performance which without a ``frozenmap`` "
+"collection would be very challenging because most programs use the "
+"``contextvars`` module indirectly."
 msgstr ""
 
 #: ../pep-0603.rst:75
@@ -166,8 +166,8 @@ msgstr ""
 
 #: ../pep-0603.rst:77
 msgid ""
-"A new public immutable type ``frozenmap`` is added to the ``collections``"
-" module."
+"A new public immutable type ``frozenmap`` is added to the ``collections`` "
+"module."
 msgstr ""
 
 #: ../pep-0603.rst:81
@@ -190,8 +190,8 @@ msgstr ""
 
 #: ../pep-0603.rst:90
 msgid ""
-"``frozenmap(collection)`` creates a mapping from the passed "
-"``collection`` object. The passed ``collection`` object can be:"
+"``frozenmap(collection)`` creates a mapping from the passed ``collection`` "
+"object. The passed ``collection`` object can be:"
 msgstr ""
 
 #: ../pep-0603.rst:93
@@ -204,8 +204,8 @@ msgstr ""
 
 #: ../pep-0603.rst:95
 msgid ""
-"an object with an ``items()`` method that is expected to return a series "
-"of key/value tuples, or"
+"an object with an ``items()`` method that is expected to return a series of "
+"key/value tuples, or"
 msgstr ""
 
 #: ../pep-0603.rst:97
@@ -218,9 +218,9 @@ msgstr ""
 
 #: ../pep-0603.rst:102
 msgid ""
-"``frozenmap`` implements the ``collection.abc.Mapping`` protocol. "
-"Therefore, getters, membership checks, and iteration work the same way "
-"that they would for a ``dict``::"
+"``frozenmap`` implements the ``collection.abc.Mapping`` protocol. Therefore, "
+"getters, membership checks, and iteration work the same way that they would "
+"for a ``dict``::"
 msgstr ""
 
 #: ../pep-0603.rst:123
@@ -236,8 +236,8 @@ msgstr ""
 #: ../pep-0603.rst:128
 msgid ""
 "The complexity of mutation operations is O(log N) and the resulting "
-"``frozenmap`` copies often consume very little additional memory due to "
-"the use of structural sharing (read [6]_ for more details.)"
+"``frozenmap`` copies often consume very little additional memory due to the "
+"use of structural sharing (read [6]_ for more details.)"
 msgstr ""
 
 #: ../pep-0603.rst:133
@@ -246,8 +246,7 @@ msgstr ""
 
 #: ../pep-0603.rst:135
 msgid ""
-"The method creates a new ``frozenmap`` copy with a new *key* / *value* "
-"pair::"
+"The method creates a new ``frozenmap`` copy with a new *key* / *value* pair::"
 msgstr ""
 
 #: ../pep-0603.rst:145
@@ -273,8 +272,8 @@ msgstr ""
 
 #: ../pep-0603.rst:176
 msgid ""
-"Calling the ``union()`` method to add/replace N keys is more efficient "
-"than calling the ``including()`` method N times."
+"Calling the ``union()`` method to add/replace N keys is more efficient than "
+"calling the ``including()`` method N times."
 msgstr ""
 
 #: ../pep-0603.rst:180
@@ -284,16 +283,15 @@ msgstr ""
 #: ../pep-0603.rst:182
 msgid ""
 "The method allows efficient copying of a ``frozenmap`` instance with "
-"multiple modifications applied.  This method is especially useful when "
-"the frozenmap in question contains thousands of key/value pairs and "
-"there's a need to update many of them in a performance-critical section "
-"of the code."
+"multiple modifications applied.  This method is especially useful when the "
+"frozenmap in question contains thousands of key/value pairs and there's a "
+"need to update many of them in a performance-critical section of the code."
 msgstr ""
 
 #: ../pep-0603.rst:188
 msgid ""
-"The ``frozenmap.mutating()`` method returns a mutable dict-like copy of "
-"the ``frozenmap`` object: an instance of ``collections.FrozenMapCopy``."
+"The ``frozenmap.mutating()`` method returns a mutable dict-like copy of the "
+"``frozenmap`` object: an instance of ``collections.FrozenMapCopy``."
 msgstr ""
 
 #: ../pep-0603.rst:192
@@ -308,26 +306,26 @@ msgstr ""
 
 #: ../pep-0603.rst:197
 msgid ""
-"are mutable, although any mutations on them do not affect the "
-"``frozenmap`` instances they were created from;"
+"are mutable, although any mutations on them do not affect the ``frozenmap`` "
+"instances they were created from;"
 msgstr ""
 
 #: ../pep-0603.rst:200
 msgid ""
-"can be passed to the ``frozenmap`` constructor; creating a frozenmap from"
-" a ``FrozenMapCopy`` object is an O(1) operation;"
+"can be passed to the ``frozenmap`` constructor; creating a frozenmap from a "
+"``FrozenMapCopy`` object is an O(1) operation;"
 msgstr ""
 
 #: ../pep-0603.rst:204
 msgid ""
-"have O(log N) complexity for get/set operations; creating them is an O(1)"
-" operation;"
+"have O(log N) complexity for get/set operations; creating them is an O(1) "
+"operation;"
 msgstr ""
 
 #: ../pep-0603.rst:207
 msgid ""
-"have a ``FrozenMapCopy.close()`` method that prevents any further "
-"access/mutation of the data;"
+"have a ``FrozenMapCopy.close()`` method that prevents any further access/"
+"mutation of the data;"
 msgstr ""
 
 #: ../pep-0603.rst:210
@@ -336,8 +334,8 @@ msgstr ""
 
 #: ../pep-0603.rst:212
 msgid ""
-"The below example illustrates how ``mutating()`` can be used with a "
-"context manager::"
+"The below example illustrates how ``mutating()`` can be used with a context "
+"manager::"
 msgstr ""
 
 #: ../pep-0603.rst:241
@@ -379,9 +377,8 @@ msgstr ""
 #: ../pep-0603.rst:273
 msgid ""
 "The proposed ``frozenmap`` immutable type uses a Hash Array Mapped Trie "
-"(HAMT) data structure. Functional programming languages, like Clojure, "
-"use HAMT to efficiently implement immutable hash tables, vectors, and "
-"sets."
+"(HAMT) data structure. Functional programming languages, like Clojure, use "
+"HAMT to efficiently implement immutable hash tables, vectors, and sets."
 msgstr ""
 
 #: ../pep-0603.rst:279
@@ -390,25 +387,25 @@ msgstr ""
 
 #: ../pep-0603.rst:281
 msgid ""
-"The key design contract of HAMT is the guarantee of a predictable *value*"
-" when given the hash of a *key*. For a pair of *key* and *value*, the "
-"hash of the *key* can be used to determine the location of *value* in the"
-" hash map tree."
+"The key design contract of HAMT is the guarantee of a predictable *value* "
+"when given the hash of a *key*. For a pair of *key* and *value*, the hash of "
+"the *key* can be used to determine the location of *value* in the hash map "
+"tree."
 msgstr ""
 
 #: ../pep-0603.rst:286
 msgid ""
 "Immutable mappings implemented with HAMT have O(log N) performance for "
 "``set()`` and ``get()`` operations.  This efficiency is possible because "
-"mutation operations only affect one branch of the tree, making it "
-"possible to reuse non-mutated branches, and, therefore, avoiding copying "
-"of unmodified data."
+"mutation operations only affect one branch of the tree, making it possible "
+"to reuse non-mutated branches, and, therefore, avoiding copying of "
+"unmodified data."
 msgstr ""
 
 #: ../pep-0603.rst:292
 msgid ""
-"Read more about HAMT in [5]_.  The CPython implementation [1]_ has a "
-"fairly detailed description of the algorithm as well."
+"Read more about HAMT in [5]_.  The CPython implementation [1]_ has a fairly "
+"detailed description of the algorithm as well."
 msgstr ""
 
 #: ../pep-0603.rst:296
@@ -425,8 +422,8 @@ msgstr ""
 
 #: ../pep-0603.rst:307
 msgid ""
-"``frozenmap`` implemented with HAMT displays near O(1) performance for "
-"all benchmarked dictionary sizes."
+"``frozenmap`` implemented with HAMT displays near O(1) performance for all "
+"benchmarked dictionary sizes."
 msgstr ""
 
 #: ../pep-0603.rst:310
@@ -440,20 +437,19 @@ msgstr ""
 #: ../pep-0603.rst:320
 #, python-format
 msgid ""
-"Figure 2 compares the lookup costs of ``dict`` versus a HAMT-based "
-"immutable mapping.  HAMT lookup time is ~30% slower than Python dict "
-"lookups on average. This performance difference exists since traversing a"
-" shallow tree is less efficient than lookup in a flat continuous array."
+"Figure 2 compares the lookup costs of ``dict`` versus a HAMT-based immutable "
+"mapping.  HAMT lookup time is ~30% slower than Python dict lookups on "
+"average. This performance difference exists since traversing a shallow tree "
+"is less efficient than lookup in a flat continuous array."
 msgstr ""
 
 #: ../pep-0603.rst:325
 msgid ""
-"Further to that, quoting [6]_: \"[using HAMT] means that in practice "
-"while insertions, deletions, and lookups into a persistent hash array "
-"mapped trie have a computational complexity of O(log n), for most "
-"applications they are effectively constant time, as it would require an "
-"extremely large number of entries to make any operation take more than a "
-"dozen steps.\""
+"Further to that, quoting [6]_: \"[using HAMT] means that in practice while "
+"insertions, deletions, and lookups into a persistent hash array mapped trie "
+"have a computational complexity of O(log n), for most applications they are "
+"effectively constant time, as it would require an extremely large number of "
+"entries to make any operation take more than a dozen steps.\""
 msgstr ""
 
 #: ../pep-0603.rst:334
@@ -466,8 +462,8 @@ msgstr ""
 
 #: ../pep-0603.rst:339
 msgid ""
-"The lower-case \"frozenmap\" resonates well with the ``frozenset`` built-"
-"in as well as with types like ``collections.defaultdict``."
+"The lower-case \"frozenmap\" resonates well with the ``frozenset`` built-in "
+"as well as with types like ``collections.defaultdict``."
 msgstr ""
 
 #: ../pep-0603.rst:344
@@ -480,8 +476,8 @@ msgstr ""
 
 #: ../pep-0603.rst:348
 msgid ""
-"a dict is a concrete implementation of ``abc.MutableMapping`` with O(1) "
-"get and set operations (``frozenmap`` has O(log N) complexity);"
+"a dict is a concrete implementation of ``abc.MutableMapping`` with O(1) get "
+"and set operations (``frozenmap`` has O(log N) complexity);"
 msgstr ""
 
 #: ../pep-0603.rst:351
@@ -491,21 +487,20 @@ msgstr ""
 #: ../pep-0603.rst:353
 msgid ""
 "The proposed ``frozenmap`` does not have these mentioned properties. "
-"Instead, ``frozenmap`` has an O(log N) cost of set/get operations, and it"
-" only implements the ``abc.Mapping`` protocol."
+"Instead, ``frozenmap`` has an O(log N) cost of set/get operations, and it "
+"only implements the ``abc.Mapping`` protocol."
 msgstr ""
 
 #: ../pep-0603.rst:361
 msgid ""
-"The full implementation of the proposed ``frozenmap`` type is available "
-"at [2]_.  The package includes C and pure Python implementations of the "
-"type."
+"The full implementation of the proposed ``frozenmap`` type is available at "
+"[2]_.  The package includes C and pure Python implementations of the type."
 msgstr ""
 
 #: ../pep-0603.rst:365
 msgid ""
-"See also the HAMT collection implementation as part of the CPython "
-"project tree here: [1]_."
+"See also the HAMT collection implementation as part of the CPython project "
+"tree here: [1]_."
 msgstr ""
 
 #: ../pep-0603.rst:370
@@ -533,7 +528,8 @@ msgid "https://gist.github.com/1st1/dbe27f2e14c30cce6f0b5fddfc8c437e"
 msgstr ""
 
 #: ../pep-0603.rst:382
-msgid "https://en.wikipedia.org/wiki/Hash_array_mapped_trie#cite_note-bagwell-1"
+msgid ""
+"https://en.wikipedia.org/wiki/Hash_array_mapped_trie#cite_note-bagwell-1"
 msgstr ""
 
 #: ../pep-0603.rst:384
@@ -546,8 +542,8 @@ msgstr ""
 
 #: ../pep-0603.rst:390
 msgid ""
-"I thank Carol Willing, Łukasz Langa, Larry Hastings, and Guido van Rossum"
-" for their feedback, ideas, edits, and discussions around this PEP."
+"I thank Carol Willing, Łukasz Langa, Larry Hastings, and Guido van Rossum "
+"for their feedback, ideas, edits, and discussions around this PEP."
 msgstr ""
 
 #: ../pep-0603.rst:396
@@ -556,7 +552,6 @@ msgstr ""
 
 #: ../pep-0603.rst:398
 msgid ""
-"This document is placed in the public domain or under the "
-"CC0-1.0-Universal license, whichever is more permissive."
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
 msgstr ""
-

@@ -77,9 +77,8 @@ msgstr ""
 
 #: ../pep-0597.rst:23
 msgid ""
-"A ``\"locale\"`` argument value for ``encoding`` is added too. It "
-"explicitly specifies that the locale encoding should be used, silencing "
-"the warning."
+"A ``\"locale\"`` argument value for ``encoding`` is added too. It explicitly "
+"specifies that the locale encoding should be used, silencing the warning."
 msgstr ""
 
 #: ../pep-0597.rst:29
@@ -92,45 +91,44 @@ msgstr ""
 
 #: ../pep-0597.rst:34
 msgid ""
-"Developers using macOS or Linux may forget that the default encoding is "
-"not always UTF-8."
+"Developers using macOS or Linux may forget that the default encoding is not "
+"always UTF-8."
 msgstr ""
 
 #: ../pep-0597.rst:37
 msgid ""
 "For example, using ``long_description = open(\"README.md\").read()`` in "
 "``setup.py`` is a common mistake. Many Windows users cannot install such "
-"packages if there is at least one non-ASCII character (e.g. emoji, author"
-" names, copyright symbols, and the like) in their UTF-8-encoded "
-"``README.md`` file."
+"packages if there is at least one non-ASCII character (e.g. emoji, author "
+"names, copyright symbols, and the like) in their UTF-8-encoded ``README.md`` "
+"file."
 msgstr ""
 
 #: ../pep-0597.rst:43
 msgid ""
-"Of the 4000 most downloaded packages from PyPI, 489 use non-ASCII "
-"characters in their README, and 82 fail to install from source on non-"
-"UTF-8 locales due to not specifying an encoding for a non-ASCII file. "
-"[1]_"
+"Of the 4000 most downloaded packages from PyPI, 489 use non-ASCII characters "
+"in their README, and 82 fail to install from source on non-UTF-8 locales due "
+"to not specifying an encoding for a non-ASCII file. [1]_"
 msgstr ""
 
 #: ../pep-0597.rst:48
 msgid ""
-"Another example is ``logging.basicConfig(filename=\"log.txt\")``. Some "
-"users might expect it to use UTF-8 by default, but the locale encoding is"
-" actually what is used. [2]_"
+"Another example is ``logging.basicConfig(filename=\"log.txt\")``. Some users "
+"might expect it to use UTF-8 by default, but the locale encoding is actually "
+"what is used. [2]_"
 msgstr ""
 
 #: ../pep-0597.rst:52
 msgid ""
 "Even Python experts may assume that the default encoding is UTF-8. This "
-"creates bugs that only happen on Windows; see [3]_, [4]_, [5]_, and [6]_ "
-"for example."
+"creates bugs that only happen on Windows; see [3]_, [4]_, [5]_, and [6]_ for "
+"example."
 msgstr ""
 
 #: ../pep-0597.rst:56
 msgid ""
-"Emitting a warning when the ``encoding`` argument is omitted will help "
-"find such mistakes."
+"Emitting a warning when the ``encoding`` argument is omitted will help find "
+"such mistakes."
 msgstr ""
 
 #: ../pep-0597.rst:61
@@ -153,8 +151,8 @@ msgstr ""
 
 #: ../pep-0597.rst:68
 msgid ""
-"If the locale encoding is assumed, the behavior is as expected (but could"
-" change if future versions of Python modify the default)"
+"If the locale encoding is assumed, the behavior is as expected (but could "
+"change if future versions of Python modify the default)"
 msgstr ""
 
 #: ../pep-0597.rst:71
@@ -163,9 +161,9 @@ msgstr ""
 
 #: ../pep-0597.rst:73
 msgid ""
-"``encoding=locale.getpreferredencoding(False)`` can be used to specify "
-"the locale encoding explicitly, but it is too long and easy to misuse "
-"(e.g. one can forget to pass ``False`` as its argument)."
+"``encoding=locale.getpreferredencoding(False)`` can be used to specify the "
+"locale encoding explicitly, but it is too long and easy to misuse (e.g. one "
+"can forget to pass ``False`` as its argument)."
 msgstr ""
 
 #: ../pep-0597.rst:77
@@ -178,15 +176,15 @@ msgstr ""
 
 #: ../pep-0597.rst:83
 msgid ""
-"Since UTF-8 has become the de-facto standard text encoding, we might "
-"default to it for opening files in the future."
+"Since UTF-8 has become the de-facto standard text encoding, we might default "
+"to it for opening files in the future."
 msgstr ""
 
 #: ../pep-0597.rst:86
 msgid ""
-"However, such a change will affect many applications and libraries. If we"
-" start emitting ``DeprecationWarning`` everywhere the ``encoding`` "
-"argument is omitted, it will be too noisy and painful."
+"However, such a change will affect many applications and libraries. If we "
+"start emitting ``DeprecationWarning`` everywhere the ``encoding`` argument "
+"is omitted, it will be too noisy and painful."
 msgstr ""
 
 #: ../pep-0597.rst:90
@@ -197,16 +195,16 @@ msgstr ""
 
 #: ../pep-0597.rst:93
 msgid ""
-"Reducing the number of omitted ``encoding`` arguments in libraries before"
-" we start emitting a ``DeprecationWarning`` by default."
+"Reducing the number of omitted ``encoding`` arguments in libraries before we "
+"start emitting a ``DeprecationWarning`` by default."
 msgstr ""
 
 #: ../pep-0597.rst:96
 msgid ""
 "Allowing users to pass ``encoding=\"locale\"`` to suppress the current "
 "warning and any ``DeprecationWarning`` added in the future, as well as "
-"retaining consistent behavior if later Python versions change the "
-"default, ensuring support for any Python version >=3.10."
+"retaining consistent behavior if later Python versions change the default, "
+"ensuring support for any Python version >=3.10."
 msgstr ""
 
 #: ../pep-0597.rst:103
@@ -219,9 +217,9 @@ msgstr ""
 
 #: ../pep-0597.rst:108
 msgid ""
-"Add a new ``EncodingWarning`` warning class as a subclass of ``Warning``."
-" It is emitted when the ``encoding`` argument is omitted and the default "
-"locale-specific encoding is used."
+"Add a new ``EncodingWarning`` warning class as a subclass of ``Warning``. It "
+"is emitted when the ``encoding`` argument is omitted and the default locale-"
+"specific encoding is used."
 msgstr ""
 
 #: ../pep-0597.rst:114
@@ -231,8 +229,8 @@ msgstr ""
 #: ../pep-0597.rst:116
 msgid ""
 "The ``-X warn_default_encoding`` option and the "
-"``PYTHONWARNDEFAULTENCODING`` environment variable are added. They are "
-"used to enable ``EncodingWarning``."
+"``PYTHONWARNDEFAULTENCODING`` environment variable are added. They are used "
+"to enable ``EncodingWarning``."
 msgstr ""
 
 #: ../pep-0597.rst:120
@@ -243,15 +241,15 @@ msgstr ""
 
 #: ../pep-0597.rst:123
 msgid ""
-"When the flag is set, ``io.TextIOWrapper()``, ``open()`` and other "
-"modules using them will emit ``EncodingWarning`` when the ``encoding`` "
-"argument is omitted."
+"When the flag is set, ``io.TextIOWrapper()``, ``open()`` and other modules "
+"using them will emit ``EncodingWarning`` when the ``encoding`` argument is "
+"omitted."
 msgstr ""
 
 #: ../pep-0597.rst:127
 msgid ""
-"Since ``EncodingWarning`` is a subclass of ``Warning``, they are shown by"
-" default (if the ``warn_default_encoding`` flag is set), unlike "
+"Since ``EncodingWarning`` is a subclass of ``Warning``, they are shown by "
+"default (if the ``warn_default_encoding`` flag is set), unlike "
 "``DeprecationWarning``."
 msgstr ""
 
@@ -273,9 +271,8 @@ msgstr ""
 
 #: ../pep-0597.rst:144
 msgid ""
-"``io.text_encoding()`` is a helper for functions with an "
-"``encoding=None`` parameter that pass it to ``io.TextIOWrapper()`` or "
-"``open()``."
+"``io.text_encoding()`` is a helper for functions with an ``encoding=None`` "
+"parameter that pass it to ``io.TextIOWrapper()`` or ``open()``."
 msgstr ""
 
 #: ../pep-0597.rst:148
@@ -310,14 +307,13 @@ msgstr ""
 msgid ""
 "Where using the locale encoding as the default encoding is reasonable, "
 "``encoding=\"locale\"`` will be used instead. For example, the "
-"``subprocess`` module will use the locale encoding as the default for "
-"pipes."
+"``subprocess`` module will use the locale encoding as the default for pipes."
 msgstr ""
 
 #: ../pep-0597.rst:198
 msgid ""
-"Many tests use ``open()`` without ``encoding`` specified to read ASCII "
-"text files. They should be rewritten with ``encoding=\"ascii\"``."
+"Many tests use ``open()`` without ``encoding`` specified to read ASCII text "
+"files. They should be rewritten with ``encoding=\"ascii\"``."
 msgstr ""
 
 #: ../pep-0597.rst:203
@@ -330,13 +326,14 @@ msgstr ""
 
 #: ../pep-0597.rst:208
 msgid ""
-"Although ``DeprecationWarning`` is suppressed by default, always emitting"
-" ``DeprecationWarning`` when the ``encoding`` argument is omitted would "
-"be too noisy."
+"Although ``DeprecationWarning`` is suppressed by default, always emitting "
+"``DeprecationWarning`` when the ``encoding`` argument is omitted would be "
+"too noisy."
 msgstr ""
 
 #: ../pep-0597.rst:212
-msgid "Noisy warnings may lead developers to dismiss the ``DeprecationWarning``."
+msgid ""
+"Noisy warnings may lead developers to dismiss the ``DeprecationWarning``."
 msgstr ""
 
 #: ../pep-0597.rst:217
@@ -345,8 +342,8 @@ msgstr ""
 
 #: ../pep-0597.rst:219
 msgid ""
-"We don't add \"locale\" as a codec alias because the locale can be "
-"changed at runtime."
+"We don't add \"locale\" as a codec alias because the locale can be changed "
+"at runtime."
 msgstr ""
 
 #: ../pep-0597.rst:222
@@ -372,14 +369,14 @@ msgstr ""
 #: ../pep-0597.rst:237
 msgid ""
 "Passing ``\"locale\"`` as the argument to ``encoding`` is not forward-"
-"compatible. Code using it will not work on Python older than 3.10, and "
-"will instead raise ``LookupError: unknown encoding: locale``."
+"compatible. Code using it will not work on Python older than 3.10, and will "
+"instead raise ``LookupError: unknown encoding: locale``."
 msgstr ""
 
 #: ../pep-0597.rst:241
 msgid ""
-"Until developers can drop Python 3.9 support, ``EncodingWarning`` can "
-"only be used for finding missing ``encoding=\"utf-8\"`` arguments."
+"Until developers can drop Python 3.9 support, ``EncodingWarning`` can only "
+"be used for finding missing ``encoding=\"utf-8\"`` arguments."
 msgstr ""
 
 #: ../pep-0597.rst:246
@@ -392,8 +389,8 @@ msgstr ""
 
 #: ../pep-0597.rst:251
 msgid ""
-"Since ``EncodingWarning`` is used to write cross-platform code, there is "
-"no need to teach it to new users."
+"Since ``EncodingWarning`` is used to write cross-platform code, there is no "
+"need to teach it to new users."
 msgstr ""
 
 #: ../pep-0597.rst:254
@@ -415,15 +412,15 @@ msgstr ""
 
 #: ../pep-0597.rst:265
 msgid ""
-"You can use ``-X warn_default_encoding`` or "
-"``PYTHONWARNDEFAULTENCODING=1`` to find this type of mistake."
+"You can use ``-X warn_default_encoding`` or ``PYTHONWARNDEFAULTENCODING=1`` "
+"to find this type of mistake."
 msgstr ""
 
 #: ../pep-0597.rst:268
 msgid ""
 "Omitting the ``encoding`` argument is not a bug when opening text files "
-"encoded in the locale encoding, but ``encoding=\"locale\"`` is "
-"recommended in Python 3.10 and later because it is more explicit."
+"encoded in the locale encoding, but ``encoding=\"locale\"`` is recommended "
+"in Python 3.10 and later because it is more explicit."
 msgstr ""
 
 #: ../pep-0597.rst:274
@@ -440,8 +437,8 @@ msgstr ""
 
 #: ../pep-0597.rst:282
 msgid ""
-"The latest discussion thread is: https://mail.python.org/archives/list"
-"/python-dev@python.org/thread/SFYUP2TWD5JZ5KDLVSTZ44GWKVY4YNCV/"
+"The latest discussion thread is: https://mail.python.org/archives/list/"
+"python-dev@python.org/thread/SFYUP2TWD5JZ5KDLVSTZ44GWKVY4YNCV/"
 msgstr ""
 
 #: ../pep-0597.rst:286
@@ -450,8 +447,8 @@ msgstr ""
 
 #: ../pep-0597.rst:288
 msgid ""
-"``encoding=\"locale\"`` and ``io.text_encoding()`` must be implemented in"
-" Python."
+"``encoding=\"locale\"`` and ``io.text_encoding()`` must be implemented in "
+"Python."
 msgstr ""
 
 #: ../pep-0597.rst:291
@@ -466,15 +463,15 @@ msgstr ""
 
 #: ../pep-0597.rst:297
 msgid ""
-"Some will, and report the warnings to libraries they use, so the option "
-"is worth it even if many developers don't enable it."
+"Some will, and report the warnings to libraries they use, so the option is "
+"worth it even if many developers don't enable it."
 msgstr ""
 
 #: ../pep-0597.rst:300
 msgid ""
-"For example, I found [7]_ and [8]_ by running ``pip install -U pip``, and"
-" [9]_ by running ``tox`` with the reference implementation. This "
-"demonstrates how this option can be used to find potential issues."
+"For example, I found [7]_ and [8]_ by running ``pip install -U pip``, and "
+"[9]_ by running ``tox`` with the reference implementation. This demonstrates "
+"how this option can be used to find potential issues."
 msgstr ""
 
 #: ../pep-0597.rst:307
@@ -483,57 +480,56 @@ msgstr ""
 
 #: ../pep-0597.rst:309
 msgid ""
-"\"Packages can't be installed when encoding is not UTF-8\" "
-"(https://github.com/methane/pep597-pypi-ascii)"
+"\"Packages can't be installed when encoding is not UTF-8\" (https://github."
+"com/methane/pep597-pypi-ascii)"
 msgstr ""
 
 #: ../pep-0597.rst:312
 msgid ""
-"\"Logging - Inconsistent behaviour when handling unicode\" "
-"(https://bugs.python.org/issue37111)"
+"\"Logging - Inconsistent behaviour when handling unicode\" (https://bugs."
+"python.org/issue37111)"
 msgstr ""
 
 #: ../pep-0597.rst:315
 msgid ""
-"Packaging tutorial in packaging.python.org didn't specify encoding to "
-"read a ``README.md`` "
-"(https://github.com/pypa/packaging.python.org/pull/682)"
+"Packaging tutorial in packaging.python.org didn't specify encoding to read a "
+"``README.md`` (https://github.com/pypa/packaging.python.org/pull/682)"
 msgstr ""
 
 #: ../pep-0597.rst:319
 msgid ""
-"``json.tool`` had used locale encoding to read JSON files. "
-"(https://bugs.python.org/issue33684)"
+"``json.tool`` had used locale encoding to read JSON files. (https://bugs."
+"python.org/issue33684)"
 msgstr ""
 
 #: ../pep-0597.rst:322
 msgid ""
-"site: Potential UnicodeDecodeError when handling pth file "
-"(https://bugs.python.org/issue33684)"
+"site: Potential UnicodeDecodeError when handling pth file (https://bugs."
+"python.org/issue33684)"
 msgstr ""
 
 #: ../pep-0597.rst:325
 msgid ""
-"pypa/pip: \"Installing packages fails if Python 3 installed into path "
-"with non-ASCII characters\" (https://github.com/pypa/pip/issues/9054)"
+"pypa/pip: \"Installing packages fails if Python 3 installed into path with "
+"non-ASCII characters\" (https://github.com/pypa/pip/issues/9054)"
 msgstr ""
 
 #: ../pep-0597.rst:329
 msgid ""
-"\"site: Potential UnicodeDecodeError when handling pth file\" "
-"(https://bugs.python.org/issue43214)"
+"\"site: Potential UnicodeDecodeError when handling pth file\" (https://bugs."
+"python.org/issue43214)"
 msgstr ""
 
 #: ../pep-0597.rst:332
 msgid ""
-"\"[pypa/pip] Use ``encoding`` option or binary mode for open()\" "
-"(https://github.com/pypa/pip/pull/9608)"
+"\"[pypa/pip] Use ``encoding`` option or binary mode for open()\" (https://"
+"github.com/pypa/pip/pull/9608)"
 msgstr ""
 
 #: ../pep-0597.rst:335
 msgid ""
-"\"Possible UnicodeError caused by missing encoding=\"utf-8\"\" "
-"(https://github.com/tox-dev/tox/issues/1908)"
+"\"Possible UnicodeError caused by missing encoding=\"utf-8\"\" (https://"
+"github.com/tox-dev/tox/issues/1908)"
 msgstr ""
 
 #: ../pep-0597.rst:340
@@ -542,7 +538,6 @@ msgstr ""
 
 #: ../pep-0597.rst:342
 msgid ""
-"This document is placed in the public domain or under the "
-"CC0-1.0-Universal license, whichever is more permissive."
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
 msgstr ""
-

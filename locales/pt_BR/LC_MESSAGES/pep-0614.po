@@ -79,8 +79,8 @@ msgstr ""
 
 #: ../pep-0614.rst:13
 msgid ""
-"https://mail.python.org/archives/list/python-"
-"dev@python.org/thread/VSR66MOTCDCY7ZFH4IG7QVFI2JXQQZQ5"
+"https://mail.python.org/archives/list/python-dev@python.org/thread/"
+"VSR66MOTCDCY7ZFH4IG7QVFI2JXQQZQ5"
 msgstr ""
 
 #: ../pep-0614.rst:17
@@ -100,35 +100,35 @@ msgstr ""
 
 #: ../pep-0614.rst:27
 msgid ""
-"When decorators were first being introduced, `Guido described "
-"<https://mail.python.org/archives/list/python-"
-"dev@python.org/message/P3JD24UFFPZUUDANOAI6GZAPIGY4CVK7>`_ the motivation"
-" to limit their syntax as a preference, not a technical requirement:"
+"When decorators were first being introduced, `Guido described <https://mail."
+"python.org/archives/list/python-dev@python.org/message/"
+"P3JD24UFFPZUUDANOAI6GZAPIGY4CVK7>`_ the motivation to limit their syntax as "
+"a preference, not a technical requirement:"
 msgstr ""
 
 #: ../pep-0614.rst:32
 msgid ""
-"I have a gut feeling about this one.  I'm not sure where it comes from, "
-"but I have it...  So while it would be quite easy to change the syntax to"
-" ``@test`` in the future, I'd like to stick to with the more restricted "
-"form unless a real use case is presented where allowing ``@test`` would "
-"increase readability."
+"I have a gut feeling about this one.  I'm not sure where it comes from, but "
+"I have it...  So while it would be quite easy to change the syntax to "
+"``@test`` in the future, I'd like to stick to with the more restricted form "
+"unless a real use case is presented where allowing ``@test`` would increase "
+"readability."
 msgstr ""
 
 #: ../pep-0614.rst:38
 msgid ""
 "While these limitations were rarely encountered in practice, `BPO issues "
-"<https://bugs.python.org/issue19660>`_ and `mailing list posts "
-"<https://mail.python.org/archives/list/python-"
-"ideas@python.org/thread/UQOCJH3KOPBP7P3AVNS3OYBGZPR3V2WO/#CAOXYF4GV76AFJNCYSYMQTBM7CIPPH5M>`_"
-" have consistently surfaced over the years requesting that they be "
-"removed. The `most recent one <https://mail.python.org/archives/list"
-"/python-ideas@python.org/thread/WOWD4P323DYDIGUQVWMESDWUG6QOW4MP>`_ "
-"(which `prompted this proposal <https://mail.python.org/archives/list"
-"/python-ideas@python.org/message/FKE7ZFGUDCU5WVOE2QTD5XGMCNCOMETV>`_) "
-"contained a good example of code using the ``PyQt5`` library that would "
-"become more readable, idiomatic, and maintainable if the existing "
-"restrictions were relaxed.  Slightly modified::"
+"<https://bugs.python.org/issue19660>`_ and `mailing list posts <https://mail."
+"python.org/archives/list/python-ideas@python.org/thread/"
+"UQOCJH3KOPBP7P3AVNS3OYBGZPR3V2WO/#CAOXYF4GV76AFJNCYSYMQTBM7CIPPH5M>`_ have "
+"consistently surfaced over the years requesting that they be removed. The "
+"`most recent one <https://mail.python.org/archives/list/python-ideas@python."
+"org/thread/WOWD4P323DYDIGUQVWMESDWUG6QOW4MP>`_ (which `prompted this "
+"proposal <https://mail.python.org/archives/list/python-ideas@python.org/"
+"message/FKE7ZFGUDCU5WVOE2QTD5XGMCNCOMETV>`_) contained a good example of "
+"code using the ``PyQt5`` library that would become more readable, idiomatic, "
+"and maintainable if the existing restrictions were relaxed.  Slightly "
+"modified::"
 msgstr ""
 
 #: ../pep-0614.rst:64
@@ -137,8 +137,8 @@ msgstr ""
 
 #: ../pep-0614.rst:78
 msgid ""
-"Further, the current grammar is already loose enough that it's trivial to"
-" hack more complicated decorator expressions together. So rather than "
+"Further, the current grammar is already loose enough that it's trivial to "
+"hack more complicated decorator expressions together. So rather than "
 "disallow arbitrarily complex expressions, as intended, the current "
 "restrictions only make them uglier and less efficient::"
 msgstr ""
@@ -155,26 +155,25 @@ msgstr ""
 msgid ""
 "The decision to allow *any* valid expression (and not just relaxing the "
 "current restrictions to allow, for example, subscripting) has been "
-"considered as the next logical step in the evolution of decorator grammar"
-" for quite some time.  As `Guido noted "
-"<https://mail.python.org/archives/list/python-"
-"ideas@python.org/message/CAOXYF4GV76AFJNCYSYMQTBM7CIPPH5M>`_, during yet "
-"another mailing list thread:"
+"considered as the next logical step in the evolution of decorator grammar "
+"for quite some time.  As `Guido noted <https://mail.python.org/archives/list/"
+"python-ideas@python.org/message/CAOXYF4GV76AFJNCYSYMQTBM7CIPPH5M>`_, during "
+"yet another mailing list thread:"
 msgstr ""
 
 #: ../pep-0614.rst:112
 msgid ""
-"I don't think it's reasonable to constrain it less than it currently is "
-"but more than a general expression."
+"I don't think it's reasonable to constrain it less than it currently is but "
+"more than a general expression."
 msgstr ""
 
 #: ../pep-0614.rst:115
 msgid ""
 "Special-casing the grammar to allow *some* useful cases would only "
 "complicate the current situation, and all but guarantee that the process "
-"would repeat itself sometime in the future.  Further, one purpose of this"
-" grammatical change is to discourage the temptation to use hacks like the"
-" ``eval`` and identity-function anti-patterns shown above."
+"would repeat itself sometime in the future.  Further, one purpose of this "
+"grammatical change is to discourage the temptation to use hacks like the "
+"``eval`` and identity-function anti-patterns shown above."
 msgstr ""
 
 #: ../pep-0614.rst:122
@@ -189,21 +188,20 @@ msgstr ""
 
 #: ../pep-0614.rst:129
 msgid ""
-"Throughout this document, the word \"expression\" is used as defined in "
-"the `Python Language Reference "
-"<https://docs.python.org/3.9/reference/expressions.html#grammar-token-"
-"expression>`_. This can be summarized as \"anything that's valid as a "
-"test in ``if``, ``elif``, and ``while`` blocks\".  This differs subtly "
-"from a perhaps more popular `definition "
-"<https://docs.python.org/3/glossary.html#term-expression>`_, which can be"
-" summarized as \"anything that's valid as string input to ``eval``\"."
+"Throughout this document, the word \"expression\" is used as defined in the "
+"`Python Language Reference <https://docs.python.org/3.9/reference/"
+"expressions.html#grammar-token-expression>`_. This can be summarized as "
+"\"anything that's valid as a test in ``if``, ``elif``, and ``while`` "
+"blocks\".  This differs subtly from a perhaps more popular `definition "
+"<https://docs.python.org/3/glossary.html#term-expression>`_, which can be "
+"summarized as \"anything that's valid as string input to ``eval``\"."
 msgstr ""
 
 #: ../pep-0614.rst:138
 msgid ""
-"This definition of \"expression\" is convenient in that it fits our needs"
-" well, and reuses the allowed grammar of existing language constructs.  "
-"It has two subtle differences from the other definition:"
+"This definition of \"expression\" is convenient in that it fits our needs "
+"well, and reuses the allowed grammar of existing language constructs.  It "
+"has two subtle differences from the other definition:"
 msgstr ""
 
 #: ../pep-0614.rst:144
@@ -227,9 +225,9 @@ msgstr ""
 #: ../pep-0614.rst:158
 msgid ""
 "Indeed, it may even lead inexperienced readers to conclude that several "
-"decorators are being applied, as if they were stacked. Requiring "
-"parentheses here makes the (admittedly nonsensical) intent clear without "
-"imposing further restrictions and grammar complications."
+"decorators are being applied, as if they were stacked. Requiring parentheses "
+"here makes the (admittedly nonsensical) intent clear without imposing "
+"further restrictions and grammar complications."
 msgstr ""
 
 #: ../pep-0614.rst:165
@@ -245,8 +243,8 @@ msgstr ""
 #: ../pep-0614.rst:170
 msgid ""
 "This rule is included to simplify the choice for the user between an "
-"assignment statement and an assignment expression -- there is no "
-"syntactic position where both are valid."
+"assignment statement and an assignment expression -- there is no syntactic "
+"position where both are valid."
 msgstr ""
 
 #: ../pep-0614.rst:174
@@ -272,7 +270,8 @@ msgid "Backwards Compatibility"
 msgstr ""
 
 #: ../pep-0614.rst:193
-msgid "This new grammar is fully backward-compatible with the existing grammar."
+msgid ""
+"This new grammar is fully backward-compatible with the existing grammar."
 msgstr ""
 
 #: ../pep-0614.rst:198
@@ -281,9 +280,8 @@ msgstr ""
 
 #: ../pep-0614.rst:200
 msgid ""
-"Decorators can continue to be taught as they always have; the average "
-"Python programmer is likely unaware that the current restriction even "
-"exists."
+"Decorators can continue to be taught as they always have; the average Python "
+"programmer is likely unaware that the current restriction even exists."
 msgstr ""
 
 #: ../pep-0614.rst:206
@@ -292,8 +290,8 @@ msgstr ""
 
 #: ../pep-0614.rst:208
 msgid ""
-"The author has written a `CPython implementation "
-"<https://github.com/python/cpython/pull/18570>`_."
+"The author has written a `CPython implementation <https://github.com/python/"
+"cpython/pull/18570>`_."
 msgstr ""
 
 #: ../pep-0614.rst:213
@@ -302,7 +300,6 @@ msgstr ""
 
 #: ../pep-0614.rst:215
 msgid ""
-"This document is placed in the public domain or under the "
-"CC0-1.0-Universal license, whichever is more permissive."
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
 msgstr ""
-

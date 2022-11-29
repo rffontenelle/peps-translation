@@ -68,8 +68,8 @@ msgstr ""
 #: ../pep-0295.txt:15
 msgid ""
 "This PEP describes an interpretation of multiline string constants for "
-"Python.  It suggests stripping spaces after newlines and stripping a "
-"newline if it is first character after an opening quotation."
+"Python.  It suggests stripping spaces after newlines and stripping a newline "
+"if it is first character after an opening quotation."
 msgstr ""
 
 #: ../pep-0295.txt:22
@@ -97,8 +97,8 @@ msgstr ""
 
 #: ../pep-0295.txt:52
 msgid ""
-"ignore in string constants all spaces and tabs up to first non-whitespace"
-" character, but no more than current indentation."
+"ignore in string constants all spaces and tabs up to first non-whitespace "
+"character, but no more than current indentation."
 msgstr ""
 
 #: ../pep-0295.txt:56
@@ -107,14 +107,14 @@ msgstr ""
 
 #: ../pep-0295.txt:61
 msgid ""
-"To get this result, previous programs could be rewritten for current "
-"Python as (note, this gives the same result with new strings meaning)::"
+"To get this result, previous programs could be rewritten for current Python "
+"as (note, this gives the same result with new strings meaning)::"
 msgstr ""
 
 #: ../pep-0295.txt:75
 msgid ""
-"Or stripping can be done with library routines at runtime (as pydoc "
-"does), but this decreases program readability."
+"Or stripping can be done with library routines at runtime (as pydoc does), "
+"but this decreases program readability."
 msgstr ""
 
 #: ../pep-0295.txt:80
@@ -128,10 +128,10 @@ msgstr ""
 #: ../pep-0295.txt:84
 msgid ""
 "In original Python, there is no info about the current indentation (in "
-"spaces) at compile time, so space and tab stripping should be done at "
-"parse time.  Currently no flags can be passed to the parser in program "
-"text (like ``from __future__ import xxx``).  I suggest enabling or "
-"disabling of this feature at Python compile time depending of CPP flag "
+"spaces) at compile time, so space and tab stripping should be done at parse "
+"time.  Currently no flags can be passed to the parser in program text (like "
+"``from __future__ import xxx``).  I suggest enabling or disabling of this "
+"feature at Python compile time depending of CPP flag "
 "``Py_PARSE_MULTILINE_STRINGS``."
 msgstr ""
 
@@ -141,8 +141,8 @@ msgstr ""
 
 #: ../pep-0295.txt:95
 msgid ""
-"New interpretation of string constants can be implemented with flags 'i' "
-"and 'o' to string constants, like::"
+"New interpretation of string constants can be implemented with flags 'i' and "
+"'o' to string constants, like::"
 msgstr ""
 
 #: ../pep-0295.txt:112
@@ -158,4 +158,3 @@ msgstr ""
 #: ../pep-0295.txt:119
 msgid "This document has been placed in the Public Domain."
 msgstr ""
-

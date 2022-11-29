@@ -23,8 +23,8 @@ msgstr ""
 
 #: ../pep-0282.txt:3
 msgid ""
-"Vinay Sajip <vinay_sajip at red-dove.com>, Trent Mick "
-"<trentm@activestate.com>"
+"Vinay Sajip <vinay_sajip at red-dove.com>, Trent Mick <trentm@activestate."
+"com>"
 msgstr ""
 
 #: ../pep-0282.txt
@@ -69,16 +69,15 @@ msgstr ""
 
 #: ../pep-0282.txt:16
 msgid ""
-"This PEP describes a proposed logging package for Python's standard "
-"library."
+"This PEP describes a proposed logging package for Python's standard library."
 msgstr ""
 
 #: ../pep-0282.txt:19
 msgid ""
-"Basically the system involves the user creating one or more logger "
-"objects on which methods are called to log debugging notes, general "
-"information, warnings, errors etc.  Different logging 'levels' can be "
-"used to distinguish important messages from less important ones."
+"Basically the system involves the user creating one or more logger objects "
+"on which methods are called to log debugging notes, general information, "
+"warnings, errors etc.  Different logging 'levels' can be used to distinguish "
+"important messages from less important ones."
 msgstr ""
 
 #: ../pep-0282.txt:25
@@ -87,8 +86,8 @@ msgstr ""
 
 #: ../pep-0282.txt:27
 msgid ""
-"different logical logging streams (or 'channels') exist (say, one for "
-"'zope.zodb' stuff and another for 'mywebsite'-specific stuff)"
+"different logical logging streams (or 'channels') exist (say, one for 'zope."
+"zodb' stuff and another for 'mywebsite'-specific stuff)"
 msgstr ""
 
 #: ../pep-0282.txt:31
@@ -97,9 +96,9 @@ msgstr ""
 
 #: ../pep-0282.txt:33
 msgid ""
-"The system is configurable at runtime.  This configuration mechanism "
-"allows one to tune the level and type of logging done while not touching "
-"the application itself."
+"The system is configurable at runtime.  This configuration mechanism allows "
+"one to tune the level and type of logging done while not touching the "
+"application itself."
 msgstr ""
 
 #: ../pep-0282.txt:39
@@ -109,8 +108,8 @@ msgstr ""
 #: ../pep-0282.txt:41
 msgid ""
 "If a single logging mechanism is enshrined in the standard library, 1) "
-"logging is more likely to be done 'well', and 2) multiple libraries will "
-"be able to be integrated into larger applications which can be logged "
+"logging is more likely to be done 'well', and 2) multiple libraries will be "
+"able to be integrated into larger applications which can be logged "
 "reasonably coherently."
 msgstr ""
 
@@ -120,8 +119,8 @@ msgstr ""
 
 #: ../pep-0282.txt:50
 msgid ""
-"This proposal was put together after having studied the following logging"
-" packages:"
+"This proposal was put together after having studied the following logging "
+"packages:"
 msgstr ""
 
 #: ../pep-0282.txt:53
@@ -146,8 +145,8 @@ msgstr ""
 
 #: ../pep-0282.txt:62
 msgid ""
-"This shows a very simple example of how the logging package can be used "
-"to generate simple logging output on stderr."
+"This shows a very simple example of how the logging package can be used to "
+"generate simple logging output on stderr."
 msgstr ""
 
 #: ../pep-0282.txt:110
@@ -164,8 +163,8 @@ msgstr ""
 #: ../pep-0282.txt:126
 msgid ""
 "Applications make logging calls on **Logger** objects.  Loggers are "
-"organized in a hierarchical namespace and child Loggers inherit some "
-"logging properties from their parents in the namespace."
+"organized in a hierarchical namespace and child Loggers inherit some logging "
+"properties from their parents in the namespace."
 msgstr ""
 
 #: ../pep-0282.txt:130
@@ -190,37 +189,36 @@ msgstr ""
 #: ../pep-0282.txt:138
 msgid ""
 "These Logger objects create **LogRecord** objects which are passed to "
-"**Handler** objects for output.  Both Loggers and Handlers may use "
-"logging **levels** and (optionally) **Filters** to decide if they are "
-"interested in a particular LogRecord.  When it is necessary to output a "
-"LogRecord externally, a Handler can (optionally) use a **Formatter** to "
-"localize and format the message before sending it to an I/O stream."
+"**Handler** objects for output.  Both Loggers and Handlers may use logging "
+"**levels** and (optionally) **Filters** to decide if they are interested in "
+"a particular LogRecord.  When it is necessary to output a LogRecord "
+"externally, a Handler can (optionally) use a **Formatter** to localize and "
+"format the message before sending it to an I/O stream."
 msgstr ""
 
 #: ../pep-0282.txt:146
 msgid ""
-"Each Logger keeps track of a set of output Handlers.  By default all "
-"Loggers also send their output to all Handlers of their ancestor Loggers."
-"  Loggers may, however, also be configured to ignore Handlers higher up "
-"the tree."
+"Each Logger keeps track of a set of output Handlers.  By default all Loggers "
+"also send their output to all Handlers of their ancestor Loggers.  Loggers "
+"may, however, also be configured to ignore Handlers higher up the tree."
 msgstr ""
 
 #: ../pep-0282.txt:151
 msgid ""
-"The APIs are structured so that calls on the Logger APIs can be cheap "
-"when logging is disabled.  If logging is disabled for a given log level, "
-"then the Logger can make a cheap comparison test and return.  If logging "
-"is enabled for a given log level, the Logger is still careful to minimize"
-" costs before passing the LogRecord into the Handlers.  In particular, "
-"localization and formatting (which are relatively expensive) are deferred"
-" until the Handler requests them."
+"The APIs are structured so that calls on the Logger APIs can be cheap when "
+"logging is disabled.  If logging is disabled for a given log level, then the "
+"Logger can make a cheap comparison test and return.  If logging is enabled "
+"for a given log level, the Logger is still careful to minimize costs before "
+"passing the LogRecord into the Handlers.  In particular, localization and "
+"formatting (which are relatively expensive) are deferred until the Handler "
+"requests them."
 msgstr ""
 
 #: ../pep-0282.txt:160
 msgid ""
-"The overall Logger hierarchy can also have a level associated with it, "
-"which takes precedence over the levels of individual Loggers. This is "
-"done through a module-level function::"
+"The overall Logger hierarchy can also have a level associated with it, which "
+"takes precedence over the levels of individual Loggers. This is done through "
+"a module-level function::"
 msgstr ""
 
 #: ../pep-0282.txt:173
@@ -253,29 +251,29 @@ msgstr ""
 
 #: ../pep-0282.txt:183
 msgid ""
-"The term CRITICAL is used in preference to FATAL, which is used by log4j."
-"  The levels are conceptually the same - that of a serious, or very "
-"serious, error.  However, FATAL implies death, which in Python implies a "
-"raised and uncaught exception, traceback, and exit.  Since the logging "
-"module does not enforce such an outcome from a FATAL-level log entry, it "
-"makes sense to use CRITICAL in preference to FATAL."
+"The term CRITICAL is used in preference to FATAL, which is used by log4j.  "
+"The levels are conceptually the same - that of a serious, or very serious, "
+"error.  However, FATAL implies death, which in Python implies a raised and "
+"uncaught exception, traceback, and exit.  Since the logging module does not "
+"enforce such an outcome from a FATAL-level log entry, it makes sense to use "
+"CRITICAL in preference to FATAL."
 msgstr ""
 
 #: ../pep-0282.txt:191
 msgid ""
-"These are just integer constants, to allow simple comparison of "
-"importance.  Experience has shown that too many levels can be confusing, "
-"as they lead to subjective interpretation of which level should be "
-"applied to any particular log request."
+"These are just integer constants, to allow simple comparison of importance.  "
+"Experience has shown that too many levels can be confusing, as they lead to "
+"subjective interpretation of which level should be applied to any particular "
+"log request."
 msgstr ""
 
 #: ../pep-0282.txt:196
 msgid ""
 "Although the above levels are strongly recommended, the logging system "
-"should not be prescriptive.  Users may define their own levels, as well "
-"as the textual representation of any levels.  User defined levels must, "
-"however, obey the constraints that they are all positive integers and "
-"that they increase in order of increasing severity."
+"should not be prescriptive.  Users may define their own levels, as well as "
+"the textual representation of any levels.  User defined levels must, "
+"however, obey the constraints that they are all positive integers and that "
+"they increase in order of increasing severity."
 msgstr ""
 
 #: ../pep-0282.txt:203
@@ -296,9 +294,9 @@ msgstr ""
 
 #: ../pep-0282.txt:223
 msgid ""
-"A **Manager** class instance maintains the hierarchical namespace of "
-"named Logger objects.  Generations are denoted with dot-separated names: "
-"Logger \"foo\" is the parent of Loggers \"foo.bar\" and \"foo.baz\"."
+"A **Manager** class instance maintains the hierarchical namespace of named "
+"Logger objects.  Generations are denoted with dot-separated names: Logger "
+"\"foo\" is the parent of Loggers \"foo.bar\" and \"foo.baz\"."
 msgstr ""
 
 #: ../pep-0282.txt:228
@@ -317,44 +315,43 @@ msgstr ""
 
 #: ../pep-0282.txt:248
 msgid ""
-"Only one keyword argument is recognized at present - \"exc_info\". If "
-"true, the caller wants exception information to be provided in the "
-"logging output.  This mechanism is only needed if exception information "
-"needs to be provided at **any** logging level.  In the more common case, "
-"where exception information needs to be added to the log only when errors"
-" occur, i.e. at the ERROR level, then another convenience method is "
-"provided::"
+"Only one keyword argument is recognized at present - \"exc_info\". If true, "
+"the caller wants exception information to be provided in the logging "
+"output.  This mechanism is only needed if exception information needs to be "
+"provided at **any** logging level.  In the more common case, where exception "
+"information needs to be added to the log only when errors occur, i.e. at the "
+"ERROR level, then another convenience method is provided::"
 msgstr ""
 
 #: ../pep-0282.txt:259
 msgid ""
-"This should only be called in the context of an exception handler, and is"
-" the preferred way of indicating a desire for exception information in "
-"the log.  The other convenience methods are intended to be called with "
-"exc_info only in the unusual situation where you might want to provide "
-"exception information in the context of an INFO message, for example."
+"This should only be called in the context of an exception handler, and is "
+"the preferred way of indicating a desire for exception information in the "
+"log.  The other convenience methods are intended to be called with exc_info "
+"only in the unusual situation where you might want to provide exception "
+"information in the context of an INFO message, for example."
 msgstr ""
 
 #: ../pep-0282.txt:266
 msgid ""
-"The \"msg\" argument shown above will normally be a format string; "
-"however, it can be any object x for which ``str(x)`` returns the format "
-"string.  This facilitates, for example, the use of an object which "
-"fetches a locale- specific message for an internationalized/localized "
-"application, perhaps using the standard gettext module.  An outline "
-"example::"
+"The \"msg\" argument shown above will normally be a format string; however, "
+"it can be any object x for which ``str(x)`` returns the format string.  This "
+"facilitates, for example, the use of an object which fetches a locale- "
+"specific message for an internationalized/localized application, perhaps "
+"using the standard gettext module.  An outline example::"
 msgstr ""
 
 #: ../pep-0282.txt:285
 msgid ""
 "Gathering and formatting data for a log message may be expensive, and a "
 "waste if the logger was going to discard the message anyway. To see if a "
-"request will be honoured by the logger, the ``isEnabledFor()`` method can"
-" be used::"
+"request will be honoured by the logger, the ``isEnabledFor()`` method can be "
+"used::"
 msgstr ""
 
 #: ../pep-0282.txt:298
-msgid "so instead of this expensive and possibly wasteful DOM to XML conversion::"
+msgid ""
+"so instead of this expensive and possibly wasteful DOM to XML conversion::"
 msgstr ""
 
 #: ../pep-0282.txt:306
@@ -371,15 +368,15 @@ msgstr ""
 #: ../pep-0282.txt:319
 msgid ""
 "If a logger's level is not set, the system consults all its ancestors, "
-"walking up the hierarchy until an explicitly set level is found.  That is"
-" regarded as the \"effective level\" of the logger, and can be queried "
-"via the getEffectiveLevel() method::"
+"walking up the hierarchy until an explicitly set level is found.  That is "
+"regarded as the \"effective level\" of the logger, and can be queried via "
+"the getEffectiveLevel() method::"
 msgstr ""
 
 #: ../pep-0282.txt:326
 msgid ""
-"Loggers are never instantiated directly.  Instead, a module-level "
-"function is used::"
+"Loggers are never instantiated directly.  Instead, a module-level function "
+"is used::"
 msgstr ""
 
 #: ../pep-0282.txt:331
@@ -392,14 +389,14 @@ msgstr ""
 
 #: ../pep-0282.txt:336
 msgid ""
-"Users can specify a custom subclass of Logger to be used by the system "
-"when instantiating new loggers::"
+"Users can specify a custom subclass of Logger to be used by the system when "
+"instantiating new loggers::"
 msgstr ""
 
 #: ../pep-0282.txt:341
 msgid ""
-"The passed class should be a subclass of Logger, and its ``__init__`` "
-"method should call ``Logger.__init__``."
+"The passed class should be a subclass of Logger, and its ``__init__`` method "
+"should call ``Logger.__init__``."
 msgstr ""
 
 #: ../pep-0282.txt:346
@@ -418,8 +415,8 @@ msgstr ""
 
 #: ../pep-0282.txt:352
 msgid ""
-"``FileHandler``: A handler for writing to a single file or set of "
-"rotating files."
+"``FileHandler``: A handler for writing to a single file or set of rotating "
+"files."
 msgstr ""
 
 #: ../pep-0282.txt:354
@@ -434,8 +431,8 @@ msgstr ""
 
 #: ../pep-0282.txt:357
 msgid ""
-"``MemoryHandler``: A handler that buffers log records in memory until the"
-" buffer is full or a particular condition occurs [1]_."
+"``MemoryHandler``: A handler that buffers log records in memory until the "
+"buffer is full or a particular condition occurs [1]_."
 msgstr ""
 
 #: ../pep-0282.txt:360
@@ -448,46 +445,45 @@ msgstr ""
 
 #: ../pep-0282.txt:362
 msgid ""
-"``NTEventLogHandler``: A handler for writing to event logs on Windows NT,"
-" 2000 and XP."
+"``NTEventLogHandler``: A handler for writing to event logs on Windows NT, "
+"2000 and XP."
 msgstr ""
 
 #: ../pep-0282.txt:364
 msgid ""
-"``HTTPHandler``: A handler for writing to a Web server with either GET or"
-" POST semantics."
+"``HTTPHandler``: A handler for writing to a Web server with either GET or "
+"POST semantics."
 msgstr ""
 
 #: ../pep-0282.txt:367
 msgid ""
-"Handlers can also have levels set for them using the ``setLevel()`` "
-"method::"
+"Handlers can also have levels set for them using the ``setLevel()`` method::"
 msgstr ""
 
 #: ../pep-0282.txt:373
 msgid ""
 "The FileHandler can be set up to create a rotating set of log files.  In "
-"this case, the file name passed to the constructor is taken as a \"base\""
-" file name.  Additional file names for the rotation are created by "
-"appending .1, .2, etc. to the base file name, up to a maximum as "
-"specified when rollover is requested. The setRollover method is used to "
-"specify a maximum size for a log file and a maximum number of backup "
-"files in the rotation."
+"this case, the file name passed to the constructor is taken as a \"base\" "
+"file name.  Additional file names for the rotation are created by "
+"appending .1, .2, etc. to the base file name, up to a maximum as specified "
+"when rollover is requested. The setRollover method is used to specify a "
+"maximum size for a log file and a maximum number of backup files in the "
+"rotation."
 msgstr ""
 
 #: ../pep-0282.txt:385
 msgid ""
-"If maxBytes is specified as zero, no rollover ever occurs and the log "
-"file grows indefinitely.  If a non-zero size is specified, when that size"
-" is about to be exceeded, rollover occurs.  The rollover method ensures "
-"that the base file name is always the most recent, .1 is the next most "
-"recent, .2 the next most recent after that, and so on."
+"If maxBytes is specified as zero, no rollover ever occurs and the log file "
+"grows indefinitely.  If a non-zero size is specified, when that size is "
+"about to be exceeded, rollover occurs.  The rollover method ensures that the "
+"base file name is always the most recent, .1 is the next most recent, .2 the "
+"next most recent after that, and so on."
 msgstr ""
 
 #: ../pep-0282.txt:392
 msgid ""
-"There are many additional handlers implemented in the test/example "
-"scripts provided with [6]_ - for example, XMLHandler and SOAPHandler."
+"There are many additional handlers implemented in the test/example scripts "
+"provided with [6]_ - for example, XMLHandler and SOAPHandler."
 msgstr ""
 
 #: ../pep-0282.txt:398
@@ -496,9 +492,9 @@ msgstr ""
 
 #: ../pep-0282.txt:400
 msgid ""
-"A LogRecord acts as a receptacle for information about a logging event.  "
-"It is little more than a dictionary, though it does define a "
-"``getMessage`` method which merges a message with optional runarguments."
+"A LogRecord acts as a receptacle for information about a logging event.  It "
+"is little more than a dictionary, though it does define a ``getMessage`` "
+"method which merges a message with optional runarguments."
 msgstr ""
 
 #: ../pep-0282.txt:407
@@ -508,8 +504,8 @@ msgstr ""
 #: ../pep-0282.txt:409
 msgid ""
 "A Formatter is responsible for converting a LogRecord to a string "
-"representation.  A Handler may call its Formatter before writing a "
-"record.  The following core Formatters will be implemented:"
+"representation.  A Handler may call its Formatter before writing a record.  "
+"The following core Formatters will be implemented:"
 msgstr ""
 
 #: ../pep-0282.txt:413
@@ -525,8 +521,8 @@ msgstr ""
 
 #: ../pep-0282.txt:418
 msgid ""
-"Formatters are associated with Handlers by calling ``setFormatter()`` on "
-"a handler::"
+"Formatters are associated with Handlers by calling ``setFormatter()`` on a "
+"handler::"
 msgstr ""
 
 #: ../pep-0282.txt:423
@@ -534,8 +530,8 @@ msgstr ""
 msgid ""
 "Formatters use the % operator to format the logging message.  The format "
 "string should contain ``%(name)x`` and the attribute dictionary of the "
-"LogRecord is used to obtain message-specific data.  The following "
-"attributes are provided:"
+"LogRecord is used to obtain message-specific data.  The following attributes "
+"are provided:"
 msgstr ""
 
 #: ../pep-0282.txt:429
@@ -553,7 +549,8 @@ msgid "``%(levelno)s``"
 msgstr ""
 
 #: ../pep-0282.txt:431
-msgid "Numeric logging level for the message (DEBUG, INFO, WARN, ERROR, CRITICAL)"
+msgid ""
+"Numeric logging level for the message (DEBUG, INFO, WARN, ERROR, CRITICAL)"
 msgstr ""
 
 #: ../pep-0282.txt:434
@@ -639,8 +636,8 @@ msgstr ""
 
 #: ../pep-0282.txt:454
 msgid ""
-"Time in milliseconds when the LogRecord was created, relative to the time"
-" the logging module was loaded (typically at application startup time)"
+"Time in milliseconds when the LogRecord was created, relative to the time "
+"the logging module was loaded (typically at application startup time)"
 msgstr ""
 
 #: ../pep-0282.txt:458
@@ -658,28 +655,29 @@ msgid "``%(message)s``"
 msgstr ""
 
 #: ../pep-0282.txt:460
-msgid "The result of record.getMessage(), computed just as the record is emitted"
+msgid ""
+"The result of record.getMessage(), computed just as the record is emitted"
 msgstr ""
 
 #: ../pep-0282.txt:464
 #, python-format
 msgid ""
 "If a formatter sees that the format string includes \"(asctime)s\", the "
-"creation time is formatted into the LogRecord's asctime attribute.  To "
-"allow flexibility in formatting dates, Formatters are initialized with a "
-"format string for the message as a whole, and a separate format string "
-"for date/time.  The date/time format string should be in time.strftime "
-"format.  The default value for the message format is \"%(message)s\".  "
-"The default date/time format is ISO8601."
+"creation time is formatted into the LogRecord's asctime attribute.  To allow "
+"flexibility in formatting dates, Formatters are initialized with a format "
+"string for the message as a whole, and a separate format string for date/"
+"time.  The date/time format string should be in time.strftime format.  The "
+"default value for the message format is \"%(message)s\".  The default date/"
+"time format is ISO8601."
 msgstr ""
 
 #: ../pep-0282.txt:473
 msgid ""
 "The formatter uses a class attribute, \"converter\", to indicate how to "
 "convert a time from seconds to a tuple.  By default, the value of "
-"\"converter\" is \"time.localtime\".  If needed, a different converter "
-"(e.g.  \"time.gmtime\") can be set on an individual formatter instance, "
-"or the class attribute changed to affect all formatter instances."
+"\"converter\" is \"time.localtime\".  If needed, a different converter (e."
+"g.  \"time.gmtime\") can be set on an individual formatter instance, or the "
+"class attribute changed to affect all formatter instances."
 msgstr ""
 
 #: ../pep-0282.txt:482
@@ -690,21 +688,21 @@ msgstr ""
 msgid ""
 "When level-based filtering is insufficient, a Filter can be called by a "
 "Logger or Handler to decide if a LogRecord should be output. Loggers and "
-"Handlers can have multiple filters installed, and any one of them can "
-"veto a LogRecord being output."
+"Handlers can have multiple filters installed, and any one of them can veto a "
+"LogRecord being output."
 msgstr ""
 
 #: ../pep-0282.txt:499
 msgid ""
-"The default behaviour allows a Filter to be initialized with a Logger "
-"name.  This will only allow through events which are generated using the "
-"named logger or any of its children.  For example, a filter initialized "
-"with \"A.B\" will allow events logged by loggers \"A.B\", \"A.B.C\", "
-"\"A.B.C.D\", \"A.B.D\" etc. but not \"A.BB\", \"B.A.B\" etc.  If "
-"initialized with the empty string, all events are passed by the Filter.  "
-"This filter behaviour is useful when it is desired to focus attention on "
-"one particular area of an application; the focus can be changed simply by"
-" changing a filter attached to the root logger."
+"The default behaviour allows a Filter to be initialized with a Logger name.  "
+"This will only allow through events which are generated using the named "
+"logger or any of its children.  For example, a filter initialized with \"A."
+"B\" will allow events logged by loggers \"A.B\", \"A.B.C\", \"A.B.C.D\", \"A."
+"B.D\" etc. but not \"A.BB\", \"B.A.B\" etc.  If initialized with the empty "
+"string, all events are passed by the Filter.  This filter behaviour is "
+"useful when it is desired to focus attention on one particular area of an "
+"application; the focus can be changed simply by changing a filter attached "
+"to the root logger."
 msgstr ""
 
 #: ../pep-0282.txt:510
@@ -717,14 +715,13 @@ msgstr ""
 
 #: ../pep-0282.txt:516
 msgid ""
-"The main benefit of a logging system like this is that one can control "
-"how much and what logging output one gets from an application without "
-"changing that application's source code. Therefore, although "
-"configuration can be performed through the logging API, it must also be "
-"possible to change the logging configuration without changing an "
-"application at all.  For long-running programs like Zope, it should be "
-"possible to change the logging configuration while the program is "
-"running."
+"The main benefit of a logging system like this is that one can control how "
+"much and what logging output one gets from an application without changing "
+"that application's source code. Therefore, although configuration can be "
+"performed through the logging API, it must also be possible to change the "
+"logging configuration without changing an application at all.  For long-"
+"running programs like Zope, it should be possible to change the logging "
+"configuration while the program is running."
 msgstr ""
 
 #: ../pep-0282.txt:525
@@ -749,10 +746,9 @@ msgstr ""
 
 #: ../pep-0282.txt:532
 msgid ""
-"In general each application will have its own requirements for how a user"
-" may configure logging output.  However, each application will specify "
-"the required configuration to the logging system through a standard "
-"mechanism."
+"In general each application will have its own requirements for how a user "
+"may configure logging output.  However, each application will specify the "
+"required configuration to the logging system through a standard mechanism."
 msgstr ""
 
 #: ../pep-0282.txt:537
@@ -765,8 +761,8 @@ msgstr ""
 
 #: ../pep-0282.txt:546
 msgid ""
-"For more sophisticated configurations, this PEP makes no specific "
-"proposals, for the following reasons:"
+"For more sophisticated configurations, this PEP makes no specific proposals, "
+"for the following reasons:"
 msgstr ""
 
 #: ../pep-0282.txt:549
@@ -775,10 +771,10 @@ msgstr ""
 
 #: ../pep-0282.txt:550
 msgid ""
-"Without the benefit of wide practical experience in the Python community,"
-" there is no way to know whether any given configuration approach is a "
-"good one.  That practice can't really come until the logging module is "
-"used, and that means until **after** Python 2.3 has shipped."
+"Without the benefit of wide practical experience in the Python community, "
+"there is no way to know whether any given configuration approach is a good "
+"one.  That practice can't really come until the logging module is used, and "
+"that means until **after** Python 2.3 has shipped."
 msgstr ""
 
 #: ../pep-0282.txt:555
@@ -789,12 +785,12 @@ msgstr ""
 
 #: ../pep-0282.txt:559
 msgid ""
-"The reference implementation [6]_ has a working configuration file "
-"format, implemented for the purpose of proving the concept and suggesting"
-" one possible alternative.  It may be that separate extension modules, "
-"not part of the core Python distribution, are created for logging "
-"configuration and log viewing, supplemental handlers and other features "
-"which are not of interest to the bulk of the community."
+"The reference implementation [6]_ has a working configuration file format, "
+"implemented for the purpose of proving the concept and suggesting one "
+"possible alternative.  It may be that separate extension modules, not part "
+"of the core Python distribution, are created for logging configuration and "
+"log viewing, supplemental handlers and other features which are not of "
+"interest to the bulk of the community."
 msgstr ""
 
 #: ../pep-0282.txt:569
@@ -803,8 +799,8 @@ msgstr ""
 
 #: ../pep-0282.txt:571
 msgid ""
-"The logging system should support thread-safe operation without any "
-"special action needing to be taken by its users."
+"The logging system should support thread-safe operation without any special "
+"action needing to be taken by its users."
 msgstr ""
 
 #: ../pep-0282.txt:576
@@ -814,16 +810,17 @@ msgstr ""
 #: ../pep-0282.txt:578
 msgid ""
 "To support use of the logging mechanism in short scripts and small "
-"applications, module-level functions ``debug()``, ``info()``, ``warn()``,"
-" ``error()``, ``critical()`` and ``exception()`` are provided.  These "
-"work in the same way as the correspondingly named methods of Logger - in "
-"fact they delegate to the corresponding methods on the root logger.  A "
-"further convenience provided by these functions is that if no "
-"configuration has been done, ``basicConfig()`` is automatically called."
+"applications, module-level functions ``debug()``, ``info()``, ``warn()``, "
+"``error()``, ``critical()`` and ``exception()`` are provided.  These work in "
+"the same way as the correspondingly named methods of Logger - in fact they "
+"delegate to the corresponding methods on the root logger.  A further "
+"convenience provided by these functions is that if no configuration has been "
+"done, ``basicConfig()`` is automatically called."
 msgstr ""
 
 #: ../pep-0282.txt:587
-msgid "At application exit, all handlers can be flushed by calling the function::"
+msgid ""
+"At application exit, all handlers can be flushed by calling the function::"
 msgstr ""
 
 #: ../pep-0282.txt:591
@@ -844,10 +841,9 @@ msgstr ""
 
 #: ../pep-0282.txt:603
 msgid ""
-"The reference implementation is implemented as a single module. This "
-"offers the simplest interface - all users have to do is \"import "
-"logging\" and they are in a position to use all the functionality "
-"available."
+"The reference implementation is implemented as a single module. This offers "
+"the simplest interface - all users have to do is \"import logging\" and they "
+"are in a position to use all the functionality available."
 msgstr ""
 
 #: ../pep-0282.txt:610
@@ -860,29 +856,30 @@ msgstr ""
 
 #: ../pep-0282.txt:615
 msgid ""
-"log4j: a Java logging package "
-"http://jakarta.apache.org/log4j/docs/index.html"
+"log4j: a Java logging package http://jakarta.apache.org/log4j/docs/index.html"
 msgstr ""
 
 #: ../pep-0282.txt:618
 msgid ""
 "Protomatter's Syslog http://protomatter.sourceforge.net/1.1.6/index.html "
-"http://protomatter.sourceforge.net/1.1.6/javadoc/com/protomatter/syslog"
-"/syslog-whitepaper.html"
+"http://protomatter.sourceforge.net/1.1.6/javadoc/com/protomatter/syslog/"
+"syslog-whitepaper.html"
 msgstr ""
 
 #: ../pep-0282.txt:622
 msgid ""
-"MAL mentions his mx.Log logging module: https://mail.python.org/pipermail"
-"/python-dev/2002-February/019767.html"
+"MAL mentions his mx.Log logging module: https://mail.python.org/pipermail/"
+"python-dev/2002-February/019767.html"
 msgstr ""
 
 #: ../pep-0282.txt:625
-msgid "Jeff Bauer's Mr. Creosote http://starship.python.net/crew/jbauer/creosote/"
+msgid ""
+"Jeff Bauer's Mr. Creosote http://starship.python.net/crew/jbauer/creosote/"
 msgstr ""
 
 #: ../pep-0282.txt:628
-msgid "Vinay Sajip's logging module. https://old.red-dove.com/python_logging.html"
+msgid ""
+"Vinay Sajip's logging module. https://old.red-dove.com/python_logging.html"
 msgstr ""
 
 #: ../pep-0282.txt:633
@@ -892,4 +889,3 @@ msgstr ""
 #: ../pep-0282.txt:635
 msgid "This document has been placed in the public domain."
 msgstr ""
-

@@ -74,22 +74,22 @@ msgstr ""
 #: ../pep-0329.txt:24
 msgid ""
 "The PEP is self rejected by the author.  Though the ASPN recipe was well "
-"received, there was less willingness to consider this for inclusion in "
-"the core distribution."
+"received, there was less willingness to consider this for inclusion in the "
+"core distribution."
 msgstr ""
 
 #: ../pep-0329.txt:28
 msgid ""
-"The Jython implementation does not use byte codes, so its performance "
-"would suffer if the current ``_len=len`` optimizations were removed."
+"The Jython implementation does not use byte codes, so its performance would "
+"suffer if the current ``_len=len`` optimizations were removed."
 msgstr ""
 
 #: ../pep-0329.txt:31
 msgid ""
 "Also, altering byte codes is one of the least clean ways to improve "
-"performance and enable cleaner coding.  A more robust solution would "
-"likely involve compiler pragma directives or metavariables indicating "
-"what can be optimized (similar to const/volatile declarations)."
+"performance and enable cleaner coding.  A more robust solution would likely "
+"involve compiler pragma directives or metavariables indicating what can be "
+"optimized (similar to const/volatile declarations)."
 msgstr ""
 
 #: ../pep-0329.txt:38
@@ -98,37 +98,37 @@ msgstr ""
 
 #: ../pep-0329.txt:40
 msgid ""
-"The library contains code such as ``_len=len`` which is intended to "
-"create fast local references instead of slower global lookups.  Though "
-"necessary for performance, these constructs clutter the code and are "
-"usually incomplete (missing many opportunities)."
+"The library contains code such as ``_len=len`` which is intended to create "
+"fast local references instead of slower global lookups.  Though necessary "
+"for performance, these constructs clutter the code and are usually "
+"incomplete (missing many opportunities)."
 msgstr ""
 
 #: ../pep-0329.txt:45
 msgid ""
-"If the proposal is adopted, those constructs could be eliminated from the"
-" code base and at the same time improve upon their results in terms of "
+"If the proposal is adopted, those constructs could be eliminated from the "
+"code base and at the same time improve upon their results in terms of "
 "performance."
 msgstr ""
 
 #: ../pep-0329.txt:49
 msgid ""
-"There are currently over a hundred instances of ``while 1`` in the "
-"library.  They were not replaced with the more readable ``while True`` "
-"because of performance reasons (the compiler cannot eliminate the test "
-"because `True` is not known to always be a constant).  Conversion of True"
-" to a constant will clarify the code while retaining performance."
+"There are currently over a hundred instances of ``while 1`` in the library.  "
+"They were not replaced with the more readable ``while True`` because of "
+"performance reasons (the compiler cannot eliminate the test because `True` "
+"is not known to always be a constant).  Conversion of True to a constant "
+"will clarify the code while retaining performance."
 msgstr ""
 
 #: ../pep-0329.txt:55
 msgid ""
 "Many other basic Python operations run much slower because of global "
-"lookups.  In try/except statements, the trapped exceptions are "
-"dynamically looked up before testing whether they match. Similarly, "
-"simple identity tests such as ``while x is not None`` require the `None` "
-"variable to be re-looked up on every pass. Builtin lookups are especially"
-" egregious because the enclosing global scope must be checked first.  "
-"These lookup chains devour cache space that is best used elsewhere."
+"lookups.  In try/except statements, the trapped exceptions are dynamically "
+"looked up before testing whether they match. Similarly, simple identity "
+"tests such as ``while x is not None`` require the `None` variable to be re-"
+"looked up on every pass. Builtin lookups are especially egregious because "
+"the enclosing global scope must be checked first.  These lookup chains "
+"devour cache space that is best used elsewhere."
 msgstr ""
 
 #: ../pep-0329.txt:64
@@ -144,22 +144,22 @@ msgstr ""
 #: ../pep-0329.txt:71
 msgid ""
 "Add a module called codetweaks.py which contains two functions, "
-"`bind_constants()` and `bind_all()`.  The first function performs "
-"constant binding and the second recursively applies it to every function "
-"and class in a target module."
+"`bind_constants()` and `bind_all()`.  The first function performs constant "
+"binding and the second recursively applies it to every function and class in "
+"a target module."
 msgstr ""
 
 #: ../pep-0329.txt:76
 msgid ""
-"For most modules in the standard library, add a pair of lines near the "
-"end of the script::"
+"For most modules in the standard library, add a pair of lines near the end "
+"of the script::"
 msgstr ""
 
 #: ../pep-0329.txt:82
 msgid ""
-"In addition to binding builtins, there are some modules (like "
-"`sre_compile`) where it also makes sense to bind module variables as well"
-" as builtins into constants."
+"In addition to binding builtins, there are some modules (like `sre_compile`) "
+"where it also makes sense to bind module variables as well as builtins into "
+"constants."
 msgstr ""
 
 #: ../pep-0329.txt:88
@@ -182,11 +182,11 @@ msgstr ""
 
 #: ../pep-0329.txt:98
 msgid ""
-"Every function has attributes with its bytecodes (the language of the "
-"Python virtual machine) and a table of constants.  The bind function "
-"scans the bytecodes for a `LOAD_GLOBAL` instruction and checks to see "
-"whether the value is already known.  If so, it adds that value to the "
-"constants table and replaces the opcode with `LOAD_CONSTANT`."
+"Every function has attributes with its bytecodes (the language of the Python "
+"virtual machine) and a table of constants.  The bind function scans the "
+"bytecodes for a `LOAD_GLOBAL` instruction and checks to see whether the "
+"value is already known.  If so, it adds that value to the constants table "
+"and replaces the opcode with `LOAD_CONSTANT`."
 msgstr ""
 
 #: ../pep-0329.txt:105
@@ -195,10 +195,10 @@ msgstr ""
 
 #: ../pep-0329.txt:107
 msgid ""
-"When a module is imported for the first time, python compiles the "
-"bytecode and runs the binding optimization.  Subsequent imports just re-"
-"use the previous work.  Each session repeats this process (the results "
-"are not saved in `pyc` files)."
+"When a module is imported for the first time, python compiles the bytecode "
+"and runs the binding optimization.  Subsequent imports just re-use the "
+"previous work.  Each session repeats this process (the results are not saved "
+"in `pyc` files)."
 msgstr ""
 
 #: ../pep-0329.txt:112
@@ -207,8 +207,8 @@ msgstr ""
 
 #: ../pep-0329.txt:114
 msgid ""
-"I implemented it, applied it to every module in library, and the test "
-"suite ran without exception."
+"I implemented it, applied it to every module in library, and the test suite "
+"ran without exception."
 msgstr ""
 
 #: ../pep-0329.txt:117
@@ -217,9 +217,9 @@ msgstr ""
 
 #: ../pep-0329.txt:119
 msgid ""
-"This does happen.  For instance, True can be redefined at the module "
-"level as `True = (1==1)`.  The sample implementation below detects the "
-"shadowing and leaves the global lookup unchanged."
+"This does happen.  For instance, True can be redefined at the module level "
+"as `True = (1==1)`.  The sample implementation below detects the shadowing "
+"and leaves the global lookup unchanged."
 msgstr ""
 
 #: ../pep-0329.txt:123
@@ -253,10 +253,10 @@ msgstr ""
 #: ../pep-0329.txt:137
 msgid ""
 "It imports `opcode.py` to protect against renumbering.  Also, it uses "
-"`LOAD_CONST` and `LOAD_GLOBAL` which are fundamental and have been around"
-" forever.  That notwithstanding, the coding scheme could change and this "
-"implementation would have to change along with modules like `dis` which "
-"also rely on the current coding scheme."
+"`LOAD_CONST` and `LOAD_GLOBAL` which are fundamental and have been around "
+"forever.  That notwithstanding, the coding scheme could change and this "
+"implementation would have to change along with modules like `dis` which also "
+"rely on the current coding scheme."
 msgstr ""
 
 #: ../pep-0329.txt:143
@@ -281,10 +281,10 @@ msgstr ""
 
 #: ../pep-0329.txt:246
 msgid ""
-"Note the automatic detection of a non-CPython environment that does not "
-"have bytecodes [3]_.  In that situation, the bind functions would simply "
-"return the original function unchanged.  This assures that the two line "
-"additions to library modules do not impact other implementations."
+"Note the automatic detection of a non-CPython environment that does not have "
+"bytecodes [3]_.  In that situation, the bind functions would simply return "
+"the original function unchanged.  This assures that the two line additions "
+"to library modules do not impact other implementations."
 msgstr ""
 
 #: ../pep-0329.txt:251
@@ -297,14 +297,14 @@ msgstr ""
 
 #: ../pep-0329.txt:258
 msgid ""
-"ASPN Recipe for a non-private implementation "
-"http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/277940"
+"ASPN Recipe for a non-private implementation http://aspn.activestate.com/"
+"ASPN/Cookbook/Python/Recipe/277940"
 msgstr ""
 
 #: ../pep-0329.txt:261
 msgid ""
-"Differences between CPython and Jython http://www.jython.org/cgi-"
-"bin/faqw.py?req=show&file=faq01.003.htp"
+"Differences between CPython and Jython http://www.jython.org/cgi-bin/faqw.py?"
+"req=show&file=faq01.003.htp"
 msgstr ""
 
 #: ../pep-0329.txt:265
@@ -314,4 +314,3 @@ msgstr ""
 #: ../pep-0329.txt:267
 msgid "This document has been placed in the public domain."
 msgstr ""
-

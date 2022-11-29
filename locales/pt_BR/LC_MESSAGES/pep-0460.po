@@ -69,16 +69,16 @@ msgstr ""
 
 #: ../pep-0460.txt:19
 msgid ""
-"``bytes % ...`` and ``bytearray % ...`` for percent-formatting, similar "
-"in syntax to percent-formatting on ``str`` objects (accepting a single "
-"object, a tuple or a dict)."
+"``bytes % ...`` and ``bytearray % ...`` for percent-formatting, similar in "
+"syntax to percent-formatting on ``str`` objects (accepting a single object, "
+"a tuple or a dict)."
 msgstr ""
 
 #: ../pep-0460.txt:23
 msgid ""
-"``bytes.format(...)`` and ``bytearray.format(...)`` for a formatting "
-"similar in syntax to ``str.format()`` (accepting positional as well as "
-"keyword arguments)."
+"``bytes.format(...)`` and ``bytearray.format(...)`` for a formatting similar "
+"in syntax to ``str.format()`` (accepting positional as well as keyword "
+"arguments)."
 msgstr ""
 
 #: ../pep-0460.txt:27
@@ -94,34 +94,34 @@ msgstr ""
 
 #: ../pep-0460.txt:35
 msgid ""
-"In Python 2, ``str % args`` and ``str.format(args)`` allow the formatting"
-" and interpolation of bytestrings.  This feature has commonly been used "
-"for the assembling of protocol messages when protocols are known to use a"
-" fixed encoding."
+"In Python 2, ``str % args`` and ``str.format(args)`` allow the formatting "
+"and interpolation of bytestrings.  This feature has commonly been used for "
+"the assembling of protocol messages when protocols are known to use a fixed "
+"encoding."
 msgstr ""
 
 #: ../pep-0460.txt:40
 msgid ""
-"Python 3 generally mandates that text be stored and manipulated as "
-"unicode (i.e. ``str`` objects, not ``bytes``).  In some cases, though, it"
-" makes sense to manipulate ``bytes`` objects directly.  Typical usage is "
-"binary network protocols, where you can want to interpolate and assemble "
-"several bytes object (some of them literals, some of them compute) to "
-"produce complete protocol messages.  For example, protocols such as HTTP "
-"or SIP have headers with ASCII names and opaque \"textual\" values using "
-"a varying and/or sometimes ill-defined encoding.  Moreover, those headers"
-" can be followed by a binary body... which can be chunked and decorated "
-"with ASCII headers and trailers!"
+"Python 3 generally mandates that text be stored and manipulated as unicode "
+"(i.e. ``str`` objects, not ``bytes``).  In some cases, though, it makes "
+"sense to manipulate ``bytes`` objects directly.  Typical usage is binary "
+"network protocols, where you can want to interpolate and assemble several "
+"bytes object (some of them literals, some of them compute) to produce "
+"complete protocol messages.  For example, protocols such as HTTP or SIP have "
+"headers with ASCII names and opaque \"textual\" values using a varying and/"
+"or sometimes ill-defined encoding.  Moreover, those headers can be followed "
+"by a binary body... which can be chunked and decorated with ASCII headers "
+"and trailers!"
 msgstr ""
 
 #: ../pep-0460.txt:51
 #, python-format
 msgid ""
-"While there are reasonably efficient ways to accumulate binary data (such"
-" as using a ``bytearray`` object, the ``bytes.join`` method or even "
-"``io.BytesIO``), none of them leads to the kind of readable and intuitive"
-" code that is produced by a %-formatted or {}-formatted template and a "
-"formatting operation."
+"While there are reasonably efficient ways to accumulate binary data (such as "
+"using a ``bytearray`` object, the ``bytes.join`` method or even ``io."
+"BytesIO``), none of them leads to the kind of readable and intuitive code "
+"that is produced by a %-formatted or {}-formatted template and a formatting "
+"operation."
 msgstr ""
 
 #: ../pep-0460.txt:59
@@ -141,25 +141,25 @@ msgstr ""
 #: ../pep-0460.txt:67
 #, python-format
 msgid ""
-"Looking up formatting arguments by position as well as by name (i.e., "
-"``%s`` as well as ``%(name)s``)."
+"Looking up formatting arguments by position as well as by name (i.e., ``%s`` "
+"as well as ``%(name)s``)."
 msgstr ""
 
 #: ../pep-0460.txt:69
 #, python-format
 msgid ""
-"``%s`` will try to get a ``Py_buffer`` on the given value, and fallback "
-"on calling ``__bytes__``.  The resulting binary data is inserted at the "
-"given point in the string.  This is expected to work with bytes, "
-"bytearray and memoryview objects (as well as a couple others such as "
-"pathlib's path objects)."
+"``%s`` will try to get a ``Py_buffer`` on the given value, and fallback on "
+"calling ``__bytes__``.  The resulting binary data is inserted at the given "
+"point in the string.  This is expected to work with bytes, bytearray and "
+"memoryview objects (as well as a couple others such as pathlib's path "
+"objects)."
 msgstr ""
 
 #: ../pep-0460.txt:74
 #, python-format
 msgid ""
-"``%c`` will accept an integer between 0 and 255, and insert a byte of the"
-" given value."
+"``%c`` will accept an integer between 0 and 255, and insert a byte of the "
+"given value."
 msgstr ""
 
 #: ../pep-0460.txt:77
@@ -178,16 +178,16 @@ msgstr ""
 #: ../pep-0460.txt:83
 #, python-format
 msgid ""
-"Insertion of binary data when no modifier or layout is specified (e.g. "
-"``{}``, ``{0}``, ``{name}``).  This has the same semantics as ``%s`` for "
-"percent-formatting (see above)."
+"Insertion of binary data when no modifier or layout is specified (e.g. ``{}"
+"``, ``{0}``, ``{name}``).  This has the same semantics as ``%s`` for percent-"
+"formatting (see above)."
 msgstr ""
 
 #: ../pep-0460.txt:86
 #, python-format
 msgid ""
-"The ``c`` modifier will accept an integer between 0 and 255, and insert a"
-" byte of the given value (same as ``%c`` above)."
+"The ``c`` modifier will accept an integer between 0 and 255, and insert a "
+"byte of the given value (same as ``%c`` above)."
 msgstr ""
 
 #: ../pep-0460.txt:90
@@ -197,21 +197,21 @@ msgstr ""
 #: ../pep-0460.txt:92
 #, python-format
 msgid ""
-"All other features present in formatting of ``str`` objects (either "
-"through the percent operator or the ``str.format()`` method) are "
-"unsupported.  Those features imply treating the recipient of the operator"
-" or method as text, which goes counter to the text / bytes separation "
-"(for example, accepting ``%d`` as a format code would imply that the "
-"bytes object really is an ASCII-compatible text string)."
+"All other features present in formatting of ``str`` objects (either through "
+"the percent operator or the ``str.format()`` method) are unsupported.  Those "
+"features imply treating the recipient of the operator or method as text, "
+"which goes counter to the text / bytes separation (for example, accepting "
+"``%d`` as a format code would imply that the bytes object really is an ASCII-"
+"compatible text string)."
 msgstr ""
 
 #: ../pep-0460.txt:99
 #, python-format
 msgid ""
-"Amongst those unsupported features are not only most type-specific format"
-" codes, but also the various layout specifiers such as padding or "
-"alignment.  Besides, ``str`` objects are not acceptable as arguments to "
-"the formatting operations, even when using e.g. the ``%s`` format code."
+"Amongst those unsupported features are not only most type-specific format "
+"codes, but also the various layout specifiers such as padding or alignment.  "
+"Besides, ``str`` objects are not acceptable as arguments to the formatting "
+"operations, even when using e.g. the ``%s`` format code."
 msgstr ""
 
 #: ../pep-0460.txt:104
@@ -234,20 +234,20 @@ msgstr ""
 
 #: ../pep-0460.txt:113
 msgid ""
-"Developers will have to work around the lack of binary formatting anyway,"
-" if they want to support Python 3.4 and earlier."
+"Developers will have to work around the lack of binary formatting anyway, if "
+"they want to support Python 3.4 and earlier."
 msgstr ""
 
 #: ../pep-0460.txt:115
 msgid ""
-"bytes.join() is consistently faster than format to join bytes strings "
-"(XXX *is it?*)."
+"bytes.join() is consistently faster than format to join bytes strings (XXX "
+"*is it?*)."
 msgstr ""
 
 #: ../pep-0460.txt:117
 msgid ""
-"Formatting functions could be implemented in a third party module, rather"
-" than added to builtin types."
+"Formatting functions could be implemented in a third party module, rather "
+"than added to builtin types."
 msgstr ""
 
 #: ../pep-0460.txt:122
@@ -261,10 +261,9 @@ msgstr ""
 #: ../pep-0460.txt:127
 msgid ""
 "It was proposed to create a new datatype specialized for \"network "
-"programming\".  The authors of this PEP believe this is counter-"
-"productive. Python 3 already has several major types dedicated to "
-"manipulation of binary data: ``bytes``, ``bytearray``, ``memoryview``, "
-"``io.BytesIO``."
+"programming\".  The authors of this PEP believe this is counter-productive. "
+"Python 3 already has several major types dedicated to manipulation of binary "
+"data: ``bytes``, ``bytearray``, ``memoryview``, ``io.BytesIO``."
 msgstr ""
 
 #: ../pep-0460.txt:132
@@ -277,8 +276,8 @@ msgstr ""
 #: ../pep-0460.txt:136
 msgid ""
 "Moreover, not one type would be needed, but two: one immutable type (to "
-"allow for hashing), and one mutable type (as efficient accumulation is "
-"often necessary when working with network messages)."
+"allow for hashing), and one mutable type (as efficient accumulation is often "
+"necessary when working with network messages)."
 msgstr ""
 
 #: ../pep-0460.txt:142
@@ -287,10 +286,10 @@ msgstr ""
 
 #: ../pep-0460.txt:144
 msgid ""
-"This PEP is made obsolete by the `acceptance "
-"<https://mail.python.org/pipermail/python-dev/2014-March/133621.html>`_ "
-"of :pep:`461`, which introduces a more extended formatting language for "
-"bytes objects in conjunction with the modulo operator."
+"This PEP is made obsolete by the `acceptance <https://mail.python.org/"
+"pipermail/python-dev/2014-March/133621.html>`_ of :pep:`461`, which "
+"introduces a more extended formatting language for bytes objects in "
+"conjunction with the modulo operator."
 msgstr ""
 
 #: ../pep-0460.txt:151
@@ -299,8 +298,7 @@ msgstr ""
 
 #: ../pep-0460.txt:153
 msgid ""
-"`Issue #3982: support .format for bytes "
-"<http://bugs.python.org/issue3982>`_"
+"`Issue #3982: support .format for bytes <http://bugs.python.org/issue3982>`_"
 msgstr ""
 
 #: ../pep-0460.txt:155
@@ -313,14 +311,14 @@ msgstr ""
 
 #: ../pep-0460.txt:159
 msgid ""
-"`Documentation of Python 2 formatting (str % args) "
-"<http://docs.python.org/2/library/stdtypes.html#string-formatting>`_"
+"`Documentation of Python 2 formatting (str % args) <http://docs.python.org/2/"
+"library/stdtypes.html#string-formatting>`_"
 msgstr ""
 
 #: ../pep-0460.txt:161
 msgid ""
-"`Documentation of Python 2 formatting (str.format) "
-"<http://docs.python.org/2/library/string.html#formatstrings>`_"
+"`Documentation of Python 2 formatting (str.format) <http://docs.python.org/2/"
+"library/string.html#formatstrings>`_"
 msgstr ""
 
 #: ../pep-0460.txt:165
@@ -330,4 +328,3 @@ msgstr ""
 #: ../pep-0460.txt:167
 msgid "This document has been placed in the public domain."
 msgstr ""
-

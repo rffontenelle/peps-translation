@@ -59,8 +59,8 @@ msgstr ""
 
 #: ../pep-0336.txt:16
 msgid ""
-"``None`` should be a callable object that when called with any arguments "
-"has no side effect and returns ``None``."
+"``None`` should be a callable object that when called with any arguments has "
+"no side effect and returns ``None``."
 msgstr ""
 
 #: ../pep-0336.txt:21
@@ -69,11 +69,11 @@ msgstr ""
 
 #: ../pep-0336.txt:23
 msgid ""
-"This PEP is rejected.  It is considered a feature that ``None`` raises an"
-" error when called.  The proposal falls short in tests for obviousness, "
-"clarity, explicitness, and necessity.  The provided Switch example is "
-"nice but easily handled by a simple lambda definition. See python-dev "
-"discussion on 17 June 2005 [2]_."
+"This PEP is rejected.  It is considered a feature that ``None`` raises an "
+"error when called.  The proposal falls short in tests for obviousness, "
+"clarity, explicitness, and necessity.  The provided Switch example is nice "
+"but easily handled by a simple lambda definition. See python-dev discussion "
+"on 17 June 2005 [2]_."
 msgstr ""
 
 #: ../pep-0336.txt:31
@@ -83,8 +83,8 @@ msgstr ""
 #: ../pep-0336.txt:33
 msgid ""
 "To allow a programming style for selectable actions that is more in "
-"accordance with the minimalistic functional programming goals of the "
-"Python language."
+"accordance with the minimalistic functional programming goals of the Python "
+"language."
 msgstr ""
 
 #: ../pep-0336.txt:39
@@ -93,10 +93,10 @@ msgstr ""
 
 #: ../pep-0336.txt:41
 msgid ""
-"Allow the use of ``None`` in method tables as a universal no effect "
-"rather than either (1) checking a method table entry against ``None`` "
-"before calling, or (2) writing a local no effect method with arguments "
-"similar to other functions in the table."
+"Allow the use of ``None`` in method tables as a universal no effect rather "
+"than either (1) checking a method table entry against ``None`` before "
+"calling, or (2) writing a local no effect method with arguments similar to "
+"other functions in the table."
 msgstr ""
 
 #: ../pep-0336.txt:46
@@ -129,8 +129,8 @@ msgstr ""
 
 #: ../pep-0336.txt:125
 msgid ""
-"Raymond Hettinger, Propose to reject PEP 336 -- Make None Callable "
-"https://mail.python.org/pipermail/python-dev/2005-June/054280.html"
+"Raymond Hettinger, Propose to reject PEP 336 -- Make None Callable https://"
+"mail.python.org/pipermail/python-dev/2005-June/054280.html"
 msgstr ""
 
 #: ../pep-0336.txt:130
@@ -140,4 +140,3 @@ msgstr ""
 #: ../pep-0336.txt:132
 msgid "This document has been placed in the public domain."
 msgstr ""
-

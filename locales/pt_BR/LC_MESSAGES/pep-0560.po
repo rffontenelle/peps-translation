@@ -79,14 +79,14 @@ msgstr ""
 
 #: ../pep-0560.rst:16
 msgid ""
-"Initially :pep:`484` was designed in such way that it would not introduce"
-" *any* changes to the core CPython interpreter. Now type hints and the "
+"Initially :pep:`484` was designed in such way that it would not introduce "
+"*any* changes to the core CPython interpreter. Now type hints and the "
 "``typing`` module are extensively used by the community, e.g. :pep:`526` "
 "and :pep:`557` extend the usage of type hints, and the backport of "
-"``typing`` on PyPI has 1M downloads/month. Therefore, this restriction "
-"can be removed. It is proposed to add two special methods "
-"``__class_getitem__`` and ``__mro_entries__`` to the core CPython for "
-"better support of generic types."
+"``typing`` on PyPI has 1M downloads/month. Therefore, this restriction can "
+"be removed. It is proposed to add two special methods ``__class_getitem__`` "
+"and ``__mro_entries__`` to the core CPython for better support of generic "
+"types."
 msgstr ""
 
 #: ../pep-0560.rst:27
@@ -96,10 +96,10 @@ msgstr ""
 #: ../pep-0560.rst:29
 msgid ""
 "The restriction to not modify the core CPython interpreter led to some "
-"design decisions that became questionable when the ``typing`` module "
-"started to be widely used. There are three main points of concern: "
-"performance of the ``typing`` module, metaclass conflicts, and the large "
-"number of hacks currently used in ``typing``."
+"design decisions that became questionable when the ``typing`` module started "
+"to be widely used. There are three main points of concern: performance of "
+"the ``typing`` module, metaclass conflicts, and the large number of hacks "
+"currently used in ``typing``."
 msgstr ""
 
 #: ../pep-0560.rst:37
@@ -110,10 +110,10 @@ msgstr ""
 msgid ""
 "The ``typing`` module is one of the heaviest and slowest modules in the "
 "standard library even with all the optimizations made. Mainly this is "
-"because subscripted generic types (see :pep:`484` for definition of terms"
-" used in this PEP) are class objects (see also [1]_). There are three "
-"main ways how the performance can be improved with the help of the "
-"proposed special methods:"
+"because subscripted generic types (see :pep:`484` for definition of terms "
+"used in this PEP) are class objects (see also [1]_). There are three main "
+"ways how the performance can be improved with the help of the proposed "
+"special methods:"
 msgstr ""
 
 #: ../pep-0560.rst:45
@@ -124,13 +124,14 @@ msgstr ""
 
 #: ../pep-0560.rst:48
 msgid ""
-"Very long method resolution orders (MROs) for generic classes will be "
-"half as long; they are present because we duplicate the "
-"``collections.abc`` inheritance chain in ``typing``."
+"Very long method resolution orders (MROs) for generic classes will be half "
+"as long; they are present because we duplicate the ``collections.abc`` "
+"inheritance chain in ``typing``."
 msgstr ""
 
 #: ../pep-0560.rst:52
-msgid "Instantiation of generic classes will be faster (this is minor however)."
+msgid ""
+"Instantiation of generic classes will be faster (this is minor however)."
 msgstr ""
 
 #: ../pep-0560.rst:56
@@ -141,15 +142,14 @@ msgstr ""
 msgid ""
 "All generic types are instances of ``GenericMeta``, so if a user uses a "
 "custom metaclass, then it is hard to make a corresponding class generic. "
-"This is particularly hard for library classes that a user doesn't "
-"control. A workaround is to always mix-in ``GenericMeta``::"
+"This is particularly hard for library classes that a user doesn't control. A "
+"workaround is to always mix-in ``GenericMeta``::"
 msgstr ""
 
 #: ../pep-0560.rst:69
 msgid ""
 "but this is not always practical or even possible. With the help of the "
-"proposed special attributes the ``GenericMeta`` metaclass will not be "
-"needed."
+"proposed special attributes the ``GenericMeta`` metaclass will not be needed."
 msgstr ""
 
 #: ../pep-0560.rst:74
@@ -159,36 +159,36 @@ msgstr ""
 #: ../pep-0560.rst:76
 msgid ""
 "``_generic_new`` hack that exists because ``__init__`` is not called on "
-"instances with a type differing from the type whose ``__new__`` was "
-"called, ``C[int]().__class__ is C``."
+"instances with a type differing from the type whose ``__new__`` was called, "
+"``C[int]().__class__ is C``."
 msgstr ""
 
 #: ../pep-0560.rst:80
 msgid ""
-"``_next_in_mro`` speed hack will be not necessary since subscription will"
-" not create new classes."
+"``_next_in_mro`` speed hack will be not necessary since subscription will "
+"not create new classes."
 msgstr ""
 
 #: ../pep-0560.rst:83
 msgid ""
-"Ugly ``sys._getframe`` hack. This one is particularly nasty since it "
-"looks like we can't remove it without changes outside ``typing``."
+"Ugly ``sys._getframe`` hack. This one is particularly nasty since it looks "
+"like we can't remove it without changes outside ``typing``."
 msgstr ""
 
 #: ../pep-0560.rst:86
 msgid ""
-"Currently generics do dangerous things with private ABC caches to fix "
-"large memory consumption that grows at least as O(N\\ :sup:`2`), see "
-"[2]_. This point is also important because it was recently proposed to "
-"re-implement ``ABCMeta`` in C."
+"Currently generics do dangerous things with private ABC caches to fix large "
+"memory consumption that grows at least as O(N\\ :sup:`2`), see [2]_. This "
+"point is also important because it was recently proposed to re-implement "
+"``ABCMeta`` in C."
 msgstr ""
 
 #: ../pep-0560.rst:91
 msgid ""
-"Problems with sharing attributes between subscripted generics, see [3]_. "
-"The current solution already uses ``__getattr__`` and ``__setattr__``, "
-"but it is still incomplete, and solving this without the current proposal"
-" will be hard and will need ``__getattribute__``."
+"Problems with sharing attributes between subscripted generics, see [3]_. The "
+"current solution already uses ``__getattr__`` and ``__setattr__``, but it is "
+"still incomplete, and solving this without the current proposal will be hard "
+"and will need ``__getattribute__``."
 msgstr ""
 
 #: ../pep-0560.rst:96
@@ -199,9 +199,9 @@ msgstr ""
 
 #: ../pep-0560.rst:99
 msgid ""
-"General complexity of the ``typing`` module. The new proposal will not "
-"only allow to remove the above-mentioned hacks/bugs, but also simplify "
-"the implementation, so that it will be easier to maintain."
+"General complexity of the ``typing`` module. The new proposal will not only "
+"allow to remove the above-mentioned hacks/bugs, but also simplify the "
+"implementation, so that it will be easier to maintain."
 msgstr ""
 
 #: ../pep-0560.rst:105
@@ -215,12 +215,12 @@ msgstr ""
 #: ../pep-0560.rst:110
 msgid ""
 "The idea of ``__class_getitem__`` is simple: it is an exact analog of "
-"``__getitem__`` with an exception that it is called on a class that "
-"defines it, not on its instances. This allows us to avoid "
-"``GenericMeta.__getitem__`` for things like ``Iterable[int]``. The "
-"``__class_getitem__`` is automatically a class method and does not "
-"require ``@classmethod`` decorator (similar to ``__init_subclass__``) and"
-" is inherited like normal attributes. For example::"
+"``__getitem__`` with an exception that it is called on a class that defines "
+"it, not on its instances. This allows us to avoid ``GenericMeta."
+"__getitem__`` for things like ``Iterable[int]``. The ``__class_getitem__`` "
+"is automatically a class method and does not require ``@classmethod`` "
+"decorator (similar to ``__init_subclass__``) and is inherited like normal "
+"attributes. For example::"
 msgstr ""
 
 #: ../pep-0560.rst:134
@@ -235,42 +235,41 @@ msgstr ""
 
 #: ../pep-0560.rst:141
 msgid ""
-"If an object that is not a class object appears in the tuple of bases of "
-"a class definition, then method ``__mro_entries__`` is searched on it. If"
-" found, it is called with the original tuple of bases as an argument. The"
-" result of the call must be a tuple, that is unpacked in the base classes"
-" in place of this object. (If the tuple is empty, this means that the "
-"original bases is simply discarded.) If there are more than one object "
-"with ``__mro_entries__``, then all of them are called with the same "
-"original tuple of bases. This step happens first in the process of "
-"creation of a class, all other steps, including checks for duplicate "
-"bases and MRO calculation, happen normally with the updated bases."
+"If an object that is not a class object appears in the tuple of bases of a "
+"class definition, then method ``__mro_entries__`` is searched on it. If "
+"found, it is called with the original tuple of bases as an argument. The "
+"result of the call must be a tuple, that is unpacked in the base classes in "
+"place of this object. (If the tuple is empty, this means that the original "
+"bases is simply discarded.) If there are more than one object with "
+"``__mro_entries__``, then all of them are called with the same original "
+"tuple of bases. This step happens first in the process of creation of a "
+"class, all other steps, including checks for duplicate bases and MRO "
+"calculation, happen normally with the updated bases."
 msgstr ""
 
 #: ../pep-0560.rst:152
 msgid ""
 "Using the method API instead of just an attribute is necessary to avoid "
-"inconsistent MRO errors, and perform other manipulations that are "
-"currently done by ``GenericMeta.__new__``. The original bases are stored "
-"as ``__orig_bases__`` in the class namespace (currently this is also done"
-" by the metaclass). For example::"
+"inconsistent MRO errors, and perform other manipulations that are currently "
+"done by ``GenericMeta.__new__``. The original bases are stored as "
+"``__orig_bases__`` in the class namespace (currently this is also done by "
+"the metaclass). For example::"
 msgstr ""
 
 #: ../pep-0560.rst:176
 msgid ""
 "Resolution using ``__mro_entries__`` happens *only* in bases of a class "
 "definition statement. In all other situations where a class object is "
-"expected, no such resolution will happen, this includes ``isinstance`` "
-"and ``issubclass`` built-in functions."
+"expected, no such resolution will happen, this includes ``isinstance`` and "
+"``issubclass`` built-in functions."
 msgstr ""
 
 #: ../pep-0560.rst:181
 msgid ""
-"NOTE: These two method names are reserved for use by the ``typing`` "
-"module and the generic types machinery, and any other use is discouraged."
-" The reference implementation (with tests) can be found in [4]_, and the "
-"proposal was originally posted and discussed on the ``typing`` tracker, "
-"see [5]_."
+"NOTE: These two method names are reserved for use by the ``typing`` module "
+"and the generic types machinery, and any other use is discouraged. The "
+"reference implementation (with tests) can be found in [4]_, and the proposal "
+"was originally posted and discussed on the ``typing`` tracker, see [5]_."
 msgstr ""
 
 #: ../pep-0560.rst:189
@@ -279,14 +278,14 @@ msgstr ""
 
 #: ../pep-0560.rst:191
 msgid ""
-"``type.__new__`` will not perform any MRO entry resolution. So that a "
-"direct call ``type('Tokens', (List[int],), {})`` will fail. This is done "
-"for performance reasons and to minimize the number of implicit "
-"transformations. Instead, a helper function ``resolve_bases`` will be "
-"added to the ``types`` module to allow an explicit ``__mro_entries__`` "
-"resolution in the context of dynamic class creation. Correspondingly, "
-"``types.new_class`` will be updated to reflect the new class creation "
-"steps while maintaining the backwards compatibility::"
+"``type.__new__`` will not perform any MRO entry resolution. So that a direct "
+"call ``type('Tokens', (List[int],), {})`` will fail. This is done for "
+"performance reasons and to minimize the number of implicit transformations. "
+"Instead, a helper function ``resolve_bases`` will be added to the ``types`` "
+"module to allow an explicit ``__mro_entries__`` resolution in the context of "
+"dynamic class creation. Correspondingly, ``types.new_class`` will be updated "
+"to reflect the new class creation steps while maintaining the backwards "
+"compatibility::"
 msgstr ""
 
 #: ../pep-0560.rst:210
@@ -295,19 +294,19 @@ msgstr ""
 
 #: ../pep-0560.rst:212
 msgid ""
-"As mentioned above, ``__class_getitem__`` is automatically a class method"
-" if defined in Python code. To define this method in a C extension, one "
-"should use flags ``METH_O|METH_CLASS``. For example, a simple way to make"
-" an extension class generic is to use a method that simply returns the "
-"original class objects, thus fully erasing the type information at "
-"runtime, and deferring all check to static type checkers only::"
+"As mentioned above, ``__class_getitem__`` is automatically a class method if "
+"defined in Python code. To define this method in a C extension, one should "
+"use flags ``METH_O|METH_CLASS``. For example, a simple way to make an "
+"extension class generic is to use a method that simply returns the original "
+"class objects, thus fully erasing the type information at runtime, and "
+"deferring all check to static type checkers only::"
 msgstr ""
 
 #: ../pep-0560.rst:245
 msgid ""
 "Such class can be used as a normal generic in Python type annotations (a "
-"corresponding stub file should be provided for static type checkers, see "
-":pep:`484` for details)::"
+"corresponding stub file should be provided for static type checkers, see :"
+"pep:`484` for details)::"
 msgstr ""
 
 #: ../pep-0560.rst:263
@@ -317,29 +316,28 @@ msgstr ""
 #: ../pep-0560.rst:265
 msgid ""
 "This proposal may break code that currently uses the names "
-"``__class_getitem__`` and ``__mro_entries__``.  (But the language "
-"reference explicitly reserves *all* undocumented dunder names, and allows"
-" \"breakage without warning\"; see [6]_.)"
+"``__class_getitem__`` and ``__mro_entries__``.  (But the language reference "
+"explicitly reserves *all* undocumented dunder names, and allows \"breakage "
+"without warning\"; see [6]_.)"
 msgstr ""
 
 #: ../pep-0560.rst:270
 msgid ""
-"This proposal will support almost complete backwards compatibility with "
-"the current public generic types API; moreover the ``typing`` module is "
-"still provisional. The only two exceptions are that currently "
-"``issubclass(List[int], List)`` returns True, while with this proposal it"
-" will raise ``TypeError``, and ``repr()`` of unsubscripted user-defined "
-"generics cannot be tweaked and will coincide with ``repr()`` of normal "
-"(non-generic) classes."
+"This proposal will support almost complete backwards compatibility with the "
+"current public generic types API; moreover the ``typing`` module is still "
+"provisional. The only two exceptions are that currently "
+"``issubclass(List[int], List)`` returns True, while with this proposal it "
+"will raise ``TypeError``, and ``repr()`` of unsubscripted user-defined "
+"generics cannot be tweaked and will coincide with ``repr()`` of normal (non-"
+"generic) classes."
 msgstr ""
 
 #: ../pep-0560.rst:278
 #, python-format
 msgid ""
-"With the reference implementation I measured negligible performance "
-"effects (under 1% on a micro-benchmark) for regular (non-generic) "
-"classes. At the same time performance of generics is significantly "
-"improved:"
+"With the reference implementation I measured negligible performance effects "
+"(under 1% on a micro-benchmark) for regular (non-generic) classes. At the "
+"same time performance of generics is significantly improved:"
 msgstr ""
 
 #: ../pep-0560.rst:282
@@ -354,14 +352,14 @@ msgstr ""
 
 #: ../pep-0560.rst:285
 msgid ""
-"Instantiation of generic classes is up to 5x faster (on a micro-benchmark"
-" with an empty ``__init__``)"
+"Instantiation of generic classes is up to 5x faster (on a micro-benchmark "
+"with an empty ``__init__``)"
 msgstr ""
 
 #: ../pep-0560.rst:287
 msgid ""
-"Other operations with generic types and instances (like method lookup and"
-" ``isinstance()`` checks) are improved by around 10-20%"
+"Other operations with generic types and instances (like method lookup and "
+"``isinstance()`` checks) are improved by around 10-20%"
 msgstr ""
 
 #: ../pep-0560.rst:289
@@ -377,27 +375,26 @@ msgstr ""
 
 #: ../pep-0560.rst:296
 msgid ""
-"Discussion following Mark Shannon's presentation at Language Summit "
-"(https://github.com/python/typing/issues/432)"
+"Discussion following Mark Shannon's presentation at Language Summit (https://"
+"github.com/python/typing/issues/432)"
 msgstr ""
 
 #: ../pep-0560.rst:299
 msgid ""
-"Pull Request to implement shared generic ABC caches (merged) "
-"(https://github.com/python/typing/pull/383)"
+"Pull Request to implement shared generic ABC caches (merged) (https://github."
+"com/python/typing/pull/383)"
 msgstr ""
 
 #: ../pep-0560.rst:302
 msgid ""
-"An old bug with setting/accessing attributes on generic types "
-"(https://github.com/python/typing/issues/392)"
+"An old bug with setting/accessing attributes on generic types (https://"
+"github.com/python/typing/issues/392)"
 msgstr ""
 
 #: ../pep-0560.rst:305
 msgid ""
-"The reference implementation "
-"(https://github.com/ilevkivskyi/cpython/pull/2/files, "
-"https://github.com/ilevkivskyi/cpython/tree/new-typing)"
+"The reference implementation (https://github.com/ilevkivskyi/cpython/pull/2/"
+"files, https://github.com/ilevkivskyi/cpython/tree/new-typing)"
 msgstr ""
 
 #: ../pep-0560.rst:309
@@ -406,9 +403,8 @@ msgstr ""
 
 #: ../pep-0560.rst:312
 msgid ""
-"Reserved classes of identifiers "
-"(https://docs.python.org/3/reference/lexical_analysis.html#reserved-"
-"classes-of-identifiers)"
+"Reserved classes of identifiers (https://docs.python.org/3/reference/"
+"lexical_analysis.html#reserved-classes-of-identifiers)"
 msgstr ""
 
 #: ../pep-0560.rst:316
@@ -418,4 +414,3 @@ msgstr ""
 #: ../pep-0560.rst:318
 msgid "This document has been placed in the public domain."
 msgstr ""
-

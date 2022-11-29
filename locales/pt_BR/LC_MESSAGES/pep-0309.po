@@ -71,12 +71,12 @@ msgstr ""
 
 #: ../pep-0309.txt:17
 msgid ""
-"Following the acceptance of this PEP, further discussion on python-dev "
-"and comp.lang.python revealed a desire for several tools that operated on"
-" function objects, but were not related to functional programming.  "
-"Rather than create a new module for these tools, it was agreed [1]_ that "
-"the \"functional\" module be renamed to \"functools\" to reflect its "
-"newly-widened focus."
+"Following the acceptance of this PEP, further discussion on python-dev and "
+"comp.lang.python revealed a desire for several tools that operated on "
+"function objects, but were not related to functional programming.  Rather "
+"than create a new module for these tools, it was agreed [1]_ that the "
+"\"functional\" module be renamed to \"functools\" to reflect its newly-"
+"widened focus."
 msgstr ""
 
 #: ../pep-0309.txt:24
@@ -91,15 +91,15 @@ msgstr ""
 
 #: ../pep-0309.txt:31
 msgid ""
-"This proposal is for a function or callable class that allows a new "
-"callable to be constructed from a callable and a partial argument list "
-"(including positional and keyword arguments)."
+"This proposal is for a function or callable class that allows a new callable "
+"to be constructed from a callable and a partial argument list (including "
+"positional and keyword arguments)."
 msgstr ""
 
 #: ../pep-0309.txt:35
 msgid ""
-"I propose a standard library module called \"functional\", to hold useful"
-" higher-order functions, including the implementation of partial()."
+"I propose a standard library module called \"functional\", to hold useful "
+"higher-order functions, including the implementation of partial()."
 msgstr ""
 
 #: ../pep-0309.txt:39
@@ -112,12 +112,11 @@ msgstr ""
 
 #: ../pep-0309.txt:45
 msgid ""
-"Patch #941881 was accepted and applied in 2005 for Py2.5.  It is "
-"essentially as outlined here, a partial() type constructor binding "
-"leftmost positional arguments and any keywords.  The partial object has "
-"three read-only attributes func, args, and keywords.  Calls to the "
-"partial object can specify keywords that override those in the object "
-"itself."
+"Patch #941881 was accepted and applied in 2005 for Py2.5.  It is essentially "
+"as outlined here, a partial() type constructor binding leftmost positional "
+"arguments and any keywords.  The partial object has three read-only "
+"attributes func, args, and keywords.  Calls to the partial object can "
+"specify keywords that override those in the object itself."
 msgstr ""
 
 #: ../pep-0309.txt:51
@@ -133,11 +132,11 @@ msgstr ""
 
 #: ../pep-0309.txt:58
 msgid ""
-"In functional programming, function currying is a way of implementing "
-"multi-argument functions in terms of single-argument functions.  A "
-"function with N arguments is really a function with 1 argument that "
-"returns another function taking (N-1) arguments.  Function application in"
-" languages like Haskell and ML works such that a function call::"
+"In functional programming, function currying is a way of implementing multi-"
+"argument functions in terms of single-argument functions.  A function with N "
+"arguments is really a function with 1 argument that returns another function "
+"taking (N-1) arguments.  Function application in languages like Haskell and "
+"ML works such that a function call::"
 msgstr ""
 
 #: ../pep-0309.txt:66
@@ -147,37 +146,36 @@ msgstr ""
 #: ../pep-0309.txt:70
 msgid ""
 "This would be only an obscure theoretical issue except that in actual "
-"programming it turns out to be very useful.  Expressing a function in "
-"terms of partial application of arguments to another function can be both"
-" elegant and powerful, and in functional languages it is heavily used."
+"programming it turns out to be very useful.  Expressing a function in terms "
+"of partial application of arguments to another function can be both elegant "
+"and powerful, and in functional languages it is heavily used."
 msgstr ""
 
 #: ../pep-0309.txt:76
 msgid ""
-"In some functional languages, (e.g. Miranda) you can use an expression "
-"such as ``(+1)`` to mean the equivalent of Python's ``(lambda x: x + "
-"1)``."
+"In some functional languages, (e.g. Miranda) you can use an expression such "
+"as ``(+1)`` to mean the equivalent of Python's ``(lambda x: x + 1)``."
 msgstr ""
 
 #: ../pep-0309.txt:80
 msgid ""
-"In general, languages like that are strongly typed, so the compiler "
-"always knows the number of arguments expected and can do the right thing "
-"when presented with a functor and less arguments than expected."
+"In general, languages like that are strongly typed, so the compiler always "
+"knows the number of arguments expected and can do the right thing when "
+"presented with a functor and less arguments than expected."
 msgstr ""
 
 #: ../pep-0309.txt:84
 msgid ""
-"Python does not implement multi-argument functions by currying, so if you"
-" want a function with partially-applied arguments you would probably use "
-"a lambda as above, or define a named function for each instance."
+"Python does not implement multi-argument functions by currying, so if you "
+"want a function with partially-applied arguments you would probably use a "
+"lambda as above, or define a named function for each instance."
 msgstr ""
 
 #: ../pep-0309.txt:89
 msgid ""
 "However, lambda syntax is not to everyone's taste, so say the least. "
-"Furthermore, Python's flexible parameter passing using both positional "
-"and keyword presents an opportunity to generalise the idea of partial "
+"Furthermore, Python's flexible parameter passing using both positional and "
+"keyword presents an opportunity to generalise the idea of partial "
 "application and do things that lambda cannot."
 msgstr ""
 
@@ -187,9 +185,9 @@ msgstr ""
 
 #: ../pep-0309.txt:98
 msgid ""
-"Here is one way to do a create a callable with partially-applied "
-"arguments in Python.  The implementation below is based on improvements "
-"provided by Scott David Daniels::"
+"Here is one way to do a create a callable with partially-applied arguments "
+"in Python.  The implementation below is based on improvements provided by "
+"Scott David Daniels::"
 msgstr ""
 
 #: ../pep-0309.txt:116
@@ -200,10 +198,9 @@ msgstr ""
 
 #: ../pep-0309.txt:119
 msgid ""
-"Note that when the object is called as though it were a function, "
-"positional arguments are appended to those provided to the constructor, "
-"and keyword arguments override and augment those provided to the "
-"constructor."
+"Note that when the object is called as though it were a function, positional "
+"arguments are appended to those provided to the constructor, and keyword "
+"arguments override and augment those provided to the constructor."
 msgstr ""
 
 #: ../pep-0309.txt:124
@@ -218,28 +215,28 @@ msgstr ""
 
 #: ../pep-0309.txt:131
 msgid ""
-"So ``partial(operator.add, 1)`` is a bit like ``(lambda x: 1 + x)``. Not "
-"an example where you see the benefits, of course."
+"So ``partial(operator.add, 1)`` is a bit like ``(lambda x: 1 + x)``. Not an "
+"example where you see the benefits, of course."
 msgstr ""
 
 #: ../pep-0309.txt:134
 msgid ""
 "Note too, that you could wrap a class in the same way, since classes "
 "themselves are callable factories for objects.  So in some cases, rather "
-"than defining a subclass, you can specialise classes by partial "
-"application of the arguments to the constructor."
+"than defining a subclass, you can specialise classes by partial application "
+"of the arguments to the constructor."
 msgstr ""
 
 #: ../pep-0309.txt:139
 msgid ""
-"For example, ``partial(Tkinter.Label, fg='blue')`` makes Tkinter Labels "
-"that have a blue foreground by default."
+"For example, ``partial(Tkinter.Label, fg='blue')`` makes Tkinter Labels that "
+"have a blue foreground by default."
 msgstr ""
 
 #: ../pep-0309.txt:142
 msgid ""
-"Here's a simple example that uses partial application to construct "
-"callbacks for Tkinter widgets on the fly::"
+"Here's a simple example that uses partial application to construct callbacks "
+"for Tkinter widgets on the fly::"
 msgstr ""
 
 #: ../pep-0309.txt:162
@@ -248,21 +245,21 @@ msgstr ""
 
 #: ../pep-0309.txt:164
 msgid ""
-"I originally suggested the syntax ``fn@(*args, **kw)``, meaning the same "
-"as ``partial(fn, *args, **kw)``."
+"I originally suggested the syntax ``fn@(*args, **kw)``, meaning the same as "
+"``partial(fn, *args, **kw)``."
 msgstr ""
 
 #: ../pep-0309.txt:167
 msgid ""
-"The @ sign is used in some assembly languages to imply register "
-"indirection, and the use here is also a kind of indirection. ``f@(x)`` is"
-" not ``f(x)``, but a thing that becomes ``f(x)`` when you call it."
+"The @ sign is used in some assembly languages to imply register indirection, "
+"and the use here is also a kind of indirection. ``f@(x)`` is not ``f(x)``, "
+"but a thing that becomes ``f(x)`` when you call it."
 msgstr ""
 
 #: ../pep-0309.txt:172
 msgid ""
-"It was not well-received, so I have withdrawn this part of the proposal."
-"  In any case, @ has been taken for the new decorator syntax."
+"It was not well-received, so I have withdrawn this part of the proposal.  In "
+"any case, @ has been taken for the new decorator syntax."
 msgstr ""
 
 #: ../pep-0309.txt:177
@@ -288,13 +285,14 @@ msgid ""
 msgstr ""
 
 #: ../pep-0309.txt:189
-msgid "A curry class would indeed be a useful addition to the standard library."
+msgid ""
+"A curry class would indeed be a useful addition to the standard library."
 msgstr ""
 
 #: ../pep-0309.txt:192
 msgid ""
-"It isn't function currying, but partial application.  Hence the name is "
-"now proposed to be partial()."
+"It isn't function currying, but partial application.  Hence the name is now "
+"proposed to be partial()."
 msgstr ""
 
 #: ../pep-0309.txt:195
@@ -303,46 +301,46 @@ msgstr ""
 
 #: ../pep-0309.txt:197
 msgid ""
-"The idea of a module called ``functional`` was well received, and there "
-"are other things that belong there (for example function composition)."
+"The idea of a module called ``functional`` was well received, and there are "
+"other things that belong there (for example function composition)."
 msgstr ""
 
 #: ../pep-0309.txt:201
 msgid ""
-"For completeness, another object that appends partial arguments after "
-"those supplied in the function call (maybe called ``rightcurry``) has "
-"been suggested."
+"For completeness, another object that appends partial arguments after those "
+"supplied in the function call (maybe called ``rightcurry``) has been "
+"suggested."
 msgstr ""
 
 #: ../pep-0309.txt:205
 msgid ""
-"I agree that lambda is usually good enough, just not always.  And I want "
-"the possibility of useful introspection and subclassing."
+"I agree that lambda is usually good enough, just not always.  And I want the "
+"possibility of useful introspection and subclassing."
 msgstr ""
 
 #: ../pep-0309.txt:208
 msgid ""
-"I disagree that @ is particularly ugly, but it may be that I'm just "
-"weird.  We have dictionary, list and tuple literals neatly differentiated"
-" by special punctuation -- a way of directly expressing partially-applied"
-" function literals is not such a stretch.  However, not one single person"
-" has said they like it, so as far as I'm concerned it's a dead parrot."
+"I disagree that @ is particularly ugly, but it may be that I'm just weird.  "
+"We have dictionary, list and tuple literals neatly differentiated by special "
+"punctuation -- a way of directly expressing partially-applied function "
+"literals is not such a stretch.  However, not one single person has said "
+"they like it, so as far as I'm concerned it's a dead parrot."
 msgstr ""
 
 #: ../pep-0309.txt:215
 msgid ""
-"I concur with calling the class partial rather than curry or closure, so "
-"I have amended the proposal in this PEP accordingly.  But not throughout:"
-" some incorrect references to 'curry' have been left in since that's "
-"where the discussion was at the time."
+"I concur with calling the class partial rather than curry or closure, so I "
+"have amended the proposal in this PEP accordingly.  But not throughout: some "
+"incorrect references to 'curry' have been left in since that's where the "
+"discussion was at the time."
 msgstr ""
 
 #: ../pep-0309.txt:220
 msgid ""
 "Partially applying arguments from the right, or inserting arguments at "
 "arbitrary positions creates its own problems, but pending discovery of a "
-"good implementation and non-confusing semantics, I don't think it should "
-"be ruled out."
+"good implementation and non-confusing semantics, I don't think it should be "
+"ruled out."
 msgstr ""
 
 #: ../pep-0309.txt:225
@@ -355,17 +353,17 @@ msgstr ""
 
 #: ../pep-0309.txt:236
 msgid ""
-"I also coded the class in Pyrex, to estimate how the performance might be"
-" improved by coding it in C::"
+"I also coded the class in Pyrex, to estimate how the performance might be "
+"improved by coding it in C::"
 msgstr ""
 
 #: ../pep-0309.txt:256
 #, python-format
 msgid ""
 "The performance gain in Pyrex is less than 100% over the nested function "
-"implementation, since to be fully general it has to operate by Python API"
-" calls.  For the same reason, a C implementation will be unlikely to be "
-"much faster, so the case for a built-in coded in C is not very strong."
+"implementation, since to be fully general it has to operate by Python API "
+"calls.  For the same reason, a C implementation will be unlikely to be much "
+"faster, so the case for a built-in coded in C is not very strong."
 msgstr ""
 
 #: ../pep-0309.txt:264
@@ -374,30 +372,29 @@ msgstr ""
 
 #: ../pep-0309.txt:266
 msgid ""
-"I prefer that some means to partially-apply functions and other callables"
-" should be present in the standard library."
+"I prefer that some means to partially-apply functions and other callables "
+"should be present in the standard library."
 msgstr ""
 
 #: ../pep-0309.txt:269
 msgid ""
-"A standard library module ``functional`` should contain an implementation"
-" of ``partial``, and any other higher-order functions the community want."
-"  Other functions that might belong there fall outside the scope of this "
-"PEP though."
+"A standard library module ``functional`` should contain an implementation of "
+"``partial``, and any other higher-order functions the community want.  Other "
+"functions that might belong there fall outside the scope of this PEP though."
 msgstr ""
 
 #: ../pep-0309.txt:274
 msgid ""
 "Patches for the implementation, documentation and unit tests (SF patches "
-"931005_, 931007_, and 931010_ respectively) have been submitted but not "
-"yet checked in."
+"931005_, 931007_, and 931010_ respectively) have been submitted but not yet "
+"checked in."
 msgstr ""
 
 #: ../pep-0309.txt:278
 msgid ""
-"A C implementation by Hye-Shik Chang has also been submitted, although it"
-" is not expected to be included until after the Python implementation has"
-" proven itself useful enough to be worth optimising."
+"A C implementation by Hye-Shik Chang has also been submitted, although it is "
+"not expected to be included until after the Python implementation has proven "
+"itself useful enough to be worth optimising."
 msgstr ""
 
 #: ../pep-0309.txt:284
@@ -423,4 +420,3 @@ msgstr ""
 #: ../pep-0309.txt:300
 msgid "This document has been placed in the public domain."
 msgstr ""
-

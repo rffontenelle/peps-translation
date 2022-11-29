@@ -78,7 +78,8 @@ msgid "Resolution"
 msgstr ""
 
 #: ../pep-0503.txt:14
-msgid "https://mail.python.org/pipermail/distutils-sig/2015-September/026899.html"
+msgid ""
+"https://mail.python.org/pipermail/distutils-sig/2015-September/026899.html"
 msgstr ""
 
 #: ../pep-0503.txt:18
@@ -87,12 +88,11 @@ msgstr ""
 
 #: ../pep-0503.txt:20
 msgid ""
-"There are many implementations of a Python package repository and many "
-"tools that consume them. Of these, the canonical implementation that "
-"defines what the \"simple\" repository API looks like is the "
-"implementation that powers PyPI. This document will specify that API, "
-"documenting what the correct behavior for any implementation of the "
-"simple repository API."
+"There are many implementations of a Python package repository and many tools "
+"that consume them. Of these, the canonical implementation that defines what "
+"the \"simple\" repository API looks like is the implementation that powers "
+"PyPI. This document will specify that API, documenting what the correct "
+"behavior for any implementation of the simple repository API."
 msgstr ""
 
 #: ../pep-0503.txt:28
@@ -101,26 +101,26 @@ msgstr ""
 
 #: ../pep-0503.txt:30
 msgid ""
-"A repository that implements the simple API is defined by its base URL, "
-"this is the top level URL that all additional URLs are below. The API is "
-"named the \"simple\" repository due to the fact that PyPI's base URL is "
-"``https://pypi.org/simple/``."
+"A repository that implements the simple API is defined by its base URL, this "
+"is the top level URL that all additional URLs are below. The API is named "
+"the \"simple\" repository due to the fact that PyPI's base URL is ``https://"
+"pypi.org/simple/``."
 msgstr ""
 
 #: ../pep-0503.txt:35
 msgid ""
-"All subsequent URLs in this document will be relative to this base URL "
-"(so given PyPI's URL, a URL of ``/foo/`` would be "
-"``https://pypi.org/simple/foo/``."
+"All subsequent URLs in this document will be relative to this base URL (so "
+"given PyPI's URL, a URL of ``/foo/`` would be ``https://pypi.org/simple/foo/"
+"``."
 msgstr ""
 
 #: ../pep-0503.txt:40
 msgid ""
-"Within a repository, the root URL (``/`` for this PEP which represents "
-"the base URL) **MUST** be a valid HTML5 page with a single anchor element"
-" per project in the repository. The text of the anchor tag **MUST** be "
-"the name of the project and the href attribute **MUST** link to the URL "
-"for that particular project. As an example::"
+"Within a repository, the root URL (``/`` for this PEP which represents the "
+"base URL) **MUST** be a valid HTML5 page with a single anchor element per "
+"project in the repository. The text of the anchor tag **MUST** be the name "
+"of the project and the href attribute **MUST** link to the URL for that "
+"particular project. As an example::"
 msgstr ""
 
 #: ../pep-0503.txt:54
@@ -128,38 +128,39 @@ msgid ""
 "Below the root URL is another URL for each individual project contained "
 "within a repository. The format of this URL is ``/<project>/`` where the "
 "``<project>`` is replaced by the normalized name for that project, so a "
-"project named \"HolyGrail\" would have a URL like ``/holygrail/``. This "
-"URL must respond with a valid HTML5 page with a single anchor element per"
-" file for the project. The href attribute **MUST** be a URL that links to"
-" the location of the file for download, and the text of the anchor tag "
-"**MUST** match the final path component (the filename) of the URL. The "
-"URL **SHOULD** include a hash in the form of a URL fragment with the "
-"following syntax: ``#<hashname>=<hashvalue>``, where ``<hashname>`` is "
-"the lowercase name of the hash function (such as ``sha256``) and "
-"``<hashvalue>`` is the hex encoded digest."
+"project named \"HolyGrail\" would have a URL like ``/holygrail/``. This URL "
+"must respond with a valid HTML5 page with a single anchor element per file "
+"for the project. The href attribute **MUST** be a URL that links to the "
+"location of the file for download, and the text of the anchor tag **MUST** "
+"match the final path component (the filename) of the URL. The URL **SHOULD** "
+"include a hash in the form of a URL fragment with the following syntax: "
+"``#<hashname>=<hashvalue>``, where ``<hashname>`` is the lowercase name of "
+"the hash function (such as ``sha256``) and ``<hashvalue>`` is the hex "
+"encoded digest."
 msgstr ""
 
 #: ../pep-0503.txt:66
-msgid "In addition to the above, the following constraints are placed on the API:"
+msgid ""
+"In addition to the above, the following constraints are placed on the API:"
 msgstr ""
 
 #: ../pep-0503.txt:68
 msgid ""
-"All URLs which respond with an HTML5 page **MUST** end with a ``/`` and "
-"the repository **SHOULD** redirect the URLs without a ``/`` to add a "
-"``/`` to the end."
+"All URLs which respond with an HTML5 page **MUST** end with a ``/`` and the "
+"repository **SHOULD** redirect the URLs without a ``/`` to add a ``/`` to "
+"the end."
 msgstr ""
 
 #: ../pep-0503.txt:72
 msgid ""
-"URLs may be either absolute or relative as long as they point to the "
-"correct location."
+"URLs may be either absolute or relative as long as they point to the correct "
+"location."
 msgstr ""
 
 #: ../pep-0503.txt:75
 msgid ""
-"There are no constraints on where the files must be hosted relative to "
-"the repository."
+"There are no constraints on where the files must be hosted relative to the "
+"repository."
 msgstr ""
 
 #: ../pep-0503.txt:78
@@ -170,44 +171,43 @@ msgstr ""
 
 #: ../pep-0503.txt:81
 msgid ""
-"Repositories **MAY** redirect unnormalized URLs to the canonical "
-"normalized URL (e.g. ``/Foobar/`` may redirect to ``/foobar/``), however "
-"clients **MUST NOT** rely on this redirection and **MUST** request the "
-"normalized URL."
+"Repositories **MAY** redirect unnormalized URLs to the canonical normalized "
+"URL (e.g. ``/Foobar/`` may redirect to ``/foobar/``), however clients **MUST "
+"NOT** rely on this redirection and **MUST** request the normalized URL."
 msgstr ""
 
 #: ../pep-0503.txt:86
 msgid ""
 "Repositories **SHOULD** choose a hash function from one of the ones "
-"guaranteed to be available via the ``hashlib`` module in the Python "
-"standard library (currently ``md5``, ``sha1``, ``sha224``, ``sha256``, "
-"``sha384``, ``sha512``). The current recommendation is to use ``sha256``."
+"guaranteed to be available via the ``hashlib`` module in the Python standard "
+"library (currently ``md5``, ``sha1``, ``sha224``, ``sha256``, ``sha384``, "
+"``sha512``). The current recommendation is to use ``sha256``."
 msgstr ""
 
 #: ../pep-0503.txt:91
 msgid ""
-"If there is a GPG signature for a particular distribution file it "
-"**MUST** live alongside that file with the same name with a ``.asc`` "
-"appended to it. So if the file ``/packages/HolyGrail-1.0.tar.gz`` existed"
-" and had an associated signature, the signature would be located at "
-"``/packages/HolyGrail-1.0.tar.gz.asc``."
+"If there is a GPG signature for a particular distribution file it **MUST** "
+"live alongside that file with the same name with a ``.asc`` appended to it. "
+"So if the file ``/packages/HolyGrail-1.0.tar.gz`` existed and had an "
+"associated signature, the signature would be located at ``/packages/"
+"HolyGrail-1.0.tar.gz.asc``."
 msgstr ""
 
 #: ../pep-0503.txt:97
 msgid ""
 "A repository **MAY** include a ``data-gpg-sig`` attribute on a file link "
 "with a value of either ``true`` or ``false`` to indicate whether or not "
-"there is a GPG signature. Repositories that do this **SHOULD** include it"
-" on every link."
+"there is a GPG signature. Repositories that do this **SHOULD** include it on "
+"every link."
 msgstr ""
 
 #: ../pep-0503.txt:101
 msgid ""
-"A repository **MAY** include a ``data-requires-python`` attribute on a "
-"file link. This exposes the *Requires-Python* metadata field, specified "
-"in :pep:`345`, for the corresponding release. Where this is present, "
-"installer tools **SHOULD** ignore the download when installing to a "
-"Python version that doesn't satisfy the requirement. For example::"
+"A repository **MAY** include a ``data-requires-python`` attribute on a file "
+"link. This exposes the *Requires-Python* metadata field, specified in :pep:"
+"`345`, for the corresponding release. Where this is present, installer tools "
+"**SHOULD** ignore the download when installing to a Python version that "
+"doesn't satisfy the requirement. For example::"
 msgstr ""
 
 #: ../pep-0503.txt:109
@@ -222,12 +222,11 @@ msgstr ""
 
 #: ../pep-0503.txt:115
 msgid ""
-"This PEP references the concept of a \"normalized\" project name. As per "
-":pep:`426` the only valid characters in a name are the ASCII alphabet, "
-"ASCII numbers, ``.``, ``-``, and ``_``. The name should be lowercased "
-"with all runs of the characters ``.``, ``-``, or ``_`` replaced with a "
-"single ``-`` character. This can be implemented in Python with the ``re``"
-" module::"
+"This PEP references the concept of a \"normalized\" project name. As per :"
+"pep:`426` the only valid characters in a name are the ASCII alphabet, ASCII "
+"numbers, ``.``, ``-``, and ``_``. The name should be lowercased with all "
+"runs of the characters ``.``, ``-``, or ``_`` replaced with a single ``-`` "
+"character. This can be implemented in Python with the ``re`` module::"
 msgstr ""
 
 #: ../pep-0503.txt:127
@@ -245,4 +244,3 @@ msgstr ""
 #: ../pep-0503.txt:135
 msgid "This document has been placed in the public domain."
 msgstr ""
-

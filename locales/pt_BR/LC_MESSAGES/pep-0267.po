@@ -78,19 +78,19 @@ msgstr ""
 
 #: ../pep-0267.txt:23
 msgid ""
-"This PEP proposes a new implementation of global module namespaces and "
-"the builtin namespace that speeds name resolution.  The implementation "
-"would use an array of object pointers for most operations in these "
-"namespaces.  The compiler would assign indices for global variables and "
-"module attributes at compile time."
+"This PEP proposes a new implementation of global module namespaces and the "
+"builtin namespace that speeds name resolution.  The implementation would use "
+"an array of object pointers for most operations in these namespaces.  The "
+"compiler would assign indices for global variables and module attributes at "
+"compile time."
 msgstr ""
 
 #: ../pep-0267.txt:29
 msgid ""
-"The current implementation represents these namespaces as dictionaries.  "
-"A global name incurs a dictionary lookup each time it is used; a builtin "
-"name incurs two dictionary lookups, a failed lookup in the global "
-"namespace and a second lookup in the builtin namespace."
+"The current implementation represents these namespaces as dictionaries.  A "
+"global name incurs a dictionary lookup each time it is used; a builtin name "
+"incurs two dictionary lookups, a failed lookup in the global namespace and a "
+"second lookup in the builtin namespace."
 msgstr ""
 
 #: ../pep-0267.txt:35
@@ -102,12 +102,11 @@ msgstr ""
 
 #: ../pep-0267.txt:40
 msgid ""
-"The implementation is complicated because the global and builtin "
-"namespaces can be modified dynamically in ways that are impossible for "
-"the compiler to detect.  (Example: A module's namespace is modified by a "
-"script after the module is imported.)  As a result, the implementation "
-"must maintain several auxiliary data structures to preserve these dynamic"
-" features."
+"The implementation is complicated because the global and builtin namespaces "
+"can be modified dynamically in ways that are impossible for the compiler to "
+"detect.  (Example: A module's namespace is modified by a script after the "
+"module is imported.)  As a result, the implementation must maintain several "
+"auxiliary data structures to preserve these dynamic features."
 msgstr ""
 
 #: ../pep-0267.txt:49
@@ -117,24 +116,24 @@ msgstr ""
 #: ../pep-0267.txt:51
 msgid ""
 "This PEP proposes a new implementation of attribute access for module "
-"objects that optimizes access to module variables known at compile time."
-"  The module will store these variables in an array and provide an "
-"interface to lookup attributes using array offsets. For globals, "
-"builtins, and attributes of imported modules, the compiler will generate "
-"code that uses the array offsets for fast access."
+"objects that optimizes access to module variables known at compile time.  "
+"The module will store these variables in an array and provide an interface "
+"to lookup attributes using array offsets. For globals, builtins, and "
+"attributes of imported modules, the compiler will generate code that uses "
+"the array offsets for fast access."
 msgstr ""
 
 #: ../pep-0267.txt:59
 msgid ""
-"[describe the key parts of the design: dlict, compiler support, stupid "
-"name trick workarounds, optimization of other module's globals]"
+"[describe the key parts of the design: dlict, compiler support, stupid name "
+"trick workarounds, optimization of other module's globals]"
 msgstr ""
 
 #: ../pep-0267.txt:63
 msgid ""
-"The implementation will preserve existing semantics for module "
-"namespaces, including the ability to modify module namespaces at runtime "
-"in ways that affect the visibility of builtin names."
+"The implementation will preserve existing semantics for module namespaces, "
+"including the ability to modify module namespaces at runtime in ways that "
+"affect the visibility of builtin names."
 msgstr ""
 
 #: ../pep-0267.txt:69
@@ -144,15 +143,16 @@ msgstr ""
 #: ../pep-0267.txt:71
 msgid ""
 "The namespaces are implemented using a data structure that has sometimes "
-"gone under the name ``dlict``.  It is a dictionary that has numbered "
-"slots for some dictionary entries.  The type must be implemented in C to "
-"achieve acceptable performance.  The new type-class unification work "
-"should make this fairly easy.  The ``DLict`` will presumably be a "
-"subclass of dictionary with an alternate storage module for some keys."
+"gone under the name ``dlict``.  It is a dictionary that has numbered slots "
+"for some dictionary entries.  The type must be implemented in C to achieve "
+"acceptable performance.  The new type-class unification work should make "
+"this fairly easy.  The ``DLict`` will presumably be a subclass of dictionary "
+"with an alternate storage module for some keys."
 msgstr ""
 
 #: ../pep-0267.txt:79
-msgid "A Python implementation is included here to illustrate the basic design::"
+msgid ""
+"A Python implementation is included here to illustrate the basic design::"
 msgstr ""
 
 #: ../pep-0267.txt:190
@@ -162,25 +162,24 @@ msgstr ""
 #: ../pep-0267.txt:192
 msgid ""
 "The compiler currently collects the names of all global variables in a "
-"module.  These are names bound at the module level or bound in a class or"
-" function body that declares them to be global."
+"module.  These are names bound at the module level or bound in a class or "
+"function body that declares them to be global."
 msgstr ""
 
 #: ../pep-0267.txt:196
 msgid ""
-"The compiler would assign indices for each global name and add the names "
-"and indices of the globals to the module's code object. Each code object "
-"would then be bound irrevocably to the module it was defined in.  (Not "
-"sure if there are some subtle problems with this.)"
+"The compiler would assign indices for each global name and add the names and "
+"indices of the globals to the module's code object. Each code object would "
+"then be bound irrevocably to the module it was defined in.  (Not sure if "
+"there are some subtle problems with this.)"
 msgstr ""
 
 #: ../pep-0267.txt:202
 msgid ""
 "For attributes of imported modules, the module will store an indirection "
-"record.  Internally, the module will store a pointer to the defining "
-"module and the offset of the attribute in the defining module's global "
-"variable array.  The offset would be initialized the first time the name "
-"is looked up."
+"record.  Internally, the module will store a pointer to the defining module "
+"and the offset of the attribute in the defining module's global variable "
+"array.  The offset would be initialized the first time the name is looked up."
 msgstr ""
 
 #: ../pep-0267.txt:210
@@ -189,28 +188,28 @@ msgstr ""
 
 #: ../pep-0267.txt:212
 msgid ""
-"The PythonVM will be extended with new opcodes to access globals and "
-"module attributes via a module-level array."
+"The PythonVM will be extended with new opcodes to access globals and module "
+"attributes via a module-level array."
 msgstr ""
 
 #: ../pep-0267.txt:215
 msgid ""
-"A function object would need to point to the module that defined it in "
-"order to provide access to the module-level global array."
+"A function object would need to point to the module that defined it in order "
+"to provide access to the module-level global array."
 msgstr ""
 
 #: ../pep-0267.txt:218
 msgid ""
-"For module attributes stored in the ``dlict`` (call them static "
-"attributes), the get/delattr implementation would need to track access to"
-" these attributes using the old by-name interface.  If a static attribute"
-" is updated dynamically, e.g.::"
+"For module attributes stored in the ``dlict`` (call them static attributes), "
+"the get/delattr implementation would need to track access to these "
+"attributes using the old by-name interface.  If a static attribute is "
+"updated dynamically, e.g.::"
 msgstr ""
 
 #: ../pep-0267.txt:225
 msgid ""
-"The implementation would need to update the array slot instead of the "
-"backup dict."
+"The implementation would need to update the array slot instead of the backup "
+"dict."
 msgstr ""
 
 #: ../pep-0267.txt:230
@@ -219,35 +218,34 @@ msgstr ""
 
 #: ../pep-0267.txt:232
 msgid ""
-"The ``dlict`` will need to maintain meta-information about whether a slot"
-" is currently used or not.  It will also need to maintain a pointer to "
-"the builtin namespace.  When a name is not currently used in the global "
+"The ``dlict`` will need to maintain meta-information about whether a slot is "
+"currently used or not.  It will also need to maintain a pointer to the "
+"builtin namespace.  When a name is not currently used in the global "
 "namespace, the lookup will have to fail over to the builtin namespace."
 msgstr ""
 
 #: ../pep-0267.txt:238
 msgid ""
-"In the reverse case, each module may need a special accessor function for"
-" the builtin namespace that checks to see if a global shadowing the "
-"builtin has been added dynamically.  This check would only occur if there"
-" was a dynamic change to the module's ``dlict``, i.e. when a name is "
-"bound that wasn't discovered at compile-time."
+"In the reverse case, each module may need a special accessor function for "
+"the builtin namespace that checks to see if a global shadowing the builtin "
+"has been added dynamically.  This check would only occur if there was a "
+"dynamic change to the module's ``dlict``, i.e. when a name is bound that "
+"wasn't discovered at compile-time."
 msgstr ""
 
 #: ../pep-0267.txt:245
 msgid ""
-"These mechanisms would have little if any cost for the common case "
-"whether a module's global namespace is not modified in strange ways at "
-"runtime.  They would add overhead for modules that did unusual things "
-"with global names, but this is an uncommon practice and probably one "
-"worth discouraging."
+"These mechanisms would have little if any cost for the common case whether a "
+"module's global namespace is not modified in strange ways at runtime.  They "
+"would add overhead for modules that did unusual things with global names, "
+"but this is an uncommon practice and probably one worth discouraging."
 msgstr ""
 
 #: ../pep-0267.txt:251
 msgid ""
-"It may be desirable to disable dynamic additions to the global namespace "
-"in some future version of Python.  If so, the new implementation could "
-"provide warnings."
+"It may be desirable to disable dynamic additions to the global namespace in "
+"some future version of Python.  If so, the new implementation could provide "
+"warnings."
 msgstr ""
 
 #: ../pep-0267.txt:257
@@ -258,31 +256,30 @@ msgstr ""
 msgid ""
 ":pep:`266`, Optimizing Global Variable/Attribute Access, proposes a "
 "different mechanism for optimizing access to global variables as well as "
-"attributes of objects.  The mechanism uses two new opcodes "
-"``TRACK_OBJECT`` and ``UNTRACK_OBJECT`` to create a slot in the local "
-"variables array that aliases the global or object attribute.  If the "
-"object being aliases is rebound, the rebind operation is responsible for "
-"updating the aliases."
+"attributes of objects.  The mechanism uses two new opcodes ``TRACK_OBJECT`` "
+"and ``UNTRACK_OBJECT`` to create a slot in the local variables array that "
+"aliases the global or object attribute.  If the object being aliases is "
+"rebound, the rebind operation is responsible for updating the aliases."
 msgstr ""
 
 #: ../pep-0267.txt:267
 msgid ""
 "The objecting tracking approach applies to a wider range of objects than "
-"just module.  It may also have a higher runtime cost, because each "
-"function that uses a global or object attribute must execute extra "
-"opcodes to register its interest in an object and unregister on exit; the"
-" cost of registration is unclear, but presumably involves a dynamically "
-"resizable data structure to hold a list of callbacks."
+"just module.  It may also have a higher runtime cost, because each function "
+"that uses a global or object attribute must execute extra opcodes to "
+"register its interest in an object and unregister on exit; the cost of "
+"registration is unclear, but presumably involves a dynamically resizable "
+"data structure to hold a list of callbacks."
 msgstr ""
 
 #: ../pep-0267.txt:275
 msgid ""
-"The implementation proposed here avoids the need for registration, "
-"because it does not create aliases.  Instead it allows functions that "
-"reference a global variable or module attribute to retain a pointer to "
-"the location where the original binding is stored.  A second advantage is"
-" that the initial lookup is performed once per module rather than once "
-"per function call."
+"The implementation proposed here avoids the need for registration, because "
+"it does not create aliases.  Instead it allows functions that reference a "
+"global variable or module attribute to retain a pointer to the location "
+"where the original binding is stored.  A second advantage is that the "
+"initial lookup is performed once per module rather than once per function "
+"call."
 msgstr ""
 
 #: ../pep-0267.txt:284
@@ -292,4 +289,3 @@ msgstr ""
 #: ../pep-0267.txt:286
 msgid "This document has been placed in the public domain."
 msgstr ""
-

@@ -67,25 +67,25 @@ msgstr ""
 
 #: ../pep-0511.txt:17
 msgid ""
-"This PEP was seen as blessing new Python-like programming languages which"
-" are close but incompatible with the regular Python language. It was "
-"decided to not promote syntaxes incompatible with Python."
+"This PEP was seen as blessing new Python-like programming languages which "
+"are close but incompatible with the regular Python language. It was decided "
+"to not promote syntaxes incompatible with Python."
 msgstr ""
 
 #: ../pep-0511.txt:21
 msgid ""
-"This PEP was also seen as a nice tool to experiment new Python features, "
-"but it is already possible to experiment them without the PEP, only with "
-"importlib hooks. If a feature becomes useful, it should be directly part "
-"of Python, instead of depending on an third party Python module."
+"This PEP was also seen as a nice tool to experiment new Python features, but "
+"it is already possible to experiment them without the PEP, only with "
+"importlib hooks. If a feature becomes useful, it should be directly part of "
+"Python, instead of depending on an third party Python module."
 msgstr ""
 
 #: ../pep-0511.txt:26
 msgid ""
-"Finally, this PEP was driven was the FAT Python optimization project "
-"which was abandoned in 2016, since it was not possible to show any "
-"significant speedup, but also because of the lack of time to implement "
-"the most advanced and complex optimizations."
+"Finally, this PEP was driven was the FAT Python optimization project which "
+"was abandoned in 2016, since it was not possible to show any significant "
+"speedup, but also because of the lack of time to implement the most advanced "
+"and complex optimizations."
 msgstr ""
 
 #: ../pep-0511.txt:33
@@ -95,12 +95,11 @@ msgstr ""
 #: ../pep-0511.txt:35
 msgid ""
 "Propose an API to register bytecode and AST transformers. Add also ``-o "
-"OPTIM_TAG`` command line option to change ``.pyc`` filenames, ``-o "
-"noopt`` disables the peephole optimizer. Raise an ``ImportError`` "
-"exception on import if the ``.pyc`` file is missing and the code "
-"transformers required to transform the code are missing.  code "
-"transformers are not needed code transformed ahead of time (loaded from "
-"``.pyc`` files)."
+"OPTIM_TAG`` command line option to change ``.pyc`` filenames, ``-o noopt`` "
+"disables the peephole optimizer. Raise an ``ImportError`` exception on "
+"import if the ``.pyc`` file is missing and the code transformers required to "
+"transform the code are missing.  code transformers are not needed code "
+"transformed ahead of time (loaded from ``.pyc`` files)."
 msgstr ""
 
 #: ../pep-0511.txt:45
@@ -110,18 +109,17 @@ msgstr ""
 #: ../pep-0511.txt:47
 msgid ""
 "Python does not provide a standard way to transform the code. Projects "
-"transforming the code use various hooks. The MacroPy project uses an "
-"import hook: it adds its own module finder in ``sys.meta_path`` to hook "
-"its AST transformer. Another option is to monkey-patch the builtin "
-"``compile()`` function. There are even more options to hook a code "
-"transformer."
+"transforming the code use various hooks. The MacroPy project uses an import "
+"hook: it adds its own module finder in ``sys.meta_path`` to hook its AST "
+"transformer. Another option is to monkey-patch the builtin ``compile()`` "
+"function. There are even more options to hook a code transformer."
 msgstr ""
 
 #: ../pep-0511.txt:54
 msgid ""
-"Python 3.4 added a ``compile_source()`` method to "
-"``importlib.abc.SourceLoader``. But code transformation is wider than "
-"just importing modules, see described use cases below."
+"Python 3.4 added a ``compile_source()`` method to ``importlib.abc."
+"SourceLoader``. But code transformation is wider than just importing "
+"modules, see described use cases below."
 msgstr ""
 
 #: ../pep-0511.txt:58
@@ -134,9 +132,9 @@ msgstr ""
 
 #: ../pep-0511.txt:63
 msgid ""
-"Transforming an Abstract Syntax Tree (AST) is a convenient way to "
-"implement an optimizer. It's easier to work on the AST than working on "
-"the bytecode, AST contains more information and is more high level."
+"Transforming an Abstract Syntax Tree (AST) is a convenient way to implement "
+"an optimizer. It's easier to work on the AST than working on the bytecode, "
+"AST contains more information and is more high level."
 msgstr ""
 
 #: ../pep-0511.txt:68
@@ -146,7 +144,8 @@ msgid ""
 msgstr ""
 
 #: ../pep-0511.txt:71
-msgid "Example of optimizations which can be implemented with an AST optimizer:"
+msgid ""
+"Example of optimizations which can be implemented with an AST optimizer:"
 msgstr ""
 
 #: ../pep-0511.txt:73
@@ -163,8 +162,8 @@ msgstr ""
 
 #: ../pep-0511.txt:79
 msgid ""
-"`Dead code elimination "
-"<https://en.wikipedia.org/wiki/Dead_code_elimination>`_"
+"`Dead code elimination <https://en.wikipedia.org/wiki/"
+"Dead_code_elimination>`_"
 msgstr ""
 
 #: ../pep-0511.txt:82
@@ -193,9 +192,9 @@ msgstr ""
 
 #: ../pep-0511.txt:90
 msgid ""
-"See also `optimizations implemented in fatoptimizer "
-"<https://fatoptimizer.readthedocs.org/en/latest/optimizations.html>`_, a "
-"static optimizer for Python 3.6."
+"See also `optimizations implemented in fatoptimizer <https://fatoptimizer."
+"readthedocs.org/en/latest/optimizations.html>`_, a static optimizer for "
+"Python 3.6."
 msgstr ""
 
 #: ../pep-0511.txt:94
@@ -204,8 +203,8 @@ msgstr ""
 
 #: ../pep-0511.txt:96
 msgid ""
-"`Issue #1346238 <https://bugs.python.org/issue1346238>`_: A constant "
-"folding optimization pass for the AST"
+"`Issue #1346238 <https://bugs.python.org/issue1346238>`_: A constant folding "
+"optimization pass for the AST"
 msgstr ""
 
 #: ../pep-0511.txt:99
@@ -216,20 +215,20 @@ msgstr ""
 
 #: ../pep-0511.txt:101
 msgid ""
-"`Issue #2499 <http://bugs.python.org/issue2499>`_: Fold unary + and not "
-"on constants"
+"`Issue #2499 <http://bugs.python.org/issue2499>`_: Fold unary + and not on "
+"constants"
 msgstr ""
 
 #: ../pep-0511.txt:103
 msgid ""
-"`Issue #4264 <http://bugs.python.org/issue4264>`_: Patch: optimize code "
-"to use LIST_APPEND instead of calling list.append"
+"`Issue #4264 <http://bugs.python.org/issue4264>`_: Patch: optimize code to "
+"use LIST_APPEND instead of calling list.append"
 msgstr ""
 
 #: ../pep-0511.txt:105
 msgid ""
-"`Issue #7682 <http://bugs.python.org/issue7682>`_: Optimisation of if "
-"with constant expression"
+"`Issue #7682 <http://bugs.python.org/issue7682>`_: Optimisation of if with "
+"constant expression"
 msgstr ""
 
 #: ../pep-0511.txt:107
@@ -246,8 +245,8 @@ msgstr ""
 
 #: ../pep-0511.txt:112
 msgid ""
-"`Issue #17068 <http://bugs.python.org/issue17068>`_: peephole "
-"optimization for constant strings"
+"`Issue #17068 <http://bugs.python.org/issue17068>`_: peephole optimization "
+"for constant strings"
 msgstr ""
 
 #: ../pep-0511.txt:114
@@ -272,8 +271,8 @@ msgstr ""
 
 #: ../pep-0511.txt:126
 msgid ""
-"Remove debug code like assertions and logs to make the code faster to run"
-" it for production."
+"Remove debug code like assertions and logs to make the code faster to run it "
+"for production."
 msgstr ""
 
 #: ../pep-0511.txt:128
@@ -288,8 +287,8 @@ msgstr ""
 msgid ""
 "`Lazy evaluation <https://en.wikipedia.org/wiki/Lazy_evaluation>`_: see "
 "`lazy_python <https://github.com/llllllllll/lazy_python>`_ (bytecode "
-"transformer) and `lazy macro of MacroPy "
-"<https://github.com/lihaoyi/macropy#lazy>`_ (AST transformer)"
+"transformer) and `lazy macro of MacroPy <https://github.com/lihaoyi/"
+"macropy#lazy>`_ (AST transformer)"
 msgstr ""
 
 #: ../pep-0511.txt:134
@@ -298,16 +297,15 @@ msgstr ""
 
 #: ../pep-0511.txt:135
 msgid ""
-"Declare constants: see `@asconstants of codetransformer "
-"<https://pypi.python.org/pypi/codetransformer>`_"
+"Declare constants: see `@asconstants of codetransformer <https://pypi.python."
+"org/pypi/codetransformer>`_"
 msgstr ""
 
 #: ../pep-0511.txt:137
 msgid ""
-"Domain Specific Language (DSL) like SQL queries. The Python language "
-"itself doesn't need to be modified. Previous attempts to implement DSL "
-"for SQL like :pep:`PEP 335 - Overloadable Boolean Operators <335>` was "
-"rejected."
+"Domain Specific Language (DSL) like SQL queries. The Python language itself "
+"doesn't need to be modified. Previous attempts to implement DSL for SQL "
+"like :pep:`PEP 335 - Overloadable Boolean Operators <335>` was rejected."
 msgstr ""
 
 #: ../pep-0511.txt:141
@@ -320,8 +318,8 @@ msgstr ""
 
 #: ../pep-0511.txt:146
 msgid ""
-"`MacroPy <https://github.com/lihaoyi/macropy>`_ has a long list of "
-"examples and use cases."
+"`MacroPy <https://github.com/lihaoyi/macropy>`_ has a long list of examples "
+"and use cases."
 msgstr ""
 
 #: ../pep-0511.txt:149
@@ -345,14 +343,14 @@ msgid ""
 "Ned Batchelder asked to add an option to disable the peephole optimizer "
 "because it makes code coverage more difficult to implement. See the "
 "discussion on the python-ideas mailing list: `Disable all peephole "
-"optimizations <https://mail.python.org/pipermail/python-"
-"ideas/2014-May/027893.html>`_."
+"optimizations <https://mail.python.org/pipermail/python-ideas/2014-"
+"May/027893.html>`_."
 msgstr ""
 
 #: ../pep-0511.txt:165
 msgid ""
-"This PEP adds a new ``-o noopt`` command line option to disable the "
-"peephole optimizer. In Python, it's as easy as::"
+"This PEP adds a new ``-o noopt`` command line option to disable the peephole "
+"optimizer. In Python, it's as easy as::"
 msgstr ""
 
 #: ../pep-0511.txt:170
@@ -367,24 +365,24 @@ msgstr ""
 
 #: ../pep-0511.txt:177
 msgid ""
-"Python 3.6 optimizes the code using a peephole optimizer. By definition, "
-"a peephole optimizer has a narrow view of the code and so can only "
-"implement basic optimizations. The optimizer rewrites the bytecode. It is"
-" difficult to enhance it, because it written in C."
+"Python 3.6 optimizes the code using a peephole optimizer. By definition, a "
+"peephole optimizer has a narrow view of the code and so can only implement "
+"basic optimizations. The optimizer rewrites the bytecode. It is difficult to "
+"enhance it, because it written in C."
 msgstr ""
 
 #: ../pep-0511.txt:182
 msgid ""
-"With this PEP, it becomes possible to implement a new bytecode optimizer "
-"in pure Python and experiment new optimizations."
+"With this PEP, it becomes possible to implement a new bytecode optimizer in "
+"pure Python and experiment new optimizations."
 msgstr ""
 
 #: ../pep-0511.txt:185
 msgid ""
-"Some optimizations are easier to implement on the AST like constant "
-"folding, but optimizations on the bytecode are still useful. For example,"
-" when the AST is compiled to bytecode, useless jumps can be emitted "
-"because the compiler is naive and does not try to optimize anything."
+"Some optimizations are easier to implement on the AST like constant folding, "
+"but optimizations on the bytecode are still useful. For example, when the "
+"AST is compiled to bytecode, useless jumps can be emitted because the "
+"compiler is naive and does not try to optimize anything."
 msgstr ""
 
 #: ../pep-0511.txt:193
@@ -410,8 +408,8 @@ msgstr ""
 
 #: ../pep-0511.txt:205
 msgid ""
-"The code is transformed at runtime and so the interpreter can be slower "
-"when expensive code transformers are used."
+"The code is transformed at runtime and so the interpreter can be slower when "
+"expensive code transformers are used."
 msgstr ""
 
 #: ../pep-0511.txt:209
@@ -424,8 +422,8 @@ msgstr ""
 
 #: ../pep-0511.txt:213
 msgid ""
-"A transformer can have a configuration. The configuration is not stored "
-"in the package."
+"A transformer can have a configuration. The configuration is not stored in "
+"the package."
 msgstr ""
 
 #: ../pep-0511.txt:216
@@ -436,10 +434,9 @@ msgstr ""
 
 #: ../pep-0511.txt:219
 msgid ""
-"It is possible to build different ``.pyc`` files using different "
-"optimizer tags. Example: ``fat`` for the default configuration and "
-"``fat_inline`` for a different configuration with function inlining "
-"enabled."
+"It is possible to build different ``.pyc`` files using different optimizer "
+"tags. Example: ``fat`` for the default configuration and ``fat_inline`` for "
+"a different configuration with function inlining enabled."
 msgstr ""
 
 #: ../pep-0511.txt:224
@@ -452,8 +449,8 @@ msgstr ""
 
 #: ../pep-0511.txt:230
 msgid ""
-"It will be possible to install a package which contains transformed "
-"``.pyc`` files."
+"It will be possible to install a package which contains transformed ``.pyc`` "
+"files."
 msgstr ""
 
 #: ../pep-0511.txt:233
@@ -468,9 +465,9 @@ msgstr ""
 
 #: ../pep-0511.txt:240
 msgid ""
-"If a package does not contain any ``.pyc`` files of the current optimizer"
-" tag (or some ``.pyc`` files are missing), the ``.pyc`` are created "
-"during the installation."
+"If a package does not contain any ``.pyc`` files of the current optimizer "
+"tag (or some ``.pyc`` files are missing), the ``.pyc`` are created during "
+"the installation."
 msgstr ""
 
 #: ../pep-0511.txt:244
@@ -520,18 +517,18 @@ msgstr ""
 
 #: ../pep-0511.txt:272
 msgid ""
-"The ``name`` attribute (``str``) must be a short string used to identify "
-"an optimizer. It is used to build a ``.pyc`` filename. The name must not "
-"contain dots (``'.'``), dashes (``'-'``) or directory separators: dots "
-"are used to separated fields in a ``.pyc`` filename and dashes areused to"
-" join code transformer names to build the optimizer tag."
+"The ``name`` attribute (``str``) must be a short string used to identify an "
+"optimizer. It is used to build a ``.pyc`` filename. The name must not "
+"contain dots (``'.'``), dashes (``'-'``) or directory separators: dots are "
+"used to separated fields in a ``.pyc`` filename and dashes areused to join "
+"code transformer names to build the optimizer tag."
 msgstr ""
 
 #: ../pep-0511.txt:279
 msgid ""
 "It would be nice to pass the fully qualified name of a module in the "
-"*context* when an AST transformer is used to transform a module on "
-"import, but it looks like the information is not available in "
+"*context* when an AST transformer is used to transform a module on import, "
+"but it looks like the information is not available in "
 "``PyParser_ASTFromStringObject()``."
 msgstr ""
 
@@ -554,9 +551,9 @@ msgstr ""
 #: ../pep-0511.txt:299
 msgid ""
 "*context*: an object with an *optimize* attribute (``int``), the "
-"optimization level (0, 1 or 2). The value of the *optimize* attribute "
-"comes from the *optimize* parameter of the ``compile()`` function, it is "
-"equal to ``sys.flags.optimize`` by default."
+"optimization level (0, 1 or 2). The value of the *optimize* attribute comes "
+"from the *optimize* parameter of the ``compile()`` function, it is equal to "
+"``sys.flags.optimize`` by default."
 msgstr ""
 
 #: ../pep-0511.txt:304
@@ -574,7 +571,8 @@ msgid "XXX add more flags?"
 msgstr ""
 
 #: ../pep-0511.txt:311
-msgid "XXX replace flags int with a sub-namespace, or with specific attributes?"
+msgid ""
+"XXX replace flags int with a sub-namespace, or with specific attributes?"
 msgstr ""
 
 #: ../pep-0511.txt:313
@@ -599,14 +597,14 @@ msgstr ""
 
 #: ../pep-0511.txt:332
 msgid ""
-"It must return an AST tree. It can modify the AST tree in place, or "
-"create a new AST tree."
+"It must return an AST tree. It can modify the AST tree in place, or create a "
+"new AST tree."
 msgstr ""
 
 #: ../pep-0511.txt:335
 msgid ""
-"The AST transformer is called after the creation of the AST by the parser"
-" and before the compilation to bytecode. New attributes may be added to "
+"The AST transformer is called after the creation of the AST by the parser "
+"and before the compilation to bytecode. New attributes may be added to "
 "*context* in the future."
 msgstr ""
 
@@ -659,8 +657,8 @@ msgstr ""
 #: ../pep-0511.txt:362
 msgid ""
 "The order of code transformers matter. Running transformer A and then "
-"transformer B can give a different output than running transformer B an "
-"then transformer A."
+"transformer B can give a different output than running transformer B an then "
+"transformer A."
 msgstr ""
 
 #: ../pep-0511.txt:366
@@ -669,9 +667,9 @@ msgstr ""
 
 #: ../pep-0511.txt:372
 msgid ""
-"All AST transformers are run sequentially (ex: the second transformer "
-"gets the input of the first transformer), and then all bytecode "
-"transformers are run sequentially."
+"All AST transformers are run sequentially (ex: the second transformer gets "
+"the input of the first transformer), and then all bytecode transformers are "
+"run sequentially."
 msgstr ""
 
 #: ../pep-0511.txt:378
@@ -690,8 +688,8 @@ msgstr ""
 
 #: ../pep-0511.txt:384
 msgid ""
-"Add a new ``-o OPTIM_TAG`` command line option to set "
-"``sys.implementation.optim_tag``."
+"Add a new ``-o OPTIM_TAG`` command line option to set ``sys.implementation."
+"optim_tag``."
 msgstr ""
 
 #: ../pep-0511.txt:387
@@ -700,24 +698,24 @@ msgstr ""
 
 #: ../pep-0511.txt:389
 msgid ""
-"``importlib`` uses ``sys.implementation.optim_tag`` to build the ``.pyc``"
-" filename to importing modules, instead of always using ``opt``. Remove "
-"also the special case for the optimizer level ``0`` with the default "
-"optimizer tag ``'opt'`` to simplify the code."
+"``importlib`` uses ``sys.implementation.optim_tag`` to build the ``.pyc`` "
+"filename to importing modules, instead of always using ``opt``. Remove also "
+"the special case for the optimizer level ``0`` with the default optimizer "
+"tag ``'opt'`` to simplify the code."
 msgstr ""
 
 #: ../pep-0511.txt:393
 msgid ""
-"When loading a module, if the ``.pyc`` file is missing but the ``.py`` is"
-" available, the ``.py`` is only used if code optimizers have the same "
-"optimizer tag than the current tag, otherwise an ``ImportError`` "
-"exception is raised."
+"When loading a module, if the ``.pyc`` file is missing but the ``.py`` is "
+"available, the ``.py`` is only used if code optimizers have the same "
+"optimizer tag than the current tag, otherwise an ``ImportError`` exception "
+"is raised."
 msgstr ""
 
 #: ../pep-0511.txt:398
 msgid ""
-"Pseudo-code of a ``use_py()`` function to decide if a ``.py`` file can be"
-" compiled to import a module::"
+"Pseudo-code of a ``use_py()`` function to decide if a ``.py`` file can be "
+"compiled to import a module::"
 msgstr ""
 
 #: ../pep-0511.txt:411
@@ -739,9 +737,9 @@ msgstr ""
 
 #: ../pep-0511.txt:422
 msgid ""
-"By default, ``sys.implementation.optim_tag`` is ``opt`` and "
-"``sys.get_code_transformers()`` returns a list of one code transformer: "
-"the peephole optimizer (optimize the bytecode)."
+"By default, ``sys.implementation.optim_tag`` is ``opt`` and ``sys."
+"get_code_transformers()`` returns a list of one code transformer: the "
+"peephole optimizer (optimize the bytecode)."
 msgstr ""
 
 #: ../pep-0511.txt:426
@@ -764,8 +762,8 @@ msgstr ""
 
 #: ../pep-0511.txt:437
 msgid ""
-"Add a new compiler flag ``PyCF_TRANSFORMED_AST`` to get the transformed "
-"AST. ``PyCF_ONLY_AST`` returns the AST before the transformers."
+"Add a new compiler flag ``PyCF_TRANSFORMED_AST`` to get the transformed AST. "
+"``PyCF_ONLY_AST`` returns the AST before the transformers."
 msgstr ""
 
 #: ../pep-0511.txt:443
@@ -838,8 +836,7 @@ msgstr ""
 
 #: ../pep-0511.txt:474
 msgid ""
-"Scary bytecode transformer replacing all strings with ``\"Ni! Ni! "
-"Ni!\"``::"
+"Scary bytecode transformer replacing all strings with ``\"Ni! Ni! Ni!\"``::"
 msgstr ""
 
 #: ../pep-0511.txt:508 ../pep-0511.txt:543
@@ -862,16 +859,16 @@ msgstr ""
 
 #: ../pep-0511.txt:551
 msgid ""
-"The :pep:`511` should be implemented by all Python implementation, but "
-"the bytecode and the AST are not standardized."
+"The :pep:`511` should be implemented by all Python implementation, but the "
+"bytecode and the AST are not standardized."
 msgstr ""
 
 #: ../pep-0511.txt:554
 msgid ""
-"By the way, even between minor version of CPython, there are changes on "
-"the AST API. There are differences, but only minor differences. It is "
-"quite easy to write an AST transformer which works on Python 2.7 and "
-"Python 3.5 for example."
+"By the way, even between minor version of CPython, there are changes on the "
+"AST API. There are differences, but only minor differences. It is quite easy "
+"to write an AST transformer which works on Python 2.7 and Python 3.5 for "
+"example."
 msgstr ""
 
 #: ../pep-0511.txt:561
@@ -880,16 +877,14 @@ msgstr ""
 
 #: ../pep-0511.txt:563
 msgid ""
-"`[Python-ideas] PEP 511: API for code transformers "
-"<https://mail.python.org/pipermail/python-"
-"ideas/2016-January/037884.html>`_ (January 2016)"
+"`[Python-ideas] PEP 511: API for code transformers <https://mail.python.org/"
+"pipermail/python-ideas/2016-January/037884.html>`_ (January 2016)"
 msgstr ""
 
 #: ../pep-0511.txt:566
 msgid ""
-"`[Python-Dev] AST optimizer implemented in Python "
-"<https://mail.python.org/pipermail/python-dev/2012-August/121286.html>`_ "
-"(August 2012)"
+"`[Python-Dev] AST optimizer implemented in Python <https://mail.python.org/"
+"pipermail/python-dev/2012-August/121286.html>`_ (August 2012)"
 msgstr ""
 
 #: ../pep-0511.txt:572
@@ -903,15 +898,15 @@ msgstr ""
 #: ../pep-0511.txt:577
 msgid ""
 "The Issue #17515 `\"Add sys.setasthook() to allow to use a custom AST\" "
-"optimizer <https://bugs.python.org/issue17515>`_ was a first attempt of "
-"API for code transformers, but specific to AST."
+"optimizer <https://bugs.python.org/issue17515>`_ was a first attempt of API "
+"for code transformers, but specific to AST."
 msgstr ""
 
 #: ../pep-0511.txt:581
 msgid ""
-"In 2015, Victor Stinner wrote the `fatoptimizer "
-"<http://fatoptimizer.readthedocs.org/>`_ project, an AST optimizer "
-"specializing functions using guards."
+"In 2015, Victor Stinner wrote the `fatoptimizer <http://fatoptimizer."
+"readthedocs.org/>`_ project, an AST optimizer specializing functions using "
+"guards."
 msgstr ""
 
 #: ../pep-0511.txt:585
@@ -922,20 +917,19 @@ msgstr ""
 
 #: ../pep-0511.txt:588
 msgid ""
-"In 2012, Victor Stinner wrote the `astoptimizer "
-"<https://bitbucket.org/haypo/astoptimizer/>`_ project, an AST optimizer "
-"implementing various optimizations. Most interesting optimizations break "
-"the Python semantics since no guard is used to disable optimization if "
-"something changes."
+"In 2012, Victor Stinner wrote the `astoptimizer <https://bitbucket.org/haypo/"
+"astoptimizer/>`_ project, an AST optimizer implementing various "
+"optimizations. Most interesting optimizations break the Python semantics "
+"since no guard is used to disable optimization if something changes."
 msgstr ""
 
 #: ../pep-0511.txt:594
 msgid ""
-"In 2011, Eugene Toder proposed to rewrite some peephole optimizations in "
-"a new AST optimizer: issue #11549, `Build-out an AST optimizer, moving "
-"some functionality out of the peephole optimizer "
-"<https://bugs.python.org/issue11549>`_.  The patch adds ``ast.Lit`` (it "
-"was proposed to rename it to ``ast.Literal``)."
+"In 2011, Eugene Toder proposed to rewrite some peephole optimizations in a "
+"new AST optimizer: issue #11549, `Build-out an AST optimizer, moving some "
+"functionality out of the peephole optimizer <https://bugs.python.org/"
+"issue11549>`_.  The patch adds ``ast.Lit`` (it was proposed to rename it to "
+"``ast.Literal``)."
 msgstr ""
 
 #: ../pep-0511.txt:602
@@ -946,9 +940,9 @@ msgstr ""
 msgid ""
 "`MacroPy <https://github.com/lihaoyi/macropy>`_: MacroPy is an "
 "implementation of Syntactic Macros in the Python Programming Language. "
-"MacroPy provides a mechanism for user-defined functions (macros) to "
-"perform transformations on the abstract syntax tree (AST) of a Python "
-"program at import time."
+"MacroPy provides a mechanism for user-defined functions (macros) to perform "
+"transformations on the abstract syntax tree (AST) of a Python program at "
+"import time."
 msgstr ""
 
 #: ../pep-0511.txt:609
@@ -963,19 +957,19 @@ msgstr ""
 
 #: ../pep-0511.txt:616
 msgid ""
-"`codetransformer <https://pypi.python.org/pypi/codetransformer>`_: "
-"Bytecode transformers for CPython inspired by the ``ast`` module’s "
+"`codetransformer <https://pypi.python.org/pypi/codetransformer>`_: Bytecode "
+"transformers for CPython inspired by the ``ast`` module’s "
 "``NodeTransformer``."
 msgstr ""
 
 #: ../pep-0511.txt:619
 msgid ""
-"`byteplay <http://code.google.com/p/byteplay/>`_: Byteplay lets you "
-"convert Python code objects into equivalent objects which are easy to "
-"play with, and lets you convert those objects back into living Python "
-"code objects. It's useful for applying crazy transformations on Python "
-"functions, and is also useful in learning Python byte code intricacies. "
-"See `byteplay documentation <http://wiki.python.org/moin/ByteplayDoc>`_."
+"`byteplay <http://code.google.com/p/byteplay/>`_: Byteplay lets you convert "
+"Python code objects into equivalent objects which are easy to play with, and "
+"lets you convert those objects back into living Python code objects. It's "
+"useful for applying crazy transformations on Python functions, and is also "
+"useful in learning Python byte code intricacies. See `byteplay documentation "
+"<http://wiki.python.org/moin/ByteplayDoc>`_."
 msgstr ""
 
 #: ../pep-0511.txt:627
@@ -993,4 +987,3 @@ msgstr ""
 #: ../pep-0511.txt:635
 msgid "This document has been placed in the public domain."
 msgstr ""
-

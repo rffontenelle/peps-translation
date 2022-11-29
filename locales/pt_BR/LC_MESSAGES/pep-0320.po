@@ -80,9 +80,9 @@ msgstr ""
 #: ../pep-0320.txt:18
 msgid ""
 "This document describes the development and release schedule for Python "
-"2.4.  The schedule primarily concerns itself with PEP-sized items.  Small"
-" features may be added up to and including the first beta release.  Bugs "
-"may be fixed until the final release."
+"2.4.  The schedule primarily concerns itself with PEP-sized items.  Small "
+"features may be added up to and including the first beta release.  Bugs may "
+"be fixed until the final release."
 msgstr ""
 
 #: ../pep-0320.txt:23
@@ -101,8 +101,8 @@ msgstr ""
 
 #: ../pep-0320.txt:32
 msgid ""
-"Martin von Lowis is building the Windows installers, Fred the doc "
-"packages, Sean the RPMs."
+"Martin von Lowis is building the Windows installers, Fred the doc packages, "
+"Sean the RPMs."
 msgstr ""
 
 #: ../pep-0320.txt:37
@@ -171,8 +171,8 @@ msgstr ""
 
 #: ../pep-0320.txt:71
 msgid ""
-"Encapsulate the decorate-sort-undecorate pattern in a keyword for "
-"``list.sort()``."
+"Encapsulate the decorate-sort-undecorate pattern in a keyword for ``list."
+"sort()``."
 msgstr ""
 
 #: ../pep-0320.txt:74
@@ -181,8 +181,7 @@ msgstr ""
 
 #: ../pep-0320.txt:76
 msgid ""
-"The ``itertools`` module has two new functions, ``tee()`` and "
-"``groupby()``."
+"The ``itertools`` module has two new functions, ``tee()`` and ``groupby()``."
 msgstr ""
 
 #: ../pep-0320.txt:78
@@ -191,8 +190,8 @@ msgstr ""
 
 #: ../pep-0320.txt:80
 msgid ""
-"Add two statistical/reduction functions, ``nlargest()`` and "
-"``nsmallest()`` to the ``heapq`` module."
+"Add two statistical/reduction functions, ``nlargest()`` and ``nsmallest()`` "
+"to the ``heapq`` module."
 msgstr ""
 
 #: ../pep-0320.txt:83
@@ -224,23 +223,21 @@ msgstr ""
 #: ../pep-0320.txt:98
 msgid ""
 "It would be nice if the built-in SSL socket type could be used for non-"
-"blocking SSL I/O.  Currently packages such as Twisted which implement "
-"async servers using SSL have to require third-party packages such as "
-"pyopenssl."
+"blocking SSL I/O.  Currently packages such as Twisted which implement async "
+"servers using SSL have to require third-party packages such as pyopenssl."
 msgstr ""
 
 #: ../pep-0320.txt:103
 msgid ""
-"AST-based compiler: this branch was not completed in time for 2.4, but "
-"will land on the trunk some time after 2.4 final is out, for inclusion in"
-" 2.5."
+"AST-based compiler: this branch was not completed in time for 2.4, but will "
+"land on the trunk some time after 2.4 final is out, for inclusion in 2.5."
 msgstr ""
 
 #: ../pep-0320.txt:107
 msgid ""
-"reST is going to be used a lot in Zope3.  Maybe it could become a "
-"standard library module?  (Since reST's author thinks it's too instable, "
-"I'm inclined not to do this.)"
+"reST is going to be used a lot in Zope3.  Maybe it could become a standard "
+"library module?  (Since reST's author thinks it's too instable, I'm inclined "
+"not to do this.)"
 msgstr ""
 
 #: ../pep-0320.txt:113
@@ -289,8 +286,8 @@ msgstr ""
 
 #: ../pep-0320.txt:137
 msgid ""
-"Deprecate modules which are unmaintained, or perhaps make a new category "
-"for modules 'Unmaintained'"
+"Deprecate modules which are unmaintained, or perhaps make a new category for "
+"modules 'Unmaintained'"
 msgstr ""
 
 #: ../pep-0320.txt:140
@@ -315,10 +312,10 @@ msgstr ""
 
 #: ../pep-0320.txt:154
 msgid ""
-"A nicer API to open text files, replacing the ugly (in some people's "
-"eyes) \"U\" mode flag.  There's a proposal out there to have a new built-"
-"in type ``textfile(filename, mode, encoding)``. (Shouldn't it have a "
-"*bufsize* argument too?)"
+"A nicer API to open text files, replacing the ugly (in some people's eyes) "
+"\"U\" mode flag.  There's a proposal out there to have a new built-in type "
+"``textfile(filename, mode, encoding)``. (Shouldn't it have a *bufsize* "
+"argument too?)"
 msgstr ""
 
 #: ../pep-0320.txt:159
@@ -328,44 +325,44 @@ msgstr ""
 #: ../pep-0320.txt:161
 msgid ""
 "Has anyone gotten the time for this?  *Are* there any new widgets in Tk "
-"8.4?  Note that we've got better Tix support already (though not on "
-"Windows yet)."
+"8.4?  Note that we've got better Tix support already (though not on Windows "
+"yet)."
 msgstr ""
 
 #: ../pep-0320.txt:165
 msgid ""
-":pep:`304` (Controlling Generation of Bytecode Files by Montanaro) seems "
-"to have lost steam."
+":pep:`304` (Controlling Generation of Bytecode Files by Montanaro) seems to "
+"have lost steam."
 msgstr ""
 
 #: ../pep-0320.txt:168
 msgid ""
-"For a class defined inside another class, the ``__name__`` should be "
-"\"outer.inner\", and pickling should work.  ([3]_.  I'm no longer certain"
-" this is easy or even right.)"
+"For a class defined inside another class, the ``__name__`` should be \"outer."
+"inner\", and pickling should work.  ([3]_.  I'm no longer certain this is "
+"easy or even right.)"
 msgstr ""
 
 #: ../pep-0320.txt:172
 msgid ""
-"Decide on a clearer deprecation policy (especially for modules) and act "
-"on it.  For a start, see this message from Neal Norwitz [4]_. There seems"
-" insufficient interest in moving this further in an organized fashion, "
-"and it's not particularly important."
+"Decide on a clearer deprecation policy (especially for modules) and act on "
+"it.  For a start, see this message from Neal Norwitz [4]_. There seems "
+"insufficient interest in moving this further in an organized fashion, and "
+"it's not particularly important."
 msgstr ""
 
 #: ../pep-0320.txt:177
 msgid ""
-"Provide alternatives for common uses of the ``types`` module; Skip "
-"Montanaro has posted a proto-PEP for this idea [5]_. There hasn't been "
-"any progress on this, AFAICT."
+"Provide alternatives for common uses of the ``types`` module; Skip Montanaro "
+"has posted a proto-PEP for this idea [5]_. There hasn't been any progress on "
+"this, AFAICT."
 msgstr ""
 
 #: ../pep-0320.txt:181
 msgid ""
 "Use pending deprecation for the ``types`` and ``string`` modules.  This "
-"requires providing alternatives for the parts that aren't covered yet "
-"(e.g. ``string.whitespace`` and ``types.TracebackType``). It seems we "
-"can't get consensus on this."
+"requires providing alternatives for the parts that aren't covered yet (e.g. "
+"``string.whitespace`` and ``types.TracebackType``). It seems we can't get "
+"consensus on this."
 msgstr ""
 
 #: ../pep-0320.txt:186
@@ -384,8 +381,8 @@ msgstr ""
 
 #: ../pep-0320.txt:194
 msgid ""
-"(Some necessary changes are in; the ``pgen`` module itself needs to "
-"mature more.)"
+"(Some necessary changes are in; the ``pgen`` module itself needs to mature "
+"more.)"
 msgstr ""
 
 #: ../pep-0320.txt:197
@@ -402,10 +399,10 @@ msgstr ""
 
 #: ../pep-0320.txt:203
 msgid ""
-"These are basically three friendly competing proposals.  Jeremy has made "
-"a little progress with a new compiler, but it's going slowly and the "
-"compiler is only the first step.  Maybe we'll be able to refactor the "
-"compiler in this release.  I'm tempted to say we won't hold our breath."
+"These are basically three friendly competing proposals.  Jeremy has made a "
+"little progress with a new compiler, but it's going slowly and the compiler "
+"is only the first step.  Maybe we'll be able to refactor the compiler in "
+"this release.  I'm tempted to say we won't hold our breath."
 msgstr ""
 
 #: ../pep-0320.txt:209
@@ -424,8 +421,8 @@ msgstr ""
 
 #: ../pep-0320.txt:218
 msgid ""
-"Make '``as``' a keyword.  It has been a pseudo-keyword long enough. Too "
-"much effort to bother."
+"Make '``as``' a keyword.  It has been a pseudo-keyword long enough. Too much "
+"effort to bother."
 msgstr ""
 
 #: ../pep-0320.txt:223
@@ -437,7 +434,8 @@ msgid "Shadow Password Support Module https://bugs.python.org/issue579435"
 msgstr ""
 
 #: ../pep-0320.txt:228
-msgid "PyErr_Warn may cause import deadlock https://bugs.python.org/issue683658"
+msgid ""
+"PyErr_Warn may cause import deadlock https://bugs.python.org/issue683658"
 msgstr ""
 
 #: ../pep-0320.txt:231
@@ -446,20 +444,20 @@ msgstr ""
 
 #: ../pep-0320.txt:234
 msgid ""
-"Neal Norwitz, random vs whrandom https://mail.python.org/pipermail"
-"/python-dev/2002-April/023165.html"
+"Neal Norwitz, random vs whrandom https://mail.python.org/pipermail/python-"
+"dev/2002-April/023165.html"
 msgstr ""
 
 #: ../pep-0320.txt:237
 msgid ""
-"Skip Montanaro, python/dist/src/Lib types.py,1.26,1.27 "
-"https://mail.python.org/pipermail/python-dev/2002-May/024346.html"
+"Skip Montanaro, python/dist/src/Lib types.py,1.26,1.27 https://mail.python."
+"org/pipermail/python-dev/2002-May/024346.html"
 msgstr ""
 
 #: ../pep-0320.txt:240
 msgid ""
-"Daniel Dunbar, Lazily GC tracking tuples "
-"https://mail.python.org/pipermail/python-dev/2002-May/023926.html"
+"Daniel Dunbar, Lazily GC tracking tuples https://mail.python.org/pipermail/"
+"python-dev/2002-May/023926.html"
 msgstr ""
 
 #: ../pep-0320.txt:243
@@ -473,4 +471,3 @@ msgstr ""
 #: ../pep-0320.txt:250
 msgid "This document has been placed in the public domain."
 msgstr ""
-

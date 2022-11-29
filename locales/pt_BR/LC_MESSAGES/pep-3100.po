@@ -59,26 +59,26 @@ msgstr ""
 
 #: ../pep-3100.txt:16
 msgid ""
-"This PEP, previously known as :pep:`3000`, describes smaller scale "
-"changes and new features for which no separate PEP is written yet, all "
-"targeted for Python 3000."
+"This PEP, previously known as :pep:`3000`, describes smaller scale changes "
+"and new features for which no separate PEP is written yet, all targeted for "
+"Python 3000."
 msgstr ""
 
 #: ../pep-3100.txt:20
 msgid ""
 "The list of features included in this document is subject to change and "
-"isn't binding on the Python development community; features may be added,"
-" removed, and modified at any time.  The purpose of this list is to focus"
-" our language development effort on changes that are steps to 3.0, and to"
-" encourage people to invent ways to smooth the transition."
+"isn't binding on the Python development community; features may be added, "
+"removed, and modified at any time.  The purpose of this list is to focus our "
+"language development effort on changes that are steps to 3.0, and to "
+"encourage people to invent ways to smooth the transition."
 msgstr ""
 
 #: ../pep-3100.txt:26
 msgid ""
-"This document is not a wish-list that anyone can extend.  While there are"
-" two authors of this PEP, we're just supplying the text; the decisions "
-"for which changes are listed in this document are made by Guido van "
-"Rossum, who has chosen them as goals for Python 3.0."
+"This document is not a wish-list that anyone can extend.  While there are "
+"two authors of this PEP, we're just supplying the text; the decisions for "
+"which changes are listed in this document are made by Guido van Rossum, who "
+"has chosen them as goals for Python 3.0."
 msgstr ""
 
 #: ../pep-3100.txt:31
@@ -94,8 +94,8 @@ msgstr ""
 #: ../pep-3100.txt:38
 msgid ""
 "A general goal is to reduce feature duplication by removing old ways of "
-"doing things.  A general principle of the design will be that one obvious"
-" way of doing something is enough. [1]_"
+"doing things.  A general principle of the design will be that one obvious "
+"way of doing something is enough. [1]_"
 msgstr ""
 
 #: ../pep-3100.txt:44
@@ -124,11 +124,11 @@ msgstr ""
 
 #: ../pep-3100.txt:55
 msgid ""
-"The C style guide will be updated to use 4-space indents, never tabs. "
-"This style should be used for all new files; existing files can be "
-"updated only if there is no hope to ever merge a particular file from the"
-" Python 2 HEAD.  Within a file, the indentation style should be "
-"consistent.  No other style guide changes are planned ATM."
+"The C style guide will be updated to use 4-space indents, never tabs. This "
+"style should be used for all new files; existing files can be updated only "
+"if there is no hope to ever merge a particular file from the Python 2 HEAD.  "
+"Within a file, the indentation style should be consistent.  No other style "
+"guide changes are planned ATM."
 msgstr ""
 
 #: ../pep-3100.txt:63
@@ -148,7 +148,8 @@ msgid "Add optional declarations for static typing :pep:`3107` [10]_ [done]"
 msgstr ""
 
 #: ../pep-3100.txt:68
-msgid "Support only new-style classes; classic classes will be gone [1]_ [done]"
+msgid ""
+"Support only new-style classes; classic classes will be gone [1]_ [done]"
 msgstr ""
 
 #: ../pep-3100.txt:69
@@ -161,8 +162,7 @@ msgstr ""
 
 #: ../pep-3100.txt:71
 msgid ""
-"Use ``except E1, E2, E3 as err:`` if you want the error variable. [3]_ "
-"[done]"
+"Use ``except E1, E2, E3 as err:`` if you want the error variable. [3]_ [done]"
 msgstr ""
 
 #: ../pep-3100.txt:72
@@ -180,28 +180,27 @@ msgstr ""
 #: ../pep-3100.txt:75
 msgid ""
 "Have list comprehensions be syntactic sugar for passing an equivalent "
-"generator expression to ``list()``; as a consequence the loop variable "
-"will no longer be exposed :pep:`289` [done]"
+"generator expression to ``list()``; as a consequence the loop variable will "
+"no longer be exposed :pep:`289` [done]"
 msgstr ""
 
 #: ../pep-3100.txt:78
 msgid ""
-"Comparisons other than ``==`` and ``!=`` between disparate types will "
-"raise an exception unless explicitly supported by the type [6]_ [done]"
+"Comparisons other than ``==`` and ``!=`` between disparate types will raise "
+"an exception unless explicitly supported by the type [6]_ [done]"
 msgstr ""
 
 #: ../pep-3100.txt:80
 msgid ""
-"floats will not be acceptable as arguments in place of ints for "
-"operations where floats are inadvertently accepted (PyArg_ParseTuple() i "
-"& l formats)"
+"floats will not be acceptable as arguments in place of ints for operations "
+"where floats are inadvertently accepted (PyArg_ParseTuple() i & l formats)"
 msgstr ""
 
 #: ../pep-3100.txt:82
 msgid ""
 "Remove from ... import * at function scope.  [done] This means that "
-"functions can always be optimized and support for unoptimized functions "
-"can go away."
+"functions can always be optimized and support for unoptimized functions can "
+"go away."
 msgstr ""
 
 #: ../pep-3100.txt:88
@@ -218,19 +217,19 @@ msgstr ""
 
 #: ../pep-3100.txt:87
 msgid ""
-"Indirection entries in ``sys.modules`` (i.e., a value of ``None`` for "
-"``A.string`` means to use the top-level ``string`` module) will not be "
-"supported."
+"Indirection entries in ``sys.modules`` (i.e., a value of ``None`` for ``A."
+"string`` means to use the top-level ``string`` module) will not be supported."
 msgstr ""
 
 #: ../pep-3100.txt:90
 msgid ""
-"__init__.py might become optional in sub-packages?  __init__.py will "
-"still be required for top-level packages."
+"__init__.py might become optional in sub-packages?  __init__.py will still "
+"be required for top-level packages."
 msgstr ""
 
 #: ../pep-3100.txt:92
-msgid "Cleanup the Py_InitModule() variants {,3,4} (also import and parser APIs)"
+msgid ""
+"Cleanup the Py_InitModule() variants {,3,4} (also import and parser APIs)"
 msgstr ""
 
 #: ../pep-3100.txt:93
@@ -243,9 +242,9 @@ msgstr ""
 
 #: ../pep-3100.txt:96
 msgid ""
-"List comprehensions will require parentheses around the iterables. This "
-"will make list comprehensions more similar to generator comprehensions. "
-"[x for x in 1, 2] will need to be:  [x for x in (1, 2)] [done]"
+"List comprehensions will require parentheses around the iterables. This will "
+"make list comprehensions more similar to generator comprehensions. [x for x "
+"in 1, 2] will need to be:  [x for x in (1, 2)] [done]"
 msgstr ""
 
 #: ../pep-3100.txt:99
@@ -254,10 +253,9 @@ msgstr ""
 
 #: ../pep-3100.txt:101
 msgid ""
-"In order to get rid of the confusion between __builtin__ and "
-"__builtins__, it was decided to rename __builtin__ (the module) to "
-"builtins, and to leave __builtins__ (the sandbox hook) alone. [#builtin]_"
-" [#builtins]_ [done]"
+"In order to get rid of the confusion between __builtin__ and __builtins__, "
+"it was decided to rename __builtin__ (the module) to builtins, and to leave "
+"__builtins__ (the sandbox hook) alone. [#builtin]_ [#builtins]_ [done]"
 msgstr ""
 
 #: ../pep-3100.txt:104
@@ -268,24 +266,23 @@ msgstr ""
 
 #: ../pep-3100.txt:106
 msgid ""
-"Set literals and comprehensions [19]_ [20]_ [done] {x} means set([x]); "
-"{x, y} means set([x, y]). {F(x) for x in S if P(x)} means set(F(x) for x "
-"in S if P(x)). NB. {range(x)} means set([range(x)]), NOT set(range(x)). "
-"There's no literal for an empty set; use set() (or {1}&{2} :-). There's "
-"no frozenset literal; they are too rarely needed."
+"Set literals and comprehensions [19]_ [20]_ [done] {x} means set([x]); {x, "
+"y} means set([x, y]). {F(x) for x in S if P(x)} means set(F(x) for x in S if "
+"P(x)). NB. {range(x)} means set([range(x)]), NOT set(range(x)). There's no "
+"literal for an empty set; use set() (or {1}&{2} :-). There's no frozenset "
+"literal; they are too rarely needed."
 msgstr ""
 
 #: ../pep-3100.txt:112
 msgid ""
-"The ``__nonzero__`` special method will be renamed to ``__bool__`` and "
-"have to return a bool. The typeobject slot will be called ``tp_bool`` "
-"[23]_ [done]"
+"The ``__nonzero__`` special method will be renamed to ``__bool__`` and have "
+"to return a bool. The typeobject slot will be called ``tp_bool`` [23]_ [done]"
 msgstr ""
 
 #: ../pep-3100.txt:115
 msgid ""
-"Dict comprehensions, as first proposed in :pep:`274` [done] {K(x): V(x) "
-"for x in S if P(x)} means dict((K(x), V(x)) for x in S if P(x))."
+"Dict comprehensions, as first proposed in :pep:`274` [done] {K(x): V(x) for "
+"x in S if P(x)} means dict((K(x), V(x)) for x in S if P(x))."
 msgstr ""
 
 #: ../pep-3100.txt:118 ../pep-3100.txt:158 ../pep-3100.txt:182
@@ -299,8 +296,8 @@ msgstr ""
 
 #: ../pep-3100.txt:121
 msgid ""
-"``raise Exception, \"message\"``: use ``raise Exception(\"message\")`` "
-"[12]_ [done]"
+"``raise Exception, \"message\"``: use ``raise Exception(\"message\")`` [12]_ "
+"[done]"
 msgstr ""
 
 #: ../pep-3100.txt:123
@@ -313,8 +310,7 @@ msgstr ""
 
 #: ../pep-3100.txt:125
 msgid ""
-"The __mod__ and __divmod__ special methods on float. [they should stay] "
-"[21]_"
+"The __mod__ and __divmod__ special methods on float. [they should stay] [21]_"
 msgstr ""
 
 #: ../pep-3100.txt:126
@@ -331,8 +327,8 @@ msgstr ""
 
 #: ../pep-3100.txt:129
 msgid ""
-"__getslice__, __setslice__, __delslice__ [#sequence-types]_; remove slice"
-" opcodes and use slice objects. [done]"
+"__getslice__, __setslice__, __delslice__ [#sequence-types]_; remove slice "
+"opcodes and use slice objects. [done]"
 msgstr ""
 
 #: ../pep-3100.txt:131
@@ -349,8 +345,8 @@ msgstr ""
 msgid ""
 "C APIs (see code): PyFloat_AsString, PyFloat_AsReprString, "
 "PyFloat_AsStringEx, PySequence_In, PyEval_EvalFrame, PyEval_CallObject, "
-"_PyObject_Del, _PyObject_GC_Del, _PyObject_GC_Track, _PyObject_GC_UnTrack"
-" PyString_AsEncodedString, PyString_AsDecodedString PyArg_NoArgs, "
+"_PyObject_Del, _PyObject_GC_Del, _PyObject_GC_Track, _PyObject_GC_UnTrack "
+"PyString_AsEncodedString, PyString_AsDecodedString PyArg_NoArgs, "
 "PyArg_GetInt, intargfunc, intintargfunc"
 msgstr ""
 
@@ -370,15 +366,15 @@ msgstr ""
 
 #: ../pep-3100.txt:149
 msgid ""
-"Make all strings be Unicode, and have a separate bytes() type [1]_ The "
-"new string type will be called 'str'. See :pep:`3137`. [done]"
+"Make all strings be Unicode, and have a separate bytes() type [1]_ The new "
+"string type will be called 'str'. See :pep:`3137`. [done]"
 msgstr ""
 
 #: ../pep-3100.txt:151
 msgid ""
 "Return iterable views instead of lists where appropriate for atomic type "
-"methods (e.g. ``dict.keys()``, ``dict.values()``, ``dict.items()``, "
-"etc.); iter* methods will be removed. [done]"
+"methods (e.g. ``dict.keys()``, ``dict.values()``, ``dict.items()``, etc.); "
+"iter* methods will be removed. [done]"
 msgstr ""
 
 #: ../pep-3100.txt:154
@@ -393,9 +389,9 @@ msgstr ""
 
 #: ../pep-3100.txt:160
 msgid ""
-"``basestring.find()`` and ``basestring.rfind()``; use "
-"``basestring.index()`` or ``basestring.[r]partition()`` or "
-"``basestring.rindex()`` in a try/except block??? [13]_ [UNLIKELY]"
+"``basestring.find()`` and ``basestring.rfind()``; use ``basestring.index()`` "
+"or ``basestring.[r]partition()`` or ``basestring.rindex()`` in a try/except "
+"block??? [13]_ [UNLIKELY]"
 msgstr ""
 
 #: ../pep-3100.txt:163
@@ -428,14 +424,14 @@ msgstr ""
 
 #: ../pep-3100.txt:174
 msgid ""
-"Remove ``input()`` and rename ``raw_input()`` to ``input()``. If you need"
-" the old input(), use eval(input()). [done]"
+"Remove ``input()`` and rename ``raw_input()`` to ``input()``. If you need "
+"the old input(), use eval(input()). [done]"
 msgstr ""
 
 #: ../pep-3100.txt:176
 msgid ""
-"Introduce ``trunc()``, which would call the ``__trunc__()`` method on its"
-" argument; suggested use is for objects like float where calling "
+"Introduce ``trunc()``, which would call the ``__trunc__()`` method on its "
+"argument; suggested use is for objects like float where calling "
 "``__int__()`` has data loss, but an integral representation is still "
 "desired? [8]_ [done]"
 msgstr ""
@@ -458,8 +454,7 @@ msgstr ""
 
 #: ../pep-3100.txt:186
 msgid ""
-"``callable()``: just use isinstance(x, collections.Callable) (?) [2]_ "
-"[done]"
+"``callable()``: just use isinstance(x, collections.Callable) (?) [2]_ [done]"
 msgstr ""
 
 #: ../pep-3100.txt:187
@@ -489,7 +484,8 @@ msgid "``xrange()``: use ``range()`` instead [1]_ [See range() above] [done]"
 msgstr ""
 
 #: ../pep-3100.txt:196
-msgid "``StandardError``: this is a relic from the original exception hierarchy;"
+msgid ""
+"``StandardError``: this is a relic from the original exception hierarchy;"
 msgstr ""
 
 #: ../pep-3100.txt:195
@@ -506,8 +502,8 @@ msgstr ""
 
 #: ../pep-3100.txt:202
 msgid ""
-"Move test code to where it belongs, there will be no more test() "
-"functions in the standard library"
+"Move test code to where it belongs, there will be no more test() functions "
+"in the standard library"
 msgstr ""
 
 #: ../pep-3100.txt:204
@@ -550,8 +546,8 @@ msgstr ""
 
 #: ../pep-3100.txt:221
 msgid ""
-"``mpz``, ``posixfile``, ``regsub``, ``rgbimage``, ``sha``, ``statcache``,"
-" ``sv``, ``TERMIOS``, ``timing`` [done]"
+"``mpz``, ``posixfile``, ``regsub``, ``rgbimage``, ``sha``, ``statcache``, "
+"``sv``, ``TERMIOS``, ``timing`` [done]"
 msgstr ""
 
 #: ../pep-3100.txt:223
@@ -605,16 +601,15 @@ msgstr ""
 
 #: ../pep-3100.txt:241
 msgid ""
-"``operator.sequenceIncludes`` : redundant thanks to ``operator.contains``"
-" [#operator-module]_  [#remove-operator-funcs]_ [done]"
+"``operator.sequenceIncludes`` : redundant thanks to ``operator.contains`` "
+"[#operator-module]_  [#remove-operator-funcs]_ [done]"
 msgstr ""
 
 #: ../pep-3100.txt:243
 msgid ""
-"In the thread module, the acquire_lock() and release_lock() aliases for "
-"the acquire() and release() methods on lock objects. (Probably also just "
-"remove the thread module as a public API, in favor of always using "
-"threading.py.)"
+"In the thread module, the acquire_lock() and release_lock() aliases for the "
+"acquire() and release() methods on lock objects. (Probably also just remove "
+"the thread module as a public API, in favor of always using threading.py.)"
 msgstr ""
 
 #: ../pep-3100.txt:247
@@ -631,8 +626,8 @@ msgstr ""
 
 #: ../pep-3100.txt:251
 msgid ""
-"Make the primitive for random be something generating random bytes rather"
-" than random floats?"
+"Make the primitive for random be something generating random bytes rather "
+"than random floats?"
 msgstr ""
 
 #: ../pep-3100.txt:253
@@ -641,8 +636,8 @@ msgstr ""
 
 #: ../pep-3100.txt:254
 msgid ""
-"Modify the heapq.heapreplace() API to compare the new value to the top of"
-" the heap?"
+"Modify the heapq.heapreplace() API to compare the new value to the top of "
+"the heap?"
 msgstr ""
 
 #: ../pep-3100.txt:258
@@ -657,7 +652,8 @@ msgid ""
 msgstr ""
 
 #: ../pep-3100.txt:264
-msgid "Remove support for old systems, including: BeOS, RISCOS, (SGI) Irix, Tru64"
+msgid ""
+"Remove support for old systems, including: BeOS, RISCOS, (SGI) Irix, Tru64"
 msgstr ""
 
 #: ../pep-3100.txt:268
@@ -666,14 +662,14 @@ msgstr ""
 
 #: ../pep-3100.txt:270
 msgid ""
-"PyCon 2003 State of the Union: "
-"http://www.python.org/doc/essays/ppt/pycon2003/pycon2003.ppt"
+"PyCon 2003 State of the Union: http://www.python.org/doc/essays/ppt/"
+"pycon2003/pycon2003.ppt"
 msgstr ""
 
 #: ../pep-3100.txt:273
 msgid ""
-"Python Regrets: "
-"http://www.python.org/doc/essays/ppt/regrets/PythonRegrets.pdf"
+"Python Regrets: http://www.python.org/doc/essays/ppt/regrets/PythonRegrets."
+"pdf"
 msgstr ""
 
 #: ../pep-3100.txt:276
@@ -682,135 +678,134 @@ msgstr ""
 
 #: ../pep-3100.txt:279
 msgid ""
-"python-dev email (\"Constancy of None\") "
-"https://mail.python.org/pipermail/python-dev/2004-July/046294.html"
+"python-dev email (\"Constancy of None\") https://mail.python.org/pipermail/"
+"python-dev/2004-July/046294.html"
 msgstr ""
 
 #: ../pep-3100.txt:282
 msgid ""
-"python-dev email (' \"as\" to be a keyword?') "
-"https://mail.python.org/pipermail/python-dev/2004-July/046316.html"
+"python-dev email (' \"as\" to be a keyword?') https://mail.python.org/"
+"pipermail/python-dev/2004-July/046316.html"
 msgstr ""
 
 #: ../pep-3100.txt:285
 msgid ""
-"python-dev email (\"Comparing heterogeneous types\") "
-"https://mail.python.org/pipermail/python-dev/2004-June/045111.html"
+"python-dev email (\"Comparing heterogeneous types\") https://mail.python.org/"
+"pipermail/python-dev/2004-June/045111.html"
 msgstr ""
 
 #: ../pep-3100.txt:288
 msgid ""
-"python-dev email (\"Let's get rid of unbound methods\") "
-"https://mail.python.org/pipermail/python-dev/2005-January/050625.html"
+"python-dev email (\"Let's get rid of unbound methods\") https://mail.python."
+"org/pipermail/python-dev/2005-January/050625.html"
 msgstr ""
 
 #: ../pep-3100.txt:291
 msgid ""
-"python-dev email (\"Fixing _PyEval_SliceIndex so that integer-like "
-"objects can be used\") https://mail.python.org/pipermail/python-"
-"dev/2005-February/051674.html"
+"python-dev email (\"Fixing _PyEval_SliceIndex so that integer-like objects "
+"can be used\") https://mail.python.org/pipermail/python-dev/2005-"
+"February/051674.html"
 msgstr ""
 
 #: ../pep-3100.txt:295
 msgid ""
-"Guido's blog (\"The fate of reduce() in Python 3000\") "
-"http://www.artima.com/weblogs/viewpost.jsp?thread=98196"
+"Guido's blog (\"The fate of reduce() in Python 3000\") http://www.artima.com/"
+"weblogs/viewpost.jsp?thread=98196"
 msgstr ""
 
 #: ../pep-3100.txt:298
 msgid ""
-"Guido's blog (\"Python Optional Typechecking Redux\") "
-"http://www.artima.com/weblogs/viewpost.jsp?thread=89161"
+"Guido's blog (\"Python Optional Typechecking Redux\") http://www.artima.com/"
+"weblogs/viewpost.jsp?thread=89161"
 msgstr ""
 
 #: ../pep-3100.txt:301
 msgid ""
-"python-dev email (\"anonymous blocks\") https://mail.python.org/pipermail"
-"/python-dev/2005-April/053060.html"
+"python-dev email (\"anonymous blocks\") https://mail.python.org/pipermail/"
+"python-dev/2005-April/053060.html"
 msgstr ""
 
 #: ../pep-3100.txt:304
 msgid ""
-"python-dev email (\"PEP 8: exception style\") "
-"https://mail.python.org/pipermail/python-dev/2005-August/055190.html"
+"python-dev email (\"PEP 8: exception style\") https://mail.python.org/"
+"pipermail/python-dev/2005-August/055190.html"
 msgstr ""
 
 #: ../pep-3100.txt:307
 msgid ""
-"python-dev email (Remove str.find in 3.0?) "
-"https://mail.python.org/pipermail/python-dev/2005-August/055705.html"
+"python-dev email (Remove str.find in 3.0?) https://mail.python.org/pipermail/"
+"python-dev/2005-August/055705.html"
 msgstr ""
 
 #: ../pep-3100.txt:310
 msgid ""
-"python-dev email (Replacement for print in Python 3.0) "
-"https://mail.python.org/pipermail/python-dev/2005-September/056154.html"
+"python-dev email (Replacement for print in Python 3.0) https://mail.python."
+"org/pipermail/python-dev/2005-September/056154.html"
 msgstr ""
 
 #: ../pep-3100.txt:313
 msgid ""
-"python-dev email (\"defaultdict\") https://mail.python.org/pipermail"
-"/python-dev/2006-February/061261.html"
+"python-dev email (\"defaultdict\") https://mail.python.org/pipermail/python-"
+"dev/2006-February/061261.html"
 msgstr ""
 
 #: ../pep-3100.txt:316
 msgid ""
-"python-3000 email "
-"https://mail.python.org/pipermail/python-3000/2006-April/000996.html"
+"python-3000 email https://mail.python.org/pipermail/python-3000/2006-"
+"April/000996.html"
 msgstr ""
 
 #: ../pep-3100.txt:319
 msgid ""
-"python-3000 email (\"Pronouncement on parameter lists\") "
-"https://mail.python.org/pipermail/python-3000/2006-April/001175.html"
+"python-3000 email (\"Pronouncement on parameter lists\") https://mail.python."
+"org/pipermail/python-3000/2006-April/001175.html"
 msgstr ""
 
 #: ../pep-3100.txt:322
 msgid ""
-"python-3000 email (\"More wishful thinking\") "
-"https://mail.python.org/pipermail/python-3000/2006-April/000810.html"
+"python-3000 email (\"More wishful thinking\") https://mail.python.org/"
+"pipermail/python-3000/2006-April/000810.html"
 msgstr ""
 
 #: ../pep-3100.txt:325
 msgid ""
-"python-3000 email (\"sets in P3K?\") "
-"https://mail.python.org/pipermail/python-3000/2006-April/001286.html"
+"python-3000 email (\"sets in P3K?\") https://mail.python.org/pipermail/"
+"python-3000/2006-April/001286.html"
 msgstr ""
 
 #: ../pep-3100.txt:328
 msgid ""
-"python-3000 email (\"sets in P3K?\") "
-"https://mail.python.org/pipermail/python-3000/2006-May/001666.html"
+"python-3000 email (\"sets in P3K?\") https://mail.python.org/pipermail/"
+"python-3000/2006-May/001666.html"
 msgstr ""
 
 #: ../pep-3100.txt:331
 msgid ""
-"python-3000 email (\"bug in modulus?\") "
-"https://mail.python.org/pipermail/python-3000/2006-May/001735.html"
+"python-3000 email (\"bug in modulus?\") https://mail.python.org/pipermail/"
+"python-3000/2006-May/001735.html"
 msgstr ""
 
 #: ../pep-3100.txt:334
 msgid ""
-"SF patch \"sys.id() and sys.intern()\" "
-"https://bugs.python.org/issue1601678"
+"SF patch \"sys.id() and sys.intern()\" https://bugs.python.org/issue1601678"
 msgstr ""
 
 #: ../pep-3100.txt:337
 msgid ""
-"python-3000 email (\"__nonzero__ vs. __bool__\") "
-"https://mail.python.org/pipermail/python-3000/2006-November/004524.html"
+"python-3000 email (\"__nonzero__ vs. __bool__\") https://mail.python.org/"
+"pipermail/python-3000/2006-November/004524.html"
 msgstr ""
 
 #: ../pep-3100.txt:340
 msgid ""
-"python-3000 email (\"Pre-peps on raise and except changes\") "
-"https://mail.python.org/pipermail/python-3000/2007-February/005672.html"
+"python-3000 email (\"Pre-peps on raise and except changes\") https://mail."
+"python.org/pipermail/python-3000/2007-February/005672.html"
 msgstr ""
 
 #: ../pep-3100.txt:343
 msgid ""
-"python-3000 email (\"Py3.0 Library Ideas\") "
-"https://mail.python.org/pipermail/python-3000/2007-February/005726.html"
+"python-3000 email (\"Py3.0 Library Ideas\") https://mail.python.org/"
+"pipermail/python-3000/2007-February/005726.html"
 msgstr ""
 
 #: ../pep-3100.txt:346
@@ -821,26 +816,26 @@ msgstr ""
 
 #: ../pep-3100.txt:349
 msgid ""
-"python-dev email (\"Mutable sequence .sort() signature\") "
-"https://mail.python.org/pipermail/python-dev/2008-February/076818.html"
+"python-dev email (\"Mutable sequence .sort() signature\") https://mail."
+"python.org/pipermail/python-dev/2008-February/076818.html"
 msgstr ""
 
 #: ../pep-3100.txt:352
 msgid ""
-"Python docs (sys -- System-specific parameters and functions) "
-"http://docs.python.org/library/sys.html"
+"Python docs (sys -- System-specific parameters and functions) http://docs."
+"python.org/library/sys.html"
 msgstr ""
 
 #: ../pep-3100.txt:355
 msgid ""
-"Python docs (operator -- Standard operators as functions) "
-"http://docs.python.org/library/operator.html"
+"Python docs (operator -- Standard operators as functions) http://docs.python."
+"org/library/operator.html"
 msgstr ""
 
 #: ../pep-3100.txt:358
 msgid ""
-"Python docs (array -- Efficient arrays of numeric values) "
-"http://docs.python.org/library/array.html"
+"Python docs (array -- Efficient arrays of numeric values) http://docs.python."
+"org/library/array.html"
 msgstr ""
 
 #: ../pep-3100.txt:361
@@ -849,21 +844,21 @@ msgstr ""
 
 #: ../pep-3100.txt:364
 msgid ""
-"Python docs (Additional methods for emulation of sequence types) "
-"http://docs.python.org/reference/datamodel.html#additional-methods-for-"
-"emulation-of-sequence-types"
+"Python docs (Additional methods for emulation of sequence types) http://docs."
+"python.org/reference/datamodel.html#additional-methods-for-emulation-of-"
+"sequence-types"
 msgstr ""
 
 #: ../pep-3100.txt:367
 msgid ""
-"Approach to resolving __builtin__ vs __builtins__ "
-"https://mail.python.org/pipermail/python-3000/2007-March/006161.html"
+"Approach to resolving __builtin__ vs __builtins__ https://mail.python.org/"
+"pipermail/python-3000/2007-March/006161.html"
 msgstr ""
 
 #: ../pep-3100.txt:370
 msgid ""
-"New name for __builtins__ https://mail.python.org/pipermail/python-"
-"dev/2007-November/075388.html"
+"New name for __builtins__ https://mail.python.org/pipermail/python-dev/2007-"
+"November/075388.html"
 msgstr ""
 
 #: ../pep-3100.txt:373
@@ -872,8 +867,8 @@ msgstr ""
 
 #: ../pep-3100.txt:376
 msgid ""
-"Remove deprecated functions from operator "
-"https://bugs.python.org/issue1516309"
+"Remove deprecated functions from operator https://bugs.python.org/"
+"issue1516309"
 msgstr ""
 
 #: ../pep-3100.txt:380
@@ -883,4 +878,3 @@ msgstr ""
 #: ../pep-3100.txt:382
 msgid "This document has been placed in the public domain."
 msgstr ""
-

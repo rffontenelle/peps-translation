@@ -67,10 +67,10 @@ msgstr ""
 
 #: ../pep-0379.txt:17
 msgid ""
-"This PEP adds a new assignment expression to the Python language to make "
-"it possible to assign the result of an expression in almost any place.  "
-"The new expression will allow the assignment of the result of an "
-"expression at first use (in a comparison for example)."
+"This PEP adds a new assignment expression to the Python language to make it "
+"possible to assign the result of an expression in almost any place.  The new "
+"expression will allow the assignment of the result of an expression at first "
+"use (in a comparison for example)."
 msgstr ""
 
 #: ../pep-0379.txt:25
@@ -80,11 +80,10 @@ msgstr ""
 #: ../pep-0379.txt:27
 msgid ""
 "Issue1714448 \"if something as x:\" [1]_ describes a feature to allow "
-"assignment of the result of an expression in an if statement to a name.  "
-"It supposed that the ``as`` syntax could be borrowed for this purpose.  "
-"Many times it is not the expression itself that is interesting, rather "
-"one of the terms that make up the expression. To be clear, something like"
-" this::"
+"assignment of the result of an expression in an if statement to a name.  It "
+"supposed that the ``as`` syntax could be borrowed for this purpose.  Many "
+"times it is not the expression itself that is interesting, rather one of the "
+"terms that make up the expression. To be clear, something like this::"
 msgstr ""
 
 #: ../pep-0379.txt:36
@@ -129,8 +128,8 @@ msgstr ""
 
 #: ../pep-0379.txt:62
 msgid ""
-"Here ``->`` or (``RARROW``) has been used to illustrate the concept that "
-"the result of ``EXPR`` is assigned to ``VAR``."
+"Here ``->`` or (``RARROW``) has been used to illustrate the concept that the "
+"result of ``EXPR`` is assigned to ``VAR``."
 msgstr ""
 
 #: ../pep-0379.txt:65
@@ -143,17 +142,16 @@ msgstr ""
 
 #: ../pep-0379.txt:79
 msgid ""
-"This expression should be available anywhere that an expression is "
-"currently accepted."
+"This expression should be available anywhere that an expression is currently "
+"accepted."
 msgstr ""
 
 #: ../pep-0379.txt:82
 msgid ""
 "All exceptions that are currently raised during invalid assignments will "
-"continue to be raised when using the assignment expression.  For example,"
-" a ``NameError`` will be raised when in example 1 and 2 above if ``name``"
-" is not previously defined, or an ``IndexError`` if index 0 was out of "
-"range."
+"continue to be raised when using the assignment expression.  For example, a "
+"``NameError`` will be raised when in example 1 and 2 above if ``name`` is "
+"not previously defined, or an ``IndexError`` if index 0 was out of range."
 msgstr ""
 
 #: ../pep-0379.txt:90
@@ -207,8 +205,8 @@ msgstr ""
 
 #: ../pep-0379.txt:178
 msgid ""
-"Issue1714448 \"if something as x:\", k0wax "
-"http://bugs.python.org/issue1714448"
+"Issue1714448 \"if something as x:\", k0wax http://bugs.python.org/"
+"issue1714448"
 msgstr ""
 
 #: ../pep-0379.txt:183
@@ -218,4 +216,3 @@ msgstr ""
 #: ../pep-0379.txt:185
 msgid "This document has been placed in the public domain."
 msgstr ""
-

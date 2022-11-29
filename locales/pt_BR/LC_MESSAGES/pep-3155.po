@@ -77,10 +77,10 @@ msgstr ""
 msgid ""
 "Python's introspection facilities have long had poor support for nested "
 "classes.  Given a class object, it is impossible to know whether it was "
-"defined inside another class or at module top-level; and, if the former, "
-"it is also impossible to know in which class it was defined.  While use "
-"of nested classes is often considered poor style, the only reason for "
-"them to have second class introspection support is a lousy pun."
+"defined inside another class or at module top-level; and, if the former, it "
+"is also impossible to know in which class it was defined.  While use of "
+"nested classes is often considered poor style, the only reason for them to "
+"have second class introspection support is a lousy pun."
 msgstr ""
 
 #: ../pep-3155.txt:26
@@ -99,10 +99,10 @@ msgstr ""
 
 #: ../pep-3155.txt:53
 msgid ""
-"This limits again the introspection capabilities available to the user.  "
-"It can produce actual issues when porting software to Python 3, for "
-"example Twisted Core where the issue of introspecting method objects came"
-" up several times.  It also limits pickling support [1]_."
+"This limits again the introspection capabilities available to the user.  It "
+"can produce actual issues when porting software to Python 3, for example "
+"Twisted Core where the issue of introspecting method objects came up several "
+"times.  It also limits pickling support [1]_."
 msgstr ""
 
 #: ../pep-3155.txt:60
@@ -111,13 +111,13 @@ msgstr ""
 
 #: ../pep-3155.txt:62
 msgid ""
-"This PEP proposes the addition of a ``__qualname__`` attribute to "
-"functions and classes.  For top-level functions and classes, the "
-"``__qualname__`` attribute is equal to the ``__name__`` attribute.  For "
-"nested classes, methods, and nested functions, the ``__qualname__`` "
-"attribute contains a dotted path leading to the object from the module "
-"top-level.  A function's local namespace is represented in that dotted "
-"path by a component named ``<locals>``."
+"This PEP proposes the addition of a ``__qualname__`` attribute to functions "
+"and classes.  For top-level functions and classes, the ``__qualname__`` "
+"attribute is equal to the ``__name__`` attribute.  For nested classes, "
+"methods, and nested functions, the ``__qualname__`` attribute contains a "
+"dotted path leading to the object from the module top-level.  A function's "
+"local namespace is represented in that dotted path by a component named "
+"``<locals>``."
 msgstr ""
 
 #: ../pep-3155.txt:70
@@ -141,15 +141,15 @@ msgstr ""
 #: ../pep-3155.txt:106
 msgid ""
 "With nested functions (and classes defined inside functions), the dotted "
-"path will not be walkable programmatically as a function's namespace is "
-"not available from the outside.  It will still be more helpful to the "
-"human reader than the bare ``__name__``."
+"path will not be walkable programmatically as a function's namespace is not "
+"available from the outside.  It will still be more helpful to the human "
+"reader than the bare ``__name__``."
 msgstr ""
 
 #: ../pep-3155.txt:111
 msgid ""
-"As the ``__name__`` attribute, the ``__qualname__`` attribute is computed"
-" statically and it will not automatically follow rebinding."
+"As the ``__name__`` attribute, the ``__qualname__`` attribute is computed "
+"statically and it will not automatically follow rebinding."
 msgstr ""
 
 #: ../pep-3155.txt:116
@@ -163,8 +163,8 @@ msgstr ""
 #: ../pep-3155.txt:121
 msgid ""
 "As ``__name__``, ``__qualname__`` doesn't include the module name.  This "
-"makes it independent of module aliasing and rebinding, and also allows to"
-" compute it at compile time."
+"makes it independent of module aliasing and rebinding, and also allows to "
+"compute it at compile time."
 msgstr ""
 
 #: ../pep-3155.txt:126
@@ -173,9 +173,9 @@ msgstr ""
 
 #: ../pep-3155.txt:128
 msgid ""
-"Reviving unbound methods would only solve a fraction of the problems this"
-" PEP solves, at a higher price (an additional object type and an "
-"additional indirection, rather than an additional attribute)."
+"Reviving unbound methods would only solve a fraction of the problems this "
+"PEP solves, at a higher price (an additional object type and an additional "
+"indirection, rather than an additional attribute)."
 msgstr ""
 
 #: ../pep-3155.txt:134
@@ -184,20 +184,19 @@ msgstr ""
 
 #: ../pep-3155.txt:136
 msgid ""
-"\"Qualified name\" is the best approximation, as a short phrase, of what "
-"the additional attribute is about.  It is not a \"full name\" or \"fully "
-"qualified name\" since it (deliberately) does not include the module "
-"name.  Calling it a \"path\" would risk confusion with filesystem paths "
-"and the ``__file__`` attribute."
+"\"Qualified name\" is the best approximation, as a short phrase, of what the "
+"additional attribute is about.  It is not a \"full name\" or \"fully "
+"qualified name\" since it (deliberately) does not include the module name.  "
+"Calling it a \"path\" would risk confusion with filesystem paths and the "
+"``__file__`` attribute."
 msgstr ""
 
 #: ../pep-3155.txt:142
 msgid ""
-"The first proposal for the attribute name was to call it ``__qname__`` "
-"but many people (who are not aware of previous use of such jargon in e.g."
-" the XML specification [2]_) found it obscure and non-obvious, which is "
-"why the slightly less short and more explicit ``__qualname__`` was "
-"finally chosen."
+"The first proposal for the attribute name was to call it ``__qname__`` but "
+"many people (who are not aware of previous use of such jargon in e.g. the "
+"XML specification [2]_) found it obscure and non-obvious, which is why the "
+"slightly less short and more explicit ``__qualname__`` was finally chosen."
 msgstr ""
 
 #: ../pep-3155.txt:149
@@ -219,4 +218,3 @@ msgstr ""
 #: ../pep-3155.txt:161
 msgid "This document has been placed in the public domain."
 msgstr ""
-

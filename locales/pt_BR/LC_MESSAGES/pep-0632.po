@@ -79,8 +79,8 @@ msgstr ""
 
 #: ../pep-0632.rst:11
 msgid ""
-"https://mail.python.org/archives/list/python-"
-"dev@python.org/thread/TXU6TVOMBLQU3SV57DMMOA5Y2E67AW7P/"
+"https://mail.python.org/archives/list/python-dev@python.org/thread/"
+"TXU6TVOMBLQU3SV57DMMOA5Y2E67AW7P/"
 msgstr ""
 
 #: ../pep-0632.rst:15
@@ -92,10 +92,10 @@ msgid ""
 "The distutils module [1]_ has for a long time recommended using the "
 "setuptools package [2]_ instead. Setuptools has recently integrated a "
 "complete copy of distutils and is no longer dependent on the standard "
-"library [3]_. Pip has been silently replacing distutils with setuptools "
-"when installing packages for a long time already, and the distutils "
-"documentation has stated that it is being phased out since 2014 (or "
-"earlier). It is time to remove it from the standard library."
+"library [3]_. Pip has been silently replacing distutils with setuptools when "
+"installing packages for a long time already, and the distutils documentation "
+"has stated that it is being phased out since 2014 (or earlier). It is time "
+"to remove it from the standard library."
 msgstr ""
 
 #: ../pep-0632.rst:27
@@ -106,49 +106,49 @@ msgstr ""
 msgid ""
 "distutils [1]_ is a largely undocumented and unmaintained collection of "
 "utilities for packaging and distributing Python packages, including "
-"compilation of native extension modules. It defines a configuration "
-"format that describes a Python distribution and provides the tools to "
-"convert a directory of source code into a source distribution, and some "
-"forms of binary distribution. Because of its place in the standard "
-"library, many updates can only be released with a major release, and "
-"users cannot rely on particular fixes being available."
+"compilation of native extension modules. It defines a configuration format "
+"that describes a Python distribution and provides the tools to convert a "
+"directory of source code into a source distribution, and some forms of "
+"binary distribution. Because of its place in the standard library, many "
+"updates can only be released with a major release, and users cannot rely on "
+"particular fixes being available."
 msgstr ""
 
 #: ../pep-0632.rst:38
 msgid ""
-"setuptools [2]_ is a better documented and well maintained enhancement "
-"based on distutils. While it provides very similar functionality, it is "
-"much better able to support users on earlier Python releases, and can "
-"respond to bug reports more quickly. A number of platform-specific "
-"enhancements already exist in setuptools that have not been added to "
-"distutils, and there is been a long-standing recommendation in the "
-"distutils documentation to prefer setuptools."
+"setuptools [2]_ is a better documented and well maintained enhancement based "
+"on distutils. While it provides very similar functionality, it is much "
+"better able to support users on earlier Python releases, and can respond to "
+"bug reports more quickly. A number of platform-specific enhancements already "
+"exist in setuptools that have not been added to distutils, and there is been "
+"a long-standing recommendation in the distutils documentation to prefer "
+"setuptools."
 msgstr ""
 
 #: ../pep-0632.rst:46
 msgid ""
 "Historically, setuptools has extended distutils using subclassing and "
-"monkeypatching, but has now taken a copy of the underlying code. [3]_ As "
-"a result, the second last major dependency on distutils is gone and there"
-" is no need to keep it in the standard library."
+"monkeypatching, but has now taken a copy of the underlying code. [3]_ As a "
+"result, the second last major dependency on distutils is gone and there is "
+"no need to keep it in the standard library."
 msgstr ""
 
 #: ../pep-0632.rst:51
 msgid ""
-"The final dependency on distutils is CPython itself, which uses it to "
-"build native extension modules in the standard library (except on "
-"Windows). Because this is a CPython build-time dependency, it is possible"
-" to continue to use distutils for this specific case without it being "
-"part of the standard library."
+"The final dependency on distutils is CPython itself, which uses it to build "
+"native extension modules in the standard library (except on Windows). "
+"Because this is a CPython build-time dependency, it is possible to continue "
+"to use distutils for this specific case without it being part of the "
+"standard library."
 msgstr ""
 
 #: ../pep-0632.rst:57
 msgid ""
-"Deprecation and removal will make it obvious that issues should be fixed "
-"in the setuptools project, and will reduce a source of bug reports and "
-"unnecessary test maintenance. It will also help promote the development "
-"of alternative build backends, which can now be supported more easily "
-"thanks to :pep:`517`."
+"Deprecation and removal will make it obvious that issues should be fixed in "
+"the setuptools project, and will reduce a source of bug reports and "
+"unnecessary test maintenance. It will also help promote the development of "
+"alternative build backends, which can now be supported more easily thanks "
+"to :pep:`517`."
 msgstr ""
 
 #: ../pep-0632.rst:65
@@ -157,46 +157,45 @@ msgstr ""
 
 #: ../pep-0632.rst:67
 msgid ""
-"In Python 3.10 and 3.11, distutils will be formally marked as deprecated."
-" All known issues will be closed at this time. ``import distutils`` will "
+"In Python 3.10 and 3.11, distutils will be formally marked as deprecated. "
+"All known issues will be closed at this time. ``import distutils`` will "
 "raise a deprecation warning. New issues that would be considered release "
-"blocking may still be fixed, but support for new tools or platforms will "
-"not be added."
+"blocking may still be fixed, but support for new tools or platforms will not "
+"be added."
 msgstr ""
 
 #: ../pep-0632.rst:73
 msgid ""
-"During Python 3.10 and 3.11, uses of distutils within the standard "
-"library may change to use alternative APIs."
+"During Python 3.10 and 3.11, uses of distutils within the standard library "
+"may change to use alternative APIs."
 msgstr ""
 
 #: ../pep-0632.rst:76
 msgid ""
-"In Python 3.12, distutils will no longer be installed by ``make install``"
-" or any of the first-party distribution. Third-party redistributors "
-"should no longer include distutils in their bundles or repositories."
+"In Python 3.12, distutils will no longer be installed by ``make install`` or "
+"any of the first-party distribution. Third-party redistributors should no "
+"longer include distutils in their bundles or repositories."
 msgstr ""
 
 #: ../pep-0632.rst:81
 msgid ""
-"This PEP makes no specification on migrating the parts of the CPython "
-"build process that currently use distutils. Depending on contributions, "
-"this migration may occur at any time."
+"This PEP makes no specification on migrating the parts of the CPython build "
+"process that currently use distutils. Depending on contributions, this "
+"migration may occur at any time."
 msgstr ""
 
 #: ../pep-0632.rst:85
 msgid ""
-"After Python 3.12 is started and when the CPython build process no longer"
-" depends on distutils being in the standard library, the entire "
-"``Lib/distutils`` directory and ``Lib/test/test_distutils.py`` file will "
-"be removed from the repository."
+"After Python 3.12 is started and when the CPython build process no longer "
+"depends on distutils being in the standard library, the entire ``Lib/"
+"distutils`` directory and ``Lib/test/test_distutils.py`` file will be "
+"removed from the repository."
 msgstr ""
 
 #: ../pep-0632.rst:90
 msgid ""
-"Other references to distutils will be cleaned up. As of Python 3.9's "
-"initial release, the following modules have references in code or "
-"comments:"
+"Other references to distutils will be cleaned up. As of Python 3.9's initial "
+"release, the following modules have references in code or comments:"
 msgstr ""
 
 #: ../pep-0632.rst:94
@@ -229,8 +228,8 @@ msgstr ""
 
 #: ../pep-0632.rst:102
 msgid ""
-"The following Tools in CPython also refer to distutils. Note that none of"
-" these are installed with CPython:"
+"The following Tools in CPython also refer to distutils. Note that none of "
+"these are installed with CPython:"
 msgstr ""
 
 #: ../pep-0632.rst:105
@@ -251,8 +250,8 @@ msgstr ""
 
 #: ../pep-0632.rst:110
 msgid ""
-"As the distutils code is already included in setuptools, there is no need"
-" to republish it in any other form. Those who require access to the "
+"As the distutils code is already included in setuptools, there is no need to "
+"republish it in any other form. Those who require access to the "
 "functionality should use setuptools or an alternative build backend."
 msgstr ""
 
@@ -266,33 +265,32 @@ msgstr ""
 
 #: ../pep-0632.rst:120
 msgid ""
-"The suggested migration path is to use the equivalent (though not "
-"identical) imports from setuptools (see [5]_), or to migrate to an "
-"alternative build backend (see :pep:`517`)."
+"The suggested migration path is to use the equivalent (though not identical) "
+"imports from setuptools (see [5]_), or to migrate to an alternative build "
+"backend (see :pep:`517`)."
 msgstr ""
 
 #: ../pep-0632.rst:124
 msgid ""
-"Code already exists in setuptools to transparently switch ``setup.py`` "
-"files using distutils onto their equivalents, and so most working build "
-"scripts are already known to work with setuptools. Such scripts may need "
-"to update their import statements. Consult the setuptools documentation "
-"for specific migration advice. [5]_"
+"Code already exists in setuptools to transparently switch ``setup.py`` files "
+"using distutils onto their equivalents, and so most working build scripts "
+"are already known to work with setuptools. Such scripts may need to update "
+"their import statements. Consult the setuptools documentation for specific "
+"migration advice. [5]_"
 msgstr ""
 
 #: ../pep-0632.rst:130
 msgid ""
-"Some projects use alternate sets of patches over distutils, notably, "
-"numpy.distutils. [6]_ Projects that we know are doing this have been "
-"informed."
+"Some projects use alternate sets of patches over distutils, notably, numpy."
+"distutils. [6]_ Projects that we know are doing this have been informed."
 msgstr ""
 
 #: ../pep-0632.rst:134
 msgid ""
-"Many build scripts use custom commands or narrowly scoped patches. As "
-"these packages are already subject to setuptools overriding distutils, we"
-" expect minimal disruption as a result of distutils being removed. "
-"Scripts may still need to be updated to avoid importing distutils."
+"Many build scripts use custom commands or narrowly scoped patches. As these "
+"packages are already subject to setuptools overriding distutils, we expect "
+"minimal disruption as a result of distutils being removed. Scripts may still "
+"need to be updated to avoid importing distutils."
 msgstr ""
 
 #: ../pep-0632.rst:141
@@ -301,11 +299,11 @@ msgstr ""
 
 #: ../pep-0632.rst:143
 msgid ""
-"setuptools version 48 includes the complete copy of distutils, and as "
-"such is no longer dependent on the standard library's copy. Most "
-"implementation issues they have faced are due to the continuing existence"
-" of distutils in the standard library, and so removal will improve the "
-"stability of their implementation."
+"setuptools version 48 includes the complete copy of distutils, and as such "
+"is no longer dependent on the standard library's copy. Most implementation "
+"issues they have faced are due to the continuing existence of distutils in "
+"the standard library, and so removal will improve the stability of their "
+"implementation."
 msgstr ""
 
 #: ../pep-0632.rst:149
@@ -323,8 +321,8 @@ msgstr ""
 #: ../pep-0632.rst:159
 msgid ""
 "This section suggests some alternative replacements for popular "
-"functionality that is being formally deprecated with this PEP. It is "
-"current at time of writing, but is not kept up to date."
+"functionality that is being formally deprecated with this PEP. It is current "
+"at time of writing, but is not kept up to date."
 msgstr ""
 
 #: ../pep-0632.rst:163
@@ -420,28 +418,27 @@ msgstr ""
 msgid ""
 "The primary concern with this approach is that distutils most frequently "
 "breaks because of platform differences, which means that without "
-"maintenance, it will stop working out-of-sync with any Python release. "
-"This makes it impossible for libraries to reliably detect when they will "
-"stop working."
+"maintenance, it will stop working out-of-sync with any Python release. This "
+"makes it impossible for libraries to reliably detect when they will stop "
+"working."
 msgstr ""
 
 #: ../pep-0632.rst:206
 msgid ""
-"In contrast, this PEP proposes a concrete date, known well in advance, "
-"when distutils will stop working, and commits to not breaking the API "
-"before that time. This gives maintainers a predictable schedule, ensures "
-"any breakage occurs at a point where users will already be expecting "
-"changed behavior, and provides a reliable detection mechanism "
-"(specifically, that ``import distutils`` raises)."
+"In contrast, this PEP proposes a concrete date, known well in advance, when "
+"distutils will stop working, and commits to not breaking the API before that "
+"time. This gives maintainers a predictable schedule, ensures any breakage "
+"occurs at a point where users will already be expecting changed behavior, "
+"and provides a reliable detection mechanism (specifically, that ``import "
+"distutils`` raises)."
 msgstr ""
 
 #: ../pep-0632.rst:213
 msgid ""
-"Finally, as long as distutils remains in the standard library in any "
-"form, it will interfere with third-party packages that provide shims or "
+"Finally, as long as distutils remains in the standard library in any form, "
+"it will interfere with third-party packages that provide shims or "
 "replacements, including setuptools. Completely removing the package at a "
-"known version makes it possible for third-parties to safely use a "
-"substitute."
+"known version makes it possible for third-parties to safely use a substitute."
 msgstr ""
 
 #: ../pep-0632.rst:221
@@ -450,19 +447,19 @@ msgstr ""
 
 #: ../pep-0632.rst:223
 msgid ""
-"This suggestion assumes that there exists a volunteer to maintain "
-"whatever is left, which is not true. It also implies that anybody knows "
-"which functionality should remain, which as seen in the discussions is "
-"not at all clear."
+"This suggestion assumes that there exists a volunteer to maintain whatever "
+"is left, which is not true. It also implies that anybody knows which "
+"functionality should remain, which as seen in the discussions is not at all "
+"clear."
 msgstr ""
 
 #: ../pep-0632.rst:228
 msgid ""
 "Most helper functions in distutils already have supported (and improved) "
-"alternatives, often in the standard library, and there is little that can"
-" be done to the legacy versions without breaking compatibility. (And any "
-"break requiring maintainers to update their code is essentially "
-"equivalent to requiring them to import a different function.)"
+"alternatives, often in the standard library, and there is little that can be "
+"done to the legacy versions without breaking compatibility. (And any break "
+"requiring maintainers to update their code is essentially equivalent to "
+"requiring them to import a different function.)"
 msgstr ""
 
 #: ../pep-0632.rst:235
@@ -475,8 +472,8 @@ msgstr ""
 
 #: ../pep-0632.rst:241
 msgid ""
-"distutils - Building and installing Python modules "
-"(https://docs.python.org/3.9/library/distutils.html)"
+"distutils - Building and installing Python modules (https://docs.python."
+"org/3.9/library/distutils.html)"
 msgstr ""
 
 #: ../pep-0632.rst:244
@@ -485,21 +482,20 @@ msgstr ""
 
 #: ../pep-0632.rst:247
 msgid ""
-"setuptools Issue #417 - Adopt distutils "
-"(https://github.com/pypa/setuptools/issues/417)"
+"setuptools Issue #417 - Adopt distutils (https://github.com/pypa/setuptools/"
+"issues/417)"
 msgstr ""
 
 #: ../pep-0632.rst:250
 msgid ""
-"Porting from Distutils "
-"(https://setuptools.readthedocs.io/en/latest/deprecated/distutils-"
-"legacy.html)"
+"Porting from Distutils (https://setuptools.readthedocs.io/en/latest/"
+"deprecated/distutils-legacy.html)"
 msgstr ""
 
 #: ../pep-0632.rst:253
 msgid ""
-"Packaging (numpy.distutils) "
-"(https://numpy.org/doc/stable/reference/distutils.html)"
+"Packaging (numpy.distutils) (https://numpy.org/doc/stable/reference/"
+"distutils.html)"
 msgstr ""
 
 #: ../pep-0632.rst:258
@@ -508,7 +504,6 @@ msgstr ""
 
 #: ../pep-0632.rst:260
 msgid ""
-"This document is placed in the public domain or under the "
-"CC0-1.0-Universal license, whichever is more permissive."
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
 msgstr ""
-

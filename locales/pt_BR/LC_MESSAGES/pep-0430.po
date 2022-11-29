@@ -63,18 +63,18 @@ msgstr ""
 
 #: ../pep-0430.txt:16
 msgid ""
-"This PEP proposes a strategy for migrating the default version of the "
-"Python documentation presented to users of Python when accessing "
-"docs.python.org from 2.7 to Python 3.3."
+"This PEP proposes a strategy for migrating the default version of the Python "
+"documentation presented to users of Python when accessing docs.python.org "
+"from 2.7 to Python 3.3."
 msgstr ""
 
 #: ../pep-0430.txt:20
 msgid ""
 "It proposes a backwards compatible scheme that preserves the meaning of "
-"existing deep links in to the Python 2 documentation, while still "
-"presenting the Python 3 documentation by default, and presenting the "
-"Python 2 and 3 documentation in a way that avoids making the Python 3 "
-"documentation look like a second-class citizen."
+"existing deep links in to the Python 2 documentation, while still presenting "
+"the Python 3 documentation by default, and presenting the Python 2 and 3 "
+"documentation in a way that avoids making the Python 3 documentation look "
+"like a second-class citizen."
 msgstr ""
 
 #: ../pep-0430.txt:28
@@ -83,11 +83,11 @@ msgstr ""
 
 #: ../pep-0430.txt:30
 msgid ""
-"With the transition of the overall Python ecosystem from Python 2 to "
-"Python 3 still in progress, one question which arises periodically [1]_, "
-"[2]_ is when and how to handle the change from providing the Python 2 "
-"documentation as the default version displayed at the docs.python.org "
-"root URL to providing the Python 3 documentation."
+"With the transition of the overall Python ecosystem from Python 2 to Python "
+"3 still in progress, one question which arises periodically [1]_, [2]_ is "
+"when and how to handle the change from providing the Python 2 documentation "
+"as the default version displayed at the docs.python.org root URL to "
+"providing the Python 3 documentation."
 msgstr ""
 
 #: ../pep-0430.txt:38
@@ -106,30 +106,29 @@ msgstr ""
 
 #: ../pep-0430.txt:47
 msgid ""
-"Many beginners learn Python through third party resources. These "
-"resources, not all of which are online resources, may reference in to the"
-" python.org online documentation for additional background and details."
+"Many beginners learn Python through third party resources. These resources, "
+"not all of which are online resources, may reference in to the python.org "
+"online documentation for additional background and details."
 msgstr ""
 
 #: ../pep-0430.txt:51
 msgid ""
-"Importantly, even when the online documentation is updated, the \"version"
-" added\" and \"version changed\" tags usually provide enough information "
-"for users to adjust appropriately for the specific version they are "
-"using."
+"Importantly, even when the online documentation is updated, the \"version "
+"added\" and \"version changed\" tags usually provide enough information for "
+"users to adjust appropriately for the specific version they are using."
 msgstr ""
 
 #: ../pep-0430.txt:55
 msgid ""
-"While deep links in to the python.org documentation may occasionally "
-"break within the Python 2 series, this is very rare."
+"While deep links in to the python.org documentation may occasionally break "
+"within the Python 2 series, this is very rare."
 msgstr ""
 
 #: ../pep-0430.txt:58
 msgid ""
-"Migrating to Python 3 is a very different matter. Many links would break "
-"due to renames and removals, and the \"version added\" and \"version "
-"changed\" information for the Python 2 series is completely absent."
+"Migrating to Python 3 is a very different matter. Many links would break due "
+"to renames and removals, and the \"version added\" and \"version changed\" "
+"information for the Python 2 series is completely absent."
 msgstr ""
 
 #: ../pep-0430.txt:64
@@ -138,18 +137,18 @@ msgstr ""
 
 #: ../pep-0430.txt:66
 msgid ""
-"There are many useful Python resources out there, such as the mailing "
-"list archives on python.org and question-and-answer sites like Stack "
-"Overflow, where links are highly unlikely to be updated, no matter how "
-"much notice is provided."
+"There are many useful Python resources out there, such as the mailing list "
+"archives on python.org and question-and-answer sites like Stack Overflow, "
+"where links are highly unlikely to be updated, no matter how much notice is "
+"provided."
 msgstr ""
 
 #: ../pep-0430.txt:71
 msgid ""
 "Old posts and answers to questions all currently link to docs.python.org "
-"expecting to get the Python 2 documentation at unqualified URLs. Links "
-"from answers that relate to Python 3 are explicitly qualified with "
-"``/py3k/`` in the path component."
+"expecting to get the Python 2 documentation at unqualified URLs. Links from "
+"answers that relate to Python 3 are explicitly qualified with ``/py3k/`` in "
+"the path component."
 msgstr ""
 
 #: ../pep-0430.txt:78
@@ -158,25 +157,25 @@ msgstr ""
 
 #: ../pep-0430.txt:80
 msgid ""
-"This PEP (based on an idea originally put forward back in May [3]_) is to"
-" *not migrate* the Python 2 specific deep links at all, and instead adopt"
-" a scheme where all URLs presented to users on docs.python.org are "
-"qualified appropriately with the relevant release series."
+"This PEP (based on an idea originally put forward back in May [3]_) is to "
+"*not migrate* the Python 2 specific deep links at all, and instead adopt a "
+"scheme where all URLs presented to users on docs.python.org are qualified "
+"appropriately with the relevant release series."
 msgstr ""
 
 #: ../pep-0430.txt:85
 msgid ""
-"Visitors to the root URL at ``http://docs.python.org`` will be "
-"automatically redirected to ``http://docs.python.org/3/``, but links "
-"deeper in the version-specific hierarchy, such as to "
-"``http://docs.python.org/library/os``, will instead be redirected to a "
-"Python 2 specific link such as ``http://docs.python.org/2/library/os``."
+"Visitors to the root URL at ``http://docs.python.org`` will be automatically "
+"redirected to ``http://docs.python.org/3/``, but links deeper in the version-"
+"specific hierarchy, such as to ``http://docs.python.org/library/os``, will "
+"instead be redirected to a Python 2 specific link such as ``http://docs."
+"python.org/2/library/os``."
 msgstr ""
 
 #: ../pep-0430.txt:91
 msgid ""
-"The specific subpaths which will be redirected to explicitly qualified "
-"paths for the Python 2 docs are:"
+"The specific subpaths which will be redirected to explicitly qualified paths "
+"for the Python 2 docs are:"
 msgstr ""
 
 #: ../pep-0430.txt:94
@@ -294,11 +293,11 @@ msgstr ""
 #: ../pep-0430.txt:130
 msgid ""
 "The ``/x/`` URLs mean \"give me the latest documentation for a released "
-"version in this release series\". It will draw the documentation from the"
-" relevant maintenance branch in source control (this will always be the "
-"2.7 branch for Python 2 and is currently 3.3 for Python 3). Differences "
-"relative to previous versions in the release series will be available "
-"through \"version added\" and \"version changed\" markers."
+"version in this release series\". It will draw the documentation from the "
+"relevant maintenance branch in source control (this will always be the 2.7 "
+"branch for Python 2 and is currently 3.3 for Python 3). Differences relative "
+"to previous versions in the release series will be available through "
+"\"version added\" and \"version changed\" markers."
 msgstr ""
 
 #: ../pep-0430.txt:137
@@ -306,20 +305,20 @@ msgid ""
 "The ``/x.y/`` URLs mean \"give me the latest documentation for this "
 "release\". It will draw the documentation from the relevant maintenance "
 "branch in source control (or the default branch for the currently in "
-"development version). It differs from the status quo in that the URLs "
-"will actually remain available in the user's browser for easy copy and "
-"pasting. (Currently, references to specific versions that are not the "
-"latest in their release series will resolve to a stable URL for a "
-"specific maintenance version in the \"release\" hierarchy, while the "
-"current latest version in the release series resolves to the release "
-"series URL. This makes it hard to get a \"latest version specific URL\", "
-"since it is always necessary to construct them manually)."
+"development version). It differs from the status quo in that the URLs will "
+"actually remain available in the user's browser for easy copy and pasting. "
+"(Currently, references to specific versions that are not the latest in their "
+"release series will resolve to a stable URL for a specific maintenance "
+"version in the \"release\" hierarchy, while the current latest version in "
+"the release series resolves to the release series URL. This makes it hard to "
+"get a \"latest version specific URL\", since it is always necessary to "
+"construct them manually)."
 msgstr ""
 
 #: ../pep-0430.txt:149
 msgid ""
-"The ``/dev/`` URL means the documentation for the default branch in "
-"source control."
+"The ``/dev/`` URL means the documentation for the default branch in source "
+"control."
 msgstr ""
 
 #: ../pep-0430.txt:152
@@ -340,21 +339,20 @@ msgstr ""
 
 #: ../pep-0430.txt:161
 msgid ""
-"There is some desire to switch the unqualified references to mean Python "
-"3 as a sign of confidence in Python 3. Such a move would either break a "
-"lot of things, or else involve an awful lot of work to *avoid* breaking "
-"things."
+"There is some desire to switch the unqualified references to mean Python 3 "
+"as a sign of confidence in Python 3. Such a move would either break a lot of "
+"things, or else involve an awful lot of work to *avoid* breaking things."
 msgstr ""
 
 #: ../pep-0430.txt:165
-msgid "I believe we can get much the same effect without breaking the world by:"
+msgid ""
+"I believe we can get much the same effect without breaking the world by:"
 msgstr ""
 
 #: ../pep-0430.txt:167
 msgid ""
-"Deprecating the use of unqualified references to the online documentation"
-" (while promising to preserve the meaning of such references "
-"indefinitely)"
+"Deprecating the use of unqualified references to the online documentation "
+"(while promising to preserve the meaning of such references indefinitely)"
 msgstr ""
 
 #: ../pep-0430.txt:170
@@ -365,19 +363,19 @@ msgstr ""
 
 #: ../pep-0430.txt:172
 msgid ""
-"Redirecting visitors to the root of ``http://docs.python.org`` to "
-"``http://docs.python.org/3.x``"
+"Redirecting visitors to the root of ``http://docs.python.org`` to ``http://"
+"docs.python.org/3.x``"
 msgstr ""
 
 #: ../pep-0430.txt:175
 msgid ""
 "Most importantly, because this scheme doesn't alter the behaviour of any "
-"existing deep links, it could be implemented with a significantly shorter"
-" warning period than would be required for a scheme that risked breaking "
-"deep links, or started to redirect unqualified links to Python 3. The "
-"only part of the scheme which would require any warning at all is the "
-"step of redirecting the \"http://docs.python.org/\" landing page to the "
-"Python 3.3 documentation."
+"existing deep links, it could be implemented with a significantly shorter "
+"warning period than would be required for a scheme that risked breaking deep "
+"links, or started to redirect unqualified links to Python 3. The only part "
+"of the scheme which would require any warning at all is the step of "
+"redirecting the \"http://docs.python.org/\" landing page to the Python 3.3 "
+"documentation."
 msgstr ""
 
 #: ../pep-0430.txt:183
@@ -386,23 +384,23 @@ msgstr ""
 
 #: ../pep-0430.txt:185
 msgid ""
-"Note that the approach described in this PEP gives two ways to access the"
-" content of the default branch: as ``/dev/`` or using the appropriate "
-"``/x.y/`` reference. This is deliberate, as the default branch is "
-"referenced for two different purposes:"
+"Note that the approach described in this PEP gives two ways to access the "
+"content of the default branch: as ``/dev/`` or using the appropriate ``/x.y/"
+"`` reference. This is deliberate, as the default branch is referenced for "
+"two different purposes:"
 msgstr ""
 
 #: ../pep-0430.txt:190
 msgid ""
-"to provide additional information when discussing an upcoming feature of "
-"the next release (a ``/x.y/`` URL is appropriate)"
+"to provide additional information when discussing an upcoming feature of the "
+"next release (a ``/x.y/`` URL is appropriate)"
 msgstr ""
 
 #: ../pep-0430.txt:192
 msgid ""
-"to provide a stable destination for developers to access the "
-"documentation of the next feature release, regardless of the version (a "
-"``/dev/`` URL is appropriate)"
+"to provide a stable destination for developers to access the documentation "
+"of the next feature release, regardless of the version (a ``/dev/`` URL is "
+"appropriate)"
 msgstr ""
 
 #: ../pep-0430.txt:198
@@ -411,10 +409,9 @@ msgstr ""
 
 #: ../pep-0430.txt:200
 msgid ""
-"The URLs on docs.python.org are controlled by the python.org "
-"infrastructure team rather than through the CPython source repo, so "
-"acceptance and implementation of the ideas in this PEP will be up to the "
-"team."
+"The URLs on docs.python.org are controlled by the python.org infrastructure "
+"team rather than through the CPython source repo, so acceptance and "
+"implementation of the ideas in this PEP will be up to the team."
 msgstr ""
 
 #: ../pep-0430.txt:206
@@ -423,20 +420,20 @@ msgstr ""
 
 #: ../pep-0430.txt:208
 msgid ""
-"May 2012 discussion (https://mail.python.org/pipermail/python-"
-"dev/2012-May/119524.html)"
+"May 2012 discussion (https://mail.python.org/pipermail/python-dev/2012-"
+"May/119524.html)"
 msgstr ""
 
 #: ../pep-0430.txt:211
 msgid ""
-"October 2012 discussion (https://mail.python.org/pipermail/python-"
-"ideas/2012-October/017406.html)"
+"October 2012 discussion (https://mail.python.org/pipermail/python-ideas/2012-"
+"October/017406.html)"
 msgstr ""
 
 #: ../pep-0430.txt:214
 msgid ""
-"Using a \"/latest/\" path prefix (https://mail.python.org/pipermail"
-"/python-dev/2012-May/119567.html)"
+"Using a \"/latest/\" path prefix (https://mail.python.org/pipermail/python-"
+"dev/2012-May/119567.html)"
 msgstr ""
 
 #: ../pep-0430.txt:219
@@ -446,4 +443,3 @@ msgstr ""
 #: ../pep-0430.txt:220
 msgid "This document has been placed in the public domain."
 msgstr ""
-

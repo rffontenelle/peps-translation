@@ -59,8 +59,8 @@ msgstr ""
 
 #: ../pep-0206.txt:16
 msgid ""
-"This PEP describes the Python Advanced Library, a collection of high-"
-"quality and frequently-used third party extension modules."
+"This PEP describes the Python Advanced Library, a collection of high-quality "
+"and frequently-used third party extension modules."
 msgstr ""
 
 #: ../pep-0206.txt:21
@@ -70,38 +70,37 @@ msgstr ""
 #: ../pep-0206.txt:23
 msgid ""
 "The Python source distribution has long maintained the philosophy of "
-"\"batteries included\" -- having a rich and versatile standard library "
-"which is immediately available, without making the user download separate"
-" packages.  This gives the Python language a head start in many projects."
+"\"batteries included\" -- having a rich and versatile standard library which "
+"is immediately available, without making the user download separate "
+"packages.  This gives the Python language a head start in many projects."
 msgstr ""
 
 #: ../pep-0206.txt:29
 msgid ""
-"However, the standard library modules aren't always the best choices for "
-"a job.  Some library modules were quick hacks (e.g. ``calendar``, "
-"``commands``), some were designed poorly and are now near-impossible to "
-"fix (``cgi``), and some have been rendered obsolete by other, more "
-"complete modules (``binascii`` offers the same features as the "
-"``binhex``, ``uu``, ``base64`` modules).  This PEP describes a list of "
-"third-party modules that make Python more competitive for various "
-"application domains, forming the Python Advanced Library."
+"However, the standard library modules aren't always the best choices for a "
+"job.  Some library modules were quick hacks (e.g. ``calendar``, "
+"``commands``), some were designed poorly and are now near-impossible to fix "
+"(``cgi``), and some have been rendered obsolete by other, more complete "
+"modules (``binascii`` offers the same features as the ``binhex``, ``uu``, "
+"``base64`` modules).  This PEP describes a list of third-party modules that "
+"make Python more competitive for various application domains, forming the "
+"Python Advanced Library."
 msgstr ""
 
 #: ../pep-0206.txt:38
 msgid ""
-"The deliverable is a set of scripts that will retrieve, build, and "
-"install the packages for a particular application domain.  The Python "
-"Package Index now contains enough information to let software "
-"automatically find packages and download them, so the time is ripe to "
-"implement this."
+"The deliverable is a set of scripts that will retrieve, build, and install "
+"the packages for a particular application domain.  The Python Package Index "
+"now contains enough information to let software automatically find packages "
+"and download them, so the time is ripe to implement this."
 msgstr ""
 
 #: ../pep-0206.txt:44
 msgid ""
-"Currently this document doesn't suggest *removing* modules from the "
-"standard library that are superseded by a third-party module. That's "
-"difficult to do because it entails many backward-compatibility problems, "
-"so it's not worth bothering with now."
+"Currently this document doesn't suggest *removing* modules from the standard "
+"library that are superseded by a third-party module. That's difficult to do "
+"because it entails many backward-compatibility problems, so it's not worth "
+"bothering with now."
 msgstr ""
 
 #: ../pep-0206.txt:49
@@ -184,9 +183,9 @@ msgstr ""
 msgid ""
 "Some of these third-party modules are covered by the GNU General Public "
 "License and the GNU Lesser General Public License. Providing a script to "
-"download and install such packages, or even assembling all these packages"
-" into a single tarball or CD-ROM, shouldn't cause any difficulties with "
-"the GPL, under the \"mere aggregation\" clause of the license."
+"download and install such packages, or even assembling all these packages "
+"into a single tarball or CD-ROM, shouldn't cause any difficulties with the "
+"GPL, under the \"mere aggregation\" clause of the license."
 msgstr ""
 
 #: ../pep-0206.txt:108
@@ -199,9 +198,8 @@ msgstr ""
 
 #: ../pep-0206.txt:112
 msgid ""
-"Should this just be a set of Ubuntu or Debian packages?  Compiling things"
-" such as PyGame can be very complicated and may be too difficult to "
-"automate."
+"Should this just be a set of Ubuntu or Debian packages?  Compiling things "
+"such as PyGame can be very complicated and may be too difficult to automate."
 msgstr ""
 
 #: ../pep-0206.txt:118
@@ -213,4 +211,3 @@ msgid ""
 "The PEP is based on an earlier draft PEP by Moshe Zadka, titled \"2.0 "
 "Batteries Included.\""
 msgstr ""
-

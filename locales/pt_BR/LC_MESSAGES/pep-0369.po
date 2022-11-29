@@ -71,8 +71,8 @@ msgstr ""
 
 #: ../pep-0369.txt:17
 msgid ""
-"This PEP has been withdrawn by its author, as much of the detailed design"
-" is no longer valid following the migration to importlib in Python 3.3."
+"This PEP has been withdrawn by its author, as much of the detailed design is "
+"no longer valid following the migration to importlib in Python 3.3."
 msgstr ""
 
 #: ../pep-0369.txt:22
@@ -81,16 +81,16 @@ msgstr ""
 
 #: ../pep-0369.txt:24
 msgid ""
-"This PEP proposes enhancements for the import machinery to add post "
-"import hooks. It is intended primarily to support the wider use of "
-"abstract base classes that is expected in Python 3.0."
+"This PEP proposes enhancements for the import machinery to add post import "
+"hooks. It is intended primarily to support the wider use of abstract base "
+"classes that is expected in Python 3.0."
 msgstr ""
 
 #: ../pep-0369.txt:28
 msgid ""
 "The PEP originally started as a combined PEP for lazy imports and post "
-"import hooks. After some discussion on the python-dev mailing list the "
-"PEP was parted in two separate PEPs. [1]_"
+"import hooks. After some discussion on the python-dev mailing list the PEP "
+"was parted in two separate PEPs. [1]_"
 msgstr ""
 
 #: ../pep-0369.txt:34
@@ -99,10 +99,10 @@ msgstr ""
 
 #: ../pep-0369.txt:36
 msgid ""
-"Python has no API to hook into the import machinery and execute code "
-"*after* a module is successfully loaded. The import hooks of :pep:`302` "
-"are about finding modules and loading modules but they were not designed "
-"to as post import hooks."
+"Python has no API to hook into the import machinery and execute code *after* "
+"a module is successfully loaded. The import hooks of :pep:`302` are about "
+"finding modules and loading modules but they were not designed to as post "
+"import hooks."
 msgstr ""
 
 #: ../pep-0369.txt:43
@@ -113,23 +113,23 @@ msgstr ""
 msgid ""
 "A use case for a post import hook is mentioned in Nick Coghlan's initial "
 "posting [2]_. about callbacks on module import. It was found during the "
-"development of Python 3.0 and its ABCs. We wanted to register classes "
-"like decimal.Decimal with an ABC but the module should not be imported on"
-" every interpreter startup. Nick came up with this example::"
+"development of Python 3.0 and its ABCs. We wanted to register classes like "
+"decimal.Decimal with an ABC but the module should not be imported on every "
+"interpreter startup. Nick came up with this example::"
 msgstr ""
 
 #: ../pep-0369.txt:55
 msgid ""
 "The function ``register`` is registered as callback for the module named "
-"'decimal'. When decimal is imported the function is called with the "
-"module object as argument."
+"'decimal'. When decimal is imported the function is called with the module "
+"object as argument."
 msgstr ""
 
 #: ../pep-0369.txt:59
 msgid ""
-"While this particular example isn't necessary in practice, (as "
-"decimal.Decimal will inherit from the appropriate abstract Number base "
-"class in 2.6 and 3.0), it still illustrates the principle."
+"While this particular example isn't necessary in practice, (as decimal."
+"Decimal will inherit from the appropriate abstract Number base class in 2.6 "
+"and 3.0), it still illustrates the principle."
 msgstr ""
 
 #: ../pep-0369.txt:65
@@ -138,8 +138,8 @@ msgstr ""
 
 #: ../pep-0369.txt:67
 msgid ""
-"PJE's peak.util.imports [3]_ implements post load hooks. My "
-"implementation shares a lot with his and it's partly based on his ideas."
+"PJE's peak.util.imports [3]_ implements post load hooks. My implementation "
+"shares a lot with his and it's partly based on his ideas."
 msgstr ""
 
 #: ../pep-0369.txt:72
@@ -148,9 +148,9 @@ msgstr ""
 
 #: ../pep-0369.txt:74
 msgid ""
-"Post import hooks are called after a module has been loaded. The hooks "
-"are callable which take one argument, the module instance. They are "
-"registered by the dotted name of the module, e.g. 'os' or 'os.path'."
+"Post import hooks are called after a module has been loaded. The hooks are "
+"callable which take one argument, the module instance. They are registered "
+"by the dotted name of the module, e.g. 'os' or 'os.path'."
 msgstr ""
 
 #: ../pep-0369.txt:78
@@ -177,8 +177,8 @@ msgstr ""
 
 #: ../pep-0369.txt:94
 msgid ""
-"The import hook registry contains an entry "
-"sys.post_import_hooks[\"name\"] = [hook1]"
+"The import hook registry contains an entry sys.post_import_hooks[\"name\"] = "
+"[hook1]"
 msgstr ""
 
 #: ../pep-0369.txt:99
@@ -187,18 +187,18 @@ msgstr ""
 
 #: ../pep-0369.txt:101
 msgid ""
-"The import machinery checks if sys.post_import_hooks contains post import"
-" hooks for the newly loaded module. If hooks are found then the hooks are"
-" called in the order they were registered with the module instance as "
-"first argument. The processing of the hooks is stopped when a method "
-"raises an exception. At the end the entry for the module name set to "
-"None, even when an error has occurred."
+"The import machinery checks if sys.post_import_hooks contains post import "
+"hooks for the newly loaded module. If hooks are found then the hooks are "
+"called in the order they were registered with the module instance as first "
+"argument. The processing of the hooks is stopped when a method raises an "
+"exception. At the end the entry for the module name set to None, even when "
+"an error has occurred."
 msgstr ""
 
 #: ../pep-0369.txt:108
 msgid ""
-"Additionally the new ``__notified__`` slot of the module object is set to"
-" ``True`` in order to prevent infinity recursions when the notification "
+"Additionally the new ``__notified__`` slot of the module object is set to "
+"``True`` in order to prevent infinity recursions when the notification "
 "method is called inside a hook. For object which don't subclass from "
 "``PyModule`` a new attribute is added instead."
 msgstr ""
@@ -209,8 +209,8 @@ msgstr ""
 
 #: ../pep-0369.txt:117
 msgid ""
-"The import hooks are neither called nor removed from the registry. It may"
-" be possible to load the module later."
+"The import hooks are neither called nor removed from the registry. It may be "
+"possible to load the module later."
 msgstr ""
 
 #: ../pep-0369.txt:122
@@ -261,8 +261,8 @@ msgstr ""
 msgid ""
 "Notify the post import system that a module was requested. Returns the a "
 "borrowed reference to the same module object or NULL if an error has "
-"occurred. The function calls only the hooks for the module itself and not"
-" its parents. The function must be called with the import lock acquired."
+"occurred. The function calls only the hooks for the module itself and not "
+"its parents. The function must be called with the import lock acquired."
 msgstr ""
 
 #: ../pep-0369.txt:179
@@ -272,12 +272,12 @@ msgstr ""
 #: ../pep-0369.txt:173
 msgid ""
 "``PyImport_NotifyLoadedByName(\"a.b.c\")`` calls "
-"``PyImport_NotifyLoadedByModule()`` for ``a``, ``a.b`` and ``a.b.c`` in "
-"that particular order. The modules are retrieved from ``sys.modules``. If"
-" a module can't be retrieved, an exception is raised otherwise the a "
-"borrowed reference to ``modname`` is returned. The hook calls always "
-"start with the prime parent module. The caller of "
-"PyImport_NotifyLoadedByName() must hold the import lock!"
+"``PyImport_NotifyLoadedByModule()`` for ``a``, ``a.b`` and ``a.b.c`` in that "
+"particular order. The modules are retrieved from ``sys.modules``. If a "
+"module can't be retrieved, an exception is raised otherwise the a borrowed "
+"reference to ``modname`` is returned. The hook calls always start with the "
+"prime parent module. The caller of PyImport_NotifyLoadedByName() must hold "
+"the import lock!"
 msgstr ""
 
 #: ../pep-0369.txt:182
@@ -309,8 +309,8 @@ msgstr ""
 #: ../pep-0369.txt:191
 msgid ""
 "The ``PyImport_NotifyLoadedByModule()`` method is called inside "
-"``import_submodule()``. The import system makes sure that the import lock"
-" is acquired and the hooks for the parent modules are already called."
+"``import_submodule()``. The import system makes sure that the import lock is "
+"acquired and the hooks for the parent modules are already called."
 msgstr ""
 
 #: ../pep-0369.txt:197
@@ -345,8 +345,8 @@ msgstr ""
 
 #: ../pep-0369.txt:211
 msgid ""
-"Notify the system that a module has been loaded. The method is provided "
-"for compatibility with existing lazy / deferred import extensions."
+"Notify the system that a module has been loaded. The method is provided for "
+"compatibility with existing lazy / deferred import extensions."
 msgstr ""
 
 #: ../pep-0369.txt:215
@@ -381,8 +381,8 @@ msgstr ""
 
 #: ../pep-0369.txt:234
 msgid ""
-"The code contains several XXX comments. They are mostly about error "
-"handling in edge cases."
+"The code contains several XXX comments. They are mostly about error handling "
+"in edge cases."
 msgstr ""
 
 #: ../pep-0369.txt:239
@@ -391,19 +391,19 @@ msgstr ""
 
 #: ../pep-0369.txt:241
 msgid ""
-"The new features and API don't conflict with old import system of Python "
-"and don't cause any backward compatibility issues for most software. "
-"However systems like PEAK and Zope which implement their own lazy import "
-"magic need to follow some rules."
+"The new features and API don't conflict with old import system of Python and "
+"don't cause any backward compatibility issues for most software. However "
+"systems like PEAK and Zope which implement their own lazy import magic need "
+"to follow some rules."
 msgstr ""
 
 #: ../pep-0369.txt:246
 msgid ""
-"The post import hooks carefully designed to cooperate with existing "
-"deferred and lazy import systems. It's the suggestion of the PEP author "
-"to replace own on-load-hooks with the new hook API. The alternative lazy "
-"or deferred imports will still work but the implementations must call the"
-" ``imp.notify_module_loaded`` function."
+"The post import hooks carefully designed to cooperate with existing deferred "
+"and lazy import systems. It's the suggestion of the PEP author to replace "
+"own on-load-hooks with the new hook API. The alternative lazy or deferred "
+"imports will still work but the implementations must call the ``imp."
+"notify_module_loaded`` function."
 msgstr ""
 
 #: ../pep-0369.txt:254
@@ -412,9 +412,9 @@ msgstr ""
 
 #: ../pep-0369.txt:256
 msgid ""
-"A reference implementation is already written and is available in the "
-"*py3k-importhook* branch. [4]_ It still requires some cleanups, "
-"documentation updates and additional unit tests."
+"A reference implementation is already written and is available in the *py3k-"
+"importhook* branch. [4]_ It still requires some cleanups, documentation "
+"updates and additional unit tests."
 msgstr ""
 
 #: ../pep-0369.txt:262
@@ -423,8 +423,8 @@ msgstr ""
 
 #: ../pep-0369.txt:264
 msgid ""
-"Nick Coghlan, for proof reading and the initial discussion Phillip J. "
-"Eby, for his implementation in PEAK and help with my own implementation"
+"Nick Coghlan, for proof reading and the initial discussion Phillip J. Eby, "
+"for his implementation in PEAK and help with my own implementation"
 msgstr ""
 
 #: ../pep-0369.txt:269
@@ -441,20 +441,20 @@ msgstr ""
 
 #: ../pep-0369.txt:277
 msgid ""
-"PEP: Lazy module imports and post import hook "
-"http://permalink.gmane.org/gmane.comp.python.devel/90949"
+"PEP: Lazy module imports and post import hook http://permalink.gmane.org/"
+"gmane.comp.python.devel/90949"
 msgstr ""
 
 #: ../pep-0369.txt:280
 msgid ""
-"Interest in PEP for callbacks on module import "
-"http://permalink.gmane.org/gmane.comp.python.python-3000.devel/11126"
+"Interest in PEP for callbacks on module import http://permalink.gmane.org/"
+"gmane.comp.python.python-3000.devel/11126"
 msgstr ""
 
 #: ../pep-0369.txt:283
 msgid ""
-"peak.utils.imports http://svn.eby-"
-"sarna.com/Importing/peak/util/imports.py?view=markup"
+"peak.utils.imports http://svn.eby-sarna.com/Importing/peak/util/imports.py?"
+"view=markup"
 msgstr ""
 
 #: ../pep-0369.txt:286
@@ -462,4 +462,3 @@ msgid ""
 "py3k-importhook branch http://svn.python.org/view/python/branches/py3k-"
 "importhook/"
 msgstr ""
-

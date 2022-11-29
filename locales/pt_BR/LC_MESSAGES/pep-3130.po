@@ -67,9 +67,9 @@ msgstr ""
 
 #: ../pep-3130.txt:17
 msgid ""
-"This PEP is rejected.  It is not clear how it should be implemented or "
-"what the precise semantics should be in edge cases, and there aren't "
-"enough important use cases given.  response has been lukewarm at best."
+"This PEP is rejected.  It is not clear how it should be implemented or what "
+"the precise semantics should be in edge cases, and there aren't enough "
+"important use cases given.  response has been lukewarm at best."
 msgstr ""
 
 #: ../pep-3130.txt:24
@@ -78,9 +78,9 @@ msgstr ""
 
 #: ../pep-3130.txt:26
 msgid ""
-"It is common to need a reference to the current module, class, or "
-"function, but there is currently no entirely correct way to do this.  "
-"This PEP proposes adding the keywords ``__module__``, ``__class__``, and "
+"It is common to need a reference to the current module, class, or function, "
+"but there is currently no entirely correct way to do this.  This PEP "
+"proposes adding the keywords ``__module__``, ``__class__``, and "
 "``__function__``."
 msgstr ""
 
@@ -90,10 +90,10 @@ msgstr ""
 
 #: ../pep-3130.txt:35
 msgid ""
-"Many modules export various functions, classes, and other objects, but "
-"will perform additional activities (such as running unit tests) when run "
-"as a script.  The current idiom is to test whether the module's name has "
-"been set to magic value."
+"Many modules export various functions, classes, and other objects, but will "
+"perform additional activities (such as running unit tests) when run as a "
+"script.  The current idiom is to test whether the module's name has been set "
+"to magic value."
 msgstr ""
 
 #: ../pep-3130.txt:44
@@ -105,8 +105,8 @@ msgstr ""
 
 #: ../pep-3130.txt:65
 msgid ""
-"Proposal:  Add a ``__module__`` keyword which refers to the module "
-"currently being defined (executed).  (But see open issues.)"
+"Proposal:  Add a ``__module__`` keyword which refers to the module currently "
+"being defined (executed).  (But see open issues.)"
 msgstr ""
 
 #: ../pep-3130.txt:77
@@ -115,34 +115,34 @@ msgstr ""
 
 #: ../pep-3130.txt:79
 msgid ""
-"Class methods are passed the current instance; from this they can "
-"determine ``self.__class__`` (or cls, for class methods). Unfortunately, "
-"this reference is to the object's actual class, which may be a subclass "
-"of the defining class.  The current workaround is to repeat the name of "
-"the class, and assume that the name will not be rebound."
+"Class methods are passed the current instance; from this they can determine "
+"``self.__class__`` (or cls, for class methods). Unfortunately, this "
+"reference is to the object's actual class, which may be a subclass of the "
+"defining class.  The current workaround is to repeat the name of the class, "
+"and assume that the name will not be rebound."
 msgstr ""
 
 #: ../pep-3130.txt:99
 msgid ""
-"Proposal: Add a ``__class__`` keyword which refers to the class currently"
-" being defined (executed).  (But see open issues.)"
+"Proposal: Add a ``__class__`` keyword which refers to the class currently "
+"being defined (executed).  (But see open issues.)"
 msgstr ""
 
 #: ../pep-3130.txt:108
 msgid ""
 "Note that super calls may be further simplified by the \"New Super\" PEP "
-"(Spealman).  The ``__class__`` (or ``__this_class__``) attribute came up "
-"in attempts to simplify the explanation and/or implementation of that "
-"PEP, but was separated out as an independent decision."
+"(Spealman).  The ``__class__`` (or ``__this_class__``) attribute came up in "
+"attempts to simplify the explanation and/or implementation of that PEP, but "
+"was separated out as an independent decision."
 msgstr ""
 
 #: ../pep-3130.txt:113
 msgid ""
-"Note that ``__class__`` (or ``__this_class__``) is not quite the same as "
-"the ``__thisclass__`` property on bound super objects.  The existing "
-"``super.__thisclass__`` property refers to the class from which the "
-"Method Resolution Order search begins.  In the above class D, it would "
-"refer to (the current reference of name) C."
+"Note that ``__class__`` (or ``__this_class__``) is not quite the same as the "
+"``__thisclass__`` property on bound super objects.  The existing ``super."
+"__thisclass__`` property refers to the class from which the Method "
+"Resolution Order search begins.  In the above class D, it would refer to "
+"(the current reference of name) C."
 msgstr ""
 
 #: ../pep-3130.txt:121
@@ -151,15 +151,15 @@ msgstr ""
 
 #: ../pep-3130.txt:123
 msgid ""
-"Functions (including methods) often want access to themselves, usually "
-"for a private storage location or true recursion.  While there are "
-"several workarounds, all have their drawbacks."
+"Functions (including methods) often want access to themselves, usually for a "
+"private storage location or true recursion.  While there are several "
+"workarounds, all have their drawbacks."
 msgstr ""
 
 #: ../pep-3130.txt:160
 msgid ""
-"Proposal: Add a ``__function__`` keyword which refers to the function (or"
-" method) currently being defined (executed).  (But see open issues.)"
+"Proposal: Add a ``__function__`` keyword which refers to the function (or "
+"method) currently being defined (executed).  (But see open issues.)"
 msgstr ""
 
 #: ../pep-3130.txt:177
@@ -170,8 +170,8 @@ msgstr ""
 msgid ""
 "While a user could be using these names already, double-underscore names "
 "( ``__anything__`` ) are explicitly reserved to the interpreter. It is "
-"therefore acceptable to introduce special meaning to these names within a"
-" single feature release."
+"therefore acceptable to introduce special meaning to these names within a "
+"single feature release."
 msgstr ""
 
 #: ../pep-3130.txt:186
@@ -185,14 +185,15 @@ msgid ""
 msgstr ""
 
 #: ../pep-3130.txt:191
-msgid "Guido has suggested [1]_ using a cell variable filled in by the metaclass."
+msgid ""
+"Guido has suggested [1]_ using a cell variable filled in by the metaclass."
 msgstr ""
 
 #: ../pep-3130.txt:194
 msgid ""
-"Michele Simionato has provided a prototype using bytecode hacks [2]_. "
-"This does not require any new bytecode operators; it just modifies the "
-"which specific sequence of existing operators gets run."
+"Michele Simionato has provided a prototype using bytecode hacks [2]_. This "
+"does not require any new bytecode operators; it just modifies the which "
+"specific sequence of existing operators gets run."
 msgstr ""
 
 #: ../pep-3130.txt:201
@@ -201,18 +202,18 @@ msgstr ""
 
 #: ../pep-3130.txt:203
 msgid ""
-"Are ``__module__``, ``__class__``, and ``__function__`` the right names?"
-"  In particular, should the names include the word \"this\", either as "
-"``__this_module__``, ``__this_class__``, and ``__this_function__``, "
-"(format discussed on the python-3000 and python-ideas lists) or as "
-"``__thismodule__``, ``__thisclass__``, and ``__thisfunction__`` (inspired"
-" by, but conflicting with, current usage of super.``__thisclass__``)."
+"Are ``__module__``, ``__class__``, and ``__function__`` the right names?  In "
+"particular, should the names include the word \"this\", either as "
+"``__this_module__``, ``__this_class__``, and ``__this_function__``, (format "
+"discussed on the python-3000 and python-ideas lists) or as "
+"``__thismodule__``, ``__thisclass__``, and ``__thisfunction__`` (inspired "
+"by, but conflicting with, current usage of super.``__thisclass__``)."
 msgstr ""
 
 #: ../pep-3130.txt:210
 msgid ""
-"Are all three keywords needed, or should this enhancement be limited to a"
-" subset of the objects?  Should methods be treated separately from other "
+"Are all three keywords needed, or should this enhancement be limited to a "
+"subset of the objects?  Should methods be treated separately from other "
 "functions?"
 msgstr ""
 
@@ -222,14 +223,15 @@ msgstr ""
 
 #: ../pep-3130.txt:218
 msgid ""
-"Fixing super anyone?  Guido van Rossum "
-"https://mail.python.org/pipermail/python-3000/2007-April/006671.html"
+"Fixing super anyone?  Guido van Rossum https://mail.python.org/pipermail/"
+"python-3000/2007-April/006671.html"
 msgstr ""
 
 #: ../pep-3130.txt:221
 msgid ""
-"Descriptor/Decorator challenge,  Michele Simionato "
-"http://groups.google.com/group/comp.lang.python/browse_frm/thread/a6010c7494871bb1/62a2da68961caeb6?lnk=gst&q=simionato+challenge&rnum=1&hl=en#62a2da68961caeb6"
+"Descriptor/Decorator challenge,  Michele Simionato http://groups.google.com/"
+"group/comp.lang.python/browse_frm/thread/a6010c7494871bb1/62a2da68961caeb6?"
+"lnk=gst&q=simionato+challenge&rnum=1&hl=en#62a2da68961caeb6"
 msgstr ""
 
 #: ../pep-3130.txt:226
@@ -239,4 +241,3 @@ msgstr ""
 #: ../pep-3130.txt:228
 msgid "This document has been placed in the public domain."
 msgstr ""
-

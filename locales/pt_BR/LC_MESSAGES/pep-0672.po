@@ -73,19 +73,18 @@ msgstr ""
 
 #: ../pep-0672.rst:22
 msgid ""
-"`Unicode`_ is a system for handling all kinds of written language. It "
-"aims to allow any character from any human language to be used. Python "
-"code may consist of almost all valid Unicode characters. While this "
-"allows programmers from all around the world to express themselves, it "
-"also allows writing code that is potentially confusing to readers."
+"`Unicode`_ is a system for handling all kinds of written language. It aims "
+"to allow any character from any human language to be used. Python code may "
+"consist of almost all valid Unicode characters. While this allows "
+"programmers from all around the world to express themselves, it also allows "
+"writing code that is potentially confusing to readers."
 msgstr ""
 
 #: ../pep-0672.rst:28
 msgid ""
 "It is possible to misuse Python's Unicode-related features to write code "
-"that *appears* to do something else than what it does. Evildoers could "
-"take advantage of this to trick code reviewers into accepting malicious "
-"code."
+"that *appears* to do something else than what it does. Evildoers could take "
+"advantage of this to trick code reviewers into accepting malicious code."
 msgstr ""
 
 #: ../pep-0672.rst:33
@@ -98,14 +97,14 @@ msgstr ""
 
 #: ../pep-0672.rst:39
 msgid ""
-"This document purposefully does not give any solutions or "
-"recommendations: it is rather a list of things to keep in mind."
+"This document purposefully does not give any solutions or recommendations: "
+"it is rather a list of things to keep in mind."
 msgstr ""
 
 #: ../pep-0672.rst:42
 msgid ""
-"This document is specific to Python. For general security considerations "
-"in Unicode text, see [tr36]_ and [tr39]_."
+"This document is specific to Python. For general security considerations in "
+"Unicode text, see [tr36]_ and [tr39]_."
 msgstr ""
 
 #: ../pep-0672.rst:47
@@ -114,10 +113,10 @@ msgstr ""
 
 #: ../pep-0672.rst:49
 msgid ""
-"Investigation for this document was prompted by `CVE-2021-42574`_, "
-"*Trojan Source Attacks*, reported by Nicholas Boucher and Ross Anderson, "
-"which focuses on Bidirectional override characters and homoglyphs in a "
-"variety of programming languages."
+"Investigation for this document was prompted by `CVE-2021-42574`_, *Trojan "
+"Source Attacks*, reported by Nicholas Boucher and Ross Anderson, which "
+"focuses on Bidirectional override characters and homoglyphs in a variety of "
+"programming languages."
 msgstr ""
 
 #: ../pep-0672.rst:56
@@ -126,8 +125,8 @@ msgstr ""
 
 #: ../pep-0672.rst:58
 msgid ""
-"This section lists some Unicode-related features that can be surprising "
-"or misusable."
+"This section lists some Unicode-related features that can be surprising or "
+"misusable."
 msgstr ""
 
 #: ../pep-0672.rst:63
@@ -143,8 +142,7 @@ msgstr ""
 #: ../pep-0672.rst:68
 msgid ""
 "While issues with the ASCII character set are generally well understood, "
-"the're presented here to help better understanding of the non-ASCII "
-"cases."
+"the're presented here to help better understanding of the non-ASCII cases."
 msgstr ""
 
 #: ../pep-0672.rst:72
@@ -155,18 +153,18 @@ msgstr ""
 msgid ""
 "Some characters look alike. Before the age of computers, many mechanical "
 "typewriters lacked the keys for the digits ``0`` and ``1``: users typed "
-"``O`` (capital o) and ``l`` (lowercase L) instead. Human readers could "
-"tell them apart by context only. In programming languages, however, "
-"distinction between digits and letters is critical -- and most fonts "
-"designed for programmers make it easy to tell them apart."
+"``O`` (capital o) and ``l`` (lowercase L) instead. Human readers could tell "
+"them apart by context only. In programming languages, however, distinction "
+"between digits and letters is critical -- and most fonts designed for "
+"programmers make it easy to tell them apart."
 msgstr ""
 
 #: ../pep-0672.rst:82
 msgid ""
 "Similarly, in fonts designed for human languages, the uppercase “I” and "
 "lowercase “l” can look similar. Or the letters “rn” may be virtually "
-"indistinguishable from the single letter “m”. Again, programmers' fonts "
-"make these pairs of *confusables* noticeably different."
+"indistinguishable from the single letter “m”. Again, programmers' fonts make "
+"these pairs of *confusables* noticeably different."
 msgstr ""
 
 #: ../pep-0672.rst:88
@@ -175,8 +173,8 @@ msgid ""
 "Humans tend to ignore details in longer identifiers: the variable name "
 "``accessibi1ity_options`` can still look indistinguishable from "
 "``accessibility_options``, while they are distinct for the compiler. The "
-"same can be said for plain typos: most humans will not notice the typo in"
-" ``responsbility_chain_delegate``."
+"same can be said for plain typos: most humans will not notice the typo in "
+"``responsbility_chain_delegate``."
 msgstr ""
 
 #: ../pep-0672.rst:96
@@ -185,11 +183,11 @@ msgstr ""
 
 #: ../pep-0672.rst:98
 msgid ""
-"Python generally considers all ``CR`` (``\\r``), ``LF`` (``\\n``), and "
-"``CR-LF`` pairs (``\\r\\n``) as an end of line characters. Most code "
-"editors do as well, but there are editors that display “non-native” line "
-"endings as unknown characters (or nothing at all), rather than ending the"
-" line, displaying this example::"
+"Python generally considers all ``CR`` (``\\r``), ``LF`` (``\\n``), and ``CR-"
+"LF`` pairs (``\\r\\n``) as an end of line characters. Most code editors do "
+"as well, but there are editors that display “non-native” line endings as "
+"unknown characters (or nothing at all), rather than ending the line, "
+"displaying this example::"
 msgstr ""
 
 #: ../pep-0672.rst:107
@@ -198,15 +196,15 @@ msgstr ""
 
 #: ../pep-0672.rst:111
 msgid ""
-"CPython may treat the control character NUL (``\\0``) as end of input, "
-"but many editors simply skip it, possibly showing code that Python will "
-"not run as a regular part of a file."
+"CPython may treat the control character NUL (``\\0``) as end of input, but "
+"many editors simply skip it, possibly showing code that Python will not run "
+"as a regular part of a file."
 msgstr ""
 
 #: ../pep-0672.rst:115
 msgid ""
-"Some characters can be used to hide/overwrite other characters when "
-"source is listed in common terminals. For example:"
+"Some characters can be used to hide/overwrite other characters when source "
+"is listed in common terminals. For example:"
 msgstr ""
 
 #: ../pep-0672.rst:118
@@ -223,8 +221,8 @@ msgstr ""
 
 #: ../pep-0672.rst:122
 msgid ""
-"SUB (``\\x1A``, Ctrl+Z) means “End of text” on Windows. Some programs "
-"(such as ``type``) ignore the rest of the file after it."
+"SUB (``\\x1A``, Ctrl+Z) means “End of text” on Windows. Some programs (such "
+"as ``type``) ignore the rest of the file after it."
 msgstr ""
 
 #: ../pep-0672.rst:124
@@ -239,11 +237,11 @@ msgstr ""
 
 #: ../pep-0672.rst:131
 msgid ""
-"Python is not limited to ASCII. It allows characters of all scripts – "
-"Latin letters to ancient Egyptian hieroglyphs – in identifiers (such as "
-"variable names). See :pep:`3131` for details and rationale. Only “letters"
-" and numbers” are allowed, so while ``γάτα`` is a valid Python "
-"identifier, ``🐱`` is not.  (See `Identifiers and keywords`_ for details.)"
+"Python is not limited to ASCII. It allows characters of all scripts – Latin "
+"letters to ancient Egyptian hieroglyphs – in identifiers (such as variable "
+"names). See :pep:`3131` for details and rationale. Only “letters and "
+"numbers” are allowed, so while ``γάτα`` is a valid Python identifier, ``🐱`` "
+"is not.  (See `Identifiers and keywords`_ for details.)"
 msgstr ""
 
 #: ../pep-0672.rst:138
@@ -252,16 +250,16 @@ msgstr ""
 
 #: ../pep-0672.rst:140
 msgid ""
-"However, within the allowed set there is a large number of “confusables”."
-" For example, the uppercase versions of the Latin ``b``, Greek ``β`` "
-"(Beta), and Cyrillic ``в`` (Ve) often look identical: ``B``, ``Β`` and "
-"``В``, respectively."
+"However, within the allowed set there is a large number of “confusables”. "
+"For example, the uppercase versions of the Latin ``b``, Greek ``β`` (Beta), "
+"and Cyrillic ``в`` (Ve) often look identical: ``B``, ``Β`` and ``В``, "
+"respectively."
 msgstr ""
 
 #: ../pep-0672.rst:144
 msgid ""
-"This allows identifiers that look the same to humans, but not to Python. "
-"For example, all of the following are distinct identifiers:"
+"This allows identifiers that look the same to humans, but not to Python. For "
+"example, all of the following are distinct identifiers:"
 msgstr ""
 
 #: ../pep-0672.rst:147
@@ -286,8 +284,8 @@ msgstr ""
 
 #: ../pep-0672.rst:154
 msgid ""
-"The letter for the Hawaiian *ʻokina* looks like an apostrophe; "
-"``ʻHelloʻ`` is a Python identifier, not a string."
+"The letter for the Hawaiian *ʻokina* looks like an apostrophe; ``ʻHelloʻ`` "
+"is a Python identifier, not a string."
 msgstr ""
 
 #: ../pep-0672.rst:156
@@ -299,8 +297,7 @@ msgstr ""
 #: ../pep-0672.rst:162
 msgid ""
 "The converse also applies – some symbols look like letters – but since "
-"Python does not allow arbitrary symbols in identifiers, this is not an "
-"issue."
+"Python does not allow arbitrary symbols in identifiers, this is not an issue."
 msgstr ""
 
 #: ../pep-0672.rst:168
@@ -315,10 +312,10 @@ msgstr ""
 
 #: ../pep-0672.rst:173
 msgid ""
-"However, when numbers are converted from strings, such as in the ``int`` "
-"and ``float`` constructors or by the ``str.format`` method, any decimal "
-"digit can be used. For example ``߅`` (``NKO DIGIT FIVE``) or ``௫`` "
-"(``TAMIL DIGIT FIVE``) work as the digit ``5``."
+"However, when numbers are converted from strings, such as in the ``int`` and "
+"``float`` constructors or by the ``str.format`` method, any decimal digit "
+"can be used. For example ``߅`` (``NKO DIGIT FIVE``) or ``௫`` (``TAMIL DIGIT "
+"FIVE``) work as the digit ``5``."
 msgstr ""
 
 #: ../pep-0672.rst:178
@@ -333,16 +330,16 @@ msgstr ""
 
 #: ../pep-0672.rst:190
 msgid ""
-"Some scripts, such as Hebrew or Arabic, are written right-to-left. "
-"Phrases in such scripts interact with nearby text in ways that can be "
-"surprising to people who aren't familiar with these writing systems and "
-"their computer representation."
+"Some scripts, such as Hebrew or Arabic, are written right-to-left. Phrases "
+"in such scripts interact with nearby text in ways that can be surprising to "
+"people who aren't familiar with these writing systems and their computer "
+"representation."
 msgstr ""
 
 #: ../pep-0672.rst:195
 msgid ""
-"The exact process is complicated, and explained in Unicode Standard Annex"
-" #9, `Unicode Bidirectional Algorithm`_."
+"The exact process is complicated, and explained in Unicode Standard Annex "
+"#9, `Unicode Bidirectional Algorithm`_."
 msgstr ""
 
 #: ../pep-0672.rst:198
@@ -352,14 +349,15 @@ msgid ""
 msgstr ""
 
 #: ../pep-0672.rst:203
-msgid "When the ``X`` is replaced by the Hebrew letter ``א``, the line becomes::"
+msgid ""
+"When the ``X`` is replaced by the Hebrew letter ``א``, the line becomes::"
 msgstr ""
 
 #: ../pep-0672.rst:207
 msgid ""
 "This command still assigns a 100-character string to ``s``, but when "
-"displayed as general text following the Bidirectional Algorithm (e.g. in "
-"a browser), it appears as ``s = \"א\"`` followed by a comment."
+"displayed as general text following the Bidirectional Algorithm (e.g. in a "
+"browser), it appears as ``s = \"א\"`` followed by a comment."
 msgstr ""
 
 #: ../pep-0672.rst:211
@@ -368,21 +366,20 @@ msgstr ""
 
 #: ../pep-0672.rst:213
 msgid ""
-"In the statement ``ערך = 23``, the variable ``ערך`` is set to the integer"
-" 23."
+"In the statement ``ערך = 23``, the variable ``ערך`` is set to the integer 23."
 msgstr ""
 
 #: ../pep-0672.rst:215
 msgid ""
-"In the statement ``قيمة = ערך``, the variable ``قيمة`` is set to the "
-"value of ``ערך``."
+"In the statement ``قيمة = ערך``, the variable ``قيمة`` is set to the value "
+"of ``ערך``."
 msgstr ""
 
 #: ../pep-0672.rst:218
 msgid ""
-"In the statement ``قيمة - (ערך ** 2)``, the value of ``ערך`` is squared "
-"and then subtracted from ``قيمة``. The *opening* parenthesis is displayed"
-" as ``)``."
+"In the statement ``قيمة - (ערך ** 2)``, the value of ``ערך`` is squared and "
+"then subtracted from ``قيمة``. The *opening* parenthesis is displayed as "
+"``)``."
 msgstr ""
 
 #: ../pep-0672.rst:225
@@ -391,40 +388,40 @@ msgstr ""
 
 #: ../pep-0672.rst:227
 msgid ""
-"Default reordering rules do not always yield the intended direction of "
-"text, so Unicode provides several ways to alter it."
+"Default reordering rules do not always yield the intended direction of text, "
+"so Unicode provides several ways to alter it."
 msgstr ""
 
 #: ../pep-0672.rst:230
 msgid ""
 "The most basic are **directional marks**, which are invisible but affect "
-"text as a left-to-right (or right-to-left) character would. Continuing "
-"with the ``s = \"X\"`` example above, in the next example the ``X`` is "
-"replaced by the Latin ``x`` followed or preceded by a right-to-left mark "
-"(``U+200F``). This assigns a 200-character string to ``s`` (100 copies of"
-" ``x`` interspersed with 100 invisible marks), but under Unicode rules "
-"for general text, it is rendered as ``s = \"x\"`` followed by an ASCII-"
-"only comment::"
+"text as a left-to-right (or right-to-left) character would. Continuing with "
+"the ``s = \"X\"`` example above, in the next example the ``X`` is replaced "
+"by the Latin ``x`` followed or preceded by a right-to-left mark "
+"(``U+200F``). This assigns a 200-character string to ``s`` (100 copies of "
+"``x`` interspersed with 100 invisible marks), but under Unicode rules for "
+"general text, it is rendered as ``s = \"x\"`` followed by an ASCII-only "
+"comment::"
 msgstr ""
 
 #: ../pep-0672.rst:241
 msgid ""
-"The directional **embedding**, **override** and **isolate** characters "
-"are also invisible, but affect the ordering of all text after them until "
-"either ended by a dedicated character, or until the end of line. (Unicode"
-" specifies the effect to last until the end of a “paragraph” (see "
-"`Unicode Bidirectional Algorithm`_), but allows tools to interpret "
-"newline characters as paragraph ends (see Unicode `Newline Guidelines`_)."
-" Most code editors and terminals do so.)"
+"The directional **embedding**, **override** and **isolate** characters are "
+"also invisible, but affect the ordering of all text after them until either "
+"ended by a dedicated character, or until the end of line. (Unicode specifies "
+"the effect to last until the end of a “paragraph” (see `Unicode "
+"Bidirectional Algorithm`_), but allows tools to interpret newline characters "
+"as paragraph ends (see Unicode `Newline Guidelines`_). Most code editors and "
+"terminals do so.)"
 msgstr ""
 
 #: ../pep-0672.rst:249
 msgid ""
 "These characters essentially allow arbitrary reordering of the text that "
-"follows them. Python only allows them in strings and comments, which does"
-" limit their potential (especially in combination with the fact that "
-"Python's comments always extend to the end of a line), but it doesn't "
-"render them harmless."
+"follows them. Python only allows them in strings and comments, which does "
+"limit their potential (especially in combination with the fact that Python's "
+"comments always extend to the end of a line), but it doesn't render them "
+"harmless."
 msgstr ""
 
 #: ../pep-0672.rst:256
@@ -432,15 +429,16 @@ msgid "Normalizing identifiers"
 msgstr ""
 
 #: ../pep-0672.rst:258
-msgid "Python strings are collections of *Unicode codepoints*, not “characters”."
+msgid ""
+"Python strings are collections of *Unicode codepoints*, not “characters”."
 msgstr ""
 
 #: ../pep-0672.rst:260
 msgid ""
 "For reasons like compatibility with earlier encodings, Unicode often has "
 "several ways to encode what is essentially a single “character”. For "
-"example, all these are different ways of writing ``Å`` as a Python "
-"string, each of which is unequal to the others."
+"example, all these are different ways of writing ``Å`` as a Python string, "
+"each of which is unequal to the others."
 msgstr ""
 
 #: ../pep-0672.rst:265
@@ -449,8 +447,7 @@ msgstr ""
 
 #: ../pep-0672.rst:266
 msgid ""
-"``\"\\N{LATIN CAPITAL LETTER A}\\N{COMBINING RING ABOVE}\"`` (2 "
-"codepoints)"
+"``\"\\N{LATIN CAPITAL LETTER A}\\N{COMBINING RING ABOVE}\"`` (2 codepoints)"
 msgstr ""
 
 #: ../pep-0672.rst:267
@@ -459,15 +456,15 @@ msgstr ""
 
 #: ../pep-0672.rst:269
 msgid ""
-"For another example, the ligature ``ﬁ`` has a dedicated Unicode "
-"codepoint, even though it has the same meaning as the two letters ``fi``."
+"For another example, the ligature ``ﬁ`` has a dedicated Unicode codepoint, "
+"even though it has the same meaning as the two letters ``fi``."
 msgstr ""
 
 #: ../pep-0672.rst:272
 msgid ""
-"Also, common letters frequently have several distinct variations. Unicode"
-" provides them for contexts where the difference has some semantic "
-"meaning, like mathematics. For example, some variations of ``n`` are:"
+"Also, common letters frequently have several distinct variations. Unicode "
+"provides them for contexts where the difference has some semantic meaning, "
+"like mathematics. For example, some variations of ``n`` are:"
 msgstr ""
 
 #: ../pep-0672.rst:276
@@ -492,9 +489,9 @@ msgstr ""
 
 #: ../pep-0672.rst:282
 msgid ""
-"Unicode includes algorithms to *normalize* variants like these to a "
-"single form, and Python identifiers are normalized. (There are several "
-"normal forms; Python uses ``NFKC``.)"
+"Unicode includes algorithms to *normalize* variants like these to a single "
+"form, and Python identifiers are normalized. (There are several normal "
+"forms; Python uses ``NFKC``.)"
 msgstr ""
 
 #: ../pep-0672.rst:286
@@ -502,13 +499,14 @@ msgid "For example, ``xn`` and ``xⁿ`` are the same identifier in Python::"
 msgstr ""
 
 #: ../pep-0672.rst:292
-msgid "… as is ``ﬁ`` and ``fi``, and as are the different ways to encode ``Å``."
+msgid ""
+"… as is ``ﬁ`` and ``fi``, and as are the different ways to encode ``Å``."
 msgstr ""
 
 #: ../pep-0672.rst:294
 msgid ""
-"This normalization applies *only* to identifiers, however. Functions that"
-" treat strings as identifiers, such as ``getattr``, do not perform "
+"This normalization applies *only* to identifiers, however. Functions that "
+"treat strings as identifiers, such as ``getattr``, do not perform "
 "normalization::"
 msgstr ""
 
@@ -518,22 +516,22 @@ msgstr ""
 
 #: ../pep-0672.rst:313
 msgid ""
-"``import ﬁnalization`` performs normalization, and looks for a file named"
-" ``finalization.py`` (and other ``finalization.*`` files)."
+"``import ﬁnalization`` performs normalization, and looks for a file named "
+"``finalization.py`` (and other ``finalization.*`` files)."
 msgstr ""
 
 #: ../pep-0672.rst:315
 msgid ""
-"``importlib.import_module(\"ﬁnalization\")`` does not normalize, so it "
-"looks for a file named ``ﬁnalization.py``."
+"``importlib.import_module(\"ﬁnalization\")`` does not normalize, so it looks "
+"for a file named ``ﬁnalization.py``."
 msgstr ""
 
 #: ../pep-0672.rst:318
 msgid ""
-"Some filesystems independently apply normalization and/or case folding. "
-"On some systems, ``ﬁnalization.py``, ``finalization.py`` and "
-"``FINALIZATION.py`` are three distinct filenames; on others, some or all "
-"of these name the same file."
+"Some filesystems independently apply normalization and/or case folding. On "
+"some systems, ``ﬁnalization.py``, ``finalization.py`` and ``FINALIZATION."
+"py`` are three distinct filenames; on others, some or all of these name the "
+"same file."
 msgstr ""
 
 #: ../pep-0672.rst:325
@@ -543,8 +541,8 @@ msgstr ""
 #: ../pep-0672.rst:327
 msgid ""
 "The encoding of Python source files is given by a specific regex on the "
-"first two lines of a file, as per `Encoding declarations`_. This "
-"mechanism is very liberal in what it accepts, and thus easy to obfuscate."
+"first two lines of a file, as per `Encoding declarations`_. This mechanism "
+"is very liberal in what it accepts, and thus easy to obfuscate."
 msgstr ""
 
 #: ../pep-0672.rst:331
@@ -552,16 +550,16 @@ msgid ""
 "This can be misused in combination with Python-specific special-purpose "
 "encodings (see `Text Encodings`_). For example, with ``encoding: "
 "unicode_escape``, characters like quotes or braces can be hidden in an "
-"(f-)string, with many tools (syntax highlighters, linters, etc.) "
-"considering them part of the string. For example::"
+"(f-)string, with many tools (syntax highlighters, linters, etc.) considering "
+"them part of the string. For example::"
 msgstr ""
 
 #: ../pep-0672.rst:354
 msgid ""
 "Here, ``encoding: unicode_escape`` in the initial comment is an encoding "
 "declaration. The ``unicode_escape`` encoding instructs Python to treat "
-"``\\u0027`` as a single quote (which can start/end a string), ``\\u002c``"
-" as a comma (punctuator), etc."
+"``\\u0027`` as a single quote (which can start/end a string), ``\\u002c`` as "
+"a comma (punctuator), etc."
 msgstr ""
 
 #: ../pep-0672.rst:361
@@ -590,14 +588,14 @@ msgstr ""
 
 #: ../pep-0672.rst:378
 msgid ""
-"Unicode Technical Report #36: Unicode Security Considerations "
-"http://www.unicode.org/reports/tr36/"
+"Unicode Technical Report #36: Unicode Security Considerations http://www."
+"unicode.org/reports/tr36/"
 msgstr ""
 
 #: ../pep-0672.rst:380
 msgid ""
-"Unicode® Technical Standard #39: Unicode Security Mechanisms "
-"http://www.unicode.org/reports/tr39/"
+"Unicode® Technical Standard #39: Unicode Security Mechanisms http://www."
+"unicode.org/reports/tr39/"
 msgstr ""
 
 #: ../pep-0672.rst:390
@@ -606,7 +604,6 @@ msgstr ""
 
 #: ../pep-0672.rst:392
 msgid ""
-"This document is placed in the public domain or under the "
-"CC0-1.0-Universal license, whichever is more permissive."
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
 msgstr ""
-

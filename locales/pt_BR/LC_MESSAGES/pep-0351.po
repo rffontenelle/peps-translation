@@ -59,10 +59,9 @@ msgstr ""
 
 #: ../pep-0351.txt:16
 msgid ""
-"This PEP describes a simple protocol for requesting a frozen, immutable "
-"copy of a mutable object.  It also defines a new built-in function which "
-"uses this protocol to provide an immutable copy on any cooperating "
-"object."
+"This PEP describes a simple protocol for requesting a frozen, immutable copy "
+"of a mutable object.  It also defines a new built-in function which uses "
+"this protocol to provide an immutable copy on any cooperating object."
 msgstr ""
 
 #: ../pep-0351.txt:23
@@ -70,7 +69,8 @@ msgid "Rejection Notice"
 msgstr ""
 
 #: ../pep-0351.txt:25
-msgid "This PEP was rejected.  For a rationale, see `this thread on python-dev`_."
+msgid ""
+"This PEP was rejected.  For a rationale, see `this thread on python-dev`_."
 msgstr ""
 
 #: ../pep-0351.txt:31
@@ -79,27 +79,26 @@ msgstr ""
 
 #: ../pep-0351.txt:33
 msgid ""
-"Built-in objects such dictionaries and sets accept only immutable objects"
-" as keys.  This means that mutable objects like lists cannot be used as "
-"keys to a dictionary.  However, a Python programmer can convert a list to"
-" a tuple; the two objects are similar, but the latter is immutable, and "
-"can be used as a dictionary key."
+"Built-in objects such dictionaries and sets accept only immutable objects as "
+"keys.  This means that mutable objects like lists cannot be used as keys to "
+"a dictionary.  However, a Python programmer can convert a list to a tuple; "
+"the two objects are similar, but the latter is immutable, and can be used as "
+"a dictionary key."
 msgstr ""
 
 #: ../pep-0351.txt:39
 msgid ""
 "It is conceivable that third party objects also have similar mutable and "
-"immutable counterparts, and it would be useful to have a standard "
-"protocol for conversion of such objects."
+"immutable counterparts, and it would be useful to have a standard protocol "
+"for conversion of such objects."
 msgstr ""
 
 #: ../pep-0351.txt:43
 msgid ""
-"sets.Set objects expose a \"protocol for automatic conversion to "
-"immutable\" so that you can create sets.Sets of sets.Sets.  :pep:`218` "
-"deliberately dropped this feature from built-in sets.  This PEP advances "
-"that the feature is still useful and proposes a standard mechanism for "
-"its support."
+"sets.Set objects expose a \"protocol for automatic conversion to immutable\" "
+"so that you can create sets.Sets of sets.Sets.  :pep:`218` deliberately "
+"dropped this feature from built-in sets.  This PEP advances that the feature "
+"is still useful and proposes a standard mechanism for its support."
 msgstr ""
 
 #: ../pep-0351.txt:51
@@ -112,17 +111,16 @@ msgstr ""
 
 #: ../pep-0351.txt:55
 msgid ""
-"If freeze() is passed an immutable object, as determined by hash() on "
-"that object not raising a TypeError, then the object is returned "
-"directly."
+"If freeze() is passed an immutable object, as determined by hash() on that "
+"object not raising a TypeError, then the object is returned directly."
 msgstr ""
 
 #: ../pep-0351.txt:59
 msgid ""
-"If freeze() is passed a mutable object (i.e. hash() of that object raises"
-" a TypeError), then freeze() will call that object's __freeze__() method "
-"to get an immutable copy.  If the object does not have a __freeze__() "
-"method, then a TypeError is raised."
+"If freeze() is passed a mutable object (i.e. hash() of that object raises a "
+"TypeError), then freeze() will call that object's __freeze__() method to get "
+"an immutable copy.  If the object does not have a __freeze__() method, then "
+"a TypeError is raised."
 msgstr ""
 
 #: ../pep-0351.txt:66
@@ -143,11 +141,10 @@ msgstr ""
 
 #: ../pep-0351.txt:144
 msgid ""
-"Patch 1335812_ provides the C implementation of this feature.  It adds "
-"the freeze() built-in, along with implementations of the __freeze__() "
-"method for lists and sets.  Dictionaries are not easily freezable in "
-"current Python, so an implementation of dict.__freeze__() is not provided"
-" yet."
+"Patch 1335812_ provides the C implementation of this feature.  It adds the "
+"freeze() built-in, along with implementations of the __freeze__() method for "
+"lists and sets.  Dictionaries are not easily freezable in current Python, so "
+"an implementation of dict.__freeze__() is not provided yet."
 msgstr ""
 
 #: ../pep-0351.txt:153
@@ -182,4 +179,3 @@ msgstr ""
 #: ../pep-0351.txt:170
 msgid "This document has been placed in the public domain."
 msgstr ""
-

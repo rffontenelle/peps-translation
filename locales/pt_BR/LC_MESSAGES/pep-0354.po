@@ -76,17 +76,16 @@ msgstr ""
 #: ../pep-0354.txt:18
 msgid ""
 "This PEP has been rejected.  This doesn't slot nicely into any of the "
-"existing modules (like collections), and the Python standard library "
-"eschews having lots of individual data structures in their own modules.  "
-"Also, the PEP has generated no widespread interest.  For those who need "
-"enumerations, there are cookbook recipes and PyPI packages that meet "
-"these needs."
+"existing modules (like collections), and the Python standard library eschews "
+"having lots of individual data structures in their own modules.  Also, the "
+"PEP has generated no widespread interest.  For those who need enumerations, "
+"there are cookbook recipes and PyPI packages that meet these needs."
 msgstr ""
 
 #: ../pep-0354.txt:25
 msgid ""
-"*Note: this PEP was superseded by* :pep:`435`, *which has been accepted "
-"in May 2013.*"
+"*Note: this PEP was superseded by* :pep:`435`, *which has been accepted in "
+"May 2013.*"
 msgstr ""
 
 #: ../pep-0354.txt:29
@@ -100,9 +99,9 @@ msgstr ""
 #: ../pep-0354.txt:33
 msgid ""
 "An enumeration is an exclusive set of symbolic names bound to arbitrary "
-"unique values.  Values within an enumeration can be iterated and "
-"compared, but the values have no inherent relationship to values outside "
-"the enumeration."
+"unique values.  Values within an enumeration can be iterated and compared, "
+"but the values have no inherent relationship to values outside the "
+"enumeration."
 msgstr ""
 
 #: ../pep-0354.txt:40
@@ -112,20 +111,19 @@ msgstr ""
 #: ../pep-0354.txt:42
 msgid ""
 "The properties of an enumeration are useful for defining an immutable, "
-"related set of constant values that have a defined sequence but no "
-"inherent semantic meaning.  Classic examples are days of the week (Sunday"
-" through Saturday) and school assessment grades ('A' through 'D', and "
-"'F').  Other examples include error status values and states within a "
-"defined process."
+"related set of constant values that have a defined sequence but no inherent "
+"semantic meaning.  Classic examples are days of the week (Sunday through "
+"Saturday) and school assessment grades ('A' through 'D', and 'F').  Other "
+"examples include error status values and states within a defined process."
 msgstr ""
 
 #: ../pep-0354.txt:49
 msgid ""
 "It is possible to simply define a sequence of values of some other basic "
-"type, such as ``int`` or ``str``, to represent discrete arbitrary values."
-"  However, an enumeration ensures that such values are distinct from any "
-"others, and that operations without meaning (\"Wednesday times two\") are"
-" not defined for these values."
+"type, such as ``int`` or ``str``, to represent discrete arbitrary values.  "
+"However, an enumeration ensures that such values are distinct from any "
+"others, and that operations without meaning (\"Wednesday times two\") are "
+"not defined for these values."
 msgstr ""
 
 #: ../pep-0354.txt:57
@@ -156,10 +154,10 @@ msgstr ""
 #: ../pep-0354.txt:78
 msgid ""
 "Values within an enumeration cannot be meaningfully compared except with "
-"values from the same enumeration.  The comparison operation functions "
-"return ``NotImplemented`` [#CMP-NOTIMPLEMENTED]_ when a value from an "
-"enumeration is compared against any value not from the same enumeration "
-"or of a different type::"
+"values from the same enumeration.  The comparison operation functions return "
+"``NotImplemented`` [#CMP-NOTIMPLEMENTED]_ when a value from an enumeration "
+"is compared against any value not from the same enumeration or of a "
+"different type::"
 msgstr ""
 
 #: ../pep-0354.txt:98
@@ -168,8 +166,8 @@ msgstr ""
 
 #: ../pep-0354.txt:116
 msgid ""
-"Coercing a value from an enumeration to a ``str`` results in the string "
-"that was specified for that value when constructing the enumeration::"
+"Coercing a value from an enumeration to a ``str`` results in the string that "
+"was specified for that value when constructing the enumeration::"
 msgstr ""
 
 #: ../pep-0354.txt:124
@@ -180,8 +178,8 @@ msgstr ""
 
 #: ../pep-0354.txt:131
 msgid ""
-"An enumeration can be iterated, returning its values in the sequence they"
-" were specified when the enumeration was created::"
+"An enumeration can be iterated, returning its values in the sequence they "
+"were specified when the enumeration was created::"
 msgstr ""
 
 #: ../pep-0354.txt:137
@@ -190,9 +188,9 @@ msgstr ""
 
 #: ../pep-0354.txt:143
 msgid ""
-"The normal usage of enumerations is to provide a set of possible values "
-"for a data type, which can then be used to map to other information about"
-" the values::"
+"The normal usage of enumerations is to provide a set of possible values for "
+"a data type, which can then be used to map to other information about the "
+"values::"
 msgstr ""
 
 #: ../pep-0354.txt:153
@@ -205,16 +203,16 @@ msgstr ""
 
 #: ../pep-0354.txt:158
 msgid ""
-"Some implementations have the enumeration and its values all as "
-"attributes of a single object or class."
+"Some implementations have the enumeration and its values all as attributes "
+"of a single object or class."
 msgstr ""
 
 #: ../pep-0354.txt:161
 msgid ""
-"This PEP specifies a design where the enumeration is a container, and the"
-" values are simple comparables.  It was felt that attempting to place all"
-" the properties of enumeration within a single class complicates the "
-"design without apparent benefit."
+"This PEP specifies a design where the enumeration is a container, and the "
+"values are simple comparables.  It was felt that attempting to place all the "
+"properties of enumeration within a single class complicates the design "
+"without apparent benefit."
 msgstr ""
 
 #: ../pep-0354.txt:168
@@ -223,28 +221,28 @@ msgstr ""
 
 #: ../pep-0354.txt:170
 msgid ""
-"The enumerations specified in this PEP are instances of an ``enum`` type."
-"  Some alternative designs implement each enumeration as its own class, "
-"and a metaclass to define common properties of all enumerations."
+"The enumerations specified in this PEP are instances of an ``enum`` type.  "
+"Some alternative designs implement each enumeration as its own class, and a "
+"metaclass to define common properties of all enumerations."
 msgstr ""
 
 #: ../pep-0354.txt:175
 msgid ""
 "One motivation for having a class (rather than an instance) for each "
-"enumeration is to allow subclasses of enumerations, extending and "
-"altering an existing enumeration.  A class, though, implies that "
-"instances of that class will be created; it is difficult to imagine what "
-"it means to have separate instances of a \"days of the week\" class, "
-"where each instance contains all days.  This usually leads to having each"
-" class follow the Singleton pattern, further complicating the design."
+"enumeration is to allow subclasses of enumerations, extending and altering "
+"an existing enumeration.  A class, though, implies that instances of that "
+"class will be created; it is difficult to imagine what it means to have "
+"separate instances of a \"days of the week\" class, where each instance "
+"contains all days.  This usually leads to having each class follow the "
+"Singleton pattern, further complicating the design."
 msgstr ""
 
 #: ../pep-0354.txt:184
 msgid ""
 "In contrast, this PEP specifies enumerations that are not expected to be "
 "extended or modified.  It is, of course, possible to create a new "
-"enumeration from the string values of an existing one, or even subclass "
-"the ``enum`` type if desired."
+"enumeration from the string values of an existing one, or even subclass the "
+"``enum`` type if desired."
 msgstr ""
 
 #: ../pep-0354.txt:191
@@ -253,18 +251,17 @@ msgstr ""
 
 #: ../pep-0354.txt:193
 msgid ""
-"Some designs express a strong relationship to some other value, such as a"
-" particular integer or string, for each enumerated value."
+"Some designs express a strong relationship to some other value, such as a "
+"particular integer or string, for each enumerated value."
 msgstr ""
 
 #: ../pep-0354.txt:196
 msgid ""
-"This results in using such values in contexts where the enumeration has "
-"no meaning, and unnecessarily complicates the design.  The enumerated "
-"values specified in this PEP export the values used to create them, and "
-"can be compared for equality with any other value, but sequence "
-"comparison with values outside the enumeration is explicitly not "
-"implemented."
+"This results in using such values in contexts where the enumeration has no "
+"meaning, and unnecessarily complicates the design.  The enumerated values "
+"specified in this PEP export the values used to create them, and can be "
+"compared for equality with any other value, but sequence comparison with "
+"values outside the enumeration is explicitly not implemented."
 msgstr ""
 
 #: ../pep-0354.txt:205
@@ -273,17 +270,17 @@ msgstr ""
 
 #: ../pep-0354.txt:207
 msgid ""
-"A previous design had the enumerated values hiding as much as possible "
-"about their implementation, to the point of not exporting the string key "
-"and sequence index."
+"A previous design had the enumerated values hiding as much as possible about "
+"their implementation, to the point of not exporting the string key and "
+"sequence index."
 msgstr ""
 
 #: ../pep-0354.txt:211
 msgid ""
 "The design in this PEP acknowledges that programs will often find it "
-"convenient to know the enumerated value's enumeration type, sequence "
-"index, and string key specified for the value.  These are exported by the"
-" enumerated value as attributes."
+"convenient to know the enumerated value's enumeration type, sequence index, "
+"and string key specified for the value.  These are exported by the "
+"enumerated value as attributes."
 msgstr ""
 
 #: ../pep-0354.txt:218
@@ -298,8 +295,8 @@ msgstr ""
 
 #: ../pep-0354.txt:223
 msgid ""
-"The PyPI package ``enum`` [#ENUM-PACKAGE]_ provides a Python "
-"implementation of the data types described in this PEP."
+"The PyPI package ``enum`` [#ENUM-PACKAGE]_ provides a Python implementation "
+"of the data types described in this PEP."
 msgstr ""
 
 #: ../pep-0354.txt:228
@@ -308,22 +305,21 @@ msgstr ""
 
 #: ../pep-0354.txt:231
 msgid ""
-"The ``NotImplemented`` return value from comparison operations signals "
-"the Python interpreter to attempt alternative comparisons or other "
-"fallbacks. <http://docs.python.org/reference/datamodel.html#the-standard-"
-"type-hierarchy>"
+"The ``NotImplemented`` return value from comparison operations signals the "
+"Python interpreter to attempt alternative comparisons or other fallbacks. "
+"<http://docs.python.org/reference/datamodel.html#the-standard-type-hierarchy>"
 msgstr ""
 
 #: ../pep-0354.txt:237
 msgid ""
-"\"First Class Enums in Python\", Zoran Isailovski, Python Cookbook recipe"
-" 413486 <http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/413486>"
+"\"First Class Enums in Python\", Zoran Isailovski, Python Cookbook recipe "
+"413486 <http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/413486>"
 msgstr ""
 
 #: ../pep-0354.txt:242
 msgid ""
-"Python Package Index, package ``enum`` "
-"<http://cheeseshop.python.org/pypi/enum/>"
+"Python Package Index, package ``enum`` <http://cheeseshop.python.org/pypi/"
+"enum/>"
 msgstr ""
 
 #: ../pep-0354.txt:247
@@ -333,4 +329,3 @@ msgstr ""
 #: ../pep-0354.txt:249
 msgid "This document has been placed in the public domain."
 msgstr ""
-

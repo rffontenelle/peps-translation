@@ -67,10 +67,10 @@ msgstr ""
 
 #: ../pep-0279.txt:15
 msgid ""
-"This PEP introduces a new built-in function, ``enumerate()`` to simplify "
-"a commonly used looping idiom.  It provides all iterable collections with"
-" the same advantage that ``iteritems()`` affords to dictionaries -- a "
-"compact, readable, reliable index notation."
+"This PEP introduces a new built-in function, ``enumerate()`` to simplify a "
+"commonly used looping idiom.  It provides all iterable collections with the "
+"same advantage that ``iteritems()`` affords to dictionaries -- a compact, "
+"readable, reliable index notation."
 msgstr ""
 
 #: ../pep-0279.txt:22
@@ -79,42 +79,40 @@ msgstr ""
 
 #: ../pep-0279.txt:24
 msgid ""
-"Python 2.2 introduced the concept of an iterable interface as proposed in"
-" :pep:`234`.  The ``iter()`` factory function was provided as common "
-"calling convention and deep changes were made to use iterators as a "
-"unifying theme throughout Python.  The unification came in the form of "
-"establishing a common iterable interface for mappings, sequences, and "
-"file objects."
+"Python 2.2 introduced the concept of an iterable interface as proposed in :"
+"pep:`234`.  The ``iter()`` factory function was provided as common calling "
+"convention and deep changes were made to use iterators as a unifying theme "
+"throughout Python.  The unification came in the form of establishing a "
+"common iterable interface for mappings, sequences, and file objects."
 msgstr ""
 
 #: ../pep-0279.txt:31
 msgid ""
-"Generators, as proposed in :pep:`255`, were introduced as a means for "
-"making it easier to create iterators, especially ones with complex "
-"internal execution or variable states.  The availability of generators "
-"makes it possible to improve on the loop counter ideas in :pep:`212`.  "
-"Those ideas provided a clean syntax for iteration with indices and "
-"values, but did not apply to all iterable objects.  Also, that approach "
-"did not have the memory friendly benefit provided by generators which do "
-"not evaluate the entire sequence all at once."
+"Generators, as proposed in :pep:`255`, were introduced as a means for making "
+"it easier to create iterators, especially ones with complex internal "
+"execution or variable states.  The availability of generators makes it "
+"possible to improve on the loop counter ideas in :pep:`212`.  Those ideas "
+"provided a clean syntax for iteration with indices and values, but did not "
+"apply to all iterable objects.  Also, that approach did not have the memory "
+"friendly benefit provided by generators which do not evaluate the entire "
+"sequence all at once."
 msgstr ""
 
 #: ../pep-0279.txt:41
 msgid ""
-"The new proposal is to add a built-in function, ``enumerate()`` which was"
-" made possible once iterators and generators became available. It "
-"provides all iterables with the same advantage that ``iteritems()`` "
-"affords to dictionaries -- a compact, readable, reliable index notation."
-"  Like ``zip()``, it is expected to become a commonly used looping idiom."
+"The new proposal is to add a built-in function, ``enumerate()`` which was "
+"made possible once iterators and generators became available. It provides "
+"all iterables with the same advantage that ``iteritems()`` affords to "
+"dictionaries -- a compact, readable, reliable index notation.  Like "
+"``zip()``, it is expected to become a commonly used looping idiom."
 msgstr ""
 
 #: ../pep-0279.txt:48
 msgid ""
-"This suggestion is designed to take advantage of the existing "
-"implementation and require little additional effort to incorporate.  It "
-"is backwards compatible and requires no new keywords.  The proposal will "
-"go into Python 2.3 when generators become final and are not imported from"
-" ``__future__``."
+"This suggestion is designed to take advantage of the existing implementation "
+"and require little additional effort to incorporate.  It is backwards "
+"compatible and requires no new keywords.  The proposal will go into Python "
+"2.3 when generators become final and are not imported from ``__future__``."
 msgstr ""
 
 #: ../pep-0279.txt:56
@@ -131,16 +129,15 @@ msgstr ""
 
 #: ../pep-0279.txt:74
 msgid ""
-"Note A: :pep:`212` Loop Counter Iteration discussed several proposals for"
-" achieving indexing.  Some of the proposals only work for lists unlike "
-"the above function which works for any generator, xrange, sequence, or "
-"iterable object.  Also, those proposals were presented and evaluated in "
-"the world prior to Python 2.2 which did not include generators.  As a "
-"result, the non-generator version in :pep:`212` had the disadvantage of "
-"consuming memory with a giant list of tuples.  The generator version "
-"presented here is fast and light, works with all iterables, and allows "
-"users to abandon the sequence in mid-stream with no loss of computation "
-"effort."
+"Note A: :pep:`212` Loop Counter Iteration discussed several proposals for "
+"achieving indexing.  Some of the proposals only work for lists unlike the "
+"above function which works for any generator, xrange, sequence, or iterable "
+"object.  Also, those proposals were presented and evaluated in the world "
+"prior to Python 2.2 which did not include generators.  As a result, the non-"
+"generator version in :pep:`212` had the disadvantage of consuming memory "
+"with a giant list of tuples.  The generator version presented here is fast "
+"and light, works with all iterables, and allows users to abandon the "
+"sequence in mid-stream with no loss of computation effort."
 msgstr ""
 
 #: ../pep-0279.txt:85
@@ -148,30 +145,29 @@ msgid ""
 "There are other PEPs which touch on related issues: integer iterators, "
 "integer for-loops, and one for modifying the arguments to ``range`` and "
 "``xrange``.  The ``enumerate()`` proposal does not preclude the other "
-"proposals and it still meets an important need even if those are adopted "
-"-- the need to count items in any iterable.  The other proposals give a "
-"means of producing an index but not the corresponding value.  This is "
-"especially problematic if a sequence is given which doesn't support "
-"random access such as a file object, generator, or sequence defined with "
-"``__getitem__``."
+"proposals and it still meets an important need even if those are adopted -- "
+"the need to count items in any iterable.  The other proposals give a means "
+"of producing an index but not the corresponding value.  This is especially "
+"problematic if a sequence is given which doesn't support random access such "
+"as a file object, generator, or sequence defined with ``__getitem__``."
 msgstr ""
 
 #: ../pep-0279.txt:95
 msgid ""
 "Note B: Almost all of the PEP reviewers welcomed the function but were "
-"divided as to whether there should be any built-ins.  The main argument "
-"for a separate module was to slow the rate of language inflation.  The "
-"main argument for a built-in was that the function is destined to be part"
-" of a core programming style, applicable to any object with an iterable "
-"interface.  Just as ``zip()`` solves the problem of looping over multiple"
-" sequences, the ``enumerate()`` function solves the loop counter problem."
+"divided as to whether there should be any built-ins.  The main argument for "
+"a separate module was to slow the rate of language inflation.  The main "
+"argument for a built-in was that the function is destined to be part of a "
+"core programming style, applicable to any object with an iterable "
+"interface.  Just as ``zip()`` solves the problem of looping over multiple "
+"sequences, the ``enumerate()`` function solves the loop counter problem."
 msgstr ""
 
 #: ../pep-0279.txt:104
 msgid ""
-"If only one built-in is allowed, then ``enumerate()`` is the most "
-"important general purpose tool, solving the broadest class of problems "
-"while improving program brevity, clarity and reliability."
+"If only one built-in is allowed, then ``enumerate()`` is the most important "
+"general purpose tool, solving the broadest class of problems while improving "
+"program brevity, clarity and reliability."
 msgstr ""
 
 #: ../pep-0279.txt:108
@@ -254,26 +250,25 @@ msgstr ""
 
 #: ../pep-0279.txt:123
 msgid ""
-"All of the names involving 'count' had the further disadvantage of "
-"implying that the count would begin from one instead of zero."
+"All of the names involving 'count' had the further disadvantage of implying "
+"that the count would begin from one instead of zero."
 msgstr ""
 
 #: ../pep-0279.txt:126
 msgid ""
-"All of the names involving 'index' clashed with usage in database "
-"languages where indexing implies a sorting operation rather than linear "
-"sequencing."
+"All of the names involving 'index' clashed with usage in database languages "
+"where indexing implies a sorting operation rather than linear sequencing."
 msgstr ""
 
 #: ../pep-0279.txt:130
 msgid ""
-"Note D: This function was originally proposed with optional start and "
-"stop arguments.  GvR pointed out that the function call "
-"``enumerate(seqn,4,6)`` had an alternate, plausible interpretation as a "
-"slice that would return the fourth and fifth elements of the sequence.  "
-"To avoid the ambiguity, the optional arguments were dropped even though "
-"it meant losing flexibility as a loop counter. That flexibility was most "
-"important for the common case of counting from one, as in::"
+"Note D: This function was originally proposed with optional start and stop "
+"arguments.  GvR pointed out that the function call ``enumerate(seqn,4,6)`` "
+"had an alternate, plausible interpretation as a slice that would return the "
+"fourth and fifth elements of the sequence.  To avoid the ambiguity, the "
+"optional arguments were dropped even though it meant losing flexibility as a "
+"loop counter. That flexibility was most important for the common case of "
+"counting from one, as in::"
 msgstr ""
 
 #: ../pep-0279.txt:154
@@ -282,16 +277,15 @@ msgstr ""
 
 #: ../pep-0279.txt:143
 msgid ""
-"``filter`` and ``map`` should die and be subsumed into list "
-"comprehensions, not grow more variants. I'd rather introduce built-ins "
-"that do iterator algebra (e.g. the iterzip that I've often used as an "
-"example)."
+"``filter`` and ``map`` should die and be subsumed into list comprehensions, "
+"not grow more variants. I'd rather introduce built-ins that do iterator "
+"algebra (e.g. the iterzip that I've often used as an example)."
 msgstr ""
 
 #: ../pep-0279.txt:148
 msgid ""
-"I like the idea of having some way to iterate over a sequence and its "
-"index set in parallel.  It's fine for this to be a built-in."
+"I like the idea of having some way to iterate over a sequence and its index "
+"set in parallel.  It's fine for this to be a built-in."
 msgstr ""
 
 #: ../pep-0279.txt:152
@@ -306,9 +300,9 @@ msgstr ""
 
 #: ../pep-0279.txt:157
 msgid ""
-"I'm also quite happy with everything  you proposed ... and the extra "
-"built-ins (really 'indexed' in particular) are things I have wanted for a"
-" long time."
+"I'm also quite happy with everything  you proposed ... and the extra built-"
+"ins (really 'indexed' in particular) are things I have wanted for a long "
+"time."
 msgstr ""
 
 #: ../pep-0279.txt:168
@@ -317,10 +311,10 @@ msgstr ""
 
 #: ../pep-0279.txt:163
 msgid ""
-"The new built-ins sound okay.  Guido may be concerned with increasing the"
-" number of built-ins too much.  You might be better off selling them as "
-"part of a module.  If you use a module then you can add lots of useful "
-"functions (Haskell has lots of them that we could steal)."
+"The new built-ins sound okay.  Guido may be concerned with increasing the "
+"number of built-ins too much.  You might be better off selling them as part "
+"of a module.  If you use a module then you can add lots of useful functions "
+"(Haskell has lots of them that we could steal)."
 msgstr ""
 
 #: ../pep-0279.txt:176
@@ -330,8 +324,8 @@ msgstr ""
 #: ../pep-0279.txt:171
 msgid ""
 "I think indexed would be a useful and natural built-in function. I would "
-"certainly use it a lot.  I like ``indexed()`` a lot; +1. I'm quite happy "
-"to have it make PEP 281 obsolete. Adding a separate module for iterator "
+"certainly use it a lot.  I like ``indexed()`` a lot; +1. I'm quite happy to "
+"have it make PEP 281 obsolete. Adding a separate module for iterator "
 "utilities seems like a good idea."
 msgstr ""
 
@@ -342,8 +336,8 @@ msgstr ""
 #: ../pep-0279.txt:179
 #, python-format
 msgid ""
-"The response to the ``enumerate()`` proposal has been close to 100% "
-"favorable.  Almost everyone loves the idea."
+"The response to the ``enumerate()`` proposal has been close to "
+"100% favorable.  Almost everyone loves the idea."
 msgstr ""
 
 #: ../pep-0279.txt:196
@@ -352,19 +346,19 @@ msgstr ""
 
 #: ../pep-0279.txt:185
 msgid ""
-"Prior to these comments, four built-ins were proposed. After the "
-"comments, ``xmap``, ``xfilter`` and ``xzip`` were withdrawn.  The one "
-"that remains is vital for the language and is proposed by itself.  "
-"``Indexed()`` is trivially easy to implement and can be documented in "
-"minutes.  More importantly, it is useful in everyday programming which "
-"does not otherwise involve explicit use of generators."
+"Prior to these comments, four built-ins were proposed. After the comments, "
+"``xmap``, ``xfilter`` and ``xzip`` were withdrawn.  The one that remains is "
+"vital for the language and is proposed by itself.  ``Indexed()`` is "
+"trivially easy to implement and can be documented in minutes.  More "
+"importantly, it is useful in everyday programming which does not otherwise "
+"involve explicit use of generators."
 msgstr ""
 
 #: ../pep-0279.txt:193
 msgid ""
-"This proposal originally included another function ``iterzip()``. That "
-"was subsequently implemented as the ``izip()`` function in the "
-"``itertools`` module."
+"This proposal originally included another function ``iterzip()``. That was "
+"subsequently implemented as the ``izip()`` function in the ``itertools`` "
+"module."
 msgstr ""
 
 #: ../pep-0279.txt:199
@@ -374,4 +368,3 @@ msgstr ""
 #: ../pep-0279.txt:201
 msgid "This document has been placed in the public domain."
 msgstr ""
-

@@ -79,8 +79,8 @@ msgstr ""
 
 #: ../pep-0536.txt:21
 msgid ""
-"This PEP expands upon the f-strings introduced by :pep:`498`, so this "
-"text requires familiarity with :pep:`498`."
+"This PEP expands upon the f-strings introduced by :pep:`498`, so this text "
+"requires familiarity with :pep:`498`."
 msgstr ""
 
 #: ../pep-0536.txt:25
@@ -103,9 +103,9 @@ msgstr ""
 
 #: ../pep-0536.txt:36
 msgid ""
-"Furthermore, it will refer to the ``{}``-delimited expressions in "
-"f-literals/f-strings as “expression portions” and the static string "
-"content around them as “string portions”."
+"Furthermore, it will refer to the ``{}``-delimited expressions in f-literals/"
+"f-strings as “expression portions” and the static string content around them "
+"as “string portions”."
 msgstr ""
 
 #: ../pep-0536.txt:41
@@ -114,16 +114,15 @@ msgstr ""
 
 #: ../pep-0536.txt:43
 msgid ""
-"The current implementation of f-strings in CPython relies on the existing"
-" string parsing machinery and a post processing of its tokens.  This "
-"results in several restrictions to the possible expressions usable within"
-" f-strings:"
+"The current implementation of f-strings in CPython relies on the existing "
+"string parsing machinery and a post processing of its tokens.  This results "
+"in several restrictions to the possible expressions usable within f-strings:"
 msgstr ""
 
 #: ../pep-0536.txt:47
 msgid ""
-"It is impossible to use the quote character delimiting the f-string "
-"within the expression portion::"
+"It is impossible to use the quote character delimiting the f-string within "
+"the expression portion::"
 msgstr ""
 
 #: ../pep-0536.txt:54
@@ -142,9 +141,9 @@ msgstr ""
 
 #: ../pep-0536.txt:72
 msgid ""
-"These limitations serve no purpose from a language user perspective and "
-"can be lifted by giving f-literals a regular grammar without exceptions "
-"and implementing it using dedicated parse code."
+"These limitations serve no purpose from a language user perspective and can "
+"be lifted by giving f-literals a regular grammar without exceptions and "
+"implementing it using dedicated parse code."
 msgstr ""
 
 #: ../pep-0536.txt:77
@@ -154,57 +153,54 @@ msgstr ""
 #: ../pep-0536.txt:81
 msgid ""
 "The restrictions mentioned in Motivation_ are non-obvious and counter-"
-"intuitive unless the user is familiar with the f-literals’ implementation"
-" details."
+"intuitive unless the user is familiar with the f-literals’ implementation "
+"details."
 msgstr ""
 
 #: ../pep-0536.txt:84
 msgid ""
 "As mentioned, a previous version of :pep:`498` allowed escape sequences "
-"anywhere in f-strings, including as ways to encode the braces delimiting "
-"the expression portions and in their code.  They would be expanded before"
-" the code is parsed, which would have had several important "
-"ramifications:"
+"anywhere in f-strings, including as ways to encode the braces delimiting the "
+"expression portions and in their code.  They would be expanded before the "
+"code is parsed, which would have had several important ramifications:"
 msgstr ""
 
 #: ../pep-0536.txt:89
 msgid ""
-"#. It would not be clear to human readers which portions are Expressions "
-"and which are strings.  Great material for an “obfuscated/underhanded "
-"Python challenge” #. Syntax highlighters are good in parsing nested "
-"grammar, but not in recognizing escape sequences.  ECMAScript 2016 "
-"(JavaScript) allows escape sequences in its identifiers [1]_ and the "
-"author knows of no syntax highlighter able to correctly highlight code "
-"making use of this."
+"#. It would not be clear to human readers which portions are Expressions and "
+"which are strings.  Great material for an “obfuscated/underhanded Python "
+"challenge” #. Syntax highlighters are good in parsing nested grammar, but "
+"not in recognizing escape sequences.  ECMAScript 2016 (JavaScript) allows "
+"escape sequences in its identifiers [1]_ and the author knows of no syntax "
+"highlighter able to correctly highlight code making use of this."
 msgstr ""
 
 #: ../pep-0536.txt:97
 msgid ""
-"As a consequence, the expression portions would be harder to recognize "
-"with and without the aid of syntax highlighting.  With the new grammar, "
-"it is easy to extend syntax highlighters to correctly parse and display "
-"f-literals:"
+"As a consequence, the expression portions would be harder to recognize with "
+"and without the aid of syntax highlighting.  With the new grammar, it is "
+"easy to extend syntax highlighters to correctly parse and display f-literals:"
 msgstr ""
 
 #: ../pep-0536.txt:109
 msgid ""
-"Highlighting expression portions with possible escape sequences would "
-"mean to create a modified copy of all rules of the complete expression "
-"grammar, accounting for the possibility of escape sequences in key words,"
-" delimiters, and all other language syntax. One such duplication would "
-"yield one level of escaping depth and have to be repeated for a deeper "
-"escaping in a recursive f-literal. This is the case since no highlighting"
-" engine known to the author supports expanding escape sequences before "
-"applying rules to a certain context. Nesting contexts however is a "
-"standard feature of all highlighting engines."
+"Highlighting expression portions with possible escape sequences would mean "
+"to create a modified copy of all rules of the complete expression grammar, "
+"accounting for the possibility of escape sequences in key words, delimiters, "
+"and all other language syntax. One such duplication would yield one level of "
+"escaping depth and have to be repeated for a deeper escaping in a recursive "
+"f-literal. This is the case since no highlighting engine known to the author "
+"supports expanding escape sequences before applying rules to a certain "
+"context. Nesting contexts however is a standard feature of all highlighting "
+"engines."
 msgstr ""
 
 #: ../pep-0536.txt:119
 msgid ""
 "Familiarity also plays a role: Arbitrary nesting of expressions without "
-"expansion of escape sequences is available in every single other language"
-" employing a string interpolation method that uses expressions instead of"
-" just variable names. [2]_"
+"expansion of escape sequences is available in every single other language "
+"employing a string interpolation method that uses expressions instead of "
+"just variable names. [2]_"
 msgstr ""
 
 #: ../pep-0536.txt:125
@@ -213,8 +209,8 @@ msgstr ""
 
 #: ../pep-0536.txt:127
 msgid ""
-":pep:`498` specified f-strings as the following, but places restrictions "
-"on it::"
+":pep:`498` specified f-strings as the following, but places restrictions on "
+"it::"
 msgstr ""
 
 #: ../pep-0536.txt:131
@@ -225,37 +221,37 @@ msgstr ""
 
 #: ../pep-0536.txt:134
 msgid ""
-"Expression portions may now contain strings delimited with the same kind "
-"of quote that is used to delimit the f-literal."
+"Expression portions may now contain strings delimited with the same kind of "
+"quote that is used to delimit the f-literal."
 msgstr ""
 
 #: ../pep-0536.txt:136
 msgid ""
 "Backslashes may now appear within expressions just like anywhere else in "
-"Python code.  In case of strings nested within f-literals, escape "
-"sequences are expanded when the innermost string is evaluated."
+"Python code.  In case of strings nested within f-literals, escape sequences "
+"are expanded when the innermost string is evaluated."
 msgstr ""
 
 #: ../pep-0536.txt:139
 msgid ""
-"Comments, using the ``'#'`` character, are possible only in multi-line "
-"f-literals, since comments are terminated by the end of the line (which "
-"makes closing a single-line f-literal impossible)."
+"Comments, using the ``'#'`` character, are possible only in multi-line f-"
+"literals, since comments are terminated by the end of the line (which makes "
+"closing a single-line f-literal impossible)."
 msgstr ""
 
 #: ../pep-0536.txt:142
 msgid ""
-"Expression portions may contain ``':'`` or ``'!'`` wherever syntactically"
-" valid.  The first ``':'`` or ``'!'`` that is not part of an expression "
-"has to be followed a valid coercion or format specifier."
+"Expression portions may contain ``':'`` or ``'!'`` wherever syntactically "
+"valid.  The first ``':'`` or ``'!'`` that is not part of an expression has "
+"to be followed a valid coercion or format specifier."
 msgstr ""
 
 #: ../pep-0536.txt:146
 msgid ""
 "A remaining restriction not explicitly mentioned by :pep:`498` is line "
-"breaks in expression portions.  Since strings delimited by single ``'`` "
-"or ``\"`` characters are expected to be single line, line breaks remain "
-"illegal in expression portions of single line strings."
+"breaks in expression portions.  Since strings delimited by single ``'`` or "
+"``\"`` characters are expected to be single line, line breaks remain illegal "
+"in expression portions of single line strings."
 msgstr ""
 
 #: ../pep-0536.txt:151
@@ -288,21 +284,19 @@ msgstr ""
 
 #: ../pep-0536.txt:168
 msgid ""
-"ECMAScript ``IdentifierName`` specification ( http://ecma-"
-"international.org/ecma-262/6.0/#sec-names-and-keywords )"
+"ECMAScript ``IdentifierName`` specification ( http://ecma-international.org/"
+"ecma-262/6.0/#sec-names-and-keywords )"
 msgstr ""
 
 #: ../pep-0536.txt:171
 msgid ""
-"Yes, ``const cthulhu = { "
-"H̹̙̦̮͉̩̗̗ͧ̇̏̊̾Eͨ͆͒̆ͮ̃͏̷̮̣̫̤̣Cͯ̂͐͏̨̛͔̦̟͈̻O̜͎͍͙͚̬̝̣̽ͮ͐͗̀ͤ̍̀͢M̴̡̲̭͍͇̼̟̯̦̉̒͠Ḛ̛̙̞̪̗ͥͤͩ̾͑̔͐ͅṮ̴̷̷̗̼͍̿̿̓̽͐H̙̙̔̄͜\\u0042:"
-" 42 }`` is valid ECMAScript 2016"
+"Yes, ``const cthulhu = { H̹̙̦̮͉̩̗̗ͧ̇̏̊̾Eͨ͆͒̆ͮ̃͏̷̮̣̫̤̣Cͯ̂͐͏̨̛͔̦̟͈̻O̜͎͍͙͚̬̝̣̽ͮ͐͗̀ͤ̍̀͢M̴̡̲̭͍͇̼̟̯̦̉̒͠Ḛ̛̙̞̪̗ͥͤͩ̾͑̔͐ͅṮ̴̷̷̗̼͍̿̿̓̽͐H̙̙̔̄͜\\u0042: 42 }`` is valid ECMAScript 2016"
 msgstr ""
 
 #: ../pep-0536.txt:173
 msgid ""
-"Wikipedia article on string interpolation ( "
-"https://en.wikipedia.org/wiki/String_interpolation )"
+"Wikipedia article on string interpolation ( https://en.wikipedia.org/wiki/"
+"String_interpolation )"
 msgstr ""
 
 #: ../pep-0536.txt:177
@@ -312,4 +306,3 @@ msgstr ""
 #: ../pep-0536.txt:179
 msgid "This document has been placed in the public domain."
 msgstr ""
-

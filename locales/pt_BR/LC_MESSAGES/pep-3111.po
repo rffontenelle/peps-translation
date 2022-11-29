@@ -71,26 +71,25 @@ msgstr ""
 
 #: ../pep-3111.txt:17
 msgid ""
-"Input and output are core features of computer programs.  Currently, "
-"Python provides a simple means of output through the print keyword and "
-"two simple means of interactive input through the input() and raw_input()"
-" built-in functions."
+"Input and output are core features of computer programs.  Currently, Python "
+"provides a simple means of output through the print keyword and two simple "
+"means of interactive input through the input() and raw_input() built-in "
+"functions."
 msgstr ""
 
 #: ../pep-3111.txt:22
 msgid ""
-"Python 3.0 will introduce various incompatible changes with previous "
-"Python versions (:pep:`3100`). Among the proposed changes, print will "
-"become a built-in function, print(), while input() and raw_input() would "
-"be removed completely from the built-in namespace, requiring importing "
-"some module to provide even the most basic input capability."
+"Python 3.0 will introduce various incompatible changes with previous Python "
+"versions (:pep:`3100`). Among the proposed changes, print will become a "
+"built-in function, print(), while input() and raw_input() would be removed "
+"completely from the built-in namespace, requiring importing some module to "
+"provide even the most basic input capability."
 msgstr ""
 
 #: ../pep-3111.txt:29
 msgid ""
-"This PEP proposes that Python 3.0 retains some simple interactive user "
-"input capability, equivalent to raw_input(), within the built-in "
-"namespace."
+"This PEP proposes that Python 3.0 retains some simple interactive user input "
+"capability, equivalent to raw_input(), within the built-in namespace."
 msgstr ""
 
 #: ../pep-3111.txt:32
@@ -103,25 +102,24 @@ msgstr ""
 
 #: ../pep-3111.txt:38
 msgid ""
-"With its easy readability and its support for many programming styles "
-"(e.g. procedural, object-oriented, etc.) among others, Python is perhaps "
-"the best computer language to use in introductory programming classes. "
-"Simple programs often need to provide information to the user (output) "
-"and to obtain information from the user (interactive input). Any computer"
-" language intended to be used in an educational setting should provide "
-"straightforward methods for both output and interactive input."
+"With its easy readability and its support for many programming styles (e.g. "
+"procedural, object-oriented, etc.) among others, Python is perhaps the best "
+"computer language to use in introductory programming classes. Simple "
+"programs often need to provide information to the user (output) and to "
+"obtain information from the user (interactive input). Any computer language "
+"intended to be used in an educational setting should provide straightforward "
+"methods for both output and interactive input."
 msgstr ""
 
 #: ../pep-3111.txt:46
 msgid ""
-"The :pep:`current proposals for Python 3.0 <3100>` include a simple "
-"output pathway via a built-in function named print(), but a more "
-"complicated method for input [e.g. via sys.stdin.readline()], one that "
-"requires importing an external module.  Current versions of Python "
-"(pre-3.0) include raw_input() as a built-in function.  With the "
-"availability of such a function, programs that require simple "
-"input/output can be written from day one, without requiring discussions "
-"of importing modules, streams, etc."
+"The :pep:`current proposals for Python 3.0 <3100>` include a simple output "
+"pathway via a built-in function named print(), but a more complicated method "
+"for input [e.g. via sys.stdin.readline()], one that requires importing an "
+"external module.  Current versions of Python (pre-3.0) include raw_input() "
+"as a built-in function.  With the availability of such a function, programs "
+"that require simple input/output can be written from day one, without "
+"requiring discussions of importing modules, streams, etc."
 msgstr ""
 
 #: ../pep-3111.txt:57
@@ -130,19 +128,18 @@ msgstr ""
 
 #: ../pep-3111.txt:59
 msgid ""
-"Current built-in functions, like input() and raw_input(), are found to be"
-" extremely useful in traditional teaching settings. (For more details, "
-"see [2]_ and the discussion that followed.) While the BDFL has clearly "
-"stated [3]_ that input() was not to be kept in Python 3000, he has also "
-"stated that he was not against revising the decision of killing "
-"raw_input()."
+"Current built-in functions, like input() and raw_input(), are found to be "
+"extremely useful in traditional teaching settings. (For more details, see "
+"[2]_ and the discussion that followed.) While the BDFL has clearly stated "
+"[3]_ that input() was not to be kept in Python 3000, he has also stated that "
+"he was not against revising the decision of killing raw_input()."
 msgstr ""
 
 #: ../pep-3111.txt:66
 msgid ""
-"raw_input() provides a simple mean to ask a question and obtain a "
-"response from a user.  The proposed plans for Python 3.0 would require "
-"the replacement of the single statement::"
+"raw_input() provides a simple mean to ask a question and obtain a response "
+"from a user.  The proposed plans for Python 3.0 would require the "
+"replacement of the single statement::"
 msgstr ""
 
 #: ../pep-3111.txt:72
@@ -151,39 +148,38 @@ msgstr ""
 
 #: ../pep-3111.txt:78
 msgid ""
-"However, from the point of view of many Python beginners and educators, "
-"the use of sys.stdin.readline() presents the following problems:"
+"However, from the point of view of many Python beginners and educators, the "
+"use of sys.stdin.readline() presents the following problems:"
 msgstr ""
 
 #: ../pep-3111.txt:81
 msgid ""
-"1. Compared to the name \"raw_input\", the name \"sys.stdin.readline()\" "
-"is clunky and inelegant."
+"1. Compared to the name \"raw_input\", the name \"sys.stdin.readline()\" is "
+"clunky and inelegant."
 msgstr ""
 
 #: ../pep-3111.txt:84
 msgid ""
-"2. The names \"sys\" and \"stdin\" have no meaning for most beginners, "
-"who are mainly interested in *what* the function does, and not *where* in"
-" the package structure it is located.  The lack of meaning also makes it "
-"difficult to remember: is it \"sys.stdin.readline()\", or \" "
-"stdin.sys.readline()\"? To a programming novice, there is not any obvious"
-" reason to prefer one over the other. In contrast, functions simple and "
-"direct names like print, input, and raw_input, and open are easier to "
-"remember."
+"2. The names \"sys\" and \"stdin\" have no meaning for most beginners, who "
+"are mainly interested in *what* the function does, and not *where* in the "
+"package structure it is located.  The lack of meaning also makes it "
+"difficult to remember: is it \"sys.stdin.readline()\", or \" stdin.sys."
+"readline()\"? To a programming novice, there is not any obvious reason to "
+"prefer one over the other. In contrast, functions simple and direct names "
+"like print, input, and raw_input, and open are easier to remember."
 msgstr ""
 
 #: ../pep-3111.txt:93
 msgid ""
-"3. The use of \".\" notation is unmotivated and confusing to many "
-"beginners. For example, it may lead some beginners to think \".\"  is a "
-"standard character that could be used in any identifier."
+"3. The use of \".\" notation is unmotivated and confusing to many beginners. "
+"For example, it may lead some beginners to think \".\"  is a standard "
+"character that could be used in any identifier."
 msgstr ""
 
 #: ../pep-3111.txt:97
 msgid ""
-"4. There is an asymmetry with the print function: why is print not called"
-" sys.stdout.print()?"
+"4. There is an asymmetry with the print function: why is print not called "
+"sys.stdout.print()?"
 msgstr ""
 
 #: ../pep-3111.txt:102
@@ -208,24 +204,22 @@ msgstr ""
 msgid ""
 "With ``input()`` effectively removed from the language, the name "
 "``raw_input()`` makes much less sense and alternatives should be "
-"considered.  The various possibilities mentioned in various forums "
-"include::"
+"considered.  The various possibilities mentioned in various forums include::"
 msgstr ""
 
 #: ../pep-3111.txt:126
 msgid ""
-"While it was initially rejected by the BDFL, it has been suggested that "
-"the most direct solution would be to rename \"raw_input\" to \"input\" in"
-" Python 3000. The main objection is that Python 2.x already has a "
-"function named \"input\", and, even though it is not going to be included"
-" in Python 3000, having a built-in function with the same name but "
-"different semantics may confuse programmers migrating from 2.x to 3000.  "
-"Certainly, this is no problem for beginners, and the scope of the problem"
-" is unclear for more experienced programmers, since raw_input(), while "
-"popular with many, is not in universal use.  In this instance, the good "
-"it does for beginners could be seen to outweigh the harm it does to "
-"experienced programmers - although it could cause confusion for people "
-"reading older books or tutorials."
+"While it was initially rejected by the BDFL, it has been suggested that the "
+"most direct solution would be to rename \"raw_input\" to \"input\" in Python "
+"3000. The main objection is that Python 2.x already has a function named "
+"\"input\", and, even though it is not going to be included in Python 3000, "
+"having a built-in function with the same name but different semantics may "
+"confuse programmers migrating from 2.x to 3000.  Certainly, this is no "
+"problem for beginners, and the scope of the problem is unclear for more "
+"experienced programmers, since raw_input(), while popular with many, is not "
+"in universal use.  In this instance, the good it does for beginners could be "
+"seen to outweigh the harm it does to experienced programmers - although it "
+"could cause confusion for people reading older books or tutorials."
 msgstr ""
 
 #: ../pep-3111.txt:138
@@ -238,26 +232,26 @@ msgstr ""
 
 #: ../pep-3111.txt:144
 msgid ""
-"The fate of raw_input() in Python 3000 https://mail.python.org/pipermail"
-"/edu-sig/2006-September/006967.html"
+"The fate of raw_input() in Python 3000 https://mail.python.org/pipermail/edu-"
+"sig/2006-September/006967.html"
 msgstr ""
 
 #: ../pep-3111.txt:147
 msgid ""
-"Educational aspects of Python 3000 "
-"https://mail.python.org/pipermail/python-3000/2006-September/003589.html"
+"Educational aspects of Python 3000 https://mail.python.org/pipermail/"
+"python-3000/2006-September/003589.html"
 msgstr ""
 
 #: ../pep-3111.txt:150
 msgid ""
-"Rationale for going with the straight renaming "
-"https://mail.python.org/pipermail/python-3000/2006-December/005249.html"
+"Rationale for going with the straight renaming https://mail.python.org/"
+"pipermail/python-3000/2006-December/005249.html"
 msgstr ""
 
 #: ../pep-3111.txt:153
 msgid ""
-"BDFL acceptance of the PEP "
-"https://mail.python.org/pipermail/python-3000/2006-December/005257.html"
+"BDFL acceptance of the PEP https://mail.python.org/pipermail/"
+"python-3000/2006-December/005257.html"
 msgstr ""
 
 #: ../pep-3111.txt:157
@@ -267,4 +261,3 @@ msgstr ""
 #: ../pep-3111.txt:159
 msgid "This document has been placed in the public domain."
 msgstr ""
-

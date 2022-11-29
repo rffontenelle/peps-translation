@@ -71,10 +71,10 @@ msgstr ""
 
 #: ../pep-0496.txt:16
 msgid ""
-"After this PEP was initially drafted, :pep:`508` was developed and "
-"submitted to fully specify the dependency declaration syntax, including "
-"environment markers. As a result, this PEP ended up being rejected in "
-"favour of the more comprehensive :pep:`508`."
+"After this PEP was initially drafted, :pep:`508` was developed and submitted "
+"to fully specify the dependency declaration syntax, including environment "
+"markers. As a result, this PEP ended up being rejected in favour of the more "
+"comprehensive :pep:`508`."
 msgstr ""
 
 #: ../pep-0496.txt:22
@@ -83,20 +83,19 @@ msgstr ""
 
 #: ../pep-0496.txt:24
 msgid ""
-"An **environment marker** describes a condition about the current "
-"execution environment. They are used to indicate when certain "
-"dependencies are only required in particular environments, and to "
-"indicate supported platforms for distributions with additional "
-"constraints beyond the availability of a Python runtime."
+"An **environment marker** describes a condition about the current execution "
+"environment. They are used to indicate when certain dependencies are only "
+"required in particular environments, and to indicate supported platforms for "
+"distributions with additional constraints beyond the availability of a "
+"Python runtime."
 msgstr ""
 
 #: ../pep-0496.txt:30
 msgid ""
-"Environment markers were first specified in :pep:`345`. :pep:`426` (which"
-" would replace :pep:`345`) proposed extensions to the markers. When "
-"2.7.10 was released, even these extensions became insufficient due to "
-"their reliance on simple lexical comparisons, and thus this PEP has been "
-"born."
+"Environment markers were first specified in :pep:`345`. :pep:`426` (which "
+"would replace :pep:`345`) proposed extensions to the markers. When 2.7.10 "
+"was released, even these extensions became insufficient due to their "
+"reliance on simple lexical comparisons, and thus this PEP has been born."
 msgstr ""
 
 #: ../pep-0496.txt:36
@@ -110,18 +109,18 @@ msgstr ""
 #: ../pep-0496.txt:40
 msgid ""
 "For many packages this means they aim to support a wide range of Python "
-"releases. If they depend on libraries such as ``argparse`` - which "
-"started as external libraries, but later got incorporated into core - "
-"specifying a single set of requirements is difficult, as the set of "
-"required packages differs depending on the version of Python in use."
+"releases. If they depend on libraries such as ``argparse`` - which started "
+"as external libraries, but later got incorporated into core - specifying a "
+"single set of requirements is difficult, as the set of required packages "
+"differs depending on the version of Python in use."
 msgstr ""
 
 #: ../pep-0496.txt:47
 msgid ""
 "For other packages, designing for portability means supporting multiple "
 "operating systems. However, the significant differences between them may "
-"mean that particular dependencies are only needed on particular platforms"
-" (relying on ``pywin32`` only on Windows, for example)\""
+"mean that particular dependencies are only needed on particular platforms "
+"(relying on ``pywin32`` only on Windows, for example)\""
 msgstr ""
 
 #: ../pep-0496.txt:53
@@ -141,9 +140,9 @@ msgstr ""
 
 #: ../pep-0496.txt:66
 msgid ""
-"And here's an example of some conditional metadata included in setup.py "
-"for a distribution that requires PyWin32 both at runtime and buildtime "
-"when using Windows::"
+"And here's an example of some conditional metadata included in setup.py for "
+"a distribution that requires PyWin32 both at runtime and buildtime when "
+"using Windows::"
 msgstr ""
 
 #: ../pep-0496.txt:77
@@ -176,15 +175,15 @@ msgstr ""
 
 #: ../pep-0496.txt:98
 msgid ""
-"``SUBEXPR`` is either a Python string (such as ``'win32'``) or one of the"
-" ``Strings`` marker variables listed below."
+"``SUBEXPR`` is either a Python string (such as ``'win32'``) or one of the "
+"``Strings`` marker variables listed below."
 msgstr ""
 
 #: ../pep-0496.txt:101
 msgid ""
 "``VEREXPR`` is a :pep:`440` version identifier, or one of the ``Version "
-"number`` marker variables listed below. Comparisons between version "
-"numbers are done using :pep:`440` semantics."
+"number`` marker variables listed below. Comparisons between version numbers "
+"are done using :pep:`440` semantics."
 msgstr ""
 
 #: ../pep-0496.txt:107
@@ -212,21 +211,21 @@ msgid "``platform_machine``: ``platform.machine()``"
 msgstr ""
 
 #: ../pep-0496.txt:114
-msgid "``platform_python_implementation``: ``platform.python_implementation()``"
+msgid ""
+"``platform_python_implementation``: ``platform.python_implementation()``"
 msgstr ""
 
 #: ../pep-0496.txt:117
 msgid ""
-"If a particular string value is not available (such as "
-"``sys.implementation.name`` in versions of Python prior to 3.3), the "
-"corresponding marker variable MUST be considered equivalent to the empty "
-"string."
+"If a particular string value is not available (such as ``sys.implementation."
+"name`` in versions of Python prior to 3.3), the corresponding marker "
+"variable MUST be considered equivalent to the empty string."
 msgstr ""
 
 #: ../pep-0496.txt:121
 msgid ""
-"If a particular version number value is not available (such as "
-"``sys.implementation.version`` in versions of Python prior to 3.3) the "
+"If a particular version number value is not available (such as ``sys."
+"implementation.version`` in versions of Python prior to 3.3) the "
 "corresponding marker variable MUST be considered equivalent to ``0``"
 msgstr ""
 
@@ -252,16 +251,15 @@ msgstr ""
 
 #: ../pep-0496.txt:134
 msgid ""
-"The ``python_full_version`` and ``implementation_version`` marker "
-"variables are derived from ``sys.version_info`` and "
-"``sys.implementation.version`` respectively, in accordance with the "
-"following algorithm::"
+"The ``python_full_version`` and ``implementation_version`` marker variables "
+"are derived from ``sys.version_info`` and ``sys.implementation.version`` "
+"respectively, in accordance with the following algorithm::"
 msgstr ""
 
 #: ../pep-0496.txt:148
 msgid ""
-"``python_full_version`` will typically correspond to "
-"``sys.version.split()[0]``."
+"``python_full_version`` will typically correspond to ``sys.version.split()"
+"[0]``."
 msgstr ""
 
 #: ../pep-0496.txt:152
@@ -271,4 +269,3 @@ msgstr ""
 #: ../pep-0496.txt:154
 msgid "This document has been placed in the public domain."
 msgstr ""
-

@@ -71,18 +71,18 @@ msgstr ""
 
 #: ../pep-0564.rst:17
 msgid ""
-"Add six new \"nanosecond\" variants of existing functions to the ``time``"
-" module: ``clock_gettime_ns()``, ``clock_settime_ns()``, "
-"``monotonic_ns()``, ``perf_counter_ns()``, ``process_time_ns()`` and "
-"``time_ns()``.  While similar to the existing functions without the "
-"``_ns`` suffix, they provide nanosecond resolution: they return a number "
-"of nanoseconds as a Python ``int``."
+"Add six new \"nanosecond\" variants of existing functions to the ``time`` "
+"module: ``clock_gettime_ns()``, ``clock_settime_ns()``, ``monotonic_ns()``, "
+"``perf_counter_ns()``, ``process_time_ns()`` and ``time_ns()``.  While "
+"similar to the existing functions without the ``_ns`` suffix, they provide "
+"nanosecond resolution: they return a number of nanoseconds as a Python "
+"``int``."
 msgstr ""
 
 #: ../pep-0564.rst:24
 msgid ""
-"The ``time.time_ns()`` resolution is 3 times better than the "
-"``time.time()`` resolution on Linux and Windows."
+"The ``time.time_ns()`` resolution is 3 times better than the ``time.time()`` "
+"resolution on Linux and Windows."
 msgstr ""
 
 #: ../pep-0564.rst:29
@@ -95,31 +95,30 @@ msgstr ""
 
 #: ../pep-0564.rst:34
 msgid ""
-"The clocks resolution of desktop and laptop computers is getting closer "
-"to nanosecond resolution.  More and more clocks have a frequency in MHz, "
-"up to GHz for the CPU TSC clock."
+"The clocks resolution of desktop and laptop computers is getting closer to "
+"nanosecond resolution.  More and more clocks have a frequency in MHz, up to "
+"GHz for the CPU TSC clock."
 msgstr ""
 
 #: ../pep-0564.rst:38
 msgid ""
-"The Python ``time.time()`` function returns the current time as a "
-"floating-point number which is usually a 64-bit binary floating-point "
-"number (in the IEEE 754 format)."
+"The Python ``time.time()`` function returns the current time as a floating-"
+"point number which is usually a 64-bit binary floating-point number (in the "
+"IEEE 754 format)."
 msgstr ""
 
 #: ../pep-0564.rst:42
 msgid ""
-"The problem is that the ``float`` type starts to lose nanoseconds after "
-"104 days.  Converting from nanoseconds (``int``) to seconds (``float``) "
-"and then back to nanoseconds (``int``) to check if conversions lose "
-"precision::"
+"The problem is that the ``float`` type starts to lose nanoseconds after 104 "
+"days.  Converting from nanoseconds (``int``) to seconds (``float``) and then "
+"back to nanoseconds (``int``) to check if conversions lose precision::"
 msgstr ""
 
 #: ../pep-0564.rst:56
 msgid ""
-"``time.time()`` returns seconds elapsed since the UNIX epoch: January "
-"1st, 1970.  This function hasn't had nanosecond precision since May 1970 "
-"(47 years ago)::"
+"``time.time()`` returns seconds elapsed since the UNIX epoch: January 1st, "
+"1970.  This function hasn't had nanosecond precision since May 1970 (47 "
+"years ago)::"
 msgstr ""
 
 #: ../pep-0564.rst:67
@@ -128,9 +127,9 @@ msgstr ""
 
 #: ../pep-0564.rst:69
 msgid ""
-"Five years ago, the :pep:`410` proposed a large and complex change in all"
-" Python functions returning time to support nanosecond resolution using "
-"the ``decimal.Decimal`` type."
+"Five years ago, the :pep:`410` proposed a large and complex change in all "
+"Python functions returning time to support nanosecond resolution using the "
+"``decimal.Decimal`` type."
 msgstr ""
 
 #: ../pep-0564.rst:73
@@ -139,20 +138,20 @@ msgstr ""
 
 #: ../pep-0564.rst:75
 msgid ""
-"The idea of adding a new optional parameter to change the result type was"
-" rejected. It's an uncommon (and bad?) programming practice in Python."
+"The idea of adding a new optional parameter to change the result type was "
+"rejected. It's an uncommon (and bad?) programming practice in Python."
 msgstr ""
 
 #: ../pep-0564.rst:79
 msgid ""
-"It was not clear if hardware clocks really had a resolution of 1 "
-"nanosecond, or if that made sense at the Python level."
+"It was not clear if hardware clocks really had a resolution of 1 nanosecond, "
+"or if that made sense at the Python level."
 msgstr ""
 
 #: ../pep-0564.rst:82
 msgid ""
-"The ``decimal.Decimal`` type is uncommon in Python and so requires to "
-"adapt code to handle it."
+"The ``decimal.Decimal`` type is uncommon in Python and so requires to adapt "
+"code to handle it."
 msgstr ""
 
 #: ../pep-0564.rst:87
@@ -165,18 +164,16 @@ msgstr ""
 
 #: ../pep-0564.rst:92
 msgid ""
-"A server is running for longer than 104 days.  A clock is read before and"
-" after running a function to measure its performance to detect "
-"performance issues at runtime.  Such benchmark only loses precision "
-"because of the float type used by clocks, not because of the clock "
-"resolution."
+"A server is running for longer than 104 days.  A clock is read before and "
+"after running a function to measure its performance to detect performance "
+"issues at runtime.  Such benchmark only loses precision because of the float "
+"type used by clocks, not because of the clock resolution."
 msgstr ""
 
 #: ../pep-0564.rst:98
 msgid ""
-"On Python microbenchmarks, it is common to see function calls taking less"
-" than 100 ns.  A difference of a few nanoseconds might become "
-"significant."
+"On Python microbenchmarks, it is common to see function calls taking less "
+"than 100 ns.  A difference of a few nanoseconds might become significant."
 msgstr ""
 
 #: ../pep-0564.rst:103
@@ -187,18 +184,18 @@ msgstr ""
 msgid ""
 "Two programs \"A\" and \"B\" are running on the same system and use the "
 "system clock.  The program A reads the system clock with nanosecond "
-"resolution and writes a timestamp with nanosecond resolution.  The "
-"program B reads the timestamp with nanosecond resolution, but compares it"
-" to the system clock read with a worse resolution.  To simplify the "
-"example, let's say that B reads the clock with second resolution.  If "
-"that case, there is a window of 1 second while the program B can see the "
-"timestamp written by A as \"in the future\"."
+"resolution and writes a timestamp with nanosecond resolution.  The program B "
+"reads the timestamp with nanosecond resolution, but compares it to the "
+"system clock read with a worse resolution.  To simplify the example, let's "
+"say that B reads the clock with second resolution.  If that case, there is a "
+"window of 1 second while the program B can see the timestamp written by A as "
+"\"in the future\"."
 msgstr ""
 
 #: ../pep-0564.rst:114
 msgid ""
-"Nowadays, more and more databases and filesystems support storing times "
-"with nanosecond resolution."
+"Nowadays, more and more databases and filesystems support storing times with "
+"nanosecond resolution."
 msgstr ""
 
 #: ../pep-0564.rst:118
@@ -225,17 +222,16 @@ msgstr ""
 
 #: ../pep-0564.rst:133
 msgid ""
-"The :pep:`418` was accepted, Python 3.3 got 3 new clocks: "
-"``time.monotonic()``, ``time.perf_counter()`` and "
-"``time.process_time()``."
+"The :pep:`418` was accepted, Python 3.3 got 3 new clocks: ``time."
+"monotonic()``, ``time.perf_counter()`` and ``time.process_time()``."
 msgstr ""
 
 #: ../pep-0564.rst:137
 msgid ""
 "The CPython private \"pytime\" C API handling time now uses a new "
 "``_PyTime_t`` type: simple 64-bit signed integer (C ``int64_t``). The "
-"``_PyTime_t`` unit is an implementation detail and not part of the API. "
-"The unit is currently ``1 nanosecond``."
+"``_PyTime_t`` unit is an implementation detail and not part of the API. The "
+"unit is currently ``1 nanosecond``."
 msgstr ""
 
 #: ../pep-0564.rst:143
@@ -244,15 +240,14 @@ msgstr ""
 
 #: ../pep-0564.rst:145
 msgid ""
-"The ``os.stat_result`` structure has 3 fields for timestamps as "
-"nanoseconds (``int``): ``st_atime_ns``, ``st_ctime_ns`` and "
-"``st_mtime_ns``."
+"The ``os.stat_result`` structure has 3 fields for timestamps as nanoseconds "
+"(``int``): ``st_atime_ns``, ``st_ctime_ns`` and ``st_mtime_ns``."
 msgstr ""
 
 #: ../pep-0564.rst:149
 msgid ""
-"The ``ns`` parameter of the ``os.utime()`` function accepts a "
-"``(atime_ns: int, mtime_ns: int)`` tuple: nanoseconds."
+"The ``ns`` parameter of the ``os.utime()`` function accepts a ``(atime_ns: "
+"int, mtime_ns: int)`` tuple: nanoseconds."
 msgstr ""
 
 #: ../pep-0564.rst:154
@@ -293,8 +288,8 @@ msgstr ""
 
 #: ../pep-0564.rst:168
 msgid ""
-"These functions are similar to the version without the ``_ns`` suffix, "
-"but return a number of nanoseconds as a Python ``int``."
+"These functions are similar to the version without the ``_ns`` suffix, but "
+"return a number of nanoseconds as a Python ``int``."
 msgstr ""
 
 #: ../pep-0564.rst:171
@@ -306,9 +301,9 @@ msgstr ""
 #: ../pep-0564.rst:174
 msgid ""
 "These functions are needed because they may return \"large\" timestamps, "
-"like ``time.time()`` which uses the UNIX epoch as reference, and so their"
-" ``float``-returning variants are likely to lose precision at the "
-"nanosecond resolution."
+"like ``time.time()`` which uses the UNIX epoch as reference, and so their "
+"``float``-returning variants are likely to lose precision at the nanosecond "
+"resolution."
 msgstr ""
 
 #: ../pep-0564.rst:180
@@ -317,17 +312,17 @@ msgstr ""
 
 #: ../pep-0564.rst:182
 msgid ""
-"Since the ``time.clock()`` function was deprecated in Python 3.3, no "
-"``time.clock_ns()`` is added."
+"Since the ``time.clock()`` function was deprecated in Python 3.3, no ``time."
+"clock_ns()`` is added."
 msgstr ""
 
 #: ../pep-0564.rst:185
 msgid ""
 "Python has other time-returning functions.  No nanosecond variant is "
-"proposed for these other functions, either because their internal "
-"resolution is greater or equal to 1 us, or because their maximum value is"
-" small enough to not lose precision.  For example, the maximum value of "
-"``time.clock_getres()`` should be 1 second."
+"proposed for these other functions, either because their internal resolution "
+"is greater or equal to 1 us, or because their maximum value is small enough "
+"to not lose precision.  For example, the maximum value of ``time."
+"clock_getres()`` should be 1 second."
 msgstr ""
 
 #: ../pep-0564.rst:191
@@ -342,8 +337,7 @@ msgstr ""
 
 #: ../pep-0564.rst:196
 msgid ""
-"``resource`` module: ``ru_utime`` and ``ru_stime`` fields of "
-"``getrusage()``"
+"``resource`` module: ``ru_utime`` and ``ru_stime`` fields of ``getrusage()``"
 msgstr ""
 
 #: ../pep-0564.rst:199
@@ -360,8 +354,8 @@ msgstr ""
 
 #: ../pep-0564.rst:205
 msgid ""
-"A new nanosecond-returning flavor of these functions may be added later "
-"if an operating system exposes new functions providing better resolution."
+"A new nanosecond-returning flavor of these functions may be added later if "
+"an operating system exposes new functions providing better resolution."
 msgstr ""
 
 #: ../pep-0564.rst:210
@@ -387,21 +381,20 @@ msgstr ""
 
 #: ../pep-0564.rst:222
 msgid ""
-"Hardware clocks with a resolution better than 1 nanosecond already exist."
-"  For example, the frequency of a CPU TSC clock is the CPU base "
-"frequency: the resolution is around 0.3 ns for a CPU running at 3 GHz.  "
-"Users who have access to such hardware and really need sub-nanosecond "
-"resolution can however extend Python for their needs. Such a rare use "
-"case doesn't justify to design the Python standard library to support "
-"sub-nanosecond resolution."
+"Hardware clocks with a resolution better than 1 nanosecond already exist.  "
+"For example, the frequency of a CPU TSC clock is the CPU base frequency: the "
+"resolution is around 0.3 ns for a CPU running at 3 GHz.  Users who have "
+"access to such hardware and really need sub-nanosecond resolution can "
+"however extend Python for their needs. Such a rare use case doesn't justify "
+"to design the Python standard library to support sub-nanosecond resolution."
 msgstr ""
 
 #: ../pep-0564.rst:230
 msgid ""
 "For the CPython implementation, nanosecond resolution is convenient: the "
 "standard and well supported ``int64_t`` type can be used to store a "
-"nanosecond-precise timestamp.  It supports a timespan of -292 years to "
-"+292 years.  Using the UNIX epoch as reference, it therefore supports "
+"nanosecond-precise timestamp.  It supports a timespan of -292 years to +292 "
+"years.  Using the UNIX epoch as reference, it therefore supports "
 "representing times since year 1677 to year 2262::"
 msgstr ""
 
@@ -411,29 +404,28 @@ msgstr ""
 
 #: ../pep-0564.rst:244
 msgid ""
-"It was proposed to modify ``time.time()`` to return a different number "
-"type with better precision."
+"It was proposed to modify ``time.time()`` to return a different number type "
+"with better precision."
 msgstr ""
 
 #: ../pep-0564.rst:247
 msgid ""
-"The :pep:`410` proposed to return ``decimal.Decimal`` which already "
-"exists and supports arbitrary precision, but it was rejected.  Apart from"
-" ``decimal.Decimal``, no portable real number type with better precision "
-"is currently available in Python."
+"The :pep:`410` proposed to return ``decimal.Decimal`` which already exists "
+"and supports arbitrary precision, but it was rejected.  Apart from ``decimal."
+"Decimal``, no portable real number type with better precision is currently "
+"available in Python."
 msgstr ""
 
 #: ../pep-0564.rst:252
 msgid ""
-"Changing the built-in Python ``float`` type is out of the scope of this "
-"PEP."
+"Changing the built-in Python ``float`` type is out of the scope of this PEP."
 msgstr ""
 
 #: ../pep-0564.rst:255
 msgid ""
-"Moreover, changing existing functions to return a new type introduces a "
-"risk of breaking the backward compatibility even if the new type is "
-"designed carefully."
+"Moreover, changing existing functions to return a new type introduces a risk "
+"of breaking the backward compatibility even if the new type is designed "
+"carefully."
 msgstr ""
 
 #: ../pep-0564.rst:261
@@ -460,22 +452,21 @@ msgstr ""
 
 #: ../pep-0564.rst:273
 msgid ""
-"The Python ``int`` type is well known, well supported, easy to "
-"manipulate, and supports all arithmetic operations such as ``dt = t2 - "
-"t1``."
+"The Python ``int`` type is well known, well supported, easy to manipulate, "
+"and supports all arithmetic operations such as ``dt = t2 - t1``."
 msgstr ""
 
 #: ../pep-0564.rst:277
 msgid ""
 "Moreover, taking/returning an integer number of nanoseconds is not a new "
-"concept in Python, as witnessed by ``os.stat_result`` and "
-"``os.utime(ns=(atime_ns, mtime_ns))``."
+"concept in Python, as witnessed by ``os.stat_result`` and ``os."
+"utime(ns=(atime_ns, mtime_ns))``."
 msgstr ""
 
 #: ../pep-0564.rst:282
 msgid ""
-"If the Python ``float`` type becomes larger (e.g. decimal128 or "
-"float128), the ``time.time()`` precision will increase as well."
+"If the Python ``float`` type becomes larger (e.g. decimal128 or float128), "
+"the ``time.time()`` precision will increase as well."
 msgstr ""
 
 #: ../pep-0564.rst:286
@@ -484,20 +475,19 @@ msgstr ""
 
 #: ../pep-0564.rst:288
 msgid ""
-"The ``time.time(ns=False)`` API was proposed to avoid adding new "
-"functions. It's an uncommon (and bad?) programming practice in Python to "
-"change the result type depending on a parameter."
+"The ``time.time(ns=False)`` API was proposed to avoid adding new functions. "
+"It's an uncommon (and bad?) programming practice in Python to change the "
+"result type depending on a parameter."
 msgstr ""
 
 #: ../pep-0564.rst:292
 msgid ""
 "Different options were proposed to allow the user to choose the time "
-"resolution. If each Python module uses a different resolution, it can "
-"become difficult to handle different resolutions, instead of just seconds"
-" (``time.time()`` returning ``float``) and nanoseconds "
-"(``time.time_ns()`` returning ``int``). Moreover, as written above, there"
-" is no need for resolution better than 1 nanosecond in practice in the "
-"Python standard library."
+"resolution. If each Python module uses a different resolution, it can become "
+"difficult to handle different resolutions, instead of just seconds (``time."
+"time()`` returning ``float``) and nanoseconds (``time.time_ns()`` returning "
+"``int``). Moreover, as written above, there is no need for resolution better "
+"than 1 nanosecond in practice in the Python standard library."
 msgstr ""
 
 #: ../pep-0564.rst:301
@@ -536,24 +526,24 @@ msgstr ""
 
 #: ../pep-0564.rst:313
 msgid ""
-"The first question is whether the ``time_ns`` module should expose "
-"exactly the same API (constants, functions, etc.) as the ``time`` module."
-" It can be painful to maintain two flavors of the ``time`` module. How "
-"are users use supposed to make a choice between these two modules?"
+"The first question is whether the ``time_ns`` module should expose exactly "
+"the same API (constants, functions, etc.) as the ``time`` module. It can be "
+"painful to maintain two flavors of the ``time`` module. How are users use "
+"supposed to make a choice between these two modules?"
 msgstr ""
 
 #: ../pep-0564.rst:318
 msgid ""
-"If tomorrow, other nanosecond variants are needed in the ``os`` module, "
-"will we have to add a new ``os_ns`` module as well? There are functions "
-"related to time in many modules: ``time``, ``os``, ``signal``, "
-"``resource``, ``select``, etc."
+"If tomorrow, other nanosecond variants are needed in the ``os`` module, will "
+"we have to add a new ``os_ns`` module as well? There are functions related "
+"to time in many modules: ``time``, ``os``, ``signal``, ``resource``, "
+"``select``, etc."
 msgstr ""
 
 #: ../pep-0564.rst:323
 msgid ""
-"Another idea is to add a ``time.ns`` submodule or a nested-namespace to "
-"get the ``time.ns.time()`` syntax, but it suffers from the same issues."
+"Another idea is to add a ``time.ns`` submodule or a nested-namespace to get "
+"the ``time.ns.time()`` syntax, but it suffers from the same issues."
 msgstr ""
 
 #: ../pep-0564.rst:328
@@ -562,9 +552,9 @@ msgstr ""
 
 #: ../pep-0564.rst:330
 msgid ""
-"This annex contains the resolution of clocks as measured in Python, and "
-"not the resolution announced by the operating system or the resolution of"
-" the internal structure used by the operating system."
+"This annex contains the resolution of clocks as measured in Python, and not "
+"the resolution announced by the operating system or the resolution of the "
+"internal structure used by the operating system."
 msgstr ""
 
 #: ../pep-0564.rst:335
@@ -573,9 +563,8 @@ msgstr ""
 
 #: ../pep-0564.rst:337
 msgid ""
-"Example of script to measure the smallest difference between two "
-"``time.time()`` and ``time.time_ns()`` reads ignoring differences of "
-"zero::"
+"Example of script to measure the smallest difference between two ``time."
+"time()`` and ``time.time_ns()`` reads ignoring differences of zero::"
 msgstr ""
 
 #: ../pep-0564.rst:359
@@ -693,9 +682,9 @@ msgstr ""
 #: ../pep-0564.rst:386
 msgid ""
 "``resource.getrusage()``, ``os.wait3()`` and ``os.wait4()`` use the "
-"``ru_usage`` structure. The type of the ``ru_usage.ru_utime`` and "
-"``ru_usage.ru_stime`` fields is the ``timeval`` structure which has a "
-"resolution of 1 us."
+"``ru_usage`` structure. The type of the ``ru_usage.ru_utime`` and ``ru_usage."
+"ru_stime`` fields is the ``timeval`` structure which has a resolution of 1 "
+"us."
 msgstr ""
 
 #: ../pep-0564.rst:392
@@ -729,9 +718,9 @@ msgstr ""
 #: ../pep-0564.rst:409
 msgid ""
 "The frequency of ``perf_counter()`` and ``perf_counter_ns()`` comes from "
-"``QueryPerformanceFrequency()``. The frequency is usually 10 MHz: "
-"resolution of 100 ns. In old Windows versions, the frequency was "
-"sometimes 3,579,545 Hz (3.6 MHz): resolution of 279 ns."
+"``QueryPerformanceFrequency()``. The frequency is usually 10 MHz: resolution "
+"of 100 ns. In old Windows versions, the frequency was sometimes 3,579,545 Hz "
+"(3.6 MHz): resolution of 279 ns."
 msgstr ""
 
 #: ../pep-0564.rst:415
@@ -740,34 +729,32 @@ msgstr ""
 
 #: ../pep-0564.rst:417
 msgid ""
-"The resolution of ``time.time_ns()`` is much better than ``time.time()``:"
-" **84 ns (2.8x better) vs 239 ns on Linux and 318 us (2.8x better) vs 894"
-" us on Windows**. The ``time.time()`` resolution will only become larger "
-"(worse) as years pass since every day adds 86,400,000,000,000 nanoseconds"
-" to the system clock, which increases the precision loss."
+"The resolution of ``time.time_ns()`` is much better than ``time.time()``: "
+"**84 ns (2.8x better) vs 239 ns on Linux and 318 us (2.8x better) vs 894 us "
+"on Windows**. The ``time.time()`` resolution will only become larger (worse) "
+"as years pass since every day adds 86,400,000,000,000 nanoseconds to the "
+"system clock, which increases the precision loss."
 msgstr ""
 
 #: ../pep-0564.rst:424
 msgid ""
-"The difference between ``time.perf_counter()``, ``time.monotonic()``, "
-"``time.process_time()`` and their respective nanosecond variants is not "
-"visible in this quick script since the script runs for less than 1 "
-"minute, and the uptime of the computer used to run the script was smaller"
-" than 1 week.  A significant difference may be seen if uptime reaches 104"
-" days or more."
+"The difference between ``time.perf_counter()``, ``time.monotonic()``, ``time."
+"process_time()`` and their respective nanosecond variants is not visible in "
+"this quick script since the script runs for less than 1 minute, and the "
+"uptime of the computer used to run the script was smaller than 1 week.  A "
+"significant difference may be seen if uptime reaches 104 days or more."
 msgstr ""
 
 #: ../pep-0564.rst:431
 msgid ""
-"``resource.getrusage()`` and ``times()`` have a resolution greater or "
-"equal to 1 microsecond, and so don't need a variant with nanosecond "
-"resolution."
+"``resource.getrusage()`` and ``times()`` have a resolution greater or equal "
+"to 1 microsecond, and so don't need a variant with nanosecond resolution."
 msgstr ""
 
 #: ../pep-0564.rst:436
 msgid ""
-"Internally, Python starts ``monotonic()`` and ``perf_counter()`` clocks "
-"at zero on some platforms which indirectly reduce the precision loss."
+"Internally, Python starts ``monotonic()`` and ``perf_counter()`` clocks at "
+"zero on some platforms which indirectly reduce the precision loss."
 msgstr ""
 
 #: ../pep-0564.rst:442
@@ -776,8 +763,8 @@ msgstr ""
 
 #: ../pep-0564.rst:444
 msgid ""
-"`bpo-31784: Implementation of the PEP 564 "
-"<https://bugs.python.org/issue31784>`_"
+"`bpo-31784: Implementation of the PEP 564 <https://bugs.python.org/"
+"issue31784>`_"
 msgstr ""
 
 #: ../pep-0564.rst:449
@@ -787,4 +774,3 @@ msgstr ""
 #: ../pep-0564.rst:451
 msgid "This document has been placed in the public domain."
 msgstr ""
-

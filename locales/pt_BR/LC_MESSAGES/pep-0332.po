@@ -67,8 +67,8 @@ msgstr ""
 
 #: ../pep-0332.txt:17
 msgid ""
-"This PEP outlines the introduction of a raw ``bytes`` sequence object and"
-" the unification of the current ``str`` and ``unicode`` objects."
+"This PEP outlines the introduction of a raw ``bytes`` sequence object and "
+"the unification of the current ``str`` and ``unicode`` objects."
 msgstr ""
 
 #: ../pep-0332.txt:22
@@ -77,11 +77,11 @@ msgstr ""
 
 #: ../pep-0332.txt:24
 msgid ""
-"This PEP is rejected in this form.  The author has expressed lack of time"
-" to continue to shepherd it, and discussion on python-dev has moved to a "
-"slightly different proposal which will (eventually) be written up as a "
-"new PEP.  See the thread starting at https://mail.python.org/pipermail"
-"/python-dev/2006-February/060930.html."
+"This PEP is rejected in this form.  The author has expressed lack of time to "
+"continue to shepherd it, and discussion on python-dev has moved to a "
+"slightly different proposal which will (eventually) be written up as a new "
+"PEP.  See the thread starting at https://mail.python.org/pipermail/python-"
+"dev/2006-February/060930.html."
 msgstr ""
 
 #: ../pep-0332.txt:32
@@ -91,13 +91,13 @@ msgstr ""
 #: ../pep-0332.txt:34
 msgid ""
 "Python's current string objects are overloaded.  They serve both to hold "
-"ASCII and non-ASCII character data and to also hold sequences of raw "
-"bytes which have no reasonable interpretation as displayable character "
-"sequences.  This overlap hasn't been a big problem in the past, but as "
-"Python moves closer to requiring source code to be properly encoded, the "
-"use of strings to represent raw byte sequences will be more problematic."
-"  In addition, as Python's Unicode support has improved, it's easier to "
-"consider strings as ASCII-encoded Unicode objects."
+"ASCII and non-ASCII character data and to also hold sequences of raw bytes "
+"which have no reasonable interpretation as displayable character sequences.  "
+"This overlap hasn't been a big problem in the past, but as Python moves "
+"closer to requiring source code to be properly encoded, the use of strings "
+"to represent raw byte sequences will be more problematic.  In addition, as "
+"Python's Unicode support has improved, it's easier to consider strings as "
+"ASCII-encoded Unicode objects."
 msgstr ""
 
 #: ../pep-0332.txt:46
@@ -106,8 +106,8 @@ msgstr ""
 
 #: ../pep-0332.txt:48
 msgid ""
-"The number in parentheses indicates the Python version in which the "
-"feature will be introduced."
+"The number in parentheses indicates the Python version in which the feature "
+"will be introduced."
 msgstr ""
 
 #: ../pep-0332.txt:51
@@ -127,8 +127,8 @@ msgstr ""
 
 #: ../pep-0332.txt:59
 msgid ""
-"Introduce a ``bytes`` builtin which refers to a sequence distinct from "
-"the ``str`` type. (2.6)"
+"Introduce a ``bytes`` builtin which refers to a sequence distinct from the "
+"``str`` type. (2.6)"
 msgstr ""
 
 #: ../pep-0332.txt:62
@@ -153,8 +153,8 @@ msgstr ""
 
 #: ../pep-0332.txt:76
 msgid ""
-"Should ``bytes`` objects be mutable or immutable?  (Guido seems to like "
-"them to be mutable.)"
+"Should ``bytes`` objects be mutable or immutable?  (Guido seems to like them "
+"to be mutable.)"
 msgstr ""
 
 #: ../pep-0332.txt:81
@@ -164,4 +164,3 @@ msgstr ""
 #: ../pep-0332.txt:83
 msgid "This document has been placed in the public domain."
 msgstr ""
-

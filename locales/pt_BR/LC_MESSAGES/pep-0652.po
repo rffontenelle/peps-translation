@@ -71,8 +71,8 @@ msgstr ""
 
 #: ../pep-0652.rst:10
 msgid ""
-"https://mail.python.org/archives/list/python-"
-"dev@python.org/message/IN4XMFLQJ6D6V67EXU27GV3QWSEHHNNH/"
+"https://mail.python.org/archives/list/python-dev@python.org/message/"
+"IN4XMFLQJ6D6V67EXU27GV3QWSEHHNNH/"
 msgstr ""
 
 #: ../pep-0652.rst:14
@@ -81,8 +81,8 @@ msgstr ""
 
 #: ../pep-0652.rst:16
 msgid ""
-"CPython's Limited C-API and Stable ABI, introduced in :pep:`384`, will be"
-" formalized in a single definitive file, tested, and documented."
+"CPython's Limited C-API and Stable ABI, introduced in :pep:`384`, will be "
+"formalized in a single definitive file, tested, and documented."
 msgstr ""
 
 #: ../pep-0652.rst:21
@@ -91,24 +91,24 @@ msgstr ""
 
 #: ../pep-0652.rst:23
 msgid ""
-":pep:`384` defined a Limited API and Stable ABI, which allow extenders "
-"and embedders of CPython to compile extension modules that are binary-"
-"compatible with any subsequent version of 3.x. In theory, this brings "
-"several advantages:"
+":pep:`384` defined a Limited API and Stable ABI, which allow extenders and "
+"embedders of CPython to compile extension modules that are binary-compatible "
+"with any subsequent version of 3.x. In theory, this brings several "
+"advantages:"
 msgstr ""
 
 #: ../pep-0652.rst:28
 msgid ""
-"A module can be built only once per platform and support multiple "
-"versions of Python, reducing time, power and maintainer attention needed "
-"for builds (in exchange for potentially worse performance)."
+"A module can be built only once per platform and support multiple versions "
+"of Python, reducing time, power and maintainer attention needed for builds "
+"(in exchange for potentially worse performance)."
 msgstr ""
 
 #: ../pep-0652.rst:32
 msgid ""
 "Binary wheels using the Stable ABI work with new versions of CPython "
-"throughout the pre-release period, and can be tested in environments "
-"where building from source is not practical."
+"throughout the pre-release period, and can be tested in environments where "
+"building from source is not practical."
 msgstr ""
 
 #: ../pep-0652.rst:36
@@ -120,25 +120,24 @@ msgstr ""
 
 #: ../pep-0652.rst:40
 msgid ""
-"However, in hindsight, :pep:`384` and its implementation has several "
-"issues:"
+"However, in hindsight, :pep:`384` and its implementation has several issues:"
 msgstr ""
 
 #: ../pep-0652.rst:42
 msgid ""
 "It is ill-defined. According to :pep:`384`, functions are *opt-out*: all "
-"functions not specially marked are part of the Stable ABI. In practice, "
-"for Windows there's a list that's *opt-in*. For users there is a "
-"``#define`` that should make only the Stable ABI available, but there is "
-"no process that ensures it is kept up-to date. Neither is there a process"
-" for updating the documentation."
+"functions not specially marked are part of the Stable ABI. In practice, for "
+"Windows there's a list that's *opt-in*. For users there is a ``#define`` "
+"that should make only the Stable ABI available, but there is no process that "
+"ensures it is kept up-to date. Neither is there a process for updating the "
+"documentation."
 msgstr ""
 
 #: ../pep-0652.rst:48
 msgid ""
-"Until recently, the Stable ABI was not tested at all. It tends to break. "
-"For example, changing a function to a macro can break the Stable ABI as "
-"the function symbol is removed."
+"Until recently, the Stable ABI was not tested at all. It tends to break. For "
+"example, changing a function to a macro can break the Stable ABI as the "
+"function symbol is removed."
 msgstr ""
 
 #: ../pep-0652.rst:51
@@ -147,9 +146,9 @@ msgstr ""
 
 #: ../pep-0652.rst:52
 msgid ""
-"It is incomplete. Some operations are not available in the Stable ABI, "
-"with little reason except \"we forgot\". (This last point is one the PEP "
-"will not help with, however.)"
+"It is incomplete. Some operations are not available in the Stable ABI, with "
+"little reason except \"we forgot\". (This last point is one the PEP will not "
+"help with, however.)"
 msgstr ""
 
 #: ../pep-0652.rst:56
@@ -164,28 +163,27 @@ msgstr ""
 
 #: ../pep-0652.rst:63
 msgid ""
-"This PEP contains a lot of clarifications and definitions, but just one "
-"big technical change: the Stable ABI will be explicitly listed in a "
-"human-maintained “manifest” file."
+"This PEP contains a lot of clarifications and definitions, but just one big "
+"technical change: the Stable ABI will be explicitly listed in a human-"
+"maintained “manifest” file."
 msgstr ""
 
 #: ../pep-0652.rst:67
 msgid ""
 "There have been efforts to collect such lists automatically, e.g. by "
-"scanning the symbols exported from Python. Such automation might seem "
-"easier to maintain than a handcrafted file, but has major issues: for "
-"example, the set exported symbols has platform-specific variations. Also,"
-" the cost of updating an explicit manifest is small compared to the "
-"overall work that should go into changing API that will need to be "
-"supported forever (or until Python 3 reaches end of life, if that comes "
-"sooner)."
+"scanning the symbols exported from Python. Such automation might seem easier "
+"to maintain than a handcrafted file, but has major issues: for example, the "
+"set exported symbols has platform-specific variations. Also, the cost of "
+"updating an explicit manifest is small compared to the overall work that "
+"should go into changing API that will need to be supported forever (or until "
+"Python 3 reaches end of life, if that comes sooner)."
 msgstr ""
 
 #: ../pep-0652.rst:77
 msgid ""
 "This PEP proposes automatically generating things *from* the manifest: "
-"initially documentation and DLL contents, with later possibilities for "
-"also automating tests."
+"initially documentation and DLL contents, with later possibilities for also "
+"automating tests."
 msgstr ""
 
 #: ../pep-0652.rst:83
@@ -200,9 +198,8 @@ msgstr ""
 
 #: ../pep-0652.rst:88
 msgid ""
-"The *Stable ABI* is a promise that certain extensions compiled with "
-"CPython 3.x will be binary compatible with all subsequent versions of "
-"CPython 3.x."
+"The *Stable ABI* is a promise that certain extensions compiled with CPython "
+"3.x will be binary compatible with all subsequent versions of CPython 3.x."
 msgstr ""
 
 #: ../pep-0652.rst:91
@@ -230,8 +227,8 @@ msgstr ""
 #: ../pep-0652.rst:103
 msgid ""
 "The CPython *Stable ABI* is a promise that extensions built against a "
-"specific Stable ABI version will be compatible with any newer interpreter"
-" of the same major version."
+"specific Stable ABI version will be compatible with any newer interpreter of "
+"the same major version."
 msgstr ""
 
 #: ../pep-0652.rst:107
@@ -246,37 +243,35 @@ msgstr ""
 #: ../pep-0652.rst:113
 msgid ""
 "For example, an extension built with the CPython 3.10 Stable ABI will be "
-"usable with CPython 3.11, 3.12, etc. It will not necessarily be "
-"compatible with CPython 4.0, nor with CPython 3.10 on a different "
-"platform."
+"usable with CPython 3.11, 3.12, etc. It will not necessarily be compatible "
+"with CPython 4.0, nor with CPython 3.10 on a different platform."
 msgstr ""
 
 #: ../pep-0652.rst:118
 msgid ""
-"The Stable ABI is not generally forward-compatible: an extension built "
-"and tested with CPython 3.10 will not generally be compatible with "
-"CPython 3.9."
+"The Stable ABI is not generally forward-compatible: an extension built and "
+"tested with CPython 3.10 will not generally be compatible with CPython 3.9."
 msgstr ""
 
 #: ../pep-0652.rst:122
 msgid ""
-"For example, starting in Python 3.10, the ``Py_tp_doc`` slot may be set "
-"to ``NULL``, while in older versions, a ``NULL`` value will likely crash "
-"the interpreter."
+"For example, starting in Python 3.10, the ``Py_tp_doc`` slot may be set to "
+"``NULL``, while in older versions, a ``NULL`` value will likely crash the "
+"interpreter."
 msgstr ""
 
 #: ../pep-0652.rst:126
 msgid ""
-"The Stable ABI trades performance for its stability. For example, "
-"extensions built for a specific CPython version will automatically use "
-"faster macros instead of functions in the Stable ABI."
+"The Stable ABI trades performance for its stability. For example, extensions "
+"built for a specific CPython version will automatically use faster macros "
+"instead of functions in the Stable ABI."
 msgstr ""
 
 #: ../pep-0652.rst:130
 msgid ""
 "Future Python versions may deprecate some members of the Stable ABI. "
-"Deprecated members will still work, but may suffer from issues like "
-"reduced performance or, in the most extreme cases, memory/resource leaks."
+"Deprecated members will still work, but may suffer from issues like reduced "
+"performance or, in the most extreme cases, memory/resource leaks."
 msgstr ""
 
 #: ../pep-0652.rst:135
@@ -286,43 +281,43 @@ msgstr ""
 #: ../pep-0652.rst:137
 msgid ""
 "The Stable ABI promise holds for extensions compiled from code that "
-"restricts itself to the *Limited API* (application programming "
-"interface). The Limited API is a subset of CPython's C API."
+"restricts itself to the *Limited API* (application programming interface). "
+"The Limited API is a subset of CPython's C API."
 msgstr ""
 
 #: ../pep-0652.rst:141
 msgid ""
-"Extensions that target the Limited API should define the preprocessor "
-"macro ``Py_LIMITED_API`` to either ``3`` or the current "
-"``PYTHON_API_VERSION``. This will enable Stable ABI versions of several "
-"functions and limit definitions to the Limited API. (However, note that "
-"the macro is not perfect: due to technical issues or oversights, some "
-"non-limited API might be exposed even with it defined.)"
+"Extensions that target the Limited API should define the preprocessor macro "
+"``Py_LIMITED_API`` to either ``3`` or the current ``PYTHON_API_VERSION``. "
+"This will enable Stable ABI versions of several functions and limit "
+"definitions to the Limited API. (However, note that the macro is not "
+"perfect: due to technical issues or oversights, some non-limited API might "
+"be exposed even with it defined.)"
 msgstr ""
 
 #: ../pep-0652.rst:148
 msgid ""
-"The Limited API is not guaranteed to be *stable*. In the future, parts of"
-" the Limited API may be deprecated. They may even be removed, as long as "
-"the *Stable ABI* is kept stable and Python's general backwards "
-"compatibility policy, :pep:`387`, is followed."
+"The Limited API is not guaranteed to be *stable*. In the future, parts of "
+"the Limited API may be deprecated. They may even be removed, as long as the "
+"*Stable ABI* is kept stable and Python's general backwards compatibility "
+"policy, :pep:`387`, is followed."
 msgstr ""
 
 #: ../pep-0652.rst:156
 msgid ""
 "For example, a function declaration might be removed from public header "
 "files but kept in the library. This is currently a possibility for the "
-"future; this PEP does not to propose a concrete process for deprecations "
-"and removals."
+"future; this PEP does not to propose a concrete process for deprecations and "
+"removals."
 msgstr ""
 
 #: ../pep-0652.rst:161
 msgid ""
-"The goal for the Limited API is to cover everything needed to interact "
-"with the interpreter. The main reason to not include a public API in the "
-"Limited subset should be that it needs implementation details that change"
-" between CPython versions (like struct memory layouts) – usually for "
-"performance reasons."
+"The goal for the Limited API is to cover everything needed to interact with "
+"the interpreter. The main reason to not include a public API in the Limited "
+"subset should be that it needs implementation details that change between "
+"CPython versions (like struct memory layouts) – usually for performance "
+"reasons."
 msgstr ""
 
 #: ../pep-0652.rst:167
@@ -347,41 +342,41 @@ msgstr ""
 
 #: ../pep-0652.rst:181
 msgid ""
-"All members of the Stable ABI – functions, typedefs, structs, data, "
-"macros, and constants – will be explicitly listed in a single "
-"\"manifest\" file, ``Misc/stable_abi.txt``."
+"All members of the Stable ABI – functions, typedefs, structs, data, macros, "
+"and constants – will be explicitly listed in a single \"manifest\" file, "
+"``Misc/stable_abi.txt``."
 msgstr ""
 
 #: ../pep-0652.rst:185
 msgid ""
-"For structs, any fields that users of the Stable ABI are allowed to "
-"access will be listed explicitly."
+"For structs, any fields that users of the Stable ABI are allowed to access "
+"will be listed explicitly."
 msgstr ""
 
 #: ../pep-0652.rst:188
 msgid ""
 "The manifest will also serve as the definitive list of the Limited API. "
-"Members that are not part of the Limited API, but are part of the Stable "
-"ABI (e.g. ``PyObject.ob_type``, which is accessible by the ``Py_TYPE`` "
-"macro), will be annotated as such."
+"Members that are not part of the Limited API, but are part of the Stable ABI "
+"(e.g. ``PyObject.ob_type``, which is accessible by the ``Py_TYPE`` macro), "
+"will be annotated as such."
 msgstr ""
 
 #: ../pep-0652.rst:193
 msgid ""
-"For items that are only available on some systems, the manifest will "
-"record the feature macro that determines their presence (such as "
-"``MS_WINDOWS`` or ``HAVE_FORK``). To make the implementation (and usage "
-"from non-C languages) easier, all such macros will be simple names. If a "
-"future item needs a “negative” macro or complex expression (such as a "
-"hypothetical ``#ifndef MACOSX`` or ``#if defined(POSIX) && "
-"!defined(LINUX)``), a new feature macro will be derived."
+"For items that are only available on some systems, the manifest will record "
+"the feature macro that determines their presence (such as ``MS_WINDOWS`` or "
+"``HAVE_FORK``). To make the implementation (and usage from non-C languages) "
+"easier, all such macros will be simple names. If a future item needs a "
+"“negative” macro or complex expression (such as a hypothetical ``#ifndef "
+"MACOSX`` or ``#if defined(POSIX) && !defined(LINUX)``), a new feature macro "
+"will be derived."
 msgstr ""
 
 #: ../pep-0652.rst:202
 msgid ""
 "The format of the manifest will be subject to change whenever needed. It "
-"should be consumed only by scripts in the CPython repository. If a stable"
-" list is needed, a script can be added to generate it."
+"should be consumed only by scripts in the CPython repository. If a stable "
+"list is needed, a script can be added to generate it."
 msgstr ""
 
 #: ../pep-0652.rst:206
@@ -414,16 +409,16 @@ msgstr ""
 
 #: ../pep-0652.rst:217
 msgid ""
-"The functions/structs declared and constants/macros defined when "
-"``Python.h`` is included with ``Py_LIMITED_API`` set. (Initially Linux "
-"only; checks on other systems may be added in the future.)"
+"The functions/structs declared and constants/macros defined when ``Python."
+"h`` is included with ``Py_LIMITED_API`` set. (Initially Linux only; checks "
+"on other systems may be added in the future.)"
 msgstr ""
 
 #: ../pep-0652.rst:221
 msgid ""
-"After the initial implementation, details such as function arguments will"
-" be added and the manifest will be checked for internal consistency (e.g."
-" all types used in function signatures are part of the API)."
+"After the initial implementation, details such as function arguments will be "
+"added and the manifest will be checked for internal consistency (e.g. all "
+"types used in function signatures are part of the API)."
 msgstr ""
 
 #: ../pep-0652.rst:227
@@ -464,8 +459,8 @@ msgstr ""
 
 #: ../pep-0652.rst:239
 msgid ""
-"All API needed by macros is the Stable ABI (annotated as not being part "
-"of the Limited API)."
+"All API needed by macros is the Stable ABI (annotated as not being part of "
+"the Limited API)."
 msgstr ""
 
 #: ../pep-0652.rst:242
@@ -487,14 +482,14 @@ msgstr ""
 #: ../pep-0652.rst:252
 msgid ""
 "Notes saying “Part of the Limited API” will be added to Python's "
-"documentation automatically, in a way similar to the notes on functions "
-"that return borrowed references."
+"documentation automatically, in a way similar to the notes on functions that "
+"return borrowed references."
 msgstr ""
 
 #: ../pep-0652.rst:256
 msgid ""
-"A complete list of all members of the Limited API will also be added to "
-"the documentation."
+"A complete list of all members of the Limited API will also be added to the "
+"documentation."
 msgstr ""
 
 #: ../pep-0652.rst:261
@@ -513,17 +508,17 @@ msgstr ""
 
 #: ../pep-0652.rst:270
 msgid ""
-"A checklist for changing the Limited API, including adding new items to "
-"it and removing existing ones, will be added to the `Devguide`_. The "
-"checklist will 1) mention best practices and common pitfalls in Python C "
-"API design and 2) guide the developer around the files that need changing"
-" and scripts that need running when the Limited API is changed."
+"A checklist for changing the Limited API, including adding new items to it "
+"and removing existing ones, will be added to the `Devguide`_. The checklist "
+"will 1) mention best practices and common pitfalls in Python C API design "
+"and 2) guide the developer around the files that need changing and scripts "
+"that need running when the Limited API is changed."
 msgstr ""
 
 #: ../pep-0652.rst:276
 msgid ""
-"Below is the initial proposal for the checklist. (After the PEP is "
-"accepted, see the Devguide for the current version.)"
+"Below is the initial proposal for the checklist. (After the PEP is accepted, "
+"see the Devguide for the current version.)"
 msgstr ""
 
 #: ../pep-0652.rst:279
@@ -538,8 +533,8 @@ msgstr ""
 
 #: ../pep-0652.rst:284
 msgid ""
-"Make sure the change does not break the Stable ABI of any version of "
-"Python since 3.5."
+"Make sure the change does not break the Stable ABI of any version of Python "
+"since 3.5."
 msgstr ""
 
 #: ../pep-0652.rst:286
@@ -553,8 +548,8 @@ msgstr ""
 #: ../pep-0652.rst:288
 msgid ""
 "Make sure the types of all parameters and return values of the added "
-"function(s) and all fields of the added struct(s) are be part of the "
-"Limited API (or standard C)."
+"function(s) and all fields of the added struct(s) are be part of the Limited "
+"API (or standard C)."
 msgstr ""
 
 #: ../pep-0652.rst:292
@@ -566,15 +561,14 @@ msgstr ""
 
 #: ../pep-0652.rst:296
 msgid ""
-"Do not cast a function pointer to ``void*`` (a data pointer) or vice "
-"versa."
+"Do not cast a function pointer to ``void*`` (a data pointer) or vice versa."
 msgstr ""
 
 #: ../pep-0652.rst:298
 msgid ""
 "Make sure the new API follows reference counting conventions. (Following "
-"them makes the API easier to reason about, and easier use in other Python"
-" implementations.)"
+"them makes the API easier to reason about, and easier use in other Python "
+"implementations.)"
 msgstr ""
 
 #: ../pep-0652.rst:302
@@ -587,15 +581,15 @@ msgstr ""
 
 #: ../pep-0652.rst:305
 msgid ""
-"Make sure the ownership rules and lifetimes of all applicable struct "
-"fields, arguments and return values are well defined."
+"Make sure the ownership rules and lifetimes of all applicable struct fields, "
+"arguments and return values are well defined."
 msgstr ""
 
 #: ../pep-0652.rst:307
 msgid ""
-"Think about ease of use for the user. (In C, ease of use itself is not "
-"very important; what *is* useful is reducing boilerplate code needed to "
-"use the API. Bugs like to hide in boiler plates.)"
+"Think about ease of use for the user. (In C, ease of use itself is not very "
+"important; what *is* useful is reducing boilerplate code needed to use the "
+"API. Bugs like to hide in boiler plates.)"
 msgstr ""
 
 #: ../pep-0652.rst:311
@@ -607,8 +601,8 @@ msgstr ""
 #: ../pep-0652.rst:314
 msgid ""
 "Think about future extensions: for example, if it's possible that future "
-"Python versions will need to add a new field to your struct, how will "
-"that be done?"
+"Python versions will need to add a new field to your struct, how will that "
+"be done?"
 msgstr ""
 
 #: ../pep-0652.rst:318
@@ -631,16 +625,14 @@ msgstr ""
 
 #: ../pep-0652.rst:325
 msgid ""
-"If following these guidelines would hurt performance, add a fast function"
-" (or macro) to the non-limited API and a stable equivalent to the Limited"
-" API."
+"If following these guidelines would hurt performance, add a fast function "
+"(or macro) to the non-limited API and a stable equivalent to the Limited API."
 msgstr ""
 
 #: ../pep-0652.rst:328
 msgid ""
-"If anything is unclear, or you have a good reason to break the "
-"guidelines, consider discussing the change at the `capi-sig`_ mailing "
-"list."
+"If anything is unclear, or you have a good reason to break the guidelines, "
+"consider discussing the change at the `capi-sig`_ mailing list."
 msgstr ""
 
 #: ../pep-0652.rst:333
@@ -649,9 +641,9 @@ msgstr ""
 
 #: ../pep-0652.rst:335
 msgid ""
-"Move the declaration to a header file directly under ``Include/``, into a"
-" ``#if !defined(Py_LIMITED_API) || Py_LIMITED_API+0 >= 0x03yy0000`` block"
-" (with the ``yy`` corresponding to the target CPython version)."
+"Move the declaration to a header file directly under ``Include/``, into a "
+"``#if !defined(Py_LIMITED_API) || Py_LIMITED_API+0 >= 0x03yy0000`` block "
+"(with the ``yy`` corresponding to the target CPython version)."
 msgstr ""
 
 #: ../pep-0652.rst:338
@@ -666,8 +658,8 @@ msgstr ""
 
 #: ../pep-0652.rst:341
 msgid ""
-"Build Python and run checks using ``make check-abi``. (or the alternative"
-" for non-``make`` platforms)"
+"Build Python and run checks using ``make check-abi``. (or the alternative "
+"for non-``make`` platforms)"
 msgstr ""
 
 #: ../pep-0652.rst:346
@@ -689,9 +681,9 @@ msgstr ""
 #: ../pep-0652.rst:354
 msgid ""
 "Compiling with ``Py_LIMITED_API`` defined is *not* a guarantee that your "
-"code conforms to the Limited API or the Stable ABI. ``Py_LIMITED_API`` "
-"only covers definitions, but an API also includes other issues, such as "
-"expected semantics."
+"code conforms to the Limited API or the Stable ABI. ``Py_LIMITED_API`` only "
+"covers definitions, but an API also includes other issues, such as expected "
+"semantics."
 msgstr ""
 
 #: ../pep-0652.rst:359
@@ -704,23 +696,23 @@ msgstr ""
 
 #: ../pep-0652.rst:362
 msgid ""
-"A function that started accepting ``NULL`` values for an argument in "
-"Python 3.9 will fail if ``NULL`` is passed to it under Python 3.8. Only "
-"testing with 3.8 (or lower versions) will uncover this issue."
+"A function that started accepting ``NULL`` values for an argument in Python "
+"3.9 will fail if ``NULL`` is passed to it under Python 3.8. Only testing "
+"with 3.8 (or lower versions) will uncover this issue."
 msgstr ""
 
 #: ../pep-0652.rst:365
 msgid ""
-"Some structs include a few fields that are part of the Stable ABI and "
-"other fields that aren't. ``Py_LIMITED_API`` does not filter out such "
-"“private” fields."
+"Some structs include a few fields that are part of the Stable ABI and other "
+"fields that aren't. ``Py_LIMITED_API`` does not filter out such “private” "
+"fields."
 msgstr ""
 
 #: ../pep-0652.rst:368
 msgid ""
-"Code that uses something that is not documented as part of the Stable "
-"ABI, but exposed even with ``Py_LIMITED_API`` defined, may break in the "
-"future. Despite the team's best efforts, such issues may happen."
+"Code that uses something that is not documented as part of the Stable ABI, "
+"but exposed even with ``Py_LIMITED_API`` defined, may break in the future. "
+"Despite the team's best efforts, such issues may happen."
 msgstr ""
 
 #: ../pep-0652.rst:374
@@ -729,11 +721,11 @@ msgstr ""
 
 #: ../pep-0652.rst:376
 msgid ""
-"The Stable ABI promise relies on stable underlying ABI details, such as "
-"the layout of structures in memory and function calling conventions, "
-"which are affected by the compiler and its settings. For the promise to "
-"hold, these details must not change between CPython 3.x releases on a "
-"particular platform."
+"The Stable ABI promise relies on stable underlying ABI details, such as the "
+"layout of structures in memory and function calling conventions, which are "
+"affected by the compiler and its settings. For the promise to hold, these "
+"details must not change between CPython 3.x releases on a particular "
+"platform."
 msgstr ""
 
 #: ../pep-0652.rst:386
@@ -746,10 +738,9 @@ msgstr ""
 
 #: ../pep-0652.rst:390
 msgid ""
-"This PEP aims at full compatibility with the existing Stable ABI and "
-"Limited API, but defines them terms more explicitly. It might not be "
-"consistent with some interpretations of what the existing Stable "
-"ABI/Limited API is."
+"This PEP aims at full compatibility with the existing Stable ABI and Limited "
+"API, but defines them terms more explicitly. It might not be consistent with "
+"some interpretations of what the existing Stable ABI/Limited API is."
 msgstr ""
 
 #: ../pep-0652.rst:397
@@ -766,9 +757,9 @@ msgstr ""
 
 #: ../pep-0652.rst:405
 msgid ""
-"Technical documentation will be provided in ``Doc/c-api/stable`` and "
-"linked from the *What's New* document. Docs for CPython core developers "
-"will be added to the devguide."
+"Technical documentation will be provided in ``Doc/c-api/stable`` and linked "
+"from the *What's New* document. Docs for CPython core developers will be "
+"added to the devguide."
 msgstr ""
 
 #: ../pep-0652.rst:411
@@ -785,8 +776,8 @@ msgstr ""
 
 #: ../pep-0652.rst:420
 msgid ""
-"The following issues are out of scope of this PEP, but show possible "
-"future directions."
+"The following issues are out of scope of this PEP, but show possible future "
+"directions."
 msgstr ""
 
 #: ../pep-0652.rst:424
@@ -796,8 +787,8 @@ msgstr ""
 #: ../pep-0652.rst:426
 msgid ""
 "While this PEP acknowledges that parts of the Limited API might be "
-"deprecated or removed in the future, a process to do this is not in "
-"scope, and is left to a possible future PEP."
+"deprecated or removed in the future, a process to do this is not in scope, "
+"and is left to a possible future PEP."
 msgstr ""
 
 #: ../pep-0652.rst:432
@@ -807,8 +798,8 @@ msgstr ""
 #: ../pep-0652.rst:434
 msgid ""
 "It might be useful to have the ABI manifest be a C header file, or to "
-"generate header files from the manifest. Again, either are options for "
-"the future."
+"generate header files from the manifest. Again, either are options for the "
+"future."
 msgstr ""
 
 #: ../pep-0652.rst:440
@@ -825,7 +816,6 @@ msgstr ""
 
 #: ../pep-0652.rst:454
 msgid ""
-"This document is placed in the public domain or under the "
-"CC0-1.0-Universal license, whichever is more permissive."
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
 msgstr ""
-

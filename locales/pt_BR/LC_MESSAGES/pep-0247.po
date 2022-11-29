@@ -63,10 +63,10 @@ msgstr ""
 
 #: ../pep-0247.txt:16
 msgid ""
-"There are several different modules available that implement "
-"cryptographic hashing algorithms such as MD5 or SHA.  This document "
-"specifies a standard API for such algorithms, to make it easier to switch"
-" between different implementations."
+"There are several different modules available that implement cryptographic "
+"hashing algorithms such as MD5 or SHA.  This document specifies a standard "
+"API for such algorithms, to make it easier to switch between different "
+"implementations."
 msgstr ""
 
 #: ../pep-0247.txt:23
@@ -75,9 +75,9 @@ msgstr ""
 
 #: ../pep-0247.txt:25
 msgid ""
-"All hashing modules should present the same interface.  Additional "
-"methods or variables can be added, but those described in this document "
-"should always be present."
+"All hashing modules should present the same interface.  Additional methods "
+"or variables can be added, but those described in this document should "
+"always be present."
 msgstr ""
 
 #: ../pep-0247.txt:29
@@ -95,28 +95,27 @@ msgstr ""
 #: ../pep-0247.txt:34
 msgid ""
 "Create a new hashing object and return it.  The first form is for hashes "
-"that are unkeyed, such as MD5 or SHA.  For keyed hashes such as HMAC, "
-"*key* is a required parameter containing a string giving the key to use."
-"  In both cases, the optional *string* parameter, if supplied, will be "
-"immediately hashed into the object's starting state, as if "
-"``obj.update(string)`` was called."
+"that are unkeyed, such as MD5 or SHA.  For keyed hashes such as HMAC, *key* "
+"is a required parameter containing a string giving the key to use.  In both "
+"cases, the optional *string* parameter, if supplied, will be immediately "
+"hashed into the object's starting state, as if ``obj.update(string)`` was "
+"called."
 msgstr ""
 
 #: ../pep-0247.txt:41
 msgid ""
 "After creating a hashing object, arbitrary strings can be fed into the "
-"object using its ``update()`` method, and the hash value can be obtained "
-"at any time by calling the object's ``digest()`` method."
+"object using its ``update()`` method, and the hash value can be obtained at "
+"any time by calling the object's ``digest()`` method."
 msgstr ""
 
 #: ../pep-0247.txt:45
 msgid ""
-"Arbitrary additional keyword arguments can be added to this function, but"
-" if they're not supplied, sensible default values should be used.  For "
-"example, ``rounds`` and ``digest_size`` keywords could be added for a "
-"hash function which supports a variable number of rounds and several "
-"different output sizes, and they should default to values believed to be "
-"secure."
+"Arbitrary additional keyword arguments can be added to this function, but if "
+"they're not supplied, sensible default values should be used.  For example, "
+"``rounds`` and ``digest_size`` keywords could be added for a hash function "
+"which supports a variable number of rounds and several different output "
+"sizes, and they should default to values believed to be secure."
 msgstr ""
 
 #: ../pep-0247.txt:51
@@ -130,11 +129,10 @@ msgstr ""
 #: ../pep-0247.txt:55
 msgid ""
 "An integer value; the size of the digest produced by the hashing objects "
-"created by this module, measured in bytes. You could also obtain this "
-"value by creating a sample object and accessing its ``digest_size`` "
-"attribute, but it can be convenient to have this value available from the"
-" module. Hashes with a variable output size will set this variable to "
-"``None``."
+"created by this module, measured in bytes. You could also obtain this value "
+"by creating a sample object and accessing its ``digest_size`` attribute, but "
+"it can be convenient to have this value available from the module. Hashes "
+"with a variable output size will set this variable to ``None``."
 msgstr ""
 
 #: ../pep-0247.txt:61
@@ -143,12 +141,12 @@ msgstr ""
 
 #: ../pep-0247.txt:65
 msgid ""
-"This attribute is identical to the module-level ``digest_size`` variable,"
-" measuring the size of the digest produced by the hashing object, "
-"measured in bytes.  If the hash has a variable output size, this output "
-"size must be chosen when the hashing object is created, and this "
-"attribute must contain the selected size.  Therefore, ``None`` is *not* a"
-" legal value for this attribute."
+"This attribute is identical to the module-level ``digest_size`` variable, "
+"measuring the size of the digest produced by the hashing object, measured in "
+"bytes.  If the hash has a variable output size, this output size must be "
+"chosen when the hashing object is created, and this attribute must contain "
+"the selected size.  Therefore, ``None`` is *not* a legal value for this "
+"attribute."
 msgstr ""
 
 #: ../pep-0247.txt:73
@@ -161,8 +159,8 @@ msgstr ""
 
 #: ../pep-0247.txt:77
 msgid ""
-"Return a separate copy of this hashing object.  An update to this copy "
-"won't affect the original object."
+"Return a separate copy of this hashing object.  An update to this copy won't "
+"affect the original object."
 msgstr ""
 
 #: ../pep-0247.txt:80
@@ -171,8 +169,8 @@ msgstr ""
 
 #: ../pep-0247.txt:82
 msgid ""
-"Return the hash value of this hashing object as a string containing 8-bit"
-" data.  The object is not altered in any way by this function; you can "
+"Return the hash value of this hashing object as a string containing 8-bit "
+"data.  The object is not altered in any way by this function; you can "
 "continue updating the object after calling this function."
 msgstr ""
 
@@ -183,9 +181,9 @@ msgstr ""
 #: ../pep-0247.txt:88
 msgid ""
 "Return the hash value of this hashing object as a string containing "
-"hexadecimal digits.  Lowercase letters should be used for the digits "
-"``a`` through ``f``.  Like the ``.digest()`` method, this method mustn't "
-"alter the object."
+"hexadecimal digits.  Lowercase letters should be used for the digits ``a`` "
+"through ``f``.  Like the ``.digest()`` method, this method mustn't alter the "
+"object."
 msgstr ""
 
 #: ../pep-0247.txt:93
@@ -194,8 +192,8 @@ msgstr ""
 
 #: ../pep-0247.txt:95
 msgid ""
-"Hash *string* into the current state of the hashing object. ``update()`` "
-"can be called any number of times during a hashing object's lifetime."
+"Hash *string* into the current state of the hashing object. ``update()`` can "
+"be called any number of times during a hashing object's lifetime."
 msgstr ""
 
 #: ../pep-0247.txt:98
@@ -214,36 +212,34 @@ msgstr ""
 
 #: ../pep-0247.txt:119
 msgid ""
-"The digest size is measured in bytes, not bits, even though hash "
-"algorithm sizes are usually quoted in bits; MD5 is a 128-bit algorithm "
-"and not a 16-byte one, for example.  This is because, in the sample code "
-"I looked at, the length in bytes is often needed (to seek ahead or behind"
-" in a file; to compute the length of an output string) while the length "
-"in bits is rarely used. Therefore, the burden will fall on the few people"
-" actually needing the size in bits, who will have to multiply "
-"``digest_size`` by 8."
+"The digest size is measured in bytes, not bits, even though hash algorithm "
+"sizes are usually quoted in bits; MD5 is a 128-bit algorithm and not a 16-"
+"byte one, for example.  This is because, in the sample code I looked at, the "
+"length in bytes is often needed (to seek ahead or behind in a file; to "
+"compute the length of an output string) while the length in bits is rarely "
+"used. Therefore, the burden will fall on the few people actually needing the "
+"size in bits, who will have to multiply ``digest_size`` by 8."
 msgstr ""
 
 #: ../pep-0247.txt:127
 msgid ""
 "It's been suggested that the ``update()`` method would be better named "
-"``append()``.  However, that method is really causing the current state "
-"of the hashing object to be updated, and ``update()`` is already used by "
-"the md5 and sha modules included with Python, so it seems simplest to "
-"leave the name ``update()`` alone."
+"``append()``.  However, that method is really causing the current state of "
+"the hashing object to be updated, and ``update()`` is already used by the "
+"md5 and sha modules included with Python, so it seems simplest to leave the "
+"name ``update()`` alone."
 msgstr ""
 
 #: ../pep-0247.txt:133
 msgid ""
 "The order of the constructor's arguments for keyed hashes was a sticky "
-"issue. It wasn't clear whether the *key* should come first or second.  "
-"It's a required parameter, and the usual convention is to place required "
-"parameters first, but that also means that the *string* parameter moves "
-"from the first position to the second. It would be possible to get "
-"confused and pass a single argument to a keyed hash, thinking that you're"
-" passing an initial string to an unkeyed hash, but it doesn't seem worth "
-"making the interface for keyed hashes more obscure to avoid this "
-"potential error."
+"issue. It wasn't clear whether the *key* should come first or second.  It's "
+"a required parameter, and the usual convention is to place required "
+"parameters first, but that also means that the *string* parameter moves from "
+"the first position to the second. It would be possible to get confused and "
+"pass a single argument to a keyed hash, thinking that you're passing an "
+"initial string to an unkeyed hash, but it doesn't seem worth making the "
+"interface for keyed hashes more obscure to avoid this potential error."
 msgstr ""
 
 #: ../pep-0247.txt:144
@@ -270,8 +266,8 @@ msgstr ""
 
 #: ../pep-0247.txt:157
 msgid ""
-"Thanks to Aahz, Andrew Archibald, Rich Salz, Itamar Shtull-Trauring, and "
-"the readers of the python-crypto list for their comments on this PEP."
+"Thanks to Aahz, Andrew Archibald, Rich Salz, Itamar Shtull-Trauring, and the "
+"readers of the python-crypto list for their comments on this PEP."
 msgstr ""
 
 #: ../pep-0247.txt:162
@@ -281,4 +277,3 @@ msgstr ""
 #: ../pep-0247.txt:164
 msgid "This document has been placed in the public domain."
 msgstr ""
-

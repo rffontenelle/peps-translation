@@ -67,9 +67,9 @@ msgstr ""
 
 #: ../pep-3132.txt:17
 msgid ""
-"This PEP proposes a change to iterable unpacking syntax, allowing to "
-"specify a \"catch-all\" name which will be assigned a list of all items "
-"not assigned to a \"regular\" name."
+"This PEP proposes a change to iterable unpacking syntax, allowing to specify "
+"a \"catch-all\" name which will be assigned a list of all items not assigned "
+"to a \"regular\" name."
 msgstr ""
 
 #: ../pep-3132.txt:21
@@ -82,8 +82,8 @@ msgstr ""
 
 #: ../pep-3132.txt:35
 msgid ""
-"Many algorithms require splitting a sequence in a \"first, rest\" pair. "
-"With the new syntax, ::"
+"Many algorithms require splitting a sequence in a \"first, rest\" pair. With "
+"the new syntax, ::"
 msgstr ""
 
 #: ../pep-3132.txt:40
@@ -92,15 +92,15 @@ msgstr ""
 
 #: ../pep-3132.txt:44
 msgid ""
-"For more complex unpacking patterns, the new syntax looks even cleaner, "
-"and the clumsy index handling is not necessary anymore."
+"For more complex unpacking patterns, the new syntax looks even cleaner, and "
+"the clumsy index handling is not necessary anymore."
 msgstr ""
 
 #: ../pep-3132.txt:47
 msgid ""
-"Also, if the right-hand value is not a list, but an iterable, it has to "
-"be converted to a list before being able to do slicing; to avoid creating"
-" this temporary list, one has to resort to ::"
+"Also, if the right-hand value is not a list, but an iterable, it has to be "
+"converted to a list before being able to do slicing; to avoid creating this "
+"temporary list, one has to resort to ::"
 msgstr ""
 
 #: ../pep-3132.txt:57
@@ -109,14 +109,14 @@ msgstr ""
 
 #: ../pep-3132.txt:59
 msgid ""
-"A tuple (or list) on the left side of a simple assignment (unpacking is "
-"not defined for augmented assignment) may contain at most one expression "
-"prepended with a single asterisk (which is henceforth called a "
-"\"starred\" expression, while the other expressions in the list are "
-"called \"mandatory\").  This designates a subexpression that will be "
-"assigned a list of all items from the iterable being unpacked that are "
-"not assigned to any of the mandatory expressions, or an empty list if "
-"there are no such items."
+"A tuple (or list) on the left side of a simple assignment (unpacking is not "
+"defined for augmented assignment) may contain at most one expression "
+"prepended with a single asterisk (which is henceforth called a \"starred\" "
+"expression, while the other expressions in the list are called "
+"\"mandatory\").  This designates a subexpression that will be assigned a "
+"list of all items from the iterable being unpacked that are not assigned to "
+"any of the mandatory expressions, or an empty list if there are no such "
+"items."
 msgstr ""
 
 #: ../pep-3132.txt:68
@@ -127,8 +127,8 @@ msgstr ""
 
 #: ../pep-3132.txt:75
 msgid ""
-"It is an error (as it is currently) if the iterable doesn't contain "
-"enough items to assign to all the mandatory expressions."
+"It is an error (as it is currently) if the iterable doesn't contain enough "
+"items to assign to all the mandatory expressions."
 msgstr ""
 
 #: ../pep-3132.txt:78
@@ -180,25 +180,25 @@ msgstr ""
 
 #: ../pep-3132.txt:121
 msgid ""
-"A new ASDL expression type ``Starred`` is added which represents a "
-"starred expression.  Note that the starred expression element introduced "
-"here is universal and could later be used for other purposes in non-"
-"assignment context, such as the ``yield *iterable`` proposal."
+"A new ASDL expression type ``Starred`` is added which represents a starred "
+"expression.  Note that the starred expression element introduced here is "
+"universal and could later be used for other purposes in non-assignment "
+"context, such as the ``yield *iterable`` proposal."
 msgstr ""
 
 #: ../pep-3132.txt:127
 msgid ""
-"The compiler is changed to recognize all cases where a starred expression"
-" is invalid and flag them with syntax errors."
+"The compiler is changed to recognize all cases where a starred expression is "
+"invalid and flag them with syntax errors."
 msgstr ""
 
 #: ../pep-3132.txt:130
 msgid ""
-"A new bytecode instruction, ``UNPACK_EX``, is added, whose argument has "
-"the number of mandatory targets before the starred target in the lower 8 "
-"bits and the number of mandatory targets after the starred target in the "
-"upper 8 bits.  For unpacking sequences without starred expressions, the "
-"old ``UNPACK_ITERABLE`` opcode is kept."
+"A new bytecode instruction, ``UNPACK_EX``, is added, whose argument has the "
+"number of mandatory targets before the starred target in the lower 8 bits "
+"and the number of mandatory targets after the starred target in the upper 8 "
+"bits.  For unpacking sequences without starred expressions, the old "
+"``UNPACK_ITERABLE`` opcode is kept."
 msgstr ""
 
 #: ../pep-3132.txt:137
@@ -208,8 +208,8 @@ msgstr ""
 #: ../pep-3132.txt:139
 msgid ""
 "The function ``unpack_iterable()`` in ceval.c is changed to handle the "
-"extended unpacking, via an ``argcntafter`` parameter. In the "
-"``UNPACK_EX`` case, the function will do the following:"
+"extended unpacking, via an ``argcntafter`` parameter. In the ``UNPACK_EX`` "
+"case, the function will do the following:"
 msgstr ""
 
 #: ../pep-3132.txt:143
@@ -230,8 +230,8 @@ msgstr ""
 
 #: ../pep-3132.txt:148
 msgid ""
-"Shortcuts for unpacking iterables of known types, such as lists or "
-"tuples, can be added."
+"Shortcuts for unpacking iterables of known types, such as lists or tuples, "
+"can be added."
 msgstr ""
 
 #: ../pep-3132.txt:152
@@ -246,31 +246,31 @@ msgstr ""
 
 #: ../pep-3132.txt:159
 msgid ""
-"After a short discussion on the python-3000 list [1]_, the PEP was "
-"accepted by Guido in its current form.  Possible changes discussed were:"
+"After a short discussion on the python-3000 list [1]_, the PEP was accepted "
+"by Guido in its current form.  Possible changes discussed were:"
 msgstr ""
 
 #: ../pep-3132.txt:163
 msgid ""
-"Only allow a starred expression as the last item in the exprlist. This "
-"would simplify the unpacking code a bit and allow for the starred "
-"expression to be assigned an iterator.  This behavior was rejected "
-"because it would be too surprising."
+"Only allow a starred expression as the last item in the exprlist. This would "
+"simplify the unpacking code a bit and allow for the starred expression to be "
+"assigned an iterator.  This behavior was rejected because it would be too "
+"surprising."
 msgstr ""
 
 #: ../pep-3132.txt:168
 msgid ""
 "Try to give the starred target the same type as the source iterable, for "
 "example, ``b`` in ``a, *b = 'hello'`` would be assigned the string "
-"``'ello'``.  This may seem nice, but is impossible to get right "
-"consistently with all iterables."
+"``'ello'``.  This may seem nice, but is impossible to get right consistently "
+"with all iterables."
 msgstr ""
 
 #: ../pep-3132.txt:173
 msgid ""
-"Make the starred target a tuple instead of a list.  This would be "
-"consistent with a function's ``*args``, but make further processing of "
-"the result harder."
+"Make the starred target a tuple instead of a list.  This would be consistent "
+"with a function's ``*args``, but make further processing of the result "
+"harder."
 msgstr ""
 
 #: ../pep-3132.txt:179
@@ -292,4 +292,3 @@ msgstr ""
 #: ../pep-3132.txt:188
 msgid "This document has been placed in the public domain."
 msgstr ""
-

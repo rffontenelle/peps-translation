@@ -38,7 +38,8 @@ msgid "Discussions-To"
 msgstr ""
 
 #: ../pep-0602.rst:7
-msgid "https://discuss.python.org/t/pep-602-annual-release-cycle-for-python/2296/"
+msgid ""
+"https://discuss.python.org/t/pep-602-annual-release-cycle-for-python/2296/"
 msgstr ""
 
 #: ../pep-0602.rst
@@ -79,10 +80,10 @@ msgstr ""
 
 #: ../pep-0602.rst:18
 msgid ""
-"This document describes a change in the release calendar for Python "
-"starting with Python 3.9.  This change accelerates the release cadence "
-"such that major versions are released predictably every twelve months, in"
-" October every year."
+"This document describes a change in the release calendar for Python starting "
+"with Python 3.9.  This change accelerates the release cadence such that "
+"major versions are released predictably every twelve months, in October "
+"every year."
 msgstr ""
 
 #: ../pep-0602.rst:25
@@ -95,8 +96,7 @@ msgstr ""
 
 #: ../pep-0602.rst:30
 msgid ""
-"This PEP proposes that Python 3.X.0 will be developed for around 17 "
-"months:"
+"This PEP proposes that Python 3.X.0 will be developed for around 17 months:"
 msgstr ""
 
 #: ../pep-0602.rst:33
@@ -107,21 +107,21 @@ msgstr ""
 
 #: ../pep-0602.rst:36
 msgid ""
-"The next *seven months* are spent on versioned alpha releases where both "
-"new features are incrementally added and bug fixes are included."
+"The next *seven months* are spent on versioned alpha releases where both new "
+"features are incrementally added and bug fixes are included."
 msgstr ""
 
 #: ../pep-0602.rst:39
 msgid ""
-"The following *three months* are spent on four versioned beta releases "
-"where **no new features** can be added but bug fixes are still included."
+"The following *three months* are spent on four versioned beta releases where "
+"**no new features** can be added but bug fixes are still included."
 msgstr ""
 
 #: ../pep-0602.rst:43
 msgid ""
 "The final *two months* are spent on two release candidates (or more, if "
-"necessary) and conclude with the release of the final release of Python "
-"3.X.0."
+"necessary) and conclude with the release of the final release of Python 3."
+"X.0."
 msgstr ""
 
 #: ../pep-0602.rst:48
@@ -136,16 +136,15 @@ msgstr ""
 
 #: ../pep-0602.rst:53
 msgid ""
-"During the *first eighteen months* (1½ year) it receives bugfix updates "
-"and full releases (sources and installers for Windows and macOS) are made"
-" approximately every other month."
+"During the *first eighteen months* (1½ year) it receives bugfix updates and "
+"full releases (sources and installers for Windows and macOS) are made "
+"approximately every other month."
 msgstr ""
 
 #: ../pep-0602.rst:57
 msgid ""
-"For the next *forty two months* (3½ years) it receives security updates "
-"and source-only releases are made on an as-needed basis (no fixed "
-"cadence)."
+"For the next *forty two months* (3½ years) it receives security updates and "
+"source-only releases are made on an as-needed basis (no fixed cadence)."
 msgstr ""
 
 #: ../pep-0602.rst:61
@@ -158,9 +157,9 @@ msgstr ""
 
 #: ../pep-0602.rst:66
 msgid ""
-"Feature development of Python 3.(X+1).0 starts as soon as Python 3.X.0 "
-"Beta 1 is released.  This creates a twelve-month delta between major "
-"Python versions."
+"Feature development of Python 3.(X+1).0 starts as soon as Python 3.X.0 Beta "
+"1 is released.  This creates a twelve-month delta between major Python "
+"versions."
 msgstr ""
 
 #: ../pep-0602.rst:72
@@ -233,8 +232,8 @@ msgstr ""
 
 #: ../pep-0602.rst:98
 msgid ""
-"In comparison, if this PEP is rejected and Python keeps the current "
-"release schedule:"
+"In comparison, if this PEP is rejected and Python keeps the current release "
+"schedule:"
 msgstr ""
 
 #: ../pep-0602.rst:102
@@ -298,8 +297,8 @@ msgstr ""
 
 #: ../pep-0602.rst:125
 msgid ""
-"This PEP proposes to keep this policy of **at least** two releases before"
-" making a breaking change."
+"This PEP proposes to keep this policy of **at least** two releases before "
+"making a breaking change."
 msgstr ""
 
 #: ../pep-0602.rst:129
@@ -309,8 +308,8 @@ msgstr ""
 #: ../pep-0602.rst:131
 msgid ""
 "The current wording of :pep:`13` states that \"a new council is elected "
-"after each feature release\".  This PEP proposes to keep this policy as "
-"it will lead to a consistent election schedule."
+"after each feature release\".  This PEP proposes to keep this policy as it "
+"will lead to a consistent election schedule."
 msgstr ""
 
 #: ../pep-0602.rst:136
@@ -321,16 +320,16 @@ msgstr ""
 msgid ""
 "The current undocumented convention is for a single Release Manager to "
 "handle two feature releases of Python.  This PEP proposes to keep this "
-"policy, allowing for the term to be extended to more releases with "
-"approval from the Steering Council and the Cabal of Release Managers."
+"policy, allowing for the term to be extended to more releases with approval "
+"from the Steering Council and the Cabal of Release Managers."
 msgstr ""
 
 #: ../pep-0602.rst:143
 msgid ""
-"In particular, since this PEP is authored by the active Release Manager "
-"and its effect would shorten the term of the Release Manager, the author "
-"is open to managing the release of a third feature release to compensate "
-"for the disruption."
+"In particular, since this PEP is authored by the active Release Manager and "
+"its effect would shorten the term of the Release Manager, the author is open "
+"to managing the release of a third feature release to compensate for the "
+"disruption."
 msgstr ""
 
 #: ../pep-0602.rst:150
@@ -354,8 +353,8 @@ msgstr ""
 
 #: ../pep-0602.rst:160
 msgid ""
-"creates a more gradual upgrade path for users, by decreasing the surface "
-"of change in any single release;"
+"creates a more gradual upgrade path for users, by decreasing the surface of "
+"change in any single release;"
 msgstr ""
 
 #: ../pep-0602.rst:163
@@ -363,8 +362,8 @@ msgid ""
 "creates a predictable calendar for releases where the final release is "
 "always in October (so after the annual core sprint), and the beta phase "
 "starts in late May (so after PyCon US sprints), which is especially "
-"important for core developers who need to plan to include Python "
-"involvement in their calendar;"
+"important for core developers who need to plan to include Python involvement "
+"in their calendar;"
 msgstr ""
 
 #: ../pep-0602.rst:169
@@ -376,10 +375,10 @@ msgstr ""
 #: ../pep-0602.rst:172
 msgid ""
 "allows for synchronizing the schedule of Python release management with "
-"external distributors like Fedora who've been historically very helpful "
-"in finding regressions early not only in core Python but also in third-"
-"party libraries, helping moving the community forward to support the "
-"latest version of Python from Day 1;"
+"external distributors like Fedora who've been historically very helpful in "
+"finding regressions early not only in core Python but also in third-party "
+"libraries, helping moving the community forward to support the latest "
+"version of Python from Day 1;"
 msgstr ""
 
 #: ../pep-0602.rst:178
@@ -401,10 +400,10 @@ msgstr ""
 
 #: ../pep-0602.rst:188
 msgid ""
-"Adopting an annual release calendar allows for natural switching to "
-"calendar versioning, for example by calling Python 3.9 \"Python 3.20\" "
-"since it's released in October '20 and so on (\"Python 3.23\" would be "
-"the one released in October '23)."
+"Adopting an annual release calendar allows for natural switching to calendar "
+"versioning, for example by calling Python 3.9 \"Python 3.20\" since it's "
+"released in October '20 and so on (\"Python 3.23\" would be the one released "
+"in October '23)."
 msgstr ""
 
 #: ../pep-0602.rst:193
@@ -412,8 +411,8 @@ msgid ""
 "While the ease of switching to calendar versioning can be treated as an "
 "advantage of an annual release cycle, this PEP does not advocate for or "
 "against a change in how Python is versioned.  Should the annual release "
-"cycle be adopted, the versioning question will be dealt with in a "
-"separate PEP."
+"cycle be adopted, the versioning question will be dealt with in a separate "
+"PEP."
 msgstr ""
 
 #: ../pep-0602.rst:200
@@ -422,25 +421,23 @@ msgstr ""
 
 #: ../pep-0602.rst:202
 msgid ""
-"This change does not shorten the currently documented support calendar "
-"for a Python release, both in terms of bugfix releases and security "
-"fixes."
+"This change does not shorten the currently documented support calendar for a "
+"Python release, both in terms of bugfix releases and security fixes."
 msgstr ""
 
 #: ../pep-0602.rst:206
 msgid ""
-"This change does not accelerate the velocity of development.  Python is "
-"not going to become incompatible faster or accrue new features faster. "
-"It's just that features are going to be released more gradually as they "
-"are developed."
+"This change does not accelerate the velocity of development.  Python is not "
+"going to become incompatible faster or accrue new features faster. It's just "
+"that features are going to be released more gradually as they are developed."
 msgstr ""
 
 #: ../pep-0602.rst:211
 msgid ""
-"Consequently, while this change introduces the ability for users to "
-"upgrade much faster, it does not require them to do so.  Say, if they "
-"upgrade every second release, their experience with Python is going to be"
-" similar to the current situation."
+"Consequently, while this change introduces the ability for users to upgrade "
+"much faster, it does not require them to do so.  Say, if they upgrade every "
+"second release, their experience with Python is going to be similar to the "
+"current situation."
 msgstr ""
 
 #: ../pep-0602.rst:217
@@ -453,8 +450,8 @@ msgstr ""
 
 #: ../pep-0602.rst:222
 msgid ""
-"This requires changes to how integrators, like Linux distributions, "
-"release Python within their systems."
+"This requires changes to how integrators, like Linux distributions, release "
+"Python within their systems."
 msgstr ""
 
 #: ../pep-0602.rst:226
@@ -464,8 +461,8 @@ msgstr ""
 #: ../pep-0602.rst:228
 msgid ""
 "This eventually increases the testing matrix for library and application "
-"maintainers that want to support all actively supported Python versions "
-"by one or two:"
+"maintainers that want to support all actively supported Python versions by "
+"one or two:"
 msgstr ""
 
 #: ../pep-0602.rst:236
@@ -476,12 +473,12 @@ msgstr ""
 msgid ""
 "The \"extended bugfix support at the discretion of the Release Manager\" "
 "stage of the current release cycle is not codified.  If fact, :pep:`101` "
-"currently states that after the release of Python 3.(X+1).0 only one last"
-" bugfix release is made for Python 3.X.0.  However, in practice at least "
-"the last four versions of Python 3 overlapped with stable releases of the"
-" next version for around six months.  Figure 2 is including this "
-"information to demonstrate that overlap between stable version releases "
-"with the 12-month release cadence will be nothing new."
+"currently states that after the release of Python 3.(X+1).0 only one last "
+"bugfix release is made for Python 3.X.0.  However, in practice at least the "
+"last four versions of Python 3 overlapped with stable releases of the next "
+"version for around six months.  Figure 2 is including this information to "
+"demonstrate that overlap between stable version releases with the 12-month "
+"release cadence will be nothing new."
 msgstr ""
 
 #: ../pep-0602.rst:248
@@ -490,9 +487,9 @@ msgstr ""
 
 #: ../pep-0602.rst:250
 msgid ""
-"Although identified dependent policies were addressed in a previous "
-"section, it is entirely possible there are some other areas which "
-"implicitly rely on the timing of Python releases."
+"Although identified dependent policies were addressed in a previous section, "
+"it is entirely possible there are some other areas which implicitly rely on "
+"the timing of Python releases."
 msgstr ""
 
 #: ../pep-0602.rst:256
@@ -511,14 +508,14 @@ msgstr ""
 
 #: ../pep-0602.rst:264
 msgid ""
-"it makes contribution scheduling harder due to irregular release dates "
-"every year;"
+"it makes contribution scheduling harder due to irregular release dates every "
+"year;"
 msgstr ""
 
 #: ../pep-0602.rst:267
 msgid ""
-"it creates a surge of rushed commits before (and even after!) Beta 1 due "
-"to the stress involved with \"missing a release\";"
+"it creates a surge of rushed commits before (and even after!) Beta 1 due to "
+"the stress involved with \"missing a release\";"
 msgstr ""
 
 #: ../pep-0602.rst:270
@@ -552,11 +549,11 @@ msgstr ""
 
 #: ../pep-0602.rst:285
 msgid ""
-"it causes every \"point zero\" release to be extra risky for users. While"
-" we provide and recommend testing with alphas and betas, \"point zero\" "
-"is the first release of a given Python version for many users.  The "
-"bigger a release is feature-wise, the more potential problems are hiding "
-"in \"point zero releases\"."
+"it causes every \"point zero\" release to be extra risky for users. While we "
+"provide and recommend testing with alphas and betas, \"point zero\" is the "
+"first release of a given Python version for many users.  The bigger a "
+"release is feature-wise, the more potential problems are hiding in \"point "
+"zero releases\"."
 msgstr ""
 
 #: ../pep-0602.rst:292
@@ -572,19 +569,19 @@ msgid ""
 msgstr ""
 
 #: ../pep-0602.rst:300
-msgid "Keep \"4 betas over 4 months and a final month for the release candidate\""
+msgid ""
+"Keep \"4 betas over 4 months and a final month for the release candidate\""
 msgstr ""
 
 #: ../pep-0602.rst:302
 msgid ""
-"While this would make the release calendar a bit cleaner, `it would make "
-"it very hard for external distributors like Fedora "
-"<https://discuss.python.org/t/pep-602-annual-release-cycle-for-"
-"python/2296/79?u=ambv>`_ to release the newest version of Python as soon "
-"as possible.  We are adjusting Python's calendar here in the hope that "
-"this will enable Fedora to integrate the newest version of Python with "
-"the newest version of Fedora *as both are being developed* which makes "
-"both projects better."
+"While this would make the release calendar a bit cleaner, `it would make it "
+"very hard for external distributors like Fedora <https://discuss.python.org/"
+"t/pep-602-annual-release-cycle-for-python/2296/79?u=ambv>`_ to release the "
+"newest version of Python as soon as possible.  We are adjusting Python's "
+"calendar here in the hope that this will enable Fedora to integrate the "
+"newest version of Python with the newest version of Fedora *as both are "
+"being developed* which makes both projects better."
 msgstr ""
 
 #: ../pep-0602.rst:312
@@ -595,8 +592,8 @@ msgstr ""
 msgid ""
 "This is described in :pep:`598`.  This proposal includes non-standard "
 "concepts like the \"incremental feature release\" which makes it hard to "
-"understand.  The presented advantages are unclear while the unfamiliarity"
-" of the scheme poses a real risk of user and integrator confusion."
+"understand.  The presented advantages are unclear while the unfamiliarity of "
+"the scheme poses a real risk of user and integrator confusion."
 msgstr ""
 
 #: ../pep-0602.rst:321
@@ -605,10 +602,10 @@ msgstr ""
 
 #: ../pep-0602.rst:323
 msgid ""
-"Each version of Python is effectively long-term support: it's supported "
-"for five years, with the first eighteen months allowing regular bug fixes"
-" and security updates.  For the remaining time security updates are "
-"accepted and promptly released."
+"Each version of Python is effectively long-term support: it's supported for "
+"five years, with the first eighteen months allowing regular bug fixes and "
+"security updates.  For the remaining time security updates are accepted and "
+"promptly released."
 msgstr ""
 
 #: ../pep-0602.rst:328
@@ -621,7 +618,6 @@ msgstr ""
 
 #: ../pep-0602.rst:334
 msgid ""
-"This document is placed in the public domain or under the "
-"CC0-1.0-Universal license, whichever is more permissive."
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
 msgstr ""
-

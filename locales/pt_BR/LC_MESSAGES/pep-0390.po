@@ -100,8 +100,8 @@ msgstr ""
 #: ../pep-0390.txt:20
 msgid ""
 "This PEP describes a new section and a new format for the ``setup.cfg`` "
-"file, that allows describing the Metadata of a package without using "
-"``setup.py``."
+"file, that allows describing the Metadata of a package without using ``setup."
+"py``."
 msgstr ""
 
 #: ../pep-0390.txt:25
@@ -116,8 +116,8 @@ msgstr ""
 
 #: ../pep-0390.txt:30
 msgid ""
-"A replacement PEP based on :pep:`426` (metadata 2.0) will be created that"
-" defines the minimum amount of information needed to generate an sdist "
+"A replacement PEP based on :pep:`426` (metadata 2.0) will be created that "
+"defines the minimum amount of information needed to generate an sdist "
 "archive given a source tarball or VCS checkout."
 msgstr ""
 
@@ -127,9 +127,9 @@ msgstr ""
 
 #: ../pep-0390.txt:38
 msgid ""
-"Today, if you want to list all the Metadata of a distribution (see "
-":pep:`314`) that is not installed, you need to use the ``setup.py`` "
-"command line interface."
+"Today, if you want to list all the Metadata of a distribution (see :pep:"
+"`314`) that is not installed, you need to use the ``setup.py`` command line "
+"interface."
 msgstr ""
 
 #: ../pep-0390.txt:41
@@ -138,24 +138,23 @@ msgstr ""
 
 #: ../pep-0390.txt:49
 msgid ""
-"Where ``name`` and ``version`` are metadata fields. This is working fine "
-"but as soon as the developers add more code in ``setup.py``, this feature"
-" might break or in worst cases might do unwanted things on the target "
-"system."
+"Where ``name`` and ``version`` are metadata fields. This is working fine but "
+"as soon as the developers add more code in ``setup.py``, this feature might "
+"break or in worst cases might do unwanted things on the target system."
 msgstr ""
 
 #: ../pep-0390.txt:53
 msgid ""
-"Moreover, when an OS packager wants to get the metadata of a distribution"
-" he is re-packaging, he might encounter some problems to understand the "
-"``setup.py`` file he's working with."
+"Moreover, when an OS packager wants to get the metadata of a distribution he "
+"is re-packaging, he might encounter some problems to understand the ``setup."
+"py`` file he's working with."
 msgstr ""
 
 #: ../pep-0390.txt:57
 msgid ""
-"So the rationale of this PEP is to provide a way to declare the metadata "
-"in a static configuration file alongside ``setup.py`` that doesn't "
-"require any third party code to run."
+"So the rationale of this PEP is to provide a way to declare the metadata in "
+"a static configuration file alongside ``setup.py`` that doesn't require any "
+"third party code to run."
 msgstr ""
 
 #: ../pep-0390.txt:63
@@ -176,17 +175,17 @@ msgstr ""
 
 #: ../pep-0390.txt:75
 msgid ""
-"This file is already read by Distutils when a command is executed, and if"
-" the ``metadata`` section is found, it will be used to fill the metadata "
+"This file is already read by Distutils when a command is executed, and if "
+"the ``metadata`` section is found, it will be used to fill the metadata "
 "fields. If an option that corresponds to a Metadata field is given to "
-"``setup()``, it will override the value that was possibly present in "
-"``setup.cfg``."
+"``setup()``, it will override the value that was possibly present in ``setup."
+"cfg``."
 msgstr ""
 
 #: ../pep-0390.txt:81
 msgid ""
-"Notice that ``setup.py`` is still used and can be required to define some"
-" options that are not part of the Metadata fields. For instance, the "
+"Notice that ``setup.py`` is still used and can be required to define some "
+"options that are not part of the Metadata fields. For instance, the "
 "``sdist`` command can use options like ``packages`` or ``scripts``."
 msgstr ""
 
@@ -197,9 +196,8 @@ msgstr ""
 #: ../pep-0390.txt:89
 msgid ""
 "Some Metadata fields can have multiple values. To keep ``setup.cfg`` "
-"compatible with ``ConfigParser`` and the :rfc:`822` ``LONG HEADER "
-"FIELDS`` (see section 3.1.1), these are expressed with ``,``-separated "
-"values::"
+"compatible with ``ConfigParser`` and the :rfc:`822` ``LONG HEADER FIELDS`` "
+"(see section 3.1.1), these are expressed with ``,``-separated values::"
 msgstr ""
 
 #: ../pep-0390.txt:95
@@ -214,8 +212,7 @@ msgstr ""
 
 #: ../pep-0390.txt:102
 msgid ""
-"The ``metadata`` section will also be able to use context-dependant "
-"sections."
+"The ``metadata`` section will also be able to use context-dependant sections."
 msgstr ""
 
 #: ../pep-0390.txt:104
@@ -226,19 +223,19 @@ msgstr ""
 
 #: ../pep-0390.txt:124
 msgid ""
-"Every ``[metadata:condition]`` section will be used only if the condition"
-" is met when the file is read. The background motivation for these "
-"context-dependant sections is to be able to define requirements that "
-"varies depending on the platform the distribution might be installed on. "
-"(see :pep:`314`)."
+"Every ``[metadata:condition]`` section will be used only if the condition is "
+"met when the file is read. The background motivation for these context-"
+"dependant sections is to be able to define requirements that varies "
+"depending on the platform the distribution might be installed on. (see :pep:"
+"`314`)."
 msgstr ""
 
 #: ../pep-0390.txt:130
 msgid ""
-"The micro-language behind this is the simplest possible: it compares only"
-" strings, with the ``==`` and ``in`` operators (and their opposites), and"
-" with the ability to combine expressions. It makes it also easy to "
-"understand to non-pythoneers."
+"The micro-language behind this is the simplest possible: it compares only "
+"strings, with the ``==`` and ``in`` operators (and their opposites), and "
+"with the ability to combine expressions. It makes it also easy to understand "
+"to non-pythoneers."
 msgstr ""
 
 #: ../pep-0390.txt:135
@@ -276,15 +273,14 @@ msgstr ""
 
 #: ../pep-0390.txt:148
 msgid ""
-"Notice that ``in`` is restricted to strings, meaning that it is not "
-"possible to use other sequences like tuples or lists on the right side."
+"Notice that ``in`` is restricted to strings, meaning that it is not possible "
+"to use other sequences like tuples or lists on the right side."
 msgstr ""
 
 #: ../pep-0390.txt:151
 msgid ""
-"Distutils will provide a function that is able to generate the metadata "
-"of a distribution, given a ``setup.cfg`` file, for the execution "
-"environment::"
+"Distutils will provide a function that is able to generate the metadata of a "
+"distribution, given a ``setup.cfg`` file, for the execution environment::"
 msgstr ""
 
 #: ../pep-0390.txt:158
@@ -295,9 +291,9 @@ msgstr ""
 
 #: ../pep-0390.txt:161
 msgid ""
-"Notice that this feature is not restricted to the ``metadata`` namespace."
-" Consequently, any other section can be extended with such context-"
-"dependant sections."
+"Notice that this feature is not restricted to the ``metadata`` namespace. "
+"Consequently, any other section can be extended with such context-dependant "
+"sections."
 msgstr ""
 
 #: ../pep-0390.txt:166
@@ -306,16 +302,16 @@ msgstr ""
 
 #: ../pep-0390.txt:168
 msgid ""
-"When ``PKG-INFO`` is generated by Distutils, every field that relies on a"
-" condition will have that condition written at the end of the line, after"
-" a `;` separator::"
+"When ``PKG-INFO`` is generated by Distutils, every field that relies on a "
+"condition will have that condition written at the end of the line, after a `;"
+"` separator::"
 msgstr ""
 
 #: ../pep-0390.txt:186
 msgid ""
-"Notice that this file can be opened with the ``DistributionMetadata`` "
-"class. This class will be able to use the micro-language using the "
-"execution environment."
+"Notice that this file can be opened with the ``DistributionMetadata`` class. "
+"This class will be able to use the micro-language using the execution "
+"environment."
 msgstr ""
 
 #: ../pep-0390.txt:190
@@ -330,8 +326,8 @@ msgstr ""
 
 #: ../pep-0390.txt:210
 msgid ""
-":pep:`314` is changed accordingly, meaning that each field will be able "
-"to have that extra condition marker."
+":pep:`314` is changed accordingly, meaning that each field will be able to "
+"have that extra condition marker."
 msgstr ""
 
 #: ../pep-0390.txt:214
@@ -340,14 +336,14 @@ msgstr ""
 
 #: ../pep-0390.txt:216
 msgid ""
-"This change is based on a new metadata ``1.2`` format meaning that "
-"Distutils will be able to distinguish old PKG-INFO files from new ones."
+"This change is based on a new metadata ``1.2`` format meaning that Distutils "
+"will be able to distinguish old PKG-INFO files from new ones."
 msgstr ""
 
 #: ../pep-0390.txt:219
 msgid ""
-"The ``setup.cfg`` file change will stay ``ConfigParser``-compatible and "
-"will not break existing ``setup.cfg`` files."
+"The ``setup.cfg`` file change will stay ``ConfigParser``-compatible and will "
+"not break existing ``setup.cfg`` files."
 msgstr ""
 
 #: ../pep-0390.txt:223
@@ -357,20 +353,20 @@ msgstr ""
 #: ../pep-0390.txt:225
 msgid ""
 "We are not providing ``<`` and ``>`` operators at this time, and "
-"``python_version`` is a regular string. This implies using ``or`` "
-"operators when a section needs to be restricted to a couple of Python "
-"versions. Although, if :pep:`386` is accepted, ``python_version`` could "
-"be changed internally into something comparable with strings, and ``<`` "
-"and ``>`` operators introduced."
+"``python_version`` is a regular string. This implies using ``or`` operators "
+"when a section needs to be restricted to a couple of Python versions. "
+"Although, if :pep:`386` is accepted, ``python_version`` could be changed "
+"internally into something comparable with strings, and ``<`` and ``>`` "
+"operators introduced."
 msgstr ""
 
 #: ../pep-0390.txt:232
 msgid ""
-"Last, if a distribution is unable to set all metadata fields in "
-"``setup.cfg``, that's fine, the fields will be set to ``UNKNOWN`` when "
-"``local_metadata`` is called. Getting ``UNKNOWN`` values will mean that "
-"it might be necessary to run the ``setup.py`` command line interface to "
-"get the whole set of metadata."
+"Last, if a distribution is unable to set all metadata fields in ``setup."
+"cfg``, that's fine, the fields will be set to ``UNKNOWN`` when "
+"``local_metadata`` is called. Getting ``UNKNOWN`` values will mean that it "
+"might be necessary to run the ``setup.py`` command line interface to get the "
+"whole set of metadata."
 msgstr ""
 
 #: ../pep-0390.txt:238
@@ -388,4 +384,3 @@ msgstr ""
 #: ../pep-0390.txt:246
 msgid "This document has been placed in the public domain."
 msgstr ""
-

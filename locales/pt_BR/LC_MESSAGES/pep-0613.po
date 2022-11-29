@@ -39,8 +39,8 @@ msgstr ""
 
 #: ../pep-0613.rst:5
 msgid ""
-"https://mail.python.org/archives/list/typing-"
-"sig@python.org/thread/MWRJOBEEEMFVXE7CAKO7B4P46IPM4AN3/"
+"https://mail.python.org/archives/list/typing-sig@python.org/thread/"
+"MWRJOBEEEMFVXE7CAKO7B4P46IPM4AN3/"
 msgstr ""
 
 #: ../pep-0613.rst
@@ -93,9 +93,9 @@ msgstr ""
 
 #: ../pep-0613.rst:18
 msgid ""
-"Type aliases are user-specified types which may be as complex as any type"
-" hint, and are specified with a simple variable assignment on a module "
-"top level."
+"Type aliases are user-specified types which may be as complex as any type "
+"hint, and are specified with a simple variable assignment on a module top "
+"level."
 msgstr ""
 
 #: ../pep-0613.rst:21
@@ -110,12 +110,12 @@ msgstr ""
 
 #: ../pep-0613.rst:26
 msgid ""
-"Type aliases are declared as top level variable assignments. In :pep:`PEP"
-" 484 <484#type-aliases>`, the distinction between a valid type alias and "
-"a global variable was implicitly determined: if a top level assignment is"
-" unannotated, and the assigned value is a valid type, then the name being"
-" assigned to is a valid type alias. Otherwise, that name is simply a "
-"global value that cannot be used as a type hint."
+"Type aliases are declared as top level variable assignments. In :pep:`PEP "
+"484 <484#type-aliases>`, the distinction between a valid type alias and a "
+"global variable was implicitly determined: if a top level assignment is "
+"unannotated, and the assigned value is a valid type, then the name being "
+"assigned to is a valid type alias. Otherwise, that name is simply a global "
+"value that cannot be used as a type hint."
 msgstr ""
 
 #: ../pep-0613.rst:33
@@ -125,18 +125,17 @@ msgid ""
 "restrictions enforced on type alias declaration. Because the distinction "
 "between an unannotated value and a type alias is implicit, ambiguous or "
 "incorrect type alias declarations implicitly default to a valid value "
-"assignment. This creates expressions that are impossible to express as "
-"type aliases and punts error diagnosis of malformed type aliases "
-"downstream."
+"assignment. This creates expressions that are impossible to express as type "
+"aliases and punts error diagnosis of malformed type aliases downstream."
 msgstr ""
 
 #: ../pep-0613.rst:41
 msgid ""
 "The following examples each include an illustration of some of the "
 "suboptimal or confusing behaviors resulting from existing implicit alias "
-"declarations. We also introduce explicit aliases of the format "
-"``TypeName: TypeAlias = Expression`` here for the sake of comparison, but"
-" the syntax is discussed in further detail in later sections."
+"declarations. We also introduce explicit aliases of the format ``TypeName: "
+"TypeAlias = Expression`` here for the sake of comparison, but the syntax is "
+"discussed in further detail in later sections."
 msgstr ""
 
 #: ../pep-0613.rst:48
@@ -145,19 +144,18 @@ msgstr ""
 
 #: ../pep-0613.rst:55
 msgid ""
-"This code snippet should not error so long as ``ClassName`` is defined "
-"later on. However, a type checker is forced to assume that MyType is a "
-"value assignment rather than a type alias, and therefore may throw "
-"spurious errors that (1) ``MyType`` is an unannotated global string, and "
-"(2) ``MyType`` cannot be used as a return annotation because it is not a "
-"valid type."
+"This code snippet should not error so long as ``ClassName`` is defined later "
+"on. However, a type checker is forced to assume that MyType is a value "
+"assignment rather than a type alias, and therefore may throw spurious errors "
+"that (1) ``MyType`` is an unannotated global string, and (2) ``MyType`` "
+"cannot be used as a return annotation because it is not a valid type."
 msgstr ""
 
 #: ../pep-0613.rst:66
 msgid ""
 "Explicit aliases remove ambiguity so neither of the above errors will be "
-"thrown. Additionally, if something is wrong with ``ClassName`` (i.e., "
-"it’s not actually defined later), the type checker can throw an error."
+"thrown. Additionally, if something is wrong with ``ClassName`` (i.e., it’s "
+"not actually defined later), the type checker can throw an error."
 msgstr ""
 
 #: ../pep-0613.rst:72
@@ -166,22 +164,21 @@ msgstr ""
 
 #: ../pep-0613.rst:79
 msgid ""
-"A type checker should warn on this code snippet that ``InvalidType`` is "
-"not a valid type, and therefore cannot be used to annotate an expression "
-"or to construct a type alias. Instead, type checkers are forced to throw "
-"spurious errors that (1) ``MyType`` is a global expression missing an "
-"annotation, and (2) ``MyType`` is not a valid type in all usages of "
-"``MyType`` across the codebase."
+"A type checker should warn on this code snippet that ``InvalidType`` is not "
+"a valid type, and therefore cannot be used to annotate an expression or to "
+"construct a type alias. Instead, type checkers are forced to throw spurious "
+"errors that (1) ``MyType`` is a global expression missing an annotation, and "
+"(2) ``MyType`` is not a valid type in all usages of ``MyType`` across the "
+"codebase."
 msgstr ""
 
 #: ../pep-0613.rst:91
 msgid ""
-"With explicit aliases, the type checker has enough information to error "
-"on the actual definition of the bad type alias, and explain why: that "
-"``MyGeneric(int)`` and ``InvalidType`` are not valid types. When the "
-"value expression is no longer evaluated as a global value, unactionable "
-"type errors on all usages of ``MyType`` across the codebase can be "
-"suppressed."
+"With explicit aliases, the type checker has enough information to error on "
+"the actual definition of the bad type alias, and explain why: that "
+"``MyGeneric(int)`` and ``InvalidType`` are not valid types. When the value "
+"expression is no longer evaluated as a global value, unactionable type "
+"errors on all usages of ``MyType`` across the codebase can be suppressed."
 msgstr ""
 
 #: ../pep-0613.rst:98
@@ -191,27 +188,27 @@ msgstr ""
 #: ../pep-0613.rst:107
 msgid ""
 "Type aliases are valid within class scope, both implicitly (``x``) and "
-"explicitly (``y``). If the line should be interpreted as a class "
-"variable, it must be explicitly annotated (``z``)."
+"explicitly (``y``). If the line should be interpreted as a class variable, "
+"it must be explicitly annotated (``z``)."
 msgstr ""
 
 #: ../pep-0613.rst:117
 msgid ""
-"The outer ``x`` is a valid type alias, but type checkers must error if "
-"the inner ``x`` is ever used as a type because type aliases cannot be "
-"defined inside of a function. This is confusing because the alias "
-"declaration rule is not explicit, and because a type error will not be "
-"thrown on the location of the inner type alias declaration but rather on "
-"every one of its subsequent use cases."
+"The outer ``x`` is a valid type alias, but type checkers must error if the "
+"inner ``x`` is ever used as a type because type aliases cannot be defined "
+"inside of a function. This is confusing because the alias declaration rule "
+"is not explicit, and because a type error will not be thrown on the location "
+"of the inner type alias declaration but rather on every one of its "
+"subsequent use cases."
 msgstr ""
 
 #: ../pep-0613.rst:132
 msgid ""
-"With explicit aliases, the outer assignment is still a valid type "
-"variable. Inside ``foo``, the inner assignment should be interpreted as "
-"``x: Type[ClassName]``. Inside ``bar``, the type checker should raise a "
-"clear error, communicating to the author that type aliases cannot be "
-"defined inside a function."
+"With explicit aliases, the outer assignment is still a valid type variable. "
+"Inside ``foo``, the inner assignment should be interpreted as ``x: "
+"Type[ClassName]``. Inside ``bar``, the type checker should raise a clear "
+"error, communicating to the author that type aliases cannot be defined "
+"inside a function."
 msgstr ""
 
 #: ../pep-0613.rst:139
@@ -223,9 +220,8 @@ msgid ""
 "The explicit alias declaration syntax clearly differentiates between the "
 "three possible kinds of assignments: typed global expressions, untyped "
 "global expressions, and type aliases. This avoids the existence of "
-"assignments that break type checking when an annotation is added, and "
-"avoids classifying the nature of the assignment based on the type of the "
-"value."
+"assignments that break type checking when an annotation is added, and avoids "
+"classifying the nature of the assignment based on the type of the value."
 msgstr ""
 
 #: ../pep-0613.rst:147
@@ -238,10 +234,10 @@ msgstr ""
 
 #: ../pep-0613.rst:172
 msgid ""
-"Note: The examples above illustrate implicit and explicit alias "
-"declarations in isolation. For the sake of backwards compatibility, type "
-"checkers should support both simultaneously, meaning an untyped global "
-"expression ``x = int`` will still be considered a valid type alias."
+"Note: The examples above illustrate implicit and explicit alias declarations "
+"in isolation. For the sake of backwards compatibility, type checkers should "
+"support both simultaneously, meaning an untyped global expression ``x = "
+"int`` will still be considered a valid type alias."
 msgstr ""
 
 #: ../pep-0613.rst:179
@@ -250,8 +246,8 @@ msgstr ""
 
 #: ../pep-0613.rst:181
 msgid ""
-"Explicit aliases provide an alternative way to declare type aliases, but "
-"all pre-existing code and old alias declarations will work as before."
+"Explicit aliases provide an alternative way to declare type aliases, but all "
+"pre-existing code and old alias declarations will work as before."
 msgstr ""
 
 #: ../pep-0613.rst:186
@@ -260,8 +256,8 @@ msgstr ""
 
 #: ../pep-0613.rst:188
 msgid ""
-"The `Pyre <https://pyre-check.org/>`_ type checker supports explicit type"
-" alias declarations."
+"The `Pyre <https://pyre-check.org/>`_ type checker supports explicit type "
+"alias declarations."
 msgstr ""
 
 #: ../pep-0613.rst:193
@@ -278,8 +274,8 @@ msgstr ""
 
 #: ../pep-0613.rst:207
 msgid ""
-"Along with the option above, this format potentially adds confusion "
-"around what the runtime value of ``MyType`` is."
+"Along with the option above, this format potentially adds confusion around "
+"what the runtime value of ``MyType`` is."
 msgstr ""
 
 #: ../pep-0613.rst:211
@@ -308,7 +304,6 @@ msgstr ""
 
 #: ../pep-0613.rst:227
 msgid ""
-"This document is placed in the public domain or under the "
-"CC0-1.0-Universal license, whichever is more permissive."
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
 msgstr ""
-

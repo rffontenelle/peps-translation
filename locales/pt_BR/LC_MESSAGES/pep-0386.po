@@ -85,59 +85,58 @@ msgstr ""
 
 #: ../pep-0386.txt:25
 msgid ""
-"In Python there are no real restrictions yet on how a project should "
-"manage its versions, and how they should be incremented."
+"In Python there are no real restrictions yet on how a project should manage "
+"its versions, and how they should be incremented."
 msgstr ""
 
 #: ../pep-0386.txt:28
 msgid ""
 "Distutils provides a `version` distribution meta-data field but it is "
-"freeform and current users, such as PyPI usually consider the latest "
-"version pushed as the `latest` one, regardless of the expected semantics."
+"freeform and current users, such as PyPI usually consider the latest version "
+"pushed as the `latest` one, regardless of the expected semantics."
 msgstr ""
 
 #: ../pep-0386.txt:32
 msgid ""
 "Distutils will soon extend its capabilities to allow distributions to "
-"express a dependency on other distributions through the ``Requires-Dist``"
-" metadata field (see :pep:`345`) and it will optionally allow use of that"
-" field to restrict the dependency to a set of compatible versions. Notice"
-" that this field is replacing ``Requires`` that was expressing "
-"dependencies on modules and packages."
+"express a dependency on other distributions through the ``Requires-Dist`` "
+"metadata field (see :pep:`345`) and it will optionally allow use of that "
+"field to restrict the dependency to a set of compatible versions. Notice "
+"that this field is replacing ``Requires`` that was expressing dependencies "
+"on modules and packages."
 msgstr ""
 
 #: ../pep-0386.txt:38
 msgid ""
-"The ``Requires-Dist`` field will allow a distribution to define a "
-"dependency on another package and optionally restrict this dependency to "
-"a set of compatible versions, so one may write::"
+"The ``Requires-Dist`` field will allow a distribution to define a dependency "
+"on another package and optionally restrict this dependency to a set of "
+"compatible versions, so one may write::"
 msgstr ""
 
 #: ../pep-0386.txt:44
 msgid ""
-"This means that the distribution requires ``zope.interface`` with a "
-"version greater than ``3.5.0``."
+"This means that the distribution requires ``zope.interface`` with a version "
+"greater than ``3.5.0``."
 msgstr ""
 
 #: ../pep-0386.txt:47
 msgid ""
-"This also means that Python projects will need to follow the same "
-"convention as the tool that will be used to install them, so they are "
-"able to compare versions."
+"This also means that Python projects will need to follow the same convention "
+"as the tool that will be used to install them, so they are able to compare "
+"versions."
 msgstr ""
 
 #: ../pep-0386.txt:51
 msgid ""
-"That is why this PEP proposes, for the sake of interoperability, a "
-"standard schema to express version information and its comparison "
-"semantics."
+"That is why this PEP proposes, for the sake of interoperability, a standard "
+"schema to express version information and its comparison semantics."
 msgstr ""
 
 #: ../pep-0386.txt:54
 msgid ""
 "Furthermore, this will make OS packagers' work easier when repackaging "
-"standards compliant distributions, because as of now it can be difficult "
-"to decide how two distribution versions compare."
+"standards compliant distributions, because as of now it can be difficult to "
+"decide how two distribution versions compare."
 msgstr ""
 
 #: ../pep-0386.txt:60
@@ -146,56 +145,55 @@ msgstr ""
 
 #: ../pep-0386.txt:62
 msgid ""
-"It is not in the scope of this PEP to provide a universal versioning "
-"schema intended to support all or even most of existing versioning "
-"schemas. There will always be competing grammars, either mandated by "
-"distro or project policies or by historical reasons that we cannot expect"
-" to change."
+"It is not in the scope of this PEP to provide a universal versioning schema "
+"intended to support all or even most of existing versioning schemas. There "
+"will always be competing grammars, either mandated by distro or project "
+"policies or by historical reasons that we cannot expect to change."
 msgstr ""
 
 #: ../pep-0386.txt:67
 msgid ""
 "The proposed schema should be able to express the usual versioning "
-"semantics, so it's possible to parse any alternative versioning schema "
-"and transform it into a compliant one. This is how OS packagers usually "
-"deal with the existing version schemas and is a preferable alternative "
-"than supporting an arbitrary set of versioning schemas."
+"semantics, so it's possible to parse any alternative versioning schema and "
+"transform it into a compliant one. This is how OS packagers usually deal "
+"with the existing version schemas and is a preferable alternative than "
+"supporting an arbitrary set of versioning schemas."
 msgstr ""
 
 #: ../pep-0386.txt:73
 msgid ""
-"Conformance to usual practice and conventions, as well as a simplicity "
-"are a plus, to ease frictionless adoption and painless transition. "
-"Practicality beats purity, sometimes."
+"Conformance to usual practice and conventions, as well as a simplicity are a "
+"plus, to ease frictionless adoption and painless transition. Practicality "
+"beats purity, sometimes."
 msgstr ""
 
 #: ../pep-0386.txt:77
 msgid ""
-"Projects have very different versioning needs, but the following are "
-"widely considered important semantics:"
+"Projects have very different versioning needs, but the following are widely "
+"considered important semantics:"
 msgstr ""
 
 #: ../pep-0386.txt:80
 msgid ""
 "it should be possible to express more than one versioning level (usually "
-"this is expressed as major and minor revision and, sometimes, also a "
-"micro revision)."
+"this is expressed as major and minor revision and, sometimes, also a micro "
+"revision)."
 msgstr ""
 
 #: ../pep-0386.txt:83
 msgid ""
 "a significant number of projects need special meaning versions for \"pre-"
-"releases\" (such as \"alpha\", \"beta\", \"rc\"), and these have widely "
-"used aliases (\"a\" stands for \"alpha\", \"b\" for \"beta\" and \"c\" "
-"for \"rc\"). And these pre-release versions make it impossible to use a "
-"simple alphanumerical ordering of the version string components. "
-"(Example: 3.1a1 < 3.1)"
+"releases\" (such as \"alpha\", \"beta\", \"rc\"), and these have widely used "
+"aliases (\"a\" stands for \"alpha\", \"b\" for \"beta\" and \"c\" for "
+"\"rc\"). And these pre-release versions make it impossible to use a simple "
+"alphanumerical ordering of the version string components. (Example: 3.1a1 < "
+"3.1)"
 msgstr ""
 
 #: ../pep-0386.txt:89
 msgid ""
-"some projects also need \"post-releases\" of regular versions, mainly for"
-" installer work which can't be clearly expressed otherwise."
+"some projects also need \"post-releases\" of regular versions, mainly for "
+"installer work which can't be clearly expressed otherwise."
 msgstr ""
 
 #: ../pep-0386.txt:91
@@ -206,8 +204,8 @@ msgstr ""
 
 #: ../pep-0386.txt:94
 msgid ""
-"For people that want to go further and use a tool to manage their version"
-" numbers, the two major ones are:"
+"For people that want to go further and use a tool to manage their version "
+"numbers, the two major ones are:"
 msgstr ""
 
 #: ../pep-0386.txt:97
@@ -234,17 +232,16 @@ msgstr ""
 
 #: ../pep-0386.txt:138
 msgid ""
-"This class makes any version string valid, and provides an algorithm to "
-"sort them numerically then lexically. It means that anything can be used "
-"to version your project::"
+"This class makes any version string valid, and provides an algorithm to sort "
+"them numerically then lexically. It means that anything can be used to "
+"version your project::"
 msgstr ""
 
 #: ../pep-0386.txt:148
 msgid ""
-"The problem with this is that while it allows expressing any nesting "
-"level it doesn't allow giving special meaning to versions (pre and post-"
-"releases as well as development versions), as expressed in requisites 2, "
-"3 and 4."
+"The problem with this is that while it allows expressing any nesting level "
+"it doesn't allow giving special meaning to versions (pre and post-releases "
+"as well as development versions), as expressed in requisites 2, 3 and 4."
 msgstr ""
 
 #: ../pep-0386.txt:153
@@ -259,15 +256,15 @@ msgstr ""
 
 #: ../pep-0386.txt:199
 msgid ""
-"It adds pre-release versions, and some structure, but lacks a few "
-"semantic elements to make it usable, such as development releases or "
-"post-release tags, as expressed in requisites 3 and 4."
+"It adds pre-release versions, and some structure, but lacks a few semantic "
+"elements to make it usable, such as development releases or post-release "
+"tags, as expressed in requisites 3 and 4."
 msgstr ""
 
 #: ../pep-0386.txt:203
 msgid ""
-"Also, note that Distutils version classes have been present for years but"
-" are not really used in the community."
+"Also, note that Distutils version classes have been present for years but "
+"are not really used in the community."
 msgstr ""
 
 #: ../pep-0386.txt:208
@@ -276,10 +273,10 @@ msgstr ""
 
 #: ../pep-0386.txt:210
 msgid ""
-"Setuptools provides another version comparison tool [#setuptools-"
-"version]_ which does not enforce any rules for the version, but tries to "
-"provide a better algorithm to convert the strings to sortable keys, with "
-"a ``parse_version`` function."
+"Setuptools provides another version comparison tool [#setuptools-version]_ "
+"which does not enforce any rules for the version, but tries to provide a "
+"better algorithm to convert the strings to sortable keys, with a "
+"``parse_version`` function."
 msgstr ""
 
 #: ../pep-0386.txt:215
@@ -289,16 +286,15 @@ msgstr ""
 #: ../pep-0386.txt:247
 msgid ""
 "In other words, ``parse_version`` will return a tuple for each version "
-"string, that is compatible with ``StrictVersion`` but also accept "
-"arbitrary version and deal with them so they can be compared::"
+"string, that is compatible with ``StrictVersion`` but also accept arbitrary "
+"version and deal with them so they can be compared::"
 msgstr ""
 
 #: ../pep-0386.txt:259
 msgid ""
-"In this schema practicality takes priority over purity, but as a result "
-"it doesn't enforce any policy and leads to very complex semantics due to "
-"the lack of a clear standard. It just tries to adapt to widely used "
-"conventions."
+"In this schema practicality takes priority over purity, but as a result it "
+"doesn't enforce any policy and leads to very complex semantics due to the "
+"lack of a clear standard. It just tries to adapt to widely used conventions."
 msgstr ""
 
 #: ../pep-0386.txt:264
@@ -307,42 +303,42 @@ msgstr ""
 
 #: ../pep-0386.txt:266
 msgid ""
-"The major problem with the described version comparison tools is that "
-"they are too permissive and, at the same time, aren't capable of "
-"expressing some of the required semantics. Many of the versions on PyPI "
-"[#pypi]_ are obviously not useful versions, which makes it difficult for "
-"users to grok the versioning that a particular package was using and to "
-"provide tools on top of PyPI."
+"The major problem with the described version comparison tools is that they "
+"are too permissive and, at the same time, aren't capable of expressing some "
+"of the required semantics. Many of the versions on PyPI [#pypi]_ are "
+"obviously not useful versions, which makes it difficult for users to grok "
+"the versioning that a particular package was using and to provide tools on "
+"top of PyPI."
 msgstr ""
 
 #: ../pep-0386.txt:272
 msgid ""
-"Distutils classes are not really used in Python projects, but the "
-"Setuptools function is quite widespread because it's used by tools like "
-"`easy_install` [#ezinstall]_, `pip` [#pip]_ or `zc.buildout` "
-"[#zc.buildout]_ to install dependencies of a given project."
+"Distutils classes are not really used in Python projects, but the Setuptools "
+"function is quite widespread because it's used by tools like `easy_install` "
+"[#ezinstall]_, `pip` [#pip]_ or `zc.buildout` [#zc.buildout]_ to install "
+"dependencies of a given project."
 msgstr ""
 
 #: ../pep-0386.txt:277
 msgid ""
-"While Setuptools *does* provide a mechanism for comparing/sorting "
-"versions, it is much preferable if the versioning spec is such that a "
-"human can make a reasonable attempt at that sorting without having to run"
-" it against some code."
+"While Setuptools *does* provide a mechanism for comparing/sorting versions, "
+"it is much preferable if the versioning spec is such that a human can make a "
+"reasonable attempt at that sorting without having to run it against some "
+"code."
 msgstr ""
 
 #: ../pep-0386.txt:281
 msgid ""
-"Also there's a problem with the use of dates at the \"major\" version "
-"number (e.g. a version string \"20090421\") with RPMs: it means that any "
-"attempt to switch to a more typical \"major.minor...\" version scheme is "
-"problematic because it will always sort less than \"20090421\"."
+"Also there's a problem with the use of dates at the \"major\" version number "
+"(e.g. a version string \"20090421\") with RPMs: it means that any attempt to "
+"switch to a more typical \"major.minor...\" version scheme is problematic "
+"because it will always sort less than \"20090421\"."
 msgstr ""
 
 #: ../pep-0386.txt:286
 msgid ""
-"Last, the meaning of ``-`` is specific to Setuptools, while it is avoided"
-" in some packaging systems like the one used by Debian or Ubuntu."
+"Last, the meaning of ``-`` is specific to Setuptools, while it is avoided in "
+"some packaging systems like the one used by Debian or Ubuntu."
 msgstr ""
 
 #: ../pep-0386.txt:290
@@ -351,8 +347,8 @@ msgstr ""
 
 #: ../pep-0386.txt:292
 msgid ""
-"During Pycon, members of the Python, Ubuntu and Fedora community worked "
-"on a version standard that would be acceptable for everyone."
+"During Pycon, members of the Python, Ubuntu and Fedora community worked on a "
+"version standard that would be acceptable for everyone."
 msgstr ""
 
 #: ../pep-0386.txt:295
@@ -373,27 +369,26 @@ msgstr ""
 
 #: ../pep-0386.txt:333
 msgid ""
-"The trailing ``.dev123`` is for pre-releases. The ``.post123`` is for "
-"post-releases -- which apparently are used by a number of projects out "
-"there (e.g. Twisted [#twisted]_). For example, *after* a ``1.2.0`` "
-"release there might be a ``1.2.0-r678`` release. We used ``post`` instead"
-" of ``r`` because the ``r`` is ambiguous as to whether it indicates a "
-"pre- or post-release."
+"The trailing ``.dev123`` is for pre-releases. The ``.post123`` is for post-"
+"releases -- which apparently are used by a number of projects out there (e."
+"g. Twisted [#twisted]_). For example, *after* a ``1.2.0`` release there "
+"might be a ``1.2.0-r678`` release. We used ``post`` instead of ``r`` because "
+"the ``r`` is ambiguous as to whether it indicates a pre- or post-release."
 msgstr ""
 
 #: ../pep-0386.txt:339
 msgid ""
 "``.post456.dev34`` indicates a dev marker for a post release, that sorts "
-"before a ``.post456`` marker. This can be used to do development versions"
-" of post releases."
+"before a ``.post456`` marker. This can be used to do development versions of "
+"post releases."
 msgstr ""
 
 #: ../pep-0386.txt:343
 msgid ""
-"Pre-releases can use ``a`` for \"alpha\", ``b`` for \"beta\" and ``c`` "
-"for \"release candidate\". ``rc`` is an alternative notation for "
-"\"release candidate\" that is added to make the version scheme compatible"
-" with Python's own version scheme. ``rc`` sorts after ``c``::"
+"Pre-releases can use ``a`` for \"alpha\", ``b`` for \"beta\" and ``c`` for "
+"\"release candidate\". ``rc`` is an alternative notation for \"release "
+"candidate\" that is added to make the version scheme compatible with "
+"Python's own version scheme. ``rc`` sorts after ``c``::"
 msgstr ""
 
 #: ../pep-0386.txt:357
@@ -412,8 +407,8 @@ msgstr ""
 
 #: ../pep-0386.txt:365
 msgid ""
-"The `NormalizedVersion` class is used to hold a version and to compare it"
-" with others. It takes a string as an argument, that contains the "
+"The `NormalizedVersion` class is used to hold a version and to compare it "
+"with others. It takes a string as an argument, that contains the "
 "representation of the version::"
 msgstr ""
 
@@ -427,8 +422,8 @@ msgstr ""
 
 #: ../pep-0386.txt:384
 msgid ""
-"A class method called ``from_parts`` is available if you want to create "
-"an instance by providing the parts that composes the version."
+"A class method called ``from_parts`` is available if you want to create an "
+"instance by providing the parts that composes the version."
 msgstr ""
 
 #: ../pep-0386.txt:387
@@ -442,22 +437,22 @@ msgstr ""
 #: ../pep-0386.txt:405
 msgid ""
 "``suggest_normalized_version`` is a function that suggests a normalized "
-"version close to the given version string. If you have a version string "
-"that isn't normalized (i.e. ``NormalizedVersion`` doesn't like it) then "
-"you might be able to get an equivalent (or close) normalized version from"
-" this function."
+"version close to the given version string. If you have a version string that "
+"isn't normalized (i.e. ``NormalizedVersion`` doesn't like it) then you might "
+"be able to get an equivalent (or close) normalized version from this "
+"function."
 msgstr ""
 
 #: ../pep-0386.txt:410
 msgid ""
-"This does a number of simple normalizations to the given string, based on"
-" an observation of versions currently in use on PyPI."
+"This does a number of simple normalizations to the given string, based on an "
+"observation of versions currently in use on PyPI."
 msgstr ""
 
 #: ../pep-0386.txt:413
 msgid ""
-"Given a dump of those versions on January 6th 2010, the function has "
-"given those results out of the 8821 distributions PyPI had:"
+"Given a dump of those versions on January 6th 2010, the function has given "
+"those results out of the 8821 distributions PyPI had:"
 msgstr ""
 
 #: ../pep-0386.txt:416
@@ -475,10 +470,10 @@ msgstr ""
 #: ../pep-0386.txt:420
 #, python-format
 msgid ""
-"The 3.20% of projects that are incompatible with ``NormalizedVersion`` "
-"and cannot be transformed into a compatible form, are for most of them "
-"date-based version schemes, versions with custom markers, or dummy "
-"versions. Examples:"
+"The 3.20% of projects that are incompatible with ``NormalizedVersion`` and "
+"cannot be transformed into a compatible form, are for most of them date-"
+"based version schemes, versions with custom markers, or dummy versions. "
+"Examples:"
 msgstr ""
 
 #: ../pep-0386.txt:424
@@ -509,10 +504,10 @@ msgstr ""
 msgid ""
 "When a tool needs to work with versions, a strategy is to use "
 "``suggest_normalized_version`` on the versions string. If this function "
-"returns ``None``, it means that the provided version is not close enough "
-"to the standard scheme. If it returns a version that slightly differs "
-"from the original version, it's a suggested normalized version. Last, if "
-"it returns the same string, it means that the version matches the scheme."
+"returns ``None``, it means that the provided version is not close enough to "
+"the standard scheme. If it returns a version that slightly differs from the "
+"original version, it's a suggested normalized version. Last, if it returns "
+"the same string, it means that the version matches the scheme."
 msgstr ""
 
 #: ../pep-0386.txt:438
@@ -526,8 +521,8 @@ msgstr ""
 #: ../pep-0386.txt:470
 msgid ""
 "Distutils will deprecate its existing versions class in favor of "
-"``NormalizedVersion``. The ``verlib`` module presented in this PEP will "
-"be renamed to ``version`` and placed into the ``distutils`` package."
+"``NormalizedVersion``. The ``verlib`` module presented in this PEP will be "
+"renamed to ``version`` and placed into the ``distutils`` package."
 msgstr ""
 
 #: ../pep-0386.txt:475
@@ -544,8 +539,8 @@ msgstr ""
 
 #: ../pep-0386.txt:484
 msgid ""
-"http://peak.telecommunity.com/DevCenter/setuptools#specifying-your-"
-"project-s-version"
+"http://peak.telecommunity.com/DevCenter/setuptools#specifying-your-project-s-"
+"version"
 msgstr ""
 
 #: ../pep-0386.txt:487
@@ -589,4 +584,3 @@ msgstr ""
 #: ../pep-0386.txt:516
 msgid "This document has been placed in the public domain."
 msgstr ""
-

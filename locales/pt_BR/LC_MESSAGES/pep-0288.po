@@ -67,16 +67,16 @@ msgstr ""
 
 #: ../pep-0288.txt:15
 msgid ""
-"This PEP proposes to enhance generators by providing mechanisms for "
-"raising exceptions and sharing data with running generators."
+"This PEP proposes to enhance generators by providing mechanisms for raising "
+"exceptions and sharing data with running generators."
 msgstr ""
 
 #: ../pep-0288.txt:22
 msgid ""
 "This PEP is withdrawn.  The exception raising mechanism was extended and "
-"subsumed into :pep:`343`.  The attribute passing capability never built a"
-" following, did not have a clear implementation, and did not have a clean"
-" way for the running generator to access its own namespace."
+"subsumed into :pep:`343`.  The attribute passing capability never built a "
+"following, did not have a clear implementation, and did not have a clean way "
+"for the running generator to access its own namespace."
 msgstr ""
 
 #: ../pep-0288.txt:30
@@ -85,28 +85,27 @@ msgstr ""
 
 #: ../pep-0288.txt:32
 msgid ""
-"Currently, only class based iterators can provide attributes and "
-"exception handling.  However, class based iterators are harder to write, "
-"less compact, less readable, and slower.  A better solution is to enable "
-"these capabilities for generators."
+"Currently, only class based iterators can provide attributes and exception "
+"handling.  However, class based iterators are harder to write, less compact, "
+"less readable, and slower.  A better solution is to enable these "
+"capabilities for generators."
 msgstr ""
 
 #: ../pep-0288.txt:37
 msgid ""
-"Enabling attribute assignments allows data to be passed to and from "
-"running generators.  The approach of sharing data using attributes "
-"pervades Python.  Other approaches exist but are somewhat hackish in "
-"comparison."
+"Enabling attribute assignments allows data to be passed to and from running "
+"generators.  The approach of sharing data using attributes pervades Python.  "
+"Other approaches exist but are somewhat hackish in comparison."
 msgstr ""
 
 #: ../pep-0288.txt:42
 msgid ""
-"Another evolutionary step is to add a generator method to allow "
-"exceptions to be passed to a generator.  Currently, there is no clean "
-"method for triggering exceptions from outside the generator. Also, "
-"generator exception passing helps mitigate the try/finally prohibition "
-"for generators.  The need is especially acute for generators needing to "
-"flush buffers or close resources upon termination."
+"Another evolutionary step is to add a generator method to allow exceptions "
+"to be passed to a generator.  Currently, there is no clean method for "
+"triggering exceptions from outside the generator. Also, generator exception "
+"passing helps mitigate the try/finally prohibition for generators.  The need "
+"is especially acute for generators needing to flush buffers or close "
+"resources upon termination."
 msgstr ""
 
 #: ../pep-0288.txt:49
@@ -121,10 +120,10 @@ msgstr ""
 
 #: ../pep-0288.txt:57
 msgid ""
-"Essentially, the proposal is to emulate attribute writing for classes. "
-"The only wrinkle is that generators lack a way to refer to instances of "
-"themselves.  So, the proposal is to provide a function for discovering "
-"the reference.  For example::"
+"Essentially, the proposal is to emulate attribute writing for classes. The "
+"only wrinkle is that generators lack a way to refer to instances of "
+"themselves.  So, the proposal is to provide a function for discovering the "
+"reference.  For example::"
 msgstr ""
 
 #: ../pep-0288.txt:75
@@ -143,8 +142,8 @@ msgstr ""
 
 #: ../pep-0288.txt:82
 msgid ""
-"Writing lazy consumers with complex execution states (an arithmetic "
-"encoder output stream for example)."
+"Writing lazy consumers with complex execution states (an arithmetic encoder "
+"output stream for example)."
 msgstr ""
 
 #: ../pep-0288.txt:84
@@ -153,10 +152,10 @@ msgstr ""
 
 #: ../pep-0288.txt:86
 msgid ""
-"The control flow of 'yield' and 'next' is unchanged by this proposal.  "
-"The only change is that data can passed to and from the generator.  Most "
-"of the underlying machinery is already in place, only the access function"
-" needs to be added."
+"The control flow of 'yield' and 'next' is unchanged by this proposal.  The "
+"only change is that data can passed to and from the generator.  Most of the "
+"underlying machinery is already in place, only the access function needs to "
+"be added."
 msgstr ""
 
 #: ../pep-0288.txt:94
@@ -176,9 +175,9 @@ msgstr ""
 
 #: ../pep-0288.txt:118
 msgid ""
-"Generator exception passing also helps address an intrinsic limitation on"
-" generators, the prohibition against their using try/finally to trigger "
-"clean-up code (:pep:`255`)."
+"Generator exception passing also helps address an intrinsic limitation on "
+"generators, the prohibition against their using try/finally to trigger clean-"
+"up code (:pep:`255`)."
 msgstr ""
 
 #: ../pep-0288.txt:122
@@ -186,30 +185,29 @@ msgid ""
 "Note A: The name of the throw method was selected for several reasons.  "
 "Raise is a keyword and so cannot be used as a method name.  Unlike raise "
 "which immediately raises an exception from the current execution point, "
-"throw will first return to the generator and then raise the exception.  "
-"The word throw is suggestive of putting the exception in another "
-"location.  The word throw is already associated with exceptions in other "
-"languages."
+"throw will first return to the generator and then raise the exception.  The "
+"word throw is suggestive of putting the exception in another location.  The "
+"word throw is already associated with exceptions in other languages."
 msgstr ""
 
 #: ../pep-0288.txt:130
 msgid ""
 "Alternative method names were considered: ``resolve()``, ``signal()``, "
-"``genraise()``, ``raiseinto()``, and ``flush()``.  None of these fit as "
-"well as ``throw()``."
+"``genraise()``, ``raiseinto()``, and ``flush()``.  None of these fit as well "
+"as ``throw()``."
 msgstr ""
 
 #: ../pep-0288.txt:134
 msgid ""
-"Note B:  To keep the ``throw()`` syntax simple only the instance version "
-"of the raise syntax would be supported (no variants for \"``raise "
-"string``\" or \"``raise class, instance``\")."
+"Note B:  To keep the ``throw()`` syntax simple only the instance version of "
+"the raise syntax would be supported (no variants for \"``raise string``\" or "
+"\"``raise class, instance``\")."
 msgstr ""
 
 #: ../pep-0288.txt:138
 msgid ""
-"Calling ``g.throw(instance)`` would correspond to writing ``raise "
-"instance`` immediately after the most recent yield."
+"Calling ``g.throw(instance)`` would correspond to writing ``raise instance`` "
+"immediately after the most recent yield."
 msgstr ""
 
 #: ../pep-0288.txt:144
@@ -218,9 +216,9 @@ msgstr ""
 
 #: ../pep-0288.txt:146
 msgid ""
-"Dr. David Mertz's draft columns for Charming Python "
-"http://gnosis.cx/publish/programming/charming_python_b5.txt "
-"http://gnosis.cx/publish/programming/charming_python_b7.txt"
+"Dr. David Mertz's draft columns for Charming Python http://gnosis.cx/publish/"
+"programming/charming_python_b5.txt http://gnosis.cx/publish/programming/"
+"charming_python_b7.txt"
 msgstr ""
 
 #: ../pep-0288.txt:153
@@ -230,4 +228,3 @@ msgstr ""
 #: ../pep-0288.txt:155
 msgid "This document has been placed in the public domain."
 msgstr ""
-

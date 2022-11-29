@@ -72,8 +72,8 @@ msgstr ""
 #: ../pep-0433.txt:17
 msgid ""
 "Add a new optional *cloexec* parameter on functions creating file "
-"descriptors, add different ways to change default values of this "
-"parameter, and add four new functions:"
+"descriptors, add different ways to change default values of this parameter, "
+"and add four new functions:"
 msgstr ""
 
 #: ../pep-0433.txt:21
@@ -105,20 +105,20 @@ msgstr ""
 #: ../pep-0433.txt:33
 msgid ""
 "On UNIX, if the close-on-exec flag is set, the file descriptor is not "
-"inherited: it will be closed at the execution of child processes; "
-"otherwise the file descriptor is inherited by child processes."
+"inherited: it will be closed at the execution of child processes; otherwise "
+"the file descriptor is inherited by child processes."
 msgstr ""
 
 #: ../pep-0433.txt:37
 msgid ""
 "On Windows, if the close-on-exec flag is set, the file descriptor is not "
-"inherited; the file descriptor is inherited by child processes if the "
-"close-on-exec flag is cleared and if ``CreateProcess()`` is called with "
-"the *bInheritHandles* parameter set to ``TRUE`` (when "
-"``subprocess.Popen`` is created with ``close_fds=False`` for example). "
-"Windows does not have \"close-on-exec\" flag but an inheritance flag "
-"which is just the opposite value. For example, setting close-on-exec flag"
-" means clearing the ``HANDLE_FLAG_INHERIT`` flag of a handle."
+"inherited; the file descriptor is inherited by child processes if the close-"
+"on-exec flag is cleared and if ``CreateProcess()`` is called with the "
+"*bInheritHandles* parameter set to ``TRUE`` (when ``subprocess.Popen`` is "
+"created with ``close_fds=False`` for example). Windows does not have \"close-"
+"on-exec\" flag but an inheritance flag which is just the opposite value. For "
+"example, setting close-on-exec flag means clearing the "
+"``HANDLE_FLAG_INHERIT`` flag of a handle."
 msgstr ""
 
 #: ../pep-0433.txt:48
@@ -128,33 +128,32 @@ msgstr ""
 #: ../pep-0433.txt:50
 msgid ""
 "On UNIX, the subprocess module closes file descriptors greater than 2 by "
-"default since Python 3.2 [#subprocess_close]_. All file descriptors "
-"created by the parent process are automatically closed in the child "
-"process."
+"default since Python 3.2 [#subprocess_close]_. All file descriptors created "
+"by the parent process are automatically closed in the child process."
 msgstr ""
 
 #: ../pep-0433.txt:55
 msgid ""
 "``xmlrpc.server.SimpleXMLRPCServer`` sets the close-on-exec flag of the "
-"listening socket, the parent class ``socketserver.TCPServer`` does not "
-"set this flag."
+"listening socket, the parent class ``socketserver.TCPServer`` does not set "
+"this flag."
 msgstr ""
 
 #: ../pep-0433.txt:59
 msgid ""
-"There are other cases creating a subprocess or executing a new program "
-"where file descriptors are not closed: functions of the ``os.spawn*()`` "
-"and the ``os.exec*()`` families and third party modules calling "
-"``exec()`` or ``fork()`` + ``exec()``. In this case, file descriptors are"
-" shared between the parent and the child processes which is usually "
-"unexpected and causes various issues."
+"There are other cases creating a subprocess or executing a new program where "
+"file descriptors are not closed: functions of the ``os.spawn*()`` and the "
+"``os.exec*()`` families and third party modules calling ``exec()`` or "
+"``fork()`` + ``exec()``. In this case, file descriptors are shared between "
+"the parent and the child processes which is usually unexpected and causes "
+"various issues."
 msgstr ""
 
 #: ../pep-0433.txt:66
 msgid ""
 "This PEP proposes to continue the work started with the change in the "
-"subprocess in Python 3.2, to fix the issue in any code, and not just code"
-" using subprocess."
+"subprocess in Python 3.2, to fix the issue in any code, and not just code "
+"using subprocess."
 msgstr ""
 
 #: ../pep-0433.txt:72
@@ -163,24 +162,23 @@ msgstr ""
 
 #: ../pep-0433.txt:74
 msgid ""
-"Closing the file descriptor in the parent process does not close the "
-"related resource (file, socket, ...) because it is still open in the "
-"child process."
+"Closing the file descriptor in the parent process does not close the related "
+"resource (file, socket, ...) because it is still open in the child process."
 msgstr ""
 
 #: ../pep-0433.txt:78
 msgid ""
 "The listening socket of TCPServer is not closed on ``exec()``: the child "
-"process is able to get connection from new clients; if the parent closes "
-"the listening socket and create a new listening socket on the same "
-"address, it would get an \"address already is used\" error."
+"process is able to get connection from new clients; if the parent closes the "
+"listening socket and create a new listening socket on the same address, it "
+"would get an \"address already is used\" error."
 msgstr ""
 
 #: ../pep-0433.txt:83
 msgid ""
-"Not closing file descriptors can lead to resource exhaustion: even if the"
-" parent closes all files, creating a new file descriptor may fail with "
-"\"too many files\" because files are still open in the child process."
+"Not closing file descriptors can lead to resource exhaustion: even if the "
+"parent closes all files, creating a new file descriptor may fail with \"too "
+"many files\" because files are still open in the child process."
 msgstr ""
 
 #: ../pep-0433.txt:87
@@ -189,8 +187,8 @@ msgstr ""
 
 #: ../pep-0433.txt:89
 msgid ""
-"`Issue #2320: Race condition in subprocess using stdin "
-"<http://bugs.python.org/issue2320>`_ (2008)"
+"`Issue #2320: Race condition in subprocess using stdin <http://bugs.python."
+"org/issue2320>`_ (2008)"
 msgstr ""
 
 #: ../pep-0433.txt:91
@@ -201,14 +199,14 @@ msgstr ""
 
 #: ../pep-0433.txt:93
 msgid ""
-"`Issue #7213: subprocess leaks open file descriptors between Popen "
-"instances causing hangs <http://bugs.python.org/issue7213>`_ (2009)"
+"`Issue #7213: subprocess leaks open file descriptors between Popen instances "
+"causing hangs <http://bugs.python.org/issue7213>`_ (2009)"
 msgstr ""
 
 #: ../pep-0433.txt:95
 msgid ""
-"`Issue #12786: subprocess wait() hangs when stdin is closed "
-"<http://bugs.python.org/issue12786>`_ (2011)"
+"`Issue #12786: subprocess wait() hangs when stdin is closed <http://bugs."
+"python.org/issue12786>`_ (2011)"
 msgstr ""
 
 #: ../pep-0433.txt:100
@@ -218,16 +216,17 @@ msgstr ""
 #: ../pep-0433.txt:102
 msgid ""
 "Leaking file descriptors is a major security vulnerability. An untrusted "
-"child process can read sensitive data like passwords and take control of "
-"the parent process though leaked file descriptors. It is for example a "
-"known vulnerability to escape from a chroot."
+"child process can read sensitive data like passwords and take control of the "
+"parent process though leaked file descriptors. It is for example a known "
+"vulnerability to escape from a chroot."
 msgstr ""
 
 #: ../pep-0433.txt:107
 msgid ""
-"See also the CERT recommendation: `FIO42-C. Ensure files are properly "
-"closed when they are no longer needed "
-"<https://www.securecoding.cert.org/confluence/display/seccode/FIO42-C.+Ensure+files+are+properly+closed+when+they+are+no+longer+needed>`_."
+"See also the CERT recommendation: `FIO42-C. Ensure files are properly closed "
+"when they are no longer needed <https://www.securecoding.cert.org/confluence/"
+"display/seccode/FIO42-C."
+"+Ensure+files+are+properly+closed+when+they+are+no+longer+needed>`_."
 msgstr ""
 
 #: ../pep-0433.txt:112
@@ -236,34 +235,32 @@ msgstr ""
 
 #: ../pep-0433.txt:115
 msgid ""
-"`OpenSSH Security Advisory: portable-keysign-rand-helper.adv "
-"<http://www.openssh.com/txt/portable-keysign-rand-helper.adv>`_ (April "
-"2011)"
+"`OpenSSH Security Advisory: portable-keysign-rand-helper.adv <http://www."
+"openssh.com/txt/portable-keysign-rand-helper.adv>`_ (April 2011)"
 msgstr ""
 
 #: ../pep-0433.txt:118
 msgid ""
-"`CWE-403: Exposure of File Descriptor to Unintended Control Sphere "
-"<http://cwe.mitre.org/data/definitions/403.html>`_ (2008)"
+"`CWE-403: Exposure of File Descriptor to Unintended Control Sphere <http://"
+"cwe.mitre.org/data/definitions/403.html>`_ (2008)"
 msgstr ""
 
 #: ../pep-0433.txt:120
 msgid ""
-"`Hijacking Apache https by mod_php "
-"<http://www.securityfocus.com/archive/1/348368>`_ (Dec 2003)"
+"`Hijacking Apache https by mod_php <http://www.securityfocus.com/"
+"archive/1/348368>`_ (Dec 2003)"
 msgstr ""
 
 #: ../pep-0433.txt:123
 msgid ""
 "Apache: `Apr should set FD_CLOEXEC if APR_FOPEN_NOCLEANUP is not set "
-"<https://issues.apache.org/bugzilla/show_bug.cgi?id=46425>`_ (fixed in "
-"2009)"
+"<https://issues.apache.org/bugzilla/show_bug.cgi?id=46425>`_ (fixed in 2009)"
 msgstr ""
 
 #: ../pep-0433.txt:126
 msgid ""
-"PHP: `system() (and similar) don't cleanup opened handles of Apache "
-"<https://bugs.php.net/bug.php?id=38915>`_ (not fixed in January 2013)"
+"PHP: `system() (and similar) don't cleanup opened handles of Apache <https://"
+"bugs.php.net/bug.php?id=38915>`_ (not fixed in January 2013)"
 msgstr ""
 
 #: ../pep-0433.txt:132
@@ -275,9 +272,9 @@ msgid ""
 "Using ``fcntl()`` to set the close-on-exec flag is not safe in a "
 "multithreaded application. If a thread calls ``fork()`` and ``exec()`` "
 "between the creation of the file descriptor and the call to ``fcntl(fd, "
-"F_SETFD, new_flags)``: the file descriptor will be inherited by the child"
-" process. Modern operating systems offer functions to set the flag during"
-" the creation of the file descriptor, which avoids the race condition."
+"F_SETFD, new_flags)``: the file descriptor will be inherited by the child "
+"process. Modern operating systems offer functions to set the flag during the "
+"creation of the file descriptor, which avoids the race condition."
 msgstr ""
 
 #: ../pep-0433.txt:144
@@ -286,28 +283,28 @@ msgstr ""
 
 #: ../pep-0433.txt:146
 msgid ""
-"Python 3.2 added ``socket.SOCK_CLOEXEC`` flag, Python 3.3 added "
-"``os.O_CLOEXEC`` flag and ``os.pipe2()`` function. It is already possible"
-" to set atomically close-on-exec flag in Python 3.3 when opening a file "
-"and creating a pipe or socket."
+"Python 3.2 added ``socket.SOCK_CLOEXEC`` flag, Python 3.3 added ``os."
+"O_CLOEXEC`` flag and ``os.pipe2()`` function. It is already possible to set "
+"atomically close-on-exec flag in Python 3.3 when opening a file and creating "
+"a pipe or socket."
 msgstr ""
 
 #: ../pep-0433.txt:151
 msgid ""
-"The problem is that these flags and functions are not portable: only "
-"recent versions of operating systems support them. ``O_CLOEXEC`` and "
+"The problem is that these flags and functions are not portable: only recent "
+"versions of operating systems support them. ``O_CLOEXEC`` and "
 "``SOCK_CLOEXEC`` flags are ignored by old Linux versions and so "
-"``FD_CLOEXEC`` flag must be checked using ``fcntl(fd, F_GETFD)``.  If the"
-" kernel ignores ``O_CLOEXEC`` or ``SOCK_CLOEXEC`` flag, a call to "
-"``fcntl(fd, F_SETFD, flags)`` is required to set close-on-exec flag."
+"``FD_CLOEXEC`` flag must be checked using ``fcntl(fd, F_GETFD)``.  If the "
+"kernel ignores ``O_CLOEXEC`` or ``SOCK_CLOEXEC`` flag, a call to ``fcntl(fd, "
+"F_SETFD, flags)`` is required to set close-on-exec flag."
 msgstr ""
 
 #: ../pep-0433.txt:159
 msgid ""
-"OpenBSD older 5.2 does not close the file descriptor with close-on-exec "
-"flag set if ``fork()`` is used before ``exec()``, but it works correctly "
-"if ``exec()`` is called without ``fork()``. Try `openbsd_bug.py "
-"<http://hg.python.org/peps/file/tip/pep-0433/openbsd_bug.py>`_."
+"OpenBSD older 5.2 does not close the file descriptor with close-on-exec flag "
+"set if ``fork()`` is used before ``exec()``, but it works correctly if "
+"``exec()`` is called without ``fork()``. Try `openbsd_bug.py <http://hg."
+"python.org/peps/file/tip/pep-0433/openbsd_bug.py>`_."
 msgstr ""
 
 #: ../pep-0433.txt:166
@@ -323,11 +320,11 @@ msgstr ""
 
 #: ../pep-0433.txt:172
 msgid ""
-"This PEP only change the close-on-exec flag of file descriptors created "
-"by the Python standard library, or by modules using the standard library."
-"  Third party modules not using the standard library should be modified "
-"to conform to this PEP. The new ``os.set_cloexec()`` function can be used"
-" for example."
+"This PEP only change the close-on-exec flag of file descriptors created by "
+"the Python standard library, or by modules using the standard library.  "
+"Third party modules not using the standard library should be modified to "
+"conform to this PEP. The new ``os.set_cloexec()`` function can be used for "
+"example."
 msgstr ""
 
 #: ../pep-0433.txt:179
@@ -364,8 +361,8 @@ msgstr ""
 
 #: ../pep-0433.txt:198
 msgid ""
-"``sys.getdefaultcloexec() -> bool``: get the current default value of the"
-" *cloexec* parameter"
+"``sys.getdefaultcloexec() -> bool``: get the current default value of the "
+"*cloexec* parameter"
 msgstr ""
 
 #: ../pep-0433.txt:200
@@ -452,8 +449,7 @@ msgstr ""
 
 #: ../pep-0433.txt:224
 msgid ""
-"The default value of the *cloexec* parameter is "
-"``sys.getdefaultcloexec()``."
+"The default value of the *cloexec* parameter is ``sys.getdefaultcloexec()``."
 msgstr ""
 
 #: ../pep-0433.txt:227
@@ -470,17 +466,16 @@ msgstr ""
 
 #: ../pep-0433.txt:233
 msgid ""
-"All functions creating file descriptors in the standard library must "
-"respect the default value of the *cloexec* parameter: "
-"``sys.getdefaultcloexec()``."
+"All functions creating file descriptors in the standard library must respect "
+"the default value of the *cloexec* parameter: ``sys.getdefaultcloexec()``."
 msgstr ""
 
 #: ../pep-0433.txt:237
 msgid ""
 "File descriptors 0 (stdin), 1 (stdout) and 2 (stderr) are expected to be "
-"inherited, but Python does not handle them differently. When "
-"``os.dup2()`` is used to replace standard streams, ``cloexec=False`` must"
-" be specified explicitly."
+"inherited, but Python does not handle them differently. When ``os.dup2()`` "
+"is used to replace standard streams, ``cloexec=False`` must be specified "
+"explicitly."
 msgstr ""
 
 #: ../pep-0433.txt:242
@@ -489,15 +484,15 @@ msgstr ""
 
 #: ../pep-0433.txt:244
 msgid ""
-"It is not more possible to know if the close-on-exec flag will be set or "
-"not on a newly created file descriptor just by reading the source code."
+"It is not more possible to know if the close-on-exec flag will be set or not "
+"on a newly created file descriptor just by reading the source code."
 msgstr ""
 
 #: ../pep-0433.txt:247
 msgid ""
 "If the inheritance of a file descriptor matters, the *cloexec* parameter "
-"must now be specified explicitly, or the library or the application will "
-"not work depending on the default value of the *cloexec* parameter."
+"must now be specified explicitly, or the library or the application will not "
+"work depending on the default value of the *cloexec* parameter."
 msgstr ""
 
 #: ../pep-0433.txt:254
@@ -511,18 +506,18 @@ msgstr ""
 #: ../pep-0433.txt:259
 msgid ""
 "Add a new optional parameter *cloexec* on functions creating file "
-"descriptors. The default value of the *cloexec* parameter is ``False``, "
-"and this default cannot be changed. File descriptor inheritance enabled "
-"by default is also the default on POSIX and on Windows. This alternative "
-"is the most conservative option."
+"descriptors. The default value of the *cloexec* parameter is ``False``, and "
+"this default cannot be changed. File descriptor inheritance enabled by "
+"default is also the default on POSIX and on Windows. This alternative is the "
+"most conservative option."
 msgstr ""
 
 #: ../pep-0433.txt:265
 msgid ""
 "This option does not solve issues listed in the `Rationale`_ section, it "
-"only provides a helper to fix them. All functions creating file "
-"descriptors have to be modified to set *cloexec=True* in each module used"
-" by an application to fix all these issues."
+"only provides a helper to fix them. All functions creating file descriptors "
+"have to be modified to set *cloexec=True* in each module used by an "
+"application to fix all these issues."
 msgstr ""
 
 #: ../pep-0433.txt:272
@@ -531,9 +526,9 @@ msgstr ""
 
 #: ../pep-0433.txt:274
 msgid ""
-"This alternative is based on the proposal: the only difference is that "
-"``sys.setdefaultcloexec()`` does not take any argument, it can only be "
-"used to set the default value of the *cloexec* parameter to ``True``."
+"This alternative is based on the proposal: the only difference is that ``sys."
+"setdefaultcloexec()`` does not take any argument, it can only be used to set "
+"the default value of the *cloexec* parameter to ``True``."
 msgstr ""
 
 #: ../pep-0433.txt:280
@@ -542,15 +537,14 @@ msgstr ""
 
 #: ../pep-0433.txt:282
 msgid ""
-"This alternative is based on the proposal: the only difference is that "
-"the default value of the *cloexec* parameter is ``True`` (instead of "
-"``False``)."
+"This alternative is based on the proposal: the only difference is that the "
+"default value of the *cloexec* parameter is ``True`` (instead of ``False``)."
 msgstr ""
 
 #: ../pep-0433.txt:286
 msgid ""
-"If a file must be inherited by child processes, ``cloexec=False`` "
-"parameter can be used."
+"If a file must be inherited by child processes, ``cloexec=False`` parameter "
+"can be used."
 msgstr ""
 
 #: ../pep-0433.txt:289
@@ -559,10 +553,9 @@ msgstr ""
 
 #: ../pep-0433.txt:291
 msgid ""
-"There are far more programs that are bitten by FD inheritance upon exec "
-"(see `Inherited file descriptors issues`_ and `Security`_) than programs "
-"relying on it (see `Applications using inheritance of file "
-"descriptors`_)."
+"There are far more programs that are bitten by FD inheritance upon exec (see "
+"`Inherited file descriptors issues`_ and `Security`_) than programs relying "
+"on it (see `Applications using inheritance of file descriptors`_)."
 msgstr ""
 
 #: ../pep-0433.txt:296
@@ -571,18 +564,17 @@ msgstr ""
 
 #: ../pep-0433.txt:298
 msgid ""
-"It violates the principle of least surprise.  Developers using the os "
-"module may expect that Python respects the POSIX standard and so that "
-"close-on-exec flag is not set by default."
+"It violates the principle of least surprise.  Developers using the os module "
+"may expect that Python respects the POSIX standard and so that close-on-exec "
+"flag is not set by default."
 msgstr ""
 
 #: ../pep-0433.txt:301
 msgid ""
-"The os module is written as a thin wrapper to system calls (to functions "
-"of the C standard library). If atomic flags to set close-on-exec flag are"
-" not supported (see `Appendix: Operating system support`_), a single "
-"Python function call may call 2 or 3 system calls (see `Performances`_ "
-"section)."
+"The os module is written as a thin wrapper to system calls (to functions of "
+"the C standard library). If atomic flags to set close-on-exec flag are not "
+"supported (see `Appendix: Operating system support`_), a single Python "
+"function call may call 2 or 3 system calls (see `Performances`_ section)."
 msgstr ""
 
 #: ../pep-0433.txt:306
@@ -592,16 +584,16 @@ msgstr ""
 #: ../pep-0433.txt:309
 msgid ""
 "Backward compatibility: only a few programs rely on inheritance of file "
-"descriptors, and they only pass a few file descriptors, usually just one."
-"  These programs will fail immediately with ``EBADF`` error, and it will "
-"be simple to fix them: add ``cloexec=False`` parameter or use "
-"``os.set_cloexec(fd, False)``."
+"descriptors, and they only pass a few file descriptors, usually just one.  "
+"These programs will fail immediately with ``EBADF`` error, and it will be "
+"simple to fix them: add ``cloexec=False`` parameter or use ``os."
+"set_cloexec(fd, False)``."
 msgstr ""
 
 #: ../pep-0433.txt:315
 msgid ""
-"The ``subprocess`` module will be changed anyway to clear close-on-exec "
-"flag on file descriptors listed in the ``pass_fds`` parameter of Popen "
+"The ``subprocess`` module will be changed anyway to clear close-on-exec flag "
+"on file descriptors listed in the ``pass_fds`` parameter of Popen "
 "constructor. So it possible that these programs will not need any fix if "
 "they use the ``subprocess`` module."
 msgstr ""
@@ -613,9 +605,9 @@ msgstr ""
 #: ../pep-0433.txt:324
 msgid ""
 "This PEP does not fix issues with applications using ``fork()`` without "
-"``exec()``. Python needs a generic process to register callbacks which "
-"would be called after a fork, see `#16500: Add an atfork module`_.  Such "
-"registry could be used to close file descriptors just after a ``fork()``."
+"``exec()``. Python needs a generic process to register callbacks which would "
+"be called after a fork, see `#16500: Add an atfork module`_.  Such registry "
+"could be used to close file descriptors just after a ``fork()``."
 msgstr ""
 
 #: ../pep-0433.txt:330
@@ -630,27 +622,27 @@ msgstr ""
 
 #: ../pep-0433.txt:334
 msgid ""
-"This alternative does not solve the problem for programs using ``exec()``"
-" without ``fork()``."
+"This alternative does not solve the problem for programs using ``exec()`` "
+"without ``fork()``."
 msgstr ""
 
 #: ../pep-0433.txt:336
 msgid ""
-"A third party module may call directly the C function ``fork()`` which "
-"will not call \"atfork\" callbacks."
+"A third party module may call directly the C function ``fork()`` which will "
+"not call \"atfork\" callbacks."
 msgstr ""
 
 #: ../pep-0433.txt:338
 msgid ""
 "All functions creating file descriptors must be changed to register a "
-"callback and then unregister their callback when the file is closed. Or a"
-" list of *all* open file descriptors must be maintained."
+"callback and then unregister their callback when the file is closed. Or a "
+"list of *all* open file descriptors must be maintained."
 msgstr ""
 
 #: ../pep-0433.txt:342
 msgid ""
-"The operating system is a better place than Python to close automatically"
-" file descriptors. For example, it is not easy to avoid a race condition "
+"The operating system is a better place than Python to close automatically "
+"file descriptors. For example, it is not easy to avoid a race condition "
 "between closing the file and unregistering the callback closing the file."
 msgstr ""
 
@@ -664,16 +656,16 @@ msgstr ""
 
 #: ../pep-0433.txt:353
 msgid ""
-"This alternative only solves the problem for ``open()``. socket.socket() "
-"and os.pipe() do not have a ``mode`` parameter for example."
+"This alternative only solves the problem for ``open()``. socket.socket() and "
+"os.pipe() do not have a ``mode`` parameter for example."
 msgstr ""
 
 #: ../pep-0433.txt:357
 msgid ""
 "Since its version 2.7, the GNU libc supports ``\"e\"`` flag for "
 "``fopen()``.  It uses ``O_CLOEXEC`` if available, or use ``fcntl(fd, "
-"F_SETFD, FD_CLOEXEC)``.  With Visual Studio, fopen() accepts a \"N\" flag"
-" which uses ``O_NOINHERIT``."
+"F_SETFD, FD_CLOEXEC)``.  With Visual Studio, fopen() accepts a \"N\" flag "
+"which uses ``O_NOINHERIT``."
 msgstr ""
 
 #: ../pep-0433.txt:364
@@ -698,43 +690,43 @@ msgstr ""
 
 #: ../pep-0433.txt:376
 msgid ""
-"Most developers don't know that file descriptors are inherited by "
-"default. Most programs do not rely on inheritance of file descriptors. "
-"For example, ``subprocess.Popen`` was changed in Python 3.2 to close all "
-"file descriptors greater than 2 in the child process by default. No user "
-"complained about this behavior change yet."
+"Most developers don't know that file descriptors are inherited by default. "
+"Most programs do not rely on inheritance of file descriptors. For example, "
+"``subprocess.Popen`` was changed in Python 3.2 to close all file descriptors "
+"greater than 2 in the child process by default. No user complained about "
+"this behavior change yet."
 msgstr ""
 
 #: ../pep-0433.txt:382
 msgid ""
-"Network servers using fork may want to pass the client socket to the "
-"child process. For example, on UNIX a CGI server pass the socket client "
-"through file descriptors 0 (stdin) and 1 (stdout) using ``dup2()``."
+"Network servers using fork may want to pass the client socket to the child "
+"process. For example, on UNIX a CGI server pass the socket client through "
+"file descriptors 0 (stdin) and 1 (stdout) using ``dup2()``."
 msgstr ""
 
 #: ../pep-0433.txt:387
 msgid ""
-"To access a restricted resource like creating a socket listening on a TCP"
-" port lower than 1024 or reading a file containing sensitive data like "
+"To access a restricted resource like creating a socket listening on a TCP "
+"port lower than 1024 or reading a file containing sensitive data like "
 "passwords, a common practice is: start as the root user, create a file "
-"descriptor, create a child process, drop privileges (ex: change the "
-"current user), pass the file descriptor to the child process and exit the"
-" parent process."
+"descriptor, create a child process, drop privileges (ex: change the current "
+"user), pass the file descriptor to the child process and exit the parent "
+"process."
 msgstr ""
 
 #: ../pep-0433.txt:394
 msgid ""
-"Security is very important in such use case: leaking another file "
-"descriptor would be a critical security vulnerability (see `Security`_). "
-"The root process may not exit but monitors the child process instead, and"
-" restarts a new child process and pass the same file descriptor if the "
-"previous child process crashed."
+"Security is very important in such use case: leaking another file descriptor "
+"would be a critical security vulnerability (see `Security`_). The root "
+"process may not exit but monitors the child process instead, and restarts a "
+"new child process and pass the same file descriptor if the previous child "
+"process crashed."
 msgstr ""
 
 #: ../pep-0433.txt:400
 msgid ""
-"Example of programs taking file descriptors from the parent process using"
-" a command line option:"
+"Example of programs taking file descriptors from the parent process using a "
+"command line option:"
 msgstr ""
 
 #: ../pep-0433.txt:403
@@ -759,8 +751,8 @@ msgstr ""
 
 #: ../pep-0433.txt:409
 msgid ""
-"On Linux, it is possible to use ``\"/dev/fd/<fd>\"`` filename to pass a "
-"file descriptor to a program expecting a filename."
+"On Linux, it is possible to use ``\"/dev/fd/<fd>\"`` filename to pass a file "
+"descriptor to a program expecting a filename."
 msgstr ""
 
 #: ../pep-0433.txt:414
@@ -780,9 +772,9 @@ msgstr ""
 
 #: ../pep-0433.txt:421
 msgid ""
-"``O_CLOEXEC``: one additional system call, but only at the creation of "
-"the first file descriptor, to check if the flag is supported. If the flag"
-" is not supported, Python has to fallback to the next method."
+"``O_CLOEXEC``: one additional system call, but only at the creation of the "
+"first file descriptor, to check if the flag is supported. If the flag is not "
+"supported, Python has to fallback to the next method."
 msgstr ""
 
 #: ../pep-0433.txt:424
@@ -798,9 +790,8 @@ msgstr ""
 #: ../pep-0433.txt:429
 msgid ""
 "On Linux, setting the close-on-flag has a low overhead on performances. "
-"Results of `bench_cloexec.py "
-"<http://hg.python.org/peps/file/tip/pep-0433/bench_cloexec.py>`_ on Linux"
-" 3.6:"
+"Results of `bench_cloexec.py <http://hg.python.org/peps/file/tip/pep-0433/"
+"bench_cloexec.py>`_ on Linux 3.6:"
 msgstr ""
 
 #: ../pep-0433.txt:434
@@ -844,22 +835,21 @@ msgstr ""
 
 #: ../pep-0433.txt:469
 msgid ""
-"Set or clear the close-on-exec flag on a file descriptor. The flag is set"
-" after the creation of the file descriptor and so it is not atomic."
+"Set or clear the close-on-exec flag on a file descriptor. The flag is set "
+"after the creation of the file descriptor and so it is not atomic."
 msgstr ""
 
 #: ../pep-0433.txt:509
 msgid ""
-"ioctl is preferred over fcntl because it requires only one syscall, "
-"instead of two syscalls for fcntl."
+"ioctl is preferred over fcntl because it requires only one syscall, instead "
+"of two syscalls for fcntl."
 msgstr ""
 
 #: ../pep-0433.txt:513
 msgid ""
-"``fcntl(fd, F_SETFD, flags)`` only supports one flag (``FD_CLOEXEC``), so"
-" it would be possible to avoid ``fcntl(fd, F_GETFD)``. But it may drop "
-"other flags in the future, and so it is safer to keep the two functions "
-"calls."
+"``fcntl(fd, F_SETFD, flags)`` only supports one flag (``FD_CLOEXEC``), so it "
+"would be possible to avoid ``fcntl(fd, F_GETFD)``. But it may drop other "
+"flags in the future, and so it is safer to keep the two functions calls."
 msgstr ""
 
 #: ../pep-0433.txt:519
@@ -922,9 +912,8 @@ msgstr ""
 
 #: ../pep-0433.txt:546
 msgid ""
-"Windows: ``CreatePipe()`` with "
-"``SECURITY_ATTRIBUTES.bInheritHandle=TRUE``, or ``_pipe()`` with "
-"``O_NOINHERIT`` flag [atomic]"
+"Windows: ``CreatePipe()`` with ``SECURITY_ATTRIBUTES.bInheritHandle=TRUE``, "
+"or ``_pipe()`` with ``O_NOINHERIT`` flag [atomic]"
 msgstr ""
 
 #: ../pep-0433.txt:549
@@ -940,7 +929,8 @@ msgid "socket.socket()"
 msgstr ""
 
 #: ../pep-0433.txt:555
-msgid "Windows: ``WSASocket()`` with ``WSA_FLAG_NO_HANDLE_INHERIT`` flag [atomic]"
+msgid ""
+"Windows: ``WSASocket()`` with ``WSA_FLAG_NO_HANDLE_INHERIT`` flag [atomic]"
 msgstr ""
 
 #: ../pep-0433.txt:557
@@ -995,8 +985,7 @@ msgstr ""
 
 #: ../pep-0433.txt:586
 msgid ""
-"Windows has an ``O_NOINHERIT`` flag: \"Do not inherit in child "
-"processes\"."
+"Windows has an ``O_NOINHERIT`` flag: \"Do not inherit in child processes\"."
 msgstr ""
 
 #: ../pep-0433.txt:589
@@ -1012,9 +1001,9 @@ msgstr ""
 #: ../pep-0433.txt:594
 msgid ""
 "``CreateProcess()`` has an ``bInheritHandles`` parameter: if it is "
-"``FALSE``, the handles are not inherited. If it is ``TRUE``, handles with"
-" ``HANDLE_FLAG_INHERIT`` flag set are inherited. ``subprocess.Popen`` "
-"uses ``close_fds`` option to define ``bInheritHandles``."
+"``FALSE``, the handles are not inherited. If it is ``TRUE``, handles with "
+"``HANDLE_FLAG_INHERIT`` flag set are inherited. ``subprocess.Popen`` uses "
+"``close_fds`` option to define ``bInheritHandles``."
 msgstr ""
 
 #: ../pep-0433.txt:602
@@ -1043,8 +1032,8 @@ msgstr ""
 
 #: ../pep-0433.txt:617
 msgid ""
-"``flags = fcntl(fd, F_GETFD); fcntl(fd, F_SETFD, flags | FD_CLOEXEC)``: "
-"set the close-on-exec flag"
+"``flags = fcntl(fd, F_GETFD); fcntl(fd, F_SETFD, flags | FD_CLOEXEC)``: set "
+"the close-on-exec flag"
 msgstr ""
 
 #: ../pep-0433.txt:619
@@ -1076,8 +1065,8 @@ msgstr ""
 
 #: ../pep-0433.txt:634
 msgid ""
-"``SOCK_CLOEXEC`` flag for ``socket()`` and ``socketpair()``, available on"
-" Linux 2.6.27, OpenBSD 5.2, NetBSD 6.0."
+"``SOCK_CLOEXEC`` flag for ``socket()`` and ``socketpair()``, available on "
+"Linux 2.6.27, OpenBSD 5.2, NetBSD 6.0."
 msgstr ""
 
 #: ../pep-0433.txt:636
@@ -1088,35 +1077,33 @@ msgstr ""
 
 #: ../pep-0433.txt:638
 msgid ""
-"``fcntl()``: ``F_DUPFD_CLOEXEC`` flag, available on Linux 2.6.24, OpenBSD"
-" 5.0, FreeBSD 9.1, NetBSD 6.0, Solaris 11. This flag is part of "
-"POSIX.1-2008."
+"``fcntl()``: ``F_DUPFD_CLOEXEC`` flag, available on Linux 2.6.24, OpenBSD "
+"5.0, FreeBSD 9.1, NetBSD 6.0, Solaris 11. This flag is part of POSIX.1-2008."
 msgstr ""
 
 #: ../pep-0433.txt:641
 msgid ""
-"``fcntl()``: ``F_DUP2FD_CLOEXEC`` flag, available on FreeBSD 9.1 and "
-"Solaris 11."
+"``fcntl()``: ``F_DUP2FD_CLOEXEC`` flag, available on FreeBSD 9.1 and Solaris "
+"11."
 msgstr ""
 
 #: ../pep-0433.txt:643
 msgid ""
-"``recvmsg()``: ``MSG_CMSG_CLOEXEC``, available on Linux 2.6.23, NetBSD "
-"6.0."
+"``recvmsg()``: ``MSG_CMSG_CLOEXEC``, available on Linux 2.6.23, NetBSD 6.0."
 msgstr ""
 
 #: ../pep-0433.txt:646
 msgid ""
-"On Linux older than 2.6.23, ``O_CLOEXEC`` flag is simply ignored. So we "
-"have to check that the flag is supported by calling ``fcntl()``. If it "
-"does not work, we have to set the flag using ``ioctl()`` or ``fcntl()``."
+"On Linux older than 2.6.23, ``O_CLOEXEC`` flag is simply ignored. So we have "
+"to check that the flag is supported by calling ``fcntl()``. If it does not "
+"work, we have to set the flag using ``ioctl()`` or ``fcntl()``."
 msgstr ""
 
 #: ../pep-0433.txt:651
 msgid ""
 "On Linux older than 2.6.27, if the ``SOCK_CLOEXEC`` flag is set in the "
-"socket type, ``socket()`` or ``socketpair()`` fail and ``errno`` is set "
-"to ``EINVAL``."
+"socket type, ``socket()`` or ``socketpair()`` fail and ``errno`` is set to "
+"``EINVAL``."
 msgstr ""
 
 #: ../pep-0433.txt:655
@@ -1143,8 +1130,8 @@ msgstr ""
 
 #: ../pep-0433.txt:664
 msgid ""
-"If ``accept4()`` is called on Linux older than 2.6.28, ``accept4()`` "
-"returns ``-1`` (fail) and ``errno`` is set to ``ENOSYS``."
+"If ``accept4()`` is called on Linux older than 2.6.28, ``accept4()`` returns "
+"``-1`` (fail) and ``errno`` is set to ``ENOSYS``."
 msgstr ""
 
 #: ../pep-0433.txt:669
@@ -1157,14 +1144,14 @@ msgstr ""
 
 #: ../pep-0433.txt:673
 msgid ""
-"`Secure File Descriptor Handling "
-"<http://udrepper.livejournal.com/20407.html>`_ (Ulrich Drepper, 2008)"
+"`Secure File Descriptor Handling <http://udrepper.livejournal.com/20407."
+"html>`_ (Ulrich Drepper, 2008)"
 msgstr ""
 
 #: ../pep-0433.txt:676
 msgid ""
-"`win32_support.py of the Tornado project <https://bitbucket.org/pvl"
-"/gaeseries-tornado/src/c2671cea1842/tornado/win32_support.py>`_: emulate "
+"`win32_support.py of the Tornado project <https://bitbucket.org/pvl/"
+"gaeseries-tornado/src/c2671cea1842/tornado/win32_support.py>`_: emulate "
 "fcntl(fd, F_SETFD, FD_CLOEXEC) using ``SetHandleInformation(fd, "
 "HANDLE_FLAG_INHERIT, 1)``"
 msgstr ""
@@ -1179,20 +1166,20 @@ msgstr ""
 
 #: ../pep-0433.txt:685
 msgid ""
-"`#10115: Support accept4() for atomic setting of flags at socket creation"
-" <http://bugs.python.org/issue10115>`_"
+"`#10115: Support accept4() for atomic setting of flags at socket creation "
+"<http://bugs.python.org/issue10115>`_"
 msgstr ""
 
 #: ../pep-0433.txt:687
 msgid ""
-"`#12105: open() does not able to set flags, such as O_CLOEXEC "
-"<http://bugs.python.org/issue12105>`_"
+"`#12105: open() does not able to set flags, such as O_CLOEXEC <http://bugs."
+"python.org/issue12105>`_"
 msgstr ""
 
 #: ../pep-0433.txt:689
 msgid ""
-"`#12107: TCP listening sockets created without FD_CLOEXEC flag "
-"<http://bugs.python.org/issue12107>`_"
+"`#12107: TCP listening sockets created without FD_CLOEXEC flag <http://bugs."
+"python.org/issue12107>`_"
 msgstr ""
 
 #: ../pep-0433.txt:691
@@ -1201,27 +1188,26 @@ msgstr ""
 
 #: ../pep-0433.txt:693
 msgid ""
-"`#16850: Add \"e\" mode to open(): close-and-exec (O_CLOEXEC) / "
-"O_NOINHERIT <http://bugs.python.org/issue16850>`_"
+"`#16850: Add \"e\" mode to open(): close-and-exec (O_CLOEXEC) / O_NOINHERIT "
+"<http://bugs.python.org/issue16850>`_"
 msgstr ""
 
 #: ../pep-0433.txt:695
 msgid ""
-"`#16860: Use O_CLOEXEC in the tempfile module "
-"<http://bugs.python.org/issue16860>`_"
+"`#16860: Use O_CLOEXEC in the tempfile module <http://bugs.python.org/"
+"issue16860>`_"
 msgstr ""
 
 #: ../pep-0433.txt:697
 msgid ""
-"`#17036: Implementation of the PEP 433 "
-"<http://bugs.python.org/issue17036>`_"
+"`#17036: Implementation of the PEP 433 <http://bugs.python.org/issue17036>`_"
 msgstr ""
 
 #: ../pep-0433.txt:699
 msgid ""
-"`#16946: subprocess: _close_open_fd_range_safe() does not set close-on-"
-"exec flag on Linux < 2.6.23 if O_CLOEXEC is defined "
-"<http://bugs.python.org/issue16946>`_"
+"`#16946: subprocess: _close_open_fd_range_safe() does not set close-on-exec "
+"flag on Linux < 2.6.23 if O_CLOEXEC is defined <http://bugs.python.org/"
+"issue16946>`_"
 msgstr ""
 
 #: ../pep-0433.txt:702
@@ -1236,32 +1222,30 @@ msgstr ""
 
 #: ../pep-0433.txt:707
 msgid ""
-"Perl sets the close-on-exec flag on newly created file descriptor if "
-"their number is greater than ``$SYSTEM_FD_MAX`` (``$^F``). See "
-"`$SYSTEM_FD_MAX documentation "
-"<http://perldoc.perl.org/perlvar.html#%24SYSTEM_FD_MAX>`_. Perl does this"
-" since the creation of Perl (it was already present in Perl 1)."
+"Perl sets the close-on-exec flag on newly created file descriptor if their "
+"number is greater than ``$SYSTEM_FD_MAX`` (``$^F``). See `$SYSTEM_FD_MAX "
+"documentation <http://perldoc.perl.org/perlvar.html#%24SYSTEM_FD_MAX>`_. "
+"Perl does this since the creation of Perl (it was already present in Perl 1)."
 msgstr ""
 
 #: ../pep-0433.txt:712
 msgid ""
-"Ruby: `Set FD_CLOEXEC for all fds (except 0, 1, 2) <http://bugs.ruby-"
-"lang.org/issues/5041>`_"
+"Ruby: `Set FD_CLOEXEC for all fds (except 0, 1, 2) <http://bugs.ruby-lang."
+"org/issues/5041>`_"
 msgstr ""
 
 #: ../pep-0433.txt:714
 msgid ""
-"Ruby: `O_CLOEXEC flag missing for Kernel::open <http://bugs.ruby-"
-"lang.org/issues/1291>`_: the `commit was reverted later <http://bugs"
-".ruby-lang.org/projects/ruby-trunk/repository/revisions/31643>`_"
+"Ruby: `O_CLOEXEC flag missing for Kernel::open <http://bugs.ruby-lang.org/"
+"issues/1291>`_: the `commit was reverted later <http://bugs.ruby-lang.org/"
+"projects/ruby-trunk/repository/revisions/31643>`_"
 msgstr ""
 
 #: ../pep-0433.txt:718
 msgid ""
 "OCaml: `PR#5256: Processes opened using Unix.open_process* inherit all "
-"opened file descriptors (including sockets) "
-"<http://caml.inria.fr/mantis/view.php?id=5256>`_. OCaml has a "
-"``Unix.set_close_on_exec`` function."
+"opened file descriptors (including sockets) <http://caml.inria.fr/mantis/"
+"view.php?id=5256>`_. OCaml has a ``Unix.set_close_on_exec`` function."
 msgstr ""
 
 #: ../pep-0433.txt:725
@@ -1270,12 +1254,11 @@ msgstr ""
 
 #: ../pep-0433.txt:727
 msgid ""
-"On UNIX since Python 3.2, subprocess.Popen() closes all file descriptors "
-"by default: ``close_fds=True``. It closes file descriptors in range 3 "
-"inclusive to ``local_max_fd`` exclusive, where ``local_max_fd`` is "
-"``fcntl(0, F_MAXFD)`` on NetBSD, or ``sysconf(_SC_OPEN_MAX)`` otherwise. "
-"If the error pipe has a descriptor smaller than 3, ``ValueError`` is "
-"raised."
+"On UNIX since Python 3.2, subprocess.Popen() closes all file descriptors by "
+"default: ``close_fds=True``. It closes file descriptors in range 3 inclusive "
+"to ``local_max_fd`` exclusive, where ``local_max_fd`` is ``fcntl(0, "
+"F_MAXFD)`` on NetBSD, or ``sysconf(_SC_OPEN_MAX)`` otherwise. If the error "
+"pipe has a descriptor smaller than 3, ``ValueError`` is raised."
 msgstr ""
 
 #: ../pep-0433.txt:736
@@ -1285,4 +1268,3 @@ msgstr ""
 #: ../pep-0433.txt:738
 msgid "This document has been placed in the public domain."
 msgstr ""
-

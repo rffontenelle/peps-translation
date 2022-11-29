@@ -67,14 +67,13 @@ msgstr ""
 
 #: ../pep-0294.txt:16
 msgid ""
-"This PEP proposes that symbols matching the type name should be added to "
-"the types module for all basic Python types in the types module::"
+"This PEP proposes that symbols matching the type name should be added to the "
+"types module for all basic Python types in the types module::"
 msgstr ""
 
 #: ../pep-0294.txt:24
 msgid ""
-"The long capitalized names currently in the types module will be "
-"deprecated."
+"The long capitalized names currently in the types module will be deprecated."
 msgstr ""
 
 #: ../pep-0294.txt:27
@@ -89,23 +88,22 @@ msgstr ""
 
 #: ../pep-0294.txt:34
 msgid ""
-"A centralized repository of type names was a mistake.  Neither the "
-"\"types\" nor \"new\" modules should be carried forward to Python 3.0."
+"A centralized repository of type names was a mistake.  Neither the \"types\" "
+"nor \"new\" modules should be carried forward to Python 3.0."
 msgstr ""
 
 #: ../pep-0294.txt:37
 msgid ""
-"In the meantime, it does not make sense to make the proposed updates to "
-"the modules.  This would cause disruption without any compensating "
-"benefit."
+"In the meantime, it does not make sense to make the proposed updates to the "
+"modules.  This would cause disruption without any compensating benefit."
 msgstr ""
 
 #: ../pep-0294.txt:41
 msgid ""
 "Instead, the problem that some internal types (frames, functions, etc.) "
-"don't live anywhere outside those modules may be addressed by either "
-"adding them to ``__builtin__`` or sys.  This will provide a smoother "
-"transition to Python 3.0."
+"don't live anywhere outside those modules may be addressed by either adding "
+"them to ``__builtin__`` or sys.  This will provide a smoother transition to "
+"Python 3.0."
 msgstr ""
 
 #: ../pep-0294.txt:48
@@ -113,24 +111,24 @@ msgid "Rationale"
 msgstr ""
 
 #: ../pep-0294.txt:50
-msgid "Using two sets of names for the same objects is redundant and confusing."
+msgid ""
+"Using two sets of names for the same objects is redundant and confusing."
 msgstr ""
 
 #: ../pep-0294.txt:53
 msgid ""
-"In Python versions prior to 2.2 the symbols matching many type names were"
-" taken by the factory functions for those types.  Now all basic types "
-"have been unified with their factory functions and therefore the type "
-"names are available to be consistently used to refer to the type object."
+"In Python versions prior to 2.2 the symbols matching many type names were "
+"taken by the factory functions for those types.  Now all basic types have "
+"been unified with their factory functions and therefore the type names are "
+"available to be consistently used to refer to the type object."
 msgstr ""
 
 #: ../pep-0294.txt:59
 msgid ""
-"Most types are accessible as either builtins or in the new module but "
-"some types such as traceback and generator are only accessible through "
-"the types module under names which do not match the type name.  This PEP "
-"provides a uniform way to access all basic types under a single set of "
-"names."
+"Most types are accessible as either builtins or in the new module but some "
+"types such as traceback and generator are only accessible through the types "
+"module under names which do not match the type name.  This PEP provides a "
+"uniform way to access all basic types under a single set of names."
 msgstr ""
 
 #: ../pep-0294.txt:67
@@ -155,9 +153,9 @@ msgstr ""
 #: ../pep-0294.txt:84
 msgid ""
 "Because of their widespread use it is not planned to actually remove the "
-"long names from the types module in some future version.  However, the "
-"long names should be changed in documentation and library sources to "
-"discourage their use in new code."
+"long names from the types module in some future version.  However, the long "
+"names should be changed in documentation and library sources to discourage "
+"their use in new code."
 msgstr ""
 
 #: ../pep-0294.txt:91
@@ -166,8 +164,8 @@ msgstr ""
 
 #: ../pep-0294.txt:93
 msgid ""
-"A reference implementation is available in `issue #569328 "
-"<https://bugs.python.org/issue569328>`_."
+"A reference implementation is available in `issue #569328 <https://bugs."
+"python.org/issue569328>`_."
 msgstr ""
 
 #: ../pep-0294.txt:98
@@ -177,4 +175,3 @@ msgstr ""
 #: ../pep-0294.txt:100
 msgid "This document has been placed in the public domain."
 msgstr ""
-

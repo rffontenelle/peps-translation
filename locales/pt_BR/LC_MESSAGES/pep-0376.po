@@ -71,8 +71,8 @@ msgstr ""
 
 #: ../pep-0376.txt:10
 msgid ""
-"`22-Jun-2009 <https://mail.python.org/archives/list/python-"
-"dev@python.org/thread/ILLTIOZAULMDY5CAS6GOITEYJ4HNFATQ/#ILLTIOZAULMDY5CAS6GOITEYJ4HNFATQ>`__"
+"`22-Jun-2009 <https://mail.python.org/archives/list/python-dev@python.org/"
+"thread/ILLTIOZAULMDY5CAS6GOITEYJ4HNFATQ/#ILLTIOZAULMDY5CAS6GOITEYJ4HNFATQ>`__"
 msgstr ""
 
 #: ../pep-0376.txt:17
@@ -88,15 +88,15 @@ msgstr ""
 
 #: ../pep-0376.txt:23
 msgid ""
-"To achieve this goal, the PEP proposes a new format to describe installed"
-" distributions on a system. It also describes a reference implementation "
-"for the standard library."
+"To achieve this goal, the PEP proposes a new format to describe installed "
+"distributions on a system. It also describes a reference implementation for "
+"the standard library."
 msgstr ""
 
 #: ../pep-0376.txt:27
 msgid ""
-"In the past an attempt was made to create an installation database (see "
-":pep:`262`)."
+"In the past an attempt was made to create an installation database (see :pep:"
+"`262`)."
 msgstr ""
 
 #: ../pep-0376.txt:30
@@ -115,12 +115,13 @@ msgstr ""
 
 #: ../pep-0376.txt:39
 msgid ""
-"There are two problems right now in the way distributions are installed "
-"in Python:"
+"There are two problems right now in the way distributions are installed in "
+"Python:"
 msgstr ""
 
 #: ../pep-0376.txt:42
-msgid "There are too many ways to do it and this makes interoperation difficult."
+msgid ""
+"There are too many ways to do it and this makes interoperation difficult."
 msgstr ""
 
 #: ../pep-0376.txt:43
@@ -133,16 +134,16 @@ msgstr ""
 
 #: ../pep-0376.txt:48
 msgid ""
-"Right now, when a distribution is installed in Python, every element can "
-"be installed in a different directory."
+"Right now, when a distribution is installed in Python, every element can be "
+"installed in a different directory."
 msgstr ""
 
 #: ../pep-0376.txt:51
 msgid ""
-"For instance, ``Distutils`` installs the pure Python code in the "
-"``purelib`` directory, which is ``lib/python2.6/site-packages`` for unix-"
-"like systems and Mac OS X, or ``Lib\\site-packages`` under Python's "
-"installation directory for Windows."
+"For instance, ``Distutils`` installs the pure Python code in the ``purelib`` "
+"directory, which is ``lib/python2.6/site-packages`` for unix-like systems "
+"and Mac OS X, or ``Lib\\site-packages`` under Python's installation "
+"directory for Windows."
 msgstr ""
 
 #: ../pep-0376.txt:56
@@ -154,9 +155,9 @@ msgstr ""
 
 #: ../pep-0376.txt:60
 msgid ""
-"For example, for the ``docutils`` distribution, which contains one "
-"package an extra module and executable scripts, three elements are "
-"installed in ``site-packages``:"
+"For example, for the ``docutils`` distribution, which contains one package "
+"an extra module and executable scripts, three elements are installed in "
+"``site-packages``:"
 msgstr ""
 
 #: ../pep-0376.txt:64
@@ -169,9 +170,9 @@ msgstr ""
 
 #: ../pep-0376.txt:66
 msgid ""
-"``docutils-0.5-py2.6.egg-info``: A file containing the distribution "
-"metadata as described in :pep:`314`. This file corresponds to the file "
-"called ``PKG-INFO``, built by the ``sdist`` command."
+"``docutils-0.5-py2.6.egg-info``: A file containing the distribution metadata "
+"as described in :pep:`314`. This file corresponds to the file called ``PKG-"
+"INFO``, built by the ``sdist`` command."
 msgstr ""
 
 #: ../pep-0376.txt:70
@@ -182,29 +183,29 @@ msgstr ""
 
 #: ../pep-0376.txt:73
 msgid ""
-"Another project called ``setuptools`` [#setuptools]_ has two other "
-"formats to install distributions, called ``EggFormats`` [#eggformats]_:"
+"Another project called ``setuptools`` [#setuptools]_ has two other formats "
+"to install distributions, called ``EggFormats`` [#eggformats]_:"
 msgstr ""
 
 #: ../pep-0376.txt:76
 msgid ""
 "a self-contained ``.egg`` directory, that contains all the distribution "
 "files and the distribution metadata in a file called ``PKG-INFO`` in a "
-"subdirectory called ``EGG-INFO``. ``setuptools`` creates other files in "
-"that directory that can be considered as complementary metadata."
+"subdirectory called ``EGG-INFO``. ``setuptools`` creates other files in that "
+"directory that can be considered as complementary metadata."
 msgstr ""
 
 #: ../pep-0376.txt:81
 msgid ""
-"an ``.egg-info`` directory installed in ``site-packages``, that contains "
-"the same files ``EGG-INFO`` has in the ``.egg`` format."
+"an ``.egg-info`` directory installed in ``site-packages``, that contains the "
+"same files ``EGG-INFO`` has in the ``.egg`` format."
 msgstr ""
 
 #: ../pep-0376.txt:84
 msgid ""
-"The first format is automatically used when you install a distribution "
-"that uses the ``setuptools.setup`` function in its setup.py file, instead"
-" of the ``distutils.core.setup`` one."
+"The first format is automatically used when you install a distribution that "
+"uses the ``setuptools.setup`` function in its setup.py file, instead of the "
+"``distutils.core.setup`` one."
 msgstr ""
 
 #: ../pep-0376.txt:88
@@ -216,19 +217,18 @@ msgstr ""
 #: ../pep-0376.txt:91
 msgid ""
 "Last, the ``setuptools`` project provides an executable script called "
-"``easy_install`` [#easyinstall]_ that installs all distributions, "
-"including distutils-based ones in self-contained ``.egg`` directories."
+"``easy_install`` [#easyinstall]_ that installs all distributions, including "
+"distutils-based ones in self-contained ``.egg`` directories."
 msgstr ""
 
 #: ../pep-0376.txt:95
 msgid ""
 "If you want to have standalone ``.egg-info`` directories for your "
-"distributions, e.g. the second ``setuptools`` format, you have to force "
-"it when you work with a setuptools-based distribution or with the "
-"``easy_install`` script. You can force it by using the ``--single-"
-"version-externally-managed`` option **or** the ``--root`` option. This "
-"will make the ``setuptools`` project install the project like distutils "
-"does."
+"distributions, e.g. the second ``setuptools`` format, you have to force it "
+"when you work with a setuptools-based distribution or with the "
+"``easy_install`` script. You can force it by using the ``--single-version-"
+"externally-managed`` option **or** the ``--root`` option. This will make the "
+"``setuptools`` project install the project like distutils does."
 msgstr ""
 
 #: ../pep-0376.txt:102
@@ -253,38 +253,38 @@ msgstr ""
 
 #: ../pep-0376.txt:111
 msgid ""
-"Distutils doesn't provide an ``uninstall`` command. If you want to "
-"uninstall a distribution, you have to be a power user and remove the "
-"various elements that were installed, and then look over the ``.pth`` "
-"file to clean them if necessary."
+"Distutils doesn't provide an ``uninstall`` command. If you want to uninstall "
+"a distribution, you have to be a power user and remove the various elements "
+"that were installed, and then look over the ``.pth`` file to clean them if "
+"necessary."
 msgstr ""
 
 #: ../pep-0376.txt:116
 msgid ""
-"And the process differs depending on the tools you have used to install "
-"the distribution and if the distribution's ``setup.py`` uses Distutils or"
-" Setuptools."
+"And the process differs depending on the tools you have used to install the "
+"distribution and if the distribution's ``setup.py`` uses Distutils or "
+"Setuptools."
 msgstr ""
 
 #: ../pep-0376.txt:120
 msgid ""
-"Under some circumstances, you might not be able to know for sure that you"
-" have removed everything, or that you didn't break another distribution "
-"by removing a file that is shared among several distributions."
+"Under some circumstances, you might not be able to know for sure that you "
+"have removed everything, or that you didn't break another distribution by "
+"removing a file that is shared among several distributions."
 msgstr ""
 
 #: ../pep-0376.txt:124
 msgid ""
-"But there's a common behavior: when you install a distribution, files are"
-" copied in your system. And it's possible to keep track of these files "
-"for later removal."
+"But there's a common behavior: when you install a distribution, files are "
+"copied in your system. And it's possible to keep track of these files for "
+"later removal."
 msgstr ""
 
 #: ../pep-0376.txt:128
 msgid ""
 "Moreover, the Pip project has gained an ``uninstall`` feature lately. It "
-"records all installed files, using the ``record`` option of the "
-"``install`` command."
+"records all installed files, using the ``record`` option of the ``install`` "
+"command."
 msgstr ""
 
 #: ../pep-0376.txt:133
@@ -297,8 +297,8 @@ msgstr ""
 
 #: ../pep-0376.txt:137
 msgid ""
-"A new ``.dist-info`` structure using a directory, inspired on one format "
-"of the ``EggFormats`` standard from ``setuptools``."
+"A new ``.dist-info`` structure using a directory, inspired on one format of "
+"the ``EggFormats`` standard from ``setuptools``."
 msgstr ""
 
 #: ../pep-0376.txt:139
@@ -317,9 +317,9 @@ msgstr ""
 
 #: ../pep-0376.txt:147
 msgid ""
-"This PEP proposes an installation format inspired by one of the options "
-"in the ``EggFormats`` standard, the one that uses a distinct directory "
-"located in the site-packages directory."
+"This PEP proposes an installation format inspired by one of the options in "
+"the ``EggFormats`` standard, the one that uses a distinct directory located "
+"in the site-packages directory."
 msgstr ""
 
 #: ../pep-0376.txt:151
@@ -332,8 +332,8 @@ msgstr ""
 
 #: ../pep-0376.txt:157
 msgid ""
-"``METADATA``: contains metadata, as described in :pep:`345`, :pep:`314` "
-"and :pep:`241`."
+"``METADATA``: contains metadata, as described in :pep:`345`, :pep:`314` and :"
+"pep:`241`."
 msgstr ""
 
 #: ../pep-0376.txt:158
@@ -347,27 +347,26 @@ msgstr ""
 #: ../pep-0376.txt:160
 msgid ""
 "``REQUESTED``: the presence of this file indicates that the project "
-"installation was explicitly requested (i.e., not installed as a "
-"dependency)."
+"installation was explicitly requested (i.e., not installed as a dependency)."
 msgstr ""
 
 #: ../pep-0376.txt:163
 msgid ""
-"The METADATA, RECORD and INSTALLER files are mandatory, while REQUESTED "
-"may be missing."
+"The METADATA, RECORD and INSTALLER files are mandatory, while REQUESTED may "
+"be missing."
 msgstr ""
 
 #: ../pep-0376.txt:166
 msgid ""
-"This proposal will not impact Python itself because the metadata files "
-"are not used anywhere yet in the standard library besides Distutils."
+"This proposal will not impact Python itself because the metadata files are "
+"not used anywhere yet in the standard library besides Distutils."
 msgstr ""
 
 #: ../pep-0376.txt:169
 msgid ""
-"It will impact the ``setuptools`` and ``pip`` projects but, given the "
-"fact that they already work with a directory that contains a ``PKG-INFO``"
-" file, the change will have no deep consequences."
+"It will impact the ``setuptools`` and ``pip`` projects but, given the fact "
+"that they already work with a directory that contains a ``PKG-INFO`` file, "
+"the change will have no deep consequences."
 msgstr ""
 
 #: ../pep-0376.txt:175
@@ -379,19 +378,19 @@ msgid ""
 "A ``RECORD`` file is added inside the ``.dist-info`` directory at "
 "installation time when installing a source distribution using the "
 "``install`` command. Notice that when installing a binary distribution "
-"created with ``bdist`` command or a ``bdist``-based command, the "
-"``RECORD`` file will be installed as well since these commands use the "
-"``install`` command to create binary distributions."
+"created with ``bdist`` command or a ``bdist``-based command, the ``RECORD`` "
+"file will be installed as well since these commands use the ``install`` "
+"command to create binary distributions."
 msgstr ""
 
 #: ../pep-0376.txt:183
 msgid ""
-"The ``RECORD`` file holds the list of installed files. These correspond "
-"to the files listed by the ``record`` option of the ``install`` command, "
-"and will be generated by default. This allows the implementation of an "
+"The ``RECORD`` file holds the list of installed files. These correspond to "
+"the files listed by the ``record`` option of the ``install`` command, and "
+"will be generated by default. This allows the implementation of an "
 "uninstallation feature, as explained later in this PEP. The ``install`` "
-"command also provides an option to prevent the ``RECORD`` file from being"
-" written and this option should be used when creating system packages."
+"command also provides an option to prevent the ``RECORD`` file from being "
+"written and this option should be used when creating system packages."
 msgstr ""
 
 #: ../pep-0376.txt:190
@@ -429,14 +428,14 @@ msgstr ""
 
 #: ../pep-0376.txt:205
 msgid ""
-"the **base location**: path defined by the ``--install-lib`` option, "
-"which defaults to the site-packages directory."
+"the **base location**: path defined by the ``--install-lib`` option, which "
+"defaults to the site-packages directory."
 msgstr ""
 
 #: ../pep-0376.txt:208
 msgid ""
-"the **installation prefix**: path defined by the ``--prefix`` option, "
-"which defaults to ``sys.prefix``."
+"the **installation prefix**: path defined by the ``--prefix`` option, which "
+"defaults to ``sys.prefix``."
 msgstr ""
 
 #: ../pep-0376.txt:211
@@ -460,8 +459,8 @@ msgstr ""
 #: ../pep-0376.txt:221
 msgid ""
 "a '/'-separated path, relative to the **base location**, if the file is "
-"under the  **installation prefix** AND if the **base location** is a "
-"subpath of the **installation prefix**."
+"under the  **installation prefix** AND if the **base location** is a subpath "
+"of the **installation prefix**."
 msgstr ""
 
 #: ../pep-0376.txt:225
@@ -480,9 +479,9 @@ msgstr ""
 #: ../pep-0376.txt:233
 msgid ""
 "The hash is either the empty string or the hash algorithm as named in "
-"``hashlib.algorithms_guaranteed``, followed by the equals character "
-"``=``, followed by the urlsafe-base64-nopad encoding of the digest "
-"(``base64.urlsafe_b64encode(digest)`` with trailing ``=`` removed)."
+"``hashlib.algorithms_guaranteed``, followed by the equals character ``=``, "
+"followed by the urlsafe-base64-nopad encoding of the digest (``base64."
+"urlsafe_b64encode(digest)`` with trailing ``=`` removed)."
 msgstr ""
 
 #: ../pep-0376.txt:238
@@ -491,16 +490,16 @@ msgstr ""
 
 #: ../pep-0376.txt:240
 msgid ""
-"The ``csv`` module is used to generate this file, so the field separator "
-"is \",\". Any \",\" character found within a field is escaped "
-"automatically by ``csv``."
+"The ``csv`` module is used to generate this file, so the field separator is "
+"\",\". Any \",\" character found within a field is escaped automatically by "
+"``csv``."
 msgstr ""
 
 #: ../pep-0376.txt:244
 msgid ""
 "When the file is read, the ``U`` option is used so the universal newline "
-"support (see :pep:`278`) is activated, avoiding any trouble reading a "
-"file produced on a platform that uses a different new line terminator."
+"support (see :pep:`278`) is activated, avoiding any trouble reading a file "
+"produced on a platform that uses a different new line terminator."
 msgstr ""
 
 #: ../pep-0376.txt:249
@@ -509,8 +508,8 @@ msgstr ""
 
 #: ../pep-0376.txt:262
 msgid ""
-"Notice that the ``RECORD`` file can't contain a hash of itself and is "
-"just mentioned here"
+"Notice that the ``RECORD`` file can't contain a hash of itself and is just "
+"mentioned here"
 msgstr ""
 
 #: ../pep-0376.txt:264
@@ -521,8 +520,8 @@ msgstr ""
 
 #: ../pep-0376.txt:268
 msgid ""
-"For a windows platform, the drive letter is added for the absolute paths,"
-" so a file that is copied in c:\\MyApp\\ will be::"
+"For a windows platform, the drive letter is added for the absolute paths, so "
+"a file that is copied in c:\\MyApp\\ will be::"
 msgstr ""
 
 #: ../pep-0376.txt:275
@@ -531,9 +530,9 @@ msgstr ""
 
 #: ../pep-0376.txt:277
 msgid ""
-"The ``install`` command has a new option called ``installer``. This "
-"option is the name of the tool used to invoke the installation. It's a "
-"normalized lower-case string matching ``[a-z0-9_\\-\\.]``."
+"The ``install`` command has a new option called ``installer``. This option "
+"is the name of the tool used to invoke the installation. It's a normalized "
+"lower-case string matching ``[a-z0-9_\\-\\.]``."
 msgstr ""
 
 #: ../pep-0376.txt:281
@@ -546,9 +545,9 @@ msgstr ""
 
 #: ../pep-0376.txt:285
 msgid ""
-"When a distribution is installed, the INSTALLER file is generated in the "
-"``.dist-info`` directory with this value, to keep track of **who** "
-"installed the distribution. The file is a single-line text file."
+"When a distribution is installed, the INSTALLER file is generated in the ``."
+"dist-info`` directory with this value, to keep track of **who** installed "
+"the distribution. The file is a single-line text file."
 msgstr ""
 
 #: ../pep-0376.txt:291
@@ -557,40 +556,38 @@ msgstr ""
 
 #: ../pep-0376.txt:293
 msgid ""
-"Some install tools automatically detect unfulfilled dependencies and "
-"install them. In these cases, it is useful to track which distributions "
-"were installed purely as a dependency, so if their dependent distribution"
-" is later uninstalled, the user can be alerted of the orphaned "
-"dependency."
+"Some install tools automatically detect unfulfilled dependencies and install "
+"them. In these cases, it is useful to track which distributions were "
+"installed purely as a dependency, so if their dependent distribution is "
+"later uninstalled, the user can be alerted of the orphaned dependency."
 msgstr ""
 
 #: ../pep-0376.txt:299
 msgid ""
-"If a distribution is installed by direct user request (the usual case), a"
-" file REQUESTED is added to the .dist-info directory of the installed "
+"If a distribution is installed by direct user request (the usual case), a "
+"file REQUESTED is added to the .dist-info directory of the installed "
 "distribution. The REQUESTED file may be empty, or may contain a marker "
 "comment line beginning with the \"#\" character."
 msgstr ""
 
 #: ../pep-0376.txt:304
 msgid ""
-"If an install tool installs a distribution automatically, as a dependency"
-" of another distribution, the REQUESTED file should not be created."
+"If an install tool installs a distribution automatically, as a dependency of "
+"another distribution, the REQUESTED file should not be created."
 msgstr ""
 
 #: ../pep-0376.txt:308
 msgid ""
-"The ``install`` command of distutils by default creates the REQUESTED "
-"file. It accepts ``--requested`` and ``--no-requested`` options to "
-"explicitly specify whether the file is created."
+"The ``install`` command of distutils by default creates the REQUESTED file. "
+"It accepts ``--requested`` and ``--no-requested`` options to explicitly "
+"specify whether the file is created."
 msgstr ""
 
 #: ../pep-0376.txt:312
 msgid ""
-"If a distribution that was already installed on the system as a "
-"dependency is later installed by name, the distutils ``install`` command "
-"will create the REQUESTED file in the .dist-info directory of the "
-"existing installation."
+"If a distribution that was already installed on the system as a dependency "
+"is later installed by name, the distutils ``install`` command will create "
+"the REQUESTED file in the .dist-info directory of the existing installation."
 msgstr ""
 
 #: ../pep-0376.txt:319
@@ -599,8 +596,8 @@ msgstr ""
 
 #: ../pep-0376.txt:321
 msgid ""
-"Note: this section is non-normative.  In the end, this PEP was "
-"implemented by third-party libraries and tools, not the standard library."
+"Note: this section is non-normative.  In the end, this PEP was implemented "
+"by third-party libraries and tools, not the standard library."
 msgstr ""
 
 #: ../pep-0376.txt:326
@@ -609,9 +606,8 @@ msgstr ""
 
 #: ../pep-0376.txt:328
 msgid ""
-"To use the ``.dist-info`` directory content, we need to add in the "
-"standard library a set of APIs. The best place to put these APIs is "
-"``pkgutil``."
+"To use the ``.dist-info`` directory content, we need to add in the standard "
+"library a set of APIs. The best place to put these APIs is ``pkgutil``."
 msgstr ""
 
 #: ../pep-0376.txt:332
@@ -628,22 +624,22 @@ msgstr ""
 
 #: ../pep-0376.txt:338
 msgid ""
-"``name`` is converted to a standard distribution name by replacing any "
-"runs of non-alphanumeric characters with a single '-'."
+"``name`` is converted to a standard distribution name by replacing any runs "
+"of non-alphanumeric characters with a single '-'."
 msgstr ""
 
 #: ../pep-0376.txt:341
 msgid ""
-"``version`` is converted to a standard version string. Spaces become "
-"dots, and all other non-alphanumeric characters (except dots) become "
-"dashes, with runs of multiple dashes condensed to a single dash."
+"``version`` is converted to a standard version string. Spaces become dots, "
+"and all other non-alphanumeric characters (except dots) become dashes, with "
+"runs of multiple dashes condensed to a single dash."
 msgstr ""
 
 #: ../pep-0376.txt:345
 msgid ""
-"Both attributes are then converted into their filename-escaped form, i.e."
-" any '-' characters are replaced with '_' other than the one in 'dist-"
-"info' and the one separating the name from the version number."
+"Both attributes are then converted into their filename-escaped form, i.e. "
+"any '-' characters are replaced with '_' other than the one in 'dist-info' "
+"and the one separating the name from the version number."
 msgstr ""
 
 #: ../pep-0376.txt:349
@@ -652,8 +648,8 @@ msgstr ""
 
 #: ../pep-0376.txt:351
 msgid ""
-"Provides an iterator that looks for ``.dist-info`` directories in "
-"``sys.path`` and returns ``Distribution`` instances for each one of them."
+"Provides an iterator that looks for ``.dist-info`` directories in ``sys."
+"path`` and returns ``Distribution`` instances for each one of them."
 msgstr ""
 
 #: ../pep-0376.txt:355
@@ -683,16 +679,16 @@ msgstr ""
 msgid ""
 "Iterates over all distributions to find which distributions *provide* "
 "``name``. If a ``version`` is provided, it will be used to filter the "
-"results. Scans all elements in ``sys.path`` and looks for all directories"
-" ending with ``.dist-info``. Returns a ``Distribution`` corresponding to "
-"the ``.dist-info`` directory that contains a METADATA that matches "
-"``name`` for the ``name`` metadata."
+"results. Scans all elements in ``sys.path`` and looks for all directories "
+"ending with ``.dist-info``. Returns a ``Distribution`` corresponding to the "
+"``.dist-info`` directory that contains a METADATA that matches ``name`` for "
+"the ``name`` metadata."
 msgstr ""
 
 #: ../pep-0376.txt:373
 msgid ""
-"This function only returns the first result founded, since no more than "
-"one values are expected. If the directory is not found, returns None."
+"This function only returns the first result founded, since no more than one "
+"values are expected. If the directory is not found, returns None."
 msgstr ""
 
 #: ../pep-0376.txt:376
@@ -702,14 +698,14 @@ msgstr ""
 #: ../pep-0376.txt:378
 msgid ""
 "Iterates over all distributions to find out which distributions uses "
-"``path``. ``path`` can be a local absolute path or a relative "
-"'/'-separated path."
+"``path``. ``path`` can be a local absolute path or a relative '/'-separated "
+"path."
 msgstr ""
 
 #: ../pep-0376.txt:381 ../pep-0376.txt:415
 msgid ""
-"A local absolute path is an absolute path in which occurrences of '/' "
-"have been replaced by the system separator given by ``os.sep``."
+"A local absolute path is an absolute path in which occurrences of '/' have "
+"been replaced by the system separator given by ``os.sep``."
 msgstr ""
 
 #: ../pep-0376.txt:386
@@ -718,9 +714,9 @@ msgstr ""
 
 #: ../pep-0376.txt:388
 msgid ""
-"A new class called ``Distribution`` is created with the path of the "
-"``.dist-info`` directory provided to the constructor. It reads the "
-"metadata contained in ``METADATA`` when it is instantiated."
+"A new class called ``Distribution`` is created with the path of the ``.dist-"
+"info`` directory provided to the constructor. It reads the metadata "
+"contained in ``METADATA`` when it is instantiated."
 msgstr ""
 
 #: ../pep-0376.txt:392
@@ -747,9 +743,9 @@ msgstr ""
 
 #: ../pep-0376.txt:403
 msgid ""
-"``requested``: A boolean that indicates whether the REQUESTED metadata "
-"file is present (in other words, whether the distribution was installed "
-"by user request)."
+"``requested``: A boolean that indicates whether the REQUESTED metadata file "
+"is present (in other words, whether the distribution was installed by user "
+"request)."
 msgstr ""
 
 #: ../pep-0376.txt:407
@@ -798,14 +794,14 @@ msgstr ""
 
 #: ../pep-0376.txt:432
 msgid ""
-"If ``path`` is an absolute path and doesn't start with the ``.dist-info``"
-" directory path, a ``DistutilsError`` is raised."
+"If ``path`` is an absolute path and doesn't start with the ``.dist-info`` "
+"directory path, a ``DistutilsError`` is raised."
 msgstr ""
 
 #: ../pep-0376.txt:435
 msgid ""
-"If ``binary`` is ``True``, opens the file in read-only binary mode "
-"(``rb``), otherwise opens it in read-only mode (``r``)."
+"If ``binary`` is ``True``, opens the file in read-only binary mode (``rb``), "
+"otherwise opens it in read-only mode (``r``)."
 msgstr ""
 
 #: ../pep-0376.txt:438
@@ -814,9 +810,9 @@ msgstr ""
 
 #: ../pep-0376.txt:440
 msgid ""
-"Iterates over the ``RECORD`` entries and returns paths for each line if "
-"the path is pointing to a file located in the ``.dist-info`` directory or"
-" one of its subdirectories."
+"Iterates over the ``RECORD`` entries and returns paths for each line if the "
+"path is pointing to a file located in the ``.dist-info`` directory or one of "
+"its subdirectories."
 msgstr ""
 
 #: ../pep-0376.txt:444
@@ -827,11 +823,10 @@ msgstr ""
 
 #: ../pep-0376.txt:448
 msgid ""
-"Notice that the API is organized in five classes that work with "
-"directories and Zip files (so it works with files included in Zip files, "
-"see :pep:`273` for more details). These classes are described in the "
-"documentation of the prototype implementation for interested readers "
-"[#prototype]_."
+"Notice that the API is organized in five classes that work with directories "
+"and Zip files (so it works with files included in Zip files, see :pep:`273` "
+"for more details). These classes are described in the documentation of the "
+"prototype implementation for interested readers [#prototype]_."
 msgstr ""
 
 #: ../pep-0376.txt:454
@@ -848,18 +843,18 @@ msgstr ""
 
 #: ../pep-0376.txt:500
 msgid ""
-"Distutils already provides a very basic way to install a distribution, "
-"which is running the ``install`` command over the ``setup.py`` script of "
-"the distribution."
+"Distutils already provides a very basic way to install a distribution, which "
+"is running the ``install`` command over the ``setup.py`` script of the "
+"distribution."
 msgstr ""
 
 #: ../pep-0376.txt:504
 msgid ""
-":pep:`Distutils2 <262>` will provide a very basic ``uninstall`` function,"
-" that is added in ``distutils2.util`` and takes the name of the "
-"distribution to uninstall as its argument. ``uninstall`` uses the APIs "
-"described earlier and remove all unique files, as long as their hash "
-"didn't change. Then it removes empty directories left behind."
+":pep:`Distutils2 <262>` will provide a very basic ``uninstall`` function, "
+"that is added in ``distutils2.util`` and takes the name of the distribution "
+"to uninstall as its argument. ``uninstall`` uses the APIs described earlier "
+"and remove all unique files, as long as their hash didn't change. Then it "
+"removes empty directories left behind."
 msgstr ""
 
 #: ../pep-0376.txt:510
@@ -867,7 +862,8 @@ msgid "``uninstall`` returns a list of uninstalled files::"
 msgstr ""
 
 #: ../pep-0376.txt:518
-msgid "If the distribution is not found, a ``DistutilsUninstallError`` is raised."
+msgid ""
+"If the distribution is not found, a ``DistutilsUninstallError`` is raised."
 msgstr ""
 
 #: ../pep-0376.txt:521
@@ -876,10 +872,10 @@ msgstr ""
 
 #: ../pep-0376.txt:523
 msgid ""
-"To make it a reference API for third-party projects that wish to control "
-"how ``uninstall`` works, a second callable argument can be used. It's "
-"called for each file that is removed. If the callable returns ``True``, "
-"the file is removed. If it returns False, it's left alone."
+"To make it a reference API for third-party projects that wish to control how "
+"``uninstall`` works, a second callable argument can be used. It's called for "
+"each file that is removed. If the callable returns ``True``, the file is "
+"removed. If it returns False, it's left alone."
 msgstr ""
 
 #: ../pep-0376.txt:528
@@ -912,17 +908,17 @@ msgstr ""
 
 #: ../pep-0376.txt:555
 msgid ""
-"When called, ``uninstall`` controls that the ``INSTALLER`` file matches "
-"this argument. If not, it raises a ``DistutilsUninstallError``::"
+"When called, ``uninstall`` controls that the ``INSTALLER`` file matches this "
+"argument. If not, it raises a ``DistutilsUninstallError``::"
 msgstr ""
 
 #: ../pep-0376.txt:565
 msgid ""
-"This allows a third-party application to use the ``uninstall`` function "
-"and strongly suggest that no other program remove a distribution it has "
-"previously installed. This is useful when a third-party program that "
-"relies on Distutils APIs does extra steps on the system at installation "
-"time, it has to undo at uninstallation time."
+"This allows a third-party application to use the ``uninstall`` function and "
+"strongly suggest that no other program remove a distribution it has "
+"previously installed. This is useful when a third-party program that relies "
+"on Distutils APIs does extra steps on the system at installation time, it "
+"has to undo at uninstallation time."
 msgstr ""
 
 #: ../pep-0376.txt:572
@@ -935,17 +931,16 @@ msgstr ""
 
 #: ../pep-0376.txt:578
 msgid ""
-"Notice that script doesn't control if the removal of a distribution "
-"breaks another distribution. Although it makes sure that all the files it"
-" removes are not used by any other distribution, by using the uninstall "
-"function."
+"Notice that script doesn't control if the removal of a distribution breaks "
+"another distribution. Although it makes sure that all the files it removes "
+"are not used by any other distribution, by using the uninstall function."
 msgstr ""
 
 #: ../pep-0376.txt:582
 msgid ""
 "Also note that this uninstall script pays no attention to the REQUESTED "
-"metadata; that is provided only for use by external tools to provide more"
-" advanced dependency management."
+"metadata; that is provided only for use by external tools to provide more "
+"advanced dependency management."
 msgstr ""
 
 #: ../pep-0376.txt:587
@@ -954,8 +949,8 @@ msgstr ""
 
 #: ../pep-0376.txt:589
 msgid ""
-"These changes don't introduce any compatibility problems since they will "
-"be implemented in:"
+"These changes don't introduce any compatibility problems since they will be "
+"implemented in:"
 msgstr ""
 
 #: ../pep-0376.txt:592
@@ -968,23 +963,22 @@ msgstr ""
 
 #: ../pep-0376.txt:595
 msgid ""
-"The plan is to include the functionality outlined in this PEP in pkgutil "
-"for Python 3.2, and in Distutils2."
+"The plan is to include the functionality outlined in this PEP in pkgutil for "
+"Python 3.2, and in Distutils2."
 msgstr ""
 
 #: ../pep-0376.txt:598
 msgid ""
-"Distutils2 will also contain a backport of the new pgkutil, and can be "
-"used for 2.4 onward."
+"Distutils2 will also contain a backport of the new pgkutil, and can be used "
+"for 2.4 onward."
 msgstr ""
 
 #: ../pep-0376.txt:601
 msgid ""
-"Distributions installed using existing, pre-standardization formats do "
-"not have the necessary metadata available for the new API, and thus will "
-"be ignored. Third-party tools may of course to continue to support "
-"previous formats in addition to the new format, in order to ease the "
-"transition."
+"Distributions installed using existing, pre-standardization formats do not "
+"have the necessary metadata available for the new API, and thus will be "
+"ignored. Third-party tools may of course to continue to support previous "
+"formats in addition to the new format, in order to ease the transition."
 msgstr ""
 
 #: ../pep-0376.txt:608
@@ -1016,7 +1010,9 @@ msgid "http://peak.telecommunity.com/DevCenter/EggFormats"
 msgstr ""
 
 #: ../pep-0376.txt:629
-msgid "http://fedoraproject.org/wiki/Packaging/Python/Eggs#Providing_Eggs_using_Setuptools"
+msgid ""
+"http://fedoraproject.org/wiki/Packaging/Python/"
+"Eggs#Providing_Eggs_using_Setuptools"
 msgstr ""
 
 #: ../pep-0376.txt:632
@@ -1033,8 +1029,8 @@ msgstr ""
 
 #: ../pep-0376.txt:640
 msgid ""
-"Jim Fulton, Ian Bicking, Phillip Eby, Rafael Villar Burke, and many "
-"people at Pycon and Distutils-SIG."
+"Jim Fulton, Ian Bicking, Phillip Eby, Rafael Villar Burke, and many people "
+"at Pycon and Distutils-SIG."
 msgstr ""
 
 #: ../pep-0376.txt:644
@@ -1044,4 +1040,3 @@ msgstr ""
 #: ../pep-0376.txt:646
 msgid "This document has been placed in the public domain."
 msgstr ""
-

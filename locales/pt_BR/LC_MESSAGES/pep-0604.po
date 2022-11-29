@@ -103,9 +103,9 @@ msgstr ""
 
 #: ../pep-0604.rst:19
 msgid ""
-"This PEP proposes overloading the ``|`` operator on types to allow "
-"writing ``Union[X, Y]`` as ``X | Y``, and allows it to appear in "
-"``isinstance`` and ``issubclass`` calls."
+"This PEP proposes overloading the ``|`` operator on types to allow writing "
+"``Union[X, Y]`` as ``X | Y``, and allows it to appear in ``isinstance`` and "
+"``issubclass`` calls."
 msgstr ""
 
 #: ../pep-0604.rst:25
@@ -115,14 +115,14 @@ msgstr ""
 #: ../pep-0604.rst:27
 msgid ""
 ":pep:`484` and :pep:`526` propose a generic syntax to add typing to "
-"variables, parameters and function returns. :pep:`585` proposes to "
-":pep:`expose parameters to generics at runtime <585#parameters-to-"
-"generics-are-available-at-runtime>`. Mypy [1]_ accepts a syntax which "
-"looks like::"
+"variables, parameters and function returns. :pep:`585` proposes to :pep:"
+"`expose parameters to generics at runtime <585#parameters-to-generics-are-"
+"available-at-runtime>`. Mypy [1]_ accepts a syntax which looks like::"
 msgstr ""
 
 #: ../pep-0604.rst:38
-msgid "To describe a disjunction (union type), the user must use ``Union[X, Y]``."
+msgid ""
+"To describe a disjunction (union type), the user must use ``Union[X, Y]``."
 msgstr ""
 
 #: ../pep-0604.rst:40
@@ -135,10 +135,10 @@ msgstr ""
 
 #: ../pep-0604.rst:46
 msgid ""
-"Inspired by Scala [2]_ and Pike [3]_, this proposal adds operator "
-"``type.__or__()``.  With this new operator, it is possible to write ``int"
-" | str`` instead of ``Union[int, str]``. In addition to annotations, the "
-"result of this expression would then be valid in ``isinstance()`` and "
+"Inspired by Scala [2]_ and Pike [3]_, this proposal adds operator ``type."
+"__or__()``.  With this new operator, it is possible to write ``int | str`` "
+"instead of ``Union[int, str]``. In addition to annotations, the result of "
+"this expression would then be valid in ``isinstance()`` and "
 "``issubclass()``::"
 msgstr ""
 
@@ -154,8 +154,8 @@ msgstr ""
 
 #: ../pep-0604.rst:64
 msgid ""
-"The new union syntax should be accepted for function, variable and "
-"parameter annotations."
+"The new union syntax should be accepted for function, variable and parameter "
+"annotations."
 msgstr ""
 
 #: ../pep-0604.rst:67
@@ -198,7 +198,8 @@ msgid "In some situations, some exceptions will not be raised as expected."
 msgstr ""
 
 #: ../pep-0604.rst:145
-msgid "If a metaclass implements the ``__or__`` operator, it will override this::"
+msgid ""
+"If a metaclass implements the ``__or__`` operator, it will override this::"
 msgstr ""
 
 #: ../pep-0604.rst:161
@@ -211,8 +212,8 @@ msgstr ""
 
 #: ../pep-0604.rst:165
 msgid ""
-"`Discussion in python-ideas <https://mail.python.org/archives/list"
-"/python-ideas@python.org/thread/FCTXGDT2NNKRJQ6CDEPWUXHVG2AAQZZY/>`_"
+"`Discussion in python-ideas <https://mail.python.org/archives/list/python-"
+"ideas@python.org/thread/FCTXGDT2NNKRJQ6CDEPWUXHVG2AAQZZY/>`_"
 msgstr ""
 
 #: ../pep-0604.rst:166
@@ -237,8 +238,8 @@ msgstr ""
 
 #: ../pep-0604.rst:174
 msgid ""
-"At runtime, ``int|str`` might return a simple object in 3.10, rather than"
-" everything that you'd need to grab from importing ``typing``"
+"At runtime, ``int|str`` might return a simple object in 3.10, rather than "
+"everything that you'd need to grab from importing ``typing``"
 msgstr ""
 
 #: ../pep-0604.rst:178 ../pep-0604.rst:214
@@ -253,28 +254,27 @@ msgstr ""
 
 #: ../pep-0604.rst:181
 msgid ""
-"Breaks the backport (in that ``typing`` can easily be backported but core"
-" ``types`` can't)"
+"Breaks the backport (in that ``typing`` can easily be backported but core "
+"``types`` can't)"
 msgstr ""
 
 #: ../pep-0604.rst:182
 msgid ""
-"If Python itself doesn't have to be changed, we'd still need to implement"
-" it in mypy, Pyre, PyCharm, Pytype, and who knows what else (it's a minor"
-" change see \"Reference Implementation\")"
+"If Python itself doesn't have to be changed, we'd still need to implement it "
+"in mypy, Pyre, PyCharm, Pytype, and who knows what else (it's a minor change "
+"see \"Reference Implementation\")"
 msgstr ""
 
 #: ../pep-0604.rst:187
 msgid ""
-"2. Change only PEP 484 (Type hints) to accept the syntax ``type1 | "
-"type2`` ?"
+"2. Change only PEP 484 (Type hints) to accept the syntax ``type1 | type2`` ?"
 msgstr ""
 
 #: ../pep-0604.rst:189
 msgid ""
-":pep:`563` (Postponed Evaluation of Annotations) is enough to accept this"
-" proposition, if we accept to not be compatible with the dynamic "
-"evaluation of annotations (``eval()``)."
+":pep:`563` (Postponed Evaluation of Annotations) is enough to accept this "
+"proposition, if we accept to not be compatible with the dynamic evaluation "
+"of annotations (``eval()``)."
 msgstr ""
 
 #: ../pep-0604.rst:204
@@ -283,8 +283,8 @@ msgstr ""
 
 #: ../pep-0604.rst:212
 msgid ""
-"If they were permitted, then instance checking could use an extremely "
-"clean-looking notation"
+"If they were permitted, then instance checking could use an extremely clean-"
+"looking notation"
 msgstr ""
 
 #: ../pep-0604.rst:216
@@ -297,8 +297,8 @@ msgstr ""
 
 #: ../pep-0604.rst:222
 msgid ""
-"A new built-in ``Union`` type must be implemented to hold the return "
-"value of ``t1 | t2``, and it must be supported by ``isinstance()`` and "
+"A new built-in ``Union`` type must be implemented to hold the return value "
+"of ``t1 | t2``, and it must be supported by ``isinstance()`` and "
 "``issubclass()``. This type can be placed in the ``types`` module. "
 "Interoperability between ``types.Union`` and ``typing.Union`` must be "
 "provided."
@@ -306,20 +306,20 @@ msgstr ""
 
 #: ../pep-0604.rst:228
 msgid ""
-"Once the Python language is extended, mypy [1]_ and other type checkers "
-"will need to be updated to accept this new syntax."
+"Once the Python language is extended, mypy [1]_ and other type checkers will "
+"need to be updated to accept this new syntax."
 msgstr ""
 
 #: ../pep-0604.rst:232
 msgid ""
-"A proposed implementation for `cpython is here "
-"<https://github.com/python/cpython/pull/21515>`_."
+"A proposed implementation for `cpython is here <https://github.com/python/"
+"cpython/pull/21515>`_."
 msgstr ""
 
 #: ../pep-0604.rst:234
 msgid ""
-"A proposed implementation for `mypy is here "
-"<https://github.com/pprados/mypy/tree/PEP604>`_."
+"A proposed implementation for `mypy is here <https://github.com/pprados/mypy/"
+"tree/PEP604>`_."
 msgstr ""
 
 #: ../pep-0604.rst:239
@@ -332,8 +332,8 @@ msgstr ""
 
 #: ../pep-0604.rst:243
 msgid ""
-"Scala Union Types https://dotty.epfl.ch/docs/reference/new-types/union-"
-"types.html"
+"Scala Union Types https://dotty.epfl.ch/docs/reference/new-types/union-types."
+"html"
 msgstr ""
 
 #: ../pep-0604.rst:245
@@ -346,7 +346,6 @@ msgstr ""
 
 #: ../pep-0604.rst:252
 msgid ""
-"This document is placed in the public domain or under the "
-"CC0-1.0-Universal license, whichever is more permissive."
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
 msgstr ""
-

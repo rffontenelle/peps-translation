@@ -87,34 +87,34 @@ msgstr ""
 msgid ""
 "It becomes possible to read the configuration and then override some "
 "computed parameters before it is applied. It also becomes possible to "
-"completely override how Python computes the module search paths "
-"(``sys.path``)."
+"completely override how Python computes the module search paths (``sys."
+"path``)."
 msgstr ""
 
 #: ../pep-0587.rst:23
 msgid ""
-"The new `Isolated Configuration`_ provides sane default values to isolate"
-" Python from the system. For example, to embed Python into an "
-"application. Using the environment are now opt-in options, rather than an"
-" opt-out options. For example, environment variables, command line "
-"arguments and global configuration variables are ignored by default."
+"The new `Isolated Configuration`_ provides sane default values to isolate "
+"Python from the system. For example, to embed Python into an application. "
+"Using the environment are now opt-in options, rather than an opt-out "
+"options. For example, environment variables, command line arguments and "
+"global configuration variables are ignored by default."
 msgstr ""
 
 #: ../pep-0587.rst:29
 msgid ""
 "Building a customized Python which behaves as the regular Python becomes "
-"easier using the new ``Py_RunMain()`` function. Moreover, using the "
-"`Python Configuration`_, ``PyConfig.argv`` arguments are now parsed the "
-"same way the regular Python parses command line arguments, and "
-"``PyConfig.xoptions`` are handled as ``-X opt`` command line options."
+"easier using the new ``Py_RunMain()`` function. Moreover, using the `Python "
+"Configuration`_, ``PyConfig.argv`` arguments are now parsed the same way the "
+"regular Python parses command line arguments, and ``PyConfig.xoptions`` are "
+"handled as ``-X opt`` command line options."
 msgstr ""
 
 #: ../pep-0587.rst:35
 msgid ""
-"This extracts a subset of the API design from the :pep:`432` development "
-"and refactoring work that is now considered sufficiently stable to make "
-"public (allowing 3rd party embedding applications access to the same "
-"configuration APIs that the native CPython CLI is now using)."
+"This extracts a subset of the API design from the :pep:`432` development and "
+"refactoring work that is now considered sufficiently stable to make public "
+"(allowing 3rd party embedding applications access to the same configuration "
+"APIs that the native CPython CLI is now using)."
 msgstr ""
 
 #: ../pep-0587.rst:42
@@ -123,20 +123,20 @@ msgstr ""
 
 #: ../pep-0587.rst:44
 msgid ""
-"Python is highly configurable but its configuration evolved organically. "
-"The initialization configuration is scattered all around the code using "
+"Python is highly configurable but its configuration evolved organically. The "
+"initialization configuration is scattered all around the code using "
 "different ways to set them: global configuration variables (ex: "
-"``Py_IsolatedFlag``), environment variables (ex: ``PYTHONPATH``), command"
-" line arguments (ex: ``-b``), configuration files (ex: ``pyvenv.cfg``), "
-"function calls (ex: ``Py_SetProgramName()``). A straightforward and "
-"reliable way to configure Python is needed."
+"``Py_IsolatedFlag``), environment variables (ex: ``PYTHONPATH``), command "
+"line arguments (ex: ``-b``), configuration files (ex: ``pyvenv.cfg``), "
+"function calls (ex: ``Py_SetProgramName()``). A straightforward and reliable "
+"way to configure Python is needed."
 msgstr ""
 
 #: ../pep-0587.rst:52
 msgid ""
 "Some configuration parameters are not accessible from the C API, or not "
-"easily. For example, there is no API to override the default values of "
-"``sys.executable``."
+"easily. For example, there is no API to override the default values of ``sys."
+"executable``."
 msgstr ""
 
 #: ../pep-0587.rst:56
@@ -155,9 +155,9 @@ msgstr ""
 
 #: ../pep-0587.rst:64
 msgid ""
-"The C API of Python 3.7 Initialization takes ``wchar_t*`` strings as "
-"input whereas the Python filesystem encoding is set during the "
-"initialization which can lead to mojibake."
+"The C API of Python 3.7 Initialization takes ``wchar_t*`` strings as input "
+"whereas the Python filesystem encoding is set during the initialization "
+"which can lead to mojibake."
 msgstr ""
 
 #: ../pep-0587.rst:68
@@ -165,40 +165,39 @@ msgid ""
 "Python 3.7 APIs like ``Py_Initialize()`` aborts the process on memory "
 "allocation failure which is not convenient when Python is embedded. "
 "Moreover, ``Py_Main()`` could exit directly the process rather than "
-"returning an exit code. Proposed new API reports the error or exit code "
-"to the caller which can decide how to handle it."
+"returning an exit code. Proposed new API reports the error or exit code to "
+"the caller which can decide how to handle it."
 msgstr ""
 
 #: ../pep-0587.rst:74
 msgid ""
-"Implementing the :pep:`540` (UTF-8 Mode) and the new ``-X dev`` correctly"
-" was almost impossible in Python 3.6. The code base has been deeply "
-"reworked in Python 3.7 and then in Python 3.8 to read the configuration "
-"into a structure with no side effect. It becomes possible to clear the "
+"Implementing the :pep:`540` (UTF-8 Mode) and the new ``-X dev`` correctly "
+"was almost impossible in Python 3.6. The code base has been deeply reworked "
+"in Python 3.7 and then in Python 3.8 to read the configuration into a "
+"structure with no side effect. It becomes possible to clear the "
 "configuration (release memory) and read again the configuration if the "
 "encoding changed . It is required to implement properly the UTF-8 which "
 "changes the encoding using ``-X utf8`` command line option. Internally, "
-"bytes ``argv`` strings are decoded from the filesystem encoding. The ``-X"
-" dev`` changes the memory allocator (behaves as ``PYTHONMALLOC=debug``), "
-"whereas it was not possible to change the memory allocation *while* "
-"parsing the command line arguments. The new design of the internal "
-"implementation not only allowed to implement properly ``-X utf8`` and "
-"``-X dev``, it also allows to change the Python behavior way more easily,"
-" especially for corner cases like that, and ensure that the configuration"
-" remains consistent: see `Priority and Rules`_."
+"bytes ``argv`` strings are decoded from the filesystem encoding. The ``-X "
+"dev`` changes the memory allocator (behaves as ``PYTHONMALLOC=debug``), "
+"whereas it was not possible to change the memory allocation *while* parsing "
+"the command line arguments. The new design of the internal implementation "
+"not only allowed to implement properly ``-X utf8`` and ``-X dev``, it also "
+"allows to change the Python behavior way more easily, especially for corner "
+"cases like that, and ensure that the configuration remains consistent: see "
+"`Priority and Rules`_."
 msgstr ""
 
 #: ../pep-0587.rst:91
 msgid ""
 "This PEP is a partial implementation of :pep:`432` which is the overall "
-"design.  New fields can be added later to ``PyConfig`` structure to "
-"finish the implementation of the :pep:`432` (e.g. by adding a new partial"
-" initialization API which allows to configure Python using Python objects"
-" to finish the full initialization). However, those features are omitted "
-"from this PEP as even the native CPython CLI doesn't work that way - the "
-"public API proposal in this PEP is limited to features which have already"
-" been implemented and adopted as private APIs for us in the native "
-"CPython CLI."
+"design.  New fields can be added later to ``PyConfig`` structure to finish "
+"the implementation of the :pep:`432` (e.g. by adding a new partial "
+"initialization API which allows to configure Python using Python objects to "
+"finish the full initialization). However, those features are omitted from "
+"this PEP as even the native CPython CLI doesn't work that way - the public "
+"API proposal in this PEP is limited to features which have already been "
+"implemented and adopted as private APIs for us in the native CPython CLI."
 msgstr ""
 
 #: ../pep-0587.rst:102
@@ -339,11 +338,11 @@ msgstr ""
 
 #: ../pep-0587.rst:142
 msgid ""
-"This PEP also adds ``_PyRuntimeState.preconfig`` (``PyPreConfig`` type) "
-"and ``PyInterpreterState.config`` (``PyConfig`` type) fields to these "
-"internal structures. ``PyInterpreterState.config`` becomes the new "
-"reference configuration, replacing global configuration variables and "
-"other private variables."
+"This PEP also adds ``_PyRuntimeState.preconfig`` (``PyPreConfig`` type) and "
+"``PyInterpreterState.config`` (``PyConfig`` type) fields to these internal "
+"structures. ``PyInterpreterState.config`` becomes the new reference "
+"configuration, replacing global configuration variables and other private "
+"variables."
 msgstr ""
 
 #: ../pep-0587.rst:150
@@ -378,15 +377,15 @@ msgstr ""
 
 #: ../pep-0587.rst:163
 msgid ""
-"``PyStatus PyWideStringList_Insert(PyWideStringList *list, Py_ssize_t "
-"index, const wchar_t *item)``: Insert *item* into *list* at *index*. If "
-"*index* is greater than *list* length, just append *item* to *list*."
+"``PyStatus PyWideStringList_Insert(PyWideStringList *list, Py_ssize_t index, "
+"const wchar_t *item)``: Insert *item* into *list* at *index*. If *index* is "
+"greater than *list* length, just append *item* to *list*."
 msgstr ""
 
 #: ../pep-0587.rst:167
 msgid ""
-"If *length* is non-zero, *items* must be non-NULL and all strings must be"
-" non-NULL."
+"If *length* is non-zero, *items* must be non-NULL and all strings must be "
+"non-NULL."
 msgstr ""
 
 #: ../pep-0587.rst:171
@@ -396,8 +395,8 @@ msgstr ""
 #: ../pep-0587.rst:173
 msgid ""
 "``PyStatus`` is a structure to store the status of an initialization "
-"function: success, error or exit. For an error, it can store the C "
-"function name which created the error."
+"function: success, error or exit. For an error, it can store the C function "
+"name which created the error."
 msgstr ""
 
 #: ../pep-0587.rst:177
@@ -418,8 +417,8 @@ msgstr ""
 
 #: ../pep-0587.rst:205
 msgid ""
-"``func`` (``const char *``): Name of the function which created an error,"
-" can be ``NULL``."
+"``func`` (``const char *``): Name of the function which created an error, "
+"can be ``NULL``."
 msgstr ""
 
 #: ../pep-0587.rst:207
@@ -452,9 +451,9 @@ msgstr ""
 
 #: ../pep-0587.rst:218
 msgid ""
-"``PyStatus_Exception(status)``: Is the result an error or an exit? If "
-"true, the exception must be handled; by calling "
-"``Py_ExitStatusException(status)`` for example."
+"``PyStatus_Exception(status)``: Is the result an error or an exit? If true, "
+"the exception must be handled; by calling ``Py_ExitStatusException(status)`` "
+"for example."
 msgstr ""
 
 #: ../pep-0587.rst:221
@@ -467,10 +466,10 @@ msgstr ""
 
 #: ../pep-0587.rst:223
 msgid ""
-"``Py_ExitStatusException(status)``: Call ``exit(exitcode)`` if *status* "
-"is an exit. Print the error messageand exit with a non-zero exit code if "
-"*status* is an error.  Must only be called if "
-"``PyStatus_Exception(status)`` is true."
+"``Py_ExitStatusException(status)``: Call ``exit(exitcode)`` if *status* is "
+"an exit. Print the error messageand exit with a non-zero exit code if "
+"*status* is an error.  Must only be called if ``PyStatus_Exception(status)`` "
+"is true."
 msgstr ""
 
 #: ../pep-0587.rst:229
@@ -525,14 +524,14 @@ msgstr ""
 
 #: ../pep-0587.rst:270
 msgid ""
-"``PyStatus Py_PreInitializeFromBytesArgs(const PyPreConfig *preconfig, "
-"int argc, char * const *argv)``"
+"``PyStatus Py_PreInitializeFromBytesArgs(const PyPreConfig *preconfig, int "
+"argc, char * const *argv)``"
 msgstr ""
 
 #: ../pep-0587.rst:271
 msgid ""
-"``PyStatus Py_PreInitializeFromArgs(const PyPreConfig *preconfig, int "
-"argc, wchar_t * const * argv)``"
+"``PyStatus Py_PreInitializeFromArgs(const PyPreConfig *preconfig, int argc, "
+"wchar_t * const * argv)``"
 msgstr ""
 
 #: ../pep-0587.rst:273
@@ -543,11 +542,11 @@ msgstr ""
 
 #: ../pep-0587.rst:276
 msgid ""
-"For `Python Configuration`_ (``PyPreConfig_InitPythonConfig()``), if "
-"Python is initialized with command line arguments, the command line "
-"arguments must also be passed to preinitialize Python, since they have an"
-" effect on the pre-configuration like encodings. For example, the ``-X "
-"utf8`` command line option enables the UTF-8 Mode."
+"For `Python Configuration`_ (``PyPreConfig_InitPythonConfig()``), if Python "
+"is initialized with command line arguments, the command line arguments must "
+"also be passed to preinitialize Python, since they have an effect on the pre-"
+"configuration like encodings. For example, the ``-X utf8`` command line "
+"option enables the UTF-8 Mode."
 msgstr ""
 
 #: ../pep-0587.rst:282
@@ -572,8 +571,7 @@ msgstr ""
 
 #: ../pep-0587.rst:291
 msgid ""
-"``PYMEM_ALLOCATOR_DEBUG`` (``2``): default memory allocators with debug "
-"hooks"
+"``PYMEM_ALLOCATOR_DEBUG`` (``2``): default memory allocators with debug hooks"
 msgstr ""
 
 #: ../pep-0587.rst:293
@@ -582,8 +580,8 @@ msgstr ""
 
 #: ../pep-0587.rst:294
 msgid ""
-"``PYMEM_ALLOCATOR_MALLOC_DEBUG`` (``4``): force usage of ``malloc()`` "
-"with debug hooks"
+"``PYMEM_ALLOCATOR_MALLOC_DEBUG`` (``4``): force usage of ``malloc()`` with "
+"debug hooks"
 msgstr ""
 
 #: ../pep-0587.rst:296
@@ -592,14 +590,14 @@ msgstr ""
 
 #: ../pep-0587.rst:297
 msgid ""
-"``PYMEM_ALLOCATOR_PYMALLOC_DEBUG`` (``6``): Python \"pymalloc\" allocator"
-" with debug hooks"
+"``PYMEM_ALLOCATOR_PYMALLOC_DEBUG`` (``6``): Python \"pymalloc\" allocator "
+"with debug hooks"
 msgstr ""
 
 #: ../pep-0587.rst:299
 msgid ""
-"Note: ``PYMEM_ALLOCATOR_PYMALLOC`` and ``PYMEM_ALLOCATOR_PYMALLOC_DEBUG``"
-" are not supported if Python is configured using ``--without-pymalloc``"
+"Note: ``PYMEM_ALLOCATOR_PYMALLOC`` and ``PYMEM_ALLOCATOR_PYMALLOC_DEBUG`` "
+"are not supported if Python is configured using ``--without-pymalloc``"
 msgstr ""
 
 #: ../pep-0587.rst:303
@@ -631,17 +629,17 @@ msgstr ""
 
 #: ../pep-0587.rst:315
 msgid ""
-"``legacy_windows_fs_encoding`` (``int``, Windows only): If non-zero, "
-"disable UTF-8 Mode, set the Python filesystem encoding to ``mbcs``, set "
-"the filesystem error handler to ``replace``."
+"``legacy_windows_fs_encoding`` (``int``, Windows only): If non-zero, disable "
+"UTF-8 Mode, set the Python filesystem encoding to ``mbcs``, set the "
+"filesystem error handler to ``replace``."
 msgstr ""
 
 #: ../pep-0587.rst:318
 msgid ""
-"``parse_argv`` (``int``): If non-zero, ``Py_PreInitializeFromArgs()`` and"
-" ``Py_PreInitializeFromBytesArgs()`` parse their ``argv`` argument the "
-"same way the regular Python parses command line arguments: see `Command "
-"Line Arguments`_."
+"``parse_argv`` (``int``): If non-zero, ``Py_PreInitializeFromArgs()`` and "
+"``Py_PreInitializeFromBytesArgs()`` parse their ``argv`` argument the same "
+"way the regular Python parses command line arguments: see `Command Line "
+"Arguments`_."
 msgstr ""
 
 #: ../pep-0587.rst:323
@@ -664,24 +662,24 @@ msgstr ""
 
 #: ../pep-0587.rst:333 ../pep-0587.rst:582
 msgid ""
-"``_config_init`` (``int``): Function used to initialize ``PyConfig``, "
-"used for preinitialization."
+"``_config_init`` (``int``): Function used to initialize ``PyConfig``, used "
+"for preinitialization."
 msgstr ""
 
 #: ../pep-0587.rst:336
 msgid ""
 "``PyMem_SetAllocator()`` can be called after ``Py_PreInitialize()`` and "
-"before ``Py_InitializeFromConfig()`` to install a custom memory "
-"allocator. It can be called before ``Py_PreInitialize()`` if "
-"``allocator`` is set to ``PYMEM_ALLOCATOR_NOT_SET`` (default value)."
+"before ``Py_InitializeFromConfig()`` to install a custom memory allocator. "
+"It can be called before ``Py_PreInitialize()`` if ``allocator`` is set to "
+"``PYMEM_ALLOCATOR_NOT_SET`` (default value)."
 msgstr ""
 
 #: ../pep-0587.rst:341
 msgid ""
-"Python memory allocation functions like ``PyMem_RawMalloc()`` must not be"
-" used before Python preinitialization, whereas calling directly "
-"``malloc()`` and ``free()`` is always safe. ``Py_DecodeLocale()`` must "
-"not be called before the preinitialization."
+"Python memory allocation functions like ``PyMem_RawMalloc()`` must not be "
+"used before Python preinitialization, whereas calling directly ``malloc()`` "
+"and ``free()`` is always safe. ``Py_DecodeLocale()`` must not be called "
+"before the preinitialization."
 msgstr ""
 
 #: ../pep-0587.rst:348
@@ -689,7 +687,8 @@ msgid "Initialization with PyConfig"
 msgstr ""
 
 #: ../pep-0587.rst:350
-msgid "The ``PyConfig`` structure contains most parameters to configure Python."
+msgid ""
+"The ``PyConfig`` structure contains most parameters to configure Python."
 msgstr ""
 
 #: ../pep-0587.rst:352
@@ -714,16 +713,16 @@ msgstr ""
 
 #: ../pep-0587.rst:386
 msgid ""
-"``PyStatus PyConfig_SetString(PyConfig *config, wchar_t * const "
-"*config_str, const wchar_t *str)``: Copy the wide character string *str* "
-"into ``*config_str``. Preinitialize Python if needed."
+"``PyStatus PyConfig_SetString(PyConfig *config, wchar_t * const *config_str, "
+"const wchar_t *str)``: Copy the wide character string *str* into "
+"``*config_str``. Preinitialize Python if needed."
 msgstr ""
 
 #: ../pep-0587.rst:389
 msgid ""
 "``PyStatus PyConfig_SetBytesString(PyConfig *config, wchar_t * const "
-"*config_str, const char *str)``: Decode *str* using ``Py_DecodeLocale()``"
-" and set the result into ``*config_str``. Preinitialize Python if needed."
+"*config_str, const char *str)``: Decode *str* using ``Py_DecodeLocale()`` "
+"and set the result into ``*config_str``. Preinitialize Python if needed."
 msgstr ""
 
 #: ../pep-0587.rst:393
@@ -735,28 +734,29 @@ msgstr ""
 
 #: ../pep-0587.rst:396
 msgid ""
-"``PyStatus PyConfig_SetBytesArgv(PyConfig *config, int argc, char * const"
-" *argv)``: Set command line arguments: decode bytes using "
+"``PyStatus PyConfig_SetBytesArgv(PyConfig *config, int argc, char * const "
+"*argv)``: Set command line arguments: decode bytes using "
 "``Py_DecodeLocale()``. Preinitialize Python if needed."
 msgstr ""
 
 #: ../pep-0587.rst:399
 msgid ""
-"``PyStatus PyConfig_Read(PyConfig *config)``: Read all Python "
-"configuration. Fields which are already initialized are left unchanged. "
-"Preinitialize Python if needed."
+"``PyStatus PyConfig_Read(PyConfig *config)``: Read all Python configuration. "
+"Fields which are already initialized are left unchanged. Preinitialize "
+"Python if needed."
 msgstr ""
 
 #: ../pep-0587.rst:403
-msgid "``void PyConfig_Clear(PyConfig *config)``: Release configuration memory."
+msgid ""
+"``void PyConfig_Clear(PyConfig *config)``: Release configuration memory."
 msgstr ""
 
 #: ../pep-0587.rst:406
 msgid ""
-"Most ``PyConfig`` methods preinitialize Python if needed. In that case, "
-"the Python preinitialization configuration in based on the ``PyConfig``. "
-"If configuration fields which are in common with ``PyPreConfig`` are "
-"tuned, they must be set before calling a ``PyConfig`` method:"
+"Most ``PyConfig`` methods preinitialize Python if needed. In that case, the "
+"Python preinitialization configuration in based on the ``PyConfig``. If "
+"configuration fields which are in common with ``PyPreConfig`` are tuned, "
+"they must be set before calling a ``PyConfig`` method:"
 msgstr ""
 
 #: ../pep-0587.rst:411 ../pep-0587.rst:913 ../pep-0587.rst:1116
@@ -779,8 +779,8 @@ msgstr ""
 
 #: ../pep-0587.rst:416
 msgid ""
-"Moreover, if ``PyConfig_SetArgv()`` or ``PyConfig_SetBytesArgv()`` is "
-"used, this method must be called first, before other methods, since the "
+"Moreover, if ``PyConfig_SetArgv()`` or ``PyConfig_SetBytesArgv()`` is used, "
+"this method must be called first, before other methods, since the "
 "preinitialization configuration depends on command line arguments (if "
 "``parse_argv`` is non-zero)."
 msgstr ""
@@ -808,11 +808,10 @@ msgstr ""
 
 #: ../pep-0587.rst:433
 msgid ""
-"``argv`` (``PyWideStringList``): Command line arguments, ``sys.argv``. "
-"See ``parse_argv`` to parse ``argv`` the same way the regular Python "
-"parses Python command line arguments. If ``argv`` is empty, an empty "
-"string is added to ensure that ``sys.argv`` always exists and is never "
-"empty."
+"``argv`` (``PyWideStringList``): Command line arguments, ``sys.argv``. See "
+"``parse_argv`` to parse ``argv`` the same way the regular Python parses "
+"Python command line arguments. If ``argv`` is empty, an empty string is "
+"added to ensure that ``sys.argv`` always exists and is never empty."
 msgstr ""
 
 #: ../pep-0587.rst:438
@@ -825,30 +824,29 @@ msgstr ""
 
 #: ../pep-0587.rst:442
 msgid ""
-"``buffered_stdio`` (``int``): If equals to 0, enable unbuffered mode, "
-"making the stdout and stderr streams unbuffered."
+"``buffered_stdio`` (``int``): If equals to 0, enable unbuffered mode, making "
+"the stdout and stderr streams unbuffered."
 msgstr ""
 
 #: ../pep-0587.rst:445
 msgid ""
-"``bytes_warning`` (``int``): If equals to 1, issue a warning when "
-"comparing ``bytes`` or ``bytearray`` with ``str``, or comparing ``bytes``"
-" with ``int``. If equal or greater to 2, raise a ``BytesWarning`` "
-"exception."
+"``bytes_warning`` (``int``): If equals to 1, issue a warning when comparing "
+"``bytes`` or ``bytearray`` with ``str``, or comparing ``bytes`` with "
+"``int``. If equal or greater to 2, raise a ``BytesWarning`` exception."
 msgstr ""
 
 #: ../pep-0587.rst:449
 msgid ""
-"``check_hash_pycs_mode`` (``wchar_t*``): ``--check-hash-based-pycs`` "
-"command line option value (see :pep:`552`). Valid values: ``always``, "
-"``never`` and ``default``. The default value is ``default``."
+"``check_hash_pycs_mode`` (``wchar_t*``): ``--check-hash-based-pycs`` command "
+"line option value (see :pep:`552`). Valid values: ``always``, ``never`` and "
+"``default``. The default value is ``default``."
 msgstr ""
 
 #: ../pep-0587.rst:453
 msgid ""
-"``configure_c_stdio`` (``int``): If non-zero, configure C standard "
-"streams (``stdio``, ``stdout``, ``stdout``).  For example, set their mode"
-" to ``O_BINARY`` on Windows."
+"``configure_c_stdio`` (``int``): If non-zero, configure C standard streams "
+"(``stdio``, ``stdout``, ``stdout``).  For example, set their mode to "
+"``O_BINARY`` on Windows."
 msgstr ""
 
 #: ../pep-0587.rst:456
@@ -857,9 +855,8 @@ msgstr ""
 
 #: ../pep-0587.rst:458
 msgid ""
-"``dump_refs`` (``int``): If non-zero, dump all objects which are still "
-"alive at exit. Require a special Python build with ``Py_REF_DEBUG`` macro"
-" defined."
+"``dump_refs`` (``int``): If non-zero, dump all objects which are still alive "
+"at exit. Require a special Python build with ``Py_REF_DEBUG`` macro defined."
 msgstr ""
 
 #: ../pep-0587.rst:461
@@ -871,25 +868,26 @@ msgid "``executable`` (``wchar_t*``): ``sys.executable``."
 msgstr ""
 
 #: ../pep-0587.rst:465
-msgid "``faulthandler`` (``int``): If non-zero, call ``faulthandler.enable()``."
+msgid ""
+"``faulthandler`` (``int``): If non-zero, call ``faulthandler.enable()``."
 msgstr ""
 
 #: ../pep-0587.rst:467
 msgid ""
-"``filesystem_encoding`` (``wchar_t*``): Filesystem encoding, "
-"``sys.getfilesystemencoding()``."
+"``filesystem_encoding`` (``wchar_t*``): Filesystem encoding, ``sys."
+"getfilesystemencoding()``."
 msgstr ""
 
 #: ../pep-0587.rst:469
 msgid ""
-"``filesystem_errors`` (``wchar_t*``): Filesystem encoding errors, "
-"``sys.getfilesystemencodeerrors()``."
+"``filesystem_errors`` (``wchar_t*``): Filesystem encoding errors, ``sys."
+"getfilesystemencodeerrors()``."
 msgstr ""
 
 #: ../pep-0587.rst:471
 msgid ""
-"``use_hash_seed`` (``int``), ``hash_seed`` (``unsigned long``): "
-"Randomized hash function seed."
+"``use_hash_seed`` (``int``), ``hash_seed`` (``unsigned long``): Randomized "
+"hash function seed."
 msgstr ""
 
 #: ../pep-0587.rst:474
@@ -902,8 +900,8 @@ msgstr ""
 
 #: ../pep-0587.rst:478
 msgid ""
-"``inspect`` (``int``): Enter interactive mode after executing a script or"
-" a command."
+"``inspect`` (``int``): Enter interactive mode after executing a script or a "
+"command."
 msgstr ""
 
 #: ../pep-0587.rst:480
@@ -921,8 +919,7 @@ msgstr ""
 #: ../pep-0587.rst:487
 msgid ""
 "``sys.path`` contains neither the script's directory (computed from "
-"``argv[0]`` or the current directory) nor the user's site-packages "
-"directory."
+"``argv[0]`` or the current directory) nor the user's site-packages directory."
 msgstr ""
 
 #: ../pep-0587.rst:490
@@ -937,23 +934,23 @@ msgstr ""
 
 #: ../pep-0587.rst:494
 msgid ""
-"``legacy_windows_stdio`` (``int``, Windows only): If non-zero, use "
-"``io.FileIO`` instead of ``WindowsConsoleIO`` for ``sys.stdin``, "
-"``sys.stdout`` and ``sys.stderr``."
+"``legacy_windows_stdio`` (``int``, Windows only): If non-zero, use ``io."
+"FileIO`` instead of ``WindowsConsoleIO`` for ``sys.stdin``, ``sys.stdout`` "
+"and ``sys.stderr``."
 msgstr ""
 
 #: ../pep-0587.rst:497
 msgid ""
 "``malloc_stats`` (``int``): If non-zero, dump statistics on ``pymalloc`` "
-"memory allocator at exit. The option is ignored if Python is built using "
-"``--without-pymalloc``."
+"memory allocator at exit. The option is ignored if Python is built using ``--"
+"without-pymalloc``."
 msgstr ""
 
 #: ../pep-0587.rst:500
 msgid ""
-"``pythonpath_env`` (``wchar_t*``): Module search paths as a string "
-"separated by DELIM (usually ``:`` character). Initialized from "
-"``PYTHONPATH`` environment variable value by default."
+"``pythonpath_env`` (``wchar_t*``): Module search paths as a string separated "
+"by DELIM (usually ``:`` character). Initialized from ``PYTHONPATH`` "
+"environment variable value by default."
 msgstr ""
 
 #: ../pep-0587.rst:504
@@ -1014,8 +1011,8 @@ msgstr ""
 
 #: ../pep-0587.rst:533
 msgid ""
-"``quiet`` (``int``): Quiet mode. For example, don't display the copyright"
-" and version messages even in interactive mode."
+"``quiet`` (``int``): Quiet mode. For example, don't display the copyright "
+"and version messages even in interactive mode."
 msgstr ""
 
 #: ../pep-0587.rst:536
@@ -1047,24 +1044,25 @@ msgid "``site_import`` (``int``): Import the ``site`` module at startup?"
 msgstr ""
 
 #: ../pep-0587.rst:551
-msgid "``skip_source_first_line`` (``int``): Skip the first line of the source?"
+msgid ""
+"``skip_source_first_line`` (``int``): Skip the first line of the source?"
 msgstr ""
 
 #: ../pep-0587.rst:553
 msgid ""
-"``stdio_encoding`` (``wchar_t*``), ``stdio_errors`` (``wchar_t*``): "
-"Encoding and encoding errors of ``sys.stdin``, ``sys.stdout`` and "
-"``sys.stderr``."
+"``stdio_encoding`` (``wchar_t*``), ``stdio_errors`` (``wchar_t*``): Encoding "
+"and encoding errors of ``sys.stdin``, ``sys.stdout`` and ``sys.stderr``."
 msgstr ""
 
 #: ../pep-0587.rst:557
-msgid "``tracemalloc`` (``int``): If non-zero, call ``tracemalloc.start(value)``."
+msgid ""
+"``tracemalloc`` (``int``): If non-zero, call ``tracemalloc.start(value)``."
 msgstr ""
 
 #: ../pep-0587.rst:559
 msgid ""
-"``user_site_directory`` (``int``): If non-zero, add user site directory "
-"to ``sys.path``."
+"``user_site_directory`` (``int``): If non-zero, add user site directory to "
+"``sys.path``."
 msgstr ""
 
 #: ../pep-0587.rst:561
@@ -1073,8 +1071,8 @@ msgstr ""
 
 #: ../pep-0587.rst:563
 msgid ""
-"``warnoptions`` (``PyWideStringList``): Options of the ``warnings`` "
-"module to build warnings filters."
+"``warnoptions`` (``PyWideStringList``): Options of the ``warnings`` module "
+"to build warnings filters."
 msgstr ""
 
 #: ../pep-0587.rst:565
@@ -1087,21 +1085,20 @@ msgstr ""
 
 #: ../pep-0587.rst:570
 msgid ""
-"The ``legacy_windows_stdio`` field is only available on Windows. ``#ifdef"
-" MS_WINDOWS`` macro can be used for Windows specific code."
+"The ``legacy_windows_stdio`` field is only available on Windows. ``#ifdef "
+"MS_WINDOWS`` macro can be used for Windows specific code."
 msgstr ""
 
 #: ../pep-0587.rst:573
 msgid ""
-"If ``parse_argv`` is non-zero, ``argv`` arguments are parsed the same way"
-" the regular Python parses command line arguments, and Python arguments "
-"are stripped from ``argv``: see `Command Line Arguments`_."
+"If ``parse_argv`` is non-zero, ``argv`` arguments are parsed the same way "
+"the regular Python parses command line arguments, and Python arguments are "
+"stripped from ``argv``: see `Command Line Arguments`_."
 msgstr ""
 
 #: ../pep-0587.rst:577
 msgid ""
-"The ``xoptions`` options are parsed to set other options: see `-X "
-"Options`_."
+"The ``xoptions`` options are parsed to set other options: see `-X Options`_."
 msgstr ""
 
 #: ../pep-0587.rst:580
@@ -1114,8 +1111,8 @@ msgstr ""
 
 #: ../pep-0587.rst:586
 msgid ""
-"``_init_main`` (``int``): If equal to 0, stop Python initialization "
-"before the \"main\" phase (see :pep:`432`)."
+"``_init_main`` (``int``): If equal to 0, stop Python initialization before "
+"the \"main\" phase (see :pep:`432`)."
 msgstr ""
 
 #: ../pep-0587.rst:590
@@ -1127,8 +1124,8 @@ msgstr ""
 #: ../pep-0587.rst:638
 msgid ""
 "``PyImport_FrozenModules``, ``PyImport_AppendInittab()`` and "
-"``PyImport_ExtendInittab()`` functions are still relevant and continue to"
-" work as previously. They should be set or called after Python "
+"``PyImport_ExtendInittab()`` functions are still relevant and continue to "
+"work as previously. They should be set or called after Python "
 "preinitialization and before the Python initialization."
 msgstr ""
 
@@ -1138,25 +1135,24 @@ msgstr ""
 
 #: ../pep-0587.rst:647
 msgid ""
-"``PyPreConfig_InitIsolatedConfig()`` and "
-"``PyConfig_InitIsolatedConfig()`` functions create a configuration to "
-"isolate Python from the system. For example, to embed Python into an "
-"application."
+"``PyPreConfig_InitIsolatedConfig()`` and ``PyConfig_InitIsolatedConfig()`` "
+"functions create a configuration to isolate Python from the system. For "
+"example, to embed Python into an application."
 msgstr ""
 
 #: ../pep-0587.rst:652
 msgid ""
 "This configuration ignores global configuration variables, environments "
 "variables and command line arguments (``argv`` is not parsed). The C "
-"standard streams (ex: ``stdout``) and the LC_CTYPE locale are left "
-"unchanged by default."
+"standard streams (ex: ``stdout``) and the LC_CTYPE locale are left unchanged "
+"by default."
 msgstr ""
 
 #: ../pep-0587.rst:657
 msgid ""
-"Configuration files are still used with this configuration. Set the `Path"
-" Configuration`_ (\"output fields\") to ignore these configuration files "
-"and avoid the function computing the default path configuration."
+"Configuration files are still used with this configuration. Set the `Path "
+"Configuration`_ (\"output fields\") to ignore these configuration files and "
+"avoid the function computing the default path configuration."
 msgstr ""
 
 #: ../pep-0587.rst:663
@@ -1166,8 +1162,8 @@ msgstr ""
 #: ../pep-0587.rst:665
 msgid ""
 "``PyPreConfig_InitPythonConfig()`` and ``PyConfig_InitPythonConfig()`` "
-"functions create a configuration to build a customized Python which "
-"behaves as the regular Python."
+"functions create a configuration to build a customized Python which behaves "
+"as the regular Python."
 msgstr ""
 
 #: ../pep-0587.rst:669
@@ -1189,8 +1185,8 @@ msgstr ""
 
 #: ../pep-0587.rst:712
 msgid ""
-"This example is a basic implementation of the \"System Python "
-"Executable\" discussed in :pep:`432`."
+"This example is a basic implementation of the \"System Python Executable\" "
+"discussed in :pep:`432`."
 msgstr ""
 
 #: ../pep-0587.rst:717
@@ -1240,19 +1236,19 @@ msgstr ""
 #: ../pep-0587.rst:734
 msgid ""
 "If at least one \"output field\" is not set, Python computes the path "
-"configuration to fill unset fields. If ``module_search_paths_set`` is "
-"equal to 0, ``module_search_paths`` is overridden and "
-"``module_search_paths_set`` is set to 1."
+"configuration to fill unset fields. If ``module_search_paths_set`` is equal "
+"to 0, ``module_search_paths`` is overridden and ``module_search_paths_set`` "
+"is set to 1."
 msgstr ""
 
 #: ../pep-0587.rst:739
 msgid ""
-"It is possible to completely ignore the function computing the default "
-"path configuration by setting explicitly all path configuration output "
-"fields listed above. A string is considered as set even if it is non-"
-"empty. ``module_search_paths`` is considered as set if "
-"``module_search_paths_set`` is set to 1. In this case, path configuration"
-" input fields are ignored as well."
+"It is possible to completely ignore the function computing the default path "
+"configuration by setting explicitly all path configuration output fields "
+"listed above. A string is considered as set even if it is non-empty. "
+"``module_search_paths`` is considered as set if ``module_search_paths_set`` "
+"is set to 1. In this case, path configuration input fields are ignored as "
+"well."
 msgstr ""
 
 #: ../pep-0587.rst:746
@@ -1263,8 +1259,8 @@ msgstr ""
 
 #: ../pep-0587.rst:749
 msgid ""
-"If ``base_prefix`` or ``base_exec_prefix`` fields are not set, they "
-"inherit their value from ``prefix`` and ``exec_prefix`` respectively."
+"If ``base_prefix`` or ``base_exec_prefix`` fields are not set, they inherit "
+"their value from ``prefix`` and ``exec_prefix`` respectively."
 msgstr ""
 
 #: ../pep-0587.rst:752
@@ -1273,8 +1269,8 @@ msgstr ""
 
 #: ../pep-0587.rst:754
 msgid ""
-"If ``run_filename`` is set and is a directory which contains a "
-"``__main__.py`` script, prepend ``run_filename`` to ``sys.path``."
+"If ``run_filename`` is set and is a directory which contains a ``__main__."
+"py`` script, prepend ``run_filename`` to ``sys.path``."
 msgstr ""
 
 #: ../pep-0587.rst:756
@@ -1283,14 +1279,14 @@ msgstr ""
 
 #: ../pep-0587.rst:758
 msgid ""
-"If ``run_module`` is set, prepend the current directory to ``sys.path``. "
-"Do nothing if the current directory cannot be read."
+"If ``run_module`` is set, prepend the current directory to ``sys.path``. Do "
+"nothing if the current directory cannot be read."
 msgstr ""
 
 #: ../pep-0587.rst:760
 msgid ""
-"If ``run_filename`` is set, prepends the directory of the filename to "
-"``sys.path``."
+"If ``run_filename`` is set, prepends the directory of the filename to ``sys."
+"path``."
 msgstr ""
 
 #: ../pep-0587.rst:762
@@ -1299,10 +1295,10 @@ msgstr ""
 
 #: ../pep-0587.rst:764
 msgid ""
-"If ``site_import`` is non-zero, ``sys.path`` can be modified by the "
-"``site`` module. If ``user_site_directory`` is non-zero and the user's "
-"site-package directory exists, the ``site`` module appends the user's "
-"site-package directory to ``sys.path``."
+"If ``site_import`` is non-zero, ``sys.path`` can be modified by the ``site`` "
+"module. If ``user_site_directory`` is non-zero and the user's site-package "
+"directory exists, the ``site`` module appends the user's site-package "
+"directory to ``sys.path``."
 msgstr ""
 
 #: ../pep-0587.rst:769
@@ -1315,10 +1311,10 @@ msgstr ""
 
 #: ../pep-0587.rst:775
 msgid ""
-"Python 3.7 provides a high-level ``Py_Main()`` function which requires to"
-" pass command line arguments as ``wchar_t*`` strings. It is non-trivial "
-"to use the correct encoding to decode bytes. Python has its own set of "
-"issues with C locale coercion and UTF-8 Mode."
+"Python 3.7 provides a high-level ``Py_Main()`` function which requires to "
+"pass command line arguments as ``wchar_t*`` strings. It is non-trivial to "
+"use the correct encoding to decode bytes. Python has its own set of issues "
+"with C locale coercion and UTF-8 Mode."
 msgstr ""
 
 #: ../pep-0587.rst:780
@@ -1333,11 +1329,11 @@ msgstr ""
 
 #: ../pep-0587.rst:788
 msgid ""
-"The new ``Py_RunMain()`` function executes the command "
-"(``PyConfig.run_command``), the script (``PyConfig.run_filename``) or the"
-" module (``PyConfig.run_module``) specified on the command line or in the"
-" configuration, and then finalizes Python. It returns an exit status that"
-" can be passed to the ``exit()`` function. ::"
+"The new ``Py_RunMain()`` function executes the command (``PyConfig."
+"run_command``), the script (``PyConfig.run_filename``) or the module "
+"(``PyConfig.run_module``) specified on the command line or in the "
+"configuration, and then finalizes Python. It returns an exit status that can "
+"be passed to the ``exit()`` function. ::"
 msgstr ""
 
 #: ../pep-0587.rst:796
@@ -1374,8 +1370,8 @@ msgstr ""
 
 #: ../pep-0587.rst:811
 msgid ""
-"The ``sys`` module is only partially initialized (ex: ``sys.path`` "
-"doesn't exist yet);"
+"The ``sys`` module is only partially initialized (ex: ``sys.path`` doesn't "
+"exist yet);"
 msgstr ""
 
 #: ../pep-0587.rst:814
@@ -1396,8 +1392,8 @@ msgstr ""
 
 #: ../pep-0587.rst:819
 msgid ""
-"Finish ``sys`` module initialization (ex: create ``sys.stdout`` and "
-"``sys.path``);"
+"Finish ``sys`` module initialization (ex: create ``sys.stdout`` and ``sys."
+"path``);"
 msgstr ""
 
 #: ../pep-0587.rst:821
@@ -1418,38 +1414,38 @@ msgstr ""
 
 #: ../pep-0587.rst:827
 msgid ""
-"``PyConfig._init_main``: if set to 0, ``Py_InitializeFromConfig()`` stops"
-" at the \"Core\" initialization phase."
+"``PyConfig._init_main``: if set to 0, ``Py_InitializeFromConfig()`` stops at "
+"the \"Core\" initialization phase."
 msgstr ""
 
 #: ../pep-0587.rst:829
 msgid ""
-"``PyStatus _Py_InitializeMain(void)``: move to the \"Main\" "
-"initialization phase, finish the Python initialization."
+"``PyStatus _Py_InitializeMain(void)``: move to the \"Main\" initialization "
+"phase, finish the Python initialization."
 msgstr ""
 
 #: ../pep-0587.rst:832
 msgid ""
-"No module is imported during the \"Core\" phase and the ``importlib`` "
-"module is not configured: the `Path Configuration`_ is only applied "
-"during the \"Main\" phase. It may allow to customize Python in Python to "
-"override or tune the `Path Configuration`_, maybe install a custom "
-"sys.meta_path importer or an import hook, etc."
+"No module is imported during the \"Core\" phase and the ``importlib`` module "
+"is not configured: the `Path Configuration`_ is only applied during the "
+"\"Main\" phase. It may allow to customize Python in Python to override or "
+"tune the `Path Configuration`_, maybe install a custom sys.meta_path "
+"importer or an import hook, etc."
 msgstr ""
 
 #: ../pep-0587.rst:838
 msgid ""
-"It may become possible to compute the `Path Configuration`_ in Python, "
-"after the Core phase and before the Main phase, which is one of the PEP "
-"432 motivation."
+"It may become possible to compute the `Path Configuration`_ in Python, after "
+"the Core phase and before the Main phase, which is one of the PEP 432 "
+"motivation."
 msgstr ""
 
 #: ../pep-0587.rst:842
 msgid ""
-"The \"Core\" phase is not properly defined: what should be and what "
-"should not be available at this phase is not specified yet. The API is "
-"marked as private and provisional: the API can be modified or even be "
-"removed anytime until a proper public API is designed."
+"The \"Core\" phase is not properly defined: what should be and what should "
+"not be available at this phase is not specified yet. The API is marked as "
+"private and provisional: the API can be modified or even be removed anytime "
+"until a proper public API is designed."
 msgstr ""
 
 #: ../pep-0587.rst:847
@@ -1464,16 +1460,16 @@ msgstr ""
 
 #: ../pep-0587.rst:889
 msgid ""
-"This PEP only adds a new API: it leaves the existing API unchanged and "
-"has no impact on the backwards compatibility."
+"This PEP only adds a new API: it leaves the existing API unchanged and has "
+"no impact on the backwards compatibility."
 msgstr ""
 
 #: ../pep-0587.rst:892
 msgid ""
 "The Python 3.7 ``Py_Initialize()`` function now disable the C locale "
-"coercion (:pep:`538`) and the UTF-8 Mode (:pep:`540`) by default to "
-"prevent mojibake. The new API using the `Python Configuration`_ is needed"
-" to enable them automatically."
+"coercion (:pep:`538`) and the UTF-8 Mode (:pep:`540`) by default to prevent "
+"mojibake. The new API using the `Python Configuration`_ is needed to enable "
+"them automatically."
 msgstr ""
 
 #: ../pep-0587.rst:899
@@ -1625,8 +1621,8 @@ msgstr ""
 
 #: ../pep-0587.rst:960
 msgid ""
-"If ``isolated`` is non-zero, ``use_environment`` and "
-"``user_site_directory`` are set to 0."
+"If ``isolated`` is non-zero, ``use_environment`` and ``user_site_directory`` "
+"are set to 0."
 msgstr ""
 
 #: ../pep-0587.rst:962
@@ -1647,9 +1643,9 @@ msgstr ""
 
 #: ../pep-0587.rst:968
 msgid ""
-"If the ``python._pth`` configuration file is present, ``isolated`` is set"
-" to 1 and ``site_import`` is set to 0; but ``site_import`` is set to 1 if"
-" ``python._pth`` contains ``import site``."
+"If the ``python._pth`` configuration file is present, ``isolated`` is set to "
+"1 and ``site_import`` is set to 0; but ``site_import`` is set to 1 if "
+"``python._pth`` contains ``import site``."
 msgstr ""
 
 #: ../pep-0587.rst:972
@@ -1658,9 +1654,9 @@ msgstr ""
 
 #: ../pep-0587.rst:974
 msgid ""
-"If ``PyPreConfig.legacy_windows_fs_encoding`` is non-zero, set "
-"``PyPreConfig.utf8_mode`` to 0, set ``PyConfig.filesystem_encoding`` to "
-"``mbcs``, and set ``PyConfig.filesystem_errors`` to ``replace``."
+"If ``PyPreConfig.legacy_windows_fs_encoding`` is non-zero, set ``PyPreConfig."
+"utf8_mode`` to 0, set ``PyConfig.filesystem_encoding`` to ``mbcs``, and set "
+"``PyConfig.filesystem_errors`` to ``replace``."
 msgstr ""
 
 #: ../pep-0587.rst:980
@@ -2626,7 +2622,8 @@ msgid "Python 3.7 API"
 msgstr ""
 
 #: ../pep-0587.rst:1297
-msgid "Python 3.7 has 4 functions in its C API to initialize and finalize Python:"
+msgid ""
+"Python 3.7 has 4 functions in its C API to initialize and finalize Python:"
 msgstr ""
 
 #: ../pep-0587.rst:1300
@@ -2695,8 +2692,8 @@ msgstr ""
 
 #: ../pep-0587.rst:1322
 msgid ""
-"See `Initialization, Finalization, and Threads "
-"<https://docs.python.org/dev/c-api/init.html>`_ documentation."
+"See `Initialization, Finalization, and Threads <https://docs.python.org/dev/"
+"c-api/init.html>`_ documentation."
 msgstr ""
 
 #: ../pep-0587.rst:1327
@@ -2727,14 +2724,14 @@ msgstr ""
 
 #: ../pep-0587.rst:1338
 msgid ""
-"`bpo-14956 <https://bugs.python.org/issue14956>`_: \"custom PYTHONPATH "
-"may break apps embedding Python\""
+"`bpo-14956 <https://bugs.python.org/issue14956>`_: \"custom PYTHONPATH may "
+"break apps embedding Python\""
 msgstr ""
 
 #: ../pep-0587.rst:1340
 msgid ""
-"`bpo-19983 <https://bugs.python.org/issue19983>`_: \"When interrupted "
-"during startup, Python should not call abort() but exit()\""
+"`bpo-19983 <https://bugs.python.org/issue19983>`_: \"When interrupted during "
+"startup, Python should not call abort() but exit()\""
 msgstr ""
 
 #: ../pep-0587.rst:1342
@@ -2745,16 +2742,14 @@ msgstr ""
 
 #: ../pep-0587.rst:1344
 msgid ""
-"`bpo-29778 <https://bugs.python.org/issue29778>`_: \"_Py_CheckPython3 "
-"uses uninitialized dllpath when embedder sets module path with "
-"Py_SetPath\""
+"`bpo-29778 <https://bugs.python.org/issue29778>`_: \"_Py_CheckPython3 uses "
+"uninitialized dllpath when embedder sets module path with Py_SetPath\""
 msgstr ""
 
 #: ../pep-0587.rst:1347
 msgid ""
 "`bpo-30560 <https://bugs.python.org/issue30560>`_: \"Add "
-"Py_SetFatalErrorAbortFunc: Allow embedding program to handle fatal "
-"errors\"."
+"Py_SetFatalErrorAbortFunc: Allow embedding program to handle fatal errors\"."
 msgstr ""
 
 #: ../pep-0587.rst:1350
@@ -2765,21 +2760,21 @@ msgstr ""
 
 #: ../pep-0587.rst:1352
 msgid ""
-"`bpo-32573 <https://bugs.python.org/issue32573>`_: \"All sys attributes "
-"(.argv, ...) should exist in embedded environments\"."
+"`bpo-32573 <https://bugs.python.org/issue32573>`_: \"All sys attributes (."
+"argv, ...) should exist in embedded environments\"."
 msgstr ""
 
 #: ../pep-0587.rst:1354
 msgid ""
-"`bpo-33135 <https://bugs.python.org/issue33135>`_: \"Define field "
-"prefixes for the various config structs\". The PEP now defines well how "
-"warnings options are handled."
+"`bpo-33135 <https://bugs.python.org/issue33135>`_: \"Define field prefixes "
+"for the various config structs\". The PEP now defines well how warnings "
+"options are handled."
 msgstr ""
 
 #: ../pep-0587.rst:1357
 msgid ""
-"`bpo-34725 <https://bugs.python.org/issue34725>`_: "
-"\"Py_GetProgramFullPath() odd behaviour in Windows\""
+"`bpo-34725 <https://bugs.python.org/issue34725>`_: \"Py_GetProgramFullPath() "
+"odd behaviour in Windows\""
 msgstr ""
 
 #: ../pep-0587.rst:1359
@@ -2794,21 +2789,21 @@ msgstr ""
 
 #: ../pep-0587.rst:1364
 msgid ""
-"`bpo-16961 <https://bugs.python.org/issue16961>`_: \"No regression tests "
-"for -E and individual environment vars\""
+"`bpo-16961 <https://bugs.python.org/issue16961>`_: \"No regression tests for "
+"-E and individual environment vars\""
 msgstr ""
 
 #: ../pep-0587.rst:1366
 msgid ""
-"`bpo-20361 <https://bugs.python.org/issue20361>`_: \"-W command line "
-"options and PYTHONWARNINGS environmental variable should not override -b "
-"/ -bb command line options\""
+"`bpo-20361 <https://bugs.python.org/issue20361>`_: \"-W command line options "
+"and PYTHONWARNINGS environmental variable should not override -b / -bb "
+"command line options\""
 msgstr ""
 
 #: ../pep-0587.rst:1369
 msgid ""
-"`bpo-26122 <https://bugs.python.org/issue26122>`_: \"Isolated mode "
-"doesn't ignore PYTHONHASHSEED\""
+"`bpo-26122 <https://bugs.python.org/issue26122>`_: \"Isolated mode doesn't "
+"ignore PYTHONHASHSEED\""
 msgstr ""
 
 #: ../pep-0587.rst:1371
@@ -2819,8 +2814,8 @@ msgstr ""
 
 #: ../pep-0587.rst:1373
 msgid ""
-"`bpo-31845 <https://bugs.python.org/issue31845>`_: "
-"\"PYTHONDONTWRITEBYTECODE and PYTHONOPTIMIZE have no effect\""
+"`bpo-31845 <https://bugs.python.org/issue31845>`_: \"PYTHONDONTWRITEBYTECODE "
+"and PYTHONOPTIMIZE have no effect\""
 msgstr ""
 
 #: ../pep-0587.rst:1375
@@ -2831,8 +2826,8 @@ msgstr ""
 
 #: ../pep-0587.rst:1377
 msgid ""
-"`bpo-32124 <https://bugs.python.org/issue32124>`_: \"Document functions "
-"safe to be called before Py_Initialize()\""
+"`bpo-32124 <https://bugs.python.org/issue32124>`_: \"Document functions safe "
+"to be called before Py_Initialize()\""
 msgstr ""
 
 #: ../pep-0587.rst:1379
@@ -2843,14 +2838,14 @@ msgstr ""
 
 #: ../pep-0587.rst:1381
 msgid ""
-"`bpo-33932 <https://bugs.python.org/issue33932>`_: \"Calling "
-"Py_Initialize() twice now triggers a fatal error (Python 3.7)\""
+"`bpo-33932 <https://bugs.python.org/issue33932>`_: \"Calling Py_Initialize() "
+"twice now triggers a fatal error (Python 3.7)\""
 msgstr ""
 
 #: ../pep-0587.rst:1383
 msgid ""
-"`bpo-34008 <https://bugs.python.org/issue34008>`_: \"Do we support "
-"calling Py_Main() after Py_Initialize()?\""
+"`bpo-34008 <https://bugs.python.org/issue34008>`_: \"Do we support calling "
+"Py_Main() after Py_Initialize()?\""
 msgstr ""
 
 #: ../pep-0587.rst:1385
@@ -2867,15 +2862,14 @@ msgstr ""
 
 #: ../pep-0587.rst:1389
 msgid ""
-"`bpo-34639 <https://bugs.python.org/issue34639>`_: \"PYTHONCOERCECLOCALE "
-"is ignored when using -E or -I option\""
+"`bpo-34639 <https://bugs.python.org/issue34639>`_: \"PYTHONCOERCECLOCALE is "
+"ignored when using -E or -I option\""
 msgstr ""
 
 #: ../pep-0587.rst:1391
 msgid ""
-"`bpo-36142 <https://bugs.python.org/issue36142>`_: \"Add a new "
-"_PyPreConfig step to Python initialization to setup memory allocator and "
-"encodings\""
+"`bpo-36142 <https://bugs.python.org/issue36142>`_: \"Add a new _PyPreConfig "
+"step to Python initialization to setup memory allocator and encodings\""
 msgstr ""
 
 #: ../pep-0587.rst:1394
@@ -2886,26 +2880,26 @@ msgstr ""
 
 #: ../pep-0587.rst:1396
 msgid ""
-"`bpo-36301 <https://bugs.python.org/issue36301>`_: \"Add "
-"_Py_PreInitialize() function\""
+"`bpo-36301 <https://bugs.python.org/issue36301>`_: \"Add _Py_PreInitialize() "
+"function\""
 msgstr ""
 
 #: ../pep-0587.rst:1398
 msgid ""
-"`bpo-36443 <https://bugs.python.org/issue36443>`_: \"Disable "
-"coerce_c_locale and utf8_mode by default in _PyPreConfig?\""
+"`bpo-36443 <https://bugs.python.org/issue36443>`_: \"Disable coerce_c_locale "
+"and utf8_mode by default in _PyPreConfig?\""
 msgstr ""
 
 #: ../pep-0587.rst:1400
 msgid ""
-"`bpo-36444 <https://bugs.python.org/issue36444>`_: \"Python "
-"initialization: remove _PyMainInterpreterConfig\""
+"`bpo-36444 <https://bugs.python.org/issue36444>`_: \"Python initialization: "
+"remove _PyMainInterpreterConfig\""
 msgstr ""
 
 #: ../pep-0587.rst:1402
 msgid ""
-"`bpo-36471 <https://bugs.python.org/issue36471>`_: \"PEP 432, PEP 587: "
-"Add _Py_RunMain()\""
+"`bpo-36471 <https://bugs.python.org/issue36471>`_: \"PEP 432, PEP 587: Add "
+"_Py_RunMain()\""
 msgstr ""
 
 #: ../pep-0587.rst:1404
@@ -2916,8 +2910,8 @@ msgstr ""
 
 #: ../pep-0587.rst:1406
 msgid ""
-"`bpo-36775 <https://bugs.python.org/issue36775>`_: \"Rework filesystem "
-"codec implementation\""
+"`bpo-36775 <https://bugs.python.org/issue36775>`_: \"Rework filesystem codec "
+"implementation\""
 msgstr ""
 
 #: ../pep-0587.rst:1408
@@ -2938,63 +2932,63 @@ msgstr ""
 
 #: ../pep-0587.rst:1415
 msgid ""
-"`bpo-15577 <https://bugs.python.org/issue15577>`_: \"Real argc and argv "
-"in embedded interpreter\""
+"`bpo-15577 <https://bugs.python.org/issue15577>`_: \"Real argc and argv in "
+"embedded interpreter\""
 msgstr ""
 
 #: ../pep-0587.rst:1417
 msgid ""
-"`bpo-16202 <https://bugs.python.org/issue16202>`_: \"sys.path[0] security"
-" issues\""
+"`bpo-16202 <https://bugs.python.org/issue16202>`_: \"sys.path[0] security "
+"issues\""
 msgstr ""
 
 #: ../pep-0587.rst:1419
 msgid ""
-"`bpo-18309 <https://bugs.python.org/issue18309>`_: \"Make python slightly"
-" more relocatable\""
+"`bpo-18309 <https://bugs.python.org/issue18309>`_: \"Make python slightly "
+"more relocatable\""
 msgstr ""
 
 #: ../pep-0587.rst:1421
 msgid ""
-"`bpo-22257 <https://bugs.python.org/issue22257>`_: \"PEP 432: Redesign "
-"the interpreter startup sequence\""
+"`bpo-22257 <https://bugs.python.org/issue22257>`_: \"PEP 432: Redesign the "
+"interpreter startup sequence\""
 msgstr ""
 
 #: ../pep-0587.rst:1423
 msgid ""
-"`bpo-25631 <https://bugs.python.org/issue25631>`_: \"Segmentation fault "
-"with invalid Unicode command-line arguments in embedded Python\""
+"`bpo-25631 <https://bugs.python.org/issue25631>`_: \"Segmentation fault with "
+"invalid Unicode command-line arguments in embedded Python\""
 msgstr ""
 
 #: ../pep-0587.rst:1425
 msgid ""
-"`bpo-26007 <https://bugs.python.org/issue26007>`_: \"Support embedding "
-"the standard library in an executable\""
+"`bpo-26007 <https://bugs.python.org/issue26007>`_: \"Support embedding the "
+"standard library in an executable\""
 msgstr ""
 
 #: ../pep-0587.rst:1427
 msgid ""
-"`bpo-31210 <https://bugs.python.org/issue31210>`_: \"Can not import "
-"modules if sys.prefix contains DELIM\"."
+"`bpo-31210 <https://bugs.python.org/issue31210>`_: \"Can not import modules "
+"if sys.prefix contains DELIM\"."
 msgstr ""
 
 #: ../pep-0587.rst:1429
 msgid ""
-"`bpo-31349 <https://bugs.python.org/issue31349>`_: \"Embedded "
-"initialization ignores Py_SetProgramName()\""
+"`bpo-31349 <https://bugs.python.org/issue31349>`_: \"Embedded initialization "
+"ignores Py_SetProgramName()\""
 msgstr ""
 
 #: ../pep-0587.rst:1431
 msgid ""
-"`bpo-33919 <https://bugs.python.org/issue33919>`_: \"Expose _PyCoreConfig"
-" structure to Python\""
+"`bpo-33919 <https://bugs.python.org/issue33919>`_: \"Expose _PyCoreConfig "
+"structure to Python\""
 msgstr ""
 
 #: ../pep-0587.rst:1433
 msgid ""
-"`bpo-35173 <https://bugs.python.org/issue35173>`_: \"Re-use already "
-"existing functionality to allow Python 2.7.x (both embedded and "
-"standalone) to locate the module path according to the shared library\""
+"`bpo-35173 <https://bugs.python.org/issue35173>`_: \"Re-use already existing "
+"functionality to allow Python 2.7.x (both embedded and standalone) to locate "
+"the module path according to the shared library\""
 msgstr ""
 
 #: ../pep-0587.rst:1439
@@ -3014,21 +3008,19 @@ msgstr ""
 #: ../pep-0587.rst:1445
 msgid ""
 "`[Python-Dev] RFC: PEP 587 \"Python Initialization Configuration\": 3rd "
-"version <https://mail.python.org/pipermail/python-"
-"dev/2019-May/157435.html>`_"
+"version <https://mail.python.org/pipermail/python-dev/2019-May/157435.html>`_"
 msgstr ""
 
 #: ../pep-0587.rst:1447
 msgid ""
-"`Study on applications embedding Python "
-"<https://mail.python.org/pipermail/python-dev/2019-May/157385.html>`_"
+"`Study on applications embedding Python <https://mail.python.org/pipermail/"
+"python-dev/2019-May/157385.html>`_"
 msgstr ""
 
 #: ../pep-0587.rst:1449
 msgid ""
 "`[Python-Dev] RFC: PEP 587 \"Python Initialization Configuration\": 2nd "
-"version <https://mail.python.org/pipermail/python-"
-"dev/2019-May/157290.html>`_"
+"version <https://mail.python.org/pipermail/python-dev/2019-May/157290.html>`_"
 msgstr ""
 
 #: ../pep-0587.rst:1453
@@ -3037,14 +3029,14 @@ msgstr ""
 
 #: ../pep-0587.rst:1455
 msgid ""
-"`[Python-Dev] PEP 587: Python Initialization Configuration "
-"<https://mail.python.org/pipermail/python-dev/2019-March/156892.html>`_"
+"`[Python-Dev] PEP 587: Python Initialization Configuration <https://mail."
+"python.org/pipermail/python-dev/2019-March/156892.html>`_"
 msgstr ""
 
 #: ../pep-0587.rst:1457
 msgid ""
-"`[Python-Dev] New Python Initialization API "
-"<https://mail.python.org/pipermail/python-dev/2019-March/156884.html>`_"
+"`[Python-Dev] New Python Initialization API <https://mail.python.org/"
+"pipermail/python-dev/2019-March/156884.html>`_"
 msgstr ""
 
 #: ../pep-0587.rst:1460
@@ -3053,8 +3045,8 @@ msgstr ""
 
 #: ../pep-0587.rst:1462
 msgid ""
-"`Adding char* based APIs for Unix <https://discuss.python.org/t/adding-"
-"char-based-apis-for-unix/916>`_"
+"`Adding char* based APIs for Unix <https://discuss.python.org/t/adding-char-"
+"based-apis-for-unix/916>`_"
 msgstr ""
 
 #: ../pep-0587.rst:1465
@@ -3099,8 +3091,8 @@ msgstr ""
 
 #: ../pep-0587.rst:1481
 msgid ""
-"Fix Python Configuration default values: isolated=0 and "
-"use_environment=1, instead of -1."
+"Fix Python Configuration default values: isolated=0 and use_environment=1, "
+"instead of -1."
 msgstr ""
 
 #: ../pep-0587.rst:1483
@@ -3115,12 +3107,13 @@ msgstr ""
 
 #: ../pep-0587.rst:1488
 msgid ""
-"Introduce \"Python Configuration\" and \"Isolated Configuration\" which "
-"are well better defined. Replace all macros with functions."
+"Introduce \"Python Configuration\" and \"Isolated Configuration\" which are "
+"well better defined. Replace all macros with functions."
 msgstr ""
 
 #: ../pep-0587.rst:1490
-msgid "Replace ``PyPreConfig_INIT`` and ``PyConfig_INIT`` macros with functions:"
+msgid ""
+"Replace ``PyPreConfig_INIT`` and ``PyConfig_INIT`` macros with functions:"
 msgstr ""
 
 #: ../pep-0587.rst:1493
@@ -3133,15 +3126,15 @@ msgstr ""
 
 #: ../pep-0587.rst:1496
 msgid ""
-"``PyPreConfig`` no longer uses dynamic memory, the ``allocator`` field "
-"type becomes an int, add ``configure_locale`` and ``parse_argv`` field."
+"``PyPreConfig`` no longer uses dynamic memory, the ``allocator`` field type "
+"becomes an int, add ``configure_locale`` and ``parse_argv`` field."
 msgstr ""
 
 #: ../pep-0587.rst:1499
 msgid ""
 "``PyConfig``: rename ``module_search_path_env`` to ``pythonpath_env``, "
-"rename ``use_module_search_paths`` to ``module_search_paths_set``, remove"
-" ``program`` and ``dll_path``."
+"rename ``use_module_search_paths`` to ``module_search_paths_set``, remove "
+"``program`` and ``dll_path``."
 msgstr ""
 
 #: ../pep-0587.rst:1502
@@ -3150,9 +3143,8 @@ msgstr ""
 
 #: ../pep-0587.rst:1504
 msgid ""
-"Remove the \"Constant PyConfig\" section. Remove "
-"``Py_InitializeFromArgs()`` and ``Py_InitializeFromBytesArgs()`` "
-"functions."
+"Remove the \"Constant PyConfig\" section. Remove ``Py_InitializeFromArgs()`` "
+"and ``Py_InitializeFromBytesArgs()`` functions."
 msgstr ""
 
 #: ../pep-0587.rst:1508
@@ -3185,8 +3177,8 @@ msgstr ""
 
 #: ../pep-0587.rst:1519
 msgid ""
-"``PyConfig_SetString()`` and ``PyConfig_SetBytesString()`` now requires "
-"the configuration as the first argument."
+"``PyConfig_SetString()`` and ``PyConfig_SetBytesString()`` now requires the "
+"configuration as the first argument."
 msgstr ""
 
 #: ../pep-0587.rst:1521
@@ -3210,8 +3202,8 @@ msgstr ""
 
 #: ../pep-0587.rst:1531
 msgid ""
-":pep:`587` was `accepted by Thomas Wouters on May 26, 2019 "
-"<https://mail.python.org/pipermail/python-dev/2019-May/157721.html>`_."
+":pep:`587` was `accepted by Thomas Wouters on May 26, 2019 <https://mail."
+"python.org/pipermail/python-dev/2019-May/157721.html>`_."
 msgstr ""
 
 #: ../pep-0587.rst:1536
@@ -3221,4 +3213,3 @@ msgstr ""
 #: ../pep-0587.rst:1538
 msgid "This document has been placed in the public domain."
 msgstr ""
-

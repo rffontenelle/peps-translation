@@ -103,11 +103,11 @@ msgstr ""
 
 #: ../pep-0656.rst:19
 msgid ""
-"This PEP proposes a new platform tag series ``musllinux`` for binary "
-"Python package distributions for a Python installation that depends on "
-"musl on a Linux distribution. The tag works similarly to the \"perennial "
-"manylinux\" platform tags specified in :pep:`600`, but targeting "
-"platforms based on musl instead."
+"This PEP proposes a new platform tag series ``musllinux`` for binary Python "
+"package distributions for a Python installation that depends on musl on a "
+"Linux distribution. The tag works similarly to the \"perennial manylinux\" "
+"platform tags specified in :pep:`600`, but targeting platforms based on musl "
+"instead."
 msgstr ""
 
 #: ../pep-0656.rst:27
@@ -117,12 +117,12 @@ msgstr ""
 #: ../pep-0656.rst:29
 msgid ""
 "With the wide use of containers, distributions such as Alpine Linux "
-"[alpine]_, have been gaining more popularity than ever. Many of them "
-"based on musl [musl]_, a different libc implementation from glibc, and "
-"therefore cannot use the existing ``manylinux`` platform tags. This means"
-" that Python package projects cannot deploy binary distributions on PyPI "
-"for them. Users of such projects demand build constraints from those "
-"projects, putting unnecessary burden on project maintainers."
+"[alpine]_, have been gaining more popularity than ever. Many of them based "
+"on musl [musl]_, a different libc implementation from glibc, and therefore "
+"cannot use the existing ``manylinux`` platform tags. This means that Python "
+"package projects cannot deploy binary distributions on PyPI for them. Users "
+"of such projects demand build constraints from those projects, putting "
+"unnecessary burden on project maintainers."
 msgstr ""
 
 #: ../pep-0656.rst:39
@@ -132,17 +132,17 @@ msgstr ""
 #: ../pep-0656.rst:41
 msgid ""
 "According to the documentation, musl has a stable ABI, and maintains "
-"backwards compatibility [musl-compatibility]_ [compare-libcs]_, so a "
-"binary compiled against an earlier version of musl is guaranteed to run "
-"against a newer musl runtime [musl-compat-ml]_. Therefore, we use a "
-"scheme similar to the glibc-version-based manylinux tags, but against "
-"musl versions instead of glibc."
+"backwards compatibility [musl-compatibility]_ [compare-libcs]_, so a binary "
+"compiled against an earlier version of musl is guaranteed to run against a "
+"newer musl runtime [musl-compat-ml]_. Therefore, we use a scheme similar to "
+"the glibc-version-based manylinux tags, but against musl versions instead of "
+"glibc."
 msgstr ""
 
 #: ../pep-0656.rst:48
 msgid ""
-"Logic behind the new platform tag largely follows :pep:`600` (\"perennial"
-" manylinux\"), and requires wheels using this tag make similar promises. "
+"Logic behind the new platform tag largely follows :pep:`600` (\"perennial "
+"manylinux\"), and requires wheels using this tag make similar promises. "
 "Please refer to :pep:`600` for more details on rationale and reasoning "
 "behind the design."
 msgstr ""
@@ -150,12 +150,11 @@ msgstr ""
 #: ../pep-0656.rst:53
 msgid ""
 "The ``musllinux`` platform tags only apply to Python interpreters "
-"dynamically linked against the musl libc and executed on the runtime "
-"shared library, on a Linux operating system. Statically linked "
-"interpreters or mixed builds with other libc implementations (such as "
-"glibc) are out of scope and not supported by platform tags defined in "
-"this document. Such interpreters should not claim compatibility with "
-"``musllinux`` platform tags."
+"dynamically linked against the musl libc and executed on the runtime shared "
+"library, on a Linux operating system. Statically linked interpreters or "
+"mixed builds with other libc implementations (such as glibc) are out of "
+"scope and not supported by platform tags defined in this document. Such "
+"interpreters should not claim compatibility with ``musllinux`` platform tags."
 msgstr ""
 
 #: ../pep-0656.rst:63
@@ -168,16 +167,16 @@ msgstr ""
 
 #: ../pep-0656.rst:69
 msgid ""
-"This tag promises the wheel works on any mainstream Linux distribution "
-"that uses musl version ``${MUSLMAJOR}.${MUSLMINOR}``, following the "
-"perennial design. All other system-level dependency requirements rely on "
-"the community's definition to the intentionally vague \"mainstream\" "
-"description introduced in :pep:`600`. A wheel may make use of newer "
-"system dependencies when all mainstream distributions using the specified"
-" musl version provide the dependency by default; once all mainstream "
-"distributions on the musl version ship a certain dependency version by "
-"default, users relying on older versions are automatically removed from "
-"the coverage of that ``musllinux`` tag."
+"This tag promises the wheel works on any mainstream Linux distribution that "
+"uses musl version ``${MUSLMAJOR}.${MUSLMINOR}``, following the perennial "
+"design. All other system-level dependency requirements rely on the "
+"community's definition to the intentionally vague \"mainstream\" description "
+"introduced in :pep:`600`. A wheel may make use of newer system dependencies "
+"when all mainstream distributions using the specified musl version provide "
+"the dependency by default; once all mainstream distributions on the musl "
+"version ship a certain dependency version by default, users relying on older "
+"versions are automatically removed from the coverage of that ``musllinux`` "
+"tag."
 msgstr ""
 
 #: ../pep-0656.rst:82
@@ -186,15 +185,15 @@ msgstr ""
 
 #: ../pep-0656.rst:84
 msgid ""
-"The musl version values can be obtained by executing the musl libc shared"
-" library the Python interpreter is currently running on, and parsing the "
+"The musl version values can be obtained by executing the musl libc shared "
+"library the Python interpreter is currently running on, and parsing the "
 "output::"
 msgstr ""
 
 #: ../pep-0656.rst:114
 msgid ""
-"There are currently two possible ways to find the musl library's location"
-" that a Python interpreter is running on, either with the system ``ldd`` "
+"There are currently two possible ways to find the musl library's location "
+"that a Python interpreter is running on, either with the system ``ldd`` "
 "command [ldd]_, or by parsing the ``PT_INTERP`` section's value from the "
 "executable's ELF header [elf]_."
 msgstr ""
@@ -205,8 +204,8 @@ msgstr ""
 
 #: ../pep-0656.rst:123
 msgid ""
-"Distributions using the tag make similar promises to those described in "
-":pep:`600`, including:"
+"Distributions using the tag make similar promises to those described in :pep:"
+"`600`, including:"
 msgstr ""
 
 #: ../pep-0656.rst:126
@@ -217,10 +216,10 @@ msgstr ""
 
 #: ../pep-0656.rst:128
 msgid ""
-"The distribution's ``${ARCH}`` matches the return value of "
-"``sysconfig.get_platform()`` on the host system, replacing period (``.``)"
-" and hyphen (``-``) characters with underscores (``_``), as outlined in "
-":pep:`425` and :pep:`427`."
+"The distribution's ``${ARCH}`` matches the return value of ``sysconfig."
+"get_platform()`` on the host system, replacing period (``.``) and hyphen (``-"
+"``) characters with underscores (``_``), as outlined in :pep:`425` and :pep:"
+"`427`."
 msgstr ""
 
 #: ../pep-0656.rst:133
@@ -237,8 +236,8 @@ msgstr ""
 
 #: ../pep-0656.rst:151
 msgid ""
-"It is recommended for Python package repositories, including PyPI, to "
-"accept platform tags matching the following regular expression::"
+"It is recommended for Python package repositories, including PyPI, to accept "
+"platform tags matching the following regular expression::"
 msgstr ""
 
 #: ../pep-0656.rst:156
@@ -249,26 +248,26 @@ msgstr ""
 
 #: ../pep-0656.rst:159
 msgid ""
-"A ``musllinux_1_1`` wheel containing symbols only available in musl 1.2 "
-"or later."
+"A ``musllinux_1_1`` wheel containing symbols only available in musl 1.2 or "
+"later."
 msgstr ""
 
 #: ../pep-0656.rst:161
 msgid ""
-"Wheel that depends on external libraries not considered generally "
-"available to the intended audience of the package index."
+"Wheel that depends on external libraries not considered generally available "
+"to the intended audience of the package index."
 msgstr ""
 
 #: ../pep-0656.rst:163
 msgid ""
-"A platform tag claiming compatibility to a non-existent musl version "
-"(like ``musllinux_9000_0``)."
+"A platform tag claiming compatibility to a non-existent musl version (like "
+"``musllinux_9000_0``)."
 msgstr ""
 
 #: ../pep-0656.rst:166
 msgid ""
-"Such policies are ultimately up to individual package repositories. It is"
-" not the author's intention to impose restrictions to the maintainers."
+"Such policies are ultimately up to individual package repositories. It is "
+"not the author's intention to impose restrictions to the maintainers."
 msgstr ""
 
 #: ../pep-0656.rst:172
@@ -289,9 +288,9 @@ msgstr ""
 
 #: ../pep-0656.rst:183
 msgid ""
-"Past experience on the ``manylinux`` tag series shows this approach would"
-" be too costly time-wise. The author feels the \"works well with others\""
-" rule both is more inclusive and works well enough in practice."
+"Past experience on the ``manylinux`` tag series shows this approach would be "
+"too costly time-wise. The author feels the \"works well with others\" rule "
+"both is more inclusive and works well enough in practice."
 msgstr ""
 
 #: ../pep-0656.rst:189
@@ -316,8 +315,8 @@ msgstr ""
 
 #: ../pep-0656.rst:199
 msgid ""
-"https://mail.python.org/archives/list/distutils-"
-"sig@python.org/message/VRXSTNXWHPAVUW253ZCWWMP7WDTBAQDL/"
+"https://mail.python.org/archives/list/distutils-sig@python.org/message/"
+"VRXSTNXWHPAVUW253ZCWWMP7WDTBAQDL/"
 msgstr ""
 
 #: ../pep-0656.rst:201
@@ -334,7 +333,6 @@ msgstr ""
 
 #: ../pep-0656.rst:209
 msgid ""
-"This document is placed in the public domain or under the "
-"CC0-1.0-Universal license, whichever is more permissive."
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
 msgstr ""
-

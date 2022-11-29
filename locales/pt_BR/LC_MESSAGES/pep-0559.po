@@ -89,17 +89,15 @@ msgstr ""
 
 #: ../pep-0559.rst:23
 msgid ""
-"It is trivial to implement a no-op function in Python.  It's so easy in "
-"fact that many people do it many times over and over again.  It would be "
-"useful in many cases to have a common built-in function that does "
-"nothing."
+"It is trivial to implement a no-op function in Python.  It's so easy in fact "
+"that many people do it many times over and over again.  It would be useful "
+"in many cases to have a common built-in function that does nothing."
 msgstr ""
 
 #: ../pep-0559.rst:27
 msgid ""
 "One use case would be for :pep:`553`, where you could set the breakpoint "
-"environment variable to the following in order to effectively disable "
-"it::"
+"environment variable to the following in order to effectively disable it::"
 msgstr ""
 
 #: ../pep-0559.rst:34
@@ -128,23 +126,23 @@ msgstr ""
 
 #: ../pep-0559.rst:52
 msgid ""
-"This is rejected because it complicates the semantics.  For example, if "
-"you always return both ``*args`` and ``**kws``, what do you return when "
-"none of those are given?  Returning a tuple of ``((), {})`` is kind of "
-"ugly, but provides consistency.  But you might also want to just return "
-"``None`` since that's also conceptually what the function was passed."
+"This is rejected because it complicates the semantics.  For example, if you "
+"always return both ``*args`` and ``**kws``, what do you return when none of "
+"those are given?  Returning a tuple of ``((), {})`` is kind of ugly, but "
+"provides consistency.  But you might also want to just return ``None`` since "
+"that's also conceptually what the function was passed."
 msgstr ""
 
 #: ../pep-0559.rst:58
 msgid ""
-"Or, what if you pass in exactly one positional argument, e.g. "
-"``noop(7)``.  Do you return ``7`` or ``((7,), {})``?  And so on."
+"Or, what if you pass in exactly one positional argument, e.g. ``noop(7)``.  "
+"Do you return ``7`` or ``((7,), {})``?  And so on."
 msgstr ""
 
 #: ../pep-0559.rst:61
 msgid ""
-"The author claims that you won't ever need the return value of ``noop()``"
-" so it will always return ``None``."
+"The author claims that you won't ever need the return value of ``noop()`` so "
+"it will always return ``None``."
 msgstr ""
 
 #: ../pep-0559.rst:64
@@ -154,23 +152,23 @@ msgstr ""
 #: ../pep-0559.rst:66
 msgid ""
 "My counterargument to this would be ``map(noop, iterable)``, "
-"``sorted(iterable, key=noop)``, etc. (``filter``, ``max``, and ``min`` "
-"all accept callables that accept a single argument, as do many of the "
-"itertools operations)."
+"``sorted(iterable, key=noop)``, etc. (``filter``, ``max``, and ``min`` all "
+"accept callables that accept a single argument, as do many of the itertools "
+"operations)."
 msgstr ""
 
 #: ../pep-0559.rst:71
 msgid ""
-"Making ``noop()`` a useful default function in those cases just needs the"
-" definition to be::"
+"Making ``noop()`` a useful default function in those cases just needs the "
+"definition to be::"
 msgstr ""
 
 #: ../pep-0559.rst:77
 msgid ""
 "The counterargument to the counterargument is that using ``None`` as the "
 "default in all these cases is going to be faster, since it lets the "
-"algorithm skip the callback entirely, rather than calling it and having "
-"it do nothing useful."
+"algorithm skip the callback entirely, rather than calling it and having it "
+"do nothing useful."
 msgstr ""
 
 #: ../pep-0559.rst:84
@@ -188,4 +186,3 @@ msgstr ""
 #: ../pep-0559.rst:92
 msgid "This document has been placed in the public domain."
 msgstr ""
-

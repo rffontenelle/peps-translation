@@ -70,14 +70,14 @@ msgstr ""
 #: ../pep-0542.txt:19
 msgid ""
 "This PEP proposes adding support for assigning a function to a class or "
-"instance attribute directly in the function definition's header by using "
-"the dot notation to separate the object from the function's name."
+"instance attribute directly in the function definition's header by using the "
+"dot notation to separate the object from the function's name."
 msgstr ""
 
 #: ../pep-0542.txt:24
 msgid ""
-"Although a similar feature, this PEP does not address general assignment "
-"to anything that supports assignment, such as dict keys and list indexes."
+"Although a similar feature, this PEP does not address general assignment to "
+"anything that supports assignment, such as dict keys and list indexes."
 msgstr ""
 
 #: ../pep-0542.txt:29
@@ -98,10 +98,10 @@ msgstr ""
 
 #: ../pep-0542.txt:64
 msgid ""
-"There are multiple reasons to use this functionality over a standard "
-"class method, for example when the class is referenced inside the "
-"function's header (such as with decorators and typing). This is also "
-"useful when an instance requires a callback attribute::"
+"There are multiple reasons to use this functionality over a standard class "
+"method, for example when the class is referenced inside the function's "
+"header (such as with decorators and typing). This is also useful when an "
+"instance requires a callback attribute::"
 msgstr ""
 
 #: ../pep-0542.txt:79
@@ -114,9 +114,9 @@ msgstr ""
 
 #: ../pep-0542.txt:94
 msgid ""
-"It reads better than the \"unnatural\" way, since you already know at the"
-" time of the function definition what it's goig to be used for. It also "
-"saves one line of code while removing visual complexity."
+"It reads better than the \"unnatural\" way, since you already know at the "
+"time of the function definition what it's goig to be used for. It also saves "
+"one line of code while removing visual complexity."
 msgstr ""
 
 #: ../pep-0542.txt:98
@@ -160,4 +160,3 @@ msgstr ""
 #: ../pep-0542.txt:162
 msgid "This document has been placed in the public domain."
 msgstr ""
-

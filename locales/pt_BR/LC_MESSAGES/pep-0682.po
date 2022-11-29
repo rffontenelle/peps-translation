@@ -47,8 +47,7 @@ msgstr ""
 
 #: ../pep-0682.rst:6
 msgid ""
-"https://discuss.python.org/t/pep-682-format-specifier-for-signed-"
-"zero/13596"
+"https://discuss.python.org/t/pep-682-format-specifier-for-signed-zero/13596"
 msgstr ""
 
 #: ../pep-0682.rst
@@ -97,8 +96,8 @@ msgstr ""
 
 #: ../pep-0682.rst:13
 msgid ""
-"https://discuss.python.org/t/accepting-pep-682-format-specifier-for-"
-"signed-zero/14088"
+"https://discuss.python.org/t/accepting-pep-682-format-specifier-for-signed-"
+"zero/14088"
 msgstr ""
 
 #: ../pep-0682.rst:17
@@ -107,11 +106,11 @@ msgstr ""
 
 #: ../pep-0682.rst:19
 msgid ""
-"Though ``float`` and ``Decimal`` types can represent `signed zero`_, in "
-"many fields of mathematics negative zero is surprising or unwanted -- "
-"especially in the context of displaying an (often rounded) numerical "
-"result.  This PEP proposes an extension to the `string format "
-"specification`_ allowing negative zero to be normalized to positive zero."
+"Though ``float`` and ``Decimal`` types can represent `signed zero`_, in many "
+"fields of mathematics negative zero is surprising or unwanted -- especially "
+"in the context of displaying an (often rounded) numerical result.  This PEP "
+"proposes an extension to the `string format specification`_ allowing "
+"negative zero to be normalized to positive zero."
 msgstr ""
 
 #: ../pep-0682.rst:30
@@ -124,16 +123,16 @@ msgstr ""
 
 #: ../pep-0682.rst:38
 msgid ""
-"When formatting a number, negative zero can result from rounding.  "
-"Assuming the user's intention is truly to discard precision, the "
-"distinction between negative and positive zero of the rounded result "
-"might be considered an unwanted artifact::"
+"When formatting a number, negative zero can result from rounding.  Assuming "
+"the user's intention is truly to discard precision, the distinction between "
+"negative and positive zero of the rounded result might be considered an "
+"unwanted artifact::"
 msgstr ""
 
 #: ../pep-0682.rst:49
 msgid ""
-"There are various approaches to clearing the sign of a negative zero.  It"
-" can be achieved without a conditional by adding positive zero::"
+"There are various approaches to clearing the sign of a negative zero.  It "
+"can be achieved without a conditional by adding positive zero::"
 msgstr ""
 
 #: ../pep-0682.rst:56
@@ -144,9 +143,9 @@ msgstr ""
 
 #: ../pep-0682.rst:65
 msgid ""
-"There is ample evidence that, regardless of the language, programmers are"
-" often looking for a way to suppress negative zero, and landing on a "
-"variety of workarounds (pre-round, post-regex, etc.).  A sampling:"
+"There is ample evidence that, regardless of the language, programmers are "
+"often looking for a way to suppress negative zero, and landing on a variety "
+"of workarounds (pre-round, post-regex, etc.).  A sampling:"
 msgstr ""
 
 #: ../pep-0682.rst:69
@@ -157,8 +156,8 @@ msgstr ""
 
 #: ../pep-0682.rst:71
 msgid ""
-"`(Iron)Python formatting issue with modulo operator & \"negative zero\"`_"
-" (Python, pre-round)"
+"`(Iron)Python formatting issue with modulo operator & \"negative zero\"`_ "
+"(Python, pre-round)"
 msgstr ""
 
 #: ../pep-0682.rst:73
@@ -167,8 +166,8 @@ msgstr ""
 
 #: ../pep-0682.rst:74
 msgid ""
-"`Prevent small negative numbers printing as \"-0\"`_ (Objective-C, custom"
-" number formatter)"
+"`Prevent small negative numbers printing as \"-0\"`_ (Objective-C, custom "
+"number formatter)"
 msgstr ""
 
 #: ../pep-0682.rst:77
@@ -187,38 +186,35 @@ msgid ""
 "There are use cases where negative zero is unwanted in formatted number "
 "output -- arguably, not wanting it is more common.  Expanding the format "
 "specification is the best way to support this because number formatting "
-"already incorporates rounding, and the normalization of negative zero "
-"must happen after rounding."
+"already incorporates rounding, and the normalization of negative zero must "
+"happen after rounding."
 msgstr ""
 
 #: ../pep-0682.rst:96
 msgid ""
-"While it is possible to pre-round and normalize a number before "
-"formatting, it's tedious and prone to error if the rounding doesn't "
-"precisely match that of the format spec.  Furthermore, functions that "
-"wrap formatting would find themselves having to parse format specs to "
-"extract the precision information.  For example, consider how this "
-"utility for formatting one-dimensional numerical arrays would be "
-"complicated by such pre-rounding:"
+"While it is possible to pre-round and normalize a number before formatting, "
+"it's tedious and prone to error if the rounding doesn't precisely match that "
+"of the format spec.  Furthermore, functions that wrap formatting would find "
+"themselves having to parse format specs to extract the precision "
+"information.  For example, consider how this utility for formatting one-"
+"dimensional numerical arrays would be complicated by such pre-rounding:"
 msgstr ""
 
 #: ../pep-0682.rst:109
 msgid ""
 "To date, there doesn't appear to be any other widely-used language or "
-"library providing a formatting option for negative zero.  However, the "
-"same ``z`` option syntax and semantics specified below have been "
-"`proposed for C++ std::format()`_.  While the proposal was withdrawn for "
-"C++20, a consensus proposal is promised for C++23.  (The original "
-"`feature request`_ prompting this PEP was argued without knowledge of the"
-" C++ proposal.)"
+"library providing a formatting option for negative zero.  However, the same "
+"``z`` option syntax and semantics specified below have been `proposed for C+"
+"+ std::format()`_.  While the proposal was withdrawn for C++20, a consensus "
+"proposal is promised for C++23.  (The original `feature request`_ prompting "
+"this PEP was argued without knowledge of the C++ proposal.)"
 msgstr ""
 
 #: ../pep-0682.rst:116
 msgid ""
-"When Rust developers debated whether to suppress negative zero in "
-"``print`` output, they took a small `survey of other languages`_.  "
-"Notably, it didn't mention any language providing an option for negative "
-"zero handling."
+"When Rust developers debated whether to suppress negative zero in ``print`` "
+"output, they took a small `survey of other languages`_.  Notably, it didn't "
+"mention any language providing an option for negative zero handling."
 msgstr ""
 
 #: ../pep-0682.rst:126
@@ -233,11 +229,11 @@ msgstr ""
 
 #: ../pep-0682.rst:135
 msgid ""
-"where ``z`` is allowed for floating-point presentation types (``f``, "
-"``g``, etc.,  as defined by the format specification documentation).  "
-"Support for ``z`` is provided by the ``.__format__()`` method of each "
-"numeric type, allowing the specifier to be used in f-strings, built-in "
-"``format()``, and ``str.format()``."
+"where ``z`` is allowed for floating-point presentation types (``f``, ``g``, "
+"etc.,  as defined by the format specification documentation).  Support for "
+"``z`` is provided by the ``.__format__()`` method of each numeric type, "
+"allowing the specifier to be used in f-strings, built-in ``format()``, and "
+"``str.format()``."
 msgstr ""
 
 #: ../pep-0682.rst:141
@@ -257,34 +253,34 @@ msgstr ""
 #: ../pep-0682.rst:159
 msgid ""
 "The solution must be opt-in, because we can't change the behavior of "
-"programs that may be expecting or relying on negative zero when "
-"formatting numbers."
+"programs that may be expecting or relying on negative zero when formatting "
+"numbers."
 msgstr ""
 
 #: ../pep-0682.rst:163
 msgid ""
 "The proposed extension is intentionally ``[sign][z]`` rather than "
 "``[sign[z]]``.  The default for ``sign`` (``-``) is not widely known or "
-"explicitly written, so this avoids everyone having to learn it just to "
-"use the ``z`` option."
+"explicitly written, so this avoids everyone having to learn it just to use "
+"the ``z`` option."
 msgstr ""
 
 #: ../pep-0682.rst:168
 #, python-format
 msgid ""
-"While f-strings, built-in ``format()``, and ``str.format()`` can access "
-"the new option, %-formatting cannot.  There is already precedent for not "
+"While f-strings, built-in ``format()``, and ``str.format()`` can access the "
+"new option, %-formatting cannot.  There is already precedent for not "
 "extending %-formatting with new options, as was the case for the ``,`` "
 "option (:pep:`378`)."
 msgstr ""
 
 #: ../pep-0682.rst:173
 msgid ""
-"C99 ``printf`` already uses the ``z`` option character for another "
-"purpose:  qualifying the unsigned type (``u``) to match the length of "
-"``size_t``.  However, since the signed zero option specifically disallows"
-" ``z`` for integer presentation types, it's possible to disambiguate the "
-"two uses, should C want to adopt this new option."
+"C99 ``printf`` already uses the ``z`` option character for another purpose:  "
+"qualifying the unsigned type (``u``) to match the length of ``size_t``.  "
+"However, since the signed zero option specifically disallows ``z`` for "
+"integer presentation types, it's possible to disambiguate the two uses, "
+"should C want to adopt this new option."
 msgstr ""
 
 #: ../pep-0682.rst:181
@@ -293,8 +289,8 @@ msgstr ""
 
 #: ../pep-0682.rst:183
 msgid ""
-"The new formatting behavior is opt-in, so numerical formatting of "
-"existing programs will not be affected."
+"The new formatting behavior is opt-in, so numerical formatting of existing "
+"programs will not be affected."
 msgstr ""
 
 #: ../pep-0682.rst:188
@@ -304,13 +300,13 @@ msgstr ""
 #: ../pep-0682.rst:189
 msgid ""
 "A typical introductory Python course will not cover string formatting in "
-"full detail.  For such a course, no adjustments would need to be made. "
-"For a course that does go into details of the string format "
-"specification, a single example demonstrating the effect of the ``z`` "
-"option on a negative value that's rounded to zero by the formatting "
-"should be enough.  For an independent developer encountering the feature "
-"in someone else's code, reference to the `Format Specification Mini-"
-"Language`_ section of the library reference manual should suffice."
+"full detail.  For such a course, no adjustments would need to be made. For a "
+"course that does go into details of the string format specification, a "
+"single example demonstrating the effect of the ``z`` option on a negative "
+"value that's rounded to zero by the formatting should be enough.  For an "
+"independent developer encountering the feature in someone else's code, "
+"reference to the `Format Specification Mini-Language`_ section of the "
+"library reference manual should suffice."
 msgstr ""
 
 #: ../pep-0682.rst:202
@@ -327,7 +323,6 @@ msgstr ""
 
 #: ../pep-0682.rst:212
 msgid ""
-"This document is placed in the public domain or under the "
-"CC0-1.0-Universal license, whichever is more permissive."
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
 msgstr ""
-

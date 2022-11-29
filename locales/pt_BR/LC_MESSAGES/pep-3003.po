@@ -63,20 +63,19 @@ msgstr ""
 
 #: ../pep-3003.txt:16
 msgid ""
-"This PEP proposes a temporary moratorium (suspension) of all changes to "
-"the Python language syntax, semantics, and built-ins for a period of at "
-"least two years from the release of Python 3.1.  In particular, the "
-"moratorium would include Python 3.2 (to be released 18-24 months after "
-"3.1) but allow Python 3.3 (assuming it is not released prematurely) to "
-"once again include language changes."
+"This PEP proposes a temporary moratorium (suspension) of all changes to the "
+"Python language syntax, semantics, and built-ins for a period of at least "
+"two years from the release of Python 3.1.  In particular, the moratorium "
+"would include Python 3.2 (to be released 18-24 months after 3.1) but allow "
+"Python 3.3 (assuming it is not released prematurely) to once again include "
+"language changes."
 msgstr ""
 
 #: ../pep-3003.txt:23
 msgid ""
-"This suspension of features is designed to allow non-CPython "
-"implementations to \"catch up\" to the core implementation of the "
-"language, help ease adoption of Python 3.x, and provide a more stable "
-"base for the community."
+"This suspension of features is designed to allow non-CPython implementations "
+"to \"catch up\" to the core implementation of the language, help ease "
+"adoption of Python 3.x, and provide a more stable base for the community."
 msgstr ""
 
 #: ../pep-3003.txt:29
@@ -85,26 +84,25 @@ msgstr ""
 
 #: ../pep-3003.txt:31
 msgid ""
-"This idea was proposed by Guido van Rossum on the python-ideas [1]_ "
-"mailing list. The premise of his email was to slow the alteration of the"
-"  Python core syntax, builtins and semantics to allow non-CPython "
-"implementations to catch up to the current state of Python, both 2.x and "
-"3.x."
+"This idea was proposed by Guido van Rossum on the python-ideas [1]_ mailing "
+"list. The premise of his email was to slow the alteration of the  Python "
+"core syntax, builtins and semantics to allow non-CPython implementations to "
+"catch up to the current state of Python, both 2.x and 3.x."
 msgstr ""
 
 #: ../pep-3003.txt:36
 msgid ""
 "Python, as a language is more than the core implementation -- CPython -- "
-"with a rich, mature and vibrant community of implementations, such as "
-"Jython [2]_, IronPython [3]_ and PyPy [4]_ that are a benefit not only to"
-" the community, but to the language itself."
+"with a rich, mature and vibrant community of implementations, such as Jython "
+"[2]_, IronPython [3]_ and PyPy [4]_ that are a benefit not only to the "
+"community, but to the language itself."
 msgstr ""
 
 #: ../pep-3003.txt:41
 msgid ""
-"Still others, such as Unladen Swallow [5]_ (a branch of CPython) seek not"
-" to create an alternative implementation, but rather they seek to enhance"
-" the performance and implementation of CPython itself."
+"Still others, such as Unladen Swallow [5]_ (a branch of CPython) seek not to "
+"create an alternative implementation, but rather they seek to enhance the "
+"performance and implementation of CPython itself."
 msgstr ""
 
 #: ../pep-3003.txt:45
@@ -119,42 +117,41 @@ msgstr ""
 #: ../pep-3003.txt:51
 msgid ""
 "Additionally, many of the changes put into the recent releases of the "
-"language as implemented by CPython have not yet seen widespread usage by "
-"the general user population. For example, most users are limited to the "
-"version of the interpreter (typically CPython) which comes pre-installed "
-"with their operating system. Most OS vendors are just barely beginning to"
-" ship Python 2.6 -- even fewer are shipping Python 3.x."
+"language as implemented by CPython have not yet seen widespread usage by the "
+"general user population. For example, most users are limited to the version "
+"of the interpreter (typically CPython) which comes pre-installed with their "
+"operating system. Most OS vendors are just barely beginning to ship Python "
+"2.6 -- even fewer are shipping Python 3.x."
 msgstr ""
 
 #: ../pep-3003.txt:58
 msgid ""
-"As it is expected that Python 2.7 be the effective \"end of life\" of the"
-" Python 2.x code line, with Python 3.x being the future, it is in the "
-"best interest of Python core development to temporarily suspend the "
-"alteration of the language itself to allow all of these external entities"
-" to catch up and to assist in the adoption of, and migration to, Python "
-"3.x"
+"As it is expected that Python 2.7 be the effective \"end of life\" of the "
+"Python 2.x code line, with Python 3.x being the future, it is in the best "
+"interest of Python core development to temporarily suspend the alteration of "
+"the language itself to allow all of these external entities to catch up and "
+"to assist in the adoption of, and migration to, Python 3.x"
 msgstr ""
 
 #: ../pep-3003.txt:64
 msgid ""
 "Finally, the moratorium is intended to free up cycles within core "
-"development to focus on other issues, such as the CPython interpreter and"
-" improvements therein, the standard library, etc."
+"development to focus on other issues, such as the CPython interpreter and "
+"improvements therein, the standard library, etc."
 msgstr ""
 
 #: ../pep-3003.txt:68
 msgid ""
-"This moratorium does not allow for exceptions -- once accepted, any "
-"pending changes to the syntax or semantics of the language will be "
-"postponed until the moratorium is lifted."
+"This moratorium does not allow for exceptions -- once accepted, any pending "
+"changes to the syntax or semantics of the language will be postponed until "
+"the moratorium is lifted."
 msgstr ""
 
 #: ../pep-3003.txt:72
 msgid ""
-"This moratorium does not attempt to apply to any other Python "
-"implementation meaning that if desired other implementations may add "
-"features which deviate from the standard implementation."
+"This moratorium does not attempt to apply to any other Python implementation "
+"meaning that if desired other implementations may add features which deviate "
+"from the standard implementation."
 msgstr ""
 
 #: ../pep-3003.txt:78
@@ -174,7 +171,8 @@ msgid "Language syntax"
 msgstr ""
 
 #: ../pep-3003.txt:85
-msgid "The grammar file essentially becomes immutable apart from ambiguity fixes."
+msgid ""
+"The grammar file essentially becomes immutable apart from ambiguity fixes."
 msgstr ""
 
 #: ../pep-3003.txt:88
@@ -213,9 +211,8 @@ msgstr ""
 
 #: ../pep-3003.txt:101
 msgid ""
-"If the language semantics turn out to be ambiguous or improperly "
-"implemented based on the intention of the original design then the "
-"semantics may change."
+"If the language semantics turn out to be ambiguous or improperly implemented "
+"based on the intention of the original design then the semantics may change."
 msgstr ""
 
 #: ../pep-3003.txt:109
@@ -224,10 +221,10 @@ msgstr ""
 
 #: ../pep-3003.txt:105
 msgid ""
-"Because other VMs have not begun implementing Python 3.x semantics there "
-"is a possibility that certain semantics are too difficult to replicate. "
-"In those cases they can be changed to ease adoption of Python 3.x by the "
-"other VMs."
+"Because other VMs have not begun implementing Python 3.x semantics there is "
+"a possibility that certain semantics are too difficult to replicate. In "
+"those cases they can be changed to ease adoption of Python 3.x by the other "
+"VMs."
 msgstr ""
 
 #: ../pep-3003.txt:112
@@ -240,10 +237,10 @@ msgstr ""
 
 #: ../pep-3003.txt:115
 msgid ""
-"It is entirely acceptable to change the underlying C code of CPython as "
-"long as other restrictions of this moratorium are not broken. E.g. "
-"removing the GIL would be fine assuming certain operations that are "
-"currently atomic remain atomic."
+"It is entirely acceptable to change the underlying C code of CPython as long "
+"as other restrictions of this moratorium are not broken. E.g. removing the "
+"GIL would be fine assuming certain operations that are currently atomic "
+"remain atomic."
 msgstr ""
 
 #: ../pep-3003.txt:120
@@ -252,8 +249,8 @@ msgstr ""
 
 #: ../pep-3003.txt:120
 msgid ""
-"As the standard library is not directly tied to the language definition "
-"it is not covered by this moratorium."
+"As the standard library is not directly tied to the language definition it "
+"is not covered by this moratorium."
 msgstr ""
 
 #: ../pep-3003.txt:122
@@ -270,8 +267,8 @@ msgstr ""
 
 #: ../pep-3003.txt:125
 msgid ""
-"For example, :pep:`382`.  After all, import semantics vary between Python"
-" implementations anyway."
+"For example, :pep:`382`.  After all, import semantics vary between Python "
+"implementations anyway."
 msgstr ""
 
 #: ../pep-3003.txt:130
@@ -281,11 +278,10 @@ msgstr ""
 #: ../pep-3003.txt:132
 msgid ""
 "It is important to note that the moratorium covers all changes since the "
-"release of Python 3.1. This rule is intended to avoid features being "
-"rushed or smuggled into the CPython source tree while the moratorium is "
-"being discussed.  A review of the NEWS file for the py3k development "
-"branch showed no commits would need to be rolled back in order to meet "
-"this goal."
+"release of Python 3.1. This rule is intended to avoid features being rushed "
+"or smuggled into the CPython source tree while the moratorium is being "
+"discussed.  A review of the NEWS file for the py3k development branch showed "
+"no commits would need to be rolled back in order to meet this goal."
 msgstr ""
 
 #: ../pep-3003.txt:140
@@ -293,7 +289,8 @@ msgid "Extensions"
 msgstr ""
 
 #: ../pep-3003.txt:142
-msgid "The time period of the moratorium can only be extended through a new PEP."
+msgid ""
+"The time period of the moratorium can only be extended through a new PEP."
 msgstr ""
 
 #: ../pep-3003.txt:146
@@ -327,4 +324,3 @@ msgstr ""
 #: ../pep-3003.txt:157
 msgid "http://code.google.com/p/unladen-swallow/"
 msgstr ""
-

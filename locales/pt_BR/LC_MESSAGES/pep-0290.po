@@ -66,9 +66,9 @@ msgstr ""
 #: ../pep-0290.txt:19
 msgid ""
 "The migration tips highlight possible areas of incompatibility and make "
-"suggestions on how to find and resolve those differences.  The "
-"modernization procedures show how older code can be updated to take "
-"advantage of new language features."
+"suggestions on how to find and resolve those differences.  The modernization "
+"procedures show how older code can be updated to take advantage of new "
+"language features."
 msgstr ""
 
 #: ../pep-0290.txt:26
@@ -83,17 +83,17 @@ msgstr ""
 
 #: ../pep-0290.txt:31
 msgid ""
-"Migration issues can arise for several reasons.  Some obsolete features "
-"are slowly deprecated according to the guidelines in :pep:`4`. Also, some"
-" code relies on undocumented behaviors which are subject to change "
-"between versions.  Some code may rely on behavior which was subsequently "
-"shown to be a bug and that behavior changes when the bug is fixed."
+"Migration issues can arise for several reasons.  Some obsolete features are "
+"slowly deprecated according to the guidelines in :pep:`4`. Also, some code "
+"relies on undocumented behaviors which are subject to change between "
+"versions.  Some code may rely on behavior which was subsequently shown to be "
+"a bug and that behavior changes when the bug is fixed."
 msgstr ""
 
 #: ../pep-0290.txt:38
 msgid ""
-"Modernization options arise when new versions of Python add features that"
-" allow improved clarity or higher performance than previously available."
+"Modernization options arise when new versions of Python add features that "
+"allow improved clarity or higher performance than previously available."
 msgstr ""
 
 #: ../pep-0290.txt:44
@@ -102,28 +102,28 @@ msgstr ""
 
 #: ../pep-0290.txt:46
 msgid ""
-"Developers with commit access may update this PEP directly.  Others can "
-"send their ideas to a developer for possible inclusion."
+"Developers with commit access may update this PEP directly.  Others can send "
+"their ideas to a developer for possible inclusion."
 msgstr ""
 
 #: ../pep-0290.txt:49
 msgid ""
-"While a consistent format makes the repository easier to use, feel free "
-"to add or subtract sections to improve clarity."
+"While a consistent format makes the repository easier to use, feel free to "
+"add or subtract sections to improve clarity."
 msgstr ""
 
 #: ../pep-0290.txt:52
 msgid ""
-"Grep patterns may be supplied as tool to help maintainers locate code for"
-" possible updates.  However, fully automated search/replace style regular"
-" expressions are not recommended.  Instead, each code fragment should be "
+"Grep patterns may be supplied as tool to help maintainers locate code for "
+"possible updates.  However, fully automated search/replace style regular "
+"expressions are not recommended.  Instead, each code fragment should be "
 "evaluated individually."
 msgstr ""
 
 #: ../pep-0290.txt:57
 msgid ""
-"The contra-indications section is the most important part of a new entry."
-"  It lists known situations where the update SHOULD NOT be applied."
+"The contra-indications section is the most important part of a new entry.  "
+"It lists known situations where the update SHOULD NOT be applied."
 msgstr ""
 
 #: ../pep-0290.txt:63
@@ -136,10 +136,10 @@ msgstr ""
 
 #: ../pep-0290.txt:68
 msgid ""
-"Prior to Python 2.3, comparison operations returned 0 or 1 rather than "
-"True or False.  Some code may have used this as a shortcut for producing "
-"zero or one in places where their boolean counterparts are not "
-"appropriate.  For example::"
+"Prior to Python 2.3, comparison operations returned 0 or 1 rather than True "
+"or False.  Some code may have used this as a shortcut for producing zero or "
+"one in places where their boolean counterparts are not appropriate.  For "
+"example::"
 msgstr ""
 
 #: ../pep-0290.txt:77
@@ -183,13 +183,13 @@ msgstr ""
 
 #: ../pep-0290.txt:107
 msgid ""
-"Python's lists are implemented to perform best with appends and pops on "
-"the right.  Use of ``pop(0)`` or ``insert(0, x)`` triggers O(n) data "
-"movement for the entire list.  To help address this need, Python 2.4 "
-"introduces a new container, ``collections.deque()`` which has efficient "
-"append and pop operations on the both the left and right (the trade-off "
-"is much slower getitem/setitem access).  The new container is especially "
-"helpful for implementing data queues:"
+"Python's lists are implemented to perform best with appends and pops on the "
+"right.  Use of ``pop(0)`` or ``insert(0, x)`` triggers O(n) data movement "
+"for the entire list.  To help address this need, Python 2.4 introduces a new "
+"container, ``collections.deque()`` which has efficient append and pop "
+"operations on the both the left and right (the trade-off is much slower "
+"getitem/setitem access).  The new container is especially helpful for "
+"implementing data queues:"
 msgstr ""
 
 #: ../pep-0290.txt:115 ../pep-0290.txt:162 ../pep-0290.txt:218
@@ -210,13 +210,13 @@ msgstr ""
 
 #: ../pep-0290.txt:129
 msgid ""
-"In Python 2.4, the ``sort`` method for lists and the new ``sorted`` "
-"built-in function both accept a ``key`` function for computing sort keys."
-"  Unlike the ``cmp`` function which gets applied to every comparison, the"
-" key function gets applied only once to each record. It is much faster "
-"than cmp and typically more readable while using less code.  The key "
-"function also maintains the stability of the sort (records with the same "
-"key are left in their original order."
+"In Python 2.4, the ``sort`` method for lists and the new ``sorted`` built-in "
+"function both accept a ``key`` function for computing sort keys.  Unlike the "
+"``cmp`` function which gets applied to every comparison, the key function "
+"gets applied only once to each record. It is much faster than cmp and "
+"typically more readable while using less code.  The key function also "
+"maintains the stability of the sort (records with the same key are left in "
+"their original order."
 msgstr ""
 
 #: ../pep-0290.txt:137
@@ -242,9 +242,9 @@ msgstr ""
 #: ../pep-0290.txt:157
 msgid ""
 "In Python 2.4, the ``operator`` module gained two new functions, "
-"itemgetter() and attrgetter() that can replace common uses of the "
-"``lambda`` keyword.  The new functions run faster and are considered by "
-"some to improve readability."
+"itemgetter() and attrgetter() that can replace common uses of the ``lambda`` "
+"keyword.  The new functions run faster and are considered by some to improve "
+"readability."
 msgstr ""
 
 #: ../pep-0290.txt:167
@@ -263,8 +263,8 @@ msgstr ""
 msgid ""
 "Python 2.4 introduced the ``reversed`` builtin function for reverse "
 "iteration.  The existing approaches to reverse iteration suffered from "
-"wordiness, performance issues (speed and memory consumption), and/or lack"
-" of clarity.  A preferred style is to express the sequence in a forwards "
+"wordiness, performance issues (speed and memory consumption), and/or lack of "
+"clarity.  A preferred style is to express the sequence in a forwards "
 "direction, apply ``reversed`` to the result, and then loop over the "
 "resulting fast, memory friendly iterator."
 msgstr ""
@@ -296,10 +296,9 @@ msgstr ""
 #: ../pep-0290.txt:212
 msgid ""
 "In Python 2.3, for ``string2 in string1``, the length restriction on "
-"``string2`` is lifted; it can now be a string of any length.  When "
-"searching for a substring, where you don't care about the position of the"
-" substring in the original string, using the ``in`` operator makes the "
-"meaning clear."
+"``string2`` is lifted; it can now be a string of any length.  When searching "
+"for a substring, where you don't care about the position of the substring in "
+"the original string, using the ``in`` operator makes the meaning clear."
 msgstr ""
 
 #: ../pep-0290.txt:224
@@ -309,18 +308,18 @@ msgstr ""
 #: ../pep-0290.txt:226
 msgid ""
 "In Python 2.3, apply() was marked for Pending Deprecation because it was "
-"made obsolete by Python 1.6's introduction of * and ** in function calls."
-"  Using a direct function call was always a little faster than apply() "
-"because it saved the lookup for the builtin. Now, apply() is even slower "
-"due to its use of the warnings module."
+"made obsolete by Python 1.6's introduction of * and ** in function calls.  "
+"Using a direct function call was always a little faster than apply() because "
+"it saved the lookup for the builtin. Now, apply() is even slower due to its "
+"use of the warnings module."
 msgstr ""
 
 #: ../pep-0290.txt:236
 msgid ""
-"Note: The Pending Deprecation was removed from apply() in Python 2.3.3 "
-"since it creates pain for people who need to maintain code that works "
-"with Python versions as far back as 1.5.2, where there was no alternative"
-" to apply().  The function remains deprecated, however."
+"Note: The Pending Deprecation was removed from apply() in Python 2.3.3 since "
+"it creates pain for people who need to maintain code that works with Python "
+"versions as far back as 1.5.2, where there was no alternative to apply().  "
+"The function remains deprecated, however."
 msgstr ""
 
 #: ../pep-0290.txt:243
@@ -336,8 +335,8 @@ msgid ""
 "For testing dictionary membership, use the 'in' keyword instead of the "
 "'has_key()' method.  The result is shorter and more readable.  The style "
 "becomes consistent with tests for membership in lists.  The result is "
-"slightly faster because ``has_key`` requires an attribute search and uses"
-" a relatively expensive function call."
+"slightly faster because ``has_key`` requires an attribute search and uses a "
+"relatively expensive function call."
 msgstr ""
 
 #: ../pep-0290.txt:258 ../pep-0290.txt:285
@@ -345,7 +344,8 @@ msgid "Contra-indications:"
 msgstr ""
 
 #: ../pep-0290.txt:260
-msgid "Some dictionary-like objects may not define a ``__contains__()`` method::"
+msgid ""
+"Some dictionary-like objects may not define a ``__contains__()`` method::"
 msgstr ""
 
 #: ../pep-0290.txt:265
@@ -358,12 +358,12 @@ msgstr ""
 
 #: ../pep-0290.txt:271
 msgid ""
-"Use the new ``iter`` methods for looping over dictionaries.  The ``iter``"
-" methods are faster because they do not have to create a new list object "
-"with a complete copy of all of the keys, values, or items. Selecting only"
-" keys, values, or items (key/value pairs) as needed saves the time for "
-"creating throwaway object references and, in the case of items, saves a "
-"second hash look-up of the key."
+"Use the new ``iter`` methods for looping over dictionaries.  The ``iter`` "
+"methods are faster because they do not have to create a new list object with "
+"a complete copy of all of the keys, values, or items. Selecting only keys, "
+"values, or items (key/value pairs) as needed saves the time for creating "
+"throwaway object references and, in the case of items, saves a second hash "
+"look-up of the key."
 msgstr ""
 
 #: ../pep-0290.txt:287
@@ -388,9 +388,9 @@ msgstr ""
 
 #: ../pep-0290.txt:308
 msgid ""
-"Replace ``stat`` constants or indices with new ``os.stat`` attributes and"
-" methods.  The ``os.stat`` attributes and methods are not order-dependent"
-" and do not require an import of the ``stat`` module."
+"Replace ``stat`` constants or indices with new ``os.stat`` attributes and "
+"methods.  The ``os.stat`` attributes and methods are not order-dependent and "
+"do not require an import of the ``stat`` module."
 msgstr ""
 
 #: ../pep-0290.txt:317
@@ -403,15 +403,14 @@ msgstr ""
 
 #: ../pep-0290.txt:323
 msgid ""
-"The ``types`` module is likely to be deprecated in the future.  Use "
-"built-in constructor functions instead.  They may be slightly faster."
+"The ``types`` module is likely to be deprecated in the future.  Use built-in "
+"constructor functions instead.  They may be slightly faster."
 msgstr ""
 
 #: ../pep-0290.txt:331
 msgid ""
-"Full use of this technique requires Python 2.3 or later (``basestring`` "
-"was introduced in Python 2.3), but Python 2.2 is sufficient for most "
-"uses."
+"Full use of this technique requires Python 2.3 or later (``basestring`` was "
+"introduced in Python 2.3), but Python 2.2 is sufficient for most uses."
 msgstr ""
 
 #: ../pep-0290.txt:335
@@ -443,8 +442,8 @@ msgstr ""
 
 #: ../pep-0290.txt:359
 msgid ""
-"All random-related methods have been collected in one place, the "
-"``random`` module."
+"All random-related methods have been collected in one place, the ``random`` "
+"module."
 msgstr ""
 
 #: ../pep-0290.txt:366
@@ -475,8 +474,8 @@ msgstr ""
 
 #: ../pep-0290.txt:389
 msgid ""
-"Use these string methods instead of slicing.  No slice has to be created "
-"and there's no risk of miscounting."
+"Use these string methods instead of slicing.  No slice has to be created and "
+"there's no risk of miscounting."
 msgstr ""
 
 #: ../pep-0290.txt:399
@@ -485,12 +484,12 @@ msgstr ""
 
 #: ../pep-0290.txt:401
 msgid ""
-"The atexit module supports multiple functions to be executed upon program"
-" termination.  Also, it supports parameterized functions. Unfortunately, "
-"its implementation conflicts with the sys.exitfunc attribute which only "
-"supports a single exit function.  Code relying on sys.exitfunc may "
-"interfere with other modules (including library modules) that elect to "
-"use the newer and more versatile atexit module."
+"The atexit module supports multiple functions to be executed upon program "
+"termination.  Also, it supports parameterized functions. Unfortunately, its "
+"implementation conflicts with the sys.exitfunc attribute which only supports "
+"a single exit function.  Code relying on sys.exitfunc may interfere with "
+"other modules (including library modules) that elect to use the newer and "
+"more versatile atexit module."
 msgstr ""
 
 #: ../pep-0290.txt:414
@@ -504,9 +503,9 @@ msgstr ""
 #: ../pep-0290.txt:419
 msgid ""
 "String exceptions are deprecated, so derive from the ``Exception`` base "
-"class.  Unlike the obsolete string exceptions, class exceptions all "
-"derive from another exception or the ``Exception`` base class. This "
-"allows meaningful groupings of exceptions.  It also allows an \"``except "
+"class.  Unlike the obsolete string exceptions, class exceptions all derive "
+"from another exception or the ``Exception`` base class. This allows "
+"meaningful groupings of exceptions.  It also allows an \"``except "
 "Exception``\" clause to catch all exceptions."
 msgstr ""
 
@@ -526,8 +525,8 @@ msgstr ""
 msgid ""
 "Since there is only one ``None`` object, equality can be tested with "
 "identity.  Identity tests are slightly faster than equality tests. Also, "
-"some object types may overload comparison, so equality testing may be "
-"much slower."
+"some object types may overload comparison, so equality testing may be much "
+"slower."
 msgstr ""
 
 #: ../pep-0290.txt:448
@@ -541,4 +540,3 @@ msgstr ""
 #: ../pep-0290.txt:454
 msgid "This document has been placed in the public domain."
 msgstr ""
-

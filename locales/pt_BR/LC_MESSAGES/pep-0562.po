@@ -75,9 +75,8 @@ msgstr ""
 
 #: ../pep-0562.rst:16
 msgid ""
-"It is proposed to support ``__getattr__`` and ``__dir__`` function "
-"defined on modules to provide basic customization of module attribute "
-"access."
+"It is proposed to support ``__getattr__`` and ``__dir__`` function defined "
+"on modules to provide basic customization of module attribute access."
 msgstr ""
 
 #: ../pep-0562.rst:22
@@ -88,13 +87,12 @@ msgstr ""
 msgid ""
 "It is sometimes convenient to customize or otherwise have control over "
 "access to module attributes. A typical example is managing deprecation "
-"warnings. Typical workarounds are assigning ``__class__`` of a module "
-"object to a custom subclass of ``types.ModuleType`` or replacing the "
-"``sys.modules`` item with a custom wrapper instance. It would be "
-"convenient to simplify this procedure by recognizing ``__getattr__`` "
-"defined directly in a module that would act like a normal ``__getattr__``"
-" method, except that it will be defined on module *instances*. For "
-"example::"
+"warnings. Typical workarounds are assigning ``__class__`` of a module object "
+"to a custom subclass of ``types.ModuleType`` or replacing the ``sys."
+"modules`` item with a custom wrapper instance. It would be convenient to "
+"simplify this procedure by recognizing ``__getattr__`` defined directly in a "
+"module that would act like a normal ``__getattr__`` method, except that it "
+"will be defined on module *instances*. For example::"
 msgstr ""
 
 #: ../pep-0562.rst:52
@@ -106,18 +104,18 @@ msgstr ""
 #: ../pep-0562.rst:77
 msgid ""
 "There is a related proposal :pep:`549` that proposes to support instance "
-"properties for a similar functionality. The difference is this PEP "
-"proposes a faster and simpler mechanism, but provides more basic "
-"customization. An additional motivation for this proposal is that "
-":pep:`484` already defines the use of module ``__getattr__`` for this "
-"purpose in Python stub files, see :pep:`484#stub-files`."
+"properties for a similar functionality. The difference is this PEP proposes "
+"a faster and simpler mechanism, but provides more basic customization. An "
+"additional motivation for this proposal is that :pep:`484` already defines "
+"the use of module ``__getattr__`` for this purpose in Python stub files, "
+"see :pep:`484#stub-files`."
 msgstr ""
 
 #: ../pep-0562.rst:84
 msgid ""
-"In addition, to allow modifying result of a ``dir()`` call on a module to"
-" show deprecated and other dynamically generated attributes, it is "
-"proposed to support module level ``__dir__`` function. For example::"
+"In addition, to allow modifying result of a ``dir()`` call on a module to "
+"show deprecated and other dynamically generated attributes, it is proposed "
+"to support module level ``__dir__`` function. For example::"
 msgstr ""
 
 #: ../pep-0562.rst:109
@@ -126,26 +124,26 @@ msgstr ""
 
 #: ../pep-0562.rst:111
 msgid ""
-"The ``__getattr__`` function at the module level should accept one "
-"argument which is the name of an attribute and return the computed value "
-"or raise an ``AttributeError``::"
+"The ``__getattr__`` function at the module level should accept one argument "
+"which is the name of an attribute and return the computed value or raise an "
+"``AttributeError``::"
 msgstr ""
 
 #: ../pep-0562.rst:117
 msgid ""
-"If an attribute is not found on a module object through the normal lookup"
-" (i.e. ``object.__getattribute__``), then ``__getattr__`` is searched in "
-"the module ``__dict__`` before raising an ``AttributeError``. If found, "
-"it is called with the attribute name and the result is returned. Looking "
-"up a name as a module global will bypass module ``__getattr__``. This is "
-"intentional, otherwise calling ``__getattr__`` for builtins will "
-"significantly harm performance."
+"If an attribute is not found on a module object through the normal lookup (i."
+"e. ``object.__getattribute__``), then ``__getattr__`` is searched in the "
+"module ``__dict__`` before raising an ``AttributeError``. If found, it is "
+"called with the attribute name and the result is returned. Looking up a name "
+"as a module global will bypass module ``__getattr__``. This is intentional, "
+"otherwise calling ``__getattr__`` for builtins will significantly harm "
+"performance."
 msgstr ""
 
 #: ../pep-0562.rst:125
 msgid ""
-"The ``__dir__`` function should accept no arguments, and return a list of"
-" strings that represents the names accessible on module::"
+"The ``__dir__`` function should accept no arguments, and return a list of "
+"strings that represents the names accessible on module::"
 msgstr ""
 
 #: ../pep-0562.rst:130
@@ -167,8 +165,8 @@ msgid ""
 "This PEP may break code that uses module level (global) names "
 "``__getattr__`` and ``__dir__``.  (But the language reference explicitly "
 "reserves *all* undocumented dunder names, and allows \"breakage without "
-"warning\"; see [3]_.) The performance implications of this PEP are "
-"minimal, since ``__getattr__`` is called only for missing attributes."
+"warning\"; see [3]_.) The performance implications of this PEP are minimal, "
+"since ``__getattr__`` is called only for missing attributes."
 msgstr ""
 
 #: ../pep-0562.rst:145
@@ -176,8 +174,8 @@ msgid ""
 "Some tools that perform module attributes discovery might not expect "
 "``__getattr__``. This problem is not new however, since it is already "
 "possible to replace a module with a module subclass with overridden "
-"``__getattr__`` and ``__dir__``, but with this PEP such problems can "
-"occur more often."
+"``__getattr__`` and ``__dir__``, but with this PEP such problems can occur "
+"more often."
 msgstr ""
 
 #: ../pep-0562.rst:152
@@ -187,21 +185,21 @@ msgstr ""
 #: ../pep-0562.rst:154
 msgid ""
 "Note that the use of module ``__getattr__`` requires care to keep the "
-"referred objects pickleable. For example, the ``__name__`` attribute of a"
-" function should correspond to the name with which it is accessible via "
+"referred objects pickleable. For example, the ``__name__`` attribute of a "
+"function should correspond to the name with which it is accessible via "
 "``__getattr__``::"
 msgstr ""
 
 #: ../pep-0562.rst:168
 msgid ""
-"One should be also careful to avoid recursion as one would do with a "
-"class level ``__getattr__``."
+"One should be also careful to avoid recursion as one would do with a class "
+"level ``__getattr__``."
 msgstr ""
 
 #: ../pep-0562.rst:171
 msgid ""
-"To use a module global with triggering ``__getattr__`` (for example if "
-"one wants to use a lazy loaded submodule) one can access it as::"
+"To use a module global with triggering ``__getattr__`` (for example if one "
+"wants to use a lazy loaded submodule) one can access it as::"
 msgstr ""
 
 #: ../pep-0562.rst:176
@@ -210,8 +208,8 @@ msgstr ""
 
 #: ../pep-0562.rst:180
 msgid ""
-"Note that the latter sets the module attribute, thus ``__getattr__`` will"
-" be called only once."
+"Note that the latter sets the module attribute, thus ``__getattr__`` will be "
+"called only once."
 msgstr ""
 
 #: ../pep-0562.rst:185
@@ -220,15 +218,14 @@ msgstr ""
 
 #: ../pep-0562.rst:187
 msgid ""
-"The reference implementation "
-"(https://github.com/ilevkivskyi/cpython/pull/3/files)"
+"The reference implementation (https://github.com/ilevkivskyi/cpython/pull/3/"
+"files)"
 msgstr ""
 
 #: ../pep-0562.rst:190
 msgid ""
-"Reserved classes of identifiers "
-"(https://docs.python.org/3/reference/lexical_analysis.html#reserved-"
-"classes-of-identifiers)"
+"Reserved classes of identifiers (https://docs.python.org/3/reference/"
+"lexical_analysis.html#reserved-classes-of-identifiers)"
 msgstr ""
 
 #: ../pep-0562.rst:195
@@ -238,4 +235,3 @@ msgstr ""
 #: ../pep-0562.rst:197
 msgid "This document has been placed in the public domain."
 msgstr ""
-

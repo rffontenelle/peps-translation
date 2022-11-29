@@ -85,9 +85,8 @@ msgstr ""
 
 #: ../pep-0506.txt:28
 msgid ""
-"Pseudo Random Number Generator.  A deterministic algorithm used to "
-"produce random-looking numbers with certain desirable statistical "
-"properties."
+"Pseudo Random Number Generator.  A deterministic algorithm used to produce "
+"random-looking numbers with certain desirable statistical properties."
 msgstr ""
 
 #: ../pep-0506.txt:32
@@ -96,8 +95,8 @@ msgstr ""
 
 #: ../pep-0506.txt:34
 msgid ""
-"Cryptographically Strong Pseudo Random Number Generator.  An algorithm "
-"used to produce random-looking numbers which are resistant to prediction."
+"Cryptographically Strong Pseudo Random Number Generator.  An algorithm used "
+"to produce random-looking numbers which are resistant to prediction."
 msgstr ""
 
 #: ../pep-0506.txt:38
@@ -106,8 +105,8 @@ msgstr ""
 
 #: ../pep-0506.txt:40
 msgid ""
-"Mersenne Twister.  An extensively studied PRNG which is currently used by"
-" the ``random`` module as the default."
+"Mersenne Twister.  An extensively studied PRNG which is currently used by "
+"the ``random`` module as the default."
 msgstr ""
 
 #: ../pep-0506.txt:45
@@ -116,26 +115,25 @@ msgstr ""
 
 #: ../pep-0506.txt:47
 msgid ""
-"This proposal is motivated by concerns that Python's standard library "
-"makes it too easy for developers to inadvertently make serious security "
-"errors.  Theo de Raadt, the founder of OpenBSD, contacted Guido van "
-"Rossum and expressed some concern [#]_ about the use of MT for generating"
-" sensitive information such as passwords, secure tokens, session keys and"
-" similar."
+"This proposal is motivated by concerns that Python's standard library makes "
+"it too easy for developers to inadvertently make serious security errors.  "
+"Theo de Raadt, the founder of OpenBSD, contacted Guido van Rossum and "
+"expressed some concern [#]_ about the use of MT for generating sensitive "
+"information such as passwords, secure tokens, session keys and similar."
 msgstr ""
 
 #: ../pep-0506.txt:53
 msgid ""
-"Although the documentation for the ``random`` module explicitly states "
-"that the default is not suitable for security purposes [#]_, it is "
-"strongly believed that this warning may be missed, ignored or "
-"misunderstood by many Python developers.  In particular:"
+"Although the documentation for the ``random`` module explicitly states that "
+"the default is not suitable for security purposes [#]_, it is strongly "
+"believed that this warning may be missed, ignored or misunderstood by many "
+"Python developers.  In particular:"
 msgstr ""
 
 #: ../pep-0506.txt:58
 msgid ""
-"developers may not have read the documentation and consequently not seen "
-"the warning;"
+"developers may not have read the documentation and consequently not seen the "
+"warning;"
 msgstr ""
 
 #: ../pep-0506.txt:61
@@ -152,22 +150,21 @@ msgstr ""
 
 #: ../pep-0506.txt:68
 msgid ""
-"The first [#]_ hit when searching for \"python how to generate "
-"passwords\" on Google is a tutorial that uses the default functions from "
-"the ``random`` module [#]_.  Although it is not intended for use in web "
-"applications, it is likely that similar techniques find themselves used "
-"in that situation. The second hit is to a StackOverflow question about "
-"generating passwords [#]_.  Most of the answers given, including the "
-"accepted one, use the default functions.  When one user warned that the "
-"default could be easily compromised, they were told \"I think you worry "
-"too much.\" [#]_"
+"The first [#]_ hit when searching for \"python how to generate passwords\" "
+"on Google is a tutorial that uses the default functions from the ``random`` "
+"module [#]_.  Although it is not intended for use in web applications, it is "
+"likely that similar techniques find themselves used in that situation. The "
+"second hit is to a StackOverflow question about generating passwords [#]_.  "
+"Most of the answers given, including the accepted one, use the default "
+"functions.  When one user warned that the default could be easily "
+"compromised, they were told \"I think you worry too much.\" [#]_"
 msgstr ""
 
 #: ../pep-0506.txt:77
 msgid ""
-"This strongly suggests that the existing ``random`` module is an "
-"attractive nuisance when it comes to generating (for example) passwords "
-"or secure tokens."
+"This strongly suggests that the existing ``random`` module is an attractive "
+"nuisance when it comes to generating (for example) passwords or secure "
+"tokens."
 msgstr ""
 
 #: ../pep-0506.txt:81
@@ -183,40 +180,40 @@ msgstr ""
 #: ../pep-0506.txt:88
 msgid ""
 "Alternative proposals have focused on the default PRNG in the ``random`` "
-"module, with the aim of providing \"secure by default\" cryptographically"
-" strong primitives that developers can build upon without thinking about "
+"module, with the aim of providing \"secure by default\" cryptographically "
+"strong primitives that developers can build upon without thinking about "
 "security.  (See Alternatives below.)  This proposes a different approach:"
 msgstr ""
 
 #: ../pep-0506.txt:93
 msgid ""
-"The standard library already provides cryptographically strong "
-"primitives, but many users don't know they exist or when to use them."
+"The standard library already provides cryptographically strong primitives, "
+"but many users don't know they exist or when to use them."
 msgstr ""
 
 #: ../pep-0506.txt:96
 msgid ""
-"Instead of requiring crypto-naive users to write secure code, the "
-"standard library should include a set of ready-to-use \"batteries\" for "
-"the most common needs, such as generating secure tokens.  This code will "
-"both directly satisfy a need (\"How do I generate a password reset "
-"token?\"), and act as an example of acceptable practises which developers"
-" can learn from [#]_."
+"Instead of requiring crypto-naive users to write secure code, the standard "
+"library should include a set of ready-to-use \"batteries\" for the most "
+"common needs, such as generating secure tokens.  This code will both "
+"directly satisfy a need (\"How do I generate a password reset token?\"), and "
+"act as an example of acceptable practises which developers can learn from "
+"[#]_."
 msgstr ""
 
 #: ../pep-0506.txt:103
 msgid ""
 "To do this, this PEP proposes that we add a new module to the standard "
-"library, with the suggested name ``secrets``.  This module will contain a"
-" set of ready-to-use functions for common activities with security "
+"library, with the suggested name ``secrets``.  This module will contain a "
+"set of ready-to-use functions for common activities with security "
 "implications, together with some lower-level primitives."
 msgstr ""
 
 #: ../pep-0506.txt:108
 msgid ""
-"The suggestion is that ``secrets`` becomes the go-to module for dealing "
-"with anything which should remain secret (passwords, tokens, etc.) while "
-"the ``random`` module remains backward-compatible."
+"The suggestion is that ``secrets`` becomes the go-to module for dealing with "
+"anything which should remain secret (passwords, tokens, etc.) while the "
+"``random`` module remains backward-compatible."
 msgstr ""
 
 #: ../pep-0506.txt:114
@@ -249,9 +246,8 @@ msgstr ""
 msgid ""
 "A limited interface to the system CSPRNG, using either ``os.urandom`` "
 "directly or ``random.SystemRandom``.  Unlike the ``random`` module, this "
-"does not need to provide methods for seeding, getting or setting the "
-"state, or any non-uniform distributions.  It should provide the "
-"following:"
+"does not need to provide methods for seeding, getting or setting the state, "
+"or any non-uniform distributions.  It should provide the following:"
 msgstr ""
 
 #: ../pep-0506.txt:131
@@ -260,14 +256,14 @@ msgstr ""
 
 #: ../pep-0506.txt:132
 msgid ""
-"A function for generating a given number of random bits and/or bytes as "
-"an integer, ``secrets.randbits``."
+"A function for generating a given number of random bits and/or bytes as an "
+"integer, ``secrets.randbits``."
 msgstr ""
 
 #: ../pep-0506.txt:134
 msgid ""
-"A function for returning a random integer in the half-open range 0 to the"
-" given upper limit, ``secrets.randbelow`` [#]_."
+"A function for returning a random integer in the half-open range 0 to the "
+"given upper limit, ``secrets.randbelow`` [#]_."
 msgstr ""
 
 #: ../pep-0506.txt:137
@@ -278,18 +274,16 @@ msgstr ""
 
 #: ../pep-0506.txt:140
 msgid ""
-"The consensus appears to be that there is no need to add a new CSPRNG to "
-"the ``random`` module to support these uses, ``SystemRandom`` will be "
-"sufficient."
+"The consensus appears to be that there is no need to add a new CSPRNG to the "
+"``random`` module to support these uses, ``SystemRandom`` will be sufficient."
 msgstr ""
 
 #: ../pep-0506.txt:144
 msgid ""
-"Some illustrative implementations have been given by Nick Coghlan [#]_ "
-"and a minimalist API by Tim Peters [#]_. This idea has also been "
-"discussed on the issue tracker for the \"cryptography\" module [#]_.  The"
-" following pseudo-code should be taken as the starting point for the real"
-" implementation::"
+"Some illustrative implementations have been given by Nick Coghlan [#]_ and a "
+"minimalist API by Tim Peters [#]_. This idea has also been discussed on the "
+"issue tracker for the \"cryptography\" module [#]_.  The following pseudo-"
+"code should be taken as the starting point for the real implementation::"
 msgstr ""
 
 #: ../pep-0506.txt:176
@@ -305,13 +299,12 @@ msgstr ""
 
 #: ../pep-0506.txt:183
 msgid ""
-"One difficult question is \"How many bytes should my token be?\".  We can"
-" help with this question by providing a default amount of entropy for the"
-" \"token_*\" functions. If the ``nbytes`` argument is None or not given, "
-"the default entropy will be used. This default value should be large "
-"enough to be expected to be secure for medium-security uses, but is "
-"expected to change in the future, possibly even in a maintenance release "
-"[#]_."
+"One difficult question is \"How many bytes should my token be?\".  We can "
+"help with this question by providing a default amount of entropy for the "
+"\"token_*\" functions. If the ``nbytes`` argument is None or not given, the "
+"default entropy will be used. This default value should be large enough to "
+"be expected to be secure for medium-security uses, but is expected to change "
+"in the future, possibly even in a maintenance release [#]_."
 msgstr ""
 
 #: ../pep-0506.txt:191
@@ -320,16 +313,16 @@ msgstr ""
 
 #: ../pep-0506.txt:193
 msgid ""
-"One question is the naming conventions used in the module [#]_, whether "
-"to use C-like naming conventions such as \"randrange\" or more Pythonic "
-"names such as \"random_range\"."
+"One question is the naming conventions used in the module [#]_, whether to "
+"use C-like naming conventions such as \"randrange\" or more Pythonic names "
+"such as \"random_range\"."
 msgstr ""
 
 #: ../pep-0506.txt:197
 msgid ""
 "Functions which are simply bound methods of the private ``SystemRandom`` "
-"instance (e.g. ``randrange``), or a thin wrapper around such, should keep"
-" the familiar names. Those which are something new (such as the various "
+"instance (e.g. ``randrange``), or a thin wrapper around such, should keep "
+"the familiar names. Those which are something new (such as the various "
 "``token_*`` functions) will use more Pythonic names."
 msgstr ""
 
@@ -340,44 +333,43 @@ msgstr ""
 #: ../pep-0506.txt:205
 msgid ""
 "One alternative is to change the default PRNG provided by the ``random`` "
-"module [#]_.  This received considerable scepticism and outright "
-"opposition:"
+"module [#]_.  This received considerable scepticism and outright opposition:"
 msgstr ""
 
 #: ../pep-0506.txt:208
 msgid ""
-"There is fear that a CSPRNG may be slower than the current PRNG (which in"
-" the case of MT is already quite slow)."
+"There is fear that a CSPRNG may be slower than the current PRNG (which in "
+"the case of MT is already quite slow)."
 msgstr ""
 
 #: ../pep-0506.txt:211
 msgid ""
-"Some applications (such as scientific simulations, and replaying "
-"gameplay) require the ability to seed the PRNG into a known state, which "
-"a CSPRNG lacks by design."
+"Some applications (such as scientific simulations, and replaying gameplay) "
+"require the ability to seed the PRNG into a known state, which a CSPRNG "
+"lacks by design."
 msgstr ""
 
 #: ../pep-0506.txt:215
 msgid ""
-"Another major use of the ``random`` module is for simple \"guess a "
-"number\" games written by beginners, and many people are loath to make "
-"any change to the ``random`` module which may make that harder."
+"Another major use of the ``random`` module is for simple \"guess a number\" "
+"games written by beginners, and many people are loath to make any change to "
+"the ``random`` module which may make that harder."
 msgstr ""
 
 #: ../pep-0506.txt:219
 msgid ""
-"Although there is no proposal to remove MT from the ``random`` module, "
-"there was considerable hostility to the idea of having to opt-in to a "
-"non-CSPRNG or any backwards-incompatible changes."
+"Although there is no proposal to remove MT from the ``random`` module, there "
+"was considerable hostility to the idea of having to opt-in to a non-CSPRNG "
+"or any backwards-incompatible changes."
 msgstr ""
 
 #: ../pep-0506.txt:223
 msgid ""
-"Demonstrated attacks against MT are typically against PHP applications. "
-"It is believed that PHP's version of MT is a significantly softer target "
-"than Python's version, due to a poor seeding technique [#]_.  "
-"Consequently, without a proven attack against Python applications, many "
-"people object to a backwards-incompatible change."
+"Demonstrated attacks against MT are typically against PHP applications. It "
+"is believed that PHP's version of MT is a significantly softer target than "
+"Python's version, due to a poor seeding technique [#]_.  Consequently, "
+"without a proven attack against Python applications, many people object to a "
+"backwards-incompatible change."
 msgstr ""
 
 #: ../pep-0506.txt:229
@@ -397,31 +389,31 @@ msgstr ""
 
 #: ../pep-0506.txt:240
 msgid ""
-"PHP includes a function ``uniqid`` [#]_ which by default returns a "
-"thirteen character string based on the current time in microseconds. "
-"Translated into Python syntax, it has the following signature::"
+"PHP includes a function ``uniqid`` [#]_ which by default returns a thirteen "
+"character string based on the current time in microseconds. Translated into "
+"Python syntax, it has the following signature::"
 msgstr ""
 
 #: ../pep-0506.txt:246
 msgid ""
-"The PHP documentation warns that this function is not suitable for "
-"security purposes.  Nevertheless, various mature, well-known PHP "
-"applications use it for that purpose (citation needed)."
+"The PHP documentation warns that this function is not suitable for security "
+"purposes.  Nevertheless, various mature, well-known PHP applications use it "
+"for that purpose (citation needed)."
 msgstr ""
 
 #: ../pep-0506.txt:250
 msgid ""
-"PHP 5.3 and better also includes a function "
-"``openssl_random_pseudo_bytes`` [#]_.  Translated into Python syntax, it "
-"has roughly the following signature::"
+"PHP 5.3 and better also includes a function ``openssl_random_pseudo_bytes`` "
+"[#]_.  Translated into Python syntax, it has roughly the following "
+"signature::"
 msgstr ""
 
 #: ../pep-0506.txt:256
 msgid ""
-"This function returns a pseudo-random string of bytes of the given "
-"length, and a boolean flag giving whether the string is considered "
-"cryptographically strong.  The PHP manual suggests that returning "
-"anything but True should be rare except for old or broken platforms."
+"This function returns a pseudo-random string of bytes of the given length, "
+"and a boolean flag giving whether the string is considered cryptographically "
+"strong.  The PHP manual suggests that returning anything but True should be "
+"rare except for old or broken platforms."
 msgstr ""
 
 #: ../pep-0506.txt:261
@@ -430,19 +422,18 @@ msgstr ""
 
 #: ../pep-0506.txt:263
 msgid ""
-"Based on a rather cursory search [#]_, there do not appear to be any "
-"well-known standard functions for producing strong random values in "
-"JavaScript. ``Math.random`` is often used, despite serious weaknesses "
-"making it unsuitable for cryptographic purposes [#]_. In recent years the"
-" majority of browsers have gained support for "
-"``window.crypto.getRandomValues`` [#]_."
+"Based on a rather cursory search [#]_, there do not appear to be any well-"
+"known standard functions for producing strong random values in JavaScript. "
+"``Math.random`` is often used, despite serious weaknesses making it "
+"unsuitable for cryptographic purposes [#]_. In recent years the majority of "
+"browsers have gained support for ``window.crypto.getRandomValues`` [#]_."
 msgstr ""
 
 #: ../pep-0506.txt:269
 msgid ""
-"Node.js offers a rich cryptographic module, ``crypto`` [#]_, most of "
-"which is beyond the scope of this PEP. It does include a single function "
-"for generating random bytes, ``crypto.randomBytes``."
+"Node.js offers a rich cryptographic module, ``crypto`` [#]_, most of which "
+"is beyond the scope of this PEP. It does include a single function for "
+"generating random bytes, ``crypto.randomBytes``."
 msgstr ""
 
 #: ../pep-0506.txt:273
@@ -469,8 +460,8 @@ msgstr ""
 
 #: ../pep-0506.txt:284
 msgid ""
-"random_number - depending on the argument, returns either a random "
-"integer in the range(0, n), or a random float between 0.0 and 1.0."
+"random_number - depending on the argument, returns either a random integer "
+"in the range(0, n), or a random float between 0.0 and 1.0."
 msgstr ""
 
 #: ../pep-0506.txt:287
@@ -487,22 +478,22 @@ msgstr ""
 
 #: ../pep-0506.txt:295
 msgid ""
-"There was a proposal to add a \"random.safe\" submodule, quoting the Zen "
-"of Python \"Namespaces are one honking great idea\" koan.  However, the "
-"author of the Zen, Tim Peters, has come out against this idea [#]_, and "
-"recommends a top-level module."
+"There was a proposal to add a \"random.safe\" submodule, quoting the Zen of "
+"Python \"Namespaces are one honking great idea\" koan.  However, the author "
+"of the Zen, Tim Peters, has come out against this idea [#]_, and recommends "
+"a top-level module."
 msgstr ""
 
 #: ../pep-0506.txt:300
 msgid ""
-"In discussion on the python-ideas mailing list so far, the name "
-"\"secrets\" has received some approval, and no strong opposition."
+"In discussion on the python-ideas mailing list so far, the name \"secrets\" "
+"has received some approval, and no strong opposition."
 msgstr ""
 
 #: ../pep-0506.txt:303
 msgid ""
-"There is already an existing third-party module with the same name [#]_, "
-"but it appears to be unused and abandoned."
+"There is already an existing third-party module with the same name [#]_, but "
+"it appears to be unused and abandoned."
 msgstr ""
 
 #: ../pep-0506.txt:308
@@ -518,16 +509,15 @@ msgstr ""
 #: ../pep-0506.txt:313
 msgid ""
 "A: The consensus among security professionals is that MT is not safe in "
-"security contexts.  It is not difficult to reconstruct the internal state"
-" of MT [#]_ [#]_ and so predict all past and future values.  There are a "
-"number of known, practical attacks on systems using MT for randomness "
-"[#]_."
+"security contexts.  It is not difficult to reconstruct the internal state of "
+"MT [#]_ [#]_ and so predict all past and future values.  There are a number "
+"of known, practical attacks on systems using MT for randomness [#]_."
 msgstr ""
 
 #: ../pep-0506.txt:319
 msgid ""
-"Q: Attacks on PHP are one thing, but are there any known attacks on "
-"Python software?"
+"Q: Attacks on PHP are one thing, but are there any known attacks on Python "
+"software?"
 msgstr ""
 
 #: ../pep-0506.txt:322
@@ -538,23 +528,22 @@ msgstr ""
 
 #: ../pep-0506.txt:336
 msgid ""
-"Christian Heimes reported this issue to the Zope security team in 2012 "
-"[#]_, there are at least two related CVE vulnerabilities [#]_, and at "
-"least one work-around for this issue in Django [#]_."
+"Christian Heimes reported this issue to the Zope security team in 2012 [#]_, "
+"there are at least two related CVE vulnerabilities [#]_, and at least one "
+"work-around for this issue in Django [#]_."
 msgstr ""
 
 #: ../pep-0506.txt:340
 msgid ""
-"Q: Is this an alternative to specialist cryptographic software such as "
-"SSL?"
+"Q: Is this an alternative to specialist cryptographic software such as SSL?"
 msgstr ""
 
 #: ../pep-0506.txt:342
 msgid ""
 "A: No. This is a \"batteries included\" solution, not a full-featured "
-"\"nuclear reactor\".  It is intended to mitigate against some basic "
-"security errors, not be a solution to all security-related issues. To "
-"quote Nick Coghlan referring to his earlier proposal [#]_::"
+"\"nuclear reactor\".  It is intended to mitigate against some basic security "
+"errors, not be a solution to all security-related issues. To quote Nick "
+"Coghlan referring to his earlier proposal [#]_::"
 msgstr ""
 
 #: ../pep-0506.txt:353
@@ -563,27 +552,26 @@ msgstr ""
 
 #: ../pep-0506.txt:355
 msgid ""
-"A: The consensus is that the requirements for password generators are too"
-" variable for it to be a good match for the standard library [#]_. No "
-"password generator will be included in the initial release of the module,"
-" instead it will be given in the documentation as a recipe (à la the "
-"recipes in the ``itertools`` module) [#]_."
+"A: The consensus is that the requirements for password generators are too "
+"variable for it to be a good match for the standard library [#]_. No "
+"password generator will be included in the initial release of the module, "
+"instead it will be given in the documentation as a recipe (à la the recipes "
+"in the ``itertools`` module) [#]_."
 msgstr ""
 
 #: ../pep-0506.txt:361
 msgid ""
-"Q: Will ``secrets`` use /dev/random (which blocks) or /dev/urandom (which"
-" doesn't block) on Linux? What about other platforms?"
+"Q: Will ``secrets`` use /dev/random (which blocks) or /dev/urandom (which "
+"doesn't block) on Linux? What about other platforms?"
 msgstr ""
 
 #: ../pep-0506.txt:364
 msgid ""
-"A: ``secrets`` will be based on ``os.urandom`` and "
-"``random.SystemRandom``, which are interfaces to your operating system's "
-"best source of cryptographic randomness. On Linux, that may be "
-"``/dev/urandom`` [#]_, on Windows it may be ``CryptGenRandom()``, but see"
-" the documentation and/or source code for the detailed implementation "
-"details."
+"A: ``secrets`` will be based on ``os.urandom`` and ``random.SystemRandom``, "
+"which are interfaces to your operating system's best source of cryptographic "
+"randomness. On Linux, that may be ``/dev/urandom`` [#]_, on Windows it may "
+"be ``CryptGenRandom()``, but see the documentation and/or source code for "
+"the detailed implementation details."
 msgstr ""
 
 #: ../pep-0506.txt:372
@@ -591,7 +579,8 @@ msgid "References"
 msgstr ""
 
 #: ../pep-0506.txt:374
-msgid "https://mail.python.org/pipermail/python-ideas/2015-September/035820.html"
+msgid ""
+"https://mail.python.org/pipermail/python-ideas/2015-September/035820.html"
 msgstr ""
 
 #: ../pep-0506.txt:376
@@ -600,13 +589,15 @@ msgstr ""
 
 #: ../pep-0506.txt:378
 msgid ""
-"As of the date of writing. Also, as Google search terms may be "
-"automatically customised for the user without their knowledge, some "
-"readers may see different results."
+"As of the date of writing. Also, as Google search terms may be automatically "
+"customised for the user without their knowledge, some readers may see "
+"different results."
 msgstr ""
 
 #: ../pep-0506.txt:382
-msgid "http://interactivepython.org/runestone/static/everyday/2013/01/3_password.html"
+msgid ""
+"http://interactivepython.org/runestone/static/everyday/2013/01/3_password."
+"html"
 msgstr ""
 
 #: ../pep-0506.txt:384
@@ -620,28 +611,30 @@ msgid ""
 msgstr ""
 
 #: ../pep-0506.txt:388
-msgid "https://mail.python.org/pipermail/python-ideas/2015-September/036238.html"
+msgid ""
+"https://mail.python.org/pipermail/python-ideas/2015-September/036238.html"
 msgstr ""
 
 #: ../pep-0506.txt:390
 msgid ""
-"At least those who are motivated to read the source code and "
-"documentation."
+"At least those who are motivated to read the source code and documentation."
 msgstr ""
 
 #: ../pep-0506.txt:392
 msgid ""
-"After considerable discussion, Guido ruled that the module need only "
-"provide ``randbelow``, and not similar functions ``randrange`` or "
-"``randint``.  http://code.activestate.com/lists/python-dev/138375/"
+"After considerable discussion, Guido ruled that the module need only provide "
+"``randbelow``, and not similar functions ``randrange`` or ``randint``.  "
+"http://code.activestate.com/lists/python-dev/138375/"
 msgstr ""
 
 #: ../pep-0506.txt:396
-msgid "https://mail.python.org/pipermail/python-ideas/2015-September/036271.html"
+msgid ""
+"https://mail.python.org/pipermail/python-ideas/2015-September/036271.html"
 msgstr ""
 
 #: ../pep-0506.txt:398
-msgid "https://mail.python.org/pipermail/python-ideas/2015-September/036350.html"
+msgid ""
+"https://mail.python.org/pipermail/python-ideas/2015-September/036350.html"
 msgstr ""
 
 #: ../pep-0506.txt:400
@@ -654,13 +647,13 @@ msgstr ""
 
 #: ../pep-0506.txt:404
 msgid ""
-"https://mail.python.org/pipermail/python-ideas/2015-September/036517.html"
-" https://mail.python.org/pipermail/python-"
-"ideas/2015-September/036515.html"
+"https://mail.python.org/pipermail/python-ideas/2015-September/036517.html "
+"https://mail.python.org/pipermail/python-ideas/2015-September/036515.html"
 msgstr ""
 
 #: ../pep-0506.txt:407
-msgid "https://mail.python.org/pipermail/python-ideas/2015-September/036474.html"
+msgid ""
+"https://mail.python.org/pipermail/python-ideas/2015-September/036474.html"
 msgstr ""
 
 #: ../pep-0506.txt:409
@@ -669,9 +662,9 @@ msgstr ""
 
 #: ../pep-0506.txt:411
 msgid ""
-"By default PHP seeds the MT PRNG with the time (citation needed), which "
-"is exploitable by attackers, while Python seeds the PRNG with output from"
-" the system CSPRNG, which is believed to be much harder to exploit."
+"By default PHP seeds the MT PRNG with the time (citation needed), which is "
+"exploitable by attackers, while Python seeds the PRNG with output from the "
+"system CSPRNG, which is believed to be much harder to exploit."
 msgstr ""
 
 #: ../pep-0506.txt:416
@@ -687,13 +680,13 @@ msgid "Volunteers and patches are welcome."
 msgstr ""
 
 #: ../pep-0506.txt:422
-msgid "http://ifsec.blogspot.fr/2012/05/cross-domain-mathrandom-prediction.html"
+msgid ""
+"http://ifsec.blogspot.fr/2012/05/cross-domain-mathrandom-prediction.html"
 msgstr ""
 
 #: ../pep-0506.txt:424
 msgid ""
-"https://developer.mozilla.org/en-"
-"US/docs/Web/API/RandomSource/getRandomValues"
+"https://developer.mozilla.org/en-US/docs/Web/API/RandomSource/getRandomValues"
 msgstr ""
 
 #: ../pep-0506.txt:426
@@ -702,12 +695,12 @@ msgstr ""
 
 #: ../pep-0506.txt:428
 msgid ""
-"http://ruby-"
-"doc.org/stdlib-2.1.2/libdoc/securerandom/rdoc/SecureRandom.html"
+"http://ruby-doc.org/stdlib-2.1.2/libdoc/securerandom/rdoc/SecureRandom.html"
 msgstr ""
 
 #: ../pep-0506.txt:430
-msgid "https://mail.python.org/pipermail/python-ideas/2015-September/036254.html"
+msgid ""
+"https://mail.python.org/pipermail/python-ideas/2015-September/036254.html"
 msgstr ""
 
 #: ../pep-0506.txt:432
@@ -715,17 +708,19 @@ msgid "https://pypi.python.org/pypi/secrets"
 msgstr ""
 
 #: ../pep-0506.txt:434
-msgid "https://jazzy.id.au/2010/09/22/cracking_random_number_generators_part_3.html"
+msgid ""
+"https://jazzy.id.au/2010/09/22/cracking_random_number_generators_part_3.html"
 msgstr ""
 
 #: ../pep-0506.txt:436
-msgid "https://mail.python.org/pipermail/python-ideas/2015-September/036077.html"
+msgid ""
+"https://mail.python.org/pipermail/python-ideas/2015-September/036077.html"
 msgstr ""
 
 #: ../pep-0506.txt:438
 msgid ""
-"https://media.blackhat.com/bh-"
-"us-12/Briefings/Argyros/BH_US_12_Argyros_PRNG_WP.pdf"
+"https://media.blackhat.com/bh-us-12/Briefings/Argyros/"
+"BH_US_12_Argyros_PRNG_WP.pdf"
 msgstr ""
 
 #: ../pep-0506.txt:440
@@ -738,33 +733,36 @@ msgstr ""
 
 #: ../pep-0506.txt:444
 msgid ""
-"http://www.cvedetails.com/cve/CVE-2012-5508/ "
-"http://www.cvedetails.com/cve/CVE-2012-6661/"
+"http://www.cvedetails.com/cve/CVE-2012-5508/ http://www.cvedetails.com/cve/"
+"CVE-2012-6661/"
 msgstr ""
 
 #: ../pep-0506.txt:447
-msgid "https://github.com/django/django/commit/1525874238fd705ec17a066291935a9316bd3044"
+msgid ""
+"https://github.com/django/django/"
+"commit/1525874238fd705ec17a066291935a9316bd3044"
 msgstr ""
 
 #: ../pep-0506.txt:449
-msgid "https://mail.python.org/pipermail/python-ideas/2015-September/036157.html"
+msgid ""
+"https://mail.python.org/pipermail/python-ideas/2015-September/036157.html"
 msgstr ""
 
 #: ../pep-0506.txt:451
 msgid ""
-"https://mail.python.org/pipermail/python-ideas/2015-September/036476.html"
-" https://mail.python.org/pipermail/python-"
-"ideas/2015-September/036478.html"
+"https://mail.python.org/pipermail/python-ideas/2015-September/036476.html "
+"https://mail.python.org/pipermail/python-ideas/2015-September/036478.html"
 msgstr ""
 
 #: ../pep-0506.txt:454
-msgid "https://mail.python.org/pipermail/python-ideas/2015-September/036488.html"
+msgid ""
+"https://mail.python.org/pipermail/python-ideas/2015-September/036488.html"
 msgstr ""
 
 #: ../pep-0506.txt:456
 msgid ""
-"http://sockpuppet.org/blog/2014/02/25/safely-generate-random-numbers/ "
-"http://www.2uo.de/myths-about-urandom/"
+"http://sockpuppet.org/blog/2014/02/25/safely-generate-random-numbers/ http://"
+"www.2uo.de/myths-about-urandom/"
 msgstr ""
 
 #: ../pep-0506.txt:461
@@ -774,4 +772,3 @@ msgstr ""
 #: ../pep-0506.txt:463
 msgid "This document has been placed in the public domain."
 msgstr ""
-

@@ -63,8 +63,8 @@ msgstr ""
 
 #: ../pep-0424.txt:11
 msgid ""
-"`15-Jul-2012 <https://mail.python.org/pipermail/python-"
-"dev/2012-July/120920.html>`__"
+"`15-Jul-2012 <https://mail.python.org/pipermail/python-dev/2012-July/120920."
+"html>`__"
 msgstr ""
 
 #: ../pep-0424.txt:14
@@ -75,10 +75,10 @@ msgstr ""
 msgid ""
 "CPython currently defines a ``__length_hint__`` method on several types, "
 "such as various iterators.  This method is then used by various other "
-"functions (such as ``list``) to presize lists based on the estimate "
-"returned by ``__length_hint__``.  Types which are not sized, and thus "
-"should not define ``__len__``, can then define ``__length_hint__``, to "
-"allow estimating or computing a size (such as many iterators)."
+"functions (such as ``list``) to presize lists based on the estimate returned "
+"by ``__length_hint__``.  Types which are not sized, and thus should not "
+"define ``__len__``, can then define ``__length_hint__``, to allow estimating "
+"or computing a size (such as many iterators)."
 msgstr ""
 
 #: ../pep-0424.txt:25
@@ -87,25 +87,24 @@ msgstr ""
 
 #: ../pep-0424.txt:27
 msgid ""
-"This PEP formally documents ``__length_hint__`` for other interpreters "
-"and non-standard-library Python modules to implement."
+"This PEP formally documents ``__length_hint__`` for other interpreters and "
+"non-standard-library Python modules to implement."
 msgstr ""
 
 #: ../pep-0424.txt:30
 msgid ""
-"``__length_hint__`` must return an integer (else a ``TypeError`` is "
-"raised) or ``NotImplemented``, and is not required to be accurate.  It "
-"may return a value that is either larger or smaller than the actual size "
-"of the container.  A return value of ``NotImplemented`` indicates that "
-"there is no finite length estimate.  It may not return a negative value "
-"(else a ValueError is raised)."
+"``__length_hint__`` must return an integer (else a ``TypeError`` is raised) "
+"or ``NotImplemented``, and is not required to be accurate.  It may return a "
+"value that is either larger or smaller than the actual size of the "
+"container.  A return value of ``NotImplemented`` indicates that there is no "
+"finite length estimate.  It may not return a negative value (else a "
+"ValueError is raised)."
 msgstr ""
 
 #: ../pep-0424.txt:37
 msgid ""
-"In addition, a new function ``operator.length_hint`` hint is added, with "
-"the following semantics (which define how ``__length_hint__`` should be "
-"used)::"
+"In addition, a new function ``operator.length_hint`` hint is added, with the "
+"following semantics (which define how ``__length_hint__`` should be used)::"
 msgstr ""
 
 #: ../pep-0424.txt:73
@@ -114,9 +113,9 @@ msgstr ""
 
 #: ../pep-0424.txt:75
 msgid ""
-"Being able to pre-allocate lists based on the expected size, as estimated"
-" by ``__length_hint__``, can be a significant optimization. CPython has "
-"been observed to run some code faster than PyPy, purely because of this "
+"Being able to pre-allocate lists based on the expected size, as estimated by "
+"``__length_hint__``, can be a significant optimization. CPython has been "
+"observed to run some code faster than PyPy, purely because of this "
 "optimization being present."
 msgstr ""
 
@@ -127,4 +126,3 @@ msgstr ""
 #: ../pep-0424.txt:83
 msgid "This document has been placed into the public domain."
 msgstr ""
-

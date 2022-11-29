@@ -63,9 +63,9 @@ msgstr ""
 
 #: ../pep-3125.txt:16
 msgid ""
-"This PEP is rejected.  There wasn't enough support in favor, the feature "
-"to be removed isn't all that harmful, and there are some use cases that "
-"would become harder."
+"This PEP is rejected.  There wasn't enough support in favor, the feature to "
+"be removed isn't all that harmful, and there are some use cases that would "
+"become harder."
 msgstr ""
 
 #: ../pep-3125.txt:22
@@ -75,8 +75,8 @@ msgstr ""
 #: ../pep-3125.txt:24
 msgid ""
 "Python initially inherited its parsing from C.  While this has been "
-"generally useful, there are some remnants which have been less useful for"
-" Python, and should be eliminated."
+"generally useful, there are some remnants which have been less useful for "
+"Python, and should be eliminated."
 msgstr ""
 
 #: ../pep-3125.txt:28
@@ -98,9 +98,9 @@ msgstr ""
 
 #: ../pep-3125.txt:40
 msgid ""
-"The other continuation methods are easily explained as a logical "
-"consequence of the semantics they provide; ``\\`` is simply an escape "
-"character that needs to be memorized."
+"The other continuation methods are easily explained as a logical consequence "
+"of the semantics they provide; ``\\`` is simply an escape character that "
+"needs to be memorized."
 msgstr ""
 
 #: ../pep-3125.txt:46
@@ -113,9 +113,9 @@ msgstr ""
 
 #: ../pep-3125.txt:52
 msgid ""
-"Open a parenthetical expression.  It doesn't matter whether people view "
-"the \"line\" as continuing; they do immediately recognize that the "
-"expression needs to be closed before the statement can end."
+"Open a parenthetical expression.  It doesn't matter whether people view the "
+"\"line\" as continuing; they do immediately recognize that the expression "
+"needs to be closed before the statement can end."
 msgstr ""
 
 #: ../pep-3125.txt:56
@@ -124,9 +124,9 @@ msgstr ""
 
 #: ../pep-3125.txt:66
 msgid ""
-"Note that it is always possible to parenthesize an expression, but it can"
-" seem odd to parenthesize an expression that needs parentheses only for "
-"the line break::"
+"Note that it is always possible to parenthesize an expression, but it can "
+"seem odd to parenthesize an expression that needs parentheses only for the "
+"line break::"
 msgstr ""
 
 #: ../pep-3125.txt:75
@@ -135,8 +135,8 @@ msgstr ""
 
 #: ../pep-3125.txt:77
 msgid ""
-"Open a triple-quoted string; again, people recognize that the string "
-"needs to finish before the next statement starts. ::"
+"Open a triple-quoted string; again, people recognize that the string needs "
+"to finish before the next statement starts. ::"
 msgstr ""
 
 #: ../pep-3125.txt:92
@@ -147,17 +147,17 @@ msgstr ""
 msgid ""
 "A terminal ``\\`` indicates that the logical line is continued on the "
 "following physical line (after whitespace).  There are no particular "
-"semantics associated with this.  This form is never required, although it"
-" may look better (particularly for people with a C language background) "
-"in some cases::"
+"semantics associated with this.  This form is never required, although it "
+"may look better (particularly for people with a C language background) in "
+"some cases::"
 msgstr ""
 
 #: ../pep-3125.txt:103
 msgid ""
-"Also note that the ``\\`` must be the final character in the line.  If "
-"your editor navigation can add whitespace to the end of a line, that "
-"invisible change will alter the semantics of the program. Fortunately, "
-"the typical result is only a syntax error, rather than a runtime bug::"
+"Also note that the ``\\`` must be the final character in the line.  If your "
+"editor navigation can add whitespace to the end of a line, that invisible "
+"change will alter the semantics of the program. Fortunately, the typical "
+"result is only a syntax error, rather than a runtime bug::"
 msgstr ""
 
 #: ../pep-3125.txt:114
@@ -172,31 +172,30 @@ msgstr ""
 
 #: ../pep-3125.txt:121
 msgid ""
-"A terminal ``\\`` within a single-quoted string, at the end of the line."
-"  This is arguably a special case of the terminal ``\\``, but it is a "
-"special case that may be worth keeping. ::"
+"A terminal ``\\`` within a single-quoted string, at the end of the line.  "
+"This is arguably a special case of the terminal ``\\``, but it is a special "
+"case that may be worth keeping. ::"
 msgstr ""
 
 #: ../pep-3125.txt:129
 msgid ""
-"Pro: Many of the objections to removing ``\\`` termination were really "
-"just objections to removing it within literal strings; several people "
-"clarified that they want to keep this literal-string usage, but don't "
-"mind losing the general case."
+"Pro: Many of the objections to removing ``\\`` termination were really just "
+"objections to removing it within literal strings; several people clarified "
+"that they want to keep this literal-string usage, but don't mind losing the "
+"general case."
 msgstr ""
 
 #: ../pep-3125.txt:134
 msgid ""
-"Pro: The use of ``\\`` for an escape character within strings is well "
-"known."
+"Pro: The use of ``\\`` for an escape character within strings is well known."
 msgstr ""
 
 #: ../pep-3125.txt:137
 msgid ""
 "Contra: But note that this particular usage is odd, because the escaped "
-"character (the newline) is invisible, and the special treatment is to "
-"delete the character.  That said, the ``\\`` of ``\\(newline)`` is still "
-"an escape which changes the meaning of the following character."
+"character (the newline) is invisible, and the special treatment is to delete "
+"the character.  That said, the ``\\`` of ``\\(newline)`` is still an escape "
+"which changes the meaning of the following character."
 msgstr ""
 
 #: ../pep-3125.txt:145
@@ -227,36 +226,36 @@ msgstr ""
 
 #: ../pep-3125.txt:158
 msgid ""
-"The amount of whitespace may be contentious; expression continuation "
-"should not be confused with opening a new suite."
+"The amount of whitespace may be contentious; expression continuation should "
+"not be confused with opening a new suite."
 msgstr ""
 
 #: ../pep-3125.txt:161
 msgid ""
-"The \"expression continuation\" markers are not as clearly marked in "
-"Python as the grouping punctuation \"(), [], {}\" marks are::"
+"The \"expression continuation\" markers are not as clearly marked in Python "
+"as the grouping punctuation \"(), [], {}\" marks are::"
 msgstr ""
 
 #: ../pep-3125.txt:174
 msgid ""
 "Guido objected for technical reasons.  [#dedent]_ The most obvious "
-"implementation would require allowing INDENT or DEDENT tokens anywhere, "
-"or at least in a widely expanded (and ill-defined) set of locations.  "
-"While this is of concern only for the internal parsing mechanism (rather "
-"than for users), it would be a major new source of complexity."
+"implementation would require allowing INDENT or DEDENT tokens anywhere, or "
+"at least in a widely expanded (and ill-defined) set of locations.  While "
+"this is of concern only for the internal parsing mechanism (rather than for "
+"users), it would be a major new source of complexity."
 msgstr ""
 
 #: ../pep-3125.txt:181
 msgid ""
-"Andrew Koenig then pointed out [#lexical]_ a better implementation "
-"strategy, and said that it had worked quite well in other languages. "
-"[#snocone]_ The improved suggestion boiled down to:"
+"Andrew Koenig then pointed out [#lexical]_ a better implementation strategy, "
+"and said that it had worked quite well in other languages. [#snocone]_ The "
+"improved suggestion boiled down to:"
 msgstr ""
 
 #: ../pep-3125.txt:185
 msgid ""
-"The whitespace that follows an (operator or) open bracket or parenthesis "
-"can include newline characters."
+"The whitespace that follows an (operator or) open bracket or parenthesis can "
+"include newline characters."
 msgstr ""
 
 #: ../pep-3125.txt:188
@@ -274,8 +273,8 @@ msgstr ""
 
 #: ../pep-3125.txt:200
 msgid ""
-"Requiring that the continuation be indented more than the initial line "
-"would add both safety and complexity."
+"Requiring that the continuation be indented more than the initial line would "
+"add both safety and complexity."
 msgstr ""
 
 #: ../pep-3125.txt:205
@@ -304,18 +303,19 @@ msgstr ""
 
 #: ../pep-3125.txt:219
 msgid ""
-"(email subject) PEP 30XZ: Simplified Parsing, van Rossum "
-"https://mail.python.org/pipermail/python-3000/2007-April/007063.html"
+"(email subject) PEP 30XZ: Simplified Parsing, van Rossum https://mail.python."
+"org/pipermail/python-3000/2007-April/007063.html"
 msgstr ""
 
 #: ../pep-3125.txt:222
 msgid ""
-"(email subject) :pep:`3125` -- remove backslash continuation, Koenig "
-"https://mail.python.org/pipermail/python-3000/2007-May/007237.html"
+"(email subject) :pep:`3125` -- remove backslash continuation, Koenig https://"
+"mail.python.org/pipermail/python-3000/2007-May/007237.html"
 msgstr ""
 
 #: ../pep-3125.txt:226
-msgid "The Snocone Programming Language, Koenig http://www.snobol4.com/report.htm"
+msgid ""
+"The Snocone Programming Language, Koenig http://www.snobol4.com/report.htm"
 msgstr ""
 
 #: ../pep-3125.txt:229
@@ -331,4 +331,3 @@ msgstr ""
 #: ../pep-3125.txt:237
 msgid "This document has been placed in the public domain."
 msgstr ""
-

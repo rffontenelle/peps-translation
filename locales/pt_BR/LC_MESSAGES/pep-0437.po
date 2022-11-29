@@ -76,26 +76,23 @@ msgstr ""
 #: ../pep-0437.txt:17
 msgid ""
 "The Python C-API currently has no mechanism for specifying and auto-"
-"generating function signatures, annotations or custom argument "
-"converters."
+"generating function signatures, annotations or custom argument converters."
 msgstr ""
 
 #: ../pep-0437.txt:20
 msgid ""
 "There are several possible approaches to the problem. Cython uses *cdef* "
-"definitions in *.pyx* files to generate the required information. "
-"However, CPython's C-API functions often require additional "
-"initialization and cleanup snippets that would be hard to specify in a "
-"*cdef*."
+"definitions in *.pyx* files to generate the required information. However, "
+"CPython's C-API functions often require additional initialization and "
+"cleanup snippets that would be hard to specify in a *cdef*."
 msgstr ""
 
 #: ../pep-0437.txt:25
 msgid ""
-":pep:`436` proposes a domain specific language (DSL) enclosed in C "
-"comments that largely resembles a per-parameter configuration file. A "
-"preprocessor reads the comment and emits an argument parsing function, "
-"docstrings and a header for the function that utilizes the results of the"
-" parsing step."
+":pep:`436` proposes a domain specific language (DSL) enclosed in C comments "
+"that largely resembles a per-parameter configuration file. A preprocessor "
+"reads the comment and emits an argument parsing function, docstrings and a "
+"header for the function that utilizes the results of the parsing step."
 msgstr ""
 
 #: ../pep-0437.txt:30
@@ -110,9 +107,9 @@ msgstr ""
 
 #: ../pep-0437.txt:37
 msgid ""
-"This PEP was rejected by Guido van Rossum at PyCon US 2013. However, "
-"several of the specific issues raised by this PEP were taken into account"
-" when designing the `second iteration of the PEP 436 DSL`_."
+"This PEP was rejected by Guido van Rossum at PyCon US 2013. However, several "
+"of the specific issues raised by this PEP were taken into account when "
+"designing the `second iteration of the PEP 436 DSL`_."
 msgstr ""
 
 #: ../pep-0437.txt:43
@@ -123,8 +120,8 @@ msgstr ""
 msgid ""
 "Opinions differ regarding the suitability of the :pep:`436` DSL in the "
 "context of a C file. This PEP proposes an alternative DSL. The specific "
-"issues with :pep:`436` that spurred the counter proposal will be "
-"explained in the final section of this PEP."
+"issues with :pep:`436` that spurred the counter proposal will be explained "
+"in the final section of this PEP."
 msgstr ""
 
 #: ../pep-0437.txt:52
@@ -133,17 +130,17 @@ msgstr ""
 
 #: ../pep-0437.txt:54
 msgid ""
-"The PEP focuses exclusively on the DSL. Topics like the output locations "
-"of docstrings or the generated code are outside the scope of this PEP."
+"The PEP focuses exclusively on the DSL. Topics like the output locations of "
+"docstrings or the generated code are outside the scope of this PEP."
 msgstr ""
 
 #: ../pep-0437.txt:57
 msgid ""
-"It is however vital that the DSL is suitable for generating custom "
-"argument parsers, a feature that is already implemented in Cython.  "
-"Therefore, one of the goals of this PEP is to keep the DSL close to "
-"existing solutions, thus facilitating a possible inclusion of the "
-"relevant parts of Cython into the CPython source tree."
+"It is however vital that the DSL is suitable for generating custom argument "
+"parsers, a feature that is already implemented in Cython.  Therefore, one of "
+"the goals of this PEP is to keep the DSL close to existing solutions, thus "
+"facilitating a possible inclusion of the relevant parts of Cython into the "
+"CPython source tree."
 msgstr ""
 
 #: ../pep-0437.txt:65
@@ -156,16 +153,16 @@ msgstr ""
 
 #: ../pep-0437.txt:70
 msgid ""
-"A conversion from a Python to a C value is fully defined by the type of "
-"the converter function.  The PyArg_Parse* family of functions accepts "
-"custom converters in addition to the well-known default converters \"i\","
-" \"f\", etc."
+"A conversion from a Python to a C value is fully defined by the type of the "
+"converter function.  The PyArg_Parse* family of functions accepts custom "
+"converters in addition to the well-known default converters \"i\", \"f\", "
+"etc."
 msgstr ""
 
 #: ../pep-0437.txt:75
 msgid ""
-"This PEP views the default converters as abstract functions, regardless "
-"of how they are actually implemented."
+"This PEP views the default converters as abstract functions, regardless of "
+"how they are actually implemented."
 msgstr ""
 
 #: ../pep-0437.txt:80
@@ -174,23 +171,23 @@ msgstr ""
 
 #: ../pep-0437.txt:82
 msgid ""
-"Converter functions must be forward-declared. All converter functions "
-"shall be entered into the file Include/converters.h. The file is read by "
-"the preprocessor prior to translating .c files. This is an excerpt::"
+"Converter functions must be forward-declared. All converter functions shall "
+"be entered into the file Include/converters.h. The file is read by the "
+"preprocessor prior to translating .c files. This is an excerpt::"
 msgstr ""
 
 #: ../pep-0437.txt:99
 msgid ""
-"Converters are specified by their name, Python input type(s) and C output"
-" type(s).  Default converters must have quoted names, custom converters "
-"must have regular names.  A Python type is given by its name. If a "
-"function accepts multiple Python types, the set is written in list form."
+"Converters are specified by their name, Python input type(s) and C output "
+"type(s).  Default converters must have quoted names, custom converters must "
+"have regular names.  A Python type is given by its name. If a function "
+"accepts multiple Python types, the set is written in list form."
 msgstr ""
 
 #: ../pep-0437.txt:104
 msgid ""
-"Since the default converters may have multiple implicit return values, "
-"the C output type(s) are written according to the following convention:"
+"Since the default converters may have multiple implicit return values, the C "
+"output type(s) are written according to the following convention:"
 msgstr ""
 
 #: ../pep-0437.txt:107
@@ -202,29 +199,28 @@ msgstr ""
 
 #: ../pep-0437.txt:111
 msgid ""
-"By default the variables are passed by value to the implementation "
-"function. If the address should be passed instead, *res* must be prefixed"
-" with an ampersand."
+"By default the variables are passed by value to the implementation function. "
+"If the address should be passed instead, *res* must be prefixed with an "
+"ampersand."
 msgstr ""
 
 #: ../pep-0437.txt:116
 msgid ""
-"Additional declarations may be placed into .c files. Duplicate "
-"declarations are allowed as long as the function types are identical."
+"Additional declarations may be placed into .c files. Duplicate declarations "
+"are allowed as long as the function types are identical."
 msgstr ""
 
 #: ../pep-0437.txt:119
 msgid ""
-"It is encouraged to declare custom converter types a second time right "
-"above the converter function definition. The preprocessor will then catch"
-" any mismatch between the declarations."
+"It is encouraged to declare custom converter types a second time right above "
+"the converter function definition. The preprocessor will then catch any "
+"mismatch between the declarations."
 msgstr ""
 
 #: ../pep-0437.txt:124
 msgid ""
-"In order to keep the converter complexity manageable, PY_SSIZE_T_CLEAN "
-"will be deprecated and Py_ssize_t will be assumed for all length "
-"arguments."
+"In order to keep the converter complexity manageable, PY_SSIZE_T_CLEAN will "
+"be deprecated and Py_ssize_t will be assumed for all length arguments."
 msgstr ""
 
 #: ../pep-0437.txt:128
@@ -243,11 +239,11 @@ msgstr ""
 #, python-format
 msgid ""
 "This example contains the definition of os.stat. The individual sections "
-"will be explained in detail. Grammatically, the whole define block "
-"consists of a function specification and an output section. The function "
-"specification in turn consists of a declaration section, an optional "
-"C-declaration section and an optional cleanup code section.  Sections "
-"within the function specification are separated in yacc style by '%%'::"
+"will be explained in detail. Grammatically, the whole define block consists "
+"of a function specification and an output section. The function "
+"specification in turn consists of a declaration section, an optional C-"
+"declaration section and an optional cleanup code section.  Sections within "
+"the function specification are separated in yacc style by '%%'::"
 msgstr ""
 
 #: ../pep-0437.txt:161
@@ -256,11 +252,11 @@ msgstr ""
 
 #: ../pep-0437.txt:163
 msgid ""
-"The function specification block starts with a ``/*[define`` token, "
-"followed by an optional C function name, followed by a right bracket. If "
-"the C function name is not given, it is generated from the declaration "
-"name. In the example, omitting the name *posix_stat* would result in a C "
-"function name of *os_stat*."
+"The function specification block starts with a ``/*[define`` token, followed "
+"by an optional C function name, followed by a right bracket. If the C "
+"function name is not given, it is generated from the declaration name. In "
+"the example, omitting the name *posix_stat* would result in a C function "
+"name of *os_stat*."
 msgstr ""
 
 #: ../pep-0437.txt:170
@@ -269,16 +265,16 @@ msgstr ""
 
 #: ../pep-0437.txt:172
 msgid ""
-"The required declaration is (almost) a valid Python function definition. "
-"The 'def' keyword and the function body are redundant, but the author of "
-"this PEP finds the definition more readable if they are present."
+"The required declaration is (almost) a valid Python function definition. The "
+"'def' keyword and the function body are redundant, but the author of this "
+"PEP finds the definition more readable if they are present."
 msgstr ""
 
 #: ../pep-0437.txt:176
 msgid ""
-"The function name may be a path instead of a plain identifier. Each "
-"argument is annotated with the name of the converter function that will "
-"be applied to it."
+"The function name may be a path instead of a plain identifier. Each argument "
+"is annotated with the name of the converter function that will be applied to "
+"it."
 msgstr ""
 
 #: ../pep-0437.txt:179
@@ -289,9 +285,8 @@ msgstr ""
 
 #: ../pep-0437.txt:182
 msgid ""
-"The return value may be any Python expression. Usually it will be the "
-"name of an object, but alternative return values could be specified in "
-"list form."
+"The return value may be any Python expression. Usually it will be the name "
+"of an object, but alternative return values could be specified in list form."
 msgstr ""
 
 #: ../pep-0437.txt:187
@@ -300,9 +295,9 @@ msgstr ""
 
 #: ../pep-0437.txt:189
 msgid ""
-"This optional section contains C variable declarations. Since the "
-"converter functions have been declared beforehand, the preprocessor can "
-"type-check the declarations."
+"This optional section contains C variable declarations. Since the converter "
+"functions have been declared beforehand, the preprocessor can type-check the "
+"declarations."
 msgstr ""
 
 #: ../pep-0437.txt:195
@@ -311,8 +306,8 @@ msgstr ""
 
 #: ../pep-0437.txt:197
 msgid ""
-"The optional cleanup section contains literal C code that will be "
-"inserted unmodified after the implementation function."
+"The optional cleanup section contains literal C code that will be inserted "
+"unmodified after the implementation function."
 msgstr ""
 
 #: ../pep-0437.txt:202
@@ -329,14 +324,14 @@ msgstr ""
 
 #: ../pep-0437.txt:210
 msgid ""
-"Functions that do not take keyword arguments are indicated by the "
-"presence of the *slash* special parameter::"
+"Functions that do not take keyword arguments are indicated by the presence "
+"of the *slash* special parameter::"
 msgstr ""
 
 #: ../pep-0437.txt:219
 msgid ""
-"The preprocessor translates this definition to a PyArg_ParseTuple() call."
-" All arguments to the right of the slash are optional arguments."
+"The preprocessor translates this definition to a PyArg_ParseTuple() call. "
+"All arguments to the right of the slash are optional arguments."
 msgstr ""
 
 #: ../pep-0437.txt:224
@@ -345,16 +340,16 @@ msgstr ""
 
 #: ../pep-0437.txt:226
 msgid ""
-"Some legacy functions contain optional arguments groups both to the left "
-"and right of a central parameter. It is debatable whether a new tool "
-"should support such functions.  For completeness' sake, this is the "
-"proposed syntax::"
+"Some legacy functions contain optional arguments groups both to the left and "
+"right of a central parameter. It is debatable whether a new tool should "
+"support such functions.  For completeness' sake, this is the proposed "
+"syntax::"
 msgstr ""
 
 #: ../pep-0437.txt:235
 msgid ""
-"Here *ch* is the central parameter, *attr* can optionally be added on the"
-" right, and the group [y, x] can optionally be added on the left."
+"Here *ch* is the central parameter, *attr* can optionally be added on the "
+"right, and the group [y, x] can optionally be added on the left."
 msgstr ""
 
 #: ../pep-0437.txt:238
@@ -366,9 +361,9 @@ msgstr ""
 
 #: ../pep-0437.txt:242
 msgid ""
-"This is concisely expressed by putting the central parameter first in the"
-" list and subsequently adding the optional arguments groups to the left "
-"and right."
+"This is concisely expressed by putting the central parameter first in the "
+"list and subsequently adding the optional arguments groups to the left and "
+"right."
 msgstr ""
 
 #: ../pep-0437.txt:248
@@ -394,8 +389,8 @@ msgstr ""
 
 #: ../pep-0437.txt:290
 msgid ""
-"Note that the *preprocess* tool currently emits a redundant C-declaration"
-" section for this example, so the output is longer than necessary."
+"Note that the *preprocess* tool currently emits a redundant C-declaration "
+"section for this example, so the output is longer than necessary."
 msgstr ""
 
 #: ../pep-0437.txt:295
@@ -404,13 +399,14 @@ msgstr ""
 
 #: ../pep-0437.txt:297
 msgid ""
-"How can an inexperienced user validate a definition like os.stat? Simply "
-"by changing os.stat to os_stat, defining missing converters and pasting "
-"the definition into the Python interactive interpreter!"
+"How can an inexperienced user validate a definition like os.stat? Simply by "
+"changing os.stat to os_stat, defining missing converters and pasting the "
+"definition into the Python interactive interpreter!"
 msgstr ""
 
 #: ../pep-0437.txt:301
-msgid "In fact, a converters.py module could be auto-generated from converters.h."
+msgid ""
+"In fact, a converters.py module could be auto-generated from converters.h."
 msgstr ""
 
 #: ../pep-0437.txt:305
@@ -419,14 +415,15 @@ msgstr ""
 
 #: ../pep-0437.txt:307
 msgid ""
-"A reference implementation is available at `issue 16612`_. Since this PEP"
-" was written under time constraints and the author is unfamiliar with the"
-" PLY toolchain, the software is written in Standard ML and utilizes the "
-"ml-yacc/ml-lex toolchain."
+"A reference implementation is available at `issue 16612`_. Since this PEP "
+"was written under time constraints and the author is unfamiliar with the PLY "
+"toolchain, the software is written in Standard ML and utilizes the ml-yacc/"
+"ml-lex toolchain."
 msgstr ""
 
 #: ../pep-0437.txt:312
-msgid "The grammar is conflict-free and available in ml-yacc readable BNF form."
+msgid ""
+"The grammar is conflict-free and available in ml-yacc readable BNF form."
 msgstr ""
 
 #: ../pep-0437.txt:314
@@ -451,8 +448,8 @@ msgstr ""
 
 #: ../pep-0437.txt:325
 msgid ""
-"The Python 'test' expression is not semantically checked. The syntax "
-"however is checked since it is part of the grammar."
+"The Python 'test' expression is not semantically checked. The syntax however "
+"is checked since it is part of the grammar."
 msgstr ""
 
 #: ../pep-0437.txt:328
@@ -473,8 +470,8 @@ msgstr ""
 
 #: ../pep-0437.txt:336
 msgid ""
-"Since the *preprocess* tool generates the output from the parse tree, the"
-" original indentation of the define block is lost."
+"Since the *preprocess* tool generates the output from the parse tree, the "
+"original indentation of the define block is lost."
 msgstr ""
 
 #: ../pep-0437.txt:341
@@ -493,41 +490,41 @@ msgstr ""
 
 #: ../pep-0437.txt:350
 msgid ""
-"The author of this PEP has the following concerns about the DSL proposed "
-"in :pep:`436`:"
+"The author of this PEP has the following concerns about the DSL proposed in :"
+"pep:`436`:"
 msgstr ""
 
 #: ../pep-0437.txt:353
 msgid ""
-"The whitespace sensitive configuration file like syntax looks out of "
-"place in a C file."
+"The whitespace sensitive configuration file like syntax looks out of place "
+"in a C file."
 msgstr ""
 
 #: ../pep-0437.txt:356
 msgid ""
 "The structure of the function definition gets lost in the per-parameter "
-"specifications. Keywords like positional-only, required and keyword-only "
-"are scattered across too many different places."
+"specifications. Keywords like positional-only, required and keyword-only are "
+"scattered across too many different places."
 msgstr ""
 
 #: ../pep-0437.txt:360
 msgid ""
-"By contrast, in the alternative DSL the structure of the function "
-"definition can be understood at a single glance."
+"By contrast, in the alternative DSL the structure of the function definition "
+"can be understood at a single glance."
 msgstr ""
 
 #: ../pep-0437.txt:363
 msgid ""
 "The :pep:`436` DSL has 14 documented flags and at least one undocumented "
-"(allow_fd) flag. Figuring out which of the 2**15 possible combinations "
-"are valid places an unnecessary burden on the user."
+"(allow_fd) flag. Figuring out which of the 2**15 possible combinations are "
+"valid places an unnecessary burden on the user."
 msgstr ""
 
 #: ../pep-0437.txt:367
 msgid ""
-"Experience with the :pep:`3118` buffer flags has shown that sorting out "
-"(and exhaustively testing!) valid combinations is an extremely tedious "
-"task. The :pep:`3118` flags are still not well understood by many people."
+"Experience with the :pep:`3118` buffer flags has shown that sorting out (and "
+"exhaustively testing!) valid combinations is an extremely tedious task. The :"
+"pep:`3118` flags are still not well understood by many people."
 msgstr ""
 
 #: ../pep-0437.txt:371
@@ -540,18 +537,16 @@ msgstr ""
 
 #: ../pep-0437.txt:376
 msgid ""
-"The :pep:`436` DSL allows too much freedom. Types can apparently be "
-"omitted, the preprocessor accepts (and ignores) unknown keywords, "
-"sometimes adding white space after a docstring results in an assertion "
-"error."
+"The :pep:`436` DSL allows too much freedom. Types can apparently be omitted, "
+"the preprocessor accepts (and ignores) unknown keywords, sometimes adding "
+"white space after a docstring results in an assertion error."
 msgstr ""
 
 #: ../pep-0437.txt:380
 msgid ""
 "The alternative DSL on the other hand allows no such freedoms. Omitting "
-"converter or return value annotations is plainly a syntax error. The "
-"LALR(1) grammar is unambiguous and specified for the complete translation"
-" unit."
+"converter or return value annotations is plainly a syntax error. The LALR(1) "
+"grammar is unambiguous and specified for the complete translation unit."
 msgstr ""
 
 #: ../pep-0437.txt:387
@@ -565,4 +560,3 @@ msgstr ""
 #: ../pep-0437.txt:393
 msgid "References and Footnotes"
 msgstr ""
-

@@ -63,8 +63,8 @@ msgstr ""
 
 #: ../pep-3139.txt:16
 msgid ""
-"Guido's -0.5 put an end to this PEP.  See "
-"https://mail.python.org/pipermail/python-3000/2008-April/012977.html."
+"Guido's -0.5 put an end to this PEP.  See https://mail.python.org/pipermail/"
+"python-3000/2008-April/012977.html."
 msgstr ""
 
 #: ../pep-3139.txt:21
@@ -73,9 +73,9 @@ msgstr ""
 
 #: ../pep-3139.txt:23
 msgid ""
-"This PEP proposes a new low-level module for CPython-specific interpreter"
-" functions in order to clean out the sys module and separate general "
-"Python functionality from implementation details."
+"This PEP proposes a new low-level module for CPython-specific interpreter "
+"functions in order to clean out the sys module and separate general Python "
+"functionality from implementation details."
 msgstr ""
 
 #: ../pep-3139.txt:29
@@ -84,14 +84,14 @@ msgstr ""
 
 #: ../pep-3139.txt:31
 msgid ""
-"The sys module currently contains functions and data that can be put into"
-" two major groups:"
+"The sys module currently contains functions and data that can be put into "
+"two major groups:"
 msgstr ""
 
 #: ../pep-3139.txt:34
 msgid ""
-"Data and functions that are available in all Python implementations and "
-"deal with the general running of a Python virtual machine."
+"Data and functions that are available in all Python implementations and deal "
+"with the general running of a Python virtual machine."
 msgstr ""
 
 #: ../pep-3139.txt:37
@@ -240,24 +240,23 @@ msgstr ""
 
 #: ../pep-3139.txt:77
 msgid ""
-"The second collections of items has been steadily increasing over the "
-"years causing clutter in sys.  Guido has even said he doesn't recognize "
-"some of things in it [#bug-1522]_!"
+"The second collections of items has been steadily increasing over the years "
+"causing clutter in sys.  Guido has even said he doesn't recognize some of "
+"things in it [#bug-1522]_!"
 msgstr ""
 
 #: ../pep-3139.txt:81
 msgid ""
-"Moving these items off to another module would send a clear message to "
-"other Python implementations about what functions need and need not be "
-"implemented."
+"Moving these items off to another module would send a clear message to other "
+"Python implementations about what functions need and need not be implemented."
 msgstr ""
 
 #: ../pep-3139.txt:85
 msgid ""
-"It has also been proposed that the contents of types module be "
-"distributed across the standard library [#types-removal]_; the "
-"interpreter module would provide an excellent resting place for internal "
-"types like frames and code objects."
+"It has also been proposed that the contents of types module be distributed "
+"across the standard library [#types-removal]_; the interpreter module would "
+"provide an excellent resting place for internal types like frames and code "
+"objects."
 msgstr ""
 
 #: ../pep-3139.txt:91
@@ -265,11 +264,13 @@ msgid "Specification"
 msgstr ""
 
 #: ../pep-3139.txt:93
-msgid "A new builtin module named \"interpreter\" (see `Naming`_) will be added."
+msgid ""
+"A new builtin module named \"interpreter\" (see `Naming`_) will be added."
 msgstr ""
 
 #: ../pep-3139.txt:95
-msgid "The second list of items above will be split into the stdlib as follows:"
+msgid ""
+"The second list of items above will be split into the stdlib as follows:"
 msgstr ""
 
 #: ../pep-3139.txt:111
@@ -286,8 +287,8 @@ msgstr ""
 
 #: ../pep-3139.txt:121
 msgid ""
-"Once implemented in 3.x, the interpreter module will be back-ported to "
-"2.6. Py3k warnings will be added to the sys functions it replaces."
+"Once implemented in 3.x, the interpreter module will be back-ported to 2.6. "
+"Py3k warnings will be added to the sys functions it replaces."
 msgstr ""
 
 #: ../pep-3139.txt:126
@@ -304,11 +305,11 @@ msgstr ""
 
 #: ../pep-3139.txt:136
 msgid ""
-"Some believe that the writing of bytecode is an implementation detail and"
-" should be moved [#bytecode-issue]_.  The counterargument is that all "
-"current, complete Python implementations do write some sort of bytecode, "
-"so it is valuable to be able to disable it.  Also, if it is moved, some "
-"wish to put it in the imp module."
+"Some believe that the writing of bytecode is an implementation detail and "
+"should be moved [#bytecode-issue]_.  The counterargument is that all "
+"current, complete Python implementations do write some sort of bytecode, so "
+"it is valuable to be able to disable it.  Also, if it is moved, some wish to "
+"put it in the imp module."
 msgstr ""
 
 #: ../pep-3139.txt:144
@@ -317,8 +318,8 @@ msgstr ""
 
 #: ../pep-3139.txt:146
 msgid ""
-"It was noted that dont_write_bytecode or maybe builtin_module_names might"
-" fit nicely in the imp module."
+"It was noted that dont_write_bytecode or maybe builtin_module_names might "
+"fit nicely in the imp module."
 msgstr ""
 
 #: ../pep-3139.txt:151
@@ -327,9 +328,9 @@ msgstr ""
 
 #: ../pep-3139.txt:153
 msgid ""
-"The author proposes the name \"interpreter\" for the new module.  "
-"\"pyvm\" has also been suggested [#pyvm-name]_.  The name \"cpython\" was"
-" well liked [#cpython-name]_."
+"The author proposes the name \"interpreter\" for the new module.  \"pyvm\" "
+"has also been suggested [#pyvm-name]_.  The name \"cpython\" was well liked "
+"[#cpython-name]_."
 msgstr ""
 
 #: ../pep-3139.txt:159
@@ -363,4 +364,3 @@ msgstr ""
 #: ../pep-3139.txt:184
 msgid "This document has been placed in the public domain."
 msgstr ""
-

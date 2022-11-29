@@ -67,9 +67,8 @@ msgstr ""
 
 #: ../pep-3108.txt:14
 msgid ""
-"The merging of profile/cProfile as of Python 3.3 did not occur, and thus "
-"is considered abandoned (although it would be acceptable to do in the "
-"future)."
+"The merging of profile/cProfile as of Python 3.3 did not occur, and thus is "
+"considered abandoned (although it would be acceptable to do in the future)."
 msgstr ""
 
 #: ../pep-3108.txt:19
@@ -78,19 +77,19 @@ msgstr ""
 
 #: ../pep-3108.txt:21
 msgid ""
-"Just like the language itself, Python's standard library (stdlib) has "
-"grown over the years to be very rich.  But over time some modules have "
-"lost their need to be included with Python.  There has also been an "
-"introduction of a naming convention for modules since Python's inception "
-"that not all modules follow."
+"Just like the language itself, Python's standard library (stdlib) has grown "
+"over the years to be very rich.  But over time some modules have lost their "
+"need to be included with Python.  There has also been an introduction of a "
+"naming convention for modules since Python's inception that not all modules "
+"follow."
 msgstr ""
 
 #: ../pep-3108.txt:27
 msgid ""
-"Python 3.0 presents a chance to remove modules that do not have long term"
-" usefulness.  This chance also allows for the renaming of modules so that"
-" they follow the :pep:`Python style guide <8>`.  This PEP lists modules "
-"that should not be included in Python 3.0 or which need to be renamed."
+"Python 3.0 presents a chance to remove modules that do not have long term "
+"usefulness.  This chance also allows for the renaming of modules so that "
+"they follow the :pep:`Python style guide <8>`.  This PEP lists modules that "
+"should not be included in Python 3.0 or which need to be renamed."
 msgstr ""
 
 #: ../pep-3108.txt:35
@@ -99,21 +98,20 @@ msgstr ""
 
 #: ../pep-3108.txt:37
 msgid ""
-"Guido pronounced that \"silly old stuff\" is to be deleted from the "
-"stdlib for Py3K [#silly-old-stuff]_.  This is open-ended on purpose. Each"
-" module to be removed needs to have a justification as to why it should "
-"no longer be distributed with Python.  This can range from the module "
-"being deprecated in Python 2.x to being for a platform that is no longer "
-"widely used."
+"Guido pronounced that \"silly old stuff\" is to be deleted from the stdlib "
+"for Py3K [#silly-old-stuff]_.  This is open-ended on purpose. Each module to "
+"be removed needs to have a justification as to why it should no longer be "
+"distributed with Python.  This can range from the module being deprecated in "
+"Python 2.x to being for a platform that is no longer widely used."
 msgstr ""
 
 #: ../pep-3108.txt:44
 msgid ""
 "This section of the PEP lists the various modules to be removed. Each "
-"subsection represents a different reason for modules to be removed.  Each"
-" module must have a specific justification on top of being listed in a "
-"specific subsection so as to make sure only modules that truly deserve to"
-" be removed are in fact removed."
+"subsection represents a different reason for modules to be removed.  Each "
+"module must have a specific justification on top of being listed in a "
+"specific subsection so as to make sure only modules that truly deserve to be "
+"removed are in fact removed."
 msgstr ""
 
 #: ../pep-3108.txt:50
@@ -122,8 +120,7 @@ msgid ""
 "\"uniquely edited\", it is in reference to how long it has been since a "
 "checkin was done specifically for the module and not for a change that "
 "applied universally across the entire stdlib.  If an edit time is not "
-"denoted as \"unique\" then it is the last time the file was edited, "
-"period."
+"denoted as \"unique\" then it is the last time the file was edited, period."
 msgstr ""
 
 #: ../pep-3108.txt:59
@@ -133,16 +130,15 @@ msgstr ""
 #: ../pep-3108.txt:61
 msgid ""
 ":pep:`4` lists all modules that have been deprecated in the stdlib. The "
-"specified motivations mirror those listed in :pep:`4`. All modules listed"
-" in the PEP at the time of the first alpha release of Python 3.0 will be "
-"removed."
+"specified motivations mirror those listed in :pep:`4`. All modules listed in "
+"the PEP at the time of the first alpha release of Python 3.0 will be removed."
 msgstr ""
 
 #: ../pep-3108.txt:67
 msgid ""
 "The entire contents of lib-old will also be removed.  These modules have "
-"already been removed from being imported but are kept in the distribution"
-" for Python for users that rely upon the code."
+"already been removed from being imported but are kept in the distribution "
+"for Python for users that rely upon the code."
 msgstr ""
 
 #: ../pep-3108.txt:71
@@ -249,8 +245,8 @@ msgstr ""
 
 #: ../pep-3108.txt:135
 msgid ""
-"The modules mentioned below are documented. All undocumented modules for "
-"the specified platforms will also be removed."
+"The modules mentioned below are documented. All undocumented modules for the "
+"specified platforms will also be removed."
 msgstr ""
 
 #: ../pep-3108.txt:139
@@ -398,7 +394,8 @@ msgid "imgfile"
 msgstr ""
 
 #: ../pep-3108.txt:207
-msgid "Wrapper for SGI libimage library for imglib image files (``.rgb`` files)."
+msgid ""
+"Wrapper for SGI libimage library for imglib image files (``.rgb`` files)."
 msgstr ""
 
 #: ../pep-3108.txt:209
@@ -465,11 +462,11 @@ msgstr ""
 
 #: ../pep-3108.txt:255
 msgid ""
-"The Mac-specific modules are not well-maintained (e.g., the bgen tool "
-"used to auto-generate many of the modules has never been updated to "
-"support UCS-4). It is also not Python's place to maintain such a large "
-"amount of OS-specific modules. Thus all modules under ``Lib/plat-mac`` "
-"and ``Mac`` are to be removed."
+"The Mac-specific modules are not well-maintained (e.g., the bgen tool used "
+"to auto-generate many of the modules has never been updated to support "
+"UCS-4). It is also not Python's place to maintain such a large amount of OS-"
+"specific modules. Thus all modules under ``Lib/plat-mac`` and ``Mac`` are to "
+"be removed."
 msgstr ""
 
 #: ../pep-3108.txt:261
@@ -755,9 +752,9 @@ msgstr ""
 
 #: ../pep-3108.txt:456
 msgid ""
-"Some platform-independent modules are rarely used.  There are a number of"
-" possible explanations for this, including, ease of reimplementation, "
-"very small audience or lack of adherence to more modern standards."
+"Some platform-independent modules are rarely used.  There are a number of "
+"possible explanations for this, including, ease of reimplementation, very "
+"small audience or lack of adherence to more modern standards."
 msgstr ""
 
 #: ../pep-3108.txt:460
@@ -814,8 +811,8 @@ msgstr ""
 
 #: ../pep-3108.txt:482
 msgid ""
-"Any functionality not in the string object or module will be moved to the"
-" string module (mostly constants)."
+"Any functionality not in the string object or module will be moved to the "
+"string module (mostly constants)."
 msgstr ""
 
 #: ../pep-3108.txt:485
@@ -872,8 +869,8 @@ msgstr ""
 
 #: ../pep-3108.txt:510
 msgid ""
-"Written before Pure Atria was bought by Rational which was then bought by"
-" IBM (in other words, very old)."
+"Written before Pure Atria was bought by Rational which was then bought by "
+"IBM (in other words, very old)."
 msgstr ""
 
 #: ../pep-3108.txt:513
@@ -890,9 +887,9 @@ msgstr ""
 
 #: ../pep-3108.txt:521
 msgid ""
-"Becoming obsolete signifies that either another module in the stdlib or a"
-" widely distributed third-party library provides a better solution for "
-"what the module is meant for."
+"Becoming obsolete signifies that either another module in the stdlib or a "
+"widely distributed third-party library provides a better solution for what "
+"the module is meant for."
 msgstr ""
 
 #: ../pep-3108.txt:525
@@ -925,8 +922,8 @@ msgstr ""
 
 #: ../pep-3108.txt:535
 msgid ""
-"Documentation specifies that the \"module should never be used directly "
-"in new code\"."
+"Documentation specifies that the \"module should never be used directly in "
+"new code\"."
 msgstr ""
 
 #: ../pep-3108.txt:537
@@ -939,8 +936,8 @@ msgstr ""
 
 #: ../pep-3108.txt:541
 msgid ""
-"Marked as obsolete in a comment by Guido since 2000 (see "
-"http://bugs.python.org/issue210677)."
+"Marked as obsolete in a comment by Guido since 2000 (see http://bugs.python."
+"org/issue210677)."
 msgstr ""
 
 #: ../pep-3108.txt:543
@@ -1026,7 +1023,8 @@ msgid "imageop [done]"
 msgstr ""
 
 #: ../pep-3108.txt:581
-msgid "Better support by third-party libraries (Python Imaging Library [#pil]_)."
+msgid ""
+"Better support by third-party libraries (Python Imaging Library [#pil]_)."
 msgstr ""
 
 #: ../pep-3108.txt:585
@@ -1091,8 +1089,8 @@ msgstr ""
 
 #: ../pep-3108.txt:612
 msgid ""
-"Functions in the module should be made into methods for the object "
-"returned by os.stat."
+"Functions in the module should be made into methods for the object returned "
+"by os.stat."
 msgstr ""
 
 #: ../pep-3108.txt:615
@@ -1169,11 +1167,11 @@ msgstr ""
 
 #: ../pep-3108.txt:650
 msgid ""
-"Over the years, certain modules have become a heavy burden upon python-"
-"dev to maintain. In situations like this, it is better for the module to "
-"be given to the community to maintain to free python-dev to focus more on"
-" language support and other modules in the standard library that do not "
-"take up an undue amount of time and effort."
+"Over the years, certain modules have become a heavy burden upon python-dev "
+"to maintain. In situations like this, it is better for the module to be "
+"given to the community to maintain to free python-dev to focus more on "
+"language support and other modules in the standard library that do not take "
+"up an undue amount of time and effort."
 msgstr ""
 
 #: ../pep-3108.txt:656
@@ -1190,8 +1188,8 @@ msgstr ""
 
 #: ../pep-3108.txt:661
 msgid ""
-"Berkeley DB follows a different release schedule than Python, leading to "
-"the bindings not necessarily being in sync with what is available."
+"Berkeley DB follows a different release schedule than Python, leading to the "
+"bindings not necessarily being in sync with what is available."
 msgstr ""
 
 #: ../pep-3108.txt:667
@@ -1201,8 +1199,8 @@ msgstr ""
 #: ../pep-3108.txt:669
 msgid ""
 "Many modules existed in the stdlib before :pep:`8` came into existence.  "
-"This has led to some naming inconsistencies and namespace bloat that "
-"should be addressed."
+"This has led to some naming inconsistencies and namespace bloat that should "
+"be addressed."
 msgstr ""
 
 #: ../pep-3108.txt:676
@@ -1211,11 +1209,10 @@ msgstr ""
 
 #: ../pep-3108.txt:678
 msgid ""
-":pep:`8` specifies that modules \"should have short, all-lowercase "
-"names\" where \"underscores can be used ... if it improves readability\"."
-" The use of underscores is discouraged in package names. The following "
-"modules violate :pep:`8` and are not somehow being renamed by being moved"
-" to a package."
+":pep:`8` specifies that modules \"should have short, all-lowercase names\" "
+"where \"underscores can be used ... if it improves readability\". The use of "
+"underscores is discouraged in package names. The following modules violate :"
+"pep:`8` and are not somehow being renamed by being moved to a package."
 msgstr ""
 
 #: ../pep-3108.txt:685 ../pep-3108.txt:740 ../pep-3108.txt:754
@@ -1277,27 +1274,27 @@ msgstr ""
 #: ../pep-3108.txt:698
 msgid ""
 "Several interfaces have both a Python and C implementation.  While it is "
-"great to have a C implementation for speed with a Python implementation "
-"as fallback, there is no need to expose the two implementations "
-"independently in the stdlib.  For Python 3.0 all interfaces with two "
-"implementations will be merged into a single public interface."
+"great to have a C implementation for speed with a Python implementation as "
+"fallback, there is no need to expose the two implementations independently "
+"in the stdlib.  For Python 3.0 all interfaces with two implementations will "
+"be merged into a single public interface."
 msgstr ""
 
 #: ../pep-3108.txt:705
 msgid ""
-"The C module is to be given a leading underscore to delineate the fact "
-"that it is not the reference implementation (the Python implementation "
-"is).  This means that any semantic difference between the C and Python "
-"versions must be dealt with before Python 3.0 or else the C "
-"implementation will be removed until it can be fixed."
+"The C module is to be given a leading underscore to delineate the fact that "
+"it is not the reference implementation (the Python implementation is).  This "
+"means that any semantic difference between the C and Python versions must be "
+"dealt with before Python 3.0 or else the C implementation will be removed "
+"until it can be fixed."
 msgstr ""
 
 #: ../pep-3108.txt:711
 msgid ""
-"One interface that is not listed below is xml.etree.ElementTree.  This is"
-" an externally maintained module and thus is not under the direct control"
-" of the Python development team for renaming.  See `Open Issues`_ for a "
-"discussion on this."
+"One interface that is not listed below is xml.etree.ElementTree.  This is an "
+"externally maintained module and thus is not under the direct control of the "
+"Python development team for renaming.  See `Open Issues`_ for a discussion "
+"on this."
 msgstr ""
 
 #: ../pep-3108.txt:716
@@ -1335,9 +1332,9 @@ msgstr ""
 #: ../pep-3108.txt:734
 msgid ""
 "There are several modules in the stdlib that have no defined public "
-"interface.  These modules exist as support code for other modules that "
-"are exposed.  Because they are not meant to be used directly they should "
-"be renamed to reflect this fact."
+"interface.  These modules exist as support code for other modules that are "
+"exposed.  Because they are not meant to be used directly they should be "
+"renamed to reflect this fact."
 msgstr ""
 
 #: ../pep-3108.txt:742
@@ -1354,9 +1351,9 @@ msgstr ""
 
 #: ../pep-3108.txt:749
 msgid ""
-"A few modules have names that were poorly chosen in hindsight.  They "
-"should be renamed so as to prevent their bad name from perpetuating "
-"beyond the 2.x series."
+"A few modules have names that were poorly chosen in hindsight.  They should "
+"be renamed so as to prevent their bad name from perpetuating beyond the 2.x "
+"series."
 msgstr ""
 
 #: ../pep-3108.txt:756 ../pep-3108.txt:1079
@@ -1381,9 +1378,9 @@ msgstr ""
 
 #: ../pep-3108.txt:764
 msgid ""
-"As the stdlib has grown, several areas within it have expanded to include"
-" multiple modules (e.g., support for database files). It thus makes sense"
-" to group related modules into packages."
+"As the stdlib has grown, several areas within it have expanded to include "
+"multiple modules (e.g., support for database files). It thus makes sense to "
+"group related modules into packages."
 msgstr ""
 
 #: ../pep-3108.txt:770
@@ -1436,9 +1433,9 @@ msgstr ""
 
 #: ../pep-3108.txt:784
 msgid ""
-"``dbm.__init__`` can combine ``anybdbm`` and ``whichdb`` since the public"
-" API for both modules has no name conflict and the two modules have "
-"closely related usage."
+"``dbm.__init__`` can combine ``anybdbm`` and ``whichdb`` since the public "
+"API for both modules has no name conflict and the two modules have closely "
+"related usage."
 msgstr ""
 
 #: ../pep-3108.txt:791
@@ -1507,8 +1504,8 @@ msgstr ""
 
 #: ../pep-3108.txt:815
 msgid ""
-"The ``http.server`` module can combine the specified modules safely as "
-"they have no naming conflicts."
+"The ``http.server`` module can combine the specified modules safely as they "
+"have no naming conflicts."
 msgstr ""
 
 #: ../pep-3108.txt:820
@@ -1654,9 +1651,8 @@ msgstr ""
 #: ../pep-3108.txt:853
 msgid ""
 "Originally this new package was to be named ``url``, but because of the "
-"common use of the name as a variable, it has been deemed better to keep "
-"the name ``urllib`` and instead shift existing modules around into a new "
-"package."
+"common use of the name as a variable, it has been deemed better to keep the "
+"name ``urllib`` and instead shift existing modules around into a new package."
 msgstr ""
 
 #: ../pep-3108.txt:861
@@ -1693,10 +1689,9 @@ msgstr ""
 
 #: ../pep-3108.txt:867
 msgid ""
-"The quoting-related functions from ``urllib`` will be added to "
-"``urllib.parse``. ``urllib.URLOpener`` and ``urllib.FancyUrlOpener`` will"
-" be added to ``urllib.request`` as long as the documentation for both "
-"modules is updated."
+"The quoting-related functions from ``urllib`` will be added to ``urllib."
+"parse``. ``urllib.URLOpener`` and ``urllib.FancyUrlOpener`` will be added to "
+"``urllib.request`` as long as the documentation for both modules is updated."
 msgstr ""
 
 #: ../pep-3108.txt:874
@@ -1725,8 +1720,8 @@ msgstr ""
 
 #: ../pep-3108.txt:884
 msgid ""
-"The modules being combined into ``xmlrpc.server`` have no naming "
-"conflicts and thus can safely be merged."
+"The modules being combined into ``xmlrpc.server`` have no naming conflicts "
+"and thus can safely be merged."
 msgstr ""
 
 #: ../pep-3108.txt:889
@@ -1755,9 +1750,9 @@ msgstr ""
 
 #: ../pep-3108.txt:906
 msgid ""
-"For module removals, it is easiest to remove the module first in Python "
-"3.0 to see where dependencies exist. This makes finding code that "
-"(possibly) requires the suppression of the DeprecationWarning easier."
+"For module removals, it is easiest to remove the module first in Python 3.0 "
+"to see where dependencies exist. This makes finding code that (possibly) "
+"requires the suppression of the DeprecationWarning easier."
 msgstr ""
 
 #: ../pep-3108.txt:913
@@ -1774,8 +1769,8 @@ msgstr ""
 
 #: ../pep-3108.txt:919
 msgid ""
-"Remove all documentation (typically the module's documentation file and "
-"its entry in a file for the Library Reference)."
+"Remove all documentation (typically the module's documentation file and its "
+"entry in a file for the Library Reference)."
 msgstr ""
 
 #: ../pep-3108.txt:922
@@ -1784,8 +1779,8 @@ msgstr ""
 
 #: ../pep-3108.txt:924
 msgid ""
-"Run the regression test suite (using ``-uall``); watch out for tests that"
-" are skipped because an import failed for the removed module."
+"Run the regression test suite (using ``-uall``); watch out for tests that "
+"are skipped because an import failed for the removed module."
 msgstr ""
 
 #: ../pep-3108.txt:928
@@ -1803,8 +1798,8 @@ msgstr ""
 #: ../pep-3108.txt:936
 msgid ""
 "Add the following code to the deprecated module if it is implemented in "
-"Python as the first piece of executed code (adjusting the module name and"
-" the ``warnings`` import and needed)::"
+"Python as the first piece of executed code (adjusting the module name and "
+"the ``warnings`` import and needed)::"
 msgstr ""
 
 #: ../pep-3108.txt:946
@@ -1813,16 +1808,16 @@ msgstr ""
 
 #: ../pep-3108.txt:952
 msgid ""
-"(the Python-Dev TextMate bundle, available from ``Misc/TextMate``, "
-"contains a command that will generate all of this for you)."
+"(the Python-Dev TextMate bundle, available from ``Misc/TextMate``, contains "
+"a command that will generate all of this for you)."
 msgstr ""
 
 #: ../pep-3108.txt:955
 msgid ""
-"Update the documentation. For modules with their own documentation file, "
-"use the ``:deprecated:`` option with the ``module`` directive along with "
-"the ``deprecated`` directive, stating the deprecation is occurring in "
-"2.6, but is for the module's removal in 3.0.::"
+"Update the documentation. For modules with their own documentation file, use "
+"the ``:deprecated:`` option with the ``module`` directive along with the "
+"``deprecated`` directive, stating the deprecation is occurring in 2.6, but "
+"is for the module's removal in 3.0.::"
 msgstr ""
 
 #: ../pep-3108.txt:963
@@ -1859,15 +1854,15 @@ msgstr ""
 
 #: ../pep-3108.txt:980
 msgid ""
-"Support in the 2to3 refactoring tool for renames will be used to help "
-"people transition to new module names [#2to3]_.  Import statements will "
-"be rewritten so that only the import statement and none of the rest of "
-"the code needs to be touched.  This will be accomplished by using the "
-"``as`` keyword in import statements to bind in the module namespace to "
-"the old name while importing based on the new name (when the keyword is "
-"not already used, otherwise the reassigned name should be left alone and "
-"only the module that is imported needs to be changed). The "
-"``fix_imports`` fixer is an example of how to approach this."
+"Support in the 2to3 refactoring tool for renames will be used to help people "
+"transition to new module names [#2to3]_.  Import statements will be "
+"rewritten so that only the import statement and none of the rest of the code "
+"needs to be touched.  This will be accomplished by using the ``as`` keyword "
+"in import statements to bind in the module namespace to the old name while "
+"importing based on the new name (when the keyword is not already used, "
+"otherwise the reassigned name should be left alone and only the module that "
+"is imported needs to be changed). The ``fix_imports`` fixer is an example of "
+"how to approach this."
 msgstr ""
 
 #: ../pep-3108.txt:993
@@ -1884,8 +1879,8 @@ msgstr ""
 
 #: ../pep-3108.txt:999
 msgid ""
-"Update all import statements in the stdlib to use the new name (use "
-"2to3's ``fix_imports`` fixer for the easiest solution)."
+"Update all import statements in the stdlib to use the new name (use 2to3's "
+"``fix_imports`` fixer for the easiest solution)."
 msgstr ""
 
 #: ../pep-3108.txt:1002
@@ -1894,8 +1889,7 @@ msgstr ""
 
 #: ../pep-3108.txt:1004
 msgid ""
-"Update all references in the documentation from the old name to the new "
-"name."
+"Update all references in the documentation from the old name to the new name."
 msgstr ""
 
 #: ../pep-3108.txt:1007
@@ -1938,11 +1932,10 @@ msgstr ""
 
 #: ../pep-3108.txt:1035
 msgid ""
-"xml.etree.ElementTree not only does not meet :pep:`8` naming standards "
-"but it also has an exposed C implementation.  It is an externally "
-"maintained package, though :pep:`360`.  A request will be made for the "
-"maintainer to change the name so that it matches :pep:`8` and hides the C"
-" implementation."
+"xml.etree.ElementTree not only does not meet :pep:`8` naming standards but "
+"it also has an exposed C implementation.  It is an externally maintained "
+"package, though :pep:`360`.  A request will be made for the maintainer to "
+"change the name so that it matches :pep:`8` and hides the C implementation."
 msgstr ""
 
 #: ../pep-3108.txt:1043
@@ -2002,7 +1995,8 @@ msgid "nis"
 msgstr ""
 
 #: ../pep-3108.txt:1072
-msgid "Testimonials from people that new installations of NIS are still occurring"
+msgid ""
+"Testimonials from people that new installations of NIS are still occurring"
 msgstr ""
 
 #: ../pep-3108.txt:1075
@@ -2065,9 +2059,9 @@ msgstr ""
 msgid ""
 "It has been suggested that the entire stdlib be placed within its own "
 "package.  This PEP will not address this issue as it has its own design "
-"issues (naming, does it deserve special consideration in import "
-"semantics, etc.).  Everything within this PEP can easily be handled if a "
-"new top-level package is introduced."
+"issues (naming, does it deserve special consideration in import semantics, "
+"etc.).  Everything within this PEP can easily be handled if a new top-level "
+"package is introduced."
 msgstr ""
 
 #: ../pep-3108.txt:1115
@@ -2076,18 +2070,17 @@ msgstr ""
 
 #: ../pep-3108.txt:1117
 msgid ""
-"During the writing of this PEP it was noticed that certain themes "
-"appeared in the stdlib.  In the past people have suggested introducing "
-"new packages to help collect modules that share a similar theme (e.g., "
-"audio).  An Open Issue was created to suggest some new packages to "
-"introduce."
+"During the writing of this PEP it was noticed that certain themes appeared "
+"in the stdlib.  In the past people have suggested introducing new packages "
+"to help collect modules that share a similar theme (e.g., audio).  An Open "
+"Issue was created to suggest some new packages to introduce."
 msgstr ""
 
 #: ../pep-3108.txt:1123
 msgid ""
-"In the end, though, not enough support could be pulled together to "
-"warrant moving forward with the idea.  Instead name simplification has "
-"been chosen as the guiding force for PEPs to create."
+"In the end, though, not enough support could be pulled together to warrant "
+"moving forward with the idea.  Instead name simplification has been chosen "
+"as the guiding force for PEPs to create."
 msgstr ""
 
 #: ../pep-3108.txt:1129
@@ -2096,14 +2089,14 @@ msgstr ""
 
 #: ../pep-3108.txt:1131
 msgid ""
-"Python Documentation: Global Module Index "
-"(http://docs.python.org/modindex.html)"
+"Python Documentation: Global Module Index (http://docs.python.org/modindex."
+"html)"
 msgstr ""
 
 #: ../pep-3108.txt:1134
 msgid ""
-"Python-Dev email: \"Py3k release schedule worries\" "
-"(https://mail.python.org/pipermail/python-3000/2006-December/005130.html)"
+"Python-Dev email: \"Py3k release schedule worries\" (https://mail.python.org/"
+"pipermail/python-3000/2006-December/005130.html)"
 msgstr ""
 
 #: ../pep-3108.txt:1137
@@ -2114,8 +2107,8 @@ msgstr ""
 
 #: ../pep-3108.txt:1140
 msgid ""
-"Python-Dev Summary: 2004-11-01 "
-"(http://www.python.org/dev/summary/2004-11-01_2004-11-15/#id10)"
+"Python-Dev Summary: 2004-11-01 (http://www.python.org/dev/"
+"summary/2004-11-01_2004-11-15/#id10)"
 msgstr ""
 
 #: ../pep-3108.txt:1143
@@ -2158,8 +2151,8 @@ msgstr ""
 
 #: ../pep-3108.txt:1171
 msgid ""
-"python-dev email: getting compiler package failures "
-"(https://mail.python.org/pipermail/python-3000/2007-May/007615.html)"
+"python-dev email: getting compiler package failures (https://mail.python.org/"
+"pipermail/python-3000/2007-May/007615.html)"
 msgstr ""
 
 #: ../pep-3108.txt:1179
@@ -2169,4 +2162,3 @@ msgstr ""
 #: ../pep-3108.txt:1181
 msgid "This document has been placed in the public domain."
 msgstr ""
-

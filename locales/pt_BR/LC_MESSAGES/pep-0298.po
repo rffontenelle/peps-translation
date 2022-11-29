@@ -71,34 +71,34 @@ msgstr ""
 
 #: ../pep-0298.txt:17
 msgid ""
-"This PEP proposes an extension to the buffer interface called the 'locked"
-" buffer interface'."
+"This PEP proposes an extension to the buffer interface called the 'locked "
+"buffer interface'."
 msgstr ""
 
 #: ../pep-0298.txt:20
 msgid ""
-"The locked buffer interface avoids the flaws of the 'old' buffer "
-"interface [1]_ as defined in Python versions up to and including 2.2, and"
-" has the following semantics:"
+"The locked buffer interface avoids the flaws of the 'old' buffer interface "
+"[1]_ as defined in Python versions up to and including 2.2, and has the "
+"following semantics:"
 msgstr ""
 
 #: ../pep-0298.txt:24
 msgid ""
-"The lifetime of the retrieved pointer is clearly defined and controlled "
-"by the client."
+"The lifetime of the retrieved pointer is clearly defined and controlled by "
+"the client."
 msgstr ""
 
 #: ../pep-0298.txt:27
 msgid ""
-"The buffer size is returned as a 'size_t' data type, which allows access "
-"to large buffers on platforms where ``sizeof(int) != sizeof(void *)``."
+"The buffer size is returned as a 'size_t' data type, which allows access to "
+"large buffers on platforms where ``sizeof(int) != sizeof(void *)``."
 msgstr ""
 
 #: ../pep-0298.txt:31
 msgid ""
-"(Guido comments: This second sounds like a change we could also make to "
-"the \"old\" buffer interface, if we introduce another flag bit that's "
-"*not* part of the default flags.)"
+"(Guido comments: This second sounds like a change we could also make to the "
+"\"old\" buffer interface, if we introduce another flag bit that's *not* part "
+"of the default flags.)"
 msgstr ""
 
 #: ../pep-0298.txt:37
@@ -107,31 +107,30 @@ msgstr ""
 
 #: ../pep-0298.txt:39
 msgid ""
-"The locked buffer interface exposes new functions which return the size "
-"and the pointer to the internal memory block of any python object which "
-"chooses to implement this interface."
+"The locked buffer interface exposes new functions which return the size and "
+"the pointer to the internal memory block of any python object which chooses "
+"to implement this interface."
 msgstr ""
 
 #: ../pep-0298.txt:43
 msgid ""
-"Retrieving a buffer from an object puts this object in a locked state "
-"during which the buffer may not be freed, resized, or reallocated."
+"Retrieving a buffer from an object puts this object in a locked state during "
+"which the buffer may not be freed, resized, or reallocated."
 msgstr ""
 
 #: ../pep-0298.txt:47
 msgid ""
-"The object must be unlocked again by releasing the buffer if it's no "
-"longer used by calling another function in the locked buffer interface.  "
-"If the object never resizes or reallocates the buffer during its "
-"lifetime, this function may be NULL.  Failure to call this function (if "
-"it is != NULL) is a programming error and may have unexpected results."
+"The object must be unlocked again by releasing the buffer if it's no longer "
+"used by calling another function in the locked buffer interface.  If the "
+"object never resizes or reallocates the buffer during its lifetime, this "
+"function may be NULL.  Failure to call this function (if it is != NULL) is a "
+"programming error and may have unexpected results."
 msgstr ""
 
 #: ../pep-0298.txt:54
 msgid ""
-"The locked buffer interface omits the memory segment model which is "
-"present in the old buffer interface - only a single memory block can be "
-"exposed."
+"The locked buffer interface omits the memory segment model which is present "
+"in the old buffer interface - only a single memory block can be exposed."
 msgstr ""
 
 #: ../pep-0298.txt:58
@@ -153,13 +152,14 @@ msgid "This flag would be included in ``Py_TPFLAGS_DEFAULT``::"
 msgstr ""
 
 #: ../pep-0298.txt:81
-msgid "Extend the ``PyBufferProcs`` structure by new fields in Include/object.h::"
+msgid ""
+"Extend the ``PyBufferProcs`` structure by new fields in Include/object.h::"
 msgstr ""
 
 #: ../pep-0298.txt:102
 msgid ""
-"The new fields are present if the ``Py_TPFLAGS_HAVE_LOCKEDBUFFER`` flag "
-"is set in the object's type."
+"The new fields are present if the ``Py_TPFLAGS_HAVE_LOCKEDBUFFER`` flag is "
+"set in the object's type."
 msgstr ""
 
 #: ../pep-0298.txt:105
@@ -171,31 +171,31 @@ msgstr ""
 #: ../pep-0298.txt:108
 msgid ""
 "The ``acquirelockedreadbufferproc`` and ``acquirelockedwritebufferproc`` "
-"functions return the size in bytes of the memory block on success, and "
-"fill in the passed void \\* pointer on success.  If these functions fail "
-"- either because an error occurs or no memory block is exposed - they "
-"must set the void \\* pointer to NULL and raise an exception.  The return"
-" value is undefined in these cases and should not be used."
+"functions return the size in bytes of the memory block on success, and fill "
+"in the passed void \\* pointer on success.  If these functions fail - either "
+"because an error occurs or no memory block is exposed - they must set the "
+"void \\* pointer to NULL and raise an exception.  The return value is "
+"undefined in these cases and should not be used."
 msgstr ""
 
 #: ../pep-0298.txt:116
 msgid ""
-"If calls to these functions succeed, eventually the buffer must be "
-"released by a call to the ``releaselockedbufferproc``, supplying the "
-"original object as argument.  The ``releaselockedbufferproc`` cannot "
-"fail.  For objects that actually maintain an internal lock count it would"
-" be a fatal error if the ``releaselockedbufferproc`` function would be "
-"called too often, leading to a negative lock count."
+"If calls to these functions succeed, eventually the buffer must be released "
+"by a call to the ``releaselockedbufferproc``, supplying the original object "
+"as argument.  The ``releaselockedbufferproc`` cannot fail.  For objects that "
+"actually maintain an internal lock count it would be a fatal error if the "
+"``releaselockedbufferproc`` function would be called too often, leading to a "
+"negative lock count."
 msgstr ""
 
 #: ../pep-0298.txt:123
 msgid ""
-"Similar to the 'old' buffer interface, any of these functions may be set "
-"to NULL, but it is strongly recommended to implement the "
-"``releaselockedbufferproc`` function (even if it does nothing) if any of "
-"the ``acquireread``/``writelockedbufferproc`` functions are implemented, "
-"to discourage extension writers from checking for a NULL value and not "
-"calling it."
+"Similar to the 'old' buffer interface, any of these functions may be set to "
+"NULL, but it is strongly recommended to implement the "
+"``releaselockedbufferproc`` function (even if it does nothing) if any of the "
+"``acquireread``/``writelockedbufferproc`` functions are implemented, to "
+"discourage extension writers from checking for a NULL value and not calling "
+"it."
 msgstr ""
 
 #: ../pep-0298.txt:130
@@ -208,8 +208,8 @@ msgstr ""
 msgid ""
 "The former two functions return 0 on success, set buffer to the memory "
 "location and buffer_len to the length of the memory block in bytes. On "
-"failure, or if the locked buffer interface is not implemented by obj, "
-"they return -1 and set an exception."
+"failure, or if the locked buffer interface is not implemented by obj, they "
+"return -1 and set an exception."
 msgstr ""
 
 #: ../pep-0298.txt:149
@@ -223,8 +223,8 @@ msgstr ""
 #: ../pep-0298.txt:155
 msgid ""
 "The size of the ``PyBufferProcs`` structure changes if this proposal is "
-"implemented, but the type's ``tp_flags`` slot can be used to determine if"
-" the additional fields are present."
+"implemented, but the type's ``tp_flags`` slot can be used to determine if "
+"the additional fields are present."
 msgstr ""
 
 #: ../pep-0298.txt:161
@@ -249,11 +249,11 @@ msgstr ""
 
 #: ../pep-0298.txt:173
 msgid ""
-"mmap and array objects would actually enter a locked state while the "
-"buffer is active, this is not needed for strings and unicode objects.  "
-"Resizing locked array objects is not allowed and will raise an exception."
-" Whether closing a locked mmap object is an error or will only be "
-"deferred until the lock count reaches zero is an implementation detail."
+"mmap and array objects would actually enter a locked state while the buffer "
+"is active, this is not needed for strings and unicode objects.  Resizing "
+"locked array objects is not allowed and will raise an exception. Whether "
+"closing a locked mmap object is an error or will only be deferred until the "
+"lock count reaches zero is an implementation detail."
 msgstr ""
 
 #: ../pep-0298.txt:180
@@ -269,21 +269,19 @@ msgstr ""
 
 #: ../pep-0298.txt:187
 msgid ""
-"I recommend that at least some built-in types implement the "
-"acquire/release functionality with a counter, and assert that the counter"
-" is zero when the object is deleted -- if the assert fails, someone "
-"DECREF'ed their reference to the object without releasing it.  (The rule "
-"should be that you must own a reference to the object while you've "
-"acquired the object.)"
+"I recommend that at least some built-in types implement the acquire/release "
+"functionality with a counter, and assert that the counter is zero when the "
+"object is deleted -- if the assert fails, someone DECREF'ed their reference "
+"to the object without releasing it.  (The rule should be that you must own a "
+"reference to the object while you've acquired the object.)"
 msgstr ""
 
 #: ../pep-0298.txt:194
 msgid ""
-"For strings that might be impractical because the string object would "
-"have to grow 4 bytes to hold the counter; but the new bytes object "
-"(:pep:`296`) could easily implement the counter, and the array object too"
-" -- that way there will be plenty of opportunity to test proper use of "
-"the protocol."
+"For strings that might be impractical because the string object would have "
+"to grow 4 bytes to hold the counter; but the new bytes object (:pep:`296`) "
+"could easily implement the counter, and the array object too -- that way "
+"there will be plenty of opportunity to test proper use of the protocol."
 msgstr ""
 
 #: ../pep-0298.txt:202
@@ -292,26 +290,25 @@ msgstr ""
 
 #: ../pep-0298.txt:204
 msgid ""
-"Greg Ewing doubts the locked buffer interface is needed at all, he thinks"
-" the normal buffer interface could be used if the pointer is (re)fetched "
-"each time it's used.  This seems to be dangerous, because even innocent "
-"looking calls to the Python API like ``Py_DECREF()`` may trigger "
-"execution of arbitrary Python code."
+"Greg Ewing doubts the locked buffer interface is needed at all, he thinks "
+"the normal buffer interface could be used if the pointer is (re)fetched each "
+"time it's used.  This seems to be dangerous, because even innocent looking "
+"calls to the Python API like ``Py_DECREF()`` may trigger execution of "
+"arbitrary Python code."
 msgstr ""
 
 #: ../pep-0298.txt:210
 msgid ""
-"The first version of this proposal didn't have the release function, but "
-"it turned out that this would have been too restrictive: mmap and array "
-"objects wouldn't have been able to implement it, because mmap objects can"
-" be closed anytime if not locked, and array objects could resize or "
-"reallocate the buffer."
+"The first version of this proposal didn't have the release function, but it "
+"turned out that this would have been too restrictive: mmap and array objects "
+"wouldn't have been able to implement it, because mmap objects can be closed "
+"anytime if not locked, and array objects could resize or reallocate the "
+"buffer."
 msgstr ""
 
 #: ../pep-0298.txt:216
 msgid ""
-"This PEP will probably be rejected because nobody except the author needs"
-" it."
+"This PEP will probably be rejected because nobody except the author needs it."
 msgstr ""
 
 #: ../pep-0298.txt:222
@@ -320,8 +317,8 @@ msgstr ""
 
 #: ../pep-0298.txt:224
 msgid ""
-"The buffer interface https://mail.python.org/pipermail/python-"
-"dev/2000-October/009974.html"
+"The buffer interface https://mail.python.org/pipermail/python-dev/2000-"
+"October/009974.html"
 msgstr ""
 
 #: ../pep-0298.txt:229
@@ -331,4 +328,3 @@ msgstr ""
 #: ../pep-0298.txt:231
 msgid "This document has been placed in the public domain."
 msgstr ""
-

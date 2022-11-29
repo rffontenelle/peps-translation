@@ -75,18 +75,18 @@ msgstr ""
 
 #: ../pep-0358.txt:23
 msgid ""
-"This PEP outlines the introduction of a raw bytes sequence type. Adding "
-"the bytes type is one step in the transition to Unicode-based str objects"
-" which will be introduced in Python 3.0."
+"This PEP outlines the introduction of a raw bytes sequence type. Adding the "
+"bytes type is one step in the transition to Unicode-based str objects which "
+"will be introduced in Python 3.0."
 msgstr ""
 
 #: ../pep-0358.txt:27
 msgid ""
-"The PEP describes how the bytes type should work in Python 2.6, as well "
-"as how it should work in Python 3.0.  (Occasionally there are differences"
-" because in Python 2.6, we have two string types, str and unicode, while "
-"in Python 3.0 we will only have one string type, whose name will be str "
-"but whose semantics will be like the 2.6 unicode type.)"
+"The PEP describes how the bytes type should work in Python 2.6, as well as "
+"how it should work in Python 3.0.  (Occasionally there are differences "
+"because in Python 2.6, we have two string types, str and unicode, while in "
+"Python 3.0 we will only have one string type, whose name will be str but "
+"whose semantics will be like the 2.6 unicode type.)"
 msgstr ""
 
 #: ../pep-0358.txt:36
@@ -96,11 +96,11 @@ msgstr ""
 #: ../pep-0358.txt:38
 msgid ""
 "Python's current string objects are overloaded.  They serve to hold both "
-"sequences of characters and sequences of bytes.  This overloading of "
-"purpose leads to confusion and bugs.  In future versions of Python, "
-"string objects will be used for holding character data.  The bytes object"
-" will fulfil the role of a byte container.  Eventually the unicode type "
-"will be renamed to str and the old str type will be removed."
+"sequences of characters and sequences of bytes.  This overloading of purpose "
+"leads to confusion and bugs.  In future versions of Python, string objects "
+"will be used for holding character data.  The bytes object will fulfil the "
+"role of a byte container.  Eventually the unicode type will be renamed to "
+"str and the old str type will be removed."
 msgstr ""
 
 #: ../pep-0358.txt:48
@@ -109,13 +109,13 @@ msgstr ""
 
 #: ../pep-0358.txt:50
 msgid ""
-"A bytes object stores a mutable sequence of integers that are in the "
-"range 0 to 255.  Unlike string objects, indexing a bytes object returns "
-"an integer.  Assigning or comparing an object that is not an integer to "
-"an element causes a ``TypeError`` exception. Assigning an element to a "
-"value outside the range 0 to 255 causes a ``ValueError`` exception.  The "
-"``.__len__()`` method of bytes returns the number of integers stored in "
-"the sequence (i.e. the number of bytes)."
+"A bytes object stores a mutable sequence of integers that are in the range 0 "
+"to 255.  Unlike string objects, indexing a bytes object returns an integer.  "
+"Assigning or comparing an object that is not an integer to an element causes "
+"a ``TypeError`` exception. Assigning an element to a value outside the range "
+"0 to 255 causes a ``ValueError`` exception.  The ``.__len__()`` method of "
+"bytes returns the number of integers stored in the sequence (i.e. the number "
+"of bytes)."
 msgstr ""
 
 #: ../pep-0358.txt:59
@@ -124,11 +124,11 @@ msgstr ""
 
 #: ../pep-0358.txt:63
 msgid ""
-"If no arguments are provided then a bytes object containing zero elements"
-" is created and returned.  The initializer argument can be a string (in "
-"2.6, either str or unicode), an iterable of integers, or a single "
-"integer.  The pseudo-code for the constructor (optimized for clear "
-"semantics, not for speed) is::"
+"If no arguments are provided then a bytes object containing zero elements is "
+"created and returned.  The initializer argument can be a string (in 2.6, "
+"either str or unicode), an iterable of integers, or a single integer.  The "
+"pseudo-code for the constructor (optimized for clear semantics, not for "
+"speed) is::"
 msgstr ""
 
 #: ../pep-0358.txt:95
@@ -139,17 +139,16 @@ msgstr ""
 
 #: ../pep-0358.txt:101
 msgid ""
-"The object has a ``.decode()`` method equivalent to the ``.decode()`` "
-"method of the str object.  The object has a classmethod ``.fromhex()`` "
-"that takes a string of characters from the set ``[0-9a-fA-F ]`` and "
-"returns a bytes object (similar to ``binascii.unhexlify``).  For "
-"example::"
+"The object has a ``.decode()`` method equivalent to the ``.decode()`` method "
+"of the str object.  The object has a classmethod ``.fromhex()`` that takes a "
+"string of characters from the set ``[0-9a-fA-F ]`` and returns a bytes "
+"object (similar to ``binascii.unhexlify``).  For example::"
 msgstr ""
 
 #: ../pep-0358.txt:112
 msgid ""
-"The object has a ``.hex()`` method that does the reverse conversion "
-"(similar to ``binascii.hexlify``)::"
+"The object has a ``.hex()`` method that does the reverse conversion (similar "
+"to ``binascii.hexlify``)::"
 msgstr ""
 
 #: ../pep-0358.txt:118
@@ -161,16 +160,15 @@ msgstr ""
 
 #: ../pep-0358.txt:169
 msgid ""
-"Note the conspicuous absence of ``.isupper()``, ``.upper()``, and "
-"friends. (But see \"Open Issues\" below.)  There is no ``.__hash__()`` "
-"because the object is mutable.  There is no use case for a ``.sort()`` "
-"method."
+"Note the conspicuous absence of ``.isupper()``, ``.upper()``, and friends. "
+"(But see \"Open Issues\" below.)  There is no ``.__hash__()`` because the "
+"object is mutable.  There is no use case for a ``.sort()`` method."
 msgstr ""
 
 #: ../pep-0358.txt:173
 msgid ""
-"The bytes type also supports the buffer interface, supporting reading and"
-" writing binary (but not character) data."
+"The bytes type also supports the buffer interface, supporting reading and "
+"writing binary (but not character) data."
 msgstr ""
 
 #: ../pep-0358.txt:178
@@ -179,19 +177,19 @@ msgstr ""
 
 #: ../pep-0358.txt:180
 msgid ""
-"Python 3k will have a much different I/O subsystem.  Deciding how that "
-"I/O subsystem will work and interact with the bytes object is out of the "
-"scope of this PEP.  The expectation however is that binary I/O will read "
-"and write bytes, while text I/O will read strings.  Since the bytes type "
-"supports the buffer interface, the existing binary I/O operations in "
-"Python 2.6 will support bytes objects."
+"Python 3k will have a much different I/O subsystem.  Deciding how that I/O "
+"subsystem will work and interact with the bytes object is out of the scope "
+"of this PEP.  The expectation however is that binary I/O will read and write "
+"bytes, while text I/O will read strings.  Since the bytes type supports the "
+"buffer interface, the existing binary I/O operations in Python 2.6 will "
+"support bytes objects."
 msgstr ""
 
 #: ../pep-0358.txt:188
 msgid ""
-"It has been suggested that a special method named ``.__bytes__()`` be "
-"added to the language to allow objects to be converted into byte arrays."
-"  This decision is out of scope."
+"It has been suggested that a special method named ``.__bytes__()`` be added "
+"to the language to allow objects to be converted into byte arrays.  This "
+"decision is out of scope."
 msgstr ""
 
 #: ../pep-0358.txt:192
@@ -206,8 +204,8 @@ msgstr ""
 
 #: ../pep-0358.txt:199
 msgid ""
-"The ``.decode()`` method is redundant since a bytes object ``b`` can also"
-" be decoded by calling ``unicode(b, <encoding>)`` (in 2.6) or ``str(b, "
+"The ``.decode()`` method is redundant since a bytes object ``b`` can also be "
+"decoded by calling ``unicode(b, <encoding>)`` (in 2.6) or ``str(b, "
 "<encoding>)`` (in 3.0).  Do we need encode/decode methods at all?  In a "
 "sense the spelling using a constructor is cleaner."
 msgstr ""
@@ -226,25 +224,24 @@ msgstr ""
 
 #: ../pep-0358.txt:210
 msgid ""
-"A case could be made for supporting ``.ljust()``, ``.rjust()``, "
-"``.center()`` with a mandatory second argument."
+"A case could be made for supporting ``.ljust()``, ``.rjust()``, ``."
+"center()`` with a mandatory second argument."
 msgstr ""
 
 #: ../pep-0358.txt:213
 msgid ""
-"A case could be made for supporting ``.split()`` with a mandatory "
-"argument."
+"A case could be made for supporting ``.split()`` with a mandatory argument."
 msgstr ""
 
 #: ../pep-0358.txt:216
 msgid ""
-"A case could even be made for supporting ``.islower()``, ``.isupper()``, "
-"``.isspace()``, ``.isalpha()``, ``.isalnum()``, ``.isdigit()`` and the "
-"corresponding conversions (``.lower()`` etc.), using the ASCII "
-"definitions for letters, digits and whitespace.  If this is accepted, the"
-" cases for ``.ljust()``, ``.rjust()``, ``.center()`` and ``.split()`` "
-"become much stronger, and they should have default arguments as well, "
-"using an ASCII space or all ASCII whitespace (for ``.split()``)."
+"A case could even be made for supporting ``.islower()``, ``.isupper()``, ``."
+"isspace()``, ``.isalpha()``, ``.isalnum()``, ``.isdigit()`` and the "
+"corresponding conversions (``.lower()`` etc.), using the ASCII definitions "
+"for letters, digits and whitespace.  If this is accepted, the cases for ``."
+"ljust()``, ``.rjust()``, ``.center()`` and ``.split()`` become much "
+"stronger, and they should have default arguments as well, using an ASCII "
+"space or all ASCII whitespace (for ``.split()``)."
 msgstr ""
 
 #: ../pep-0358.txt:227
@@ -263,43 +260,43 @@ msgid ""
 "object and we cannot change that without breaking code.  The construct "
 "``bytes(s.encode(...))`` is expensive because it has to copy the byte "
 "sequence multiple times.  Also, Python generally provides two ways of "
-"converting an object of type A into an object of type B: ask an A "
-"instance to convert itself to a B, or ask the type B to create a new "
-"instance from an A. Depending on what A and B are, both APIs make sense; "
-"sometimes reasons of decoupling require that A can't know about B, in "
-"which case you have to use the latter approach; sometimes B can't know "
-"about A, in which case you have to use the former."
+"converting an object of type A into an object of type B: ask an A instance "
+"to convert itself to a B, or ask the type B to create a new instance from an "
+"A. Depending on what A and B are, both APIs make sense; sometimes reasons of "
+"decoupling require that A can't know about B, in which case you have to use "
+"the latter approach; sometimes B can't know about A, in which case you have "
+"to use the former."
 msgstr ""
 
 #: ../pep-0358.txt:245
 msgid ""
-"**Q:** Why does bytes ignore the encoding argument if the initializer is "
-"a str?  (This only applies to 2.6.)"
+"**Q:** Why does bytes ignore the encoding argument if the initializer is a "
+"str?  (This only applies to 2.6.)"
 msgstr ""
 
 #: ../pep-0358.txt:248
 msgid ""
-"**A:** There is no sane meaning that the encoding can have in that case. "
-"str objects *are* byte arrays and they know nothing about the encoding of"
-" character data they contain.  We need to assume that the programmer has "
-"provided a str object that already uses the desired encoding. If you need"
-" something other than a pure copy of the bytes then you need to first "
-"decode the string.  For example::"
+"**A:** There is no sane meaning that the encoding can have in that case. str "
+"objects *are* byte arrays and they know nothing about the encoding of "
+"character data they contain.  We need to assume that the programmer has "
+"provided a str object that already uses the desired encoding. If you need "
+"something other than a pure copy of the bytes then you need to first decode "
+"the string.  For example::"
 msgstr ""
 
 #: ../pep-0358.txt:258
 msgid ""
-"**Q:** Why not have the encoding argument default to Latin-1 (or some "
-"other encoding that covers the entire byte range) rather than ASCII?"
+"**Q:** Why not have the encoding argument default to Latin-1 (or some other "
+"encoding that covers the entire byte range) rather than ASCII?"
 msgstr ""
 
 #: ../pep-0358.txt:262
 msgid ""
 "**A:** The system default encoding for Python is ASCII.  It seems least "
-"confusing to use that default.  Also, in Py3k, using Latin-1 as the "
-"default might not be what users expect.  For example, they might prefer a"
-" Unicode encoding.  Any default will not always work as expected.  At "
-"least ASCII will complain loudly if you try to encode non-ASCII data."
+"confusing to use that default.  Also, in Py3k, using Latin-1 as the default "
+"might not be what users expect.  For example, they might prefer a Unicode "
+"encoding.  Any default will not always work as expected.  At least ASCII "
+"will complain loudly if you try to encode non-ASCII data."
 msgstr ""
 
 #: ../pep-0358.txt:271
@@ -309,4 +306,3 @@ msgstr ""
 #: ../pep-0358.txt:273
 msgid "This document has been placed in the public domain."
 msgstr ""
-

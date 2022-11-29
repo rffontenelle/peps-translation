@@ -67,10 +67,10 @@ msgstr ""
 
 #: ../pep-0452.txt:16
 msgid ""
-"There are several different modules available that implement "
-"cryptographic hashing algorithms such as MD5 or SHA.  This document "
-"specifies a standard API for such algorithms, to make it easier to switch"
-" between different implementations."
+"There are several different modules available that implement cryptographic "
+"hashing algorithms such as MD5 or SHA.  This document specifies a standard "
+"API for such algorithms, to make it easier to switch between different "
+"implementations."
 msgstr ""
 
 #: ../pep-0452.txt:23
@@ -79,9 +79,9 @@ msgstr ""
 
 #: ../pep-0452.txt:25
 msgid ""
-"All hashing modules should present the same interface.  Additional "
-"methods or variables can be added, but those described in this document "
-"should always be present."
+"All hashing modules should present the same interface.  Additional methods "
+"or variables can be added, but those described in this document should "
+"always be present."
 msgstr ""
 
 #: ../pep-0452.txt:29
@@ -99,37 +99,37 @@ msgstr ""
 #: ../pep-0452.txt:34
 msgid ""
 "Create a new hashing object and return it.  The first form is for hashes "
-"that are unkeyed, such as MD5 or SHA.  For keyed hashes such as HMAC, "
-"'key' is a required parameter containing a string giving the key to use."
-"  In both cases, the optional 'string' parameter, if supplied, will be "
-"immediately hashed into the object's starting state, as if "
-"``obj.update(string)`` was called."
+"that are unkeyed, such as MD5 or SHA.  For keyed hashes such as HMAC, 'key' "
+"is a required parameter containing a string giving the key to use.  In both "
+"cases, the optional 'string' parameter, if supplied, will be immediately "
+"hashed into the object's starting state, as if ``obj.update(string)`` was "
+"called."
 msgstr ""
 
 #: ../pep-0452.txt:42
 msgid ""
-"After creating a hashing object, arbitrary bytes can be fed into the "
-"object using its ``update()`` method, and the hash value can be obtained "
-"at any time by calling the object's ``digest()`` method."
+"After creating a hashing object, arbitrary bytes can be fed into the object "
+"using its ``update()`` method, and the hash value can be obtained at any "
+"time by calling the object's ``digest()`` method."
 msgstr ""
 
 #: ../pep-0452.txt:47
 msgid ""
-"Although the parameter is called 'string', hashing objects operate on "
-"8-bit data only. Both 'key' and 'string' must be a bytes-like object "
-"(bytes, bytearray...). A hashing object may support one-dimensional, "
-"contiguous buffers as argument, too. Text (unicode) is no longer "
-"supported in Python 3.x. Python 2.x implementations may take ASCII-only "
-"unicode as argument, but portable code should not rely on the feature."
+"Although the parameter is called 'string', hashing objects operate on 8-bit "
+"data only. Both 'key' and 'string' must be a bytes-like object (bytes, "
+"bytearray...). A hashing object may support one-dimensional, contiguous "
+"buffers as argument, too. Text (unicode) is no longer supported in Python 3."
+"x. Python 2.x implementations may take ASCII-only unicode as argument, but "
+"portable code should not rely on the feature."
 msgstr ""
 
 #: ../pep-0452.txt:55
 msgid ""
-"Arbitrary additional keyword arguments can be added to this function, but"
-" if they're not supplied, sensible default values should be used.  For "
-"example, 'rounds' and 'digest_size' keywords could be added for a hash "
-"function which supports a variable number of rounds and several different"
-" output sizes, and they should default to values believed to be secure."
+"Arbitrary additional keyword arguments can be added to this function, but if "
+"they're not supplied, sensible default values should be used.  For example, "
+"'rounds' and 'digest_size' keywords could be added for a hash function which "
+"supports a variable number of rounds and several different output sizes, and "
+"they should default to values believed to be secure."
 msgstr ""
 
 #: ../pep-0452.txt:62
@@ -143,11 +143,10 @@ msgstr ""
 #: ../pep-0452.txt:65
 msgid ""
 "An integer value; the size of the digest produced by the hashing objects "
-"created by this module, measured in bytes. You could also obtain this "
-"value by creating a sample object and accessing its 'digest_size' "
-"attribute, but it can be convenient to have this value available from the"
-" module. Hashes with a variable output size will set this variable to "
-"None."
+"created by this module, measured in bytes. You could also obtain this value "
+"by creating a sample object and accessing its 'digest_size' attribute, but "
+"it can be convenient to have this value available from the module. Hashes "
+"with a variable output size will set this variable to None."
 msgstr ""
 
 #: ../pep-0452.txt:73
@@ -157,11 +156,11 @@ msgstr ""
 #: ../pep-0452.txt:76
 msgid ""
 "This attribute is identical to the module-level digest_size variable, "
-"measuring the size of the digest produced by the hashing object, measured"
-" in bytes.  If the hash has a variable output size, this output size must"
-" be chosen when the hashing object is created, and this attribute must "
-"contain the selected size.  Therefore, ``None`` is **not** a legal value "
-"for this attribute."
+"measuring the size of the digest produced by the hashing object, measured in "
+"bytes.  If the hash has a variable output size, this output size must be "
+"chosen when the hashing object is created, and this attribute must contain "
+"the selected size.  Therefore, ``None`` is **not** a legal value for this "
+"attribute."
 msgstr ""
 
 #: ../pep-0452.txt:90 ../pep-0452.txt:189
@@ -170,11 +169,11 @@ msgstr ""
 
 #: ../pep-0452.txt:85
 msgid ""
-"An integer value or ``NotImplemented``; the internal block size of the "
-"hash algorithm in bytes. The block size is used by the HMAC module to pad"
-" the secret key to ``digest_size`` or to hash the secret key if it is "
-"longer than ``digest_size``. If no HMAC algorithm is standardized for the"
-" hash algorithm, return ``NotImplemented`` instead."
+"An integer value or ``NotImplemented``; the internal block size of the hash "
+"algorithm in bytes. The block size is used by the HMAC module to pad the "
+"secret key to ``digest_size`` or to hash the secret key if it is longer than "
+"``digest_size``. If no HMAC algorithm is standardized for the hash "
+"algorithm, return ``NotImplemented`` instead."
 msgstr ""
 
 #: ../pep-0452.txt:95 ../pep-0452.txt:185
@@ -183,8 +182,8 @@ msgstr ""
 
 #: ../pep-0452.txt:93
 msgid ""
-"A text string value; the canonical, lowercase name of the hashing "
-"algorithm. The name should be a suitable parameter for ``hashlib.new``."
+"A text string value; the canonical, lowercase name of the hashing algorithm. "
+"The name should be a suitable parameter for ``hashlib.new``."
 msgstr ""
 
 #: ../pep-0452.txt:97
@@ -197,8 +196,8 @@ msgstr ""
 
 #: ../pep-0452.txt:100
 msgid ""
-"Return a separate copy of this hashing object.  An update to this copy "
-"won't affect the original object."
+"Return a separate copy of this hashing object.  An update to this copy won't "
+"affect the original object."
 msgstr ""
 
 #: ../pep-0452.txt:107
@@ -220,8 +219,8 @@ msgstr ""
 msgid ""
 "Return the hash value of this hashing object as a string containing "
 "hexadecimal digits.  Lowercase letters should be used for the digits 'a' "
-"through 'f'.  Like the ``.digest()`` method, this method mustn't alter "
-"the object."
+"through 'f'.  Like the ``.digest()`` method, this method mustn't alter the "
+"object."
 msgstr ""
 
 #: ../pep-0452.txt:118
@@ -251,36 +250,34 @@ msgstr ""
 
 #: ../pep-0452.txt:148
 msgid ""
-"The digest size is measured in bytes, not bits, even though hash "
-"algorithm sizes are usually quoted in bits; MD5 is a 128-bit algorithm "
-"and not a 16-byte one, for example.  This is because, in the sample code "
-"I looked at, the length in bytes is often needed (to seek ahead or behind"
-" in a file; to compute the length of an output string) while the length "
-"in bits is rarely used. Therefore, the burden will fall on the few people"
-" actually needing the size in bits, who will have to multiply digest_size"
-" by 8."
+"The digest size is measured in bytes, not bits, even though hash algorithm "
+"sizes are usually quoted in bits; MD5 is a 128-bit algorithm and not a 16-"
+"byte one, for example.  This is because, in the sample code I looked at, the "
+"length in bytes is often needed (to seek ahead or behind in a file; to "
+"compute the length of an output string) while the length in bits is rarely "
+"used. Therefore, the burden will fall on the few people actually needing the "
+"size in bits, who will have to multiply digest_size by 8."
 msgstr ""
 
 #: ../pep-0452.txt:157
 msgid ""
 "It's been suggested that the ``update()`` method would be better named "
-"``append()``.  However, that method is really causing the current state "
-"of the hashing object to be updated, and ``update()`` is already used by "
-"the md5 and sha modules included with Python, so it seems simplest to "
-"leave the name ``update()`` alone."
+"``append()``.  However, that method is really causing the current state of "
+"the hashing object to be updated, and ``update()`` is already used by the "
+"md5 and sha modules included with Python, so it seems simplest to leave the "
+"name ``update()`` alone."
 msgstr ""
 
 #: ../pep-0452.txt:163
 msgid ""
 "The order of the constructor's arguments for keyed hashes was a sticky "
-"issue.  It wasn't clear whether the key should come first or second.  "
-"It's a required parameter, and the usual convention is to place required "
-"parameters first, but that also means that the 'string' parameter moves "
-"from the first position to the second. It would be possible to get "
-"confused and pass a single argument to a keyed hash, thinking that you're"
-" passing an initial string to an unkeyed hash, but it doesn't seem worth "
-"making the interface for keyed hashes more obscure to avoid this "
-"potential error."
+"issue.  It wasn't clear whether the key should come first or second.  It's a "
+"required parameter, and the usual convention is to place required parameters "
+"first, but that also means that the 'string' parameter moves from the first "
+"position to the second. It would be possible to get confused and pass a "
+"single argument to a keyed hash, thinking that you're passing an initial "
+"string to an unkeyed hash, but it doesn't seem worth making the interface "
+"for keyed hashes more obscure to avoid this potential error."
 msgstr ""
 
 #: ../pep-0452.txt:175
@@ -289,10 +286,9 @@ msgstr ""
 
 #: ../pep-0452.txt:177
 msgid ""
-"Version 2.0 of API for Cryptographic Hash Functions clarifies some "
-"aspects of the API and brings it up-to-date. It also formalized aspects "
-"that were already de facto standards and provided by most "
-"implementations."
+"Version 2.0 of API for Cryptographic Hash Functions clarifies some aspects "
+"of the API and brings it up-to-date. It also formalized aspects that were "
+"already de facto standards and provided by most implementations."
 msgstr ""
 
 #: ../pep-0452.txt:182
@@ -311,12 +307,12 @@ msgstr ""
 
 #: ../pep-0452.txt:191
 msgid ""
-"Version 2.0 takes the separation of binary and text data in Python 3.0 "
-"into account. The 'string' argument to ``new()`` and ``update()`` as well"
-" as the 'key' argument must be bytes-like objects. On Python 2.x a "
-"hashing object may also support ASCII-only unicode. The actual name of "
-"argument is not changed as it is part of the public API. Code may depend "
-"on the fact that the argument is called 'string'."
+"Version 2.0 takes the separation of binary and text data in Python 3.0 into "
+"account. The 'string' argument to ``new()`` and ``update()`` as well as the "
+"'key' argument must be bytes-like objects. On Python 2.x a hashing object "
+"may also support ASCII-only unicode. The actual name of argument is not "
+"changed as it is part of the public API. Code may depend on the fact that "
+"the argument is called 'string'."
 msgstr ""
 
 #: ../pep-0452.txt:200
@@ -469,8 +465,8 @@ msgstr ""
 
 #: ../pep-0452.txt:245
 msgid ""
-"Thanks to Aahz, Andrew Archibald, Rich Salz, Itamar Shtull-Trauring, and "
-"the readers of the python-crypto list for their comments on this PEP."
+"Thanks to Aahz, Andrew Archibald, Rich Salz, Itamar Shtull-Trauring, and the "
+"readers of the python-crypto list for their comments on this PEP."
 msgstr ""
 
 #: ../pep-0452.txt:251
@@ -480,4 +476,3 @@ msgstr ""
 #: ../pep-0452.txt:253
 msgid "This document has been placed in the public domain."
 msgstr ""
-

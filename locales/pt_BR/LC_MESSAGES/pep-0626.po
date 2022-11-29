@@ -80,26 +80,25 @@ msgstr ""
 #: ../pep-0626.rst:15
 msgid ""
 "Python should guarantee that when tracing is turned on, \"line\" tracing "
-"events are generated for *all* lines of code executed and *only* for "
-"lines of code that are executed."
+"events are generated for *all* lines of code executed and *only* for lines "
+"of code that are executed."
 msgstr ""
 
 #: ../pep-0626.rst:18
 msgid ""
 "The ``f_lineno`` attribute of frame objects should always contain the "
-"expected line number. During frame execution, the expected line number is"
-" the line number of source code currently being executed. After a frame "
-"has completed, either by returning or by raising an exception, the "
-"expected line number is the line number of the last line of source that "
-"was executed."
+"expected line number. During frame execution, the expected line number is "
+"the line number of source code currently being executed. After a frame has "
+"completed, either by returning or by raising an exception, the expected line "
+"number is the line number of the last line of source that was executed."
 msgstr ""
 
 #: ../pep-0626.rst:23
 msgid ""
-"A side effect of ensuring correct line numbers, is that some bytecodes "
-"will need to be marked as artificial, and not have a meaningful line "
-"number. To assist tools, a new ``co_lines`` attribute will be added that "
-"describes the mapping from bytecode to source."
+"A side effect of ensuring correct line numbers, is that some bytecodes will "
+"need to be marked as artificial, and not have a meaningful line number. To "
+"assist tools, a new ``co_lines`` attribute will be added that describes the "
+"mapping from bytecode to source."
 msgstr ""
 
 #: ../pep-0626.rst:27
@@ -109,23 +108,22 @@ msgstr ""
 #: ../pep-0626.rst:29
 msgid ""
 "Users of ``sys.settrace`` and associated tools should be able to rely on "
-"tracing events being generated for all lines of code, and only for actual"
-" code. They should also be able to assume that the line number in "
+"tracing events being generated for all lines of code, and only for actual "
+"code. They should also be able to assume that the line number in "
 "``f_lineno`` is correct."
 msgstr ""
 
 #: ../pep-0626.rst:33
 msgid ""
-"The current implementation mostly does this, but fails in a few cases. "
-"This requires workarounds in tooling and is a nuisance for alternative "
-"Python implementions."
+"The current implementation mostly does this, but fails in a few cases. This "
+"requires workarounds in tooling and is a nuisance for alternative Python "
+"implementions."
 msgstr ""
 
 #: ../pep-0626.rst:36
 msgid ""
 "Having this guarantee also benefits implementers of CPython in the long "
-"term, as the current behaviour is not obvious and has some odd corner "
-"cases."
+"term, as the current behaviour is not obvious and has some odd corner cases."
 msgstr ""
 
 #: ../pep-0626.rst:39
@@ -135,8 +133,8 @@ msgstr ""
 #: ../pep-0626.rst:41
 msgid ""
 "In order to guarantee that line events are generated when expected, the "
-"``co_lnotab`` attribute, in its current form, can no longer be the source"
-" of truth for line number information."
+"``co_lnotab`` attribute, in its current form, can no longer be the source of "
+"truth for line number information."
 msgstr ""
 
 #: ../pep-0626.rst:44
@@ -148,16 +146,15 @@ msgstr ""
 
 #: ../pep-0626.rst:47
 msgid ""
-"Ensuring that the bytecode is annotated correctly to enable accurate line"
-" number information means that some bytecodes must be marked as "
-"artificial, and not have a line number."
+"Ensuring that the bytecode is annotated correctly to enable accurate line "
+"number information means that some bytecodes must be marked as artificial, "
+"and not have a line number."
 msgstr ""
 
 #: ../pep-0626.rst:50
 msgid ""
-"Some care must be taken not to break existing tooling. To minimize "
-"breakage, the ``co_lnotab`` attribute will be retained, but lazily "
-"generated on demand."
+"Some care must be taken not to break existing tooling. To minimize breakage, "
+"the ``co_lnotab`` attribute will be retained, but lazily generated on demand."
 msgstr ""
 
 #: ../pep-0626.rst:54
@@ -194,14 +191,14 @@ msgstr ""
 
 #: ../pep-0626.rst:68
 msgid ""
-"A backwards jump occurs, even if it jumps to the same line, as may happen"
-" in list comprehensions."
+"A backwards jump occurs, even if it jumps to the same line, as may happen in "
+"list comprehensions."
 msgstr ""
 
 #: ../pep-0626.rst:70
 msgid ""
-"Additionally, line events will *never* be generated for source code lines"
-" that are not executed."
+"Additionally, line events will *never* be generated for source code lines "
+"that are not executed."
 msgstr ""
 
 #: ../pep-0626.rst:73
@@ -223,20 +220,21 @@ msgstr ""
 
 #: ../pep-0626.rst:80
 msgid ""
-"Statements are made up of keywords and expressions. Not all keywords have"
-" a direct runtime effect, so not all keywords are considered to be "
-"executable code. For example, ``else``, is a necessary part of an ``if`` "
-"statement, but there is no runtime effect associated with an ``else``."
+"Statements are made up of keywords and expressions. Not all keywords have a "
+"direct runtime effect, so not all keywords are considered to be executable "
+"code. For example, ``else``, is a necessary part of an ``if`` statement, but "
+"there is no runtime effect associated with an ``else``."
 msgstr ""
 
 #: ../pep-0626.rst:83
 msgid ""
-"For the purposes of tracing, the following keywords will *not* be "
-"considered to be executable code:"
+"For the purposes of tracing, the following keywords will *not* be considered "
+"to be executable code:"
 msgstr ""
 
 #: ../pep-0626.rst:85
-msgid "``del`` -- The expression to be deleted is treated as the executable code."
+msgid ""
+"``del`` -- The expression to be deleted is treated as the executable code."
 msgstr ""
 
 #: ../pep-0626.rst:86
@@ -265,8 +263,7 @@ msgstr ""
 
 #: ../pep-0626.rst:96 ../pep-0626.rst:212
 msgid ""
-"In the following examples, events are listed as \"name\", ``f_lineno`` "
-"pairs."
+"In the following examples, events are listed as \"name\", ``f_lineno`` pairs."
 msgstr ""
 
 #: ../pep-0626.rst:98 ../pep-0626.rst:110 ../pep-0626.rst:126
@@ -287,16 +284,16 @@ msgstr ""
 
 #: ../pep-0626.rst:150
 msgid ""
-"When a frame object is created, the ``f_lineno`` attribute will be set to"
-" the line at which the function or class is defined; that is the line on "
-"which the ``def`` or ``class`` keyword appears. For modules it will be "
-"set to zero."
+"When a frame object is created, the ``f_lineno`` attribute will be set to "
+"the line at which the function or class is defined; that is the line on "
+"which the ``def`` or ``class`` keyword appears. For modules it will be set "
+"to zero."
 msgstr ""
 
 #: ../pep-0626.rst:153
 msgid ""
-"The ``f_lineno`` attribute will be updated to match the line number about"
-" to be executed, even if tracing is turned off and no event is generated."
+"The ``f_lineno`` attribute will be updated to match the line number about to "
+"be executed, even if tracing is turned off and no event is generated."
 msgstr ""
 
 #: ../pep-0626.rst:157
@@ -320,8 +317,8 @@ msgstr ""
 
 #: ../pep-0626.rst:164
 msgid ""
-"``line`` -- The line number, or ``None`` if the bytecodes in the given "
-"range do not have a line number."
+"``line`` -- The line number, or ``None`` if the bytecodes in the given range "
+"do not have a line number."
 msgstr ""
 
 #: ../pep-0626.rst:166
@@ -334,9 +331,9 @@ msgstr ""
 
 #: ../pep-0626.rst:169
 msgid ""
-"The ``(start, end)`` ranges will be non-decreasing and consecutive. That "
-"is, for any pair of tuples the ``start`` of the second will equal to the "
-"``end`` of the first."
+"The ``(start, end)`` ranges will be non-decreasing and consecutive. That is, "
+"for any pair of tuples the ``start`` of the second will equal to the ``end`` "
+"of the first."
 msgstr ""
 
 #: ../pep-0626.rst:172
@@ -345,8 +342,8 @@ msgstr ""
 
 #: ../pep-0626.rst:173
 msgid ""
-"The final range in the sequence with have ``end`` equal to the size of "
-"the bytecode."
+"The final range in the sequence with have ``end`` equal to the size of the "
+"bytecode."
 msgstr ""
 
 #: ../pep-0626.rst:174
@@ -359,9 +356,9 @@ msgstr ""
 
 #: ../pep-0626.rst:179
 msgid ""
-"Zero width range, that is ranges where ``start == end`` are allowed. Zero"
-" width ranges are used for lines that are present in the source code, but"
-" have been eliminated by the bytecode compiler."
+"Zero width range, that is ranges where ``start == end`` are allowed. Zero "
+"width ranges are used for lines that are present in the source code, but "
+"have been eliminated by the bytecode compiler."
 msgstr ""
 
 #: ../pep-0626.rst:184
@@ -370,9 +367,9 @@ msgstr ""
 
 #: ../pep-0626.rst:186
 msgid ""
-"The co_linetable attribute will hold the line number information. The "
-"format is opaque, unspecified and may be changed without notice. The "
-"attribute is public only to support creation of new code objects."
+"The co_linetable attribute will hold the line number information. The format "
+"is opaque, unspecified and may be changed without notice. The attribute is "
+"public only to support creation of new code objects."
 msgstr ""
 
 #: ../pep-0626.rst:191
@@ -381,11 +378,11 @@ msgstr ""
 
 #: ../pep-0626.rst:193
 msgid ""
-"Historically the ``co_lnotab`` attribute held a mapping from bytecode "
-"offset to line number, but does not support bytecodes without a line "
-"number. For backward compatibility, the ``co_lnotab`` bytes object will "
-"be lazily created when needed. For ranges of bytecodes without a line "
-"number, the line number of the previous bytecode range will be used."
+"Historically the ``co_lnotab`` attribute held a mapping from bytecode offset "
+"to line number, but does not support bytecodes without a line number. For "
+"backward compatibility, the ``co_lnotab`` bytes object will be lazily "
+"created when needed. For ranges of bytecodes without a line number, the line "
+"number of the previous bytecode range will be used."
 msgstr ""
 
 #: ../pep-0626.rst:197
@@ -400,16 +397,15 @@ msgstr ""
 
 #: ../pep-0626.rst:203
 msgid ""
-"The ``co_lnotab`` attribute will be deprecated in 3.10 and removed in "
-"3.12."
+"The ``co_lnotab`` attribute will be deprecated in 3.10 and removed in 3.12."
 msgstr ""
 
 #: ../pep-0626.rst:205
 msgid ""
-"Any tools that parse the ``co_lnotab`` attribute of code objects will "
-"need to move to using ``co_lines()`` before 3.12 is released. Tools that "
-"use ``sys.settrace`` will be unaffected, except in cases where the "
-"\"line\" events they receive are more accurate."
+"Any tools that parse the ``co_lnotab`` attribute of code objects will need "
+"to move to using ``co_lines()`` before 3.12 is released. Tools that use "
+"``sys.settrace`` will be unaffected, except in cases where the \"line\" "
+"events they receive are more accurate."
 msgstr ""
 
 #: ../pep-0626.rst:210
@@ -422,8 +418,8 @@ msgstr ""
 
 #: ../pep-0626.rst:226
 msgid ""
-"If ``a`` is ``True``, then the sequence of events generated by Python 3.9"
-" is::"
+"If ``a`` is ``True``, then the sequence of events generated by Python 3.9 "
+"is::"
 msgstr ""
 
 #: ../pep-0626.rst:233 ../pep-0626.rst:254
@@ -462,18 +458,18 @@ msgstr ""
 
 #: ../pep-0626.rst:272
 msgid ""
-"Out of process tools, such as py-spy [1]_, cannot use the C-API, and must"
-" parse the line number table themselves. Although the line number table "
+"Out of process tools, such as py-spy [1]_, cannot use the C-API, and must "
+"parse the line number table themselves. Although the line number table "
 "format may change without warning, it will not change during a release "
 "unless absolutely necessary for a bug fix."
 msgstr ""
 
 #: ../pep-0626.rst:276
 msgid ""
-"To reduce the work required to implement these tools, the following C "
-"struct and utility functions are provided. Note that these functions are "
-"not part of the C-API, so will be need to be linked into any code that "
-"needs to use them."
+"To reduce the work required to implement these tools, the following C struct "
+"and utility functions are provided. Note that these functions are not part "
+"of the C-API, so will be need to be linked into any code that needs to use "
+"them."
 msgstr ""
 
 #: ../pep-0626.rst:292
@@ -496,25 +492,24 @@ msgstr ""
 
 #: ../pep-0626.rst:299
 msgid ""
-"The data in ``linetable`` is immutable, but its lifetime depends on its "
-"code object. For reliable operation, ``linetable`` should be copied into "
-"a local buffer before calling ``PyLineTable_InitAddressRange``."
+"The data in ``linetable`` is immutable, but its lifetime depends on its code "
+"object. For reliable operation, ``linetable`` should be copied into a local "
+"buffer before calling ``PyLineTable_InitAddressRange``."
 msgstr ""
 
 #: ../pep-0626.rst:302
 msgid ""
-"Although these functions are not part of C-API, they will provided by all"
-" future versions of CPython. The ``PyLineTable_`` functions do not call "
-"into the C-API, so can be safely copied into any tool that needs to use "
-"them. The ``PyCodeAddressRange`` struct will not be changed, but the "
-"``_opaque`` struct is not part of the specification and may change."
+"Although these functions are not part of C-API, they will provided by all "
+"future versions of CPython. The ``PyLineTable_`` functions do not call into "
+"the C-API, so can be safely copied into any tool that needs to use them. The "
+"``PyCodeAddressRange`` struct will not be changed, but the ``_opaque`` "
+"struct is not part of the specification and may change."
 msgstr ""
 
 #: ../pep-0626.rst:307
 msgid ""
-"The ``PyCodeAddressRange`` struct has changed from the original version "
-"of this PEP, where the addition fields were defined, but were liable to "
-"change."
+"The ``PyCodeAddressRange`` struct has changed from the original version of "
+"this PEP, where the addition fields were defined, but were liable to change."
 msgstr ""
 
 #: ../pep-0626.rst:310
@@ -527,10 +522,10 @@ msgstr ""
 
 #: ../pep-0626.rst:335
 msgid ""
-"In general, there should be no change in performance. When tracing, "
-"programs should run a little faster as the new table format can be "
-"designed with line number calculation speed in mind. Code with long "
-"sequences of ``pass`` statements will probably become a bit slower."
+"In general, there should be no change in performance. When tracing, programs "
+"should run a little faster as the new table format can be designed with line "
+"number calculation speed in mind. Code with long sequences of ``pass`` "
+"statements will probably become a bit slower."
 msgstr ""
 
 #: ../pep-0626.rst:340
@@ -538,7 +533,8 @@ msgid "Reference Implementation"
 msgstr ""
 
 #: ../pep-0626.rst:342
-msgid "https://github.com/markshannon/cpython/tree/new-linetable-format-version-2"
+msgid ""
+"https://github.com/markshannon/cpython/tree/new-linetable-format-version-2"
 msgstr ""
 
 #: ../pep-0626.rst:345
@@ -547,8 +543,8 @@ msgstr ""
 
 #: ../pep-0626.rst:347
 msgid ""
-"This document is placed in the public domain or under the "
-"CC0-1.0-Universal license, whichever is more permissive."
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
 msgstr ""
 
 #: ../pep-0626.rst:351
@@ -557,7 +553,6 @@ msgstr ""
 
 #: ../pep-0626.rst:353
 msgid ""
-"py-spy: Sampling profiler for Python programs (https://github.com/benfred"
-"/py-spy)"
+"py-spy: Sampling profiler for Python programs (https://github.com/benfred/py-"
+"spy)"
 msgstr ""
-

@@ -71,8 +71,8 @@ msgstr ""
 
 #: ../pep-0686.rst:10
 msgid ""
-"`18-Mar-2022 <https://discuss.python.org/t/14435>`__, `31-Mar-2022 "
-"<https://discuss.python.org/t/14737>`__"
+"`18-Mar-2022 <https://discuss.python.org/t/14435>`__, `31-Mar-2022 <https://"
+"discuss.python.org/t/14737>`__"
 msgstr ""
 
 #: ../pep-0686.rst
@@ -125,8 +125,8 @@ msgstr ""
 
 #: ../pep-0686.rst:34
 msgid ""
-"And many other popular programming languages, including Node.js, Go, "
-"Rust, and Java uses UTF-8 by default."
+"And many other popular programming languages, including Node.js, Go, Rust, "
+"and Java uses UTF-8 by default."
 msgstr ""
 
 #: ../pep-0686.rst:37
@@ -138,10 +138,9 @@ msgstr ""
 #: ../pep-0686.rst:40
 msgid ""
 "Additionally, many Python developers using Unix forget that the default "
-"encoding is platform dependent. They omit to specify "
-"``encoding=\"utf-8\"`` when they read text files encoded in UTF-8 (e.g. "
-"JSON, TOML, Markdown, and Python source files). Inconsistent default "
-"encoding causes many bugs."
+"encoding is platform dependent. They omit to specify ``encoding=\"utf-8\"`` "
+"when they read text files encoded in UTF-8 (e.g. JSON, TOML, Markdown, and "
+"Python source files). Inconsistent default encoding causes many bugs."
 msgstr ""
 
 #: ../pep-0686.rst:48
@@ -168,21 +167,21 @@ msgstr ""
 
 #: ../pep-0686.rst:62
 msgid ""
-"Since UTF-8 mode affects ``locale.getpreferredencoding(False)``, we need "
-"an API to get locale encoding regardless of UTF-8 mode."
+"Since UTF-8 mode affects ``locale.getpreferredencoding(False)``, we need an "
+"API to get locale encoding regardless of UTF-8 mode."
 msgstr ""
 
 #: ../pep-0686.rst:65
 msgid ""
-"``locale.getencoding()`` will be added for this purpose. It returns "
-"locale encoding too, but ignores UTF-8 mode."
+"``locale.getencoding()`` will be added for this purpose. It returns locale "
+"encoding too, but ignores UTF-8 mode."
 msgstr ""
 
 #: ../pep-0686.rst:68
 msgid ""
-"When ``warn_default_encoding`` option is specified, "
-"``locale.getpreferredencoding()`` will emit ``EncodingWarning`` like "
-"``open()`` (see also :pep:`597`)."
+"When ``warn_default_encoding`` option is specified, ``locale."
+"getpreferredencoding()`` will emit ``EncodingWarning`` like ``open()`` (see "
+"also :pep:`597`)."
 msgstr ""
 
 #: ../pep-0686.rst:72
@@ -197,24 +196,23 @@ msgstr ""
 msgid ""
 ":pep:`597` added the ``encoding=\"locale\"`` option to the "
 "``TextIOWrapper``. This option is used to specify the locale encoding "
-"explicitly. ``TextIOWrapper`` should use locale encoding when the option "
-"is specified, regardless of default text encoding."
+"explicitly. ``TextIOWrapper`` should use locale encoding when the option is "
+"specified, regardless of default text encoding."
 msgstr ""
 
 #: ../pep-0686.rst:83
 msgid ""
 "But ``TextIOWrapper`` uses ``\"UTF-8\"`` in UTF-8 mode even if "
-"``encoding=\"locale\"`` is specified for now. This behavior is "
-"inconsistent with the :pep:`597` motivation. It is because we didn't "
-"expect making UTF-8 mode default when Python changes its default text "
-"encoding."
+"``encoding=\"locale\"`` is specified for now. This behavior is inconsistent "
+"with the :pep:`597` motivation. It is because we didn't expect making UTF-8 "
+"mode default when Python changes its default text encoding."
 msgstr ""
 
 #: ../pep-0686.rst:89
 msgid ""
 "This inconsistency should be fixed before making UTF-8 mode default. "
-"``TextIOWrapper`` should use locale encoding when ``encoding=\"locale\"``"
-" is passed even in UTF-8 mode."
+"``TextIOWrapper`` should use locale encoding when ``encoding=\"locale\"`` is "
+"passed even in UTF-8 mode."
 msgstr ""
 
 #: ../pep-0686.rst:93
@@ -227,15 +225,15 @@ msgstr ""
 
 #: ../pep-0686.rst:99
 msgid ""
-"Most Unix systems use UTF-8 locale and Python enables UTF-8 mode when its"
-" locale is C or POSIX. So this change mostly affects Windows users."
+"Most Unix systems use UTF-8 locale and Python enables UTF-8 mode when its "
+"locale is C or POSIX. So this change mostly affects Windows users."
 msgstr ""
 
 #: ../pep-0686.rst:103
 msgid ""
-"When a Python program depends on the default encoding, this change may "
-"cause ``UnicodeError``, mojibake, or even silent data corruption. So this"
-" change should be announced loudly."
+"When a Python program depends on the default encoding, this change may cause "
+"``UnicodeError``, mojibake, or even silent data corruption. So this change "
+"should be announced loudly."
 msgstr ""
 
 #: ../pep-0686.rst:107
@@ -248,20 +246,19 @@ msgstr ""
 
 #: ../pep-0686.rst:110
 msgid ""
-"Use ``EncodingWarning`` (:pep:`597`) to find every places UTF-8 mode "
-"affects."
+"Use ``EncodingWarning`` (:pep:`597`) to find every places UTF-8 mode affects."
 msgstr ""
 
 #: ../pep-0686.rst:113
 msgid ""
-"If ``encoding`` option is omitted, consider using ``encoding=\"utf-8\"`` "
-"or ``encoding=\"locale\"``."
+"If ``encoding`` option is omitted, consider using ``encoding=\"utf-8\"`` or "
+"``encoding=\"locale\"``."
 msgstr ""
 
 #: ../pep-0686.rst:115
 msgid ""
-"If ``locale.getpreferredencoding()`` is used, consider using "
-"``\"utf-8\"`` or ``locale.getencoding()``."
+"If ``locale.getpreferredencoding()`` is used, consider using ``\"utf-8\"`` "
+"or ``locale.getencoding()``."
 msgstr ""
 
 #: ../pep-0686.rst:118
@@ -280,15 +277,15 @@ msgstr ""
 
 #: ../pep-0686.rst:126
 msgid ""
-"Java `changed <JEP 400_>`__ the default text encoding to UTF-8 in JDK 18."
-" (2022)."
+"Java `changed <JEP 400_>`__ the default text encoding to UTF-8 in JDK 18. "
+"(2022)."
 msgstr ""
 
 #: ../pep-0686.rst:129
 msgid ""
 "Both Ruby and Java have an option for backward compatibility. They don't "
-"provide any warning like :pep:`597`'s ``EncodingWarning`` in Python for "
-"use of the default encoding."
+"provide any warning like :pep:`597`'s ``EncodingWarning`` in Python for use "
+"of the default encoding."
 msgstr ""
 
 #: ../pep-0686.rst:135
@@ -305,9 +302,9 @@ msgstr ""
 
 #: ../pep-0686.rst:142
 msgid ""
-"But there are many cases that the default encoding is used for "
-"reading/writing only ASCII text. Additionally, such warnings are not "
-"useful for non-cross platform applications run on Unix."
+"But there are many cases that the default encoding is used for reading/"
+"writing only ASCII text. Additionally, such warnings are not useful for non-"
+"cross platform applications run on Unix."
 msgstr ""
 
 #: ../pep-0686.rst:147
@@ -318,8 +315,8 @@ msgstr ""
 
 #: ../pep-0686.rst:150
 msgid ""
-":pep:`387` requires adding a warning for backward incompatible changes. "
-"But it doesn't require using ``DeprecationWarning``. So using optional "
+":pep:`387` requires adding a warning for backward incompatible changes. But "
+"it doesn't require using ``DeprecationWarning``. So using optional "
 "``EncodingWarning`` doesn't violate the :pep:`387`."
 msgstr ""
 
@@ -339,20 +336,20 @@ msgstr ""
 
 #: ../pep-0686.rst:163
 msgid ""
-"With this idea, users can use legacy encoding for "
-"``subprocess.Popen(text=True)`` even in UTF-8 mode."
+"With this idea, users can use legacy encoding for ``subprocess."
+"Popen(text=True)`` even in UTF-8 mode."
 msgstr ""
 
 #: ../pep-0686.rst:166
 msgid ""
-"But this idea makes \"default encoding\" complicated. And this idea is "
-"also backward incompatible."
+"But this idea makes \"default encoding\" complicated. And this idea is also "
+"backward incompatible."
 msgstr ""
 
 #: ../pep-0686.rst:169
 msgid ""
-"So this idea is rejected. Users can disable UTF-8 mode until they replace"
-" ``text=True`` with ``encoding=\"utf-8\"`` or ``encoding=\"locale\"``."
+"So this idea is rejected. Users can disable UTF-8 mode until they replace "
+"``text=True`` with ``encoding=\"utf-8\"`` or ``encoding=\"locale\"``."
 msgstr ""
 
 #: ../pep-0686.rst:174
@@ -361,9 +358,9 @@ msgstr ""
 
 #: ../pep-0686.rst:176
 msgid ""
-"For new users, this change reduces things that need to teach. Users don't"
-" need to learn about text encoding in their first year. They should learn"
-" it when they need to use non-UTF-8 text files."
+"For new users, this change reduces things that need to teach. Users don't "
+"need to learn about text encoding in their first year. They should learn it "
+"when they need to use non-UTF-8 text files."
 msgstr ""
 
 #: ../pep-0686.rst:180
@@ -376,7 +373,6 @@ msgstr ""
 
 #: ../pep-0686.rst:194
 msgid ""
-"This document is placed in the public domain or under the "
-"CC0-1.0-Universal license, whichever is more permissive."
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
 msgstr ""
-

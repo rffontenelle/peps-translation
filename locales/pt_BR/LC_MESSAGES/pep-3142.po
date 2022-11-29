@@ -85,13 +85,13 @@ msgstr ""
 
 #: ../pep-3142.txt:25
 msgid ""
-"A generator expression (:pep:`289`) is a concise method to serve "
-"dynamically-generated objects to list comprehensions (:pep:`202`). "
-"Current generator expressions allow for an \"if\" clause to filter the "
-"objects that are returned to those meeting some set of criteria.  "
-"However, since the \"if\" clause is evaluated for every object that may "
-"be returned, in some cases it is possible that all objects would be "
-"rejected after a certain point.  For example::"
+"A generator expression (:pep:`289`) is a concise method to serve dynamically-"
+"generated objects to list comprehensions (:pep:`202`). Current generator "
+"expressions allow for an \"if\" clause to filter the objects that are "
+"returned to those meeting some set of criteria.  However, since the \"if\" "
+"clause is evaluated for every object that may be returned, in some cases it "
+"is possible that all objects would be rejected after a certain point.  For "
+"example::"
 msgstr ""
 
 #: ../pep-3142.txt:35
@@ -100,17 +100,17 @@ msgstr ""
 
 #: ../pep-3142.txt:44
 msgid ""
-"would yield 0, 1, 2, 3, 4, 5, 6 and 7, but would also consider the "
-"numbers from 8 to 99 and reject them all since ``n*n >= 50`` for numbers "
-"in that range.  Allowing for a \"while\" clause would allow the redundant"
-" tests to be short-circuited::"
+"would yield 0, 1, 2, 3, 4, 5, 6 and 7, but would also consider the numbers "
+"from 8 to 99 and reject them all since ``n*n >= 50`` for numbers in that "
+"range.  Allowing for a \"while\" clause would allow the redundant tests to "
+"be short-circuited::"
 msgstr ""
 
 #: ../pep-3142.txt:51
 msgid ""
-"would also yield 0, 1, 2, 3, 4, 5, 6 and 7, but would stop at 8 since the"
-" condition (``n*n < 50``) is no longer true.  This would be equivalent to"
-" the generator function::"
+"would also yield 0, 1, 2, 3, 4, 5, 6 and 7, but would stop at 8 since the "
+"condition (``n*n < 50``) is no longer true.  This would be equivalent to the "
+"generator function::"
 msgstr ""
 
 #: ../pep-3142.txt:63
@@ -122,11 +122,10 @@ msgstr ""
 
 #: ../pep-3142.txt:70
 msgid ""
-"The takewhile code achieves the same result as the proposed syntax, "
-"albeit in a longer (some would say \"less-elegant\") fashion.  Also, the "
-"takewhile version requires an extra function call (the lambda in the "
-"example above) with the associated performance penalty. A simple test "
-"shows that::"
+"The takewhile code achieves the same result as the proposed syntax, albeit "
+"in a longer (some would say \"less-elegant\") fashion.  Also, the takewhile "
+"version requires an extra function call (the lambda in the example above) "
+"with the associated performance penalty. A simple test shows that::"
 msgstr ""
 
 #: ../pep-3142.txt:78
@@ -135,23 +134,22 @@ msgstr ""
 
 #: ../pep-3142.txt:82
 msgid ""
-"though they achieve similar results.  (The first example uses a "
-"generator; takewhile is an iterator).  If similarly implemented, a "
-"\"while\" clause should perform about the same as the \"if\" clause does "
-"today."
+"though they achieve similar results.  (The first example uses a generator; "
+"takewhile is an iterator).  If similarly implemented, a \"while\" clause "
+"should perform about the same as the \"if\" clause does today."
 msgstr ""
 
 #: ../pep-3142.txt:87
 msgid ""
-"The reader may ask if the \"if\" and \"while\" clauses should be mutually"
-" exclusive.  There are good examples that show that there are times when "
-"both may be used to good advantage. For example::"
+"The reader may ask if the \"if\" and \"while\" clauses should be mutually "
+"exclusive.  There are good examples that show that there are times when both "
+"may be used to good advantage. For example::"
 msgstr ""
 
 #: ../pep-3142.txt:93
 msgid ""
-"should return prime numbers found between 100 and 1000, assuming I have a"
-" ``primes()`` generator that yields prime numbers."
+"should return prime numbers found between 100 and 1000, assuming I have a "
+"``primes()`` generator that yields prime numbers."
 msgstr ""
 
 #: ../pep-3142.txt:96
@@ -177,4 +175,3 @@ msgstr ""
 #: ../pep-3142.txt:111
 msgid "This document has been placed in the public domain."
 msgstr ""
-

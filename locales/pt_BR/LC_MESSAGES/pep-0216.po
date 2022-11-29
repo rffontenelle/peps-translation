@@ -75,21 +75,19 @@ msgstr ""
 
 #: ../pep-0216.txt:22
 msgid ""
-"Named Python objects, such as modules, classes and functions, have a "
-"string attribute called ``__doc__``. If the first expression inside the "
-"definition is a literal string, that string is assigned to the "
-"``__doc__`` attribute."
+"Named Python objects, such as modules, classes and functions, have a string "
+"attribute called ``__doc__``. If the first expression inside the definition "
+"is a literal string, that string is assigned to the ``__doc__`` attribute."
 msgstr ""
 
 #: ../pep-0216.txt:27
 msgid ""
-"The ``__doc__`` attribute is called a documentation string, or docstring."
-" It is often used to summarize the interface of the module, class or "
-"function. However, since there is no common format for documentation "
-"string, tools for extracting docstrings and transforming those into "
-"documentation in a standard format (e.g., DocBook) have not sprang up in "
-"abundance, and those that do exist are for the most part unmaintained and"
-" unused."
+"The ``__doc__`` attribute is called a documentation string, or docstring. It "
+"is often used to summarize the interface of the module, class or function. "
+"However, since there is no common format for documentation string, tools for "
+"extracting docstrings and transforming those into documentation in a "
+"standard format (e.g., DocBook) have not sprang up in abundance, and those "
+"that do exist are for the most part unmaintained and unused."
 msgstr ""
 
 #: ../pep-0216.txt:37
@@ -101,8 +99,8 @@ msgid ""
 "In Perl, most modules are documented in a format called POD -- Plain Old "
 "Documentation. This is an easy-to-type, very low level format which "
 "integrates well with the Perl parser. Many tools exist to turn POD "
-"documentation into other formats: info, HTML and man pages, among others."
-" However, in Perl, the information is not available at run-time."
+"documentation into other formats: info, HTML and man pages, among others. "
+"However, in Perl, the information is not available at run-time."
 msgstr ""
 
 #: ../pep-0216.txt:47
@@ -111,11 +109,11 @@ msgstr ""
 
 #: ../pep-0216.txt:49
 msgid ""
-"In Java, special comments before classes and functions function to "
-"document the code. A program to extract these, and turn them into HTML "
-"documentation is called javadoc, and is part of the standard Java "
-"distribution. However, the only output format that is supported is HTML, "
-"and JavaDoc has a very intimate relationship with HTML."
+"In Java, special comments before classes and functions function to document "
+"the code. A program to extract these, and turn them into HTML documentation "
+"is called javadoc, and is part of the standard Java distribution. However, "
+"the only output format that is supported is HTML, and JavaDoc has a very "
+"intimate relationship with HTML."
 msgstr ""
 
 #: ../pep-0216.txt:57
@@ -124,15 +122,15 @@ msgstr ""
 
 #: ../pep-0216.txt:59
 msgid ""
-"Python documentation string are easy to spot during parsing, and are also"
-" available to the runtime interpreter. This double purpose is a bit "
+"Python documentation string are easy to spot during parsing, and are also "
+"available to the runtime interpreter. This double purpose is a bit "
 "problematic, sometimes: for example, some are reluctant to have too long "
-"docstrings, because they do not want to take much space in the runtime. "
-"In addition, because of the current lack of tools, people read objects' "
-"docstrings by \"print\"ing them, so a tendency to make them brief and "
-"free of markups has sprung up. This tendency hinders writing better "
-"documentation-extraction tools, since it causes docstrings to contain "
-"little information, which is hard to parse."
+"docstrings, because they do not want to take much space in the runtime. In "
+"addition, because of the current lack of tools, people read objects' "
+"docstrings by \"print\"ing them, so a tendency to make them brief and free "
+"of markups has sprung up. This tendency hinders writing better documentation-"
+"extraction tools, since it causes docstrings to contain little information, "
+"which is hard to parse."
 msgstr ""
 
 #: ../pep-0216.txt:71
@@ -144,8 +142,8 @@ msgid ""
 "To counter the objection that the strings take up place in the running "
 "program, it is suggested that documentation extraction tools will "
 "concatenate a maximum prefix of string literals which appear in the "
-"beginning of a definition. The first of these will also be available in "
-"the interactive interpreter, so it should contain a few summary lines."
+"beginning of a definition. The first of these will also be available in the "
+"interactive interpreter, so it should contain a few summary lines."
 msgstr ""
 
 #: ../pep-0216.txt:82
@@ -154,8 +152,8 @@ msgstr ""
 
 #: ../pep-0216.txt:84
 msgid ""
-"These are the goals for the docstring format, as discussed ad nauseam in "
-"the doc-sig."
+"These are the goals for the docstring format, as discussed ad nauseam in the "
+"doc-sig."
 msgstr ""
 
 #: ../pep-0216.txt:87
@@ -168,8 +166,7 @@ msgstr ""
 
 #: ../pep-0216.txt:89
 msgid ""
-"It must not contain information which can be deduced from parsing the "
-"module."
+"It must not contain information which can be deduced from parsing the module."
 msgstr ""
 
 #: ../pep-0216.txt:91
@@ -180,8 +177,8 @@ msgstr ""
 
 #: ../pep-0216.txt:93
 msgid ""
-"It must be possible to write a module's entire documentation in "
-"docstrings, without feeling hampered by the markup language."
+"It must be possible to write a module's entire documentation in docstrings, "
+"without feeling hampered by the markup language."
 msgstr ""
 
 #: ../pep-0216.txt:98
@@ -190,8 +187,7 @@ msgstr ""
 
 #: ../pep-0216.txt:100
 msgid ""
-"For requirement 5. above, it is needed to specify what must be in "
-"docstrings."
+"For requirement 5. above, it is needed to specify what must be in docstrings."
 msgstr ""
 
 #: ../pep-0216.txt:103
@@ -204,22 +200,23 @@ msgstr ""
 
 #: ../pep-0216.txt:107
 msgid ""
-"Example: In the sentence \"The POP3 class\", we need to markup \"POP3\" "
-"so. The parser will be able to guess it is a class from the contents of "
-"the ``poplib`` module, but we need to make it guess."
+"Example: In the sentence \"The POP3 class\", we need to markup \"POP3\" so. "
+"The parser will be able to guess it is a class from the contents of the "
+"``poplib`` module, but we need to make it guess."
 msgstr ""
 
 #: ../pep-0216.txt:111
-msgid "Tags that mean \"this is a Python class/module/class var/instance var...\""
+msgid ""
+"Tags that mean \"this is a Python class/module/class var/instance var...\""
 msgstr ""
 
 #: ../pep-0216.txt:113
 msgid ""
-"Example: The usual Python idiom for singleton class ``A`` is to have "
-"``_A`` as the class, and ``A`` a function which returns ``_A`` objects. "
-"It's usual to document the class, nonetheless, as being ``A``. This "
-"requires the strength to say \"The class ``A``\" and have ``A`` "
-"hyperlinked and marked-up as a class."
+"Example: The usual Python idiom for singleton class ``A`` is to have ``_A`` "
+"as the class, and ``A`` a function which returns ``_A`` objects. It's usual "
+"to document the class, nonetheless, as being ``A``. This requires the "
+"strength to say \"The class ``A``\" and have ``A`` hyperlinked and marked-up "
+"as a class."
 msgstr ""
 
 #: ../pep-0216.txt:119
@@ -240,13 +237,12 @@ msgstr ""
 
 #: ../pep-0216.txt:129
 msgid ""
-"The documentation strings will be in StructuredTextNG "
-"(http://www.zope.org/Members/jim/StructuredTextWiki/StructuredTextNG) "
-"Since StructuredText is not yet strong enough to handle (a) and (b) "
-"above, we will need to extend it. I suggest using ``[<optional "
-"description>:python identifier]``. E.g.: ``[class:POP3]``, "
-"``[:POP3.list]``, etc. If the description is missing, a guess will be "
-"made from the text."
+"The documentation strings will be in StructuredTextNG (http://www.zope.org/"
+"Members/jim/StructuredTextWiki/StructuredTextNG) Since StructuredText is not "
+"yet strong enough to handle (a) and (b) above, we will need to extend it. I "
+"suggest using ``[<optional description>:python identifier]``. E.g.: ``[class:"
+"POP3]``, ``[:POP3.list]``, etc. If the description is missing, a guess will "
+"be made from the text."
 msgstr ""
 
 #: ../pep-0216.txt:139
@@ -255,14 +251,14 @@ msgstr ""
 
 #: ../pep-0216.txt:141
 msgid ""
-"Is there a way to escape characters in ST? If so, how? (example: * at the"
-" beginning of a line without being bullet symbol)"
+"Is there a way to escape characters in ST? If so, how? (example: * at the "
+"beginning of a line without being bullet symbol)"
 msgstr ""
 
 #: ../pep-0216.txt:144
 msgid ""
-"Is my suggestion above for Python symbols compatible with ST-NG? How hard"
-" would it be to extend ST-NG to support it?"
+"Is my suggestion above for Python symbols compatible with ST-NG? How hard "
+"would it be to extend ST-NG to support it?"
 msgstr ""
 
 #: ../pep-0216.txt:147
@@ -271,8 +267,8 @@ msgstr ""
 
 #: ../pep-0216.txt:149
 msgid ""
-"What additional constraint do we enforce on each docstring? "
-"(module/class/function)?"
+"What additional constraint do we enforce on each docstring? (module/class/"
+"function)?"
 msgstr ""
 
 #: ../pep-0216.txt:152
@@ -284,6 +280,6 @@ msgid "Rejected Suggestions"
 msgstr ""
 
 #: ../pep-0216.txt:158
-msgid "XML -- it's very hard to type, and too cluttered to read it comfortably."
+msgid ""
+"XML -- it's very hard to type, and too cluttered to read it comfortably."
 msgstr ""
-

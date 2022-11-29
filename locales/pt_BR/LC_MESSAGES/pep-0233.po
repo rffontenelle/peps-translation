@@ -67,10 +67,10 @@ msgstr ""
 
 #: ../pep-0233.txt:15
 msgid ""
-"This PEP describes a command-line driven online help facility for Python."
-"  The facility should be able to build on existing documentation "
-"facilities such as the Python documentation and docstrings.  It should "
-"also be extensible for new types and modules."
+"This PEP describes a command-line driven online help facility for Python.  "
+"The facility should be able to build on existing documentation facilities "
+"such as the Python documentation and docstrings.  It should also be "
+"extensible for new types and modules."
 msgstr ""
 
 #: ../pep-0233.txt:23
@@ -113,8 +113,7 @@ msgstr ""
 
 #: ../pep-0233.txt:44
 msgid ""
-"In either situation, the output does paging similar to the ``more`` "
-"command."
+"In either situation, the output does paging similar to the ``more`` command."
 msgstr ""
 
 #: ../pep-0233.txt:49
@@ -123,8 +122,8 @@ msgstr ""
 
 #: ../pep-0233.txt:51
 msgid ""
-"The help function is implemented in an ``onlinehelp`` module which is "
-"demand-loaded."
+"The help function is implemented in an ``onlinehelp`` module which is demand-"
+"loaded."
 msgstr ""
 
 #: ../pep-0233.txt:54
@@ -141,22 +140,22 @@ msgstr ""
 
 #: ../pep-0233.txt:63
 msgid ""
-"The module should be able to extract module information from either the "
-"HTML or LaTeX versions of the Python documentation. Links should be "
-"accommodated in a \"lynx-like\" manner."
+"The module should be able to extract module information from either the HTML "
+"or LaTeX versions of the Python documentation. Links should be accommodated "
+"in a \"lynx-like\" manner."
 msgstr ""
 
 #: ../pep-0233.txt:67
 msgid ""
 "Over time, it should also be able to recognize when docstrings are in "
-"\"special\" syntaxes like structured text, HTML and LaTeX and decode them"
-" appropriately."
+"\"special\" syntaxes like structured text, HTML and LaTeX and decode them "
+"appropriately."
 msgstr ""
 
 #: ../pep-0233.txt:71
 msgid ""
-"A prototype implementation is available with the Python source "
-"distribution as ``nondist/sandbox/doctools/onlinehelp.py``."
+"A prototype implementation is available with the Python source distribution "
+"as ``nondist/sandbox/doctools/onlinehelp.py``."
 msgstr ""
 
 #: ../pep-0233.txt:76
@@ -217,8 +216,7 @@ msgstr ""
 
 #: ../pep-0233.txt:106
 msgid ""
-"This module will attempt to import modules with the same names as "
-"requested topics.  Don't use the modules if you are not confident that "
-"everything in your ``PYTHONPATH`` is from a trusted source."
+"This module will attempt to import modules with the same names as requested "
+"topics.  Don't use the modules if you are not confident that everything in "
+"your ``PYTHONPATH`` is from a trusted source."
 msgstr ""
-

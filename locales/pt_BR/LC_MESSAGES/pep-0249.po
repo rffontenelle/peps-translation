@@ -75,33 +75,32 @@ msgstr ""
 
 #: ../pep-0249.txt:16
 msgid ""
-"This API has been defined to encourage similarity between the Python "
-"modules that are used to access databases.  By doing this, we hope to "
-"achieve a consistency leading to more easily understood modules, code "
-"that is generally more portable across databases, and a broader reach of "
-"database connectivity from Python."
+"This API has been defined to encourage similarity between the Python modules "
+"that are used to access databases.  By doing this, we hope to achieve a "
+"consistency leading to more easily understood modules, code that is "
+"generally more portable across databases, and a broader reach of database "
+"connectivity from Python."
 msgstr ""
 
 #: ../pep-0249.txt:22
 msgid ""
-"Comments and questions about this specification may be directed to the "
-"`SIG for Database Interfacing with Python <db-sig@python.org>`__."
+"Comments and questions about this specification may be directed to the `SIG "
+"for Database Interfacing with Python <db-sig@python.org>`__."
 msgstr ""
 
 #: ../pep-0249.txt:25
 msgid ""
 "For more information on database interfacing with Python and available "
-"packages see the `Database Topic Guide "
-"<http://www.python.org/topics/database/>`__."
+"packages see the `Database Topic Guide <http://www.python.org/topics/"
+"database/>`__."
 msgstr ""
 
 #: ../pep-0249.txt:29
 msgid ""
-"This document describes the Python Database API Specification 2.0 and a "
-"set of common optional extensions.  The previous version 1.0 version is "
-"still available as reference, in :PEP:`248`. Package writers are "
-"encouraged to use this version of the specification as basis for new "
-"interfaces."
+"This document describes the Python Database API Specification 2.0 and a set "
+"of common optional extensions.  The previous version 1.0 version is still "
+"available as reference, in :PEP:`248`. Package writers are encouraged to use "
+"this version of the specification as basis for new interfaces."
 msgstr ""
 
 #: ../pep-0249.txt:37
@@ -150,8 +149,8 @@ msgstr ""
 
 #: ../pep-0249.txt:64
 msgid ""
-"Currently only the strings \"``1.0``\" and \"``2.0``\" are allowed. If "
-"not given, a DB-API 1.0 level interface should be assumed."
+"Currently only the strings \"``1.0``\" and \"``2.0``\" are allowed. If not "
+"given, a DB-API 1.0 level interface should be assumed."
 msgstr ""
 
 #: ../pep-0249.txt:89
@@ -160,8 +159,8 @@ msgstr ""
 
 #: ../pep-0249.txt:71
 msgid ""
-"Integer constant stating the level of thread safety the interface "
-"supports.  Possible values are:"
+"Integer constant stating the level of thread safety the interface supports.  "
+"Possible values are:"
 msgstr ""
 
 #: ../pep-0249.txt:75
@@ -207,10 +206,10 @@ msgstr ""
 #: ../pep-0249.txt:83
 msgid ""
 "Sharing in the above context means that two threads may use a resource "
-"without wrapping it using a mutex semaphore to implement resource "
-"locking.  Note that you cannot always make external resources thread safe"
-" by managing access using a mutex: the resource may rely on global "
-"variables or other external sources that are beyond your control."
+"without wrapping it using a mutex semaphore to implement resource locking.  "
+"Note that you cannot always make external resources thread safe by managing "
+"access using a mutex: the resource may rely on global variables or other "
+"external sources that are beyond your control."
 msgstr ""
 
 #: ../pep-0249.txt:106
@@ -219,8 +218,8 @@ msgstr ""
 
 #: ../pep-0249.txt:94
 msgid ""
-"String constant stating the type of parameter marker formatting expected "
-"by the interface. Possible values are [2]_:"
+"String constant stating the type of parameter marker formatting expected by "
+"the interface. Possible values are [2]_:"
 msgstr ""
 
 #: ../pep-0249.txt:98
@@ -296,10 +295,10 @@ msgstr ""
 
 #: ../pep-0249.txt:125
 msgid ""
-"Exception that is the base class of all other error exceptions. You can "
-"use this to catch all errors with one single ``except`` statement. "
-"Warnings are not considered errors and thus should not use this class as "
-"base. It must be a subclass of the Python ``Exception`` class [10]_."
+"Exception that is the base class of all other error exceptions. You can use "
+"this to catch all errors with one single ``except`` statement. Warnings are "
+"not considered errors and thus should not use this class as base. It must be "
+"a subclass of the Python ``Exception`` class [10]_."
 msgstr ""
 
 #: ../pep-0249.txt:138
@@ -318,8 +317,8 @@ msgstr ""
 
 #: ../pep-0249.txt:143
 msgid ""
-"Exception raised for errors that are related to the database.  It must be"
-" a subclass of Error_."
+"Exception raised for errors that are related to the database.  It must be a "
+"subclass of Error_."
 msgstr ""
 
 #: ../pep-0249.txt:153
@@ -328,9 +327,9 @@ msgstr ""
 
 #: ../pep-0249.txt:150
 msgid ""
-"Exception raised for errors that are due to problems with the processed "
-"data like division by zero, numeric value out of range, etc. It must be a"
-" subclass of DatabaseError_."
+"Exception raised for errors that are due to problems with the processed data "
+"like division by zero, numeric value out of range, etc. It must be a "
+"subclass of DatabaseError_."
 msgstr ""
 
 #: ../pep-0249.txt:164
@@ -339,11 +338,11 @@ msgstr ""
 
 #: ../pep-0249.txt:158
 msgid ""
-"Exception raised for errors that are related to the database's operation "
-"and not necessarily under the control of the programmer, e.g. an "
-"unexpected disconnect occurs, the data source name is not found, a "
-"transaction could not be processed, a memory allocation error occurred "
-"during processing, etc.  It must be a subclass of DatabaseError_."
+"Exception raised for errors that are related to the database's operation and "
+"not necessarily under the control of the programmer, e.g. an unexpected "
+"disconnect occurs, the data source name is not found, a transaction could "
+"not be processed, a memory allocation error occurred during processing, "
+"etc.  It must be a subclass of DatabaseError_."
 msgstr ""
 
 #: ../pep-0249.txt:172
@@ -352,9 +351,8 @@ msgstr ""
 
 #: ../pep-0249.txt:169
 msgid ""
-"Exception raised when the relational integrity of the database is "
-"affected, e.g. a foreign key check fails.  It must be a subclass of "
-"DatabaseError_."
+"Exception raised when the relational integrity of the database is affected, "
+"e.g. a foreign key check fails.  It must be a subclass of DatabaseError_."
 msgstr ""
 
 #: ../pep-0249.txt:180
@@ -363,9 +361,9 @@ msgstr ""
 
 #: ../pep-0249.txt:177
 msgid ""
-"Exception raised when the database encounters an internal error, e.g. the"
-" cursor is not valid anymore, the transaction is out of sync, etc.  It "
-"must be a subclass of DatabaseError_."
+"Exception raised when the database encounters an internal error, e.g. the "
+"cursor is not valid anymore, the transaction is out of sync, etc.  It must "
+"be a subclass of DatabaseError_."
 msgstr ""
 
 #: ../pep-0249.txt:189
@@ -386,9 +384,9 @@ msgstr ""
 #: ../pep-0249.txt:194
 msgid ""
 "Exception raised in case a method or database API was used which is not "
-"supported by the database, e.g. requesting a `.rollback()`_ on a "
-"connection that does not support transaction or has transactions turned "
-"off.  It must be a subclass of DatabaseError_."
+"supported by the database, e.g. requesting a `.rollback()`_ on a connection "
+"that does not support transaction or has transactions turned off.  It must "
+"be a subclass of DatabaseError_."
 msgstr ""
 
 #: ../pep-0249.txt:200
@@ -397,8 +395,8 @@ msgstr ""
 
 #: ../pep-0249.txt:217
 msgid ""
-"The values of these exceptions are not defined. They should give the user"
-" a fairly good idea of what went wrong, though."
+"The values of these exceptions are not defined. They should give the user a "
+"fairly good idea of what went wrong, though."
 msgstr ""
 
 #: ../pep-0249.txt:224
@@ -418,16 +416,17 @@ msgid "`.close() <#Connection.close>`_"
 msgstr ""
 
 #: ../pep-0249.txt:236
-msgid "Close the connection now (rather than whenever ``.__del__()`` is called)."
+msgid ""
+"Close the connection now (rather than whenever ``.__del__()`` is called)."
 msgstr ""
 
 #: ../pep-0249.txt:239
 msgid ""
 "The connection will be unusable from this point forward; an Error_ (or "
-"subclass) exception will be raised if any operation is attempted with the"
-" connection. The same applies to all cursor objects trying to use the "
-"connection.  Note that closing a connection without committing the "
-"changes first will cause an implicit rollback to be performed."
+"subclass) exception will be raised if any operation is attempted with the "
+"connection. The same applies to all cursor objects trying to use the "
+"connection.  Note that closing a connection without committing the changes "
+"first will cause an implicit rollback to be performed."
 msgstr ""
 
 #: ../pep-0249.txt:258
@@ -456,16 +455,16 @@ msgstr ""
 
 #: ../pep-0249.txt:264
 msgid ""
-"This method is optional since not all databases provide transaction "
-"support. [3]_"
+"This method is optional since not all databases provide transaction support. "
+"[3]_"
 msgstr ""
 
 #: ../pep-0249.txt:267
 msgid ""
-"In case a database does provide transactions this method causes the "
-"database to roll back to the start of any pending transaction.  Closing a"
-" connection without committing the changes first will cause an implicit "
-"rollback to be performed."
+"In case a database does provide transactions this method causes the database "
+"to roll back to the start of any pending transaction.  Closing a connection "
+"without committing the changes first will cause an implicit rollback to be "
+"performed."
 msgstr ""
 
 #: ../pep-0249.txt:282
@@ -478,8 +477,8 @@ msgstr ""
 
 #: ../pep-0249.txt:278
 msgid ""
-"If the database does not provide a direct cursor concept, the module will"
-" have to emulate cursors using other means to the extent needed by this "
+"If the database does not provide a direct cursor concept, the module will "
+"have to emulate cursors using other means to the extent needed by this "
 "specification.  [4]_"
 msgstr ""
 
@@ -490,12 +489,12 @@ msgstr ""
 #: ../pep-0249.txt:289
 msgid ""
 "These objects represent a database cursor, which is used to manage the "
-"context of a fetch operation. Cursors created from the same connection "
-"are not isolated, *i.e.*, any changes done to the database by a cursor "
-"are immediately visible by the other cursors.  Cursors created from "
-"different connections can or can not be isolated, depending on how the "
-"transaction support is implemented (see also the connection's "
-"`.rollback`_\\ () and `.commit`_\\ () methods)."
+"context of a fetch operation. Cursors created from the same connection are "
+"not isolated, *i.e.*, any changes done to the database by a cursor are "
+"immediately visible by the other cursors.  Cursors created from different "
+"connections can or can not be isolated, depending on how the transaction "
+"support is implemented (see also the connection's `.rollback`_\\ () and `."
+"commit`_\\ () methods)."
 msgstr ""
 
 #: ../pep-0249.txt:297
@@ -515,7 +514,8 @@ msgid "This read-only attribute is a sequence of 7-item sequences."
 msgstr ""
 
 #: ../pep-0249.txt:308
-msgid "Each of these sequences contains information describing one result column:"
+msgid ""
+"Each of these sequences contains information describing one result column:"
 msgstr ""
 
 #: ../pep-0249.txt:311
@@ -548,22 +548,22 @@ msgstr ""
 
 #: ../pep-0249.txt:319
 msgid ""
-"The first two items (``name`` and ``type_code``) are mandatory, the other"
-" five are optional and are set to ``None`` if no meaningful values can be"
-" provided."
+"The first two items (``name`` and ``type_code``) are mandatory, the other "
+"five are optional and are set to ``None`` if no meaningful values can be "
+"provided."
 msgstr ""
 
 #: ../pep-0249.txt:323
 msgid ""
-"This attribute will be ``None`` for operations that do not return rows or"
-" if the cursor has not had an operation invoked via the `.execute*()`_ "
-"method yet."
+"This attribute will be ``None`` for operations that do not return rows or if "
+"the cursor has not had an operation invoked via the `.execute*()`_ method "
+"yet."
 msgstr ""
 
 #: ../pep-0249.txt:327
 msgid ""
-"The ``type_code`` can be interpreted by comparing it to the `Type "
-"Objects`_ specified in the section below."
+"The ``type_code`` can be interpreted by comparing it to the `Type Objects`_ "
+"specified in the section below."
 msgstr ""
 
 #: ../pep-0249.txt:345
@@ -572,22 +572,22 @@ msgstr ""
 
 #: ../pep-0249.txt:334
 msgid ""
-"This read-only attribute specifies the number of rows that the last "
-"`.execute*()`_ produced (for DQL statements like ``SELECT``) or affected "
-"(for DML statements like ``UPDATE`` or ``INSERT``). [9]_"
+"This read-only attribute specifies the number of rows that the last `."
+"execute*()`_ produced (for DQL statements like ``SELECT``) or affected (for "
+"DML statements like ``UPDATE`` or ``INSERT``). [9]_"
 msgstr ""
 
 #: ../pep-0249.txt:338
 msgid ""
 "The attribute is -1 in case no `.execute*()`_ has been performed on the "
-"cursor or the rowcount of the last operation is cannot be determined by "
-"the interface. [7]_"
+"cursor or the rowcount of the last operation is cannot be determined by the "
+"interface. [7]_"
 msgstr ""
 
 #: ../pep-0249.txt:343
 msgid ""
-"Future versions of the DB API specification could redefine the latter "
-"case to have the object return ``None`` instead of -1."
+"Future versions of the DB API specification could redefine the latter case "
+"to have the object return ``None`` instead of -1."
 msgstr ""
 
 #: ../pep-0249.txt:348
@@ -600,16 +600,16 @@ msgstr ""
 
 #: ../pep-0249.txt:354
 msgid ""
-"(This method is optional since not all databases provide stored "
-"procedures. [3]_)"
+"(This method is optional since not all databases provide stored procedures. "
+"[3]_)"
 msgstr ""
 
 #: ../pep-0249.txt:357
 msgid ""
 "Call a stored database procedure with the given name. The sequence of "
 "parameters must contain one entry for each argument that the procedure "
-"expects. The result of the call is returned as modified copy of the input"
-" sequence. Input parameters are left untouched, output and input/output "
+"expects. The result of the call is returned as modified copy of the input "
+"sequence. Input parameters are left untouched, output and input/output "
 "parameters replaced with possibly new values."
 msgstr ""
 
@@ -629,9 +629,8 @@ msgstr ""
 
 #: ../pep-0249.txt:375
 msgid ""
-"The cursor will be unusable from this point forward; an Error_ (or "
-"subclass) exception will be raised if any operation is attempted with the"
-" cursor."
+"The cursor will be unusable from this point forward; an Error_ (or subclass) "
+"exception will be raised if any operation is attempted with the cursor."
 msgstr ""
 
 #: ../pep-0249.txt:411
@@ -645,33 +644,31 @@ msgstr ""
 #: ../pep-0249.txt:389
 msgid ""
 "Parameters may be provided as sequence or mapping and will be bound to "
-"variables in the operation.  Variables are specified in a database-"
-"specific notation (see the module's paramstyle_ attribute for details). "
-"[5]_"
+"variables in the operation.  Variables are specified in a database-specific "
+"notation (see the module's paramstyle_ attribute for details). [5]_"
 msgstr ""
 
 #: ../pep-0249.txt:394
 msgid ""
-"A reference to the operation will be retained by the cursor.  If the same"
-" operation object is passed in again, then the cursor can optimize its "
-"behavior.  This is most effective for algorithms where the same operation"
-" is used, but different parameters are bound to it (many times)."
+"A reference to the operation will be retained by the cursor.  If the same "
+"operation object is passed in again, then the cursor can optimize its "
+"behavior.  This is most effective for algorithms where the same operation is "
+"used, but different parameters are bound to it (many times)."
 msgstr ""
 
 #: ../pep-0249.txt:400
 msgid ""
-"For maximum efficiency when reusing an operation, it is best to use the "
-"`.setinputsizes()`_ method to specify the parameter types and sizes ahead"
-" of time.  It is legal for a parameter to not match the predefined "
-"information; the implementation should compensate, possibly with a loss "
-"of efficiency."
+"For maximum efficiency when reusing an operation, it is best to use the `."
+"setinputsizes()`_ method to specify the parameter types and sizes ahead of "
+"time.  It is legal for a parameter to not match the predefined information; "
+"the implementation should compensate, possibly with a loss of efficiency."
 msgstr ""
 
 #: ../pep-0249.txt:406
 msgid ""
 "The parameters may also be specified as list of tuples to e.g. insert "
-"multiple rows in a single operation, but this kind of usage is "
-"deprecated: `.executemany()`_ should be used instead."
+"multiple rows in a single operation, but this kind of usage is deprecated: `."
+"executemany()`_ should be used instead."
 msgstr ""
 
 #: ../pep-0249.txt:410 ../pep-0249.txt:434
@@ -684,30 +681,29 @@ msgstr ""
 
 #: ../pep-0249.txt:417
 msgid ""
-"Prepare a database operation (query or command) and then execute it "
-"against all parameter sequences or mappings found in the sequence "
+"Prepare a database operation (query or command) and then execute it against "
+"all parameter sequences or mappings found in the sequence "
 "*seq_of_parameters*."
 msgstr ""
 
 #: ../pep-0249.txt:421
 msgid ""
-"Modules are free to implement this method using multiple calls to the "
-"`.execute()`_ method or by using array operations to have the database "
-"process the sequence as a whole in one call."
+"Modules are free to implement this method using multiple calls to the `."
+"execute()`_ method or by using array operations to have the database process "
+"the sequence as a whole in one call."
 msgstr ""
 
 #: ../pep-0249.txt:425
 msgid ""
-"Use of this method for an operation which produces one or more result "
-"sets constitutes undefined behavior, and the implementation is permitted "
-"(but not required) to raise an exception when it detects that a result "
-"set has been created by an invocation of the operation."
+"Use of this method for an operation which produces one or more result sets "
+"constitutes undefined behavior, and the implementation is permitted (but not "
+"required) to raise an exception when it detects that a result set has been "
+"created by an invocation of the operation."
 msgstr ""
 
 #: ../pep-0249.txt:431
 msgid ""
-"The same comments as for `.execute()`_ also apply accordingly to this "
-"method."
+"The same comments as for `.execute()`_ also apply accordingly to this method."
 msgstr ""
 
 #: ../pep-0249.txt:450
@@ -716,15 +712,15 @@ msgstr ""
 
 #: ../pep-0249.txt:444
 msgid ""
-"Fetch the next row of a query result set, returning a single sequence, or"
-" ``None`` when no more data is available. [6]_"
+"Fetch the next row of a query result set, returning a single sequence, or "
+"``None`` when no more data is available. [6]_"
 msgstr ""
 
 #: ../pep-0249.txt:447 ../pep-0249.txt:467 ../pep-0249.txt:487
 #: ../pep-0249.txt:506
 msgid ""
-"An Error_ (or subclass) exception is raised if the previous call to "
-"`.execute*()`_ did not produce any result set or no call was issued yet."
+"An Error_ (or subclass) exception is raised if the previous call to `."
+"execute*()`_ did not produce any result set or no call was issued yet."
 msgstr ""
 
 #: ../pep-0249.txt:476
@@ -740,20 +736,19 @@ msgstr ""
 
 #: ../pep-0249.txt:460
 msgid ""
-"The number of rows to fetch per call is specified by the parameter.  If "
-"it is not given, the cursor's arraysize determines the number of rows to "
-"be fetched. The method should try to fetch as many rows as indicated by "
-"the size parameter. If this is not possible due to the specified number "
-"of rows not being available, fewer rows may be returned."
+"The number of rows to fetch per call is specified by the parameter.  If it "
+"is not given, the cursor's arraysize determines the number of rows to be "
+"fetched. The method should try to fetch as many rows as indicated by the "
+"size parameter. If this is not possible due to the specified number of rows "
+"not being available, fewer rows may be returned."
 msgstr ""
 
 #: ../pep-0249.txt:471
 msgid ""
 "Note there are performance considerations involved with the *size* "
-"parameter.  For optimal performance, it is usually best to use the "
-"`.arraysize`_ attribute.  If the size parameter is used, then it is best "
-"for it to retain the same value from one `.fetchmany()`_ call to the "
-"next."
+"parameter.  For optimal performance, it is usually best to use the `."
+"arraysize`_ attribute.  If the size parameter is used, then it is best for "
+"it to retain the same value from one `.fetchmany()`_ call to the next."
 msgstr ""
 
 #: ../pep-0249.txt:490
@@ -762,9 +757,9 @@ msgstr ""
 
 #: ../pep-0249.txt:482
 msgid ""
-"Fetch all (remaining) rows of a query result, returning them as a "
-"sequence of sequences (e.g. a list of tuples).  Note that the cursor's "
-"arraysize attribute can affect the performance of this operation."
+"Fetch all (remaining) rows of a query result, returning them as a sequence "
+"of sequences (e.g. a list of tuples).  Note that the cursor's arraysize "
+"attribute can affect the performance of this operation."
 msgstr ""
 
 #: ../pep-0249.txt:509
@@ -779,15 +774,15 @@ msgstr ""
 
 #: ../pep-0249.txt:499
 msgid ""
-"This method will make the cursor skip to the next available set, "
-"discarding any remaining rows from the current set."
+"This method will make the cursor skip to the next available set, discarding "
+"any remaining rows from the current set."
 msgstr ""
 
 #: ../pep-0249.txt:502
 msgid ""
 "If there are no more sets, the method returns ``None``. Otherwise, it "
-"returns a true value and subsequent calls to the `.fetch*()`_ methods "
-"will return rows from the next result set."
+"returns a true value and subsequent calls to the `.fetch*()`_ methods will "
+"return rows from the next result set."
 msgstr ""
 
 #: ../pep-0249.txt:522
@@ -796,17 +791,16 @@ msgstr ""
 
 #: ../pep-0249.txt:514
 msgid ""
-"This read/write attribute specifies the number of rows to fetch at a time"
-" with `.fetchmany()`_. It defaults to 1 meaning to fetch a single row at "
-"a time."
+"This read/write attribute specifies the number of rows to fetch at a time "
+"with `.fetchmany()`_. It defaults to 1 meaning to fetch a single row at a "
+"time."
 msgstr ""
 
 #: ../pep-0249.txt:518
 msgid ""
-"Implementations must observe this value with respect to the "
-"`.fetchmany()`_ method, but are free to interact with the database a "
-"single row at a time. It may also be used in the implementation of "
-"`.executemany()`_."
+"Implementations must observe this value with respect to the `.fetchmany()`_ "
+"method, but are free to interact with the database a single row at a time. "
+"It may also be used in the implementation of `.executemany()`_."
 msgstr ""
 
 #: ../pep-0249.txt:544
@@ -815,18 +809,18 @@ msgstr ""
 
 #: ../pep-0249.txt:528
 msgid ""
-"This can be used before a call to `.execute*()`_ to predefine memory "
-"areas for the operation's parameters."
+"This can be used before a call to `.execute*()`_ to predefine memory areas "
+"for the operation's parameters."
 msgstr ""
 
 #: ../pep-0249.txt:531
 msgid ""
-"*sizes* is specified as a sequence — one item for each input parameter.  "
-"The item should be a Type Object that corresponds to the input that will "
-"be used, or it should be an integer specifying the maximum length of a "
-"string parameter.  If the item is ``None``, then no predefined memory "
-"area will be reserved for that column (this is useful to avoid predefined"
-" areas for large inputs)."
+"*sizes* is specified as a sequence — one item for each input parameter.  The "
+"item should be a Type Object that corresponds to the input that will be "
+"used, or it should be an integer specifying the maximum length of a string "
+"parameter.  If the item is ``None``, then no predefined memory area will be "
+"reserved for that column (this is useful to avoid predefined areas for large "
+"inputs)."
 msgstr ""
 
 #: ../pep-0249.txt:539 ../pep-0249.txt:555
@@ -835,8 +829,8 @@ msgstr ""
 
 #: ../pep-0249.txt:542 ../pep-0249.txt:558
 msgid ""
-"Implementations are free to have this method do nothing and users are "
-"free to not use it."
+"Implementations are free to have this method do nothing and users are free "
+"to not use it."
 msgstr ""
 
 #: ../pep-0249.txt:560
@@ -847,8 +841,8 @@ msgstr ""
 msgid ""
 "Set a column buffer size for fetches of large columns (e.g. ``LONG``\\s, "
 "``BLOB``\\s, etc.).  The column is specified as an index into the result "
-"sequence.  Not specifying the column will set the default size for all "
-"large columns in the cursor."
+"sequence.  Not specifying the column will set the default size for all large "
+"columns in the cursor."
 msgstr ""
 
 #: ../pep-0249.txt:565
@@ -857,33 +851,32 @@ msgstr ""
 
 #: ../pep-0249.txt:567
 msgid ""
-"Many databases need to have the input in a particular format for binding "
-"to an operation's input parameters.  For example, if an input is destined"
-" for a ``DATE`` column, then it must be bound to the database in a "
-"particular string format.  Similar problems exist for \"Row ID\" columns "
-"or large binary items (e.g. blobs or ``RAW`` columns).  This presents "
-"problems for Python since the parameters to the `.execute*()`_ method are"
-" untyped.  When the database module sees a Python string object, it "
-"doesn't know if it should be bound as a simple ``CHAR`` column, as a raw "
-"``BINARY`` item, or as a ``DATE``."
+"Many databases need to have the input in a particular format for binding to "
+"an operation's input parameters.  For example, if an input is destined for a "
+"``DATE`` column, then it must be bound to the database in a particular "
+"string format.  Similar problems exist for \"Row ID\" columns or large "
+"binary items (e.g. blobs or ``RAW`` columns).  This presents problems for "
+"Python since the parameters to the `.execute*()`_ method are untyped.  When "
+"the database module sees a Python string object, it doesn't know if it "
+"should be bound as a simple ``CHAR`` column, as a raw ``BINARY`` item, or as "
+"a ``DATE``."
 msgstr ""
 
 #: ../pep-0249.txt:577
 msgid ""
 "To overcome this problem, a module must provide the constructors defined "
-"below to create objects that can hold special values.  When passed to the"
-" cursor methods, the module can then detect the proper type of the input "
+"below to create objects that can hold special values.  When passed to the "
+"cursor methods, the module can then detect the proper type of the input "
 "parameter and bind it accordingly."
 msgstr ""
 
 #: ../pep-0249.txt:582
 msgid ""
-"A Cursor_ Object's description attribute returns information about each "
-"of the result columns of a query.  The ``type_code`` must compare equal "
-"to one of Type Objects defined below. Type Objects may be equal to more "
-"than one type code (e.g. ``DATETIME`` could be equal to the type codes "
-"for date, time and timestamp columns; see the `Implementation Hints`_ "
-"below for details)."
+"A Cursor_ Object's description attribute returns information about each of "
+"the result columns of a query.  The ``type_code`` must compare equal to one "
+"of Type Objects defined below. Type Objects may be equal to more than one "
+"type code (e.g. ``DATETIME`` could be equal to the type codes for date, time "
+"and timestamp columns; see the `Implementation Hints`_ below for details)."
 msgstr ""
 
 #: ../pep-0249.txt:589
@@ -920,10 +913,10 @@ msgstr ""
 
 #: ../pep-0249.txt:612
 msgid ""
-"This function constructs an object holding a date value from the given "
-"ticks value (number of seconds since the epoch; see the documentation of "
-"`the standard Python time module "
-"<http://docs.python.org/library/time.html>`__ for details)."
+"This function constructs an object holding a date value from the given ticks "
+"value (number of seconds since the epoch; see the documentation of `the "
+"standard Python time module <http://docs.python.org/library/time.html>`__ "
+"for details)."
 msgstr ""
 
 #: ../pep-0249.txt:623
@@ -932,9 +925,9 @@ msgstr ""
 
 #: ../pep-0249.txt:620
 msgid ""
-"This function constructs an object holding a time value from the given "
-"ticks value (number of seconds since the epoch; see the documentation of "
-"the standard Python time module for details)."
+"This function constructs an object holding a time value from the given ticks "
+"value (number of seconds since the epoch; see the documentation of the "
+"standard Python time module for details)."
 msgstr ""
 
 #: ../pep-0249.txt:631
@@ -943,9 +936,9 @@ msgstr ""
 
 #: ../pep-0249.txt:628
 msgid ""
-"This function constructs an object holding a time stamp value from the "
-"given ticks value (number of seconds since the epoch; see the "
-"documentation of the standard Python time module for details)."
+"This function constructs an object holding a time stamp value from the given "
+"ticks value (number of seconds since the epoch; see the documentation of the "
+"standard Python time module for details)."
 msgstr ""
 
 #: ../pep-0249.txt:638
@@ -954,8 +947,8 @@ msgstr ""
 
 #: ../pep-0249.txt:636
 msgid ""
-"This function constructs an object capable of holding a binary (long) "
-"string value."
+"This function constructs an object capable of holding a binary (long) string "
+"value."
 msgstr ""
 
 #: ../pep-0249.txt:645
@@ -964,8 +957,8 @@ msgstr ""
 
 #: ../pep-0249.txt:643
 msgid ""
-"This type object is used to describe columns in a database that are "
-"string-based (e.g. ``CHAR``)."
+"This type object is used to describe columns in a database that are string-"
+"based (e.g. ``CHAR``)."
 msgstr ""
 
 #: ../pep-0249.txt:652
@@ -974,8 +967,8 @@ msgstr ""
 
 #: ../pep-0249.txt:650
 msgid ""
-"This type object is used to describe (long) binary columns in a database "
-"(e.g. ``LONG``, ``RAW``, ``BLOB``\\s)."
+"This type object is used to describe (long) binary columns in a database (e."
+"g. ``LONG``, ``RAW``, ``BLOB``\\s)."
 msgstr ""
 
 #: ../pep-0249.txt:659
@@ -999,7 +992,8 @@ msgid "`ROWID`_ type"
 msgstr ""
 
 #: ../pep-0249.txt:670
-msgid "This type object is used to describe the \"Row ID\" column in a database."
+msgid ""
+"This type object is used to describe the \"Row ID\" column in a database."
 msgstr ""
 
 #: ../pep-0249.txt:674
@@ -1010,8 +1004,8 @@ msgstr ""
 
 #: ../pep-0249.txt:678
 msgid ""
-"Usage of Unix ticks for database interfacing can cause troubles because "
-"of the limited date range they cover."
+"Usage of Unix ticks for database interfacing can cause troubles because of "
+"the limited date range they cover."
 msgstr ""
 
 #: ../pep-0249.txt:686
@@ -1020,12 +1014,12 @@ msgstr ""
 
 #: ../pep-0249.txt:688
 msgid ""
-"Date/time objects can be implemented as `Python datetime module "
-"<http://docs.python.org/library/datetime.html>`__ objects (available "
-"since Python 2.3, with a C API since 2.4) or using the `mxDateTime "
-"<http://www.egenix.com/products/python/mxBase/mxDateTime/>`_ package "
-"(available for all Python versions since 1.5.2). They both provide all "
-"necessary constructors and methods at Python and C level."
+"Date/time objects can be implemented as `Python datetime module <http://docs."
+"python.org/library/datetime.html>`__ objects (available since Python 2.3, "
+"with a C API since 2.4) or using the `mxDateTime <http://www.egenix.com/"
+"products/python/mxBase/mxDateTime/>`_ package (available for all Python "
+"versions since 1.5.2). They both provide all necessary constructors and "
+"methods at Python and C level."
 msgstr ""
 
 #: ../pep-0249.txt:695
@@ -1036,18 +1030,17 @@ msgstr ""
 
 #: ../pep-0249.txt:709
 msgid ""
-"The preferred object type for Binary objects are the buffer types "
-"available in standard Python starting with version 1.5.2.  Please see the"
-" Python documentation for details. For information about the C interface "
-"have a look at ``Include/bufferobject.h`` and ``Objects/bufferobject.c`` "
-"in the Python source distribution."
+"The preferred object type for Binary objects are the buffer types available "
+"in standard Python starting with version 1.5.2.  Please see the Python "
+"documentation for details. For information about the C interface have a look "
+"at ``Include/bufferobject.h`` and ``Objects/bufferobject.c`` in the Python "
+"source distribution."
 msgstr ""
 
 #: ../pep-0249.txt:715
 msgid ""
-"This Python class allows implementing the above type objects even though "
-"the description type code field yields multiple values for on type "
-"object::"
+"This Python class allows implementing the above type objects even though the "
+"description type code field yields multiple values for on type object::"
 msgstr ""
 
 #: ../pep-0249.txt:730
@@ -1074,29 +1067,28 @@ msgstr ""
 
 #: ../pep-0249.txt:773
 msgid ""
-"During the lifetime of DB API 2.0, module authors have often extended "
-"their implementations beyond what is required by this DB API "
-"specification. To enhance compatibility and to provide a clean upgrade "
-"path to possible future versions of the specification, this section "
-"defines a set of common extensions to the core DB API 2.0 specification."
+"During the lifetime of DB API 2.0, module authors have often extended their "
+"implementations beyond what is required by this DB API specification. To "
+"enhance compatibility and to provide a clean upgrade path to possible future "
+"versions of the specification, this section defines a set of common "
+"extensions to the core DB API 2.0 specification."
 msgstr ""
 
 #: ../pep-0249.txt:780
 msgid ""
-"As with all DB API optional features, the database module authors are "
-"free to not implement these additional attributes and methods (using them"
-" will then result in an ``AttributeError``) or to raise a "
-"NotSupportedError_ in case the availability can only be checked at run-"
-"time."
+"As with all DB API optional features, the database module authors are free "
+"to not implement these additional attributes and methods (using them will "
+"then result in an ``AttributeError``) or to raise a NotSupportedError_ in "
+"case the availability can only be checked at run-time."
 msgstr ""
 
 #: ../pep-0249.txt:786
 msgid ""
-"It has been proposed to make usage of these extensions optionally visible"
-" to the programmer by issuing Python warnings through the Python warning "
+"It has been proposed to make usage of these extensions optionally visible to "
+"the programmer by issuing Python warnings through the Python warning "
 "framework. To make this feature useful, the warning messages must be "
-"standardized in order to be able to mask them. These standard messages "
-"are referred to below as *Warning Message*."
+"standardized in order to be able to mask them. These standard messages are "
+"referred to below as *Warning Message*."
 msgstr ""
 
 #: ../pep-0249.txt:805
@@ -1111,9 +1103,9 @@ msgstr ""
 
 #: ../pep-0249.txt:800
 msgid ""
-"The index can be seen as index of the cursor in a sequence (the result "
-"set). The next fetch operation will fetch the row indexed by "
-"`.rownumber`_ in that sequence."
+"The index can be seen as index of the cursor in a sequence (the result set). "
+"The next fetch operation will fetch the row indexed by `.rownumber`_ in that "
+"sequence."
 msgstr ""
 
 #: ../pep-0249.txt:804
@@ -1126,13 +1118,14 @@ msgstr ""
 
 #: ../pep-0249.txt:811
 msgid ""
-"All exception classes defined by the DB API standard should be exposed on"
-" the Connection_ objects as attributes (in addition to being available at"
-" module scope)."
+"All exception classes defined by the DB API standard should be exposed on "
+"the Connection_ objects as attributes (in addition to being available at "
+"module scope)."
 msgstr ""
 
 #: ../pep-0249.txt:815
-msgid "These attributes simplify error handling in multi-connection environments."
+msgid ""
+"These attributes simplify error handling in multi-connection environments."
 msgstr ""
 
 #: ../pep-0249.txt:818
@@ -1164,29 +1157,30 @@ msgid "Cursor\\ `.scroll`_\\ (*value* [, *mode='relative'* ])"
 msgstr ""
 
 #: ../pep-0249.txt:837
-msgid "Scroll the cursor in the result set to a new position according to *mode*."
+msgid ""
+"Scroll the cursor in the result set to a new position according to *mode*."
 msgstr ""
 
 #: ../pep-0249.txt:840
 msgid ""
-"If mode is ``relative`` (default), value is taken as offset to the "
-"current position in the result set, if set to ``absolute``, value states "
-"an absolute target position."
+"If mode is ``relative`` (default), value is taken as offset to the current "
+"position in the result set, if set to ``absolute``, value states an absolute "
+"target position."
 msgstr ""
 
 #: ../pep-0249.txt:844
 msgid ""
-"An ``IndexError`` should be raised in case a scroll operation would leave"
-" the result set. In this case, the cursor position is left undefined "
-"(ideal would be to not move the cursor at all)."
+"An ``IndexError`` should be raised in case a scroll operation would leave "
+"the result set. In this case, the cursor position is left undefined (ideal "
+"would be to not move the cursor at all)."
 msgstr ""
 
 #: ../pep-0249.txt:849
 msgid ""
-"This method should use native scrollable cursors, if available, or revert"
-" to an emulation for forward-only scrollable cursors. The method may "
-"raise NotSupportedError_ to signal that a specific operation is not "
-"supported by the database (e.g. backward scrolling)."
+"This method should use native scrollable cursors, if available, or revert to "
+"an emulation for forward-only scrollable cursors. The method may raise "
+"NotSupportedError_ to signal that a specific operation is not supported by "
+"the database (e.g. backward scrolling)."
 msgstr ""
 
 #: ../pep-0249.txt:855
@@ -1206,24 +1200,23 @@ msgstr ""
 
 #: ../pep-0249.txt:865
 msgid ""
-"The list is cleared by all standard cursor methods calls (prior to "
-"executing the call) except for the `.fetch*()`_ calls automatically to "
-"avoid excessive memory usage and can also be cleared by executing ``del "
-"cursor.messages[:]``."
+"The list is cleared by all standard cursor methods calls (prior to executing "
+"the call) except for the `.fetch*()`_ calls automatically to avoid excessive "
+"memory usage and can also be cleared by executing ``del cursor.messages[:]``."
 msgstr ""
 
 #: ../pep-0249.txt:870
 msgid ""
 "All error and warning messages generated by the database are placed into "
-"this list, so checking the list allows the user to verify correct "
-"operation of the method calls."
+"this list, so checking the list allows the user to verify correct operation "
+"of the method calls."
 msgstr ""
 
 #: ../pep-0249.txt:874
 msgid ""
-"The aim of this attribute is to eliminate the need for a Warning "
-"exception which often causes problems (some warnings really only have "
-"informational character)."
+"The aim of this attribute is to eliminate the need for a Warning exception "
+"which often causes problems (some warnings really only have informational "
+"character)."
 msgstr ""
 
 #: ../pep-0249.txt:878
@@ -1236,15 +1229,15 @@ msgstr ""
 
 #: ../pep-0249.txt:884
 msgid ""
-"Same as Cursor.messages_ except that the messages in the list are "
-"connection oriented."
+"Same as Cursor.messages_ except that the messages in the list are connection "
+"oriented."
 msgstr ""
 
 #: ../pep-0249.txt:887
 msgid ""
-"The list is cleared automatically by all standard connection methods "
-"calls (prior to executing the call) to avoid excessive memory usage and "
-"can also be cleared by executing ``del connection.messages[:]``."
+"The list is cleared automatically by all standard connection methods calls "
+"(prior to executing the call) to avoid excessive memory usage and can also "
+"be cleared by executing ``del connection.messages[:]``."
 msgstr ""
 
 #: ../pep-0249.txt:892
@@ -1258,10 +1251,10 @@ msgstr ""
 #: ../pep-0249.txt:899
 msgid ""
 "Return the next row from the currently executing SQL statement using the "
-"same semantics as `.fetchone()`_.  A ``StopIteration`` exception is "
-"raised when the result set is exhausted for Python versions 2.2 and "
-"later.  Previous versions don't have the ``StopIteration`` exception and "
-"so the method should raise an ``IndexError`` instead."
+"same semantics as `.fetchone()`_.  A ``StopIteration`` exception is raised "
+"when the result set is exhausted for Python versions 2.2 and later.  "
+"Previous versions don't have the ``StopIteration`` exception and so the "
+"method should raise an ``IndexError`` instead."
 msgstr ""
 
 #: ../pep-0249.txt:906
@@ -1286,17 +1279,17 @@ msgstr ""
 
 #: ../pep-0249.txt:922
 msgid ""
-"This read-only attribute provides the rowid of the last modified row "
-"(most databases return a rowid only when a single ``INSERT`` operation is"
-" performed). If the operation does not set a rowid or if the database "
-"does not support rowids, this attribute should be set to ``None``."
+"This read-only attribute provides the rowid of the last modified row (most "
+"databases return a rowid only when a single ``INSERT`` operation is "
+"performed). If the operation does not set a rowid or if the database does "
+"not support rowids, this attribute should be set to ``None``."
 msgstr ""
 
 #: ../pep-0249.txt:928
 msgid ""
 "The semantics of ``.lastrowid`` are undefined in case the last executed "
-"statement modified more than one row, e.g. when using ``INSERT`` with "
-"``.executemany()``."
+"statement modified more than one row, e.g. when using ``INSERT`` with ``."
+"executemany()``."
 msgstr ""
 
 #: ../pep-0249.txt:932
@@ -1320,26 +1313,26 @@ msgstr ""
 
 #: ../pep-0249.txt:945
 msgid ""
-"Setting the attribute to ``True`` or ``False`` adjusts the connection's "
-"mode accordingly."
+"Setting the attribute to ``True`` or ``False`` adjusts the connection's mode "
+"accordingly."
 msgstr ""
 
 #: ../pep-0249.txt:948
 msgid ""
-"Changing the setting from ``True`` to ``False`` (disabling autocommit) "
-"will have the database leave autocommit mode and start a new transaction."
-" Changing from ``False`` to ``True`` (enabling autocommit) has database "
-"dependent semantics with respect to how pending transactions are handled."
-" [12]_"
+"Changing the setting from ``True`` to ``False`` (disabling autocommit) will "
+"have the database leave autocommit mode and start a new transaction. "
+"Changing from ``False`` to ``True`` (enabling autocommit) has database "
+"dependent semantics with respect to how pending transactions are handled. "
+"[12]_"
 msgstr ""
 
 #: ../pep-0249.txt:954
 msgid ""
-"*Deprecation notice*: Even though several database modules implement both"
-" the read and write nature of this attribute, setting the autocommit mode"
-" by writing to the attribute is deprecated, since this may result in I/O "
-"and related exceptions, making it difficult to implement in an async "
-"context. [13]_"
+"*Deprecation notice*: Even though several database modules implement both "
+"the read and write nature of this attribute, setting the autocommit mode by "
+"writing to the attribute is deprecated, since this may result in I/O and "
+"related exceptions, making it difficult to implement in an async context. "
+"[13]_"
 msgstr ""
 
 #: ../pep-0249.txt:960
@@ -1352,18 +1345,17 @@ msgstr ""
 
 #: ../pep-0249.txt:966
 msgid ""
-"The core DB API specification only introduces a set of exceptions which "
-"can be raised to report errors to the user. In some cases, exceptions may"
-" be too disruptive for the flow of a program or even render execution "
-"impossible."
+"The core DB API specification only introduces a set of exceptions which can "
+"be raised to report errors to the user. In some cases, exceptions may be too "
+"disruptive for the flow of a program or even render execution impossible."
 msgstr ""
 
 #: ../pep-0249.txt:971
 msgid ""
-"For these cases and in order to simplify error handling when dealing with"
-" databases, database module authors may choose to implement user "
-"definable error handlers. This section describes a standard way of "
-"defining these error handlers."
+"For these cases and in order to simplify error handling when dealing with "
+"databases, database module authors may choose to implement user definable "
+"error handlers. This section describes a standard way of defining these "
+"error handlers."
 msgstr ""
 
 #: ../pep-0249.txt:1004
@@ -1372,8 +1364,8 @@ msgstr ""
 
 #: ../pep-0249.txt:980
 msgid ""
-"Read/write attribute which references an error handler to call in case an"
-" error condition is met."
+"Read/write attribute which references an error handler to call in case an "
+"error condition is met."
 msgstr ""
 
 #: ../pep-0249.txt:983
@@ -1383,17 +1375,17 @@ msgstr ""
 #: ../pep-0249.txt:989
 msgid ""
 "where connection is a reference to the connection on which the cursor "
-"operates, cursor a reference to the cursor (or ``None`` in case the error"
-" does not apply to a cursor), *errorclass* is an error class which to "
+"operates, cursor a reference to the cursor (or ``None`` in case the error "
+"does not apply to a cursor), *errorclass* is an error class which to "
 "instantiate using *errorvalue* as construction argument."
 msgstr ""
 
 #: ../pep-0249.txt:995
 msgid ""
 "The standard error handler should add the error information to the "
-"appropriate ``.messages`` attribute (`Connection.messages`_ or "
-"`Cursor.messages`_) and raise the exception defined by the given "
-"*errorclass* and *errorvalue* parameters."
+"appropriate ``.messages`` attribute (`Connection.messages`_ or `Cursor."
+"messages`_) and raise the exception defined by the given *errorclass* and "
+"*errorvalue* parameters."
 msgstr ""
 
 #: ../pep-0249.txt:1000
@@ -1408,8 +1400,8 @@ msgstr ""
 
 #: ../pep-0249.txt:1006
 msgid ""
-"Cursors should inherit the ``.errorhandler`` setting from their "
-"connection objects at cursor creation time."
+"Cursors should inherit the ``.errorhandler`` setting from their connection "
+"objects at cursor creation time."
 msgstr ""
 
 #: ../pep-0249.txt:1011
@@ -1418,18 +1410,16 @@ msgstr ""
 
 #: ../pep-0249.txt:1013
 msgid ""
-"Many databases have support for two-phase commit (TPC) which allows "
-"managing transactions across multiple database connections and other "
-"resources."
+"Many databases have support for two-phase commit (TPC) which allows managing "
+"transactions across multiple database connections and other resources."
 msgstr ""
 
 #: ../pep-0249.txt:1017
 msgid ""
-"If a database backend provides support for two-phase commit and the "
-"database module author wishes to expose this support, the following API "
-"should be implemented. NotSupportedError_ should be raised, if the "
-"database backend support for two-phase commit can only be checked at run-"
-"time."
+"If a database backend provides support for two-phase commit and the database "
+"module author wishes to expose this support, the following API should be "
+"implemented. NotSupportedError_ should be raised, if the database backend "
+"support for two-phase commit can only be checked at run-time."
 msgstr ""
 
 #: ../pep-0249.txt:1024
@@ -1438,8 +1428,8 @@ msgstr ""
 
 #: ../pep-0249.txt:1026
 msgid ""
-"As many databases follow the XA specification, transaction IDs are formed"
-" from three components:"
+"As many databases follow the XA specification, transaction IDs are formed "
+"from three components:"
 msgstr ""
 
 #: ../pep-0249.txt:1029
@@ -1456,9 +1446,9 @@ msgstr ""
 
 #: ../pep-0249.txt:1033
 msgid ""
-"For a particular global transaction, the first two components should be "
-"the same for all resources.  Each resource in the global transaction "
-"should be assigned a different branch qualifier."
+"For a particular global transaction, the first two components should be the "
+"same for all resources.  Each resource in the global transaction should be "
+"assigned a different branch qualifier."
 msgstr ""
 
 #: ../pep-0249.txt:1037
@@ -1471,8 +1461,8 @@ msgstr ""
 
 #: ../pep-0249.txt:1041
 msgid ""
-"global transaction ID and branch qualifier: byte strings no longer than "
-"64 characters."
+"global transaction ID and branch qualifier: byte strings no longer than 64 "
+"characters."
 msgstr ""
 
 #: ../pep-0249.txt:1044
@@ -1499,8 +1489,8 @@ msgstr ""
 msgid ""
 "The type of the object returned by `.xid()`_ is not defined, but it must "
 "provide sequence behaviour, allowing access to the three components.  A "
-"conforming database module could choose to represent transaction IDs with"
-" tuples rather than a custom object."
+"conforming database module could choose to represent transaction IDs with "
+"tuples rather than a custom object."
 msgstr ""
 
 #: ../pep-0249.txt:1064
@@ -1517,15 +1507,15 @@ msgstr ""
 
 #: ../pep-0249.txt:1075
 msgid ""
-"This method should be called outside of a transaction (*i.e.* nothing may"
-" have executed since the last `.commit()`_ or `.rollback()`_)."
+"This method should be called outside of a transaction (*i.e.* nothing may "
+"have executed since the last `.commit()`_ or `.rollback()`_)."
 msgstr ""
 
 #: ../pep-0249.txt:1079
 msgid ""
-"Furthermore, it is an error to call `.commit()`_ or `.rollback()`_ within"
-" the TPC transaction. A ProgrammingError_ is raised, if the application "
-"calls `.commit()`_ or `.rollback()`_ during an active TPC transaction."
+"Furthermore, it is an error to call `.commit()`_ or `.rollback()`_ within "
+"the TPC transaction. A ProgrammingError_ is raised, if the application calls "
+"`.commit()`_ or `.rollback()`_ during an active TPC transaction."
 msgstr ""
 
 #: ../pep-0249.txt:1098
@@ -1534,15 +1524,15 @@ msgstr ""
 
 #: ../pep-0249.txt:1092
 msgid ""
-"Performs the first phase of a transaction started with `.tpc_begin()`_.  "
-"A ProgrammingError_ should be raised if this method outside of a TPC "
+"Performs the first phase of a transaction started with `.tpc_begin()`_.  A "
+"ProgrammingError_ should be raised if this method outside of a TPC "
 "transaction."
 msgstr ""
 
 #: ../pep-0249.txt:1096
 msgid ""
-"After calling `.tpc_prepare()`_, no statements can be executed until "
-"`.tpc_commit()`_ or `.tpc_rollback()`_ have been called."
+"After calling `.tpc_prepare()`_, no statements can be executed until `."
+"tpc_commit()`_ or `.tpc_rollback()`_ have been called."
 msgstr ""
 
 #: ../pep-0249.txt:1118
@@ -1551,23 +1541,23 @@ msgstr ""
 
 #: ../pep-0249.txt:1104
 msgid ""
-"When called with no arguments, `.tpc_commit()`_ commits a TPC transaction"
-" previously prepared with `.tpc_prepare()`_."
+"When called with no arguments, `.tpc_commit()`_ commits a TPC transaction "
+"previously prepared with `.tpc_prepare()`_."
 msgstr ""
 
 #: ../pep-0249.txt:1107
 msgid ""
 "If `.tpc_commit()`_ is called prior to `.tpc_prepare()`_, a single phase "
-"commit is performed.  A transaction manager may choose to do this if only"
-" a single resource is participating in the global transaction."
+"commit is performed.  A transaction manager may choose to do this if only a "
+"single resource is participating in the global transaction."
 msgstr ""
 
 #: ../pep-0249.txt:1112
 msgid ""
 "When called with a transaction ID *xid*, the database commits the given "
-"transaction.  If an invalid transaction ID is provided, a "
-"ProgrammingError_ will be raised.  This form should be called outside of "
-"a transaction, and is intended for use in recovery."
+"transaction.  If an invalid transaction ID is provided, a ProgrammingError_ "
+"will be raised.  This form should be called outside of a transaction, and is "
+"intended for use in recovery."
 msgstr ""
 
 #: ../pep-0249.txt:1117 ../pep-0249.txt:1132
@@ -1587,9 +1577,9 @@ msgstr ""
 #: ../pep-0249.txt:1127
 msgid ""
 "When called with a transaction ID *xid*, it rolls back the given "
-"transaction.  If an invalid transaction ID is provided, a "
-"ProgrammingError_ is raised.  This form should be called outside of a "
-"transaction, and is intended for use in recovery."
+"transaction.  If an invalid transaction ID is provided, a ProgrammingError_ "
+"is raised.  This form should be called outside of a transaction, and is "
+"intended for use in recovery."
 msgstr ""
 
 #: ../pep-0249.txt:1144
@@ -1598,8 +1588,8 @@ msgstr ""
 
 #: ../pep-0249.txt:1138
 msgid ""
-"Returns a list of pending transaction IDs suitable for use with "
-"``.tpc_commit(xid)`` or ``.tpc_rollback(xid)``."
+"Returns a list of pending transaction IDs suitable for use with ``."
+"tpc_commit(xid)`` or ``.tpc_rollback(xid)``."
 msgstr ""
 
 #: ../pep-0249.txt:1141
@@ -1615,8 +1605,8 @@ msgstr ""
 #: ../pep-0249.txt:1149
 msgid ""
 "The database SIG often sees reoccurring questions about the DB API "
-"specification. This section covers some of the issues people sometimes "
-"have with the specification."
+"specification. This section covers some of the issues people sometimes have "
+"with the specification."
 msgstr ""
 
 #: ../pep-0249.txt:1153
@@ -1625,8 +1615,7 @@ msgstr ""
 
 #: ../pep-0249.txt:1155
 msgid ""
-"How can I construct a dictionary out of the tuples returned by "
-"`.fetch*()`_:"
+"How can I construct a dictionary out of the tuples returned by `.fetch*()`_:"
 msgstr ""
 
 #: ../pep-0249.txt:1158
@@ -1635,17 +1624,16 @@ msgstr ""
 
 #: ../pep-0249.txt:1160
 msgid ""
-"There are several existing tools available which provide helpers for this"
-" task. Most of them use the approach of using the column names defined in"
-" the cursor attribute `.description`_ as basis for the keys in the row "
-"dictionary."
+"There are several existing tools available which provide helpers for this "
+"task. Most of them use the approach of using the column names defined in the "
+"cursor attribute `.description`_ as basis for the keys in the row dictionary."
 msgstr ""
 
 #: ../pep-0249.txt:1165
 msgid ""
 "Note that the reason for not extending the DB API specification to also "
-"support dictionary return values for the `.fetch*()`_ methods is that "
-"this approach has several drawbacks:"
+"support dictionary return values for the `.fetch*()`_ methods is that this "
+"approach has several drawbacks:"
 msgstr ""
 
 #: ../pep-0249.txt:1169
@@ -1656,15 +1644,15 @@ msgstr ""
 
 #: ../pep-0249.txt:1172
 msgid ""
-"Columns in the result set which are generated by the query (e.g. using "
-"SQL functions) don't map to table column names and databases usually "
-"generate names for these columns in a very database specific way."
+"Columns in the result set which are generated by the query (e.g. using SQL "
+"functions) don't map to table column names and databases usually generate "
+"names for these columns in a very database specific way."
 msgstr ""
 
 #: ../pep-0249.txt:1177
 msgid ""
-"As a result, accessing the columns through dictionary keys varies between"
-" databases and makes writing portable code impossible."
+"As a result, accessing the columns through dictionary keys varies between "
+"databases and makes writing portable code impossible."
 msgstr ""
 
 #: ../pep-0249.txt:1183
@@ -1673,10 +1661,10 @@ msgstr ""
 
 #: ../pep-0249.txt:1185
 msgid ""
-"The Python Database API 2.0 introduces a few major changes compared to "
-"the 1.0 version. Because some of these changes will cause existing DB API"
-" 1.0 based scripts to break, the major version number was adjusted to "
-"reflect this change."
+"The Python Database API 2.0 introduces a few major changes compared to the "
+"1.0 version. Because some of these changes will cause existing DB API 1.0 "
+"based scripts to break, the major version number was adjusted to reflect "
+"this change."
 msgstr ""
 
 #: ../pep-0249.txt:1190
@@ -1685,21 +1673,21 @@ msgstr ""
 
 #: ../pep-0249.txt:1192
 msgid ""
-"The need for a separate dbi module was dropped and the functionality "
-"merged into the module interface itself."
+"The need for a separate dbi module was dropped and the functionality merged "
+"into the module interface itself."
 msgstr ""
 
 #: ../pep-0249.txt:1195
 msgid ""
-"New constructors and `Type Objects`_ were added for date/time values, the"
-" ``RAW`` Type Object was renamed to ``BINARY``. The resulting set should "
+"New constructors and `Type Objects`_ were added for date/time values, the "
+"``RAW`` Type Object was renamed to ``BINARY``. The resulting set should "
 "cover all basic data types commonly found in modern SQL databases."
 msgstr ""
 
 #: ../pep-0249.txt:1200
 msgid ""
-"New constants (apilevel_, threadsafety_, paramstyle_) and methods "
-"(`.executemany()`_, `.nextset()`_) were added to provide better database "
+"New constants (apilevel_, threadsafety_, paramstyle_) and methods (`."
+"executemany()`_, `.nextset()`_) were added to provide better database "
 "bindings."
 msgstr ""
 
@@ -1711,12 +1699,12 @@ msgstr ""
 
 #: ../pep-0249.txt:1207
 msgid ""
-"The definition of the `.execute()`_ return value changed. Previously, the"
-" return value was based on the SQL statement type (which was hard to "
-"implement right) — it is undefined now; use the more flexible "
-"`.rowcount`_ attribute instead. Modules are free to return the old style "
-"return values, but these are no longer mandated by the specification and "
-"should be considered database interface dependent."
+"The definition of the `.execute()`_ return value changed. Previously, the "
+"return value was based on the SQL statement type (which was hard to "
+"implement right) — it is undefined now; use the more flexible `.rowcount`_ "
+"attribute instead. Modules are free to return the old style return values, "
+"but these are no longer mandated by the specification and should be "
+"considered database interface dependent."
 msgstr ""
 
 #: ../pep-0249.txt:1215
@@ -1732,8 +1720,8 @@ msgstr ""
 
 #: ../pep-0249.txt:1222
 msgid ""
-"Additional optional DB API extensions to the set of core functionality "
-"were specified."
+"Additional optional DB API extensions to the set of core functionality were "
+"specified."
 msgstr ""
 
 #: ../pep-0249.txt:1227
@@ -1755,9 +1743,9 @@ msgstr ""
 
 #: ../pep-0249.txt:1236
 msgid ""
-"Integrate the `decimal module "
-"<http://docs.python.org/library/decimal.html>`__ ``Decimal`` object for "
-"use as loss-less monetary and decimal interchange format."
+"Integrate the `decimal module <http://docs.python.org/library/decimal."
+"html>`__ ``Decimal`` object for use as loss-less monetary and decimal "
+"interchange format."
 msgstr ""
 
 #: ../pep-0249.txt:1243
@@ -1766,9 +1754,9 @@ msgstr ""
 
 #: ../pep-0249.txt:1245
 msgid ""
-"As a guideline the connection constructor parameters should be "
-"implemented as keyword parameters for more intuitive use and follow this "
-"order of parameters:"
+"As a guideline the connection constructor parameters should be implemented "
+"as keyword parameters for more intuitive use and follow this order of "
+"parameters:"
 msgstr ""
 
 #: ../pep-0249.txt:1250
@@ -1831,56 +1819,54 @@ msgstr ""
 
 #: ../pep-0249.txt:1270
 msgid ""
-"If the database does not support the functionality required by the "
-"method, the interface should throw an exception in case the method is "
-"used."
+"If the database does not support the functionality required by the method, "
+"the interface should throw an exception in case the method is used."
 msgstr ""
 
 #: ../pep-0249.txt:1274
 msgid ""
-"The preferred approach is to not implement the method and thus have "
-"Python generate an ``AttributeError`` in case the method is requested. "
-"This allows the programmer to check for database capabilities using the "
-"standard ``hasattr()`` function."
+"The preferred approach is to not implement the method and thus have Python "
+"generate an ``AttributeError`` in case the method is requested. This allows "
+"the programmer to check for database capabilities using the standard "
+"``hasattr()`` function."
 msgstr ""
 
 #: ../pep-0249.txt:1279
 msgid ""
 "For some dynamically configured interfaces it may not be appropriate to "
 "require dynamically making the method available. These interfaces should "
-"then raise a ``NotSupportedError`` to indicate the non-ability to perform"
-" the roll back when the method is invoked."
+"then raise a ``NotSupportedError`` to indicate the non-ability to perform "
+"the roll back when the method is invoked."
 msgstr ""
 
 #: ../pep-0249.txt:1285
 msgid ""
 "A database interface may choose to support named cursors by allowing a "
 "string argument to the method. This feature is not part of the "
-"specification, since it complicates semantics of the `.fetch*()`_ "
-"methods."
+"specification, since it complicates semantics of the `.fetch*()`_ methods."
 msgstr ""
 
 #: ../pep-0249.txt:1290
 msgid ""
-"The module will use the ``__getitem__`` method of the parameters object "
-"to map either positions (integers) or names (strings) to parameter "
-"values.  This allows for both sequences and mappings to be used as input."
+"The module will use the ``__getitem__`` method of the parameters object to "
+"map either positions (integers) or names (strings) to parameter values.  "
+"This allows for both sequences and mappings to be used as input."
 msgstr ""
 
 #: ../pep-0249.txt:1295
 msgid ""
 "The term *bound* refers to the process of binding an input value to a "
 "database execution buffer. In practical terms, this means that the input "
-"value is directly used as a value in the operation. The client should not"
-" be required to \"escape\" the value so that it can be used — the value "
-"should be equal to the actual database value."
+"value is directly used as a value in the operation. The client should not be "
+"required to \"escape\" the value so that it can be used — the value should "
+"be equal to the actual database value."
 msgstr ""
 
 #: ../pep-0249.txt:1302
 msgid ""
-"Note that the interface may implement row fetching using arrays and other"
-" optimizations. It is not guaranteed that a call to this method will only"
-" move the associated cursor forward by one row."
+"Note that the interface may implement row fetching using arrays and other "
+"optimizations. It is not guaranteed that a call to this method will only "
+"move the associated cursor forward by one row."
 msgstr ""
 
 #: ../pep-0249.txt:1306
@@ -1893,62 +1879,58 @@ msgstr ""
 #: ../pep-0249.txt:1311
 msgid ""
 "Implementation Note: Python C extensions will have to implement the "
-"``tp_iter`` slot on the cursor object instead of the ``.__iter__()`` "
-"method."
+"``tp_iter`` slot on the cursor object instead of the ``.__iter__()`` method."
 msgstr ""
 
 #: ../pep-0249.txt:1315
 msgid ""
-"The term *number of affected rows* generally refers to the number of rows"
-" deleted, updated or inserted by the last statement run on the database "
-"cursor. Most databases will return the total number of rows that were "
-"found by the corresponding ``WHERE`` clause of the statement. Some "
-"databases use a different interpretation for ``UPDATE``\\s and only "
-"return the number of rows that were changed by the ``UPDATE``, even "
-"though the ``WHERE`` clause of the statement may have found more matching"
-" rows. Database module authors should try to implement the more common "
-"interpretation of returning the total number of rows found by the "
-"``WHERE`` clause, or clearly document a different interpretation of the "
-"``.rowcount`` attribute."
+"The term *number of affected rows* generally refers to the number of rows "
+"deleted, updated or inserted by the last statement run on the database "
+"cursor. Most databases will return the total number of rows that were found "
+"by the corresponding ``WHERE`` clause of the statement. Some databases use a "
+"different interpretation for ``UPDATE``\\s and only return the number of "
+"rows that were changed by the ``UPDATE``, even though the ``WHERE`` clause "
+"of the statement may have found more matching rows. Database module authors "
+"should try to implement the more common interpretation of returning the "
+"total number of rows found by the ``WHERE`` clause, or clearly document a "
+"different interpretation of the ``.rowcount`` attribute."
 msgstr ""
 
 #: ../pep-0249.txt:1328
 msgid ""
-"In Python 2 and earlier versions of this PEP, ``StandardError`` was used "
-"as the base class for all DB-API exceptions. Since ``StandardError`` was "
+"In Python 2 and earlier versions of this PEP, ``StandardError`` was used as "
+"the base class for all DB-API exceptions. Since ``StandardError`` was "
 "removed in Python 3, database modules targeting Python 3 should use "
 "``Exception`` as base class instead. The PEP was updated to use "
-"``Exception`` throughout the text, to avoid confusion. The change should "
-"not affect existing modules or uses of those modules, since all DB-API "
-"error exception classes are still rooted at the ``Error`` or ``Warning`` "
-"classes."
+"``Exception`` throughout the text, to avoid confusion. The change should not "
+"affect existing modules or uses of those modules, since all DB-API error "
+"exception classes are still rooted at the ``Error`` or ``Warning`` classes."
 msgstr ""
 
 #: ../pep-0249.txt:1337
 msgid ""
 "In a future revision of the DB-API, the base class for ``Warning`` will "
-"likely change to the builtin ``Warning`` class. At the time of writing of"
-" the DB-API 2.0 in 1999, the warning framework in Python did not yet "
-"exist."
+"likely change to the builtin ``Warning`` class. At the time of writing of "
+"the DB-API 2.0 in 1999, the warning framework in Python did not yet exist."
 msgstr ""
 
 #: ../pep-0249.txt:1342
 msgid ""
 "Many database modules implementing the autocommit attribute will "
-"automatically commit any pending transaction and then enter autocommit "
-"mode. It is generally recommended to explicitly `.commit()`_ or "
-"`.rollback()`_ transactions prior to changing the autocommit setting, "
-"since this is portable across database modules."
+"automatically commit any pending transaction and then enter autocommit mode. "
+"It is generally recommended to explicitly `.commit()`_ or `.rollback()`_ "
+"transactions prior to changing the autocommit setting, since this is "
+"portable across database modules."
 msgstr ""
 
 #: ../pep-0249.txt:1348
 msgid ""
-"In a future revision of the DB-API, we are going to introduce a new "
-"method ``.setautocommit(value)``, which will allow setting the autocommit"
-" mode, and make ``.autocommit`` a read-only attribute. Additionally, we "
-"are considering to add a new standard keyword parameter ``autocommit`` to"
-" the Connection constructor. Modules authors are encouraged to add these "
-"changes in preparation for this change."
+"In a future revision of the DB-API, we are going to introduce a new method "
+"``.setautocommit(value)``, which will allow setting the autocommit mode, and "
+"make ``.autocommit`` a read-only attribute. Additionally, we are considering "
+"to add a new standard keyword parameter ``autocommit`` to the Connection "
+"constructor. Modules authors are encouraged to add these changes in "
+"preparation for this change."
 msgstr ""
 
 #: ../pep-0249.txt:1357
@@ -1958,21 +1940,19 @@ msgstr ""
 #: ../pep-0249.txt:1359
 msgid ""
 "Many thanks go to Andrew Kuchling who converted the Python Database API "
-"Specification 2.0 from the original HTML format into the PEP format in "
-"2001."
+"Specification 2.0 from the original HTML format into the PEP format in 2001."
 msgstr ""
 
 #: ../pep-0249.txt:1363
 msgid ""
-"Many thanks to James Henstridge for leading the discussion which led to "
-"the standardization of the two-phase commit API extensions in 2008."
+"Many thanks to James Henstridge for leading the discussion which led to the "
+"standardization of the two-phase commit API extensions in 2008."
 msgstr ""
 
 #: ../pep-0249.txt:1366
 msgid ""
-"Many thanks to Daniele Varrazzo for converting the specification from "
-"text PEP format to ReST PEP format, which allows linking to various parts"
-" in 2012."
+"Many thanks to Daniele Varrazzo for converting the specification from text "
+"PEP format to ReST PEP format, which allows linking to various parts in 2012."
 msgstr ""
 
 #: ../pep-0249.txt:1371
@@ -1982,4 +1962,3 @@ msgstr ""
 #: ../pep-0249.txt:1373
 msgid "This document has been placed in the Public Domain."
 msgstr ""
-

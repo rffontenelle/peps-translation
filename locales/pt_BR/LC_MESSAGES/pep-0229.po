@@ -71,21 +71,21 @@ msgstr ""
 
 #: ../pep-0229.txt:19
 msgid ""
-"People have to remember to uncomment bits of ``Modules/Setup`` in order "
-"to get all the possible modules."
+"People have to remember to uncomment bits of ``Modules/Setup`` in order to "
+"get all the possible modules."
 msgstr ""
 
 #: ../pep-0229.txt:22
 msgid ""
 "Moving ``Setup`` to a new version of Python is tedious; new modules have "
-"been added, so you can't just copy the older version, but have to "
-"reconcile the two versions."
+"been added, so you can't just copy the older version, but have to reconcile "
+"the two versions."
 msgstr ""
 
 #: ../pep-0229.txt:26
 msgid ""
-"Users have to figure out where the needed libraries, such as ``zlib``, "
-"are installed."
+"Users have to figure out where the needed libraries, such as ``zlib``, are "
+"installed."
 msgstr ""
 
 #: ../pep-0229.txt:31
@@ -103,15 +103,14 @@ msgstr ""
 #: ../pep-0229.txt:37
 msgid ""
 "The Distutils needs some Python modules to be able to build modules.  "
-"Currently I believe the minimal list is ``posix``, ``_sre``, and "
-"``string``."
+"Currently I believe the minimal list is ``posix``, ``_sre``, and ``string``."
 msgstr ""
 
 #: ../pep-0229.txt:41
 msgid ""
 "These modules will have to be built before the Distutils can be used, so "
-"they'll simply be hardwired into ``Modules/Makefile`` and be "
-"automatically built."
+"they'll simply be hardwired into ``Modules/Makefile`` and be automatically "
+"built."
 msgstr ""
 
 #: ../pep-0229.txt:45
@@ -122,18 +121,17 @@ msgstr ""
 
 #: ../pep-0229.txt:49
 msgid ""
-"``Modules/Setup`` will be kept and settings in it will override "
-"``setup.py``'s usual behavior, so you can disable a module known to be "
-"buggy, or specify particular compilation or linker flags. However, in the"
-" common case where ``setup.py`` works correctly, everything in ``Setup`` "
-"will remain commented out.  The other ``Setup.*`` become unnecessary, "
-"since nothing will be generating ``Setup`` automatically."
+"``Modules/Setup`` will be kept and settings in it will override ``setup."
+"py``'s usual behavior, so you can disable a module known to be buggy, or "
+"specify particular compilation or linker flags. However, in the common case "
+"where ``setup.py`` works correctly, everything in ``Setup`` will remain "
+"commented out.  The other ``Setup.*`` become unnecessary, since nothing will "
+"be generating ``Setup`` automatically."
 msgstr ""
 
 #: ../pep-0229.txt:57
 msgid ""
-"The patch was checked in for Python 2.1, and has been subsequently "
-"modified."
+"The patch was checked in for Python 2.1, and has been subsequently modified."
 msgstr ""
 
 #: ../pep-0229.txt:62
@@ -143,11 +141,11 @@ msgstr ""
 #: ../pep-0229.txt:64
 msgid ""
 "Patch #102588 on SourceForge contains the proposed patch. Currently the "
-"patch tries to be conservative and to change as few files as possible, in"
-" order to simplify backing out the patch. For example, no attempt is made"
-" to rip out the existing build mechanisms.  Such simplifications can wait"
-" for later in the beta cycle, when we're certain the patch will be left "
-"in, or they can wait for Python 2.2."
+"patch tries to be conservative and to change as few files as possible, in "
+"order to simplify backing out the patch. For example, no attempt is made to "
+"rip out the existing build mechanisms.  Such simplifications can wait for "
+"later in the beta cycle, when we're certain the patch will be left in, or "
+"they can wait for Python 2.2."
 msgstr ""
 
 #: ../pep-0229.txt:72
@@ -156,16 +154,16 @@ msgstr ""
 
 #: ../pep-0229.txt:74
 msgid ""
-"Makes some required changes to distutils/sysconfig (these will be checked"
-" in separately)"
+"Makes some required changes to distutils/sysconfig (these will be checked in "
+"separately)"
 msgstr ""
 
 #: ../pep-0229.txt:77
 msgid ""
 "In the top-level ``Makefile.in``, the \"sharedmods\" target simply runs "
 "``\"./python setup.py build\"``, and \"sharedinstall\" runs ``\"./python "
-"setup.py install\"``.  The \"clobber\" target also deletes the ``build/``"
-" subdirectory where Distutils puts its output."
+"setup.py install\"``.  The \"clobber\" target also deletes the ``build/`` "
+"subdirectory where Distutils puts its output."
 msgstr ""
 
 #: ../pep-0229.txt:82
@@ -177,24 +175,24 @@ msgstr ""
 
 #: ../pep-0229.txt:86
 msgid ""
-"``Modules/Setup.dist`` now contains entries for only 3 modules -- "
-"``_sre``, ``posix``, and ``strop``."
+"``Modules/Setup.dist`` now contains entries for only 3 modules -- ``_sre``, "
+"``posix``, and ``strop``."
 msgstr ""
 
 #: ../pep-0229.txt:89
 msgid ""
-"The ``configure`` script builds ``setup.cfg`` from ``setup.cfg.in``.  "
-"This is needed for two reasons: to make building in subdirectories work, "
-"and to get the configured installation prefix."
+"The ``configure`` script builds ``setup.cfg`` from ``setup.cfg.in``.  This "
+"is needed for two reasons: to make building in subdirectories work, and to "
+"get the configured installation prefix."
 msgstr ""
 
 #: ../pep-0229.txt:93
 msgid ""
-"Adds ``setup.py`` to the top directory of the source tree.  ``setup.py`` "
-"is the largest piece of the puzzle, though not the most complicated.  "
-"``setup.py`` contains a subclass of the ``BuildExt`` class, and extends "
-"it with a ``detect_modules()`` method that does the work of figuring out "
-"when modules can be compiled, and adding them to the 'exts' list."
+"Adds ``setup.py`` to the top directory of the source tree.  ``setup.py`` is "
+"the largest piece of the puzzle, though not the most complicated.  ``setup."
+"py`` contains a subclass of the ``BuildExt`` class, and extends it with a "
+"``detect_modules()`` method that does the work of figuring out when modules "
+"can be compiled, and adding them to the 'exts' list."
 msgstr ""
 
 #: ../pep-0229.txt:102
@@ -203,22 +201,22 @@ msgstr ""
 
 #: ../pep-0229.txt:104
 msgid ""
-"Do we need to make it possible to disable the 3 hard-wired modules "
-"without manually hacking the Makefiles?  [Answer: No.]"
+"Do we need to make it possible to disable the 3 hard-wired modules without "
+"manually hacking the Makefiles?  [Answer: No.]"
 msgstr ""
 
 #: ../pep-0229.txt:107
 msgid ""
-"The Distutils always compile modules as shared libraries.  How do we "
-"support compiling them statically into the resulting Python binary?"
+"The Distutils always compile modules as shared libraries.  How do we support "
+"compiling them statically into the resulting Python binary?"
 msgstr ""
 
 #: ../pep-0229.txt:111
 msgid ""
 "[Answer: building a Python binary with the Distutils should be feasible, "
 "though no one has implemented it yet.  This should be done someday, but "
-"isn't a pressing priority as messing around with the top-level "
-"``Makefile.pre.in`` is good enough.]"
+"isn't a pressing priority as messing around with the top-level ``Makefile."
+"pre.in`` is good enough.]"
 msgstr ""
 
 #: ../pep-0229.txt:118
@@ -228,4 +226,3 @@ msgstr ""
 #: ../pep-0229.txt:120
 msgid "This document has been placed in the public domain."
 msgstr ""
-

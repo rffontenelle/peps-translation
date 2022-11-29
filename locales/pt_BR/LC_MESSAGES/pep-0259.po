@@ -69,22 +69,22 @@ msgstr ""
 msgid ""
 "Currently, the ``print`` statement always appends a newline, unless a "
 "trailing comma is used.  This means that if we want to print data that "
-"already ends in a newline, we get two newlines, unless special "
-"precautions are taken."
+"already ends in a newline, we get two newlines, unless special precautions "
+"are taken."
 msgstr ""
 
 #: ../pep-0259.txt:20
 msgid ""
-"I propose to skip printing the newline when it follows a newline that "
-"came from data."
+"I propose to skip printing the newline when it follows a newline that came "
+"from data."
 msgstr ""
 
 #: ../pep-0259.txt:23
 msgid ""
-"In order to avoid having to add yet another magic variable to file "
-"objects, I propose to give the existing 'softspace' variable an extra "
-"meaning: a negative value will mean \"the last data written ended in a "
-"newline so no space *or* newline is required.\""
+"In order to avoid having to add yet another magic variable to file objects, "
+"I propose to give the existing 'softspace' variable an extra meaning: a "
+"negative value will mean \"the last data written ended in a newline so no "
+"space *or* newline is required.\""
 msgstr ""
 
 #: ../pep-0259.txt:30
@@ -93,15 +93,15 @@ msgstr ""
 
 #: ../pep-0259.txt:32
 msgid ""
-"When printing data that resembles the lines read from a file using a "
-"simple loop, double-spacing occurs unless special care is taken::"
+"When printing data that resembles the lines read from a file using a simple "
+"loop, double-spacing occurs unless special care is taken::"
 msgstr ""
 
 #: ../pep-0259.txt:48
 msgid ""
-"While there are easy work-arounds, this is often noticed only during "
-"testing and requires an extra edit-test roundtrip; the fixed code is "
-"uglier and harder to maintain."
+"While there are easy work-arounds, this is often noticed only during testing "
+"and requires an extra edit-test roundtrip; the fixed code is uglier and "
+"harder to maintain."
 msgstr ""
 
 #: ../pep-0259.txt:54
@@ -111,12 +111,12 @@ msgstr ""
 #: ../pep-0259.txt:56
 msgid ""
 "In the ``PRINT_ITEM`` opcode in ``ceval.c``, when a string object is "
-"printed, a check is already made that looks at the last character of that"
-" string.  Currently, if that last character is a whitespace character "
-"other than space, the softspace flag is reset to zero; this suppresses "
-"the space between two items if the first item is a string ending in "
-"newline, tab, etc. (but not when it ends in a space).  Otherwise the "
-"softspace flag is set to one."
+"printed, a check is already made that looks at the last character of that "
+"string.  Currently, if that last character is a whitespace character other "
+"than space, the softspace flag is reset to zero; this suppresses the space "
+"between two items if the first item is a string ending in newline, tab, etc. "
+"(but not when it ends in a space).  Otherwise the softspace flag is set to "
+"one."
 msgstr ""
 
 #: ../pep-0259.txt:64
@@ -135,15 +135,15 @@ msgstr ""
 
 #: ../pep-0259.txt:73
 msgid ""
-"``1`` -- in all other cases (including the case when the last object "
-"written is an empty string or not a string)"
+"``1`` -- in all other cases (including the case when the last object written "
+"is an empty string or not a string)"
 msgstr ""
 
 #: ../pep-0259.txt:76
 msgid ""
-"Then, the ``PRINT_NEWLINE`` opcode, printing of the newline is suppressed"
-" if the value of softspace is negative; in any case the softspace flag is"
-" reset to zero."
+"Then, the ``PRINT_NEWLINE`` opcode, printing of the newline is suppressed if "
+"the value of softspace is negative; in any case the softspace flag is reset "
+"to zero."
 msgstr ""
 
 #: ../pep-0259.txt:82
@@ -153,9 +153,9 @@ msgstr ""
 #: ../pep-0259.txt:84
 msgid ""
 "This only affects printing of 8-bit strings.  It doesn't affect Unicode, "
-"although that could be considered a bug in the Unicode implementation.  "
-"It doesn't affect other objects whose string representation happens to "
-"end in a newline character."
+"although that could be considered a bug in the Unicode implementation.  It "
+"doesn't affect other objects whose string representation happens to end in a "
+"newline character."
 msgstr ""
 
 #: ../pep-0259.txt:91
@@ -168,16 +168,16 @@ msgstr ""
 
 #: ../pep-0259.txt:98
 msgid ""
-"In current Python, this produces a blank line separating the subject from"
-" the message body; with the proposed change, the body begins immediately "
+"In current Python, this produces a blank line separating the subject from "
+"the message body; with the proposed change, the body begins immediately "
 "below the subject.  This is not very robust code anyway; it is better "
 "written as::"
 msgstr ""
 
 #: ../pep-0259.txt:107
 msgid ""
-"In the test suite, only ``test_StringIO`` (which explicitly tests for "
-"this feature) breaks."
+"In the test suite, only ``test_StringIO`` (which explicitly tests for this "
+"feature) breaks."
 msgstr ""
 
 #: ../pep-0259.txt:112
@@ -190,8 +190,8 @@ msgstr ""
 
 #: ../pep-0259.txt:122
 msgid ""
-"The user community unanimously rejected this, so I won't pursue this idea"
-" any further.  Frequently heard arguments against included:"
+"The user community unanimously rejected this, so I won't pursue this idea "
+"any further.  Frequently heard arguments against included:"
 msgstr ""
 
 #: ../pep-0259.txt:126
@@ -209,4 +209,3 @@ msgstr ""
 #: ../pep-0259.txt:135
 msgid "This document has been placed in the public domain."
 msgstr ""
-

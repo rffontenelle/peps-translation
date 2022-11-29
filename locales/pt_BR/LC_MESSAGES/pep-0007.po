@@ -66,14 +66,14 @@ msgstr ""
 
 #: ../pep-0007.txt:20
 msgid ""
-"Note, rules are there to be broken.  Two good reasons to break a "
-"particular rule:"
+"Note, rules are there to be broken.  Two good reasons to break a particular "
+"rule:"
 msgstr ""
 
 #: ../pep-0007.txt:23
 msgid ""
-"When applying the rule would make the code less readable, even for "
-"someone who is used to reading code that follows the rules."
+"When applying the rule would make the code less readable, even for someone "
+"who is used to reading code that follows the rules."
 msgstr ""
 
 #: ../pep-0007.txt:26
@@ -89,9 +89,9 @@ msgstr ""
 
 #: ../pep-0007.txt:34
 msgid ""
-"Python 3.11 and newer versions use C11 without `optional features "
-"<https://en.wikipedia.org/wiki/C11_%28C_standard_revision%29#Optional_features>`_."
-" The public C API should be compatible with C++."
+"Python 3.11 and newer versions use C11 without `optional features <https://"
+"en.wikipedia.org/wiki/C11_%28C_standard_revision%29#Optional_features>`_. "
+"The public C API should be compatible with C++."
 msgstr ""
 
 #: ../pep-0007.txt:38
@@ -100,8 +100,8 @@ msgstr ""
 
 #: ../pep-0007.txt:40
 msgid ""
-"Standard integer types in ``<stdint.h>`` and ``<inttypes.h>``. We require"
-" the fixed width integer types."
+"Standard integer types in ``<stdint.h>`` and ``<inttypes.h>``. We require "
+"the fixed width integer types."
 msgstr ""
 
 #: ../pep-0007.txt:42
@@ -126,16 +126,15 @@ msgstr ""
 
 #: ../pep-0007.txt:48
 msgid ""
-"Python versions before 3.6 used ANSI/ISO standard C (the 1989 version of "
-"the standard).  This meant (amongst many other things) that all "
-"declarations must be at the top of a block (not necessarily at the top of"
-" function)."
+"Python versions before 3.6 used ANSI/ISO standard C (the 1989 version of the "
+"standard).  This meant (amongst many other things) that all declarations "
+"must be at the top of a block (not necessarily at the top of function)."
 msgstr ""
 
 #: ../pep-0007.txt:53
 msgid ""
-"Don't use compiler-specific extensions, such as those of GCC or MSVC "
-"(e.g. don't write multi-line strings without trailing backslashes)."
+"Don't use compiler-specific extensions, such as those of GCC or MSVC (e.g. "
+"don't write multi-line strings without trailing backslashes)."
 msgstr ""
 
 #: ../pep-0007.txt:56
@@ -149,7 +148,8 @@ msgid "No compiler warnings with major compilers (gcc, VC++, a few others)."
 msgstr ""
 
 #: ../pep-0007.txt:61
-msgid "``static inline`` functions should be preferred over macros in new code."
+msgid ""
+"``static inline`` functions should be preferred over macros in new code."
 msgstr ""
 
 #: ../pep-0007.txt:66
@@ -162,31 +162,31 @@ msgstr ""
 
 #: ../pep-0007.txt:70
 msgid ""
-"No line should be longer than 79 characters.  If this and the previous "
-"rule together don't give you enough room to code, your code is too "
-"complicated -- consider using subroutines."
+"No line should be longer than 79 characters.  If this and the previous rule "
+"together don't give you enough room to code, your code is too complicated -- "
+"consider using subroutines."
 msgstr ""
 
 #: ../pep-0007.txt:74
 msgid ""
 "No line should end in whitespace.  If you think you need significant "
-"trailing whitespace, think again -- somebody's editor might delete it as "
-"a matter of routine."
+"trailing whitespace, think again -- somebody's editor might delete it as a "
+"matter of routine."
 msgstr ""
 
 #: ../pep-0007.txt:78
 msgid ""
-"Function definition style: function name in column 1, outermost curly "
-"braces in column 1, blank line after local variable declarations.  ::"
+"Function definition style: function name in column 1, outermost curly braces "
+"in column 1, blank line after local variable declarations.  ::"
 msgstr ""
 
 #: ../pep-0007.txt:93
 msgid ""
 "Code structure: one space between keywords like ``if``, ``for`` and the "
 "following left paren; no spaces inside the paren; braces are required "
-"everywhere, even where C permits them to be omitted, but do not add them "
-"to code you are not otherwise modifying.  All new C code requires braces."
-"  Braces should be formatted as shown::"
+"everywhere, even where C permits them to be omitted, but do not add them to "
+"code you are not otherwise modifying.  All new C code requires braces.  "
+"Braces should be formatted as shown::"
 msgstr ""
 
 #: ../pep-0007.txt:106
@@ -195,15 +195,15 @@ msgstr ""
 
 #: ../pep-0007.txt:111
 msgid ""
-"Function and macro call style: ``foo(a, b, c)`` -- no space before the "
-"open paren, no spaces inside the parens, no spaces before commas, one "
-"space after each comma."
+"Function and macro call style: ``foo(a, b, c)`` -- no space before the open "
+"paren, no spaces inside the parens, no spaces before commas, one space after "
+"each comma."
 msgstr ""
 
 #: ../pep-0007.txt:115
 msgid ""
-"Always put spaces around assignment, Boolean and comparison operators.  "
-"In expressions using a lot of operators, add spaces around the outermost "
+"Always put spaces around assignment, Boolean and comparison operators.  In "
+"expressions using a lot of operators, add spaces around the outermost "
 "(lowest-priority) operators."
 msgstr ""
 
@@ -215,15 +215,15 @@ msgstr ""
 
 #: ../pep-0007.txt:127
 msgid ""
-"When you break a long expression at a binary operator, the operator goes "
-"at the end of the previous line, and braces should be formatted as shown."
-"  E.g.::"
+"When you break a long expression at a binary operator, the operator goes at "
+"the end of the previous line, and braces should be formatted as shown.  E."
+"g.::"
 msgstr ""
 
 #: ../pep-0007.txt:138
 msgid ""
-"Put blank lines around functions, structure definitions, and major "
-"sections inside functions."
+"Put blank lines around functions, structure definitions, and major sections "
+"inside functions."
 msgstr ""
 
 #: ../pep-0007.txt:141
@@ -232,8 +232,8 @@ msgstr ""
 
 #: ../pep-0007.txt:143
 msgid ""
-"All functions and global variables should be declared static unless they "
-"are to be part of a published interface"
+"All functions and global variables should be declared static unless they are "
+"to be part of a published interface"
 msgstr ""
 
 #: ../pep-0007.txt:146
@@ -249,28 +249,28 @@ msgstr ""
 
 #: ../pep-0007.txt:158
 msgid ""
-"Use a ``Py`` prefix for public functions; never for static functions.  "
-"The ``Py_`` prefix is reserved for global service routines like "
-"``Py_FatalError``; specific groups of routines (e.g. specific object type"
-" APIs) use a longer prefix, e.g. ``PyString_`` for string functions."
+"Use a ``Py`` prefix for public functions; never for static functions.  The "
+"``Py_`` prefix is reserved for global service routines like "
+"``Py_FatalError``; specific groups of routines (e.g. specific object type "
+"APIs) use a longer prefix, e.g. ``PyString_`` for string functions."
 msgstr ""
 
 #: ../pep-0007.txt:164
 msgid ""
-"Public functions and variables use MixedCase with underscores, like this:"
-" ``PyObject_GetAttr``, ``Py_BuildValue``, ``PyExc_TypeError``."
+"Public functions and variables use MixedCase with underscores, like this: "
+"``PyObject_GetAttr``, ``Py_BuildValue``, ``PyExc_TypeError``."
 msgstr ""
 
 #: ../pep-0007.txt:167
 msgid ""
-"Occasionally an \"internal\" function has to be visible to the loader; we"
-" use the ``_Py`` prefix for this, e.g.: ``_PyObject_Dump``."
+"Occasionally an \"internal\" function has to be visible to the loader; we "
+"use the ``_Py`` prefix for this, e.g.: ``_PyObject_Dump``."
 msgstr ""
 
 #: ../pep-0007.txt:170
 msgid ""
-"Macros should have a MixedCase prefix and then use upper case, for "
-"example: ``PyString_AS_STRING``, ``Py_PRINT_RAW``."
+"Macros should have a MixedCase prefix and then use upper case, for example: "
+"``PyString_AS_STRING``, ``Py_PRINT_RAW``."
 msgstr ""
 
 #: ../pep-0007.txt:175
@@ -286,28 +286,26 @@ msgstr ""
 
 #: ../pep-0007.txt:181
 msgid ""
-"For C code that needs to support versions of Python older than 2.3, you "
-"can include this after including ``Python.h``::"
+"For C code that needs to support versions of Python older than 2.3, you can "
+"include this after including ``Python.h``::"
 msgstr ""
 
 #: ../pep-0007.txt:190
 msgid ""
 "The first line of each function docstring should be a \"signature line\" "
-"that gives a brief synopsis of the arguments and return value. For "
-"example::"
+"that gives a brief synopsis of the arguments and return value. For example::"
 msgstr ""
 
 #: ../pep-0007.txt:198
 msgid ""
-"Always include a blank line between the signature line and the text of "
-"the description."
+"Always include a blank line between the signature line and the text of the "
+"description."
 msgstr ""
 
 #: ../pep-0007.txt:201
 msgid ""
 "If the return value for the function is always None (because there is no "
-"meaningful return value), do not include the indication of the return "
-"type."
+"meaningful return value), do not include the indication of the return type."
 msgstr ""
 
 #: ../pep-0007.txt:205
@@ -331,4 +329,3 @@ msgstr ""
 #: ../pep-0007.txt:226
 msgid "This document has been placed in the public domain."
 msgstr ""
-

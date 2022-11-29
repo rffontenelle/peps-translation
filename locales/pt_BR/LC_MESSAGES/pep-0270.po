@@ -71,19 +71,19 @@ msgstr ""
 
 #: ../pep-0270.txt:17
 msgid ""
-"Removing duplicate elements from a list is a common task, but there are "
-"only two reasons I can see for making it a built-in. The first is if it "
-"could be done much faster, which isn't the case.  The second is if it "
-"makes it significantly easier to write code.  The introduction of "
-"``sets.py`` eliminates this situation since creating a sequence without "
-"duplicates is just a matter of choosing a different data structure: a set"
-" instead of a list."
+"Removing duplicate elements from a list is a common task, but there are only "
+"two reasons I can see for making it a built-in. The first is if it could be "
+"done much faster, which isn't the case.  The second is if it makes it "
+"significantly easier to write code.  The introduction of ``sets.py`` "
+"eliminates this situation since creating a sequence without duplicates is "
+"just a matter of choosing a different data structure: a set instead of a "
+"list."
 msgstr ""
 
 #: ../pep-0270.txt:26
 msgid ""
-"As described in :pep:`218`, sets are being added to the standard library "
-"for Python 2.3."
+"As described in :pep:`218`, sets are being added to the standard library for "
+"Python 2.3."
 msgstr ""
 
 #: ../pep-0270.txt:31
@@ -102,18 +102,17 @@ msgstr ""
 
 #: ../pep-0270.txt:40
 msgid ""
-"Removing duplicates from a list is a common task.  I think it is useful "
-"and general enough to belong as a method in list objects. It also has "
-"potential for faster execution when implemented in C, especially if "
-"optimization using hashing or sorted cannot be used."
+"Removing duplicates from a list is a common task.  I think it is useful and "
+"general enough to belong as a method in list objects. It also has potential "
+"for faster execution when implemented in C, especially if optimization using "
+"hashing or sorted cannot be used."
 msgstr ""
 
 #: ../pep-0270.txt:45
 msgid ""
-"On comp.lang.python there are many, many, posts [1]_ asking about the "
-"best way to do this task.  It's a little tricky to implement optimally "
-"and it would be nice to save people the trouble of figuring it out "
-"themselves."
+"On comp.lang.python there are many, many, posts [1]_ asking about the best "
+"way to do this task.  It's a little tricky to implement optimally and it "
+"would be nice to save people the trouble of figuring it out themselves."
 msgstr ""
 
 #: ../pep-0270.txt:52
@@ -123,8 +122,8 @@ msgstr ""
 #: ../pep-0270.txt:54
 msgid ""
 "Tim Peters suggests trying to use a hash table, then trying to sort, and "
-"finally falling back on brute force [2]_.  Should uniq maintain list "
-"order at the expense of speed?"
+"finally falling back on brute force [2]_.  Should uniq maintain list order "
+"at the expense of speed?"
 msgstr ""
 
 #: ../pep-0270.txt:58
@@ -152,8 +151,8 @@ msgstr ""
 
 #: ../pep-0270.txt:74
 msgid ""
-"Tim Peters unique() entry in the Python cookbook: "
-"http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/52560/index_txt"
+"Tim Peters unique() entry in the Python cookbook: http://aspn.activestate."
+"com/ASPN/Cookbook/Python/Recipe/52560/index_txt"
 msgstr ""
 
 #: ../pep-0270.txt:79
@@ -163,4 +162,3 @@ msgstr ""
 #: ../pep-0270.txt:81
 msgid "This document has been placed in the public domain."
 msgstr ""
-

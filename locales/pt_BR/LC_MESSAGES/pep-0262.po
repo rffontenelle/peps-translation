@@ -67,8 +67,8 @@ msgstr ""
 
 #: ../pep-0262.txt:13
 msgid ""
-"This PEP was superseded by :pep:`345` and :pep:`376`, which were "
-"accepted. Therefore, this PEP is (by implication) rejected."
+"This PEP was superseded by :pep:`345` and :pep:`376`, which were accepted. "
+"Therefore, this PEP is (by implication) rejected."
 msgstr ""
 
 #: ../pep-0262.txt:18
@@ -77,17 +77,17 @@ msgstr ""
 
 #: ../pep-0262.txt:20
 msgid ""
-"This PEP describes a format for a database of the Python software "
-"installed on a system."
+"This PEP describes a format for a database of the Python software installed "
+"on a system."
 msgstr ""
 
 #: ../pep-0262.txt:23
 msgid ""
-"(In this document, the term \"distribution\" is used to mean a set of "
-"code that's developed and distributed together.  A \"distribution\" is "
-"the same as a Red Hat or Debian package, but the term \"package\" already"
-" has a meaning in Python terminology, meaning \"a directory with an "
-"``__init__.py`` file in it.\")"
+"(In this document, the term \"distribution\" is used to mean a set of code "
+"that's developed and distributed together.  A \"distribution\" is the same "
+"as a Red Hat or Debian package, but the term \"package\" already has a "
+"meaning in Python terminology, meaning \"a directory with an ``__init__.py`` "
+"file in it.\")"
 msgstr ""
 
 #: ../pep-0262.txt:31
@@ -96,10 +96,10 @@ msgstr ""
 
 #: ../pep-0262.txt:33
 msgid ""
-"We need a way to figure out what distributions, and what versions of "
-"those distributions, are installed on a system.  We want to provide "
-"features similar to CPAN, APT, or RPM.  Required use cases that should be"
-" supported are:"
+"We need a way to figure out what distributions, and what versions of those "
+"distributions, are installed on a system.  We want to provide features "
+"similar to CPAN, APT, or RPM.  Required use cases that should be supported "
+"are:"
 msgstr ""
 
 #: ../pep-0262.txt:38
@@ -112,10 +112,10 @@ msgstr ""
 
 #: ../pep-0262.txt:40
 msgid ""
-"Where can the new version of distribution X be found?  (This can be "
-"defined as either \"a home page where the user can go and find a download"
-" link\", or \"a place where a program can find the newest version?\"  "
-"Both should probably be supported.)"
+"Where can the new version of distribution X be found?  (This can be defined "
+"as either \"a home page where the user can go and find a download link\", or "
+"\"a place where a program can find the newest version?\"  Both should "
+"probably be supported.)"
 msgstr ""
 
 #: ../pep-0262.txt:44
@@ -144,27 +144,26 @@ msgstr ""
 
 #: ../pep-0262.txt:54
 msgid ""
-"The database lives in a bunch of files under <prefix>/lib/python<version"
-">/install-db/.  This location will be called INSTALLDB through the "
-"remainder of this PEP."
+"The database lives in a bunch of files under <prefix>/lib/python<version>/"
+"install-db/.  This location will be called INSTALLDB through the remainder "
+"of this PEP."
 msgstr ""
 
 #: ../pep-0262.txt:58
 msgid ""
-"The structure of the database is deliberately kept simple; each file in "
-"this directory or its subdirectories (if any) describes a single "
-"distribution.  Binary packagings of Python software such as RPMs can then"
-" update Python's database by just installing the corresponding file into "
-"the INSTALLDB directory."
+"The structure of the database is deliberately kept simple; each file in this "
+"directory or its subdirectories (if any) describes a single distribution.  "
+"Binary packagings of Python software such as RPMs can then update Python's "
+"database by just installing the corresponding file into the INSTALLDB "
+"directory."
 msgstr ""
 
 #: ../pep-0262.txt:64
 msgid ""
-"The rationale for scanning subdirectories is that we can move to a "
-"directory-based indexing scheme if the database directory contains too "
-"many entries.  For example, this would let us transparently switch from "
-"INSTALLDB/Numeric to INSTALLDB/N/Nu/Numeric or some similar hashing "
-"scheme."
+"The rationale for scanning subdirectories is that we can move to a directory-"
+"based indexing scheme if the database directory contains too many entries.  "
+"For example, this would let us transparently switch from INSTALLDB/Numeric "
+"to INSTALLDB/N/Nu/Numeric or some similar hashing scheme."
 msgstr ""
 
 #: ../pep-0262.txt:72
@@ -179,20 +178,20 @@ msgstr ""
 
 #: ../pep-0262.txt:77
 msgid ""
-"An initial line listing the sections in this file, separated by "
-"whitespace.  Currently this will always be 'PKG-INFO FILES REQUIRES "
-"PROVIDES'.  This is for future-proofing; if we add a new section, for "
-"example to list documentation files, then we'd add a DOCS section and "
-"list it in the contents.  Sections are always separated by blank lines."
+"An initial line listing the sections in this file, separated by whitespace.  "
+"Currently this will always be 'PKG-INFO FILES REQUIRES PROVIDES'.  This is "
+"for future-proofing; if we add a new section, for example to list "
+"documentation files, then we'd add a DOCS section and list it in the "
+"contents.  Sections are always separated by blank lines."
 msgstr ""
 
 #: ../pep-0262.txt:84
 msgid ""
-"A distribution that uses the Distutils for installation should "
-"automatically update the database.  Distributions that roll their own "
-"installation will have to use the database's API to manually add or "
-"update their own entry.  System package managers such as RPM or pkgadd "
-"can just create the new file in the INSTALLDB directory."
+"A distribution that uses the Distutils for installation should automatically "
+"update the database.  Distributions that roll their own installation will "
+"have to use the database's API to manually add or update their own entry.  "
+"System package managers such as RPM or pkgadd can just create the new file "
+"in the INSTALLDB directory."
 msgstr ""
 
 #: ../pep-0262.txt:91
@@ -205,9 +204,9 @@ msgstr ""
 
 #: ../pep-0262.txt:96
 msgid ""
-"An initial set of :rfc:`822` headers containing the distribution "
-"information for a file, as described in :pep:`241`, \"Metadata for Python"
-" Software Packages\"."
+"An initial set of :rfc:`822` headers containing the distribution information "
+"for a file, as described in :pep:`241`, \"Metadata for Python Software "
+"Packages\"."
 msgstr ""
 
 #: ../pep-0262.txt:101
@@ -216,16 +215,16 @@ msgstr ""
 
 #: ../pep-0262.txt:103
 msgid ""
-"An entry for each file installed by the distribution. Generated files "
-"such as .pyc and .pyo files are on this list as well as the original .py "
-"files installed by a distribution; their checksums won't be stored or "
-"checked, though."
+"An entry for each file installed by the distribution. Generated files such "
+"as .pyc and .pyo files are on this list as well as the original .py files "
+"installed by a distribution; their checksums won't be stored or checked, "
+"though."
 msgstr ""
 
 #: ../pep-0262.txt:109
 msgid ""
-"Each file's entry is a single tab-delimited line that contains the "
-"following fields:"
+"Each file's entry is a single tab-delimited line that contains the following "
+"fields:"
 msgstr ""
 
 #: ../pep-0262.txt:112
@@ -237,7 +236,8 @@ msgid "The file's size"
 msgstr ""
 
 #: ../pep-0262.txt:116
-msgid "The file's permissions.  On Windows, this field will always be 'unknown'"
+msgid ""
+"The file's permissions.  On Windows, this field will always be 'unknown'"
 msgstr ""
 
 #: ../pep-0262.txt:119
@@ -248,9 +248,9 @@ msgstr ""
 
 #: ../pep-0262.txt:122
 msgid ""
-"A SHA1 digest of the file, encoded in hex.  For generated files such as "
-"\\*.pyc files, this field must contain the string \"-\", which indicates "
-"that the file's checksum should not be verified."
+"A SHA1 digest of the file, encoded in hex.  For generated files such as \\*."
+"pyc files, this field must contain the string \"-\", which indicates that "
+"the file's checksum should not be verified."
 msgstr ""
 
 #: ../pep-0262.txt:128
@@ -260,19 +260,18 @@ msgstr ""
 #: ../pep-0262.txt:130
 msgid ""
 "This section is a list of strings giving the services required for this "
-"module distribution to run properly.  This list includes the distribution"
-" name (\"python-stdlib\") and module names (\"rfc822\", \"htmllib\", "
-"\"email\", \"email.Charset\").  It will be specified by an extra "
-"'requires' argument to the ``distutils.core.setup()`` function.  For "
-"example::"
+"module distribution to run properly.  This list includes the distribution "
+"name (\"python-stdlib\") and module names (\"rfc822\", \"htmllib\", "
+"\"email\", \"email.Charset\").  It will be specified by an extra 'requires' "
+"argument to the ``distutils.core.setup()`` function.  For example::"
 msgstr ""
 
 #: ../pep-0262.txt:139
 msgid ""
-"Eventually there may be automated tools that look through all of the code"
-" and produce a list of requirements, but it's unlikely that these tools "
-"can handle all possible cases; a manual way to specify requirements will "
-"always be necessary."
+"Eventually there may be automated tools that look through all of the code "
+"and produce a list of requirements, but it's unlikely that these tools can "
+"handle all possible cases; a manual way to specify requirements will always "
+"be necessary."
 msgstr ""
 
 #: ../pep-0262.txt:146
@@ -282,26 +281,26 @@ msgstr ""
 #: ../pep-0262.txt:148
 msgid ""
 "This section is a list of strings giving the services provided by an "
-"installed distribution.  This list includes the distribution name "
-"(\"python-stdlib\") and module names (\"rfc822\", \"htmllib\", \"email\","
-" \"email.Charset\")."
+"installed distribution.  This list includes the distribution name (\"python-"
+"stdlib\") and module names (\"rfc822\", \"htmllib\", \"email\", \"email."
+"Charset\")."
 msgstr ""
 
 #: ../pep-0262.txt:153
 msgid ""
-"XXX should files be listed?  e.g. $PREFIX/lib/color-table.txt, to pick up"
-" data files, required scripts, etc."
+"XXX should files be listed?  e.g. $PREFIX/lib/color-table.txt, to pick up "
+"data files, required scripts, etc."
 msgstr ""
 
 #: ../pep-0262.txt:156
 msgid ""
 "Eventually there may be an option to let module developers add their own "
-"strings to this section.  For example, you might add \"XML parser\" to "
-"this section, and other module distributions could then list \"XML "
-"parser\" as one of their dependencies to indicate that multiple different"
-" XML parsers can be used.  For now this ability isn't supported because "
-"it raises too many issues: do we need a central registry of legal "
-"strings, or just let people put whatever they like?  Etc., etc..."
+"strings to this section.  For example, you might add \"XML parser\" to this "
+"section, and other module distributions could then list \"XML parser\" as "
+"one of their dependencies to indicate that multiple different XML parsers "
+"can be used.  For now this ability isn't supported because it raises too "
+"many issues: do we need a central registry of legal strings, or just let "
+"people put whatever they like?  Etc., etc..."
 msgstr ""
 
 #: ../pep-0262.txt:167
@@ -310,22 +309,22 @@ msgstr ""
 
 #: ../pep-0262.txt:169
 msgid ""
-"There's a single fundamental class, InstallationDatabase.  The code for "
-"it lives in distutils/install_db.py.  (XXX any suggestions for alternate "
+"There's a single fundamental class, InstallationDatabase.  The code for it "
+"lives in distutils/install_db.py.  (XXX any suggestions for alternate "
 "locations in the standard library, or an alternate module name?)"
 msgstr ""
 
 #: ../pep-0262.txt:174
 msgid ""
-"The InstallationDatabase returns instances of Distribution that contain "
-"all the information about an installed distribution."
+"The InstallationDatabase returns instances of Distribution that contain all "
+"the information about an installed distribution."
 msgstr ""
 
 #: ../pep-0262.txt:177
 msgid ""
 "XXX Several of the fields in Distribution are duplicates of ones in "
-"distutils.dist.Distribution.  Probably they should be factored out into "
-"the Distribution class proposed here, but can this be done in a backward-"
+"distutils.dist.Distribution.  Probably they should be factored out into the "
+"Distribution class proposed here, but can this be done in a backward-"
 "compatible way?"
 msgstr ""
 
@@ -343,10 +342,10 @@ msgstr ""
 
 #: ../pep-0262.txt:257
 msgid ""
-"Patches to the Distutils that 1) implement an InstallationDatabase class,"
-" 2) Update the database when a new distribution is installed.  3) add a "
-"simple package management tool, features to be added to this PEP.  (Or "
-"should that be a separate PEP?)  See [2]_ for the current patch."
+"Patches to the Distutils that 1) implement an InstallationDatabase class, 2) "
+"Update the database when a new distribution is installed.  3) add a simple "
+"package management tool, features to be added to this PEP.  (Or should that "
+"be a separate PEP?)  See [2]_ for the current patch."
 msgstr ""
 
 #: ../pep-0262.txt:265
@@ -357,10 +356,10 @@ msgstr ""
 msgid ""
 "PJE suggests the installation database \"be potentially present on every "
 "directory in sys.path, with the contents merged in sys.path order.  This "
-"would allow home-directory or other alternate-location installs to work, "
-"and ease the process of a distutils install command writing the file.\" "
-"Nice feature: it does mean that package manager tools can take into "
-"account Python packages that a user has privately installed."
+"would allow home-directory or other alternate-location installs to work, and "
+"ease the process of a distutils install command writing the file.\" Nice "
+"feature: it does mean that package manager tools can take into account "
+"Python packages that a user has privately installed."
 msgstr ""
 
 #: ../pep-0262.txt:275
@@ -372,24 +371,24 @@ msgstr ""
 
 #: ../pep-0262.txt:280
 msgid ""
-"Should the package-database file itself be included in the files list?  "
-"(PJE would think yes, but of course it can't contain its own checksum.  "
-"AMK can't think of a use case where including the DB file matters.)"
+"Should the package-database file itself be included in the files list?  (PJE "
+"would think yes, but of course it can't contain its own checksum.  AMK can't "
+"think of a use case where including the DB file matters.)"
 msgstr ""
 
 #: ../pep-0262.txt:285
 msgid ""
-"PJE wonders about writing the package DB file **first**, before "
-"installing any other files, so that failed partial installations can both"
-" be backed out, and recognized as broken. This PEP may have to specify "
-"some algorithm for recognizing this situation."
+"PJE wonders about writing the package DB file **first**, before installing "
+"any other files, so that failed partial installations can both be backed "
+"out, and recognized as broken. This PEP may have to specify some algorithm "
+"for recognizing this situation."
 msgstr ""
 
 #: ../pep-0262.txt:291
 msgid ""
-"Should we guarantee the format of installation databases remains "
-"compatible across Python versions, or is it subject to arbitrary change?"
-"  Probably we need to guarantee compatibility."
+"Should we guarantee the format of installation databases remains compatible "
+"across Python versions, or is it subject to arbitrary change?  Probably we "
+"need to guarantee compatibility."
 msgstr ""
 
 #: ../pep-0262.txt:297
@@ -398,25 +397,25 @@ msgstr ""
 
 #: ../pep-0262.txt:299
 msgid ""
-"Instead of using one text file per distribution, one large text file or "
-"an anydbm file could be used.  This has been rejected for a few reasons."
-"  First, performance is probably not an extremely pressing concern as the"
-" database is only used when installing or removing software, a relatively"
-" infrequent task.  Scalability also likely isn't a problem, as people may"
-" have hundreds of Python packages installed, but thousands or tens of "
+"Instead of using one text file per distribution, one large text file or an "
+"anydbm file could be used.  This has been rejected for a few reasons.  "
+"First, performance is probably not an extremely pressing concern as the "
+"database is only used when installing or removing software, a relatively "
+"infrequent task.  Scalability also likely isn't a problem, as people may "
+"have hundreds of Python packages installed, but thousands or tens of "
 "thousands seems unlikely.  Finally, individual text files are compatible "
-"with installers such as RPM or DPKG because a binary packager can just "
-"drop the new database file into the database directory.  If one large "
-"text file or a binary file were used, the Python database would then have"
-" to be updated by running a postinstall script."
+"with installers such as RPM or DPKG because a binary packager can just drop "
+"the new database file into the database directory.  If one large text file "
+"or a binary file were used, the Python database would then have to be "
+"updated by running a postinstall script."
 msgstr ""
 
 #: ../pep-0262.txt:312
 msgid ""
 "On Windows, the permissions and owner/group of a file aren't stored.  "
-"Windows does in fact support ownership and access permissions, but "
-"reading and setting them requires the win32all extensions, and they "
-"aren't present in the basic Python installer for Windows."
+"Windows does in fact support ownership and access permissions, but reading "
+"and setting them requires the win32all extensions, and they aren't present "
+"in the basic Python installer for Windows."
 msgstr ""
 
 #: ../pep-0262.txt:320
@@ -433,8 +432,8 @@ msgstr ""
 msgid ""
 "A patch to implement this PEP will be tracked as patch #562100 on "
 "SourceForge. https://bugs.python.org/issue562100 . Code implementing the "
-"installation database is currently in Python CVS in the "
-"nondist/sandbox/pep262 directory."
+"installation database is currently in Python CVS in the nondist/sandbox/"
+"pep262 directory."
 msgstr ""
 
 #: ../pep-0262.txt:333
@@ -443,14 +442,14 @@ msgstr ""
 
 #: ../pep-0262.txt:335
 msgid ""
-"Ideas for this PEP originally came from postings by Greg Ward, Fred L. "
-"Drake Jr., Thomas Heller, Mats Wichmann, Phillip J. Eby, and others."
+"Ideas for this PEP originally came from postings by Greg Ward, Fred L. Drake "
+"Jr., Thomas Heller, Mats Wichmann, Phillip J. Eby, and others."
 msgstr ""
 
 #: ../pep-0262.txt:339
 msgid ""
-"Many changes and rewrites to this document were suggested by the readers "
-"of the Distutils SIG."
+"Many changes and rewrites to this document were suggested by the readers of "
+"the Distutils SIG."
 msgstr ""
 
 #: ../pep-0262.txt:344
@@ -460,4 +459,3 @@ msgstr ""
 #: ../pep-0262.txt:346
 msgid "This document has been placed in the public domain."
 msgstr ""
-

@@ -23,8 +23,8 @@ msgstr ""
 
 #: ../pep-0633.rst:3
 msgid ""
-"Laurie Opperman <laurie_opperman@hotmail.com>, Arun Babu Neelicattu "
-"<arun.neelicattu@gmail.com>"
+"Laurie Opperman <laurie_opperman@hotmail.com>, Arun Babu Neelicattu <arun."
+"neelicattu@gmail.com>"
 msgstr ""
 
 #: ../pep-0633.rst
@@ -87,8 +87,8 @@ msgstr ""
 
 #: ../pep-0633.rst:13
 msgid ""
-"https://discuss.python.org/t/how-to-specify-dependencies-pep-508-strings-"
-"or-a-table-in-toml/5243/38"
+"https://discuss.python.org/t/how-to-specify-dependencies-pep-508-strings-or-"
+"a-table-in-toml/5243/38"
 msgstr ""
 
 #: ../pep-0633.rst:17
@@ -97,9 +97,9 @@ msgstr ""
 
 #: ../pep-0633.rst:19
 msgid ""
-"This PEP has been rejected in favour of :pep:`631` due to its popularity,"
-" consistency with the existing usage of :pep:`508` strings, and "
-"compatibility with existing packaging tool suites."
+"This PEP has been rejected in favour of :pep:`631` due to its popularity, "
+"consistency with the existing usage of :pep:`508` strings, and compatibility "
+"with existing packaging tool suites."
 msgstr ""
 
 #: ../pep-0633.rst:25
@@ -108,10 +108,10 @@ msgstr ""
 
 #: ../pep-0633.rst:27
 msgid ""
-"This PEP specifies how to write a project's dependencies in a "
-"``pyproject.toml`` file for packaging-related tools to consume using the "
-"fields defined in :pep:`621`, as an alternative to the :pep:`508`-based "
-"approach defined in :pep:`631`."
+"This PEP specifies how to write a project's dependencies in a ``pyproject."
+"toml`` file for packaging-related tools to consume using the fields defined "
+"in :pep:`621`, as an alternative to the :pep:`508`-based approach defined "
+"in :pep:`631`."
 msgstr ""
 
 #: ../pep-0633.rst:34
@@ -140,15 +140,15 @@ msgstr ""
 
 #: ../pep-0633.rst:46
 msgid ""
-"Users of multiple other popular languages may already be familiar with "
-"the TOML syntax."
+"Users of multiple other popular languages may already be familiar with the "
+"TOML syntax."
 msgstr ""
 
 #: ../pep-0633.rst:49
 msgid ""
-"TOML directly represents the same data structures as in JSON, and "
-"therefore a sub-set of Python literals, so users can understand the "
-"hierarchy and type of value"
+"TOML directly represents the same data structures as in JSON, and therefore "
+"a sub-set of Python literals, so users can understand the hierarchy and type "
+"of value"
 msgstr ""
 
 #: ../pep-0633.rst:57
@@ -157,26 +157,25 @@ msgstr ""
 
 #: ../pep-0633.rst:59
 msgid ""
-"Most of this is taken from discussions in the `PEP 621 dependencies "
-"topic`_. This has elements from `Pipfile`_, `Poetry`_, `Dart's "
-"dependencies`_ and `Rust's Cargo`_. A `comparison document`_ shows "
-"advantages and disadvantages between this format and :pep:`508`-style "
-"specifiers."
+"Most of this is taken from discussions in the `PEP 621 dependencies topic`_. "
+"This has elements from `Pipfile`_, `Poetry`_, `Dart's dependencies`_ and "
+"`Rust's Cargo`_. A `comparison document`_ shows advantages and disadvantages "
+"between this format and :pep:`508`-style specifiers."
 msgstr ""
 
 #: ../pep-0633.rst:64
 msgid ""
 "In the specification of multiple requirements with the same distribution "
 "name (where environment markers choose the appropriate dependency), the "
-"chosen solution is similar to `Poetry`_'s, where an array of requirements"
-" is allowed."
+"chosen solution is similar to `Poetry`_'s, where an array of requirements is "
+"allowed."
 msgstr ""
 
 #: ../pep-0633.rst:68
 msgid ""
-"The direct-reference keys closely align with and utilise :pep:`610` and "
-":pep:`440` as to reduce differences in the packaging ecosystem and rely "
-"on previous work in specification."
+"The direct-reference keys closely align with and utilise :pep:`610` and :pep:"
+"`440` as to reduce differences in the packaging ecosystem and rely on "
+"previous work in specification."
 msgstr ""
 
 #: ../pep-0633.rst:81
@@ -185,21 +184,21 @@ msgstr ""
 
 #: ../pep-0633.rst:83
 msgid ""
-"As in :pep:`621`, if metadata is improperly specified then tools MUST "
-"raise an error. The metadata MUST conform to the `TOML`_ specification."
+"As in :pep:`621`, if metadata is improperly specified then tools MUST raise "
+"an error. The metadata MUST conform to the `TOML`_ specification."
 msgstr ""
 
 #: ../pep-0633.rst:86
 msgid ""
-"To reduce confusion with this document being a specification for "
-"specifying dependencies, the word \"requirement\" is used to mean a "
-":pep:`508` dependency specification."
+"To reduce confusion with this document being a specification for specifying "
+"dependencies, the word \"requirement\" is used to mean a :pep:`508` "
+"dependency specification."
 msgstr ""
 
 #: ../pep-0633.rst:90
 msgid ""
-"The following tables are added to the ``project`` table specified in "
-":pep:`621`."
+"The following tables are added to the ``project`` table specified in :pep:"
+"`621`."
 msgstr ""
 
 #: ../pep-0633.rst:96
@@ -212,16 +211,15 @@ msgstr ""
 
 #: ../pep-0633.rst:100
 msgid ""
-"The keys inside this table are the names of the required distribution. "
-"The values can have one of the following types:"
+"The keys inside this table are the names of the required distribution. The "
+"values can have one of the following types:"
 msgstr ""
 
 #: ../pep-0633.rst:103
 msgid ""
-"string: the requirement is defined only by a version requirement, with "
-"same specification as ``version`` in the requirement table, except "
-"allowing the empty string ``\"\"`` to place no restriction on the "
-"version."
+"string: the requirement is defined only by a version requirement, with same "
+"specification as ``version`` in the requirement table, except allowing the "
+"empty string ``\"\"`` to place no restriction on the version."
 msgstr ""
 
 #: ../pep-0633.rst:107 ../pep-0633.rst:163
@@ -230,8 +228,8 @@ msgstr ""
 
 #: ../pep-0633.rst:109
 msgid ""
-"array: an array of requirement tables. It is an error to specify an empty"
-" array ``[]`` as a value."
+"array: an array of requirement tables. It is an error to specify an empty "
+"array ``[]`` as a value."
 msgstr ""
 
 #: ../pep-0633.rst:115
@@ -245,20 +243,19 @@ msgstr ""
 #: ../pep-0633.rst:119
 msgid ""
 "``version`` (string): a :pep:`440` version specifier, which is a comma- "
-"delimited list of version specifier clauses. The string MUST be non-"
-"empty."
+"delimited list of version specifier clauses. The string MUST be non-empty."
 msgstr ""
 
 #: ../pep-0633.rst:122
 msgid ""
-"``extras`` (array of strings): a list of :pep:`508` extras declarations "
-"for the distribution. The list MUST be non-empty."
+"``extras`` (array of strings): a list of :pep:`508` extras declarations for "
+"the distribution. The list MUST be non-empty."
 msgstr ""
 
 #: ../pep-0633.rst:125
 msgid ""
-"``markers`` (string): a :pep:`508` environment marker expression. The "
-"string MUST be non-empty."
+"``markers`` (string): a :pep:`508` environment marker expression. The string "
+"MUST be non-empty."
 msgstr ""
 
 #: ../pep-0633.rst:128
@@ -270,33 +267,33 @@ msgstr ""
 
 #: ../pep-0633.rst:132
 msgid ""
-"``git``, ``hg``, ``bzr`` or ``svn`` (string): the URL of a VCS repository"
-" (as specified in :pep:`440`) to clone, whose tree will be installed to "
-"satisfy the requirement. Further VCS keys will be added via amendments to"
-" :pep:`610`, however tools MAY opt to support other VCS's using their "
-"command-line command prior to the acceptance of the amendment."
+"``git``, ``hg``, ``bzr`` or ``svn`` (string): the URL of a VCS repository "
+"(as specified in :pep:`440`) to clone, whose tree will be installed to "
+"satisfy the requirement. Further VCS keys will be added via amendments to :"
+"pep:`610`, however tools MAY opt to support other VCS's using their command-"
+"line command prior to the acceptance of the amendment."
 msgstr ""
 
 #: ../pep-0633.rst:139
 msgid ""
 "``revision`` (string): the identifier for a specific revision of the "
-"specified VCS repository to check-out before installation. Users MUST "
-"only provide this when one of ``git``, ``hg``, ``bzr``, ``svn``, or "
-"another VCS key is used to identify the distribution to install. Revision"
-" identifiers are suggested in :pep:`610`."
+"specified VCS repository to check-out before installation. Users MUST only "
+"provide this when one of ``git``, ``hg``, ``bzr``, ``svn``, or another VCS "
+"key is used to identify the distribution to install. Revision identifiers "
+"are suggested in :pep:`610`."
 msgstr ""
 
 #: ../pep-0633.rst:145
 msgid ""
-"At most one of the following keys can be specified simultaneously, as "
-"they logically conflict with each other in the requirement: ``version``, "
-"``url``, ``git``, ``hg``, ``bzr``, ``svn``, and any other VCS key."
+"At most one of the following keys can be specified simultaneously, as they "
+"logically conflict with each other in the requirement: ``version``, ``url``, "
+"``git``, ``hg``, ``bzr``, ``svn``, and any other VCS key."
 msgstr ""
 
 #: ../pep-0633.rst:149
 msgid ""
-"An empty requirement table ``{}`` places no restriction on the "
-"requirement, in addition to the empty string ``\"\"``."
+"An empty requirement table ``{}`` places no restriction on the requirement, "
+"in addition to the empty string ``\"\"``."
 msgstr ""
 
 #: ../pep-0633.rst:152
@@ -321,8 +318,8 @@ msgstr ""
 
 #: ../pep-0633.rst:167
 msgid ""
-"These requirement tables have `the same specification as above "
-"<#requirement-spec>`_, with the addition of the following required key:"
+"These requirement tables have `the same specification as above <#requirement-"
+"spec>`_, with the addition of the following required key:"
 msgstr ""
 
 #: ../pep-0633.rst:171
@@ -337,9 +334,9 @@ msgstr ""
 
 #: ../pep-0633.rst:178
 msgid ""
-"Tools will need to convert this format to :pep:`508` requirement strings."
-" Below is an example implementation of that conversion (assuming "
-"validation is already performed):"
+"Tools will need to convert this format to :pep:`508` requirement strings. "
+"Below is an example implementation of that conversion (assuming validation "
+"is already performed):"
 msgstr ""
 
 #: ../pep-0633.rst:237
@@ -348,9 +345,9 @@ msgstr ""
 
 #: ../pep-0633.rst:239
 msgid ""
-"For initial validation, a JSON-schema can be used. Not only does this "
-"help tools have a consistent validation, but it allows code editors to "
-"highlight validation errors as users are building the dependencies list."
+"For initial validation, a JSON-schema can be used. Not only does this help "
+"tools have a consistent validation, but it allows code editors to highlight "
+"validation errors as users are building the dependencies list."
 msgstr ""
 
 #: ../pep-0633.rst:448
@@ -373,23 +370,23 @@ msgstr ""
 
 #: ../pep-0633.rst:510
 msgid ""
-"The authors of this PEP recognise that various tools need to both read "
-"from and write to this format for dependency specification. This section "
-"aims to provide direct comparison with and examples for translating "
-"to/from the currently used standard, :pep:`508`."
+"The authors of this PEP recognise that various tools need to both read from "
+"and write to this format for dependency specification. This section aims to "
+"provide direct comparison with and examples for translating to/from the "
+"currently used standard, :pep:`508`."
 msgstr ""
 
 #: ../pep-0633.rst:517
 msgid ""
-"For simplicity and clarity, various ways in which TOML allows you to "
-"specify each specification is not represented. These examples use the "
-"standard inline representation."
+"For simplicity and clarity, various ways in which TOML allows you to specify "
+"each specification is not represented. These examples use the standard "
+"inline representation."
 msgstr ""
 
 #: ../pep-0633.rst:520
 msgid ""
-"For example, while following are considered equivalent in TOML, we choose"
-" the second form for the examples in this section."
+"For example, while following are considered equivalent in TOML, we choose "
+"the second form for the examples in this section."
 msgstr ""
 
 #: ../pep-0633.rst:530
@@ -465,8 +462,8 @@ msgstr ""
 #: ../pep-0633.rst:679
 msgid ""
 "Use an array instead of a table in order to have each element only be a "
-"table (with a ``name`` key) and no arrays of requirement tables. This was"
-" very verbose and restrictive in the TOML format, and having multiple "
+"table (with a ``name`` key) and no arrays of requirement tables. This was "
+"very verbose and restrictive in the TOML format, and having multiple "
 "requirements for a given distribution isn't very common."
 msgstr ""
 
@@ -476,16 +473,16 @@ msgstr ""
 
 #: ../pep-0633.rst:687
 msgid ""
-"Remove the ``optional-dependencies`` table in favour of both including an"
-" ``optional`` key in the requirement and an ``extras`` table which "
-"specifies which (optional) requirements are needed for a project's extra."
-" This reduces the number of table with the same specification (to 1) and "
-"allows for requirements to be specified once but used in multiple extras,"
-" but distances some of the requirement's properties (which extra(s) it "
-"belongs to), groups required and optional dependencies together (possibly"
-" mixed), and there may not be a simple way to choose a requirement when a"
-" distribution has multiple requirements. This was rejected as ``optional-"
-"dependencies`` has already been used in the :pep:`621` draft."
+"Remove the ``optional-dependencies`` table in favour of both including an "
+"``optional`` key in the requirement and an ``extras`` table which specifies "
+"which (optional) requirements are needed for a project's extra. This reduces "
+"the number of table with the same specification (to 1) and allows for "
+"requirements to be specified once but used in multiple extras, but distances "
+"some of the requirement's properties (which extra(s) it belongs to), groups "
+"required and optional dependencies together (possibly mixed), and there may "
+"not be a simple way to choose a requirement when a distribution has multiple "
+"requirements. This was rejected as ``optional-dependencies`` has already "
+"been used in the :pep:`621` draft."
 msgstr ""
 
 #: ../pep-0633.rst:699
@@ -495,9 +492,9 @@ msgstr ""
 #: ../pep-0633.rst:701
 msgid ""
 "Include the direct-reference keys in a ``direct`` table, have the VCS "
-"specified as the value of a ``vcs`` key. This was more explicit and "
-"easier to include in a JSON-schema validation, but was decided to be too "
-"verbose and not as readable."
+"specified as the value of a ``vcs`` key. This was more explicit and easier "
+"to include in a JSON-schema validation, but was decided to be too verbose "
+"and not as readable."
 msgstr ""
 
 #: ../pep-0633.rst:707
@@ -516,11 +513,11 @@ msgstr ""
 
 #: ../pep-0633.rst:715
 msgid ""
-"Have the ``optional-dependencies`` be a table of dependency tables for "
-"each extra, with the table name being the extra's name. This made "
-"``optional-dependencies`` a different type (table of tables of "
-"requirements) from ``dependencies`` (table of requirements), which could "
-"be jarring for users and harder to parse."
+"Have the ``optional-dependencies`` be a table of dependency tables for each "
+"extra, with the table name being the extra's name. This made ``optional-"
+"dependencies`` a different type (table of tables of requirements) from "
+"``dependencies`` (table of requirements), which could be jarring for users "
+"and harder to parse."
 msgstr ""
 
 #: ../pep-0633.rst:722
@@ -529,12 +526,11 @@ msgstr ""
 
 #: ../pep-0633.rst:724
 msgid ""
-"Make each :pep:`508` environment marker as a key (or child-table key) in "
-"the requirement. This arguably increases readability and ease of parsing."
-" The ``markers`` key would still be allowed for more advanced "
-"specification, with which the key-specified environment markers are "
-"``and``'d with the result of. This was deferred as more design needs to "
-"be undertaken."
+"Make each :pep:`508` environment marker as a key (or child-table key) in the "
+"requirement. This arguably increases readability and ease of parsing. The "
+"``markers`` key would still be allowed for more advanced specification, with "
+"which the key-specified environment markers are ``and``'d with the result "
+"of. This was deferred as more design needs to be undertaken."
 msgstr ""
 
 #: ../pep-0633.rst:731
@@ -543,10 +539,10 @@ msgstr ""
 
 #: ../pep-0633.rst:733
 msgid ""
-"Replace the ``for-extra`` key with ``for-extras``, with the value being "
-"an array of extras which the requirement satisfies. This reduces some "
-"duplication, but in this case that duplication makes explicit which "
-"extras have which dependencies."
+"Replace the ``for-extra`` key with ``for-extras``, with the value being an "
+"array of extras which the requirement satisfies. This reduces some "
+"duplication, but in this case that duplication makes explicit which extras "
+"have which dependencies."
 msgstr ""
 
 #: ../pep-0633.rst:740
@@ -555,7 +551,6 @@ msgstr ""
 
 #: ../pep-0633.rst:742
 msgid ""
-"This document is placed in the public domain or under the "
-"CC0-1.0-Universal license, whichever is more permissive."
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
 msgstr ""
-

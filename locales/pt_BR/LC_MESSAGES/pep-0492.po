@@ -80,37 +80,35 @@ msgstr ""
 #: ../pep-0492.txt:18
 msgid ""
 "The growth of Internet and general connectivity has triggered the "
-"proportionate need for responsive and scalable code.  This proposal aims "
-"to answer that need by making writing explicitly asynchronous, concurrent"
-" Python code easier and more Pythonic."
+"proportionate need for responsive and scalable code.  This proposal aims to "
+"answer that need by making writing explicitly asynchronous, concurrent "
+"Python code easier and more Pythonic."
 msgstr ""
 
 #: ../pep-0492.txt:23
 msgid ""
-"It is proposed to make *coroutines* a proper standalone concept in "
-"Python, and introduce new supporting syntax.  The ultimate goal is to "
-"help establish a common, easily approachable, mental model of "
-"asynchronous programming in Python and make it as close to synchronous "
-"programming as possible."
+"It is proposed to make *coroutines* a proper standalone concept in Python, "
+"and introduce new supporting syntax.  The ultimate goal is to help establish "
+"a common, easily approachable, mental model of asynchronous programming in "
+"Python and make it as close to synchronous programming as possible."
 msgstr ""
 
 #: ../pep-0492.txt:29
 msgid ""
-"This PEP assumes that the asynchronous tasks are scheduled and "
-"coordinated by an Event Loop similar to that of stdlib module "
-"``asyncio.events.AbstractEventLoop``.  While the PEP is not tied to any "
-"specific Event Loop implementation, it is relevant only to the kind of "
-"coroutine that uses ``yield`` as a signal to the scheduler, indicating "
-"that the coroutine will be waiting until an event (such as IO) is "
-"completed."
+"This PEP assumes that the asynchronous tasks are scheduled and coordinated "
+"by an Event Loop similar to that of stdlib module ``asyncio.events."
+"AbstractEventLoop``.  While the PEP is not tied to any specific Event Loop "
+"implementation, it is relevant only to the kind of coroutine that uses "
+"``yield`` as a signal to the scheduler, indicating that the coroutine will "
+"be waiting until an event (such as IO) is completed."
 msgstr ""
 
 #: ../pep-0492.txt:37
 msgid ""
-"We believe that the changes proposed here will help keep Python relevant "
-"and competitive in a quickly growing area of asynchronous programming, as"
-" many other languages have adopted, or are planning to adopt, similar "
-"features: [2]_, [5]_, [6]_, [7]_, [8]_, [10]_."
+"We believe that the changes proposed here will help keep Python relevant and "
+"competitive in a quickly growing area of asynchronous programming, as many "
+"other languages have adopted, or are planning to adopt, similar features: "
+"[2]_, [5]_, [6]_, [7]_, [8]_, [10]_."
 msgstr ""
 
 #: ../pep-0492.txt:44
@@ -119,18 +117,18 @@ msgstr ""
 
 #: ../pep-0492.txt:46
 msgid ""
-"Feedback on the initial beta release of Python 3.5 resulted in a redesign"
-" of the object model supporting this PEP to more clearly separate native "
+"Feedback on the initial beta release of Python 3.5 resulted in a redesign of "
+"the object model supporting this PEP to more clearly separate native "
 "coroutines from generators - rather than being a new kind of generator, "
-"native coroutines are now their own completely distinct type (implemented"
-" in [17]_)."
+"native coroutines are now their own completely distinct type (implemented in "
+"[17]_)."
 msgstr ""
 
 #: ../pep-0492.txt:52
 msgid ""
 "This change was implemented based primarily due to problems encountered "
-"attempting to integrate support for native coroutines into the Tornado "
-"web server (reported in [18]_)."
+"attempting to integrate support for native coroutines into the Tornado web "
+"server (reported in [18]_)."
 msgstr ""
 
 #: ../pep-0492.txt:56
@@ -139,9 +137,9 @@ msgstr ""
 
 #: ../pep-0492.txt:58
 msgid ""
-"Before 3.5.2, ``__aiter__`` was expected to return an *awaitable* "
-"resolving to an *asynchronous iterator*.  Starting with 3.5.2, "
-"``__aiter__`` should return asynchronous iterators directly."
+"Before 3.5.2, ``__aiter__`` was expected to return an *awaitable* resolving "
+"to an *asynchronous iterator*.  Starting with 3.5.2, ``__aiter__`` should "
+"return asynchronous iterators directly."
 msgstr ""
 
 #: ../pep-0492.txt:62
@@ -152,15 +150,15 @@ msgstr ""
 
 #: ../pep-0492.txt:65
 msgid ""
-"In CPython 3.6, the old ``__aiter__`` protocol will still be supported "
-"with a ``DeprecationWarning`` being raised."
+"In CPython 3.6, the old ``__aiter__`` protocol will still be supported with "
+"a ``DeprecationWarning`` being raised."
 msgstr ""
 
 #: ../pep-0492.txt:68
 msgid ""
-"In CPython 3.7, the old ``__aiter__`` protocol will no longer be "
-"supported: a ``RuntimeError`` will be raised if ``__aiter__`` returns "
-"anything but an asynchronous iterator."
+"In CPython 3.7, the old ``__aiter__`` protocol will no longer be supported: "
+"a ``RuntimeError`` will be raised if ``__aiter__`` returns anything but an "
+"asynchronous iterator."
 msgstr ""
 
 #: ../pep-0492.txt:72
@@ -173,49 +171,49 @@ msgstr ""
 
 #: ../pep-0492.txt:78
 msgid ""
-"Current Python supports implementing coroutines via generators (PEP 342),"
-" further enhanced by the ``yield from`` syntax introduced in PEP 380. "
-"This approach has a number of shortcomings:"
+"Current Python supports implementing coroutines via generators (PEP 342), "
+"further enhanced by the ``yield from`` syntax introduced in PEP 380. This "
+"approach has a number of shortcomings:"
 msgstr ""
 
 #: ../pep-0492.txt:82
 msgid ""
-"It is easy to confuse coroutines with regular generators, since they "
-"share the same syntax; this is especially true for new developers."
+"It is easy to confuse coroutines with regular generators, since they share "
+"the same syntax; this is especially true for new developers."
 msgstr ""
 
 #: ../pep-0492.txt:85
 msgid ""
 "Whether or not a function is a coroutine is determined by a presence of "
 "``yield``  or ``yield from`` statements in its *body*, which can lead to "
-"unobvious errors when such statements appear in or disappear from "
-"function body during refactoring."
+"unobvious errors when such statements appear in or disappear from function "
+"body during refactoring."
 msgstr ""
 
 #: ../pep-0492.txt:90
 msgid ""
-"Support for asynchronous calls is limited to expressions where ``yield`` "
-"is allowed syntactically, limiting the usefulness of syntactic features, "
-"such as ``with`` and ``for`` statements."
+"Support for asynchronous calls is limited to expressions where ``yield`` is "
+"allowed syntactically, limiting the usefulness of syntactic features, such "
+"as ``with`` and ``for`` statements."
 msgstr ""
 
 #: ../pep-0492.txt:94
 msgid ""
-"This proposal makes coroutines a native Python language feature, and "
-"clearly separates them from generators.  This removes generator/coroutine"
-" ambiguity, and makes it possible to reliably define coroutines without "
-"reliance on a specific library.  This also enables linters and IDEs to "
-"improve static code analysis and refactoring."
+"This proposal makes coroutines a native Python language feature, and clearly "
+"separates them from generators.  This removes generator/coroutine ambiguity, "
+"and makes it possible to reliably define coroutines without reliance on a "
+"specific library.  This also enables linters and IDEs to improve static code "
+"analysis and refactoring."
 msgstr ""
 
 #: ../pep-0492.txt:100
 msgid ""
-"Native coroutines and the associated new syntax features make it possible"
-" to define context manager and iteration protocols in asynchronous terms."
-" As shown later in this proposal, the new ``async with`` statement lets "
-"Python programs perform asynchronous calls when entering and exiting a "
-"runtime context, and the new ``async for`` statement makes it possible to"
-" perform asynchronous calls in iterators."
+"Native coroutines and the associated new syntax features make it possible to "
+"define context manager and iteration protocols in asynchronous terms. As "
+"shown later in this proposal, the new ``async with`` statement lets Python "
+"programs perform asynchronous calls when entering and exiting a runtime "
+"context, and the new ``async for`` statement makes it possible to perform "
+"asynchronous calls in iterators."
 msgstr ""
 
 #: ../pep-0492.txt:109
@@ -230,20 +228,20 @@ msgstr ""
 
 #: ../pep-0492.txt:114
 msgid ""
-"This specification presumes knowledge of the implementation of coroutines"
-" in Python (:pep:`342` and :pep:`380`).  Motivation for the syntax "
-"changes proposed here comes from the asyncio framework (:pep:`3156`) and "
-"the \"Cofunctions\" proposal (:pep:`3152`, now rejected in favor of this "
+"This specification presumes knowledge of the implementation of coroutines in "
+"Python (:pep:`342` and :pep:`380`).  Motivation for the syntax changes "
+"proposed here comes from the asyncio framework (:pep:`3156`) and the "
+"\"Cofunctions\" proposal (:pep:`3152`, now rejected in favor of this "
 "specification)."
 msgstr ""
 
 #: ../pep-0492.txt:120
 msgid ""
-"From this point in this document we use the word *native coroutine* to "
-"refer to functions declared using the new syntax.  *generator-based "
-"coroutine* is used where necessary to refer to coroutines that are based "
-"on generator syntax.  *coroutine* is used in contexts where both "
-"definitions are applicable."
+"From this point in this document we use the word *native coroutine* to refer "
+"to functions declared using the new syntax.  *generator-based coroutine* is "
+"used where necessary to refer to coroutines that are based on generator "
+"syntax.  *coroutine* is used in contexts where both definitions are "
+"applicable."
 msgstr ""
 
 #: ../pep-0492.txt:128
@@ -260,14 +258,14 @@ msgstr ""
 
 #: ../pep-0492.txt:137
 msgid ""
-"``async def`` functions are always coroutines, even if they do not "
-"contain ``await`` expressions."
+"``async def`` functions are always coroutines, even if they do not contain "
+"``await`` expressions."
 msgstr ""
 
 #: ../pep-0492.txt:140
 msgid ""
-"It is a ``SyntaxError`` to have ``yield`` or ``yield from`` expressions "
-"in an ``async`` function."
+"It is a ``SyntaxError`` to have ``yield`` or ``yield from`` expressions in "
+"an ``async`` function."
 msgstr ""
 
 #: ../pep-0492.txt:143
@@ -283,8 +281,7 @@ msgstr ""
 #: ../pep-0492.txt:148
 msgid ""
 "``CO_ITERABLE_COROUTINE`` is used to make *generator-based coroutines* "
-"compatible with *native coroutines* (set by `types.coroutine()`_ "
-"function)."
+"compatible with *native coroutines* (set by `types.coroutine()`_ function)."
 msgstr ""
 
 #: ../pep-0492.txt:152
@@ -295,9 +292,9 @@ msgstr ""
 
 #: ../pep-0492.txt:155
 msgid ""
-"``StopIteration`` exceptions are not propagated out of coroutines, and "
-"are replaced with a ``RuntimeError``.  For regular generators such "
-"behavior requires a future import (see :pep:`479`)."
+"``StopIteration`` exceptions are not propagated out of coroutines, and are "
+"replaced with a ``RuntimeError``.  For regular generators such behavior "
+"requires a future import (see :pep:`479`)."
 msgstr ""
 
 #: ../pep-0492.txt:159
@@ -323,22 +320,22 @@ msgstr ""
 
 #: ../pep-0492.txt:178
 msgid ""
-"The function applies ``CO_ITERABLE_COROUTINE`` flag to generator- "
-"function's code object, making it return a *coroutine* object."
+"The function applies ``CO_ITERABLE_COROUTINE`` flag to generator- function's "
+"code object, making it return a *coroutine* object."
 msgstr ""
 
 #: ../pep-0492.txt:181
 msgid ""
 "If ``fn`` is not a *generator function*, it is wrapped.  If it returns a "
-"*generator*, it will be wrapped in an *awaitable* proxy object (see below"
-" the definition of awaitable objects)."
+"*generator*, it will be wrapped in an *awaitable* proxy object (see below "
+"the definition of awaitable objects)."
 msgstr ""
 
 #: ../pep-0492.txt:185
 msgid ""
-"Note, that the ``CO_COROUTINE`` flag is not applied by "
-"``types.coroutine()`` to make it possible to separate *native coroutines*"
-" defined with new syntax, from *generator-based coroutines*."
+"Note, that the ``CO_COROUTINE`` flag is not applied by ``types.coroutine()`` "
+"to make it possible to separate *native coroutines* defined with new syntax, "
+"from *generator-based coroutines*."
 msgstr ""
 
 #: ../pep-0492.txt:191
@@ -353,26 +350,26 @@ msgstr ""
 
 #: ../pep-0492.txt:200
 msgid ""
-"``await``, similarly to ``yield from``, suspends execution of "
-"``read_data`` coroutine until ``db.fetch`` *awaitable* completes and "
-"returns the result data."
+"``await``, similarly to ``yield from``, suspends execution of ``read_data`` "
+"coroutine until ``db.fetch`` *awaitable* completes and returns the result "
+"data."
 msgstr ""
 
 #: ../pep-0492.txt:204
 msgid ""
-"It uses the ``yield from`` implementation with an extra step of "
-"validating its argument.  ``await`` only accepts an *awaitable*, which "
-"can be one of:"
+"It uses the ``yield from`` implementation with an extra step of validating "
+"its argument.  ``await`` only accepts an *awaitable*, which can be one of:"
 msgstr ""
 
 #: ../pep-0492.txt:208
-msgid "A *native coroutine* object returned from a *native coroutine function*."
+msgid ""
+"A *native coroutine* object returned from a *native coroutine function*."
 msgstr ""
 
 #: ../pep-0492.txt:211
 msgid ""
-"A *generator-based coroutine* object returned from a function decorated "
-"with ``types.coroutine()``."
+"A *generator-based coroutine* object returned from a function decorated with "
+"``types.coroutine()``."
 msgstr ""
 
 #: ../pep-0492.txt:214
@@ -382,10 +379,10 @@ msgstr ""
 #: ../pep-0492.txt:216
 msgid ""
 "Any ``yield from`` chain of calls ends with a ``yield``.  This is a "
-"fundamental mechanism of how *Futures* are implemented.  Since, "
-"internally, coroutines are a special kind of generators, every ``await`` "
-"is suspended by a ``yield`` somewhere down the chain of ``await`` calls "
-"(please refer to :pep:`3156` for a detailed explanation)."
+"fundamental mechanism of how *Futures* are implemented.  Since, internally, "
+"coroutines are a special kind of generators, every ``await`` is suspended by "
+"a ``yield`` somewhere down the chain of ``await`` calls (please refer to :"
+"pep:`3156` for a detailed explanation)."
 msgstr ""
 
 #: ../pep-0492.txt:223
@@ -398,31 +395,32 @@ msgstr ""
 
 #: ../pep-0492.txt:228
 msgid ""
-"Objects with ``__await__`` method are called *Future-like* objects in the"
-" rest of this PEP."
+"Objects with ``__await__`` method are called *Future-like* objects in the "
+"rest of this PEP."
 msgstr ""
 
 #: ../pep-0492.txt:231
-msgid "It is a ``TypeError`` if ``__await__`` returns anything but an iterator."
+msgid ""
+"It is a ``TypeError`` if ``__await__`` returns anything but an iterator."
 msgstr ""
 
 #: ../pep-0492.txt:234
 msgid ""
-"Objects defined with CPython C API with a ``tp_as_async.am_await`` "
-"function, returning an *iterator* (similar to ``__await__`` method)."
+"Objects defined with CPython C API with a ``tp_as_async.am_await`` function, "
+"returning an *iterator* (similar to ``__await__`` method)."
 msgstr ""
 
 #: ../pep-0492.txt:237
 msgid ""
 "It is a ``SyntaxError`` to use ``await`` outside of an ``async def`` "
-"function (like it is a ``SyntaxError`` to use ``yield`` outside of "
-"``def`` function)."
+"function (like it is a ``SyntaxError`` to use ``yield`` outside of ``def`` "
+"function)."
 msgstr ""
 
 #: ../pep-0492.txt:241
 msgid ""
-"It is a ``TypeError`` to pass anything other than an *awaitable* object "
-"to an ``await`` expression."
+"It is a ``TypeError`` to pass anything other than an *awaitable* object to "
+"an ``await`` expression."
 msgstr ""
 
 #: ../pep-0492.txt:246
@@ -447,19 +445,19 @@ msgstr ""
 
 #: ../pep-0492.txt:261
 msgid ""
-"The key ``await`` difference from ``yield`` and ``yield from`` operators "
-"is that *await expressions* do not require parentheses around them most "
-"of the times."
+"The key ``await`` difference from ``yield`` and ``yield from`` operators is "
+"that *await expressions* do not require parentheses around them most of the "
+"times."
 msgstr ""
 
 #: ../pep-0492.txt:265
 msgid ""
 "Also, ``yield from`` allows any expression as its argument, including "
-"expressions like ``yield from a() + b()``, that would be parsed as "
-"``yield from (a() + b())``, which is almost always a bug.  In general, "
-"the result of any arithmetic operation is not an *awaitable* object. To "
-"avoid this kind of mistakes, it was decided to make ``await`` precedence "
-"lower than ``[]``, ``()``, and ``.``, but higher than ``**`` operators."
+"expressions like ``yield from a() + b()``, that would be parsed as ``yield "
+"from (a() + b())``, which is almost always a bug.  In general, the result of "
+"any arithmetic operation is not an *awaitable* object. To avoid this kind of "
+"mistakes, it was decided to make ``await`` precedence lower than ``[]``, "
+"``()``, and ``.``, but higher than ``**`` operators."
 msgstr ""
 
 #: ../pep-0492.txt:274
@@ -520,8 +518,8 @@ msgstr ""
 
 #: ../pep-0492.txt:289
 msgid ""
-"``in``, ``not in``, ``is``, ``is not``, ``<``, ``<=``, ``>``, ``>=``, "
-"``!=``, ``==``"
+"``in``, ``not in``, ``is``, ``is not``, ``<``, ``<=``, ``>``, ``>=``, ``!"
+"=``, ``==``"
 msgstr ""
 
 #: ../pep-0492.txt:289
@@ -750,8 +748,8 @@ msgstr ""
 
 #: ../pep-0492.txt:362
 msgid ""
-"To make this possible, a new protocol for asynchronous context managers "
-"is proposed.  Two new magic methods are added: ``__aenter__`` and "
+"To make this possible, a new protocol for asynchronous context managers is "
+"proposed.  Two new magic methods are added: ``__aenter__`` and "
 "``__aexit__``. Both must return an *awaitable*."
 msgstr ""
 
@@ -779,9 +777,9 @@ msgstr ""
 
 #: ../pep-0492.txt:404
 msgid ""
-"It is an error to pass a regular context manager without ``__aenter__`` "
-"and ``__aexit__`` methods to ``async with``.  It is a ``SyntaxError`` to "
-"use ``async with`` outside of an ``async def`` function."
+"It is an error to pass a regular context manager without ``__aenter__`` and "
+"``__aexit__`` methods to ``async with``.  It is a ``SyntaxError`` to use "
+"``async with`` outside of an ``async def`` function."
 msgstr ""
 
 #: ../pep-0492.txt:410
@@ -790,8 +788,8 @@ msgstr ""
 
 #: ../pep-0492.txt:412
 msgid ""
-"With *asynchronous context managers* it is easy to implement proper "
-"database transaction managers for coroutines::"
+"With *asynchronous context managers* it is easy to implement proper database "
+"transaction managers for coroutines::"
 msgstr ""
 
 #: ../pep-0492.txt:423
@@ -808,9 +806,9 @@ msgstr ""
 
 #: ../pep-0492.txt:437
 msgid ""
-"An *asynchronous iterable* is able to call asynchronous code in its "
-"*iter* implementation, and *asynchronous iterator* can call asynchronous "
-"code in its *next* method.  To support asynchronous iteration:"
+"An *asynchronous iterable* is able to call asynchronous code in its *iter* "
+"implementation, and *asynchronous iterator* can call asynchronous code in "
+"its *next* method.  To support asynchronous iteration:"
 msgstr ""
 
 #: ../pep-0492.txt:442
@@ -823,8 +821,8 @@ msgstr ""
 #: ../pep-0492.txt:446
 msgid ""
 "An *asynchronous iterator object* must implement an ``__anext__`` method "
-"(or, if defined with CPython C API, ``tp_as_async.am_anext`` slot) "
-"returning an *awaitable*."
+"(or, if defined with CPython C API, ``tp_as_async.am_anext`` slot) returning "
+"an *awaitable*."
 msgstr ""
 
 #: ../pep-0492.txt:450
@@ -838,7 +836,8 @@ msgid "An example of asynchronous iterable::"
 msgstr ""
 
 #: ../pep-0492.txt:473
-msgid "A new statement for iterating through asynchronous iterators is proposed::"
+msgid ""
+"A new statement for iterating through asynchronous iterators is proposed::"
 msgstr ""
 
 #: ../pep-0492.txt:497
@@ -860,14 +859,14 @@ msgstr ""
 
 #: ../pep-0492.txt:508
 msgid ""
-"With asynchronous iteration protocol it is possible to asynchronously "
-"buffer data during iteration::"
+"With asynchronous iteration protocol it is possible to asynchronously buffer "
+"data during iteration::"
 msgstr ""
 
 #: ../pep-0492.txt:514
 msgid ""
-"Where ``cursor`` is an asynchronous iterator that prefetches ``N`` rows "
-"of data from a database after every ``N`` iterations."
+"Where ``cursor`` is an asynchronous iterator that prefetches ``N`` rows of "
+"data from a database after every ``N`` iterations."
 msgstr ""
 
 #: ../pep-0492.txt:517
@@ -888,9 +887,9 @@ msgstr ""
 
 #: ../pep-0492.txt:556
 msgid ""
-"The following is a utility class that transforms a regular iterable to an"
-" asynchronous one.  While this is not a very useful thing to do, the code"
-" illustrates the relationship between regular and asynchronous iterators."
+"The following is a utility class that transforms a regular iterable to an "
+"asynchronous one.  While this is not a very useful thing to do, the code "
+"illustrates the relationship between regular and asynchronous iterators."
 msgstr ""
 
 #: ../pep-0492.txt:582
@@ -899,8 +898,8 @@ msgstr ""
 
 #: ../pep-0492.txt:584
 msgid ""
-"Coroutines are still based on generators internally.  So, before PEP 479,"
-" there was no fundamental difference between"
+"Coroutines are still based on generators internally.  So, before PEP 479, "
+"there was no fundamental difference between"
 msgstr ""
 
 #: ../pep-0492.txt:593
@@ -909,8 +908,8 @@ msgstr ""
 
 #: ../pep-0492.txt:601
 msgid ""
-"And since :pep:`479` is accepted and enabled by default for coroutines, "
-"the following example will have its ``StopIteration`` wrapped into a "
+"And since :pep:`479` is accepted and enabled by default for coroutines, the "
+"following example will have its ``StopIteration`` wrapped into a "
 "``RuntimeError``"
 msgstr ""
 
@@ -923,8 +922,8 @@ msgstr ""
 
 #: ../pep-0492.txt:615
 msgid ""
-"Moreover, with semantics from :pep:`479`, all ``StopIteration`` "
-"exceptions raised in coroutines are wrapped in ``RuntimeError``."
+"Moreover, with semantics from :pep:`479`, all ``StopIteration`` exceptions "
+"raised in coroutines are wrapped in ``RuntimeError``."
 msgstr ""
 
 #: ../pep-0492.txt:620
@@ -937,28 +936,28 @@ msgstr ""
 
 #: ../pep-0492.txt:625
 msgid ""
-"This section applies only to *native coroutines* with ``CO_COROUTINE`` "
-"flag, i.e. defined with the new ``async def`` syntax."
+"This section applies only to *native coroutines* with ``CO_COROUTINE`` flag, "
+"i.e. defined with the new ``async def`` syntax."
 msgstr ""
 
 #: ../pep-0492.txt:628
 msgid ""
-"**The behavior of existing *generator-based coroutines* in asyncio "
-"remains unchanged.**"
+"**The behavior of existing *generator-based coroutines* in asyncio remains "
+"unchanged.**"
 msgstr ""
 
 #: ../pep-0492.txt:631
 msgid ""
-"Great effort has been made to make sure that coroutines and generators "
-"are treated as distinct concepts:"
+"Great effort has been made to make sure that coroutines and generators are "
+"treated as distinct concepts:"
 msgstr ""
 
 #: ../pep-0492.txt:634
 msgid ""
-"*Native coroutine* objects do not implement ``__iter__`` and ``__next__``"
-" methods.  Therefore, they cannot be iterated over or passed to "
-"``iter()``, ``list()``, ``tuple()`` and other built-ins. They also cannot"
-" be used in a ``for..in`` loop."
+"*Native coroutine* objects do not implement ``__iter__`` and ``__next__`` "
+"methods.  Therefore, they cannot be iterated over or passed to ``iter()``, "
+"``list()``, ``tuple()`` and other built-ins. They also cannot be used in a "
+"``for..in`` loop."
 msgstr ""
 
 #: ../pep-0492.txt:639
@@ -969,8 +968,8 @@ msgstr ""
 
 #: ../pep-0492.txt:642
 msgid ""
-"*Plain generators* cannot ``yield from`` *native coroutines*: doing so "
-"will result in a ``TypeError``."
+"*Plain generators* cannot ``yield from`` *native coroutines*: doing so will "
+"result in a ``TypeError``."
 msgstr ""
 
 #: ../pep-0492.txt:645
@@ -982,8 +981,7 @@ msgstr ""
 #: ../pep-0492.txt:649
 msgid ""
 "``inspect.isgenerator()`` and ``inspect.isgeneratorfunction()`` return "
-"``False`` for *native coroutine* objects and *native coroutine "
-"functions*."
+"``False`` for *native coroutine* objects and *native coroutine functions*."
 msgstr ""
 
 #: ../pep-0492.txt:655
@@ -995,15 +993,15 @@ msgid ""
 "Coroutines are based on generators internally, thus they share the "
 "implementation.  Similarly to generator objects, *coroutines* have "
 "``throw()``, ``send()`` and ``close()`` methods.  ``StopIteration`` and "
-"``GeneratorExit`` play the same role for coroutines (although :pep:`479` "
-"is enabled by default for coroutines).  See :pep:`342`, :pep:`380`, and "
-"Python Documentation [11]_ for details."
+"``GeneratorExit`` play the same role for coroutines (although :pep:`479` is "
+"enabled by default for coroutines).  See :pep:`342`, :pep:`380`, and Python "
+"Documentation [11]_ for details."
 msgstr ""
 
 #: ../pep-0492.txt:664
 msgid ""
-"``throw()``, ``send()`` methods for *coroutines* are used to push values "
-"and raise errors into *Future-like* objects."
+"``throw()``, ``send()`` methods for *coroutines* are used to push values and "
+"raise errors into *Future-like* objects."
 msgstr ""
 
 #: ../pep-0492.txt:669
@@ -1012,8 +1010,7 @@ msgstr ""
 
 #: ../pep-0492.txt:671
 msgid ""
-"A common beginner mistake is forgetting to use ``yield from`` on "
-"coroutines::"
+"A common beginner mistake is forgetting to use ``yield from`` on coroutines::"
 msgstr ""
 
 #: ../pep-0492.txt:678
@@ -1021,34 +1018,33 @@ msgid ""
 "For debugging this kind of mistakes there is a special debug mode in "
 "asyncio, in which ``@coroutine`` decorator wraps all functions with a "
 "special object with a destructor logging a warning.  Whenever a wrapped "
-"generator gets garbage collected, a detailed logging message is generated"
-" with information about where exactly the decorator function was defined,"
-" stack trace of where it was collected, etc.  Wrapper object also "
-"provides a convenient ``__repr__`` function with detailed information "
-"about the generator."
+"generator gets garbage collected, a detailed logging message is generated "
+"with information about where exactly the decorator function was defined, "
+"stack trace of where it was collected, etc.  Wrapper object also provides a "
+"convenient ``__repr__`` function with detailed information about the "
+"generator."
 msgstr ""
 
 #: ../pep-0492.txt:687
 msgid ""
 "The only problem is how to enable these debug capabilities.  Since debug "
-"facilities should be a no-op in production mode, ``@coroutine`` decorator"
-" makes the decision of whether to wrap or not to wrap based on an OS "
-"environment variable ``PYTHONASYNCIODEBUG``.  This way it is possible to "
-"run asyncio programs with asyncio's own functions instrumented.  "
-"``EventLoop.set_debug``, a different debug facility, has no impact on "
-"``@coroutine`` decorator's behavior."
+"facilities should be a no-op in production mode, ``@coroutine`` decorator "
+"makes the decision of whether to wrap or not to wrap based on an OS "
+"environment variable ``PYTHONASYNCIODEBUG``.  This way it is possible to run "
+"asyncio programs with asyncio's own functions instrumented.  ``EventLoop."
+"set_debug``, a different debug facility, has no impact on ``@coroutine`` "
+"decorator's behavior."
 msgstr ""
 
 #: ../pep-0492.txt:695
 msgid ""
 "With this proposal, coroutines is a native, distinct from generators, "
-"concept.  *In addition* to a ``RuntimeWarning`` being raised on "
-"coroutines that were never awaited, it is proposed to add two new "
-"functions to the ``sys`` module: ``set_coroutine_wrapper`` and "
-"``get_coroutine_wrapper``.  This is to enable advanced debugging "
-"facilities in asyncio and other frameworks (such as displaying where "
-"exactly coroutine was created, and a more detailed stack trace of where "
-"it was garbage collected)."
+"concept.  *In addition* to a ``RuntimeWarning`` being raised on coroutines "
+"that were never awaited, it is proposed to add two new functions to the "
+"``sys`` module: ``set_coroutine_wrapper`` and ``get_coroutine_wrapper``.  "
+"This is to enable advanced debugging facilities in asyncio and other "
+"frameworks (such as displaying where exactly coroutine was created, and a "
+"more detailed stack trace of where it was garbage collected)."
 msgstr ""
 
 #: ../pep-0492.txt:706
@@ -1056,7 +1052,8 @@ msgid "New Standard Library Functions"
 msgstr ""
 
 #: ../pep-0492.txt:708
-msgid "``types.coroutine(gen)``.  See `types.coroutine()`_ section for details."
+msgid ""
+"``types.coroutine(gen)``.  See `types.coroutine()`_ section for details."
 msgstr ""
 
 #: ../pep-0492.txt:711
@@ -1073,38 +1070,36 @@ msgstr ""
 
 #: ../pep-0492.txt:717
 msgid ""
-"``inspect.isawaitable(obj)`` returns ``True`` if ``obj`` is an "
-"*awaitable*."
+"``inspect.isawaitable(obj)`` returns ``True`` if ``obj`` is an *awaitable*."
 msgstr ""
 
 #: ../pep-0492.txt:720
 msgid ""
-"``inspect.getcoroutinestate(coro)`` returns the current state of a "
-"*native coroutine object* (mirrors ``inspect.getfgeneratorstate(gen)``)."
+"``inspect.getcoroutinestate(coro)`` returns the current state of a *native "
+"coroutine object* (mirrors ``inspect.getfgeneratorstate(gen)``)."
 msgstr ""
 
 #: ../pep-0492.txt:724
 msgid ""
 "``inspect.getcoroutinelocals(coro)`` returns the mapping of a *native "
-"coroutine object's* local variables to their values (mirrors "
-"``inspect.getgeneratorlocals(gen)``)."
+"coroutine object's* local variables to their values (mirrors ``inspect."
+"getgeneratorlocals(gen)``)."
 msgstr ""
 
 #: ../pep-0492.txt:728
 msgid ""
 "``sys.set_coroutine_wrapper(wrapper)`` allows to intercept creation of "
 "*native coroutine* objects. ``wrapper`` must be either a callable that "
-"accepts one argument (a *coroutine* object), or ``None``.  ``None`` "
-"resets the wrapper.  If called twice, the new wrapper replaces the "
-"previous one. The function is thread-specific.  See `Debugging Features`_"
-" for more details."
+"accepts one argument (a *coroutine* object), or ``None``.  ``None`` resets "
+"the wrapper.  If called twice, the new wrapper replaces the previous one. "
+"The function is thread-specific.  See `Debugging Features`_ for more details."
 msgstr ""
 
 #: ../pep-0492.txt:735
 msgid ""
-"``sys.get_coroutine_wrapper()`` returns the current wrapper object. "
-"Returns ``None`` if no wrapper was set.  The function is thread-specific."
-"  See  `Debugging Features`_ for more details."
+"``sys.get_coroutine_wrapper()`` returns the current wrapper object. Returns "
+"``None`` if no wrapper was set.  The function is thread-specific.  See  "
+"`Debugging Features`_ for more details."
 msgstr ""
 
 #: ../pep-0492.txt:741
@@ -1120,28 +1115,28 @@ msgstr ""
 
 #: ../pep-0492.txt:747
 msgid ""
-"``collections.abc.Awaitable`` ABC for *Future-like* classes, that "
-"implement ``__await__`` method."
+"``collections.abc.Awaitable`` ABC for *Future-like* classes, that implement "
+"``__await__`` method."
 msgstr ""
 
 #: ../pep-0492.txt:750
 msgid ""
-"``collections.abc.Coroutine`` ABC for *coroutine* objects, that implement"
-" ``send(value)``, ``throw(type, exc, tb)``, ``close()`` and "
-"``__await__()`` methods."
+"``collections.abc.Coroutine`` ABC for *coroutine* objects, that implement "
+"``send(value)``, ``throw(type, exc, tb)``, ``close()`` and ``__await__()`` "
+"methods."
 msgstr ""
 
 #: ../pep-0492.txt:754
 msgid ""
-"Note that generator-based coroutines with ``CO_ITERABLE_COROUTINE`` flag "
-"do not implement ``__await__`` method, and therefore are not instances of"
-" ``collections.abc.Coroutine`` and ``collections.abc.Awaitable`` ABCs::"
+"Note that generator-based coroutines with ``CO_ITERABLE_COROUTINE`` flag do "
+"not implement ``__await__`` method, and therefore are not instances of "
+"``collections.abc.Coroutine`` and ``collections.abc.Awaitable`` ABCs::"
 msgstr ""
 
 #: ../pep-0492.txt:768
 msgid ""
-"To allow easy testing if objects support asynchronous iteration, two more"
-" ABCs are added:"
+"To allow easy testing if objects support asynchronous iteration, two more "
+"ABCs are added:"
 msgstr ""
 
 #: ../pep-0492.txt:771
@@ -1164,9 +1159,8 @@ msgstr ""
 
 #: ../pep-0492.txt:781
 msgid ""
-"A coroutine function is declared with ``async def``. It uses ``await`` "
-"and ``return value``; see `New Coroutine Declaration Syntax`_ for "
-"details."
+"A coroutine function is declared with ``async def``. It uses ``await`` and "
+"``return value``; see `New Coroutine Declaration Syntax`_ for details."
 msgstr ""
 
 #: ../pep-0492.txt:787
@@ -1219,12 +1213,11 @@ msgstr ""
 
 #: ../pep-0492.txt:804
 msgid ""
-"An object with an ``__await__`` method, or a C object with "
-"``tp_as_async->am_await`` function, returning an *iterator*.  Can be "
-"consumed by an ``await`` expression in a coroutine. A coroutine waiting "
-"for a Future-like object is suspended until the Future-like object's "
-"``__await__`` completes, and returns the result.  See `Await Expression`_"
-" for details."
+"An object with an ``__await__`` method, or a C object with ``tp_as_async-"
+">am_await`` function, returning an *iterator*.  Can be consumed by an "
+"``await`` expression in a coroutine. A coroutine waiting for a Future-like "
+"object is suspended until the Future-like object's ``__await__`` completes, "
+"and returns the result.  See `Await Expression`_ for details."
 msgstr ""
 
 #: ../pep-0492.txt:813
@@ -1233,8 +1226,8 @@ msgstr ""
 
 #: ../pep-0492.txt:812
 msgid ""
-"A *Future-like* object or a *coroutine* object.  See `Await Expression`_ "
-"for details."
+"A *Future-like* object or a *coroutine* object.  See `Await Expression`_ for "
+"details."
 msgstr ""
 
 #: ../pep-0492.txt:818
@@ -1243,9 +1236,9 @@ msgstr ""
 
 #: ../pep-0492.txt:816
 msgid ""
-"An asynchronous context manager has ``__aenter__`` and ``__aexit__`` "
-"methods and can be used with ``async with``.  See `Asynchronous Context "
-"Managers and \"async with\"`_ for details."
+"An asynchronous context manager has ``__aenter__`` and ``__aexit__`` methods "
+"and can be used with ``async with``.  See `Asynchronous Context Managers and "
+"\"async with\"`_ for details."
 msgstr ""
 
 #: ../pep-0492.txt:823
@@ -1254,9 +1247,9 @@ msgstr ""
 
 #: ../pep-0492.txt:821
 msgid ""
-"An object with an ``__aiter__`` method, which must return an "
-"*asynchronous iterator* object.  Can be used with ``async for``. See "
-"`Asynchronous Iterators and \"async for\"`_ for details."
+"An object with an ``__aiter__`` method, which must return an *asynchronous "
+"iterator* object.  Can be used with ``async for``. See `Asynchronous "
+"Iterators and \"async for\"`_ for details."
 msgstr ""
 
 #: ../pep-0492.txt:828
@@ -1276,8 +1269,7 @@ msgstr ""
 #: ../pep-0492.txt:833
 msgid ""
 "To avoid backwards compatibility issues with ``async`` and ``await`` "
-"keywords, it was decided to modify ``tokenizer.c`` in such a way, that "
-"it:"
+"keywords, it was decided to modify ``tokenizer.c`` in such a way, that it:"
 msgstr ""
 
 #: ../pep-0492.txt:837
@@ -1286,8 +1278,8 @@ msgstr ""
 
 #: ../pep-0492.txt:839
 msgid ""
-"while tokenizing ``async def`` block, it replaces ``'async'`` ``NAME`` "
-"token with ``ASYNC``, and ``'await'`` ``NAME`` token with ``AWAIT``;"
+"while tokenizing ``async def`` block, it replaces ``'async'`` ``NAME`` token "
+"with ``ASYNC``, and ``'await'`` ``NAME`` token with ``AWAIT``;"
 msgstr ""
 
 #: ../pep-0492.txt:843
@@ -1298,14 +1290,14 @@ msgstr ""
 
 #: ../pep-0492.txt:846
 msgid ""
-"This approach allows for seamless combination of new syntax features (all"
-" of them available only in ``async`` functions) with any existing code."
+"This approach allows for seamless combination of new syntax features (all of "
+"them available only in ``async`` functions) with any existing code."
 msgstr ""
 
 #: ../pep-0492.txt:850
 msgid ""
-"An example of having \"async def\" and \"async\" attribute in one piece "
-"of code::"
+"An example of having \"async def\" and \"async\" attribute in one piece of "
+"code::"
 msgstr ""
 
 #: ../pep-0492.txt:863
@@ -1322,9 +1314,9 @@ msgstr ""
 
 #: ../pep-0492.txt:871
 msgid ""
-"``asyncio`` module was adapted and tested to work with coroutines and new"
-" statements.  Backwards compatibility is 100% preserved, i.e. all "
-"existing code will work as-is."
+"``asyncio`` module was adapted and tested to work with coroutines and new "
+"statements.  Backwards compatibility is 100% preserved, i.e. all existing "
+"code will work as-is."
 msgstr ""
 
 #: ../pep-0492.txt:875
@@ -1353,11 +1345,10 @@ msgstr ""
 
 #: ../pep-0492.txt:889
 msgid ""
-"Because *plain generators* cannot ``yield from`` *native coroutine "
-"objects* (see `Differences from generators`_ section for more details), "
-"it is advised to make sure that all generator-based coroutines are "
-"decorated with ``@asyncio.coroutine`` *before* starting to use the new "
-"syntax."
+"Because *plain generators* cannot ``yield from`` *native coroutine objects* "
+"(see `Differences from generators`_ section for more details), it is advised "
+"to make sure that all generator-based coroutines are decorated with "
+"``@asyncio.coroutine`` *before* starting to use the new syntax."
 msgstr ""
 
 #: ../pep-0492.txt:897
@@ -1378,11 +1369,11 @@ msgstr ""
 #: ../pep-0492.txt:905
 msgid ""
 "Another use of ``async`` keyword is in ``Lib/xml/dom/xmlbuilder.py``, to "
-"define an ``async = False`` attribute for ``DocumentLS`` class. There is "
-"no documentation or tests for it, it is not used anywhere else in "
-"CPython.  It is replaced with a getter, that raises a "
-"``DeprecationWarning``, advising to use ``async_`` attribute instead. "
-"'async' attribute is not documented and is not used in CPython code base."
+"define an ``async = False`` attribute for ``DocumentLS`` class. There is no "
+"documentation or tests for it, it is not used anywhere else in CPython.  It "
+"is replaced with a getter, that raises a ``DeprecationWarning``, advising to "
+"use ``async_`` attribute instead. 'async' attribute is not documented and is "
+"not used in CPython code base."
 msgstr ""
 
 #: ../pep-0492.txt:915
@@ -1399,10 +1390,10 @@ msgstr ""
 
 #: ../pep-0492.txt:934
 msgid ""
-"``async`` and ``await`` names will be softly deprecated in CPython 3.5 "
-"and 3.6. In 3.7 we will transform them to proper keywords.  Making "
-"``async`` and ``await`` proper keywords before 3.7 might make it harder "
-"for people to port their code to Python 3."
+"``async`` and ``await`` names will be softly deprecated in CPython 3.5 and "
+"3.6. In 3.7 we will transform them to proper keywords.  Making ``async`` and "
+"``await`` proper keywords before 3.7 might make it harder for people to port "
+"their code to Python 3."
 msgstr ""
 
 #: ../pep-0492.txt:941
@@ -1415,22 +1406,22 @@ msgstr ""
 
 #: ../pep-0492.txt:946
 msgid ""
-":pep:`3152` by Gregory Ewing proposes a different mechanism for "
-"coroutines (called \"cofunctions\").  Some key points:"
+":pep:`3152` by Gregory Ewing proposes a different mechanism for coroutines "
+"(called \"cofunctions\").  Some key points:"
 msgstr ""
 
 #: ../pep-0492.txt:949
 msgid ""
-"A new keyword ``codef`` to declare a *cofunction*.  *Cofunction* is "
-"always a generator, even if there is no ``cocall`` expressions inside it."
-"  Maps to ``async def`` in this proposal."
+"A new keyword ``codef`` to declare a *cofunction*.  *Cofunction* is always a "
+"generator, even if there is no ``cocall`` expressions inside it.  Maps to "
+"``async def`` in this proposal."
 msgstr ""
 
 #: ../pep-0492.txt:953
 msgid ""
-"A new keyword ``cocall`` to call a *cofunction*.  Can only be used inside"
-" a *cofunction*.  Maps to ``await`` in this proposal (with some "
-"differences, see below)."
+"A new keyword ``cocall`` to call a *cofunction*.  Can only be used inside a "
+"*cofunction*.  Maps to ``await`` in this proposal (with some differences, "
+"see below)."
 msgstr ""
 
 #: ../pep-0492.txt:957
@@ -1443,8 +1434,8 @@ msgstr ""
 
 #: ../pep-0492.txt:966
 msgid ""
-"``cocall f(*args, **kwds)`` is semantically equivalent to ``yield from "
-"f.__cocall__(*args, **kwds)``."
+"``cocall f(*args, **kwds)`` is semantically equivalent to ``yield from f."
+"__cocall__(*args, **kwds)``."
 msgstr ""
 
 #: ../pep-0492.txt:969
@@ -1453,47 +1444,46 @@ msgstr ""
 
 #: ../pep-0492.txt:971
 msgid ""
-"There is no equivalent of ``__cocall__`` in this PEP, which is called and"
-" its result is passed to ``yield from`` in the ``cocall`` expression. "
+"There is no equivalent of ``__cocall__`` in this PEP, which is called and "
+"its result is passed to ``yield from`` in the ``cocall`` expression. "
 "``await`` keyword expects an *awaitable* object, validates the type, and "
-"executes ``yield from`` on it.  Although, ``__await__`` method is similar"
-" to ``__cocall__``, but is only used to define *Future-like* objects."
+"executes ``yield from`` on it.  Although, ``__await__`` method is similar to "
+"``__cocall__``, but is only used to define *Future-like* objects."
 msgstr ""
 
 #: ../pep-0492.txt:978
 msgid ""
-"``await`` is defined in almost the same way as ``yield from`` in the "
-"grammar (it is later enforced that ``await`` can only be inside ``async "
-"def``).  It is possible to simply write ``await future``, whereas "
-"``cocall`` always requires parentheses."
+"``await`` is defined in almost the same way as ``yield from`` in the grammar "
+"(it is later enforced that ``await`` can only be inside ``async def``).  It "
+"is possible to simply write ``await future``, whereas ``cocall`` always "
+"requires parentheses."
 msgstr ""
 
 #: ../pep-0492.txt:983
 msgid ""
 "To make asyncio work with :pep:`3152` it would be required to modify "
-"``@asyncio.coroutine`` decorator to wrap all functions in an object with "
-"a ``__cocall__`` method, or to implement ``__cocall__`` on generators.  "
-"To call *cofunctions* from existing generator-based coroutines it would "
-"be required to use ``costart(cofunc, *args, **kwargs)`` built-in."
+"``@asyncio.coroutine`` decorator to wrap all functions in an object with a "
+"``__cocall__`` method, or to implement ``__cocall__`` on generators.  To "
+"call *cofunctions* from existing generator-based coroutines it would be "
+"required to use ``costart(cofunc, *args, **kwargs)`` built-in."
 msgstr ""
 
 #: ../pep-0492.txt:990
 msgid ""
-"Since it is impossible to call a *cofunction* without a ``cocall`` "
-"keyword, it automatically prevents the common mistake of forgetting to "
-"use ``yield from`` on generator-based coroutines.  This proposal "
-"addresses this problem with a different approach, see `Debugging "
-"Features`_."
+"Since it is impossible to call a *cofunction* without a ``cocall`` keyword, "
+"it automatically prevents the common mistake of forgetting to use ``yield "
+"from`` on generator-based coroutines.  This proposal addresses this problem "
+"with a different approach, see `Debugging Features`_."
 msgstr ""
 
 #: ../pep-0492.txt:996
 msgid ""
-"A shortcoming of requiring a ``cocall`` keyword to call a coroutine is "
-"that if is decided to implement coroutine-generators -- coroutines with "
-"``yield`` or ``async yield`` expressions -- we wouldn't need a ``cocall``"
-" keyword to call them.  So we'll end up having ``__cocall__`` and no "
-"``__call__`` for regular coroutines, and having ``__call__`` and no "
-"``__cocall__`` for coroutine- generators."
+"A shortcoming of requiring a ``cocall`` keyword to call a coroutine is that "
+"if is decided to implement coroutine-generators -- coroutines with ``yield`` "
+"or ``async yield`` expressions -- we wouldn't need a ``cocall`` keyword to "
+"call them.  So we'll end up having ``__cocall__`` and no ``__call__`` for "
+"regular coroutines, and having ``__call__`` and no ``__cocall__`` for "
+"coroutine- generators."
 msgstr ""
 
 #: ../pep-0492.txt:1004
@@ -1511,7 +1501,8 @@ msgid "would look like::"
 msgstr ""
 
 #: ../pep-0492.txt:1020
-msgid "There are no equivalents of ``async for`` and ``async with`` in PEP 3152."
+msgid ""
+"There are no equivalents of ``async for`` and ``async with`` in PEP 3152."
 msgstr ""
 
 #: ../pep-0492.txt:1025
@@ -1520,20 +1511,20 @@ msgstr ""
 
 #: ../pep-0492.txt:1027
 msgid ""
-"With ``async for`` keyword it is desirable to have a concept of a "
-"*coroutine-generator* -- a coroutine with ``yield`` and ``yield from`` "
-"expressions.  To avoid any ambiguity with regular generators, we would "
-"likely require to have an ``async`` keyword before ``yield``, and ``async"
-" yield from`` would raise a ``StopAsyncIteration`` exception."
+"With ``async for`` keyword it is desirable to have a concept of a *coroutine-"
+"generator* -- a coroutine with ``yield`` and ``yield from`` expressions.  To "
+"avoid any ambiguity with regular generators, we would likely require to have "
+"an ``async`` keyword before ``yield``, and ``async yield from`` would raise "
+"a ``StopAsyncIteration`` exception."
 msgstr ""
 
 #: ../pep-0492.txt:1033
 msgid ""
-"While it is possible to implement coroutine-generators, we believe that "
-"they are out of scope of this proposal.  It is an advanced concept that "
-"should be carefully considered and balanced, with a non-trivial changes "
-"in the implementation of current generator objects.  This is a matter for"
-" a separate PEP."
+"While it is possible to implement coroutine-generators, we believe that they "
+"are out of scope of this proposal.  It is an advanced concept that should be "
+"carefully considered and balanced, with a non-trivial changes in the "
+"implementation of current generator objects.  This is a matter for a "
+"separate PEP."
 msgstr ""
 
 #: ../pep-0492.txt:1041
@@ -1550,8 +1541,8 @@ msgstr ""
 
 #: ../pep-0492.txt:1047
 msgid ""
-"proposal to add async/await in ECMAScript 7 [2]_; see also Traceur "
-"project [9]_;"
+"proposal to add async/await in ECMAScript 7 [2]_; see also Traceur project "
+"[9]_;"
 msgstr ""
 
 #: ../pep-0492.txt:1050
@@ -1576,9 +1567,9 @@ msgstr ""
 
 #: ../pep-0492.txt:1060
 msgid ""
-"This is a huge benefit, as some users already have experience with "
-"async/await, and because it makes working with many languages in one "
-"project easier (Python with ECMAScript 7 for instance)."
+"This is a huge benefit, as some users already have experience with async/"
+"await, and because it makes working with many languages in one project "
+"easier (Python with ECMAScript 7 for instance)."
 msgstr ""
 
 #: ../pep-0492.txt:1066
@@ -1595,8 +1586,7 @@ msgstr ""
 #: ../pep-0492.txt:1072
 msgid ""
 "In 3.5.2 (as :pep:`492` was accepted on a provisional basis) the "
-"``__aiter__`` protocol was updated to return asynchronous iterators "
-"directly."
+"``__aiter__`` protocol was updated to return asynchronous iterators directly."
 msgstr ""
 
 #: ../pep-0492.txt:1076
@@ -1611,9 +1601,9 @@ msgstr ""
 
 #: ../pep-0492.txt:1084
 msgid ""
-"While it is possible to just implement ``await`` expression and treat all"
-" functions with at least one ``await`` as coroutines, this approach makes"
-" APIs design, code refactoring and its long time support harder."
+"While it is possible to just implement ``await`` expression and treat all "
+"functions with at least one ``await`` as coroutines, this approach makes "
+"APIs design, code refactoring and its long time support harder."
 msgstr ""
 
 #: ../pep-0492.txt:1088
@@ -1623,10 +1613,10 @@ msgstr ""
 #: ../pep-0492.txt:1098
 msgid ""
 "If ``useful()`` function is refactored and someone removes all ``await`` "
-"expressions from it, it would become a regular python function, and all "
-"code that depends on it, including ``important()`` would be broken.  To "
-"mitigate this issue a decorator similar to ``@asyncio.coroutine`` has to "
-"be introduced."
+"expressions from it, it would become a regular python function, and all code "
+"that depends on it, including ``important()`` would be broken.  To mitigate "
+"this issue a decorator similar to ``@asyncio.coroutine`` has to be "
+"introduced."
 msgstr ""
 
 #: ../pep-0492.txt:1106
@@ -1635,12 +1625,11 @@ msgstr ""
 
 #: ../pep-0492.txt:1108
 msgid ""
-"For some people bare ``async name(): pass`` syntax might look more "
-"appealing than ``async def name(): pass``.  It is certainly easier to "
-"type.  But on the other hand, it breaks the symmetry between ``async "
-"def``, ``async with`` and ``async for``, where ``async`` is a modifier, "
-"stating that the statement is asynchronous.  It is also more consistent "
-"with the existing grammar."
+"For some people bare ``async name(): pass`` syntax might look more appealing "
+"than ``async def name(): pass``.  It is certainly easier to type.  But on "
+"the other hand, it breaks the symmetry between ``async def``, ``async with`` "
+"and ``async for``, where ``async`` is a modifier, stating that the statement "
+"is asynchronous.  It is also more consistent with the existing grammar."
 msgstr ""
 
 #: ../pep-0492.txt:1117
@@ -1649,10 +1638,9 @@ msgstr ""
 
 #: ../pep-0492.txt:1119
 msgid ""
-"``async`` is an adjective, and hence it is a better choice for a "
-"*statement qualifier* keyword.  ``await for/with`` would imply that "
-"something is awaiting for a completion of a ``for`` or ``with`` "
-"statement."
+"``async`` is an adjective, and hence it is a better choice for a *statement "
+"qualifier* keyword.  ``await for/with`` would imply that something is "
+"awaiting for a completion of a ``for`` or ``with`` statement."
 msgstr ""
 
 #: ../pep-0492.txt:1126
@@ -1662,10 +1650,9 @@ msgstr ""
 #: ../pep-0492.txt:1128
 msgid ""
 "``async`` keyword is a *statement qualifier*.  A good analogy to it are "
-"\"static\", \"public\", \"unsafe\" keywords from other languages.  "
-"\"async for\" is an asynchronous \"for\" statement, \"async with\" is an "
-"asynchronous \"with\" statement, \"async def\" is an asynchronous "
-"function."
+"\"static\", \"public\", \"unsafe\" keywords from other languages.  \"async "
+"for\" is an asynchronous \"for\" statement, \"async with\" is an "
+"asynchronous \"with\" statement, \"async def\" is an asynchronous function."
 msgstr ""
 
 #: ../pep-0492.txt:1133
@@ -1677,9 +1664,9 @@ msgstr ""
 
 #: ../pep-0492.txt:1137
 msgid ""
-"Having ``async`` keyword before ``def``, ``with`` and ``for`` also makes "
-"the language grammar simpler.  And \"async def\" better separates "
-"coroutines from regular functions visually."
+"Having ``async`` keyword before ``def``, ``with`` and ``for`` also makes the "
+"language grammar simpler.  And \"async def\" better separates coroutines "
+"from regular functions visually."
 msgstr ""
 
 #: ../pep-0492.txt:1143
@@ -1689,9 +1676,9 @@ msgstr ""
 #: ../pep-0492.txt:1145
 msgid ""
 "`Transition Plan`_ section explains how tokenizer is modified to treat "
-"``async`` and ``await`` as keywords *only* in ``async def`` blocks. Hence"
-" ``async def`` fills the role that a module level compiler declaration "
-"like ``from __future__ import async_await`` would otherwise fill."
+"``async`` and ``await`` as keywords *only* in ``async def`` blocks. Hence "
+"``async def`` fills the role that a module level compiler declaration like "
+"``from __future__ import async_await`` would otherwise fill."
 msgstr ""
 
 #: ../pep-0492.txt:1153
@@ -1700,12 +1687,12 @@ msgstr ""
 
 #: ../pep-0492.txt:1155
 msgid ""
-"New asynchronous magic methods ``__aiter__``, ``__anext__``, "
-"``__aenter__``, and ``__aexit__`` all start with the same prefix \"a\". "
-"An alternative proposal is to use \"async\" prefix, so that ``__anext__``"
-" becomes ``__async_next__``. However, to align new magic methods with the"
-" existing ones, such as ``__radd__`` and ``__iadd__`` it was decided to "
-"use a shorter version."
+"New asynchronous magic methods ``__aiter__``, ``__anext__``, ``__aenter__``, "
+"and ``__aexit__`` all start with the same prefix \"a\". An alternative "
+"proposal is to use \"async\" prefix, so that ``__anext__`` becomes "
+"``__async_next__``. However, to align new magic methods with the existing "
+"ones, such as ``__radd__`` and ``__iadd__`` it was decided to use a shorter "
+"version."
 msgstr ""
 
 #: ../pep-0492.txt:1164
@@ -1714,9 +1701,9 @@ msgstr ""
 
 #: ../pep-0492.txt:1166
 msgid ""
-"An alternative idea about new asynchronous iterators and context managers"
-" was to reuse existing magic methods, by adding an ``async`` keyword to "
-"their declarations::"
+"An alternative idea about new asynchronous iterators and context managers "
+"was to reuse existing magic methods, by adding an ``async`` keyword to their "
+"declarations::"
 msgstr ""
 
 #: ../pep-0492.txt:1174
@@ -1725,15 +1712,15 @@ msgstr ""
 
 #: ../pep-0492.txt:1176
 msgid ""
-"it would not be possible to create an object that works in both ``with`` "
-"and ``async with`` statements;"
+"it would not be possible to create an object that works in both ``with`` and "
+"``async with`` statements;"
 msgstr ""
 
 #: ../pep-0492.txt:1179
 msgid ""
-"it would break backwards compatibility, as nothing prohibits from "
-"returning a Future-like objects from ``__enter__`` and/or ``__exit__`` in"
-" Python <= 3.4;"
+"it would break backwards compatibility, as nothing prohibits from returning "
+"a Future-like objects from ``__enter__`` and/or ``__exit__`` in Python <= "
+"3.4;"
 msgstr ""
 
 #: ../pep-0492.txt:1183
@@ -1749,11 +1736,11 @@ msgstr ""
 
 #: ../pep-0492.txt:1191
 msgid ""
-"The vision behind existing generator-based coroutines and this proposal "
-"is to make it easy for users to see where the code might be suspended. "
-"Making existing \"for\" and \"with\" statements to recognize asynchronous"
-" iterators and context managers will inevitably create implicit suspend "
-"points, making it harder to reason about the code."
+"The vision behind existing generator-based coroutines and this proposal is "
+"to make it easy for users to see where the code might be suspended. Making "
+"existing \"for\" and \"with\" statements to recognize asynchronous iterators "
+"and context managers will inevitably create implicit suspend points, making "
+"it harder to reason about the code."
 msgstr ""
 
 #: ../pep-0492.txt:1199
@@ -1762,8 +1749,8 @@ msgstr ""
 
 #: ../pep-0492.txt:1201
 msgid ""
-"Syntax for asynchronous comprehensions could be provided, but this "
-"construct is outside of the scope of this PEP."
+"Syntax for asynchronous comprehensions could be provided, but this construct "
+"is outside of the scope of this PEP."
 msgstr ""
 
 #: ../pep-0492.txt:1206
@@ -1796,9 +1783,9 @@ msgstr ""
 
 #: ../pep-0492.txt:1247
 msgid ""
-"There is no observable slowdown of parsing python files with the modified"
-" tokenizer: parsing of one 12Mb file (``Lib/test/test_binop.py`` repeated"
-" 1000 times) takes the same amount of time."
+"There is no observable slowdown of parsing python files with the modified "
+"tokenizer: parsing of one 12Mb file (``Lib/test/test_binop.py`` repeated "
+"1000 times) takes the same amount of time."
 msgstr ""
 
 #: ../pep-0492.txt:1254
@@ -1807,8 +1794,8 @@ msgstr ""
 
 #: ../pep-0492.txt:1256
 msgid ""
-"The following micro-benchmark was used to determine performance "
-"difference between \"async\" functions and generators::"
+"The following micro-benchmark was used to determine performance difference "
+"between \"async\" functions and generators::"
 msgstr ""
 
 #: ../pep-0492.txt:1289
@@ -1833,14 +1820,13 @@ msgstr ""
 
 #: ../pep-0492.txt:1311
 msgid ""
-"New syntax for defining coroutines: ``async def`` and new ``await`` "
-"keyword."
+"New syntax for defining coroutines: ``async def`` and new ``await`` keyword."
 msgstr ""
 
 #: ../pep-0492.txt:1314
 msgid ""
-"New ``__await__`` method for Future-like objects, and new "
-"``tp_as_async.am_await`` slot in ``PyTypeObject``."
+"New ``__await__`` method for Future-like objects, and new ``tp_as_async."
+"am_await`` slot in ``PyTypeObject``."
 msgstr ""
 
 #: ../pep-0492.txt:1317
@@ -1853,23 +1839,22 @@ msgstr ""
 msgid ""
 "New syntax for asynchronous iteration: ``async for``.  And associated "
 "protocol with ``__aiter__``, ``__aexit__`` and new built- in exception "
-"``StopAsyncIteration``.  New ``tp_as_async.am_aiter`` and "
-"``tp_as_async.am_anext`` slots in ``PyTypeObject``."
+"``StopAsyncIteration``.  New ``tp_as_async.am_aiter`` and ``tp_as_async."
+"am_anext`` slots in ``PyTypeObject``."
 msgstr ""
 
 #: ../pep-0492.txt:1325
 msgid ""
-"New AST nodes: ``AsyncFunctionDef``, ``AsyncFor``, ``AsyncWith``, "
-"``Await``."
+"New AST nodes: ``AsyncFunctionDef``, ``AsyncFor``, ``AsyncWith``, ``Await``."
 msgstr ""
 
 #: ../pep-0492.txt:1328
 msgid ""
-"New functions: ``sys.set_coroutine_wrapper(callback)``, "
-"``sys.get_coroutine_wrapper()``, ``types.coroutine(gen)``, "
-"``inspect.iscoroutinefunction(func)``, ``inspect.iscoroutine(obj)``, "
-"``inspect.isawaitable(obj)``, ``inspect.getcoroutinestate(coro)``, and "
-"``inspect.getcoroutinelocals(coro)``."
+"New functions: ``sys.set_coroutine_wrapper(callback)``, ``sys."
+"get_coroutine_wrapper()``, ``types.coroutine(gen)``, ``inspect."
+"iscoroutinefunction(func)``, ``inspect.iscoroutine(obj)``, ``inspect."
+"isawaitable(obj)``, ``inspect.getcoroutinestate(coro)``, and ``inspect."
+"getcoroutinelocals(coro)``."
 msgstr ""
 
 #: ../pep-0492.txt:1334
@@ -1886,15 +1871,15 @@ msgstr ""
 
 #: ../pep-0492.txt:1341
 msgid ""
-"C API changes: new ``PyCoro_Type`` (exposed to Python as "
-"``types.CoroutineType``) and ``PyCoroObject``. ``PyCoro_CheckExact(*o)`` "
-"to test if ``o`` is a *native coroutine*."
+"C API changes: new ``PyCoro_Type`` (exposed to Python as ``types."
+"CoroutineType``) and ``PyCoroObject``. ``PyCoro_CheckExact(*o)`` to test if "
+"``o`` is a *native coroutine*."
 msgstr ""
 
 #: ../pep-0492.txt:1346
 msgid ""
-"While the list of changes and new things is not short, it is important to"
-" understand, that most users will not use these features directly. It is "
+"While the list of changes and new things is not short, it is important to "
+"understand, that most users will not use these features directly. It is "
 "intended to be used in frameworks and libraries to provide users with "
 "convenient to use and unambiguous APIs with ``async def``, ``await``, "
 "``async for`` and ``async with`` syntax."
@@ -1905,7 +1890,8 @@ msgid "Working example"
 msgstr ""
 
 #: ../pep-0492.txt:1356
-msgid "All concepts proposed in this PEP are implemented [3]_ and can be tested."
+msgid ""
+"All concepts proposed in this PEP are implemented [3]_ and can be tested."
 msgstr ""
 
 #: ../pep-0492.txt:1389
@@ -1922,8 +1908,8 @@ msgstr ""
 
 #: ../pep-0492.txt:1397
 msgid ""
-"The implementation is tracked in issue 24017 [15]_. It was committed on "
-"May 11, 2015."
+"The implementation is tracked in issue 24017 [15]_. It was committed on May "
+"11, 2015."
 msgstr ""
 
 #: ../pep-0492.txt:1402
@@ -2021,11 +2007,11 @@ msgstr ""
 #: ../pep-0492.txt:1447
 msgid ""
 "I thank Guido van Rossum, Victor Stinner, Elvis Pranskevichus, Andrew "
-"Svetlov, Łukasz Langa, Greg Ewing, Stephen J. Turnbull, Jim J. Jewett, "
-"Brett Cannon, Nick Coghlan, Steven D'Aprano, Paul Moore, Nathaniel Smith,"
-" Ethan Furman, Stefan Behnel, Paul Sokolovsky, Victor Petrovykh, and many"
-" others for their feedback, ideas, edits, criticism, code reviews, and "
-"discussions around this PEP."
+"Svetlov, Łukasz Langa, Greg Ewing, Stephen J. Turnbull, Jim J. Jewett, Brett "
+"Cannon, Nick Coghlan, Steven D'Aprano, Paul Moore, Nathaniel Smith, Ethan "
+"Furman, Stefan Behnel, Paul Sokolovsky, Victor Petrovykh, and many others "
+"for their feedback, ideas, edits, criticism, code reviews, and discussions "
+"around this PEP."
 msgstr ""
 
 #: ../pep-0492.txt:1456
@@ -2035,4 +2021,3 @@ msgstr ""
 #: ../pep-0492.txt:1458
 msgid "This document has been placed in the public domain."
 msgstr ""
-

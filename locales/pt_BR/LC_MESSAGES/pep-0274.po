@@ -71,12 +71,11 @@ msgstr ""
 
 #: ../pep-0274.txt:17
 msgid ""
-":pep:`202` introduces a syntactical extension to Python called the \"list"
-" comprehension\".  This PEP proposes a similar syntactical extension "
-"called the \"dictionary comprehension\" or \"dict comprehension\" for "
-"short.  You can use dict comprehensions in ways very similar to list "
-"comprehensions, except that they produce Python dictionary objects "
-"instead of list objects."
+":pep:`202` introduces a syntactical extension to Python called the \"list "
+"comprehension\".  This PEP proposes a similar syntactical extension called "
+"the \"dictionary comprehension\" or \"dict comprehension\" for short.  You "
+"can use dict comprehensions in ways very similar to list comprehensions, "
+"except that they produce Python dictionary objects instead of list objects."
 msgstr ""
 
 #: ../pep-0274.txt:26
@@ -87,17 +86,16 @@ msgstr ""
 msgid ""
 "This PEP was originally written for inclusion in Python 2.3.  It was "
 "withdrawn after observation that substantially all of its benefits were "
-"subsumed by generator expressions coupled with the ``dict()`` "
-"constructor."
+"subsumed by generator expressions coupled with the ``dict()`` constructor."
 msgstr ""
 
 #: ../pep-0274.txt:33
 msgid ""
-"However, Python 2.7 and 3.0 introduces this exact feature, as well as the"
-" closely related set comprehensions.  On 2012-04-09, the PEP was changed "
-"to reflect this reality by updating its Status to Accepted, and updating "
-"the Python-Version field.  The Open Questions section was also removed "
-"since these have been long resolved by the current implementation."
+"However, Python 2.7 and 3.0 introduces this exact feature, as well as the "
+"closely related set comprehensions.  On 2012-04-09, the PEP was changed to "
+"reflect this reality by updating its Status to Accepted, and updating the "
+"Python-Version field.  The Open Questions section was also removed since "
+"these have been long resolved by the current implementation."
 msgstr ""
 
 #: ../pep-0274.txt:42
@@ -106,11 +104,11 @@ msgstr ""
 
 #: ../pep-0274.txt:44
 msgid ""
-"Dict comprehensions are just like list comprehensions, except that you "
-"group the expression using curly braces instead of square braces.  Also, "
-"the left part before the ``for`` keyword expresses both a key and a "
-"value, separated by a colon.  The notation is specifically designed to "
-"remind you of list comprehensions as applied to dictionaries."
+"Dict comprehensions are just like list comprehensions, except that you group "
+"the expression using curly braces instead of square braces.  Also, the left "
+"part before the ``for`` keyword expresses both a key and a value, separated "
+"by a colon.  The notation is specifically designed to remind you of list "
+"comprehensions as applied to dictionaries."
 msgstr ""
 
 #: ../pep-0274.txt:53
@@ -119,28 +117,27 @@ msgstr ""
 
 #: ../pep-0274.txt:55
 msgid ""
-"There are times when you have some data arranged as a sequences of "
-"length-2 sequences, and you want to turn that into a dictionary. In "
-"Python 2.2, the ``dict()`` constructor accepts an argument that is a "
-"sequence of length-2 sequences, used as (key, value) pairs to initialize "
-"a new dictionary object."
+"There are times when you have some data arranged as a sequences of length-2 "
+"sequences, and you want to turn that into a dictionary. In Python 2.2, the "
+"``dict()`` constructor accepts an argument that is a sequence of length-2 "
+"sequences, used as (key, value) pairs to initialize a new dictionary object."
 msgstr ""
 
 #: ../pep-0274.txt:61
 msgid ""
-"However, the act of turning some data into a sequence of length-2 "
-"sequences can be inconvenient or inefficient from a memory or performance"
-" standpoint.  Also, for some common operations, such as turning a list of"
-" things into a set of things for quick duplicate removal or set inclusion"
-" tests, a better syntax can help code clarity."
+"However, the act of turning some data into a sequence of length-2 sequences "
+"can be inconvenient or inefficient from a memory or performance standpoint.  "
+"Also, for some common operations, such as turning a list of things into a "
+"set of things for quick duplicate removal or set inclusion tests, a better "
+"syntax can help code clarity."
 msgstr ""
 
 #: ../pep-0274.txt:68
 msgid ""
-"As with list comprehensions, an explicit for loop can always be used (and"
-" in fact was the only way to do it in earlier versions of Python).  But "
-"as with list comprehensions, dict comprehensions can provide a more "
-"syntactically succinct idiom that the traditional for loop."
+"As with list comprehensions, an explicit for loop can always be used (and in "
+"fact was the only way to do it in earlier versions of Python).  But as with "
+"list comprehensions, dict comprehensions can provide a more syntactically "
+"succinct idiom that the traditional for loop."
 msgstr ""
 
 #: ../pep-0274.txt:76
@@ -149,9 +146,9 @@ msgstr ""
 
 #: ../pep-0274.txt:78
 msgid ""
-"The semantics of dict comprehensions can actually be demonstrated in "
-"stock Python 2.2, by passing a list comprehension to the built-in "
-"dictionary constructor::"
+"The semantics of dict comprehensions can actually be demonstrated in stock "
+"Python 2.2, by passing a list comprehension to the built-in dictionary "
+"constructor::"
 msgstr ""
 
 #: ../pep-0274.txt:84
@@ -160,10 +157,10 @@ msgstr ""
 
 #: ../pep-0274.txt:88
 msgid ""
-"The dictionary constructor approach has two distinct disadvantages from "
-"the proposed syntax though.  First, it isn't as legible as a dict "
-"comprehension.  Second, it forces the programmer to create an in-core "
-"list object first, which could be expensive."
+"The dictionary constructor approach has two distinct disadvantages from the "
+"proposed syntax though.  First, it isn't as legible as a dict "
+"comprehension.  Second, it forces the programmer to create an in-core list "
+"object first, which could be expensive."
 msgstr ""
 
 #: ../pep-0274.txt:95
@@ -187,4 +184,3 @@ msgstr ""
 #: ../pep-0274.txt:140
 msgid "This document has been placed in the public domain."
 msgstr ""
-

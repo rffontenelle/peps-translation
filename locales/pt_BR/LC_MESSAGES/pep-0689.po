@@ -79,11 +79,10 @@ msgstr ""
 
 #: ../pep-0689.rst:11
 msgid ""
-"`27-Apr-2022 <https://mail.python.org/archives/list/python-"
-"dev@python.org/thread/PQXSP7E2B6KNXTJ2AERWMKKX42YP5D6O/>`__, `25-Aug-2022"
-" <https://discuss.python.org/t/c-api-what-should-the-leading-underscore-"
-"py-mean/18486>`__, `27-Oct-2022 "
-"<https://discuss.python.org/t/pep-689-unstable-c-api-tier/20452>`__,"
+"`27-Apr-2022 <https://mail.python.org/archives/list/python-dev@python.org/"
+"thread/PQXSP7E2B6KNXTJ2AERWMKKX42YP5D6O/>`__, `25-Aug-2022 <https://discuss."
+"python.org/t/c-api-what-should-the-leading-underscore-py-mean/18486>`__, `27-"
+"Oct-2022 <https://discuss.python.org/t/pep-689-unstable-c-api-tier/20452>`__,"
 msgstr ""
 
 #: ../pep-0689.rst:17
@@ -100,8 +99,8 @@ msgstr ""
 
 #: ../pep-0689.rst:24
 msgid ""
-"Any C API with a leading underscore is designated *internal*, meaning "
-"that it may change or disappear without any notice."
+"Any C API with a leading underscore is designated *internal*, meaning that "
+"it may change or disappear without any notice."
 msgstr ""
 
 #: ../pep-0689.rst:29
@@ -114,8 +113,8 @@ msgstr ""
 
 #: ../pep-0689.rst:34
 msgid ""
-"The Python C-API is currently divided into `three stability tiers "
-"<https://devguide.python.org/developer-workflow/c-api/index.html>`__:"
+"The Python C-API is currently divided into `three stability tiers <https://"
+"devguide.python.org/developer-workflow/c-api/index.html>`__:"
 msgstr ""
 
 #: ../pep-0689.rst:36
@@ -124,8 +123,8 @@ msgstr ""
 
 #: ../pep-0689.rst:37
 msgid ""
-"Public API, which follows the :pep:`backwards compatibility policy "
-"<387>`, and requires deprecation warnings before changes"
+"Public API, which follows the :pep:`backwards compatibility policy <387>`, "
+"and requires deprecation warnings before changes"
 msgstr ""
 
 #: ../pep-0689.rst:39
@@ -134,21 +133,21 @@ msgstr ""
 
 #: ../pep-0689.rst:41
 msgid ""
-"Tools requring access to CPython internals (e.g. advanced debuggers and "
-"JIT compilers) are often built for minor series releases of CPython, and "
-"assume that the C-API internals used do not change in patch releases. To "
-"support these tools, we need a tier between the Public and Private C-API,"
-" with guarantees on stability throughout the minor-series release: the "
-"proposed *Unstable tier*."
+"Tools requring access to CPython internals (e.g. advanced debuggers and JIT "
+"compilers) are often built for minor series releases of CPython, and assume "
+"that the C-API internals used do not change in patch releases. To support "
+"these tools, we need a tier between the Public and Private C-API, with "
+"guarantees on stability throughout the minor-series release: the proposed "
+"*Unstable tier*."
 msgstr ""
 
 #: ../pep-0689.rst:48
 msgid ""
-"Some functions, like ``PyCode_New()``, are documented as unstable "
-"(“Calling [it] directly can bind you to a precise Python version”), and "
-"also often change in practice. The unstable tier should make their status"
-" obvious even to people who don't read the docs carefully enough, making "
-"them hard to use accidentally."
+"Some functions, like ``PyCode_New()``, are documented as unstable (“Calling "
+"[it] directly can bind you to a precise Python version”), and also often "
+"change in practice. The unstable tier should make their status obvious even "
+"to people who don't read the docs carefully enough, making them hard to use "
+"accidentally."
 msgstr ""
 
 #: ../pep-0689.rst:56
@@ -157,29 +156,29 @@ msgstr ""
 
 #: ../pep-0689.rst:58
 msgid ""
-"Currently, CPython developers don't agree on the exact meaning of a "
-"leading underscore in API names. It is used to mean two different things:"
+"Currently, CPython developers don't agree on the exact meaning of a leading "
+"underscore in API names. It is used to mean two different things:"
 msgstr ""
 
 #: ../pep-0689.rst:62
 msgid ""
-"API that may change between minor releases, as in the Unstable tier "
-"proposed here (e.g. functions introduced in :pep:`523`)."
+"API that may change between minor releases, as in the Unstable tier proposed "
+"here (e.g. functions introduced in :pep:`523`)."
 msgstr ""
 
 #: ../pep-0689.rst:64
 msgid ""
-"API that is *private* and should not be used outside of CPython at all "
-"(e.g. because it may change without notice, or it relies on undocumented "
+"API that is *private* and should not be used outside of CPython at all (e.g. "
+"because it may change without notice, or it relies on undocumented "
 "assumptions that non-CPython code cannot guarantee)."
 msgstr ""
 
 #: ../pep-0689.rst:68
 msgid ""
-"The unclear meaning makes the underscore less useful than it could be. If"
-" it only marked *private* API, CPython developers could change "
-"underscored functions, or remove unused ones, without researching how "
-"they're documented or used outside CPython."
+"The unclear meaning makes the underscore less useful than it could be. If it "
+"only marked *private* API, CPython developers could change underscored "
+"functions, or remove unused ones, without researching how they're documented "
+"or used outside CPython."
 msgstr ""
 
 #: ../pep-0689.rst:73
@@ -194,12 +193,11 @@ msgstr ""
 
 #: ../pep-0689.rst:80
 msgid ""
-"This PEP specifies that API in the unstable tier should have a special "
-"name prefix. This means functions (macros, etc.) will need to be renamed."
-" After a rename, the old name should continue to be available until an "
-"incompatible change is made (i.e. until call sites need to be updated "
-"anyway). In other words, just changing the tier of a function shouldn't "
-"break users' code."
+"This PEP specifies that API in the unstable tier should have a special name "
+"prefix. This means functions (macros, etc.) will need to be renamed. After a "
+"rename, the old name should continue to be available until an incompatible "
+"change is made (i.e. until call sites need to be updated anyway). In other "
+"words, just changing the tier of a function shouldn't break users' code."
 msgstr ""
 
 #: ../pep-0689.rst:90
@@ -210,8 +208,8 @@ msgstr ""
 msgid ""
 "The C API is divided by stability expectations into `three “sections” "
 "<https://devguide.python.org/developer-workflow/c-api/index.html>`__ "
-"(internal, public, and limited). We'll now call these *stability tiers*, "
-"or *tiers* for short."
+"(internal, public, and limited). We'll now call these *stability tiers*, or "
+"*tiers* for short."
 msgstr ""
 
 #: ../pep-0689.rst:96
@@ -237,17 +235,17 @@ msgstr ""
 #: ../pep-0689.rst:106
 msgid ""
 "Unstable API should have no backwards-incompatible changes across patch "
-"releases, but may change or be removed in minor releases (3.x.0, "
-"including Alpha and Beta releases of 3.x.0). Such changes must be "
-"documented and mentioned in the What's New document."
+"releases, but may change or be removed in minor releases (3.x.0, including "
+"Alpha and Beta releases of 3.x.0). Such changes must be documented and "
+"mentioned in the What's New document."
 msgstr ""
 
 #: ../pep-0689.rst:111
 msgid ""
 "Backwards-incompatible changes to these APIs should be made so that code "
-"that uses them will need to be updated to compile with the new version "
-"(e.g. arguments should be added/removed, or a function should be renamed,"
-" but the semantic meaning of an argument should not change)."
+"that uses them will need to be updated to compile with the new version (e.g. "
+"arguments should be added/removed, or a function should be renamed, but the "
+"semantic meaning of an argument should not change)."
 msgstr ""
 
 #: ../pep-0689.rst:116
@@ -263,27 +261,26 @@ msgstr ""
 #: ../pep-0689.rst:121
 msgid ""
 "The old name should be deprecated (e.g. with ``Py_DEPRECATED``), but "
-"continue to be available until an incompatible change is made to the API."
-" Per Python's backwards compatibility policy (:pep:`387`), this "
-"deprecation needs to last *at least* two releases (without an SC "
-"exceptions). But it can also last indefinitely -- for example, if "
-":pep:`590`'s :pep:`“provisional” <590#finalizing-the-api>` "
-"``_PyObject_Vectorcall`` was added today, it would be initially named "
-"``PyUnstable_Object_Vectorcall`` and there would be no plan to remove "
-"this name."
+"continue to be available until an incompatible change is made to the API. "
+"Per Python's backwards compatibility policy (:pep:`387`), this deprecation "
+"needs to last *at least* two releases (without an SC exceptions). But it can "
+"also last indefinitely -- for example, if :pep:`590`'s :pep:`“provisional” "
+"<590#finalizing-the-api>` ``_PyObject_Vectorcall`` was added today, it would "
+"be initially named ``PyUnstable_Object_Vectorcall`` and there would be no "
+"plan to remove this name."
 msgstr ""
 
 #: ../pep-0689.rst:131
 msgid ""
 "In the following cases, an incompatible change (and thus removing the "
-"deprecated name) is allowed without an SC exeption, as if the function "
-"was already part of the Unstable tier:"
+"deprecated name) is allowed without an SC exeption, as if the function was "
+"already part of the Unstable tier:"
 msgstr ""
 
 #: ../pep-0689.rst:135
 msgid ""
-"Any API introduced before Python 3.12 that is *documented* to be less "
-"stable than default."
+"Any API introduced before Python 3.12 that is *documented* to be less stable "
+"than default."
 msgstr ""
 
 #: ../pep-0689.rst:137
@@ -300,16 +297,16 @@ msgstr ""
 
 #: ../pep-0689.rst:143
 msgid ""
-"To move an *internal* API to the unstable tier, it should be exposed "
-"under the new ``PyUnstable_*`` name."
+"To move an *internal* API to the unstable tier, it should be exposed under "
+"the new ``PyUnstable_*`` name."
 msgstr ""
 
 #: ../pep-0689.rst:146
 msgid ""
-"If the old name is documented, or widely used externally, it should "
-"continue to be available until an incompatible change is made (and call "
-"sites need to be updated). It should start raising deprecation warnings "
-"(e.g. using ``Py_DEPRECATED``)."
+"If the old name is documented, or widely used externally, it should continue "
+"to be available until an incompatible change is made (and call sites need to "
+"be updated). It should start raising deprecation warnings (e.g. using "
+"``Py_DEPRECATED``)."
 msgstr ""
 
 #: ../pep-0689.rst:151
@@ -320,23 +317,22 @@ msgstr ""
 
 #: ../pep-0689.rst:154
 msgid ""
-"The old name should remain available until the first incompatible change "
-"is made or the API is removed."
+"The old name should remain available until the first incompatible change is "
+"made or the API is removed."
 msgstr ""
 
 #: ../pep-0689.rst:157
 msgid ""
-"Adding new unstable API *for existing features* is allowed even after "
-"Beta feature freeze, up until the first Release Candidate. Consensus on "
-"Core Development Discourse or is needed in the Beta period."
+"Adding new unstable API *for existing features* is allowed even after Beta "
+"feature freeze, up until the first Release Candidate. Consensus on Core "
+"Development Discourse or is needed in the Beta period."
 msgstr ""
 
 #: ../pep-0689.rst:161
 msgid ""
-"These rules will be documented in the `devguide "
-"<https://devguide.python.org/developer-workflow/c-api/index.html>`__, and"
-" `user documentation <https://docs.python.org/3/c-api/stable.html>`__ "
-"will be updated accordingly."
+"These rules will be documented in the `devguide <https://devguide.python.org/"
+"developer-workflow/c-api/index.html>`__, and `user documentation <https://"
+"docs.python.org/3/c-api/stable.html>`__ will be updated accordingly."
 msgstr ""
 
 #: ../pep-0689.rst:165
@@ -351,16 +347,15 @@ msgstr ""
 
 #: ../pep-0689.rst:172
 msgid ""
-"C API named with a leading underscore, as well as API only available with"
-" ``Py_BUILD_CORE``, will be considered *internal*. This means:"
+"C API named with a leading underscore, as well as API only available with "
+"``Py_BUILD_CORE``, will be considered *internal*. This means:"
 msgstr ""
 
 #: ../pep-0689.rst:176
 msgid ""
 "It may change or be removed *without notice* in minor releases (3.x.0, "
-"including Alpha and Beta releases of 3.x.0). API changes in patch "
-"releases or Release Candidates should only be done if absolutely "
-"necessary."
+"including Alpha and Beta releases of 3.x.0). API changes in patch releases "
+"or Release Candidates should only be done if absolutely necessary."
 msgstr ""
 
 #: ../pep-0689.rst:181
@@ -377,18 +372,18 @@ msgstr ""
 
 #: ../pep-0689.rst:187
 msgid ""
-"This might happen long after this PEP is accepted. Consequently, for a "
-"few years core devs should do some research before changing underscored "
-"API, especially if it doesn't need ``Py_BUILD_CORE``."
+"This might happen long after this PEP is accepted. Consequently, for a few "
+"years core devs should do some research before changing underscored API, "
+"especially if it doesn't need ``Py_BUILD_CORE``."
 msgstr ""
 
 #: ../pep-0689.rst:191
 msgid ""
-"Users of the C API are encouraged to search their codebase for ``_Py`` "
-"and ``_PY`` identifier prefixes, and treat any hits as issues to be "
-"eventually fixed -- either by switching to an existing alternative, or by"
-" opening a CPython issue to request exposing public API for their use "
-"case, and eventually switching to that."
+"Users of the C API are encouraged to search their codebase for ``_Py`` and "
+"``_PY`` identifier prefixes, and treat any hits as issues to be eventually "
+"fixed -- either by switching to an existing alternative, or by opening a "
+"CPython issue to request exposing public API for their use case, and "
+"eventually switching to that."
 msgstr ""
 
 #: ../pep-0689.rst:201
@@ -446,7 +441,8 @@ msgid "The C API backwards compatibility expectations will be made clearer."
 msgstr ""
 
 #: ../pep-0689.rst:225
-msgid "All renamed API will be available under old names for as long as feasible."
+msgid ""
+"All renamed API will be available under old names for as long as feasible."
 msgstr ""
 
 #: ../pep-0689.rst:229
@@ -455,8 +451,8 @@ msgstr ""
 
 #: ../pep-0689.rst:231
 msgid ""
-"The changes affect advanced C programmers, who should consult the updated"
-" reference documentation, devguide and/or What's New document."
+"The changes affect advanced C programmers, who should consult the updated "
+"reference documentation, devguide and/or What's New document."
 msgstr ""
 
 #: ../pep-0689.rst:236
@@ -478,10 +474,10 @@ msgstr ""
 #: ../pep-0689.rst:247
 msgid ""
 "In the initial version of this PEP, unstable API didn't have the "
-"``PyUnstable`` prefix. Instead, defining ``Py_USING_UNSTABLE_API`` made "
-"the API available in a given source file, signifying acknowledgement that"
-" the file as a whole will potentially need to be revisited for each "
-"Python release."
+"``PyUnstable`` prefix. Instead, defining ``Py_USING_UNSTABLE_API`` made the "
+"API available in a given source file, signifying acknowledgement that the "
+"file as a whole will potentially need to be revisited for each Python "
+"release."
 msgstr ""
 
 #: ../pep-0689.rst:253
@@ -498,8 +494,7 @@ msgstr ""
 msgid ""
 "It would be possible to mark both private and unstable API with leading "
 "underscores. However, that would dilute the meaning of ``_Py`` prefix. "
-"Reserving the prefix for internal API only makes it trivial to search "
-"for."
+"Reserving the prefix for internal API only makes it trivial to search for."
 msgstr ""
 
 #: ../pep-0689.rst:266
@@ -508,15 +503,14 @@ msgstr ""
 
 #: ../pep-0689.rst:268
 msgid ""
-"Other API tiers have dedicated directories for headers "
-"(``Include/cpython/``, ``Include/internal/``)."
+"Other API tiers have dedicated directories for headers (``Include/cpython/"
+"``, ``Include/internal/``)."
 msgstr ""
 
 #: ../pep-0689.rst:271
 msgid ""
-"Since the unstable tier uses a very obvious naming convention and the "
-"names are always available, a directory like ``Include/unstable/`` is "
-"unnecessary."
+"Since the unstable tier uses a very obvious naming convention and the names "
+"are always available, a directory like ``Include/unstable/`` is unnecessary."
 msgstr ""
 
 #: ../pep-0689.rst:277
@@ -525,8 +519,8 @@ msgstr ""
 
 #: ../pep-0689.rst:279
 msgid ""
-"It might be good to add a similar tier in the Python (not C) API, e.g. "
-"for ``types.CodeType``. However, the mechanism for that would need to be "
+"It might be good to add a similar tier in the Python (not C) API, e.g. for "
+"``types.CodeType``. However, the mechanism for that would need to be "
 "different. This is outside the scope of the PEP."
 msgstr ""
 
@@ -536,7 +530,6 @@ msgstr ""
 
 #: ../pep-0689.rst:288
 msgid ""
-"This document is placed in the public domain or under the "
-"CC0-1.0-Universal license, whichever is more permissive."
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
 msgstr ""
-

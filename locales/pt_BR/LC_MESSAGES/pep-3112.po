@@ -75,9 +75,9 @@ msgstr ""
 
 #: ../pep-3112.txt:18
 msgid ""
-"This PEP proposes a literal syntax for the ``bytes`` objects introduced "
-"in :pep:`358`.  The purpose is to provide a convenient way to spell ASCII"
-" strings and arbitrary binary data."
+"This PEP proposes a literal syntax for the ``bytes`` objects introduced in :"
+"pep:`358`.  The purpose is to provide a convenient way to spell ASCII "
+"strings and arbitrary binary data."
 msgstr ""
 
 #: ../pep-3112.txt:24
@@ -99,9 +99,9 @@ msgstr ""
 #: ../pep-3112.txt:46
 msgid ""
 "In both cases, the advantages of the new syntax are brevity, some small "
-"efficiency gain, and the detection of encoding errors at compile time "
-"rather than at runtime.  The brevity benefit is especially felt when "
-"using the string-like methods of bytes objects::"
+"efficiency gain, and the detection of encoding errors at compile time rather "
+"than at runtime.  The brevity benefit is especially felt when using the "
+"string-like methods of bytes objects::"
 msgstr ""
 
 #: ../pep-3112.txt:54
@@ -130,23 +130,23 @@ msgstr ""
 
 #: ../pep-3112.txt:88
 msgid ""
-"Each ``shortstringchar`` or ``longstringchar`` must be a character "
-"between 1 and 127 inclusive, regardless of any encoding declaration "
-"[#encodings]_ in the source file."
+"Each ``shortstringchar`` or ``longstringchar`` must be a character between 1 "
+"and 127 inclusive, regardless of any encoding declaration [#encodings]_ in "
+"the source file."
 msgstr ""
 
 #: ../pep-3112.txt:92
 msgid ""
 "The Unicode-specific escape sequences ``\\u``\\ *xxxx*, ``\\U``\\ "
-"*xxxxxxxx*, and ``\\N{``\\ *name*\\ ``}`` are unrecognized in Python 2.x "
-"and forbidden in Python 3000."
+"*xxxxxxxx*, and ``\\N{``\\ *name*\\ ``}`` are unrecognized in Python 2.x and "
+"forbidden in Python 3000."
 msgstr ""
 
 #: ../pep-3112.txt:96
 msgid ""
 "Adjacent bytes literals are subject to the same concatenation rules as "
-"adjacent string literals [#concat]_.  A bytes literal adjacent to a "
-"string literal is an error."
+"adjacent string literals [#concat]_.  A bytes literal adjacent to a string "
+"literal is an error."
 msgstr ""
 
 #: ../pep-3112.txt:102
@@ -156,9 +156,8 @@ msgstr ""
 #: ../pep-3112.txt:104
 msgid ""
 "Each evaluation of a bytes literal produces a new ``bytes`` object. The "
-"bytes in the new object are the bytes represented by the "
-"``shortstringitem`` or ``longstringitem`` parts of the literal, in the "
-"same order."
+"bytes in the new object are the bytes represented by the ``shortstringitem`` "
+"or ``longstringitem`` parts of the literal, in the same order."
 msgstr ""
 
 #: ../pep-3112.txt:111
@@ -168,27 +167,27 @@ msgstr ""
 #: ../pep-3112.txt:113
 msgid ""
 "The proposed syntax provides a cleaner migration path from Python 2.x to "
-"Python 3000 for most code involving 8-bit strings.  Preserving the old "
-"8-bit meaning of a string literal is usually as simple as adding a ``b`` "
-"prefix.  The one exception is Python 2.x strings containing bytes >127, "
-"which must be rewritten using escape sequences. Transcoding a source file"
-" from one encoding to another, and fixing up the encoding declaration, "
-"should preserve the meaning of the program. Python 2.x non-Unicode "
-"strings violate this principle; Python 3000 bytes literals shouldn't."
+"Python 3000 for most code involving 8-bit strings.  Preserving the old 8-bit "
+"meaning of a string literal is usually as simple as adding a ``b`` prefix.  "
+"The one exception is Python 2.x strings containing bytes >127, which must be "
+"rewritten using escape sequences. Transcoding a source file from one "
+"encoding to another, and fixing up the encoding declaration, should preserve "
+"the meaning of the program. Python 2.x non-Unicode strings violate this "
+"principle; Python 3000 bytes literals shouldn't."
 msgstr ""
 
 #: ../pep-3112.txt:123
 msgid ""
 "A string literal with a ``b`` in the prefix is always a syntax error in "
-"Python 2.5, so this syntax can be introduced in Python 2.6, along with "
-"the ``bytes`` type."
+"Python 2.5, so this syntax can be introduced in Python 2.6, along with the "
+"``bytes`` type."
 msgstr ""
 
 #: ../pep-3112.txt:127
 msgid ""
-"A bytes literal produces a new object each time it is evaluated, like "
-"list displays and unlike string literals.  This is necessary because "
-"bytes literals, like lists and unlike strings, are mutable [#eachnew]_."
+"A bytes literal produces a new object each time it is evaluated, like list "
+"displays and unlike string literals.  This is necessary because bytes "
+"literals, like lists and unlike strings, are mutable [#eachnew]_."
 msgstr ""
 
 #: ../pep-3112.txt:134
@@ -196,7 +195,8 @@ msgid "Reference Implementation"
 msgstr ""
 
 #: ../pep-3112.txt:136
-msgid "Thomas Wouters has checked an implementation into the Py3K branch, r53872."
+msgid ""
+"Thomas Wouters has checked an implementation into the Py3K branch, r53872."
 msgstr ""
 
 #: ../pep-3112.txt:141
@@ -209,8 +209,7 @@ msgstr ""
 
 #: ../pep-3112.txt:147
 msgid ""
-"http://docs.python.org/reference/lexical_analysis.html#encoding-"
-"declarations"
+"http://docs.python.org/reference/lexical_analysis.html#encoding-declarations"
 msgstr ""
 
 #: ../pep-3112.txt:150
@@ -230,4 +229,3 @@ msgstr ""
 #: ../pep-3112.txt:159
 msgid "This document has been placed in the public domain."
 msgstr ""
-

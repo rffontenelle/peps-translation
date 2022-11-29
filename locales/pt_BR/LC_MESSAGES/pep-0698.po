@@ -41,8 +41,8 @@ msgstr ""
 
 #: ../pep-0698.rst:7
 msgid ""
-"https://mail.python.org/archives/list/typing-"
-"sig@python.org/thread/TOIYZ3SNPBJZDBRU3ZSBREXV2NNHF4KW/"
+"https://mail.python.org/archives/list/typing-sig@python.org/thread/"
+"TOIYZ3SNPBJZDBRU3ZSBREXV2NNHF4KW/"
 msgstr ""
 
 #: ../pep-0698.rst
@@ -91,12 +91,12 @@ msgstr ""
 
 #: ../pep-0698.rst:14
 msgid ""
-"`20-May-2022 <https://mail.python.org/archives/list/typing-"
-"sig@python.org/thread/V23I4D6DEOFW4BBPWBMYTHZUOMKR7KQE/>`__, `17-Aug-2022"
-" <https://mail.python.org/archives/list/typing-"
-"sig@python.org/thread/7JDW2PKGF6YTERUJGWM3BRP3GDHRFP4O/>`__, `11-Oct-2022"
-" <https://mail.python.org/archives/list/typing-"
-"sig@python.org/thread/TOIYZ3SNPBJZDBRU3ZSBREXV2NNHF4KW/>`__,"
+"`20-May-2022 <https://mail.python.org/archives/list/typing-sig@python.org/"
+"thread/V23I4D6DEOFW4BBPWBMYTHZUOMKR7KQE/>`__, `17-Aug-2022 <https://mail."
+"python.org/archives/list/typing-sig@python.org/"
+"thread/7JDW2PKGF6YTERUJGWM3BRP3GDHRFP4O/>`__, `11-Oct-2022 <https://mail."
+"python.org/archives/list/typing-sig@python.org/thread/"
+"TOIYZ3SNPBJZDBRU3ZSBREXV2NNHF4KW/>`__,"
 msgstr ""
 
 #: ../pep-0698.rst:20
@@ -106,9 +106,8 @@ msgstr ""
 #: ../pep-0698.rst:22
 msgid ""
 "This PEP proposes adding an ``@override`` decorator to the Python type "
-"system. This will allow type checkers to prevent a class of bugs that "
-"occur when a base class changes methods that are inherited by derived "
-"classes."
+"system. This will allow type checkers to prevent a class of bugs that occur "
+"when a base class changes methods that are inherited by derived classes."
 msgstr ""
 
 #: ../pep-0698.rst:28 ../pep-0698.rst:233
@@ -118,9 +117,9 @@ msgstr ""
 #: ../pep-0698.rst:30
 msgid ""
 "A primary purpose of type checkers is to flag when refactors or changes "
-"break pre-existing semantic structures in the code, so users can identify"
-" and make fixes across their project without doing a manual audit of "
-"their code."
+"break pre-existing semantic structures in the code, so users can identify "
+"and make fixes across their project without doing a manual audit of their "
+"code."
 msgstr ""
 
 #: ../pep-0698.rst:36
@@ -129,9 +128,9 @@ msgstr ""
 
 #: ../pep-0698.rst:38
 msgid ""
-"Python’s type system does not provide a way to identify call sites that "
-"need to be changed to stay consistent when an overridden function API "
-"changes. This makes refactoring and transforming code more dangerous."
+"Python’s type system does not provide a way to identify call sites that need "
+"to be changed to stay consistent when an overridden function API changes. "
+"This makes refactoring and transforming code more dangerous."
 msgstr ""
 
 #: ../pep-0698.rst:42
@@ -143,8 +142,8 @@ msgid ""
 "If the overridden method on the superclass is renamed or deleted, type "
 "checkers will only alert us to update call sites that deal with the base "
 "type directly. But the type checker can only see the new code, not the "
-"change we made, so it has no way of knowing that we probably also needed "
-"to rename the same method on child classes."
+"change we made, so it has no way of knowing that we probably also needed to "
+"rename the same method on child classes."
 msgstr ""
 
 #: ../pep-0698.rst:67
@@ -160,37 +159,36 @@ msgstr ""
 #: ../pep-0698.rst:93
 msgid ""
 "If we pass a ``Child`` instance to the parent_callsite function, it will "
-"invoke the implementation in ``Parent.new_foo``. rather than "
-"``Child.foo``. This is probably a bug - we presumably would not have "
-"written ``Child.foo`` in the first place if we didn’t need custom "
-"behavior."
+"invoke the implementation in ``Parent.new_foo``. rather than ``Child.foo``. "
+"This is probably a bug - we presumably would not have written ``Child.foo`` "
+"in the first place if we didn’t need custom behavior."
 msgstr ""
 
 #: ../pep-0698.rst:97
 msgid ""
-"Our system was likely relying on ``Child.foo``  behaving in a similar way"
-" to ``Parent.foo``. But unless we catch this early, we have now forked "
-"the methods, and future refactors it is likely no one will realize that "
-"major changes to the behavior of new_foo likely require updating "
-"``Child.foo`` as well, which could lead to major bugs later."
+"Our system was likely relying on ``Child.foo``  behaving in a similar way to "
+"``Parent.foo``. But unless we catch this early, we have now forked the "
+"methods, and future refactors it is likely no one will realize that major "
+"changes to the behavior of new_foo likely require updating ``Child.foo`` as "
+"well, which could lead to major bugs later."
 msgstr ""
 
 #: ../pep-0698.rst:103
 msgid ""
-"The incorrectly-refactored code is type-safe, but is probably not what we"
-" intended and could cause our system to behave incorrectly. The bug can "
-"be difficult to track down because our new code likely does execute "
-"without throwing exceptions. Tests are less likely to catch the problem, "
-"and silent errors can take longer to track down in production."
+"The incorrectly-refactored code is type-safe, but is probably not what we "
+"intended and could cause our system to behave incorrectly. The bug can be "
+"difficult to track down because our new code likely does execute without "
+"throwing exceptions. Tests are less likely to catch the problem, and silent "
+"errors can take longer to track down in production."
 msgstr ""
 
 #: ../pep-0698.rst:109
 msgid ""
 "We are aware of several production outages in multiple typed codebases "
 "caused by such incorrect refactors. This is our primary motivation for "
-"adding an ``@override`` decorator to the type system, which lets "
-"developers express the relationship between ``Parent.foo`` and "
-"``Child.foo`` so that type checkers can detect the problem."
+"adding an ``@override`` decorator to the type system, which lets developers "
+"express the relationship between ``Parent.foo`` and ``Child.foo`` so that "
+"type checkers can detect the problem."
 msgstr ""
 
 #: ../pep-0698.rst:116
@@ -203,9 +201,9 @@ msgstr ""
 
 #: ../pep-0698.rst:122
 msgid ""
-"We believe that explicit overrides will make unfamiliar code easier to "
-"read than implicit overrides. A developer reading the implementation of a"
-" subclass that uses ``@override``  can immediately see which methods are "
+"We believe that explicit overrides will make unfamiliar code easier to read "
+"than implicit overrides. A developer reading the implementation of a "
+"subclass that uses ``@override``  can immediately see which methods are "
 "overriding functionality in some base class; without this decorator, the "
 "only way to quickly find out is using a static analysis tool."
 msgstr ""
@@ -219,7 +217,8 @@ msgid "Static Override Checks in Other Languages"
 msgstr ""
 
 #: ../pep-0698.rst:135
-msgid "Many popular programming languages support override checks. For example:"
+msgid ""
+"Many popular programming languages support override checks. For example:"
 msgstr ""
 
 #: ../pep-0698.rst:137
@@ -230,8 +229,8 @@ msgstr ""
 
 #: ../pep-0698.rst:138
 msgid ""
-"`C# has <https://docs.microsoft.com/en-us/dotnet/csharp/language-"
-"reference/keywords/override/>`_ ``override``."
+"`C# has <https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/"
+"keywords/override/>`_ ``override``."
 msgstr ""
 
 #: ../pep-0698.rst:139
@@ -242,15 +241,14 @@ msgstr ""
 
 #: ../pep-0698.rst:140
 msgid ""
-"`Java has "
-"<https://docs.oracle.com/javase/tutorial/java/IandI/override.html/>`_ "
-"``@Override``."
+"`Java has <https://docs.oracle.com/javase/tutorial/java/IandI/override.html/"
+">`_ ``@Override``."
 msgstr ""
 
 #: ../pep-0698.rst:141
 msgid ""
-"`Kotlin has <https://kotlinlang.org/docs/inheritance.html#overriding-"
-"methods/>`_ ``override``."
+"`Kotlin has <https://kotlinlang.org/docs/inheritance.html#overriding-methods/"
+">`_ ``override``."
 msgstr ""
 
 #: ../pep-0698.rst:142
@@ -261,14 +259,14 @@ msgstr ""
 
 #: ../pep-0698.rst:143
 msgid ""
-"`Swift has <https://docs.swift.org/swift-"
-"book/LanguageGuide/Inheritance.html#ID198/>`_ ``override``."
+"`Swift has <https://docs.swift.org/swift-book/LanguageGuide/Inheritance."
+"html#ID198/>`_ ``override``."
 msgstr ""
 
 #: ../pep-0698.rst:144
 msgid ""
-"`TypeScript has <https://www.typescriptlang.org/docs/handbook/release-"
-"notes/typescript-4-3.html#override-and-the---noimplicitoverride-flag/>`_ "
+"`TypeScript has <https://www.typescriptlang.org/docs/handbook/release-notes/"
+"typescript-4-3.html#override-and-the---noimplicitoverride-flag/>`_ "
 "``override``."
 msgstr ""
 
@@ -278,23 +276,22 @@ msgstr ""
 
 #: ../pep-0698.rst:149
 msgid ""
-"Today, there is an `Overrides library "
-"<https://pypi.org/project/overrides/>`_ that provides decorators "
-"``@overrides`` (sic) and ``@final`` and will enforce them at runtime."
+"Today, there is an `Overrides library <https://pypi.org/project/overrides/"
+">`_ that provides decorators ``@overrides`` (sic) and ``@final`` and will "
+"enforce them at runtime."
 msgstr ""
 
 #: ../pep-0698.rst:153
 msgid ""
-":pep:`591` added a ``@final`` decorator with the same semantics as those "
-"in the Overrides library. But the override component of the runtime "
-"library is not supported statically at all, which has added some "
-"confusion around the mix/matched support."
+":pep:`591` added a ``@final`` decorator with the same semantics as those in "
+"the Overrides library. But the override component of the runtime library is "
+"not supported statically at all, which has added some confusion around the "
+"mix/matched support."
 msgstr ""
 
 #: ../pep-0698.rst:158
 msgid ""
-"Providing support for ``@override`` in static checks would add value "
-"because"
+"Providing support for ``@override`` in static checks would add value because"
 msgstr ""
 
 #: ../pep-0698.rst:160
@@ -308,8 +305,8 @@ msgstr ""
 #: ../pep-0698.rst:162
 msgid ""
 "Bugs will be caught quickly even in rarely-used modules, whereas with "
-"runtime checks these might go undetected for a time without automated "
-"tests of all imports."
+"runtime checks these might go undetected for a time without automated tests "
+"of all imports."
 msgstr ""
 
 #: ../pep-0698.rst:168
@@ -326,16 +323,16 @@ msgstr ""
 
 #: ../pep-0698.rst:176
 msgid ""
-"When type checkers encounter a method decorated with ``@typing.override``"
-" they should treat it as a type error unless that method is overriding a "
+"When type checkers encounter a method decorated with ``@typing.override`` "
+"they should treat it as a type error unless that method is overriding a "
 "compatible method or attribute in some ancestor class."
 msgstr ""
 
 #: ../pep-0698.rst:202
 msgid ""
 "The ``@override`` decorator should be permitted anywhere a type checker "
-"considers a method to be a valid override, which typically includes not "
-"only normal methods but also ``@property``, ``@staticmethod``, and "
+"considers a method to be a valid override, which typically includes not only "
+"normal methods but also ``@property``, ``@staticmethod``, and "
 "``@classmethod``."
 msgstr ""
 
@@ -346,19 +343,19 @@ msgstr ""
 #: ../pep-0698.rst:210
 msgid ""
 "Type checkers already enforce compatibility rules for overrides; for "
-"example, a subclass method’s type signature should be compatible with "
-"that of the superclass method. These compatibility rules do not change "
-"due to the presence or absence of ``@override``."
+"example, a subclass method’s type signature should be compatible with that "
+"of the superclass method. These compatibility rules do not change due to the "
+"presence or absence of ``@override``."
 msgstr ""
 
 #: ../pep-0698.rst:215
 msgid ""
 "Note that when a ``@property`` overrides a regular attribute of the base "
 "class, this should not be considered an error due to the use of "
-"``@override``, but the type checker may still consider the override to be"
-" incompatible. For example a type checker may consider it illegal to "
-"override a non-final attribute with a getter property and no setter, as "
-"this does not respect the substitution principle."
+"``@override``, but the type checker may still consider the override to be "
+"incompatible. For example a type checker may consider it illegal to override "
+"a non-final attribute with a getter property and no setter, as this does not "
+"respect the substitution principle."
 msgstr ""
 
 #: ../pep-0698.rst:224
@@ -368,22 +365,22 @@ msgstr ""
 #: ../pep-0698.rst:226
 msgid ""
 "We believe that ``@override`` is most useful if checkers also allow "
-"developers to opt into a strict mode where methods that override a parent"
-" class are required to use the decorator. Strict enforcement should be "
-"opt-in for backward compatibility."
+"developers to opt into a strict mode where methods that override a parent "
+"class are required to use the decorator. Strict enforcement should be opt-in "
+"for backward compatibility."
 msgstr ""
 
 #: ../pep-0698.rst:235
 msgid ""
 "The primary reason for a strict mode that requires ``@override`` is that "
-"developers can only trust that refactors are override-safe if they know "
-"that the ``@override`` decorator is used throughout the project."
+"developers can only trust that refactors are override-safe if they know that "
+"the ``@override`` decorator is used throughout the project."
 msgstr ""
 
 #: ../pep-0698.rst:239
 msgid ""
-"There is another class of bug related to overrides that we can only catch"
-" using a strict mode."
+"There is another class of bug related to overrides that we can only catch "
+"using a strict mode."
 msgstr ""
 
 #: ../pep-0698.rst:241
@@ -408,15 +405,15 @@ msgstr ""
 #: ../pep-0698.rst:273
 msgid ""
 "If the codebase authors tried to manually apply ``@override`` everywhere "
-"when writing overrides in subclasses, they are likely to miss the fact "
-"that ``Child.foo`` needs it here."
+"when writing overrides in subclasses, they are likely to miss the fact that "
+"``Child.foo`` needs it here."
 msgstr ""
 
 #: ../pep-0698.rst:278
 msgid ""
-"At first glance this kind of change may seem unlikely, but it can "
-"actually happen often if one or more subclasses have functionality that "
-"developers later realize belongs in the base class."
+"At first glance this kind of change may seem unlikely, but it can actually "
+"happen often if one or more subclasses have functionality that developers "
+"later realize belongs in the base class."
 msgstr ""
 
 #: ../pep-0698.rst:282
@@ -429,8 +426,8 @@ msgstr ""
 
 #: ../pep-0698.rst:287
 msgid ""
-"Most of the typed, object-oriented programming languages we looked at "
-"have an easy way to require explicit overrides throughout a project:"
+"Most of the typed, object-oriented programming languages we looked at have "
+"an easy way to require explicit overrides throughout a project:"
 msgstr ""
 
 #: ../pep-0698.rst:290
@@ -439,10 +436,9 @@ msgstr ""
 
 #: ../pep-0698.rst:291
 msgid ""
-"TypeScript has a `--no-implicit-override "
-"<https://www.typescriptlang.org/docs/handbook/release-"
-"notes/typescript-4-3.html#override-and-the---noimplicitoverride-flag/>`_ "
-"flag to force explicit overrides"
+"TypeScript has a `--no-implicit-override <https://www.typescriptlang.org/"
+"docs/handbook/release-notes/typescript-4-3.html#override-and-the---"
+"noimplicitoverride-flag/>`_ flag to force explicit overrides"
 msgstr ""
 
 #: ../pep-0698.rst:294
@@ -457,9 +453,8 @@ msgstr ""
 
 #: ../pep-0698.rst:301
 msgid ""
-"By default, the ``@override`` decorator will be opt-in. Codebases that do"
-" not use it will type-check as before, without the additional type "
-"safety."
+"By default, the ``@override`` decorator will be opt-in. Codebases that do "
+"not use it will type-check as before, without the additional type safety."
 msgstr ""
 
 #: ../pep-0698.rst:306
@@ -472,11 +467,11 @@ msgstr ""
 
 #: ../pep-0698.rst:311
 msgid ""
-"At runtime, ``@typing.override`` will make a best-effort attempt to add "
-"an attribute ``__override__`` with value ``True`` to its argument. By "
-"\"best-effort\" we mean that we will try adding the attribute, but if "
-"that fails (for example because the input is a descriptor type with fixed"
-" slots) we will silently return the argument as-is."
+"At runtime, ``@typing.override`` will make a best-effort attempt to add an "
+"attribute ``__override__`` with value ``True`` to its argument. By \"best-"
+"effort\" we mean that we will try adding the attribute, but if that fails "
+"(for example because the input is a descriptor type with fixed slots) we "
+"will silently return the argument as-is."
 msgstr ""
 
 #: ../pep-0698.rst:317
@@ -494,36 +489,36 @@ msgstr ""
 
 #: ../pep-0698.rst:326
 msgid ""
-"As described above, adding ``__override__`` may fail at runtime, in which"
-" case we will simply return the argument as-is."
+"As described above, adding ``__override__`` may fail at runtime, in which "
+"case we will simply return the argument as-is."
 msgstr ""
 
 #: ../pep-0698.rst:329
 msgid ""
-"In addition, even in cases where it does work it may be difficult for "
-"users to correctly work with multiple decorators, because getting the "
-"``__override__`` field to exist on the final output requires "
-"understanding the implementation of each decorator:"
+"In addition, even in cases where it does work it may be difficult for users "
+"to correctly work with multiple decorators, because getting the "
+"``__override__`` field to exist on the final output requires understanding "
+"the implementation of each decorator:"
 msgstr ""
 
 #: ../pep-0698.rst:334
 msgid ""
 "The ``@override`` decorator needs to execute *after* ordinary decorators "
-"like ``@functools.lru_cache`` that use wrapper functions, since we want "
-"to set ``__override__`` on the outermost wrapper. This means it needs to "
-"go *above* all these other decorators."
+"like ``@functools.lru_cache`` that use wrapper functions, since we want to "
+"set ``__override__`` on the outermost wrapper. This means it needs to go "
+"*above* all these other decorators."
 msgstr ""
 
 #: ../pep-0698.rst:338
 msgid ""
-"But ``@override`` needs to execute *before* many special descriptor-based"
-" decorators like ``@property``, ``@staticmethod``, and ``@classmethod``."
+"But ``@override`` needs to execute *before* many special descriptor-based "
+"decorators like ``@property``, ``@staticmethod``, and ``@classmethod``."
 msgstr ""
 
 #: ../pep-0698.rst:340
 msgid ""
-"As discussed above, in some cases (for example a descriptor with fixed "
-"slots or a descriptor that also wraps) it may be impossible to get the "
+"As discussed above, in some cases (for example a descriptor with fixed slots "
+"or a descriptor that also wraps) it may be impossible to get the "
 "``__override__`` attribute at all."
 msgstr ""
 
@@ -544,24 +539,24 @@ msgstr ""
 
 #: ../pep-0698.rst:356
 msgid ""
-"Modern Integrated Development Environments (IDEs) often provide the "
-"ability to automatically update subclasses when renaming a method. But we"
-" view this as insufficient for several reasons:"
+"Modern Integrated Development Environments (IDEs) often provide the ability "
+"to automatically update subclasses when renaming a method. But we view this "
+"as insufficient for several reasons:"
 msgstr ""
 
 #: ../pep-0698.rst:360
 msgid ""
-"If a codebase is split into multiple projects, an IDE will not help and "
-"the bug appears when upgrading dependencies. Type checkers are a fast way"
-" to catch breaking changes in dependencies."
+"If a codebase is split into multiple projects, an IDE will not help and the "
+"bug appears when upgrading dependencies. Type checkers are a fast way to "
+"catch breaking changes in dependencies."
 msgstr ""
 
 #: ../pep-0698.rst:363
 msgid ""
-"Not all developers use such IDEs. And library maintainers, even if they "
-"do use an IDE, should not need to assume pull request authors use the "
-"same IDE. We prefer being able to detect problems in continuous "
-"integration without assuming anything about developers’ choice of editor."
+"Not all developers use such IDEs. And library maintainers, even if they do "
+"use an IDE, should not need to assume pull request authors use the same IDE. "
+"We prefer being able to detect problems in continuous integration without "
+"assuming anything about developers’ choice of editor."
 msgstr ""
 
 #: ../pep-0698.rst:371
@@ -571,8 +566,8 @@ msgstr ""
 #: ../pep-0698.rst:373
 msgid ""
 "We considered having ``@typing.override`` enforce override safety at "
-"runtime, similarly to how ``@overrides.overrides`` `does today "
-"<https://pypi.org/project/overrides/>`_."
+"runtime, similarly to how ``@overrides.overrides`` `does today <https://pypi."
+"org/project/overrides/>`_."
 msgstr ""
 
 #: ../pep-0698.rst:377
@@ -581,34 +576,33 @@ msgstr ""
 
 #: ../pep-0698.rst:379
 msgid ""
-"For users of static type checking, it is not clear this brings any "
-"benefits."
+"For users of static type checking, it is not clear this brings any benefits."
 msgstr ""
 
 #: ../pep-0698.rst:380
 msgid ""
 "There would be at least some performance overhead, leading to projects "
-"importing slower with runtime enforcement. We estimate the "
-"``@overrides.overrides`` implementation takes around 100 microseconds, "
-"which is fast but could still add up to a second or more of extra "
-"initialization time in million-plus line codebases, which is exactly "
-"where we think ``@typing.override`` will be most useful."
+"importing slower with runtime enforcement. We estimate the ``@overrides."
+"overrides`` implementation takes around 100 microseconds, which is fast but "
+"could still add up to a second or more of extra initialization time in "
+"million-plus line codebases, which is exactly where we think ``@typing."
+"override`` will be most useful."
 msgstr ""
 
 #: ../pep-0698.rst:386
 msgid ""
-"An implementation may have edge cases where it doesn’t work well (we "
-"heard from a maintainer of one such closed-source library that this has "
-"been a problem). We expect static enforcement to be simple and reliable."
+"An implementation may have edge cases where it doesn’t work well (we heard "
+"from a maintainer of one such closed-source library that this has been a "
+"problem). We expect static enforcement to be simple and reliable."
 msgstr ""
 
 #: ../pep-0698.rst:389
 msgid ""
 "The implementation approaches we know of are not simple. The decorator "
-"executes before the class is finished evaluating, so the options we know "
-"of are either to inspect the bytecode of the caller (as "
-"``@overrides.overrrides`` does) or to use a metaclass-based approach. "
-"Neither approach seems ideal."
+"executes before the class is finished evaluating, so the options we know of "
+"are either to inspect the bytecode of the caller (as ``@overrides."
+"overrrides`` does) or to use a metaclass-based approach. Neither approach "
+"seems ideal."
 msgstr ""
 
 #: ../pep-0698.rst:396
@@ -617,12 +611,11 @@ msgstr ""
 
 #: ../pep-0698.rst:398
 msgid ""
-"We considered including a class decorator "
-"``@require_explicit_overrides``, which would have provided a way for base"
-" classes to declare that all subclasses must use the ``@override`` "
-"decorator on method overrides. The overrides library has a mixin class, "
-"``EnforceExplicitOverrides``, which provides similar behavior in runtime "
-"checks."
+"We considered including a class decorator ``@require_explicit_overrides``, "
+"which would have provided a way for base classes to declare that all "
+"subclasses must use the ``@override`` decorator on method overrides. The "
+"overrides library has a mixin class, ``EnforceExplicitOverrides``, which "
+"provides similar behavior in runtime checks."
 msgstr ""
 
 #: ../pep-0698.rst:404
@@ -636,12 +629,12 @@ msgstr ""
 
 #: ../pep-0698.rst:409
 msgid ""
-"Moreover we believe that authors of projects who do not consider the "
-"extra type safety to be worth the additional boilerplate of using "
-"``@override`` should not be forced to do so. Having an optional strict "
-"mode puts the decision in the hands of project owners, whereas the use of"
-" ``@require_explicit_overrides`` in libraries would force project owners "
-"to use ``@override`` even if they prefer not to."
+"Moreover we believe that authors of projects who do not consider the extra "
+"type safety to be worth the additional boilerplate of using ``@override`` "
+"should not be forced to do so. Having an optional strict mode puts the "
+"decision in the hands of project owners, whereas the use of "
+"``@require_explicit_overrides`` in libraries would force project owners to "
+"use ``@override`` even if they prefer not to."
 msgstr ""
 
 #: ../pep-0698.rst:417
@@ -657,10 +650,10 @@ msgstr ""
 #: ../pep-0698.rst:444
 msgid ""
 "This could be useful for code readability because it makes the override "
-"structure more explicit for deep inheritance trees. It also might catch "
-"bugs by prompting developers to check that the implementation of an "
-"override still makes sense whenever a method being overridden moves from "
-"one base class to another."
+"structure more explicit for deep inheritance trees. It also might catch bugs "
+"by prompting developers to check that the implementation of an override "
+"still makes sense whenever a method being overridden moves from one base "
+"class to another."
 msgstr ""
 
 #: ../pep-0698.rst:449
@@ -680,11 +673,11 @@ msgstr ""
 
 #: ../pep-0698.rst:456
 msgid ""
-"The author of the ``overrides`` package `has noted "
-"<https://discuss.python.org/t/pep-698-a-typing-override-"
-"decorator/20839/4>`_ that early versions of his library included this "
-"capability but it was rarely useful and seemed to have little benefit. "
-"After it was removed, the ability was never requested by users."
+"The author of the ``overrides`` package `has noted <https://discuss.python."
+"org/t/pep-698-a-typing-override-decorator/20839/4>`_ that early versions of "
+"his library included this capability but it was rarely useful and seemed to "
+"have little benefit. After it was removed, the ability was never requested "
+"by users."
 msgstr ""
 
 #: ../pep-0698.rst:465
@@ -697,17 +690,16 @@ msgstr ""
 
 #: ../pep-0698.rst:469
 msgid ""
-"The decorator `@pyre_extensions.override <https://github.com/facebook"
-"/pyre-"
-"check/blob/f4d3f676d17b2e59c4c55d09dfa3caead8ec2e7c/pyre_extensions/__init__.py#L95/>`_"
-" can mark overrides"
+"The decorator `@pyre_extensions.override <https://github.com/facebook/pyre-"
+"check/blob/f4d3f676d17b2e59c4c55d09dfa3caead8ec2e7c/pyre_extensions/__init__."
+"py#L95/>`_ can mark overrides"
 msgstr ""
 
 #: ../pep-0698.rst:472
 msgid ""
-"Pyre can `type-check this decorator <https://github.com/facebook/pyre-"
-"check/blob/ae68c44f4e5b263ce0e175f0798272d9318589af/source/analysis/test/integration/methodTest.ml#L2515-L2638/>`_"
-" as specified in this PEP"
+"Pyre can `type-check this decorator <https://github.com/facebook/pyre-check/"
+"blob/ae68c44f4e5b263ce0e175f0798272d9318589af/source/analysis/test/"
+"integration/methodTest.ml#L2515-L2638/>`_ as specified in this PEP"
 msgstr ""
 
 #: ../pep-0698.rst:477
@@ -716,7 +708,6 @@ msgstr ""
 
 #: ../pep-0698.rst:479
 msgid ""
-"This document is placed in the public domain or under the "
-"CC0-1.0-Universal license, whichever is more permissive."
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
 msgstr ""
-

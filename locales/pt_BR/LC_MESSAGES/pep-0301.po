@@ -80,16 +80,16 @@ msgstr ""
 #: ../pep-0301.txt:18
 msgid ""
 "This PEP proposes several extensions to the Distutils packaging system "
-"[1]_.  These enhancements include a central package index server, tools "
-"for submitting package information to the index and extensions to the "
-"package metadata to include Trove [2]_ information."
+"[1]_.  These enhancements include a central package index server, tools for "
+"submitting package information to the index and extensions to the package "
+"metadata to include Trove [2]_ information."
 msgstr ""
 
 #: ../pep-0301.txt:23
 msgid ""
-"This PEP does not address issues of package dependency.  It also does not"
-" address storage and download of packages as described in :pep:`243`. Nor"
-" is it proposing a local database of packages as described in :pep:`262`."
+"This PEP does not address issues of package dependency.  It also does not "
+"address storage and download of packages as described in :pep:`243`. Nor is "
+"it proposing a local database of packages as described in :pep:`262`."
 msgstr ""
 
 #: ../pep-0301.txt:28
@@ -104,49 +104,48 @@ msgstr ""
 
 #: ../pep-0301.txt:36
 msgid ""
-"Python programmers have long needed a simple method of discovering "
-"existing modules and systems available for their use.  It is arguable "
-"that the existence of these systems for other languages have been a "
-"significant contribution to their popularity.  The existence of the "
-"Catalog-SIG, and the many discussions there indicate that there is a "
-"large population of users who recognise this need."
+"Python programmers have long needed a simple method of discovering existing "
+"modules and systems available for their use.  It is arguable that the "
+"existence of these systems for other languages have been a significant "
+"contribution to their popularity.  The existence of the Catalog-SIG, and the "
+"many discussions there indicate that there is a large population of users "
+"who recognise this need."
 msgstr ""
 
 #: ../pep-0301.txt:43
 msgid ""
-"The introduction of the Distutils packaging system to Python simplified "
-"the process of distributing shareable code, and included mechanisms for "
-"the capture of package metadata, but did little with the metadata save "
-"ship it with the package."
+"The introduction of the Distutils packaging system to Python simplified the "
+"process of distributing shareable code, and included mechanisms for the "
+"capture of package metadata, but did little with the metadata save ship it "
+"with the package."
 msgstr ""
 
 #: ../pep-0301.txt:48
 msgid ""
-"An interface to the index should be hosted in the python.org domain, "
-"giving it an air of legitimacy that existing catalog efforts do not have."
+"An interface to the index should be hosted in the python.org domain, giving "
+"it an air of legitimacy that existing catalog efforts do not have."
 msgstr ""
 
 #: ../pep-0301.txt:52
 msgid ""
-"The interface for submitting information to the catalog should be as "
-"simple as possible - hopefully just a one-line command for most users."
+"The interface for submitting information to the catalog should be as simple "
+"as possible - hopefully just a one-line command for most users."
 msgstr ""
 
 #: ../pep-0301.txt:55
 msgid ""
-"Issues of package dependency are not addressed due to the complexity of "
-"such a system.  :pep:`262` proposes such a system, but as of this writing"
-" the PEP is still unfinished."
+"Issues of package dependency are not addressed due to the complexity of such "
+"a system.  :pep:`262` proposes such a system, but as of this writing the PEP "
+"is still unfinished."
 msgstr ""
 
 #: ../pep-0301.txt:59
 msgid ""
 "Issues of package dissemination (storage on a central server) are not "
-"addressed because they require assumptions about availability of storage "
-"and bandwidth that I am not in a position to make.  :pep:`243`, which is "
-"still being developed, is tackling these issues and many more.  This "
-"proposal is considered compatible with, and adjunct to the proposal in "
-":pep:`243`."
+"addressed because they require assumptions about availability of storage and "
+"bandwidth that I am not in a position to make.  :pep:`243`, which is still "
+"being developed, is tackling these issues and many more.  This proposal is "
+"considered compatible with, and adjunct to the proposal in :pep:`243`."
 msgstr ""
 
 #: ../pep-0301.txt:68
@@ -155,8 +154,8 @@ msgstr ""
 
 #: ../pep-0301.txt:70
 msgid ""
-"The specification takes three parts, the `web interface`_,  the "
-"`Distutils register command`_ and the `Distutils Trove classification`_."
+"The specification takes three parts, the `web interface`_,  the `Distutils "
+"register command`_ and the `Distutils Trove classification`_."
 msgstr ""
 
 #: ../pep-0301.txt:76
@@ -166,15 +165,15 @@ msgstr ""
 #: ../pep-0301.txt:78
 msgid ""
 "A web interface is implemented over a simple store.  The interface is "
-"available through the python.org domain, either directly or as "
-"packages.python.org."
+"available through the python.org domain, either directly or as packages."
+"python.org."
 msgstr ""
 
 #: ../pep-0301.txt:82
 msgid ""
-"The store has columns for all metadata fields.  The (name, version) "
-"double is used as a uniqueness key.  Additional submissions for an "
-"existing (name, version) will result in an *update* operation."
+"The store has columns for all metadata fields.  The (name, version) double "
+"is used as a uniqueness key.  Additional submissions for an existing (name, "
+"version) will result in an *update* operation."
 msgstr ""
 
 #: ../pep-0301.txt:86
@@ -188,12 +187,12 @@ msgstr ""
 #: ../pep-0301.txt:89
 msgid ""
 "Lists known packages, optionally filtered.  An additional HTML page, "
-"**search**, presents a form to the user which is used to customise the "
-"index view.  The index will include a browsing interface like that "
-"presented in the Trove interface design section 4.3.  The results will be"
-" paginated, sorted alphabetically and only showing the most recent "
-"version.  The most recent version information will be determined using "
-"the Distutils LooseVersion class."
+"**search**, presents a form to the user which is used to customise the index "
+"view.  The index will include a browsing interface like that presented in "
+"the Trove interface design section 4.3.  The results will be paginated, "
+"sorted alphabetically and only showing the most recent version.  The most "
+"recent version information will be determined using the Distutils "
+"LooseVersion class."
 msgstr ""
 
 #: ../pep-0301.txt:99
@@ -202,8 +201,8 @@ msgstr ""
 
 #: ../pep-0301.txt:98
 msgid ""
-"Displays information about the package.  All fields are displayed as "
-"plain text.  The \"url\" (or \"home_page\") field is hyperlinked."
+"Displays information about the package.  All fields are displayed as plain "
+"text.  The \"url\" (or \"home_page\") field is hyperlinked."
 msgstr ""
 
 #: ../pep-0301.txt:112
@@ -213,18 +212,18 @@ msgstr ""
 #: ../pep-0301.txt:102
 msgid ""
 "Accepts a POST submission of metadata about a package.  The \"name\" and "
-"\"version\" fields are mandatory, as they uniquely identify an entry in "
-"the index.  **Submit** will automatically determine whether to create a "
-"new entry or update an existing entry.  The metadata is checked for "
-"correctness where appropriate - specifically the Trove discriminators are"
-" compared with the allowed set.  An update will update all information "
-"about the package based on the new submitted information."
+"\"version\" fields are mandatory, as they uniquely identify an entry in the "
+"index.  **Submit** will automatically determine whether to create a new "
+"entry or update an existing entry.  The metadata is checked for correctness "
+"where appropriate - specifically the Trove discriminators are compared with "
+"the allowed set.  An update will update all information about the package "
+"based on the new submitted information."
 msgstr ""
 
 #: ../pep-0301.txt:111
 msgid ""
-"There will also be a submit/edit form that will allow manual submission "
-"and updating for those who do not use Distutils."
+"There will also be a submit/edit form that will allow manual submission and "
+"updating for those who do not use Distutils."
 msgstr ""
 
 #: ../pep-0301.txt:116
@@ -233,8 +232,8 @@ msgstr ""
 
 #: ../pep-0301.txt:115
 msgid ""
-"Accepts a POST submission of a PKG-INFO file and performs the same "
-"function as the **submit** interface."
+"Accepts a POST submission of a PKG-INFO file and performs the same function "
+"as the **submit** interface."
 msgstr ""
 
 #: ../pep-0301.txt:134
@@ -243,9 +242,9 @@ msgstr ""
 
 #: ../pep-0301.txt:119
 msgid ""
-"Registers a new user with the index.  Requires username, password and "
-"email address.  Passwords will be stored in the index database as SHA "
-"hashes.  If the username already exists in the database:"
+"Registers a new user with the index.  Requires username, password and email "
+"address.  Passwords will be stored in the index database as SHA hashes.  If "
+"the username already exists in the database:"
 msgstr ""
 
 #: ../pep-0301.txt:123
@@ -256,8 +255,8 @@ msgstr ""
 
 #: ../pep-0301.txt:125
 msgid ""
-"If no valid authentication is provided, the user is informed that the "
-"login is already taken."
+"If no valid authentication is provided, the user is informed that the login "
+"is already taken."
 msgstr ""
 
 #: ../pep-0301.txt:128
@@ -266,14 +265,14 @@ msgstr ""
 
 #: ../pep-0301.txt:130
 msgid ""
-"User submission of details via the Distutils *register* command or "
-"through the web,"
+"User submission of details via the Distutils *register* command or through "
+"the web,"
 msgstr ""
 
 #: ../pep-0301.txt:132
 msgid ""
-"Index server sending email to the user's email address with a URL to "
-"visit to confirm registration with a random one-time key, and"
+"Index server sending email to the user's email address with a URL to visit "
+"to confirm registration with a random one-time key, and"
 msgstr ""
 
 #: ../pep-0301.txt:134
@@ -294,14 +293,14 @@ msgstr ""
 
 #: ../pep-0301.txt:140
 msgid ""
-"Using a supplied email address as the key, this resets a user's password "
-"and sends an email with the new password to the user."
+"Using a supplied email address as the key, this resets a user's password and "
+"sends an email with the new password to the user."
 msgstr ""
 
 #: ../pep-0301.txt:143
 msgid ""
-"The **submit** command will require HTTP Basic authentication, preferably"
-" over an HTTPS connection."
+"The **submit** command will require HTTP Basic authentication, preferably "
+"over an HTTPS connection."
 msgstr ""
 
 #: ../pep-0301.txt:146
@@ -368,8 +367,8 @@ msgstr ""
 
 #: ../pep-0301.txt:155
 msgid ""
-"User does not have permission to update the package information (not "
-"Owner or Maintainer)"
+"User does not have permission to update the package information (not Owner "
+"or Maintainer)"
 msgstr ""
 
 #: ../pep-0301.txt:160
@@ -386,10 +385,10 @@ msgstr ""
 
 #: ../pep-0301.txt:165
 msgid ""
-"Owns a package name, may assign Maintainer Role for that name.  The first"
-" user to register information about a package is deemed Owner of the "
-"package name.  The Admin user may change this if necessary. May submit "
-"updates for the package name."
+"Owns a package name, may assign Maintainer Role for that name.  The first "
+"user to register information about a package is deemed Owner of the package "
+"name.  The Admin user may change this if necessary. May submit updates for "
+"the package name."
 msgstr ""
 
 #: ../pep-0301.txt:171
@@ -406,8 +405,7 @@ msgstr ""
 
 #: ../pep-0301.txt:174
 msgid ""
-"Can assign Owner Role and edit user details. Not specific to a package "
-"name."
+"Can assign Owner Role and edit user details. Not specific to a package name."
 msgstr ""
 
 #: ../pep-0301.txt:179
@@ -434,8 +432,8 @@ msgstr ""
 
 #: ../pep-0301.txt:188
 msgid ""
-"Each package has an entry in **releases** for each version of the package"
-" that is released. A row holds the bulk of the information given in the "
+"Each package has an entry in **releases** for each version of the package "
+"that is released. A row holds the bulk of the information given in the "
 "package's PKG-INFO file. There is one row for each package (*name*, "
 "*version*)."
 msgstr ""
@@ -454,9 +452,9 @@ msgstr ""
 
 #: ../pep-0301.txt:198
 msgid ""
-"Each entry maps a package (*name*, *version*) to a *discriminator_id*.  "
-"We map to releases instead of packages because the set of discriminators "
-"may change between releases."
+"Each entry maps a package (*name*, *version*) to a *discriminator_id*.  We "
+"map to releases instead of packages because the set of discriminators may "
+"change between releases."
 msgstr ""
 
 #: ../pep-0301.txt:206
@@ -465,10 +463,10 @@ msgstr ""
 
 #: ../pep-0301.txt:203
 msgid ""
-"Holds information about changes to package information in the index. "
-"Changes to the **packages**, **releases**, **roles**, and "
-"**release_discriminators** tables are listed here by package *name* and "
-"*version* if the change is release-specific."
+"Holds information about changes to package information in the index. Changes "
+"to the **packages**, **releases**, **roles**, and **release_discriminators** "
+"tables are listed here by package *name* and *version* if the change is "
+"release-specific."
 msgstr ""
 
 #: ../pep-0301.txt:209
@@ -485,9 +483,8 @@ msgstr ""
 
 #: ../pep-0301.txt:214
 msgid ""
-"An additional table, **rego_otk** holds the One Time Keys generated "
-"during registration and is not interesting in the scope of the index "
-"itself."
+"An additional table, **rego_otk** holds the One Time Keys generated during "
+"registration and is not interesting in the scope of the index itself."
 msgstr ""
 
 #: ../pep-0301.txt:220
@@ -496,10 +493,10 @@ msgstr ""
 
 #: ../pep-0301.txt:222
 msgid ""
-"An additional Distutils command, ``register``, is implemented which posts"
-" the package metadata to the central index.  The *register* command "
-"automatically handles user registration; the user is presented with three"
-" options:"
+"An additional Distutils command, ``register``, is implemented which posts "
+"the package metadata to the central index.  The *register* command "
+"automatically handles user registration; the user is presented with three "
+"options:"
 msgstr ""
 
 #: ../pep-0301.txt:227
@@ -516,8 +513,8 @@ msgstr ""
 
 #: ../pep-0301.txt:231
 msgid ""
-"On systems where the ``$HOME`` environment variable is set, the user will"
-" be prompted at exit to save their username/password to a file in their "
+"On systems where the ``$HOME`` environment variable is set, the user will be "
+"prompted at exit to save their username/password to a file in their "
 "``$HOME`` directory in the file ``.pypirc``."
 msgstr ""
 
@@ -530,11 +527,11 @@ msgstr ""
 
 #: ../pep-0301.txt:239
 msgid ""
-"The *register* command will include a ``--verify`` option which performs "
-"a test submission to the index without actually committing the data.  The"
-" index will perform its submission verification checks as usual and "
-"report any errors it would have reported during a normal submission.  "
-"This is useful for verifying correctness of Trove discriminators."
+"The *register* command will include a ``--verify`` option which performs a "
+"test submission to the index without actually committing the data.  The "
+"index will perform its submission verification checks as usual and report "
+"any errors it would have reported during a normal submission.  This is "
+"useful for verifying correctness of Trove discriminators."
 msgstr ""
 
 #: ../pep-0301.txt:248
@@ -544,49 +541,45 @@ msgstr ""
 #: ../pep-0301.txt:250
 msgid ""
 "The Trove concept of *discrimination* will be added to the metadata set "
-"available to package authors through the new attribute \"classifiers\".  "
-"The list of classifiers will be available through the web, and added to "
-"the package like so::"
+"available to package authors through the new attribute \"classifiers\".  The "
+"list of classifiers will be available through the web, and added to the "
+"package like so::"
 msgstr ""
 
 #: ../pep-0301.txt:278
 msgid ""
-"It was decided that strings would be used for the classification entries "
-"due to the deep nesting that would be involved in a more formal Python "
-"structure."
+"It was decided that strings would be used for the classification entries due "
+"to the deep nesting that would be involved in a more formal Python structure."
 msgstr ""
 
 #: ../pep-0301.txt:282
 msgid ""
-"The original Trove specification that classification namespaces be "
-"separated by slashes (\"/\") unfortunately collides with many of the "
-"names having slashes in them (e.g. \"OS/2\").  The double-colon solution "
-"(\" :: \") implemented by SourceForge and FreshMeat gets around this "
-"limitation."
+"The original Trove specification that classification namespaces be separated "
+"by slashes (\"/\") unfortunately collides with many of the names having "
+"slashes in them (e.g. \"OS/2\").  The double-colon solution (\" :: \") "
+"implemented by SourceForge and FreshMeat gets around this limitation."
 msgstr ""
 
 #: ../pep-0301.txt:288
 msgid ""
-"The list of classification values on the module index has been merged "
-"from FreshMeat and SourceForge (with their permission).  This list will "
-"be made available both through the web interface and through the "
-"*register* command's ``--list-classifiers`` option as a text list which "
-"may then be copied to the ``setup.py`` file.  The *register* command's "
-"``--verify`` option will check classifiers values against the server's "
-"list."
+"The list of classification values on the module index has been merged from "
+"FreshMeat and SourceForge (with their permission).  This list will be made "
+"available both through the web interface and through the *register* "
+"command's ``--list-classifiers`` option as a text list which may then be "
+"copied to the ``setup.py`` file.  The *register* command's ``--verify`` "
+"option will check classifiers values against the server's list."
 msgstr ""
 
 #: ../pep-0301.txt:296
 msgid ""
-"Unfortunately, the addition of the \"classifiers\" property is not "
-"backwards-compatible.  A setup.py file using it will not work under "
-"Python 2.1.3.  It is hoped that a bug-fix release of Python 2.2 (most "
-"likely 2.2.3) will relax the argument checking of the setup() command to "
-"allow new keywords, even if they're not actually used.  It is preferable "
-"that a warning be produced, rather than a show-stopping error. The use of"
-" the new keyword should be discouraged in situations where the package is"
-" advertised as being compatible with python versions earlier than 2.2.3 "
-"or 2.3."
+"Unfortunately, the addition of the \"classifiers\" property is not backwards-"
+"compatible.  A setup.py file using it will not work under Python 2.1.3.  It "
+"is hoped that a bug-fix release of Python 2.2 (most likely 2.2.3) will relax "
+"the argument checking of the setup() command to allow new keywords, even if "
+"they're not actually used.  It is preferable that a warning be produced, "
+"rather than a show-stopping error. The use of the new keyword should be "
+"discouraged in situations where the package is advertised as being "
+"compatible with python versions earlier than 2.2.3 or 2.3."
 msgstr ""
 
 #: ../pep-0301.txt:306
@@ -625,8 +618,8 @@ msgstr ""
 
 #: ../pep-0301.txt:336
 msgid ""
-"Originally, the index server was to return custom headers (inspired by "
-":pep:`243`):"
+"Originally, the index server was to return custom headers (inspired by :pep:"
+"`243`):"
 msgstr ""
 
 #: ../pep-0301.txt:340
@@ -643,8 +636,8 @@ msgstr ""
 
 #: ../pep-0301.txt:343
 msgid ""
-"A description of the reason for failure, or additional information in the"
-" case of a success."
+"A description of the reason for failure, or additional information in the "
+"case of a success."
 msgstr ""
 
 #: ../pep-0301.txt:346
@@ -656,7 +649,8 @@ msgid "References"
 msgstr ""
 
 #: ../pep-0301.txt:353
-msgid "Distutils packaging system (http://docs.python.org/library/distutils.html)"
+msgid ""
+"Distutils packaging system (http://docs.python.org/library/distutils.html)"
 msgstr ""
 
 #: ../pep-0301.txt:356
@@ -677,8 +671,8 @@ msgstr ""
 
 #: ../pep-0301.txt:368
 msgid ""
-"[PEP243] upload status is bogus (https://mail.python.org/pipermail"
-"/distutils-sig/2001-March/002262.html)"
+"[PEP243] upload status is bogus (https://mail.python.org/pipermail/distutils-"
+"sig/2001-March/002262.html)"
 msgstr ""
 
 #: ../pep-0301.txt:373
@@ -711,7 +705,6 @@ msgstr ""
 
 #: ../pep-0301.txt:389
 msgid ""
-"The many participants of the Distutils and Catalog SIGs for their ideas "
-"over the years."
+"The many participants of the Distutils and Catalog SIGs for their ideas over "
+"the years."
 msgstr ""
-

@@ -71,12 +71,12 @@ msgstr ""
 
 #: ../pep-0331.txt:17
 msgid ""
-"Support for the ``LC_NUMERIC`` locale category in Python 2.3 is "
-"implemented only in Python-space.  This causes inconsistent behavior and "
-"thread-safety issues for applications that use extension modules and "
-"libraries implemented in C that parse and generate floats from strings.  "
-"This document proposes a plan for removing this inconsistency by "
-"providing and using substitute locale-agnostic functions as necessary."
+"Support for the ``LC_NUMERIC`` locale category in Python 2.3 is implemented "
+"only in Python-space.  This causes inconsistent behavior and thread-safety "
+"issues for applications that use extension modules and libraries implemented "
+"in C that parse and generate floats from strings.  This document proposes a "
+"plan for removing this inconsistency by providing and using substitute "
+"locale-agnostic functions as necessary."
 msgstr ""
 
 #: ../pep-0331.txt:27
@@ -88,19 +88,19 @@ msgid ""
 "Python provides generic localization services through the locale module, "
 "which among other things allows localizing the display and conversion "
 "process of numeric types.  Locale categories, such as ``LC_TIME`` and "
-"``LC_COLLATE``, allow configuring precisely what aspects of the "
-"application are to be localized."
+"``LC_COLLATE``, allow configuring precisely what aspects of the application "
+"are to be localized."
 msgstr ""
 
 #: ../pep-0331.txt:35
 msgid ""
-"The ``LC_NUMERIC`` category specifies formatting for non-monetary numeric"
-" information, such as the decimal separator in float and fixed-precision "
+"The ``LC_NUMERIC`` category specifies formatting for non-monetary numeric "
+"information, such as the decimal separator in float and fixed-precision "
 "numbers.  Localization of the ``LC_NUMERIC`` category is currently "
 "implemented only in Python-space; C libraries invoked from the Python "
 "runtime are unaware of Python's ``LC_NUMERIC`` setting.  This is done to "
-"avoid changing the behavior of certain low-level functions that are used "
-"by the Python parser and related code [2]_."
+"avoid changing the behavior of certain low-level functions that are used by "
+"the Python parser and related code [2]_."
 msgstr ""
 
 #: ../pep-0331.txt:44
@@ -113,9 +113,9 @@ msgstr ""
 #: ../pep-0331.txt:48
 msgid ""
 "James Henstridge, the author of PyGTK [3]_, has additionally pointed out "
-"that the ``setlocale()`` function also presents thread-safety issues, "
-"since a thread may call the C library ``setlocale()`` outside of the GIL,"
-" and cause Python to parse and generate floats incorrectly."
+"that the ``setlocale()`` function also presents thread-safety issues, since "
+"a thread may call the C library ``setlocale()`` outside of the GIL, and "
+"cause Python to parse and generate floats incorrectly."
 msgstr ""
 
 #: ../pep-0331.txt:56
@@ -137,26 +137,26 @@ msgstr ""
 
 #: ../pep-0331.txt:68
 msgid ""
-"The initial problem that motivated this PEP is related to the "
-"GtkSpinButton [4]_ widget in the GTK+ UI toolkit, wrapped by the PyGTK "
-"module.  The widget can be set to numeric mode, and when this occurs, "
-"characters typed into it are evaluated as a number."
+"The initial problem that motivated this PEP is related to the GtkSpinButton "
+"[4]_ widget in the GTK+ UI toolkit, wrapped by the PyGTK module.  The widget "
+"can be set to numeric mode, and when this occurs, characters typed into it "
+"are evaluated as a number."
 msgstr ""
 
 #: ../pep-0331.txt:73
 msgid ""
-"Problems occur when ``LC_NUMERIC`` is set to a locale with a float "
-"separator that differs from the C locale's standard (for instance, ',' "
-"instead of '.' for the Brazilian locale pt_BR).  Because ``LC_NUMERIC`` "
-"is not set at the libc level, float values are displayed incorrectly "
-"(using '.' as a separator) in the spinbutton's text entry, and it is "
-"impossible to enter fractional values using the ',' separator."
+"Problems occur when ``LC_NUMERIC`` is set to a locale with a float separator "
+"that differs from the C locale's standard (for instance, ',' instead of '.' "
+"for the Brazilian locale pt_BR).  Because ``LC_NUMERIC`` is not set at the "
+"libc level, float values are displayed incorrectly (using '.' as a "
+"separator) in the spinbutton's text entry, and it is impossible to enter "
+"fractional values using the ',' separator."
 msgstr ""
 
 #: ../pep-0331.txt:81
 msgid ""
-"This small example demonstrates reduced usability for localized "
-"applications using this toolkit when coded in Python."
+"This small example demonstrates reduced usability for localized applications "
+"using this toolkit when coded in Python."
 msgstr ""
 
 #: ../pep-0331.txt:86
@@ -171,8 +171,7 @@ msgstr ""
 
 #: ../pep-0331.txt:91
 msgid ""
-"``LC_NUMERIC`` can be set at the C library level without breaking the "
-"parser."
+"``LC_NUMERIC`` can be set at the C library level without breaking the parser."
 msgstr ""
 
 #: ../pep-0331.txt:93
@@ -227,20 +226,21 @@ msgstr ""
 
 #: ../pep-0331.txt:110
 msgid ""
-"The proposed approach is to implement ``LC_NUMERIC``-agnostic functions "
-"for converting from (``strtod()``/``atof()``) and to (``snprintf()``) "
-"float formats, using these functions where the formatting should not vary"
-" according to the user-specified locale."
+"The proposed approach is to implement ``LC_NUMERIC``-agnostic functions for "
+"converting from (``strtod()``/``atof()``) and to (``snprintf()``) float "
+"formats, using these functions where the formatting should not vary "
+"according to the user-specified locale."
 msgstr ""
 
 #: ../pep-0331.txt:115
 msgid ""
-"The locale module should also be changed to remove the special-casing for"
-" ``LC_NUMERIC``."
+"The locale module should also be changed to remove the special-casing for "
+"``LC_NUMERIC``."
 msgstr ""
 
 #: ../pep-0331.txt:118
-msgid "This change should also solve the aforementioned thread-safety problems."
+msgid ""
+"This change should also solve the aforementioned thread-safety problems."
 msgstr ""
 
 #: ../pep-0331.txt:123
@@ -249,22 +249,22 @@ msgstr ""
 
 #: ../pep-0331.txt:125
 msgid ""
-"This problem was initially reported as a problem in the GTK+ libraries "
-"[5]_; since then it has been correctly diagnosed as an inconsistency in "
-"Python's implementation.  However, in a fortunate coincidence, the glib "
-"library (developed primarily for GTK+, not to be confused with the GNU C "
-"library) implements a number of ``LC_NUMERIC``-agnostic functions (for an"
-" example, see [6]_) for reasons similar to those presented in this paper."
+"This problem was initially reported as a problem in the GTK+ libraries [5]_; "
+"since then it has been correctly diagnosed as an inconsistency in Python's "
+"implementation.  However, in a fortunate coincidence, the glib library "
+"(developed primarily for GTK+, not to be confused with the GNU C library) "
+"implements a number of ``LC_NUMERIC``-agnostic functions (for an example, "
+"see [6]_) for reasons similar to those presented in this paper."
 msgstr ""
 
 #: ../pep-0331.txt:133
 msgid ""
-"In the same GTK+ problem report, Havoc Pennington suggested that the glib"
-" authors would be willing to contribute this code to the PSF, which would"
-" simplify implementation of this PEP considerably. Alex Larsson, the "
-"original author of the glib code, submitted a PSF Contributor Agreement "
-"[7]_ on 2003-08-20 [8]_ to ensure the code could be safely integrated; "
-"this agreement has been received and accepted."
+"In the same GTK+ problem report, Havoc Pennington suggested that the glib "
+"authors would be willing to contribute this code to the PSF, which would "
+"simplify implementation of this PEP considerably. Alex Larsson, the original "
+"author of the glib code, submitted a PSF Contributor Agreement [7]_ on "
+"2003-08-20 [8]_ to ensure the code could be safely integrated; this "
+"agreement has been received and accepted."
 msgstr ""
 
 #: ../pep-0331.txt:143
@@ -280,19 +280,17 @@ msgstr ""
 
 #: ../pep-0331.txt:150
 msgid ""
-"Martin and Guido pointed out potential copyright issues with the "
-"contributed code.  I believe we will have no problems in this area as "
-"members of the GTK+ and glib teams have said they are fine with "
-"relicensing the code, and a PSF contributor agreement has been mailed in "
-"to ensure this safety."
+"Martin and Guido pointed out potential copyright issues with the contributed "
+"code.  I believe we will have no problems in this area as members of the "
+"GTK+ and glib teams have said they are fine with relicensing the code, and a "
+"PSF contributor agreement has been mailed in to ensure this safety."
 msgstr ""
 
 #: ../pep-0331.txt:156
 msgid ""
 "Tim Peters has pointed out [9]_ that there are situations involving "
-"threading in which the proposed change is insufficient to solve the "
-"problem completely.  A complete solution, however, does not currently "
-"exist."
+"threading in which the proposed change is insufficient to solve the problem "
+"completely.  A complete solution, however, does not currently exist."
 msgstr ""
 
 #: ../pep-0331.txt:163
@@ -301,14 +299,14 @@ msgstr ""
 
 #: ../pep-0331.txt:165
 msgid ""
-"An implementation was developed by Gustavo Carneiro <gjc at "
-"inescporto.pt>, and attached to Sourceforge.net bug 774665 [10]_"
+"An implementation was developed by Gustavo Carneiro <gjc at inescporto.pt>, "
+"and attached to Sourceforge.net bug 774665 [10]_"
 msgstr ""
 
 #: ../pep-0331.txt:168
 msgid ""
-"The final patch [11]_ was integrated into Python CVS by Martin v. Löwis "
-"on 2004-06-08, as stated in the bug report."
+"The final patch [11]_ was integrated into Python CVS by Martin v. Löwis on "
+"2004-06-08, as stated in the bug report."
 msgstr ""
 
 #: ../pep-0331.txt:173
@@ -317,8 +315,8 @@ msgstr ""
 
 #: ../pep-0331.txt:175
 msgid ""
-"Python locale documentation for embedding, "
-"http://docs.python.org/library/locale.html"
+"Python locale documentation for embedding, http://docs.python.org/library/"
+"locale.html"
 msgstr ""
 
 #: ../pep-0331.txt:178
@@ -327,8 +325,8 @@ msgstr ""
 
 #: ../pep-0331.txt:180
 msgid ""
-"GtkSpinButton screenshot (demonstrating problem), "
-"http://www.async.com.br/~kiko/spin.png"
+"GtkSpinButton screenshot (demonstrating problem), http://www.async.com.br/"
+"~kiko/spin.png"
 msgstr ""
 
 #: ../pep-0331.txt:183
@@ -338,26 +336,25 @@ msgstr ""
 #: ../pep-0331.txt:185
 msgid ""
 "Code submission of g_ascii_strtod and g_ascii_dtostr (later renamed "
-"g_ascii_formatd) by Alex Larsson, http://mail.gnome.org/archives/gtk-"
-"devel-list/2001-October/msg00114.html"
+"g_ascii_formatd) by Alex Larsson, http://mail.gnome.org/archives/gtk-devel-"
+"list/2001-October/msg00114.html"
 msgstr ""
 
 #: ../pep-0331.txt:189
 msgid ""
-"PSF Contributor Agreement, https://www.python.org/psf/contrib/contrib-"
-"form/"
+"PSF Contributor Agreement, https://www.python.org/psf/contrib/contrib-form/"
 msgstr ""
 
 #: ../pep-0331.txt:192
 msgid ""
-"Alex Larsson's email confirming his agreement was mailed in, "
-"https://mail.python.org/pipermail/python-dev/2003-August/037755.html"
+"Alex Larsson's email confirming his agreement was mailed in, https://mail."
+"python.org/pipermail/python-dev/2003-August/037755.html"
 msgstr ""
 
 #: ../pep-0331.txt:195
 msgid ""
-"Tim Peters' email summarizing LC_NUMERIC trouble with Spambayes, "
-"https://mail.python.org/pipermail/python-dev/2003-September/037898.html"
+"Tim Peters' email summarizing LC_NUMERIC trouble with Spambayes, https://"
+"mail.python.org/pipermail/python-dev/2003-September/037898.html"
 msgstr ""
 
 #: ../pep-0331.txt:198
@@ -366,8 +363,8 @@ msgstr ""
 
 #: ../pep-0331.txt:200
 msgid ""
-"Integrated LC_NUMERIC-agnostic patch, "
-"https://sourceforge.net/tracker/download.php?group_id=5470&atid=305470&file_id=89685&aid=774665"
+"Integrated LC_NUMERIC-agnostic patch, https://sourceforge.net/tracker/"
+"download.php?group_id=5470&atid=305470&file_id=89685&aid=774665"
 msgstr ""
 
 #: ../pep-0331.txt:205
@@ -377,4 +374,3 @@ msgstr ""
 #: ../pep-0331.txt:207
 msgid "This document has been placed in the public domain."
 msgstr ""
-

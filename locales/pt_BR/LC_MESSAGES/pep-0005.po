@@ -59,10 +59,10 @@ msgstr ""
 
 #: ../pep-0005.txt:14
 msgid ""
-"In the natural evolution of programming languages it is sometimes "
-"necessary to make changes that modify the behavior of older programs. "
-"This PEP proposes a policy for implementing these changes in a manner "
-"respectful of the installed base of Python users."
+"In the natural evolution of programming languages it is sometimes necessary "
+"to make changes that modify the behavior of older programs. This PEP "
+"proposes a policy for implementing these changes in a manner respectful of "
+"the installed base of Python users."
 msgstr ""
 
 #: ../pep-0005.txt:21
@@ -81,27 +81,27 @@ msgstr ""
 
 #: ../pep-0005.txt:30
 msgid ""
-"These guidelines apply to future versions of Python that introduce "
-"backward-incompatible behavior.  Backward incompatible behavior is a "
-"major deviation in Python interpretation from an earlier behavior "
-"described in the standard Python documentation.  Removal of a feature "
-"also constitutes a change of behavior."
+"These guidelines apply to future versions of Python that introduce backward-"
+"incompatible behavior.  Backward incompatible behavior is a major deviation "
+"in Python interpretation from an earlier behavior described in the standard "
+"Python documentation.  Removal of a feature also constitutes a change of "
+"behavior."
 msgstr ""
 
 #: ../pep-0005.txt:36
 msgid ""
-"This PEP does not replace or preclude other compatibility strategies such"
-" as dynamic loading of backwards-compatible parsers.  On the other hand, "
-"if execution of \"old code\" requires a special switch or pragma then "
-"that is indeed a change of behavior from the point of view of the user "
-"and that change should be implemented according to these guidelines."
+"This PEP does not replace or preclude other compatibility strategies such as "
+"dynamic loading of backwards-compatible parsers.  On the other hand, if "
+"execution of \"old code\" requires a special switch or pragma then that is "
+"indeed a change of behavior from the point of view of the user and that "
+"change should be implemented according to these guidelines."
 msgstr ""
 
 #: ../pep-0005.txt:43
 msgid ""
 "In general, common sense must prevail in the implementation of these "
-"guidelines.  For instance changing \"sys.copyright\" does not constitute "
-"a backwards-incompatible change of behavior!"
+"guidelines.  For instance changing \"sys.copyright\" does not constitute a "
+"backwards-incompatible change of behavior!"
 msgstr ""
 
 #: ../pep-0005.txt:49
@@ -110,18 +110,18 @@ msgstr ""
 
 #: ../pep-0005.txt:51
 msgid ""
-"Propose backwards-incompatible behavior in a PEP.  The PEP must include a"
-" section on backwards compatibility that describes in detail a plan to "
+"Propose backwards-incompatible behavior in a PEP.  The PEP must include a "
+"section on backwards compatibility that describes in detail a plan to "
 "complete the remainder of these steps."
 msgstr ""
 
 #: ../pep-0005.txt:55
 msgid ""
-"Once the PEP is accepted as a productive direction, implement an "
-"alternate way to accomplish the task previously provided by the feature "
-"that is being removed or changed.  For instance if the addition operator "
-"were scheduled for removal, a new version of Python could implement an "
-"\"add()\" built-in function."
+"Once the PEP is accepted as a productive direction, implement an alternate "
+"way to accomplish the task previously provided by the feature that is being "
+"removed or changed.  For instance if the addition operator were scheduled "
+"for removal, a new version of Python could implement an \"add()\" built-in "
+"function."
 msgstr ""
 
 #: ../pep-0005.txt:61
@@ -130,20 +130,18 @@ msgstr ""
 
 #: ../pep-0005.txt:64
 msgid ""
-"Add an optional warning mode to the parser that will inform users when "
-"the deprecated construct is used.  In other words, all programs that will"
-" behave differently in the future must trigger warnings in this mode.  "
-"Compile-time warnings are preferable to runtime warnings.  The warning "
-"messages should steer people from the deprecated construct to the "
-"alternative construct."
+"Add an optional warning mode to the parser that will inform users when the "
+"deprecated construct is used.  In other words, all programs that will behave "
+"differently in the future must trigger warnings in this mode.  Compile-time "
+"warnings are preferable to runtime warnings.  The warning messages should "
+"steer people from the deprecated construct to the alternative construct."
 msgstr ""
 
 #: ../pep-0005.txt:71
 msgid ""
-"There must be at least a one-year transition period between the release "
-"of the transitional version of Python and the release of the backwards "
+"There must be at least a one-year transition period between the release of "
+"the transitional version of Python and the release of the backwards "
 "incompatible version.  Users will have at least a year to test their "
 "programs and migrate them from use of the deprecated construct to the "
 "alternative one."
 msgstr ""
-

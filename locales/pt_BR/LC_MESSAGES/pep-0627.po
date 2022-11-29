@@ -88,16 +88,16 @@ msgstr ""
 #: ../pep-0627.rst:20
 msgid ""
 "This PEP clarifies and updates :pep:`376` (Database of Installed Python "
-"Distributions), rewriting it as an interoperability standard. It moves "
-"the canonical location of the standard to the Python Packaging Authority "
-"(PyPA) standards repository, and sets up guidelines for changing it."
+"Distributions), rewriting it as an interoperability standard. It moves the "
+"canonical location of the standard to the Python Packaging Authority (PyPA) "
+"standards repository, and sets up guidelines for changing it."
 msgstr ""
 
 #: ../pep-0627.rst:26
 msgid ""
 "Two files in installed ``.dist-info`` directories are made optional: "
-"``RECORD`` (which :pep:`376` lists as mandatory, but suggests it can be "
-"left out for \"system packages\"), and ``INSTALLER``."
+"``RECORD`` (which :pep:`376` lists as mandatory, but suggests it can be left "
+"out for \"system packages\"), and ``INSTALLER``."
 msgstr ""
 
 #: ../pep-0627.rst:32
@@ -106,8 +106,8 @@ msgstr ""
 
 #: ../pep-0627.rst:34
 msgid ""
-"Python packaging is moving from relying on specific tools (Setuptools and"
-" pip) toward an ecosystem of tools and tool-agnostic interoperability "
+"Python packaging is moving from relying on specific tools (Setuptools and "
+"pip) toward an ecosystem of tools and tool-agnostic interoperability "
 "standards."
 msgstr ""
 
@@ -120,14 +120,14 @@ msgstr ""
 
 #: ../pep-0627.rst:41
 msgid ""
-"This is a proposal to “distill” the standard from :pep:`376`, clarify it,"
-" and rewrite it to be tool-agnostic."
+"This is a proposal to “distill” the standard from :pep:`376`, clarify it, "
+"and rewrite it to be tool-agnostic."
 msgstr ""
 
 #: ../pep-0627.rst:44
 msgid ""
-"The aim of this PEP is to have a better standard, not necessarily a "
-"perfect one. Some issues are left to later clarification."
+"The aim of this PEP is to have a better standard, not necessarily a perfect "
+"one. Some issues are left to later clarification."
 msgstr ""
 
 #: ../pep-0627.rst:49
@@ -140,8 +140,8 @@ msgstr ""
 
 #: ../pep-0627.rst:53
 msgid ""
-"There are too many ways to install projects and this makes interoperation"
-" difficult."
+"There are too many ways to install projects and this makes interoperation "
+"difficult."
 msgstr ""
 
 #: ../pep-0627.rst:54
@@ -161,25 +161,23 @@ msgstr ""
 
 #: ../pep-0627.rst:65
 msgid ""
-"The canonical standard for *Recording installed projects* (previously "
-"known as *Database of Installed Python Distributions*) is the "
-"`documentation`_ at ``packaging.python.org``. Any changes to the document"
-" (except trivial language or typography fixes) must be made through the "
-"PEP process."
+"The canonical standard for *Recording installed projects* (previously known "
+"as *Database of Installed Python Distributions*) is the `documentation`_ at "
+"``packaging.python.org``. Any changes to the document (except trivial "
+"language or typography fixes) must be made through the PEP process."
 msgstr ""
 
 #: ../pep-0627.rst:71
 msgid ""
-"The document is normative (with examples to aid understanding). PEPs that"
-" change it, such as this one, contain additional information that is "
-"expected to get out of date, such as rationales and compatibility "
-"considerations."
+"The document is normative (with examples to aid understanding). PEPs that "
+"change it, such as this one, contain additional information that is expected "
+"to get out of date, such as rationales and compatibility considerations."
 msgstr ""
 
 #: ../pep-0627.rst:76
 msgid ""
-"The proposed standard is submitted together with this PEP as a pull "
-"request to ``packaging.python.org``."
+"The proposed standard is submitted together with this PEP as a pull request "
+"to ``packaging.python.org``."
 msgstr ""
 
 #: ../pep-0627.rst:83
@@ -192,25 +190,25 @@ msgstr ""
 
 #: ../pep-0627.rst:88
 msgid ""
-"The standard is renamed from *Database of Installed Python Distributions*"
-" to *Recording installed projects*."
+"The standard is renamed from *Database of Installed Python Distributions* to "
+"*Recording installed projects*."
 msgstr ""
 
 #: ../pep-0627.rst:91
 msgid ""
 "While putting files in known locations on disk may be thought of as a "
-"“database”, it's not what most people think about when they hear the "
-"term. The PyPA links to :pep:`376` under the heading *Recording installed"
-" distributions*."
+"“database”, it's not what most people think about when they hear the term. "
+"The PyPA links to :pep:`376` under the heading *Recording installed "
+"distributions*."
 msgstr ""
 
 #: ../pep-0627.rst:95
 msgid ""
 "The PyPA glossary defines “Distribution” (or, “Distribution Package” to "
 "prevent confusion with e.g. Linux distributions) as “A versioned archive "
-"file […]”. Since there may be other ways to install Python code than from"
-" archive files, the document uses “installed project” rather than "
-"“installed distribution”."
+"file […]”. Since there may be other ways to install Python code than from "
+"archive files, the document uses “installed project” rather than “installed "
+"distribution”."
 msgstr ""
 
 #: ../pep-0627.rst:102
@@ -219,16 +217,16 @@ msgstr ""
 
 #: ../pep-0627.rst:104
 msgid ""
-"All tool- and library-specific details are removed. The mechanisms of how"
-" a project is installed are also left out: the document focuses on the "
-"end state. One exception is a sketch of an uninstallation algorithm, "
-"which is given to better explain the purpose of the ``RECORD`` file."
+"All tool- and library-specific details are removed. The mechanisms of how a "
+"project is installed are also left out: the document focuses on the end "
+"state. One exception is a sketch of an uninstallation algorithm, which is "
+"given to better explain the purpose of the ``RECORD`` file."
 msgstr ""
 
 #: ../pep-0627.rst:110
 msgid ""
-"References to ``.egg-info`` and ``.egg``, formats specific to "
-"``setuptools`` and ``distutils``, are left out."
+"References to ``.egg-info`` and ``.egg``, formats specific to ``setuptools`` "
+"and ``distutils``, are left out."
 msgstr ""
 
 #: ../pep-0627.rst:116
@@ -237,16 +235,15 @@ msgstr ""
 
 #: ../pep-0627.rst:118
 msgid ""
-"The ``.dist-info`` directory is allowed to contain files not specified in"
-" the spec. The current tools already do this."
+"The ``.dist-info`` directory is allowed to contain files not specified in "
+"the spec. The current tools already do this."
 msgstr ""
 
 #: ../pep-0627.rst:122
 msgid ""
-"A note in the specification mentions files in the ``.dist-info`` "
-"directory of *wheels*. Current tools copy these files to the installed "
-"``.dist-info``—something to keep in mind for further standardization "
-"efforts."
+"A note in the specification mentions files in the ``.dist-info`` directory "
+"of *wheels*. Current tools copy these files to the installed ``.dist-info``—"
+"something to keep in mind for further standardization efforts."
 msgstr ""
 
 #: ../pep-0627.rst:128
@@ -255,58 +252,58 @@ msgstr ""
 
 #: ../pep-0627.rst:130
 msgid ""
-"The CSV dialect is specified to be the default of Python's ``csv`` "
-"module. This resolves edge cases around handling double-quotes and line "
-"terminators in file names."
+"The CSV dialect is specified to be the default of Python's ``csv`` module. "
+"This resolves edge cases around handling double-quotes and line terminators "
+"in file names."
 msgstr ""
 
 #: ../pep-0627.rst:134
 msgid ""
-"The “base” of relative paths in ``RECORD`` is specified relative to the "
-"``.dist-info`` directory, rather than tool-specific ``--install-lib`` and"
-" ``--prefix`` options."
+"The “base” of relative paths in ``RECORD`` is specified relative to the ``."
+"dist-info`` directory, rather than tool-specific ``--install-lib`` and ``--"
+"prefix`` options."
 msgstr ""
 
 #: ../pep-0627.rst:138
 msgid ""
-"Both *hash* and *size* fields are now optional (for any file, not just "
-"``.pyc``, ``.pyo`` and ``RECORD``). Leavng them out is discouraged, "
-"except for ``*.pyc`` and ``RECORD`` itself. (Note that :pep:`376` is "
-"unclear on what was optional; when taken literally, its text and examples"
-" contradict. Despite that, “both fields are optional“ is a reasonable "
-"interpretation of :pep:`376`. The alternative would be to mandate—rather "
-"than recommend—which files can be recorded without hash and size, and to "
-"update that list over time as new use cases come up.)"
+"Both *hash* and *size* fields are now optional (for any file, not just ``."
+"pyc``, ``.pyo`` and ``RECORD``). Leavng them out is discouraged, except for "
+"``*.pyc`` and ``RECORD`` itself. (Note that :pep:`376` is unclear on what "
+"was optional; when taken literally, its text and examples contradict. "
+"Despite that, “both fields are optional“ is a reasonable interpretation of :"
+"pep:`376`. The alternative would be to mandate—rather than recommend—which "
+"files can be recorded without hash and size, and to update that list over "
+"time as new use cases come up.)"
 msgstr ""
 
 #: ../pep-0627.rst:148
 msgid ""
-"The new spec explicitly says that the ``RECORD`` file must now include "
-"*all* files of the installed project (the exception for ``.pyc`` files "
-"remains). Since tools use ``RECORD`` for uninstallation, incomplete file "
-"lists could introduce orphaned files to users' environments. On the other"
-" hand, this means that there is no way to record hashes of some any files"
-" if the full list of files is unknown."
+"The new spec explicitly says that the ``RECORD`` file must now include *all* "
+"files of the installed project (the exception for ``.pyc`` files remains). "
+"Since tools use ``RECORD`` for uninstallation, incomplete file lists could "
+"introduce orphaned files to users' environments. On the other hand, this "
+"means that there is no way to record hashes of some any files if the full "
+"list of files is unknown."
 msgstr ""
 
 #: ../pep-0627.rst:155
 msgid ""
-"A sketch of an uninstallation algorithm is included to clarify the file's"
-" primary purpose and contents."
+"A sketch of an uninstallation algorithm is included to clarify the file's "
+"primary purpose and contents."
 msgstr ""
 
 #: ../pep-0627.rst:158
 msgid ""
-"Tools must not uninstall/remove projects that lack a ``RECORD`` file "
-"(unless they have external information, such as in system package "
-"managers of Linux distros)."
+"Tools must not uninstall/remove projects that lack a ``RECORD`` file (unless "
+"they have external information, such as in system package managers of Linux "
+"distros)."
 msgstr ""
 
 #: ../pep-0627.rst:162
 msgid ""
-"On Windows, files in ``RECORD`` may be separated by either ``/`` or "
-"``\\``. :pep:`376` was unclear on this: it mandates forward slashes in "
-"one place, but shows backslackes in a Windows-specific example."
+"On Windows, files in ``RECORD`` may be separated by either ``/`` or ``\\``. :"
+"pep:`376` was unclear on this: it mandates forward slashes in one place, but "
+"shows backslackes in a Windows-specific example."
 msgstr ""
 
 #: ../pep-0627.rst:169
@@ -315,24 +312,24 @@ msgstr ""
 
 #: ../pep-0627.rst:171
 msgid ""
-"The ``RECORD`` file is made optional. Not all tools can easily generate a"
-" list of installed files in a Python-specific format."
+"The ``RECORD`` file is made optional. Not all tools can easily generate a "
+"list of installed files in a Python-specific format."
 msgstr ""
 
 #: ../pep-0627.rst:175
 msgid ""
-"Specifically, the ``RECORD`` file is unnecessary when projects are "
-"installed by a Linux system packaging system, which has its own ways to "
-"keep track of files, uninstall them or check their integrity. Having to "
-"keep a ``RECORD`` file in sync with the disk and the system package "
-"database would be unreasonably fragile, and no ``RECORD`` file is better "
-"than one that does not correspond to reality."
+"Specifically, the ``RECORD`` file is unnecessary when projects are installed "
+"by a Linux system packaging system, which has its own ways to keep track of "
+"files, uninstall them or check their integrity. Having to keep a ``RECORD`` "
+"file in sync with the disk and the system package database would be "
+"unreasonably fragile, and no ``RECORD`` file is better than one that does "
+"not correspond to reality."
 msgstr ""
 
 #: ../pep-0627.rst:182
 msgid ""
-"(Full disclosure: The author of this PEP is an RPM packager active in the"
-" Fedora Linux distro.)"
+"(Full disclosure: The author of this PEP is an RPM packager active in the "
+"Fedora Linux distro.)"
 msgstr ""
 
 #: ../pep-0627.rst:186
@@ -341,23 +338,23 @@ msgstr ""
 
 #: ../pep-0627.rst:188
 msgid ""
-"The ``INSTALLER`` file is also made optional, and specified to be used "
-"for informational purposes only. It is still a single-line text file "
-"containing the name of the installer."
+"The ``INSTALLER`` file is also made optional, and specified to be used for "
+"informational purposes only. It is still a single-line text file containing "
+"the name of the installer."
 msgstr ""
 
 #: ../pep-0627.rst:192
 msgid ""
 "This file was originally added to distinguish projects installed by the "
-"Python installer (``pip``) from ones installed by other package managers "
-"(e.g. ``dnf``). There were attempts to use this file to prevent ``pip`` "
-"from updating or uninstalling packages it didn't install."
+"Python installer (``pip``) from ones installed by other package managers (e."
+"g. ``dnf``). There were attempts to use this file to prevent ``pip`` from "
+"updating or uninstalling packages it didn't install."
 msgstr ""
 
 #: ../pep-0627.rst:198
 msgid ""
-"Our goal is supporting interoperating tools, and basing any action on "
-"which tool happened to install a package runs counter to that goal."
+"Our goal is supporting interoperating tools, and basing any action on which "
+"tool happened to install a package runs counter to that goal."
 msgstr ""
 
 #: ../pep-0627.rst:201
@@ -368,14 +365,15 @@ msgid ""
 msgstr ""
 
 #: ../pep-0627.rst:205
-msgid "On the other hand, the installer name may be useful in hints to the user."
+msgid ""
+"On the other hand, the installer name may be useful in hints to the user."
 msgstr ""
 
 #: ../pep-0627.rst:207
 msgid ""
-"To align with this new purpose of the file, the new specification allows "
-"any ASCII string in ``INSTALLER``, rather than a lowercase identifier. It"
-" also suggests using the command-line command, if available."
+"To align with this new purpose of the file, the new specification allows any "
+"ASCII string in ``INSTALLER``, rather than a lowercase identifier. It also "
+"suggests using the command-line command, if available."
 msgstr ""
 
 #: ../pep-0627.rst:213
@@ -388,20 +386,20 @@ msgstr ""
 
 #: ../pep-0627.rst:217
 msgid ""
-"Per :pep:`376`, ``REQUESTED`` was to be written when a project was "
-"installed by direct user request, as opposed to automatically to satisfy "
-"dependencies of another project. Projects without this marker file could "
-"be uninstalled when no longer needed."
+"Per :pep:`376`, ``REQUESTED`` was to be written when a project was installed "
+"by direct user request, as opposed to automatically to satisfy dependencies "
+"of another project. Projects without this marker file could be uninstalled "
+"when no longer needed."
 msgstr ""
 
 #: ../pep-0627.rst:222
 msgid ""
-"Despite the standard, many existing installers (including older versions "
-"of ``pip``) never write this file. There is no distinction between "
-"projects that are “OK to remove when no longer needed” and ones simply "
-"installed by a tool that ignores ``REQUESTED``. So, the file is currently"
-" not usable for its intended purpose (unless a tool can use additional, "
-"non-standard information)."
+"Despite the standard, many existing installers (including older versions of "
+"``pip``) never write this file. There is no distinction between projects "
+"that are “OK to remove when no longer needed” and ones simply installed by a "
+"tool that ignores ``REQUESTED``. So, the file is currently not usable for "
+"its intended purpose (unless a tool can use additional, non-standard "
+"information)."
 msgstr ""
 
 #: ../pep-0627.rst:230
@@ -434,9 +432,9 @@ msgstr ""
 
 #: ../pep-0627.rst:244
 msgid ""
-"Marking the difference between projects installed directly by user "
-"request versus those installed to satisfy dependencies, so that the "
-"latter can be removed when no longer needed."
+"Marking the difference between projects installed directly by user request "
+"versus those installed to satisfy dependencies, so that the latter can be "
+"removed when no longer needed."
 msgstr ""
 
 #: ../pep-0627.rst:250
@@ -445,7 +443,6 @@ msgstr ""
 
 #: ../pep-0627.rst:252
 msgid ""
-"This document is placed in the public domain or under the "
-"CC0-1.0-Universal license, whichever is more permissive."
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
 msgstr ""
-

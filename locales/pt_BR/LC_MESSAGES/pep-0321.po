@@ -67,21 +67,20 @@ msgstr ""
 
 #: ../pep-0321.txt:17
 msgid ""
-"Python 2.3 added a number of simple date and time types in the "
-"``datetime`` module.  There's no support for parsing strings in various "
-"formats and returning a corresponding instance of one of the types. This "
-"PEP proposes adding a family of predefined parsing function for several "
-"commonly used date and time formats, and a facility for generic parsing."
+"Python 2.3 added a number of simple date and time types in the ``datetime`` "
+"module.  There's no support for parsing strings in various formats and "
+"returning a corresponding instance of one of the types. This PEP proposes "
+"adding a family of predefined parsing function for several commonly used "
+"date and time formats, and a facility for generic parsing."
 msgstr ""
 
 #: ../pep-0321.txt:24
 msgid ""
-"The types provided by the ``datetime`` module all have ``.isoformat()`` "
-"and ``.ctime()`` methods that return string representations of a time, "
-"and the ``.strftime()`` method can be used to construct new formats.  "
-"There are a number of additional commonly-used formats that would be "
-"useful to have as part of the standard library; this PEP also suggests "
-"how to add them."
+"The types provided by the ``datetime`` module all have ``.isoformat()`` and "
+"``.ctime()`` methods that return string representations of a time, and the "
+"``.strftime()`` method can be used to construct new formats.  There are a "
+"number of additional commonly-used formats that would be useful to have as "
+"part of the standard library; this PEP also suggests how to add them."
 msgstr ""
 
 #: ../pep-0321.txt:33
@@ -106,8 +105,8 @@ msgstr ""
 
 #: ../pep-0321.txt:40
 msgid ""
-"Formats commonly written by humans such as the American \"MM/DD/YYYY\", "
-"the European \"YYYY/MM/DD\", and variants such as \"DD-Month-YYYY\"."
+"Formats commonly written by humans such as the American \"MM/DD/YYYY\", the "
+"European \"YYYY/MM/DD\", and variants such as \"DD-Month-YYYY\"."
 msgstr ""
 
 #: ../pep-0321.txt:43
@@ -116,8 +115,8 @@ msgstr ""
 
 #: ../pep-0321.txt:45
 msgid ""
-"XXX The Perl `ParseDate.pm`_ module supports many different input "
-"formats, both absolute and relative.  Should we try to support them all?"
+"XXX The Perl `ParseDate.pm`_ module supports many different input formats, "
+"both absolute and relative.  Should we try to support them all?"
 msgstr ""
 
 #: ../pep-0321.txt:48 ../pep-0321.txt:98
@@ -137,8 +136,7 @@ msgstr ""
 #: ../pep-0321.txt:61
 msgid ""
 "Add a separate module (possible names: date, date_parse, parse_date) or "
-"subpackage (possible names: datetime.parser) containing parsing "
-"functions::"
+"subpackage (possible names: datetime.parser) containing parsing functions::"
 msgstr ""
 
 #: ../pep-0321.txt:69
@@ -151,17 +149,16 @@ msgstr ""
 
 #: ../pep-0321.txt:72
 msgid ""
-"What exception to raise on errors?  ValueError, or a specialized "
-"exception?"
+"What exception to raise on errors?  ValueError, or a specialized exception?"
 msgstr ""
 
 #: ../pep-0321.txt:73
 msgid ""
-"Should you know what type you're expecting, or should the parsing figure "
-"it out?  (e.g. ``parse_iso8601(\"yyyy-mm-dd\")`` returns a ``date`` "
-"instance, but parsing \"yyyy-mm-ddThh:mm:ss\" returns a ``datetime``.)  "
-"Should there be an option to signal an error if a time is provided where "
-"none is expected, or if no time is provided?"
+"Should you know what type you're expecting, or should the parsing figure it "
+"out?  (e.g. ``parse_iso8601(\"yyyy-mm-dd\")`` returns a ``date`` instance, "
+"but parsing \"yyyy-mm-ddThh:mm:ss\" returns a ``datetime``.)  Should there "
+"be an option to signal an error if a time is provided where none is "
+"expected, or if no time is provided?"
 msgstr ""
 
 #: ../pep-0321.txt:78
@@ -173,7 +170,8 @@ msgid "Generic Input Parsing"
 msgstr ""
 
 #: ../pep-0321.txt:84
-msgid "Is a strptime() implementation that returns ``datetime`` types sufficient?"
+msgid ""
+"Is a strptime() implementation that returns ``datetime`` types sufficient?"
 msgstr ""
 
 #: ../pep-0321.txt:86
@@ -188,10 +186,10 @@ msgstr ""
 
 #: ../pep-0321.txt:93
 msgid ""
-"Not all input formats need to be supported as output formats, because "
-"it's pretty trivial to get the ``strftime()`` argument right for simple "
-"things such as YYYY/MM/DD.   Only complicated formats need to be "
-"supported; :rfc:`2822` is currently the only one I can think of."
+"Not all input formats need to be supported as output formats, because it's "
+"pretty trivial to get the ``strftime()`` argument right for simple things "
+"such as YYYY/MM/DD.   Only complicated formats need to be supported; :rfc:"
+"`2822` is currently the only one I can think of."
 msgstr ""
 
 #: ../pep-0321.txt:100
@@ -204,9 +202,9 @@ msgstr ""
 
 #: ../pep-0321.txt:112
 msgid ""
-"Relevant functionality in other languages includes the `PHP date`_ "
-"function (Python implementation by Simon Willison at "
-"http://simon.incutio.com/archive/2003/10/07/dateInPython)"
+"Relevant functionality in other languages includes the `PHP date`_ function "
+"(Python implementation by Simon Willison at http://simon.incutio.com/"
+"archive/2003/10/07/dateInPython)"
 msgstr ""
 
 #: ../pep-0321.txt:118
@@ -219,10 +217,9 @@ msgstr ""
 
 #: ../pep-0321.txt:130
 msgid ""
-"http://www.egenix.com/files/python/mxDateTime.html "
-"http://ringmaster.arc.nasa.gov/tools/time_formats.html "
-"http://www.thinkage.ca/english/gcos/expl/b/lib/0tosec.html "
-"https://moin.conectiva.com.br/DateUtil"
+"http://www.egenix.com/files/python/mxDateTime.html http://ringmaster.arc."
+"nasa.gov/tools/time_formats.html http://www.thinkage.ca/english/gcos/expl/b/"
+"lib/0tosec.html https://moin.conectiva.com.br/DateUtil"
 msgstr ""
 
 #: ../pep-0321.txt:137
@@ -232,4 +229,3 @@ msgstr ""
 #: ../pep-0321.txt:139
 msgid "This document has been placed in the public domain."
 msgstr ""
-

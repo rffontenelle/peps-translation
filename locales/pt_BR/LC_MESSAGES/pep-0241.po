@@ -71,8 +71,8 @@ msgstr ""
 
 #: ../pep-0241.txt:10
 msgid ""
-"`19-Mar-2001 <https://mail.python.org/archives/list/distutils-"
-"sig@python.org/thread/46XPDHQHI3XAAJHEZAMAMKZYAI6K7NB6/>`__"
+"`19-Mar-2001 <https://mail.python.org/archives/list/distutils-sig@python.org/"
+"thread/46XPDHQHI3XAAJHEZAMAMKZYAI6K7NB6/>`__"
 msgstr ""
 
 #: ../pep-0241.txt
@@ -89,8 +89,8 @@ msgstr ""
 
 #: ../pep-0241.txt:17
 msgid ""
-"This PEP describes a mechanism for adding metadata to Python packages.  "
-"It includes specifics of the field names, and their semantics and usage."
+"This PEP describes a mechanism for adding metadata to Python packages.  It "
+"includes specifics of the field names, and their semantics and usage."
 msgstr ""
 
 #: ../pep-0241.txt:23
@@ -100,27 +100,27 @@ msgstr ""
 #: ../pep-0241.txt:25
 msgid ""
 "The Distutils 'sdist' command will be modified to extract the metadata "
-"fields from the arguments and write them to a file in the generated "
-"zipfile or tarball.  This file will be named PKG-INFO and will be placed "
-"in the top directory of the source distribution (where the README, "
-"INSTALL, and other files usually go)."
+"fields from the arguments and write them to a file in the generated zipfile "
+"or tarball.  This file will be named PKG-INFO and will be placed in the top "
+"directory of the source distribution (where the README, INSTALL, and other "
+"files usually go)."
 msgstr ""
 
 #: ../pep-0241.txt:32
 msgid ""
-"Developers may not provide their own PKG-INFO file.  The \"sdist\" "
-"command will, if it detects an existing PKG-INFO file, terminate with an "
-"appropriate error message.  This should prevent confusion caused by the "
-"PKG-INFO and setup.py files being out of sync."
+"Developers may not provide their own PKG-INFO file.  The \"sdist\" command "
+"will, if it detects an existing PKG-INFO file, terminate with an appropriate "
+"error message.  This should prevent confusion caused by the PKG-INFO and "
+"setup.py files being out of sync."
 msgstr ""
 
 #: ../pep-0241.txt:37
 msgid ""
-"The PKG-INFO file format is a single set of :rfc:`822` headers parseable "
-"by the rfc822.py module.  The field names listed in the following section"
-" are used as the header names.  There's no extension mechanism in this "
-"simple format; the Catalog and Distutils SIGs will aim at getting a more "
-"flexible format ready for Python 2.2."
+"The PKG-INFO file format is a single set of :rfc:`822` headers parseable by "
+"the rfc822.py module.  The field names listed in the following section are "
+"used as the header names.  There's no extension mechanism in this simple "
+"format; the Catalog and Distutils SIGs will aim at getting a more flexible "
+"format ready for Python 2.2."
 msgstr ""
 
 #: ../pep-0241.txt:45
@@ -135,10 +135,10 @@ msgstr ""
 
 #: ../pep-0241.txt:50
 msgid ""
-"Fields marked with \"(Multiple use)\" may be specified multiple times in "
-"a single PKG-INFO file.  Other fields may only occur once in a PKG-INFO "
-"file.  Fields marked with \"(optional)\" are not required to appear in a "
-"valid PKG-INFO file, all other fields must be present."
+"Fields marked with \"(Multiple use)\" may be specified multiple times in a "
+"single PKG-INFO file.  Other fields may only occur once in a PKG-INFO file.  "
+"Fields marked with \"(optional)\" are not required to appear in a valid PKG-"
+"INFO file, all other fields must be present."
 msgstr ""
 
 #: ../pep-0241.txt:57
@@ -147,8 +147,7 @@ msgstr ""
 
 #: ../pep-0241.txt:59
 msgid ""
-"Version of the file format; currently \"1.0\" is the only legal value "
-"here."
+"Version of the file format; currently \"1.0\" is the only legal value here."
 msgstr ""
 
 #: ../pep-0241.txt:62 ../pep-0241.txt:71 ../pep-0241.txt:83 ../pep-0241.txt:104
@@ -173,8 +172,8 @@ msgstr ""
 #: ../pep-0241.txt:78
 msgid ""
 "A string containing the package's version number.  This field should be "
-"parseable by one of the Version classes (StrictVersion or LooseVersion) "
-"in the distutils.version module."
+"parseable by one of the Version classes (StrictVersion or LooseVersion) in "
+"the distutils.version module."
 msgstr ""
 
 #: ../pep-0241.txt:88
@@ -183,17 +182,16 @@ msgstr ""
 
 #: ../pep-0241.txt:90
 msgid ""
-"A comma-separated list of platform specifications, summarizing the "
-"operating systems supported by the package.  The major supported "
-"platforms are listed below, but this list is necessarily incomplete."
+"A comma-separated list of platform specifications, summarizing the operating "
+"systems supported by the package.  The major supported platforms are listed "
+"below, but this list is necessarily incomplete."
 msgstr ""
 
 #: ../pep-0241.txt:99
 msgid ""
-"Binary distributions will use the Supported-Platform field in their "
-"metadata to specify the OS and CPU for which the binary package was "
-"compiled.  The semantics of the Supported-Platform are not specified in "
-"this PEP."
+"Binary distributions will use the Supported-Platform field in their metadata "
+"to specify the OS and CPU for which the binary package was compiled.  The "
+"semantics of the Supported-Platform are not specified in this PEP."
 msgstr ""
 
 #: ../pep-0241.txt:109
@@ -211,9 +209,9 @@ msgstr ""
 #: ../pep-0241.txt:120
 msgid ""
 "A longer description of the package that can run to several paragraphs.  "
-"(Software that deals with metadata should not assume any maximum size for"
-" this field, though one hopes that people won't include their instruction"
-" manual as the long-description.)"
+"(Software that deals with metadata should not assume any maximum size for "
+"this field, though one hopes that people won't include their instruction "
+"manual as the long-description.)"
 msgstr ""
 
 #: ../pep-0241.txt:134
@@ -222,8 +220,8 @@ msgstr ""
 
 #: ../pep-0241.txt:136
 msgid ""
-"A list of additional keywords to be used to assist searching for the "
-"package in a larger catalog."
+"A list of additional keywords to be used to assist searching for the package "
+"in a larger catalog."
 msgstr ""
 
 #: ../pep-0241.txt:144
@@ -240,8 +238,8 @@ msgstr ""
 
 #: ../pep-0241.txt:155
 msgid ""
-"A string containing at a minimum the author's name.  Contact information "
-"can also be added, separating each line with newlines."
+"A string containing at a minimum the author's name.  Contact information can "
+"also be added, separating each line with newlines."
 msgstr ""
 
 #: ../pep-0241.txt:166
@@ -250,14 +248,14 @@ msgstr ""
 
 #: ../pep-0241.txt:168
 msgid ""
-"A string containing the author's e-mail address.  It can contain a name "
-"and e-mail address in the legal forms for a :rfc:`822` 'From:' header.  "
-"It's not optional because cataloging systems can use the e-mail portion "
-"of this field as a unique key representing the author.  A catalog might "
-"provide authors the ability to store their GPG key, personal home page, "
-"and other additional metadata *about the author*, and optionally the "
-"ability to associate several e-mail addresses with the same person.  "
-"Author-related metadata fields are not covered by this PEP."
+"A string containing the author's e-mail address.  It can contain a name and "
+"e-mail address in the legal forms for a :rfc:`822` 'From:' header.  It's not "
+"optional because cataloging systems can use the e-mail portion of this field "
+"as a unique key representing the author.  A catalog might provide authors "
+"the ability to store their GPG key, personal home page, and other additional "
+"metadata *about the author*, and optionally the ability to associate several "
+"e-mail addresses with the same person.  Author-related metadata fields are "
+"not covered by this PEP."
 msgstr ""
 
 #: ../pep-0241.txt:184
@@ -269,9 +267,9 @@ msgid ""
 "A string selected from a short list of choices, specifying the license "
 "covering the package.  Some licenses result in the software being freely "
 "redistributable, so packagers and resellers can automatically know that "
-"they're free to redistribute the software.  Other licenses will require a"
-" careful reading by a human to determine how the software can be "
-"repackaged and resold."
+"they're free to redistribute the software.  Other licenses will require a "
+"careful reading by a human to determine how the software can be repackaged "
+"and resold."
 msgstr ""
 
 #: ../pep-0241.txt:194
@@ -288,10 +286,9 @@ msgstr ""
 
 #: ../pep-0241.txt:203
 msgid ""
-"The license conforms to the Debian Free Software Guidelines, but does not"
-" use one of the other DFSG conforming licenses listed here. More "
-"information is available at: "
-"http://www.debian.org/social_contract#guidelines"
+"The license conforms to the Debian Free Software Guidelines, but does not "
+"use one of the other DFSG conforming licenses listed here. More information "
+"is available at: http://www.debian.org/social_contract#guidelines"
 msgstr ""
 
 #: ../pep-0241.txt:209
@@ -300,8 +297,8 @@ msgstr ""
 
 #: ../pep-0241.txt:209
 msgid ""
-"Python 1.6 or higher license.  Version 1.5.2 and earlier are under the "
-"MIT license."
+"Python 1.6 or higher license.  Version 1.5.2 and earlier are under the MIT "
+"license."
 msgstr ""
 
 #: ../pep-0241.txt:212
@@ -368,8 +365,8 @@ msgstr ""
 
 #: ../pep-0241.txt:234
 msgid ""
-"Note that being redistributable does not mean a package qualifies as free"
-" software, 'nosource' and 'shareware' being examples."
+"Note that being redistributable does not mean a package qualifies as free "
+"software, 'nosource' and 'shareware' being examples."
 msgstr ""
 
 #: ../pep-0241.txt:244
@@ -378,16 +375,16 @@ msgstr ""
 
 #: ../pep-0241.txt:246
 msgid ""
-"Many changes and rewrites to this document were suggested by the readers "
-"of the Distutils SIG.  In particular, Sean Reifschneider often "
-"contributed actual text for inclusion in this PEP."
+"Many changes and rewrites to this document were suggested by the readers of "
+"the Distutils SIG.  In particular, Sean Reifschneider often contributed "
+"actual text for inclusion in this PEP."
 msgstr ""
 
 #: ../pep-0241.txt:250
 msgid ""
-"The list of licenses was compiled using the SourceForge license list and "
-"the CTAN license list compiled by Graham Williams; Carey Evans also "
-"offered several useful suggestions on this list."
+"The list of licenses was compiled using the SourceForge license list and the "
+"CTAN license list compiled by Graham Williams; Carey Evans also offered "
+"several useful suggestions on this list."
 msgstr ""
 
 #: ../pep-0241.txt:256
@@ -397,4 +394,3 @@ msgstr ""
 #: ../pep-0241.txt:258
 msgid "This document has been placed in the public domain."
 msgstr ""
-

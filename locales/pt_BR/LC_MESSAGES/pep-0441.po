@@ -87,30 +87,28 @@ msgstr ""
 
 #: ../pep-0441.txt:17
 msgid ""
-"Python has had the ability to execute directories or ZIP-format archives "
-"as scripts since version 2.6 [1]_.  When invoked with a zip file or "
-"directory as its first argument the interpreter adds that directory to "
-"sys.path and executes the ``__main__`` module.  These archives provide a "
-"great way to publish software that needs to be distributed as a single "
-"file script but is complex enough to need to be written as a collection "
-"of modules."
+"Python has had the ability to execute directories or ZIP-format archives as "
+"scripts since version 2.6 [1]_.  When invoked with a zip file or directory "
+"as its first argument the interpreter adds that directory to sys.path and "
+"executes the ``__main__`` module.  These archives provide a great way to "
+"publish software that needs to be distributed as a single file script but is "
+"complex enough to need to be written as a collection of modules."
 msgstr ""
 
 #: ../pep-0441.txt:25
 msgid ""
 "This feature is not as popular as it should be mainly because it was not "
-"promoted as part of Python 2.6 [2]_, so that it is relatively unknown, "
-"but also because the Windows installer does not register a file extension"
-" (other than ``.py``) for this format of file, to associate with the "
-"launcher."
+"promoted as part of Python 2.6 [2]_, so that it is relatively unknown, but "
+"also because the Windows installer does not register a file extension (other "
+"than ``.py``) for this format of file, to associate with the launcher."
 msgstr ""
 
 #: ../pep-0441.txt:31
 msgid ""
 "This PEP proposes to fix these problems by re-publicising the feature, "
 "defining the ``.pyz`` and ``.pyzw`` extensions as \"Python ZIP "
-"Applications\" and \"Windowed Python ZIP Applications\", and providing "
-"some simple tooling to manage the format."
+"Applications\" and \"Windowed Python ZIP Applications\", and providing some "
+"simple tooling to manage the format."
 msgstr ""
 
 #: ../pep-0441.txt:37
@@ -119,39 +117,39 @@ msgstr ""
 
 #: ../pep-0441.txt:39
 msgid ""
-"The terminology \"Python Zip Application\" will be the formal term used "
-"for a zip-format archive that contains Python code in a form that can be "
-"directly executed by Python (specifically, it must have a ``__main__.py``"
-" file in the root directory of the archive).  The extension ``.pyz`` will"
-" be formally associated with such files."
+"The terminology \"Python Zip Application\" will be the formal term used for "
+"a zip-format archive that contains Python code in a form that can be "
+"directly executed by Python (specifically, it must have a ``__main__.py`` "
+"file in the root directory of the archive).  The extension ``.pyz`` will be "
+"formally associated with such files."
 msgstr ""
 
 #: ../pep-0441.txt:45
 msgid ""
-"The Python 3.5 installer will associate ``.pyz`` and ``.pyzw`` \"Python "
-"Zip Applications\" with the platform launcher so they can be executed. A "
-"``.pyz`` archive is a console application and a ``.pyzw`` archive is a "
-"windowed application, indicating whether the console should appear when "
-"running the app."
+"The Python 3.5 installer will associate ``.pyz`` and ``.pyzw`` \"Python Zip "
+"Applications\" with the platform launcher so they can be executed. A ``."
+"pyz`` archive is a console application and a ``.pyzw`` archive is a windowed "
+"application, indicating whether the console should appear when running the "
+"app."
 msgstr ""
 
 #: ../pep-0441.txt:51
 msgid ""
-"On Unix, it would be ideal if the ``.pyz`` extension and the name "
-"\"Python Zip Application\" were registered (in the mime types database?)."
-" However, such an association is out of scope for this PEP."
+"On Unix, it would be ideal if the ``.pyz`` extension and the name \"Python "
+"Zip Application\" were registered (in the mime types database?). However, "
+"such an association is out of scope for this PEP."
 msgstr ""
 
 #: ../pep-0441.txt:55
 msgid ""
-"Python Zip applications can be prefixed with a ``#!`` line pointing to "
-"the correct Python interpreter and an optional explanation::"
+"Python Zip applications can be prefixed with a ``#!`` line pointing to the "
+"correct Python interpreter and an optional explanation::"
 msgstr ""
 
 #: ../pep-0441.txt:63
 msgid ""
-"On Unix, this allows the OS to run the file with the correct interpreter,"
-" via the standard \"shebang\" support.  On Windows, the Python launcher "
+"On Unix, this allows the OS to run the file with the correct interpreter, "
+"via the standard \"shebang\" support.  On Windows, the Python launcher "
 "implements shebang support."
 msgstr ""
 
@@ -163,11 +161,10 @@ msgstr ""
 
 #: ../pep-0441.txt:70
 msgid ""
-"As background, ZIP archives are defined with a footer containing relative"
-" offsets from the end of the file.  They remain valid when concatenated "
-"to the end of any other file.  This feature is completely standard and is"
-" how self-extracting ZIP archives and the bdist_wininst installer format "
-"work."
+"As background, ZIP archives are defined with a footer containing relative "
+"offsets from the end of the file.  They remain valid when concatenated to "
+"the end of any other file.  This feature is completely standard and is how "
+"self-extracting ZIP archives and the bdist_wininst installer format work."
 msgstr ""
 
 #: ../pep-0441.txt:78
@@ -176,17 +173,17 @@ msgstr ""
 
 #: ../pep-0441.txt:80
 msgid ""
-"This PEP also proposes including a module for working with these "
-"archives.  The module will contain functions for working with Python zip "
-"application archives, and a command line interface (via ``python -m "
-"zipapp``) for their creation and manipulation."
+"This PEP also proposes including a module for working with these archives.  "
+"The module will contain functions for working with Python zip application "
+"archives, and a command line interface (via ``python -m zipapp``) for their "
+"creation and manipulation."
 msgstr ""
 
 #: ../pep-0441.txt:85
 msgid ""
-"More complete tools for managing Python Zip Applications are encouraged "
-"as 3rd party applications on PyPI.  Currently, pyzzer [5]_ and pex [6]_ "
-"are two such tools."
+"More complete tools for managing Python Zip Applications are encouraged as "
+"3rd party applications on PyPI.  Currently, pyzzer [5]_ and pex [6]_ are two "
+"such tools."
 msgstr ""
 
 #: ../pep-0441.txt:90
@@ -203,8 +200,8 @@ msgstr ""
 
 #: ../pep-0441.txt:97
 msgid ""
-"Create an application archive from *source*.  The source can be any of "
-"the following:"
+"Create an application archive from *source*.  The source can be any of the "
+"following:"
 msgstr ""
 
 #: ../pep-0441.txt:100
@@ -215,9 +212,9 @@ msgstr ""
 
 #: ../pep-0441.txt:102
 msgid ""
-"The name of an existing application archive file, in which case the file "
-"is copied to the target.  The file name should include the ``.pyz`` or "
-"``.pyzw`` extension, if required."
+"The name of an existing application archive file, in which case the file is "
+"copied to the target.  The file name should include the ``.pyz`` or ``."
+"pyzw`` extension, if required."
 msgstr ""
 
 #: ../pep-0441.txt:105
@@ -229,8 +226,7 @@ msgstr ""
 
 #: ../pep-0441.txt:109
 msgid ""
-"The *target* argument determines where the resulting archive will be "
-"written:"
+"The *target* argument determines where the resulting archive will be written:"
 msgstr ""
 
 #: ../pep-0441.txt:112
@@ -245,48 +241,46 @@ msgstr ""
 
 #: ../pep-0441.txt:116
 msgid ""
-"If the target is omitted (or None), the source must be a directory and "
-"the target will be a file with the same name as the source, with a "
-"``.pyz`` extension added."
+"If the target is omitted (or None), the source must be a directory and the "
+"target will be a file with the same name as the source, with a ``.pyz`` "
+"extension added."
 msgstr ""
 
 #: ../pep-0441.txt:120
 msgid ""
-"The *interpreter* argument specifies the name of the Python interpreter "
-"with which the archive will be executed.  It is written as a \"shebang\" "
-"line at the start of the archive.  On Unix, this will be interpreted by "
-"the OS, and on Windows it will be handled by the Python launcher.  "
-"Omitting the *interpreter* results in no shebang line being written.  If "
-"an interpreter is specified, and the target is a filename, the executable"
-" bit of the target file will be set."
+"The *interpreter* argument specifies the name of the Python interpreter with "
+"which the archive will be executed.  It is written as a \"shebang\" line at "
+"the start of the archive.  On Unix, this will be interpreted by the OS, and "
+"on Windows it will be handled by the Python launcher.  Omitting the "
+"*interpreter* results in no shebang line being written.  If an interpreter "
+"is specified, and the target is a filename, the executable bit of the target "
+"file will be set."
 msgstr ""
 
 #: ../pep-0441.txt:128
 msgid ""
-"The *main* argument specifies the name of a callable which will be used "
-"as the main program for the archive.  It can only be specified if the "
-"source is a directory, and the source does not already contain a "
-"``__main__.py`` file.  The *main* argument should take the form "
-"\"pkg.module:callable\" and the archive will be run by importing "
-"\"pkg.module\" and executing the given callable with no arguments.  It is"
-" an error to omit *main* if the source is a directory and does not "
-"contain a ``__main__.py`` file, as otherwise the resulting archive would "
-"not be executable."
+"The *main* argument specifies the name of a callable which will be used as "
+"the main program for the archive.  It can only be specified if the source is "
+"a directory, and the source does not already contain a ``__main__.py`` "
+"file.  The *main* argument should take the form \"pkg.module:callable\" and "
+"the archive will be run by importing \"pkg.module\" and executing the given "
+"callable with no arguments.  It is an error to omit *main* if the source is "
+"a directory and does not contain a ``__main__.py`` file, as otherwise the "
+"resulting archive would not be executable."
 msgstr ""
 
 #: ../pep-0441.txt:138
 msgid ""
-"If a file object is specified for *source* or *target*, it is the "
-"caller's responsibility to close it after calling create_archive."
+"If a file object is specified for *source* or *target*, it is the caller's "
+"responsibility to close it after calling create_archive."
 msgstr ""
 
 #: ../pep-0441.txt:141
 msgid ""
-"When copying an existing archive, file objects supplied only need "
-"``read`` and ``readline``, or ``write`` methods.  When creating an "
-"archive from a directory, if the target is a file object it will be "
-"passed to the ``zipfile.ZipFile`` class, and must supply the methods "
-"needed by that class."
+"When copying an existing archive, file objects supplied only need ``read`` "
+"and ``readline``, or ``write`` methods.  When creating an archive from a "
+"directory, if the target is a file object it will be passed to the ``zipfile."
+"ZipFile`` class, and must supply the methods needed by that class."
 msgstr ""
 
 #: ../pep-0441.txt:148
@@ -295,10 +289,9 @@ msgstr ""
 
 #: ../pep-0441.txt:150
 msgid ""
-"Returns the interpreter specified in the shebang line of the *archive*.  "
-"If there is no shebang, the function returns ``None``. The *archive* "
-"argument can be a filename or a file-like object open for reading in "
-"bytes mode."
+"Returns the interpreter specified in the shebang line of the *archive*.  If "
+"there is no shebang, the function returns ``None``. The *archive* argument "
+"can be a filename or a file-like object open for reading in bytes mode."
 msgstr ""
 
 #: ../pep-0441.txt:157
@@ -307,28 +300,28 @@ msgstr ""
 
 #: ../pep-0441.txt:159
 msgid ""
-"The zipapp module can be run with the python ``-m`` flag.  The command "
-"line interface is as follows::"
+"The zipapp module can be run with the python ``-m`` flag.  The command line "
+"interface is as follows::"
 msgstr ""
 
 #: ../pep-0441.txt:189
 msgid ""
-"The behaviour of the command line interface matches that of "
-"``zipapp.create_archive()``."
+"The behaviour of the command line interface matches that of ``zipapp."
+"create_archive()``."
 msgstr ""
 
 #: ../pep-0441.txt:192
 msgid ""
-"In addition, it is possible to use the command line interface to work "
-"with an existing archive::"
+"In addition, it is possible to use the command line interface to work with "
+"an existing archive::"
 msgstr ""
 
 #: ../pep-0441.txt:216
 msgid ""
-"As noted, the archives are standard zip files, and so can be unpacked "
-"using any standard ZIP utility or Python's zipfile module.  For this "
-"reason, no interfaces to list the contents of an archive, or unpack them,"
-" are provided or needed."
+"As noted, the archives are standard zip files, and so can be unpacked using "
+"any standard ZIP utility or Python's zipfile module.  For this reason, no "
+"interfaces to list the contents of an archive, or unpack them, are provided "
+"or needed."
 msgstr ""
 
 #: ../pep-0441.txt:222
@@ -342,9 +335,9 @@ msgstr ""
 #: ../pep-0441.txt:225
 msgid ""
 "Absolutely.  The zipfile specification allows for arbitrary data to be "
-"prepended to a zipfile.  This feature is commonly used by \"self-"
-"extracting zip\" programs.  If your archive program can't handle this, it"
-" is a bug in your archive program."
+"prepended to a zipfile.  This feature is commonly used by \"self-extracting "
+"zip\" programs.  If your archive program can't handle this, it is a bug in "
+"your archive program."
 msgstr ""
 
 #: ../pep-0441.txt:233
@@ -353,8 +346,8 @@ msgstr ""
 
 #: ../pep-0441.txt:231
 msgid ""
-"Yes.  If you prefer to build your own Python zip application archives "
-"using other tools, they will work just as well.  The zipapp module is a "
+"Yes.  If you prefer to build your own Python zip application archives using "
+"other tools, they will work just as well.  The zipapp module is a "
 "convenience, nothing more."
 msgstr ""
 
@@ -364,9 +357,9 @@ msgstr ""
 
 #: ../pep-0441.txt:236
 msgid ""
-"Users expect a ``.zip`` file to be opened with an archive tool, and "
-"expect a ``.py`` file to contain readable text.  Both would be confusing "
-"for this use case."
+"Users expect a ``.zip`` file to be opened with an archive tool, and expect a "
+"``.py`` file to contain readable text.  Both would be confusing for this use "
+"case."
 msgstr ""
 
 #: ../pep-0441.txt:246
@@ -375,12 +368,11 @@ msgstr ""
 
 #: ../pep-0441.txt:241
 msgid ""
-"The sdist, bdist and wheel formats are designed for packaging of modules "
-"to be installed into an existing Python installation. They are not "
-"intended to be used without installing.  The executable zip format is "
-"specifically designed for standalone use, without needing to be "
-"installed.  They are in effect a multi-file version of a standalone "
-"Python script."
+"The sdist, bdist and wheel formats are designed for packaging of modules to "
+"be installed into an existing Python installation. They are not intended to "
+"be used without installing.  The executable zip format is specifically "
+"designed for standalone use, without needing to be installed.  They are in "
+"effect a multi-file version of a standalone Python script."
 msgstr ""
 
 #: ../pep-0441.txt:249
@@ -393,22 +385,21 @@ msgstr ""
 
 #: ../pep-0441.txt:254
 msgid ""
-"Is it worth having \"convenience\" forms for any of the common "
-"interpreter values? For example, ``-p 3`` meaning the same as ``-p "
-"\"/usr/bin/env python3\"``.  It would save a lot of typing for the common"
-" cases, as well as giving cross-platform options for people who don't "
-"want or need to understand the intricacies of shebang handling on "
-"\"other\" platforms."
+"Is it worth having \"convenience\" forms for any of the common interpreter "
+"values? For example, ``-p 3`` meaning the same as ``-p \"/usr/bin/env "
+"python3\"``.  It would save a lot of typing for the common cases, as well as "
+"giving cross-platform options for people who don't want or need to "
+"understand the intricacies of shebang handling on \"other\" platforms."
 msgstr ""
 
 #: ../pep-0441.txt:261
 msgid ""
-"Downsides are that it's not obvious how to translate the abbreviations.  "
-"For example, should \"3\" mean \"/usr/bin/env python3\", "
-"\"/usr/bin/python3\", \"python3\", or something else?  Also, there is no "
-"obvious short form for the key case of \"/usr/bin/env python\" (any "
-"available version of Python), which could easily result in scripts being "
-"written with overly-restrictive shebang lines."
+"Downsides are that it's not obvious how to translate the abbreviations.  For "
+"example, should \"3\" mean \"/usr/bin/env python3\", \"/usr/bin/python3\", "
+"\"python3\", or something else?  Also, there is no obvious short form for "
+"the key case of \"/usr/bin/env python\" (any available version of Python), "
+"which could easily result in scripts being written with overly-restrictive "
+"shebang lines."
 msgstr ""
 
 #: ../pep-0441.txt:268
@@ -423,13 +414,13 @@ msgstr ""
 
 #: ../pep-0441.txt:274
 msgid ""
-"It was suggested [3]_ that the ``.pyz`` extension should be registered in"
-" the Unix database of extensions.  While it makes sense to do this as an "
-"equivalent of the Windows installer registering the extension, the "
-"``.py`` extension is not listed in the media types database [4]_. It "
-"doesn't seem reasonable to register ``.pyz`` without ``.py``, so this "
-"idea has been omitted from this PEP.  An interested party could arrange "
-"for *both* ``.py`` and ``.pyz`` to be registered at a future date."
+"It was suggested [3]_ that the ``.pyz`` extension should be registered in "
+"the Unix database of extensions.  While it makes sense to do this as an "
+"equivalent of the Windows installer registering the extension, the ``.py`` "
+"extension is not listed in the media types database [4]_. It doesn't seem "
+"reasonable to register ``.pyz`` without ``.py``, so this idea has been "
+"omitted from this PEP.  An interested party could arrange for *both* ``.py`` "
+"and ``.pyz`` to be registered at a future date."
 msgstr ""
 
 #: ../pep-0441.txt:284
@@ -438,23 +429,23 @@ msgstr ""
 
 #: ../pep-0441.txt:286
 msgid ""
-"The initial draft of this PEP proposed using ``/usr/bin/env python`` as "
-"the default interpreter.  Unix users have problems with this behaviour, "
-"as the default for the python command on many distributions is Python 2, "
-"and it is felt that this PEP should prefer Python 3 by default.  However,"
-" using a command of ``python3`` can result in unexpected behaviour for "
-"Windows users, where the default behaviour of the launcher for the "
-"command ``python`` is commonly customised by users, but the behaviour of "
-"``python3`` may not be modified to match."
+"The initial draft of this PEP proposed using ``/usr/bin/env python`` as the "
+"default interpreter.  Unix users have problems with this behaviour, as the "
+"default for the python command on many distributions is Python 2, and it is "
+"felt that this PEP should prefer Python 3 by default.  However, using a "
+"command of ``python3`` can result in unexpected behaviour for Windows users, "
+"where the default behaviour of the launcher for the command ``python`` is "
+"commonly customised by users, but the behaviour of ``python3`` may not be "
+"modified to match."
 msgstr ""
 
 #: ../pep-0441.txt:295
 msgid ""
-"As a result, the principle \"in the face of ambiguity, refuse to guess\" "
-"has been invoked, and archives have no shebang line unless explicitly "
+"As a result, the principle \"in the face of ambiguity, refuse to guess\" has "
+"been invoked, and archives have no shebang line unless explicitly "
 "requested.  On Windows, the archives will still be run (with the default "
-"Python) by the launcher, and on Unix, the archives can be run by "
-"explicitly invoking the desired Python interpreter."
+"Python) by the launcher, and on Unix, the archives can be run by explicitly "
+"invoking the desired Python interpreter."
 msgstr ""
 
 #: ../pep-0441.txt:302
@@ -463,20 +454,20 @@ msgstr ""
 
 #: ../pep-0441.txt:304
 msgid ""
-"It is conceivable that users would want to modify the shebang line for an"
-" existing archive, or even just display the current shebang line. This is"
-" tricky to do so with existing tools (zip programs typically ignore "
-"prepended data totally, and text editors can have trouble editing files "
-"containing binary data)."
+"It is conceivable that users would want to modify the shebang line for an "
+"existing archive, or even just display the current shebang line. This is "
+"tricky to do so with existing tools (zip programs typically ignore prepended "
+"data totally, and text editors can have trouble editing files containing "
+"binary data)."
 msgstr ""
 
 #: ../pep-0441.txt:310
 msgid ""
-"The zipapp module provides functions to handle the shebang line, but does"
-" not include a command line interface to that functionality.  This is "
-"because it is not clear how to provide one without the resulting "
-"interface being over-complex and potentially confusing.  Changing the "
-"shebang line is expected to be an uncommon requirement."
+"The zipapp module provides functions to handle the shebang line, but does "
+"not include a command line interface to that functionality.  This is because "
+"it is not clear how to provide one without the resulting interface being "
+"over-complex and potentially confusing.  Changing the shebang line is "
+"expected to be an uncommon requirement."
 msgstr ""
 
 #: ../pep-0441.txt:317
@@ -493,8 +484,7 @@ msgstr ""
 
 #: ../pep-0441.txt:324
 msgid ""
-"Allow interpreter to execute a zip file "
-"(http://bugs.python.org/issue1739468)"
+"Allow interpreter to execute a zip file (http://bugs.python.org/issue1739468)"
 msgstr ""
 
 #: ../pep-0441.txt:327
@@ -503,20 +493,20 @@ msgstr ""
 
 #: ../pep-0441.txt:330
 msgid ""
-"Discussion of adding a .pyz mime type on python-dev "
-"(https://mail.python.org/pipermail/python-dev/2015-February/138338.html)"
+"Discussion of adding a .pyz mime type on python-dev (https://mail.python.org/"
+"pipermail/python-dev/2015-February/138338.html)"
 msgstr ""
 
 #: ../pep-0441.txt:333
 msgid ""
-"Register of media types (http://www.iana.org/assignments/media-types"
-"/media-types.xhtml)"
+"Register of media types (http://www.iana.org/assignments/media-types/media-"
+"types.xhtml)"
 msgstr ""
 
 #: ../pep-0441.txt:336
 msgid ""
-"pyzzer - A tool for creating Python-executable archives "
-"(https://pypi.python.org/pypi/pyzzer)"
+"pyzzer - A tool for creating Python-executable archives (https://pypi.python."
+"org/pypi/pyzzer)"
 msgstr ""
 
 #: ../pep-0441.txt:339
@@ -525,9 +515,9 @@ msgstr ""
 
 #: ../pep-0441.txt:342
 msgid ""
-"The discussion of this PEP took place on the python-dev mailing list, in "
-"the thread starting at https://mail.python.org/pipermail/python-"
-"dev/2015-February/138277.html"
+"The discussion of this PEP took place on the python-dev mailing list, in the "
+"thread starting at https://mail.python.org/pipermail/python-dev/2015-"
+"February/138277.html"
 msgstr ""
 
 #: ../pep-0441.txt:347
@@ -537,4 +527,3 @@ msgstr ""
 #: ../pep-0441.txt:349
 msgid "This document has been placed into the public domain."
 msgstr ""
-

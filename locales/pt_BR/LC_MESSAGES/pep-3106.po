@@ -67,11 +67,11 @@ msgstr ""
 
 #: ../pep-3106.txt:17
 msgid ""
-"This PEP proposes to change the .keys(), .values() and .items() methods "
-"of the built-in dict type to return a set-like or unordered container "
-"object whose contents are derived from the underlying dictionary rather "
-"than a list which is a copy of the keys, etc.; and to remove the "
-".iterkeys(), .itervalues() and .iteritems() methods."
+"This PEP proposes to change the .keys(), .values() and .items() methods of "
+"the built-in dict type to return a set-like or unordered container object "
+"whose contents are derived from the underlying dictionary rather than a list "
+"which is a copy of the keys, etc.; and to remove the .iterkeys(), ."
+"itervalues() and .iteritems() methods."
 msgstr ""
 
 #: ../pep-3106.txt:23
@@ -87,9 +87,9 @@ msgstr ""
 #: ../pep-3106.txt:30
 msgid ""
 "It has long been the plan to change the .keys(), .values() and .items() "
-"methods of the built-in dict type to return a more lightweight object "
-"than a list, and to get rid of .iterkeys(), .itervalues() and "
-".iteritems().  The idea is that code that currently (in 2.x) reads::"
+"methods of the built-in dict type to return a more lightweight object than a "
+"list, and to get rid of .iterkeys(), .itervalues() and .iteritems().  The "
+"idea is that code that currently (in 2.x) reads::"
 msgstr ""
 
 #: ../pep-3106.txt:38
@@ -116,41 +116,40 @@ msgstr ""
 
 #: ../pep-3106.txt:53
 msgid ""
-"There are (at least) two ways to accomplish this.  The original plan was "
-"to simply let .keys(), .values() and .items() return an iterator, i.e. "
-"exactly what iterkeys(), itervalues() and iteritems() return in Python "
-"2.x.  However, the Java Collections Framework [1]_ suggests that a better"
-" solution is possible: the methods return objects with set behavior (for "
-".keys() and .items()) or multiset (== bag) behavior (for .values()) that "
-"do not contain copies of the keys, values or items, but rather reference "
-"the underlying dict and pull their values out of the dict as needed."
+"There are (at least) two ways to accomplish this.  The original plan was to "
+"simply let .keys(), .values() and .items() return an iterator, i.e. exactly "
+"what iterkeys(), itervalues() and iteritems() return in Python 2.x.  "
+"However, the Java Collections Framework [1]_ suggests that a better solution "
+"is possible: the methods return objects with set behavior (for .keys() and ."
+"items()) or multiset (== bag) behavior (for .values()) that do not contain "
+"copies of the keys, values or items, but rather reference the underlying "
+"dict and pull their values out of the dict as needed."
 msgstr ""
 
 #: ../pep-3106.txt:63
 msgid ""
-"The advantage of this approach is that one can still write code like "
-"this::"
+"The advantage of this approach is that one can still write code like this::"
 msgstr ""
 
 #: ../pep-3106.txt:71
 msgid ""
-"Effectively, iter(d.keys()) (etc.) in Python 3.0 will do what "
-"d.iterkeys() (etc.) does in Python 2.x; but in most contexts we don't "
-"have to write the iter() call because it is implied by a for-loop."
+"Effectively, iter(d.keys()) (etc.) in Python 3.0 will do what d.iterkeys() "
+"(etc.) does in Python 2.x; but in most contexts we don't have to write the "
+"iter() call because it is implied by a for-loop."
 msgstr ""
 
 #: ../pep-3106.txt:75
 msgid ""
-"The objects returned by the .keys() and .items() methods behave like "
-"sets.  The object returned by the values() method behaves like a much "
-"simpler unordered collection -- it cannot be a set because duplicate "
-"values are possible."
+"The objects returned by the .keys() and .items() methods behave like sets.  "
+"The object returned by the values() method behaves like a much simpler "
+"unordered collection -- it cannot be a set because duplicate values are "
+"possible."
 msgstr ""
 
 #: ../pep-3106.txt:80
 msgid ""
-"Because of the set behavior, it will be possible to check whether two "
-"dicts have the same keys by simply testing::"
+"Because of the set behavior, it will be possible to check whether two dicts "
+"have the same keys by simply testing::"
 msgstr ""
 
 #: ../pep-3106.txt:85
@@ -160,28 +159,28 @@ msgstr ""
 #: ../pep-3106.txt:87
 msgid ""
 "These operations are thread-safe only to the extent that using them in a "
-"thread-unsafe way may cause an exception but will not cause corruption of"
-" the internal representation."
+"thread-unsafe way may cause an exception but will not cause corruption of "
+"the internal representation."
 msgstr ""
 
 #: ../pep-3106.txt:91
 msgid ""
-"As in Python 2.x, mutating a dict while iterating over it using an "
-"iterator has an undefined effect and will in most cases raise a "
-"RuntimeError exception.  (This is similar to the guarantees made by the "
-"Java Collections Framework.)"
+"As in Python 2.x, mutating a dict while iterating over it using an iterator "
+"has an undefined effect and will in most cases raise a RuntimeError "
+"exception.  (This is similar to the guarantees made by the Java Collections "
+"Framework.)"
 msgstr ""
 
 #: ../pep-3106.txt:96
 msgid ""
-"The objects returned by .keys() and .items() are fully interoperable with"
-" instances of the built-in set and frozenset types; for example::"
+"The objects returned by .keys() and .items() are fully interoperable with "
+"instances of the built-in set and frozenset types; for example::"
 msgstr ""
 
 #: ../pep-3106.txt:101
 msgid ""
-"is guaranteed to be True (except when d is being modified simultaneously "
-"by another thread)."
+"is guaranteed to be True (except when d is being modified simultaneously by "
+"another thread)."
 msgstr ""
 
 #: ../pep-3106.txt:106
@@ -198,8 +197,8 @@ msgstr ""
 
 #: ../pep-3106.txt:269
 msgid ""
-"The view objects are not directly mutable, but don't implement "
-"__hash__(); their value can change if the underlying dict is mutated."
+"The view objects are not directly mutable, but don't implement __hash__(); "
+"their value can change if the underlying dict is mutated."
 msgstr ""
 
 #: ../pep-3106.txt:272
@@ -210,20 +209,20 @@ msgstr ""
 
 #: ../pep-3106.txt:275
 msgid ""
-"We don't implement .copy() -- the presence of a .copy() method suggests "
-"that the copy has the same type as the original, but that's not feasible "
-"without copying the underlying dict.  If you want a copy of a specific "
-"type, like list or set, you can just pass one of the above to the list() "
-"or set() constructor."
+"We don't implement .copy() -- the presence of a .copy() method suggests that "
+"the copy has the same type as the original, but that's not feasible without "
+"copying the underlying dict.  If you want a copy of a specific type, like "
+"list or set, you can just pass one of the above to the list() or set() "
+"constructor."
 msgstr ""
 
 #: ../pep-3106.txt:281
 msgid ""
-"The specification implies that the order in which items are returned by "
-".keys(), .values() and .items() is the same (just as it was in Python "
-"2.x), because the order is all derived from the dict iterator (which is "
-"presumably arbitrary but stable as long as a dict isn't modified).  This "
-"can be expressed by the following invariant::"
+"The specification implies that the order in which items are returned by ."
+"keys(), .values() and .items() is the same (just as it was in Python 2.x), "
+"because the order is all derived from the dict iterator (which is presumably "
+"arbitrary but stable as long as a dict isn't modified).  This can be "
+"expressed by the following invariant::"
 msgstr ""
 
 #: ../pep-3106.txt:291
@@ -232,9 +231,9 @@ msgstr ""
 
 #: ../pep-3106.txt:293
 msgid ""
-"Do we need more of a motivation?  I would think that being able to do set"
-" operations on keys and items without having to copy them should speak "
-"for itself."
+"Do we need more of a motivation?  I would think that being able to do set "
+"operations on keys and items without having to copy them should speak for "
+"itself."
 msgstr ""
 
 #: ../pep-3106.txt:297
@@ -246,31 +245,30 @@ msgstr ""
 #: ../pep-3106.txt:300
 msgid ""
 "It would be okay if multiple calls to d.keys() (etc.) returned the same "
-"object, since the object's only state is the dict to which it refers.  Is"
-" this worth having extra slots in the dict object for? Should that be a "
-"weak reference or should the d_keys (etc.) object live forever once "
-"created?  Strawman: probably not worth the extra slots in every dict."
+"object, since the object's only state is the dict to which it refers.  Is "
+"this worth having extra slots in the dict object for? Should that be a weak "
+"reference or should the d_keys (etc.) object live forever once created?  "
+"Strawman: probably not worth the extra slots in every dict."
 msgstr ""
 
 #: ../pep-3106.txt:307
 msgid ""
 "Should d_keys, d_values and d_items have a public instance variable or "
-"method through which one can retrieve the underlying dict?  Strawman: yes"
-" (but what should it be called?)."
+"method through which one can retrieve the underlying dict?  Strawman: yes "
+"(but what should it be called?)."
 msgstr ""
 
 #: ../pep-3106.txt:311
 msgid ""
 "I'm soliciting better names than d_keys, d_values and d_items.  These "
 "classes could be public so that their implementations could be reused by "
-"the .keys(), .values() and .items() methods of other mappings.  Or should"
-" they?"
+"the .keys(), .values() and .items() methods of other mappings.  Or should "
+"they?"
 msgstr ""
 
 #: ../pep-3106.txt:316
 msgid ""
-"Should the d_keys, d_values and d_items classes be reusable? Strawman: "
-"yes."
+"Should the d_keys, d_values and d_items classes be reusable? Strawman: yes."
 msgstr ""
 
 #: ../pep-3106.txt:319
@@ -279,20 +277,19 @@ msgstr ""
 
 #: ../pep-3106.txt:321
 msgid ""
-"A particularly nasty issue is whether operations that are specified in "
-"terms of other operations (e.g. .discard()) must really be implemented in"
-" terms of those other operations; this may appear irrelevant but it "
-"becomes relevant if these classes are ever subclassed.  Historically, "
-"Python has a really poor track record of specifying the semantics of "
-"highly optimized built-in types clearly in such cases; my strawman is to "
-"continue that trend.  Subclassing may still be useful to *add* new "
-"methods, for example."
+"A particularly nasty issue is whether operations that are specified in terms "
+"of other operations (e.g. .discard()) must really be implemented in terms of "
+"those other operations; this may appear irrelevant but it becomes relevant "
+"if these classes are ever subclassed.  Historically, Python has a really "
+"poor track record of specifying the semantics of highly optimized built-in "
+"types clearly in such cases; my strawman is to continue that trend.  "
+"Subclassing may still be useful to *add* new methods, for example."
 msgstr ""
 
 #: ../pep-3106.txt:330
 msgid ""
-"I'll leave the decisions (especially about naming) up to whoever submits "
-"a working implementation."
+"I'll leave the decisions (especially about naming) up to whoever submits a "
+"working implementation."
 msgstr ""
 
 #: ../pep-3106.txt:335
@@ -301,7 +298,6 @@ msgstr ""
 
 #: ../pep-3106.txt:337
 msgid ""
-"Java Collections Framework "
-"http://java.sun.com/docs/books/tutorial/collections/index.html"
+"Java Collections Framework http://java.sun.com/docs/books/tutorial/"
+"collections/index.html"
 msgstr ""
-

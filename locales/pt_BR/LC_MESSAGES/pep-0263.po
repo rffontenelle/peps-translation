@@ -23,8 +23,7 @@ msgstr ""
 
 #: ../pep-0263.txt:3
 msgid ""
-"Marc-André Lemburg <mal@lemburg.com>, Martin von Löwis "
-"<martin@v.loewis.de>"
+"Marc-André Lemburg <mal@lemburg.com>, Martin von Löwis <martin@v.loewis.de>"
 msgstr ""
 
 #: ../pep-0263.txt
@@ -69,12 +68,12 @@ msgstr ""
 
 #: ../pep-0263.txt:16
 msgid ""
-"This PEP proposes to introduce a syntax to declare the encoding of a "
-"Python source file. The encoding information is then used by the Python "
-"parser to interpret the file using the given encoding. Most notably this "
-"enhances the interpretation of Unicode literals in the source code and "
-"makes it possible to write Unicode literals using e.g. UTF-8 directly in "
-"an Unicode aware editor."
+"This PEP proposes to introduce a syntax to declare the encoding of a Python "
+"source file. The encoding information is then used by the Python parser to "
+"interpret the file using the given encoding. Most notably this enhances the "
+"interpretation of Unicode literals in the source code and makes it possible "
+"to write Unicode literals using e.g. UTF-8 directly in an Unicode aware "
+"editor."
 msgstr ""
 
 #: ../pep-0263.txt:25
@@ -83,12 +82,12 @@ msgstr ""
 
 #: ../pep-0263.txt:27
 msgid ""
-"In Python 2.1, Unicode literals can only be written using the Latin-1 "
-"based encoding \"unicode-escape\". This makes the programming environment"
-" rather unfriendly to Python users who live and work in non-Latin-1 "
-"locales such as many of the Asian countries. Programmers can write their "
-"8-bit strings using the favorite encoding, but are bound to the "
-"\"unicode-escape\" encoding for Unicode literals."
+"In Python 2.1, Unicode literals can only be written using the Latin-1 based "
+"encoding \"unicode-escape\". This makes the programming environment rather "
+"unfriendly to Python users who live and work in non-Latin-1 locales such as "
+"many of the Asian countries. Programmers can write their 8-bit strings using "
+"the favorite encoding, but are bound to the \"unicode-escape\" encoding for "
+"Unicode literals."
 msgstr ""
 
 #: ../pep-0263.txt:37
@@ -98,8 +97,8 @@ msgstr ""
 #: ../pep-0263.txt:39
 msgid ""
 "I propose to make the Python source code encoding both visible and "
-"changeable on a per-source file basis by using a special comment at the "
-"top of the file to declare the encoding."
+"changeable on a per-source file basis by using a special comment at the top "
+"of the file to declare the encoding."
 msgstr ""
 
 #: ../pep-0263.txt:43
@@ -115,14 +114,14 @@ msgstr ""
 
 #: ../pep-0263.txt:51
 msgid ""
-"Python will default to ASCII as standard encoding if no other encoding "
-"hints are given."
+"Python will default to ASCII as standard encoding if no other encoding hints "
+"are given."
 msgstr ""
 
 #: ../pep-0263.txt:54
 msgid ""
-"To define a source code encoding, a magic comment must be placed into the"
-" source files either as first or second line in the file, such as::"
+"To define a source code encoding, a magic comment must be placed into the "
+"source files either as first or second line in the file, such as::"
 msgstr ""
 
 #: ../pep-0263.txt:60
@@ -135,32 +134,31 @@ msgstr ""
 
 #: ../pep-0263.txt:70
 msgid ""
-"More precisely, the first or second line must match the following regular"
-" expression::"
+"More precisely, the first or second line must match the following regular "
+"expression::"
 msgstr ""
 
 #: ../pep-0263.txt:75
 msgid ""
-"The first group of this expression is then interpreted as encoding name. "
-"If the encoding is unknown to Python, an error is raised during "
-"compilation. There must not be any Python statement on the line that "
-"contains the encoding declaration.  If the first line matches the second "
-"line is ignored."
+"The first group of this expression is then interpreted as encoding name. If "
+"the encoding is unknown to Python, an error is raised during compilation. "
+"There must not be any Python statement on the line that contains the "
+"encoding declaration.  If the first line matches the second line is ignored."
 msgstr ""
 
 #: ../pep-0263.txt:82
 msgid ""
-"To aid with platforms such as Windows, which add Unicode BOM marks to the"
-" beginning of Unicode files, the UTF-8 signature ``\\xef\\xbb\\xbf`` will"
-" be interpreted as 'utf-8' encoding as well (even if no magic encoding "
-"comment is given)."
+"To aid with platforms such as Windows, which add Unicode BOM marks to the "
+"beginning of Unicode files, the UTF-8 signature ``\\xef\\xbb\\xbf`` will be "
+"interpreted as 'utf-8' encoding as well (even if no magic encoding comment "
+"is given)."
 msgstr ""
 
 #: ../pep-0263.txt:87
 msgid ""
-"If a source file uses both the UTF-8 BOM mark signature and a magic "
-"encoding comment, the only allowed encoding for the comment is 'utf-8'.  "
-"Any other encoding will cause an error."
+"If a source file uses both the UTF-8 BOM mark signature and a magic encoding "
+"comment, the only allowed encoding for the comment is 'utf-8'.  Any other "
+"encoding will cause an error."
 msgstr ""
 
 #: ../pep-0263.txt:93
@@ -183,8 +181,8 @@ msgstr ""
 
 #: ../pep-0263.txt:123
 msgid ""
-"Text editors might have different ways of defining the file's encoding, "
-"e.g.::"
+"Text editors might have different ways of defining the file's encoding, e."
+"g.::"
 msgstr ""
 
 #: ../pep-0263.txt:131
@@ -219,9 +217,9 @@ msgstr ""
 
 #: ../pep-0263.txt:169
 msgid ""
-"The complete Python source file should use a single encoding. Embedding "
-"of differently encoded data is not allowed and will result in a decoding "
-"error during compilation of the Python source code."
+"The complete Python source file should use a single encoding. Embedding of "
+"differently encoded data is not allowed and will result in a decoding error "
+"during compilation of the Python source code."
 msgstr ""
 
 #: ../pep-0263.txt:174
@@ -229,23 +227,22 @@ msgid ""
 "Any encoding which allows processing the first two lines in the way "
 "indicated above is allowed as source code encoding, this includes ASCII "
 "compatible encodings as well as certain multi-byte encodings such as "
-"Shift_JIS. It does not include encodings which use two or more bytes for "
-"all characters like e.g. UTF-16. The reason for this is to keep the "
-"encoding detection algorithm in the tokenizer simple."
+"Shift_JIS. It does not include encodings which use two or more bytes for all "
+"characters like e.g. UTF-16. The reason for this is to keep the encoding "
+"detection algorithm in the tokenizer simple."
 msgstr ""
 
 #: ../pep-0263.txt:182
 msgid ""
 "Handling of escape sequences should continue to work as it does now, but "
-"with all possible source code encodings, that is standard string literals"
-" (both 8-bit and Unicode) are subject to escape sequence expansion while "
-"raw string literals only expand a very small subset of escape sequences."
+"with all possible source code encodings, that is standard string literals "
+"(both 8-bit and Unicode) are subject to escape sequence expansion while raw "
+"string literals only expand a very small subset of escape sequences."
 msgstr ""
 
 #: ../pep-0263.txt:188
 msgid ""
-"Python's tokenizer/compiler combo will need to be updated to work as "
-"follows:"
+"Python's tokenizer/compiler combo will need to be updated to work as follows:"
 msgstr ""
 
 #: ../pep-0263.txt:191
@@ -267,8 +264,8 @@ msgstr ""
 #: ../pep-0263.txt:199
 msgid ""
 "compile it, creating Unicode objects from the given Unicode data and "
-"creating string objects from the Unicode literal data by first reencoding"
-" the UTF-8 data into 8-bit string data using the given file encoding"
+"creating string objects from the Unicode literal data by first reencoding "
+"the UTF-8 data into 8-bit string data using the given file encoding"
 msgstr ""
 
 #: ../pep-0263.txt:204
@@ -284,23 +281,23 @@ msgstr ""
 #: ../pep-0263.txt:212
 msgid ""
 "For backwards-compatibility with existing code which currently uses non-"
-"ASCII in string literals without declaring an encoding, the "
-"implementation will be introduced in two phases:"
+"ASCII in string literals without declaring an encoding, the implementation "
+"will be introduced in two phases:"
 msgstr ""
 
 #: ../pep-0263.txt:216
 msgid ""
-"Allow non-ASCII in string literals and comments, by internally treating a"
-" missing encoding declaration as a declaration of \"iso-8859-1\". This "
-"will cause arbitrary byte strings to correctly round-trip between step 2 "
-"and step 5 of the processing, and provide compatibility with Python 2.2 "
-"for Unicode literals that contain non-ASCII bytes."
+"Allow non-ASCII in string literals and comments, by internally treating a "
+"missing encoding declaration as a declaration of \"iso-8859-1\". This will "
+"cause arbitrary byte strings to correctly round-trip between step 2 and step "
+"5 of the processing, and provide compatibility with Python 2.2 for Unicode "
+"literals that contain non-ASCII bytes."
 msgstr ""
 
 #: ../pep-0263.txt:223
 msgid ""
-"A warning will be issued if non-ASCII bytes are found in the input, once "
-"per improperly encoded input file."
+"A warning will be issued if non-ASCII bytes are found in the input, once per "
+"improperly encoded input file."
 msgstr ""
 
 #: ../pep-0263.txt:226
@@ -309,15 +306,15 @@ msgstr ""
 
 #: ../pep-0263.txt:228
 msgid ""
-"The builtin ``compile()`` API will be enhanced to accept Unicode as "
-"input.  8-bit string input is subject to the standard procedure for "
-"encoding detection as described above."
+"The builtin ``compile()`` API will be enhanced to accept Unicode as input.  "
+"8-bit string input is subject to the standard procedure for encoding "
+"detection as described above."
 msgstr ""
 
 #: ../pep-0263.txt:232
 msgid ""
-"If a Unicode string with a coding declaration is passed to ``compile()``,"
-" a ``SyntaxError`` will be raised."
+"If a Unicode string with a coding declaration is passed to ``compile()``, a "
+"``SyntaxError`` will be raised."
 msgstr ""
 
 #: ../pep-0263.txt:235
@@ -346,9 +343,9 @@ msgstr ""
 
 #: ../pep-0263.txt:251
 msgid ""
-"This PEP intends to provide an upgrade path from the current (more-or-"
-"less) undefined source code encoding situation to a more robust and "
-"portable definition."
+"This PEP intends to provide an upgrade path from the current (more-or-less) "
+"undefined source code encoding situation to a more robust and portable "
+"definition."
 msgstr ""
 
 #: ../pep-0263.txt:257
@@ -377,9 +374,9 @@ msgstr ""
 
 #: ../pep-0263.txt:270
 msgid ""
-"1.7: Added warnings to phase 1 implementation. Replaced the Latin-1 "
-"default encoding with the interpreter's default encoding. Added tweaks to"
-" ``compile()``."
+"1.7: Added warnings to phase 1 implementation. Replaced the Latin-1 default "
+"encoding with the interpreter's default encoding. Added tweaks to "
+"``compile()``."
 msgstr ""
 
 #: ../pep-0263.txt:273
@@ -388,8 +385,8 @@ msgstr ""
 
 #: ../pep-0263.txt:274
 msgid ""
-"1.3: Worked in comments by Martin v. Loewis: UTF-8 BOM mark detection, "
-"Emacs style magic comment, two phase approach to the implementation"
+"1.3: Worked in comments by Martin v. Loewis: UTF-8 BOM mark detection, Emacs "
+"style magic comment, two phase approach to the implementation"
 msgstr ""
 
 #: ../pep-0263.txt:280
@@ -399,4 +396,3 @@ msgstr ""
 #: ../pep-0263.txt:282
 msgid "This document has been placed in the public domain."
 msgstr ""
-

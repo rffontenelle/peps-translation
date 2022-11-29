@@ -86,15 +86,15 @@ msgstr ""
 #: ../pep-0319.txt:26
 msgid ""
 "The concept of code synchronization in Python is too low-level. To "
-"synchronize code a programmer must be aware of the details of the "
-"following pseudo-code pattern::"
+"synchronize code a programmer must be aware of the details of the following "
+"pseudo-code pattern::"
 msgstr ""
 
 #: ../pep-0319.txt:40
 msgid ""
 "This synchronized block pattern is not the only pattern (more discussed "
-"below) but it is very common.  This PEP proposes replacing the above code"
-" with the following equivalent::"
+"below) but it is very common.  This PEP proposes replacing the above code "
+"with the following equivalent::"
 msgstr ""
 
 #: ../pep-0319.txt:47
@@ -112,26 +112,25 @@ msgstr ""
 #: ../pep-0319.txt:55
 msgid ""
 "While executing a 'synchronize' block of code a programmer may want to "
-"\"drop back\" to running asynchronously momentarily to run blocking "
-"input/output routines or something else that might take an indeterminate "
-"amount of time and does not require synchronization. This code usually "
-"follows the pattern::"
+"\"drop back\" to running asynchronously momentarily to run blocking input/"
+"output routines or something else that might take an indeterminate amount of "
+"time and does not require synchronization. This code usually follows the "
+"pattern::"
 msgstr ""
 
 #: ../pep-0319.txt:76
 msgid ""
-"The asynchronous section of the code is not very obvious visually, so it "
-"is marked up with comments.  Using the proposed 'asynchronize' keyword "
-"this code becomes much cleaner, easier to understand, and less prone to "
-"error::"
+"The asynchronous section of the code is not very obvious visually, so it is "
+"marked up with comments.  Using the proposed 'asynchronize' keyword this "
+"code becomes much cleaner, easier to understand, and less prone to error::"
 msgstr ""
 
 #: ../pep-0319.txt:89
 msgid ""
-"Encountering an 'asynchronize' keyword inside a non-synchronized block "
-"can raise either an error or issue a warning (as all code blocks are "
-"implicitly asynchronous anyway).  It is important to note that the above "
-"example is **not** the same as::"
+"Encountering an 'asynchronize' keyword inside a non-synchronized block can "
+"raise either an error or issue a warning (as all code blocks are implicitly "
+"asynchronous anyway).  It is important to note that the above example is "
+"**not** the same as::"
 msgstr ""
 
 #: ../pep-0319.txt:102
@@ -142,11 +141,11 @@ msgstr ""
 
 #: ../pep-0319.txt:114
 msgid ""
-"Many threads may be looping through this code.  Without the "
-"'asynchronize' keyword one thread cannot stay in the loop and release the"
-" lock at the same time while blocking IO is going on. This pattern of "
-"releasing locks inside a main loop to do blocking IO is used extensively "
-"inside the CPython interpreter itself."
+"Many threads may be looping through this code.  Without the 'asynchronize' "
+"keyword one thread cannot stay in the loop and release the lock at the same "
+"time while blocking IO is going on. This pattern of releasing locks inside a "
+"main loop to do blocking IO is used extensively inside the CPython "
+"interpreter itself."
 msgstr ""
 
 #: ../pep-0319.txt:122
@@ -156,27 +155,27 @@ msgstr ""
 #: ../pep-0319.txt:124
 msgid ""
 "As proposed the 'synchronize' and 'asynchronize' keywords synchronize a "
-"block of code.  However programmers may want to specify a target object "
-"that threads synchronize on.  Any object can be a synchronization target."
+"block of code.  However programmers may want to specify a target object that "
+"threads synchronize on.  Any object can be a synchronization target."
 msgstr ""
 
 #: ../pep-0319.txt:129
 msgid ""
-"Consider a two-way queue object: two different objects are used by the "
-"same 'synchronize' code block to synchronize both queues separately in "
-"the 'get' method::"
+"Consider a two-way queue object: two different objects are used by the same "
+"'synchronize' code block to synchronize both queues separately in the 'get' "
+"method::"
 msgstr ""
 
 #: ../pep-0319.txt:162
 msgid ""
-"Here is the equivalent code in Python as it is now without a "
-"'synchronize' keyword::"
+"Here is the equivalent code in Python as it is now without a 'synchronize' "
+"keyword::"
 msgstr ""
 
 #: ../pep-0319.txt:208
 msgid ""
-"The last example had to define an extra class to associate a lock with "
-"the queue where the first example the 'synchronize' keyword does this "
+"The last example had to define an extra class to associate a lock with the "
+"queue where the first example the 'synchronize' keyword does this "
 "association internally and transparently."
 msgstr ""
 
@@ -187,8 +186,8 @@ msgstr ""
 #: ../pep-0319.txt:216
 msgid ""
 "There are some situations where the 'synchronize' and 'asynchronize' "
-"keywords cannot entirely replace the use of lock methods like ``acquire``"
-" and ``release``.  Some examples are if the programmer wants to provide "
+"keywords cannot entirely replace the use of lock methods like ``acquire`` "
+"and ``release``.  Some examples are if the programmer wants to provide "
 "arguments for ``acquire`` or if a lock is acquired in one code block but "
 "released in another, as shown below."
 msgstr ""
@@ -203,18 +202,17 @@ msgstr ""
 
 #: ../pep-0319.txt:272
 msgid ""
-"Here is the original class as found in the "
-"'Zope/ZServer/PubCore/ZRendevous.py' module.  The \"convenience\" of the "
-"'_a' and '_r' shortcut names obscure the code::"
+"Here is the original class as found in the 'Zope/ZServer/PubCore/ZRendevous."
+"py' module.  The \"convenience\" of the '_a' and '_r' shortcut names obscure "
+"the code::"
 msgstr ""
 
 #: ../pep-0319.txt:327
 msgid ""
-"In particular the asynchronize section of the ``accept`` method is not "
-"very obvious.  To beginner programmers, 'synchronize' and 'asynchronize' "
-"remove many of the problems encountered when juggling multiple "
-"``acquire`` and ``release`` methods on different locks in different "
-"``try/finally`` blocks."
+"In particular the asynchronize section of the ``accept`` method is not very "
+"obvious.  To beginner programmers, 'synchronize' and 'asynchronize' remove "
+"many of the problems encountered when juggling multiple ``acquire`` and "
+"``release`` methods on different locks in different ``try/finally`` blocks."
 msgstr ""
 
 #: ../pep-0319.txt:335
@@ -223,8 +221,8 @@ msgstr ""
 
 #: ../pep-0319.txt:337
 msgid ""
-"Python syntax is defined in a modified BNF grammar notation described in "
-"the Python Language Reference [1]_.  This section describes the proposed "
+"Python syntax is defined in a modified BNF grammar notation described in the "
+"Python Language Reference [1]_.  This section describes the proposed "
 "synchronization syntax using this grammar::"
 msgstr ""
 
@@ -239,33 +237,32 @@ msgstr ""
 #: ../pep-0319.txt:351
 msgid ""
 "The author of this PEP has not explored an implementation yet. There are "
-"several implementation issues that must be resolved. The main "
-"implementation issue is what exactly gets locked and unlocked during a "
-"synchronized block."
+"several implementation issues that must be resolved. The main implementation "
+"issue is what exactly gets locked and unlocked during a synchronized block."
 msgstr ""
 
 #: ../pep-0319.txt:356
 msgid ""
 "During an unqualified synchronized block (the use of the 'synchronize' "
-"keyword without a target argument) a lock could be created and associated"
-" with the synchronized code block object. Any threads that are to execute"
-" the block must first acquire the code block lock."
+"keyword without a target argument) a lock could be created and associated "
+"with the synchronized code block object. Any threads that are to execute the "
+"block must first acquire the code block lock."
 msgstr ""
 
 #: ../pep-0319.txt:362
 msgid ""
-"When an 'asynchronize' keyword is encountered in a 'synchronize' block "
-"the code block lock is unlocked before the inner block is executed and "
-"re-locked when the inner block terminates."
+"When an 'asynchronize' keyword is encountered in a 'synchronize' block the "
+"code block lock is unlocked before the inner block is executed and re-locked "
+"when the inner block terminates."
 msgstr ""
 
 #: ../pep-0319.txt:366
 msgid ""
-"When a synchronized block target is specified the object is associated "
-"with a lock.  How this is implemented cleanly is probably the highest "
-"risk of this proposal.  Java Virtual Machines typically associate a "
-"special hidden lock object with target object and use it to synchronized "
-"the block around the target only."
+"When a synchronized block target is specified the object is associated with "
+"a lock.  How this is implemented cleanly is probably the highest risk of "
+"this proposal.  Java Virtual Machines typically associate a special hidden "
+"lock object with target object and use it to synchronized the block around "
+"the target only."
 msgstr ""
 
 #: ../pep-0319.txt:375
@@ -275,19 +272,19 @@ msgstr ""
 #: ../pep-0319.txt:377
 msgid ""
 "Backward compatibility is solved with the new ``from __future__`` Python "
-"syntax (:pep:`236`), and the new warning framework (:pep:`230`) to evolve"
-" the Python language into phasing out any conflicting names that use the "
-"new keywords 'synchronize' and 'asynchronize'.  To use the syntax now, a "
+"syntax (:pep:`236`), and the new warning framework (:pep:`230`) to evolve "
+"the Python language into phasing out any conflicting names that use the new "
+"keywords 'synchronize' and 'asynchronize'.  To use the syntax now, a "
 "developer could use the statement::"
 msgstr ""
 
 #: ../pep-0319.txt:386
 msgid ""
-"In addition, any code that uses the keyword 'synchronize' or "
-"'asynchronize' as an identifier will be issued a warning from Python.  "
-"After the appropriate period of time, the syntax would become standard, "
-"the above import statement would do nothing, and any identifiers named "
-"'synchronize' or 'asynchronize' would raise an exception."
+"In addition, any code that uses the keyword 'synchronize' or 'asynchronize' "
+"as an identifier will be issued a warning from Python.  After the "
+"appropriate period of time, the syntax would become standard, the above "
+"import statement would do nothing, and any identifiers named 'synchronize' "
+"or 'asynchronize' would raise an exception."
 msgstr ""
 
 #: ../pep-0319.txt:395
@@ -296,8 +293,8 @@ msgstr ""
 
 #: ../pep-0319.txt:397
 msgid ""
-":pep:`310` proposes the 'with' keyword that can serve the same function "
-"as 'synchronize' (but no facility for 'asynchronize'). The pattern::"
+":pep:`310` proposes the 'with' keyword that can serve the same function as "
+"'synchronize' (but no facility for 'asynchronize'). The pattern::"
 msgstr ""
 
 #: ../pep-0319.txt:406
@@ -307,24 +304,23 @@ msgstr ""
 #: ../pep-0319.txt:411
 msgid ""
 ":pep:`310` must synchronize on an existing lock, while this PEP proposes "
-"that unqualified 'synchronize' statements synchronize on a global, "
-"internal, transparent lock in addition to qualified 'synchronize' "
-"statements.  The 'with' statement also requires lock initialization, "
-"while the 'synchronize' statement can synchronize on any target object "
-"**including** locks."
+"that unqualified 'synchronize' statements synchronize on a global, internal, "
+"transparent lock in addition to qualified 'synchronize' statements.  The "
+"'with' statement also requires lock initialization, while the 'synchronize' "
+"statement can synchronize on any target object **including** locks."
 msgstr ""
 
 #: ../pep-0319.txt:418
 msgid ""
 "While limited in this fashion, the 'with' statement is more abstract and "
-"serves more purposes than synchronization.  For example, transactions "
-"could be used with the 'with' keyword::"
+"serves more purposes than synchronization.  For example, transactions could "
+"be used with the 'with' keyword::"
 msgstr ""
 
 #: ../pep-0319.txt:429
 msgid ""
-"The 'synchronize' and 'asynchronize' keywords cannot serve this or any "
-"other general acquire/release pattern other than thread synchronization."
+"The 'synchronize' and 'asynchronize' keywords cannot serve this or any other "
+"general acquire/release pattern other than thread synchronization."
 msgstr ""
 
 #: ../pep-0319.txt:435
@@ -333,16 +329,16 @@ msgstr ""
 
 #: ../pep-0319.txt:437
 msgid ""
-"Java defines a 'synchronized' keyword (note the grammatical tense "
-"different between the Java keyword and this PEP's 'synchronize') which "
-"must be qualified on any object.  The syntax is::"
+"Java defines a 'synchronized' keyword (note the grammatical tense different "
+"between the Java keyword and this PEP's 'synchronize') which must be "
+"qualified on any object.  The syntax is::"
 msgstr ""
 
 #: ../pep-0319.txt:443
 msgid ""
-"Expression must yield a valid object (null raises an error and exceptions"
-" during 'Expression' terminate the 'synchronized' block for the same "
-"reason) upon which 'Block' is synchronized."
+"Expression must yield a valid object (null raises an error and exceptions "
+"during 'Expression' terminate the 'synchronized' block for the same reason) "
+"upon which 'Block' is synchronized."
 msgstr ""
 
 #: ../pep-0319.txt:449
@@ -351,9 +347,9 @@ msgstr ""
 
 #: ../pep-0319.txt:451
 msgid ""
-"Jython uses a 'synchronize' class with the static method "
-"'make_synchronized' that accepts one callable argument and returns a "
-"newly created, synchronized, callable \"wrapper\" around the argument."
+"Jython uses a 'synchronize' class with the static method 'make_synchronized' "
+"that accepts one callable argument and returns a newly created, "
+"synchronized, callable \"wrapper\" around the argument."
 msgstr ""
 
 #: ../pep-0319.txt:458
@@ -370,8 +366,8 @@ msgstr ""
 
 #: ../pep-0319.txt:467
 msgid ""
-"This PEP proposes adding two keywords to the Python language. This may "
-"break code."
+"This PEP proposes adding two keywords to the Python language. This may break "
+"code."
 msgstr ""
 
 #: ../pep-0319.txt:470
@@ -386,10 +382,10 @@ msgstr ""
 
 #: ../pep-0319.txt:475
 msgid ""
-"The equivalent Java keyword is the past participle 'synchronized'. This "
-"PEP proposes the present tense, 'synchronize' as being more in spirit "
-"with Python (there being less distinction between compile-time and run-"
-"time in Python than Java)."
+"The equivalent Java keyword is the past participle 'synchronized'. This PEP "
+"proposes the present tense, 'synchronize' as being more in spirit with "
+"Python (there being less distinction between compile-time and run-time in "
+"Python than Java)."
 msgstr ""
 
 #: ../pep-0319.txt:482
@@ -415,4 +411,3 @@ msgstr ""
 #: ../pep-0319.txt:497
 msgid "This document has been placed in the public domain."
 msgstr ""
-

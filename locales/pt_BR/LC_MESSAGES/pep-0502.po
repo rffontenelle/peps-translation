@@ -70,18 +70,18 @@ msgstr ""
 
 #: ../pep-0502.txt:21
 msgid ""
-"To recap that PEP, a string prefix was introduced that marks the string "
-"as a template to be rendered. These formatted strings may contain one or "
-"more expressions built on `the existing syntax`_ of ``str.format()``. The"
-" formatted string expands at compile-time into a conventional string "
-"format operation, with the given expressions from its text extracted and "
-"passed instead as positional arguments."
+"To recap that PEP, a string prefix was introduced that marks the string as a "
+"template to be rendered. These formatted strings may contain one or more "
+"expressions built on `the existing syntax`_ of ``str.format()``. The "
+"formatted string expands at compile-time into a conventional string format "
+"operation, with the given expressions from its text extracted and passed "
+"instead as positional arguments."
 msgstr ""
 
 #: ../pep-0502.txt:31
 msgid ""
-"At runtime, the resulting expressions are evaluated to render a string to"
-" given specifications::"
+"At runtime, the resulting expressions are evaluated to render a string to "
+"given specifications::"
 msgstr ""
 
 #: ../pep-0502.txt:39
@@ -96,10 +96,9 @@ msgstr ""
 
 #: ../pep-0502.txt:48
 msgid ""
-"This PEP was rejected based on its using an opinion-based tone rather "
-"than a factual one. This PEP was also deemed not critical as :pep:`498` "
-"was already written and should be the place to house design decision "
-"details."
+"This PEP was rejected based on its using an opinion-based tone rather than a "
+"factual one. This PEP was also deemed not critical as :pep:`498` was already "
+"written and should be the place to house design decision details."
 msgstr ""
 
 #: ../pep-0502.txt:54
@@ -108,44 +107,43 @@ msgstr ""
 
 #: ../pep-0502.txt:56
 msgid ""
-"Though string formatting and manipulation features are plentiful in "
-"Python, one area where it falls short is the lack of a convenient string "
+"Though string formatting and manipulation features are plentiful in Python, "
+"one area where it falls short is the lack of a convenient string "
 "interpolation syntax. In comparison to other dynamic scripting languages "
 "with similar use cases, the amount of code necessary to build similar "
-"strings is substantially higher, while at times offering lower "
-"readability due to verbosity, dense syntax, or identifier duplication."
+"strings is substantially higher, while at times offering lower readability "
+"due to verbosity, dense syntax, or identifier duplication."
 msgstr ""
 
 #: ../pep-0502.txt:65
 msgid ""
-"These difficulties are described at moderate length in the original `post"
-" to python-ideas`_ that started the snowball (that became :pep:`498`) "
-"rolling. [1]_"
+"These difficulties are described at moderate length in the original `post to "
+"python-ideas`_ that started the snowball (that became :pep:`498`) rolling. "
+"[1]_"
 msgstr ""
 
 #: ../pep-0502.txt:69
 msgid ""
 "Furthermore, replacement of the print statement with the more consistent "
 "print function of Python 3 (:pep:`3105`) has added one additional minor "
-"burden, an additional set of parentheses to type and read. Combined with "
-"the verbosity of current string formatting solutions, this puts an "
-"otherwise simple language at an unfortunate disadvantage to its peers::"
+"burden, an additional set of parentheses to type and read. Combined with the "
+"verbosity of current string formatting solutions, this puts an otherwise "
+"simple language at an unfortunate disadvantage to its peers::"
 msgstr ""
 
 #: ../pep-0502.txt:89
 msgid ""
-"In Python, the formatting and printing of a string with multiple "
-"variables in a single line of code of standard width is noticeably harder"
-" and more verbose, with indentation exacerbating the issue."
+"In Python, the formatting and printing of a string with multiple variables "
+"in a single line of code of standard width is noticeably harder and more "
+"verbose, with indentation exacerbating the issue."
 msgstr ""
 
 #: ../pep-0502.txt:93
 msgid ""
-"For use cases such as smaller projects, systems programming, shell script"
-" replacements, and even one-liners, where message formatting complexity "
-"has yet to be encapsulated, this verbosity has likely lead a significant "
-"number of developers and administrators to choose other languages over "
-"the years."
+"For use cases such as smaller projects, systems programming, shell script "
+"replacements, and even one-liners, where message formatting complexity has "
+"yet to be encapsulated, this verbosity has likely lead a significant number "
+"of developers and administrators to choose other languages over the years."
 msgstr ""
 
 #: ../pep-0502.txt:103
@@ -181,8 +179,7 @@ msgstr ""
 #: ../pep-0502.txt:116
 msgid ""
 "Avoid need for ``locals()`` and ``globals()`` usage, instead parsing the "
-"given string for named parameters, then passing them automatically. [2]_ "
-"[3]_"
+"given string for named parameters, then passing them automatically. [2]_ [3]_"
 msgstr ""
 
 #: ../pep-0502.txt:122
@@ -192,12 +189,12 @@ msgstr ""
 #: ../pep-0502.txt:124
 msgid ""
 "In contrast to other languages that take design cues from Unix and its "
-"shells, and in common with Javascript, Python specified both single "
-"(``'``) and double (``\"``) ASCII quote characters to enclose strings. It"
-" is not reasonable to choose one of them now to enable interpolation, "
-"while leaving the other for uninterpolated strings. Other characters, "
-"such as the \"Backtick\" (or grave accent `````) are also `constrained by"
-" history`_ as a shortcut for ``repr()``."
+"shells, and in common with Javascript, Python specified both single (``'``) "
+"and double (``\"``) ASCII quote characters to enclose strings. It is not "
+"reasonable to choose one of them now to enable interpolation, while leaving "
+"the other for uninterpolated strings. Other characters, such as the "
+"\"Backtick\" (or grave accent `````) are also `constrained by history`_ as a "
+"shortcut for ``repr()``."
 msgstr ""
 
 #: ../pep-0502.txt:136
@@ -226,9 +223,9 @@ msgstr ""
 
 #: ../pep-0502.txt:144
 msgid ""
-"The first three options above are mature. Each has specific use cases and"
-" drawbacks, yet also suffer from the verbosity and visual noise mentioned"
-" previously. All options are discussed in the next sections."
+"The first three options above are mature. Each has specific use cases and "
+"drawbacks, yet also suffer from the verbosity and visual noise mentioned "
+"previously. All options are discussed in the next sections."
 msgstr ""
 
 #: ../pep-0502.txt:153
@@ -238,15 +235,15 @@ msgstr ""
 #: ../pep-0502.txt:155
 msgid ""
 "Formatted strings build on several existing techniques and proposals and "
-"what we've collectively learned from them. In keeping with the design "
-"goals of readability and error-prevention, the following examples "
-"therefore use named, not positional arguments."
+"what we've collectively learned from them. In keeping with the design goals "
+"of readability and error-prevention, the following examples therefore use "
+"named, not positional arguments."
 msgstr ""
 
 #: ../pep-0502.txt:161
 msgid ""
-"Let's assume we have the following dictionary, and would like to print "
-"out its items as an informative string for end users::"
+"Let's assume we have the following dictionary, and would like to print out "
+"its items as an informative string for end users::"
 msgstr ""
 
 #: ../pep-0502.txt:168
@@ -255,20 +252,20 @@ msgstr ""
 
 #: ../pep-0502.txt:170
 msgid ""
-"This `venerable technique`_ continues to have its uses, such as with "
-"byte-based protocols, simplicity in simple cases, and familiarity to many"
-" programmers::"
+"This `venerable technique`_ continues to have its uses, such as with byte-"
+"based protocols, simplicity in simple cases, and familiarity to many "
+"programmers::"
 msgstr ""
 
 #: ../pep-0502.txt:178
 msgid ""
 "In this form, considering the prerequisite dictionary creation, the "
 "technique is verbose, a tad noisy, yet relatively readable. Additional "
-"issues are that an operator can only take one argument besides the "
-"original string, meaning multiple parameters must be passed in a tuple or"
-" dictionary. Also, it is relatively easy to make an error in the number "
-"of arguments passed, the expected type, have a missing key, or forget the"
-" trailing type, e.g. (``s`` or ``d``)."
+"issues are that an operator can only take one argument besides the original "
+"string, meaning multiple parameters must be passed in a tuple or dictionary. "
+"Also, it is relatively easy to make an error in the number of arguments "
+"passed, the expected type, have a missing key, or forget the trailing type, "
+"e.g. (``s`` or ``d``)."
 msgstr ""
 
 #: ../pep-0502.txt:193
@@ -279,19 +276,19 @@ msgstr ""
 msgid ""
 "The ``string.Template`` `class from`_ :pep:`292` (Simpler String "
 "Substitutions) is a purposely simplified design, using familiar shell "
-"interpolation syntax, with `safe-substitution feature`_, that finds its "
-"main use cases in shell and internationalization tools::"
+"interpolation syntax, with `safe-substitution feature`_, that finds its main "
+"use cases in shell and internationalization tools::"
 msgstr ""
 
 #: ../pep-0502.txt:204
 msgid ""
-"While also verbose, the string itself is readable. Though functionality "
-"is limited, it meets its requirements well. It isn't powerful enough for "
-"many cases, and that helps keep inexperienced users out of trouble, as "
-"well as avoiding issues with moderately-trusted input (i18n) from third-"
-"parties. It unfortunately takes enough code to discourage its use for ad-"
-"hoc string interpolation, unless encapsulated in a `convenience library`_"
-" such as ``flufl.i18n``."
+"While also verbose, the string itself is readable. Though functionality is "
+"limited, it meets its requirements well. It isn't powerful enough for many "
+"cases, and that helps keep inexperienced users out of trouble, as well as "
+"avoiding issues with moderately-trusted input (i18n) from third-parties. It "
+"unfortunately takes enough code to discourage its use for ad-hoc string "
+"interpolation, unless encapsulated in a `convenience library`_ such as "
+"``flufl.i18n``."
 msgstr ""
 
 #: ../pep-0502.txt:221
@@ -300,18 +297,16 @@ msgstr ""
 
 #: ../pep-0502.txt:223
 msgid ""
-":pep:`215` was a former proposal of which this one shares a lot in "
-"common. Apparently, the world was not ready for it at the time, but "
-"considering recent support in a number of other languages, its day may "
-"have come."
+":pep:`215` was a former proposal of which this one shares a lot in common. "
+"Apparently, the world was not ready for it at the time, but considering "
+"recent support in a number of other languages, its day may have come."
 msgstr ""
 
 #: ../pep-0502.txt:228
 msgid ""
-"The large number of dollar sign (``$``) characters it included may have "
-"led it to resemble Python's arch-nemesis Perl, and likely contributed to "
-"the PEP's lack of acceptance. It was superseded by the following "
-"proposal."
+"The large number of dollar sign (``$``) characters it included may have led "
+"it to resemble Python's arch-nemesis Perl, and likely contributed to the "
+"PEP's lack of acceptance. It was superseded by the following proposal."
 msgstr ""
 
 #: ../pep-0502.txt:235
@@ -320,17 +315,16 @@ msgstr ""
 
 #: ../pep-0502.txt:237
 msgid ""
-"The ``str.format()`` `syntax of`_ :pep:`3101` is the most recent and "
-"modern of the existing options. It is also more powerful and usually "
-"easier to read than the others. It avoids many of the drawbacks and "
-"limits of the previous techniques."
+"The ``str.format()`` `syntax of`_ :pep:`3101` is the most recent and modern "
+"of the existing options. It is also more powerful and usually easier to read "
+"than the others. It avoids many of the drawbacks and limits of the previous "
+"techniques."
 msgstr ""
 
 #: ../pep-0502.txt:242
 msgid ""
-"However, due to its necessary function call and parameter passing, it "
-"runs from verbose to very verbose in various situations with string "
-"literals::"
+"However, due to its necessary function call and parameter passing, it runs "
+"from verbose to very verbose in various situations with string literals::"
 msgstr ""
 
 #: ../pep-0502.txt:255
@@ -343,8 +337,8 @@ msgstr ""
 
 #: ../pep-0502.txt:263
 msgid ""
-":pep:`498` defines and discusses format strings, as also described in the"
-" `Abstract`_ above."
+":pep:`498` defines and discusses format strings, as also described in the "
+"`Abstract`_ above."
 msgstr ""
 
 #: ../pep-0502.txt:266
@@ -361,10 +355,10 @@ msgstr ""
 
 #: ../pep-0502.txt:276
 msgid ""
-"The complimentary :pep:`501` brings internationalization into the "
-"discussion as a first-class concern, with its proposal of the i-prefix, "
-"``string.Template`` syntax integration compatible with ES6 (Javascript), "
-"deferred rendering, and an object return value."
+"The complimentary :pep:`501` brings internationalization into the discussion "
+"as a first-class concern, with its proposal of the i-prefix, ``string."
+"Template`` syntax integration compatible with ES6 (Javascript), deferred "
+"rendering, and an object return value."
 msgstr ""
 
 #: ../pep-0502.txt:284
@@ -373,10 +367,10 @@ msgstr ""
 
 #: ../pep-0502.txt:286
 msgid ""
-"String interpolation is now well supported by various programming "
-"languages used in multiple industries, and is converging into a standard "
-"of sorts. It is centered around ``str.format()`` style syntax in minor "
-"variations, with the addition of arbitrary expressions to expand utility."
+"String interpolation is now well supported by various programming languages "
+"used in multiple industries, and is converging into a standard of sorts. It "
+"is centered around ``str.format()`` style syntax in minor variations, with "
+"the addition of arbitrary expressions to expand utility."
 msgstr ""
 
 #: ../pep-0502.txt:292
@@ -421,7 +415,8 @@ msgid "Perl"
 msgstr ""
 
 #: ../pep-0502.txt:316
-msgid "Perl also has arbitrary expression constructs, perhaps not as well known::"
+msgid ""
+"Perl also has arbitrary expression constructs, perhaps not as well known::"
 msgstr ""
 
 #: ../pep-0502.txt:323
@@ -446,8 +441,7 @@ msgstr ""
 
 #: ../pep-0502.txt:336
 msgid ""
-"See the Reference Implementation(s) section for an implementation in "
-"Python."
+"See the Reference Implementation(s) section for an implementation in Python."
 msgstr ""
 
 #: ../pep-0502.txt:340
@@ -466,8 +460,8 @@ msgstr ""
 
 #: ../pep-0502.txt:349
 msgid ""
-"`Scala interpolation`_ is directed through string prefixes. Each prefix "
-"has a different result::"
+"`Scala interpolation`_ is directed through string prefixes. Each prefix has "
+"a different result::"
 msgstr ""
 
 #: ../pep-0502.txt:356
@@ -495,16 +489,16 @@ msgstr ""
 
 #: ../pep-0502.txt:369
 msgid ""
-"Designers of `Template strings`_ faced the same issue as Python where "
-"single and double quotes were taken. Unlike Python however, \"backticks\""
-" were not. Despite `their issues`_, they were chosen as part of the "
-"ECMAScript 2015 (ES6) standard::"
+"Designers of `Template strings`_ faced the same issue as Python where single "
+"and double quotes were taken. Unlike Python however, \"backticks\" were not. "
+"Despite `their issues`_, they were chosen as part of the ECMAScript 2015 "
+"(ES6) standard::"
 msgstr ""
 
 #: ../pep-0502.txt:377
 msgid ""
-"Custom prefixes are also supported by implementing a function the same "
-"name as the tag::"
+"Custom prefixes are also supported by implementing a function the same name "
+"as the tag::"
 msgstr ""
 
 #: ../pep-0502.txt:386
@@ -517,8 +511,8 @@ msgstr ""
 
 #: ../pep-0502.txt:397
 msgid ""
-"C# has a useful new `interpolation feature`_ as well, with some ability "
-"to `customize interpolation`_ via the ``IFormattable`` interface::"
+"C# has a useful new `interpolation feature`_ as well, with some ability to "
+"`customize interpolation`_ via the ``IFormattable`` interface::"
 msgstr ""
 
 #: ../pep-0502.txt:403
@@ -557,8 +551,8 @@ msgstr ""
 
 #: ../pep-0502.txt:432
 msgid ""
-"Now that background and history have been covered, let's continue on for "
-"a solution."
+"Now that background and history have been covered, let's continue on for a "
+"solution."
 msgstr ""
 
 #: ../pep-0502.txt:439
@@ -567,9 +561,9 @@ msgstr ""
 
 #: ../pep-0502.txt:441
 msgid ""
-"This should be an option of last resort, as every new syntax feature has "
-"a cost in terms of real-estate in a brain it inhabits. There is however "
-"one alternative left on our list of possibilities, which follows."
+"This should be an option of last resort, as every new syntax feature has a "
+"cost in terms of real-estate in a brain it inhabits. There is however one "
+"alternative left on our list of possibilities, which follows."
 msgstr ""
 
 #: ../pep-0502.txt:449
@@ -579,17 +573,17 @@ msgstr ""
 #: ../pep-0502.txt:451
 msgid ""
 "Given the history of string formatting in Python and backwards-"
-"compatibility, implementations in other languages, avoidance of new "
-"syntax unless necessary, an acceptable design is reached through "
-"elimination rather than unique insight. Therefore, marking interpolated "
-"string literals with a string prefix is chosen."
+"compatibility, implementations in other languages, avoidance of new syntax "
+"unless necessary, an acceptable design is reached through elimination rather "
+"than unique insight. Therefore, marking interpolated string literals with a "
+"string prefix is chosen."
 msgstr ""
 
 #: ../pep-0502.txt:458
 msgid ""
-"We also choose an expression syntax that reuses and builds on the "
-"strongest of the existing choices, ``str.format()`` to avoid further "
-"duplication of functionality::"
+"We also choose an expression syntax that reuses and builds on the strongest "
+"of the existing choices, ``str.format()`` to avoid further duplication of "
+"functionality::"
 msgstr ""
 
 #: ../pep-0502.txt:466
@@ -608,15 +602,15 @@ msgstr ""
 
 #: ../pep-0502.txt:477
 msgid ""
-"In this section we will describe the safety situation and precautions "
-"taken in support of format-strings."
+"In this section we will describe the safety situation and precautions taken "
+"in support of format-strings."
 msgstr ""
 
 #: ../pep-0502.txt:480
 msgid ""
-"Only string literals have been considered for format-strings, not "
-"variables to be taken as input or passed around, making external attacks "
-"difficult to accomplish."
+"Only string literals have been considered for format-strings, not variables "
+"to be taken as input or passed around, making external attacks difficult to "
+"accomplish."
 msgstr ""
 
 #: ../pep-0502.txt:484
@@ -637,10 +631,9 @@ msgstr ""
 
 #: ../pep-0502.txt:493
 msgid ""
-"However, mistakes or malicious code could be missed inside string "
-"literals. Though that can be said of code in general, that these "
-"expressions are inside strings means they are a bit more likely to be "
-"obscured."
+"However, mistakes or malicious code could be missed inside string literals. "
+"Though that can be said of code in general, that these expressions are "
+"inside strings means they are a bit more likely to be obscured."
 msgstr ""
 
 #: ../pep-0502.txt:503
@@ -649,11 +642,11 @@ msgstr ""
 
 #: ../pep-0502.txt:505
 msgid ""
-"The idea is that tools or linters such as pyflakes, pylint, or Pycharm, "
-"may check inside strings with expressions and mark them up appropriately."
-" As this is a common task with programming languages today, multi-"
-"language tools won't have to implement this feature solely for Python, "
-"significantly shortening time to implementation."
+"The idea is that tools or linters such as pyflakes, pylint, or Pycharm, may "
+"check inside strings with expressions and mark them up appropriately. As "
+"this is a common task with programming languages today, multi-language tools "
+"won't have to implement this feature solely for Python, significantly "
+"shortening time to implementation."
 msgstr ""
 
 #: ../pep-0502.txt:511
@@ -668,15 +661,15 @@ msgstr ""
 
 #: ../pep-0502.txt:519
 msgid ""
-"As arbitrary expressions may accomplish anything a Python expression is "
-"able to, it is highly recommended to avoid constructs inside format-"
-"strings that could cause side effects."
+"As arbitrary expressions may accomplish anything a Python expression is able "
+"to, it is highly recommended to avoid constructs inside format-strings that "
+"could cause side effects."
 msgstr ""
 
 #: ../pep-0502.txt:524
 msgid ""
-"Further guidelines may be written once usage patterns and true problems "
-"are known."
+"Further guidelines may be written once usage patterns and true problems are "
+"known."
 msgstr ""
 
 #: ../pep-0502.txt:529
@@ -685,14 +678,14 @@ msgstr ""
 
 #: ../pep-0502.txt:531
 msgid ""
-"The `say module on PyPI`_ implements string interpolation as described "
-"here with the small burden of a callable interface::"
+"The `say module on PyPI`_ implements string interpolation as described here "
+"with the small burden of a callable interface::"
 msgstr ""
 
 #: ../pep-0502.txt:540
 msgid ""
-"A Python implementation of Ruby interpolation `is also available`_. It "
-"uses the codecs module to do its work::"
+"A Python implementation of Ruby interpolation `is also available`_. It uses "
+"the codecs module to do its work::"
 msgstr ""
 
 #: ../pep-0502.txt:554
@@ -701,9 +694,9 @@ msgstr ""
 
 #: ../pep-0502.txt:556
 msgid ""
-"By using existing syntax and avoiding current or historical features, "
-"format strings were designed so as to not interfere with existing code "
-"and are not expected to cause any issues."
+"By using existing syntax and avoiding current or historical features, format "
+"strings were designed so as to not interfere with existing code and are not "
+"expected to cause any issues."
 msgstr ""
 
 #: ../pep-0502.txt:562
@@ -717,8 +710,8 @@ msgstr ""
 #: ../pep-0502.txt:567
 msgid ""
 "Though it was highly desired to integrate internationalization support, "
-"(see :pep:`501`), the finer details diverge at almost every point, making"
-" a common solution unlikely: [15]_"
+"(see :pep:`501`), the finer details diverge at almost every point, making a "
+"common solution unlikely: [15]_"
 msgstr ""
 
 #: ../pep-0502.txt:572
@@ -767,17 +760,17 @@ msgstr ""
 
 #: ../pep-0502.txt:594
 msgid ""
-"Support of only ``str.format()`` syntax however, was deemed not enough of"
-" a solution to the problem. Often a simple length or increment of  an "
-"object, for example, is desired before printing."
+"Support of only ``str.format()`` syntax however, was deemed not enough of a "
+"solution to the problem. Often a simple length or increment of  an object, "
+"for example, is desired before printing."
 msgstr ""
 
 #: ../pep-0502.txt:599
 msgid ""
-"It can be seen in the `Implementations in Other Languages`_ section that "
-"the developer community at large tends to agree. String interpolation "
-"with arbitrary expressions is becoming an industry standard in modern "
-"languages due to its utility."
+"It can be seen in the `Implementations in Other Languages`_ section that the "
+"developer community at large tends to agree. String interpolation with "
+"arbitrary expressions is becoming an industry standard in modern languages "
+"due to its utility."
 msgstr ""
 
 #: ../pep-0502.txt:606
@@ -786,11 +779,11 @@ msgstr ""
 
 #: ../pep-0502.txt:608
 msgid ""
-"As seen in the `Implementations in Other Languages`_ section, many modern"
-" languages have extensible string prefixes with a common interface. This "
-"could be a way to generalize and reduce lines of code in common "
-"situations. Examples are found in ES6 (Javascript), Scala, Nim, and C# "
-"(to a lesser extent). This was rejected by the BDFL. [14]_"
+"As seen in the `Implementations in Other Languages`_ section, many modern "
+"languages have extensible string prefixes with a common interface. This "
+"could be a way to generalize and reduce lines of code in common situations. "
+"Examples are found in ES6 (Javascript), Scala, Nim, and C# (to a lesser "
+"extent). This was rejected by the BDFL. [14]_"
 msgstr ""
 
 #: ../pep-0502.txt:618
@@ -799,9 +792,9 @@ msgstr ""
 
 #: ../pep-0502.txt:620
 msgid ""
-"While helpful in some cases, this was thought to create too much "
-"uncertainty of when and where string expressions could be used safely or "
-"not. The concept was also difficult to describe to others. [12]_"
+"While helpful in some cases, this was thought to create too much uncertainty "
+"of when and where string expressions could be used safely or not. The "
+"concept was also difficult to describe to others. [12]_"
 msgstr ""
 
 #: ../pep-0502.txt:625
@@ -816,10 +809,10 @@ msgstr ""
 
 #: ../pep-0502.txt:632
 msgid ""
-"For systems programming and shell-script replacements, it would be useful"
-" to handle environment variables and capture output of commands directly "
-"in an expression string. This was rejected as not important enough, and "
-"looking too much like bash/perl, which could encourage bad habits. [13]_"
+"For systems programming and shell-script replacements, it would be useful to "
+"handle environment variables and capture output of commands directly in an "
+"expression string. This was rejected as not important enough, and looking "
+"too much like bash/perl, which could encourage bad habits. [13]_"
 msgstr ""
 
 #: ../pep-0502.txt:641
@@ -832,8 +825,8 @@ msgstr ""
 
 #: ../pep-0502.txt:644
 msgid ""
-"Everyone on the python-ideas mailing list for rejecting the various crazy"
-" ideas that came up, helping to keep the final design in focus."
+"Everyone on the python-ideas mailing list for rejecting the various crazy "
+"ideas that came up, helping to keep the final design in focus."
 msgstr ""
 
 #: ../pep-0502.txt:650
@@ -890,12 +883,13 @@ msgstr ""
 
 #: ../pep-0502.txt:682
 msgid ""
-"(http://ruby-doc.org/core-2.1.1/doc/syntax/literals_rdoc.html#label-"
-"Strings)"
+"(http://ruby-doc.org/core-2.1.1/doc/syntax/literals_rdoc.html#label-Strings)"
 msgstr ""
 
 #: ../pep-0502.txt:686
-msgid "(https://en.wikibooks.org/wiki/Ruby_Programming/Syntax/Literals#Interpolation)"
+msgid ""
+"(https://en.wikibooks.org/wiki/Ruby_Programming/Syntax/"
+"Literals#Interpolation)"
 msgstr ""
 
 #: ../pep-0502.txt:688
@@ -921,11 +915,13 @@ msgid "Escaping of Input Variables"
 msgstr ""
 
 #: ../pep-0502.txt:698
-msgid "(https://mail.python.org/pipermail/python-ideas/2015-August/035532.html)"
+msgid ""
+"(https://mail.python.org/pipermail/python-ideas/2015-August/035532.html)"
 msgstr ""
 
 #: ../pep-0502.txt:702
-msgid "(https://mail.python.org/pipermail/python-ideas/2015-August/035554.html)"
+msgid ""
+"(https://mail.python.org/pipermail/python-ideas/2015-August/035554.html)"
 msgstr ""
 
 #: ../pep-0502.txt:704
@@ -933,7 +929,8 @@ msgid "Extensible String Prefixes"
 msgstr ""
 
 #: ../pep-0502.txt:706
-msgid "(https://mail.python.org/pipermail/python-ideas/2015-August/035336.html)"
+msgid ""
+"(https://mail.python.org/pipermail/python-ideas/2015-August/035336.html)"
 msgstr ""
 
 #: ../pep-0502.txt:709
@@ -951,4 +948,3 @@ msgstr ""
 #: ../pep-0502.txt:717
 msgid "This document has been placed in the public domain."
 msgstr ""
-

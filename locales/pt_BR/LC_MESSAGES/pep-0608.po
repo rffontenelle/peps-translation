@@ -63,15 +63,15 @@ msgstr ""
 
 #: ../pep-0608.rst:14
 msgid ""
-"Block a Python release until a compatible version of selected projects is"
-" available."
+"Block a Python release until a compatible version of selected projects is "
+"available."
 msgstr ""
 
 #: ../pep-0608.rst:17 ../pep-0608.rst:112
 msgid ""
-"The Python release manager can decide to release Python even if a project"
-" is not compatible, if they decide that the project is going to be fixed "
-"soon enough, or if the issue severity is low enough."
+"The Python release manager can decide to release Python even if a project is "
+"not compatible, if they decide that the project is going to be fixed soon "
+"enough, or if the issue severity is low enough."
 msgstr ""
 
 #: ../pep-0608.rst:23
@@ -80,8 +80,8 @@ msgstr ""
 
 #: ../pep-0608.rst:25
 msgid ""
-"The PEP involves maintainers of the selected projects in the Python "
-"release cycle. There are multiple benefit:"
+"The PEP involves maintainers of the selected projects in the Python release "
+"cycle. There are multiple benefit:"
 msgstr ""
 
 #: ../pep-0608.rst:28
@@ -90,14 +90,13 @@ msgstr ""
 
 #: ../pep-0608.rst:29
 msgid ""
-"Discuss and maybe revert incompatible changes before a Python final "
-"release"
+"Discuss and maybe revert incompatible changes before a Python final release"
 msgstr ""
 
 #: ../pep-0608.rst:31
 msgid ""
-"Increase the number of compatible projects when the new Python final "
-"version is released"
+"Increase the number of compatible projects when the new Python final version "
+"is released"
 msgstr ""
 
 #: ../pep-0608.rst:35
@@ -106,8 +105,8 @@ msgstr ""
 
 #: ../pep-0608.rst:37
 msgid ""
-"Currently, Python beta versions are available four months before the "
-"final 3.x.0 release."
+"Currently, Python beta versions are available four months before the final 3."
+"x.0 release."
 msgstr ""
 
 #: ../pep-0608.rst:40
@@ -125,10 +124,10 @@ msgstr ""
 
 #: ../pep-0608.rst:47
 msgid ""
-"Even if more and more projects are tested on the master branch of Python "
-"in their CI, too many projects of the top 50 PyPI projects are only "
-"compatible with the new Python a few weeks, or even months, after the "
-"final Python release."
+"Even if more and more projects are tested on the master branch of Python in "
+"their CI, too many projects of the top 50 PyPI projects are only compatible "
+"with the new Python a few weeks, or even months, after the final Python "
+"release."
 msgstr ""
 
 #: ../pep-0608.rst:53
@@ -137,24 +136,24 @@ msgstr ""
 
 #: ../pep-0608.rst:55
 msgid ""
-"Python has well defined process to deprecate features. A "
-"DeprecationWarning must be emitted during at least one Python release, "
-"before a feature can be removed."
+"Python has well defined process to deprecate features. A DeprecationWarning "
+"must be emitted during at least one Python release, before a feature can be "
+"removed."
 msgstr ""
 
 #: ../pep-0608.rst:59
 msgid ""
 "In practice, DeprecationWarning warnings are ignored for years in major "
 "Python projects. Usually, maintainers explain that there are too many "
-"warnings and so they simply ignore warnings. Moreover, DeprecationWarning"
-" is silent by default (except in the ``__main__`` module: :pep:`565`)."
+"warnings and so they simply ignore warnings. Moreover, DeprecationWarning is "
+"silent by default (except in the ``__main__`` module: :pep:`565`)."
 msgstr ""
 
 #: ../pep-0608.rst:64
 msgid ""
-"Even if more and more projects are running their test suite with warnings"
-" treated as errors (``-Werror``), Python core developers still have no "
-"idea how many projects are broken when a feature is removed."
+"Even if more and more projects are running their test suite with warnings "
+"treated as errors (``-Werror``), Python core developers still have no idea "
+"how many projects are broken when a feature is removed."
 msgstr ""
 
 #: ../pep-0608.rst:69
@@ -163,25 +162,25 @@ msgstr ""
 
 #: ../pep-0608.rst:71
 msgid ""
-"When issues and incompatible changes are discovered and discussed after "
-"the final Python release, it becomes way more complicated and expensive "
-"to fix Python.  Once an API is part of an official final release, Python "
-"should provide backward compatibility for the whole 3.x release lifetime."
-" Some operating systems can be shipped with the buggy final release and "
-"can take several months before being updated."
+"When issues and incompatible changes are discovered and discussed after the "
+"final Python release, it becomes way more complicated and expensive to fix "
+"Python.  Once an API is part of an official final release, Python should "
+"provide backward compatibility for the whole 3.x release lifetime. Some "
+"operating systems can be shipped with the buggy final release and can take "
+"several months before being updated."
 msgstr ""
 
 #: ../pep-0608.rst:78
 msgid ""
-"Too many projects are only updated to the new Python after the final "
-"Python release, which makes this new Python version barely usable to run "
-"large applications when Python is released."
+"Too many projects are only updated to the new Python after the final Python "
+"release, which makes this new Python version barely usable to run large "
+"applications when Python is released."
 msgstr ""
 
 #: ../pep-0608.rst:82
 msgid ""
-"It is proposed to block a Python release until a compatible version of "
-"all selected projects is available."
+"It is proposed to block a Python release until a compatible version of all "
+"selected projects is available."
 msgstr ""
 
 #: ../pep-0608.rst:86
@@ -190,9 +189,9 @@ msgstr ""
 
 #: ../pep-0608.rst:88
 msgid ""
-"The :pep:`PEP 602: Annual Release Cycle for Python <602>` and the "
-":pep:`PEP 605: A rolling feature release stream for CPython <605>` would "
-"like to release Python more often to ship new features more quickly."
+"The :pep:`PEP 602: Annual Release Cycle for Python <602>` and the :pep:`PEP "
+"605: A rolling feature release stream for CPython <605>` would like to "
+"release Python more often to ship new features more quickly."
 msgstr ""
 
 #: ../pep-0608.rst:94
@@ -201,8 +200,8 @@ msgstr ""
 
 #: ../pep-0608.rst:96
 msgid ""
-"Coordinated Python releases reduces the number of broken projects and "
-"makes new Python release more usable."
+"Coordinated Python releases reduces the number of broken projects and makes "
+"new Python release more usable."
 msgstr ""
 
 #: ../pep-0608.rst:101
@@ -211,23 +210,23 @@ msgstr ""
 
 #: ../pep-0608.rst:103
 msgid ""
-"By default, a Python release is blocked until a compatible version of all"
-" selected projects is available."
+"By default, a Python release is blocked until a compatible version of all "
+"selected projects is available."
 msgstr ""
 
 #: ../pep-0608.rst:106
 msgid ""
 "Before releasing the final Python version, the Python release manager is "
-"responsible to send a report of the compatibility status of each project "
-"of the selected projects. It is recommended to send such report at each "
-"beta release to see the evolution and detects issues as soon as possible."
+"responsible to send a report of the compatibility status of each project of "
+"the selected projects. It is recommended to send such report at each beta "
+"release to see the evolution and detects issues as soon as possible."
 msgstr ""
 
 #: ../pep-0608.rst:116
 msgid ""
 "After each Python release, the project list can be updated to remove "
-"projects and add new ones. For example, to remove old unused dependencies"
-" and add new ones. The list can grow if the whole process doesn't block "
+"projects and add new ones. For example, to remove old unused dependencies "
+"and add new ones. The list can grow if the whole process doesn't block "
 "Python releases for too long."
 msgstr ""
 
@@ -238,24 +237,23 @@ msgstr ""
 #: ../pep-0608.rst:124
 msgid ""
 "When a build or test issue with the next Python version is reported to a "
-"project, maintainers have one month to answer. With no answer, the "
-"project can be excluded from the list of projects blocking the Python "
-"release."
+"project, maintainers have one month to answer. With no answer, the project "
+"can be excluded from the list of projects blocking the Python release."
 msgstr ""
 
 #: ../pep-0608.rst:129
 msgid ""
-"Multiple projects are already tested on the master branch of Python in a "
-"CI. Problems can be detected very early in a Python release which should "
-"provide enough time to handle them. More CI can be added for projects "
-"which are not tested on the next Python yet."
+"Multiple projects are already tested on the master branch of Python in a CI. "
+"Problems can be detected very early in a Python release which should provide "
+"enough time to handle them. More CI can be added for projects which are not "
+"tested on the next Python yet."
 msgstr ""
 
 #: ../pep-0608.rst:134
 msgid ""
-"Once selected projects issues are known, exceptions can be discussed "
-"between the Python release manager and involved project maintainers on a "
-"case-by-case basis. Not all issues deserve to block a Python release."
+"Once selected projects issues are known, exceptions can be discussed between "
+"the Python release manager and involved project maintainers on a case-by-"
+"case basis. Not all issues deserve to block a Python release."
 msgstr ""
 
 #: ../pep-0608.rst:139
@@ -391,33 +389,34 @@ msgid "Projects used by to build Python should be in the list, like Sphinx."
 msgstr ""
 
 #: ../pep-0608.rst:181
-msgid "Most popular projects are picked from the most downloaded PyPI projects."
+msgid ""
+"Most popular projects are picked from the most downloaded PyPI projects."
 msgstr ""
 
 #: ../pep-0608.rst:183
 msgid ""
 "Most of project dependencies are included in the list as well, since a "
-"single incompatible dependency can block a whole project. Some "
-"dependencies are excluded to reduce the list length."
+"single incompatible dependency can block a whole project. Some dependencies "
+"are excluded to reduce the list length."
 msgstr ""
 
 #: ../pep-0608.rst:187
 msgid ""
-"Test dependencies as pytest and tox should be included as well. If a "
-"project cannot be tested, a new version cannot be shipped neither."
+"Test dependencies as pytest and tox should be included as well. If a project "
+"cannot be tested, a new version cannot be shipped neither."
 msgstr ""
 
 #: ../pep-0608.rst:190
 msgid ""
-"The list should be long enough to have a good idea of the cost of porting"
-" a project to the next Python, but small enough to not block a Python "
-"release for too long."
+"The list should be long enough to have a good idea of the cost of porting a "
+"project to the next Python, but small enough to not block a Python release "
+"for too long."
 msgstr ""
 
 #: ../pep-0608.rst:194
 msgid ""
-"Obviously, projects which are not part of the list also are encouraged to"
-" report issues with the next Python and to have a CI running on the next "
+"Obviously, projects which are not part of the list also are encouraged to "
+"report issues with the next Python and to have a CI running on the next "
 "Python version."
 msgstr ""
 
@@ -427,8 +426,8 @@ msgstr ""
 
 #: ../pep-0608.rst:202
 msgid ""
-"The definition here is large: any Python change which cause an issue when"
-" building or testing a project."
+"The definition here is large: any Python change which cause an issue when "
+"building or testing a project."
 msgstr ""
 
 #: ../pep-0608.rst:205
@@ -447,22 +446,22 @@ msgstr ""
 
 #: ../pep-0608.rst:214
 msgid ""
-"Change in the Python build. For example, Python 3.8 removed ``'m'`` "
-"(which stands for pymalloc) from ``sys.abiflags`` which impacts Python "
-"vendors like Linux distributions."
+"Change in the Python build. For example, Python 3.8 removed ``'m'`` (which "
+"stands for pymalloc) from ``sys.abiflags`` which impacts Python vendors like "
+"Linux distributions."
 msgstr ""
 
 #: ../pep-0608.rst:217
 msgid ""
-"Change in the C extensions build. For example, Python 3.8 no longer links"
-" C extensions to libpython, and Python 3.7 removed ``os.errno`` alias to "
-"the ``errno`` module."
+"Change in the C extensions build. For example, Python 3.8 no longer links C "
+"extensions to libpython, and Python 3.7 removed ``os.errno`` alias to the "
+"``errno`` module."
 msgstr ""
 
 #: ../pep-0608.rst:220
 msgid ""
-"Removed function. For example, collections aliases to ABC classes have "
-"been removed in Python 3.9."
+"Removed function. For example, collections aliases to ABC classes have been "
+"removed in Python 3.9."
 msgstr ""
 
 #: ../pep-0608.rst:222
@@ -471,8 +470,8 @@ msgstr ""
 
 #: ../pep-0608.rst:224
 msgid ""
-"Reject a type which was previously accepted (ex: only accept ``int``, "
-"reject ``float``)."
+"Reject a type which was previously accepted (ex: only accept ``int``, reject "
+"``float``)."
 msgstr ""
 
 #: ../pep-0608.rst:226
@@ -485,8 +484,8 @@ msgstr ""
 
 #: ../pep-0608.rst:229
 msgid ""
-"Behavior change. For example, Python 3.8 now serializes XML attributes in"
-" their insertion order, rather than sorting them by name."
+"Behavior change. For example, Python 3.8 now serializes XML attributes in "
+"their insertion order, rather than sorting them by name."
 msgstr ""
 
 #: ../pep-0608.rst:231
@@ -501,10 +500,9 @@ msgstr ""
 
 #: ../pep-0608.rst:234
 msgid ""
-"Structure made opaque in the C API. For example, PyInterpreterState "
-"became opaque in Python 3.8 which broke projects accessing "
-"``interp->modules`` (``PyImport_GetModuleDict()`` should be used "
-"instead)."
+"Structure made opaque in the C API. For example, PyInterpreterState became "
+"opaque in Python 3.8 which broke projects accessing ``interp->modules`` "
+"(``PyImport_GetModuleDict()`` should be used instead)."
 msgstr ""
 
 #: ../pep-0608.rst:240
@@ -521,23 +519,22 @@ msgstr ""
 
 #: ../pep-0608.rst:248
 msgid ""
-"When Python evolves, new ways emerge inevitably. ``DeprecationWarning`` "
-"are emitted to suggest to use the new way, but many developers ignore "
-"these warnings which are silent by default."
+"When Python evolves, new ways emerge inevitably. ``DeprecationWarning`` are "
+"emitted to suggest to use the new way, but many developers ignore these "
+"warnings which are silent by default."
 msgstr ""
 
 #: ../pep-0608.rst:252
 msgid ""
 "Sometimes, supporting both ways has a minor maintenance cost, but Python "
-"core developers prefer to drop the old way to clean up the Python code "
-"base and standard library. Such kind of change is backward incompatible."
+"core developers prefer to drop the old way to clean up the Python code base "
+"and standard library. Such kind of change is backward incompatible."
 msgstr ""
 
 #: ../pep-0608.rst:256
 msgid ""
-"More incompatible changes than usual should be expected with the end of "
-"the Python 2 support which is a good opportunity to cleaning up old "
-"Python code."
+"More incompatible changes than usual should be expected with the end of the "
+"Python 2 support which is a good opportunity to cleaning up old Python code."
 msgstr ""
 
 #: ../pep-0608.rst:262
@@ -556,8 +553,8 @@ msgstr ""
 
 #: ../pep-0608.rst:269
 msgid ""
-"New CIs can be added for projects which are not tested on the next Python"
-" yet."
+"New CIs can be added for projects which are not tested on the next Python "
+"yet."
 msgstr ""
 
 #: ../pep-0608.rst:272
@@ -569,9 +566,9 @@ msgstr ""
 #: ../pep-0608.rst:275
 msgid ""
 "A job testing a project on the next Python doesn't have to be "
-"\"mandatory\" (block the whole CI). It is fine to have failures during "
-"the beta phase of a Python release. The job only has to pass for the "
-"final Python release."
+"\"mandatory\" (block the whole CI). It is fine to have failures during the "
+"beta phase of a Python release. The job only has to pass for the final "
+"Python release."
 msgstr ""
 
 #: ../pep-0608.rst:282
@@ -580,7 +577,6 @@ msgstr ""
 
 #: ../pep-0608.rst:284
 msgid ""
-"This document is placed in the public domain or under the "
-"CC0-1.0-Universal license, whichever is more permissive."
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
 msgstr ""
-

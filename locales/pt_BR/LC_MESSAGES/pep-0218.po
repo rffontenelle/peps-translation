@@ -67,14 +67,13 @@ msgstr ""
 
 #: ../pep-0218.txt:15
 msgid ""
-"This PEP proposes adding a Set module to the standard Python library, and"
-" to then make sets a built-in Python type if that module is widely used."
-"  After explaining why sets are desirable, and why the common idiom of "
-"using dictionaries in their place is inadequate, we describe how we "
-"intend built-in sets to work, and then how the preliminary Set module "
-"will behave.  The last section discusses the mutability (or otherwise) of"
-" sets and set elements, and the solution which the Set module will "
-"implement."
+"This PEP proposes adding a Set module to the standard Python library, and to "
+"then make sets a built-in Python type if that module is widely used.  After "
+"explaining why sets are desirable, and why the common idiom of using "
+"dictionaries in their place is inadequate, we describe how we intend built-"
+"in sets to work, and then how the preliminary Set module will behave.  The "
+"last section discusses the mutability (or otherwise) of sets and set "
+"elements, and the solution which the Set module will implement."
 msgstr ""
 
 #: ../pep-0218.txt:26
@@ -83,25 +82,24 @@ msgstr ""
 
 #: ../pep-0218.txt:28
 msgid ""
-"Sets are a fundamental mathematical structure, and are very commonly used"
-" in algorithm specifications.  They are much less frequently used in "
-"implementations, even when they are the \"right\" structure.  Programmers"
-" frequently use lists instead, even when the ordering information in "
-"lists is irrelevant, and by-value lookups are frequent.  (Most medium-"
-"sized C programs contain a depressing number of start-to-end searches "
-"through malloc'd vectors to determine whether particular items are "
-"present or not...)"
+"Sets are a fundamental mathematical structure, and are very commonly used in "
+"algorithm specifications.  They are much less frequently used in "
+"implementations, even when they are the \"right\" structure.  Programmers "
+"frequently use lists instead, even when the ordering information in lists is "
+"irrelevant, and by-value lookups are frequent.  (Most medium-sized C "
+"programs contain a depressing number of start-to-end searches through "
+"malloc'd vectors to determine whether particular items are present or not...)"
 msgstr ""
 
 #: ../pep-0218.txt:38
 msgid ""
-"Programmers are often told that they can implement sets as dictionaries "
-"with \"don't care\" values.  Items can be added to these \"sets\" by "
-"assigning the \"don't care\" value to them; membership can be tested "
-"using ``dict.has_key``; and items can be deleted using ``del``.  However,"
-" the other main operations on sets (union, intersection, and difference) "
-"are not directly supported by this representation, since their meaning is"
-" ambiguous for dictionaries containing key/value pairs."
+"Programmers are often told that they can implement sets as dictionaries with "
+"\"don't care\" values.  Items can be added to these \"sets\" by assigning "
+"the \"don't care\" value to them; membership can be tested using ``dict."
+"has_key``; and items can be deleted using ``del``.  However, the other main "
+"operations on sets (union, intersection, and difference) are not directly "
+"supported by this representation, since their meaning is ambiguous for "
+"dictionaries containing key/value pairs."
 msgstr ""
 
 #: ../pep-0218.txt:49
@@ -127,9 +125,9 @@ msgstr ""
 
 #: ../pep-0218.txt:65
 msgid ""
-"will produce a set containing the squares of all elements in S, "
-"Membership will be tested using ``in`` and ``not in``, and basic set "
-"operations will be implemented by a mixture of overloaded operators:"
+"will produce a set containing the squares of all elements in S, Membership "
+"will be tested using ``in`` and ``not in``, and basic set operations will be "
+"implemented by a mixture of overloaded operators:"
 msgstr ""
 
 #: ../pep-0218.txt:71
@@ -206,8 +204,8 @@ msgstr ""
 
 #: ../pep-0218.txt:86
 msgid ""
-"Remove \"x\" from the set.  If \"x\" is not present, this method raises a"
-" ``LookupError`` exception."
+"Remove \"x\" from the set.  If \"x\" is not present, this method raises a "
+"``LookupError`` exception."
 msgstr ""
 
 #: ../pep-0218.txt:90
@@ -277,7 +275,8 @@ msgid "``frozenset(x)``"
 msgstr ""
 
 #: ../pep-0218.txt:112
-msgid "Create an immutable set containing the elements of the collection \"x\"."
+msgid ""
+"Create an immutable set containing the elements of the collection \"x\"."
 msgstr ""
 
 #: ../pep-0218.txt:116
@@ -295,9 +294,9 @@ msgstr ""
 #: ../pep-0218.txt:123
 msgid ""
 "We considered using \"``+``\" to add elements to a set, rather than "
-"\"add\".  However, Guido van Rossum pointed out that \"``+``\" is "
-"symmetric for other built-in types (although \"``*``\" is not).  Use of "
-"\"add\" will also avoid confusion between that operation and set union."
+"\"add\".  However, Guido van Rossum pointed out that \"``+``\" is symmetric "
+"for other built-in types (although \"``*``\" is not).  Use of \"add\" will "
+"also avoid confusion between that operation and set union."
 msgstr ""
 
 #: ../pep-0218.txt:131
@@ -306,9 +305,9 @@ msgstr ""
 
 #: ../pep-0218.txt:133
 msgid ""
-"The PEP originally proposed ``{1,2,3}`` as the set notation and ``{-}`` "
-"for the empty set.  Experience with Python 2.3's ``sets.py`` showed that "
-"the notation was not necessary.  Also, there was some risk of making "
+"The PEP originally proposed ``{1,2,3}`` as the set notation and ``{-}`` for "
+"the empty set.  Experience with Python 2.3's ``sets.py`` showed that the "
+"notation was not necessary.  Also, there was some risk of making "
 "dictionaries less instantly recognizable."
 msgstr ""
 
@@ -316,8 +315,8 @@ msgstr ""
 msgid ""
 "It was also contemplated that the braced notation would support set "
 "comprehensions; however, Python 2.4 provided generator expressions which "
-"fully met that need and did so it a more general way. (See :pep:`289` for"
-" details on generator expressions)."
+"fully met that need and did so it a more general way. (See :pep:`289` for "
+"details on generator expressions)."
 msgstr ""
 
 #: ../pep-0218.txt:143
@@ -332,9 +331,9 @@ msgstr ""
 
 #: ../pep-0218.txt:150
 msgid ""
-"To gain experience with sets, a pure python module was introduced in "
-"Python 2.3.  Based on that implementation, the set and frozenset types "
-"were introduced in Python 2.4.  The improvements are:"
+"To gain experience with sets, a pure python module was introduced in Python "
+"2.3.  Based on that implementation, the set and frozenset types were "
+"introduced in Python 2.4.  The improvements are:"
 msgstr ""
 
 #: ../pep-0218.txt:154
@@ -365,31 +364,31 @@ msgstr ""
 
 #: ../pep-0218.txt:162
 msgid ""
-"The ``_repr`` method was dropped (the need is met by the new ``sorted()``"
-" built-in function)."
+"The ``_repr`` method was dropped (the need is met by the new ``sorted()`` "
+"built-in function)."
 msgstr ""
 
 #: ../pep-0218.txt:165
 msgid ""
 "Tim Peters believes that the class's constructor should take a single "
 "sequence as an argument, and populate the set with that sequence's "
-"elements.  His argument is that in most cases, programmers will be "
-"creating sets from pre-existing sequences, so that this case should be "
-"the common one.  However, this would require users to remember an extra "
-"set of parentheses when initializing a set with known values::"
+"elements.  His argument is that in most cases, programmers will be creating "
+"sets from pre-existing sequences, so that this case should be the common "
+"one.  However, this would require users to remember an extra set of "
+"parentheses when initializing a set with known values::"
 msgstr ""
 
 #: ../pep-0218.txt:175
 msgid ""
-"On the other hand, feedback from a small number of novice Python users "
-"(all of whom were very experienced with other languages) indicates that "
-"people will find a \"parenthesis-free\" syntax more natural::"
+"On the other hand, feedback from a small number of novice Python users (all "
+"of whom were very experienced with other languages) indicates that people "
+"will find a \"parenthesis-free\" syntax more natural::"
 msgstr ""
 
 #: ../pep-0218.txt:182
 msgid ""
-"Ultimately, we adopted the first strategy in which the initializer takes "
-"a single iterable argument."
+"Ultimately, we adopted the first strategy in which the initializer takes a "
+"single iterable argument."
 msgstr ""
 
 #: ../pep-0218.txt:187
@@ -399,30 +398,29 @@ msgstr ""
 #: ../pep-0218.txt:189
 msgid ""
 "The most difficult question to resolve in this proposal was whether sets "
-"ought to be able to contain mutable elements.  A dictionary's keys must "
-"be immutable in order to support fast, reliable lookup.  While it would "
-"be easy to require set elements to be immutable, this would preclude sets"
-" of sets (which are widely used in graph algorithms and other "
-"applications)."
+"ought to be able to contain mutable elements.  A dictionary's keys must be "
+"immutable in order to support fast, reliable lookup.  While it would be easy "
+"to require set elements to be immutable, this would preclude sets of sets "
+"(which are widely used in graph algorithms and other applications)."
 msgstr ""
 
 #: ../pep-0218.txt:196
 msgid ""
-"Earlier drafts of :pep:`218` had only a single set type, but the "
-"``sets.py`` implementation in Python 2.3 has two, Set and ImmutableSet.  "
-"For Python 2.4, the new built-in types were named ``set`` and "
-"``frozenset`` which are slightly less cumbersome."
+"Earlier drafts of :pep:`218` had only a single set type, but the ``sets.py`` "
+"implementation in Python 2.3 has two, Set and ImmutableSet.  For Python 2.4, "
+"the new built-in types were named ``set`` and ``frozenset`` which are "
+"slightly less cumbersome."
 msgstr ""
 
 #: ../pep-0218.txt:201
 msgid ""
-"There are two classes implemented in the \"sets\" module.  Instances of "
-"the Set class can be modified by the addition or removal of elements, and"
-" the ImmutableSet class is \"frozen\", with an unchangeable collection of"
-" elements.  Therefore, an ImmutableSet may be used as a dictionary key or"
-" as a set element, but cannot be updated.  Both types of set require that"
-" their elements are immutable, hashable objects.  Parallel comments apply"
-" to the \"set\" and \"frozenset\" built-in types."
+"There are two classes implemented in the \"sets\" module.  Instances of the "
+"Set class can be modified by the addition or removal of elements, and the "
+"ImmutableSet class is \"frozen\", with an unchangeable collection of "
+"elements.  Therefore, an ImmutableSet may be used as a dictionary key or as "
+"a set element, but cannot be updated.  Both types of set require that their "
+"elements are immutable, hashable objects.  Parallel comments apply to the "
+"\"set\" and \"frozenset\" built-in types."
 msgstr ""
 
 #: ../pep-0218.txt:212
@@ -432,4 +430,3 @@ msgstr ""
 #: ../pep-0218.txt:214
 msgid "This document has been placed in the Public Domain."
 msgstr ""
-

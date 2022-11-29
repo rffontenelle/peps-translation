@@ -71,8 +71,8 @@ msgstr ""
 
 #: ../pep-0535.txt:16
 msgid ""
-"Further consideration of this PEP has been deferred until Python 3.8 at "
-"the earliest."
+"Further consideration of this PEP has been deferred until Python 3.8 at the "
+"earliest."
 msgstr ""
 
 #: ../pep-0535.txt:21
@@ -83,20 +83,19 @@ msgstr ""
 msgid ""
 "Inspired by :pep:`335`, and building on the circuit breaking protocol "
 "described in :pep:`532`, this PEP proposes a change to the definition of "
-"chained comparisons, where the comparison chaining will be updated to use"
-" the left-associative circuit breaking operator (``else``) rather than "
-"the logical disjunction operator  (``and``) if the left hand comparison "
-"returns a circuit breaker as its result."
+"chained comparisons, where the comparison chaining will be updated to use "
+"the left-associative circuit breaking operator (``else``) rather than the "
+"logical disjunction operator  (``and``) if the left hand comparison returns "
+"a circuit breaker as its result."
 msgstr ""
 
 #: ../pep-0535.txt:30
 msgid ""
 "While there are some practical complexities arising from the current "
-"handling of single-valued arrays in NumPy, this change should be "
-"sufficient to allow elementwise chained comparison operations for "
-"matrices, where the result is a matrix of boolean values, rather than "
-"raising ``ValueError`` or tautologically returning ``True`` (indicating a"
-" non-empty matrix)."
+"handling of single-valued arrays in NumPy, this change should be sufficient "
+"to allow elementwise chained comparison operations for matrices, where the "
+"result is a matrix of boolean values, rather than raising ``ValueError`` or "
+"tautologically returning ``True`` (indicating a non-empty matrix)."
 msgstr ""
 
 #: ../pep-0535.txt:38
@@ -112,9 +111,9 @@ msgstr ""
 
 #: ../pep-0535.txt:44
 msgid ""
-"The specific proposal in this PEP to handle the element-wise comparison "
-"use case by changing the semantic definition of comparison chaining is "
-"drawn directly from Guido's rejection of :pep:`335`."
+"The specific proposal in this PEP to handle the element-wise comparison use "
+"case by changing the semantic definition of comparison chaining is drawn "
+"directly from Guido's rejection of :pep:`335`."
 msgstr ""
 
 #: ../pep-0535.txt:50
@@ -132,16 +131,16 @@ msgstr ""
 #: ../pep-0535.txt:62
 msgid ""
 "Using the circuit breaking concepts introduced in :pep:`532`, this PEP "
-"proposes that comparison chaining be changed to explicitly check if the "
-"left comparison returns a circuit breaker, and if so, use ``else`` rather"
-" than ``and`` to implement the comparison chaining::"
+"proposes that comparison chaining be changed to explicitly check if the left "
+"comparison returns a circuit breaker, and if so, use ``else`` rather than "
+"``and`` to implement the comparison chaining::"
 msgstr ""
 
 #: ../pep-0535.txt:74
 msgid ""
 "This allows types like NumPy arrays to control the behaviour of chained "
-"comparisons by returning suitably defined circuit breakers from "
-"comparison operations."
+"comparisons by returning suitably defined circuit breakers from comparison "
+"operations."
 msgstr ""
 
 #: ../pep-0535.txt:78
@@ -173,9 +172,8 @@ msgstr ""
 #: ../pep-0535.txt:102
 msgid ""
 "Here we see that NumPy array comparisons are element-wise by default, "
-"comparing each element in the left hand array to the corresponding "
-"element in the right hand array, and producing a matrix of boolean "
-"results."
+"comparing each element in the left hand array to the corresponding element "
+"in the right hand array, and producing a matrix of boolean results."
 msgstr ""
 
 #: ../pep-0535.txt:106
@@ -186,8 +184,8 @@ msgstr ""
 
 #: ../pep-0535.txt:114
 msgid ""
-"However, this broadcasting idiom breaks down if we attempt to use chained"
-" comparisons::"
+"However, this broadcasting idiom breaks down if we attempt to use chained "
+"comparisons::"
 msgstr ""
 
 #: ../pep-0535.txt:122
@@ -199,15 +197,15 @@ msgstr ""
 #: ../pep-0535.txt:130
 msgid ""
 "And NumPy only permits implicit coercion to a boolean value for single-"
-"element arrays where ``a.any()`` and ``a.all()`` can be assured of having"
-" the same result::"
+"element arrays where ``a.any()`` and ``a.all()`` can be assured of having "
+"the same result::"
 msgstr ""
 
 #: ../pep-0535.txt:143
 msgid ""
 "The proposal in this PEP would allow this situation to be changed by "
-"updating the definition of element-wise comparison operations in NumPy to"
-" return a dedicated subclass that implements the new circuit breaking "
+"updating the definition of element-wise comparison operations in NumPy to "
+"return a dedicated subclass that implements the new circuit breaking "
 "protocol and also changes the result array's interpretation in a boolean "
 "context to always return ``False`` and hence never trigger the short-"
 "circuiting behaviour::"
@@ -225,8 +223,8 @@ msgstr ""
 
 #: ../pep-0535.txt:173
 msgid ""
-"Actual implementation has been deferred pending in-principle interest in "
-"the idea of making the changes proposed in :pep:`532`."
+"Actual implementation has been deferred pending in-principle interest in the "
+"idea of making the changes proposed in :pep:`532`."
 msgstr ""
 
 #: ../pep-0535.txt:176
@@ -249,7 +247,6 @@ msgstr ""
 
 #: ../pep-0535.txt:188
 msgid ""
-"This document has been placed in the public domain under the terms of the"
-" CC0 1.0 license: https://creativecommons.org/publicdomain/zero/1.0/"
+"This document has been placed in the public domain under the terms of the "
+"CC0 1.0 license: https://creativecommons.org/publicdomain/zero/1.0/"
 msgstr ""
-

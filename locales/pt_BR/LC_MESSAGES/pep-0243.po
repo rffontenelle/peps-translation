@@ -87,21 +87,21 @@ msgstr ""
 
 #: ../pep-0243.txt:17
 msgid ""
-"For a module repository system (such as Perl's CPAN) to be successful, it"
-" must be as easy as possible for module authors to submit their work.  An"
-" obvious place for this submit to happen is in the Distutils tools after "
-"the distribution archive has been successfully created.  For example, "
-"after a module author has tested their software (verifying the results of"
-" ``setup.py sdist``), they might type ``setup.py sdist --submit``.  This "
-"would flag Distutils to submit the source distribution to the archive "
-"server for inclusion and distribution to the mirrors."
+"For a module repository system (such as Perl's CPAN) to be successful, it "
+"must be as easy as possible for module authors to submit their work.  An "
+"obvious place for this submit to happen is in the Distutils tools after the "
+"distribution archive has been successfully created.  For example, after a "
+"module author has tested their software (verifying the results of ``setup.py "
+"sdist``), they might type ``setup.py sdist --submit``.  This would flag "
+"Distutils to submit the source distribution to the archive server for "
+"inclusion and distribution to the mirrors."
 msgstr ""
 
 #: ../pep-0243.txt:27
 msgid ""
 "This PEP only deals with the mechanism for submitting the software "
-"distributions to the archive, and does not deal with the actual "
-"archive/catalog server."
+"distributions to the archive, and does not deal with the actual archive/"
+"catalog server."
 msgstr ""
 
 #: ../pep-0243.txt:33
@@ -110,12 +110,11 @@ msgstr ""
 
 #: ../pep-0243.txt:35
 msgid ""
-"The upload will include the Distutils ``PKG-INFO`` meta-data information "
-"(as specified in :pep:`241`), the actual software distribution, and other"
-" optional information.  This information will be uploaded as a multi-part"
-" form encoded the same as a regular HTML file upload request.  This form "
-"is posted using ``ENCTYPE=\"multipart/form-data\"`` encoding "
-"(:rfc:`1867`)."
+"The upload will include the Distutils ``PKG-INFO`` meta-data information (as "
+"specified in :pep:`241`), the actual software distribution, and other "
+"optional information.  This information will be uploaded as a multi-part "
+"form encoded the same as a regular HTML file upload request.  This form is "
+"posted using ``ENCTYPE=\"multipart/form-data\"`` encoding (:rfc:`1867`)."
 msgstr ""
 
 #: ../pep-0243.txt:42
@@ -127,54 +126,54 @@ msgstr ""
 
 #: ../pep-0243.txt:46
 msgid ""
-"``distribution`` -- The file containing the module software (for example,"
-" a ``.tar.gz`` or ``.zip`` file)."
+"``distribution`` -- The file containing the module software (for example, a "
+"``.tar.gz`` or ``.zip`` file)."
 msgstr ""
 
 #: ../pep-0243.txt:49
 #, python-format
 msgid ""
 "``distmd5sum`` -- The MD5 hash of the uploaded distribution, encoded in "
-"ASCII representing the hexadecimal representation of the digest (``for "
-"byte in digest: s = s + ('%02x' % ord(byte))``)."
+"ASCII representing the hexadecimal representation of the digest (``for byte "
+"in digest: s = s + ('%02x' % ord(byte))``)."
 msgstr ""
 
 #: ../pep-0243.txt:54
 msgid ""
-"``pkginfo`` (optional) -- The file containing the distribution meta-data "
-"(as specified in :pep:`241`).  Note that if this is not included, the "
-"distribution file is expected to be in ``.tar`` format (gzipped and "
-"bzipped compressed are allowed) or ``.zip`` format, with a ``PKG-INFO`` "
-"file in the top-level directory it extracts (``package-1.00/PKG-INFO``)."
+"``pkginfo`` (optional) -- The file containing the distribution meta-data (as "
+"specified in :pep:`241`).  Note that if this is not included, the "
+"distribution file is expected to be in ``.tar`` format (gzipped and bzipped "
+"compressed are allowed) or ``.zip`` format, with a ``PKG-INFO`` file in the "
+"top-level directory it extracts (``package-1.00/PKG-INFO``)."
 msgstr ""
 
 #: ../pep-0243.txt:61
 #, python-format
 msgid ""
-"``infomd5sum`` (required if pkginfo field is present) -- The MD5 hash of "
-"the uploaded meta-data, encoded in ASCII representing the hexadecimal "
-"representation of the digest (``for byte in digest: s = s + ('%02x' % "
-"ord(byte))``)."
+"``infomd5sum`` (required if pkginfo field is present) -- The MD5 hash of the "
+"uploaded meta-data, encoded in ASCII representing the hexadecimal "
+"representation of the digest (``for byte in digest: s = s + ('%02x' "
+"% ord(byte))``)."
 msgstr ""
 
 #: ../pep-0243.txt:66
 msgid ""
 "``platform`` (optional) -- A string representing the target platform for "
-"this distribution.  This is only for binary distributions.  It is encoded"
-" as ``<os_name>-<os_version>-<platform architecture>-<python version>``."
+"this distribution.  This is only for binary distributions.  It is encoded as "
+"``<os_name>-<os_version>-<platform architecture>-<python version>``."
 msgstr ""
 
 #: ../pep-0243.txt:72
 msgid ""
-"``signature`` (optional) -- A :rfc:`OpenPGP-compatible <2440>` signature "
-"of the uploaded distribution as signed by the author.  This may be used "
-"by the cataloging system to automate acceptance of uploads."
+"``signature`` (optional) -- A :rfc:`OpenPGP-compatible <2440>` signature of "
+"the uploaded distribution as signed by the author.  This may be used by the "
+"cataloging system to automate acceptance of uploads."
 msgstr ""
 
 #: ../pep-0243.txt:77
 msgid ""
-"``protocol_version`` -- A string indicating the protocol version that the"
-" client supports.  This document describes protocol version \"1\"."
+"``protocol_version`` -- A string indicating the protocol version that the "
+"client supports.  This document describes protocol version \"1\"."
 msgstr ""
 
 #: ../pep-0243.txt:82
@@ -183,9 +182,8 @@ msgstr ""
 
 #: ../pep-0243.txt:84
 msgid ""
-"The status of the upload will be reported using HTTP non-standard "
-"(``X-*``) headers.  The ``X-Swalow-Status`` header may have the following"
-" values:"
+"The status of the upload will be reported using HTTP non-standard (``X-*``) "
+"headers.  The ``X-Swalow-Status`` header may have the following values:"
 msgstr ""
 
 #: ../pep-0243.txt:88
@@ -198,22 +196,22 @@ msgstr ""
 
 #: ../pep-0243.txt:93
 msgid ""
-"``TRYAGAIN`` -- The server is unable to accept the upload at this time, "
-"but the client should try again at a later time. Potential causes of this"
-" are resource shortages on the server, administrative down-time, etc..."
+"``TRYAGAIN`` -- The server is unable to accept the upload at this time, but "
+"the client should try again at a later time. Potential causes of this are "
+"resource shortages on the server, administrative down-time, etc..."
 msgstr ""
 
 #: ../pep-0243.txt:98
 msgid ""
-"Optionally, there may be a ``X-Swalow-Reason`` header which includes a "
-"human-readable string which provides more detailed information about the "
-"``X-Swalow-Status``."
+"Optionally, there may be a ``X-Swalow-Reason`` header which includes a human-"
+"readable string which provides more detailed information about the ``X-"
+"Swalow-Status``."
 msgstr ""
 
 #: ../pep-0243.txt:102
 msgid ""
-"If there is no ``X-Swalow-Status`` header, or it does not contain one of "
-"the three strings above, it should be treated as a temporary failure."
+"If there is no ``X-Swalow-Status`` header, or it does not contain one of the "
+"three strings above, it should be treated as a temporary failure."
 msgstr ""
 
 #: ../pep-0243.txt:105
@@ -227,8 +225,8 @@ msgstr ""
 #: ../pep-0243.txt:117
 msgid ""
 "The upload client must submit the page in the same form as Netscape "
-"Navigator version 4.76 for Linux produces when presented with the "
-"following form::"
+"Navigator version 4.76 for Linux produces when presented with the following "
+"form::"
 msgstr ""
 
 #: ../pep-0243.txt:136
@@ -241,18 +239,17 @@ msgstr ""
 
 #: ../pep-0243.txt:143
 msgid ""
-"The above include a number of different types of distributions of Linux."
-"  Because of versioning issues these must be split out, and it is "
-"expected that when it makes sense for one system to use distributions "
-"made on other similar systems, the download client will make the "
-"distinction."
+"The above include a number of different types of distributions of Linux.  "
+"Because of versioning issues these must be split out, and it is expected "
+"that when it makes sense for one system to use distributions made on other "
+"similar systems, the download client will make the distinction."
 msgstr ""
 
 #: ../pep-0243.txt:149
 msgid ""
 "Version is the official version string specified by the vendor for the "
-"particular release.  For example, \"2000\" and \"nt\" (Windows), \"9.04\""
-" (HP-UX), \"7.0\" (RedHat, Mandrake)."
+"particular release.  For example, \"2000\" and \"nt\" (Windows), "
+"\"9.04\" (HP-UX), \"7.0\" (RedHat, Mandrake)."
 msgstr ""
 
 #: ../pep-0243.txt:153
@@ -261,11 +258,11 @@ msgstr ""
 
 #: ../pep-0243.txt:161
 msgid ""
-"I currently have a proof-of-concept client and server implemented. I plan"
-" to have the Distutils patches ready for the 2.1 release. Combined with "
-"Andrew's :pep:`241` for specifying distribution meta-data, I hope to have"
-" a platform which will allow us to gather real-world data for finalizing "
-"the catalog system for the 2.2 release."
+"I currently have a proof-of-concept client and server implemented. I plan to "
+"have the Distutils patches ready for the 2.1 release. Combined with "
+"Andrew's :pep:`241` for specifying distribution meta-data, I hope to have a "
+"platform which will allow us to gather real-world data for finalizing the "
+"catalog system for the 2.2 release."
 msgstr ""
 
 #: ../pep-0243.txt:170
@@ -275,4 +272,3 @@ msgstr ""
 #: ../pep-0243.txt:172
 msgid "This document has been placed in the public domain."
 msgstr ""
-

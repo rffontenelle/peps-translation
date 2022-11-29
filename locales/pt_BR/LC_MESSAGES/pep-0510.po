@@ -64,8 +64,8 @@ msgstr ""
 #: ../pep-0510.txt:16
 msgid ""
 "This PEP was rejected by its author since the design didn't show any "
-"significant speedup, but also because of the lack of time to implement "
-"the most advanced and complex optimizations."
+"significant speedup, but also because of the lack of time to implement the "
+"most advanced and complex optimizations."
 msgstr ""
 
 #: ../pep-0510.txt:22
@@ -74,9 +74,9 @@ msgstr ""
 
 #: ../pep-0510.txt:24
 msgid ""
-"Add functions to the Python C API to specialize pure Python functions: "
-"add specialized codes with guards. It allows to implement static "
-"optimizers respecting the Python semantics."
+"Add functions to the Python C API to specialize pure Python functions: add "
+"specialized codes with guards. It allows to implement static optimizers "
+"respecting the Python semantics."
 msgstr ""
 
 #: ../pep-0510.txt:30
@@ -91,26 +91,25 @@ msgstr ""
 msgid ""
 "Python is hard to optimize because almost everything is mutable: builtin "
 "functions, function code, global variables, local variables, ... can be "
-"modified at runtime. Implement optimizations respecting the Python "
-"semantics requires to detect when \"something changes\", we will call "
-"these checks \"guards\"."
+"modified at runtime. Implement optimizations respecting the Python semantics "
+"requires to detect when \"something changes\", we will call these checks "
+"\"guards\"."
 msgstr ""
 
 #: ../pep-0510.txt:41
 msgid ""
-"This PEP proposes to add a public API to the Python C API to add "
-"specialized codes with guards to a function. When the function is called,"
-" a specialized code is used if nothing changed, otherwise use the "
-"original bytecode."
+"This PEP proposes to add a public API to the Python C API to add specialized "
+"codes with guards to a function. When the function is called, a specialized "
+"code is used if nothing changed, otherwise use the original bytecode."
 msgstr ""
 
 #: ../pep-0510.txt:46
 msgid ""
-"Even if guards help to respect most parts of the Python semantics, it's "
-"hard to optimize Python without making subtle changes on the exact "
-"behaviour. CPython has a long history and many applications rely on "
-"implementation details. A compromise must be found between \"everything "
-"is mutable\" and performance."
+"Even if guards help to respect most parts of the Python semantics, it's hard "
+"to optimize Python without making subtle changes on the exact behaviour. "
+"CPython has a long history and many applications rely on implementation "
+"details. A compromise must be found between \"everything is mutable\" and "
+"performance."
 msgstr ""
 
 #: ../pep-0510.txt:52
@@ -144,23 +143,22 @@ msgstr ""
 #: ../pep-0510.txt:65
 msgid ""
 "Numba is specific to numerical computation.  Pyston and Pyjion are still "
-"young.  PyPy is the most complete Python interpreter, it is generally "
-"faster than CPython in micro- and many macro-benchmarks and has a very "
-"good compatibility with CPython (it respects the Python semantics). There"
-" are still issues with Python JIT compilers which avoid them to be widely"
-" used instead of CPython."
+"young.  PyPy is the most complete Python interpreter, it is generally faster "
+"than CPython in micro- and many macro-benchmarks and has a very good "
+"compatibility with CPython (it respects the Python semantics). There are "
+"still issues with Python JIT compilers which avoid them to be widely used "
+"instead of CPython."
 msgstr ""
 
 #: ../pep-0510.txt:72
 msgid ""
 "Many popular libraries like numpy, PyGTK, PyQt, PySide and wxPython are "
 "implemented in C or C++ and use the Python C API. To have a small memory "
-"footprint and better performances, Python JIT compilers do not use "
-"reference counting to use a faster garbage collector, do not use C "
-"structures of CPython objects and manage memory allocations differently. "
-"PyPy has a ``cpyext`` module which emulates the Python C API but it has "
-"worse performances than CPython and does not support the full Python C "
-"API."
+"footprint and better performances, Python JIT compilers do not use reference "
+"counting to use a faster garbage collector, do not use C structures of "
+"CPython objects and manage memory allocations differently. PyPy has a "
+"``cpyext`` module which emulates the Python C API but it has worse "
+"performances than CPython and does not support the full Python C API."
 msgstr ""
 
 #: ../pep-0510.txt:81
@@ -173,45 +171,45 @@ msgstr ""
 #: ../pep-0510.txt:85
 msgid ""
 "Even if PyPy has a very good compatibility with Python, some modules are "
-"still not compatible with PyPy: see `PyPy Compatibility Wiki "
-"<https://bitbucket.org/pypy/compatibility/wiki/Home>`_. The incomplete "
-"support of the Python C API is part of this problem. There are also "
-"subtle differences between PyPy and CPython like reference counting: "
-"object destructors are always called in PyPy, but can be called \"later\""
-" than in CPython. Using context managers helps to control when resources "
-"are released."
+"still not compatible with PyPy: see `PyPy Compatibility Wiki <https://"
+"bitbucket.org/pypy/compatibility/wiki/Home>`_. The incomplete support of the "
+"Python C API is part of this problem. There are also subtle differences "
+"between PyPy and CPython like reference counting: object destructors are "
+"always called in PyPy, but can be called \"later\" than in CPython. Using "
+"context managers helps to control when resources are released."
 msgstr ""
 
 #: ../pep-0510.txt:94
 msgid ""
-"Even if PyPy is much faster than CPython in a wide range of benchmarks, "
-"some users still report worse performances than CPython on some specific "
-"use cases or unstable performances."
+"Even if PyPy is much faster than CPython in a wide range of benchmarks, some "
+"users still report worse performances than CPython on some specific use "
+"cases or unstable performances."
 msgstr ""
 
 #: ../pep-0510.txt:98
 msgid ""
-"When Python is used as a scripting program for programs running less than"
-" 1 minute, JIT compilers can be slower because their startup time is "
-"higher and the JIT compiler takes time to optimize the code. For example,"
-" most Mercurial commands take a few seconds."
+"When Python is used as a scripting program for programs running less than 1 "
+"minute, JIT compilers can be slower because their startup time is higher and "
+"the JIT compiler takes time to optimize the code. For example, most "
+"Mercurial commands take a few seconds."
 msgstr ""
 
 #: ../pep-0510.txt:103
 msgid ""
-"Numba now supports ahead of time compilation, but it requires decorator "
-"to specify arguments types and it only supports numerical types."
+"Numba now supports ahead of time compilation, but it requires decorator to "
+"specify arguments types and it only supports numerical types."
 msgstr ""
 
 #: ../pep-0510.txt:106
 msgid ""
 "CPython 3.5 has almost no optimization: the peephole optimizer only "
-"implements basic optimizations. A static compiler is a compromise between"
-" CPython 3.5 and PyPy."
+"implements basic optimizations. A static compiler is a compromise between "
+"CPython 3.5 and PyPy."
 msgstr ""
 
 #: ../pep-0510.txt:111
-msgid "There was also the Unladen Swallow project, but it was abandoned in 2011."
+msgid ""
+"There was also the Unladen Swallow project, but it was abandoned in 2011."
 msgstr ""
 
 #: ../pep-0510.txt:116
@@ -220,9 +218,9 @@ msgstr ""
 
 #: ../pep-0510.txt:118
 msgid ""
-"Following examples are not written to show powerful optimizations "
-"promising important speedup, but to be short and easy to understand, just"
-" to explain the principle."
+"Following examples are not written to show powerful optimizations promising "
+"important speedup, but to be short and easy to understand, just to explain "
+"the principle."
 msgstr ""
 
 #: ../pep-0510.txt:123
@@ -243,16 +241,16 @@ msgstr ""
 
 #: ../pep-0510.txt:130
 msgid ""
-"``get_specialized(func)``: get the list of specialized codes as a list of"
-" ``(code, guards)`` tuples where `code` is a callable or code object and "
+"``get_specialized(func)``: get the list of specialized codes as a list of "
+"``(code, guards)`` tuples where `code` is a callable or code object and "
 "`guards` is a list of a guards"
 msgstr ""
 
 #: ../pep-0510.txt:133
 msgid ""
-"``GuardBuiltins(name)``: guard watching for ``builtins.__dict__[name]`` "
-"and ``globals()[name]``. The guard fails if ``builtins.__dict__[name]`` "
-"is replaced, or if ``globals()[name]`` is set."
+"``GuardBuiltins(name)``: guard watching for ``builtins.__dict__[name]`` and "
+"``globals()[name]``. The guard fails if ``builtins.__dict__[name]`` is "
+"replaced, or if ``globals()[name]`` is set."
 msgstr ""
 
 #: ../pep-0510.txt:140
@@ -276,15 +274,15 @@ msgstr ""
 #: ../pep-0510.txt:177
 msgid ""
 "The first call uses the specialized bytecode which returns the string "
-"``\"A\"``. The second call removes the specialized code because the "
-"builtin ``chr()`` function was replaced, and executes the original "
-"bytecode calling ``chr(65)``."
+"``\"A\"``. The second call removes the specialized code because the builtin "
+"``chr()`` function was replaced, and executes the original bytecode calling "
+"``chr(65)``."
 msgstr ""
 
 #: ../pep-0510.txt:182
 msgid ""
-"On a microbenchmark, calling the specialized bytecode takes 88 ns, "
-"whereas the original function takes 145 ns (+57 ns): 1.6 times as fast."
+"On a microbenchmark, calling the specialized bytecode takes 88 ns, whereas "
+"the original function takes 145 ns (+57 ns): 1.6 times as fast."
 msgstr ""
 
 #: ../pep-0510.txt:187
@@ -293,23 +291,22 @@ msgstr ""
 
 #: ../pep-0510.txt:189
 msgid ""
-"Add the C builtin ``chr()`` function as the specialized code instead of a"
-" bytecode calling ``chr(obj)``::"
+"Add the C builtin ``chr()`` function as the specialized code instead of a "
+"bytecode calling ``chr(obj)``::"
 msgstr ""
 
 #: ../pep-0510.txt:220
 msgid ""
-"The first call calls the C builtin ``chr()`` function (without creating a"
-" Python frame). The second call removes the specialized code because the "
-"builtin ``chr()`` function was replaced, and executes the original "
-"bytecode."
+"The first call calls the C builtin ``chr()`` function (without creating a "
+"Python frame). The second call removes the specialized code because the "
+"builtin ``chr()`` function was replaced, and executes the original bytecode."
 msgstr ""
 
 #: ../pep-0510.txt:225
 msgid ""
-"On a microbenchmark, calling the C builtin takes 95 ns, whereas the "
-"original bytecode takes 155 ns (+60 ns): 1.6 times as fast. Calling "
-"directly ``chr(65)`` takes 76 ns."
+"On a microbenchmark, calling the C builtin takes 95 ns, whereas the original "
+"bytecode takes 155 ns (+60 ns): 1.6 times as fast. Calling directly "
+"``chr(65)`` takes 76 ns."
 msgstr ""
 
 #: ../pep-0510.txt:231
@@ -318,8 +315,7 @@ msgstr ""
 
 #: ../pep-0510.txt:233
 msgid ""
-"Pseudo-code to choose the specialized code to call a pure Python "
-"function::"
+"Pseudo-code to choose the specialized code to call a pure Python function::"
 msgstr ""
 
 #: ../pep-0510.txt:269
@@ -398,8 +394,8 @@ msgstr ""
 
 #: ../pep-0510.txt:310
 msgid ""
-"Return ``1`` if the guard will always fail: ``PyFunction_Specialize()`` "
-"must ignore the specialized code"
+"Return ``1`` if the guard will always fail: ``PyFunction_Specialize()`` must "
+"ignore the specialized code"
 msgstr ""
 
 #: ../pep-0510.txt:312 ../pep-0510.txt:321 ../pep-0510.txt:367
@@ -424,8 +420,8 @@ msgstr ""
 msgid ""
 "*stack* is an array of arguments: indexed arguments followed by (*key*, "
 "*value*) pairs of keyword arguments. *na* is the number of indexed "
-"arguments. *nk* is the number of keyword arguments: the number of (*key*,"
-" *value*) pairs. `stack` contains ``na + nk * 2`` objects."
+"arguments. *nk* is the number of keyword arguments: the number of (*key*, "
+"*value*) pairs. `stack` contains ``na + nk * 2`` objects."
 msgstr ""
 
 #: ../pep-0510.txt:330
@@ -452,18 +448,18 @@ msgstr ""
 
 #: ../pep-0510.txt:353
 msgid ""
-"If *code* is a Python function, the code object of the *code* function is"
-" used as the specialized code. The specialized Python function must have "
-"the same parameter defaults, the same keyword parameter defaults, and "
-"must not have specialized code."
+"If *code* is a Python function, the code object of the *code* function is "
+"used as the specialized code. The specialized Python function must have the "
+"same parameter defaults, the same keyword parameter defaults, and must not "
+"have specialized code."
 msgstr ""
 
 #: ../pep-0510.txt:358
 msgid ""
 "If *code* is a Python function or a code object, a new code object is "
-"created and the code name and first line number of the code object of "
-"*func* are copied. The specialized code must have the same cell variables"
-" and the same free variables."
+"created and the code name and first line number of the code object of *func* "
+"are copied. The specialized code must have the same cell variables and the "
+"same free variables."
 msgstr ""
 
 #: ../pep-0510.txt:363
@@ -500,8 +496,8 @@ msgstr ""
 #: ../pep-0510.txt:391
 msgid ""
 "See ``check()`` function of guards for *stack*, *na* and *nk* arguments. "
-"Return a callable or a code object on success. Raise an exception and "
-"return ``NULL`` on error."
+"Return a callable or a code object on success. Raise an exception and return "
+"``NULL`` on error."
 msgstr ""
 
 #: ../pep-0510.txt:397
@@ -510,14 +506,14 @@ msgstr ""
 
 #: ../pep-0510.txt:399
 msgid ""
-"Add a function method to remove a specialized code with its guards by its"
-" index::"
+"Add a function method to remove a specialized code with its guards by its "
+"index::"
 msgstr ""
 
 #: ../pep-0510.txt:404
 msgid ""
-"Return ``0`` on success or if the index does not exist. Raise an "
-"exception and return ``-1`` on error."
+"Return ``0`` on success or if the index does not exist. Raise an exception "
+"and return ``-1`` on error."
 msgstr ""
 
 #: ../pep-0510.txt:409
@@ -532,8 +528,8 @@ msgstr ""
 
 #: ../pep-0510.txt:416
 msgid ""
-"Return ``0`` on success. Raise an exception and return ``-1`` if *func* "
-"is not a function."
+"Return ``0`` on success. Raise an exception and return ``-1`` if *func* is "
+"not a function."
 msgstr ""
 
 #: ../pep-0510.txt:421
@@ -542,8 +538,8 @@ msgstr ""
 
 #: ../pep-0510.txt:423
 msgid ""
-"Microbenchmark on ``python3.6 -m timeit -s 'def f(): pass' 'f()'`` (best "
-"of 3 runs):"
+"Microbenchmark on ``python3.6 -m timeit -s 'def f(): pass' 'f()'`` (best of "
+"3 runs):"
 msgstr ""
 
 #: ../pep-0510.txt:426
@@ -556,8 +552,8 @@ msgstr ""
 
 #: ../pep-0510.txt:429
 msgid ""
-"According to this microbenchmark, the changes has no overhead on calling "
-"a Python function without specialization."
+"According to this microbenchmark, the changes has no overhead on calling a "
+"Python function without specialization."
 msgstr ""
 
 #: ../pep-0510.txt:434
@@ -566,9 +562,8 @@ msgstr ""
 
 #: ../pep-0510.txt:436
 msgid ""
-"The `issue #26098: PEP 510: Specialize functions with guards "
-"<http://bugs.python.org/issue26098>`_ contains a patch which implements "
-"this PEP."
+"The `issue #26098: PEP 510: Specialize functions with guards <http://bugs."
+"python.org/issue26098>`_ contains a patch which implements this PEP."
 msgstr ""
 
 #: ../pep-0510.txt:442
@@ -594,8 +589,8 @@ msgstr ""
 
 #: ../pep-0510.txt:451
 msgid ""
-"``PyFunction_GetSpecializedCode()``: return the function code object, as "
-"the existing ``PyFunction_GET_CODE()`` macro"
+"``PyFunction_GetSpecializedCode()``: return the function code object, as the "
+"existing ``PyFunction_GET_CODE()`` macro"
 msgstr ""
 
 #: ../pep-0510.txt:456
@@ -604,9 +599,9 @@ msgstr ""
 
 #: ../pep-0510.txt:458
 msgid ""
-"Thread on the python-ideas mailing list: `RFC: PEP: Specialized functions"
-" with guards <https://mail.python.org/pipermail/python-"
-"ideas/2016-January/037703.html>`_."
+"Thread on the python-ideas mailing list: `RFC: PEP: Specialized functions "
+"with guards <https://mail.python.org/pipermail/python-ideas/2016-"
+"January/037703.html>`_."
 msgstr ""
 
 #: ../pep-0510.txt:464
@@ -616,4 +611,3 @@ msgstr ""
 #: ../pep-0510.txt:466
 msgid "This document has been placed in the public domain."
 msgstr ""
-

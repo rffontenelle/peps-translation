@@ -67,8 +67,8 @@ msgstr ""
 
 #: ../pep-0312.txt:17
 msgid ""
-"This PEP proposes to make argumentless lambda keyword optional in some "
-"cases where it is not grammatically ambiguous."
+"This PEP proposes to make argumentless lambda keyword optional in some cases "
+"where it is not grammatically ambiguous."
 msgstr ""
 
 #: ../pep-0312.txt:22
@@ -78,17 +78,17 @@ msgstr ""
 #: ../pep-0312.txt:24
 msgid ""
 "The BDFL hates the unary colon syntax.  This PEP needs to go back to the "
-"drawing board and find a more Pythonic syntax (perhaps an alternative "
-"unary operator).  See python-dev discussion on 17 June 2005 [1]_."
+"drawing board and find a more Pythonic syntax (perhaps an alternative unary "
+"operator).  See python-dev discussion on 17 June 2005 [1]_."
 msgstr ""
 
 #: ../pep-0312.txt:29
 msgid ""
-"Also, it is probably a good idea to eliminate the alternative "
-"propositions which have no chance at all.  The examples section is good "
-"and highlights the readability improvements.  It would carry more weight "
-"with additional examples and with real-world referents (instead of the "
-"abstracted dummy calls to ``:A`` and ``:B``)."
+"Also, it is probably a good idea to eliminate the alternative propositions "
+"which have no chance at all.  The examples section is good and highlights "
+"the readability improvements.  It would carry more weight with additional "
+"examples and with real-world referents (instead of the abstracted dummy "
+"calls to ``:A`` and ``:B``)."
 msgstr ""
 
 #: ../pep-0312.txt:37
@@ -98,11 +98,11 @@ msgstr ""
 #: ../pep-0312.txt:39
 msgid ""
 "Lambdas are useful for defining anonymous functions, e.g. for use as "
-"callbacks or (pseudo)-lazy evaluation schemes.  Often, lambdas are not "
-"used when they would be appropriate, just because the keyword \"lambda\" "
-"makes code look complex.  Omitting lambda in some special cases is "
-"possible, with small and backwards compatible changes to the grammar, and"
-" provides a cheap cure against such \"lambdaphobia\"."
+"callbacks or (pseudo)-lazy evaluation schemes.  Often, lambdas are not used "
+"when they would be appropriate, just because the keyword \"lambda\" makes "
+"code look complex.  Omitting lambda in some special cases is possible, with "
+"small and backwards compatible changes to the grammar, and provides a cheap "
+"cure against such \"lambdaphobia\"."
 msgstr ""
 
 #: ../pep-0312.txt:49
@@ -111,12 +111,12 @@ msgstr ""
 
 #: ../pep-0312.txt:51
 msgid ""
-"Sometimes people do not use lambdas because they fear to introduce a term"
-" with a theory behind it.  This proposal makes introducing argumentless "
-"lambdas easier, by omitting the \"lambda\" keyword. itself.  "
-"Implementation can be done simply changing grammar so it lets the "
-"\"lambda\" keyword be implied in a few well-known cases. In particular, "
-"adding surrounding brackets lets you specify nullary lambda anywhere."
+"Sometimes people do not use lambdas because they fear to introduce a term "
+"with a theory behind it.  This proposal makes introducing argumentless "
+"lambdas easier, by omitting the \"lambda\" keyword. itself.  Implementation "
+"can be done simply changing grammar so it lets the \"lambda\" keyword be "
+"implied in a few well-known cases. In particular, adding surrounding "
+"brackets lets you specify nullary lambda anywhere."
 msgstr ""
 
 #: ../pep-0312.txt:61
@@ -124,7 +124,8 @@ msgid "Syntax"
 msgstr ""
 
 #: ../pep-0312.txt:63
-msgid "An argumentless \"lambda\" keyword can be omitted in the following cases:"
+msgid ""
+"An argumentless \"lambda\" keyword can be omitted in the following cases:"
 msgstr ""
 
 #: ../pep-0312.txt:66
@@ -167,9 +168,9 @@ msgstr ""
 
 #: ../pep-0312.txt:114
 msgid ""
-"Implementation requires some tweaking of the ``Grammar/Grammar`` file in "
-"the Python sources, and some adjustment of ``Modules/parsermodule.c`` to "
-"make syntactic and pragmatic changes."
+"Implementation requires some tweaking of the ``Grammar/Grammar`` file in the "
+"Python sources, and some adjustment of ``Modules/parsermodule.c`` to make "
+"syntactic and pragmatic changes."
 msgstr ""
 
 #: ../pep-0312.txt:118
@@ -182,10 +183,9 @@ msgstr ""
 
 #: ../pep-0312.txt:138
 msgid ""
-"Three new non-terminals are needed: ``imptest`` for the place where "
-"implicit lambda may occur, ``implambdef`` for the implicit lambda "
-"definition itself, ``imptestlist`` for a place where ``imptest``'s may "
-"occur."
+"Three new non-terminals are needed: ``imptest`` for the place where implicit "
+"lambda may occur, ``implambdef`` for the implicit lambda definition itself, "
+"``imptestlist`` for a place where ``imptest``'s may occur."
 msgstr ""
 
 #: ../pep-0312.txt:143
@@ -202,34 +202,34 @@ msgstr ""
 #: ../pep-0312.txt:151
 msgid ""
 "This feature is not a high-visibility one (the only novel part is the "
-"absence of lambda). The feature is intended to make null-ary lambdas more"
-" appealing syntactically, to provide lazy evaluation of expressions in "
-"some simple cases. This proposal is not targeted at more advanced cases "
+"absence of lambda). The feature is intended to make null-ary lambdas more "
+"appealing syntactically, to provide lazy evaluation of expressions in some "
+"simple cases. This proposal is not targeted at more advanced cases "
 "(demanding arguments for the lambda)."
 msgstr ""
 
 #: ../pep-0312.txt:157
 msgid ""
 "There is an alternative proposition for implicit lambda: implicit lambda "
-"with unused arguments. In this case the function defined by such lambda "
-"can accept any parameters, i.e. be equivalent to: ``lambda *args: expr``."
-" This form would be more powerful.  Grep in the standard library revealed"
-" that such lambdas are indeed in use."
+"with unused arguments. In this case the function defined by such lambda can "
+"accept any parameters, i.e. be equivalent to: ``lambda *args: expr``. This "
+"form would be more powerful.  Grep in the standard library revealed that "
+"such lambdas are indeed in use."
 msgstr ""
 
 #: ../pep-0312.txt:163
 msgid ""
-"One more extension can provide a way to have a list of parameters passed "
-"to a function defined by implicit lambda. However, such parameters need "
-"some special name to be accessed and are unlikely to be included in the "
-"language. Possible local names for such parameters are: ``_``, "
-"``__args__``, ``__``. For example::"
+"One more extension can provide a way to have a list of parameters passed to "
+"a function defined by implicit lambda. However, such parameters need some "
+"special name to be accessed and are unlikely to be included in the language. "
+"Possible local names for such parameters are: ``_``, ``__args__``, ``__``. "
+"For example::"
 msgstr ""
 
 #: ../pep-0312.txt:173
 msgid ""
-"These forms do not look very nice, and in the PEP author's opinion do not"
-" justify the removal of the lambda keyword in such cases."
+"These forms do not look very nice, and in the PEP author's opinion do not "
+"justify the removal of the lambda keyword in such cases."
 msgstr ""
 
 #: ../pep-0312.txt:178
@@ -238,9 +238,9 @@ msgstr ""
 
 #: ../pep-0312.txt:180
 msgid ""
-"The idea of dropping lambda was first coined by Paul Rubin at 08 Feb 2003"
-" 16:39:30 -0800 in comp.lang.python while discussing the thread \"For "
-"review: PEP 308 - If-then-else expression\" [2]_."
+"The idea of dropping lambda was first coined by Paul Rubin at 08 Feb 2003 "
+"16:39:30 -0800 in comp.lang.python while discussing the thread \"For review: "
+"PEP 308 - If-then-else expression\" [2]_."
 msgstr ""
 
 #: ../pep-0312.txt:186
@@ -255,8 +255,8 @@ msgstr ""
 
 #: ../pep-0312.txt:191
 msgid ""
-"Guido van Rossum, For review: PEP 308 - If-then-else expression "
-"https://mail.python.org/pipermail/python-dev/2003-February/033178.html"
+"Guido van Rossum, For review: PEP 308 - If-then-else expression https://mail."
+"python.org/pipermail/python-dev/2003-February/033178.html"
 msgstr ""
 
 #: ../pep-0312.txt:197
@@ -266,4 +266,3 @@ msgstr ""
 #: ../pep-0312.txt:199
 msgid "This document has been placed in the public domain."
 msgstr ""
-

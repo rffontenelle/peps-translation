@@ -71,13 +71,13 @@ msgstr ""
 
 #: ../pep-0232.txt:17
 msgid ""
-"This PEP describes an extension to Python, adding attribute dictionaries "
-"to functions and methods.  This PEP tracks the status and ownership of "
-"this feature.  It contains a description of the feature and outlines "
-"changes necessary to support the feature. This PEP summarizes discussions"
-" held in mailing list forums, and provides URLs for further information, "
-"where appropriate.  The CVS revision history of this file contains the "
-"definitive historical record."
+"This PEP describes an extension to Python, adding attribute dictionaries to "
+"functions and methods.  This PEP tracks the status and ownership of this "
+"feature.  It contains a description of the feature and outlines changes "
+"necessary to support the feature. This PEP summarizes discussions held in "
+"mailing list forums, and provides URLs for further information, where "
+"appropriate.  The CVS revision history of this file contains the definitive "
+"historical record."
 msgstr ""
 
 #: ../pep-0232.txt:28
@@ -86,28 +86,25 @@ msgstr ""
 
 #: ../pep-0232.txt:30
 msgid ""
-"Functions already have a number of attributes, some of which are "
-"writable, e.g. ``func_doc``, a.k.a. ``func.__doc__``.  ``func_doc`` has "
-"the interesting property that there is special syntax in function (and "
-"method) definitions for implicitly setting the attribute.  This "
-"convenience has been exploited over and over again, overloading "
-"docstrings with additional semantics."
+"Functions already have a number of attributes, some of which are writable, e."
+"g. ``func_doc``, a.k.a. ``func.__doc__``.  ``func_doc`` has the interesting "
+"property that there is special syntax in function (and method) definitions "
+"for implicitly setting the attribute.  This convenience has been exploited "
+"over and over again, overloading docstrings with additional semantics."
 msgstr ""
 
 #: ../pep-0232.txt:37
 msgid ""
-"For example, John Aycock has written a system where docstrings are used "
-"to define parsing rules. [1]_  Zope's ZPublisher ORB [2]_ uses docstrings"
-" to signal publishable methods, i.e. methods that can be called through "
-"the web."
+"For example, John Aycock has written a system where docstrings are used to "
+"define parsing rules. [1]_  Zope's ZPublisher ORB [2]_ uses docstrings to "
+"signal publishable methods, i.e. methods that can be called through the web."
 msgstr ""
 
 #: ../pep-0232.txt:42
 msgid ""
-"The problem with this approach is that the overloaded semantics may "
-"conflict with each other.  For example, if we wanted to add a doctest "
-"unit test to a Zope method that should not be publishable through the "
-"web."
+"The problem with this approach is that the overloaded semantics may conflict "
+"with each other.  For example, if we wanted to add a doctest unit test to a "
+"Zope method that should not be publishable through the web."
 msgstr ""
 
 #: ../pep-0232.txt:49
@@ -125,19 +122,18 @@ msgstr ""
 msgid ""
 "Methods also gain getter syntax, and they currently access the attribute "
 "through the dictionary of the underlying function object.  It is not "
-"possible to set attributes on bound or unbound methods, except by doing "
-"so explicitly on the underlying function object.  See the `Future "
-"Directions`_ discussion below for approaches in subsequent versions of "
-"Python."
+"possible to set attributes on bound or unbound methods, except by doing so "
+"explicitly on the underlying function object.  See the `Future Directions`_ "
+"discussion below for approaches in subsequent versions of Python."
 msgstr ""
 
 #: ../pep-0232.txt:62
 msgid ""
-"A function object's ``__dict__`` can also be set, but only to a "
-"dictionary object.  Deleting a function's ``__dict__``, or setting it to "
-"anything other than a concrete dictionary object results in a "
-"``TypeError``.  If no function attributes have ever been set, the "
-"function's ``__dict__`` will be empty."
+"A function object's ``__dict__`` can also be set, but only to a dictionary "
+"object.  Deleting a function's ``__dict__``, or setting it to anything other "
+"than a concrete dictionary object results in a ``TypeError``.  If no "
+"function attributes have ever been set, the function's ``__dict__`` will be "
+"empty."
 msgstr ""
 
 #: ../pep-0232.txt:70
@@ -153,7 +149,8 @@ msgid "Other Uses"
 msgstr ""
 
 #: ../pep-0232.txt:101
-msgid "Paul Prescod enumerated a bunch of other uses on the `python-dev thread`_."
+msgid ""
+"Paul Prescod enumerated a bunch of other uses on the `python-dev thread`_."
 msgstr ""
 
 #: ../pep-0232.txt:107
@@ -162,16 +159,16 @@ msgstr ""
 
 #: ../pep-0232.txt:109
 msgid ""
-"Here are a number of future directions to consider.  Any adoption of "
-"these ideas would require a new PEP, which referenced this one, and would"
-" have to be targeted at a Python version subsequent to the 2.1 release."
+"Here are a number of future directions to consider.  Any adoption of these "
+"ideas would require a new PEP, which referenced this one, and would have to "
+"be targeted at a Python version subsequent to the 2.1 release."
 msgstr ""
 
 #: ../pep-0232.txt:114
 msgid ""
 "A previous version of this PEP allowed for both setter and getter of "
-"attributes on unbound methods, and only getter on bound methods.  A "
-"number of problems were discovered with this policy."
+"attributes on unbound methods, and only getter on bound methods.  A number "
+"of problems were discovered with this policy."
 msgstr ""
 
 #: ../pep-0232.txt:119
@@ -182,54 +179,53 @@ msgstr ""
 
 #: ../pep-0232.txt:130
 msgid ""
-"Because a change to ``a`` bound ``c1`` also caused a change to ``a`` "
-"bound to ``c2``, setting of attributes on bound methods was disallowed.  "
-"However, even allowing setting of attributes on unbound methods has its "
-"ambiguities::"
+"Because a change to ``a`` bound ``c1`` also caused a change to ``a`` bound "
+"to ``c2``, setting of attributes on bound methods was disallowed.  However, "
+"even allowing setting of attributes on unbound methods has its ambiguities::"
 msgstr ""
 
 #: ../pep-0232.txt:141
 msgid ""
 "For this reason, the current PEP disallows setting attributes on either "
-"bound or unbound methods, but does allow for getting attributes on either"
-" -- both return the attribute value on the underlying function object."
+"bound or unbound methods, but does allow for getting attributes on either -- "
+"both return the attribute value on the underlying function object."
 msgstr ""
 
 #: ../pep-0232.txt:146
 msgid ""
-"A future PEP might propose to implement setting (bound or unbound) method"
-" attributes by setting attributes on the instance or class, using special"
-" naming conventions.  I.e.::"
+"A future PEP might propose to implement setting (bound or unbound) method "
+"attributes by setting attributes on the instance or class, using special "
+"naming conventions.  I.e.::"
 msgstr ""
 
 #: ../pep-0232.txt:163
 msgid ""
 "Here, a lookup on the instance would look to the instance's dictionary "
-"first, followed by a lookup on the class's dictionary, and finally a "
-"lookup on the function object's dictionary."
+"first, followed by a lookup on the class's dictionary, and finally a lookup "
+"on the function object's dictionary."
 msgstr ""
 
 #: ../pep-0232.txt:168
 msgid ""
-"Currently, Python supports function attributes only on Python functions "
-"(i.e. those that are written in Python, not those that are built-in).  "
-"Should it be worthwhile, a separate patch can be crafted that will add "
-"function attributes to built-ins."
+"Currently, Python supports function attributes only on Python functions (i."
+"e. those that are written in Python, not those that are built-in).  Should "
+"it be worthwhile, a separate patch can be crafted that will add function "
+"attributes to built-ins."
 msgstr ""
 
 #: ../pep-0232.txt:173
 msgid ""
 "``__doc__`` is the only function attribute that currently has syntactic "
 "support for conveniently setting.  It may be worthwhile to eventually "
-"enhance the language for supporting easy function attribute setting.  "
-"Here are some syntaxes suggested by PEP reviewers::"
+"enhance the language for supporting easy function attribute setting.  Here "
+"are some syntaxes suggested by PEP reviewers::"
 msgstr ""
 
 #: ../pep-0232.txt:197
 msgid ""
-"The BDFL is currently against any such special syntactic support for "
-"setting arbitrary function attributes.  Any syntax proposals would have "
-"to be outlined in new PEPs."
+"The BDFL is currently against any such special syntactic support for setting "
+"arbitrary function attributes.  Any syntax proposals would have to be "
+"outlined in new PEPs."
 msgstr ""
 
 #: ../pep-0232.txt:203
@@ -239,8 +235,8 @@ msgstr ""
 #: ../pep-0232.txt:205
 msgid ""
 "When this was discussed on the python-dev mailing list in April 2000, a "
-"number of dissenting opinions were voiced.  For completeness, the "
-"discussion thread starts on `python-dev`_."
+"number of dissenting opinions were voiced.  For completeness, the discussion "
+"thread starts on `python-dev`_."
 msgstr ""
 
 #: ../pep-0232.txt:211
@@ -262,16 +258,16 @@ msgstr ""
 #: ../pep-0232.txt:218
 msgid ""
 "Countering some of these arguments is the observation that with vanilla "
-"Python 2.0, ``__doc__`` can in fact be set to any type of object, so some"
-" semblance of writable function attributes are already feasible.  But "
-"that approach is yet another corruption of ``__doc__``."
+"Python 2.0, ``__doc__`` can in fact be set to any type of object, so some "
+"semblance of writable function attributes are already feasible.  But that "
+"approach is yet another corruption of ``__doc__``."
 msgstr ""
 
 #: ../pep-0232.txt:224
 msgid ""
-"And while it is of course possible to add mappings to class objects (or "
-"in the case of function attributes, to the function's module), it is more"
-" difficult and less obvious how to extract the attribute values for "
+"And while it is of course possible to add mappings to class objects (or in "
+"the case of function attributes, to the function's module), it is more "
+"difficult and less obvious how to extract the attribute values for "
 "inspection."
 msgstr ""
 
@@ -288,8 +284,8 @@ msgstr ""
 
 #: ../pep-0232.txt:238
 msgid ""
-"This PEP has been accepted and the implementation has been integrated "
-"into Python 2.1."
+"This PEP has been accepted and the implementation has been integrated into "
+"Python 2.1."
 msgstr ""
 
 #: ../pep-0232.txt:243
@@ -298,9 +294,8 @@ msgstr ""
 
 #: ../pep-0232.txt:245
 msgid ""
-"Aycock, \"Compiling Little Languages in Python\", "
-"http://www.foretec.com/python/workshops/1998-11/proceedings/papers"
-"/aycock-little/aycock-little.html"
+"Aycock, \"Compiling Little Languages in Python\", http://www.foretec.com/"
+"python/workshops/1998-11/proceedings/papers/aycock-little/aycock-little.html"
 msgstr ""
 
 #: ../pep-0232.txt:248
@@ -309,8 +304,9 @@ msgstr ""
 
 #: ../pep-0232.txt:250
 msgid ""
-"Hudson, Michael, SourceForge patch implementing this syntax, "
-"http://sourceforge.net/tracker/index.php?func=detail&aid=403441&group_id=5470&atid=305470"
+"Hudson, Michael, SourceForge patch implementing this syntax, http://"
+"sourceforge.net/tracker/index.php?"
+"func=detail&aid=403441&group_id=5470&atid=305470"
 msgstr ""
 
 #: ../pep-0232.txt:255
@@ -320,4 +316,3 @@ msgstr ""
 #: ../pep-0232.txt:257
 msgid "This document has been placed in the public domain."
 msgstr ""
-

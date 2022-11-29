@@ -65,12 +65,12 @@ msgstr ""
 
 #: ../pep-0670.rst:10
 msgid ""
-"`20-Oct-2021 <https://mail.python.org/archives/list/python-"
-"dev@python.org/thread/2GN646CGWGTO6ZHHU7JTA5XWDF4ULM77/>`__, `08-Feb-2022"
-" <https://mail.python.org/archives/list/python-"
-"dev@python.org/thread/IJ3IBVY3JDPROKX55YNDT6XZTVTTPGOP/>`__, `22-Feb-2022"
-" <https://mail.python.org/archives/list/python-"
-"dev@python.org/thread/VM6I3UHVMME6QRSUOYLK6N2OZHP454W6/>`__"
+"`20-Oct-2021 <https://mail.python.org/archives/list/python-dev@python.org/"
+"thread/2GN646CGWGTO6ZHHU7JTA5XWDF4ULM77/>`__, `08-Feb-2022 <https://mail."
+"python.org/archives/list/python-dev@python.org/thread/"
+"IJ3IBVY3JDPROKX55YNDT6XZTVTTPGOP/>`__, `22-Feb-2022 <https://mail.python.org/"
+"archives/list/python-dev@python.org/thread/VM6I3UHVMME6QRSUOYLK6N2OZHP454W6/"
+">`__"
 msgstr ""
 
 #: ../pep-0670.rst
@@ -79,8 +79,8 @@ msgstr ""
 
 #: ../pep-0670.rst:13
 msgid ""
-"https://mail.python.org/archives/list/python-"
-"dev@python.org/thread/QQFCJ7LR36RUZSC3WI6WZZMQVQ3ZI4MS/"
+"https://mail.python.org/archives/list/python-dev@python.org/thread/"
+"QQFCJ7LR36RUZSC3WI6WZZMQVQ3ZI4MS/"
 msgstr ""
 
 #: ../pep-0670.rst:17
@@ -89,23 +89,23 @@ msgstr ""
 
 #: ../pep-0670.rst:19
 msgid ""
-"Macros in the C API will be converted to static inline functions or "
-"regular functions. This will help avoid macro pitfalls in C/C++, and make"
-" the functions usable from other programming languages."
+"Macros in the C API will be converted to static inline functions or regular "
+"functions. This will help avoid macro pitfalls in C/C++, and make the "
+"functions usable from other programming languages."
 msgstr ""
 
 #: ../pep-0670.rst:23
 msgid ""
-"To avoid compiler warnings, function arguments of pointer types will be "
-"cast to appropriate types using additional macros. The cast will not be "
-"done in the limited C API version 3.11: users who opt in to the new "
-"limited API may need to add casts to the exact expected type."
+"To avoid compiler warnings, function arguments of pointer types will be cast "
+"to appropriate types using additional macros. The cast will not be done in "
+"the limited C API version 3.11: users who opt in to the new limited API may "
+"need to add casts to the exact expected type."
 msgstr ""
 
 #: ../pep-0670.rst:29
 msgid ""
-"To avoid introducing incompatible changes, macros which can be used as "
-"l-value in an assignment will not be converted."
+"To avoid introducing incompatible changes, macros which can be used as l-"
+"value in an assignment will not be converted."
 msgstr ""
 
 #: ../pep-0670.rst:34
@@ -115,10 +115,9 @@ msgstr ""
 #: ../pep-0670.rst:36
 msgid ""
 "The use of macros may have unintended adverse effects that are hard to "
-"avoid, even for experienced C developers. Some issues have been known for"
-" years, while others have been discovered recently in Python. Working "
-"around macro pitfalls makes the macro code harder to read and to "
-"maintain."
+"avoid, even for experienced C developers. Some issues have been known for "
+"years, while others have been discovered recently in Python. Working around "
+"macro pitfalls makes the macro code harder to read and to maintain."
 msgstr ""
 
 #: ../pep-0670.rst:42
@@ -127,9 +126,9 @@ msgstr ""
 
 #: ../pep-0670.rst:44
 msgid ""
-"Functions don't suffer from macro pitfalls, for example the following "
-"ones described in `GCC documentation <https://gcc.gnu.org/onlinedocs/cpp"
-"/Macro-Pitfalls.html>`_:"
+"Functions don't suffer from macro pitfalls, for example the following ones "
+"described in `GCC documentation <https://gcc.gnu.org/onlinedocs/cpp/Macro-"
+"Pitfalls.html>`_:"
 msgstr ""
 
 #: ../pep-0670.rst:48 ../pep-0670.rst:233
@@ -162,8 +161,8 @@ msgstr ""
 
 #: ../pep-0670.rst:56
 msgid ""
-"Functions don't need the following workarounds for macro pitfalls, making"
-" them usually easier to read and to maintain than similar macro code:"
+"Functions don't need the following workarounds for macro pitfalls, making "
+"them usually easier to read and to maintain than similar macro code:"
 msgstr ""
 
 #: ../pep-0670.rst:60
@@ -172,8 +171,8 @@ msgstr ""
 
 #: ../pep-0670.rst:61
 msgid ""
-"Using line continuation characters if the function is written on multiple"
-" lines."
+"Using line continuation characters if the function is written on multiple "
+"lines."
 msgstr ""
 
 #: ../pep-0670.rst:63
@@ -203,8 +202,8 @@ msgstr ""
 #: ../pep-0670.rst:71
 msgid ""
 "Converting macros and static inline functions to regular functions makes "
-"these regular functions accessible to projects which use Python but "
-"cannot use macros and static inline functions."
+"these regular functions accessible to projects which use Python but cannot "
+"use macros and static inline functions."
 msgstr ""
 
 #: ../pep-0670.rst:77
@@ -225,8 +224,8 @@ msgstr ""
 
 #: ../pep-0670.rst:86
 msgid ""
-"Object-like macros (i.e. those which don't need parentheses and "
-"arguments). For example:"
+"Object-like macros (i.e. those which don't need parentheses and arguments). "
+"For example:"
 msgstr ""
 
 #: ../pep-0670.rst:89
@@ -235,21 +234,21 @@ msgstr ""
 
 #: ../pep-0670.rst:90
 msgid ""
-"Macros only defining a value, even if a constant with a well defined type"
-" would be better. Example: ``#define METH_VARARGS 0x0001``."
+"Macros only defining a value, even if a constant with a well defined type "
+"would be better. Example: ``#define METH_VARARGS 0x0001``."
 msgstr ""
 
 #: ../pep-0670.rst:93
 msgid ""
 "Compatibility layer for different C compilers, C language extensions, or "
-"recent C features. Example: ``Py_GCC_ATTRIBUTE()``, ``Py_ALWAYS_INLINE``,"
-" ``Py_MEMCPY()``."
+"recent C features. Example: ``Py_GCC_ATTRIBUTE()``, ``Py_ALWAYS_INLINE``, "
+"``Py_MEMCPY()``."
 msgstr ""
 
 #: ../pep-0670.rst:96
 msgid ""
-"Macros used for definitions rather than behavior. Example: "
-"``PyAPI_FUNC``, ``Py_DEPRECATED``, ``Py_PYTHON_H``."
+"Macros used for definitions rather than behavior. Example: ``PyAPI_FUNC``, "
+"``Py_DEPRECATED``, ``Py_PYTHON_H``."
 msgstr ""
 
 #: ../pep-0670.rst:98
@@ -262,8 +261,8 @@ msgstr ""
 msgid ""
 "Macros which cannot be converted to functions. Examples: "
 "``Py_BEGIN_ALLOW_THREADS`` (contains an unpaired ``}``), ``Py_VISIT`` "
-"(relies on specific variable names), Py_RETURN_RICHCOMPARE (returns from "
-"the calling function)."
+"(relies on specific variable names), Py_RETURN_RICHCOMPARE (returns from the "
+"calling function)."
 msgstr ""
 
 #: ../pep-0670.rst:104
@@ -286,9 +285,8 @@ msgstr ""
 #: ../pep-0670.rst:114
 msgid ""
 "Static inline functions in the public C API may be converted to regular "
-"functions, but only if there is no measurable performance impact of "
-"changing the function. The performance impact should be measured with "
-"benchmarks."
+"functions, but only if there is no measurable performance impact of changing "
+"the function. The performance impact should be measured with benchmarks."
 msgstr ""
 
 #: ../pep-0670.rst:121
@@ -297,15 +295,15 @@ msgstr ""
 
 #: ../pep-0670.rst:123
 msgid ""
-"Currently, most macros accepting pointers cast pointer arguments to their"
-" expected types. For example, in Python 3.6, the ``Py_TYPE()`` macro "
-"casts its argument to ``PyObject*``:"
+"Currently, most macros accepting pointers cast pointer arguments to their "
+"expected types. For example, in Python 3.6, the ``Py_TYPE()`` macro casts "
+"its argument to ``PyObject*``:"
 msgstr ""
 
 #: ../pep-0670.rst:131
 msgid ""
-"The ``Py_TYPE()`` macro accepts the ``PyObject*`` type, but also any "
-"pointer types, such as ``PyLongObject*`` and ``PyDictObject*``."
+"The ``Py_TYPE()`` macro accepts the ``PyObject*`` type, but also any pointer "
+"types, such as ``PyLongObject*`` and ``PyDictObject*``."
 msgstr ""
 
 #: ../pep-0670.rst:134
@@ -315,25 +313,24 @@ msgstr ""
 #: ../pep-0670.rst:136
 msgid ""
 "To avoid compiler errors and warnings in existing code, when a macro is "
-"converted to a function and the macro casts at least one of its arguments"
-" a new macro will be added to keep the cast. The new macro and the "
-"function will have the same name."
+"converted to a function and the macro casts at least one of its arguments a "
+"new macro will be added to keep the cast. The new macro and the function "
+"will have the same name."
 msgstr ""
 
 #: ../pep-0670.rst:141
 msgid ""
-"Example with the ``Py_TYPE()`` macro converted to a static inline "
-"function:"
+"Example with the ``Py_TYPE()`` macro converted to a static inline function:"
 msgstr ""
 
 #: ../pep-0670.rst:151
 msgid ""
 "The cast is kept for all pointer types, not only ``PyObject*``. This "
-"includes casts to ``void*``: removing a cast to ``void*`` would emit a "
-"new warning if the function is called with a ``const void*`` variable. "
-"For example, the ``PyUnicode_WRITE()`` macro casts its *data* argument to"
-" ``void*``, and so it currently accepts ``const void*`` type, even though"
-" it writes into *data*.  This PEP will not change this."
+"includes casts to ``void*``: removing a cast to ``void*`` would emit a new "
+"warning if the function is called with a ``const void*`` variable. For "
+"example, the ``PyUnicode_WRITE()`` macro casts its *data* argument to "
+"``void*``, and so it currently accepts ``const void*`` type, even though it "
+"writes into *data*.  This PEP will not change this."
 msgstr ""
 
 #: ../pep-0670.rst:160
@@ -342,9 +339,9 @@ msgstr ""
 
 #: ../pep-0670.rst:162
 msgid ""
-"The casts will be excluded from the limited C API version 3.11 and newer."
-" When an API user opts into the new limited API, they must pass the "
-"expected type or perform the cast."
+"The casts will be excluded from the limited C API version 3.11 and newer. "
+"When an API user opts into the new limited API, they must pass the expected "
+"type or perform the cast."
 msgstr ""
 
 #: ../pep-0670.rst:166
@@ -357,18 +354,17 @@ msgstr ""
 
 #: ../pep-0670.rst:181
 msgid ""
-"When a macro is converted to a function, its return type must not change "
-"to prevent emitting new compiler warnings."
+"When a macro is converted to a function, its return type must not change to "
+"prevent emitting new compiler warnings."
 msgstr ""
 
 #: ../pep-0670.rst:184
 msgid ""
-"For example, Python 3.7 changed the return type of ``PyUnicode_AsUTF8()``"
-" from ``char*`` to ``const char*`` (`commit "
-"<https://github.com/python/cpython/commit/2a404b63d48d73bbaa007d89efb7a01048475acd>`__)."
-" The change emitted new compiler warnings when building C extensions "
-"expecting ``char*``. This PEP doesn't change the return type to prevent "
-"this issue."
+"For example, Python 3.7 changed the return type of ``PyUnicode_AsUTF8()`` "
+"from ``char*`` to ``const char*`` (`commit <https://github.com/python/"
+"cpython/commit/2a404b63d48d73bbaa007d89efb7a01048475acd>`__). The change "
+"emitted new compiler warnings when building C extensions expecting "
+"``char*``. This PEP doesn't change the return type to prevent this issue."
 msgstr ""
 
 #: ../pep-0670.rst:193
@@ -381,15 +377,15 @@ msgstr ""
 
 #: ../pep-0670.rst:197
 msgid ""
-"Only C extensions explicitly targeting the limited C API version 3.11 "
-"must now pass the expected types to functions: pointer arguments are no "
-"longer cast to the expected types."
+"Only C extensions explicitly targeting the limited C API version 3.11 must "
+"now pass the expected types to functions: pointer arguments are no longer "
+"cast to the expected types."
 msgstr ""
 
 #: ../pep-0670.rst:201
 msgid ""
-"Function arguments of pointer types are still cast and return types are "
-"not changed to prevent emitting new compiler warnings."
+"Function arguments of pointer types are still cast and return types are not "
+"changed to prevent emitting new compiler warnings."
 msgstr ""
 
 #: ../pep-0670.rst:204
@@ -414,17 +410,17 @@ msgstr ""
 
 #: ../pep-0670.rst:227
 msgid ""
-"For example, the ``pos++`` argument in the ``PyUnicode_WRITE(kind, data, "
-"pos++, ch)`` code has a side effect. This code is safe because the "
-"``PyUnicode_WRITE()`` macro only uses its 3rd argument once and so does "
-"not duplicate ``pos++`` side effect."
+"For example, the ``pos++`` argument in the ``PyUnicode_WRITE(kind, data, pos+"
+"+, ch)`` code has a side effect. This code is safe because the "
+"``PyUnicode_WRITE()`` macro only uses its 3rd argument once and so does not "
+"duplicate ``pos++`` side effect."
 msgstr ""
 
 #: ../pep-0670.rst:235
 msgid ""
-"Example of the `bpo-43181: Python macros don't shield arguments "
-"<https://bugs.python.org/issue43181>`_. The ``PyObject_TypeCheck()`` "
-"macro before it has been fixed:"
+"Example of the `bpo-43181: Python macros don't shield arguments <https://"
+"bugs.python.org/issue43181>`_. The ``PyObject_TypeCheck()`` macro before it "
+"has been fixed:"
 msgstr ""
 
 #: ../pep-0670.rst:244
@@ -437,8 +433,8 @@ msgstr ""
 
 #: ../pep-0670.rst:256
 msgid ""
-"C++ ``\"<\"`` and ``\">\"`` characters are not treated as brackets by the"
-" preprocessor, so the ``Py_IS_TYPE()`` macro is invoked with 3 arguments:"
+"C++ ``\"<\"`` and ``\">\"`` characters are not treated as brackets by the "
+"preprocessor, so the ``Py_IS_TYPE()`` macro is invoked with 3 arguments:"
 msgstr ""
 
 #: ../pep-0670.rst:259
@@ -455,14 +451,14 @@ msgstr ""
 
 #: ../pep-0670.rst:263
 msgid ""
-"The compilation fails with an error on ``Py_IS_TYPE()`` which only takes "
-"2 arguments."
+"The compilation fails with an error on ``Py_IS_TYPE()`` which only takes 2 "
+"arguments."
 msgstr ""
 
 #: ../pep-0670.rst:266
 msgid ""
-"The bug is that the *op* and *tp* arguments of ``PyObject_TypeCheck()`` "
-"must be put between parentheses: replace ``Py_IS_TYPE(ob, tp)`` with "
+"The bug is that the *op* and *tp* arguments of ``PyObject_TypeCheck()`` must "
+"be put between parentheses: replace ``Py_IS_TYPE(ob, tp)`` with "
 "``Py_IS_TYPE((ob), (tp))``. In regular C code, these parentheses are "
 "redundant, can be seen as a bug, and so are often forgotten when writing "
 "macros."
@@ -471,8 +467,8 @@ msgstr ""
 #: ../pep-0670.rst:272
 msgid ""
 "To avoid Macro Pitfalls, the ``PyObject_TypeCheck()`` macro has been "
-"converted to a static inline function: `commit "
-"<https://github.com/python/cpython/commit/4bb2a1ebc569eee6f1b46ecef1965a26ae8cb76d>`__."
+"converted to a static inline function: `commit <https://github.com/python/"
+"cpython/commit/4bb2a1ebc569eee6f1b46ecef1965a26ae8cb76d>`__."
 msgstr ""
 
 #: ../pep-0670.rst:278
@@ -484,7 +480,8 @@ msgid "PyObject_INIT()"
 msgstr ""
 
 #: ../pep-0670.rst:283
-msgid "Example showing the usage of commas in a macro which has a return value."
+msgid ""
+"Example showing the usage of commas in a macro which has a return value."
 msgstr ""
 
 #: ../pep-0670.rst:285
@@ -507,8 +504,8 @@ msgstr ""
 
 #: ../pep-0670.rst:310
 msgid ""
-"It uses short statements on multiple lines, rather than being written as "
-"a single long line."
+"It uses short statements on multiple lines, rather than being written as a "
+"single long line."
 msgstr ""
 
 #: ../pep-0670.rst:312
@@ -519,8 +516,8 @@ msgstr ""
 
 #: ../pep-0670.rst:314
 msgid ""
-"Arguments don't need to be put inside parentheses: use ``typeobj``, "
-"rather than ``(typeobj)``."
+"Arguments don't need to be put inside parentheses: use ``typeobj``, rather "
+"than ``(typeobj)``."
 msgstr ""
 
 #: ../pep-0670.rst:318
@@ -541,8 +538,8 @@ msgstr ""
 
 #: ../pep-0670.rst:352
 msgid ""
-"This macro reuses arguments, and possibly calls ``PyUnicode_KIND`` "
-"multiple times:"
+"This macro reuses arguments, and possibly calls ``PyUnicode_KIND`` multiple "
+"times:"
 msgstr ""
 
 #: ../pep-0670.rst:369
@@ -555,11 +552,11 @@ msgstr ""
 
 #: ../pep-0670.rst:394
 msgid ""
-"This is a list of macros already converted to functions between Python "
-"3.8 and Python 3.11. Even though some converted macros (like "
-"``Py_INCREF()``) are very commonly used by C extensions, these "
-"conversions did not significantly impact Python performance and most of "
-"them didn't break backward compatibility."
+"This is a list of macros already converted to functions between Python 3.8 "
+"and Python 3.11. Even though some converted macros (like ``Py_INCREF()``) "
+"are very commonly used by C extensions, these conversions did not "
+"significantly impact Python performance and most of them didn't break "
+"backward compatibility."
 msgstr ""
 
 #: ../pep-0670.rst:402
@@ -636,8 +633,8 @@ msgstr ""
 
 #: ../pep-0670.rst:427
 msgid ""
-"To avoid performance slowdown on Python built without LTO, private static"
-" inline functions have been added to the internal C API:"
+"To avoid performance slowdown on Python built without LTO, private static "
+"inline functions have been added to the internal C API:"
 msgstr ""
 
 #: ../pep-0670.rst:430
@@ -682,8 +679,8 @@ msgstr ""
 
 #: ../pep-0670.rst:446
 msgid ""
-"To avoid performance slowdown on Python built without LTO, a private "
-"static inline function has been added to the internal C API:"
+"To avoid performance slowdown on Python built without LTO, a private static "
+"inline function has been added to the internal C API:"
 msgstr ""
 
 #: ../pep-0670.rst:449
@@ -696,23 +693,23 @@ msgstr ""
 
 #: ../pep-0670.rst:455
 msgid ""
-"While other converted macros didn't break the backward compatibility, "
-"there is an exception."
+"While other converted macros didn't break the backward compatibility, there "
+"is an exception."
 msgstr ""
 
 #: ../pep-0670.rst:458
 msgid ""
 "The 3 macros ``Py_REFCNT()``, ``Py_TYPE()`` and ``Py_SIZE()`` have been "
 "converted to static inline functions in Python 3.10 and 3.11 to disallow "
-"using them as l-value in assignment. It is an incompatible change made on"
-" purpose: see `bpo-39573 <https://bugs.python.org/issue39573>`_ for the "
+"using them as l-value in assignment. It is an incompatible change made on "
+"purpose: see `bpo-39573 <https://bugs.python.org/issue39573>`_ for the "
 "rationale."
 msgstr ""
 
 #: ../pep-0670.rst:464
 msgid ""
-"This PEP does not propose converting macros which can be used as l-value "
-"to avoid introducing new incompatible changes."
+"This PEP does not propose converting macros which can be used as l-value to "
+"avoid introducing new incompatible changes."
 msgstr ""
 
 #: ../pep-0670.rst:469
@@ -727,9 +724,9 @@ msgstr ""
 
 #: ../pep-0670.rst:474
 msgid ""
-"This section explains performance concerns and shows benchmark results "
-"using `PR 29728 <https://github.com/python/cpython/pull/29728>`_, which "
-"replaces the following static inline functions with macros:"
+"This section explains performance concerns and shows benchmark results using "
+"`PR 29728 <https://github.com/python/cpython/pull/29728>`_, which replaces "
+"the following static inline functions with macros:"
 msgstr ""
 
 #: ../pep-0670.rst:478
@@ -770,8 +767,8 @@ msgstr ""
 
 #: ../pep-0670.rst:489
 msgid ""
-"The benchmarks were run on Fedora 35 (Linux) with GCC 11 on a laptop with"
-" 8 logical CPUs (4 physical CPU cores)."
+"The benchmarks were run on Fedora 35 (Linux) with GCC 11 on a laptop with 8 "
+"logical CPUs (4 physical CPU cores)."
 msgstr ""
 
 #: ../pep-0670.rst:494
@@ -780,9 +777,9 @@ msgstr ""
 
 #: ../pep-0670.rst:496
 msgid ""
-"First of all, converting macros to *static inline* functions has "
-"negligible impact on performance: the measured differences are consistent"
-" with noise due to unrelated factors."
+"First of all, converting macros to *static inline* functions has negligible "
+"impact on performance: the measured differences are consistent with noise "
+"due to unrelated factors."
 msgstr ""
 
 #: ../pep-0670.rst:500
@@ -794,16 +791,16 @@ msgstr ""
 
 #: ../pep-0670.rst:504
 msgid ""
-"When a C compiler decides to not inline, there is likely a good reason. "
-"For example, inlining would reuse a register which requires to "
-"save/restore the register value on the stack and so increases the stack "
-"memory usage, or be less efficient."
+"When a C compiler decides to not inline, there is likely a good reason. For "
+"example, inlining would reuse a register which requires to save/restore the "
+"register value on the stack and so increases the stack memory usage, or be "
+"less efficient."
 msgstr ""
 
 #: ../pep-0670.rst:509
 msgid ""
-"Benchmark of the ``./python -m test -j5`` command on Python built in "
-"release mode with ``gcc -O3``, LTO and PGO:"
+"Benchmark of the ``./python -m test -j5`` command on Python built in release "
+"mode with ``gcc -O3``, LTO and PGO:"
 msgstr ""
 
 #: ../pep-0670.rst:512
@@ -816,8 +813,8 @@ msgstr ""
 
 #: ../pep-0670.rst:515
 msgid ""
-"There is **no significant performance difference** between macros and "
-"static inline functions when static inline functions **are inlined**."
+"There is **no significant performance difference** between macros and static "
+"inline functions when static inline functions **are inlined**."
 msgstr ""
 
 #: ../pep-0670.rst:520
@@ -839,24 +836,23 @@ msgstr ""
 
 #: ../pep-0670.rst:529
 msgid ""
-"On other platforms, ``./configure --with-pydebug`` uses the ``-Og`` "
-"compiler option on compilers that support it (including GCC and LLVM "
-"Clang). ``-Og`` means “optimize debugging experience”. Otherwise, the "
-"``-O0`` compiler option is used. ``-O0`` means “disable most "
-"optimizations”."
+"On other platforms, ``./configure --with-pydebug`` uses the ``-Og`` compiler "
+"option on compilers that support it (including GCC and LLVM Clang). ``-Og`` "
+"means “optimize debugging experience”. Otherwise, the ``-O0`` compiler "
+"option is used. ``-O0`` means “disable most optimizations”."
 msgstr ""
 
 #: ../pep-0670.rst:535
 msgid ""
-"With GCC 11, ``gcc -Og`` can inline static inline functions, whereas "
-"``gcc -O0`` does not inline static inline functions."
+"With GCC 11, ``gcc -Og`` can inline static inline functions, whereas ``gcc -"
+"O0`` does not inline static inline functions."
 msgstr ""
 
 #: ../pep-0670.rst:538
 msgid ""
-"Benchmark of the ``./python -m test -j10`` command on Python built in "
-"debug mode with ``gcc -O0`` (that is, compiler optimizations, including "
-"inlining, are explicitly disabled):"
+"Benchmark of the ``./python -m test -j10`` command on Python built in debug "
+"mode with ``gcc -O0`` (that is, compiler optimizations, including inlining, "
+"are explicitly disabled):"
 msgstr ""
 
 #: ../pep-0670.rst:542
@@ -869,16 +865,16 @@ msgstr ""
 
 #: ../pep-0670.rst:545
 msgid ""
-"Replacing macros with static inline functions makes Python **1.04x "
-"slower** when the compiler **does not inline** static inline functions."
+"Replacing macros with static inline functions makes Python **1.04x slower** "
+"when the compiler **does not inline** static inline functions."
 msgstr ""
 
 #: ../pep-0670.rst:549
 msgid ""
-"Note that benchmarks should not be run on a Python debug build. Moreover,"
-" using link-time optimization (LTO) and profile-guided optimization (PGO)"
-" is recommended for best performance and reliable benchmarks. PGO helps "
-"the compiler to decide if functions should be inlined or not."
+"Note that benchmarks should not be run on a Python debug build. Moreover, "
+"using link-time optimization (LTO) and profile-guided optimization (PGO) is "
+"recommended for best performance and reliable benchmarks. PGO helps the "
+"compiler to decide if functions should be inlined or not."
 msgstr ""
 
 #: ../pep-0670.rst:556
@@ -894,24 +890,23 @@ msgstr ""
 
 #: ../pep-0670.rst:562
 msgid ""
-"Previous attempts to use ``Py_ALWAYS_INLINE`` didn't show any benefit, "
-"and were abandoned. See for example `bpo-45094 "
-"<https://bugs.python.org/issue45094>`_ \"Consider using ``__forceinline``"
-" and ``__attribute__((always_inline))`` on static inline functions "
+"Previous attempts to use ``Py_ALWAYS_INLINE`` didn't show any benefit, and "
+"were abandoned. See for example `bpo-45094 <https://bugs.python.org/"
+"issue45094>`_ \"Consider using ``__forceinline`` and "
+"``__attribute__((always_inline))`` on static inline functions "
 "(``Py_INCREF``, ``Py_TYPE``) for debug build\"."
 msgstr ""
 
 #: ../pep-0670.rst:567
 msgid ""
-"When the ``Py_INCREF()`` macro was converted to a static inline function "
-"in 2018 (`commit "
-"<https://github.com/python/cpython/commit/2aaf0c12041bcaadd7f2cc5a54450eefd7a6ff12>`__),"
-" it was decided not to force inlining. The machine code was analyzed with"
-" multiple C compilers and compiler options, and ``Py_INCREF()`` was "
-"always inlined without having to force inlining. The only case where it "
-"was not inlined was the debug build. See discussion in `bpo-35059 "
-"<https://bugs.python.org/issue35059>`_ \"Convert ``Py_INCREF()`` and "
-"``PyObject_INIT()`` to inlined functions\"."
+"When the ``Py_INCREF()`` macro was converted to a static inline function in "
+"2018 (`commit <https://github.com/python/cpython/"
+"commit/2aaf0c12041bcaadd7f2cc5a54450eefd7a6ff12>`__), it was decided not to "
+"force inlining. The machine code was analyzed with multiple C compilers and "
+"compiler options, and ``Py_INCREF()`` was always inlined without having to "
+"force inlining. The only case where it was not inlined was the debug build. "
+"See discussion in `bpo-35059 <https://bugs.python.org/issue35059>`_ "
+"\"Convert ``Py_INCREF()`` and ``PyObject_INIT()`` to inlined functions\"."
 msgstr ""
 
 #: ../pep-0670.rst:579
@@ -921,11 +916,11 @@ msgstr ""
 #: ../pep-0670.rst:581
 msgid ""
 "On the other side, the ``Py_NO_INLINE`` macro can be used to disable "
-"inlining.  It can be used to reduce the stack memory usage, or to prevent"
-" inlining on LTO+PGO builds, which generally inline code more "
-"aggressively: see `bpo-33720 <https://bugs.python.org/issue33720>`_. The "
-"``Py_NO_INLINE`` macro uses ``__attribute__ ((noinline))`` with GCC and "
-"Clang, and ``__declspec(noinline)`` with MSC."
+"inlining.  It can be used to reduce the stack memory usage, or to prevent "
+"inlining on LTO+PGO builds, which generally inline code more aggressively: "
+"see `bpo-33720 <https://bugs.python.org/issue33720>`_. The ``Py_NO_INLINE`` "
+"macro uses ``__attribute__ ((noinline))`` with GCC and Clang, and "
+"``__declspec(noinline)`` with MSC."
 msgstr ""
 
 #: ../pep-0670.rst:588
@@ -949,14 +944,14 @@ msgstr ""
 
 #: ../pep-0670.rst:601
 msgid ""
-"The duplication of side effects can be worked around in the caller of the"
-" macro."
+"The duplication of side effects can be worked around in the caller of the "
+"macro."
 msgstr ""
 
 #: ../pep-0670.rst:604
 msgid ""
-"People using macros should be considered \"consenting adults\". People "
-"who feel unsafe with macros should simply not use them."
+"People using macros should be considered \"consenting adults\". People who "
+"feel unsafe with macros should simply not use them."
 msgstr ""
 
 #: ../pep-0670.rst:607
@@ -977,24 +972,22 @@ msgstr ""
 #: ../pep-0670.rst:617
 msgid ""
 "`Version 2 of PEP 670 - Convert macros to functions in the Python C API "
-"<https://mail.python.org/archives/list/python-"
-"dev@python.org/thread/VM6I3UHVMME6QRSUOYLK6N2OZHP454W6/>`_ (February "
-"2022)"
+"<https://mail.python.org/archives/list/python-dev@python.org/thread/"
+"VM6I3UHVMME6QRSUOYLK6N2OZHP454W6/>`_ (February 2022)"
 msgstr ""
 
 #: ../pep-0670.rst:620
 msgid ""
 "`Steering Council reply to PEP 670 -- Convert macros to functions in the "
-"Python C API <https://mail.python.org/archives/list/python-"
-"dev@python.org/message/IJ3IBVY3JDPROKX55YNDT6XZTVTTPGOP/>`_ (February "
-"2022)"
+"Python C API <https://mail.python.org/archives/list/python-dev@python.org/"
+"message/IJ3IBVY3JDPROKX55YNDT6XZTVTTPGOP/>`_ (February 2022)"
 msgstr ""
 
 #: ../pep-0670.rst:624
 msgid ""
-"`PEP 670: Convert macros to functions in the Python C API "
-"<https://mail.python.org/archives/list/python-"
-"dev@python.org/thread/2GN646CGWGTO6ZHHU7JTA5XWDF4ULM77/>`_ (October 2021)"
+"`PEP 670: Convert macros to functions in the Python C API <https://mail."
+"python.org/archives/list/python-dev@python.org/"
+"thread/2GN646CGWGTO6ZHHU7JTA5XWDF4ULM77/>`_ (October 2021)"
 msgstr ""
 
 #: ../pep-0670.rst:630
@@ -1003,20 +996,20 @@ msgstr ""
 
 #: ../pep-0670.rst:633
 msgid ""
-"`bpo-45490 <https://bugs.python.org/issue45490>`_: [C API] PEP 670: "
-"Convert macros to functions in the Python C API (October 2021)."
+"`bpo-45490 <https://bugs.python.org/issue45490>`_: [C API] PEP 670: Convert "
+"macros to functions in the Python C API (October 2021)."
 msgstr ""
 
 #: ../pep-0670.rst:636
 msgid ""
-"`What to do with unsafe macros <https://discuss.python.org/t/what-to-do-"
-"with-unsafe-macros/7771>`_ (March 2021)."
+"`What to do with unsafe macros <https://discuss.python.org/t/what-to-do-with-"
+"unsafe-macros/7771>`_ (March 2021)."
 msgstr ""
 
 #: ../pep-0670.rst:639
 msgid ""
-"`bpo-43502 <https://bugs.python.org/issue43502>`_: [C-API] Convert "
-"obvious unsafe macros to static inline functions (March 2021)."
+"`bpo-43502 <https://bugs.python.org/issue43502>`_: [C-API] Convert obvious "
+"unsafe macros to static inline functions (March 2021)."
 msgstr ""
 
 #: ../pep-0670.rst:645
@@ -1033,8 +1026,8 @@ msgstr ""
 
 #: ../pep-0670.rst:650
 msgid ""
-"Better explain why pointer arguments require a cast to not emit new "
-"compiler warnings."
+"Better explain why pointer arguments require a cast to not emit new compiler "
+"warnings."
 msgstr ""
 
 #: ../pep-0670.rst:652
@@ -1051,8 +1044,8 @@ msgstr ""
 
 #: ../pep-0670.rst:657
 msgid ""
-"No longer remove return values of macros \"which should not have a return"
-" value\"."
+"No longer remove return values of macros \"which should not have a return "
+"value\"."
 msgstr ""
 
 #: ../pep-0670.rst:659
@@ -1073,7 +1066,6 @@ msgstr ""
 
 #: ../pep-0670.rst:669
 msgid ""
-"This document is placed in the public domain or under the "
-"CC0-1.0-Universal license, whichever is more permissive."
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
 msgstr ""
-

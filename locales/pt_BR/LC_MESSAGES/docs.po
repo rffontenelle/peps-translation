@@ -23,16 +23,16 @@ msgstr ""
 
 #: ../docs/build.rst:8
 msgid ""
-"Whilst editing a PEP, it is useful to review the rendered output locally."
-" This can also be used to check that the PEP is valid reStructuredText "
-"before submission to the PEP editors."
+"Whilst editing a PEP, it is useful to review the rendered output locally. "
+"This can also be used to check that the PEP is valid reStructuredText before "
+"submission to the PEP editors."
 msgstr ""
 
 #: ../docs/build.rst:12
 msgid ""
-"The rest of this document assumes you are working from a local clone of "
-"the `PEPs repository <https://github.com/python/peps>`__, with **Python "
-"3.9 or later** installed."
+"The rest of this document assumes you are working from a local clone of the "
+"`PEPs repository <https://github.com/python/peps>`__, with **Python 3.9 or "
+"later** installed."
 msgstr ""
 
 #: ../docs/build.rst:18
@@ -49,8 +49,8 @@ msgstr ""
 
 #: ../docs/build.rst:35
 msgid ""
-"**(Optional)** Delete prior build files. Generally only needed when "
-"making changes to the rendering system itself."
+"**(Optional)** Delete prior build files. Generally only needed when making "
+"changes to the rendering system itself."
 msgstr ""
 
 #: ../docs/build.rst:42
@@ -59,8 +59,8 @@ msgstr ""
 
 #: ../docs/build.rst:56
 msgid ""
-"There may be a series of warnings about unreferenced citations or labels."
-" Whilst these are valid warnings, they do not impact the build process."
+"There may be a series of warnings about unreferenced citations or labels. "
+"Whilst these are valid warnings, they do not impact the build process."
 msgstr ""
 
 #: ../docs/build.rst:59
@@ -74,7 +74,8 @@ msgid "``build.py`` tools"
 msgstr ""
 
 #: ../docs/build.rst:66
-msgid "Several additional tools can be run through ``build.py``, or the Makefile."
+msgid ""
+"Several additional tools can be run through ``build.py``, or the Makefile."
 msgstr ""
 
 #: ../docs/build.rst:68
@@ -93,9 +94,9 @@ msgstr ""
 
 #: ../docs/build.rst:85
 msgid ""
-"Check the validity of links within PEP sources (runs the `Sphinx "
-"linkchecker <https://www.sphinx-"
-"doc.org/en/master/usage/builders/index.html#sphinx.builders.linkcheck.CheckExternalLinksBuilder>`__)."
+"Check the validity of links within PEP sources (runs the `Sphinx linkchecker "
+"<https://www.sphinx-doc.org/en/master/usage/builders/index.html#sphinx."
+"builders.linkcheck.CheckExternalLinksBuilder>`__)."
 msgstr ""
 
 #: ../docs/build.rst:95
@@ -104,9 +105,9 @@ msgstr ""
 
 #: ../docs/build.rst:97
 msgid ""
-"Run in `nit-picky <https://www.sphinx-"
-"doc.org/en/master/usage/configuration.html#confval-nitpicky>`__ mode. "
-"This generates warnings for all missing references."
+"Run in `nit-picky <https://www.sphinx-doc.org/en/master/usage/configuration."
+"html#confval-nitpicky>`__ mode. This generates warnings for all missing "
+"references."
 msgstr ""
 
 #: ../docs/build.rst:105
@@ -120,7 +121,8 @@ msgid "``build.py`` usage"
 msgstr ""
 
 #: ../docs/build.rst:117
-msgid "For details on the command-line options to the ``build.py`` script, run:"
+msgid ""
+"For details on the command-line options to the ``build.py`` script, run:"
 msgstr ""
 
 #: ../docs/rendering_system.rst:9
@@ -146,7 +148,8 @@ msgid "``conf.py`` contains the majority of the Sphinx configuration"
 msgstr ""
 
 #: ../docs/rendering_system.rst:21
-msgid "``contents.rst`` creates the Sphinx-mandated table of contents directive"
+msgid ""
+"``contents.rst`` creates the Sphinx-mandated table of contents directive"
 msgstr ""
 
 #: ../docs/rendering_system.rst:22
@@ -187,8 +190,7 @@ msgstr ""
 
 #: ../docs/rendering_system.rst:37
 msgid ""
-"``build.py`` manages the rendering process. Usage is covered in "
-":doc:`build`."
+"``build.py`` manages the rendering process. Usage is covered in :doc:`build`."
 msgstr ""
 
 #: ../docs/rendering_system.rst:42
@@ -198,9 +200,9 @@ msgstr ""
 #: ../docs/rendering_system.rst:44
 msgid ""
 "The Sphinx extension and theme are contained in the "
-"``pep_sphinx_extensions`` directory. The following is a brief overview of"
-" the stages of the PEP rendering process, and how the extension functions"
-" at each point."
+"``pep_sphinx_extensions`` directory. The following is a brief overview of "
+"the stages of the PEP rendering process, and how the extension functions at "
+"each point."
 msgstr ""
 
 #: ../docs/rendering_system.rst:51
@@ -213,14 +215,14 @@ msgstr ""
 
 #: ../docs/rendering_system.rst:55
 msgid ""
-"``FileBuilder`` and ``DirectoryBuilder`` run the build process for file- "
-"and directory-based building, respectively."
+"``FileBuilder`` and ``DirectoryBuilder`` run the build process for file- and "
+"directory-based building, respectively."
 msgstr ""
 
 #: ../docs/rendering_system.rst:57
 msgid ""
-"``PEPParser`` registers the custom document transforms and parses PEPs to"
-" a Docutils document."
+"``PEPParser`` registers the custom document transforms and parses PEPs to a "
+"Docutils document."
 msgstr ""
 
 #: ../docs/rendering_system.rst:59
@@ -253,8 +255,8 @@ msgstr ""
 
 #: ../docs/rendering_system.rst:72
 msgid ""
-"After the Sphinx builder object is created and initialised, we ensure the"
-" configuration is correct for the builder chosen."
+"After the Sphinx builder object is created and initialised, we ensure the "
+"configuration is correct for the builder chosen."
 msgstr ""
 
 #: ../docs/rendering_system.rst:75
@@ -277,9 +279,9 @@ msgstr ""
 
 #: ../docs/rendering_system.rst:88
 msgid ""
-"Parsing the document is handled by ``PEPParser`` "
-"(``pep_sphinx_extensions.pep_processor.parsing.pep_parser.PEPParser``), a"
-" lightweight wrapper over ``sphinx.parsers.RSTParser``."
+"Parsing the document is handled by ``PEPParser`` (``pep_sphinx_extensions."
+"pep_processor.parsing.pep_parser.PEPParser``), a lightweight wrapper over "
+"``sphinx.parsers.RSTParser``."
 msgstr ""
 
 #: ../docs/rendering_system.rst:92
@@ -322,10 +324,10 @@ msgstr ""
 
 #: ../docs/rendering_system.rst:113
 msgid ""
-"PEPs start with a set of :rfc:`2822` headers, per :doc:`PEP 1 "
-"<../pep-0001>`. This transform validates that the required headers are "
-"present and of the correct data type, and removes headers not for "
-"display. It must run before the ``PEPTitle`` transform."
+"PEPs start with a set of :rfc:`2822` headers, per :doc:`PEP 1 <../"
+"pep-0001>`. This transform validates that the required headers are present "
+"and of the correct data type, and removes headers not for display. It must "
+"run before the ``PEPTitle`` transform."
 msgstr ""
 
 #: ../docs/rendering_system.rst:120
@@ -346,17 +348,17 @@ msgstr ""
 
 #: ../docs/rendering_system.rst:131
 msgid ""
-"The automatic table of contents (TOC) is inserted in this transform in a "
-"two-part process."
+"The automatic table of contents (TOC) is inserted in this transform in a two-"
+"part process."
 msgstr ""
 
 #: ../docs/rendering_system.rst:134
 msgid ""
-"First, the transform inserts a placeholder for the TOC and a horizontal "
-"rule after the document title and PEP headers. A callback transform then "
-"recursively walks the document to create the TOC, starting from after the"
-" placeholder node. Whilst walking the document, all reference nodes in "
-"the titles are removed, and titles are given a self-link."
+"First, the transform inserts a placeholder for the TOC and a horizontal rule "
+"after the document title and PEP headers. A callback transform then "
+"recursively walks the document to create the TOC, starting from after the "
+"placeholder node. Whilst walking the document, all reference nodes in the "
+"titles are removed, and titles are given a self-link."
 msgstr ""
 
 #: ../docs/rendering_system.rst:143
@@ -365,16 +367,15 @@ msgstr ""
 
 #: ../docs/rendering_system.rst:145
 msgid ""
-"This first builds a map of file modification times from a single git "
-"call, as a speed-up. This will return incorrect results on a shallow "
-"checkout of the repository, as is the default on continuous integration "
-"systems."
+"This first builds a map of file modification times from a single git call, "
+"as a speed-up. This will return incorrect results on a shallow checkout of "
+"the repository, as is the default on continuous integration systems."
 msgstr ""
 
 #: ../docs/rendering_system.rst:149
 msgid ""
-"We then attempt to remove any empty references sections, and append "
-"metadata in the footer (source link and last modified timestamp)."
+"We then attempt to remove any empty references sections, and append metadata "
+"in the footer (source link and last modified timestamp)."
 msgstr ""
 
 #: ../docs/rendering_system.rst:154
@@ -384,9 +385,9 @@ msgstr ""
 #: ../docs/rendering_system.rst:156
 msgid ""
 "``pep_html_builder.FileBuilder.prepare_writing`` initialises the bare "
-"miniumum of the Docutils writer and the settings for writing documents. "
-"This provides a significant speed-up over the base Sphinx implementation,"
-" as most of the data automatically initialised was unused."
+"miniumum of the Docutils writer and the settings for writing documents. This "
+"provides a significant speed-up over the base Sphinx implementation, as most "
+"of the data automatically initialised was unused."
 msgstr ""
 
 #: ../docs/rendering_system.rst:163
@@ -407,9 +408,8 @@ msgstr ""
 
 #: ../docs/rendering_system.rst:174
 msgid ""
-"Finally in ``pep_html_builder``, we gather all the parts to be passed to "
-"the Jinja template. This is also where we create the sidebar table of "
-"contents."
+"Finally in ``pep_html_builder``, we gather all the parts to be passed to the "
+"Jinja template. This is also where we create the sidebar table of contents."
 msgstr ""
 
 #: ../docs/rendering_system.rst:178
@@ -422,16 +422,16 @@ msgstr ""
 
 #: ../docs/rendering_system.rst:184
 msgid ""
-"The theme is comprised of the HTML template in "
-"``pep_sphinx_extensions/pep_theme/templates/page.html`` and the "
-"stylesheets in ``pep_sphinx_extensions/pep_theme/static``."
+"The theme is comprised of the HTML template in ``pep_sphinx_extensions/"
+"pep_theme/templates/page.html`` and the stylesheets in "
+"``pep_sphinx_extensions/pep_theme/static``."
 msgstr ""
 
 #: ../docs/rendering_system.rst:188
 msgid ""
 "The template is entirely self-contained, not relying on any default "
-"behaviour from Sphinx. It specifies the CSS files to include, the "
-"favicon, and basic semantic information for the document structure."
+"behaviour from Sphinx. It specifies the CSS files to include, the favicon, "
+"and basic semantic information for the document structure."
 msgstr ""
 
 #: ../docs/rendering_system.rst:193
@@ -453,8 +453,8 @@ msgstr ""
 #: ../docs/rendering_system.rst:202
 msgid ""
 "The generation of the index, PEP 0, happens in three phases. The "
-"reStructuredText source file is generated, it is then added to Sphinx, "
-"and finally the data is post processed."
+"reStructuredText source file is generated, it is then added to Sphinx, and "
+"finally the data is post processed."
 msgstr ""
 
 #: ../docs/rendering_system.rst:208
@@ -463,14 +463,14 @@ msgstr ""
 
 #: ../docs/rendering_system.rst:210
 msgid ""
-"``pep-0000.rst`` is created during a callback, before documents are "
-"loaded by Sphinx."
+"``pep-0000.rst`` is created during a callback, before documents are loaded "
+"by Sphinx."
 msgstr ""
 
 #: ../docs/rendering_system.rst:213
 msgid ""
-"We first parse the individual PEP files to get the :rfc:`2822` header, "
-"and then parse and validate that metadata."
+"We first parse the individual PEP files to get the :rfc:`2822` header, and "
+"then parse and validate that metadata."
 msgstr ""
 
 #: ../docs/rendering_system.rst:216
@@ -493,14 +493,14 @@ msgstr ""
 
 #: ../docs/rendering_system.rst:223
 msgid ""
-"The ``AUTHOR_OVERRIDES.csv`` file can be used to override an author's "
-"name in the PEP 0 output."
+"The ``AUTHOR_OVERRIDES.csv`` file can be used to override an author's name "
+"in the PEP 0 output."
 msgstr ""
 
 #: ../docs/rendering_system.rst:226
 msgid ""
-"We then add the newly created PEP 0 file to two Sphinx variables so that "
-"it will be processed as a normal source document."
+"We then add the newly created PEP 0 file to two Sphinx variables so that it "
+"will be processed as a normal source document."
 msgstr ""
 
 #: ../docs/rendering_system.rst:231
@@ -510,8 +510,8 @@ msgstr ""
 #: ../docs/rendering_system.rst:233
 msgid ""
 "The ``PEPHeaders`` transform schedules the \\PEP 0 post-processing code. "
-"This serves two functions: masking email addresses and linking numeric "
-"PEP references to the actual documents."
+"This serves two functions: masking email addresses and linking numeric PEP "
+"references to the actual documents."
 msgstr ""
 
 #: ../docs/rendering_system.rst:239
@@ -520,7 +520,6 @@ msgstr ""
 
 #: ../docs/rendering_system.rst:241
 msgid ""
-"The RSS feed is created by extracting the header metadata and abstract "
-"from the ten most recent PEPs."
+"The RSS feed is created by extracting the header metadata and abstract from "
+"the ten most recent PEPs."
 msgstr ""
-

@@ -73,8 +73,8 @@ msgstr ""
 
 #: ../pep-0628.txt:20
 msgid ""
-"The concept of ``tau`` (``τ``) is based on the observation that the ratio"
-" of a circle's circumference to its radius is far more fundamental and "
+"The concept of ``tau`` (``τ``) is based on the observation that the ratio of "
+"a circle's circumference to its radius is far more fundamental and "
 "interesting than the ratio between its circumference and diameter. It is "
 "simply a matter of assigning a name to the value ``2 * pi`` (``2π``)."
 msgstr ""
@@ -85,14 +85,14 @@ msgstr ""
 
 #: ../pep-0628.txt:29
 msgid ""
-"This PEP is now `accepted`_ and ``math.tau`` will be a part of Python "
-"3.6. Happy birthday Nick!"
+"This PEP is now `accepted`_ and ``math.tau`` will be a part of Python 3.6. "
+"Happy birthday Nick!"
 msgstr ""
 
 #: ../pep-0628.txt:32
 msgid ""
-"The idea in this PEP has been implemented in the auspiciously named "
-"`issue 12345`_."
+"The idea in this PEP has been implemented in the auspiciously named `issue "
+"12345`_."
 msgstr ""
 
 #: ../pep-0628.txt:40
@@ -101,21 +101,21 @@ msgstr ""
 
 #: ../pep-0628.txt:42
 msgid ""
-"``pi`` is defined as the ratio of a circle's circumference to its "
-"diameter. However, a circle is defined by its centre point and its "
-"*radius*. This is shown clearly when we note that the parameter of "
-"integration to go from a circle's circumference to its area is the "
-"radius, not the diameter. If we use the diameter instead we have to "
-"divide by four to get rid of the extraneous multiplier."
+"``pi`` is defined as the ratio of a circle's circumference to its diameter. "
+"However, a circle is defined by its centre point and its *radius*. This is "
+"shown clearly when we note that the parameter of integration to go from a "
+"circle's circumference to its area is the radius, not the diameter. If we "
+"use the diameter instead we have to divide by four to get rid of the "
+"extraneous multiplier."
 msgstr ""
 
 #: ../pep-0628.txt:49
 msgid ""
-"When working with radians, it is trivial to convert any given fraction of"
-" a circle to a value in radians in terms of ``tau``. A quarter circle is "
-"``tau/4``, a half circle is ``tau/2``, seven 25ths is ``7*tau/25``, etc. "
-"In contrast with the equivalent expressions in terms of ``pi`` (``pi/2``,"
-" ``pi``, ``14*pi/25``), the unnecessary and needlessly confusing "
+"When working with radians, it is trivial to convert any given fraction of a "
+"circle to a value in radians in terms of ``tau``. A quarter circle is "
+"``tau/4``, a half circle is ``tau/2``, seven 25ths is ``7*tau/25``, etc. In "
+"contrast with the equivalent expressions in terms of ``pi`` (``pi/2``, "
+"``pi``, ``14*pi/25``), the unnecessary and needlessly confusing "
 "multiplication by two is gone."
 msgstr ""
 
@@ -125,22 +125,22 @@ msgstr ""
 
 #: ../pep-0628.txt:60
 msgid ""
-"I've barely skimmed the surface of the many examples put forward to point"
-" out just how much *easier* and more *sensible* many aspects of "
-"mathematics become when conceived in terms of ``tau`` rather than ``pi``."
-" If you don't find my specific examples sufficiently persuasive, here are"
-" some more resources that may be of interest:"
+"I've barely skimmed the surface of the many examples put forward to point "
+"out just how much *easier* and more *sensible* many aspects of mathematics "
+"become when conceived in terms of ``tau`` rather than ``pi``. If you don't "
+"find my specific examples sufficiently persuasive, here are some more "
+"resources that may be of interest:"
 msgstr ""
 
 #: ../pep-0628.txt:66
-msgid "Michael Hartl is the primary instigator of Tau Day in his `Tau Manifesto`_"
+msgid ""
+"Michael Hartl is the primary instigator of Tau Day in his `Tau Manifesto`_"
 msgstr ""
 
 #: ../pep-0628.txt:67
 msgid ""
 "Bob Palais, the author of the original mathematics journal article "
-"highlighting the problems with ``pi`` has `a page of resources`_ on the "
-"topic"
+"highlighting the problems with ``pi`` has `a page of resources`_ on the topic"
 msgstr ""
 
 #: ../pep-0628.txt:70
@@ -156,4 +156,3 @@ msgstr ""
 #: ../pep-0628.txt:82
 msgid "This document has been placed in the public domain."
 msgstr ""
-

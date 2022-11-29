@@ -71,8 +71,8 @@ msgstr ""
 
 #: ../pep-0548.rst:17
 msgid ""
-"Rejection by Guido: https://mail.python.org/pipermail/python-"
-"dev/2017-September/149232.html"
+"Rejection by Guido: https://mail.python.org/pipermail/python-dev/2017-"
+"September/149232.html"
 msgstr ""
 
 #: ../pep-0548.rst:22
@@ -81,10 +81,10 @@ msgstr ""
 
 #: ../pep-0548.rst:24
 msgid ""
-"This PEP proposes enhancing the ``break`` and ``continue`` statements "
-"with an optional boolean expression that controls whether or not they "
-"execute.  This allows the flow of control in loops to be expressed more "
-"clearly and compactly."
+"This PEP proposes enhancing the ``break`` and ``continue`` statements with "
+"an optional boolean expression that controls whether or not they execute.  "
+"This allows the flow of control in loops to be expressed more clearly and "
+"compactly."
 msgstr ""
 
 #: ../pep-0548.rst:31
@@ -97,15 +97,15 @@ msgstr ""
 
 #: ../pep-0548.rst:35
 msgid ""
-"It is often necessary for some code to be executed before each evaluation"
-" of the while loop condition.  This code is often duplicated outside the "
-"loop, as setup code that executes once before entering the loop::"
+"It is often necessary for some code to be executed before each evaluation of "
+"the while loop condition.  This code is often duplicated outside the loop, "
+"as setup code that executes once before entering the loop::"
 msgstr ""
 
 #: ../pep-0548.rst:45
 msgid ""
-"That PEP was rejected because no syntax was found that was superior to "
-"the following form::"
+"That PEP was rejected because no syntax was found that was superior to the "
+"following form::"
 msgstr ""
 
 #: ../pep-0548.rst:54
@@ -120,7 +120,8 @@ msgid "Syntax"
 msgstr ""
 
 #: ../pep-0548.rst:62
-msgid "The syntax of the break and continue statements are extended as follows::"
+msgid ""
+"The syntax of the break and continue statements are extended as follows::"
 msgstr ""
 
 #: ../pep-0548.rst:68
@@ -133,19 +134,19 @@ msgstr ""
 
 #: ../pep-0548.rst:79
 msgid ""
-"A ``break if`` or ``continue if`` is executed if and only if "
-"``expression`` evaluates to true."
+"A ``break if`` or ``continue if`` is executed if and only if ``expression`` "
+"evaluates to true."
 msgstr ""
 
 #: ../pep-0548.rst:82
 msgid ""
-"A ``while`` statement with no expression loops until a break or return is"
-" executed (or an error is raised), as if it were a ``while True`` "
-"statement.  Given that the loop can never terminate except in a way that "
-"would not cause an ``else`` suite to execute, no ``else`` suite is "
-"allowed in the expressionless form.  If practical, it should also be an "
-"error if the body of an expressionless ``while`` does not contain at "
-"least one ``break`` or ``return`` statement."
+"A ``while`` statement with no expression loops until a break or return is "
+"executed (or an error is raised), as if it were a ``while True`` statement.  "
+"Given that the loop can never terminate except in a way that would not cause "
+"an ``else`` suite to execute, no ``else`` suite is allowed in the "
+"expressionless form.  If practical, it should also be an error if the body "
+"of an expressionless ``while`` does not contain at least one ``break`` or "
+"``return`` statement."
 msgstr ""
 
 #: ../pep-0548.rst:92
@@ -161,15 +162,16 @@ msgid "could be formatted as::"
 msgstr ""
 
 #: ../pep-0548.rst:109
-msgid "This is superficially almost identical to the form proposed by this PEP::"
+msgid ""
+"This is superficially almost identical to the form proposed by this PEP::"
 msgstr ""
 
 #: ../pep-0548.rst:117
 msgid ""
 "The significant difference here is that the loop flow control keyword "
-"appears *first* in the line of code.  This makes it easier to comprehend "
-"the flow of control in the loop at a glance, especially when reading "
-"colorized code."
+"appears *first* in the line of code.  This makes it easier to comprehend the "
+"flow of control in the loop at a glance, especially when reading colorized "
+"code."
 msgstr ""
 
 #: ../pep-0548.rst:122
@@ -180,11 +182,11 @@ msgstr ""
 
 #: ../pep-0548.rst:131
 msgid ""
-"Reading this, we either see the break and possibly need to think about "
-"where the while is that it applies to, since the break is indented under "
-"the if, and then track backward to read the condition that triggers it; "
-"or, we read the condition and only afterward discover that this condition"
-" changes the flow of the loop."
+"Reading this, we either see the break and possibly need to think about where "
+"the while is that it applies to, since the break is indented under the if, "
+"and then track backward to read the condition that triggers it; or, we read "
+"the condition and only afterward discover that this condition changes the "
+"flow of the loop."
 msgstr ""
 
 #: ../pep-0548.rst:137
@@ -204,17 +206,17 @@ msgstr ""
 
 #: ../pep-0548.rst:166
 msgid ""
-"This is the natural way to write this code given current Python loop "
-"control syntax.  However, given ``break if``, it would be more natural to"
-" write this as follows::"
+"This is the natural way to write this code given current Python loop control "
+"syntax.  However, given ``break if``, it would be more natural to write this "
+"as follows::"
 msgstr ""
 
 #: ../pep-0548.rst:182
 msgid ""
-"This form moves the error handling out of the loop body, leaving the loop"
-" logic much more understandable.  While it would certainly be possible to"
-" write the code this way using the current syntax, the proposed syntax "
-"makes it more natural to write it in the clearer form."
+"This form moves the error handling out of the loop body, leaving the loop "
+"logic much more understandable.  While it would certainly be possible to "
+"write the code this way using the current syntax, the proposed syntax makes "
+"it more natural to write it in the clearer form."
 msgstr ""
 
 #: ../pep-0548.rst:187
@@ -227,8 +229,8 @@ msgstr ""
 
 #: ../pep-0548.rst:196
 msgid ""
-"The tarfile module, for example, has a couple of \"read until\" loops "
-"like the following::"
+"The tarfile module, for example, has a couple of \"read until\" loops like "
+"the following::"
 msgstr ""
 
 #: ../pep-0548.rst:204
@@ -243,8 +245,8 @@ msgstr ""
 
 #: ../pep-0548.rst:213
 msgid ""
-"It is much more common for a ``continue`` statement to be at the end of a"
-" multiline if suite, such as this example from zipfile ::"
+"It is much more common for a ``continue`` statement to be at the end of a "
+"multiline if suite, such as this example from zipfile ::"
 msgstr ""
 
 #: ../pep-0548.rst:226
@@ -263,16 +265,16 @@ msgstr ""
 
 #: ../pep-0548.rst:268
 msgid ""
-"This example indicates that there are non-trivial use cases where "
-"``continue if`` also improves the readability of the loop code."
+"This example indicates that there are non-trivial use cases where ``continue "
+"if`` also improves the readability of the loop code."
 msgstr ""
 
 #: ../pep-0548.rst:271
 msgid ""
 "It is probably significant to note that all of the examples selected for "
-"this PEP were found by grepping the standard library for ``while True`` "
-"and ``continue``, and the relevant examples were found in the first four "
-"modules inspected."
+"this PEP were found by grepping the standard library for ``while True`` and "
+"``continue``, and the relevant examples were found in the first four modules "
+"inspected."
 msgstr ""
 
 #: ../pep-0548.rst:278
@@ -282,4 +284,3 @@ msgstr ""
 #: ../pep-0548.rst:280
 msgid "This document is placed in the public domain."
 msgstr ""
-

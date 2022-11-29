@@ -67,26 +67,25 @@ msgstr ""
 
 #: ../pep-0365.txt:17
 msgid ""
-"This PEP proposes adding an enhanced version of the ``pkg_resources`` "
-"module to the standard library."
+"This PEP proposes adding an enhanced version of the ``pkg_resources`` module "
+"to the standard library."
 msgstr ""
 
 #: ../pep-0365.txt:20
 msgid ""
-"``pkg_resources`` is a module used to find and manage Python "
-"package/version dependencies and access bundled files and resources, "
-"including those inside of zipped ``.egg`` files.  Currently, "
-"``pkg_resources`` is only available through installing the entire "
-"``setuptools`` distribution, but it does not depend on any other part of "
-"setuptools; in effect, it comprises the entire runtime support library "
-"for Python Eggs, and is independently useful."
+"``pkg_resources`` is a module used to find and manage Python package/version "
+"dependencies and access bundled files and resources, including those inside "
+"of zipped ``.egg`` files.  Currently, ``pkg_resources`` is only available "
+"through installing the entire ``setuptools`` distribution, but it does not "
+"depend on any other part of setuptools; in effect, it comprises the entire "
+"runtime support library for Python Eggs, and is independently useful."
 msgstr ""
 
 #: ../pep-0365.txt:28
 msgid ""
 "In addition, with one feature addition, this module could support easy "
-"bootstrap installation of several Python package management tools, "
-"including ``setuptools``, ``workingenv``, and ``zc.buildout``."
+"bootstrap installation of several Python package management tools, including "
+"``setuptools``, ``workingenv``, and ``zc.buildout``."
 msgstr ""
 
 #: ../pep-0365.txt:34
@@ -111,22 +110,21 @@ msgstr ""
 
 #: ../pep-0365.txt:48
 msgid ""
-"to request downloading and installation of ``SomePackage`` from PyPI. "
-"This feature would *not* be a replacement for ``easy_install``; instead, "
-"it would rely on ``SomePackage`` having pure-Python ``.egg`` files listed"
-" for download via the PyPI XML-RPC API, and the eggs would be placed in "
-"the ``$PYTHON_EGG_CACHE`` directory, where they would **not** be "
-"importable by default.  (And no scripts would be installed.) However, if "
-"the download egg contains installation bootstrap code, it will be given a"
-" chance to run."
+"to request downloading and installation of ``SomePackage`` from PyPI. This "
+"feature would *not* be a replacement for ``easy_install``; instead, it would "
+"rely on ``SomePackage`` having pure-Python ``.egg`` files listed for "
+"download via the PyPI XML-RPC API, and the eggs would be placed in the "
+"``$PYTHON_EGG_CACHE`` directory, where they would **not** be importable by "
+"default.  (And no scripts would be installed.) However, if the download egg "
+"contains installation bootstrap code, it will be given a chance to run."
 msgstr ""
 
 #: ../pep-0365.txt:57
 msgid ""
-"These restrictions would allow the code to be extremely simple, yet still"
-" powerful enough to support users downloading package management tools "
-"such as ``setuptools``, ``workingenv`` and ``zc.buildout``, simply by "
-"supplying the tool's name on the command line."
+"These restrictions would allow the code to be extremely simple, yet still "
+"powerful enough to support users downloading package management tools such "
+"as ``setuptools``, ``workingenv`` and ``zc.buildout``, simply by supplying "
+"the tool's name on the command line."
 msgstr ""
 
 #: ../pep-0365.txt:64
@@ -135,42 +133,41 @@ msgstr ""
 
 #: ../pep-0365.txt:66
 msgid ""
-"Many users have requested that ``setuptools`` be included in the standard"
-" library, to save users needing to go through the awkward process of "
-"bootstrapping it.  However, most of the bootstrapping complexity comes "
-"from the fact that setuptools-installed code cannot use the "
-"``pkg_resources`` runtime module unless setuptools is already installed. "
-"Thus, installing setuptools requires (in a sense) that setuptools already"
-" be installed."
+"Many users have requested that ``setuptools`` be included in the standard "
+"library, to save users needing to go through the awkward process of "
+"bootstrapping it.  However, most of the bootstrapping complexity comes from "
+"the fact that setuptools-installed code cannot use the ``pkg_resources`` "
+"runtime module unless setuptools is already installed. Thus, installing "
+"setuptools requires (in a sense) that setuptools already be installed."
 msgstr ""
 
 #: ../pep-0365.txt:74
 msgid ""
-"Other Python package management tools, such as ``workingenv`` and "
-"``zc.buildout``, have similar bootstrapping issues, since they both make "
-"use of setuptools, but also want to provide users with something "
-"approaching a \"one-step install\".  The complexity of creating bootstrap"
-" utilities for these and any other such tools that arise in future, is "
-"greatly reduced if ``pkg_resources`` is already present, and is also able"
-" to download pre-packaged eggs from PyPI."
+"Other Python package management tools, such as ``workingenv`` and ``zc."
+"buildout``, have similar bootstrapping issues, since they both make use of "
+"setuptools, but also want to provide users with something approaching a "
+"\"one-step install\".  The complexity of creating bootstrap utilities for "
+"these and any other such tools that arise in future, is greatly reduced if "
+"``pkg_resources`` is already present, and is also able to download pre-"
+"packaged eggs from PyPI."
 msgstr ""
 
 #: ../pep-0365.txt:82
 msgid ""
-"(It would also mean that setuptools would not need to be installed in "
-"order to simply *use* eggs, as opposed to building them.)"
+"(It would also mean that setuptools would not need to be installed in order "
+"to simply *use* eggs, as opposed to building them.)"
 msgstr ""
 
 #: ../pep-0365.txt:85
 msgid ""
 "Finally, in addition to providing access to eggs built via setuptools or "
 "other packaging tools, it should be noted that since Python 2.5, the "
-"distutils install package metadata (aka ``PKG-INFO``) files that can be "
-"read by ``pkg_resources`` to identify what distributions are already on "
-"``sys.path``.  In environments where Python packages are installed using "
-"system package tools (like RPM), the ``pkg_resources`` module provides an"
-" API for detecting what versions of what packages are installed, even if "
-"those packages were installed via the distutils instead of setuptools."
+"distutils install package metadata (aka ``PKG-INFO``) files that can be read "
+"by ``pkg_resources`` to identify what distributions are already on ``sys."
+"path``.  In environments where Python packages are installed using system "
+"package tools (like RPM), the ``pkg_resources`` module provides an API for "
+"detecting what versions of what packages are installed, even if those "
+"packages were installed via the distutils instead of setuptools."
 msgstr ""
 
 #: ../pep-0365.txt:97
@@ -180,10 +177,10 @@ msgstr ""
 #: ../pep-0365.txt:99
 msgid ""
 "The ``pkg_resources`` implementation is maintained in the Python SVN "
-"repository under ``/sandbox/trunk/setuptools/``; see ``pkg_resources.py``"
-" and ``pkg_resources.txt``.  Documentation for the egg format(s) "
-"supported by ``pkg_resources`` can be found in ``doc/formats.txt``.  HTML"
-" versions of these documents are available at:"
+"repository under ``/sandbox/trunk/setuptools/``; see ``pkg_resources.py`` "
+"and ``pkg_resources.txt``.  Documentation for the egg format(s) supported by "
+"``pkg_resources`` can be found in ``doc/formats.txt``.  HTML versions of "
+"these documents are available at:"
 msgstr ""
 
 #: ../pep-0365.txt:106
@@ -196,8 +193,8 @@ msgstr ""
 
 #: ../pep-0365.txt:110
 msgid ""
-"(These HTML versions are for setuptools 0.6; they may not reflect all of "
-"the changes found in the Subversion trunk's ``.txt`` versions.)"
+"(These HTML versions are for setuptools 0.6; they may not reflect all of the "
+"changes found in the Subversion trunk's ``.txt`` versions.)"
 msgstr ""
 
 #: ../pep-0365.txt:115
@@ -207,4 +204,3 @@ msgstr ""
 #: ../pep-0365.txt:117
 msgid "This document has been placed in the public domain."
 msgstr ""
-

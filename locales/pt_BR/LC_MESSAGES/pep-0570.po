@@ -23,9 +23,8 @@ msgstr ""
 
 #: ../pep-0570.rst:5
 msgid ""
-"Larry Hastings <larry@hastings.org>, Pablo Galindo "
-"<pablogsal@python.org>, Mario Corchero <mariocj89@gmail.com>, Eric N. "
-"Vander Weele <ericvw@gmail.com>"
+"Larry Hastings <larry@hastings.org>, Pablo Galindo <pablogsal@python.org>, "
+"Mario Corchero <mariocj89@gmail.com>, Eric N. Vander Weele <ericvw@gmail.com>"
 msgstr ""
 
 #: ../pep-0570.rst
@@ -42,8 +41,7 @@ msgstr ""
 
 #: ../pep-0570.rst:10
 msgid ""
-"https://discuss.python.org/t/pep-570-python-positional-only-"
-"parameters/1078"
+"https://discuss.python.org/t/pep-570-python-positional-only-parameters/1078"
 msgstr ""
 
 #: ../pep-0570.rst
@@ -90,19 +88,19 @@ msgstr ""
 
 #: ../pep-0570.rst:25
 msgid ""
-"Positional-only parameters have no externally-usable name. When a "
-"function accepting positional-only parameters is called, positional "
-"arguments are mapped to these parameters based solely on their order."
+"Positional-only parameters have no externally-usable name. When a function "
+"accepting positional-only parameters is called, positional arguments are "
+"mapped to these parameters based solely on their order."
 msgstr ""
 
 #: ../pep-0570.rst:29
 msgid ""
-"When designing APIs (application programming interfaces), library authors"
-" try to ensure correct and intended usage of an API. Without the ability "
-"to specify which parameters are positional-only, library authors must be "
-"careful when choosing appropriate parameter names. This care must be "
-"taken even for required parameters or when the parameters have no "
-"external semantic meaning for callers of the API."
+"When designing APIs (application programming interfaces), library authors "
+"try to ensure correct and intended usage of an API. Without the ability to "
+"specify which parameters are positional-only, library authors must be "
+"careful when choosing appropriate parameter names. This care must be taken "
+"even for required parameters or when the parameters have no external "
+"semantic meaning for callers of the API."
 msgstr ""
 
 #: ../pep-0570.rst:36
@@ -133,8 +131,8 @@ msgstr ""
 
 #: ../pep-0570.rst:46
 msgid ""
-"discuss why positional-only parameters should be a feature intrinsic to "
-"the language"
+"discuss why positional-only parameters should be a feature intrinsic to the "
+"language"
 msgstr ""
 
 #: ../pep-0570.rst:48
@@ -159,27 +157,27 @@ msgstr ""
 
 #: ../pep-0570.rst:60
 msgid ""
-"Python originally supported positional-only parameters. Early versions of"
-" the language lacked the ability to call functions with arguments bound "
-"to parameters by name. Around Python 1.0, parameter semantics changed to "
-"be positional-or-keyword.  Since then, users have been able to provide "
-"arguments to a function either positionally or by the keyword name "
-"specified in the function's definition."
+"Python originally supported positional-only parameters. Early versions of "
+"the language lacked the ability to call functions with arguments bound to "
+"parameters by name. Around Python 1.0, parameter semantics changed to be "
+"positional-or-keyword.  Since then, users have been able to provide "
+"arguments to a function either positionally or by the keyword name specified "
+"in the function's definition."
 msgstr ""
 
 #: ../pep-0570.rst:67
 msgid ""
-"In current versions of Python, many CPython \"builtin\" and standard "
-"library functions only accept positional-only parameters. The resulting "
-"semantics can be easily observed by calling one of these functions using "
-"keyword arguments::"
+"In current versions of Python, many CPython \"builtin\" and standard library "
+"functions only accept positional-only parameters. The resulting semantics "
+"can be easily observed by calling one of these functions using keyword "
+"arguments::"
 msgstr ""
 
 #: ../pep-0570.rst:81
 msgid ""
-"``pow()`` expresses that its parameters are positional-only via the ``/``"
-" marker. However, this is only a documentation convention; Python "
-"developers cannot use this syntax in code."
+"``pow()`` expresses that its parameters are positional-only via the ``/`` "
+"marker. However, this is only a documentation convention; Python developers "
+"cannot use this syntax in code."
 msgstr ""
 
 #: ../pep-0570.rst:85
@@ -188,14 +186,14 @@ msgstr ""
 
 #: ../pep-0570.rst:87
 msgid ""
-"``range()``, an overloaded function, accepts an optional parameter to the"
-" *left* of its required parameter. [#RANGE]_"
+"``range()``, an overloaded function, accepts an optional parameter to the "
+"*left* of its required parameter. [#RANGE]_"
 msgstr ""
 
 #: ../pep-0570.rst:90
 msgid ""
-"``dict()``, whose mapping/iterator parameter is optional and semantically"
-" must be positional-only. Any externally visible name for this parameter "
+"``dict()``, whose mapping/iterator parameter is optional and semantically "
+"must be positional-only. Any externally visible name for this parameter "
 "would occlude that name going into the ``**kwarg`` keyword variadic "
 "parameter dict. [#DICT]_"
 msgstr ""
@@ -203,18 +201,17 @@ msgstr ""
 #: ../pep-0570.rst:95
 msgid ""
 "One can emulate these semantics in Python code by accepting ``(*args, "
-"**kwargs)`` and parsing the arguments manually. However, this results in "
-"a disconnect between the function definition and what the function "
-"contractually accepts. The function definition does not match the logic "
-"of the argument handling."
+"**kwargs)`` and parsing the arguments manually. However, this results in a "
+"disconnect between the function definition and what the function "
+"contractually accepts. The function definition does not match the logic of "
+"the argument handling."
 msgstr ""
 
 #: ../pep-0570.rst:101
 msgid ""
-"Additionally, the ``/`` syntax is used beyond CPython for specifying "
-"similar semantics (i.e., [#numpy-ufuncs]_ [#scipy-gammaln]_); thus, "
-"indicating that these scenarios are not exclusive to CPython and the "
-"standard library."
+"Additionally, the ``/`` syntax is used beyond CPython for specifying similar "
+"semantics (i.e., [#numpy-ufuncs]_ [#scipy-gammaln]_); thus, indicating that "
+"these scenarios are not exclusive to CPython and the standard library."
 msgstr ""
 
 #: ../pep-0570.rst:107
@@ -223,9 +220,9 @@ msgstr ""
 
 #: ../pep-0570.rst:109
 msgid ""
-"Without positional-only parameters, there are challenges for library "
-"authors and users of APIs. The following subsections outline the problems"
-" encountered by each entity."
+"Without positional-only parameters, there are challenges for library authors "
+"and users of APIs. The following subsections outline the problems "
+"encountered by each entity."
 msgstr ""
 
 #: ../pep-0570.rst:115
@@ -234,26 +231,26 @@ msgstr ""
 
 #: ../pep-0570.rst:117
 msgid ""
-"With positional-or-keyword parameters, the mix of calling conventions is "
-"not always desirable. Authors may want to restrict usage of an API by "
-"disallowing calling the API with keyword arguments, which exposes the "
-"name of the parameter when part of the public API. This approach is "
-"especially useful for required function parameters that already have "
-"semantic meaning (e.g, ``namedtuple(typenames, field_names, …)`` or when "
-"the parameter name has no true external meaning (e.g., ``arg1``, "
-"``arg2``, …, etc for ``min()``). If a caller of an API starts using a "
-"keyword argument, the library author cannot rename the parameter because "
-"it would be a breaking change."
+"With positional-or-keyword parameters, the mix of calling conventions is not "
+"always desirable. Authors may want to restrict usage of an API by "
+"disallowing calling the API with keyword arguments, which exposes the name "
+"of the parameter when part of the public API. This approach is especially "
+"useful for required function parameters that already have semantic meaning "
+"(e.g, ``namedtuple(typenames, field_names, …)`` or when the parameter name "
+"has no true external meaning (e.g., ``arg1``, ``arg2``, …, etc for "
+"``min()``). If a caller of an API starts using a keyword argument, the "
+"library author cannot rename the parameter because it would be a breaking "
+"change."
 msgstr ""
 
 #: ../pep-0570.rst:127
 msgid ""
 "Positional-only parameters can be emulated by extracting arguments from "
 "``*args`` one by one. However, this approach is error-prone and is not "
-"synonymous with the function definition, as previously mentioned. The "
-"usage of the function is ambiguous and forces users to look at "
-"``help()``, the associated auto-generated documentation, or source code "
-"to understand what parameters the function contractually accepts."
+"synonymous with the function definition, as previously mentioned. The usage "
+"of the function is ambiguous and forces users to look at ``help()``, the "
+"associated auto-generated documentation, or source code to understand what "
+"parameters the function contractually accepts."
 msgstr ""
 
 #: ../pep-0570.rst:136
@@ -263,12 +260,11 @@ msgstr ""
 #: ../pep-0570.rst:138
 msgid ""
 "Users may be surprised when first encountering positional-only notation. "
-"This is expected given that it has only recently been documented "
-"[#document-positional-only]_ and it is not possible to use in Python "
-"code. For these reasons, this notation is currently an outlier that "
-"appears only in CPython APIs developed in C. Documenting the notation and"
-" making it possible to use it in Python code would eliminate this "
-"disconnect."
+"This is expected given that it has only recently been documented [#document-"
+"positional-only]_ and it is not possible to use in Python code. For these "
+"reasons, this notation is currently an outlier that appears only in CPython "
+"APIs developed in C. Documenting the notation and making it possible to use "
+"it in Python code would eliminate this disconnect."
 msgstr ""
 
 #: ../pep-0570.rst:145
@@ -296,10 +292,10 @@ msgstr ""
 
 #: ../pep-0570.rst:156
 msgid ""
-"Another point the current documentation does not distinguish is whether a"
-" function takes positional-only parameters. ``open()`` accepts keyword "
-"arguments; however, ``ord()`` does not — there is no way of telling just "
-"by reading the existing documentation."
+"Another point the current documentation does not distinguish is whether a "
+"function takes positional-only parameters. ``open()`` accepts keyword "
+"arguments; however, ``ord()`` does not — there is no way of telling just by "
+"reading the existing documentation."
 msgstr ""
 
 #: ../pep-0570.rst:163
@@ -308,10 +304,10 @@ msgstr ""
 
 #: ../pep-0570.rst:165
 msgid ""
-"Positional-only parameters give more control to library authors to better"
-" express the intended usage of an API and allows the API to evolve in a "
-"safe, backward-compatible way. Additionally, it makes the Python language"
-" more consistent with existing documentation and the behavior of various "
+"Positional-only parameters give more control to library authors to better "
+"express the intended usage of an API and allows the API to evolve in a safe, "
+"backward-compatible way. Additionally, it makes the Python language more "
+"consistent with existing documentation and the behavior of various "
 "\"builtin\" and standard library functions."
 msgstr ""
 
@@ -321,11 +317,10 @@ msgstr ""
 
 #: ../pep-0570.rst:175
 msgid ""
-"Library authors would have the flexibility to change the name of "
-"positional-only parameters without breaking callers. This flexibility "
-"reduces the cognitive burden for choosing an appropriate public-facing "
-"name for required parameters or parameters that have no true external "
-"semantic meaning."
+"Library authors would have the flexibility to change the name of positional-"
+"only parameters without breaking callers. This flexibility reduces the "
+"cognitive burden for choosing an appropriate public-facing name for required "
+"parameters or parameters that have no true external semantic meaning."
 msgstr ""
 
 #: ../pep-0570.rst:180
@@ -348,23 +343,22 @@ msgstr ""
 
 #: ../pep-0570.rst:186
 msgid ""
-"A key scenario is when a function accepts any keyword argument but can "
-"also accepts a positional one. Prominent examples are "
-"``Formatter.format`` and ``dict.update``. For instance, ``dict.update`` "
-"accepts a dictionary (positionally), an iterable of key/value pairs "
-"(positionally), or multiple keyword arguments. In this scenario, if the "
-"dictionary parameter were not positional-only, the user could not use the"
-" name that the function definition uses for the parameter or, conversely,"
-" the function could not distinguish easily if the argument received is "
-"the dictionary/iterable or a keyword argument for updating the key/value "
-"pair."
+"A key scenario is when a function accepts any keyword argument but can also "
+"accepts a positional one. Prominent examples are ``Formatter.format`` and "
+"``dict.update``. For instance, ``dict.update`` accepts a dictionary "
+"(positionally), an iterable of key/value pairs (positionally), or multiple "
+"keyword arguments. In this scenario, if the dictionary parameter were not "
+"positional-only, the user could not use the name that the function "
+"definition uses for the parameter or, conversely, the function could not "
+"distinguish easily if the argument received is the dictionary/iterable or a "
+"keyword argument for updating the key/value pair."
 msgstr ""
 
 #: ../pep-0570.rst:197
 msgid ""
 "Another scenario where positional-only parameters are useful is when the "
-"parameter name has no true external semantic meaning. For example, let's "
-"say we want to create a function that converts from one type to another::"
+"parameter name has no true external semantic meaning. For example, let's say "
+"we want to create a function that converts from one type to another::"
 msgstr ""
 
 #: ../pep-0570.rst:204
@@ -376,16 +370,15 @@ msgstr ""
 
 #: ../pep-0570.rst:208
 msgid ""
-"Additionally, positional-only parameters are useful when an API's "
-"parameters are required and is unambiguous with respect to function. For "
-"example::"
+"Additionally, positional-only parameters are useful when an API's parameters "
+"are required and is unambiguous with respect to function. For example::"
 msgstr ""
 
 #: ../pep-0570.rst:214
 msgid ""
 "The name of the function makes clear the argument expected. A keyword "
-"argument provides minimal benefit and also limits the future evolution of"
-" the API. Say at a later time we want this function to be able to take "
+"argument provides minimal benefit and also limits the future evolution of "
+"the API. Say at a later time we want this function to be able to take "
 "multiple items, while preserving backwards compatibility::"
 msgstr ""
 
@@ -401,15 +394,15 @@ msgstr ""
 
 #: ../pep-0570.rst:230
 msgid ""
-"By being able to specify positional-only parameters, an author can change"
-" the name of the parameters freely or even change them to ``*args``, as "
-"seen in the previous example. There are multiple function definitions in "
-"the standard library which fall into this category. For example, the "
-"required parameter to ``collections.defaultdict`` (called "
-"*default_factory* in its documentation) can only be passed positionally. "
-"One special case of this situation is the *self* parameter for class "
-"methods: it is undesirable that a caller can bind by keyword to the name "
-"``self`` when calling the method from the class::"
+"By being able to specify positional-only parameters, an author can change "
+"the name of the parameters freely or even change them to ``*args``, as seen "
+"in the previous example. There are multiple function definitions in the "
+"standard library which fall into this category. For example, the required "
+"parameter to ``collections.defaultdict`` (called *default_factory* in its "
+"documentation) can only be passed positionally. One special case of this "
+"situation is the *self* parameter for class methods: it is undesirable that "
+"a caller can bind by keyword to the name ``self`` when calling the method "
+"from the class::"
 msgstr ""
 
 #: ../pep-0570.rst:241
@@ -426,10 +419,10 @@ msgstr ""
 msgid ""
 "The Python language would be more consistent with positional-only "
 "parameters. If the concept is a normal feature of Python rather than a "
-"feature exclusive to extension modules, it would reduce confusion for "
-"users encountering functions with positional-only parameters. Some major "
-"third-party packages are already using the ``/`` notation in their "
-"function definitions [#numpy-ufuncs]_ [#scipy-gammaln]_."
+"feature exclusive to extension modules, it would reduce confusion for users "
+"encountering functions with positional-only parameters. Some major third-"
+"party packages are already using the ``/`` notation in their function "
+"definitions [#numpy-ufuncs]_ [#scipy-gammaln]_."
 msgstr ""
 
 #: ../pep-0570.rst:261
@@ -437,18 +430,18 @@ msgid ""
 "Bridging the gap found between \"builtin\" functions which specify "
 "positional-only parameters and pure Python implementations that lack the "
 "positional syntax would improve consistency. The ``/`` syntax is already "
-"exposed in the existing documentation such as when builtins and "
-"interfaces are generated by the argument clinic."
+"exposed in the existing documentation such as when builtins and interfaces "
+"are generated by the argument clinic."
 msgstr ""
 
 #: ../pep-0570.rst:267
 msgid ""
-"Another essential aspect to consider is :pep:`399`, which mandates that "
-"pure Python versions of modules in the standard library *must* have the "
-"same interface and semantics that the accelerator modules implemented in "
-"C. For example, if ``collections.defaultdict`` were to have a pure Python"
-" implementation it would need to make use of positional-only parameters "
-"to match the interface of its C counterpart."
+"Another essential aspect to consider is :pep:`399`, which mandates that pure "
+"Python versions of modules in the standard library *must* have the same "
+"interface and semantics that the accelerator modules implemented in C. For "
+"example, if ``collections.defaultdict`` were to have a pure Python "
+"implementation it would need to make use of positional-only parameters to "
+"match the interface of its C counterpart."
 msgstr ""
 
 #: ../pep-0570.rst:276
@@ -457,24 +450,24 @@ msgstr ""
 
 #: ../pep-0570.rst:278
 msgid ""
-"We propose to introduce positional-only parameters as a new syntax to the"
-" Python language."
+"We propose to introduce positional-only parameters as a new syntax to the "
+"Python language."
 msgstr ""
 
 #: ../pep-0570.rst:281
 msgid ""
-"The new syntax will enable library authors to further control how their "
-"API can be called. It will allow designating which parameters must be "
-"called as positional-only, while preventing them from being called as "
-"keyword arguments."
+"The new syntax will enable library authors to further control how their API "
+"can be called. It will allow designating which parameters must be called as "
+"positional-only, while preventing them from being called as keyword "
+"arguments."
 msgstr ""
 
 #: ../pep-0570.rst:285
 msgid ""
-"Previously, (informational) :pep:`457` defined the syntax, but with a "
-"much more vague scope. This PEP takes the original proposal a step "
-"further by justifying the syntax and providing an implementation for the "
-"``/`` syntax in function definitions."
+"Previously, (informational) :pep:`457` defined the syntax, but with a much "
+"more vague scope. This PEP takes the original proposal a step further by "
+"justifying the syntax and providing an implementation for the ``/`` syntax "
+"in function definitions."
 msgstr ""
 
 #: ../pep-0570.rst:292
@@ -486,10 +479,10 @@ msgid ""
 "In addition to the aforementioned benefits, the parsing and handling of "
 "positional-only arguments is faster. This performance benefit can be "
 "demonstrated in this thread about converting keyword arguments to "
-"positional: [#thread-keyword-to-positional]_. Due to this speedup, there "
-"has been a recent trend towards moving builtins away from keyword "
-"arguments: recently, backwards-incompatible changes were made to disallow"
-" keyword arguments to ``bool``, ``float``, ``list``, ``int``, ``tuple``."
+"positional: [#thread-keyword-to-positional]_. Due to this speedup, there has "
+"been a recent trend towards moving builtins away from keyword arguments: "
+"recently, backwards-incompatible changes were made to disallow keyword "
+"arguments to ``bool``, ``float``, ``list``, ``int``, ``tuple``."
 msgstr ""
 
 #: ../pep-0570.rst:304
@@ -498,11 +491,11 @@ msgstr ""
 
 #: ../pep-0570.rst:306
 msgid ""
-"Providing a way to specify positional-only parameters in Python will make"
-" it easier to maintain pure Python implementations of C modules. "
-"Additionally, library authors defining functions will have the choice for"
-" choosing positional-only parameters if they determine that passing a "
-"keyword argument provides no additional clarity."
+"Providing a way to specify positional-only parameters in Python will make it "
+"easier to maintain pure Python implementations of C modules. Additionally, "
+"library authors defining functions will have the choice for choosing "
+"positional-only parameters if they determine that passing a keyword argument "
+"provides no additional clarity."
 msgstr ""
 
 #: ../pep-0570.rst:312
@@ -511,17 +504,16 @@ msgstr ""
 
 #: ../pep-0570.rst:314
 msgid ""
-"September 2018: `Anders Hovmöller: [Python-ideas] Positional-only "
-"parameters <https://mail.python.org/pipermail/python-"
-"ideas/2018-September/053233.html>`_"
+"September 2018: `Anders Hovmöller: [Python-ideas] Positional-only parameters "
+"<https://mail.python.org/pipermail/python-ideas/2018-September/053233.html>`_"
 msgstr ""
 
 #: ../pep-0570.rst:317
 msgid ""
-"February 2017: `Victor Stinner: [Python-ideas] Positional-only parameters"
-" <https://mail.python.org/pipermail/python-"
-"ideas/2017-February/044879.html>`_, `discussion continued in March "
-"<https://mail.python.org/pipermail/python-ideas/2017-March/044956.html>`_"
+"February 2017: `Victor Stinner: [Python-ideas] Positional-only parameters "
+"<https://mail.python.org/pipermail/python-ideas/2017-February/044879."
+"html>`_, `discussion continued in March <https://mail.python.org/pipermail/"
+"python-ideas/2017-March/044956.html>`_"
 msgstr ""
 
 #: ../pep-0570.rst:322
@@ -534,14 +526,14 @@ msgstr ""
 
 #: ../pep-0570.rst:324
 msgid ""
-"May 2007: `George Sakkis: [Python-ideas] Positional only arguments "
-"<https://mail.python.org/pipermail/python-ideas/2007-May/000704.html>`_"
+"May 2007: `George Sakkis: [Python-ideas] Positional only arguments <https://"
+"mail.python.org/pipermail/python-ideas/2007-May/000704.html>`_"
 msgstr ""
 
 #: ../pep-0570.rst:326
 msgid ""
-"May 2006: `Benji York: [Python-Dev] Positional-only Arguments "
-"<https://mail.python.org/pipermail/python-dev/2006-May/064790.html>`_"
+"May 2006: `Benji York: [Python-Dev] Positional-only Arguments <https://mail."
+"python.org/pipermail/python-dev/2006-May/064790.html>`_"
 msgstr ""
 
 #: ../pep-0570.rst:331
@@ -550,16 +542,16 @@ msgstr ""
 
 #: ../pep-0570.rst:333
 msgid ""
-"Positional-only parameters also have the (minor) benefit of enforcing "
-"some logical order when calling interfaces that make use of them. For "
-"example, the ``range`` function takes all its parameters positionally and"
-" disallows forms like::"
+"Positional-only parameters also have the (minor) benefit of enforcing some "
+"logical order when calling interfaces that make use of them. For example, "
+"the ``range`` function takes all its parameters positionally and disallows "
+"forms like::"
 msgstr ""
 
 #: ../pep-0570.rst:343
 msgid ""
-"at the price of disallowing the use of keyword arguments for the (unique)"
-" intended order::"
+"at the price of disallowing the use of keyword arguments for the (unique) "
+"intended order::"
 msgstr ""
 
 #: ../pep-0570.rst:350
@@ -568,35 +560,34 @@ msgstr ""
 
 #: ../pep-0570.rst:352
 msgid ""
-"Another critical motivation for positional-only parameters is :pep:`399`:"
-" Pure Python/C Accelerator Module Compatibility Requirements. This PEP "
-"states that:"
+"Another critical motivation for positional-only parameters is :pep:`399`: "
+"Pure Python/C Accelerator Module Compatibility Requirements. This PEP states "
+"that:"
 msgstr ""
 
 #: ../pep-0570.rst:356
 msgid ""
-"This PEP requires that in these instances that the C code must pass the "
-"test suite used for the pure Python code to act as much as a drop-in "
-"replacement as reasonably possible"
+"This PEP requires that in these instances that the C code must pass the test "
+"suite used for the pure Python code to act as much as a drop-in replacement "
+"as reasonably possible"
 msgstr ""
 
 #: ../pep-0570.rst:360
 msgid ""
-"If the C code is implemented using the existing capabilities to implement"
-" positional-only parameters using the argument clinic, and related "
-"machinery, it is not possible for the pure Python counterpart to match "
-"the provided interface and requirements. This creates a disparity between"
-" the interfaces of some functions and classes in the CPython standard "
-"library and other Python implementations. For example::"
+"If the C code is implemented using the existing capabilities to implement "
+"positional-only parameters using the argument clinic, and related machinery, "
+"it is not possible for the pure Python counterpart to match the provided "
+"interface and requirements. This creates a disparity between the interfaces "
+"of some functions and classes in the CPython standard library and other "
+"Python implementations. For example::"
 msgstr ""
 
 #: ../pep-0570.rst:375
 msgid ""
-"Other Python implementations can reproduce the CPython APIs manually, but"
-" this goes against the spirit of :pep:`399` to avoid duplication of "
-"effort by mandating that all modules added to Python's standard library "
-"**must** have a pure Python implementation with the same interface and "
-"semantics."
+"Other Python implementations can reproduce the CPython APIs manually, but "
+"this goes against the spirit of :pep:`399` to avoid duplication of effort by "
+"mandating that all modules added to Python's standard library **must** have "
+"a pure Python implementation with the same interface and semantics."
 msgstr ""
 
 #: ../pep-0570.rst:382
@@ -606,26 +597,25 @@ msgstr ""
 #: ../pep-0570.rst:384
 msgid ""
 "Another scenario where positional-only parameters provide benefit occurs "
-"when a subclass overrides a method of the base class and changes the name"
-" of parameters that are intended to be positional::"
+"when a subclass overrides a method of the base class and changes the name of "
+"parameters that are intended to be positional::"
 msgstr ""
 
 #: ../pep-0570.rst:401
 msgid ""
-"This situation could be considered a Liskov violation — the subclass "
-"cannot be used in a context when an instance of the base class is "
-"expected. Renaming arguments when overloading methods can happen when the"
-" subclass has reasons to use a different choice for the parameter name "
-"that is more appropriate for the specific domain of the subclass (e.g., "
-"when subclassing ``Mapping`` to implement a DNS lookup cache, the derived"
-" class may not want to use the generic argument names ‘key’ and ‘value’ "
-"but rather ‘host’ and ‘address’). Having this function definition with "
-"positional-only parameters can avoid this problem because users will not "
-"be able to call the interface using keyword arguments. In general, "
-"designing for subclassing usually involves anticipating code that hasn't "
-"been written yet and over which the author has no control. Having "
-"measures that can facilitate the evolution of interfaces in a backwards-"
-"compatible would be useful for library authors."
+"This situation could be considered a Liskov violation — the subclass cannot "
+"be used in a context when an instance of the base class is expected. "
+"Renaming arguments when overloading methods can happen when the subclass has "
+"reasons to use a different choice for the parameter name that is more "
+"appropriate for the specific domain of the subclass (e.g., when subclassing "
+"``Mapping`` to implement a DNS lookup cache, the derived class may not want "
+"to use the generic argument names ‘key’ and ‘value’ but rather ‘host’ and "
+"‘address’). Having this function definition with positional-only parameters "
+"can avoid this problem because users will not be able to call the interface "
+"using keyword arguments. In general, designing for subclassing usually "
+"involves anticipating code that hasn't been written yet and over which the "
+"author has no control. Having measures that can facilitate the evolution of "
+"interfaces in a backwards-compatible would be useful for library authors."
 msgstr ""
 
 #: ../pep-0570.rst:417
@@ -634,15 +624,14 @@ msgstr ""
 
 #: ../pep-0570.rst:419
 msgid ""
-"A final argument in favor of positional-only parameters is that they "
-"allow some new optimizations like the ones already present in the "
-"argument clinic due to the fact that parameters are expected to be passed"
-" in strict order. For example, CPython's internal ``METH_FASTCALL`` "
-"calling convention has been recently specialized for functions with "
-"positional-only parameters to eliminate the cost for handling empty "
-"keywords. Similar performance improvements can be applied when creating "
-"the evaluation frame of Python functions thanks to positional-only "
-"parameters."
+"A final argument in favor of positional-only parameters is that they allow "
+"some new optimizations like the ones already present in the argument clinic "
+"due to the fact that parameters are expected to be passed in strict order. "
+"For example, CPython's internal ``METH_FASTCALL`` calling convention has "
+"been recently specialized for functions with positional-only parameters to "
+"eliminate the cost for handling empty keywords. Similar performance "
+"improvements can be applied when creating the evaluation frame of Python "
+"functions thanks to positional-only parameters."
 msgstr ""
 
 #: ../pep-0570.rst:429
@@ -655,14 +644,14 @@ msgstr ""
 
 #: ../pep-0570.rst:435
 msgid ""
-"From the \"ten-thousand foot view\", eliding ``*args`` and ``**kwargs`` "
-"for illustration, the grammar for a function definition would look like::"
+"From the \"ten-thousand foot view\", eliding ``*args`` and ``**kwargs`` for "
+"illustration, the grammar for a function definition would look like::"
 msgstr ""
 
 #: ../pep-0570.rst:440
 msgid ""
-"Building on that example, the new syntax for function definitions would "
-"look like::"
+"Building on that example, the new syntax for function definitions would look "
+"like::"
 msgstr ""
 
 #: ../pep-0570.rst:446
@@ -675,27 +664,27 @@ msgstr ""
 
 #: ../pep-0570.rst:449
 msgid ""
-"If ``/`` is not specified in the function definition, that function does "
-"not accept any positional-only arguments."
+"If ``/`` is not specified in the function definition, that function does not "
+"accept any positional-only arguments."
 msgstr ""
 
 #: ../pep-0570.rst:451
 msgid ""
-"The logic around optional values for positional-only parameters remains "
-"the same as for positional-or-keyword parameters."
+"The logic around optional values for positional-only parameters remains the "
+"same as for positional-or-keyword parameters."
 msgstr ""
 
 #: ../pep-0570.rst:453
 msgid ""
-"Once a positional-only parameter is specified with a default, the "
-"following positional-only and positional-or-keyword parameters need to "
-"have defaults as well."
+"Once a positional-only parameter is specified with a default, the following "
+"positional-only and positional-or-keyword parameters need to have defaults "
+"as well."
 msgstr ""
 
 #: ../pep-0570.rst:456
 msgid ""
-"Positional-only parameters which do not have default values are "
-"*required* positional-only parameters."
+"Positional-only parameters which do not have default values are *required* "
+"positional-only parameters."
 msgstr ""
 
 #: ../pep-0570.rst:459
@@ -739,7 +728,8 @@ msgid ""
 msgstr ""
 
 #: ../pep-0570.rst:528
-msgid "There is no possible call that will make it return ``True``. For example::"
+msgid ""
+"There is no possible call that will make it return ``True``. For example::"
 msgstr ""
 
 #: ../pep-0570.rst:537
@@ -769,8 +759,8 @@ msgstr ""
 
 #: ../pep-0570.rst:555
 msgid ""
-"Alternative proposal: how about using '/' ? It's kind of the opposite of "
-"'*' which means \"keyword argument\", and '/' is not a new character."
+"Alternative proposal: how about using '/' ? It's kind of the opposite of '*' "
+"which means \"keyword argument\", and '/' is not a new character."
 msgstr ""
 
 #: ../pep-0570.rst:560
@@ -779,30 +769,29 @@ msgstr ""
 
 #: ../pep-0570.rst:562
 msgid ""
-"Introducing a dedicated syntax to mark positional-only parameters is "
-"closely analogous to existing keyword-only arguments. Teaching these "
-"concepts together may *simplify* how to teach the possible function "
-"definitions a user may encounter or design."
+"Introducing a dedicated syntax to mark positional-only parameters is closely "
+"analogous to existing keyword-only arguments. Teaching these concepts "
+"together may *simplify* how to teach the possible function definitions a "
+"user may encounter or design."
 msgstr ""
 
 #: ../pep-0570.rst:567
 msgid ""
-"This PEP recommends adding a new subsection to the Python documentation, "
-"in the section `\"More on Defining Functions\"`_, where the rest of the "
-"argument types are discussed. The following paragraphs serve as a draft "
-"for these additions. They will introduce the notation for both "
-"positional-only and keyword-only parameters. It is not intended to be "
-"exhaustive, nor should it be considered the final version to be "
-"incorporated into the documentation."
+"This PEP recommends adding a new subsection to the Python documentation, in "
+"the section `\"More on Defining Functions\"`_, where the rest of the "
+"argument types are discussed. The following paragraphs serve as a draft for "
+"these additions. They will introduce the notation for both positional-only "
+"and keyword-only parameters. It is not intended to be exhaustive, nor should "
+"it be considered the final version to be incorporated into the documentation."
 msgstr ""
 
 #: ../pep-0570.rst:579
 msgid ""
-"By default, arguments may be passed to a Python function either by "
-"position or explicitly by keyword. For readability and performance, it "
-"makes sense to restrict the way arguments can be passed so that a "
-"developer need only look at the function definition to determine if items"
-" are passed by position, by position or keyword, or by keyword."
+"By default, arguments may be passed to a Python function either by position "
+"or explicitly by keyword. For readability and performance, it makes sense to "
+"restrict the way arguments can be passed so that a developer need only look "
+"at the function definition to determine if items are passed by position, by "
+"position or keyword, or by keyword."
 msgstr ""
 
 #: ../pep-0570.rst:585
@@ -811,10 +800,10 @@ msgstr ""
 
 #: ../pep-0570.rst:594
 msgid ""
-"where ``/`` and ``*`` are optional. If used, these symbols indicate the "
-"kind of parameter by how the arguments may be passed to the function: "
-"positional-only, positional-or-keyword, and keyword-only. Keyword "
-"parameters are also referred to as named parameters."
+"where ``/`` and ``*`` are optional. If used, these symbols indicate the kind "
+"of parameter by how the arguments may be passed to the function: positional-"
+"only, positional-or-keyword, and keyword-only. Keyword parameters are also "
+"referred to as named parameters."
 msgstr ""
 
 #: ../pep-0570.rst:601
@@ -823,8 +812,8 @@ msgstr ""
 
 #: ../pep-0570.rst:603
 msgid ""
-"If ``/`` and ``*`` are not present in the function definition, arguments "
-"may be passed to a function by position or by keyword."
+"If ``/`` and ``*`` are not present in the function definition, arguments may "
+"be passed to a function by position or by keyword."
 msgstr ""
 
 #: ../pep-0570.rst:608
@@ -834,18 +823,18 @@ msgstr ""
 #: ../pep-0570.rst:610
 msgid ""
 "Looking at this in a bit more detail, it is possible to mark certain "
-"parameters as *positional-only*. If *positional-only*, the parameters' "
-"order matters, and the parameters cannot be passed by keyword. "
-"Positional-only parameters would be placed before a ``/`` (forward-"
-"slash). The ``/`` is used to logically separate the positional-only "
-"parameters from the rest of the parameters. If there is no ``/`` in the "
-"function definition, there are no positional-only parameters."
+"parameters as *positional-only*. If *positional-only*, the parameters' order "
+"matters, and the parameters cannot be passed by keyword. Positional-only "
+"parameters would be placed before a ``/`` (forward-slash). The ``/`` is used "
+"to logically separate the positional-only parameters from the rest of the "
+"parameters. If there is no ``/`` in the function definition, there are no "
+"positional-only parameters."
 msgstr ""
 
 #: ../pep-0570.rst:618
 msgid ""
-"Parameters following the ``/`` may be *positional-or-keyword* or "
-"*keyword-only*."
+"Parameters following the ``/`` may be *positional-or-keyword* or *keyword-"
+"only*."
 msgstr ""
 
 #: ../pep-0570.rst:622
@@ -855,8 +844,8 @@ msgstr ""
 #: ../pep-0570.rst:624
 msgid ""
 "To mark parameters as *keyword-only*, indicating the parameters must be "
-"passed by keyword argument, place an ``*`` in the arguments list just "
-"before the first *keyword-only* parameter."
+"passed by keyword argument, place an ``*`` in the arguments list just before "
+"the first *keyword-only* parameter."
 msgstr ""
 
 #: ../pep-0570.rst:630
@@ -865,21 +854,21 @@ msgstr ""
 
 #: ../pep-0570.rst:632
 msgid ""
-"Consider the following example function definitions paying close "
-"attention to the markers ``/`` and ``*``::"
+"Consider the following example function definitions paying close attention "
+"to the markers ``/`` and ``*``::"
 msgstr ""
 
 #: ../pep-0570.rst:648
 msgid ""
 "The first function definition ``standard_arg``, the most familiar form, "
-"places no restrictions on the calling convention and arguments may be "
-"passed by position or keyword::"
+"places no restrictions on the calling convention and arguments may be passed "
+"by position or keyword::"
 msgstr ""
 
 #: ../pep-0570.rst:658
 msgid ""
-"The second function ``pos_only_arg`` is restricted to only use positional"
-" parameters as there is a ``/`` in the function definition::"
+"The second function ``pos_only_arg`` is restricted to only use positional "
+"parameters as there is a ``/`` in the function definition::"
 msgstr ""
 
 #: ../pep-0570.rst:669
@@ -910,14 +899,14 @@ msgstr ""
 
 #: ../pep-0570.rst:709
 msgid ""
-"Use positional-only if names do not matter or have no meaning, and there "
-"are only a few arguments which will always be passed in the same order."
+"Use positional-only if names do not matter or have no meaning, and there are "
+"only a few arguments which will always be passed in the same order."
 msgstr ""
 
 #: ../pep-0570.rst:711
 msgid ""
-"Use keyword-only when names have meaning and the function definition is "
-"more understandable by being explicit with names."
+"Use keyword-only when names have meaning and the function definition is more "
+"understandable by being explicit with names."
 msgstr ""
 
 #: ../pep-0570.rst:716
@@ -926,16 +915,16 @@ msgstr ""
 
 #: ../pep-0570.rst:718
 msgid ""
-"An initial implementation that passes the CPython test suite is available"
-" for evaluation [#posonly-impl]_."
+"An initial implementation that passes the CPython test suite is available "
+"for evaluation [#posonly-impl]_."
 msgstr ""
 
 #: ../pep-0570.rst:721
 msgid ""
-"The benefits of this implementations are speed of handling positional-"
-"only parameters, consistency with the implementation of keyword-only "
-"parameters (PEP 3102), and a simpler implementation of all the tools and "
-"modules that would be impacted by this change."
+"The benefits of this implementations are speed of handling positional-only "
+"parameters, consistency with the implementation of keyword-only parameters "
+"(PEP 3102), and a simpler implementation of all the tools and modules that "
+"would be impacted by this change."
 msgstr ""
 
 #: ../pep-0570.rst:728
@@ -958,8 +947,8 @@ msgstr ""
 
 #: ../pep-0570.rst:741
 msgid ""
-"It has been suggested on python-ideas [#python-ideas-decorator-based]_ to"
-" provide a decorator written in Python for this feature."
+"It has been suggested on python-ideas [#python-ideas-decorator-based]_ to "
+"provide a decorator written in Python for this feature."
 msgstr ""
 
 #: ../pep-0570.rst:744
@@ -975,12 +964,12 @@ msgstr ""
 #: ../pep-0570.rst:749
 msgid ""
 "It makes it difficult for static analyzers and type checkers to safely "
-"identify positional-only parameters.  They would need to query the AST "
-"for the list of decorators and identify the correct one by name or with "
-"extra heuristics, while keyword-only parameters are exposed directly in "
-"the AST.  In order for tools to correctly identify positional-only "
-"parameters, they would need to execute the module to access any metadata "
-"the decorator is setting."
+"identify positional-only parameters.  They would need to query the AST for "
+"the list of decorators and identify the correct one by name or with extra "
+"heuristics, while keyword-only parameters are exposed directly in the AST.  "
+"In order for tools to correctly identify positional-only parameters, they "
+"would need to execute the module to access any metadata the decorator is "
+"setting."
 msgstr ""
 
 #: ../pep-0570.rst:757
@@ -990,8 +979,8 @@ msgstr ""
 #: ../pep-0570.rst:759
 msgid ""
 "It may be more difficult to identify positional-only parameters in long "
-"function definitions, as it forces the user to count them to know which "
-"is the last one that is impacted by the decorator."
+"function definitions, as it forces the user to count them to know which is "
+"the last one that is impacted by the decorator."
 msgstr ""
 
 #: ../pep-0570.rst:763
@@ -1004,9 +993,8 @@ msgstr ""
 
 #: ../pep-0570.rst:768
 msgid ""
-"The decorator implementation would likely impose a runtime performance "
-"cost, particularly when compared to adding support directly to the "
-"interpreter."
+"The decorator implementation would likely impose a runtime performance cost, "
+"particularly when compared to adding support directly to the interpreter."
 msgstr ""
 
 #: ../pep-0570.rst:774
@@ -1016,23 +1004,23 @@ msgstr ""
 #: ../pep-0570.rst:776
 msgid ""
 "A per-argument marker is another language-intrinsic option. The approach "
-"adds a token to each of the parameters to indicate they are positional-"
-"only and requires those parameters to be placed together. Example::"
+"adds a token to each of the parameters to indicate they are positional-only "
+"and requires those parameters to be placed together. Example::"
 msgstr ""
 
 #: ../pep-0570.rst:782
 msgid ""
-"Note the dot (i.e., ``.``) on ``.arg1`` and ``.arg2``. While this "
-"approach may be easier to read, it has been rejected because ``/`` as an "
-"explicit marker is congruent with ``*`` for keyword-only arguments and is"
-" less error-prone."
+"Note the dot (i.e., ``.``) on ``.arg1`` and ``.arg2``. While this approach "
+"may be easier to read, it has been rejected because ``/`` as an explicit "
+"marker is congruent with ``*`` for keyword-only arguments and is less error-"
+"prone."
 msgstr ""
 
 #: ../pep-0570.rst:786
 msgid ""
 "It should be noted that some libraries already use leading underscore "
-"[#leading-underscore]_ to conventionally indicate parameters as "
-"positional-only."
+"[#leading-underscore]_ to conventionally indicate parameters as positional-"
+"only."
 msgstr ""
 
 #: ../pep-0570.rst:791
@@ -1059,10 +1047,9 @@ msgstr ""
 
 #: ../pep-0570.rst:803
 msgid ""
-"Querying the AST for positional-only parameters would require checking "
-"the normal arguments and inspecting their names, whereas keyword-only "
-"parameters have a property associated with them "
-"(``FunctionDef.args.kwonlyargs``)."
+"Querying the AST for positional-only parameters would require checking the "
+"normal arguments and inspecting their names, whereas keyword-only parameters "
+"have a property associated with them (``FunctionDef.args.kwonlyargs``)."
 msgstr ""
 
 #: ../pep-0570.rst:807
@@ -1073,8 +1060,7 @@ msgstr ""
 
 #: ../pep-0570.rst:810
 msgid ""
-"The marker is more verbose, forcing marking every positional-only "
-"parameter."
+"The marker is more verbose, forcing marking every positional-only parameter."
 msgstr ""
 
 #: ../pep-0570.rst:812
@@ -1089,15 +1075,15 @@ msgstr ""
 
 #: ../pep-0570.rst:820
 msgid ""
-"Tuple parameter unpacking is a Python 2 feature which allows the use of a"
-" tuple as a parameter in a function definition. It allows a sequence "
-"argument to be unpacked automatically. An example is::"
+"Tuple parameter unpacking is a Python 2 feature which allows the use of a "
+"tuple as a parameter in a function definition. It allows a sequence argument "
+"to be unpacked automatically. An example is::"
 msgstr ""
 
 #: ../pep-0570.rst:827
 msgid ""
-"Tuple argument unpacking was removed in Python 3 (:pep:`3113`). There has"
-" been a proposition to reuse this syntax to implement positional-only "
+"Tuple argument unpacking was removed in Python 3 (:pep:`3113`). There has "
+"been a proposition to reuse this syntax to implement positional-only "
 "parameters. We have rejected this syntax for indicating positional only "
 "parameters for several reasons:"
 msgstr ""
@@ -1110,9 +1096,9 @@ msgstr ""
 
 #: ../pep-0570.rst:835
 msgid ""
-"Python 2 uses this syntax which could raise confusion regarding the "
-"behavior of this syntax. This would be surprising to users porting Python"
-" 2 codebases that were using this feature."
+"Python 2 uses this syntax which could raise confusion regarding the behavior "
+"of this syntax. This would be surprising to users porting Python 2 codebases "
+"that were using this feature."
 msgstr ""
 
 #: ../pep-0570.rst:839
@@ -1127,20 +1113,19 @@ msgstr ""
 
 #: ../pep-0570.rst:846
 msgid ""
-"Marking positional-parameters after the ``/`` was another idea "
-"considered. However, we were unable to find an approach which would "
-"modify the arguments after the marker. Otherwise, would force the "
-"parameters before the marker to be positional-only as well. For example::"
+"Marking positional-parameters after the ``/`` was another idea considered. "
+"However, we were unable to find an approach which would modify the arguments "
+"after the marker. Otherwise, would force the parameters before the marker to "
+"be positional-only as well. For example::"
 msgstr ""
 
 #: ../pep-0570.rst:853
 msgid ""
 "If we define that ``/`` marks ``z`` as positional-only, it would not be "
-"possible to specify ``x`` and ``y`` as keyword arguments. Finding a way "
-"to work around this limitation would add confusion given that at the "
-"moment keyword arguments cannot be followed by positional arguments. "
-"Therefore, ``/`` would make both the preceding and following parameters "
-"positional-only."
+"possible to specify ``x`` and ``y`` as keyword arguments. Finding a way to "
+"work around this limitation would add confusion given that at the moment "
+"keyword arguments cannot be followed by positional arguments. Therefore, ``/"
+"`` would make both the preceding and following parameters positional-only."
 msgstr ""
 
 #: ../pep-0570.rst:861
@@ -1149,15 +1134,15 @@ msgstr ""
 
 #: ../pep-0570.rst:863
 msgid ""
-"Credit for some of the content of this PEP is contained in Larry "
-"Hastings’s :pep:`457`."
+"Credit for some of the content of this PEP is contained in Larry Hastings’s :"
+"pep:`457`."
 msgstr ""
 
 #: ../pep-0570.rst:866
 msgid ""
 "Credit for the use of ``/`` as the separator between positional-only and "
-"positional-or-keyword parameters go to Guido van Rossum, in a proposal "
-"from 2012. [#GUIDO]_"
+"positional-or-keyword parameters go to Guido van Rossum, in a proposal from "
+"2012. [#GUIDO]_"
 msgstr ""
 
 #: ../pep-0570.rst:870
@@ -1171,7 +1156,9 @@ msgid "https://docs.scipy.org/doc/numpy/reference/ufuncs.html#available-ufuncs"
 msgstr ""
 
 #: ../pep-0570.rst:878
-msgid "https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.gammaln.html"
+msgid ""
+"https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.gammaln."
+"html"
 msgstr ""
 
 #: ../pep-0570.rst:881
@@ -1196,14 +1183,15 @@ msgstr ""
 
 #: ../pep-0570.rst:896
 msgid ""
-"Guido van Rossum, posting to python-ideas, March 2012: "
-"https://mail.python.org/pipermail/python-ideas/2012-March/014364.html and"
-" https://mail.python.org/pipermail/python-ideas/2012-March/014378.html "
-"and https://mail.python.org/pipermail/python-ideas/2012-March/014417.html"
+"Guido van Rossum, posting to python-ideas, March 2012: https://mail.python."
+"org/pipermail/python-ideas/2012-March/014364.html and https://mail.python."
+"org/pipermail/python-ideas/2012-March/014378.html and https://mail.python."
+"org/pipermail/python-ideas/2012-March/014417.html"
 msgstr ""
 
 #: ../pep-0570.rst:904
-msgid "https://mail.python.org/pipermail/python-ideas/2017-February/044888.html"
+msgid ""
+"https://mail.python.org/pipermail/python-ideas/2017-February/044888.html"
 msgstr ""
 
 #: ../pep-0570.rst:907
@@ -1215,7 +1203,8 @@ msgid "https://mail.python.org/pipermail/python-ideas/2016-January/037874.html"
 msgstr ""
 
 #: ../pep-0570.rst:913
-msgid "https://mail.python.org/pipermail/python-ideas/2018-September/053319.html"
+msgid ""
+"https://mail.python.org/pipermail/python-ideas/2018-September/053319.html"
 msgstr ""
 
 #: ../pep-0570.rst:916
@@ -1229,4 +1218,3 @@ msgstr ""
 #: ../pep-0570.rst:922
 msgid "This document has been placed in the public domain."
 msgstr ""
-

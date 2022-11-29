@@ -67,13 +67,13 @@ msgstr ""
 
 #: ../pep-0204.txt:15
 msgid ""
-"This PEP describes the \"range literal\" proposal for Python 2.0. This "
-"PEP tracks the status and ownership of this feature, slated for "
-"introduction in Python 2.0.  It contains a description of the feature and"
-" outlines changes necessary to support the feature. This PEP summarizes "
-"discussions held in mailing list forums, and provides URLs for further "
-"information, where appropriate.  The CVS revision history of this file "
-"contains the definitive historical record."
+"This PEP describes the \"range literal\" proposal for Python 2.0. This PEP "
+"tracks the status and ownership of this feature, slated for introduction in "
+"Python 2.0.  It contains a description of the feature and outlines changes "
+"necessary to support the feature. This PEP summarizes discussions held in "
+"mailing list forums, and provides URLs for further information, where "
+"appropriate.  The CVS revision history of this file contains the definitive "
+"historical record."
 msgstr ""
 
 #: ../pep-0204.txt:26
@@ -83,35 +83,32 @@ msgstr ""
 #: ../pep-0204.txt:28
 msgid ""
 "Ranges are sequences of numbers of a fixed stepping, often used in for-"
-"loops.  The Python for-loop is designed to iterate over a sequence "
-"directly::"
+"loops.  The Python for-loop is designed to iterate over a sequence directly::"
 msgstr ""
 
 #: ../pep-0204.txt:40
 msgid ""
-"However, this solution is not always prudent.  Firstly, problems arise "
-"when altering the sequence in the body of the for-loop, resulting in the "
-"for-loop skipping items.  Secondly, it is not possible to iterate over, "
-"say, every second element of the sequence.  And thirdly, it is sometimes "
-"necessary to process an element based on its index, which is not readily "
-"available in the above construct."
+"However, this solution is not always prudent.  Firstly, problems arise when "
+"altering the sequence in the body of the for-loop, resulting in the for-loop "
+"skipping items.  Secondly, it is not possible to iterate over, say, every "
+"second element of the sequence.  And thirdly, it is sometimes necessary to "
+"process an element based on its index, which is not readily available in the "
+"above construct."
 msgstr ""
 
 #: ../pep-0204.txt:48
 msgid ""
-"For these instances, and others where a range of numbers is desired, "
-"Python provides the ``range`` builtin function, which creates a list of "
-"numbers.  The ``range`` function takes three arguments, *start*, *end* "
-"and *step*.  *start* and *step* are optional, and default to 0 and 1, "
-"respectively."
+"For these instances, and others where a range of numbers is desired, Python "
+"provides the ``range`` builtin function, which creates a list of numbers.  "
+"The ``range`` function takes three arguments, *start*, *end* and *step*.  "
+"*start* and *step* are optional, and default to 0 and 1, respectively."
 msgstr ""
 
 #: ../pep-0204.txt:54
 msgid ""
-"The ``range`` function creates a list of numbers, starting at *start*, "
-"with a step of *step*, up to, but not including *end*, so that "
-"``range(10)`` produces a list that has exactly 10 items, the numbers 0 "
-"through 9."
+"The ``range`` function creates a list of numbers, starting at *start*, with "
+"a step of *step*, up to, but not including *end*, so that ``range(10)`` "
+"produces a list that has exactly 10 items, the numbers 0 through 9."
 msgstr ""
 
 #: ../pep-0204.txt:59
@@ -120,8 +117,8 @@ msgstr ""
 
 #: ../pep-0204.txt:69
 msgid ""
-"Or, to start at the second element of ``l`` and processing only every "
-"second element from then on::"
+"Or, to start at the second element of ``l`` and processing only every second "
+"element from then on::"
 msgstr ""
 
 #: ../pep-0204.txt:77
@@ -131,26 +128,26 @@ msgstr ""
 #: ../pep-0204.txt:79
 msgid ""
 "Clarity of purpose: Adding another function call, possibly with extra "
-"arithmetic to determine the desired length and step of the list, does not"
-" improve readability of the code.  Also, it is possible to \"shadow\" the"
-" builtin ``range`` function by supplying a local or global variable with "
-"the same name, effectively replacing it.  This may or may not be a "
-"desired effect."
+"arithmetic to determine the desired length and step of the list, does not "
+"improve readability of the code.  Also, it is possible to \"shadow\" the "
+"builtin ``range`` function by supplying a local or global variable with the "
+"same name, effectively replacing it.  This may or may not be a desired "
+"effect."
 msgstr ""
 
 #: ../pep-0204.txt:86
 msgid ""
 "Efficiency: because the ``range`` function can be overridden, the Python "
-"compiler cannot make assumptions about the for-loop, and has to maintain "
-"a separate loop counter."
+"compiler cannot make assumptions about the for-loop, and has to maintain a "
+"separate loop counter."
 msgstr ""
 
 #: ../pep-0204.txt:90
 msgid ""
 "Consistency: There already is a syntax that is used to denote ranges, as "
 "shown below.  This syntax uses the exact same arguments, though all "
-"optional, in the exact same way.  It seems logical to extend this syntax "
-"to ranges, to form \"range literals\"."
+"optional, in the exact same way.  It seems logical to extend this syntax to "
+"ranges, to form \"range literals\"."
 msgstr ""
 
 #: ../pep-0204.txt:98
@@ -159,19 +156,19 @@ msgstr ""
 
 #: ../pep-0204.txt:100
 msgid ""
-"In Python, a sequence can be indexed in one of two ways: retrieving a "
-"single item, or retrieving a range of items. Retrieving a range of items "
-"results in a new object of the same type as the original sequence, "
-"containing zero or more items from the original sequence.  This is done "
-"using a \"range notation\"::"
+"In Python, a sequence can be indexed in one of two ways: retrieving a single "
+"item, or retrieving a range of items. Retrieving a range of items results in "
+"a new object of the same type as the original sequence, containing zero or "
+"more items from the original sequence.  This is done using a \"range "
+"notation\"::"
 msgstr ""
 
 #: ../pep-0204.txt:109
 msgid ""
 "This range notation consists of zero, one or two indices separated by a "
-"colon.  The first index is the *start* index, the second the *end*.  When"
-" either is left out, they default to respectively the start and the end "
-"of the sequence."
+"colon.  The first index is the *start* index, the second the *end*.  When "
+"either is left out, they default to respectively the start and the end of "
+"the sequence."
 msgstr ""
 
 #: ../pep-0204.txt:114
@@ -183,18 +180,18 @@ msgstr ""
 
 #: ../pep-0204.txt:121
 msgid ""
-"The third \"argument\" to the slice syntax is exactly the same as the "
-"*step* argument to ``range()``.  The underlying mechanisms of the "
-"standard, and these extended slices, are sufficiently different and "
-"inconsistent that many classes and extensions outside of mathematical "
-"packages do not implement support for the extended variant.  While this "
-"should be resolved, it is beyond the scope of this PEP."
+"The third \"argument\" to the slice syntax is exactly the same as the *step* "
+"argument to ``range()``.  The underlying mechanisms of the standard, and "
+"these extended slices, are sufficiently different and inconsistent that many "
+"classes and extensions outside of mathematical packages do not implement "
+"support for the extended variant.  While this should be resolved, it is "
+"beyond the scope of this PEP."
 msgstr ""
 
 #: ../pep-0204.txt:129
 msgid ""
-"Extended slices do show, however, that there is already a perfectly valid"
-" and applicable syntax to denote ranges in a way that solve all of the "
+"Extended slices do show, however, that there is already a perfectly valid "
+"and applicable syntax to denote ranges in a way that solve all of the "
 "earlier stated disadvantages of the use of the ``range()`` function:"
 msgstr ""
 
@@ -210,10 +207,10 @@ msgstr ""
 
 #: ../pep-0204.txt:140
 msgid ""
-"Because it is built-in syntax, instead of a builtin function, it cannot "
-"be overridden.  This means both that a viewer can be certain about what "
-"the code does, and that an optimizer will not have to worry about "
-"``range()`` being \"shadowed\"."
+"Because it is built-in syntax, instead of a builtin function, it cannot be "
+"overridden.  This means both that a viewer can be certain about what the "
+"code does, and that an optimizer will not have to worry about ``range()`` "
+"being \"shadowed\"."
 msgstr ""
 
 #: ../pep-0204.txt:147
@@ -222,18 +219,16 @@ msgstr ""
 
 #: ../pep-0204.txt:149
 msgid ""
-"The proposed implementation of range-literals combines the syntax for "
-"list literals with the syntax for (extended) slices, to form range "
-"literals::"
+"The proposed implementation of range-literals combines the syntax for list "
+"literals with the syntax for (extended) slices, to form range literals::"
 msgstr ""
 
 #: ../pep-0204.txt:160
 msgid ""
-"There is one minor difference between range literals and the slice "
-"syntax: though it is possible to omit all of *start*, *end* and *step* in"
-" slices, it does not make sense to omit *end* in range literals.  In "
-"slices, *end* would default to the end of the list, but this has no "
-"meaning in range literals."
+"There is one minor difference between range literals and the slice syntax: "
+"though it is possible to omit all of *start*, *end* and *step* in slices, it "
+"does not make sense to omit *end* in range literals.  In slices, *end* would "
+"default to the end of the list, but this has no meaning in range literals."
 msgstr ""
 
 #: ../pep-0204.txt:168
@@ -242,16 +237,15 @@ msgstr ""
 
 #: ../pep-0204.txt:170
 msgid ""
-"The proposed implementation can be found on SourceForge [1]_.  It adds a "
-"new bytecode, ``BUILD_RANGE``, that takes three arguments from the stack "
-"and builds a list on the bases of those.  The list is pushed back on the "
-"stack."
+"The proposed implementation can be found on SourceForge [1]_.  It adds a new "
+"bytecode, ``BUILD_RANGE``, that takes three arguments from the stack and "
+"builds a list on the bases of those.  The list is pushed back on the stack."
 msgstr ""
 
 #: ../pep-0204.txt:175
 msgid ""
-"The use of a new bytecode is necessary to be able to build ranges based "
-"on other calculations, whose outcome is not known at compile time."
+"The use of a new bytecode is necessary to be able to build ranges based on "
+"other calculations, whose outcome is not known at compile time."
 msgstr ""
 
 #: ../pep-0204.txt:179
@@ -268,11 +262,11 @@ msgstr ""
 
 #: ../pep-0204.txt:188
 msgid ""
-"``PyList_GetLenOfRange()`` is a helper function used to determine the "
-"length of a range.  Previously, it was a static function in "
-"``bltinmodule.c``, but is now necessary in both ``listobject.c`` and "
-"``bltinmodule.c`` (for ``xrange``).  It is made non-static solely to "
-"avoid code duplication.  Its prototype is::"
+"``PyList_GetLenOfRange()`` is a helper function used to determine the length "
+"of a range.  Previously, it was a static function in ``bltinmodule.c``, but "
+"is now necessary in both ``listobject.c`` and ``bltinmodule.c`` (for "
+"``xrange``).  It is made non-static solely to avoid code duplication.  Its "
+"prototype is::"
 msgstr ""
 
 #: ../pep-0204.txt:198
@@ -281,11 +275,11 @@ msgstr ""
 
 #: ../pep-0204.txt:200
 msgid ""
-"One possible solution to the discrepancy of requiring the *end* argument "
-"in range literals is to allow the range syntax to create a \"generator\","
-" rather than a list, such as the ``xrange`` builtin function does.  "
-"However, a generator would not be a list, and it would be impossible, for"
-" instance, to assign to items in the generator, or append to it."
+"One possible solution to the discrepancy of requiring the *end* argument in "
+"range literals is to allow the range syntax to create a \"generator\", "
+"rather than a list, such as the ``xrange`` builtin function does.  However, "
+"a generator would not be a list, and it would be impossible, for instance, "
+"to assign to items in the generator, or append to it."
 msgstr ""
 
 #: ../pep-0204.txt:207
@@ -293,18 +287,17 @@ msgid ""
 "The range syntax could conceivably be extended to include tuples (i.e. "
 "immutable lists), which could then be safely implemented as generators.  "
 "This may be a desirable solution, especially for large number arrays: "
-"generators require very little in the way of storage and initialization, "
-"and there is only a small performance impact in calculating and creating "
-"the appropriate number on request.  (TBD: is there any at all? Cursory "
-"testing suggests equal performance even in the case of ranges of length "
-"1)"
+"generators require very little in the way of storage and initialization, and "
+"there is only a small performance impact in calculating and creating the "
+"appropriate number on request.  (TBD: is there any at all? Cursory testing "
+"suggests equal performance even in the case of ranges of length 1)"
 msgstr ""
 
 #: ../pep-0204.txt:217
 msgid ""
-"However, even if idea was adopted, would it be wise to \"special case\" "
-"the second argument, making it optional in one instance of the syntax, "
-"and non-optional in other cases ?"
+"However, even if idea was adopted, would it be wise to \"special case\" the "
+"second argument, making it optional in one instance of the syntax, and non-"
+"optional in other cases ?"
 msgstr ""
 
 #: ../pep-0204.txt:221
@@ -319,9 +312,9 @@ msgstr ""
 
 #: ../pep-0204.txt:230
 msgid ""
-"How should range literals interact with another proposed new feature, "
-":pep:`\"list comprehensions\" <202>`?  Specifically, should it be "
-"possible to create lists in list comprehensions?  E.g.::"
+"How should range literals interact with another proposed new feature, :pep:"
+"`\"list comprehensions\" <202>`?  Specifically, should it be possible to "
+"create lists in list comprehensions?  E.g.::"
 msgstr ""
 
 #: ../pep-0204.txt:236
@@ -342,31 +335,30 @@ msgstr ""
 #: ../pep-0204.txt:248
 msgid ""
 "Range literals accept objects other than integers: it performs "
-"``PyInt_AsLong()`` on the objects passed in, so as long as the objects "
-"can be coerced into integers, they will be accepted. The resulting list, "
+"``PyInt_AsLong()`` on the objects passed in, so as long as the objects can "
+"be coerced into integers, they will be accepted. The resulting list, "
 "however, is always composed of standard integers."
 msgstr ""
 
 #: ../pep-0204.txt:254
 msgid ""
 "Should range literals create a list of the passed-in type?  It might be "
-"desirable in the cases of other builtin types, such as longs and "
-"strings::"
+"desirable in the cases of other builtin types, such as longs and strings::"
 msgstr ""
 
 #: ../pep-0204.txt:262
 msgid ""
 "However, this might be too much \"magic\" to be obvious.  It might also "
-"present problems with user-defined classes: even if the base class can be"
-" found and a new instance created, the instance may require additional "
+"present problems with user-defined classes: even if the base class can be "
+"found and a new instance created, the instance may require additional "
 "arguments to ``__init__``, causing the creation to fail."
 msgstr ""
 
 #: ../pep-0204.txt:268
 msgid ""
-"The ``PyList_FromRange()`` and ``PyList_GetLenOfRange()`` functions need "
-"to be classified: are they part of the API, or should they be made "
-"private functions?"
+"The ``PyList_FromRange()`` and ``PyList_GetLenOfRange()`` functions need to "
+"be classified: are they part of the API, or should they be made private "
+"functions?"
 msgstr ""
 
 #: ../pep-0204.txt:274
@@ -375,18 +367,18 @@ msgstr ""
 
 #: ../pep-0204.txt:276
 msgid ""
-"After careful consideration, and a period of meditation, this proposal "
-"has been rejected. The open issues, as well as some confusion between "
-"ranges and slice syntax, raised enough questions for Guido not to accept "
-"it for Python 2.0, and later to reject the proposal altogether. The new "
-"syntax and its intentions were deemed not obvious enough."
+"After careful consideration, and a period of meditation, this proposal has "
+"been rejected. The open issues, as well as some confusion between ranges and "
+"slice syntax, raised enough questions for Guido not to accept it for Python "
+"2.0, and later to reject the proposal altogether. The new syntax and its "
+"intentions were deemed not obvious enough."
 msgstr ""
 
 #: ../pep-0204.txt:283
 msgid ""
-"[ TBD: Guido, amend/confirm this, please. Preferably both; this is a PEP,"
-" it should contain *all* the reasons for rejection and/or "
-"reconsideration, for future reference. ]"
+"[ TBD: Guido, amend/confirm this, please. Preferably both; this is a PEP, it "
+"should contain *all* the reasons for rejection and/or reconsideration, for "
+"future reference. ]"
 msgstr ""
 
 #: ../pep-0204.txt:289
@@ -402,6 +394,6 @@ msgid "References"
 msgstr ""
 
 #: ../pep-0204.txt:297
-msgid "http://sourceforge.net/patch/?func=detailpatch&patch_id=100902&group_id=5470"
+msgid ""
+"http://sourceforge.net/patch/?func=detailpatch&patch_id=100902&group_id=5470"
 msgstr ""
-

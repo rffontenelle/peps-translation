@@ -23,8 +23,8 @@ msgstr ""
 
 #: ../pep-0318.txt:5
 msgid ""
-"Kevin D. Smith <Kevin.Smith@theMorgue.org>, Jim J. Jewett, Skip "
-"Montanaro, Anthony Baxter"
+"Kevin D. Smith <Kevin.Smith@theMorgue.org>, Jim J. Jewett, Skip Montanaro, "
+"Anthony Baxter"
 msgstr ""
 
 #: ../pep-0318.txt
@@ -65,8 +65,7 @@ msgstr ""
 
 #: ../pep-0318.txt:11
 msgid ""
-"09-Jun-2003, 10-Jun-2003, 27-Feb-2004, 23-Mar-2004, 30-Aug-2004, "
-"02-Sep-2004"
+"09-Jun-2003, 10-Jun-2003, 27-Feb-2004, 23-Mar-2004, 30-Aug-2004, 02-Sep-2004"
 msgstr ""
 
 #: ../pep-0318.txt:16
@@ -75,11 +74,10 @@ msgstr ""
 
 #: ../pep-0318.txt:18
 msgid ""
-"This document is meant to describe the decorator syntax and the process "
-"that resulted in the decisions that were made.  It does not attempt to "
-"cover the huge number of potential alternative syntaxes, nor is it an "
-"attempt to exhaustively list all the positives and negatives of each "
-"form."
+"This document is meant to describe the decorator syntax and the process that "
+"resulted in the decisions that were made.  It does not attempt to cover the "
+"huge number of potential alternative syntaxes, nor is it an attempt to "
+"exhaustively list all the positives and negatives of each form."
 msgstr ""
 
 #: ../pep-0318.txt:26
@@ -89,11 +87,11 @@ msgstr ""
 #: ../pep-0318.txt:28
 msgid ""
 "The current method for transforming functions and methods (for instance, "
-"declaring them as a class or static method) is awkward and can lead to "
-"code that is difficult to understand.  Ideally, these transformations "
-"should be made at the same point in the code where the declaration itself"
-" is made.  This PEP introduces new syntax for transformations of a "
-"function or method declaration."
+"declaring them as a class or static method) is awkward and can lead to code "
+"that is difficult to understand.  Ideally, these transformations should be "
+"made at the same point in the code where the declaration itself is made.  "
+"This PEP introduces new syntax for transformations of a function or method "
+"declaration."
 msgstr ""
 
 #: ../pep-0318.txt:37
@@ -104,18 +102,17 @@ msgstr ""
 msgid ""
 "The current method of applying a transformation to a function or method "
 "places the actual transformation after the function body.  For large "
-"functions this separates a key component of the function's behavior from "
-"the definition of the rest of the function's external interface.  For "
-"example::"
+"functions this separates a key component of the function's behavior from the "
+"definition of the rest of the function's external interface.  For example::"
 msgstr ""
 
 #: ../pep-0318.txt:49
 msgid ""
 "This becomes less readable with longer methods.  It also seems less than "
-"pythonic to name the function three times for what is conceptually a "
-"single declaration.  A solution to this problem is to move the "
-"transformation of the method closer to the method's own declaration. The "
-"intent of the new syntax is to replace ::"
+"pythonic to name the function three times for what is conceptually a single "
+"declaration.  A solution to this problem is to move the transformation of "
+"the method closer to the method's own declaration. The intent of the new "
+"syntax is to replace ::"
 msgstr ""
 
 #: ../pep-0318.txt:60
@@ -126,12 +123,12 @@ msgstr ""
 
 #: ../pep-0318.txt:68
 msgid ""
-"Modifying classes in this fashion is also possible, though the benefits "
-"are not as immediately apparent.  Almost certainly, anything which could "
-"be done with class decorators could be done using metaclasses, but using "
-"metaclasses is sufficiently obscure that there is some attraction to "
-"having an easier way to make simple modifications to classes.  For Python"
-" 2.4, only function/method decorators are being added."
+"Modifying classes in this fashion is also possible, though the benefits are "
+"not as immediately apparent.  Almost certainly, anything which could be done "
+"with class decorators could be done using metaclasses, but using metaclasses "
+"is sufficiently obscure that there is some attraction to having an easier "
+"way to make simple modifications to classes.  For Python 2.4, only function/"
+"method decorators are being added."
 msgstr ""
 
 #: ../pep-0318.txt:75 ../pep-0318.txt:839
@@ -149,46 +146,46 @@ msgid ""
 "approximately that time that some syntactic support for them would "
 "eventually be added to the language.  Given this assumption, one might "
 "wonder why it's been so difficult to arrive at a consensus.  Discussions "
-"have raged off-and-on at times in both comp.lang.python and the python-"
-"dev mailing list about how best to implement function decorators. There "
-"is no one clear reason why this should be so, but a few problems seem to "
-"be most divisive."
+"have raged off-and-on at times in both comp.lang.python and the python-dev "
+"mailing list about how best to implement function decorators. There is no "
+"one clear reason why this should be so, but a few problems seem to be most "
+"divisive."
 msgstr ""
 
 #: ../pep-0318.txt:91
 msgid ""
 "Disagreement about where the \"declaration of intent\" belongs. Almost "
-"everyone agrees that decorating/transforming a function at the end of its"
-" definition is suboptimal.  Beyond that there seems to be no clear "
-"consensus where to place this information."
+"everyone agrees that decorating/transforming a function at the end of its "
+"definition is suboptimal.  Beyond that there seems to be no clear consensus "
+"where to place this information."
 msgstr ""
 
 #: ../pep-0318.txt:96
 msgid ""
 "Syntactic constraints.  Python is a syntactically simple language with "
-"fairly strong constraints on what can and can't be done without \"messing"
-" things up\" (both visually and with regards to the language parser).  "
-"There's no obvious way to structure this information so that people new "
-"to the concept will think, \"Oh yeah, I know what you're doing.\"  The "
-"best that seems possible is to keep new users from creating a wildly "
-"incorrect mental model of what the syntax means."
+"fairly strong constraints on what can and can't be done without \"messing "
+"things up\" (both visually and with regards to the language parser).  "
+"There's no obvious way to structure this information so that people new to "
+"the concept will think, \"Oh yeah, I know what you're doing.\"  The best "
+"that seems possible is to keep new users from creating a wildly incorrect "
+"mental model of what the syntax means."
 msgstr ""
 
 #: ../pep-0318.txt:104
 msgid ""
 "Overall unfamiliarity with the concept.  For people who have a passing "
-"acquaintance with algebra (or even basic arithmetic) or have used at "
-"least one other programming language, much of Python is intuitive.  Very "
-"few people will have had any experience with the decorator concept before"
-" encountering it in Python.  There's just no strong preexisting meme that"
-" captures the concept."
+"acquaintance with algebra (or even basic arithmetic) or have used at least "
+"one other programming language, much of Python is intuitive.  Very few "
+"people will have had any experience with the decorator concept before "
+"encountering it in Python.  There's just no strong preexisting meme that "
+"captures the concept."
 msgstr ""
 
 #: ../pep-0318.txt:111
 msgid ""
-"Syntax discussions in general appear to cause more contention than almost"
-" anything else. Readers are pointed to the ternary operator discussions "
-"that were associated with :pep:`308` for another example of this."
+"Syntax discussions in general appear to cause more contention than almost "
+"anything else. Readers are pointed to the ternary operator discussions that "
+"were associated with :pep:`308` for another example of this."
 msgstr ""
 
 #: ../pep-0318.txt:118
@@ -200,34 +197,32 @@ msgid ""
 "There is general agreement that syntactic support is desirable to the "
 "current state of affairs.  Guido mentioned `syntactic support for "
 "decorators`_ in his DevDay keynote presentation at the `10th Python "
-"Conference`_, though `he later said`_ it was only one of several "
-"extensions he proposed there \"semi-jokingly\".  `Michael Hudson raised "
-"the topic`_ on ``python-dev`` shortly after the conference, attributing "
-"the initial bracketed syntax to an earlier proposal on "
-"``comp.lang.python`` by `Gareth McCaughan`_."
+"Conference`_, though `he later said`_ it was only one of several extensions "
+"he proposed there \"semi-jokingly\".  `Michael Hudson raised the topic`_ on "
+"``python-dev`` shortly after the conference, attributing the initial "
+"bracketed syntax to an earlier proposal on ``comp.lang.python`` by `Gareth "
+"McCaughan`_."
 msgstr ""
 
 #: ../pep-0318.txt:140
 msgid ""
-"Class decorations seem like an obvious next step because class definition"
-" and function definition are syntactically similar, however Guido remains"
-" unconvinced, and class decorators will almost certainly not be in Python"
-" 2.4."
+"Class decorations seem like an obvious next step because class definition "
+"and function definition are syntactically similar, however Guido remains "
+"unconvinced, and class decorators will almost certainly not be in Python 2.4."
 msgstr ""
 
 #: ../pep-0318.txt:145
 msgid ""
-"The discussion continued on and off on python-dev from February 2002 "
-"through July 2004.  Hundreds and hundreds of posts were made, with people"
-" proposing many possible syntax variations.  Guido took a list of "
-"proposals to `EuroPython 2004`_, where a discussion took place.  "
-"Subsequent to this, he decided that we'd have the `Java-style`_ "
-"@decorator syntax, and this appeared for the first time in 2.4a2. Barry "
-"Warsaw named this the 'pie-decorator' syntax, in honor of the Pie-thon "
-"Parrot shootout which occurred around the same time as the decorator "
-"syntax, and because the @ looks a little like a pie. Guido `outlined his "
-"case`_ on Python-dev, including `this piece`_ on some of the (many) "
-"rejected forms."
+"The discussion continued on and off on python-dev from February 2002 through "
+"July 2004.  Hundreds and hundreds of posts were made, with people proposing "
+"many possible syntax variations.  Guido took a list of proposals to "
+"`EuroPython 2004`_, where a discussion took place.  Subsequent to this, he "
+"decided that we'd have the `Java-style`_ @decorator syntax, and this "
+"appeared for the first time in 2.4a2. Barry Warsaw named this the 'pie-"
+"decorator' syntax, in honor of the Pie-thon Parrot shootout which occurred "
+"around the same time as the decorator syntax, and because the @ looks a "
+"little like a pie. Guido `outlined his case`_ on Python-dev, including `this "
+"piece`_ on some of the (many) rejected forms."
 msgstr ""
 
 #: ../pep-0318.txt:168
@@ -236,12 +231,11 @@ msgstr ""
 
 #: ../pep-0318.txt:170
 msgid ""
-"There's been a number of complaints about the choice of the name "
-"'decorator' for this feature.  The major one is that the name is not "
-"consistent with its use in the `GoF book`_.  The name 'decorator' "
-"probably owes more to its use in the compiler area -- a syntax tree is "
-"walked and annotated.  It's quite possible that a better name may turn "
-"up."
+"There's been a number of complaints about the choice of the name 'decorator' "
+"for this feature.  The major one is that the name is not consistent with its "
+"use in the `GoF book`_.  The name 'decorator' probably owes more to its use "
+"in the compiler area -- a syntax tree is walked and annotated.  It's quite "
+"possible that a better name may turn up."
 msgstr ""
 
 #: ../pep-0318.txt:182
@@ -266,8 +260,8 @@ msgstr ""
 
 #: ../pep-0318.txt:193
 msgid ""
-"make it obvious what is happening; at the very least it should be obvious"
-" that new users can safely ignore it when writing their own code"
+"make it obvious what is happening; at the very least it should be obvious "
+"that new users can safely ignore it when writing their own code"
 msgstr ""
 
 #: ../pep-0318.txt:197
@@ -280,41 +274,40 @@ msgstr ""
 
 #: ../pep-0318.txt:201
 msgid ""
-"be easy to type; programs that use it are expected to use it very "
-"frequently"
+"be easy to type; programs that use it are expected to use it very frequently"
 msgstr ""
 
 #: ../pep-0318.txt:204
 msgid ""
-"not make it more difficult to scan through code quickly.  It should still"
-" be easy to search for all definitions, a particular definition, or the "
+"not make it more difficult to scan through code quickly.  It should still be "
+"easy to search for all definitions, a particular definition, or the "
 "arguments that a function accepts"
 msgstr ""
 
 #: ../pep-0318.txt:208
 msgid ""
-"not needlessly complicate secondary support tools such as language-"
-"sensitive editors and other \"`toy parser tools out there`_\""
+"not needlessly complicate secondary support tools such as language-sensitive "
+"editors and other \"`toy parser tools out there`_\""
 msgstr ""
 
 #: ../pep-0318.txt:212
 msgid ""
-"allow future compilers to optimize for decorators.  With the hope of a "
-"JIT compiler for Python coming into existence at some point this tends to"
-" require the syntax for decorators to come before the function definition"
+"allow future compilers to optimize for decorators.  With the hope of a JIT "
+"compiler for Python coming into existence at some point this tends to "
+"require the syntax for decorators to come before the function definition"
 msgstr ""
 
 #: ../pep-0318.txt:217
 msgid ""
-"move from the end of the function, where it's currently hidden, to the "
-"front where it is more `in your face`_"
+"move from the end of the function, where it's currently hidden, to the front "
+"where it is more `in your face`_"
 msgstr ""
 
 #: ../pep-0318.txt:220
 msgid ""
-"Andrew Kuchling has links to a bunch of the discussions about motivations"
-" and use cases `in his blog`_.  Particularly notable is `Jim Huginin's "
-"list of use cases`_."
+"Andrew Kuchling has links to a bunch of the discussions about motivations "
+"and use cases `in his blog`_.  Particularly notable is `Jim Huginin's list "
+"of use cases`_."
 msgstr ""
 
 #: ../pep-0318.txt:235
@@ -323,8 +316,8 @@ msgstr ""
 
 #: ../pep-0318.txt:237
 msgid ""
-"The current syntax for function decorators as implemented in Python 2.4a2"
-" is::"
+"The current syntax for function decorators as implemented in Python 2.4a2 "
+"is::"
 msgstr ""
 
 #: ../pep-0318.txt:245 ../pep-0318.txt:277 ../pep-0318.txt:614
@@ -342,15 +335,14 @@ msgstr ""
 msgid ""
 "The rationale for the `order of application`_ (bottom to top) is that it "
 "matches the usual order for function-application.  In mathematics, "
-"composition of functions (g o f)(x) translates to g(f(x)).  In Python, "
-"``@g @f def foo()`` translates to ``foo=g(f(foo)``."
+"composition of functions (g o f)(x) translates to g(f(x)).  In Python, ``@g "
+"@f def foo()`` translates to ``foo=g(f(foo)``."
 msgstr ""
 
 #: ../pep-0318.txt:263
 msgid ""
 "The decorator statement is limited in what it can accept -- arbitrary "
-"expressions will not work.  Guido preferred this because of a `gut "
-"feeling`_."
+"expressions will not work.  Guido preferred this because of a `gut feeling`_."
 msgstr ""
 
 #: ../pep-0318.txt:270
@@ -363,8 +355,8 @@ msgstr ""
 msgid ""
 "The rationale for having a function that returns a decorator is that the "
 "part after the @ sign can be considered to be an expression (though "
-"syntactically restricted to just a function), and whatever that "
-"expression returns is called.  See `declaration arguments`_."
+"syntactically restricted to just a function), and whatever that expression "
+"returns is called.  See `declaration arguments`_."
 msgstr ""
 
 #: ../pep-0318.txt:291
@@ -373,11 +365,11 @@ msgstr ""
 
 #: ../pep-0318.txt:293
 msgid ""
-"There have been `a large number`_ of different syntaxes proposed -- "
-"rather than attempting to work through these individual syntaxes, it's "
-"worthwhile to break the syntax discussion down into a number of areas. "
-"Attempting to discuss `each possible syntax`_ individually would be an "
-"act of madness, and produce a completely unwieldy PEP."
+"There have been `a large number`_ of different syntaxes proposed -- rather "
+"than attempting to work through these individual syntaxes, it's worthwhile "
+"to break the syntax discussion down into a number of areas. Attempting to "
+"discuss `each possible syntax`_ individually would be an act of madness, and "
+"produce a completely unwieldy PEP."
 msgstr ""
 
 #: ../pep-0318.txt:306
@@ -386,8 +378,8 @@ msgstr ""
 
 #: ../pep-0318.txt:308
 msgid ""
-"The first syntax point is the location of the decorators.  For the "
-"following examples, we use the @syntax used in 2.4a2."
+"The first syntax point is the location of the decorators.  For the following "
+"examples, we use the @syntax used in 2.4a2."
 msgstr ""
 
 #: ../pep-0318.txt:311
@@ -399,64 +391,64 @@ msgstr ""
 #: ../pep-0318.txt:323
 msgid ""
 "There have been a number of objections raised to this location -- the "
-"primary one is that it's the first real Python case where a line of code "
-"has an effect on a following line.  The syntax available in 2.4a3 "
-"requires one decorator per line (in a2, multiple decorators could be "
-"specified on the same line), and the final decision for 2.4 final stayed "
-"one decorator per line."
+"primary one is that it's the first real Python case where a line of code has "
+"an effect on a following line.  The syntax available in 2.4a3 requires one "
+"decorator per line (in a2, multiple decorators could be specified on the "
+"same line), and the final decision for 2.4 final stayed one decorator per "
+"line."
 msgstr ""
 
 #: ../pep-0318.txt:330
 msgid ""
-"People also complained that the syntax quickly got unwieldy when multiple"
-" decorators were used.  The point was made, though, that the chances of a"
-" large number of decorators being used on a single function were small "
-"and thus this was not a large worry."
+"People also complained that the syntax quickly got unwieldy when multiple "
+"decorators were used.  The point was made, though, that the chances of a "
+"large number of decorators being used on a single function were small and "
+"thus this was not a large worry."
 msgstr ""
 
 #: ../pep-0318.txt:335
 msgid ""
-"Some of the advantages of this form are that the decorators live outside "
-"the method body -- they are obviously executed at the time the function "
-"is defined."
+"Some of the advantages of this form are that the decorators live outside the "
+"method body -- they are obviously executed at the time the function is "
+"defined."
 msgstr ""
 
 #: ../pep-0318.txt:339
 msgid ""
-"Another advantage is that a prefix to the function definition fits the "
-"idea of knowing about a change to the semantics of the code before the "
-"code itself, thus you know how to interpret the code's semantics properly"
-" without having to go back and change your initial perceptions if the "
-"syntax did not come before the function definition."
+"Another advantage is that a prefix to the function definition fits the idea "
+"of knowing about a change to the semantics of the code before the code "
+"itself, thus you know how to interpret the code's semantics properly without "
+"having to go back and change your initial perceptions if the syntax did not "
+"come before the function definition."
 msgstr ""
 
 #: ../pep-0318.txt:345
 msgid ""
-"Guido decided `he preferred`_ having the decorators on the line before "
-"the 'def', because it was felt that a long argument list would mean that "
-"the decorators would be 'hidden'"
+"Guido decided `he preferred`_ having the decorators on the line before the "
+"'def', because it was felt that a long argument list would mean that the "
+"decorators would be 'hidden'"
 msgstr ""
 
 #: ../pep-0318.txt:352
 msgid ""
-"The second form is the decorators between the def and the function name, "
-"or the function name and the argument list::"
+"The second form is the decorators between the def and the function name, or "
+"the function name and the argument list::"
 msgstr ""
 
 #: ../pep-0318.txt:367
 msgid ""
-"There are a couple of objections to this form.  The first is that it "
-"breaks easily 'greppability' of the source -- you can no longer search "
-"for 'def foo(' and find the definition of the function.  The second, more"
-" serious, objection is that in the case of multiple decorators, the "
-"syntax would be extremely unwieldy."
+"There are a couple of objections to this form.  The first is that it breaks "
+"easily 'greppability' of the source -- you can no longer search for 'def "
+"foo(' and find the definition of the function.  The second, more serious, "
+"objection is that in the case of multiple decorators, the syntax would be "
+"extremely unwieldy."
 msgstr ""
 
 #: ../pep-0318.txt:373
 msgid ""
-"The next form, which has had a number of strong proponents, is to have "
-"the decorators between the argument list and the trailing ``:`` in the "
-"'def' line::"
+"The next form, which has had a number of strong proponents, is to have the "
+"decorators between the argument list and the trailing ``:`` in the 'def' "
+"line::"
 msgstr ""
 
 #: ../pep-0318.txt:383
@@ -485,18 +477,18 @@ msgstr ""
 
 #: ../pep-0318.txt:398
 msgid ""
-"The next form is that the decorator syntax goes inside the method body at"
-" the start, in the same place that docstrings currently live::"
+"The next form is that the decorator syntax goes inside the method body at "
+"the start, in the same place that docstrings currently live::"
 msgstr ""
 
 #: ../pep-0318.txt:410
 msgid ""
-"The primary objection to this form is that it requires \"peeking inside\""
-" the method body to determine the decorators.  In addition, even though "
-"the code is inside the method body, it is not executed when the method is"
-" run.  Guido felt that docstrings were not a good counter-example, and "
-"that it was quite possible that a 'docstring' decorator could help move "
-"the docstring to outside the function body."
+"The primary objection to this form is that it requires \"peeking inside\" "
+"the method body to determine the decorators.  In addition, even though the "
+"code is inside the method body, it is not executed when the method is run.  "
+"Guido felt that docstrings were not a good counter-example, and that it was "
+"quite possible that a 'docstring' decorator could help move the docstring to "
+"outside the function body."
 msgstr ""
 
 #: ../pep-0318.txt:417
@@ -524,10 +516,10 @@ msgstr ""
 #: ../pep-0318.txt:451
 msgid ""
 "The major objections against this syntax are that the @ symbol is not "
-"currently used in Python (and is used in both IPython and Leo), and that "
-"the @ symbol is not meaningful. Another objection is that this \"wastes\""
-" a currently unused character (from a limited set) on something that is "
-"not perceived as a major use."
+"currently used in Python (and is used in both IPython and Leo), and that the "
+"@ symbol is not meaningful. Another objection is that this \"wastes\" a "
+"currently unused character (from a limited set) on something that is not "
+"perceived as a major use."
 msgstr ""
 
 #: ../pep-0318.txt:457
@@ -536,10 +528,9 @@ msgstr ""
 
 #: ../pep-0318.txt:468
 msgid ""
-"This is a variant on the @decorator syntax -- it has the advantage that "
-"it does not break IPython and Leo.  Its major disadvantage compared to "
-"the @syntax is that the | symbol looks like both a capital I and a "
-"lowercase l."
+"This is a variant on the @decorator syntax -- it has the advantage that it "
+"does not break IPython and Leo.  Its major disadvantage compared to the "
+"@syntax is that the | symbol looks like both a capital I and a lowercase l."
 msgstr ""
 
 #: ../pep-0318.txt:473
@@ -549,8 +540,8 @@ msgstr ""
 #: ../pep-0318.txt:483
 msgid ""
 "The major objection to the list syntax is that it's currently meaningful "
-"(when used in the form before the method).  It's also lacking any "
-"indication that the expression is a decorator."
+"(when used in the form before the method).  It's also lacking any indication "
+"that the expression is a decorator."
 msgstr ""
 
 #: ../pep-0318.txt:487
@@ -562,10 +553,10 @@ msgid ""
 "None of these alternatives gained much traction. The alternatives which "
 "involve square brackets only serve to make it obvious that the decorator "
 "construct is not a list. They do nothing to make parsing any easier. The "
-"'<...>' alternative presents parsing problems because '<' and '>' already"
-" parse as un-paired. They present a further parsing ambiguity because a "
-"right angle bracket might be a greater than symbol instead of a closer "
-"for the decorators."
+"'<...>' alternative presents parsing problems because '<' and '>' already "
+"parse as un-paired. They present a further parsing ambiguity because a right "
+"angle bracket might be a greater than symbol instead of a closer for the "
+"decorators."
 msgstr ""
 
 #: ../pep-0318.txt:505
@@ -574,24 +565,23 @@ msgstr ""
 
 #: ../pep-0318.txt:507
 msgid ""
-"The ``decorate()`` proposal was that no new syntax be implemented -- "
-"instead a magic function that used introspection to manipulate the "
-"following function.  Both Jp Calderone and Philip Eby produced "
-"implementations of functions that did this.  Guido was pretty firmly "
-"against this -- with no new syntax, the magicness of a function like this"
-" is extremely high:"
+"The ``decorate()`` proposal was that no new syntax be implemented -- instead "
+"a magic function that used introspection to manipulate the following "
+"function.  Both Jp Calderone and Philip Eby produced implementations of "
+"functions that did this.  Guido was pretty firmly against this -- with no "
+"new syntax, the magicness of a function like this is extremely high:"
 msgstr ""
 
 #: ../pep-0318.txt:514
 msgid ""
-"Using functions with \"action-at-a-distance\" through sys.settraceback "
-"may be okay for an obscure feature that can't be had any other way yet "
-"doesn't merit changes to the language, but that's not the situation for "
-"decorators.  The widely held view here is that decorators need to be "
-"added as a syntactic feature to avoid the problems with the postfix "
-"notation used in 2.2 and 2.3.  Decorators are slated to be an important "
-"new language feature and their design needs to be forward-looking, not "
-"constrained by what can be implemented in 2.3."
+"Using functions with \"action-at-a-distance\" through sys.settraceback may "
+"be okay for an obscure feature that can't be had any other way yet doesn't "
+"merit changes to the language, but that's not the situation for decorators.  "
+"The widely held view here is that decorators need to be added as a syntactic "
+"feature to avoid the problems with the postfix notation used in 2.2 and "
+"2.3.  Decorators are slated to be an important new language feature and "
+"their design needs to be forward-looking, not constrained by what can be "
+"implemented in 2.3."
 msgstr ""
 
 #: ../pep-0318.txt:524
@@ -600,9 +590,9 @@ msgstr ""
 
 #: ../pep-0318.txt:526
 msgid ""
-"This idea was the consensus alternate from comp.lang.python (more on this"
-" in `Community Consensus`_ below.)  Robert Brewer wrote up a detailed `J2"
-" proposal`_ document outlining the arguments in favor of this form.  The "
+"This idea was the consensus alternate from comp.lang.python (more on this in "
+"`Community Consensus`_ below.)  Robert Brewer wrote up a detailed `J2 "
+"proposal`_ document outlining the arguments in favor of this form.  The "
 "initial issues with this form are:"
 msgstr ""
 
@@ -634,10 +624,10 @@ msgstr ""
 #: ../pep-0318.txt:545
 msgid ""
 "... the syntactic form of an indented block strongly suggests that its "
-"contents should be a sequence of statements, but in fact it is not -- "
-"only expressions are allowed, and there is an implicit \"collecting\" of "
-"these expressions going on until they can be applied to the subsequent "
-"function definition. ..."
+"contents should be a sequence of statements, but in fact it is not -- only "
+"expressions are allowed, and there is an implicit \"collecting\" of these "
+"expressions going on until they can be applied to the subsequent function "
+"definition. ..."
 msgstr ""
 
 #: ../pep-0318.txt:551
@@ -648,9 +638,9 @@ msgstr ""
 msgid ""
 "... the keyword starting the line that heads a block draws a lot of "
 "attention to it. This is true for \"if\", \"while\", \"for\", \"try\", "
-"\"def\" and \"class\". But the \"using\" keyword (or any other keyword in"
-" its place) doesn't deserve that attention; the emphasis should be on the"
-" decorator or decorators inside the suite, since those are the important "
+"\"def\" and \"class\". But the \"using\" keyword (or any other keyword in "
+"its place) doesn't deserve that attention; the emphasis should be on the "
+"decorator or decorators inside the suite, since those are the important "
 "modifiers to the function definition that follows. ..."
 msgstr ""
 
@@ -673,20 +663,20 @@ msgstr ""
 #: ../pep-0318.txt:583
 msgid ""
 "There is some history in Java using @ initially as a marker in `Javadoc "
-"comments`_ and later in Java 1.5 for `annotations`_, which are similar to"
-" Python decorators.  The fact that @ was previously unused as a token in "
+"comments`_ and later in Java 1.5 for `annotations`_, which are similar to "
+"Python decorators.  The fact that @ was previously unused as a token in "
 "Python also means it's clear there is no possibility of such code being "
-"parsed by an earlier version of Python, leading to possibly subtle "
-"semantic bugs.  It also means that ambiguity of what is a decorator and "
-"what isn't is removed.  That said, @ is still a fairly arbitrary choice."
-"  Some have suggested using | instead."
+"parsed by an earlier version of Python, leading to possibly subtle semantic "
+"bugs.  It also means that ambiguity of what is a decorator and what isn't is "
+"removed.  That said, @ is still a fairly arbitrary choice.  Some have "
+"suggested using | instead."
 msgstr ""
 
 #: ../pep-0318.txt:592
 msgid ""
-"For syntax options which use a list-like syntax (no matter where it "
-"appears) to specify the decorators a few alternatives were proposed: "
-"``[|...|]``, ``*[...]*``, and ``<...>``."
+"For syntax options which use a list-like syntax (no matter where it appears) "
+"to specify the decorators a few alternatives were proposed: ``[|...|]``, "
+"``*[...]*``, and ``<...>``."
 msgstr ""
 
 #: ../pep-0318.txt:603
@@ -706,46 +696,46 @@ msgstr ""
 
 #: ../pep-0318.txt:622
 msgid ""
-"The version implemented in 2.4a2 allowed multiple ``@decorator`` clauses "
-"on a single line. In 2.4a3, this was tightened up to only allowing one "
+"The version implemented in 2.4a2 allowed multiple ``@decorator`` clauses on "
+"a single line. In 2.4a3, this was tightened up to only allowing one "
 "decorator per line."
 msgstr ""
 
 #: ../pep-0318.txt:626
 msgid ""
-"A `previous patch`_ from Michael Hudson which implements the list-after-"
-"def syntax is also still kicking around."
+"A `previous patch`_ from Michael Hudson which implements the list-after-def "
+"syntax is also still kicking around."
 msgstr ""
 
 #: ../pep-0318.txt:632
 msgid ""
-"After 2.4a2 was released, in response to community reaction, Guido stated"
-" that he'd re-examine a community proposal, if the community could come "
-"up with a community consensus, a decent proposal, and an implementation."
-"  After an amazing number of posts, collecting a vast number of "
-"alternatives in the `Python wiki`_, a community consensus emerged "
-"(below).  Guido `subsequently rejected`_ this alternate form, but added:"
+"After 2.4a2 was released, in response to community reaction, Guido stated "
+"that he'd re-examine a community proposal, if the community could come up "
+"with a community consensus, a decent proposal, and an implementation.  After "
+"an amazing number of posts, collecting a vast number of alternatives in the "
+"`Python wiki`_, a community consensus emerged (below).  Guido `subsequently "
+"rejected`_ this alternate form, but added:"
 msgstr ""
 
 #: ../pep-0318.txt:640
 msgid ""
 "In Python 2.4a3 (to be released this Thursday), everything remains as "
-"currently in CVS.  For 2.4b1, I will consider a change of @ to some other"
-" single character, even though I think that @ has the advantage of being "
-"the same character used by a similar feature in Java.  It's been argued "
-"that it's not quite the same, since @ in Java is used for attributes that"
-" don't change semantics.  But Python's dynamic nature makes that its "
-"syntactic elements never mean quite the same thing as similar constructs "
-"in other languages, and there is definitely significant overlap.  "
-"Regarding the impact on 3rd party tools: IPython's author doesn't think "
-"there's going to be much impact; Leo's author has said that Leo will "
-"survive (although it will cause him and his users some transitional "
-"pain).  I actually expect that picking a character that's already used "
-"elsewhere in Python's syntax might be harder for external tools to adapt "
-"to, since parsing will have to be more subtle in that case.  But I'm "
-"frankly undecided, so there's some wiggle room here.  I don't want to "
-"consider further syntactic alternatives at this point: the buck has to "
-"stop at some point, everyone has had their say, and the show must go on."
+"currently in CVS.  For 2.4b1, I will consider a change of @ to some other "
+"single character, even though I think that @ has the advantage of being the "
+"same character used by a similar feature in Java.  It's been argued that "
+"it's not quite the same, since @ in Java is used for attributes that don't "
+"change semantics.  But Python's dynamic nature makes that its syntactic "
+"elements never mean quite the same thing as similar constructs in other "
+"languages, and there is definitely significant overlap.  Regarding the "
+"impact on 3rd party tools: IPython's author doesn't think there's going to "
+"be much impact; Leo's author has said that Leo will survive (although it "
+"will cause him and his users some transitional pain).  I actually expect "
+"that picking a character that's already used elsewhere in Python's syntax "
+"might be harder for external tools to adapt to, since parsing will have to "
+"be more subtle in that case.  But I'm frankly undecided, so there's some "
+"wiggle room here.  I don't want to consider further syntactic alternatives "
+"at this point: the buck has to stop at some point, everyone has had their "
+"say, and the show must go on."
 msgstr ""
 
 #: ../pep-0318.txt:667
@@ -760,10 +750,10 @@ msgstr ""
 
 #: ../pep-0318.txt:672
 msgid ""
-"The consensus that emerged on comp.lang.python was the proposed J2 syntax"
-" (the \"J2\" was how it was referenced on the PythonDecorators wiki "
-"page): the new keyword ``using`` prefixing a block of decorators before "
-"the ``def`` statement.  For example::"
+"The consensus that emerged on comp.lang.python was the proposed J2 syntax "
+"(the \"J2\" was how it was referenced on the PythonDecorators wiki page): "
+"the new keyword ``using`` prefixing a block of decorators before the ``def`` "
+"statement.  For example::"
 msgstr ""
 
 #: ../pep-0318.txt:683
@@ -775,28 +765,28 @@ msgstr ""
 #: ../pep-0318.txt:686
 msgid ""
 "A suite is better than multiple @lines.  The ``using`` keyword and block "
-"transforms the single-block ``def`` statement into a multiple-block "
-"compound construct, akin to try/finally and others."
+"transforms the single-block ``def`` statement into a multiple-block compound "
+"construct, akin to try/finally and others."
 msgstr ""
 
 #: ../pep-0318.txt:690
 msgid ""
-"A keyword is better than punctuation for a new token.  A keyword matches "
-"the existing use of tokens.  No new token category is necessary.  A "
-"keyword distinguishes Python decorators from Java annotations and .Net "
-"attributes, which are significantly different beasts."
+"A keyword is better than punctuation for a new token.  A keyword matches the "
+"existing use of tokens.  No new token category is necessary.  A keyword "
+"distinguishes Python decorators from Java annotations and .Net attributes, "
+"which are significantly different beasts."
 msgstr ""
 
 #: ../pep-0318.txt:696
 msgid ""
-"Robert Brewer wrote a `detailed proposal`_ for this form, and Michael "
-"Sparks produced `a patch`_."
+"Robert Brewer wrote a `detailed proposal`_ for this form, and Michael Sparks "
+"produced `a patch`_."
 msgstr ""
 
 #: ../pep-0318.txt:704
 msgid ""
-"As noted previously, Guido rejected this form, outlining his problems "
-"with it in `a message`_ to python-dev and comp.lang.python."
+"As noted previously, Guido rejected this form, outlining his problems with "
+"it in `a message`_ to python-dev and comp.lang.python."
 msgstr ""
 
 #: ../pep-0318.txt:712
@@ -806,10 +796,9 @@ msgstr ""
 #: ../pep-0318.txt:714
 msgid ""
 "Much of the discussion on ``comp.lang.python`` and the ``python-dev`` "
-"mailing list focuses on the use of decorators as a cleaner way to use the"
-" ``staticmethod()`` and ``classmethod()`` builtins.  This capability is "
-"much more powerful than that.  This section presents some examples of "
-"use."
+"mailing list focuses on the use of decorators as a cleaner way to use the "
+"``staticmethod()`` and ``classmethod()`` builtins.  This capability is much "
+"more powerful than that.  This section presents some examples of use."
 msgstr ""
 
 #: ../pep-0318.txt:720
@@ -820,21 +809,21 @@ msgstr ""
 
 #: ../pep-0318.txt:732
 msgid ""
-"Note that this example is probably not suitable for real usage, but is "
-"for example purposes only."
+"Note that this example is probably not suitable for real usage, but is for "
+"example purposes only."
 msgstr ""
 
 #: ../pep-0318.txt:735
 msgid ""
 "Define a class with a singleton instance.  Note that once the class "
-"disappears enterprising programmers would have to be more creative to "
-"create more instances.  (From Shane Hathaway on ``python-dev``.) ::"
+"disappears enterprising programmers would have to be more creative to create "
+"more instances.  (From Shane Hathaway on ``python-dev``.) ::"
 msgstr ""
 
 #: ../pep-0318.txt:751
 msgid ""
-"Add attributes to a function.  (Based on an example posted by Anders "
-"Munch on ``python-dev``.) ::"
+"Add attributes to a function.  (Based on an example posted by Anders Munch "
+"on ``python-dev``.) ::"
 msgstr ""
 
 #: ../pep-0318.txt:766
@@ -846,15 +835,15 @@ msgstr ""
 
 #: ../pep-0318.txt:798
 msgid ""
-"Declare that a class implements a particular (set of) interface(s). This "
-"is from a posting by Bob Ippolito on ``python-dev`` based on experience "
-"with `PyProtocols`_. ::"
+"Declare that a class implements a particular (set of) interface(s). This is "
+"from a posting by Bob Ippolito on ``python-dev`` based on experience with "
+"`PyProtocols`_. ::"
 msgstr ""
 
 #: ../pep-0318.txt:822
 msgid ""
-"Of course, all these examples are possible today, though without "
-"syntactic support."
+"Of course, all these examples are possible today, though without syntactic "
+"support."
 msgstr ""
 
 #: ../pep-0318.txt:827
@@ -864,14 +853,15 @@ msgstr ""
 #: ../pep-0318.txt:829
 msgid ""
 "It's not yet certain that class decorators will be incorporated into the "
-"language at a future point.  Guido expressed skepticism about the "
-"concept, but various people have made some `strong arguments`_ (search "
-"for ``PEP 318 -- posting draft``) on their behalf in ``python-dev``.  "
-"It's exceedingly unlikely that class decorators will be in Python 2.4."
+"language at a future point.  Guido expressed skepticism about the concept, "
+"but various people have made some `strong arguments`_ (search for ``PEP 318 "
+"-- posting draft``) on their behalf in ``python-dev``.  It's exceedingly "
+"unlikely that class decorators will be in Python 2.4."
 msgstr ""
 
 #: ../pep-0318.txt:841
-msgid "The choice of the ``@`` character will be re-examined before Python 2.4b1."
+msgid ""
+"The choice of the ``@`` character will be re-examined before Python 2.4b1."
 msgstr ""
 
 #: ../pep-0318.txt:844
@@ -885,4 +875,3 @@ msgstr ""
 #: ../pep-0318.txt:850
 msgid "This document has been placed in the public domain."
 msgstr ""
-

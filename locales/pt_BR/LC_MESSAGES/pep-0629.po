@@ -79,11 +79,10 @@ msgstr ""
 
 #: ../pep-0629.rst:15
 msgid ""
-"This PEP was `accepted on 2020-08-20 "
-"<https://discuss.python.org/t/pep-629-versioning-pypis-simple-"
-"api/4720/15>`__. PyPI `merged an implementation "
-"<2bfa5a8c75e3af218494fe8de1eb809a43e3bbb9>`__ on 2020-01-28, marking this"
-" PEP as \"Final\"."
+"This PEP was `accepted on 2020-08-20 <https://discuss.python.org/t/pep-629-"
+"versioning-pypis-simple-api/4720/15>`__. PyPI `merged an implementation "
+"<2bfa5a8c75e3af218494fe8de1eb809a43e3bbb9>`__ on 2020-01-28, marking this "
+"PEP as \"Final\"."
 msgstr ""
 
 #: ../pep-0629.rst:22
@@ -105,28 +104,27 @@ msgstr ""
 msgid ""
 "When evolving the simple API, clients wish to be able to determine which "
 "features the repository supports. Currently there is no mechanism to do "
-"this, except by attempting to detect new features by looking at the data "
-"in the responses and see if it appears like a particular feature is in "
-"use."
+"this, except by attempting to detect new features by looking at the data in "
+"the responses and see if it appears like a particular feature is in use."
 msgstr ""
 
 #: ../pep-0629.rst:38
 msgid ""
-"This works reasonably well for a modern version of a client to determine "
-"if the repository supports all of the features it wants to implement, "
-"however it does not do anything to tell an older version the client that "
-"the repository supports features that it might not understand and to "
-"allow messaging to indicate that it might not be correctly understanding "
-"the output of the repository."
+"This works reasonably well for a modern version of a client to determine if "
+"the repository supports all of the features it wants to implement, however "
+"it does not do anything to tell an older version the client that the "
+"repository supports features that it might not understand and to allow "
+"messaging to indicate that it might not be correctly understanding the "
+"output of the repository."
 msgstr ""
 
 #: ../pep-0629.rst:45
 msgid ""
-"An example of a scenario where this happened was the phasing in of "
-"python-requires metadata, while existing clients could still successfully"
-" use the repository, they were lacking the ability to understand this new"
-" piece of data which would have informed their behavior to select a "
-"better file for end users."
+"An example of a scenario where this happened was the phasing in of python-"
+"requires metadata, while existing clients could still successfully use the "
+"repository, they were lacking the ability to understand this new piece of "
+"data which would have informed their behavior to select a better file for "
+"end users."
 msgstr ""
 
 #: ../pep-0629.rst:53
@@ -136,10 +134,10 @@ msgstr ""
 #: ../pep-0629.rst:55
 msgid ""
 "This PEP proposes the inclusion of a meta tag on the responses of every "
-"successful request to a simple API page, which contains a name attribute "
-"of \"pypi:repository-version\", and a content that is a :pep:`440` "
-"compatible version number, which is further constrained to ONLY be "
-"Major.Minor, and none of the additional features supported by :pep:`440`."
+"successful request to a simple API page, which contains a name attribute of "
+"\"pypi:repository-version\", and a content that is a :pep:`440` compatible "
+"version number, which is further constrained to ONLY be Major.Minor, and "
+"none of the additional features supported by :pep:`440`."
 msgstr ""
 
 #: ../pep-0629.rst:61
@@ -152,9 +150,9 @@ msgstr ""
 
 #: ../pep-0629.rst:67
 msgid ""
-"Incrementing the major version is used to signal a backwards incompatible"
-" change such that existing clients would no longer be expected to be able"
-" to meaningfully use the API."
+"Incrementing the major version is used to signal a backwards incompatible "
+"change such that existing clients would no longer be expected to be able to "
+"meaningfully use the API."
 msgstr ""
 
 #: ../pep-0629.rst:70
@@ -166,28 +164,28 @@ msgstr ""
 
 #: ../pep-0629.rst:74
 msgid ""
-"It is left up to the discretion of any future PEPs as to what "
-"specifically constitutes a backwards incompatible vs compatible change "
-"beyond the broad suggestion that existing clients will be able to "
-"\"meaningfully\" continue to use the API, and can include adding, "
-"modifying, or removing existing features."
+"It is left up to the discretion of any future PEPs as to what specifically "
+"constitutes a backwards incompatible vs compatible change beyond the broad "
+"suggestion that existing clients will be able to \"meaningfully\" continue "
+"to use the API, and can include adding, modifying, or removing existing "
+"features."
 msgstr ""
 
 #: ../pep-0629.rst:80
 msgid ""
 "It is expectation of this PEP that the major version will never be "
-"incremented, and any future major API evolutions would utilize a "
-"different mechanism for API evolution. However the major version is "
-"included to disambiguate with future versions (e.g. a hypothetical simple"
-" api v2 that lived at /v2/, but which would be confusing if the "
-"repository-version was set to a version >= 2)."
+"incremented, and any future major API evolutions would utilize a different "
+"mechanism for API evolution. However the major version is included to "
+"disambiguate with future versions (e.g. a hypothetical simple api v2 that "
+"lived at /v2/, but which would be confusing if the repository-version was "
+"set to a version >= 2)."
 msgstr ""
 
 #: ../pep-0629.rst:87
 msgid ""
-"This PEP sets the current API version to \"1.0\", and expects that future"
-" PEPs that further evolve the simple API will increment the minor version"
-" number."
+"This PEP sets the current API version to \"1.0\", and expects that future "
+"PEPs that further evolve the simple API will increment the minor version "
+"number."
 msgstr ""
 
 #: ../pep-0629.rst:93
@@ -196,21 +194,21 @@ msgstr ""
 
 #: ../pep-0629.rst:95
 msgid ""
-"Clients interacting with the simple API **SHOULD** introspect each "
-"response for the repository version, and if that data does not exist "
-"**MUST** assume that it is version 1.0."
+"Clients interacting with the simple API **SHOULD** introspect each response "
+"for the repository version, and if that data does not exist **MUST** assume "
+"that it is version 1.0."
 msgstr ""
 
 #: ../pep-0629.rst:99
 msgid ""
-"When encountering a major version greater than expected, clients **MUST**"
-" hard fail with an appropriate error message for the user."
+"When encountering a major version greater than expected, clients **MUST** "
+"hard fail with an appropriate error message for the user."
 msgstr ""
 
 #: ../pep-0629.rst:102
 msgid ""
-"When encountering a minor version greater than expected, clients "
-"**SHOULD** warn users with an appropriate message."
+"When encountering a minor version greater than expected, clients **SHOULD** "
+"warn users with an appropriate message."
 msgstr ""
 
 #: ../pep-0629.rst:105
@@ -230,10 +228,9 @@ msgstr ""
 #: ../pep-0629.rst:115
 msgid ""
 "Instead of baking this information into the actual HTML, an alternative "
-"would be to use a HTTP header. This idea was considered and ultimately "
-"was rejected because it would make mirrors have to start modifying "
-"headers instead of being able to operate as a \"dumb\" HTTP server of "
-"files."
+"would be to use a HTTP header. This idea was considered and ultimately was "
+"rejected because it would make mirrors have to start modifying headers "
+"instead of being able to operate as a \"dumb\" HTTP server of files."
 msgstr ""
 
 #: ../pep-0629.rst:123
@@ -246,8 +243,8 @@ msgid ""
 "URL, something like ``/1.0/simple/`` or so. This works well for major "
 "version changes where olders clients are not expected to be capable of "
 "continuing to use it, but it is not well suited to minor version bumps, "
-"particularly when the version numbers can be viewed as largely advisory "
-"for end users."
+"particularly when the version numbers can be viewed as largely advisory for "
+"end users."
 msgstr ""
 
 #: ../pep-0629.rst:136
@@ -256,7 +253,6 @@ msgstr ""
 
 #: ../pep-0629.rst:138
 msgid ""
-"This document is placed in the public domain or under the "
-"CC0-1.0-Universal license, whichever is more permissive."
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
 msgstr ""
-

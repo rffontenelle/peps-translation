@@ -76,9 +76,9 @@ msgstr ""
 #: ../pep-0356.txt:18
 msgid ""
 "This document describes the development and release schedule for Python "
-"2.5.  The schedule primarily concerns itself with PEP-sized items.  Small"
-" features may be added up to and including the first beta release.  Bugs "
-"may be fixed until the final release."
+"2.5.  The schedule primarily concerns itself with PEP-sized items.  Small "
+"features may be added up to and including the first beta release.  Bugs may "
+"be fixed until the final release."
 msgstr ""
 
 #: ../pep-0356.txt:23
@@ -181,8 +181,8 @@ msgstr ""
 
 #: ../pep-0356.txt:61
 msgid ""
-":pep:`343`: The \"with\" Statement (still need updates in Doc/ref and for"
-" the ``contextlib`` module)"
+":pep:`343`: The \"with\" Statement (still need updates in Doc/ref and for "
+"the ``contextlib`` module)"
 msgstr ""
 
 #: ../pep-0356.txt:63
@@ -233,8 +233,8 @@ msgstr ""
 
 #: ../pep-0356.txt:84
 msgid ""
-"``hashlib`` -- adds support for SHA-224, -256, -384, and -512 (replaces "
-"old ``md5`` and ``sha`` modules)"
+"``hashlib`` -- adds support for SHA-224, -256, -384, and -512 (replaces old "
+"``md5`` and ``sha`` modules)"
 msgstr ""
 
 #: ../pep-0356.txt:87
@@ -268,8 +268,8 @@ msgstr ""
 #: ../pep-0356.txt:101
 msgid ""
 "Added :pep:`302` ``zipfile``/``__loader__`` support to the following "
-"modules: ``warnings``, ``linecache``, ``inspect``, ``traceback``, "
-"``site``, and ``doctest``"
+"modules: ``warnings``, ``linecache``, ``inspect``, ``traceback``, ``site``, "
+"and ``doctest``"
 msgstr ""
 
 #: ../pep-0356.txt:105
@@ -278,9 +278,9 @@ msgstr ""
 
 #: ../pep-0356.txt:107
 msgid ""
-"Add write support for mailboxes from the code in sandbox/mailbox. (Owner:"
-" A.M. Kuchling.  It would still be good if another person would take a "
-"look at the new code.)"
+"Add write support for mailboxes from the code in sandbox/mailbox. (Owner: A."
+"M. Kuchling.  It would still be good if another person would take a look at "
+"the new code.)"
 msgstr ""
 
 #: ../pep-0356.txt:111
@@ -293,9 +293,9 @@ msgstr ""
 
 #: ../pep-0356.txt:115
 msgid ""
-"New utilities in ``functools`` to help write wrapper functions that "
-"support naive introspection (e.g. having ``f.__name__`` return the "
-"original function name)."
+"New utilities in ``functools`` to help write wrapper functions that support "
+"naive introspection (e.g. having ``f.__name__`` return the original function "
+"name)."
 msgstr ""
 
 #: ../pep-0356.txt:119
@@ -312,8 +312,8 @@ msgstr ""
 
 #: ../pep-0356.txt:127
 msgid ""
-"Each feature below should implemented prior to beta1 or will require BDFL"
-" approval for inclusion in 2.5."
+"Each feature below should implemented prior to beta1 or will require BDFL "
+"approval for inclusion in 2.5."
 msgstr ""
 
 #: ../pep-0356.txt:130
@@ -328,14 +328,14 @@ msgstr ""
 
 #: ../pep-0356.txt:136
 msgid ""
-"Check the various bits of code in ``Demo/`` all still work, update or "
-"remove the ones that don't. (Owner: Anthony)"
+"Check the various bits of code in ``Demo/`` all still work, update or remove "
+"the ones that don't. (Owner: Anthony)"
 msgstr ""
 
 #: ../pep-0356.txt:140
 msgid ""
-"All modules in ``Modules/`` should be updated to be ssize_t clean. "
-"(Owner: Neal)"
+"All modules in ``Modules/`` should be updated to be ssize_t clean. (Owner: "
+"Neal)"
 msgstr ""
 
 #: ../pep-0356.txt:145
@@ -380,18 +380,18 @@ msgstr ""
 
 #: ../pep-0356.txt:168
 msgid ""
-"https://bugs.python.org/issue1544279 - ``Socket`` module is not thread-"
-"safe"
+"https://bugs.python.org/issue1544279 - ``Socket`` module is not thread-safe"
 msgstr ""
 
 #: ../pep-0356.txt:169
-msgid "https://bugs.python.org/issue1541420 - tools and demo missing from windows"
+msgid ""
+"https://bugs.python.org/issue1541420 - tools and demo missing from windows"
 msgstr ""
 
 #: ../pep-0356.txt:170
 msgid ""
-"https://bugs.python.org/issue1542451 - crash with continue in nested "
-"try/finally"
+"https://bugs.python.org/issue1542451 - crash with continue in nested try/"
+"finally"
 msgstr ""
 
 #: ../pep-0356.txt:171
@@ -413,21 +413,21 @@ msgstr ""
 
 #: ../pep-0356.txt:175
 msgid ""
-"The :pep:`302` changes to (at least) ``pkgutil``, ``runpy`` and ``pydoc``"
-" must be documented."
+"The :pep:`302` changes to (at least) ``pkgutil``, ``runpy`` and ``pydoc`` "
+"must be documented."
 msgstr ""
 
 #: ../pep-0356.txt:178
 msgid ""
-"``test_zipfile64`` takes too long and too much disk space for most of the"
-" buildbots.  How should this be handled? It is currently disabled."
+"``test_zipfile64`` takes too long and too much disk space for most of the "
+"buildbots.  How should this be handled? It is currently disabled."
 msgstr ""
 
 #: ../pep-0356.txt:182
 msgid ""
 "should C modules listed in \"Undocumented modules\" be removed too? "
-"\"timing\" (listed as obsolete), \"cl\" (listed as possibly not up-to-"
-"date), and \"sv\" (listed as obsolete hardware specific)."
+"\"timing\" (listed as obsolete), \"cl\" (listed as possibly not up-to-date), "
+"and \"sv\" (listed as obsolete hardware specific)."
 msgstr ""
 
 #: ../pep-0356.txt:188
@@ -451,4 +451,3 @@ msgstr ""
 #: ../pep-0356.txt:199
 msgid "This document has been placed in the public domain."
 msgstr ""
-

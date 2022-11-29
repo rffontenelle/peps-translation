@@ -71,8 +71,8 @@ msgstr ""
 
 #: ../pep-0624.rst:15
 msgid ""
-"This PEP proposes to remove deprecated ``Py_UNICODE`` encoder APIs in "
-"Python 3.11:"
+"This PEP proposes to remove deprecated ``Py_UNICODE`` encoder APIs in Python "
+"3.11:"
 msgstr ""
 
 #: ../pep-0624.rst:17 ../pep-0624.rst:88 ../pep-0624.rst:127
@@ -135,10 +135,10 @@ msgstr ""
 
 #: ../pep-0624.rst:33
 msgid ""
-":pep:`623` propose to remove Unicode object APIs relating to "
-"``Py_UNICODE``. On the other hand, this PEP is not relating to Unicode "
-"object. These PEPs are split because they have different motivations and "
-"need different discussions."
+":pep:`623` propose to remove Unicode object APIs relating to ``Py_UNICODE``. "
+"On the other hand, this PEP is not relating to Unicode object. These PEPs "
+"are split because they have different motivations and need different "
+"discussions."
 msgstr ""
 
 #: ../pep-0624.rst:40
@@ -147,8 +147,8 @@ msgstr ""
 
 #: ../pep-0624.rst:42
 msgid ""
-"In general, reducing the number of APIs that have been deprecated for a "
-"long time and have few users is a good idea for not only it improves the "
+"In general, reducing the number of APIs that have been deprecated for a long "
+"time and have few users is a good idea for not only it improves the "
 "maintainability of CPython, but it also helps API users and other Python "
 "implementations."
 msgstr ""
@@ -171,8 +171,8 @@ msgstr ""
 
 #: ../pep-0624.rst:60
 msgid ""
-"All of these APIs are implemented using ``PyUnicode_FromWideChar``. So "
-"these APIs are inefficient when user want to encode Unicode object."
+"All of these APIs are implemented using ``PyUnicode_FromWideChar``. So these "
+"APIs are inefficient when user want to encode Unicode object."
 msgstr ""
 
 #: ../pep-0624.rst:66
@@ -181,14 +181,14 @@ msgstr ""
 
 #: ../pep-0624.rst:68
 msgid ""
-"When searching from the top 4000 PyPI packages [1]_, only pyodbc use "
-"these APIs."
+"When searching from the top 4000 PyPI packages [1]_, only pyodbc use these "
+"APIs."
 msgstr ""
 
 #: ../pep-0624.rst:74
 msgid ""
-"pyodbc uses these APIs to encode Unicode object into bytes object. So it "
-"is easy to fix it. [2]_"
+"pyodbc uses these APIs to encode Unicode object into bytes object. So it is "
+"easy to fix it. [2]_"
 msgstr ""
 
 #: ../pep-0624.rst:79 ../pep-0624.rst:86
@@ -377,15 +377,15 @@ msgid "Replace ``Py_UNICODE*`` with ``Py_UCS4*``"
 msgstr ""
 
 #: ../pep-0624.rst:185
-msgid "We can replace ``Py_UNICODE`` with ``Py_UCS4`` and undeprecate these APIs."
+msgid ""
+"We can replace ``Py_UNICODE`` with ``Py_UCS4`` and undeprecate these APIs."
 msgstr ""
 
 #: ../pep-0624.rst:188
 msgid ""
 "UTF-8, UTF-16, UTF-32 encoders support ``Py_UCS4`` internally. So "
 "``PyUnicode_EncodeUTF8()``, ``PyUnicode_EncodeUTF16()``, and "
-"``PyUnicode_EncodeUTF32()`` can avoid to create a temporary Unicode "
-"object."
+"``PyUnicode_EncodeUTF32()`` can avoid to create a temporary Unicode object."
 msgstr ""
 
 #: ../pep-0624.rst:196
@@ -402,8 +402,8 @@ msgstr ""
 
 #: ../pep-0624.rst:205 ../pep-0624.rst:236
 msgid ""
-"If we change the Unicode internal representation to UTF-8 in the future, "
-"we need to keep UCS-4 support only for these APIs."
+"If we change the Unicode internal representation to UTF-8 in the future, we "
+"need to keep UCS-4 support only for these APIs."
 msgstr ""
 
 #: ../pep-0624.rst:210
@@ -419,9 +419,9 @@ msgstr ""
 #: ../pep-0624.rst:215
 msgid ""
 "On platforms where ``sizeof(wchar_t) == 4``, we can avoid to create a "
-"temporary Unicode object when encoding from ``wchar_t*`` to bytes objects"
-" using UTF-8, UTF-16, and UTF-32 codec, like the \"Replace "
-"``Py_UNICODE*`` with ``Py_UCS4*``\" idea."
+"temporary Unicode object when encoding from ``wchar_t*`` to bytes objects "
+"using UTF-8, UTF-16, and UTF-32 codec, like the \"Replace ``Py_UNICODE*`` "
+"with ``Py_UCS4*``\" idea."
 msgstr ""
 
 #: ../pep-0624.rst:223
@@ -430,16 +430,16 @@ msgstr ""
 
 #: ../pep-0624.rst:224
 msgid ""
-"We can avoid creating temporary Unicode object when encode from "
-"``Py_UCS4*`` into bytes object with UTF-8, UTF-16, UTF-32 codecs on "
-"platform where ``sizeof(wchar_t) == 4``."
+"We can avoid creating temporary Unicode object when encode from ``Py_UCS4*`` "
+"into bytes object with UTF-8, UTF-16, UTF-32 codecs on platform where "
+"``sizeof(wchar_t) == 4``."
 msgstr ""
 
 #: ../pep-0624.rst:230
 msgid ""
-"Although Windows is the most major platform that uses ``wchar_t`` "
-"heavily, these APIs need to create a temporary Unicode object always "
-"because ``sizeof(wchar_t) == 2`` on Windows."
+"Although Windows is the most major platform that uses ``wchar_t`` heavily, "
+"these APIs need to create a temporary Unicode object always because "
+"``sizeof(wchar_t) == 2`` on Windows."
 msgstr ""
 
 #: ../pep-0624.rst:241
@@ -464,9 +464,9 @@ msgstr ""
 
 #: ../pep-0624.rst:262
 msgid ""
-"If we emit Python warning from ``PyUnicode_EncodeUTF8()``, warning "
-"filters and other threads may change the ``list`` and ``u`` can be a "
-"dangling reference after ``PyUnicode_EncodeUTF8()`` returned."
+"If we emit Python warning from ``PyUnicode_EncodeUTF8()``, warning filters "
+"and other threads may change the ``list`` and ``u`` can be a dangling "
+"reference after ``PyUnicode_EncodeUTF8()`` returned."
 msgstr ""
 
 #: ../pep-0624.rst:268
@@ -475,22 +475,22 @@ msgstr ""
 
 #: ../pep-0624.rst:270
 msgid ""
-"`[python-dev] Plan to remove Py_UNICODE APis except PEP 623 "
-"<https://mail.python.org/archives/list/python-"
-"dev@python.org/thread/S7KW2U6IGXZFBMGS6WSJB26NZIBW4OLE/#S7KW2U6IGXZFBMGS6WSJB26NZIBW4OLE>`_"
+"`[python-dev] Plan to remove Py_UNICODE APis except PEP 623 <https://mail."
+"python.org/archives/list/python-dev@python.org/thread/"
+"S7KW2U6IGXZFBMGS6WSJB26NZIBW4OLE/#S7KW2U6IGXZFBMGS6WSJB26NZIBW4OLE>`_"
 msgstr ""
 
 #: ../pep-0624.rst:272
 msgid ""
-"`bpo-41123: Remove Py_UNICODE APIs except PEP 623 "
-"<https://bugs.python.org/issue41123>`_"
+"`bpo-41123: Remove Py_UNICODE APIs except PEP 623 <https://bugs.python.org/"
+"issue41123>`_"
 msgstr ""
 
 #: ../pep-0624.rst:274
 msgid ""
-"`[python-dev] PEP 624: Remove Py_UNICODE encoder APIs "
-"<https://mail.python.org/archives/list/python-"
-"dev@python.org/thread/THXVM7FZVT56B7CPEDIYKJG6VMAYIEK5/#QUGBVLQNBFVNX25AEIL77WSFOHQES6LJ>`_"
+"`[python-dev] PEP 624: Remove Py_UNICODE encoder APIs <https://mail.python."
+"org/archives/list/python-dev@python.org/thread/"
+"THXVM7FZVT56B7CPEDIYKJG6VMAYIEK5/#QUGBVLQNBFVNX25AEIL77WSFOHQES6LJ>`_"
 msgstr ""
 
 #: ../pep-0624.rst:279
@@ -499,15 +499,14 @@ msgstr ""
 
 #: ../pep-0624.rst:281
 msgid ""
-"Removing these APIs removes ability to use codec without temporary "
-"Unicode."
+"Removing these APIs removes ability to use codec without temporary Unicode."
 msgstr ""
 
 #: ../pep-0624.rst:284
 msgid ""
 "Codecs can not encode Unicode buffer directly without temporary Unicode "
-"object since Python 3.3. All these APIs creates temporary Unicode object "
-"for now. So removing them doesn't reduce any abilities."
+"object since Python 3.3. All these APIs creates temporary Unicode object for "
+"now. So removing them doesn't reduce any abilities."
 msgstr ""
 
 #: ../pep-0624.rst:289
@@ -537,15 +536,14 @@ msgstr ""
 
 #: ../pep-0624.rst:304
 msgid ""
-"Source package list chosen from top 4000 PyPI packages. "
-"(https://github.com/methane/notes/blob/master/2020/wchar-"
-"cache/package_list.txt)"
+"Source package list chosen from top 4000 PyPI packages. (https://github.com/"
+"methane/notes/blob/master/2020/wchar-cache/package_list.txt)"
 msgstr ""
 
 #: ../pep-0624.rst:307
 msgid ""
-"pyodbc -- Don't use PyUnicode_Encode API #792 "
-"(https://github.com/mkleehammer/pyodbc/pull/792)"
+"pyodbc -- Don't use PyUnicode_Encode API #792 (https://github.com/"
+"mkleehammer/pyodbc/pull/792)"
 msgstr ""
 
 #: ../pep-0624.rst:312
@@ -554,7 +552,6 @@ msgstr ""
 
 #: ../pep-0624.rst:314
 msgid ""
-"This document is placed in the public domain or under the "
-"CC0-1.0-Universal license, whichever is more permissive."
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
 msgstr ""
-

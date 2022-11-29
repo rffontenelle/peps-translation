@@ -67,11 +67,10 @@ msgstr ""
 
 #: ../pep-0412.txt:17
 msgid ""
-"This PEP proposes a change in the implementation of the builtin "
-"dictionary type ``dict``.  The new implementation allows dictionaries "
-"which are used as attribute dictionaries (the ``__dict__`` attribute of "
-"an object) to share keys with other attribute dictionaries of instances "
-"of the same class."
+"This PEP proposes a change in the implementation of the builtin dictionary "
+"type ``dict``.  The new implementation allows dictionaries which are used as "
+"attribute dictionaries (the ``__dict__`` attribute of an object) to share "
+"keys with other attribute dictionaries of instances of the same class."
 msgstr ""
 
 #: ../pep-0412.txt:24
@@ -81,19 +80,19 @@ msgstr ""
 #: ../pep-0412.txt:26
 msgid ""
 "The current dictionary implementation uses more memory than is necessary "
-"when used as a container for object attributes as the keys are replicated"
-" for each instance rather than being shared across many instances of the "
-"same class.  Despite this, the current dictionary implementation is "
-"finely tuned and performs very well as a general-purpose mapping object."
+"when used as a container for object attributes as the keys are replicated "
+"for each instance rather than being shared across many instances of the same "
+"class.  Despite this, the current dictionary implementation is finely tuned "
+"and performs very well as a general-purpose mapping object."
 msgstr ""
 
 #: ../pep-0412.txt:33
 msgid ""
-"By separating the keys (and hashes) from the values it is possible to "
-"share the keys between multiple dictionaries and improve memory use. By "
-"ensuring that keys are separated from the values only when beneficial, it"
-" is possible to retain the high-performance of the current dictionary "
-"implementation when used as a general-purpose mapping object."
+"By separating the keys (and hashes) from the values it is possible to share "
+"the keys between multiple dictionaries and improve memory use. By ensuring "
+"that keys are separated from the values only when beneficial, it is possible "
+"to retain the high-performance of the current dictionary implementation when "
+"used as a general-purpose mapping object."
 msgstr ""
 
 #: ../pep-0412.txt:41
@@ -116,9 +115,9 @@ msgstr ""
 
 #: ../pep-0412.txt:52
 msgid ""
-"Reduction in memory use is directly related to the number of dictionaries"
-" with shared keys in existence at any time.  These dictionaries are "
-"typically half the size of the current dictionary implementation."
+"Reduction in memory use is directly related to the number of dictionaries "
+"with shared keys in existence at any time.  These dictionaries are typically "
+"half the size of the current dictionary implementation."
 msgstr ""
 
 #: ../pep-0412.txt:57
@@ -135,19 +134,18 @@ msgstr ""
 
 #: ../pep-0412.txt:64
 msgid ""
-"The performance of the new implementation is dominated by memory locality"
-" effects.  When keys are not shared (for example in module dictionaries "
-"and dictionary explicitly created by ``dict()`` or ``{}``) then "
-"performance is unchanged (within a percent or two) from the current "
-"implementation."
+"The performance of the new implementation is dominated by memory locality "
+"effects.  When keys are not shared (for example in module dictionaries and "
+"dictionary explicitly created by ``dict()`` or ``{}``) then performance is "
+"unchanged (within a percent or two) from the current implementation."
 msgstr ""
 
 #: ../pep-0412.txt:70
 msgid ""
-"For the shared keys case, the new implementation tends to separate keys "
-"from values, but reduces total memory usage.  This will improve "
-"performance in many cases as the effects of reduced memory usage outweigh"
-" the loss of locality, but some programs may show a small slow down."
+"For the shared keys case, the new implementation tends to separate keys from "
+"values, but reduces total memory usage.  This will improve performance in "
+"many cases as the effects of reduced memory usage outweigh the loss of "
+"locality, but some programs may show a small slow down."
 msgstr ""
 
 #: ../pep-0412.txt:76
@@ -155,8 +153,8 @@ msgstr ""
 msgid ""
 "Benchmarking shows no significant change of speed for most benchmarks. "
 "Object-oriented benchmarks show small speed ups when they create large "
-"numbers of objects of the same class (the gcbench benchmark shows a 10% "
-"speed up; this is likely to be an upper limit)."
+"numbers of objects of the same class (the gcbench benchmark shows a "
+"10% speed up; this is likely to be an upper limit)."
 msgstr ""
 
 #: ../pep-0412.txt:82 ../pep-0412.txt:128
@@ -165,14 +163,13 @@ msgstr ""
 
 #: ../pep-0412.txt:84
 msgid ""
-"Both the old and new dictionaries consist of a fixed-sized dict struct "
-"and a re-sizeable table.  In the new dictionary the table can be further "
-"split into a keys table and values array.  The keys table holds the keys "
-"and hashes and (for non-split tables) the values as well.  It differs "
-"only from the original implementation in that it contains a number of "
-"fields that were previously in the dict struct. If a table is split the "
-"values in the keys table are ignored, instead the values are held in a "
-"separate array."
+"Both the old and new dictionaries consist of a fixed-sized dict struct and a "
+"re-sizeable table.  In the new dictionary the table can be further split "
+"into a keys table and values array.  The keys table holds the keys and "
+"hashes and (for non-split tables) the values as well.  It differs only from "
+"the original implementation in that it contains a number of fields that were "
+"previously in the dict struct. If a table is split the values in the keys "
+"table are ignored, instead the values are held in a separate array."
 msgstr ""
 
 #: ../pep-0412.txt:94
@@ -181,33 +178,33 @@ msgstr ""
 
 #: ../pep-0412.txt:96
 msgid ""
-"When dictionaries are created to fill the __dict__ slot of an object, "
-"they are created in split form.  The keys table is cached in the type, "
-"potentially allowing all attribute dictionaries of instances of one class"
-" to share keys.  In the event of the keys of these dictionaries starting "
-"to diverge, individual dictionaries will lazily convert to the combined-"
-"table form.  This ensures good memory use in the common case, and "
-"correctness in all cases."
+"When dictionaries are created to fill the __dict__ slot of an object, they "
+"are created in split form.  The keys table is cached in the type, "
+"potentially allowing all attribute dictionaries of instances of one class to "
+"share keys.  In the event of the keys of these dictionaries starting to "
+"diverge, individual dictionaries will lazily convert to the combined-table "
+"form.  This ensures good memory use in the common case, and correctness in "
+"all cases."
 msgstr ""
 
 #: ../pep-0412.txt:104
 msgid ""
 "When resizing a split dictionary it is converted to a combined table. If "
-"resizing is as a result of storing an instance attribute, and there is "
-"only instance of a class, then the dictionary will be re-split "
-"immediately.  Since most OO code will set attributes in the __init__ "
-"method, all attributes will be set before a second instance is created "
-"and no more resizing will be necessary as all further instance "
-"dictionaries will have the correct size.  For more complex use patterns, "
-"it is impossible to know what is the best approach, so the implementation"
-" allows extra insertions up to the point of a resize when it reverts to "
-"the combined table (non-shared keys)."
+"resizing is as a result of storing an instance attribute, and there is only "
+"instance of a class, then the dictionary will be re-split immediately.  "
+"Since most OO code will set attributes in the __init__ method, all "
+"attributes will be set before a second instance is created and no more "
+"resizing will be necessary as all further instance dictionaries will have "
+"the correct size.  For more complex use patterns, it is impossible to know "
+"what is the best approach, so the implementation allows extra insertions up "
+"to the point of a resize when it reverts to the combined table (non-shared "
+"keys)."
 msgstr ""
 
 #: ../pep-0412.txt:115
 msgid ""
-"A deletion from a split dictionary does not change the keys table, it "
-"simply removes the value from the values array."
+"A deletion from a split dictionary does not change the keys table, it simply "
+"removes the value from the values array."
 msgstr ""
 
 #: ../pep-0412.txt:119
@@ -216,11 +213,11 @@ msgstr ""
 
 #: ../pep-0412.txt:121
 msgid ""
-"Explicit dictionaries (``dict()`` or ``{}``), module dictionaries and "
-"most other dictionaries are created as combined-table dictionaries.  A "
-"combined-table dictionary never becomes a split-table dictionary. "
-"Combined tables are laid out in much the same way as the tables in the "
-"old dictionary, resulting in very similar performance."
+"Explicit dictionaries (``dict()`` or ``{}``), module dictionaries and most "
+"other dictionaries are created as combined-table dictionaries.  A combined-"
+"table dictionary never becomes a split-table dictionary. Combined tables are "
+"laid out in much the same way as the tables in the old dictionary, resulting "
+"in very similar performance."
 msgstr ""
 
 #: ../pep-0412.txt:130
@@ -253,18 +250,17 @@ msgstr ""
 
 #: ../pep-0412.txt:148
 msgid ""
-"Changes to repr() output and iteration order: For most cases, this will "
-"be unchanged.  However, for some split-table dictionaries the iteration "
-"order will change."
+"Changes to repr() output and iteration order: For most cases, this will be "
+"unchanged.  However, for some split-table dictionaries the iteration order "
+"will change."
 msgstr ""
 
 #: ../pep-0412.txt:152
 msgid ""
-"Neither of these cons should be a problem.  Modules which meddle with the"
-" internals of the dictionary implementation are already broken and should"
-" be fixed to use the API.  The iteration order of dictionaries was never "
-"defined and has always been arbitrary; it is different for Jython and "
-"PyPy."
+"Neither of these cons should be a problem.  Modules which meddle with the "
+"internals of the dictionary implementation are already broken and should be "
+"fixed to use the API.  The iteration order of dictionaries was never defined "
+"and has always been arbitrary; it is different for Jython and PyPy."
 msgstr ""
 
 #: ../pep-0412.txt:159
@@ -273,21 +269,20 @@ msgstr ""
 
 #: ../pep-0412.txt:161
 msgid ""
-"An alternative implementation for split tables, which could save even "
-"more memory, is to store an index in the value field of the keys table "
-"(instead of ignoring the value field).  This index would explicitly state"
-" where in the value array to look.  The value array would then only "
-"require 1 field for each usable slot in the key table, rather than each "
-"slot in the key table."
+"An alternative implementation for split tables, which could save even more "
+"memory, is to store an index in the value field of the keys table (instead "
+"of ignoring the value field).  This index would explicitly state where in "
+"the value array to look.  The value array would then only require 1 field "
+"for each usable slot in the key table, rather than each slot in the key "
+"table."
 msgstr ""
 
 #: ../pep-0412.txt:168
 msgid ""
-"This \"indexed\" version would reduce the size of value array by about "
-"one third. The keys table would need an extra \"values_size\" field, "
-"increasing the size of combined dicts by one word.  The extra indirection"
-" adds more complexity to the code, potentially reducing performance a "
-"little."
+"This \"indexed\" version would reduce the size of value array by about one "
+"third. The keys table would need an extra \"values_size\" field, increasing "
+"the size of combined dicts by one word.  The extra indirection adds more "
+"complexity to the code, potentially reducing performance a little."
 msgstr ""
 
 #: ../pep-0412.txt:174
@@ -303,8 +298,7 @@ msgstr ""
 
 #: ../pep-0412.txt:181
 msgid ""
-"Reference Implementation: "
-"https://bitbucket.org/markshannon/cpython_new_dict"
+"Reference Implementation: https://bitbucket.org/markshannon/cpython_new_dict"
 msgstr ""
 
 #: ../pep-0412.txt:185
@@ -314,4 +308,3 @@ msgstr ""
 #: ../pep-0412.txt:187
 msgid "This document has been placed in the public domain."
 msgstr ""
-

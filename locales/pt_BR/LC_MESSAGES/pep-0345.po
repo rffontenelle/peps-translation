@@ -79,8 +79,8 @@ msgstr ""
 
 #: ../pep-0345.txt:11
 msgid ""
-"`22-Dec-2009 <https://mail.python.org/archives/list/python-"
-"dev@python.org/thread/5QWS2FXKZNNPKNZO6RLPGT5NORS5ZQ2V/>`__"
+"`22-Dec-2009 <https://mail.python.org/archives/list/python-dev@python.org/"
+"thread/5QWS2FXKZNNPKNZO6RLPGT5NORS5ZQ2V/>`__"
 msgstr ""
 
 #: ../pep-0345.txt
@@ -105,8 +105,8 @@ msgstr ""
 
 #: ../pep-0345.txt:14
 msgid ""
-"https://mail.python.org/archives/list/python-"
-"dev@python.org/thread/MKHXVV746H7ZDFN62Z72VNAX6KIRXNRO/"
+"https://mail.python.org/archives/list/python-dev@python.org/thread/"
+"MKHXVV746H7ZDFN62Z72VNAX6KIRXNRO/"
 msgstr ""
 
 #: ../pep-0345.txt:18
@@ -115,25 +115,24 @@ msgstr ""
 
 #: ../pep-0345.txt:20
 msgid ""
-"This PEP describes a mechanism for adding metadata to Python "
-"distributions. It includes specifics of the field names, and their "
-"semantics and usage."
+"This PEP describes a mechanism for adding metadata to Python distributions. "
+"It includes specifics of the field names, and their semantics and usage."
 msgstr ""
 
 #: ../pep-0345.txt:24 ../pep-0345.txt:540
 msgid ""
-"This document specifies version 1.2 of the metadata format. Version 1.0 "
-"is specified in :pep:`241`. Version 1.1 is specified in :pep:`314`."
+"This document specifies version 1.2 of the metadata format. Version 1.0 is "
+"specified in :pep:`241`. Version 1.1 is specified in :pep:`314`."
 msgstr ""
 
 #: ../pep-0345.txt:28
 msgid ""
-"Version 1.2 of the metadata format adds a number of optional fields "
-"designed to make third-party packaging of Python Software easier. These "
-"fields are \"Requires-Python\", \"Requires-External\", \"Requires-Dist\","
-" \"Provides-Dist\", and \"Obsoletes-Dist\".  This version also changes "
-"the \"Platform\" field. Three new fields were also added: \"Maintainer\","
-" \"Maintainer-email\" and \"Project-URL\"."
+"Version 1.2 of the metadata format adds a number of optional fields designed "
+"to make third-party packaging of Python Software easier. These fields are "
+"\"Requires-Python\", \"Requires-External\", \"Requires-Dist\", \"Provides-"
+"Dist\", and \"Obsoletes-Dist\".  This version also changes the \"Platform\" "
+"field. Three new fields were also added: \"Maintainer\", \"Maintainer-"
+"email\" and \"Project-URL\"."
 msgstr ""
 
 #: ../pep-0345.txt:35
@@ -152,10 +151,10 @@ msgstr ""
 
 #: ../pep-0345.txt:43
 msgid ""
-"Fields marked with \"(Multiple use)\" may be specified multiple times in "
-"a single PKG-INFO file.  Other fields may only occur once in a PKG-INFO "
-"file.  Fields marked with \"(optional)\" are not required to appear in a "
-"valid PKG-INFO file; all other fields must be present."
+"Fields marked with \"(Multiple use)\" may be specified multiple times in a "
+"single PKG-INFO file.  Other fields may only occur once in a PKG-INFO file.  "
+"Fields marked with \"(optional)\" are not required to appear in a valid PKG-"
+"INFO file; all other fields must be present."
 msgstr ""
 
 #: ../pep-0345.txt:50
@@ -187,8 +186,8 @@ msgstr ""
 
 #: ../pep-0345.txt:72
 msgid ""
-"A string containing the distribution's version number.  This field  must "
-"be in the format specified in :pep:`440`."
+"A string containing the distribution's version number.  This field  must be "
+"in the format specified in :pep:`440`."
 msgstr ""
 
 #: ../pep-0345.txt:81
@@ -216,8 +215,8 @@ msgstr ""
 msgid ""
 "Binary distributions containing a PKG-INFO file will use the Supported-"
 "Platform field in their metadata to specify the OS and CPU for which the "
-"binary distribution was compiled.  The semantics of the Supported-"
-"Platform field are not specified in this PEP."
+"binary distribution was compiled.  The semantics of the Supported-Platform "
+"field are not specified in this PEP."
 msgstr ""
 
 #: ../pep-0345.txt:108
@@ -235,32 +234,31 @@ msgstr ""
 #: ../pep-0345.txt:120
 msgid ""
 "A longer description of the distribution that can run to several "
-"paragraphs.  Software that deals with metadata should not assume any "
-"maximum size for this field, though people shouldn't include their "
-"instruction manual as the description."
+"paragraphs.  Software that deals with metadata should not assume any maximum "
+"size for this field, though people shouldn't include their instruction "
+"manual as the description."
 msgstr ""
 
 #: ../pep-0345.txt:125
 msgid ""
 "The contents of this field can be written using reStructuredText markup "
 "[1]_.  For programs that work with the metadata, supporting markup is "
-"optional; programs can also display the contents of the field as-is.  "
-"This means that authors should be conservative in the markup they use."
+"optional; programs can also display the contents of the field as-is.  This "
+"means that authors should be conservative in the markup they use."
 msgstr ""
 
 #: ../pep-0345.txt:131
 msgid ""
-"To support empty lines and lines with indentation with respect to the "
-":rfc:`822` format, any CRLF character has to be suffixed by 7 spaces "
-"followed by a pipe (\"|\") char. As a result, the Description field is "
-"encoded into a folded field that can be interpreted by "
-":rfc:`822#section-3.1.1` parser."
+"To support empty lines and lines with indentation with respect to the :rfc:"
+"`822` format, any CRLF character has to be suffixed by 7 spaces followed by "
+"a pipe (\"|\") char. As a result, the Description field is encoded into a "
+"folded field that can be interpreted by :rfc:`822#section-3.1.1` parser."
 msgstr ""
 
 #: ../pep-0345.txt:148
 msgid ""
-"This encoding implies that any occurrences of a CRLF followed by 7 spaces"
-" and a pipe char have to be replaced by a single CRLF when the field is "
+"This encoding implies that any occurrences of a CRLF followed by 7 spaces "
+"and a pipe char have to be replaced by a single CRLF when the field is "
 "unfolded using a :rfc:`822` reader."
 msgstr ""
 
@@ -288,10 +286,9 @@ msgstr ""
 
 #: ../pep-0345.txt:177
 msgid ""
-"A string containing the URL from which this version of the distribution "
-"can be downloaded.  (This means that the URL can't be something like "
-"\".../BeagleVote-latest.tgz\", but instead must be "
-"\".../BeagleVote-0.45.tgz\".)"
+"A string containing the URL from which this version of the distribution can "
+"be downloaded.  (This means that the URL can't be something like \".../"
+"BeagleVote-latest.tgz\", but instead must be \".../BeagleVote-0.45.tgz\".)"
 msgstr ""
 
 #: ../pep-0345.txt:183
@@ -310,8 +307,8 @@ msgstr ""
 
 #: ../pep-0345.txt:197
 msgid ""
-"A string containing the author's e-mail address.  It can contain a name "
-"and e-mail address in the legal forms for a :rfc:`822` ``From:`` header."
+"A string containing the author's e-mail address.  It can contain a name and "
+"e-mail address in the legal forms for a :rfc:`822` ``From:`` header."
 msgstr ""
 
 #: ../pep-0345.txt:207
@@ -320,15 +317,15 @@ msgstr ""
 
 #: ../pep-0345.txt:209
 msgid ""
-"A string containing the maintainer's name at a minimum; additional "
-"contact information may be provided."
+"A string containing the maintainer's name at a minimum; additional contact "
+"information may be provided."
 msgstr ""
 
 #: ../pep-0345.txt:212
 msgid ""
-"Note that this field is intended for use when a project is being "
-"maintained by someone other than the original author:  it should be "
-"omitted if it is identical to ``Author``."
+"Note that this field is intended for use when a project is being maintained "
+"by someone other than the original author:  it should be omitted if it is "
+"identical to ``Author``."
 msgstr ""
 
 #: ../pep-0345.txt:223
@@ -337,16 +334,15 @@ msgstr ""
 
 #: ../pep-0345.txt:225
 msgid ""
-"A string containing the maintainer's e-mail address.  It can contain a "
-"name and e-mail address in the legal forms for a :rfc:`822` ``From:`` "
-"header."
+"A string containing the maintainer's e-mail address.  It can contain a name "
+"and e-mail address in the legal forms for a :rfc:`822` ``From:`` header."
 msgstr ""
 
 #: ../pep-0345.txt:229
 msgid ""
-"Note that this field is intended for use when a project is being "
-"maintained by someone other than the original author:  it should be "
-"omitted if it is identical to ``Author-email``."
+"Note that this field is intended for use when a project is being maintained "
+"by someone other than the original author:  it should be omitted if it is "
+"identical to ``Author-email``."
 msgstr ""
 
 #: ../pep-0345.txt:239
@@ -355,11 +351,11 @@ msgstr ""
 
 #: ../pep-0345.txt:241
 msgid ""
-"Text indicating the license covering the distribution where the license "
-"is not a selection from the \"License\" Trove classifiers. See "
-"\"Classifier\" below.  This field may also be used to specify a "
-"particular version of a license which is named via the ``Classifier`` "
-"field, or to indicate a variation or exception to such a license."
+"Text indicating the license covering the distribution where the license is "
+"not a selection from the \"License\" Trove classifiers. See \"Classifier\" "
+"below.  This field may also be used to specify a particular version of a "
+"license which is named via the ``Classifier`` field, or to indicate a "
+"variation or exception to such a license."
 msgstr ""
 
 #: ../pep-0345.txt:257
@@ -378,15 +374,15 @@ msgstr ""
 
 #: ../pep-0345.txt:271
 msgid ""
-"Each entry contains a string naming some other distutils project required"
-" by this distribution."
+"Each entry contains a string naming some other distutils project required by "
+"this distribution."
 msgstr ""
 
 #: ../pep-0345.txt:274
 msgid ""
 "The format of a requirement string is identical to that of a distutils "
-"project name (e.g., as found in the ``Name:`` field. optionally followed "
-"by a version declaration within parentheses."
+"project name (e.g., as found in the ``Name:`` field. optionally followed by "
+"a version declaration within parentheses."
 msgstr ""
 
 #: ../pep-0345.txt:278
@@ -397,8 +393,7 @@ msgstr ""
 
 #: ../pep-0345.txt:281
 msgid ""
-"Version declarations must follow the rules described in `Version "
-"Specifiers`_"
+"Version declarations must follow the rules described in `Version Specifiers`_"
 msgstr ""
 
 #: ../pep-0345.txt:292
@@ -407,38 +402,36 @@ msgstr ""
 
 #: ../pep-0345.txt:294
 msgid ""
-"Each entry contains a string naming a Distutils project which is "
-"contained within this distribution.  This field *must* include the "
-"project identified in the ``Name`` field, followed by the version : Name "
-"(Version)."
+"Each entry contains a string naming a Distutils project which is contained "
+"within this distribution.  This field *must* include the project identified "
+"in the ``Name`` field, followed by the version : Name (Version)."
 msgstr ""
 
 #: ../pep-0345.txt:299
 msgid ""
-"A distribution may provide additional names, e.g. to indicate that "
-"multiple projects have been bundled together.  For instance, source "
-"distributions of the ``ZODB`` project have historically included the "
-"``transaction`` project, which is now available as a separate "
-"distribution.  Installing such a source distribution satisfies "
-"requirements for both ``ZODB`` and ``transaction``."
+"A distribution may provide additional names, e.g. to indicate that multiple "
+"projects have been bundled together.  For instance, source distributions of "
+"the ``ZODB`` project have historically included the ``transaction`` project, "
+"which is now available as a separate distribution.  Installing such a source "
+"distribution satisfies requirements for both ``ZODB`` and ``transaction``."
 msgstr ""
 
 #: ../pep-0345.txt:306
 msgid ""
-"A distribution may also provide a \"virtual\" project name, which does "
-"not correspond to any separately-distributed project:  such a name might "
-"be used to indicate an abstract capability which could be supplied by one"
-" of multiple projects.  E.g., multiple projects might supply RDBMS "
-"bindings for use by a given ORM:  each project might declare that it "
-"provides ``ORM-bindings``, allowing other projects to depend only on "
-"having at most one of them installed."
+"A distribution may also provide a \"virtual\" project name, which does not "
+"correspond to any separately-distributed project:  such a name might be used "
+"to indicate an abstract capability which could be supplied by one of "
+"multiple projects.  E.g., multiple projects might supply RDBMS bindings for "
+"use by a given ORM:  each project might declare that it provides ``ORM-"
+"bindings``, allowing other projects to depend only on having at most one of "
+"them installed."
 msgstr ""
 
 #: ../pep-0345.txt:314
 msgid ""
-"A version declaration may be supplied and must follow the rules described"
-" in `Version Specifiers`_. The distribution's version number will be "
-"implied if none is specified."
+"A version declaration may be supplied and must follow the rules described in "
+"`Version Specifiers`_. The distribution's version number will be implied if "
+"none is specified."
 msgstr ""
 
 #: ../pep-0345.txt:326
@@ -447,21 +440,21 @@ msgstr ""
 
 #: ../pep-0345.txt:328
 msgid ""
-"Each entry contains a string describing a distutils project's "
-"distribution which this distribution renders obsolete, meaning that the "
-"two projects should not be installed at the same time."
+"Each entry contains a string describing a distutils project's distribution "
+"which this distribution renders obsolete, meaning that the two projects "
+"should not be installed at the same time."
 msgstr ""
 
 #: ../pep-0345.txt:332
 msgid ""
-"Version declarations can be supplied.  Version numbers must be in the "
-"format specified in `Version Specifiers`_."
+"Version declarations can be supplied.  Version numbers must be in the format "
+"specified in `Version Specifiers`_."
 msgstr ""
 
 #: ../pep-0345.txt:335
 msgid ""
-"The most common use of this field will be in case a project name changes,"
-" e.g. Gorgon 2.3 gets subsumed into Torqued Python 1.0. When you install "
+"The most common use of this field will be in case a project name changes, e."
+"g. Gorgon 2.3 gets subsumed into Torqued Python 1.0. When you install "
 "Torqued Python, the Gorgon distribution should be removed."
 msgstr ""
 
@@ -476,7 +469,8 @@ msgid ""
 msgstr ""
 
 #: ../pep-0345.txt:352
-msgid "Version numbers must be in the format specified in `Version Specifiers`_."
+msgid ""
+"Version numbers must be in the format specified in `Version Specifiers`_."
 msgstr ""
 
 #: ../pep-0345.txt:363
@@ -485,10 +479,10 @@ msgstr ""
 
 #: ../pep-0345.txt:365
 msgid ""
-"Each entry contains a string describing some dependency in the system "
-"that the distribution is to be used.  This field is intended to serve as "
-"a hint to downstream project maintainers, and has no semantics which are "
-"meaningful to the ``distutils`` distribution."
+"Each entry contains a string describing some dependency in the system that "
+"the distribution is to be used.  This field is intended to serve as a hint "
+"to downstream project maintainers, and has no semantics which are meaningful "
+"to the ``distutils`` distribution."
 msgstr ""
 
 #: ../pep-0345.txt:370
@@ -499,10 +493,10 @@ msgstr ""
 
 #: ../pep-0345.txt:374
 msgid ""
-"Because they refer to non-Python software releases, version numbers for "
-"this field are **not** required to conform to the format specified in "
-":pep:`440`:  they should correspond to the version scheme used by the "
-"external dependency."
+"Because they refer to non-Python software releases, version numbers for this "
+"field are **not** required to conform to the format specified in :pep:"
+"`440`:  they should correspond to the version scheme used by the external "
+"dependency."
 msgstr ""
 
 #: ../pep-0345.txt:379
@@ -516,15 +510,15 @@ msgstr ""
 #: ../pep-0345.txt:390
 msgid ""
 "A string containing an extra URL for the project and a label for it, "
-"separated by a comma.  This should be used when there are other URLs to "
-"list in the metadata in addition to the \"Home-page\" field."
+"separated by a comma.  This should be used when there are other URLs to list "
+"in the metadata in addition to the \"Home-page\" field."
 msgstr ""
 
 #: ../pep-0345.txt:400
 msgid ""
-"The label is free text, with a maximum length of 32 characters.  Notice "
-"that distributions uploaded to PyPI will have these extra entries "
-"displayed under the \"Project links\" section of their landing page."
+"The label is free text, with a maximum length of 32 characters.  Notice that "
+"distributions uploaded to PyPI will have these extra entries displayed under "
+"the \"Project links\" section of their landing page."
 msgstr ""
 
 #: ../pep-0345.txt:406
@@ -534,15 +528,15 @@ msgstr ""
 #: ../pep-0345.txt:408
 msgid ""
 "Version specifiers are a series of conditional operators and version "
-"numbers, separated by commas.  Conditional operators must be one of "
-"\"<\", \">\", \"<=\", \">=\", \"==\" and \"!=\"."
+"numbers, separated by commas.  Conditional operators must be one of \"<\", "
+"\">\", \"<=\", \">=\", \"==\" and \"!=\"."
 msgstr ""
 
 #: ../pep-0345.txt:412
 msgid ""
 "Any number of conditional operators can be specified, e.g. the string "
-"\">1.0, !=1.3.4, <2.0\" is a legal version declaration. The comma (\",\")"
-" is equivalent to the **and** operator."
+"\">1.0, !=1.3.4, <2.0\" is a legal version declaration. The comma (\",\") is "
+"equivalent to the **and** operator."
 msgstr ""
 
 #: ../pep-0345.txt:416
@@ -551,19 +545,18 @@ msgstr ""
 
 #: ../pep-0345.txt:418
 msgid ""
-"When a version is provided, it always includes all versions that starts "
-"with the same value. For example, the \"2.5\" version of Python will "
-"include versions like \"2.5.2\" or \"2.5.3\". Pre and post releases in "
-"that case are excluded. So in our example, versions like \"2.5a1\" are "
-"not included when \"2.5\" is used. If the first version of the range is "
-"required, it has to be explicitly given. In our example, it will be "
-"\"2.5.0\"."
+"When a version is provided, it always includes all versions that starts with "
+"the same value. For example, the \"2.5\" version of Python will include "
+"versions like \"2.5.2\" or \"2.5.3\". Pre and post releases in that case are "
+"excluded. So in our example, versions like \"2.5a1\" are not included when "
+"\"2.5\" is used. If the first version of the range is required, it has to be "
+"explicitly given. In our example, it will be \"2.5.0\"."
 msgstr ""
 
 #: ../pep-0345.txt:426
 msgid ""
-"Notice that some projects might omit the \".0\" suffix for the first "
-"release of the \"2.5.x\" series:"
+"Notice that some projects might omit the \".0\" suffix for the first release "
+"of the \"2.5.x\" series:"
 msgstr ""
 
 #: ../pep-0345.txt:429
@@ -585,9 +578,9 @@ msgstr ""
 #: ../pep-0345.txt:434
 msgid ""
 "In that case, \"2.5.0\" will have to be explicitly used to avoid any "
-"confusion between the \"2.5\" notation that represents the full range. It"
-" is a recommended practice to use schemes of the same length for a series"
-" to completely avoid this problem."
+"confusion between the \"2.5\" notation that represents the full range. It is "
+"a recommended practice to use schemes of the same length for a series to "
+"completely avoid this problem."
 msgstr ""
 
 #: ../pep-0345.txt:439
@@ -596,35 +589,35 @@ msgstr ""
 
 #: ../pep-0345.txt:441
 msgid ""
-"``Requires-Dist: zope.interface (3.1)``: any version that starts with "
-"3.1, excluding post or pre-releases."
+"``Requires-Dist: zope.interface (3.1)``: any version that starts with 3.1, "
+"excluding post or pre-releases."
 msgstr ""
 
 #: ../pep-0345.txt:443
 msgid ""
 "``Requires-Dist: zope.interface (3.1.0)``: any version that starts with "
-"3.1.0, excluding post or pre-releases. Since that particular project "
-"doesn't use more than 3 digits, it also means \"only the 3.1.0 release\"."
+"3.1.0, excluding post or pre-releases. Since that particular project doesn't "
+"use more than 3 digits, it also means \"only the 3.1.0 release\"."
 msgstr ""
 
 #: ../pep-0345.txt:446
 msgid ""
-"``Requires-Python: 3``: Any Python 3 version, no matter which one, "
-"excluding post or pre-releases."
+"``Requires-Python: 3``: Any Python 3 version, no matter which one, excluding "
+"post or pre-releases."
 msgstr ""
 
 #: ../pep-0345.txt:448
 msgid ""
-"``Requires-Python: >=2.6,<3``: Any version of Python 2.6 or 2.7, "
-"including post releases of 2.6, pre and post releases of 2.7. It excludes"
-" pre releases of Python 3."
+"``Requires-Python: >=2.6,<3``: Any version of Python 2.6 or 2.7, including "
+"post releases of 2.6, pre and post releases of 2.7. It excludes pre releases "
+"of Python 3."
 msgstr ""
 
 #: ../pep-0345.txt:451
 msgid ""
 "``Requires-Python: 2.6.2``: Equivalent to \">=2.6.2,<2.6.3\". So this "
-"includes only Python 2.6.2. Of course, if Python was numbered with 4 "
-"digits, it would have include all versions of the 2.6.2 series."
+"includes only Python 2.6.2. Of course, if Python was numbered with 4 digits, "
+"it would have include all versions of the 2.6.2 series."
 msgstr ""
 
 #: ../pep-0345.txt:454
@@ -634,10 +627,10 @@ msgstr ""
 #: ../pep-0345.txt:455
 msgid ""
 "``Requires-Dist: zope.interface (3.1,!=3.1.3)``: any version that starts "
-"with 3.1, excluding post or pre-releases of 3.1 *and* excluding any "
-"version that starts with \"3.1.3\". For this particular project, this "
-"means: \"any version of the 3.1 series but not 3.1.3\". This is "
-"equivalent to: \">=3.1,!=3.1.3,<3.2\"."
+"with 3.1, excluding post or pre-releases of 3.1 *and* excluding any version "
+"that starts with \"3.1.3\". For this particular project, this means: \"any "
+"version of the 3.1 series but not 3.1.3\". This is equivalent to: \">=3.1,!"
+"=3.1.3,<3.2\"."
 msgstr ""
 
 #: ../pep-0345.txt:462
@@ -657,10 +650,10 @@ msgstr ""
 
 #: ../pep-0345.txt:476
 msgid ""
-"The micro-language behind this is the simplest possible: it compares only"
-" strings, with the ``==`` and ``in`` operators (and their opposites), and"
-" with the ability to combine expressions. It makes it also easy to "
-"understand to non-pythoneers."
+"The micro-language behind this is the simplest possible: it compares only "
+"strings, with the ``==`` and ``in`` operators (and their opposites), and "
+"with the ability to combine expressions. It makes it also easy to understand "
+"to non-pythoneers."
 msgstr ""
 
 #: ../pep-0345.txt:481
@@ -706,8 +699,8 @@ msgstr ""
 
 #: ../pep-0345.txt:496
 msgid ""
-"Notice that ``in`` is restricted to strings, meaning that it is not "
-"possible to use other sequences like tuples or lists on the right side."
+"Notice that ``in`` is restricted to strings, meaning that it is not possible "
+"to use other sequences like tuples or lists on the right side."
 msgstr ""
 
 #: ../pep-0345.txt:499
@@ -812,14 +805,13 @@ msgstr ""
 
 #: ../pep-0345.txt:559
 msgid ""
-"Fred Drake, Anthony Baxter and Matthias Klose have all contributed to the"
-" ideas presented in this PEP."
+"Fred Drake, Anthony Baxter and Matthias Klose have all contributed to the "
+"ideas presented in this PEP."
 msgstr ""
 
 #: ../pep-0345.txt:562
 msgid ""
-"Tres Seaver, Jim Fulton, Marc-André Lemburg, Martin von Löwis, Tarek "
-"Ziadé, David Lyon and other people at the Distutils-SIG have contributed "
-"to the new updated version."
+"Tres Seaver, Jim Fulton, Marc-André Lemburg, Martin von Löwis, Tarek Ziadé, "
+"David Lyon and other people at the Distutils-SIG have contributed to the new "
+"updated version."
 msgstr ""
-

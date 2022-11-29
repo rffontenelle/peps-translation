@@ -78,13 +78,12 @@ msgstr ""
 
 #: ../pep-0212.txt:23
 msgid ""
-"This PEP describes the often proposed feature of exposing the loop "
-"counter in for-loops.  This PEP tracks the status and ownership of this "
-"feature.  It contains a description of the feature and outlines changes "
-"necessary to support the feature.  This PEP summarizes discussions held "
-"in mailing list forums, and provides URLs for further information, where "
-"appropriate.  The CVS revision history of this file contains the "
-"definitive historical record."
+"This PEP describes the often proposed feature of exposing the loop counter "
+"in for-loops.  This PEP tracks the status and ownership of this feature.  It "
+"contains a description of the feature and outlines changes necessary to "
+"support the feature.  This PEP summarizes discussions held in mailing list "
+"forums, and provides URLs for further information, where appropriate.  The "
+"CVS revision history of this file contains the definitive historical record."
 msgstr ""
 
 #: ../pep-0212.txt:33
@@ -93,9 +92,9 @@ msgstr ""
 
 #: ../pep-0212.txt:35
 msgid ""
-"Standard for-loops in Python iterate over the elements of a sequence "
-"[1]_.  Often it is desirable to loop over the indices or both the "
-"elements and the indices instead."
+"Standard for-loops in Python iterate over the elements of a sequence [1]_.  "
+"Often it is desirable to loop over the indices or both the elements and the "
+"indices instead."
 msgstr ""
 
 #: ../pep-0212.txt:39
@@ -130,9 +129,9 @@ msgstr ""
 
 #: ../pep-0212.txt:68
 msgid ""
-"There are three solutions that have been discussed.  One adds a non-"
-"reserved keyword, the other adds two built-in functions. A third solution"
-" adds methods to sequence objects."
+"There are three solutions that have been discussed.  One adds a non-reserved "
+"keyword, the other adds two built-in functions. A third solution adds "
+"methods to sequence objects."
 msgstr ""
 
 #: ../pep-0212.txt:74
@@ -141,9 +140,9 @@ msgstr ""
 
 #: ../pep-0212.txt:76
 msgid ""
-"This solution would extend the syntax of the for-loop by adding an "
-"optional ``<variable> indexing`` clause which can also be used instead of"
-" the ``<variable> in`` clause."
+"This solution would extend the syntax of the for-loop by adding an optional "
+"``<variable> indexing`` clause which can also be used instead of the "
+"``<variable> in`` clause."
 msgstr ""
 
 #: ../pep-0212.txt:80
@@ -160,20 +159,20 @@ msgstr ""
 
 #: ../pep-0212.txt:94
 msgid ""
-"This solution adds two built-in functions ``indices`` and ``irange``. The"
-" semantics of these can be described as follows::"
+"This solution adds two built-in functions ``indices`` and ``irange``. The "
+"semantics of these can be described as follows::"
 msgstr ""
 
 #: ../pep-0212.txt:103
 msgid ""
-"These functions could be implemented either eagerly or lazily and should "
-"be easy to extend in order to accept more than one sequence argument."
+"These functions could be implemented either eagerly or lazily and should be "
+"easy to extend in order to accept more than one sequence argument."
 msgstr ""
 
 #: ../pep-0212.txt:107
 msgid ""
-"The use of these functions would simplify the idioms for looping over the"
-" indices and over both elements and indices::"
+"The use of these functions would simplify the idioms for looping over the "
+"indices and over both elements and indices::"
 msgstr ""
 
 #: ../pep-0212.txt:118
@@ -182,21 +181,21 @@ msgstr ""
 
 #: ../pep-0212.txt:120
 msgid ""
-"This solution proposes the addition of ``indices``, ``items`` and "
-"``values`` methods to sequences, which enable looping over indices only, "
-"both indices and elements, and elements only respectively."
+"This solution proposes the addition of ``indices``, ``items`` and ``values`` "
+"methods to sequences, which enable looping over indices only, both indices "
+"and elements, and elements only respectively."
 msgstr ""
 
 #: ../pep-0212.txt:125
 msgid ""
-"This would immensely simplify the idioms for looping over indices and for"
-" looping over both elements and indices::"
+"This would immensely simplify the idioms for looping over indices and for "
+"looping over both elements and indices::"
 msgstr ""
 
 #: ../pep-0212.txt:134
 msgid ""
-"Additionally it would allow to do looping over the elements of sequences "
-"and dictionaries in a consistent way::"
+"Additionally it would allow to do looping over the elements of sequences and "
+"dictionaries in a consistent way::"
 msgstr ""
 
 #: ../pep-0212.txt:142
@@ -205,8 +204,8 @@ msgstr ""
 
 #: ../pep-0212.txt:144
 msgid ""
-"For all three solutions some more or less rough patches exist as patches "
-"at SourceForge:"
+"For all three solutions some more or less rough patches exist as patches at "
+"SourceForge:"
 msgstr ""
 
 #: ../pep-0212.txt:147
@@ -227,8 +226,8 @@ msgstr ""
 
 #: ../pep-0212.txt:153
 msgid ""
-"Note that the ``indexing`` keyword is only a ``NAME`` in the grammar and "
-"so does not hinder the general use of ``indexing``."
+"Note that the ``indexing`` keyword is only a ``NAME`` in the grammar and so "
+"does not hinder the general use of ``indexing``."
 msgstr ""
 
 #: ../pep-0212.txt:158
@@ -238,8 +237,8 @@ msgstr ""
 #: ../pep-0212.txt:160
 msgid ""
 "As no keywords are added and the semantics of existing code remains "
-"unchanged, all three solutions can be implemented without breaking "
-"existing code."
+"unchanged, all three solutions can be implemented without breaking existing "
+"code."
 msgstr ""
 
 #: ../pep-0212.txt:166
@@ -273,4 +272,3 @@ msgstr ""
 #: ../pep-0212.txt:182
 msgid "http://sourceforge.net/patch/download.php?id=101178"
 msgstr ""
-

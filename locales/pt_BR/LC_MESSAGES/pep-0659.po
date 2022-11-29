@@ -64,41 +64,39 @@ msgstr ""
 #: ../pep-0659.rst:14
 msgid ""
 "In order to perform well, virtual machines for dynamic languages must "
-"specialize the code that they execute to the types and values in the "
-"program being run. This specialization is often associated with \"JIT\" "
-"compilers, but is beneficial even without machine code generation."
+"specialize the code that they execute to the types and values in the program "
+"being run. This specialization is often associated with \"JIT\" compilers, "
+"but is beneficial even without machine code generation."
 msgstr ""
 
 #: ../pep-0659.rst:19
 msgid ""
-"A specializing, adaptive interpreter is one that speculatively "
-"specializes on the types or values it is currently operating on, and "
-"adapts to changes in those types and values."
+"A specializing, adaptive interpreter is one that speculatively specializes "
+"on the types or values it is currently operating on, and adapts to changes "
+"in those types and values."
 msgstr ""
 
 #: ../pep-0659.rst:23
 msgid ""
 "Specialization gives us improved performance, and adaptation allows the "
-"interpreter to rapidly change when the pattern of usage in a program "
-"alters, limiting the amount of additional work caused by mis-"
-"specialization."
+"interpreter to rapidly change when the pattern of usage in a program alters, "
+"limiting the amount of additional work caused by mis-specialization."
 msgstr ""
 
 #: ../pep-0659.rst:27
 msgid ""
 "This PEP proposes using a specializing, adaptive interpreter that "
-"specializes code aggressively, but over a very small region, and is able "
-"to adjust to mis-specialization rapidly and at low cost."
+"specializes code aggressively, but over a very small region, and is able to "
+"adjust to mis-specialization rapidly and at low cost."
 msgstr ""
 
 #: ../pep-0659.rst:31
 msgid ""
 "Adding a specializing, adaptive interpreter to CPython will bring "
-"significant performance improvements. It is hard to come up with "
-"meaningful numbers, as it depends very much on the benchmarks and on work"
-" that has not yet happened. Extensive experimentation suggests speedups "
-"of up to 50%. Even if the speedup were only 25%, this would still be a "
-"worthwhile enhancement."
+"significant performance improvements. It is hard to come up with meaningful "
+"numbers, as it depends very much on the benchmarks and on work that has not "
+"yet happened. Extensive experimentation suggests speedups of up to 50%. Even "
+"if the speedup were only 25%, this would still be a worthwhile enhancement."
 msgstr ""
 
 #: ../pep-0659.rst:38
@@ -107,41 +105,39 @@ msgstr ""
 
 #: ../pep-0659.rst:40
 msgid ""
-"Python is widely acknowledged as slow. Whilst Python will never attain "
-"the performance of low-level languages like C, Fortran, or even Java, we "
-"would like it to be competitive with fast implementations of scripting "
-"languages, like V8 for Javascript or luajit for lua. Specifically, we "
-"want to achieve these performance goals with CPython to benefit all users"
-" of Python including those unable to use PyPy or other alternative "
-"virtual machines."
+"Python is widely acknowledged as slow. Whilst Python will never attain the "
+"performance of low-level languages like C, Fortran, or even Java, we would "
+"like it to be competitive with fast implementations of scripting languages, "
+"like V8 for Javascript or luajit for lua. Specifically, we want to achieve "
+"these performance goals with CPython to benefit all users of Python "
+"including those unable to use PyPy or other alternative virtual machines."
 msgstr ""
 
 #: ../pep-0659.rst:49
 msgid ""
-"Achieving these performance goals is a long way off, and will require a "
-"lot of engineering effort, but we can make a significant step towards "
-"those goals by speeding up the interpreter. Both academic research and "
-"practical implementations have shown that a fast interpreter is a key "
-"part of a fast virtual machine."
+"Achieving these performance goals is a long way off, and will require a lot "
+"of engineering effort, but we can make a significant step towards those "
+"goals by speeding up the interpreter. Both academic research and practical "
+"implementations have shown that a fast interpreter is a key part of a fast "
+"virtual machine."
 msgstr ""
 
 #: ../pep-0659.rst:55
 msgid ""
-"Typical optimizations for virtual machines are expensive, so a long "
-"\"warm up\" time is required to gain confidence that the cost of "
-"optimization is justified. In order to get speed-ups rapidly, without "
-"noticeable warmup times, the VM should speculate that specialization is "
-"justified even after a few executions of a function. To do that "
-"effectively, the interpreter must be able to optimize and de-optimize "
-"continually and very cheaply."
+"Typical optimizations for virtual machines are expensive, so a long \"warm "
+"up\" time is required to gain confidence that the cost of optimization is "
+"justified. In order to get speed-ups rapidly, without noticeable warmup "
+"times, the VM should speculate that specialization is justified even after a "
+"few executions of a function. To do that effectively, the interpreter must "
+"be able to optimize and de-optimize continually and very cheaply."
 msgstr ""
 
 #: ../pep-0659.rst:62
 msgid ""
 "By using adaptive and speculative specialization at the granularity of "
-"individual virtual machine instructions, we get a faster interpreter that"
-" also generates profiling information for more sophisticated "
-"optimizations in the future."
+"individual virtual machine instructions, we get a faster interpreter that "
+"also generates profiling information for more sophisticated optimizations in "
+"the future."
 msgstr ""
 
 #: ../pep-0659.rst:68
@@ -150,11 +146,11 @@ msgstr ""
 
 #: ../pep-0659.rst:70
 msgid ""
-"There are many practical ways to speed-up a virtual machine for a dynamic"
-" language. However, specialization is the most important, both in itself "
-"and as an enabler of other optimizations. Therefore it makes sense to "
-"focus our efforts on specialization first, if we want to improve the "
-"performance of CPython."
+"There are many practical ways to speed-up a virtual machine for a dynamic "
+"language. However, specialization is the most important, both in itself and "
+"as an enabler of other optimizations. Therefore it makes sense to focus our "
+"efforts on specialization first, if we want to improve the performance of "
+"CPython."
 msgstr ""
 
 #: ../pep-0659.rst:77
@@ -168,25 +164,25 @@ msgstr ""
 msgid ""
 "There have been several ways of doing this proposed in the academic "
 "literature, but most attempt to optimize regions larger than a single "
-"bytecode [1]_ [2]_. Using larger regions than a single instruction "
-"requires code to handle de-optimization in the middle of a region. "
-"Specialization at the level of individual bytecodes makes de-optimization"
-" trivial, as it cannot occur in the middle of a region."
+"bytecode [1]_ [2]_. Using larger regions than a single instruction requires "
+"code to handle de-optimization in the middle of a region. Specialization at "
+"the level of individual bytecodes makes de-optimization trivial, as it "
+"cannot occur in the middle of a region."
 msgstr ""
 
 #: ../pep-0659.rst:89
 msgid ""
-"By speculatively specializing individual bytecodes, we can gain "
-"significant performance improvements without anything but the most local,"
-" and trivial to implement, de-optimizations."
+"By speculatively specializing individual bytecodes, we can gain significant "
+"performance improvements without anything but the most local, and trivial to "
+"implement, de-optimizations."
 msgstr ""
 
 #: ../pep-0659.rst:93
 msgid ""
-"The closest approach to this PEP in the literature is \"Inline Caching "
-"meets Quickening\" [3]_. This PEP has the advantages of inline caching, "
-"but adds the ability to quickly de-optimize making the performance more "
-"robust in cases where specialization fails or is not stable."
+"The closest approach to this PEP in the literature is \"Inline Caching meets "
+"Quickening\" [3]_. This PEP has the advantages of inline caching, but adds "
+"the ability to quickly de-optimize making the performance more robust in "
+"cases where specialization fails or is not stable."
 msgstr ""
 
 #: ../pep-0659.rst:100
@@ -196,21 +192,20 @@ msgstr ""
 #: ../pep-0659.rst:102
 msgid ""
 "The speedup from specialization is hard to determine, as many "
-"specializations depend on other optimizations. Speedups seem to be in the"
-" range 10% - 60%."
+"specializations depend on other optimizations. Speedups seem to be in the "
+"range 10% - 60%."
 msgstr ""
 
 #: ../pep-0659.rst:105
 msgid ""
 "Most of the speedup comes directly from specialization. The largest "
-"contributors are speedups to attribute lookup, global variables, and "
-"calls."
+"contributors are speedups to attribute lookup, global variables, and calls."
 msgstr ""
 
 #: ../pep-0659.rst:107
 msgid ""
-"A small, but useful, fraction is from from improved dispatch such as "
-"super-instructions and other optimizations enabled by quickening."
+"A small, but useful, fraction is from from improved dispatch such as super-"
+"instructions and other optimizations enabled by quickening."
 msgstr ""
 
 #: ../pep-0659.rst:111
@@ -223,17 +218,17 @@ msgstr ""
 
 #: ../pep-0659.rst:116
 msgid ""
-"Any instruction that would benefit from specialization will be replaced "
-"by an \"adaptive\" form of that instruction. When executed, the adaptive "
-"instructions will specialize themselves in response to the types and "
-"values that they see. This process is known as \"quickening\"."
+"Any instruction that would benefit from specialization will be replaced by "
+"an \"adaptive\" form of that instruction. When executed, the adaptive "
+"instructions will specialize themselves in response to the types and values "
+"that they see. This process is known as \"quickening\"."
 msgstr ""
 
 #: ../pep-0659.rst:121
 msgid ""
 "Once an instruction in a code object has executed enough times, that "
-"instruction will be \"specialized\" by replacing it with a new "
-"instruction that is expected to execute faster for that operation."
+"instruction will be \"specialized\" by replacing it with a new instruction "
+"that is expected to execute faster for that operation."
 msgstr ""
 
 #: ../pep-0659.rst:126
@@ -255,7 +250,8 @@ msgid "It can be changed at runtime"
 msgstr ""
 
 #: ../pep-0659.rst:133
-msgid "It can use super-instructions that span lines and take multiple operands."
+msgid ""
+"It can use super-instructions that span lines and take multiple operands."
 msgstr ""
 
 #: ../pep-0659.rst:134
@@ -277,8 +273,8 @@ msgstr ""
 
 #: ../pep-0659.rst:144
 msgid ""
-"Each instruction that would benefit from specialization is replaced by an"
-" adaptive version during quickening. For example, the ``LOAD_ATTR`` "
+"Each instruction that would benefit from specialization is replaced by an "
+"adaptive version during quickening. For example, the ``LOAD_ATTR`` "
 "instruction would be replaced with ``LOAD_ATTR_ADAPTIVE``."
 msgstr ""
 
@@ -299,20 +295,20 @@ msgstr ""
 
 #: ../pep-0659.rst:157
 msgid ""
-"By introducing a \"family\" of specialized instructions for each of these"
-" instructions allows effective specialization, since each new instruction"
-" is specialized to a single task. Each family will include an "
-"\"adaptive\" instruction, that maintains a counter and attempts to "
-"specialize itself when that counter reaches zero."
+"By introducing a \"family\" of specialized instructions for each of these "
+"instructions allows effective specialization, since each new instruction is "
+"specialized to a single task. Each family will include an \"adaptive\" "
+"instruction, that maintains a counter and attempts to specialize itself when "
+"that counter reaches zero."
 msgstr ""
 
 #: ../pep-0659.rst:163
 msgid ""
 "Each family will also include one or more specialized instructions that "
-"perform the equivalent of the generic operation much faster provided "
-"their inputs are as expected. Each specialized instruction will maintain "
-"a saturating counter which will be incremented whenever the inputs are as"
-" expected. Should the inputs not be as expected, the counter will be "
+"perform the equivalent of the generic operation much faster provided their "
+"inputs are as expected. Each specialized instruction will maintain a "
+"saturating counter which will be incremented whenever the inputs are as "
+"expected. Should the inputs not be as expected, the counter will be "
 "decremented and the generic operation will be performed. If the counter "
 "reaches the minimum value, the instruction is de-optimized by simply "
 "replacing its opcode with the adaptive version."
@@ -324,12 +320,12 @@ msgstr ""
 
 #: ../pep-0659.rst:176
 msgid ""
-"Most families of specialized instructions will require more information "
-"than can fit in an 8-bit operand. To do this, a number of 16 bit entries "
-"immediately following the instruction are used to store this data. This "
-"is a form of inline cache, an \"inline data cache\". Unspecialized, or "
-"adaptive, instructions will use the first entry of this cache as a "
-"counter, and simply skip over the others."
+"Most families of specialized instructions will require more information than "
+"can fit in an 8-bit operand. To do this, a number of 16 bit entries "
+"immediately following the instruction are used to store this data. This is a "
+"form of inline cache, an \"inline data cache\". Unspecialized, or adaptive, "
+"instructions will use the first entry of this cache as a counter, and simply "
+"skip over the others."
 msgstr ""
 
 #: ../pep-0659.rst:183
@@ -348,20 +344,19 @@ msgstr ""
 
 #: ../pep-0659.rst:191
 msgid ""
-"This is an obvious candidate for specialization. Attributes might belong "
-"to a normal instance, a class, a module, or one of many other special "
-"cases."
+"This is an obvious candidate for specialization. Attributes might belong to "
+"a normal instance, a class, a module, or one of many other special cases."
 msgstr ""
 
 #: ../pep-0659.rst:194
 msgid ""
-"``LOAD_ATTR`` would initially be quickened to ``LOAD_ATTR_ADAPTIVE`` "
-"which would track how often it is executed, and call the "
-"``_Py_Specialize_LoadAttr`` internal function when executed enough times,"
-" or jump to the original ``LOAD_ATTR`` instruction to perform the load. "
-"When optimizing, the kind of the attribute would be examined, and if a "
-"suitable specialized instruction was found, it would replace "
-"``LOAD_ATTR_ADAPTIVE`` in place."
+"``LOAD_ATTR`` would initially be quickened to ``LOAD_ATTR_ADAPTIVE`` which "
+"would track how often it is executed, and call the "
+"``_Py_Specialize_LoadAttr`` internal function when executed enough times, or "
+"jump to the original ``LOAD_ATTR`` instruction to perform the load. When "
+"optimizing, the kind of the attribute would be examined, and if a suitable "
+"specialized instruction was found, it would replace ``LOAD_ATTR_ADAPTIVE`` "
+"in place."
 msgstr ""
 
 #: ../pep-0659.rst:201
@@ -370,9 +365,8 @@ msgstr ""
 
 #: ../pep-0659.rst:203
 msgid ""
-"``LOAD_ATTR_INSTANCE_VALUE`` A common case where the attribute is stored "
-"in the object's value array, and not shadowed by an overriding "
-"descriptor."
+"``LOAD_ATTR_INSTANCE_VALUE`` A common case where the attribute is stored in "
+"the object's value array, and not shadowed by an overriding descriptor."
 msgstr ""
 
 #: ../pep-0659.rst:205
@@ -387,9 +381,9 @@ msgstr ""
 
 #: ../pep-0659.rst:209
 msgid ""
-"Note how this allows optimizations that complement other optimizations. "
-"The ``LOAD_ATTR_INSTANCE_VALUE`` works well with the \"lazy dictionary\" "
-"used for many objects."
+"Note how this allows optimizations that complement other optimizations. The "
+"``LOAD_ATTR_INSTANCE_VALUE`` works well with the \"lazy dictionary\" used "
+"for many objects."
 msgstr ""
 
 #: ../pep-0659.rst:214
@@ -398,20 +392,19 @@ msgstr ""
 
 #: ../pep-0659.rst:216
 msgid ""
-"The ``LOAD_GLOBAL`` instruction looks up a name in the global namespace "
-"and then, if not present in the global namespace, looks it up in the "
-"builtins namespace. In 3.9 the C code for the ``LOAD_GLOBAL`` includes "
-"code to check to see whether the whole code object should be modified to "
-"add a cache, whether either the global or builtins namespace, code to "
-"lookup the value in a cache, and fallback code. This makes it complicated"
-" and bulky. It also performs many redundant operations even when "
-"supposedly optimized."
+"The ``LOAD_GLOBAL`` instruction looks up a name in the global namespace and "
+"then, if not present in the global namespace, looks it up in the builtins "
+"namespace. In 3.9 the C code for the ``LOAD_GLOBAL`` includes code to check "
+"to see whether the whole code object should be modified to add a cache, "
+"whether either the global or builtins namespace, code to lookup the value in "
+"a cache, and fallback code. This makes it complicated and bulky. It also "
+"performs many redundant operations even when supposedly optimized."
 msgstr ""
 
 #: ../pep-0659.rst:226
 msgid ""
-"Using a family of instructions makes the code more maintainable and "
-"faster, as each instruction only needs to handle one concern."
+"Using a family of instructions makes the code more maintainable and faster, "
+"as each instruction only needs to handle one concern."
 msgstr ""
 
 #: ../pep-0659.rst:229
@@ -419,23 +412,24 @@ msgid "Specializations would include:"
 msgstr ""
 
 #: ../pep-0659.rst:231
-msgid "``LOAD_GLOBAL_ADAPTIVE`` would operate like ``LOAD_ATTR_ADAPTIVE`` above."
+msgid ""
+"``LOAD_GLOBAL_ADAPTIVE`` would operate like ``LOAD_ATTR_ADAPTIVE`` above."
 msgstr ""
 
 #: ../pep-0659.rst:232
 msgid ""
-"``LOAD_GLOBAL_MODULE`` can be specialized for the case where the value is"
-" in the globals namespace. After checking that the keys of the namespace "
-"have not changed, it can load the value from the stored index."
+"``LOAD_GLOBAL_MODULE`` can be specialized for the case where the value is in "
+"the globals namespace. After checking that the keys of the namespace have "
+"not changed, it can load the value from the stored index."
 msgstr ""
 
 #: ../pep-0659.rst:235
 msgid ""
-"``LOAD_GLOBAL_BUILTIN``  can be specialized for the case where the value "
-"is in the builtins namespace. It needs to check that the keys of the "
-"global namespace have not been added to, and that the builtins namespace "
-"has not changed. Note that we don't care if the values of the global "
-"namespace have changed, just the keys."
+"``LOAD_GLOBAL_BUILTIN``  can be specialized for the case where the value is "
+"in the builtins namespace. It needs to check that the keys of the global "
+"namespace have not been added to, and that the builtins namespace has not "
+"changed. Note that we don't care if the values of the global namespace have "
+"changed, just the keys."
 msgstr ""
 
 #: ../pep-0659.rst:241
@@ -444,9 +438,9 @@ msgstr ""
 
 #: ../pep-0659.rst:245
 msgid ""
-"This PEP outlines the mechanisms for managing specialization, and does "
-"not specify the particular optimizations to be applied. It is likely that"
-" details, or even the entire implementation, may change as the code is "
+"This PEP outlines the mechanisms for managing specialization, and does not "
+"specify the particular optimizations to be applied. It is likely that "
+"details, or even the entire implementation, may change as the code is "
 "further developed."
 msgstr ""
 
@@ -476,8 +470,7 @@ msgstr ""
 #: ../pep-0659.rst:265
 msgid ""
 "An obvious concern with any scheme that performs any sort of caching is "
-"\"how much more memory does it use?\". The short answer is \"not that "
-"much\"."
+"\"how much more memory does it use?\". The short answer is \"not that much\"."
 msgstr ""
 
 #: ../pep-0659.rst:270
@@ -486,16 +479,15 @@ msgstr ""
 
 #: ../pep-0659.rst:272
 msgid ""
-"CPython 3.10 used 2 bytes per instruction, until the execution count "
-"reached ~2000 when it allocates another byte per instruction and 32 bytes"
-" per instruction with a cache (``LOAD_GLOBAL`` and ``LOAD_ATTR``)."
+"CPython 3.10 used 2 bytes per instruction, until the execution count reached "
+"~2000 when it allocates another byte per instruction and 32 bytes per "
+"instruction with a cache (``LOAD_GLOBAL`` and ``LOAD_ATTR``)."
 msgstr ""
 
 #: ../pep-0659.rst:276
 msgid ""
-"The following table shows the additional bytes per instruction to support"
-" the 3.10 opcache or the proposed adaptive interpreter, on a 64 bit "
-"machine."
+"The following table shows the additional bytes per instruction to support "
+"the 3.10 opcache or the proposed adaptive interpreter, on a 64 bit machine."
 msgstr ""
 
 #: ../pep-0659.rst:280
@@ -576,8 +568,8 @@ msgstr ""
 
 #: ../pep-0659.rst:290
 msgid ""
-"``3.10 cold`` is before the code has reached the ~2000 limit. ``3.10 "
-"hot`` shows the cache use once the threshold is reached."
+"``3.10 cold`` is before the code has reached the ~2000 limit. ``3.10 hot`` "
+"shows the cache use once the threshold is reached."
 msgstr ""
 
 #: ../pep-0659.rst:293
@@ -596,9 +588,8 @@ msgstr ""
 
 #: ../pep-0659.rst:301
 msgid ""
-"In summary, for most applications where many of the functions are "
-"relatively unused, 3.11 will consume more memory than 3.10, but not by "
-"much."
+"In summary, for most applications where many of the functions are relatively "
+"unused, 3.11 will consume more memory than 3.10, but not by much."
 msgstr ""
 
 #: ../pep-0659.rst:306
@@ -615,10 +606,10 @@ msgstr ""
 
 #: ../pep-0659.rst:314
 msgid ""
-"By implementing a specializing adaptive interpreter with inline data "
-"caches, we are implicitly rejecting many alternative ways to optimize "
-"CPython. However, it is worth emphasizing that some ideas, such as just-"
-"in-time compilation, have not been rejected, merely deferred."
+"By implementing a specializing adaptive interpreter with inline data caches, "
+"we are implicitly rejecting many alternative ways to optimize CPython. "
+"However, it is worth emphasizing that some ideas, such as just-in-time "
+"compilation, have not been rejected, merely deferred."
 msgstr ""
 
 #: ../pep-0659.rst:320
@@ -633,29 +624,28 @@ msgstr ""
 
 #: ../pep-0659.rst:326
 msgid ""
-"Quickened instructions will be stored in an array (it is neither "
-"necessary not desirable to store them in a Python object) with the same "
-"format as the original bytecode. Ancillary data will be stored in a "
-"separate array."
+"Quickened instructions will be stored in an array (it is neither necessary "
+"not desirable to store them in a Python object) with the same format as the "
+"original bytecode. Ancillary data will be stored in a separate array."
 msgstr ""
 
 #: ../pep-0659.rst:330
 #, python-format
 msgid ""
-"Each instruction will use 0 or more data entries. Each instruction within"
-" a family must have the same amount of data allocated, although some "
-"instructions may not use all of it. Instructions that cannot be "
-"specialized, e.g. ``POP_TOP``, do not need any entries. Experiments show "
-"that 25% to 30% of instructions can be usefully specialized. Different "
-"families will need different amounts of data, but most need 2 entries (16"
-" bytes on a 64 bit machine)."
+"Each instruction will use 0 or more data entries. Each instruction within a "
+"family must have the same amount of data allocated, although some "
+"instructions may not use all of it. Instructions that cannot be specialized, "
+"e.g. ``POP_TOP``, do not need any entries. Experiments show that 25% to 30% "
+"of instructions can be usefully specialized. Different families will need "
+"different amounts of data, but most need 2 entries (16 bytes on a 64 bit "
+"machine)."
 msgstr ""
 
 #: ../pep-0659.rst:339
 msgid ""
-"In order to support larger functions than 256 instructions, we compute "
-"the offset of the first data entry for instructions as ``(instruction "
-"offset)//2 + (quickened operand)``."
+"In order to support larger functions than 256 instructions, we compute the "
+"offset of the first data entry for instructions as ``(instruction offset)//2 "
+"+ (quickened operand)``."
 msgstr ""
 
 #: ../pep-0659.rst:343
@@ -664,16 +654,16 @@ msgstr ""
 
 #: ../pep-0659.rst:345
 msgid ""
-"is faster; it requires no memory reads to compute the offset. 3.10 "
-"requires two reads, which are dependent."
+"is faster; it requires no memory reads to compute the offset. 3.10 requires "
+"two reads, which are dependent."
 msgstr ""
 
 #: ../pep-0659.rst:347
 msgid ""
 "uses much less memory, as the data can be different sizes for different "
-"instruction families, and doesn't need an additional array of offsets. "
-"can support much larger functions, up to about 5000 instructions per "
-"function. 3.10 can support about 1000."
+"instruction families, and doesn't need an additional array of offsets. can "
+"support much larger functions, up to about 5000 instructions per function. "
+"3.10 can support about 1000."
 msgstr ""
 
 #: ../pep-0659.rst:352
@@ -688,34 +678,32 @@ msgstr ""
 
 #: ../pep-0659.rst:358
 msgid ""
-"The construction of high-performance virtual machines for dynamic "
-"languages, Mark Shannon 2010. "
-"http://theses.gla.ac.uk/2975/1/2011shannonphd.pdf"
+"The construction of high-performance virtual machines for dynamic languages, "
+"Mark Shannon 2010. http://theses.gla.ac.uk/2975/1/2011shannonphd.pdf"
 msgstr ""
 
 #: ../pep-0659.rst:362
 msgid ""
-"Dynamic Interpretation for Dynamic Scripting Languages "
-"https://www.scss.tcd.ie/publications/tech-reports/reports.09/TCD-"
-"CS-2009-37.pdf"
+"Dynamic Interpretation for Dynamic Scripting Languages https://www.scss.tcd."
+"ie/publications/tech-reports/reports.09/TCD-CS-2009-37.pdf"
 msgstr ""
 
 #: ../pep-0659.rst:365
 msgid ""
-"Inline Caching meets Quickening "
-"https://www.unibw.de/ucsrl/pubs/ecoop10.pdf/view"
+"Inline Caching meets Quickening https://www.unibw.de/ucsrl/pubs/ecoop10.pdf/"
+"view"
 msgstr ""
 
 #: ../pep-0659.rst:368
 msgid ""
-"The adaptive and specialized instructions are implemented in "
-"https://github.com/python/cpython/blob/main/Python/ceval.c"
+"The adaptive and specialized instructions are implemented in https://github."
+"com/python/cpython/blob/main/Python/ceval.c"
 msgstr ""
 
 #: ../pep-0659.rst:371
 msgid ""
-"The optimizations are implemented in: "
-"https://github.com/python/cpython/blob/main/Python/specialize.c"
+"The optimizations are implemented in: https://github.com/python/cpython/blob/"
+"main/Python/specialize.c"
 msgstr ""
 
 #: ../pep-0659.rst:375
@@ -724,7 +712,6 @@ msgstr ""
 
 #: ../pep-0659.rst:377
 msgid ""
-"This document is placed in the public domain or under the "
-"CC0-1.0-Universal license, whichever is more permissive."
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
 msgstr ""
-
