@@ -61,6 +61,10 @@ jobs:
           sphinx-intl update -d ../locales -p build/ -l ${{ env.LANGUAGE }}
         working-directory: peps
 
+      - name: powrap
+        run: |
+          powrap locales/**/*.po
+      
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
