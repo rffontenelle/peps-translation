@@ -63,11 +63,11 @@ jobs:
 
       - name: powrap
         run: |
-          powrap locales/**/*.po
+          powrap locales/${{ env.LANGUAGE }}/LC_MESSAGES/*.po
       
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "Translation update"
-          file_pattern: .gitmodules locales/**/*.po
+          file_pattern: .gitmodules locales/${{ env.LANGUAGE }}/LC_MESSAGES/*.po
           add_options: '-A'
