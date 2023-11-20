@@ -19,7 +19,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           persist-credentials: true
           submodules: true
@@ -27,6 +27,7 @@ jobs:
       - name: Update submodule
         run: |
           git submodule update
+          cd peps && git fetch origin && git checkout main && git reset --hard origin
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -34,8 +35,8 @@ jobs:
           python-version: '3.10'
           cache: 'pip'
           cache-dependency-path: |
-            **/setup.cfg
-            **/requirements*.txt
+            requirements.txt
+            peps/requirements.txt
 
       - name: Install gettext
         run: |
@@ -46,28 +47,27 @@ jobs:
           python -m pip install -U pip
           pip install -r requirements.txt -r peps/requirements.txt
 
-      - name: Patch build.py to add --gettext flag
+      - name: Patch peps/build.py to enable internationalization
         run: |
-          git apply ../add-gettext-builder.diff
-        working-directory: peps
+          git -C peps apply ../enable-i18n.diff
 
       - name: Generate POT files
         run: |
-          python build.py --gettext
-        working-directory: peps
+          python peps/build.py --gettext
 
       - name: Add/Update message catalog files
         run: |
-          sphinx-intl update -d ../locales -p build/ -l ${{ env.LANGUAGE }}
-        working-directory: peps
+          cd peps && sphinx-intl update -d ../locales -p build/gettext
 
       - name: powrap
         run: |
-          powrap locales/${{ env.LANGUAGE }}/LC_MESSAGES/*.po
+          powrap --modified
       
       - name: Commit and push changes
+        if: ${{ github.event_name == 'push' ||
+                github.event_name == 'workflow_dispatch' }}
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "Translation update"
-          file_pattern: .gitmodules locales/${{ env.LANGUAGE }}/LC_MESSAGES/*.po
+          file_pattern: .gitmodules locales/${{ env.LANGUAGE }}/LC_MESSAGES/*.po locales/${{ env.LANGUAGE }}/LC_MESSAGES/**/*.po
           add_options: '-A'

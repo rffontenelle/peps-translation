@@ -1,8 +1,8 @@
 diff --git a/build.py b/build.py
-index bbf061e3..3c12a3f1 100755
+index 04f0b5fd..09f14d43 100755
 --- a/build.py
 +++ b/build.py
-@@ -26,6 +26,10 @@ def create_parser():
+@@ -27,6 +27,10 @@ def create_parser():
                            dest="builder", const="dirhtml",
                            help='Render PEPs to "index.html" files within "pep-NNNN" directories. '
                                 'Cannot be used with "-f" or "-l".')
@@ -11,5 +11,40 @@ index bbf061e3..3c12a3f1 100755
 +                          help='Regenerate POT files docs to html files. '
 +                               'Cannot be used with "-f" or "-l" or "-d".')
  
-     # flags / options
-     parser.add_argument("-w", "--fail-on-warning", action="store_true",
+     parser.add_argument(
+         "-o",
+@@ -34,6 +38,12 @@ def create_parser():
+         default="build",
+         help="Output directory, relative to root. Default 'build'.",
+     )
++    parser.add_argument(
++        "-t",
++        "--translation",
++        default="en",
++        help="Language code to build docs with. Defaults to English.",
++    )
+ 
+     return parser.parse_args()
+ 
+@@ -60,6 +70,13 @@ if __name__ == "__main__":
+     # builder configuration
+     sphinx_builder = args.builder or "html"
+ 
++    # enable internationalization via configuration overrides
++    conf_overrides = {}
++    conf_overrides['locale_dirs'] = '../locales'
++    conf_overrides['gettext_compact'] = False
++    if args.translation != 'en':
++        conf_overrides['language'] = 'args.translation'
++
+     app = Sphinx(
+         source_directory,
+         confdir=source_directory,
+@@ -70,6 +87,7 @@ if __name__ == "__main__":
+         parallel=os.cpu_count() or 1,
+         tags=["internal_builder"],
+         keep_going=True,
++        confoverrides=conf_overrides,
+     )
+     app.build()
+ 
