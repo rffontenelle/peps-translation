@@ -12,9 +12,6 @@ on:
 permissions:
   contents: write
 
-env:
-  LANGUAGE: pt_BR
-
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -47,17 +44,13 @@ jobs:
           python -m pip install -U pip
           pip install -r requirements.txt -r peps/requirements.txt
 
-      - name: Patch peps/build.py to enable internationalization
-        run: |
-          git -C peps apply ../enable-i18n.diff
-
       - name: Generate POT files
         run: |
-          python peps/build.py --gettext
+          - cd peps/peps && sphinx-build -E -b gettext -D gettext_compact=0 -d ../build/.doctrees . ../../locales/pot
 
       - name: Add/Update message catalog files
         run: |
-          cd peps && sphinx-intl update -d ../locales -p build/gettext
+          - cd peps/peps && sphinx-intl update -d ../../locales -p ../../locales/pot
 
       - name: powrap
         run: |
@@ -69,5 +62,5 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "Translation update"
-          file_pattern: .gitmodules locales/${{ env.LANGUAGE }}/LC_MESSAGES/*.po locales/${{ env.LANGUAGE }}/LC_MESSAGES/**/*.po
+          file_pattern: .gitmodules locales/**/*.po
           add_options: '-A'
