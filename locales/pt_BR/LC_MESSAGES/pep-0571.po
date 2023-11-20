@@ -6,673 +6,765 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PEPs\n"
+"Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 20:07+0000\n"
+"POT-Creation-Date: 2023-11-20 10:43-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.13.1\n"
 
-#: ../pep-0571.rst
+#: ../../peps/pep-0571.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../pep-0571.rst:5
+#: ../../peps/pep-0571.rst:3
 msgid ""
-"Mark  Williams <mrw@enotuniq.org>, Geoffrey Thomas <geofft@ldpreload.com>, "
-"Thomas Kluyver <thomas@kluyver.me.uk>"
+"Mark  Williams <mrw@enotuniq.org>, Geoffrey Thomas "
+"<geofft@ldpreload.com>, Thomas Kluyver <thomas@kluyver.me.uk>"
 msgstr ""
 
-#: ../pep-0571.rst
+#: ../../peps/pep-0571.rst
 msgid "BDFL-Delegate"
 msgstr ""
 
-#: ../pep-0571.rst:8
-msgid "Nick Coghlan <ncoghlan@gmail.com>"
+#: ../../peps/pep-0571.rst:6
+msgid "Alyssa Coghlan <ncoghlan@gmail.com>"
 msgstr ""
 
-#: ../pep-0571.rst
+#: ../../peps/pep-0571.rst
 msgid "Discussions-To"
 msgstr ""
 
-#: ../pep-0571.rst:9
+#: ../../peps/pep-0571.rst:7
 msgid "distutils-sig@python.org"
 msgstr ""
 
-#: ../pep-0571.rst
+#: ../../peps/pep-0571.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../pep-0571.rst:10
+#: ../../peps/pep-0571.rst:8
 msgid "Superseded"
 msgstr ""
 
-#: ../pep-0571.rst
+#: ../../peps/pep-0571.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../pep-0571.rst:11
+#: ../../peps/pep-0571.rst:9
 msgid "Informational"
 msgstr ""
 
-#: ../pep-0571.rst
+#: ../../peps/pep-0571.rst
 msgid "Topic"
 msgstr ""
 
-#: ../pep-0571.rst:12
+#: ../../peps/pep-0571.rst:10
 msgid "Packaging"
 msgstr ""
 
-#: ../pep-0571.rst
+#: ../../peps/pep-0571.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../pep-0571.rst:14
+#: ../../peps/pep-0571.rst:12
 msgid "05-Feb-2018"
 msgstr ""
 
-#: ../pep-0571.rst
+#: ../../peps/pep-0571.rst
 msgid "Post-History"
 msgstr "Pós-história"
 
-#: ../pep-0571.rst
+#: ../../peps/pep-0571.rst
 msgid "Superseded-By"
 msgstr ""
 
-#: ../pep-0571.rst:16
+#: ../../peps/pep-0571.rst:14
 msgid "600"
 msgstr ""
 
-#: ../pep-0571.rst
+#: ../../peps/pep-0571.rst
 msgid "Resolution"
 msgstr ""
 
-#: ../pep-0571.rst:17
+#: ../../peps/pep-0571.rst:15
 msgid "https://mail.python.org/pipermail/distutils-sig/2018-April/032156.html"
 msgstr ""
 
-#: ../pep-0571.rst:21
+#: ../../peps/pep-0571.rst:19
 msgid "Abstract"
 msgstr ""
 
-#: ../pep-0571.rst:23
+#: ../../peps/pep-0571.rst:21
 msgid ""
 "This PEP proposes the creation of a ``manylinux2010`` platform tag to "
-"succeed the ``manylinux1`` tag introduced by :pep:`513`.  It also proposes "
-"that PyPI and ``pip`` both be updated to support uploading, downloading, and "
-"installing ``manylinux2010`` distributions on compatible platforms."
+"succeed the ``manylinux1`` tag introduced by :pep:`513`.  It also "
+"proposes that PyPI and ``pip`` both be updated to support uploading, "
+"downloading, and installing ``manylinux2010`` distributions on compatible"
+" platforms."
 msgstr ""
 
-#: ../pep-0571.rst:30
+#: ../../peps/pep-0571.rst:28
 msgid "Rationale"
 msgstr ""
 
-#: ../pep-0571.rst:32
+#: ../../peps/pep-0571.rst:30
 msgid ""
-"True to its name, the ``manylinux1`` platform tag has made the installation "
-"of binary extension modules a reality on many Linux systems.  Libraries like "
-"``cryptography`` [2]_ and ``numpy`` [3]_ are more accessible to Python "
-"developers now that their installation on common architectures does not "
-"depend on fragile development environments and build toolchains."
+"True to its name, the ``manylinux1`` platform tag has made the "
+"installation of binary extension modules a reality on many Linux systems."
+"  Libraries like ``cryptography`` [2]_ and ``numpy`` [3]_ are more "
+"accessible to Python developers now that their installation on common "
+"architectures does not depend on fragile development environments and "
+"build toolchains."
 msgstr ""
 
-#: ../pep-0571.rst:39
+#: ../../peps/pep-0571.rst:37
 msgid ""
-"``manylinux1`` wheels achieve their portability by allowing the extension "
-"modules they contain to link against only a small set of system-level shared "
-"libraries that export versioned symbols old enough to benefit from backwards-"
-"compatibility policies.  Extension modules in a ``manylinux1`` wheel that "
-"rely on ``glibc``, for example, must be built against version 2.5 or "
-"earlier; they may then be run systems that provide more recent ``glibc`` "
-"version that still export the required symbols at version 2.5."
+"``manylinux1`` wheels achieve their portability by allowing the extension"
+" modules they contain to link against only a small set of system-level "
+"shared libraries that export versioned symbols old enough to benefit from"
+" backwards-compatibility policies.  Extension modules in a ``manylinux1``"
+" wheel that rely on ``glibc``, for example, must be built against version"
+" 2.5 or earlier; they may then be run systems that provide more recent "
+"``glibc`` version that still export the required symbols at version 2.5."
 msgstr ""
 
-#: ../pep-0571.rst:48
+#: ../../peps/pep-0571.rst:46
 msgid ""
-":pep:`513` drew its whitelisted shared libraries and their symbol versions "
-"from CentOS 5.11, which was the oldest supported CentOS release at the time "
-"of its writing.  Unfortunately, CentOS 5.11 reached its end-of-life on March "
-"31st, 2017 with a clear warning against its continued use. [4]_ No further "
-"updates, such as security patches, will be made available.  This means that "
-"its packages will remain at obsolete versions that hamper the efforts of "
-"Python software packagers who use the ``manylinux1`` Docker image."
+":pep:`513` drew its whitelisted shared libraries and their symbol "
+"versions from CentOS 5.11, which was the oldest supported CentOS release "
+"at the time of its writing.  Unfortunately, CentOS 5.11 reached its end-"
+"of-life on March 31st, 2017 with a clear warning against its continued "
+"use. [4]_ No further updates, such as security patches, will be made "
+"available.  This means that its packages will remain at obsolete versions"
+" that hamper the efforts of Python software packagers who use the "
+"``manylinux1`` Docker image."
 msgstr ""
 
-#: ../pep-0571.rst:57
+#: ../../peps/pep-0571.rst:55
 msgid ""
 "CentOS 6 is now the oldest supported CentOS release, and will receive "
-"maintenance updates through November 30th, 2020. [5]_ We propose that a new :"
-"pep:`425`-style platform tag called ``manylinux2010`` be derived from CentOS "
-"6 and that the ``manylinux`` toolchain, PyPI, and ``pip`` be updated to "
-"support it."
+"maintenance updates through November 30th, 2020. [5]_ We propose that a "
+"new :pep:`425`-style platform tag called ``manylinux2010`` be derived "
+"from CentOS 6 and that the ``manylinux`` toolchain, PyPI, and ``pip`` be "
+"updated to support it."
 msgstr ""
 
-#: ../pep-0571.rst:63
+#: ../../peps/pep-0571.rst:61
 msgid ""
-"This was originally proposed as ``manylinux2``, but the versioning has been "
-"changed to use calendar years (also known as CalVer [23]_). This makes it "
-"easier to define future *manylinux* tags out of order: for example, a "
-"hypothetical ``manylinux2017`` standard may be defined via a new PEP before "
-"``manylinux2014``, or a ``manylinux2007`` standard might be defined that "
-"targets systems older than this PEP but newer than ``manylinux1``."
+"This was originally proposed as ``manylinux2``, but the versioning has "
+"been changed to use calendar years (also known as CalVer [22]_). This "
+"makes it easier to define future *manylinux* tags out of order: for "
+"example, a hypothetical ``manylinux2017`` standard may be defined via a "
+"new PEP before ``manylinux2014``, or a ``manylinux2007`` standard might "
+"be defined that targets systems older than this PEP but newer than "
+"``manylinux1``."
 msgstr ""
 
-#: ../pep-0571.rst:71
+#: ../../peps/pep-0571.rst:69
 msgid ""
 "Calendar versioning also gives a rough idea of which Linux distribution "
-"versions support which tag: ``manylinux2010`` will work on most distribution "
-"versions released since 2010. This is only an approximation, however: the "
-"actual compatibility rules are defined below, and some newer distributions "
-"may not meet them."
+"versions support which tag: ``manylinux2010`` will work on most "
+"distribution versions released since 2010. This is only an approximation,"
+" however: the actual compatibility rules are defined below, and some "
+"newer distributions may not meet them."
 msgstr ""
 
-#: ../pep-0571.rst:78
+#: ../../peps/pep-0571.rst:76
 msgid "The ``manylinux2010`` policy"
 msgstr ""
 
-#: ../pep-0571.rst:80
+#: ../../peps/pep-0571.rst:78
 msgid ""
 "The following criteria determine a ``linux`` wheel's eligibility for the "
 "``manylinux2010`` tag:"
 msgstr ""
 
-#: ../pep-0571.rst:83
+#: ../../peps/pep-0571.rst:81
 msgid ""
-"The wheel may only contain binary executables and shared objects compiled "
-"for one of the two architectures supported by CentOS 6: x86_64 or i686. [5]_"
+"The wheel may only contain binary executables and shared objects compiled"
+" for one of the two architectures supported by CentOS 6: x86_64 or i686. "
+"[5]_"
 msgstr ""
 
-#: ../pep-0571.rst:86
+#: ../../peps/pep-0571.rst:84
 msgid ""
 "The wheel's binary executables or shared objects may not link against "
 "externally-provided libraries except those in the following whitelist: ::"
 msgstr ""
 
-#: ../pep-0571.rst:110
+#: ../../peps/pep-0571.rst:108
 msgid ""
-"This list is identical to the externally-provided libraries whitelisted for "
-"``manylinux1``, minus ``libncursesw.so.5`` and ``libpanelw.so.5``. [7]_ "
-"``libpythonX.Y`` remains ineligible for inclusion for the same reasons "
-"outlined in :pep:`513`."
+"This list is identical to the externally-provided libraries whitelisted "
+"for ``manylinux1``, minus ``libncursesw.so.5`` and ``libpanelw.so.5``. "
+"[7]_ ``libpythonX.Y`` remains ineligible for inclusion for the same "
+"reasons outlined in :pep:`513`."
 msgstr ""
 
-#: ../pep-0571.rst:115
+#: ../../peps/pep-0571.rst:113
 msgid ""
 "``libcrypt.so.1`` was retrospectively removed from the whitelist after "
 "Fedora 30 was released with ``libcrypt.so.2`` instead."
 msgstr ""
 
-#: ../pep-0571.rst:118
+#: ../../peps/pep-0571.rst:116
 msgid "On Debian-based systems, these libraries are provided by the packages:"
 msgstr ""
 
-#: ../pep-0571.rst:121 ../pep-0571.rst:139
+#: ../../peps/pep-0571.rst:119 ../../peps/pep-0571.rst:137
 msgid "Package"
 msgstr ""
 
-#: ../pep-0571.rst:121 ../pep-0571.rst:139
+#: ../../peps/pep-0571.rst:119 ../../peps/pep-0571.rst:137
 msgid "Libraries"
 msgstr ""
 
-#: ../pep-0571.rst:123
+#: ../../peps/pep-0571.rst:121
 msgid "libc6"
 msgstr ""
 
-#: ../pep-0571.rst:123
+#: ../../peps/pep-0571.rst:121
 msgid ""
-"libdl.so.2, libresolv.so.2, librt.so.1, libc.so.6, libpthread.so.0, libm."
-"so.6, libutil.so.1, libnsl.so.1"
+"libdl.so.2, libresolv.so.2, librt.so.1, libc.so.6, libpthread.so.0, "
+"libm.so.6, libutil.so.1, libnsl.so.1"
 msgstr ""
 
-#: ../pep-0571.rst:125
+#: ../../peps/pep-0571.rst:123
 msgid "libgcc1"
 msgstr ""
 
-#: ../pep-0571.rst:125 ../pep-0571.rst:148
+#: ../../peps/pep-0571.rst:123 ../../peps/pep-0571.rst:146
 msgid "libgcc_s.so.1"
 msgstr ""
 
-#: ../pep-0571.rst:126
+#: ../../peps/pep-0571.rst:124
 msgid "libgl1"
 msgstr ""
 
-#: ../pep-0571.rst:126 ../pep-0571.rst:150
+#: ../../peps/pep-0571.rst:124 ../../peps/pep-0571.rst:148
 msgid "libGL.so.1"
 msgstr ""
 
-#: ../pep-0571.rst:127
+#: ../../peps/pep-0571.rst:125
 msgid "libglib2.0-0"
 msgstr ""
 
-#: ../pep-0571.rst:127
+#: ../../peps/pep-0571.rst:125
 msgid "libgobject-2.0.so.0, libgthread-2.0.so.0, libglib-2.0.so.0"
 msgstr ""
 
-#: ../pep-0571.rst:128
+#: ../../peps/pep-0571.rst:126
 msgid "libice6"
 msgstr ""
 
-#: ../pep-0571.rst:128 ../pep-0571.rst:144
+#: ../../peps/pep-0571.rst:126 ../../peps/pep-0571.rst:142
 msgid "libICE.so.6"
 msgstr ""
 
-#: ../pep-0571.rst:129
+#: ../../peps/pep-0571.rst:127
 msgid "libsm6"
 msgstr ""
 
-#: ../pep-0571.rst:129
+#: ../../peps/pep-0571.rst:127
 msgid "libSM.so.6"
 msgstr ""
 
-#: ../pep-0571.rst:130
+#: ../../peps/pep-0571.rst:128
 msgid "libstdc++6"
 msgstr ""
 
-#: ../pep-0571.rst:130 ../pep-0571.rst:149
+#: ../../peps/pep-0571.rst:128 ../../peps/pep-0571.rst:147
 msgid "libstdc++.so.6"
 msgstr ""
 
-#: ../pep-0571.rst:131
+#: ../../peps/pep-0571.rst:129
 msgid "libx11-6"
 msgstr ""
 
-#: ../pep-0571.rst:131 ../pep-0571.rst:145
+#: ../../peps/pep-0571.rst:129 ../../peps/pep-0571.rst:143
 msgid "libX11.so.6"
 msgstr ""
 
-#: ../pep-0571.rst:132
+#: ../../peps/pep-0571.rst:130
 msgid "libxext6"
 msgstr ""
 
-#: ../pep-0571.rst:132 ../pep-0571.rst:146
+#: ../../peps/pep-0571.rst:130 ../../peps/pep-0571.rst:144
 msgid "libXext.so.6"
 msgstr ""
 
-#: ../pep-0571.rst:133
+#: ../../peps/pep-0571.rst:131
 msgid "libxrender1"
 msgstr ""
 
-#: ../pep-0571.rst:133 ../pep-0571.rst:147
+#: ../../peps/pep-0571.rst:131 ../../peps/pep-0571.rst:145
 msgid "libXrender.so.1"
 msgstr ""
 
-#: ../pep-0571.rst:136
+#: ../../peps/pep-0571.rst:134
 msgid "On RPM-based systems, they are provided by these packages:"
 msgstr ""
 
-#: ../pep-0571.rst:141
+#: ../../peps/pep-0571.rst:139
 msgid "glib2"
 msgstr ""
 
-#: ../pep-0571.rst:141
+#: ../../peps/pep-0571.rst:139
 msgid "libglib-2.0.so.0, libgthread-2.0.so.0, libgobject-2.0.so.0"
 msgstr ""
 
-#: ../pep-0571.rst:142
+#: ../../peps/pep-0571.rst:140
 msgid "glibc"
 msgstr ""
 
-#: ../pep-0571.rst:142
+#: ../../peps/pep-0571.rst:140
 msgid ""
 "libresolv.so.2, libutil.so.1, libnsl.so.1, librt.so.1, libpthread.so.0, "
 "libdl.so.2, libm.so.6, libc.so.6"
 msgstr ""
 
-#: ../pep-0571.rst:144
+#: ../../peps/pep-0571.rst:142
 msgid "libICE"
 msgstr ""
 
-#: ../pep-0571.rst:145
+#: ../../peps/pep-0571.rst:143
 msgid "libX11"
 msgstr ""
 
-#: ../pep-0571.rst:146
+#: ../../peps/pep-0571.rst:144
 msgid "libXext:"
 msgstr ""
 
-#: ../pep-0571.rst:147
+#: ../../peps/pep-0571.rst:145
 msgid "libXrender"
 msgstr ""
 
-#: ../pep-0571.rst:148
+#: ../../peps/pep-0571.rst:146
 msgid "libgcc:"
 msgstr ""
 
-#: ../pep-0571.rst:149
+#: ../../peps/pep-0571.rst:147
 msgid "libstdc++"
 msgstr ""
 
-#: ../pep-0571.rst:150
+#: ../../peps/pep-0571.rst:148
 msgid "mesa"
 msgstr ""
 
-#: ../pep-0571.rst:153
+#: ../../peps/pep-0571.rst:151
 msgid ""
-"If the wheel contains binary executables or shared objects linked against "
-"any whitelisted libraries that also export versioned symbols, they may only "
-"depend on the following maximum versions::"
+"If the wheel contains binary executables or shared objects linked against"
+" any whitelisted libraries that also export versioned symbols, they may "
+"only depend on the following maximum versions::"
 msgstr ""
 
-#: ../pep-0571.rst:162
+#: ../../peps/pep-0571.rst:160
 msgid ""
-"As an example, ``manylinux2010`` wheels may include binary artifacts that "
-"require ``glibc`` symbols at version ``GLIBC_2.4``, because this an earlier "
-"version than the maximum of ``GLIBC_2.12``."
+"As an example, ``manylinux2010`` wheels may include binary artifacts that"
+" require ``glibc`` symbols at version ``GLIBC_2.4``, because this an "
+"earlier version than the maximum of ``GLIBC_2.12``."
 msgstr ""
 
-#: ../pep-0571.rst:165
+#: ../../peps/pep-0571.rst:163
 msgid ""
-"If a wheel is built for any version of CPython 2 or CPython versions 3.0 up "
-"to and including 3.2, it *must* include a CPython ABI tag indicating its "
-"Unicode ABI.  A ``manylinux2010`` wheel built against Python 2, then, must "
-"include either the ``cpy27mu`` tag indicating it was built against an "
-"interpreter with the UCS-4 ABI or the ``cpy27m`` tag indicating an "
+"If a wheel is built for any version of CPython 2 or CPython versions 3.0 "
+"up to and including 3.2, it *must* include a CPython ABI tag indicating "
+"its Unicode ABI.  A ``manylinux2010`` wheel built against Python 2, then,"
+" must include either the ``cpy27mu`` tag indicating it was built against "
+"an interpreter with the UCS-4 ABI or the ``cpy27m`` tag indicating an "
 "interpreter with the UCS-2 ABI. (:pep:`3149`, [9]_)"
 msgstr ""
 
-#: ../pep-0571.rst:172
+#: ../../peps/pep-0571.rst:170
 msgid ""
-"A wheel *must not* require the ``PyFPE_jbuf`` symbol.  This is achieved by "
-"building it against a Python compiled *without* the ``--with-fpectl`` "
+"A wheel *must not* require the ``PyFPE_jbuf`` symbol.  This is achieved "
+"by building it against a Python compiled *without* the ``--with-fpectl`` "
 "``configure`` flag."
 msgstr ""
 
-#: ../pep-0571.rst:177
+#: ../../peps/pep-0571.rst:175
 msgid "Compilation of Compliant Wheels"
 msgstr ""
 
-#: ../pep-0571.rst:179
+#: ../../peps/pep-0571.rst:177
 msgid ""
-"Like ``manylinux1``, the ``auditwheel`` tool adds ``manylinux2010`` platform "
-"tags to ``linux`` wheels built by ``pip wheel`` or ``bdist_wheel`` in a "
-"``manylinux2010`` Docker container."
+"Like ``manylinux1``, the ``auditwheel`` tool adds ``manylinux2010`` "
+"platform tags to ``linux`` wheels built by ``pip wheel`` or "
+"``bdist_wheel`` in a ``manylinux2010`` Docker container."
 msgstr ""
 
-#: ../pep-0571.rst:184
+#: ../../peps/pep-0571.rst:182
 msgid "Docker Image"
 msgstr ""
 
-#: ../pep-0571.rst:186
+#: ../../peps/pep-0571.rst:184
 msgid ""
 "Two ``manylinux2010`` Docker images based on CentOS 6 are provided for "
 "building binary ``linux`` wheels that can reliably be converted to "
-"``manylinux2010`` wheels.  [10]_ The x86_64 and i686 images comes with a new "
-"compiler suite installed (``gcc``, ``g++``, and ``gfortran`` from "
+"``manylinux2010`` wheels.  [10]_ The x86_64 and i686 images comes with a "
+"new compiler suite installed (``gcc``, ``g++``, and ``gfortran`` from "
 "``devtoolset-8``) as well as the latest releases of Python and ``pip``."
 msgstr ""
 
-#: ../pep-0571.rst:193
+#: ../../peps/pep-0571.rst:191
 msgid "Compatibility with kernels that lack ``vsyscall``"
 msgstr ""
 
-#: ../pep-0571.rst:195
+#: ../../peps/pep-0571.rst:193
 msgid ""
-"A Docker container assumes that its userland is compatible with its host's "
-"kernel.  Unfortunately, an increasingly common kernel configuration breaks "
-"this assumption for x86_64 CentOS 6 Docker images."
+"A Docker container assumes that its userland is compatible with its "
+"host's kernel.  Unfortunately, an increasingly common kernel "
+"configuration breaks this assumption for x86_64 CentOS 6 Docker images."
 msgstr ""
 
-#: ../pep-0571.rst:200
+#: ../../peps/pep-0571.rst:198
 msgid ""
-"Versions 2.14 and earlier of ``glibc`` require the kernel provide an archaic "
-"system call optimization known as ``vsyscall`` on x86_64. [11]_ To effect "
-"the optimization, the kernel maps a read-only page of frequently-called "
-"system calls -- most notably ``time(2)`` -- into each process at a fixed "
-"memory location.  ``glibc`` then invokes these system calls by dereferencing "
-"a function pointer to the appropriate offset into the ``vsyscall`` page and "
-"calling it.  This avoids the overhead associated with invoking the kernel "
-"that affects normal system call invocation.  ``vsyscall`` has long been "
-"deprecated in favor of an equivalent mechanism known as vDSO, or \"virtual "
-"dynamic shared object\", in which the kernel instead maps a relocatable "
-"virtual shared object containing the optimized system calls into each "
-"process. [12]_"
+"Versions 2.14 and earlier of ``glibc`` require the kernel provide an "
+"archaic system call optimization known as ``vsyscall`` on x86_64. [11]_ "
+"To effect the optimization, the kernel maps a read-only page of "
+"frequently-called system calls -- most notably ``time(2)`` -- into each "
+"process at a fixed memory location.  ``glibc`` then invokes these system "
+"calls by dereferencing a function pointer to the appropriate offset into "
+"the ``vsyscall`` page and calling it.  This avoids the overhead "
+"associated with invoking the kernel that affects normal system call "
+"invocation.  ``vsyscall`` has long been deprecated in favor of an "
+"equivalent mechanism known as vDSO, or \"virtual dynamic shared object\","
+" in which the kernel instead maps a relocatable virtual shared object "
+"containing the optimized system calls into each process. [12]_"
 msgstr ""
 
-#: ../pep-0571.rst:214
+#: ../../peps/pep-0571.rst:212
 msgid ""
-"The ``vsyscall`` page has serious security implications because it does not "
-"participate in address space layout randomization (ASLR). Its predictable "
-"location and contents make it a useful source of gadgets used in return-"
-"oriented programming attacks. [13]_ At the same time, its elimination breaks "
-"the x86_64 ABI, because ``glibc`` versions that depend on ``vsyscall`` "
-"suffer from segmentation faults when attempting to dereference a system call "
-"pointer into a non-existent page.  As a compromise, Linux 3.1 implemented an "
-"\"emulated\" ``vsyscall`` that reduced the executable code, and thus the "
-"material for ROP gadgets, mapped into the process. [14]_ "
-"``vsyscall=emulated`` has been the default configuration in most "
-"distribution's kernels for many years."
+"The ``vsyscall`` page has serious security implications because it does "
+"not participate in address space layout randomization (ASLR). Its "
+"predictable location and contents make it a useful source of gadgets used"
+" in return-oriented programming attacks. [13]_ At the same time, its "
+"elimination breaks the x86_64 ABI, because ``glibc`` versions that depend"
+" on ``vsyscall`` suffer from segmentation faults when attempting to "
+"dereference a system call pointer into a non-existent page.  As a "
+"compromise, Linux 3.1 implemented an \"emulated\" ``vsyscall`` that "
+"reduced the executable code, and thus the material for ROP gadgets, "
+"mapped into the process. [14]_ ``vsyscall=emulated`` has been the default"
+" configuration in most distribution's kernels for many years."
 msgstr ""
 
-#: ../pep-0571.rst:227
+#: ../../peps/pep-0571.rst:225
 msgid ""
-"Unfortunately, ``vsyscall`` emulation still exposes predictable code at a "
-"reliable memory location, and continues to be useful for return-oriented "
-"programming. [15]_ Because most distributions have now upgraded to ``glibc`` "
-"versions that do not depend on ``vsyscall``, they are beginning to ship "
-"kernels that do not support ``vsyscall`` at all. [16]_"
+"Unfortunately, ``vsyscall`` emulation still exposes predictable code at a"
+" reliable memory location, and continues to be useful for return-oriented"
+" programming. [15]_ Because most distributions have now upgraded to "
+"``glibc`` versions that do not depend on ``vsyscall``, they are beginning"
+" to ship kernels that do not support ``vsyscall`` at all. [16]_"
 msgstr ""
 
-#: ../pep-0571.rst:234
+#: ../../peps/pep-0571.rst:232
 msgid ""
 "CentOS 5.11 and 6 both include versions of ``glibc`` that depend on the "
 "``vsyscall`` page (2.5 and 2.12.2 respectively), so containers based on "
-"either cannot run under kernels provided with many distribution's upcoming "
-"releases. [17]_ If Travis CI, for example, begins running jobs under a "
-"kernel that does not provide the ``vsyscall`` interface, Python packagers "
-"will not be able to use our Docker images there to build ``manylinux`` "
-"wheels. [19]_"
+"either cannot run under kernels provided with many distribution's "
+"upcoming releases. [17]_ If Travis CI, for example, begins running jobs "
+"under a kernel that does not provide the ``vsyscall`` interface, Python "
+"packagers will not be able to use our Docker images there to build "
+"``manylinux`` wheels. [18]_"
 msgstr ""
 
-#: ../pep-0571.rst:243
+#: ../../peps/pep-0571.rst:241
 msgid ""
-"We have derived a patch from the ``glibc`` git repository that backports the "
-"removal of all dependencies on ``vsyscall`` to the version of ``glibc`` "
-"included with our ``manylinux2010`` image. [20]_ Rebuilding ``glibc``, and "
-"thus building ``manylinux2010`` image itself, still requires a host kernel "
-"that provides the ``vsyscall`` mechanism, but the resulting image can be "
-"both run on hosts that provide it and those that do not.  Because the "
-"``vsyscall`` interface is an optimization that is only applied to running "
-"processes, the ``manylinux2010`` wheels built with this modified image "
-"should be identical to those built on an unmodified CentOS 6 system.  Also, "
-"the ``vsyscall`` problem applies only to x86_64; it is not part of the i686 "
-"ABI."
+"We have derived a patch from the ``glibc`` git repository that backports "
+"the removal of all dependencies on ``vsyscall`` to the version of "
+"``glibc`` included with our ``manylinux2010`` image. [19]_ Rebuilding "
+"``glibc``, and thus building ``manylinux2010`` image itself, still "
+"requires a host kernel that provides the ``vsyscall`` mechanism, but the "
+"resulting image can be both run on hosts that provide it and those that "
+"do not.  Because the ``vsyscall`` interface is an optimization that is "
+"only applied to running processes, the ``manylinux2010`` wheels built "
+"with this modified image should be identical to those built on an "
+"unmodified CentOS 6 system.  Also, the ``vsyscall`` problem applies only "
+"to x86_64; it is not part of the i686 ABI."
 msgstr ""
 
-#: ../pep-0571.rst:257
+#: ../../peps/pep-0571.rst:255
 msgid "Auditwheel"
 msgstr ""
 
-#: ../pep-0571.rst:259
+#: ../../peps/pep-0571.rst:257
 msgid ""
-"The ``auditwheel`` tool has also been updated to produce ``manylinux2010`` "
-"wheels. [21]_ Its behavior and purpose are otherwise unchanged from :pep:"
-"`513`."
+"The ``auditwheel`` tool has also been updated to produce "
+"``manylinux2010`` wheels. [20]_ Its behavior and purpose are otherwise "
+"unchanged from :pep:`513`."
 msgstr ""
 
-#: ../pep-0571.rst:265
+#: ../../peps/pep-0571.rst:263
 msgid "Platform Detection for Installers"
 msgstr ""
 
-#: ../pep-0571.rst:267
+#: ../../peps/pep-0571.rst:265
 msgid ""
-"Platforms may define a ``manylinux2010_compatible`` boolean attribute on the "
-"``_manylinux`` module described in :pep:`513`.  A platform is considered "
-"incompatible with ``manylinux2010`` if the attribute is ``False``."
+"Platforms may define a ``manylinux2010_compatible`` boolean attribute on "
+"the ``_manylinux`` module described in :pep:`513`.  A platform is "
+"considered incompatible with ``manylinux2010`` if the attribute is "
+"``False``."
 msgstr ""
 
-#: ../pep-0571.rst:272
+#: ../../peps/pep-0571.rst:270
 msgid ""
-"If the ``_manylinux`` module is not found, or it does not have the attribute "
-"``manylinux2010_compatible``, tools may fall back to checking for glibc. If "
-"the platform has glibc 2.12 or newer, it is assumed to be compatible unless "
-"the ``_manylinux`` module says otherwise."
+"If the ``_manylinux`` module is not found, or it does not have the "
+"attribute ``manylinux2010_compatible``, tools may fall back to checking "
+"for glibc. If the platform has glibc 2.12 or newer, it is assumed to be "
+"compatible unless the ``_manylinux`` module says otherwise."
 msgstr ""
 
-#: ../pep-0571.rst:277
+#: ../../peps/pep-0571.rst:275
 msgid "Specifically, the algorithm we propose is::"
 msgstr ""
 
-#: ../pep-0571.rst:299
+#: ../../peps/pep-0571.rst:297
 msgid "Backwards compatibility with ``manylinux1`` wheels"
 msgstr ""
 
-#: ../pep-0571.rst:301
+#: ../../peps/pep-0571.rst:299
 msgid ""
-"As explained in :pep:`513`, the specified symbol versions for ``manylinux1`` "
-"whitelisted libraries constitute an *upper bound*.  The same is true for the "
-"symbol versions defined for ``manylinux2010`` in this PEP.  As a result, "
-"``manylinux1`` wheels are considered ``manylinux2010`` wheels.  A ``pip`` "
-"that recognizes the ``manylinux2010`` platform tag will thus install "
-"``manylinux1`` wheels for ``manylinux2010`` platforms -- even when "
-"explicitly set -- when no ``manylinux2010`` wheels are available. [22]_"
+"As explained in :pep:`513`, the specified symbol versions for "
+"``manylinux1`` whitelisted libraries constitute an *upper bound*.  The "
+"same is true for the symbol versions defined for ``manylinux2010`` in "
+"this PEP.  As a result, ``manylinux1`` wheels are considered "
+"``manylinux2010`` wheels.  A ``pip`` that recognizes the "
+"``manylinux2010`` platform tag will thus install ``manylinux1`` wheels "
+"for ``manylinux2010`` platforms -- even when explicitly set -- when no "
+"``manylinux2010`` wheels are available. [21]_"
 msgstr ""
 
-#: ../pep-0571.rst:311
+#: ../../peps/pep-0571.rst:309
 msgid "PyPI Support"
 msgstr ""
 
-#: ../pep-0571.rst:313
+#: ../../peps/pep-0571.rst:311
 msgid ""
-"PyPI should permit wheels containing the ``manylinux2010`` platform tag to "
-"be uploaded in the same way that it permits ``manylinux1``.  It should not "
-"attempt to verify the compatibility of ``manylinux2010`` wheels."
+"PyPI should permit wheels containing the ``manylinux2010`` platform tag "
+"to be uploaded in the same way that it permits ``manylinux1``.  It should"
+" not attempt to verify the compatibility of ``manylinux2010`` wheels."
 msgstr ""
 
-#: ../pep-0571.rst:319
+#: ../../peps/pep-0571.rst:317
 msgid "Summary of changes to PEP 571"
 msgstr ""
 
-#: ../pep-0571.rst:321
+#: ../../peps/pep-0571.rst:319
 msgid ""
-"The following changes were made to this PEP based on feedback received after "
-"it was approved:"
+"The following changes were made to this PEP based on feedback received "
+"after it was approved:"
 msgstr ""
 
-#: ../pep-0571.rst:324
+#: ../../peps/pep-0571.rst:322
 msgid ""
-"The maximum version symbol of ``libgcc_s`` was updated from ``GCC_4.3.0`` to "
-"``GCC_4.5.0`` to address 32-bit Cent OS 6. This doesn't affect x86_64 "
-"because ``libgcc_s`` for x86_64 has no additional symbol from ``GCC_4.3.0`` "
-"to ``GCC_4.5.0``."
+"The maximum version symbol of ``libgcc_s`` was updated from ``GCC_4.3.0``"
+" to ``GCC_4.5.0`` to address 32-bit Cent OS 6. This doesn't affect x86_64"
+" because ``libgcc_s`` for x86_64 has no additional symbol from "
+"``GCC_4.3.0`` to ``GCC_4.5.0``."
 msgstr ""
 
-#: ../pep-0571.rst:330
+#: ../../peps/pep-0571.rst:328
 msgid "References"
 msgstr "Referências"
 
-#: ../pep-0571.rst:332
+#: ../../peps/pep-0571.rst:330
 msgid "pyca/cryptography (https://cryptography.io/)"
 msgstr ""
 
-#: ../pep-0571.rst:334
+#: ../../peps/pep-0571.rst:332
 msgid "numpy (https://numpy.org)"
 msgstr ""
 
-#: ../pep-0571.rst:336
+#: ../../peps/pep-0571.rst:334
 msgid ""
 "CentOS 5.11 EOL announcement (https://lists.centos.org/pipermail/centos-"
 "announce/2017-April/022350.html)"
 msgstr ""
 
-#: ../pep-0571.rst:338
+#: ../../peps/pep-0571.rst:336
 msgid ""
-"CentOS Product Specifications (https://web.archive.org/web/20180108090257/"
-"https://wiki.centos.org/About/Product)"
+"CentOS Product Specifications "
+"(https://web.archive.org/web/20180108090257/https://wiki.centos.org/About/Product)"
 msgstr ""
 
-#: ../pep-0571.rst:340
+#: ../../peps/pep-0571.rst:338
 msgid ""
-"ncurses 5 -> 6 transition means we probably need to drop some libraries from "
-"the manylinux whitelist (https://github.com/pypa/manylinux/issues/94)"
+"ncurses 5 -> 6 transition means we probably need to drop some libraries "
+"from the manylinux whitelist "
+"(https://github.com/pypa/manylinux/issues/94)"
 msgstr ""
 
-#: ../pep-0571.rst:343
+#: ../../peps/pep-0571.rst:341
 msgid ""
-"SOABI support for Python 2.X and PyPy https://github.com/pypa/pip/pull/3075"
+"SOABI support for Python 2.X and PyPy "
+"https://github.com/pypa/pip/pull/3075"
 msgstr ""
 
-#: ../pep-0571.rst:345
+#: ../../peps/pep-0571.rst:343
 msgid ""
-"manylinux2010 Docker image (https://quay.io/repository/pypa/"
-"manylinux2010_x86_64)"
+"manylinux2010 Docker image "
+"(https://quay.io/repository/pypa/manylinux2010_x86_64)"
 msgstr ""
 
-#: ../pep-0571.rst:347
+#: ../../peps/pep-0571.rst:345
 msgid "On vsyscalls and the vDSO (https://lwn.net/Articles/446528/)"
 msgstr ""
 
-#: ../pep-0571.rst:349
+#: ../../peps/pep-0571.rst:347
 msgid "vdso(7) (http://man7.org/linux/man-pages/man7/vdso.7.html)"
 msgstr ""
 
-#: ../pep-0571.rst:351
+#: ../../peps/pep-0571.rst:349
 msgid ""
-"Framing Signals -- A Return to Portable Shellcode (http://www.cs.vu.nl/"
-"~herbertb/papers/srop_sp14.pdf)"
+"Framing Signals -- A Return to Portable Shellcode "
+"(http://www.cs.vu.nl/~herbertb/papers/srop_sp14.pdf)"
 msgstr ""
 
-#: ../pep-0571.rst:353
-msgid ""
-"ChangeLog-3.1 (https://www.kernel.org/pub/linux/kernel/v3.x/ChangeLog-3.1)"
+#: ../../peps/pep-0571.rst:351
+msgid "ChangeLog-3.1 (https://www.kernel.org/pub/linux/kernel/v3.x/ChangeLog-3.1)"
 msgstr ""
 
-#: ../pep-0571.rst:355
+#: ../../peps/pep-0571.rst:353
 msgid ""
 "Project Zero: Three bypasses and a fix for one of Flash's Vector.<*> "
-"mitigations (https://googleprojectzero.blogspot.com/2015/08/three-bypasses-"
-"and-fix-for-one-of.html)"
+"mitigations (https://googleprojectzero.blogspot.com/2015/08/three-"
+"bypasses-and-fix-for-one-of.html)"
 msgstr ""
 
-#: ../pep-0571.rst:357
+#: ../../peps/pep-0571.rst:355
 msgid ""
-"linux: activate CONFIG_LEGACY_VSYSCALL_NONE ? (https://bugs.debian.org/cgi-"
-"bin/bugreport.cgi?bug=852620)"
+"linux: activate CONFIG_LEGACY_VSYSCALL_NONE ? (https://bugs.debian.org"
+"/cgi-bin/bugreport.cgi?bug=852620)"
 msgstr ""
 
-#: ../pep-0571.rst:359
+#: ../../peps/pep-0571.rst:357
 msgid ""
 "[Wheel-builders] Heads-up re: new kernel configurations breaking the "
 "manylinux docker image (https://mail.python.org/pipermail/wheel-"
 "builders/2016-December/000239.html)"
 msgstr ""
 
-#: ../pep-0571.rst:361
-msgid "No longer used"
-msgstr ""
-
-#: ../pep-0571.rst:362
+#: ../../peps/pep-0571.rst:359
 msgid "Travis CI (https://travis-ci.org/)"
 msgstr ""
 
-#: ../pep-0571.rst:364
+#: ../../peps/pep-0571.rst:361
 msgid ""
-"remove-vsyscall.patch https://github.com/markrwilliams/manylinux/commit/"
-"e9493d55471d153089df3aafca8cfbcb50fa8093#diff-3eda4130bdba562657f3ec7c1b3f5720"
+"remove-vsyscall.patch "
+"https://github.com/markrwilliams/manylinux/commit/e9493d55471d153089df3aafca8cfbcb50fa8093"
+"#diff-3eda4130bdba562657f3ec7c1b3f5720"
 msgstr ""
 
-#: ../pep-0571.rst:366
+#: ../../peps/pep-0571.rst:363
 msgid ""
-"auditwheel manylinux2 branch (https://github.com/markrwilliams/auditwheel/"
-"tree/manylinux2)"
+"auditwheel manylinux2 branch "
+"(https://github.com/markrwilliams/auditwheel/tree/manylinux2)"
 msgstr ""
 
-#: ../pep-0571.rst:368
+#: ../../peps/pep-0571.rst:365
 msgid ""
-"pip manylinux2 branch https://github.com/markrwilliams/pip/commits/manylinux2"
+"pip manylinux2 branch "
+"https://github.com/markrwilliams/pip/commits/manylinux2"
 msgstr ""
 
-#: ../pep-0571.rst:370
+#: ../../peps/pep-0571.rst:367
 msgid "Calendar Versioning http://calver.org/"
 msgstr ""
 
-#: ../pep-0571.rst:374
+#: ../../peps/pep-0571.rst:371
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../pep-0571.rst:376
+#: ../../peps/pep-0571.rst:373
 msgid "This document has been placed into the public domain."
 msgstr ""
+
+#~ msgid "Nick Coghlan <ncoghlan@gmail.com>"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This was originally proposed as "
+#~ "``manylinux2``, but the versioning has "
+#~ "been changed to use calendar years "
+#~ "(also known as CalVer [23]_). This "
+#~ "makes it easier to define future "
+#~ "*manylinux* tags out of order: for "
+#~ "example, a hypothetical ``manylinux2017`` "
+#~ "standard may be defined via a new"
+#~ " PEP before ``manylinux2014``, or a "
+#~ "``manylinux2007`` standard might be defined"
+#~ " that targets systems older than this"
+#~ " PEP but newer than ``manylinux1``."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "CentOS 5.11 and 6 both include "
+#~ "versions of ``glibc`` that depend on "
+#~ "the ``vsyscall`` page (2.5 and 2.12.2"
+#~ " respectively), so containers based on "
+#~ "either cannot run under kernels provided"
+#~ " with many distribution's upcoming "
+#~ "releases. [17]_ If Travis CI, for "
+#~ "example, begins running jobs under a "
+#~ "kernel that does not provide the "
+#~ "``vsyscall`` interface, Python packagers will"
+#~ " not be able to use our Docker"
+#~ " images there to build ``manylinux`` "
+#~ "wheels. [19]_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "We have derived a patch from the"
+#~ " ``glibc`` git repository that backports"
+#~ " the removal of all dependencies on"
+#~ " ``vsyscall`` to the version of "
+#~ "``glibc`` included with our ``manylinux2010``"
+#~ " image. [20]_ Rebuilding ``glibc``, and "
+#~ "thus building ``manylinux2010`` image itself,"
+#~ " still requires a host kernel that"
+#~ " provides the ``vsyscall`` mechanism, but"
+#~ " the resulting image can be both "
+#~ "run on hosts that provide it and"
+#~ " those that do not.  Because the "
+#~ "``vsyscall`` interface is an optimization "
+#~ "that is only applied to running "
+#~ "processes, the ``manylinux2010`` wheels built"
+#~ " with this modified image should be"
+#~ " identical to those built on an "
+#~ "unmodified CentOS 6 system.  Also, the"
+#~ " ``vsyscall`` problem applies only to "
+#~ "x86_64; it is not part of the "
+#~ "i686 ABI."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The ``auditwheel`` tool has also been"
+#~ " updated to produce ``manylinux2010`` "
+#~ "wheels. [21]_ Its behavior and purpose"
+#~ " are otherwise unchanged from :pep:`513`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "As explained in :pep:`513`, the "
+#~ "specified symbol versions for ``manylinux1``"
+#~ " whitelisted libraries constitute an *upper"
+#~ " bound*.  The same is true for "
+#~ "the symbol versions defined for "
+#~ "``manylinux2010`` in this PEP.  As a "
+#~ "result, ``manylinux1`` wheels are considered"
+#~ " ``manylinux2010`` wheels.  A ``pip`` that"
+#~ " recognizes the ``manylinux2010`` platform "
+#~ "tag will thus install ``manylinux1`` "
+#~ "wheels for ``manylinux2010`` platforms -- "
+#~ "even when explicitly set -- when "
+#~ "no ``manylinux2010`` wheels are available. "
+#~ "[22]_"
+#~ msgstr ""
+
+#~ msgid "No longer used"
+#~ msgstr ""
+

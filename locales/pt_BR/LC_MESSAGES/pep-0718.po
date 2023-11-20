@@ -1,0 +1,297 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the PEPs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PEPs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-20 10:43-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pt_BR\n"
+"Language-Team: pt_BR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.13.1\n"
+
+#: ../../peps/pep-0718.rst
+msgid "Author"
+msgstr ""
+
+#: ../../peps/pep-0718.rst:3
+msgid "James Hilton-Balfe <gobot1234yt@gmail.com>"
+msgstr ""
+
+#: ../../peps/pep-0718.rst
+msgid "Sponsor"
+msgstr ""
+
+#: ../../peps/pep-0718.rst:4
+msgid "Guido van Rossum <guido@python.org>"
+msgstr ""
+
+#: ../../peps/pep-0718.rst
+msgid "Discussions-To"
+msgstr ""
+
+#: ../../peps/pep-0718.rst:5
+msgid "https://discuss.python.org/t/26463/"
+msgstr ""
+
+#: ../../peps/pep-0718.rst
+msgid "Status"
+msgstr ""
+
+#: ../../peps/pep-0718.rst:6
+msgid "Draft"
+msgstr ""
+
+#: ../../peps/pep-0718.rst
+msgid "Type"
+msgstr ""
+
+#: ../../peps/pep-0718.rst:7
+msgid "Standards Track"
+msgstr ""
+
+#: ../../peps/pep-0718.rst
+msgid "Topic"
+msgstr ""
+
+#: ../../peps/pep-0718.rst:8
+msgid "Typing"
+msgstr ""
+
+#: ../../peps/pep-0718.rst
+msgid "Created"
+msgstr ""
+
+#: ../../peps/pep-0718.rst:10
+msgid "23-Jun-2023"
+msgstr ""
+
+#: ../../peps/pep-0718.rst
+msgid "Python-Version"
+msgstr ""
+
+#: ../../peps/pep-0718.rst:11
+msgid "3.13"
+msgstr ""
+
+#: ../../peps/pep-0718.rst
+msgid "Post-History"
+msgstr ""
+
+#: ../../peps/pep-0718.rst:12
+msgid "`24-Jun-2023 <https://discuss.python.org/t/28457/>`__"
+msgstr ""
+
+#: ../../peps/pep-0718.rst:15
+msgid "Abstract"
+msgstr ""
+
+#: ../../peps/pep-0718.rst:17
+msgid ""
+"This PEP proposes making function objects subscriptable for typing "
+"purposes. Doing so gives developers explicit control over the types "
+"produced by the type checker where bi-directional inference (which allows"
+" for the types of parameters of anonymous functions to be inferred) and "
+"other methods than specialisation are insufficient."
+msgstr ""
+
+#: ../../peps/pep-0718.rst:23
+msgid "Motivation"
+msgstr ""
+
+#: ../../peps/pep-0718.rst:25
+msgid ""
+"Currently, it is not possible to infer the type parameters to generic "
+"functions in certain situations:"
+msgstr ""
+
+#: ../../peps/pep-0718.rst:33
+msgid ""
+"Making instances of ``FunctionType`` subscriptable would allow for this "
+"constructor to be typed:"
+msgstr ""
+
+#: ../../peps/pep-0718.rst:40
+msgid "Currently you have to use an assignment to provide a precise type:"
+msgstr ""
+
+#: ../../peps/pep-0718.rst:47
+msgid ""
+"but this code is unnecessarily verbose taking up multiple lines for a "
+"simple function call."
+msgstr ""
+
+#: ../../peps/pep-0718.rst:50
+msgid ""
+"Similarly, ``T`` in this example cannot currently be meaningfully "
+"inferred, so ``x`` is untyped without an extra assignment:"
+msgstr ""
+
+#: ../../peps/pep-0718.rst:59
+msgid ""
+"If function objects were subscriptable, however, a more specific type "
+"could be given:"
+msgstr ""
+
+#: ../../peps/pep-0718.rst:65
+msgid ""
+"Currently, with unspecialised literals, it is not possible to determine a"
+" type for situations similar to:"
+msgstr ""
+
+#: ../../peps/pep-0718.rst:77
+msgid ""
+"It is also useful to be able to specify in cases in which a certain type "
+"must be passed to a function beforehand:"
+msgstr ""
+
+#: ../../peps/pep-0718.rst:85
+msgid ""
+"Allowing subscription makes functions and methods consistent with generic"
+" classes where they weren't already. Whilst all of the proposed changes "
+"can be implemented using callable generic classes, syntactic sugar would "
+"be highly welcome."
+msgstr ""
+
+#: ../../peps/pep-0718.rst:89
+msgid ""
+"Due to this, specialising the function and using it as a new factory is "
+"fine"
+msgstr ""
+
+#: ../../peps/pep-0718.rst:96
+msgid ""
+"This proposal also opens the door to `monomorphisation "
+"<https://en.wikipedia.org/wiki/Monomorphization>`_ and `reified types "
+"<https://en.wikipedia.org/wiki/Reification_(computer_science)>`_"
+msgstr ""
+
+#: ../../peps/pep-0718.rst:101
+msgid "Rationale"
+msgstr ""
+
+#: ../../peps/pep-0718.rst:103
+msgid ""
+"Function objects in this PEP is used to refer to ``FunctionType``\\ , "
+"``MethodType``\\ , ``BuiltinFunctionType``\\ , ``BuiltinMethodType`` and "
+"``MethodWrapperType``\\ ."
+msgstr ""
+
+#: ../../peps/pep-0718.rst:106
+msgid "For ``MethodType`` you should be able to write:"
+msgstr ""
+
+#: ../../peps/pep-0718.rst:115
+msgid "and have it work similarly to a ``FunctionType``."
+msgstr ""
+
+#: ../../peps/pep-0718.rst:117
+msgid ""
+"For ``BuiltinFunctionType``, so builtin generic functions (e.g. ``max`` "
+"and ``min``) work like ones defined in Python. Built-in functions should "
+"behave as much like functions implemented in Python as possible."
+msgstr ""
+
+#: ../../peps/pep-0718.rst:121
+msgid "``BuiltinMethodType`` is the same type as ``BuiltinFunctionType``."
+msgstr ""
+
+#: ../../peps/pep-0718.rst:123
+msgid ""
+"``MethodWrapperType`` (e.g. the type of ``object().__str__``) is useful "
+"for generic magic methods."
+msgstr ""
+
+#: ../../peps/pep-0718.rst:127
+msgid "Specification"
+msgstr ""
+
+#: ../../peps/pep-0718.rst:129
+msgid ""
+"Function objects should implement ``__getitem__`` to allow for "
+"subscription at runtime and return an instance of ``types.GenericAlias`` "
+"with ``__origin__`` set as the callable and ``__args__`` as the types "
+"passed."
+msgstr ""
+
+#: ../../peps/pep-0718.rst:133
+msgid ""
+"Type checkers should support subscripting functions and understand that "
+"the parameters passed to the function subscription should follow the same"
+" rules as a generic callable class."
+msgstr ""
+
+#: ../../peps/pep-0718.rst:138
+msgid "Setting ``__orig_class__``"
+msgstr ""
+
+#: ../../peps/pep-0718.rst:140
+msgid ""
+"Currently, ``__orig_class__`` is an attribute set in "
+"``GenericAlias.__call__`` to the instance of the ``GenericAlias`` that "
+"created the called class e.g."
+msgstr ""
+
+#: ../../peps/pep-0718.rst:149
+msgid ""
+"Currently, ``__orig_class__`` is unconditionally set; however, to avoid "
+"potential erasure on any created instances, this attribute should not be "
+"set if ``__origin__`` is an instance of any function object."
+msgstr ""
+
+#: ../../peps/pep-0718.rst:153
+msgid ""
+"The following code snippet would fail at runtime without this change as "
+"``__orig_class__`` would be ``bar[str]`` and not ``Foo[int]``."
+msgstr ""
+
+#: ../../peps/pep-0718.rst:164
+msgid "Backwards Compatibility"
+msgstr ""
+
+#: ../../peps/pep-0718.rst:165
+msgid ""
+"Currently these classes are not subclassable and so there are no "
+"backwards compatibility concerns with regards to classes already "
+"implementing ``__getitem__``."
+msgstr ""
+
+#: ../../peps/pep-0718.rst:170
+msgid "Reference Implementation"
+msgstr ""
+
+#: ../../peps/pep-0718.rst:172
+msgid ""
+"The runtime changes proposed can be found here "
+"https://github.com/Gobot1234/cpython/tree/function-subscript"
+msgstr ""
+
+#: ../../peps/pep-0718.rst:176
+msgid "Acknowledgements"
+msgstr ""
+
+#: ../../peps/pep-0718.rst:178
+msgid ""
+"Thank you to Alex Waygood and Jelle Zijlstra for their feedback on this "
+"PEP and Guido for some motivating examples."
+msgstr ""
+
+#: ../../peps/pep-0718.rst:182
+msgid "Copyright"
+msgstr ""
+
+#: ../../peps/pep-0718.rst:184
+msgid ""
+"This document is placed in the public domain or under the "
+"CC0-1.0-Universal license, whichever is more permissive."
+msgstr ""
+

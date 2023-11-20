@@ -6,255 +6,276 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PEPs\n"
+"Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 20:07+0000\n"
+"POT-Creation-Date: 2023-11-20 10:43-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.13.1\n"
 
-#: ../pep-0477.txt
+#: ../../peps/pep-0477.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../pep-0477.txt:3
-msgid "Donald Stufft <donald@stufft.io>, Nick Coghlan <ncoghlan@gmail.com>"
+#: ../../peps/pep-0477.rst:3
+msgid "Donald Stufft <donald@stufft.io>, Alyssa Coghlan <ncoghlan@gmail.com>"
 msgstr ""
 
-#: ../pep-0477.txt
+#: ../../peps/pep-0477.rst
 msgid "BDFL-Delegate"
 msgstr ""
 
-#: ../pep-0477.txt:5
+#: ../../peps/pep-0477.rst:5
 msgid "Benjamin Peterson <benjamin@python.org>"
 msgstr ""
 
-#: ../pep-0477.txt
+#: ../../peps/pep-0477.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../pep-0477.txt:6
+#: ../../peps/pep-0477.rst:6
 msgid "Final"
 msgstr ""
 
-#: ../pep-0477.txt
+#: ../../peps/pep-0477.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../pep-0477.txt:7
+#: ../../peps/pep-0477.rst:7
 msgid "Standards Track"
 msgstr ""
 
-#: ../pep-0477.txt
+#: ../../peps/pep-0477.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../pep-0477.txt:9
+#: ../../peps/pep-0477.rst:9
 msgid "26-Aug-2014"
 msgstr ""
 
-#: ../pep-0477.txt
+#: ../../peps/pep-0477.rst
 msgid "Post-History"
 msgstr "Pós-história"
 
-#: ../pep-0477.txt:10
+#: ../../peps/pep-0477.rst:10
 msgid "01-Sep-2014"
 msgstr ""
 
-#: ../pep-0477.txt
+#: ../../peps/pep-0477.rst
 msgid "Resolution"
 msgstr ""
 
-#: ../pep-0477.txt:11
+#: ../../peps/pep-0477.rst:11
 msgid "https://mail.python.org/pipermail/python-dev/2014-September/136238.html"
 msgstr ""
 
-#: ../pep-0477.txt:15
+#: ../../peps/pep-0477.rst:15
 msgid "Abstract"
 msgstr ""
 
-#: ../pep-0477.txt:17
+#: ../../peps/pep-0477.rst:17
 msgid ""
-"This PEP proposes that the ``ensurepip`` module, added to Python 3.4 by PEP "
-"453, be backported to Python 2.7. It also proposes that automatic invocation "
-"of ``ensurepip`` be added to the Python 2.7 Windows and OSX installers. "
-"However it does **not** propose that automatic invocation be added to the "
-"``Makefile``."
+"This PEP proposes that the ``ensurepip`` module, added to Python 3.4 by "
+"PEP 453, be backported to Python 2.7. It also proposes that automatic "
+"invocation of ``ensurepip`` be added to the Python 2.7 Windows and OSX "
+"installers. However it does **not** propose that automatic invocation be "
+"added to the ``Makefile``."
 msgstr ""
 
-#: ../pep-0477.txt:22
+#: ../../peps/pep-0477.rst:22
 msgid ""
-"It also proposes that the documentation changes for the package distribution "
-"and installation guides be updated to match that in 3.4, which references "
-"using the ``ensurepip`` module to bootstrap the installer."
+"It also proposes that the documentation changes for the package "
+"distribution and installation guides be updated to match that in 3.4, "
+"which references using the ``ensurepip`` module to bootstrap the "
+"installer."
 msgstr ""
 
-#: ../pep-0477.txt:28
+#: ../../peps/pep-0477.rst:28
 msgid "Rationale"
 msgstr ""
 
-#: ../pep-0477.txt:30
+#: ../../peps/pep-0477.rst:30
 msgid ""
-"Python 2.7 is effectively a LTS release of Python which represents the end "
-"of the 2.x series and there is still a very large contingent of users whom "
-"are still using Python 2.7 as their primary version. These users, in order "
-"to participate in the wider Python ecosystem, must manually attempt to go "
-"out and find the correct way to bootstrap the packaging tools."
+"Python 2.7 is effectively a LTS release of Python which represents the "
+"end of the 2.x series and there is still a very large contingent of users"
+" whom are still using Python 2.7 as their primary version. These users, "
+"in order to participate in the wider Python ecosystem, must manually "
+"attempt to go out and find the correct way to bootstrap the packaging "
+"tools."
 msgstr ""
 
-#: ../pep-0477.txt:36
+#: ../../peps/pep-0477.rst:36
 msgid ""
 "It is the opinion of this PEP that making it as easy as possible for end "
 "users to participate in the wider Python ecosystem is important for 3 "
 "primary reasons:"
 msgstr ""
 
-#: ../pep-0477.txt:40
+#: ../../peps/pep-0477.rst:40
 msgid ""
-"The Python 2.x to 3.x migration has a number of painpoints that are eased by "
-"a number of third party modules such as six [#six]_, modernize "
-"[#modernize]_, or future [#future]_. However relying on these tools requires "
-"that everyone who uses the project have a tool to install these packages."
+"The Python 2.x to 3.x migration has a number of painpoints that are eased"
+" by a number of third party modules such as six [#six]_, modernize "
+"[#modernize]_, or future [#future]_. However relying on these tools "
+"requires that everyone who uses the project have a tool to install these "
+"packages."
 msgstr ""
 
-#: ../pep-0477.txt:44
+#: ../../peps/pep-0477.rst:44
 msgid ""
-"In addition to tooling to aid in migration from Python 2.x to 3.x, there are "
-"also a number of modules that are *new* in Python 3 for which there are "
-"backports available on PyPI. This can also aid in the ability for people to "
-"write 2.x and 3.x compatible software as well as enable them to use some of "
-"the newer features of Python 3 on Python 2."
+"In addition to tooling to aid in migration from Python 2.x to 3.x, there "
+"are also a number of modules that are *new* in Python 3 for which there "
+"are backports available on PyPI. This can also aid in the ability for "
+"people to write 2.x and 3.x compatible software as well as enable them to"
+" use some of the newer features of Python 3 on Python 2."
 msgstr ""
 
-#: ../pep-0477.txt:49
+#: ../../peps/pep-0477.rst:49
 msgid ""
-"Users also will need a number of tools in order to create python packages "
-"that conform to the newer standards that are being proposed. Things like "
-"setuptools [#setuptools]_, Wheel [#wheel]_, and twine [#twine]_ are enabling "
-"a safer, faster, and more reliable packaging tool chain. These tools can be "
-"difficult for people to use if first they must be told how to go out and "
-"install the package manager."
+"Users also will need a number of tools in order to create python packages"
+" that conform to the newer standards that are being proposed. Things like"
+" setuptools [#setuptools]_, Wheel [#wheel]_, and twine [#twine]_ are "
+"enabling a safer, faster, and more reliable packaging tool chain. These "
+"tools can be difficult for people to use if first they must be told how "
+"to go out and install the package manager."
 msgstr ""
 
-#: ../pep-0477.txt:55
+#: ../../peps/pep-0477.rst:55
 msgid ""
-"One of Pythons biggest strengths is in the huge ecosystem of libraries and "
-"projects that have been built on top of it, most of which are distributed "
-"through PyPI. However, in order to benefit from this wide ecosystem "
-"meaningfully requires end users, some of which are going to be new, to make "
-"a decision on which package manager they should get, how to get it, and then "
-"finally actually installing it first."
+"One of Pythons biggest strengths is in the huge ecosystem of libraries "
+"and projects that have been built on top of it, most of which are "
+"distributed through PyPI. However, in order to benefit from this wide "
+"ecosystem meaningfully requires end users, some of which are going to be "
+"new, to make a decision on which package manager they should get, how to "
+"get it, and then finally actually installing it first."
 msgstr ""
 
-#: ../pep-0477.txt:62
+#: ../../peps/pep-0477.rst:62
 msgid ""
 "Furthermore, alternative implementations of Python are recognizing the "
 "benefits of :pep:`453` and both PyPy and Jython have plans to backport "
 "ensurepip to their 2.7 runtimes."
 msgstr ""
 
-#: ../pep-0477.txt:68
+#: ../../peps/pep-0477.rst:68
 msgid "Automatic Invocation"
 msgstr ""
 
-#: ../pep-0477.txt:70
+#: ../../peps/pep-0477.rst:70
 msgid ""
 ":pep:`453` has ``ensurepip`` automatically invoked by default in the "
-"``Makefile`` and the Windows and OSX Installers. This allowed it to ensure "
-"that, by default, all users would get Python with pip already installed. "
-"This PEP however believes that while this is fine for the Python 2.7 Windows "
-"and Mac OS X installers it is *not* ok for the Python 2.7 ``Makefile`` in "
-"general."
+"``Makefile`` and the Windows and OSX Installers. This allowed it to "
+"ensure that, by default, all users would get Python with pip already "
+"installed. This PEP however believes that while this is fine for the "
+"Python 2.7 Windows and Mac OS X installers it is *not* ok for the Python "
+"2.7 ``Makefile`` in general."
 msgstr ""
 
-#: ../pep-0477.txt:76
+#: ../../peps/pep-0477.rst:76
 msgid ""
-"The primary consumers of the ``Makefile`` are downstream package managers "
-"which distribute Python themselves. These downstream distributors typically "
-"do not want pip to be installed via ``ensurepip`` and would prefer that end "
-"users install it with their own package manager. Not invoking ``ensurepip`` "
-"automatically from the ``Makefile`` would allow these distributors to simply "
-"ignore the fact that ``ensurepip`` has been backported and still not end up "
-"with pip installed via it."
+"The primary consumers of the ``Makefile`` are downstream package managers"
+" which distribute Python themselves. These downstream distributors "
+"typically do not want pip to be installed via ``ensurepip`` and would "
+"prefer that end users install it with their own package manager. Not "
+"invoking ``ensurepip`` automatically from the ``Makefile`` would allow "
+"these distributors to simply ignore the fact that ``ensurepip`` has been "
+"backported and still not end up with pip installed via it."
 msgstr ""
 
-#: ../pep-0477.txt:84
+#: ../../peps/pep-0477.rst:84
 msgid ""
-"The primary consumers of the OSX and Windows installers are end users who "
-"are attempting to install Python on their own machine. There is not a "
+"The primary consumers of the OSX and Windows installers are end users who"
+" are attempting to install Python on their own machine. There is not a "
 "package manager available where these users can install pip into their "
-"Python through a more supported mechanism. For this reason it is the belief "
-"of this PEP that installing by default on OSX and Windows is the best course "
-"of action."
+"Python through a more supported mechanism. For this reason it is the "
+"belief of this PEP that installing by default on OSX and Windows is the "
+"best course of action."
 msgstr ""
 
-#: ../pep-0477.txt:92
+#: ../../peps/pep-0477.rst:92
 msgid "Documentation"
 msgstr ""
 
-#: ../pep-0477.txt:94
+#: ../../peps/pep-0477.rst:94
 msgid ""
 "As part of this PEP, the updated packaging distribution and installation "
 "guides for Python 3.4 would be backported to Python 2.7."
 msgstr ""
 
-#: ../pep-0477.txt:99
+#: ../../peps/pep-0477.rst:99
 msgid "Disabling ensurepip by Downstream Distributors"
 msgstr ""
 
-#: ../pep-0477.txt:101
+#: ../../peps/pep-0477.rst:101
 msgid ""
 "Due to its use in the ``venv`` module, downstream distributors cannot "
-"disable the ``ensurepip`` module in Python 3.4. However, since Python 2.7 "
-"has no such module it is explicitly allowed for downstream distributors to "
-"patch the ``ensurepip`` module to prevent it from installing anything."
+"disable the ``ensurepip`` module in Python 3.4. However, since Python 2.7"
+" has no such module it is explicitly allowed for downstream distributors "
+"to patch the ``ensurepip`` module to prevent it from installing anything."
 msgstr ""
 
-#: ../pep-0477.txt:106
+#: ../../peps/pep-0477.rst:106
 msgid ""
-"If a downstream distributor wishes to disable ``ensurepip`` completely in "
-"Python 2.7, they should still at least provide the module and allow `python -"
-"m ensurepip` style invocation. However it should raise errors or otherwise "
-"exit with a non-zero exit code and print out an error on stderr directing "
-"users to what they can/should use instead of ``ensurepip``."
+"If a downstream distributor wishes to disable ``ensurepip`` completely in"
+" Python 2.7, they should still at least provide the module and allow "
+"``python -m ensurepip`` style invocation. However it should raise errors "
+"or otherwise exit with a non-zero exit code and print out an error on "
+"stderr directing users to what they can/should use instead of "
+"``ensurepip``."
 msgstr ""
 
-#: ../pep-0477.txt:114
+#: ../../peps/pep-0477.rst:114
 msgid "References"
 msgstr "Referências"
 
-#: ../pep-0477.txt:116
+#: ../../peps/pep-0477.rst:116
 msgid "`six.py <https://pypi.python.org/pypi/six>`__"
 msgstr ""
 
-#: ../pep-0477.txt:117
+#: ../../peps/pep-0477.rst:117
 msgid "`modernize <https://pypi.python.org/pypi/modernize>`__"
 msgstr ""
 
-#: ../pep-0477.txt:118
+#: ../../peps/pep-0477.rst:118
 msgid "`python-future <https://pypi.python.org/pypi/future>`__"
 msgstr ""
 
-#: ../pep-0477.txt:119
+#: ../../peps/pep-0477.rst:119
 msgid "`setuptools <https://pypi.python.org/pypi/setuptools>`__"
 msgstr ""
 
-#: ../pep-0477.txt:120
+#: ../../peps/pep-0477.rst:120
 msgid "`Wheel <https://pypi.python.org/pypi/wheel>`__"
 msgstr ""
 
-#: ../pep-0477.txt:121
+#: ../../peps/pep-0477.rst:121
 msgid "`twine <https://pypi.python.org/pypi/twine>`__"
 msgstr ""
 
-#: ../pep-0477.txt:125
+#: ../../peps/pep-0477.rst:125
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../pep-0477.txt:127
+#: ../../peps/pep-0477.rst:127
 msgid "This document has been placed in the public domain."
 msgstr "Este documento foi colocado em domínio público."
+
+#~ msgid "Donald Stufft <donald@stufft.io>, Nick Coghlan <ncoghlan@gmail.com>"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If a downstream distributor wishes to"
+#~ " disable ``ensurepip`` completely in Python"
+#~ " 2.7, they should still at least "
+#~ "provide the module and allow `python "
+#~ "-m ensurepip` style invocation. However "
+#~ "it should raise errors or otherwise "
+#~ "exit with a non-zero exit code "
+#~ "and print out an error on stderr"
+#~ " directing users to what they "
+#~ "can/should use instead of ``ensurepip``."
+#~ msgstr ""
+

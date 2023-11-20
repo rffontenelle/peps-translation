@@ -1,0 +1,372 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the PEPs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PEPs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-20 10:43-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pt_BR\n"
+"Language-Team: pt_BR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.13.1\n"
+
+#: ../../peps/pep-0715.rst
+msgid "Author"
+msgstr ""
+
+#: ../../peps/pep-0715.rst:3
+msgid "William Woodruff <william@yossarian.net>"
+msgstr ""
+
+#: ../../peps/pep-0715.rst
+msgid "Sponsor"
+msgstr ""
+
+#: ../../peps/pep-0715.rst:4 ../../peps/pep-0715.rst:5
+msgid "Donald Stufft <donald@stufft.io>"
+msgstr ""
+
+#: ../../peps/pep-0715.rst
+msgid "PEP-Delegate"
+msgstr ""
+
+#: ../../peps/pep-0715.rst
+msgid "Discussions-To"
+msgstr ""
+
+#: ../../peps/pep-0715.rst:6
+msgid "https://discuss.python.org/t/27610"
+msgstr ""
+
+#: ../../peps/pep-0715.rst
+msgid "Status"
+msgstr ""
+
+#: ../../peps/pep-0715.rst:7
+msgid "Final"
+msgstr ""
+
+#: ../../peps/pep-0715.rst
+msgid "Type"
+msgstr ""
+
+#: ../../peps/pep-0715.rst:8
+msgid "Standards Track"
+msgstr ""
+
+#: ../../peps/pep-0715.rst
+msgid "Topic"
+msgstr ""
+
+#: ../../peps/pep-0715.rst:9
+msgid "Packaging"
+msgstr ""
+
+#: ../../peps/pep-0715.rst
+msgid "Created"
+msgstr ""
+
+#: ../../peps/pep-0715.rst:11
+msgid "06-Jun-2023"
+msgstr ""
+
+#: ../../peps/pep-0715.rst
+msgid "Post-History"
+msgstr ""
+
+#: ../../peps/pep-0715.rst:12
+msgid "`09-Jun-2023 <https://discuss.python.org/t/27610>`__"
+msgstr ""
+
+#: ../../peps/pep-0715.rst
+msgid "Resolution"
+msgstr ""
+
+#: ../../peps/pep-0715.rst:13
+msgid ""
+"https://discuss.python.org/t/pep-715-disabling-bdist-egg-distribution-"
+"uploads-on-pypi/27610/13"
+msgstr ""
+
+#: ../../peps/pep-0715.rst:16
+msgid "Abstract"
+msgstr ""
+
+#: ../../peps/pep-0715.rst:18
+msgid ""
+"This PEP recommends deprecating and then disabling new uploads of the "
+"``bdist_egg`` distribution type on PyPI. In a parallel move, this PEP "
+"recommends deprecating and then disabling new uploads of distribution "
+"filenames that have the ``.egg`` suffix."
+msgstr ""
+
+#: ../../peps/pep-0715.rst:23
+msgid ""
+"After this PEP, PyPI will only accept new uploads of the ``sdist`` and "
+"``bdist_wheel`` types, corresponding to files with ``.tar.gz``/``.zip`` "
+"and ``.whl`` suffixes respectively."
+msgstr ""
+
+#: ../../peps/pep-0715.rst:27
+msgid ""
+"This PEP does not recommend removing or otherwise affecting any "
+"previously uploaded ``bdist_egg`` distributions or files with the "
+"``.egg`` suffix."
+msgstr ""
+
+#: ../../peps/pep-0715.rst:31
+msgid "Rationale"
+msgstr ""
+
+#: ../../peps/pep-0715.rst:34
+msgid "Previous Work"
+msgstr ""
+
+#: ../../peps/pep-0715.rst:36
+msgid ""
+"The groundwork for this proposal was established with :pep:`527`, which "
+"proposed deprecating and eventually removing upload support for a handful"
+" of un(der)used file extensions and distribution types."
+msgstr ""
+
+#: ../../peps/pep-0715.rst:40
+msgid ""
+"In particular, :pep:`527` proposed the removal of the ``bdist_dumb``, "
+"``bdist_rpm``, ``bdist_dmg``, ``bdist_msi``, and ``bdist_wininst`` "
+"distribution types, as well as the ``.tar``, ``.tar.bz2``, ``.tar.xz``, "
+"``.tar.Z``, ``.tgz``, and ``.tbz`` file extensions on distribution "
+"filenames."
+msgstr ""
+
+#: ../../peps/pep-0715.rst:45
+msgid ""
+":pep:`527` was fully enacted with `PR #7529 "
+"<https://github.com/pypi/warehouse/pull/7529>`_ to Warehouse, which was "
+"merged on 13 April 2020."
+msgstr ""
+
+#: ../../peps/pep-0715.rst:50
+msgid "The ``bdist_egg`` format"
+msgstr ""
+
+#: ../../peps/pep-0715.rst:52
+msgid ""
+"The ``bdist_egg`` filetype identifies distributions in the :term:`egg "
+"format <packaging:Egg>`. The egg format was introduced by setuptools in "
+"2004 and is roughly equivalent in functionality to the :term:`wheel "
+"format <packaging:Wheel>` first introduced by :pep:`427` in 2012 as "
+":ref:`the standardized format <packaging:binary-distribution-format>` for"
+" :term:`built distributions <packaging:Built Distribution>`."
+msgstr ""
+
+#: ../../peps/pep-0715.rst:61
+msgid ""
+"Despite its longevity, the egg format has had `limited adoption on PyPI "
+"<https://github.com/pypi/warehouse/issues/10653>`_. Some observations "
+"from that issue:"
+msgstr ""
+
+#: ../../peps/pep-0715.rst:65
+#, python-format
+msgid ""
+"In the month of May 2023, ``bdist_egg`` uploads accounted for 0.2% of all"
+" distribution uploads to PyPI;"
+msgstr ""
+
+#: ../../peps/pep-0715.rst:67
+msgid "``pip`` deprecated its ``--egg`` option in 2016;"
+msgstr ""
+
+#: ../../peps/pep-0715.rst:68
+msgid "``setuptools`` has considered egg support deprecated since 2019;"
+msgstr ""
+
+#: ../../peps/pep-0715.rst:69
+msgid "``build`` only supports the ``sdist`` and ``bdist_wheel`` filetypes."
+msgstr ""
+
+#: ../../peps/pep-0715.rst:71
+msgid ""
+"Given the above, this PEP proposes the removal of the ``bdist_egg`` "
+"format under the same justifications presented in :pep:`527`, namely:"
+msgstr ""
+
+#: ../../peps/pep-0715.rst:74
+msgid ""
+"Egg distributions are of limited use to the broader ecosystem and "
+"therefore represent a non-reciprocal maintenance burden;"
+msgstr ""
+
+#: ../../peps/pep-0715.rst:76
+msgid ""
+"Having an additional built distribution format is confusing to end users,"
+" who may mistakenly pick it over the wheel format;"
+msgstr ""
+
+#: ../../peps/pep-0715.rst:80
+msgid ""
+"This PEP *additionally* offers an argument for removal rooted in "
+"standardization and duplication: the egg format is not standardized by "
+"any PEP or other community standard, and overlaps heavily with its "
+"standardized and well-supported alternative (wheel)."
+msgstr ""
+
+#: ../../peps/pep-0715.rst:86
+msgid "The ``.egg`` file extension"
+msgstr ""
+
+#: ../../peps/pep-0715.rst:88
+msgid ""
+"The ``.egg`` file extension is used exclusively for distributions of the "
+"``bdist_egg`` format. As such, it serves no purpose in a scenario where "
+"PyPI disables new distribution uploads for ``bdist_egg`` distributions."
+msgstr ""
+
+#: ../../peps/pep-0715.rst:93
+msgid "Removal Process"
+msgstr ""
+
+#: ../../peps/pep-0715.rst:95
+msgid ""
+"This PEP does **NOT** propose removing any existing files from PyPI, only"
+" disallowing new ones from being uploaded."
+msgstr ""
+
+#: ../../peps/pep-0715.rst:98
+msgid ""
+"PyPI will provide a deprecation period of one month. At the beginning of "
+"the deprecation period, maintainers of projects that have uploaded one or"
+" more egg distributions since 1 Jan 2023 will receive a one-time email "
+"informing them of the upcoming end of support for egg distribution "
+"uploads."
+msgstr ""
+
+#: ../../peps/pep-0715.rst:103
+msgid ""
+"During the deprecation period, users will continue to be allowed to "
+"upload egg distributions to new and existing projects. Uploading an egg "
+"distribution during this period will also send all maintainers of the "
+"project a similar email as above, reminding them of the upcoming end of "
+"support."
+msgstr ""
+
+#: ../../peps/pep-0715.rst:108
+msgid ""
+"After the deprecation period, support for uploading egg distributions "
+"will cease to exist on PyPI."
+msgstr ""
+
+#: ../../peps/pep-0715.rst:112
+msgid "Prior Art"
+msgstr ""
+
+#: ../../peps/pep-0715.rst:114
+msgid ""
+"The removal process above was based on that of :pep:`527`, with the "
+"following changes:"
+msgstr ""
+
+#: ../../peps/pep-0715.rst:117
+msgid ""
+"All projects will be continue to be allowed to upload eggs during the "
+"deprecation period, not just those that have done so previously."
+msgstr ""
+
+#: ../../peps/pep-0715.rst:119
+msgid ""
+"Uploading an egg during the deprecation period will also trigger an email"
+" to maintainers, in addition to the one-time email at the beginning."
+msgstr ""
+
+#: ../../peps/pep-0715.rst:123
+msgid "Backwards Compatibility"
+msgstr ""
+
+#: ../../peps/pep-0715.rst:126
+msgid "Limited Impact"
+msgstr ""
+
+#: ../../peps/pep-0715.rst:128
+msgid ""
+"As noted in the rationale section, this PEP is expected to have no impact"
+" on the overwhelming majority of PyPI users and projects, and there has "
+"been `substantial community coordination "
+"<https://github.com/pypi/warehouse/issues/10653>`_ over the past 1 1/2 "
+"years to minimize the impact on the few last use cases."
+msgstr ""
+
+#: ../../peps/pep-0715.rst:134
+msgid "Hosted Files"
+msgstr ""
+
+#: ../../peps/pep-0715.rst:136
+msgid ""
+"This PEP does **NOT** propose the removal of any egg distributions that "
+"have already been uploaded to PyPI. All previously uploaded egg "
+"distributions will remain downloadable, ensuring that existing users will"
+" continue to be able to download them."
+msgstr ""
+
+#: ../../peps/pep-0715.rst:142
+msgid "Deprecation Period"
+msgstr ""
+
+#: ../../peps/pep-0715.rst:144
+msgid ""
+"This PEP uses the removal process documented above, which specifies a "
+"deprecation period of 1 month for projects that have previously uploaded "
+"egg distributions to PyPI."
+msgstr ""
+
+#: ../../peps/pep-0715.rst:148
+msgid ""
+"After the end of the deprecation period, support for uploading new egg "
+"distributions will cease to exist on PyPI."
+msgstr ""
+
+#: ../../peps/pep-0715.rst:152
+msgid "Security Implications"
+msgstr ""
+
+#: ../../peps/pep-0715.rst:154
+msgid ""
+"This PEP does not identify any positive or negative security implications"
+" associated with removing upload support for egg distributions."
+msgstr ""
+
+#: ../../peps/pep-0715.rst:158
+msgid "How To Teach This"
+msgstr ""
+
+#: ../../peps/pep-0715.rst:160
+msgid ""
+"As part of the removal process, PyPI will send emails to all maintainers "
+"of projects that have previously uploaded egg distributions in 2023."
+msgstr ""
+
+#: ../../peps/pep-0715.rst:163
+msgid ""
+"Additionally, PyPI will write a post on the `PyPI blog "
+"<https://blog.pypi.org/>`_ that publicly announces the deprecation "
+"period's start and end."
+msgstr ""
+
+#: ../../peps/pep-0715.rst:168
+msgid "Copyright"
+msgstr ""
+
+#: ../../peps/pep-0715.rst:170
+msgid ""
+"This document is placed in the public domain or under the "
+"CC0-1.0-Universal license, whichever is more permissive."
+msgstr ""
+

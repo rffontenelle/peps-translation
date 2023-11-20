@@ -1,0 +1,481 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the PEPs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PEPs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-20 10:43-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pt_BR\n"
+"Language-Team: pt_BR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.13.1\n"
+
+#: ../../peps/pep-0724.rst
+msgid "Author"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:3
+msgid ""
+"Rich Chiodo <rchiodo at microsoft.com>, Eric Traut <erictr at "
+"microsoft.com>, Erik De Bonte <erikd at microsoft.com>,"
+msgstr ""
+
+#: ../../peps/pep-0724.rst
+msgid "Sponsor"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:6
+msgid "Jelle Zijlstra <jelle.zijlstra@gmail.com>"
+msgstr ""
+
+#: ../../peps/pep-0724.rst
+msgid "Discussions-To"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:7
+msgid "https://discuss.python.org/t/pep-724-stricter-type-guards/34124"
+msgstr ""
+
+#: ../../peps/pep-0724.rst
+msgid "Status"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:8
+msgid "Draft"
+msgstr ""
+
+#: ../../peps/pep-0724.rst
+msgid "Type"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:9
+msgid "Standards Track"
+msgstr ""
+
+#: ../../peps/pep-0724.rst
+msgid "Topic"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:10
+msgid "Typing"
+msgstr ""
+
+#: ../../peps/pep-0724.rst
+msgid "Created"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:12
+msgid "28-Jul-2023"
+msgstr ""
+
+#: ../../peps/pep-0724.rst
+msgid "Python-Version"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:13
+msgid "3.13"
+msgstr ""
+
+#: ../../peps/pep-0724.rst
+msgid "Post-History"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:14
+msgid ""
+"`30-Dec-2021 <https://mail.python.org/archives/list/typing-"
+"sig@python.org/thread/EMUD2D424OI53DCWQ4H5L6SJD2IXBHUL/>`__, `19-Sep-2023"
+" <https://discuss.python.org/t/pep-724-stricter-type-guards/34124>`__,"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:18
+msgid "Abstract"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:20
+msgid ""
+":pep:`647` introduced the concept of a user-defined type guard function "
+"which returns ``True`` if the type of the expression passed to its first "
+"parameter matches its return ``TypeGuard`` type. For example, a function "
+"that has a return type of ``TypeGuard[str]`` is assumed to return "
+"``True`` if and only if the type of the expression passed to its first "
+"input parameter is a ``str``. This allows type checkers to narrow types "
+"when a user-defined type guard function returns ``True``."
+msgstr ""
+
+#: ../../peps/pep-0724.rst:28
+msgid ""
+"This PEP refines the ``TypeGuard`` mechanism introduced in :pep:`647`. It"
+" allows type checkers to narrow types when a user-defined type guard "
+"function returns ``False``. It also allows type checkers to apply "
+"additional (more precise) type narrowing under certain circumstances when"
+" the type guard function returns ``True``."
+msgstr ""
+
+#: ../../peps/pep-0724.rst:36
+msgid "Motivation"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:38
+msgid ""
+"User-defined type guard functions enable a type checker to narrow the "
+"type of an expression when it is passed as an argument to the type guard "
+"function. The ``TypeGuard`` mechanism introduced in :pep:`647` is "
+"flexible, but this flexibility imposes some limitations that developers "
+"have found inconvenient for some uses."
+msgstr ""
+
+#: ../../peps/pep-0724.rst:44
+msgid ""
+"Limitation 1: Type checkers are not allowed to narrow a type in the case "
+"where the type guard function returns ``False``. This means the type is "
+"not narrowed in the negative (\"else\") clause."
+msgstr ""
+
+#: ../../peps/pep-0724.rst:48
+msgid ""
+"Limitation 2: Type checkers must use the ``TypeGuard`` return type if the"
+" type guard function returns ``True`` regardless of whether additional "
+"narrowing can be applied based on knowledge of the pre-narrowed type."
+msgstr ""
+
+#: ../../peps/pep-0724.rst:52
+msgid "The following code sample demonstrates both of these limitations."
+msgstr ""
+
+#: ../../peps/pep-0724.rst:82
+msgid ""
+":pep:`647` imposed these limitations so it could support use cases where "
+"the return ``TypeGuard`` type was not a subtype of the input type. Refer "
+"to :pep:`647` for examples."
+msgstr ""
+
+#: ../../peps/pep-0724.rst:87
+msgid "Rationale"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:89
+msgid ""
+"There are a number of issues where a stricter ``TypeGuard`` would have "
+"been a solution:"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:92
+msgid ""
+"`Python typing issue - TypeGuard doesn't intersect like isinstance "
+"<https://github.com/python/typing/issues/1351>`__"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:93
+msgid ""
+"`Pyright issue - TypeGuard not eliminating possibility on branch "
+"<https://github.com/microsoft/pyright/issues/3450>`__"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:94
+msgid ""
+"`Pyright issue - Type narrowing for Literal doesn't work "
+"<https://github.com/microsoft/pyright/issues/3466>`__"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:95
+msgid ""
+"`Mypy issue - TypeGuard is incompatible with exhaustive check "
+"<https://github.com/python/mypy/issues/15305>`__"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:96
+msgid ""
+"`Mypy issue - Incorrect type narrowing for inspect.isawaitable "
+"<https://github.com/python/mypy/issues/15520>`__"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:97
+msgid ""
+"`Typeshed issue - asyncio.iscoroutinefunction is not a TypeGuard "
+"<https://github.com/python/typeshed/issues/8009>`__"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:101
+msgid "Specification"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:103
+msgid "The use of a user-defined type guard function involves five types:"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:105
+msgid "I = ``TypeGuard`` input type"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:106
+msgid "R = ``TypeGuard`` return type"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:107
+msgid "A = Type of argument passed to type guard function (pre-narrowed)"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:108
+msgid "NP = Narrowed type (positive)"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:109
+msgid "NN = Narrowed type (negative)"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:122
+msgid ""
+"This PEP proposes some modifications to :pep:`647` to address the "
+"limitations discussed above. These limitations are safe to eliminate only"
+" when a specific condition is met. In particular, when the output type "
+"``R`` of a user-defined type guard function is consistent "
+"[#isconsistent]_ with the type of its first input parameter (``I``), type"
+" checkers should apply stricter type guard semantics."
+msgstr ""
+
+#: ../../peps/pep-0724.rst:141
+msgid ""
+"When stricter type guard semantics are applied, the application of a "
+"user-defined type guard function changes in two ways."
+msgstr ""
+
+#: ../../peps/pep-0724.rst:144
+msgid "Type narrowing is applied in the negative (\"else\") case."
+msgstr ""
+
+#: ../../peps/pep-0724.rst:155
+msgid ""
+"Additional type narrowing is applied in the positive \"if\" case if "
+"applicable."
+msgstr ""
+
+#: ../../peps/pep-0724.rst:169
+msgid ""
+"The type-theoretic rules for type narrowing are specificed in the "
+"following table."
+msgstr ""
+
+#: ../../peps/pep-0724.rst:173
+msgid "\\"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:173
+msgid "Non-strict type guard"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:173
+msgid "Strict type guard"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:175
+msgid "Applies when"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:175
+msgid "R not consistent with I"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:175
+msgid "R consistent with I"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:176
+msgid "NP is .."
+msgstr ""
+
+#: ../../peps/pep-0724.rst:176
+msgid ":math:`R`"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:176
+msgid ":math:`A \\land R`"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:177
+msgid "NN is .."
+msgstr ""
+
+#: ../../peps/pep-0724.rst:177
+msgid ":math:`A`"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:177
+msgid ":math:`A \\land \\neg{R}`"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:180
+msgid ""
+"In practice, the theoretic types for strict type guards cannot be "
+"expressed precisely in the Python type system. Type checkers should fall "
+"back on practical approximations of these types. As a rule of thumb, a "
+"type checker should use the same type narrowing logic -- and get results "
+"that are consistent with -- its handling of \"isinstance\". This guidance"
+" allows for changes and improvements if the type system is extended in "
+"the future."
+msgstr ""
+
+#: ../../peps/pep-0724.rst:189
+msgid "Additional Examples"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:191
+msgid ""
+"``Any`` is consistent [#isconsistent]_ with any other type, which means "
+"stricter semantics can be applied."
+msgstr ""
+
+#: ../../peps/pep-0724.rst:209
+msgid "Backwards Compatibility"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:211
+msgid ""
+"This PEP proposes to change the existing behavior of ``TypeGuard``. This "
+"has no effect at runtime, but it does change the types evaluated by a "
+"type checker."
+msgstr ""
+
+#: ../../peps/pep-0724.rst:226
+msgid ""
+"This behavioral change results in different types evaluated by a type "
+"checker. It could therefore produce new (or mask existing) type errors."
+msgstr ""
+
+#: ../../peps/pep-0724.rst:229
+msgid ""
+"Type checkers often improve narrowing logic or fix existing bugs in such "
+"logic, so users of static typing will be used to this type of behavioral "
+"change."
+msgstr ""
+
+#: ../../peps/pep-0724.rst:232
+msgid ""
+"We also hypothesize that it is unlikely that existing typed Python code "
+"relies on the current behavior of ``TypeGuard``. To validate our "
+"hypothesis, we implemented the proposed change in pyright and ran this "
+"modified version on roughly 25 typed code bases using `mypy primer`__  to"
+" see if there were any differences in the output. As predicted, the "
+"behavioral change had minimal impact. The only noteworthy change was that"
+" some ``# type: ignore`` comments were no longer necessary, indicating "
+"that these code bases were already working around the existing "
+"limitations of ``TypeGuard``."
+msgstr ""
+
+#: ../../peps/pep-0724.rst:244
+msgid "Breaking change"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:246
+msgid ""
+"It is possible for a user-defined type guard function to rely on the old "
+"behavior. Such type guard functions could break with the new behavior."
+msgstr ""
+
+#: ../../peps/pep-0724.rst:263
+msgid ""
+"We think it is unlikley that such user-defined type guards exist in real-"
+"world code. The mypy primer results didn't uncover any such cases."
+msgstr ""
+
+#: ../../peps/pep-0724.rst:268
+msgid "How to Teach This"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:270
+msgid ""
+"Users unfamiliar with ``TypeGuard`` are likely to expect the behavior "
+"outlined in this PEP, therefore making ``TypeGuard`` easier to teach and "
+"explain."
+msgstr ""
+
+#: ../../peps/pep-0724.rst:275
+msgid "Reference Implementation"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:277
+msgid "A reference `implementation`__ of this idea exists in pyright."
+msgstr ""
+
+#: ../../peps/pep-0724.rst:281
+msgid ""
+"To enable the modified behavior, the configuration flag "
+"``enableExperimentalFeatures`` must be set to true. This can be done on a"
+" per-file basis by adding a comment:"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:291
+msgid "Rejected Ideas"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:294
+msgid "StrictTypeGuard"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:296
+msgid ""
+"A new ``StrictTypeGuard`` construct was proposed. This alternative form "
+"would be similar to a ``TypeGuard`` except it would apply stricter type "
+"guard semantics. It would also enforce that the return type was "
+"consistent [#isconsistent]_ with the input type. See this thread for "
+"details: `StrictTypeGuard proposal`__"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:304
+msgid ""
+"This idea was rejected because it is unnecessary in most cases and added "
+"unnecessary complexity. It would require the introduction of a new "
+"special form, and developers would need to be educated about the subtle "
+"difference between the two forms."
+msgstr ""
+
+#: ../../peps/pep-0724.rst:310
+msgid "TypeGuard with a second output type"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:312
+msgid ""
+"Another idea was proposed where ``TypeGuard`` could support a second "
+"optional type argument that indicates the type that should be used for "
+"narrowing in the negative (\"else\") case."
+msgstr ""
+
+#: ../../peps/pep-0724.rst:322
+msgid "This idea was proposed `here`__."
+msgstr ""
+
+#: ../../peps/pep-0724.rst:326
+msgid ""
+"It was rejected because it was considered too complicated and addressed "
+"only one of the two main limitations of ``TypeGuard``. Refer to this "
+"`thread`__ for the full discussion."
+msgstr ""
+
+#: ../../peps/pep-0724.rst:334
+msgid "Footnotes"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:336
+msgid ""
+":pep:`PEP 483's discussion of is-consistent <483#summary-of-gradual-"
+"typing>`"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:340
+msgid "Copyright"
+msgstr ""
+
+#: ../../peps/pep-0724.rst:342
+msgid ""
+"This document is placed in the public domain or under the "
+"CC0-1.0-Universal license, whichever is more permissive."
+msgstr ""
+

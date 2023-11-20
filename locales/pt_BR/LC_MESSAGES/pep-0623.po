@@ -6,383 +6,392 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PEPs\n"
+"Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 20:07+0000\n"
+"POT-Creation-Date: 2023-11-20 10:43-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.13.1\n"
 
-#: ../pep-0623.rst
+#: ../../peps/pep-0623.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../pep-0623.rst:3
+#: ../../peps/pep-0623.rst:3
 msgid "Inada Naoki <songofacandy@gmail.com>"
 msgstr ""
 
-#: ../pep-0623.rst
+#: ../../peps/pep-0623.rst
 msgid "BDFL-Delegate"
 msgstr ""
 
-#: ../pep-0623.rst:4
+#: ../../peps/pep-0623.rst:4
 msgid "Victor Stinner <vstinner@python.org>"
 msgstr ""
 
-#: ../pep-0623.rst
+#: ../../peps/pep-0623.rst
 msgid "Discussions-To"
 msgstr ""
 
-#: ../pep-0623.rst:5
+#: ../../peps/pep-0623.rst:5
 msgid ""
-"https://mail.python.org/archives/list/python-dev@python.org/thread/"
-"BO2TQHSXWL2RJMINWQQRBF5LANDDJNHH/"
+"https://mail.python.org/archives/list/python-"
+"dev@python.org/thread/BO2TQHSXWL2RJMINWQQRBF5LANDDJNHH/"
 msgstr ""
 
-#: ../pep-0623.rst
+#: ../../peps/pep-0623.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../pep-0623.rst:6
+#: ../../peps/pep-0623.rst:6
 msgid "Final"
 msgstr ""
 
-#: ../pep-0623.rst
+#: ../../peps/pep-0623.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../pep-0623.rst:7
+#: ../../peps/pep-0623.rst:7
 msgid "Standards Track"
 msgstr ""
 
-#: ../pep-0623.rst
+#: ../../peps/pep-0623.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../pep-0623.rst:9
+#: ../../peps/pep-0623.rst:9
 msgid "25-Jun-2020"
 msgstr ""
 
-#: ../pep-0623.rst
+#: ../../peps/pep-0623.rst
 msgid "Python-Version"
 msgstr ""
 
-#: ../pep-0623.rst:10
+#: ../../peps/pep-0623.rst:10
 msgid "3.10"
 msgstr ""
 
-#: ../pep-0623.rst
+#: ../../peps/pep-0623.rst
 msgid "Resolution"
 msgstr ""
 
-#: ../pep-0623.rst:11
+#: ../../peps/pep-0623.rst:11
 msgid ""
-"https://mail.python.org/archives/list/python-dev@python.org/thread/"
-"VQKDIZLZ6HF2MLTNCUFURK2IFTXVQEYA/#VQKDIZLZ6HF2MLTNCUFURK2IFTXVQEYA"
+"https://mail.python.org/archives/list/python-"
+"dev@python.org/thread/VQKDIZLZ6HF2MLTNCUFURK2IFTXVQEYA/"
 msgstr ""
 
-#: ../pep-0623.rst:15
+#: ../../peps/pep-0623.rst:15
 msgid "Abstract"
 msgstr ""
 
-#: ../pep-0623.rst:17
+#: ../../peps/pep-0623.rst:17
 msgid ""
-":pep:`393` deprecated some unicode APIs, and introduced ``wchar_t *wstr``, "
-"and ``Py_ssize_t wstr_length`` in the Unicode structure to support these "
-"deprecated APIs."
+":pep:`393` deprecated some unicode APIs, and introduced ``wchar_t "
+"*wstr``, and ``Py_ssize_t wstr_length`` in the Unicode structure to "
+"support these deprecated APIs."
 msgstr ""
 
-#: ../pep-0623.rst:21
+#: ../../peps/pep-0623.rst:21
 msgid ""
 "This PEP is planning removal of ``wstr``, and ``wstr_length`` with "
 "deprecated APIs using these members by Python 3.12."
 msgstr ""
 
-#: ../pep-0623.rst:24
+#: ../../peps/pep-0623.rst:24
 msgid ""
-"Deprecated APIs which doesn't use the members are out of scope because they "
-"can be removed independently."
+"Deprecated APIs which doesn't use the members are out of scope because "
+"they can be removed independently."
 msgstr ""
 
-#: ../pep-0623.rst:29
+#: ../../peps/pep-0623.rst:29
 msgid "Motivation"
 msgstr ""
 
-#: ../pep-0623.rst:32
+#: ../../peps/pep-0623.rst:32
 msgid "Memory usage"
 msgstr ""
 
-#: ../pep-0623.rst:34
+#: ../../peps/pep-0623.rst:34
 msgid ""
 "``str`` is one of the most used types in Python. Even most simple ASCII "
 "strings have a ``wstr`` member. It consumes 8 bytes per string on 64-bit "
 "systems."
 msgstr ""
 
-#: ../pep-0623.rst:40
+#: ../../peps/pep-0623.rst:40
 msgid "Runtime overhead"
 msgstr ""
 
-#: ../pep-0623.rst:42
+#: ../../peps/pep-0623.rst:42
 msgid ""
 "To support legacy Unicode object, many Unicode APIs must call "
 "``PyUnicode_READY()``."
 msgstr ""
 
-#: ../pep-0623.rst:45
+#: ../../peps/pep-0623.rst:45
 msgid ""
-"We can remove this overhead too by dropping support of legacy Unicode object."
+"We can remove this overhead too by dropping support of legacy Unicode "
+"object."
 msgstr ""
 
-#: ../pep-0623.rst:50
+#: ../../peps/pep-0623.rst:50
 msgid "Simplicity"
 msgstr ""
 
-#: ../pep-0623.rst:52
+#: ../../peps/pep-0623.rst:52
 msgid ""
 "Supporting legacy Unicode object makes the Unicode implementation more "
-"complex. Until we drop legacy Unicode object, it is very hard to try other "
-"Unicode implementation like UTF-8 based implementation in PyPy."
+"complex. Until we drop legacy Unicode object, it is very hard to try "
+"other Unicode implementation like UTF-8 based implementation in PyPy."
 msgstr ""
 
-#: ../pep-0623.rst:59
+#: ../../peps/pep-0623.rst:59
 msgid "Rationale"
 msgstr ""
 
-#: ../pep-0623.rst:62
+#: ../../peps/pep-0623.rst:62
 msgid "Python 4.0 is not scheduled yet"
 msgstr ""
 
-#: ../pep-0623.rst:64
+#: ../../peps/pep-0623.rst:64
 msgid ""
 ":pep:`393` introduced efficient internal representation of Unicode and "
 "removed border between \"narrow\" and \"wide\" build of Python."
 msgstr ""
 
-#: ../pep-0623.rst:67
+#: ../../peps/pep-0623.rst:67
 msgid ""
-":pep:`393` was implemented in Python 3.3 which is released in 2012. Old APIs "
-"were deprecated since then, and the removal was scheduled in Python 4.0."
+":pep:`393` was implemented in Python 3.3 which is released in 2012. Old "
+"APIs were deprecated since then, and the removal was scheduled in Python "
+"4.0."
 msgstr ""
 
-#: ../pep-0623.rst:71
+#: ../../peps/pep-0623.rst:71
 msgid ""
-"Python 4.0 was expected as next version of Python 3.9 when :pep:`393` was "
-"accepted. But the next version of Python 3.9 is Python 3.10, not 4.0. This "
-"is why this PEP schedule the removal plan again."
+"Python 4.0 was expected as next version of Python 3.9 when :pep:`393` was"
+" accepted. But the next version of Python 3.9 is Python 3.10, not 4.0. "
+"This is why this PEP schedule the removal plan again."
 msgstr ""
 
-#: ../pep-0623.rst:77
+#: ../../peps/pep-0623.rst:77
 msgid "Python 2 reached EOL"
 msgstr ""
 
-#: ../pep-0623.rst:79
+#: ../../peps/pep-0623.rst:79
 msgid ""
-"Since Python 2 didn't have :pep:`393` Unicode implementation, legacy APIs "
-"might help C extension modules supporting both of Python 2 and 3."
+"Since Python 2 didn't have :pep:`393` Unicode implementation, legacy APIs"
+" might help C extension modules supporting both of Python 2 and 3."
 msgstr ""
 
-#: ../pep-0623.rst:82
+#: ../../peps/pep-0623.rst:82
 msgid ""
 "But Python 2 reached the EOL in 2020. We can remove legacy APIs kept for "
 "compatibility with Python 2."
 msgstr ""
 
-#: ../pep-0623.rst:87
+#: ../../peps/pep-0623.rst:87
 msgid "Plan"
 msgstr ""
 
-#: ../pep-0623.rst:90
+#: ../../peps/pep-0623.rst:90
 msgid "Python 3.9"
 msgstr ""
 
-#: ../pep-0623.rst:92
+#: ../../peps/pep-0623.rst:92
 msgid ""
-"These macros and functions are marked as deprecated, using ``Py_DEPRECATED`` "
-"macro."
+"These macros and functions are marked as deprecated, using "
+"``Py_DEPRECATED`` macro."
 msgstr ""
 
-#: ../pep-0623.rst:95 ../pep-0623.rst:142
+#: ../../peps/pep-0623.rst:95 ../../peps/pep-0623.rst:142
 msgid "``Py_UNICODE_WSTR_LENGTH()``"
 msgstr ""
 
-#: ../pep-0623.rst:96 ../pep-0623.rst:143
+#: ../../peps/pep-0623.rst:96 ../../peps/pep-0623.rst:143
 msgid "``PyUnicode_GET_SIZE()``"
 msgstr ""
 
-#: ../pep-0623.rst:97 ../pep-0623.rst:144
+#: ../../peps/pep-0623.rst:97 ../../peps/pep-0623.rst:144
 msgid "``PyUnicode_GetSize()``"
 msgstr ""
 
-#: ../pep-0623.rst:98 ../pep-0623.rst:145
+#: ../../peps/pep-0623.rst:98 ../../peps/pep-0623.rst:145
 msgid "``PyUnicode_GET_DATA_SIZE()``"
 msgstr ""
 
-#: ../pep-0623.rst:99 ../pep-0623.rst:146
+#: ../../peps/pep-0623.rst:99 ../../peps/pep-0623.rst:146
 msgid "``PyUnicode_AS_UNICODE()``"
 msgstr ""
 
-#: ../pep-0623.rst:100 ../pep-0623.rst:147
+#: ../../peps/pep-0623.rst:100 ../../peps/pep-0623.rst:147
 msgid "``PyUnicode_AS_DATA()``"
 msgstr ""
 
-#: ../pep-0623.rst:101 ../pep-0623.rst:148
+#: ../../peps/pep-0623.rst:101 ../../peps/pep-0623.rst:148
 msgid "``PyUnicode_AsUnicode()``"
 msgstr ""
 
-#: ../pep-0623.rst:102 ../pep-0623.rst:149
+#: ../../peps/pep-0623.rst:102 ../../peps/pep-0623.rst:149
 msgid "``_PyUnicode_AsUnicode()``"
 msgstr ""
 
-#: ../pep-0623.rst:103 ../pep-0623.rst:150
+#: ../../peps/pep-0623.rst:103 ../../peps/pep-0623.rst:150
 msgid "``PyUnicode_AsUnicodeAndSize()``"
 msgstr ""
 
-#: ../pep-0623.rst:104 ../pep-0623.rst:151
+#: ../../peps/pep-0623.rst:104 ../../peps/pep-0623.rst:151
 msgid "``PyUnicode_FromUnicode()``"
 msgstr ""
 
-#: ../pep-0623.rst:108
+#: ../../peps/pep-0623.rst:108
 msgid "Python 3.10"
 msgstr ""
 
-#: ../pep-0623.rst:110
+#: ../../peps/pep-0623.rst:110
 msgid ""
 "Following macros, enum members are marked as deprecated. "
-"``Py_DEPRECATED(3.10)`` macro are used as possible. But they are deprecated "
-"only in comment and document if the macro can not be used easily."
+"``Py_DEPRECATED(3.10)`` macro are used as possible. But they are "
+"deprecated only in comment and document if the macro can not be used "
+"easily."
 msgstr ""
 
-#: ../pep-0623.rst:115 ../pep-0623.rst:152
+#: ../../peps/pep-0623.rst:115 ../../peps/pep-0623.rst:152
 msgid "``PyUnicode_WCHAR_KIND``"
 msgstr ""
 
-#: ../pep-0623.rst:116 ../pep-0623.rst:153
+#: ../../peps/pep-0623.rst:116 ../../peps/pep-0623.rst:153
 msgid "``PyUnicode_READY()``"
 msgstr ""
 
-#: ../pep-0623.rst:117 ../pep-0623.rst:154
+#: ../../peps/pep-0623.rst:117 ../../peps/pep-0623.rst:154
 msgid "``PyUnicode_IS_READY()``"
 msgstr ""
 
-#: ../pep-0623.rst:118 ../pep-0623.rst:155
+#: ../../peps/pep-0623.rst:118 ../../peps/pep-0623.rst:155
 msgid "``PyUnicode_IS_COMPACT()``"
 msgstr ""
 
-#: ../pep-0623.rst:120
+#: ../../peps/pep-0623.rst:120
 msgid ""
 "``PyUnicode_FromUnicode(NULL, size)`` and "
-"``PyUnicode_FromStringAndSize(NULL, size)`` emit ``DeprecationWarning`` when "
-"``size > 0``."
+"``PyUnicode_FromStringAndSize(NULL, size)`` emit ``DeprecationWarning`` "
+"when ``size > 0``."
 msgstr ""
 
-#: ../pep-0623.rst:124
+#: ../../peps/pep-0623.rst:124
 msgid ""
 "``PyArg_ParseTuple()`` and ``PyArg_ParseTupleAndKeywords()`` emit "
 "``DeprecationWarning`` when ``u``, ``u#``, ``Z``, and ``Z#`` formats are "
 "used."
 msgstr ""
 
-#: ../pep-0623.rst:129
+#: ../../peps/pep-0623.rst:129
 msgid "Python 3.12"
 msgstr ""
 
-#: ../pep-0623.rst:131
+#: ../../peps/pep-0623.rst:131
 msgid "Following members are removed from the Unicode structures:"
 msgstr ""
 
-#: ../pep-0623.rst:133
+#: ../../peps/pep-0623.rst:133
 msgid "``wstr``"
 msgstr ""
 
-#: ../pep-0623.rst:134
+#: ../../peps/pep-0623.rst:134
 msgid "``wstr_length``"
 msgstr ""
 
-#: ../pep-0623.rst:135
+#: ../../peps/pep-0623.rst:135
 msgid "``state.compact``"
 msgstr ""
 
-#: ../pep-0623.rst:136
+#: ../../peps/pep-0623.rst:136
 msgid "``state.ready``"
 msgstr ""
 
-#: ../pep-0623.rst:138
+#: ../../peps/pep-0623.rst:138
 msgid "The ``PyUnicodeObject`` structure is removed."
 msgstr ""
 
-#: ../pep-0623.rst:140
+#: ../../peps/pep-0623.rst:140
 msgid "Following macros and functions, and enum members are removed:"
 msgstr ""
 
-#: ../pep-0623.rst:157
+#: ../../peps/pep-0623.rst:157
 msgid ""
-"``PyUnicode_FromStringAndSize(NULL, size))`` raises ``RuntimeError`` when "
-"``size > 0``."
+"``PyUnicode_FromStringAndSize(NULL, size))`` raises ``RuntimeError`` when"
+" ``size > 0``."
 msgstr ""
 
-#: ../pep-0623.rst:160
+#: ../../peps/pep-0623.rst:160
 msgid ""
 "``PyArg_ParseTuple()`` and ``PyArg_ParseTupleAndKeywords()`` raise "
-"``SystemError`` when ``u``, ``u#``, ``Z``, and ``Z#`` formats are used, as "
-"other unsupported format character."
+"``SystemError`` when ``u``, ``u#``, ``Z``, and ``Z#`` formats are used, "
+"as other unsupported format character."
 msgstr ""
 
-#: ../pep-0623.rst:166
+#: ../../peps/pep-0623.rst:166
 msgid "Discussion"
 msgstr ""
 
-#: ../pep-0623.rst:168
+#: ../../peps/pep-0623.rst:168
 msgid ""
-"`Draft PEP: Remove wstr from Unicode <https://mail.python.org/archives/list/"
-"python-dev@python.org/thread/BO2TQHSXWL2RJMINWQQRBF5LANDDJNHH/"
-"#BO2TQHSXWL2RJMINWQQRBF5LANDDJNHH>`_"
+"`Draft PEP: Remove wstr from Unicode "
+"<https://mail.python.org/archives/list/python-"
+"dev@python.org/thread/BO2TQHSXWL2RJMINWQQRBF5LANDDJNHH/#BO2TQHSXWL2RJMINWQQRBF5LANDDJNHH>`_"
 msgstr ""
 
-#: ../pep-0623.rst:170
+#: ../../peps/pep-0623.rst:170
 msgid ""
-"`When can we remove wchar_t* cache from string? <https://mail.python.org/"
-"archives/list/python-dev@python.org/thread/7JVC3IKS2V73K36ISEJAAWMRFN2T4KKR/"
-"#7JVC3IKS2V73K36ISEJAAWMRFN2T4KKR>`_"
+"`When can we remove wchar_t* cache from string? "
+"<https://mail.python.org/archives/list/python-"
+"dev@python.org/thread/7JVC3IKS2V73K36ISEJAAWMRFN2T4KKR/#7JVC3IKS2V73K36ISEJAAWMRFN2T4KKR>`_"
 msgstr ""
 
-#: ../pep-0623.rst:172
+#: ../../peps/pep-0623.rst:172
 msgid ""
-"`PEP 623: Remove wstr from Unicode object #1462 <https://github.com/python/"
-"peps/pull/1462>`_"
+"`PEP 623: Remove wstr from Unicode object #1462 "
+"<https://github.com/python/peps/pull/1462>`_"
 msgstr ""
 
-#: ../pep-0623.rst:177
+#: ../../peps/pep-0623.rst:177
 msgid "References"
 msgstr "Referências"
 
-#: ../pep-0623.rst:179
+#: ../../peps/pep-0623.rst:179
 msgid ""
-"`bpo-38604: Schedule Py_UNICODE API removal <https://bugs.python.org/"
-"issue38604>`_"
+"`bpo-38604: Schedule Py_UNICODE API removal "
+"<https://bugs.python.org/issue38604>`_"
 msgstr ""
 
-#: ../pep-0623.rst:181
+#: ../../peps/pep-0623.rst:181
 msgid ""
-"`bpo-36346: Prepare for removing the legacy Unicode C API <https://bugs."
-"python.org/issue36346>`_"
+"`bpo-36346: Prepare for removing the legacy Unicode C API "
+"<https://bugs.python.org/issue36346>`_"
 msgstr ""
 
-#: ../pep-0623.rst:183
+#: ../../peps/pep-0623.rst:183
 msgid ""
-"`bpo-30863: Rewrite PyUnicode_AsWideChar() and PyUnicode_AsWideCharString() "
-"<https://bugs.python.org/issue30863>`_: They no longer cache the "
-"``wchar_t*`` representation of string objects."
+"`bpo-30863: Rewrite PyUnicode_AsWideChar() and "
+"PyUnicode_AsWideCharString() <https://bugs.python.org/issue30863>`_: They"
+" no longer cache the ``wchar_t*`` representation of string objects."
 msgstr ""
 
-#: ../pep-0623.rst:190
+#: ../../peps/pep-0623.rst:190
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../pep-0623.rst:192
+#: ../../peps/pep-0623.rst:192
 msgid "This document has been placed in the public domain."
 msgstr "Este documento foi colocado em domínio público."
+
+#~ msgid ""
+#~ "https://mail.python.org/archives/list/python-"
+#~ "dev@python.org/thread/VQKDIZLZ6HF2MLTNCUFURK2IFTXVQEYA/#VQKDIZLZ6HF2MLTNCUFURK2IFTXVQEYA"
+#~ msgstr ""
+

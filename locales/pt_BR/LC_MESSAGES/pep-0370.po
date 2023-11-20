@@ -6,205 +6,208 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PEPs\n"
+"Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 20:07+0000\n"
+"POT-Creation-Date: 2023-11-20 10:43-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.13.1\n"
 
-#: ../pep-0370.txt
+#: ../../peps/pep-0370.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../pep-0370.txt:5
+#: ../../peps/pep-0370.rst:3
 msgid "Christian Heimes <christian@python.org>"
 msgstr ""
 
-#: ../pep-0370.txt
+#: ../../peps/pep-0370.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../pep-0370.txt:6
+#: ../../peps/pep-0370.rst:4
 msgid "Final"
 msgstr ""
 
-#: ../pep-0370.txt
+#: ../../peps/pep-0370.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../pep-0370.txt:7
+#: ../../peps/pep-0370.rst:5
 msgid "Standards Track"
 msgstr ""
 
-#: ../pep-0370.txt
+#: ../../peps/pep-0370.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../pep-0370.txt:9
+#: ../../peps/pep-0370.rst:7
 msgid "11-Jan-2008"
 msgstr ""
 
-#: ../pep-0370.txt
+#: ../../peps/pep-0370.rst
 msgid "Python-Version"
 msgstr ""
 
-#: ../pep-0370.txt:10
+#: ../../peps/pep-0370.rst:8
 msgid "2.6, 3.0"
 msgstr ""
 
-#: ../pep-0370.txt
+#: ../../peps/pep-0370.rst
 msgid "Post-History"
 msgstr "Pós-história"
 
-#: ../pep-0370.txt:15
+#: ../../peps/pep-0370.rst:13
 msgid "Abstract"
 msgstr ""
 
-#: ../pep-0370.txt:17
+#: ../../peps/pep-0370.rst:15
 msgid ""
-"This PEP proposes a new a per user site-packages directory to allow users "
-"the local installation of Python packages in their home directory."
+"This PEP proposes a new a per user site-packages directory to allow users"
+" the local installation of Python packages in their home directory."
 msgstr ""
 
-#: ../pep-0370.txt:22
+#: ../../peps/pep-0370.rst:20
 msgid "Rationale"
 msgstr ""
 
-#: ../pep-0370.txt:24
+#: ../../peps/pep-0370.rst:22
 msgid ""
-"Current Python versions don't have a unified way to install packages into "
-"the home directory of a user (except for Mac Framework builds). Users are "
-"either forced to ask the system administrator to install or update a package "
-"for them or to use one of the many workarounds like Virtual Python [1]_, "
-"Working Env [2]_ or Virtual Env [3]_."
+"Current Python versions don't have a unified way to install packages into"
+" the home directory of a user (except for Mac Framework builds). Users "
+"are either forced to ask the system administrator to install or update a "
+"package for them or to use one of the many workarounds like Virtual "
+"Python [1]_, Working Env [2]_ or Virtual Env [3]_."
 msgstr ""
 
-#: ../pep-0370.txt:31
+#: ../../peps/pep-0370.rst:29
 msgid ""
-"It's not the goal of the PEP to replace the tools or to implement isolated "
-"installations of Python. It only implements the most common use case of an "
-"additional site-packages directory for each user."
+"It's not the goal of the PEP to replace the tools or to implement "
+"isolated installations of Python. It only implements the most common use "
+"case of an additional site-packages directory for each user."
 msgstr ""
 
-#: ../pep-0370.txt:35
+#: ../../peps/pep-0370.rst:33
 msgid ""
 "The feature can't be implemented using the environment variable "
-"*PYTHONPATH*. The env var just inserts a new directory to the beginning of "
-"*sys.path* but it doesn't parse the pth files in the directory. A full blown "
-"site-packages path is required for several applications and Python eggs."
+"*PYTHONPATH*. The env var just inserts a new directory to the beginning "
+"of *sys.path* but it doesn't parse the pth files in the directory. A full"
+" blown site-packages path is required for several applications and Python"
+" eggs."
 msgstr ""
 
-#: ../pep-0370.txt:43
+#: ../../peps/pep-0370.rst:41
 msgid "Specification"
 msgstr ""
 
-#: ../pep-0370.txt:45
+#: ../../peps/pep-0370.rst:43
 msgid "site directory (site-packages)"
 msgstr ""
 
-#: ../pep-0370.txt:47
+#: ../../peps/pep-0370.rst:45
 msgid ""
 "A directory in ``sys.path``. In contrast to ordinary directories the pth "
 "files in the directory are processed, too."
 msgstr ""
 
-#: ../pep-0370.txt:50
+#: ../../peps/pep-0370.rst:48
 msgid "user site directory"
 msgstr ""
 
-#: ../pep-0370.txt:52
+#: ../../peps/pep-0370.rst:50
 msgid ""
-"A site directory inside the users' home directory. A user site directory is "
-"specific to a Python version. The path contains the version number (major "
-"and minor only)."
+"A site directory inside the users' home directory. A user site directory "
+"is specific to a Python version. The path contains the version number "
+"(major and minor only)."
 msgstr ""
 
-#: ../pep-0370.txt:56
+#: ../../peps/pep-0370.rst:54
 msgid "Unix (including Mac OS X)"
 msgstr ""
 
-#: ../pep-0370.txt:57
+#: ../../peps/pep-0370.rst:55
 msgid "``~/.local/lib/python2.6/site-packages``"
 msgstr ""
 
-#: ../pep-0370.txt:59 ../pep-0370.txt:70 ../pep-0370.txt:81 ../pep-0370.txt:92
+#: ../../peps/pep-0370.rst:57 ../../peps/pep-0370.rst:68
+#: ../../peps/pep-0370.rst:79 ../../peps/pep-0370.rst:90
 msgid "Windows"
 msgstr ""
 
-#: ../pep-0370.txt:59
+#: ../../peps/pep-0370.rst:57
 msgid "``%APPDATA%/Python/Python26/site-packages``"
 msgstr ""
 
-#: ../pep-0370.txt:61
+#: ../../peps/pep-0370.rst:59
 msgid "user data directory"
 msgstr ""
 
-#: ../pep-0370.txt:63
+#: ../../peps/pep-0370.rst:61
 msgid ""
 "Usually the parent directory of the user site directory. It's meant for "
 "Python version specific data like config files, docs, images and "
 "translations."
 msgstr ""
 
-#: ../pep-0370.txt:67 ../pep-0370.txt:78 ../pep-0370.txt:88
+#: ../../peps/pep-0370.rst:65 ../../peps/pep-0370.rst:76
+#: ../../peps/pep-0370.rst:86
 msgid "Unix (including Mac)"
 msgstr ""
 
-#: ../pep-0370.txt:68
+#: ../../peps/pep-0370.rst:66
 msgid "``~/.local/lib/python2.6``"
 msgstr ""
 
-#: ../pep-0370.txt:70
+#: ../../peps/pep-0370.rst:68
 msgid "``%APPDATA%/Python/Python26``"
 msgstr ""
 
-#: ../pep-0370.txt:72
+#: ../../peps/pep-0370.rst:70
 msgid "user base directory"
 msgstr ""
 
-#: ../pep-0370.txt:74
+#: ../../peps/pep-0370.rst:72
 msgid ""
-"It's located inside the user's home directory. The user site and use config "
-"directory are inside the base directory. On some systems the directory may "
-"be shared with 3rd party apps."
+"It's located inside the user's home directory. The user site and use "
+"config directory are inside the base directory. On some systems the "
+"directory may be shared with 3rd party apps."
 msgstr ""
 
-#: ../pep-0370.txt:79
+#: ../../peps/pep-0370.rst:77
 msgid "``~/.local``"
 msgstr ""
 
-#: ../pep-0370.txt:81
+#: ../../peps/pep-0370.rst:79
 msgid "``%APPDATA%/Python``"
 msgstr ""
 
-#: ../pep-0370.txt:83
+#: ../../peps/pep-0370.rst:81
 msgid "user script directory"
 msgstr ""
 
-#: ../pep-0370.txt:85
+#: ../../peps/pep-0370.rst:83
 msgid ""
 "A directory for binaries and scripts. [10]_ It's shared across Python "
 "versions and the destination directory for scripts."
 msgstr ""
 
-#: ../pep-0370.txt:89
+#: ../../peps/pep-0370.rst:87
 msgid "``~/.local/bin``"
 msgstr ""
 
-#: ../pep-0370.txt:91
+#: ../../peps/pep-0370.rst:89
 msgid "``%APPDATA%/Python/Scripts``"
 msgstr ""
 
-#: ../pep-0370.txt:95
+#: ../../peps/pep-0370.rst:93
 msgid "Windows Notes"
 msgstr ""
 
-#: ../pep-0370.txt:97
+#: ../../peps/pep-0370.rst:95
 msgid ""
 "On Windows the *Application Data* directory (aka ``APPDATA``) was chosen "
 "because it is the most designated place for application data. Microsoft "
@@ -214,218 +217,281 @@ msgid ""
 "%APPDATA%."
 msgstr ""
 
-#: ../pep-0370.txt:104
+#: ../../peps/pep-0370.rst:102
 #, python-format
 msgid ""
-"The application data directory is part of the roaming profile. In networks "
-"with domain logins the application data may be copied from and to the a "
-"central server. This can slow down log-in and log-off. Users can keep the "
-"data on the server by e.g. setting PYTHONUSERBASE to the value \"%HOMEDRIVE%"
-"%HOMEPATH%\\Applicata Data\". Users should consult their local administrator "
-"for more information. [13]_"
+"The application data directory is part of the roaming profile. In "
+"networks with domain logins the application data may be copied from and "
+"to the a central server. This can slow down log-in and log-off. Users can"
+" keep the data on the server by e.g. setting PYTHONUSERBASE to the value "
+"\"%HOMEDRIVE%%HOMEPATH%\\Applicata Data\". Users should consult their "
+"local administrator for more information. [13]_"
 msgstr ""
 
-#: ../pep-0370.txt:113
+#: ../../peps/pep-0370.rst:111
 msgid "Unix Notes"
 msgstr ""
 
-#: ../pep-0370.txt:115
+#: ../../peps/pep-0370.rst:113
 msgid ""
 "On Unix ``~/.local`` was chosen in favor over ``~/.python`` because the "
-"directory is already used by several other programs in analogy to ``/usr/"
-"local``. [7]_ [11]_"
+"directory is already used by several other programs in analogy to "
+"``/usr/local``. [7]_ [11]_"
 msgstr ""
 
-#: ../pep-0370.txt:121
+#: ../../peps/pep-0370.rst:119
 msgid "Mac OS X Notes"
 msgstr ""
 
-#: ../pep-0370.txt:123
+#: ../../peps/pep-0370.rst:121
 msgid ""
-"On Mac OS X Python uses ~/.local directory as well. [12]_ Framework builds "
-"of Python include ``~/Library/Python/2.6/site-packages`` as an additional "
-"search path."
+"On Mac OS X Python uses ~/.local directory as well. [12]_ Framework "
+"builds of Python include ``~/Library/Python/2.6/site-packages`` as an "
+"additional search path."
 msgstr ""
 
-#: ../pep-0370.txt:129
+#: ../../peps/pep-0370.rst:127
 msgid "Implementation"
 msgstr ""
 
-#: ../pep-0370.txt:131
+#: ../../peps/pep-0370.rst:129
 msgid ""
 "The site module gets a new method ``adduserpackage()`` which adds the "
-"appropriate directory to the search path. The directory is not added if it "
-"doesn't exist when Python is started. However the location of the user site "
-"directory and user base directory is stored in an internal variable for "
-"distutils."
+"appropriate directory to the search path. The directory is not added if "
+"it doesn't exist when Python is started. However the location of the user"
+" site directory and user base directory is stored in an internal variable"
+" for distutils."
 msgstr ""
 
-#: ../pep-0370.txt:137
+#: ../../peps/pep-0370.rst:135
 msgid ""
 "The user site directory is added before the system site directories but "
-"after Python's search paths and ``PYTHONPATH``. This setup allows the user "
-"to install a different version of a package than the system administrator "
-"but it prevents the user from accidentally overwriting a stdlib module. "
-"Stdlib modules can still be overwritten with ``PYTHONPATH``."
+"after Python's search paths and ``PYTHONPATH``. This setup allows the "
+"user to install a different version of a package than the system "
+"administrator but it prevents the user from accidentally overwriting a "
+"stdlib module. Stdlib modules can still be overwritten with "
+"``PYTHONPATH``."
 msgstr ""
 
-#: ../pep-0370.txt:144
+#: ../../peps/pep-0370.rst:142
 msgid ""
-"For security reasons the user site directory is *not* added to ``sys.path`` "
-"when the effective user id or group id is not equal to the process uid / gid "
-"[9]_. It's an additional barrier against code injection into suid apps.  "
-"However Python suid scripts *must* always use the -E and -s option or users "
-"can sneak in their own code."
+"For security reasons the user site directory is *not* added to "
+"``sys.path`` when the effective user id or group id is not equal to the "
+"process uid / gid [9]_. It's an additional barrier against code injection"
+" into suid apps.  However Python suid scripts *must* always use the -E "
+"and -s option or users can sneak in their own code."
 msgstr ""
 
-#: ../pep-0370.txt:150
+#: ../../peps/pep-0370.rst:148
 msgid ""
-"The user site directory can be suppressed with a new option ``-s`` or the "
-"environment variable ``PYTHONNOUSERSITE``. The feature can be disabled "
+"The user site directory can be suppressed with a new option ``-s`` or the"
+" environment variable ``PYTHONNOUSERSITE``. The feature can be disabled "
 "globally by setting ``site.ENABLE_USER_SITE`` to the value ``False``. It "
-"must be set by editing ``site.py``. It can't be altered ``in sitecustomize."
-"py`` or later."
+"must be set by editing ``site.py``. It can't be altered ``in "
+"sitecustomize.py`` or later."
 msgstr ""
 
-#: ../pep-0370.txt:156
+#: ../../peps/pep-0370.rst:154
 msgid ""
-"The path to the user base directory can be overwritten with the environment "
-"variable ``PYTHONUSERBASE``. The default location is used when "
-"``PYTHONUSERBASE`` is not set or empty."
+"The path to the user base directory can be overwritten with the "
+"environment variable ``PYTHONUSERBASE``. The default location is used "
+"when ``PYTHONUSERBASE`` is not set or empty."
 msgstr ""
 
-#: ../pep-0370.txt:160
+#: ../../peps/pep-0370.rst:158
 msgid ""
-"``distutils.command.install`` (setup.py install) gets a new argument ``--"
-"user`` to install packages in the user site directory. The required "
+"``distutils.command.install`` (setup.py install) gets a new argument "
+"``--user`` to install packages in the user site directory. The required "
 "directories are created on demand."
 msgstr ""
 
-#: ../pep-0370.txt:164
+#: ../../peps/pep-0370.rst:162
 msgid ""
-"``distutils.command.build_ext`` (setup.py build_ext) gets a new argument ``--"
-"user`` which adds the include/ and lib/ directories in the user base "
-"directory to the search paths for header files and libraries. It also adds "
-"the lib/ directory to rpath."
+"``distutils.command.build_ext`` (setup.py build_ext) gets a new argument "
+"``--user`` which adds the include/ and lib/ directories in the user base "
+"directory to the search paths for header files and libraries. It also "
+"adds the lib/ directory to rpath."
 msgstr ""
 
-#: ../pep-0370.txt:169
+#: ../../peps/pep-0370.rst:167
 msgid ""
-"The ``site`` module gets two arguments ``--user-base`` and ``--user-site`` "
-"to print the path to the user base or user site directory to the standard "
-"output. The feature is intended for scripting, e.g. ``./configure --prefix "
-"$(python2.5 -m site --user-base)``"
+"The ``site`` module gets two arguments ``--user-base`` and ``--user-"
+"site`` to print the path to the user base or user site directory to the "
+"standard output. The feature is intended for scripting, e.g. "
+"``./configure --prefix $(python2.5 -m site --user-base)``"
 msgstr ""
 
-#: ../pep-0370.txt:174
+#: ../../peps/pep-0370.rst:172
 msgid ""
-"``distutils.sysconfig`` will get methods to access the private variables of "
-"site. (not yet implemented)"
+"``distutils.sysconfig`` will get methods to access the private variables "
+"of site. (not yet implemented)"
 msgstr ""
 
-#: ../pep-0370.txt:177
+#: ../../peps/pep-0370.rst:175
 msgid ""
-"The Windows updater needs to be updated, too. It should create a menu item "
-"which opens the user site directory in a new explorer windows."
+"The Windows updater needs to be updated, too. It should create a menu "
+"item which opens the user site directory in a new explorer windows."
 msgstr ""
 
-#: ../pep-0370.txt:182
+#: ../../peps/pep-0370.rst:180
 msgid "Backwards Compatibility"
 msgstr ""
 
-#: ../pep-0370.txt:184
+#: ../../peps/pep-0370.rst:182
 msgid "TBD"
 msgstr ""
 
-#: ../pep-0370.txt:188
+#: ../../peps/pep-0370.rst:186
 msgid "Reference Implementation"
 msgstr ""
 
-#: ../pep-0370.txt:190
+#: ../../peps/pep-0370.rst:188
 msgid "A reference implementation is available in the bug tracker. [4]_"
 msgstr ""
 
-#: ../pep-0370.txt:194
+#: ../../peps/pep-0370.rst:192
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../pep-0370.txt:196
+#: ../../peps/pep-0370.rst:194
 msgid "This document has been placed in the public domain."
 msgstr "Este documento foi colocado em domínio público."
 
-#: ../pep-0370.txt:200
+#: ../../peps/pep-0370.rst:198
 msgid "References"
 msgstr "Referências"
 
-#: ../pep-0370.txt:202
+#: ../../peps/pep-0370.rst:200
 msgid ""
-"Virtual Python http://peak.telecommunity.com/DevCenter/EasyInstall#creating-"
-"a-virtual-python"
+"Virtual Python "
+"http://peak.telecommunity.com/DevCenter/EasyInstall#creating-a-virtual-"
+"python"
 msgstr ""
 
-#: ../pep-0370.txt:205
+#: ../../peps/pep-0370.rst:203
 msgid ""
-"Working Env http://pypi.python.org/pypi/workingenv.py http://blog.ianbicking."
-"org/workingenv-revisited.html"
+"Working Env https://pypi.org/project/workingenv.py/ "
+"https://ianbicking.org/archive/workingenv-revisited.html"
 msgstr ""
 
-#: ../pep-0370.txt:209
-msgid "Virtual Env http://pypi.python.org/pypi/virtualenv"
+#: ../../peps/pep-0370.rst:207
+msgid "Virtual Env https://pypi.org/project/virtualenv/"
 msgstr ""
 
-#: ../pep-0370.txt:212
+#: ../../peps/pep-0370.rst:210
 msgid ""
-"reference implementation http://bugs.python.org/issue1799 http://svn.python."
-"org/view/sandbox/trunk/pep370"
+"reference implementation https://github.com/python/cpython/issues/46132 "
+"http://svn.python.org/view/sandbox/trunk/pep370"
 msgstr ""
 
-#: ../pep-0370.txt:216
-msgid "MSDN: CSIDL http://msdn2.microsoft.com/en-us/library/bb762494.aspx"
+#: ../../peps/pep-0370.rst:214
+msgid "MSDN: CSIDL https://learn.microsoft.com/en/windows/win32/shell/csidl"
 msgstr ""
 
-#: ../pep-0370.txt:219
+#: ../../peps/pep-0370.rst:217
 msgid ""
-"Initial suggestion for a per user site-packages directory http://permalink."
-"gmane.org/gmane.comp.python.devel/90902"
+"[6] Initial suggestion for a per user site-packages directory \\   "
+"https://mail.python.org/archives/list/python-"
+"dev@python.org/message/V23CUKRH3VCHFLV33ADMHJSM53STPA7I/"
 msgstr ""
 
-#: ../pep-0370.txt:222
+#: ../../peps/pep-0370.rst:220
 msgid ""
-"Suggestion of ~/.local/ http://permalink.gmane.org/gmane.comp.python."
-"devel/90925"
+"Suggestion of ~/.local/ https://mail.python.org/pipermail/python-"
+"dev/2008-January/075985.html"
 msgstr ""
 
-#: ../pep-0370.txt:225
+#: ../../peps/pep-0370.rst:223
 msgid ""
-"APPDATA discussion http://permalink.gmane.org/gmane.comp.python.devel/90932"
+"APPDATA discussion https://mail.python.org/pipermail/python-"
+"dev/2008-January/075993.html"
 msgstr ""
 
-#: ../pep-0370.txt:228
+#: ../../peps/pep-0370.rst:226
 msgid ""
-"Security concerns and -s option http://permalink.gmane.org/gmane.comp.python."
-"devel/91063"
+"Security concerns and -s option https://mail.python.org/pipermail/python-"
+"dev/2008-January/076130.html"
 msgstr ""
 
-#: ../pep-0370.txt:231
+#: ../../peps/pep-0370.rst:229
 msgid ""
-"Discussion about the bin directory http://permalink.gmane.org/gmane.comp."
-"python.devel/91095"
+"Discussion about the bin directory https://mail.python.org/pipermail"
+"/python-dev/2008-January/076162.html"
 msgstr ""
 
-#: ../pep-0370.txt:234
+#: ../../peps/pep-0370.rst:232
 msgid ""
-"freedesktop.org XGD basedir specs mentions ~/.local http://www.freedesktop."
-"org/wiki/Specifications/basedir-spec"
+"freedesktop.org XGD basedir specs mentions ~/.local "
+"https://www.freedesktop.org/wiki/Specifications/basedir-spec/"
 msgstr ""
 
-#: ../pep-0370.txt:237
+#: ../../peps/pep-0370.rst:235
 msgid ""
-"~/.local for Mac and usercustomize file http://permalink.gmane.org/gmane."
-"comp.python.devel/91167"
+"~/.local for Mac and usercustomize file https://mail.python.org/pipermail"
+"/python-dev/2008-January/076236.html"
 msgstr ""
 
-#: ../pep-0370.txt:240
+#: ../../peps/pep-0370.rst:238
 msgid ""
-"Roaming profile on Windows http://permalink.gmane.org/gmane.comp.python."
-"devel/91187"
+"Roaming profile on Windows https://mail.python.org/pipermail/python-"
+"dev/2008-January/076256.html"
 msgstr ""
+
+#~ msgid ""
+#~ "Working Env http://pypi.python.org/pypi/workingenv.py "
+#~ "http://blog.ianbicking.org/workingenv-revisited.html"
+#~ msgstr ""
+
+#~ msgid "Virtual Env http://pypi.python.org/pypi/virtualenv"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "reference implementation http://bugs.python.org/issue1799"
+#~ " http://svn.python.org/view/sandbox/trunk/pep370"
+#~ msgstr ""
+
+#~ msgid "MSDN: CSIDL http://msdn2.microsoft.com/en-us/library/bb762494.aspx"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Initial suggestion for a per user "
+#~ "site-packages directory "
+#~ "http://permalink.gmane.org/gmane.comp.python.devel/90902"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Suggestion of ~/.local/ "
+#~ "http://permalink.gmane.org/gmane.comp.python.devel/90925"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "APPDATA discussion "
+#~ "http://permalink.gmane.org/gmane.comp.python.devel/90932"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Security concerns and -s option "
+#~ "http://permalink.gmane.org/gmane.comp.python.devel/91063"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Discussion about the bin directory "
+#~ "http://permalink.gmane.org/gmane.comp.python.devel/91095"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "freedesktop.org XGD basedir specs mentions "
+#~ "~/.local http://www.freedesktop.org/wiki/Specifications"
+#~ "/basedir-spec"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "~/.local for Mac and usercustomize file"
+#~ " http://permalink.gmane.org/gmane.comp.python.devel/91167"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Roaming profile on Windows "
+#~ "http://permalink.gmane.org/gmane.comp.python.devel/91187"
+#~ msgstr ""
+

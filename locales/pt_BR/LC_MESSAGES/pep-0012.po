@@ -6,817 +6,867 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PEPs\n"
+"Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 20:07+0000\n"
+"POT-Creation-Date: 2023-11-20 10:43-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.13.1\n"
 
-#: ../pep-0012.rst
+#: ../../peps/pep-0012.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../pep-0012.rst:3
+#: ../../peps/pep-0012.rst:3
 msgid ""
-"David Goodger <goodger@python.org>, Barry Warsaw <barry@python.org>, Brett "
-"Cannon <brett@python.org>"
+"David Goodger <goodger@python.org>, Barry Warsaw <barry@python.org>, "
+"Brett Cannon <brett@python.org>"
 msgstr ""
 
-#: ../pep-0012.rst
+#: ../../peps/pep-0012.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../pep-0012.rst:6
+#: ../../peps/pep-0012.rst:6
 msgid "Active"
 msgstr "Ativa"
 
-#: ../pep-0012.rst
+#: ../../peps/pep-0012.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../pep-0012.rst:7
+#: ../../peps/pep-0012.rst:7
 msgid "Process"
 msgstr "Processo"
 
-#: ../pep-0012.rst
+#: ../../peps/pep-0012.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../pep-0012.rst:9
+#: ../../peps/pep-0012.rst:8
 msgid "05-Aug-2002"
 msgstr ""
 
-#: ../pep-0012.rst
+#: ../../peps/pep-0012.rst
 msgid "Post-History"
 msgstr "Pós-história"
 
-#: ../pep-0012.rst:10
+#: ../../peps/pep-0012.rst:9
 msgid ""
-"`30-Aug-2002 <https://mail.python.org/archives/list/python-dev@python.org/"
-"thread/KX3AS7QAY26QH3WIUAEOCCNXQ4V2TGGV/>`__"
+"`30-Aug-2002 <https://mail.python.org/archives/list/python-"
+"dev@python.org/thread/KX3AS7QAY26QH3WIUAEOCCNXQ4V2TGGV/>`__"
 msgstr ""
 
-#: ../pep-0012.rst:16
+#: ../../peps/pep-0012.rst:15
 msgid ""
 "For those who have written a PEP before, there is a template_ (which is "
 "included as a file in the `PEPs repository`_)."
 msgstr ""
 
-#: ../pep-0012.rst:20
+#: ../../peps/pep-0012.rst:19
 msgid "Abstract"
 msgstr ""
 
-#: ../pep-0012.rst:22
+#: ../../peps/pep-0012.rst:21
 msgid ""
 "This PEP provides a boilerplate or sample template for creating your own "
-"reStructuredText PEPs.  In conjunction with the content guidelines in :pep:"
-"`1`, this should make it easy for you to conform your own PEPs to the format "
-"outlined below."
+"reStructuredText PEPs.  In conjunction with the content guidelines in "
+":pep:`1`, this should make it easy for you to conform your own PEPs to "
+"the format outlined below."
 msgstr ""
 
-#: ../pep-0012.rst:27
+#: ../../peps/pep-0012.rst:26
 msgid ""
 "Note: if you are reading this PEP via the web, you should first grab the "
-"text (reStructuredText) source of this PEP in order to complete the steps "
-"below.  **DO NOT USE THE HTML FILE AS YOUR TEMPLATE!**"
+"text (reStructuredText) source of this PEP in order to complete the steps"
+" below.  **DO NOT USE THE HTML FILE AS YOUR TEMPLATE!**"
 msgstr ""
 
-#: ../pep-0012.rst:31
+#: ../../peps/pep-0012.rst:30
 msgid ""
 "The source for this (or any) PEP can be found in the `PEPs repository "
-"<https://github.com/python/peps/>`_, as well as via a link at the bottom of "
-"each PEP."
+"<https://github.com/python/peps/>`_, as well as via a link at the bottom "
+"of each PEP."
 msgstr ""
 
-#: ../pep-0012.rst:37
+#: ../../peps/pep-0012.rst:36
 msgid "Rationale"
 msgstr ""
 
-#: ../pep-0012.rst:39
+#: ../../peps/pep-0012.rst:38
 msgid ""
-"If you intend to submit a PEP, you MUST use this template, in conjunction "
-"with the format guidelines below, to ensure that your PEP submission won't "
-"get automatically rejected because of form."
+"If you intend to submit a PEP, you MUST use this template, in conjunction"
+" with the format guidelines below, to ensure that your PEP submission "
+"won't get automatically rejected because of form."
 msgstr ""
 
-#: ../pep-0012.rst:43
+#: ../../peps/pep-0012.rst:42
 msgid ""
 "ReStructuredText provides PEP authors with useful functionality and "
 "expressivity, while maintaining easy readability in the source text. The "
 "processed HTML form makes the functionality accessible to readers: live "
-"hyperlinks, styled text, tables, images, and automatic tables of contents, "
-"among other advantages."
+"hyperlinks, styled text, tables, images, and automatic tables of "
+"contents, among other advantages."
 msgstr ""
 
-#: ../pep-0012.rst:51
+#: ../../peps/pep-0012.rst:50
 msgid "How to Use This Template"
 msgstr ""
 
-#: ../pep-0012.rst:53
+#: ../../peps/pep-0012.rst:52
 msgid ""
-"To use this template you must first decide whether your PEP is going to be "
-"an Informational or Standards Track PEP.  Most PEPs are Standards Track "
-"because they propose a new feature for the Python language or standard "
-"library.  When in doubt, read :pep:`1` for details, or open a tracker issue "
-"on the PEPs repo to ask for assistance."
+"To use this template you must first decide whether your PEP is going to "
+"be an Informational or Standards Track PEP.  Most PEPs are Standards "
+"Track because they propose a new feature for the Python language or "
+"standard library.  When in doubt, read :pep:`1` for details, or open a "
+"tracker issue on the PEPs repo to ask for assistance."
 msgstr ""
 
-#: ../pep-0012.rst:59
+#: ../../peps/pep-0012.rst:58
 msgid ""
 "Once you've decided which type of PEP yours is going to be, follow the "
 "directions below."
 msgstr ""
 
-#: ../pep-0012.rst:62
+#: ../../peps/pep-0012.rst:61
 msgid ""
-"Make a copy of this file (the ``.rst`` file, **not** the HTML!) and perform "
-"the following edits. Name the new file ``pep-9999.rst`` if you don't yet "
-"have a PEP number assignment, or ``pep-NNNN.rst`` if you do. Those with push "
-"permissions are welcome to claim the next available number (ignoring the "
-"special blocks 3000 and 8000, and a handful of special allocations - "
-"currently 666, 754, and 801) and push it directly."
+"Make a copy of this file (the ``.rst`` file, **not** the HTML!) and "
+"perform the following edits. Name the new file :file:`pep-{NNNN}.rst`, "
+"using the next available number (not used by a published or in-PR PEP)."
 msgstr ""
 
-#: ../pep-0012.rst:70
+#: ../../peps/pep-0012.rst:65
 msgid ""
-"Replace the \"PEP: 12\" header with \"PEP: 9999\" or \"PEP: NNNN\", matching "
-"the file name. Note that the file name should be padded with zeros (eg "
+"Replace the \"PEP: 12\" header with \"PEP: NNNN\", matching the file "
+"name. Note that the file name should be padded with zeros (eg "
 "``pep-0012.rst``), but the header should not (``PEP: 12``)."
 msgstr ""
 
-#: ../pep-0012.rst:74
+#: ../../peps/pep-0012.rst:69
 msgid "Change the Title header to the title of your PEP."
 msgstr ""
 
-#: ../pep-0012.rst:76
+#: ../../peps/pep-0012.rst:71
 msgid ""
 "Change the Author header to include your name, and optionally your email "
 "address.  Be sure to follow the format carefully: your name must appear "
-"first, and it must not be contained in parentheses. Your email address may "
-"appear second (or it can be omitted) and if it appears, it must appear in "
-"angle brackets.  It is okay to obfuscate your email address."
+"first, and it must not be contained in parentheses. Your email address "
+"may appear second (or it can be omitted) and if it appears, it must "
+"appear in angle brackets.  It is okay to obfuscate your email address."
 msgstr ""
 
-#: ../pep-0012.rst:83
+#: ../../peps/pep-0012.rst:78
 msgid ""
-"If none of the authors are Python core developers, include a Sponsor header "
-"with the name of the core developer sponsoring your PEP."
+"If none of the authors are Python core developers, include a Sponsor "
+"header with the name of the core developer sponsoring your PEP."
 msgstr ""
 
-#: ../pep-0012.rst:86
+#: ../../peps/pep-0012.rst:81
 msgid ""
-"Add the direct URL of the PEP's canonical discussion thread (on e.g. Python-"
-"Dev, Discourse, etc) under the Discussions-To header. If the thread will be "
-"created after the PEP is submitted as an official draft, it is okay to just "
-"list the venue name initially, but remember to update the PEP with the URL "
-"as soon as the PEP is successfully merged to the PEPs repository and you "
-"create the corresponding discussion thread. See :pep:`PEP 1 <1#discussing-a-"
-"pep>` for more details."
+"Add the direct URL of the PEP's canonical discussion thread (on e.g. "
+"Python-Dev, Discourse, etc) under the Discussions-To header. If the "
+"thread will be created after the PEP is submitted as an official draft, "
+"it is okay to just list the venue name initially, but remember to update "
+"the PEP with the URL as soon as the PEP is successfully merged to the "
+"PEPs repository and you create the corresponding discussion thread. See "
+":pep:`PEP 1 <1#discussing-a-pep>` for more details."
 msgstr ""
 
-#: ../pep-0012.rst:94
+#: ../../peps/pep-0012.rst:89
 msgid "Change the Status header to \"Draft\"."
 msgstr ""
 
-#: ../pep-0012.rst:96
-msgid ""
-"For Standards Track PEPs, change the Type header to \"Standards Track\"."
+#: ../../peps/pep-0012.rst:91
+msgid "For Standards Track PEPs, change the Type header to \"Standards Track\"."
 msgstr ""
 
-#: ../pep-0012.rst:99
+#: ../../peps/pep-0012.rst:94
 msgid "For Informational PEPs, change the Type header to \"Informational\"."
 msgstr ""
 
-#: ../pep-0012.rst:101
+#: ../../peps/pep-0012.rst:96
 msgid ""
-"For Standards Track PEPs, if your feature depends on the acceptance of some "
-"other currently in-development PEP, add a Requires header right after the "
-"Type header.  The value should be the PEP number of the PEP yours depends "
-"on.  Don't add this header if your dependent feature is described in a Final "
-"PEP."
+"For Standards Track PEPs, if your feature depends on the acceptance of "
+"some other currently in-development PEP, add a Requires header right "
+"after the Type header.  The value should be the PEP number of the PEP "
+"yours depends on.  Don't add this header if your dependent feature is "
+"described in a Final PEP."
 msgstr ""
 
-#: ../pep-0012.rst:107
+#: ../../peps/pep-0012.rst:102
 msgid ""
 "Change the Created header to today's date.  Be sure to follow the format "
-"carefully: it must be in ``dd-mmm-yyyy`` format, where the ``mmm`` is the 3 "
-"English letter month abbreviation, i.e. one of Jan, Feb, Mar, Apr, May, Jun, "
-"Jul, Aug, Sep, Oct, Nov, Dec."
+"carefully: it must be in ``dd-mmm-yyyy`` format, where the ``mmm`` is the"
+" 3 English letter month abbreviation, i.e. one of Jan, Feb, Mar, Apr, "
+"May, Jun, Jul, Aug, Sep, Oct, Nov, Dec."
 msgstr ""
 
-#: ../pep-0012.rst:112
+#: ../../peps/pep-0012.rst:107
 msgid ""
 "For Standards Track PEPs, after the Created header, add a Python-Version "
-"header and set the value to the next planned version of Python, i.e. the one "
-"your new feature will hopefully make its first appearance in.  Do not use an "
-"alpha or beta release designation here.  Thus, if the last version of Python "
-"was 2.2 alpha 1 and you're hoping to get your new feature into Python 2.2, "
-"set the header to:"
+"header and set the value to the next planned version of Python, i.e. the "
+"one your new feature will hopefully make its first appearance in.  Do not"
+" use an alpha or beta release designation here.  Thus, if the last "
+"version of Python was 2.2 alpha 1 and you're hoping to get your new "
+"feature into Python 2.2, set the header to:"
 msgstr ""
 
-#: ../pep-0012.rst:124
+#: ../../peps/pep-0012.rst:119
 msgid ""
-"Leave Post-History alone for now; you'll add dates and corresponding links "
-"to this header each time you post your PEP to the designated discussion "
-"forum (and update the Discussions-To header with said link, as above). For "
-"each thread, use the date (in the ``dd-mmm-yyy`` format) as the linked text, "
-"and insert the URLs inline as anonymous reST `hyperlinks`_, with commas in "
-"between each posting."
+"Add a Topic header if the PEP belongs under one shown at the :ref:`topic-"
+"index`. Most PEPs don't."
 msgstr ""
 
-#: ../pep-0012.rst:131
+#: ../../peps/pep-0012.rst:122
 msgid ""
-"If you posted threads for your PEP on August 14, 2001 and September 3, 2001, "
-"the Post-History header would look like, e.g.:"
+"Leave Post-History alone for now; you'll add dates and corresponding "
+"links to this header each time you post your PEP to the designated "
+"discussion forum (and update the Discussions-To header with said link, as"
+" above). For each thread, use the date (in the ``dd-mmm-yyy`` format) as "
+"the linked text, and insert the URLs inline as anonymous reST "
+"`hyperlinks`_, with commas in between each posting."
 msgstr ""
 
-#: ../pep-0012.rst:139
+#: ../../peps/pep-0012.rst:129
 msgid ""
-"You should add the new dates/links here as soon as you post a new discussion "
-"thread."
+"If you posted threads for your PEP on August 14, 2001 and September 3, "
+"2001, the Post-History header would look like, e.g.:"
 msgstr ""
 
-#: ../pep-0012.rst:142
+#: ../../peps/pep-0012.rst:137
 msgid ""
-"Add a Replaces header if your PEP obsoletes an earlier PEP.  The value of "
-"this header is the number of the PEP that your new PEP is replacing.  Only "
-"add this header if the older PEP is in \"final\" form, i.e. is either "
-"Accepted, Final, or Rejected.  You aren't replacing an older open PEP if "
-"you're submitting a competing idea."
+"You should add the new dates/links here as soon as you post a new "
+"discussion thread."
 msgstr ""
 
-#: ../pep-0012.rst:148
+#: ../../peps/pep-0012.rst:140
+msgid ""
+"Add a Replaces header if your PEP obsoletes an earlier PEP.  The value of"
+" this header is the number of the PEP that your new PEP is replacing.  "
+"Only add this header if the older PEP is in \"final\" form, i.e. is "
+"either Accepted, Final, or Rejected.  You aren't replacing an older open "
+"PEP if you're submitting a competing idea."
+msgstr ""
+
+#: ../../peps/pep-0012.rst:146
 msgid ""
 "Now write your Abstract, Rationale, and other content for your PEP, "
-"replacing all this gobbledygook with your own text. Be sure to adhere to the "
-"format guidelines below, specifically on the prohibition of tab characters "
-"and the indentation requirements. See \"Suggested Sections\" below for a "
-"template of sections to include."
+"replacing all this gobbledygook with your own text. Be sure to adhere to "
+"the format guidelines below, specifically on the prohibition of tab "
+"characters and the indentation requirements. See \"Suggested Sections\" "
+"below for a template of sections to include."
 msgstr ""
 
-#: ../pep-0012.rst:154
+#: ../../peps/pep-0012.rst:152
 msgid ""
 "Update your Footnotes section, listing any footnotes and non-inline link "
 "targets referenced by the text."
 msgstr ""
 
-#: ../pep-0012.rst:157
+#: ../../peps/pep-0012.rst:155
 msgid ""
-"Run ``./build.py`` to ensure the PEP is rendered without errors, and check "
-"that the output in ``build/pep-9999.html`` looks as you intend."
+"Run ``./build.py`` to ensure the PEP is rendered without errors, and "
+"check that the output in :file:`build/pep-{NNNN}.html` looks as you "
+"intend."
 msgstr ""
 
-#: ../pep-0012.rst:160
+#: ../../peps/pep-0012.rst:158
 msgid "Create a pull request against the `PEPs repository`_."
 msgstr ""
 
-#: ../pep-0012.rst:162
+#: ../../peps/pep-0012.rst:160
 msgid ""
 "For reference, here are all of the possible header fields (everything in "
 "brackets should either be replaced or have the field removed if it has a "
 "leading ``*`` marking it as optional and it does not apply to your PEP):"
 msgstr ""
 
-#: ../pep-0012.rst:188
+#: ../../peps/pep-0012.rst:186
 msgid "ReStructuredText PEP Formatting Requirements"
 msgstr ""
 
-#: ../pep-0012.rst:190
+#: ../../peps/pep-0012.rst:188
 msgid ""
-"The following is a PEP-specific summary of reStructuredText syntax. For the "
-"sake of simplicity and brevity, much detail is omitted.  For more detail, "
-"see `Resources`_ below.  `Literal blocks`_ (in which no markup processing is "
-"done) are used for examples throughout, to illustrate the plaintext markup."
+"The following is a PEP-specific summary of reStructuredText syntax. For "
+"the sake of simplicity and brevity, much detail is omitted.  For more "
+"detail, see `Resources`_ below.  `Literal blocks`_ (in which no markup "
+"processing is done) are used for examples throughout, to illustrate the "
+"plaintext markup."
 msgstr ""
 
-#: ../pep-0012.rst:198
+#: ../../peps/pep-0012.rst:196
 msgid "General"
 msgstr ""
 
-#: ../pep-0012.rst:200
+#: ../../peps/pep-0012.rst:198
 msgid ""
-"Lines should usually not extend past column 79, excepting URLs and similar "
-"circumstances. Tab characters must never appear in the document at all."
+"Lines should usually not extend past column 79, excepting URLs and "
+"similar circumstances. Tab characters must never appear in the document "
+"at all."
 msgstr ""
 
-#: ../pep-0012.rst:206
+#: ../../peps/pep-0012.rst:204
 msgid "Section Headings"
 msgstr ""
 
-#: ../pep-0012.rst:208
+#: ../../peps/pep-0012.rst:206
 msgid ""
-"PEP headings must begin in column zero and the initial letter of each word "
-"must be capitalized as in book titles.  Acronyms should be in all capitals.  "
-"Section titles must be adorned with an underline, a single repeated "
-"punctuation character, which begins in column zero and must extend at least "
-"as far as the right edge of the title text (4 characters minimum).  First-"
-"level section titles are underlined with \"=\" (equals signs), second-level "
-"section titles with \"-\" (hyphens), and third-level section titles with "
-"\"'\" (single quotes or apostrophes).  For example::"
+"PEP headings must begin in column zero and the initial letter of each "
+"word must be capitalized as in book titles.  Acronyms should be in all "
+"capitals.  Section titles must be adorned with an underline, a single "
+"repeated punctuation character, which begins in column zero and must "
+"extend at least as far as the right edge of the title text (4 characters "
+"minimum).  First-level section titles are underlined with \"=\" (equals "
+"signs), second-level section titles with \"-\" (hyphens), and third-level"
+" section titles with \"'\" (single quotes or apostrophes).  For example::"
 msgstr ""
 
-#: ../pep-0012.rst:227
+#: ../../peps/pep-0012.rst:225
 msgid ""
-"If there are more than three levels of sections in your PEP, you may insert "
-"overline/underline-adorned titles for the first and second levels as "
-"follows::"
+"If there are more than three levels of sections in your PEP, you may "
+"insert overline/underline-adorned titles for the first and second levels "
+"as follows::"
 msgstr ""
 
-#: ../pep-0012.rst:248
+#: ../../peps/pep-0012.rst:246
 msgid ""
-"You shouldn't have more than five levels of sections in your PEP.  If you "
-"do, you should consider rewriting it."
+"You shouldn't have more than five levels of sections in your PEP.  If you"
+" do, you should consider rewriting it."
 msgstr ""
 
-#: ../pep-0012.rst:251
+#: ../../peps/pep-0012.rst:249
 msgid ""
-"You must use two blank lines between the last line of a section's body and "
-"the next section heading.  If a subsection heading immediately follows a "
-"section heading, a single blank line in-between is sufficient."
+"You must use two blank lines between the last line of a section's body "
+"and the next section heading.  If a subsection heading immediately "
+"follows a section heading, a single blank line in-between is sufficient."
 msgstr ""
 
-#: ../pep-0012.rst:256
+#: ../../peps/pep-0012.rst:254
 msgid ""
-"The body of each section is not normally indented, although some constructs "
-"do use indentation, as described below.  Blank lines are used to separate "
-"constructs."
+"The body of each section is not normally indented, although some "
+"constructs do use indentation, as described below.  Blank lines are used "
+"to separate constructs."
 msgstr ""
 
-#: ../pep-0012.rst:262
+#: ../../peps/pep-0012.rst:260
 msgid "Paragraphs"
 msgstr ""
 
-#: ../pep-0012.rst:264
+#: ../../peps/pep-0012.rst:262
 msgid ""
-"Paragraphs are left-aligned text blocks separated by blank lines. Paragraphs "
-"are not indented unless they are part of an indented construct (such as a "
-"block quote or a list item)."
+"Paragraphs are left-aligned text blocks separated by blank lines. "
+"Paragraphs are not indented unless they are part of an indented construct"
+" (such as a block quote or a list item)."
 msgstr ""
 
-#: ../pep-0012.rst:270
+#: ../../peps/pep-0012.rst:268
 msgid "Inline Markup"
 msgstr ""
 
-#: ../pep-0012.rst:272
+#: ../../peps/pep-0012.rst:270
 msgid ""
-"Portions of text within paragraphs and other text blocks may be styled.  For "
-"example::"
+"Portions of text within paragraphs and other text blocks may be styled.  "
+"For example::"
 msgstr ""
 
-#: ../pep-0012.rst:284
+#: ../../peps/pep-0012.rst:282
 msgid "Block Quotes"
 msgstr ""
 
-#: ../pep-0012.rst:286
+#: ../../peps/pep-0012.rst:284
 msgid "Block quotes consist of indented body elements.  For example::"
 msgstr ""
 
-#: ../pep-0012.rst:294
+#: ../../peps/pep-0012.rst:292
 msgid ""
-"Block quotes are used to quote extended passages from other sources. Block "
-"quotes may be nested inside other body elements.  Use 4 spaces per indent "
-"level."
+"Block quotes are used to quote extended passages from other sources. "
+"Block quotes may be nested inside other body elements.  Use 4 spaces per "
+"indent level."
 msgstr ""
 
-#: ../pep-0012.rst:300
+#: ../../peps/pep-0012.rst:298
 msgid "Literal Blocks"
 msgstr ""
 
-#: ../pep-0012.rst:310
+#: ../../peps/pep-0012.rst:308
 msgid ""
 "Literal blocks are used for code samples and other preformatted text. To "
-"indicate a literal block, preface the indented text block with \"``::"
-"``\" (two colons), or use the ``.. code-block::`` directive. Indent the text "
+"indicate a literal block, preface the indented text block with \"``::``\""
+" (two colons), or use the ``.. code-block::`` directive. Indent the text "
 "block by 4 spaces; the literal block continues until the end of the "
 "indentation. For example::"
 msgstr ""
 
-#: ../pep-0012.rst:324
+#: ../../peps/pep-0012.rst:322
 msgid ""
 "\"``::``\" is also recognized at the end of any paragraph; if not "
 "immediately preceded by whitespace, one colon will remain visible in the "
 "final output::"
 msgstr ""
 
-#: ../pep-0012.rst:331
+#: ../../peps/pep-0012.rst:329
 msgid ""
-"By default, literal blocks will be syntax-highlighted as Python code. For "
-"specific blocks that contain code or data in other languages/formats, use "
-"the ``.. code-block:: language`` directive, substituting the \"short name\" "
-"of the appropriate `Pygments lexer <https://pygments.org/docs/lexers/>`_ (or "
-"``text`` to disable highlighting) for ``language``. For example::"
+"By default, literal blocks will be syntax-highlighted as Python code. For"
+" specific blocks that contain code or data in other languages/formats, "
+"use the ``.. code-block:: language`` directive, substituting the \"short "
+"name\" of the appropriate `Pygments lexer "
+"<https://pygments.org/docs/lexers/>`_ (or ``text`` to disable "
+"highlighting) for ``language``. For example::"
 msgstr ""
 
-#: ../pep-0012.rst:341
+#: ../../peps/pep-0012.rst:339
 msgid ""
-"For PEPs that predominantly contain literal blocks of a specific language, "
-"use the ``.. highlight:: language`` directive with the appropriate "
-"``language`` at the top of the PEP body (below the headers and above the "
-"Abstract). All literal blocks will then be treated as that language, unless "
-"specified otherwise in the specific ``.. code-block``. For example::"
+"For PEPs that predominantly contain literal blocks of a specific "
+"language, use the ``.. highlight:: language`` directive with the "
+"appropriate ``language`` at the top of the PEP body (below the headers "
+"and above the Abstract). All literal blocks will then be treated as that "
+"language, unless specified otherwise in the specific ``.. code-block``. "
+"For example::"
 msgstr ""
 
-#: ../pep-0012.rst:358
+#: ../../peps/pep-0012.rst:356
 msgid "Lists"
 msgstr ""
 
-#: ../pep-0012.rst:360
+#: ../../peps/pep-0012.rst:358
 msgid ""
 "Bullet list items begin with one of \"-\", \"*\", or \"+\" (hyphen, "
 "asterisk, or plus sign), followed by whitespace and the list item body.  "
-"List item bodies must be left-aligned and indented relative to the bullet; "
-"the text immediately after the bullet determines the indentation.  For "
-"example::"
+"List item bodies must be left-aligned and indented relative to the "
+"bullet; the text immediately after the bullet determines the indentation."
+"  For example::"
 msgstr ""
 
-#: ../pep-0012.rst:387
+#: ../../peps/pep-0012.rst:385
 msgid ""
-"Enumerated (numbered) list items are similar, but use an enumerator instead "
-"of a bullet.  Enumerators are numbers (1, 2, 3, ...), letters (A, B, C, ...; "
-"uppercase or lowercase), or Roman numerals (i, ii, iii, iv, ...; uppercase "
-"or lowercase), formatted with a period suffix (\"1.\", \"2.\"), parentheses "
-"(\"(1)\", \"(2)\"), or a right-parenthesis suffix (\"1)\", \"2)\").  For "
-"example::"
+"Enumerated (numbered) list items are similar, but use an enumerator "
+"instead of a bullet.  Enumerators are numbers (1, 2, 3, ...), letters (A,"
+" B, C, ...; uppercase or lowercase), or Roman numerals (i, ii, iii, iv, "
+"...; uppercase or lowercase), formatted with a period suffix (\"1.\", "
+"\"2.\"), parentheses (\"(1)\", \"(2)\"), or a right-parenthesis suffix "
+"(\"1)\", \"2)\").  For example::"
 msgstr ""
 
-#: ../pep-0012.rst:404
+#: ../../peps/pep-0012.rst:402
 msgid "Definition lists are written like this::"
 msgstr ""
 
-#: ../pep-0012.rst:416
+#: ../../peps/pep-0012.rst:414
 msgid "Tables"
 msgstr ""
 
-#: ../pep-0012.rst:418
+#: ../../peps/pep-0012.rst:416
 msgid "Simple tables are easy and compact::"
 msgstr ""
 
-#: ../pep-0012.rst:429
+#: ../../peps/pep-0012.rst:427
 msgid ""
-"There must be at least two columns in a table (to differentiate from section "
-"titles).  Column spans use underlines of hyphens (\"Inputs\" spans the first "
-"two columns)::"
+"There must be at least two columns in a table (to differentiate from "
+"section titles).  Column spans use underlines of hyphens (\"Inputs\" "
+"spans the first two columns)::"
 msgstr ""
 
-#: ../pep-0012.rst:444
+#: ../../peps/pep-0012.rst:442
 msgid ""
-"Text in a first-column cell starts a new row.  No text in the first column "
-"indicates a continuation line; the rest of the cells may consist of multiple "
-"lines.  For example::"
+"Text in a first-column cell starts a new row.  No text in the first "
+"column indicates a continuation line; the rest of the cells may consist "
+"of multiple lines.  For example::"
 msgstr ""
 
-#: ../pep-0012.rst:462
+#: ../../peps/pep-0012.rst:460
 msgid "Hyperlinks"
 msgstr ""
 
-#: ../pep-0012.rst:464
+#: ../../peps/pep-0012.rst:462
 msgid ""
 "When referencing an external web page in the body of a PEP, you should "
-"include the title of the page or a suitable description in the text, with "
-"either an inline hyperlink or a separate explicit target with the URL. Do "
-"not include bare URLs in the body text of the PEP, and use HTTPS links "
-"wherever available."
+"include the title of the page or a suitable description in the text, with"
+" either an inline hyperlink or a separate explicit target with the URL. "
+"Do not include bare URLs in the body text of the PEP, and use HTTPS links"
+" wherever available."
 msgstr ""
 
-#: ../pep-0012.rst:470
+#: ../../peps/pep-0012.rst:468
 msgid ""
-"Hyperlink references use backquotes and a trailing underscore to mark up the "
-"reference text; backquotes are optional if the reference text is a single "
-"word.  For example, to reference a hyperlink target named ``Python "
-"website``, you would write:"
+"Hyperlink references use backquotes and a trailing underscore to mark up "
+"the reference text; backquotes are optional if the reference text is a "
+"single word.  For example, to reference a hyperlink target named ``Python"
+" website``, you would write:"
 msgstr ""
 
-#: ../pep-0012.rst:479
+#: ../../peps/pep-0012.rst:477
 msgid ""
-"If you intend to only reference a link once, and want to define it inline "
-"with the text, insert the link into angle brackets (``<>``) after the text "
-"you want to link, but before the closing backtick, with a space between the "
-"text and the opening backtick. You should also use a double-underscore after "
-"the closing backtick instead of a single one, which makes it an anonymous "
-"reference to avoid conflicting with other target names. For example:"
+"If you intend to only reference a link once, and want to define it inline"
+" with the text, insert the link into angle brackets (``<>``) after the "
+"text you want to link, but before the closing backtick, with a space "
+"between the text and the opening backtick. You should also use a double-"
+"underscore after the closing backtick instead of a single one, which "
+"makes it an anonymous reference to avoid conflicting with other target "
+"names. For example:"
 msgstr ""
 
-#: ../pep-0012.rst:490
+#: ../../peps/pep-0012.rst:488
 msgid ""
-"If you want to use one link multiple places with different linked text, or "
-"want to ensure you don't have to update your link target names when changing "
-"the linked text, include the target name within angle brackets following the "
-"text to link, *with an underscore after the target name but before the "
-"closing angle bracket* (or the link **will not work**). For example:"
+"If you want to use one link multiple places with different linked text, "
+"or want to ensure you don't have to update your link target names when "
+"changing the linked text, include the target name within angle brackets "
+"following the text to link, *with an underscore after the target name but"
+" before the closing angle bracket* (or the link **will not work**). For "
+"example:"
 msgstr ""
 
-#: ../pep-0012.rst:501
+#: ../../peps/pep-0012.rst:499
 msgid ""
-"An explicit target provides the URL.  Put targets in the Footnotes section "
-"at the end of the PEP, or immediately after the paragraph with the "
-"reference. Hyperlink targets begin with two periods and a space (the "
-"\"explicit markup start\"), followed by a leading underscore, the reference "
-"text, a colon, and the URL."
+"An explicit target provides the URL.  Put targets in the Footnotes "
+"section at the end of the PEP, or immediately after the paragraph with "
+"the reference. Hyperlink targets begin with two periods and a space (the "
+"\"explicit markup start\"), followed by a leading underscore, the "
+"reference text, a colon, and the URL."
 msgstr ""
 
-#: ../pep-0012.rst:512
+#: ../../peps/pep-0012.rst:510
 msgid ""
 "The reference text and the target text must match (although the match is "
 "case-insensitive and ignores differences in whitespace).  Note that the "
-"underscore trails the reference text but precedes the target text. If you "
-"think of the underscore as a right-pointing arrow, it points *away* from the "
-"reference and *toward* the target."
+"underscore trails the reference text but precedes the target text. If you"
+" think of the underscore as a right-pointing arrow, it points *away* from"
+" the reference and *toward* the target."
 msgstr ""
 
-#: ../pep-0012.rst:520
+#: ../../peps/pep-0012.rst:518
 msgid "Internal and PEP/RFC Links"
 msgstr ""
 
-#: ../pep-0012.rst:522
+#: ../../peps/pep-0012.rst:520
 msgid ""
-"The same mechanism as hyperlinks can be used for internal references. Every "
-"unique section title implicitly defines an internal hyperlink target. We can "
-"make a link to the Abstract section like this:"
+"The same mechanism as hyperlinks can be used for internal references. "
+"Every unique section title implicitly defines an internal hyperlink "
+"target. We can make a link to the Abstract section like this:"
 msgstr ""
 
-#: ../pep-0012.rst:532
+#: ../../peps/pep-0012.rst:530
 msgid ""
 "To refer to PEPs or RFCs, always use the ``:pep:`` and ``:rfc:`` roles, "
 "never hardcoded URLs. For example:"
 msgstr ""
 
-#: ../pep-0012.rst:541
+#: ../../peps/pep-0012.rst:539
 msgid "This renders as:"
 msgstr ""
 
-#: ../pep-0012.rst:543
+#: ../../peps/pep-0012.rst:541
 msgid ""
 "See :pep:`1` for more information on how to write a PEP, and :pep:`the "
 "Hyperlink section of PEP 12 <12#hyperlinks>` for how to link."
 msgstr ""
 
-#: ../pep-0012.rst:546
+#: ../../peps/pep-0012.rst:544
 msgid ""
-"PEP numbers in the text are never padded, and there is a space (not a dash) "
-"between \"PEP\" or \"RFC\" and the number; the above roles will take care of "
-"that for you."
+"PEP numbers in the text are never padded, and there is a space (not a "
+"dash) between \"PEP\" or \"RFC\" and the number; the above roles will "
+"take care of that for you."
 msgstr ""
 
-#: ../pep-0012.rst:552
+#: ../../peps/pep-0012.rst:550
 msgid "Footnotes"
 msgstr "Notas de rodapé"
 
-#: ../pep-0012.rst:554
+#: ../../peps/pep-0012.rst:552
 msgid ""
 "Footnote references consist of a left square bracket, a label, a right "
-"square bracket, and a trailing underscore. Instead of a number, use a label "
-"of the form \"#word\", where \"word\" is a mnemonic consisting of "
-"alphanumerics plus internal hyphens, underscores, and periods (no whitespace "
-"or other characters are allowed). For example:"
+"square bracket, and a trailing underscore. Instead of a number, use a "
+"label of the form \"#word\", where \"word\" is a mnemonic consisting of "
+"alphanumerics plus internal hyphens, underscores, and periods (no "
+"whitespace or other characters are allowed). For example:"
 msgstr ""
 
-#: ../pep-0012.rst:566 ../pep-0012.rst:586
+#: ../../peps/pep-0012.rst:564 ../../peps/pep-0012.rst:584
 msgid "which renders as"
 msgstr ""
 
-#: ../pep-0012.rst:568
+#: ../../peps/pep-0012.rst:566
 msgid "Refer to The TeXbook [#TeXbook]_ for more information."
 msgstr ""
 
-#: ../pep-0012.rst:570
+#: ../../peps/pep-0012.rst:568
 msgid ""
-"Whitespace must precede the footnote reference.  Leave a space between the "
-"footnote reference and the preceding word."
+"Whitespace must precede the footnote reference.  Leave a space between "
+"the footnote reference and the preceding word."
 msgstr ""
 
-#: ../pep-0012.rst:573
+#: ../../peps/pep-0012.rst:571
 msgid ""
-"Use footnotes for additional notes, explanations and caveats, as well as for "
-"references to books and other sources not readily available online. Native "
-"reST hyperlink targets or inline hyperlinks in the text should be used in "
-"preference to footnotes for including URLs to online resources."
+"Use footnotes for additional notes, explanations and caveats, as well as "
+"for references to books and other sources not readily available online. "
+"Native reST hyperlink targets or inline hyperlinks in the text should be "
+"used in preference to footnotes for including URLs to online resources."
 msgstr ""
 
-#: ../pep-0012.rst:578
+#: ../../peps/pep-0012.rst:576
 msgid ""
-"Footnotes begin with \".. \" (the explicit markup start), followed by the "
-"footnote marker (no underscores), followed by the footnote body.  For "
+"Footnotes begin with \".. \" (the explicit markup start), followed by the"
+" footnote marker (no underscores), followed by the footnote body.  For "
 "example:"
 msgstr ""
 
-#: ../pep-0012.rst:588
+#: ../../peps/pep-0012.rst:586
 msgid "Donald Knuth's *The TeXbook*, pages 195 and 196."
 msgstr ""
 
-#: ../pep-0012.rst:590
+#: ../../peps/pep-0012.rst:588
 msgid ""
-"Footnotes and footnote references will be numbered automatically, and the "
-"numbers will always match."
+"Footnotes and footnote references will be numbered automatically, and the"
+" numbers will always match."
 msgstr ""
 
-#: ../pep-0012.rst:595
+#: ../../peps/pep-0012.rst:593
 msgid "Images"
 msgstr ""
 
-#: ../pep-0012.rst:597
+#: ../../peps/pep-0012.rst:595
 msgid ""
-"If your PEP contains a diagram or other graphic, you may include it in the "
-"processed output using the ``image`` directive:"
+"If your PEP contains a diagram or other graphic, you may include it in "
+"the processed output using the ``image`` directive:"
 msgstr ""
 
-#: ../pep-0012.rst:604
+#: ../../peps/pep-0012.rst:602
 msgid ""
-"Any browser-friendly graphics format is possible; PNG should be preferred "
-"for graphics, JPEG for photos and GIF for animations. Currently, SVG must be "
-"avoided due to compatibility issues with the PEP build system."
+"Any browser-friendly graphics format is possible; PNG should be preferred"
+" for graphics, JPEG for photos and GIF for animations. Currently, SVG "
+"must be avoided due to compatibility issues with the PEP build system."
 msgstr ""
 
-#: ../pep-0012.rst:609
+#: ../../peps/pep-0012.rst:607
 msgid ""
 "For accessibility and readers of the source text, you should include a "
-"description of the image and any key information contained within using the "
-"``:alt:`` option to the ``image`` directive:"
+"description of the image and any key information contained within using "
+"the ``:alt:`` option to the ``image`` directive:"
 msgstr ""
 
-#: ../pep-0012.rst:621
+#: ../../peps/pep-0012.rst:619
 msgid "Comments"
 msgstr "Comentários"
 
-#: ../pep-0012.rst:623
+#: ../../peps/pep-0012.rst:621
 msgid ""
-"A comment is an indented block of arbitrary text immediately following an "
-"explicit markup start: two periods and whitespace.  Leave the \"..\" on a "
-"line by itself to ensure that the comment is not misinterpreted as another "
-"explicit markup construct.  Comments are not visible in the processed "
-"document.  For example:"
+"A comment is an indented block of arbitrary text immediately following an"
+" explicit markup start: two periods and whitespace.  Leave the \"..\" on "
+"a line by itself to ensure that the comment is not misinterpreted as "
+"another explicit markup construct.  Comments are not visible in the "
+"processed document.  For example:"
 msgstr ""
 
-#: ../pep-0012.rst:637
+#: ../../peps/pep-0012.rst:635
 msgid "Escaping Mechanism"
 msgstr ""
 
-#: ../pep-0012.rst:639
+#: ../../peps/pep-0012.rst:637
 msgid ""
 "reStructuredText uses backslashes (\"``\\``\") to override the special "
 "meaning given to markup characters and get the literal characters "
-"themselves.  To get a literal backslash, use an escaped backslash (\"``\\"
-"\\``\").  There are two contexts in which backslashes have no special "
-"meaning: `literal blocks`_ and inline literals (see `Inline Markup`_ "
-"above).  In these contexts, no markup recognition is done, and a single "
-"backslash represents a literal backslash, without having to double up."
+"themselves.  To get a literal backslash, use an escaped backslash "
+"(\"``\\\\``\").  There are two contexts in which backslashes have no "
+"special meaning: `literal blocks`_ and inline literals (see `Inline "
+"Markup`_ above).  In these contexts, no markup recognition is done, and a"
+" single backslash represents a literal backslash, without having to "
+"double up."
 msgstr ""
 
-#: ../pep-0012.rst:648
+#: ../../peps/pep-0012.rst:646
 msgid ""
-"If you find that you need to use a backslash in your text, consider using "
-"inline literals or a literal block instead."
+"If you find that you need to use a backslash in your text, consider using"
+" inline literals or a literal block instead."
 msgstr ""
 
-#: ../pep-0012.rst:653
+#: ../../peps/pep-0012.rst:651
 msgid "Canonical Documentation and Intersphinx"
 msgstr ""
 
-#: ../pep-0012.rst:655
+#: ../../peps/pep-0012.rst:653
 msgid ""
 "As :pep:`PEP 1 describes <1#pep-maintenance>`, PEPs are considered "
-"historical documents once marked Final, and their canonical documentation/"
-"specification should be moved elsewhere. To indicate this, use the "
-"``canonical-docs`` directive or an appropriate subclass (currently "
-"``canonical-pypa-spec`` for packaging standards)."
+"historical documents once marked Final, and their canonical "
+"documentation/specification should be moved elsewhere. To indicate this, "
+"use the ``canonical-docs`` directive or an appropriate subclass "
+"(currently ``canonical-pypa-spec`` for packaging standards)."
 msgstr ""
 
-#: ../pep-0012.rst:662
+#: ../../peps/pep-0012.rst:660
 msgid ""
-"Furthermore, you can use `Intersphinx references <https://www.sphinx-doc.org/"
-"en/master/usage/extensions/intersphinx.html>`_ to other Sphinx sites, "
-"currently the `Python documentation <https://docs.python.org/>`_ and "
-"`packaging.python.org <https://packaging.python.org/>`_, to easily cross-"
-"reference pages, sections and Python/C objects. This works with both the "
-"\"canonical\" directives and anywhere in your PEP."
+"Furthermore, you can use `Intersphinx references <https://www.sphinx-"
+"doc.org/en/master/usage/extensions/intersphinx.html>`_ to other Sphinx "
+"sites, currently the `Python documentation <https://docs.python.org/>`_ "
+"and `packaging.python.org <https://packaging.python.org/>`_, to easily "
+"cross-reference pages, sections and Python/C objects. This works with "
+"both the \"canonical\" directives and anywhere in your PEP."
 msgstr ""
 
-#: ../pep-0012.rst:671
+#: ../../peps/pep-0012.rst:669
 msgid ""
 "Add the directive between the headers and the first section of the PEP "
-"(typically the Abstract) and pass as an argument an Intersphinx reference of "
-"the canonical doc/spec (or if the target is not on a Sphinx site, a `reST "
-"hyperlink <Hyperlinks_>`__)."
+"(typically the Abstract) and pass as an argument an Intersphinx reference"
+" of the canonical doc/spec (or if the target is not on a Sphinx site, a "
+"`reST hyperlink <Hyperlinks_>`__)."
 msgstr ""
 
-#: ../pep-0012.rst:676
+#: ../../peps/pep-0012.rst:674
 msgid ""
-"For example, to create a banner pointing to the :mod:`python:sqlite3` docs, "
-"you would write the following::"
+"For example, to create a banner pointing to the :mod:`python:sqlite3` "
+"docs, you would write the following::"
 msgstr ""
 
-#: ../pep-0012.rst:682
+#: ../../peps/pep-0012.rst:680
 msgid "which would generate the banner:"
 msgstr ""
 
-#: ../pep-0012.rst:686
+#: ../../peps/pep-0012.rst:684
 msgid ""
-"Or for a PyPA spec, such as the :ref:`packaging:core-metadata`, you would "
-"use::"
+"Or for a PyPA spec, such as the :ref:`packaging:core-metadata`, you would"
+" use::"
 msgstr ""
 
-#: ../pep-0012.rst:692
+#: ../../peps/pep-0012.rst:690
 msgid "which renders as:"
 msgstr ""
 
-#: ../pep-0012.rst:696
+#: ../../peps/pep-0012.rst:694
 msgid ""
-"The argument accepts arbitrary reST, so you can include multiple linked docs/"
-"specs and name them whatever you like, and you can also include directive "
-"content that will be inserted into the text. The following advanced example::"
+"The argument accepts arbitrary reST, so you can include multiple linked "
+"docs/specs and name them whatever you like, and you can also include "
+"directive content that will be inserted into the text. The following "
+"advanced example::"
 msgstr ""
 
-#: ../pep-0012.rst:705
+#: ../../peps/pep-0012.rst:703
 msgid "would render as:"
 msgstr ""
 
-#: ../pep-0012.rst:709
+#: ../../peps/pep-0012.rst:707
 msgid ""
-"Also, see the :ref:`Data Persistence docs <persistence>` for other examples."
+"Also, see the :ref:`Data Persistence docs <persistence>` for other "
+"examples."
 msgstr ""
 
-#: ../pep-0012.rst:713
+#: ../../peps/pep-0012.rst:711
 msgid "Habits to Avoid"
 msgstr ""
 
-#: ../pep-0012.rst:715
+#: ../../peps/pep-0012.rst:713
 msgid ""
-"Many programmers who are familiar with TeX often write quotation marks like "
-"this:"
+"Many programmers who are familiar with TeX often write quotation marks "
+"like this:"
 msgstr ""
 
-#: ../pep-0012.rst:722
+#: ../../peps/pep-0012.rst:720
 msgid ""
-"Backquotes are significant in reStructuredText, so this practice should be "
-"avoided.  For ordinary text, use ordinary 'single-quotes' or \"double-"
-"quotes\".  For inline literal text (see `Inline Markup`_ above), use double-"
-"backquotes::"
+"Backquotes are significant in reStructuredText, so this practice should "
+"be avoided.  For ordinary text, use ordinary 'single-quotes' or \"double-"
+"quotes\".  For inline literal text (see `Inline Markup`_ above), use "
+"double-backquotes::"
 msgstr ""
 
-#: ../pep-0012.rst:731
+#: ../../peps/pep-0012.rst:729
 msgid "Suggested Sections"
 msgstr ""
 
-#: ../pep-0012.rst:733
+#: ../../peps/pep-0012.rst:731
 msgid ""
-"Various sections are found to be common across PEPs and are outlined in :pep:"
-"`1`. Those sections are provided here for convenience."
+"Various sections are found to be common across PEPs and are outlined in "
+":pep:`1`. Those sections are provided here for convenience."
 msgstr ""
 
-#: ../pep-0012.rst:743
+#: ../../peps/pep-0012.rst:741
 msgid "Resources"
 msgstr ""
 
-#: ../pep-0012.rst:745
+#: ../../peps/pep-0012.rst:743
 msgid ""
-"Many other constructs and variations are possible, both those supported by "
-"basic `Docutils <https://docutils.sourceforge.io/>`_ and the extensions "
-"added by `Sphinx <https://www.sphinx-doc.org/>`_."
+"Many other constructs and variations are possible, both those supported "
+"by basic `Docutils <https://docutils.sourceforge.io/>`_ and the "
+"extensions added by `Sphinx <https://www.sphinx-doc.org/>`_."
 msgstr ""
 
-#: ../pep-0012.rst:749
+#: ../../peps/pep-0012.rst:747
 msgid "A number of resources are available to learn more about them:"
 msgstr ""
 
-#: ../pep-0012.rst:751
+#: ../../peps/pep-0012.rst:749
 msgid ""
-"`Sphinx ReStructuredText Primer <https://www.sphinx-doc.org/en/master/usage/"
-"restructuredtext/basics.html>`_, a gentle but fairly detailed introduction."
+"`Sphinx ReStructuredText Primer <https://www.sphinx-"
+"doc.org/en/master/usage/restructuredtext/basics.html>`_, a gentle but "
+"fairly detailed introduction."
 msgstr ""
 
-#: ../pep-0012.rst:755
+#: ../../peps/pep-0012.rst:753
 msgid ""
-"`reStructuredText Markup Specification <https://docutils.sourceforge.io/docs/"
-"ref/rst/restructuredtext.html>`_, the authoritative, comprehensive "
-"documentation of the basic reST syntax, directives, roles and more."
+"`reStructuredText Markup Specification "
+"<https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html>`_, "
+"the authoritative, comprehensive documentation of the basic reST syntax, "
+"directives, roles and more."
 msgstr ""
 
-#: ../pep-0012.rst:760
+#: ../../peps/pep-0012.rst:758
 msgid ""
-"`Sphinx Roles <https://www.sphinx-doc.org/en/master/usage/restructuredtext/"
-"roles.html>`_ and `Sphinx Directives <https://www.sphinx-doc.org/en/master/"
-"usage/restructuredtext/directives.html>`_, the extended constructs added by "
-"the Sphinx documentation system used to render the PEPs to HTML."
+"`Sphinx Roles <https://www.sphinx-"
+"doc.org/en/master/usage/restructuredtext/roles.html>`_ and `Sphinx "
+"Directives <https://www.sphinx-"
+"doc.org/en/master/usage/restructuredtext/directives.html>`_, the extended"
+" constructs added by the Sphinx documentation system used to render the "
+"PEPs to HTML."
 msgstr ""
 
-#: ../pep-0012.rst:767
+#: ../../peps/pep-0012.rst:765
 msgid ""
 "If you have questions or require assistance with writing a PEP that the "
-"above resources don't address, ping ``@python/pep-editors`` on GitHub, open "
-"an `issue on the PEPs repository <https://github.com/python/peps/issues>`_ "
-"or reach out to a PEP editor directly."
+"above resources don't address, ping ``@python/pep-editors`` on GitHub, "
+"open an `issue on the PEPs repository "
+"<https://github.com/python/peps/issues>`_ or reach out to a PEP editor "
+"directly."
 msgstr ""
 
-#: ../pep-0012.rst:774
+#: ../../peps/pep-0012.rst:772
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../pep-0012.rst:776
+#: ../../peps/pep-0012.rst:774
 msgid ""
-"This document is placed in the public domain or under the CC0-1.0-Universal "
-"license, whichever is more permissive."
+"This document is placed in the public domain or under the "
+"CC0-1.0-Universal license, whichever is more permissive."
 msgstr ""
+
+#~ msgid ""
+#~ "Make a copy of this file (the "
+#~ "``.rst`` file, **not** the HTML!) and"
+#~ " perform the following edits. Name "
+#~ "the new file ``pep-9999.rst`` if you "
+#~ "don't yet have a PEP number "
+#~ "assignment, or ``pep-NNNN.rst`` if you"
+#~ " do. Those with push permissions are"
+#~ " welcome to claim the next available"
+#~ " number (ignoring the special blocks "
+#~ "3000 and 8000, and a handful of"
+#~ " special allocations - currently 666, "
+#~ "754, and 801) and push it "
+#~ "directly."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Replace the \"PEP: 12\" header with "
+#~ "\"PEP: 9999\" or \"PEP: NNNN\", matching"
+#~ " the file name. Note that the "
+#~ "file name should be padded with "
+#~ "zeros (eg ``pep-0012.rst``), but the "
+#~ "header should not (``PEP: 12``)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Run ``./build.py`` to ensure the PEP "
+#~ "is rendered without errors, and check"
+#~ " that the output in ``build/pep-9999.html``"
+#~ " looks as you intend."
+#~ msgstr ""
+

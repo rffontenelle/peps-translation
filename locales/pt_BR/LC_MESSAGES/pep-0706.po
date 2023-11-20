@@ -1,0 +1,1191 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the PEPs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PEPs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-20 10:43-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pt_BR\n"
+"Language-Team: pt_BR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.13.1\n"
+
+#: ../../peps/pep-0706.rst
+msgid "Author"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:3
+msgid "Petr Viktorin <encukou@gmail.com>"
+msgstr ""
+
+#: ../../peps/pep-0706.rst
+msgid "Discussions-To"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:4
+msgid "https://discuss.python.org/t/23903"
+msgstr ""
+
+#: ../../peps/pep-0706.rst
+msgid "Status"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:5
+msgid "Final"
+msgstr ""
+
+#: ../../peps/pep-0706.rst
+msgid "Type"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:6
+msgid "Standards Track"
+msgstr ""
+
+#: ../../peps/pep-0706.rst
+msgid "Created"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:8
+msgid "09-Feb-2023"
+msgstr ""
+
+#: ../../peps/pep-0706.rst
+msgid "Python-Version"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:9
+msgid "3.12"
+msgstr ""
+
+#: ../../peps/pep-0706.rst
+msgid "Post-History"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:10
+msgid ""
+"`25-Jan-2023 <https://discuss.python.org/t/23149>`__, `15-Feb-2023 "
+"<https://discuss.python.org/t/23903>`__,"
+msgstr ""
+
+#: ../../peps/pep-0706.rst
+msgid "Resolution"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:12
+msgid "https://discuss.python.org/t/23903/10"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:18
+msgid "Abstract"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:20
+msgid ""
+"The extraction methods in :external+py3.11:mod:`tarfile` gain a "
+"``filter`` argument, which allows rejecting files or modifying metadata "
+"as the archive is extracted. Three built-in named filters are provided, "
+"aimed at limiting features that might be surprising or dangerous. These "
+"can be used as-is, or serve as a base for custom filters."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:26
+msgid ""
+"After a deprecation period, a strict (but safer) filter will become the "
+"default."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:30
+msgid "Motivation"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:32
+msgid ""
+"The ``tar`` format is used for several use cases, many of which have "
+"different needs. For example:"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:35
+msgid ""
+"A backup of a UNIX workstation should faithfully preserve all kinds of "
+"details like file permissions, symlinks to system configuration, and "
+"various kinds of special files."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:38
+msgid ""
+"When unpacking a data bundle, it’s much more important that the unpacking"
+" will not have unintended consequences – like exposing a password file by"
+" symlinking it to a public place."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:42
+msgid ""
+"To support all its use cases, the ``tar`` format has many features. In "
+"many cases, it's best to ignore or disallow some of them when extracting "
+"an archive."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:46
+msgid ""
+"Python allows extracting ``tar`` archives using "
+":external+py3.11:meth:`tarfile.TarFile.extractall`, whose docs warn to "
+"*never extract archives from untrusted sources without prior inspection*."
+" However, it’s not clear what kind of inspection should be done. Indeed, "
+"it’s quite tricky to do such an inspection correctly. As a result, many "
+"people don’t bother, or do the check incorrectly, resulting in security "
+"issues such as `CVE-2007-4559`_."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:54
+msgid ""
+"Since :external+py3.11:mod:`tarfile` was first written, it's become more "
+"accepted that warnings in documentation are not enough. Whenever "
+"possible, an unsafe operation should be *explicitly requested*; "
+"potentially dangerous operations should *look* dangerous. However, "
+"``TarFile.extractall`` looks benign in a code review."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:60
+msgid ""
+"Tarfile extraction is also exposed via "
+":external+py3.11:func:`shutil.unpack_archive`, which allows the user to "
+"not care about the kind of archive they're dealing with. The API is very "
+"inviting for extracting archives without prior inspection, even though "
+"the docs again warn against it."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:66
+msgid ""
+"It has been argued that Python is not wrong -- it behaves exactly as "
+"documented -- but that's beside the point. Let's improve the situation "
+"rather than assign/avoid blame. Python and its docs are the best place to"
+" improve things."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:73
+msgid "Rationale"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:75
+msgid ""
+"How do we improve things? Unfortunately, we will need to change the "
+"defaults, which implies breaking backwards compatibility. "
+":external+py3.11:meth:`TarFile.extractall <tarfile.TarFile.extractall>` "
+"is what people reach for when they need to extract a tarball. Its default"
+" behaviour needs to change."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:81
+msgid ""
+"What would be the best behaviour? That depends on the use case. So, we'll"
+" add several general “policies” to control extraction. They are based on "
+"*use cases*, and ideally they should have straightforward security "
+"implications:"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:86
+msgid ""
+"Current behavior: trusting the archive. Suitable e.g. as a building block"
+" for libraries that do the check themselves, or extracting an archive you"
+" just made yourself."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:89
+msgid ""
+"Unpacking a UNIX archive: roughly following GNU ``tar``, e.g. stripping "
+"leading ``/`` from filenames."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:91
+msgid ""
+"Unpacking a general data archive: the "
+":external+py3.11:func:`shutil.unpack_archive` use case, where it's not "
+"important to preserve details specific to ``tar`` or Unix-like "
+"filesystems."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:96
+msgid ""
+"After a deprecation period, the last option -- the most limited but most "
+"secure one -- will become the default."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:99
+msgid ""
+"Even with better general defaults, users should still verify the archives"
+" they extract, and perhaps modify some of the metadata. Superficially, "
+"the following looks like a reasonable way to do this today:"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:103
+msgid ""
+"Call :external+py3.11:meth:`TarFile.getmembers "
+"<tarfile.TarFile.getmembers>`"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:104
+msgid "Verify or modify each member's :external+py3.11:class:`~tarfile.TarInfo`"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:105
+msgid "Pass the result to ``extractall``'s ``members``"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:107
+msgid "However, there are some issues with this approach:"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:109
+msgid ""
+"It's possible to modify ``TarInfo`` objects, but the changes to them "
+"affect all subsequent operations on the same ``TarFile`` object. This "
+"behavior is fine for most uses, but despite that, it would be very "
+"surprising if ``TarFile.extractall`` did this by default."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:113
+msgid ""
+"Calling ``getmembers`` can be expensive and it `requires a seekable "
+"archive "
+"<https://github.com/python/cpython/issues/45385#issuecomment-1255615199>`__."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:115
+msgid ""
+"When verifying members in advance, it may be necessary to track how each "
+"member would have changed the filesystem, e.g. how symlinks are being set"
+" up. This is hard. We can't expect users to do it."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:119
+msgid "To solve these issues we'll:"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:121
+msgid ""
+"Provide a supported way to “clone” and modify ``TarInfo`` objects. A "
+"``replace`` method, similar to "
+":external+py3.11:func:`dataclasses.replace` or "
+":external+py3.11:meth:`namedtuple._replace "
+"<collections.somenamedtuple._replace>` should do the trick."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:125
+msgid ""
+"Provide a “filter” hook in ``extractall``'s loop that can modify or "
+"discard members before they are processed."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:127
+msgid ""
+"Require that this hook is called just before extracting each member, so "
+"it can scan the *current* state of the disk. This will greatly simplify "
+"the implementation of policies (both in stdlib and user code), at the "
+"cost of not being able to do a precise “dry run”."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:132
+msgid ""
+"The hook API will be very similar to the existing ``filter`` argument for"
+" :external+py3.11:meth:`TarFile.add <tarfile.TarFile.add>`. We'll also "
+"name it ``filter``. (In some cases “policy” would be a more fitting name,"
+" but the API can be used for more than security policies.)"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:138
+msgid ""
+"The built-in policies/filters described above will be implemented using "
+"the public filter API, so they can be used as building blocks or "
+"examples."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:143
+msgid "Setting a precedent"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:145
+msgid ""
+"If and when other libraries for archive extraction, such as "
+":external+py3.11:mod:`zipfile`, gain similar functionality, they should "
+"mimic this API as much as it's reasonable."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:149
+msgid ""
+"To enable this for simple cases, the built-in filters will have string "
+"names; e.g. users can pass ``filter='data'`` instead of a specific "
+"function that deals with :external+py3.11:class:`~tarfile.TarInfo` "
+"objects."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:153
+msgid ""
+"The :external+py3.11:func:`shutil.unpack_archive` function will get a "
+"``filter`` argument, which it will pass to ``extractall``."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:156
+msgid ""
+"Adding function-based API that would work across archive formats is out "
+"of scope of this PEP."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:161
+msgid "Full disclosure & redistributor info"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:163
+msgid ""
+"The PEP author works for Red Hat, a redistributor of Python with "
+"different security needs and support periods than CPython in general. "
+"Such redistributors may want to carry vendor patches to:"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:167
+msgid "Allow configuring the defaults system-wide, and"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:168
+msgid "Change the default as soon as possible, even in older Python versions."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:170
+msgid ""
+"The proposal makes this easy to do, and it allows users to query the "
+"settings."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:175
+msgid "Specification"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:178
+msgid "Modifying and forgetting member metadata"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:180
+msgid ""
+"The :external+py3.11:class:`~tarfile.TarInfo` class will gain a new "
+"method, ``replace()``, which will work similarly to "
+"``dataclasses.replace``. It will return a copy of the ``TarInfo`` object "
+"with attributes replaced as specified by keyword-only arguments:"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:185
+msgid "``name``"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:186
+msgid "``mtime``"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:187
+msgid "``mode``"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:188
+msgid "``linkname``"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:189
+msgid "``uid``"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:190
+msgid "``gid``"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:191
+msgid "``uname``"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:192
+msgid "``gname``"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:194
+msgid ""
+"Any of these, except ``name`` and ``linkname``, will be allowed to be set"
+" to ``None``. When ``extract`` or ``extractall`` encounters such a "
+"``None``, it will not set that piece of metadata. (If ``uname`` or "
+"``gname`` is ``None``, it will fall back to ``uid`` or ``gid`` as if the "
+"name wasn't found.) When ``addfile`` or ``tobuf`` encounters such a "
+"``None``, it will raise a ``ValueError``. When ``list`` encounters such a"
+" ``None``, it will print a placeholder string."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:204
+msgid ""
+"The documentation will mention why the method is there: ``TarInfo`` "
+"objects retrieved from :external+py3.11:meth:`TarFile.getmembers "
+"<tarfile.TarFile.getmembers>` are “live”; modifying them directly will "
+"affect subsequent unrelated operations."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:211
+msgid "Filters"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:213
+msgid ""
+":external+py3.11:meth:`TarFile.extract <tarfile.TarFile.extract>` and "
+":external+py3.11:meth:`TarFile.extractall <tarfile.TarFile.extractall>` "
+"methods will grow a ``filter`` keyword-only parameter, which takes a "
+"callable that can be called as::"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:220
+msgid ""
+"where ``member`` is the member to be extracted, and ``path`` is the path "
+"to where the archive is extracted (i.e., it'll be the same for every "
+"member)."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:223
+msgid ""
+"When used it will be called on each member as it is extracted, and "
+"extraction will work with the result. If it returns ``None``, the member "
+"will be skipped."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:227
+msgid ""
+"The function can also raise an exception. This can, depending on "
+"``TarFile.errorlevel``, abort the extraction or cause the member to be "
+"skipped."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:233
+msgid ""
+"If extraction is aborted, the archive may be left partially extracted. It"
+" is the user’s responsibility to clean up."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:236
+msgid ""
+"We will also provide a set of defaults for common use cases. In addition "
+"to a function, the ``filter`` argument can be one of the following "
+"strings:"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:240
+msgid ""
+"``'fully_trusted'``: Current behavior: honor the metadata as is. Should "
+"be used if the user trusts the archive completely, or implements their "
+"own complex verification."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:243
+msgid ""
+"``'tar'``: Roughly follow defaults of the GNU ``tar`` command (when run "
+"as a normal user):"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:246
+msgid "Strip leading ``'/'`` and ``os.sep`` from filenames"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:247
+msgid ""
+"Refuse to extract files with absolute paths (after the ``/`` stripping "
+"above, e.g. ``C:/foo`` on Windows)."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:249
+msgid ""
+"Refuse to extract files whose absolute path (after following symlinks) "
+"would end up outside the destination. (Note that GNU ``tar`` instead "
+"delays creating some links.)"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:252
+msgid ""
+"Clear high mode bits (setuid, setgid, sticky) and group/other write bits "
+"(:external+py3.11:data:`S_IWGRP|S_IWOTH <stat.S_IWGRP>`). (This is an "
+"approximation of GNU ``tar``'s default, which limits the mode by the "
+"current ``umask`` setting.)"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:257
+msgid ""
+"``'data'``:  Extract a \"data\" archive, disallowing common attack "
+"vectors but limiting functionality. In particular, many features specific"
+" to UNIX-style filesystems (or equivalently, to the ``tar`` archive "
+"format) are ignored, making this a good filter for cross-platform "
+"archives. In addition to ``tar``:"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:264
+msgid "Refuse to extract links (hard or soft) that link to absolute paths."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:265
+msgid ""
+"Refuse to extract links (hard or soft) which end up linking to a path "
+"outside of the destination. (On systems that don't support links, "
+"``tarfile`` will, in most cases, fall back to creating regular files. "
+"This proposal doesn't change that behaviour.)"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:270
+msgid "Refuse to extract device files (including pipes)."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:271
+msgid "For regular files and hard links:"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:273
+msgid ""
+"Set the owner read and write permissions "
+"(:external+py3.11:data:`S_IRUSR|S_IWUSR <stat.S_IRUSR>`)."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:274
+msgid ""
+"Remove the group & other *executable* permission "
+"(:external+py3.11:data:`S_IXGRP|S_IXOTH <stat.S_IXGRP>`) if the owner "
+"doesn't have it (:external+py3.11:data:`~stat.S_IXUSR`)."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:277
+msgid "For other files (directories), ignore mode entirely (set it to ``None``)."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:278
+msgid ""
+"Ignore user and group info (set ``uid``, ``gid``, ``uname``, ``gname`` to"
+" ``None``)."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:281
+msgid "Any other string will cause a ``ValueError``."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:283
+msgid ""
+"The corresponding filter functions will be available as "
+"``tarfile.fully_trusted_filter()``, ``tarfile.tar_filter()``, etc., so "
+"they can be easily used in custom policies."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:287
+msgid ""
+"Note that these filters never return ``None``. Skipping members this way "
+"is a feature for user-defined filters."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:291
+msgid "Defaults and their configuration"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:293
+msgid ""
+":external+py3.11:class:`~tarfile.TarFile` will gain a new attribute, "
+"``extraction_filter``, to allow configuring the default filter. By "
+"default it will be ``None``, but users can set it to a callable that will"
+" be used if the ``filter`` argument is missing or ``None``."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:300
+msgid ""
+"String names won't be accepted here. That would encourage code like "
+"``my_tarfile.extraction_filter = 'data'``. On Python versions without "
+"this feature, this would do nothing, silently ignoring a security-related"
+" request."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:305
+msgid "If both the argument and attribute are ``None``:"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:307
+msgid ""
+"In Python 3.12-3.13, a ``DeprecationWarning`` will be emitted and "
+"extraction will use the ``'fully_trusted'`` filter."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:309
+msgid "In Python 3.14+, it will use the ``'data'`` filter."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:311
+msgid ""
+"Applications and system integrators may wish to change "
+"``extraction_filter`` of the ``TarFile`` class itself to set a global "
+"default. When using a function, they will generally want to wrap it in "
+"``staticmethod()`` to prevent injection of a ``self`` argument."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:316
+msgid "Subclasses of ``TarFile`` can also override ``extraction_filter``."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:320
+msgid "FilterError"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:322
+msgid ""
+"A new exception, ``FilterError``, will be added to the "
+":external+py3.11:mod:`tarfile` module. It'll have several new subclasses,"
+" one for each of the refusal reasons above. ``FilterError``'s ``member`` "
+"attribute will contain the relevant ``TarInfo``."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:327
+msgid ""
+"In the lists above, “refusing\" to extract a file means that a "
+"``FilterError`` will be raised. As with other extraction errors, if the "
+"``TarFile.errorlevel`` is 1 or more, this will abort the extraction; with"
+" ``errorlevel=0`` the error will be logged and the member will be "
+"ignored, but extraction will continue. Note that ``extractall()`` may "
+"leave the archive partially extracted; it is the user's responsibility to"
+" clean up."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:337
+msgid "Errorlevel, and fatal/non-fatal errors"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:339
+msgid ""
+"Currently, :external+py3.11:class:`~tarfile.TarFile` has an *errorlevel* "
+"argument/attribute, which specifies how errors are handled:"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:342
+msgid ""
+"With ``errorlevel=0``, documentation says that “all errors are ignored "
+"when using :external+py3.11:meth:`~tarfile.TarFile.extract` and "
+":external+py3.11:meth:`~tarfile.TarFile.extractall`”. The code only "
+"ignores *non-fatal* and *fatal* errors (see below), so, for example, you "
+"still get ``TypeError`` if you pass ``None`` as the destination path."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:348
+msgid ""
+"With ``errorlevel=1`` (the default), all *non-fatal* errors are ignored. "
+"(They may be logged to ``sys.stderr`` by setting the *debug* "
+"argument/attribute.) Which errors are *non-fatal* is not defined in "
+"documentation, but code treats ``ExtractionError`` as such. Specifically,"
+" it's these issues:"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:354
+msgid ""
+"“unable to resolve link inside archive” (raised on systems that do not "
+"support symlinks)"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:356
+msgid ""
+"“fifo/special devices not supported by system” (not used for failures if "
+"the system supports these, e.g. for a ``PermissionError``)"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:358
+msgid "“could not change owner/mode/modification time”"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:360
+msgid ""
+"Note that, for example, *file name too long* or *out of disk space* don't"
+" qualify. The *non-fatal* errors are not very likely to appear on a Unix-"
+"like system."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:363
+msgid ""
+"With ``errorlevel=2``, all errors are raised, including *fatal* ones. "
+"Which errors are *fatal* is, again, not defined; in practice it's "
+"``OSError``."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:367
+msgid ""
+"A filter refusing to extract a member does not fit neatly into the *fatal"
+"*/*non-fatal* categories."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:370
+msgid ""
+"This PEP does not change existing behavior. (Ideas for improvements are "
+"welcome in `Discourse topic 25970 "
+"<https://discuss.python.org/t/25970>`_.)"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:372
+msgid ""
+"When a filter refuses to extract a member, the error should not pass "
+"silently by default."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:375
+msgid ""
+"To satisfy this, ``FilterError`` will be considered a *fatal* error, that"
+" is, it'll be ignored only with ``errorlevel=0``."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:378
+msgid ""
+"Users that want to ignore ``FilterError`` but not other *fatal* errors "
+"should create a custom filter function, and call another filter in a "
+"``try`` block."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:383
+msgid "Hints for further verification"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:385
+msgid ""
+"Even with the proposed changes, :external+py3.11:mod:`tarfile` will not "
+"be suited for extracting untrusted files without prior inspection. Among "
+"other issues, the proposed policies don't prevent denial-of-service "
+"attacks. Users should do additional checks."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:391
+msgid "New docs will tell users to consider:"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:393
+msgid "extracting to a new empty directory,"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:394
+msgid "using external (e.g. OS-level) limits on disk, memory and CPU usage,"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:395
+msgid ""
+"checking filenames against an allow-list of characters (to filter out "
+"control characters, confusables, etc.),"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:397
+msgid ""
+"checking that filenames have expected extensions (discouraging files that"
+" execute when you “click on them”, or extension-less files like Windows "
+"special device names),"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:400
+msgid ""
+"limiting the number of extracted files, total size of extracted data, and"
+" size of individual files,"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:402
+msgid "checking for files that would be shadowed on case-insensitive filesystems."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:404
+msgid "Also, the docs will note that:"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:406
+msgid ""
+"tar files commonly contain multiple versions of the same file: later ones"
+" are expected to overwrite earlier ones on extraction,"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:408
+msgid ""
+"``tarfile`` does not protect against issues with “live” data, e.g. an "
+"attacker tinkering with the destination directory while extracting (or "
+"adding) is going on (see the `GNU tar manual "
+"<https://www.gnu.org/software/tar/manual/html_node/Live-untrusted-"
+"data.html#Live-untrusted-data>`__ for more info)."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:413
+msgid ""
+"This list is not comprehensive, but the documentation is a good place to "
+"collect such general tips. It can be moved into a separate document if "
+"grows too long or if it needs to be consolidated with "
+":external+py3.11:mod:`zipfile` or :external+py3.11:mod:`shutil` (which is"
+" out of scope for this proposal)."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:423
+msgid "TarInfo identity, and ``offset``"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:425
+msgid ""
+"With filters that use ``replace()``, the ``TarInfo`` objects handled by "
+"the extraction machinery will not necessarily be the same objects as "
+"those present in ``members``. This may affect ``TarInfo`` subclasses that"
+" override methods like ``makelink`` and rely on object identity."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:431
+msgid ""
+"Such code can switch to comparing ``offset``, the position of the member "
+"header inside the file."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:434
+msgid ""
+"Note that both the overridable methods and ``offset`` are only documented"
+" in source comments."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:439
+msgid "tarfile CLI"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:441
+msgid ""
+"The CLI (``python -m tarfile``) will gain a ``--filter`` option that will"
+" take the name of one of the provided default filters. It won't be "
+"possible to specify a custom filter function."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:445
+msgid ""
+"If ``--filter`` is not given, the CLI will use the default filter "
+"(``'fully_trusted'`` with a deprecation warning now, and ``'data'`` from "
+"Python 3.14 on)."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:449
+msgid ""
+"There will be no short option. (``-f`` would be confusingly similar to "
+"the filename option of GNU ``tar``.)"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:454
+msgid "Other archive libraries"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:456
+msgid ""
+"If and when other archive libraries, such as "
+":external+py3.11:mod:`zipfile`, grow similar functionality, their "
+"extraction functions should use a ``filter`` argument that takes, at "
+"least, the strings ``'fully_trusted'`` (which should disable any security"
+" precautions) and ``'data'`` (which should avoid features that might "
+"surprise users)."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:462
+msgid "Standardizing a function-based filter API is out of scope of this PEP."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:466
+msgid "Shutil"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:468
+msgid ""
+":external+py3.11:func:`shutil.unpack_archive` will gain a ``filter`` "
+"argument. If it's given, it will be passed to the underlying extraction "
+"function. Passing it for a ``zip`` archive will fail for now (until "
+":external+py3.11:mod:`zipfile` gains a ``filter`` argument, if it ever "
+"does)."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:473
+msgid ""
+"If ``filter`` is not specified (or left as ``None``), it won't be passed "
+"on, so extracting a tarball will use the default filter "
+"(``'fully_trusted'`` with a deprecation warning now, and ``'data'`` from "
+"Python 3.14 on)."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:480
+msgid "Complex filters"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:482
+msgid ""
+"Note that some user-defined filters need, for example, to count extracted"
+" members of do post-processing. This requires a more complex API than a "
+"``filter`` callable. However, that complex API need not be exposed to "
+"``tarfile``. For example, with a hypothetical ``StatefulFilter`` users "
+"would write::"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:491
+msgid "A simple ``StatefulFilter`` example will be added to the docs."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:495
+msgid ""
+"The need for stateful filters is a reason against allowing registration "
+"of custom filter names in addition to ``'fully_trusted'``, ``'tar'`` and "
+"``'data'``. With such a mechanism, API for (at least) set-up and tear-"
+"down would need to be set in stone."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:503
+msgid "Backwards Compatibility"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:505
+msgid ""
+"The default behavior of :external+py3.11:meth:`TarFile.extract "
+"<tarfile.TarFile.extract>` and :external+py3.11:meth:`TarFile.extractall "
+"<tarfile.TarFile.extractall>` will change, after raising "
+"``DeprecationWarning`` for 2 releases (shortest deprecation period "
+"allowed in Python's :pep:`backwards compatibility policy <387>`)."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:511
+msgid ""
+"Additionally, code that relies on "
+":external+py3.11:class:`tarfile.TarInfo` object identity may break, see "
+":ref:`706-offset`."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:516
+msgid "Backporting & Forward Compatibility"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:518
+msgid "This feature may be backported to older versions of Python."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:520
+msgid ""
+"In CPython, we don't add warnings to patch releases, so the default "
+"filter should be changed to ``'fully_trusted'`` in backports."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:523
+msgid ""
+"Other than that, *all* of the changes to ``tarfile`` should be "
+"backported, so ``hasattr(tarfile, 'data_filter')`` becomes a reliable "
+"check for all of the new functionality."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:527
+msgid ""
+"Note that CPython's usual policy is to avoid adding new APIs in security "
+"backports. This feature does not make sense without a new API "
+"(``TarFile.extraction_filter`` and the ``filter`` argument), so we'll "
+"make an exception. (See `Discourse comment 23149/16 "
+"<https://discuss.python.org/t/23149/16>`__ for details.)"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:535
+msgid ""
+"Here are examples of code that takes into account that ``tarfile`` may or"
+" may not have the proposed feature."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:538
+msgid ""
+"When copying these snippets, note that setting ``extraction_filter`` will"
+" affect subsequent operations."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:541
+msgid "Fully trusted archive::"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:546
+msgid ""
+"Use the ``'data'`` filter if available, but revert to Python 3.11 "
+"behavior (``'fully_trusted'``) if this feature is not available::"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:553
+msgid ""
+"(This is an unsafe operation, so it should be spelled out explicitly, "
+"ideally with a comment.)"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:556
+msgid "Use the ``'data'`` filter; *fail* if it is not available::"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:560
+msgid "or::"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:565
+msgid "Use the ``'data'`` filter; *warn* if it is not available::"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:576
+msgid "Security Implications"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:578
+msgid ""
+"This proposal improves security, at the expense of backwards "
+"compatibility. In particular, it will help users avoid `CVE-2007-4559`_."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:583
+msgid "How to Teach This"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:585
+msgid ""
+"The API, usage notes and tips for further verification will be added to "
+"the documentation. These should be usable for users who are familiar with"
+" archives in general, but not with the specifics of UNIX filesystems nor "
+"the related security issues."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:592
+msgid "Reference Implementation"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:594
+msgid ""
+"See `pull request #102953 "
+"<https://github.com/python/cpython/pull/102953>`_ on GitHub."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:598
+msgid "Rejected Ideas"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:601
+msgid "SafeTarFile"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:603
+msgid ""
+"An initial idea from Lars Gustäbel was to provide a separate class that "
+"implements security checks (see `gh-65308`_). There are two major issues "
+"with this approach:"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:607
+msgid ""
+"The name is misleading. General archive operations can never be made "
+"“safe” from all kinds of unwanted behavior, without impacting legitimate "
+"use cases."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:609
+msgid "It does not solve the problem of unsafe defaults."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:611
+msgid "However, many of the ideas behind SafeTarFile were reused in this PEP."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:614
+msgid "Add absolute_path option to tarfile"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:616
+msgid ""
+"Issue `gh-73974`_ asks for adding an ``absolute_path`` option to "
+"extraction methods. This would be a minimal change to formally resolve "
+"`CVE-2007-4559`_. It doesn't go far enough to protect the unaware, nor to"
+" empower the diligent and curious."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:622
+msgid "Other names for the ``'tar'`` filter"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:624
+msgid ""
+"The ``'tar'`` filter exposes features specific to UNIX-like filesystems, "
+"so it could be named ``'unix'``. Or ``'unix-like'``, ``'nix'``, "
+"``'*nix'``, ``'posix'``?"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:628
+msgid ""
+"Feature-wise, *tar format* and *UNIX-like filesystem* are essentially "
+"equivalent, so ``tar`` is a good name."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:633
+msgid "Possible Further Work"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:636
+msgid "Adding filters to zipfile and shutil.unpack_archive"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:638
+msgid ""
+"For consistency, :external+py3.11:mod:`zipfile` and "
+":external+py3.11:func:`shutil.unpack_archive` could gain support for a "
+"``filter`` argument. However, this would require research that this PEP's"
+" author can't promise for Python 3.12."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:644
+msgid ""
+"Filters for ``zipfile`` would probably not help security. Zip is used "
+"primarily for cross-platform data bundles, and correspondingly, "
+":external+py3.11:meth:`ZipFile.extract <zipfile.ZipFile.extract>`'s "
+"defaults are already similar to what a ``'data'`` filter would do. A "
+"``'fully_trusted'`` filter, which would *newly allow* absolute paths and "
+"``..`` path components, might not be useful for much except a unified "
+"``unpack_archive`` API."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:652
+msgid ""
+"Filters should be useful for use cases other than security, but those "
+"would usually need custom filter functions, and those would need API that"
+" works with both :external+py3.11:class:`~tarfile.TarInfo` and "
+":external+py3.11:class:`~zipfile.ZipInfo`. That is *definitely* out of "
+"scope of this PEP."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:658
+msgid ""
+"If only this PEP is implemented and nothing changes for ``zipfile``, the "
+"effect for callers of ``unpack_archive`` is that the default for *tar* "
+"files is changing from ``'fully_trusted'`` to the more appropriate "
+"``'data'``. In the interim period, Python 3.12-3.13 will emit "
+"``DeprecationWarning``. That's annoying, but there are several ways to "
+"handle it: e.g. add a ``filter`` argument conditionally, set "
+"``TarFile.extraction_filter`` globally, or ignore/suppress the warning "
+"until Python 3.14."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:667
+msgid ""
+"Also, since many calls to ``unpack_archive`` are likely to be unsafe, "
+"there's hope that the ``DeprecationWarning`` will often turn out to be a "
+"helpful hint to review affected code."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:673
+msgid "Thanks"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:675
+msgid ""
+"This proposal is based on prior work and discussions by many people, in "
+"particular Lars Gustäbel, Gregory P. Smith, Larry Hastings, Joachim "
+"Wagner, Jan Matejek, Jakub Wilk, Daniel Garcia, Lumír Balhar, Miro "
+"Hrončok, and many others."
+msgstr ""
+
+#: ../../peps/pep-0706.rst:690
+msgid "Copyright"
+msgstr ""
+
+#: ../../peps/pep-0706.rst:692
+msgid ""
+"This document is placed in the public domain or under the "
+"CC0-1.0-Universal license, whichever is more permissive."
+msgstr ""
+

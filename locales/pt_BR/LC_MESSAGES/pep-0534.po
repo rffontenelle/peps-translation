@@ -6,60 +6,60 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PEPs\n"
+"Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 20:07+0000\n"
+"POT-Creation-Date: 2023-11-20 10:43-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.13.1\n"
 
-#: ../pep-0534.txt
+#: ../../peps/pep-0534.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../pep-0534.txt:3
+#: ../../peps/pep-0534.rst:3
 msgid ""
-"Tomáš Orsava <tomas.n@orsava.cz>, Petr Viktorin <encukou@gmail.com>, Nick "
-"Coghlan <ncoghlan@gmail.com>"
+"Tomáš Orsava <tomas.n@orsava.cz>, Petr Viktorin <encukou@gmail.com>, "
+"Alyssa Coghlan <ncoghlan@gmail.com>"
 msgstr ""
 
-#: ../pep-0534.txt
+#: ../../peps/pep-0534.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../pep-0534.txt:6
+#: ../../peps/pep-0534.rst:6
 msgid "Deferred"
 msgstr ""
 
-#: ../pep-0534.txt
+#: ../../peps/pep-0534.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../pep-0534.txt:7
+#: ../../peps/pep-0534.rst:7
 msgid "Standards Track"
 msgstr ""
 
-#: ../pep-0534.txt
+#: ../../peps/pep-0534.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../pep-0534.txt:9
+#: ../../peps/pep-0534.rst:9
 msgid "05-Sep-2016"
 msgstr ""
 
-#: ../pep-0534.txt
+#: ../../peps/pep-0534.rst
 msgid "Post-History"
 msgstr "Pós-história"
 
-#: ../pep-0534.txt:14
+#: ../../peps/pep-0534.rst:14
 msgid "Abstract"
 msgstr ""
 
-#: ../pep-0534.txt:16
+#: ../../peps/pep-0534.rst:16
 msgid ""
 "Python is often being built or distributed without its full standard "
 "library. However, there is as of yet no standard, user friendly way of "
@@ -67,456 +67,477 @@ msgid ""
 "standard library modules."
 msgstr ""
 
-#: ../pep-0534.txt:21
+#: ../../peps/pep-0534.rst:21
 msgid ""
 "This PEP proposes a mechanism for identifying expected standard library "
-"modules and providing more informative error messages to users when attempts "
-"to import standard library modules fail."
+"modules and providing more informative error messages to users when "
+"attempts to import standard library modules fail."
 msgstr ""
 
-#: ../pep-0534.txt:27
+#: ../../peps/pep-0534.rst:27
 msgid "PEP Deferral"
 msgstr ""
 
-#: ../pep-0534.txt:29
+#: ../../peps/pep-0534.rst:29
 msgid ""
-"The PEP authors aren't actively working on this PEP, so if improving these "
-"error messages is an idea that you're interested in pursuing, please get in "
-"touch! (e.g. by posting to the python-dev mailing list)."
+"The PEP authors aren't actively working on this PEP, so if improving "
+"these error messages is an idea that you're interested in pursuing, "
+"please get in touch! (e.g. by posting to the python-dev mailing list)."
 msgstr ""
 
-#: ../pep-0534.txt:33
+#: ../../peps/pep-0534.rst:33
 msgid ""
-"The key piece of open work is determining how to get the autoconf and Visual "
-"Studio build processes to populate the sysconfig metadata file with the "
-"lists of expected and optional standard library modules."
+"The key piece of open work is determining how to get the autoconf and "
+"Visual Studio build processes to populate the sysconfig metadata file "
+"with the lists of expected and optional standard library modules."
 msgstr ""
 
-#: ../pep-0534.txt:39
+#: ../../peps/pep-0534.rst:39
 msgid "Motivation"
 msgstr ""
 
-#: ../pep-0534.txt:41
+#: ../../peps/pep-0534.rst:41
 msgid ""
-"There are several use cases for including only a subset of Python's standard "
-"library.  However, there is so far no user-friendly mechanism for informing "
-"the user *why* a stdlib module is missing and how to remedy the situation "
-"appropriately."
+"There are several use cases for including only a subset of Python's "
+"standard library.  However, there is so far no user-friendly mechanism "
+"for informing the user *why* a stdlib module is missing and how to remedy"
+" the situation appropriately."
 msgstr ""
 
-#: ../pep-0534.txt:48
+#: ../../peps/pep-0534.rst:48
 msgid "CPython"
 msgstr ""
 
-#: ../pep-0534.txt:50
+#: ../../peps/pep-0534.rst:50
 msgid ""
-"When one of Python's standard library modules (such as ``_sqlite3``) cannot "
-"be compiled during a CPython build because of missing dependencies (e.g. "
-"SQLite header files), the module is simply skipped.  If you then install "
-"this compiled Python and use it to try to import one of the missing modules, "
-"Python will fail with a ModuleNotFoundError_."
+"When one of Python's standard library modules (such as ``_sqlite3``) "
+"cannot be compiled during a CPython build because of missing dependencies"
+" (e.g. SQLite header files), the module is simply skipped.  If you then "
+"install this compiled Python and use it to try to import one of the "
+"missing modules, Python will fail with a ModuleNotFoundError_."
 msgstr ""
 
-#: ../pep-0534.txt:59
+#: ../../peps/pep-0534.rst:59
 msgid ""
 "For example, after deliberately removing ``sqlite-devel`` from the local "
 "system::"
 msgstr ""
 
-#: ../pep-0534.txt:71
+#: ../../peps/pep-0534.rst:71
 msgid ""
-"This can confuse users who may not understand why a cleanly built Python is "
-"missing standard library modules."
+"This can confuse users who may not understand why a cleanly built Python "
+"is missing standard library modules."
 msgstr ""
 
-#: ../pep-0534.txt:76
+#: ../../peps/pep-0534.rst:76
 msgid "Linux and other distributions"
 msgstr ""
 
-#: ../pep-0534.txt:78
+#: ../../peps/pep-0534.rst:78
 msgid ""
-"Many Linux and other distributions are already separating out parts of the "
-"standard library to standalone packages.  Among the most commonly excluded "
-"modules are the ``tkinter`` module, since it draws in a dependency on the "
-"graphical environment, ``idlelib``, since it depends on ``tkinter`` (and "
-"most Linux desktop environments provide their own default code editor), and "
-"the ``test`` package, as it only serves to test Python internally and is "
-"about as big as the rest of the standard library put together."
+"Many Linux and other distributions are already separating out parts of "
+"the standard library to standalone packages.  Among the most commonly "
+"excluded modules are the ``tkinter`` module, since it draws in a "
+"dependency on the graphical environment, ``idlelib``, since it depends on"
+" ``tkinter`` (and most Linux desktop environments provide their own "
+"default code editor), and the ``test`` package, as it only serves to test"
+" Python internally and is about as big as the rest of the standard "
+"library put together."
 msgstr ""
 
-#: ../pep-0534.txt:86
+#: ../../peps/pep-0534.rst:86
 msgid ""
 "The methods of omission of these modules differ.  For example, Debian "
-"patches the file ``Lib/tkinter/__init__.py`` to envelop the line ``import "
-"_tkinter`` in a *try-except* block and upon encountering an ``ImportError`` "
-"it simply adds the following to the error message: ``please install the "
-"python3-tk package`` [#debian-patch]_.  Fedora and other distributions "
-"simply don't include the omitted modules, potentially leaving users baffled "
-"as to where to find them."
+"patches the file ``Lib/tkinter/__init__.py`` to envelop the line ``import"
+" _tkinter`` in a *try-except* block and upon encountering an "
+"``ImportError`` it simply adds the following to the error message: "
+"``please install the python3-tk package`` [#debian-patch]_.  Fedora and "
+"other distributions simply don't include the omitted modules, potentially"
+" leaving users baffled as to where to find them."
 msgstr ""
 
-#: ../pep-0534.txt:93
+#: ../../peps/pep-0534.rst:93
 msgid "An example from Fedora 29::"
 msgstr ""
 
-#: ../pep-0534.txt:103
+#: ../../peps/pep-0534.rst:103
 msgid "Specification"
 msgstr ""
 
-#: ../pep-0534.txt:106
+#: ../../peps/pep-0534.rst:106
 msgid "APIs to list expected standard library modules"
 msgstr ""
 
-#: ../pep-0534.txt:108
+#: ../../peps/pep-0534.rst:108
 msgid ""
-"To allow for easier identification of which module names are *expected* to "
-"be resolved in the standard library, the `sysconfig`_ module will be "
+"To allow for easier identification of which module names are *expected* "
+"to be resolved in the standard library, the `sysconfig`_ module will be "
 "extended with two additional functions:"
 msgstr ""
 
-#: ../pep-0534.txt:112
+#: ../../peps/pep-0534.rst:112
 msgid ""
-"``sysconfig.get_stdlib_modules()``, which will provide a list of the names "
-"of all top level Python standard library modules (including private modules)"
+"``sysconfig.get_stdlib_modules()``, which will provide a list of the "
+"names of all top level Python standard library modules (including private"
+" modules)"
 msgstr ""
 
-#: ../pep-0534.txt:114
+#: ../../peps/pep-0534.rst:114
 msgid ""
-"``sysconfig.get_optional_modules()``, which will list optional public top "
-"level standard library module names"
+"``sysconfig.get_optional_modules()``, which will list optional public top"
+" level standard library module names"
 msgstr ""
 
-#: ../pep-0534.txt:117
+#: ../../peps/pep-0534.rst:117
 msgid ""
-"The results of ``sysconfig.get_optional_modules()`` and the existing ``sys."
-"builtin_module_names`` will both be subsets of the full list provided by the "
-"new ``sysconfig.get_stdlib_modules()`` function."
+"The results of ``sysconfig.get_optional_modules()`` and the existing "
+"``sys.builtin_module_names`` will both be subsets of the full list "
+"provided by the new ``sysconfig.get_stdlib_modules()`` function."
 msgstr ""
 
-#: ../pep-0534.txt:121
+#: ../../peps/pep-0534.rst:121
 msgid ""
 "These added lists will be generated during the Python build process and "
 "saved in the ``_sysconfigdata-*.py`` file along with other `sysconfig`_ "
 "values."
 msgstr ""
 
-#: ../pep-0534.txt:124
+#: ../../peps/pep-0534.rst:124
 msgid "Possible reasons for modules being in the \"optional\" list will be:"
 msgstr ""
 
-#: ../pep-0534.txt:126
+#: ../../peps/pep-0534.rst:126
 msgid ""
 "the module relies on an optional build dependency (e.g. ``_sqlite3``, "
 "``tkinter``, ``idlelib``)"
 msgstr ""
 
-#: ../pep-0534.txt:128
+#: ../../peps/pep-0534.rst:128
 msgid ""
-"the module is private for other reasons and hence may not be present on all "
-"implementations (e.g. ``_freeze_importlib``, ``_collections_abc``)"
+"the module is private for other reasons and hence may not be present on "
+"all implementations (e.g. ``_freeze_importlib``, ``_collections_abc``)"
 msgstr ""
 
-#: ../pep-0534.txt:130
+#: ../../peps/pep-0534.rst:130
 msgid ""
 "the module is platform specific and hence may not be present in all "
 "installations (e.g. ``winreg``)"
 msgstr ""
 
-#: ../pep-0534.txt:132
+#: ../../peps/pep-0534.rst:132
 msgid ""
 "the ``test`` package may also be freely omitted from Python runtime "
-"installations, as it is intended for use in testing Python implementations, "
-"not as a runtime library for Python projects to use (the public API offering "
-"testing utilities is ``unittest``)"
+"installations, as it is intended for use in testing Python "
+"implementations, not as a runtime library for Python projects to use (the"
+" public API offering testing utilities is ``unittest``)"
 msgstr ""
 
-#: ../pep-0534.txt:137
+#: ../../peps/pep-0534.rst:137
 msgid ""
 "(Note: the ``ensurepip``, ``venv``, and ``distutils`` modules are all "
-"considered mandatory modules in this PEP, even though not all redistributors "
-"currently adhere to that practice)"
+"considered mandatory modules in this PEP, even though not all "
+"redistributors currently adhere to that practice)"
 msgstr ""
 
-#: ../pep-0534.txt:145
+#: ../../peps/pep-0534.rst:145
 msgid "Changes to the default ``sys.excepthook`` implementation"
 msgstr ""
 
-#: ../pep-0534.txt:147
+#: ../../peps/pep-0534.rst:147
 msgid ""
-"The default implementation of the `sys.excepthook`_ function will then be "
-"modified to dispense an appropriate message when it detects a failure to "
-"import a module identified by one of the two new `sysconfig`_ functions as "
-"belonging to the Python standard library."
+"The default implementation of the `sys.excepthook`_ function will then be"
+" modified to dispense an appropriate message when it detects a failure to"
+" import a module identified by one of the two new `sysconfig`_ functions "
+"as belonging to the Python standard library."
 msgstr ""
 
-#: ../pep-0534.txt:154
+#: ../../peps/pep-0534.rst:154
 msgid ""
 "Revised error message for a module that relies on an optional build "
 "dependency or is otherwise considered optional when Python is installed::"
 msgstr ""
 
-#: ../pep-0534.txt:166
+#: ../../peps/pep-0534.rst:166
 msgid ""
-"Revised error message for a submodule of an optional top level package when "
-"the entire top level package is missing::"
+"Revised error message for a submodule of an optional top level package "
+"when the entire top level package is missing::"
 msgstr ""
 
-#: ../pep-0534.txt:174
+#: ../../peps/pep-0534.rst:174
 msgid ""
-"Revised error message for a submodule of an optional top level package when "
-"the top level package is present::"
-msgstr ""
-
-#: ../pep-0534.txt:182
-msgid ""
-"Revised error message for a module that is always expected to be available::"
-msgstr ""
-
-#: ../pep-0534.txt:189
-msgid ""
-"Revised error message for a missing submodule of a standard library package "
+"Revised error message for a submodule of an optional top level package "
 "when the top level package is present::"
 msgstr ""
 
-#: ../pep-0534.txt:197
+#: ../../peps/pep-0534.rst:182
 msgid ""
-"These revised error messages make it clear that the missing modules are "
-"expected to be available from the standard library, but are not available "
-"for some reason, rather than being an indicator of a missing third party "
-"dependency in the current environment."
+"Revised error message for a module that is always expected to be "
+"available::"
 msgstr ""
 
-#: ../pep-0534.txt:204
+#: ../../peps/pep-0534.rst:189
+msgid ""
+"Revised error message for a missing submodule of a standard library "
+"package when the top level package is present::"
+msgstr ""
+
+#: ../../peps/pep-0534.rst:197
+msgid ""
+"These revised error messages make it clear that the missing modules are "
+"expected to be available from the standard library, but are not available"
+" for some reason, rather than being an indicator of a missing third party"
+" dependency in the current environment."
+msgstr ""
+
+#: ../../peps/pep-0534.rst:204
 msgid "Design Discussion"
 msgstr ""
 
-#: ../pep-0534.txt:207
+#: ../../peps/pep-0534.rst:207
 msgid "Modifying ``sys.excepthook``"
 msgstr ""
 
-#: ../pep-0534.txt:209
+#: ../../peps/pep-0534.rst:209
 msgid ""
 "The `sys.excepthook`_ function gets called when a raised exception is "
-"uncaught and the program is about to exit or (in an interactive session) the "
-"control is being returned to the prompt.  This makes it a perfect place for "
-"customized error messages, as it will not influence caught errors and thus "
-"not slow down normal execution of Python scripts."
+"uncaught and the program is about to exit or (in an interactive session) "
+"the control is being returned to the prompt.  This makes it a perfect "
+"place for customized error messages, as it will not influence caught "
+"errors and thus not slow down normal execution of Python scripts."
 msgstr ""
 
-#: ../pep-0534.txt:217
+#: ../../peps/pep-0534.rst:217
 msgid "Public API to query expected standard library module names"
 msgstr ""
 
-#: ../pep-0534.txt:219
+#: ../../peps/pep-0534.rst:219
 msgid ""
 "The inclusion of the functions ``sysconfig.get_stdlib_modules()`` and "
-"``sysconfig.get_optional_modules()`` will provide a long sought-after way of "
-"easily listing the names of Python standard library modules [#stackoverflow-"
-"stdlib]_, which will (among other benefits) make it easier for code "
-"analysis, profiling, and error reporting tools to offer runtime ``--ignore-"
-"stdlib`` flags."
+"``sysconfig.get_optional_modules()`` will provide a long sought-after way"
+" of easily listing the names of Python standard library modules "
+"[#stackoverflow-stdlib]_, which will (among other benefits) make it "
+"easier for code analysis, profiling, and error reporting tools to offer "
+"runtime ``--ignore-stdlib`` flags."
 msgstr ""
 
-#: ../pep-0534.txt:228
+#: ../../peps/pep-0534.rst:228
 msgid "Only including top level module names"
 msgstr ""
 
-#: ../pep-0534.txt:230
+#: ../../peps/pep-0534.rst:230
 msgid ""
-"This PEP proposes that only top level module and package names be reported "
-"by the new query APIs. This is sufficient information to generate the "
-"proposed error messages, reduces the number of required entries by an order "
-"of magnitude, and simplifies the process of generating the related metadata "
-"during the build process."
+"This PEP proposes that only top level module and package names be "
+"reported by the new query APIs. This is sufficient information to "
+"generate the proposed error messages, reduces the number of required "
+"entries by an order of magnitude, and simplifies the process of "
+"generating the related metadata during the build process."
 msgstr ""
 
-#: ../pep-0534.txt:236
+#: ../../peps/pep-0534.rst:236
 msgid ""
 "If this is eventually found to be overly limiting, a new "
-"``include_submodules`` flag could be added to the query APIs. However, this "
-"is *not* part of the initial proposal, as the benefits of doing so aren't "
-"currently seen as justifying the extra complexity."
+"``include_submodules`` flag could be added to the query APIs. However, "
+"this is *not* part of the initial proposal, as the benefits of doing so "
+"aren't currently seen as justifying the extra complexity."
 msgstr ""
 
-#: ../pep-0534.txt:241
+#: ../../peps/pep-0534.rst:241
 msgid ""
-"There is one known consequence of this restriction, which is that the new "
-"default ``excepthook`` implementation will report incorrect submodules names "
-"the same way that it reports genuinely missing standard library submodules::"
+"There is one known consequence of this restriction, which is that the new"
+" default ``excepthook`` implementation will report incorrect submodules "
+"names the same way that it reports genuinely missing standard library "
+"submodules::"
 msgstr ""
 
-#: ../pep-0534.txt:252
+#: ../../peps/pep-0534.rst:252
 msgid ""
-"Listing private top level module names as optional standard library modules"
+"Listing private top level module names as optional standard library "
+"modules"
 msgstr ""
 
-#: ../pep-0534.txt:254
+#: ../../peps/pep-0534.rst:254
 msgid ""
 "Many of the modules that have an optional external build dependency are "
-"written as hybrid modules, where there is a shared Python wrapper around an "
-"implementation dependent interface to the underlying external library. In "
-"other cases, a private top level module may simply be a CPython "
-"implementation detail, and other implementations may not provide that module "
-"at all."
+"written as hybrid modules, where there is a shared Python wrapper around "
+"an implementation dependent interface to the underlying external library."
+" In other cases, a private top level module may simply be a CPython "
+"implementation detail, and other implementations may not provide that "
+"module at all."
 msgstr ""
 
-#: ../pep-0534.txt:260
+#: ../../peps/pep-0534.rst:260
 msgid ""
 "To report import errors involving these modules appropriately, the new "
-"default ``excepthook`` implementation needs them to be reported by the new "
-"query APIs."
+"default ``excepthook`` implementation needs them to be reported by the "
+"new query APIs."
 msgstr ""
 
-#: ../pep-0534.txt:265
+#: ../../peps/pep-0534.rst:265
 msgid "Deeming packaging related modules to be mandatory"
 msgstr ""
 
-#: ../pep-0534.txt:267
+#: ../../peps/pep-0534.rst:267
 msgid ""
-"Some redistributors aren't entirely keen on installing the Python specific "
-"packaging related modules (``distutils``, ``ensurepip``, ``venv``) by "
-"default, preferring that developers use their platform specific tooling "
-"instead."
+"Some redistributors aren't entirely keen on installing the Python "
+"specific packaging related modules (``distutils``, ``ensurepip``, "
+"``venv``) by default, preferring that developers use their platform "
+"specific tooling instead."
 msgstr ""
 
-#: ../pep-0534.txt:271
+#: ../../peps/pep-0534.rst:271
 msgid ""
 "This approach causes interoperability problems for developers working on "
 "cross-platform projects and educators attempting to write platform "
 "independent setup instructions, so this PEP takes the view that these "
-"modules should be considered mandatory, and left out of the list of optional "
-"modules."
+"modules should be considered mandatory, and left out of the list of "
+"optional modules."
 msgstr ""
 
-#: ../pep-0534.txt:278
+#: ../../peps/pep-0534.rst:278
 msgid "Deferred Ideas"
 msgstr ""
 
-#: ../pep-0534.txt:280
+#: ../../peps/pep-0534.rst:280
 msgid ""
-"The ideas in this section are concepts that this PEP would potentially help "
-"enable, but they're considered out of scope for the initial proposal."
+"The ideas in this section are concepts that this PEP would potentially "
+"help enable, but they're considered out of scope for the initial "
+"proposal."
 msgstr ""
 
-#: ../pep-0534.txt:284
+#: ../../peps/pep-0534.rst:284
 msgid "Platform dependent modules"
 msgstr ""
 
-#: ../pep-0534.txt:286
+#: ../../peps/pep-0534.rst:286
 msgid ""
-"Some standard library modules may be missing because they're only provided "
-"on particular platforms. For example, the ``winreg`` module is only "
-"available on Windows::"
+"Some standard library modules may be missing because they're only "
+"provided on particular platforms. For example, the ``winreg`` module is "
+"only available on Windows::"
 msgstr ""
 
-#: ../pep-0534.txt:295
+#: ../../peps/pep-0534.rst:295
 msgid ""
 "In the current proposal, these platform dependent modules will simply be "
 "included with all the other optional modules rather than attempting to "
 "expose the platform dependency information in a more structured way."
 msgstr ""
 
-#: ../pep-0534.txt:299
+#: ../../peps/pep-0534.rst:299
 msgid ""
 "However, the platform dependence is at least tracked at the level of "
-"\"Windows\", \"Unix\", \"Linux\", and \"FreeBSD\" for the benefit of `the "
-"documentation`_, so it seems plausible that it could potentially be exposed "
-"programmatically as well."
+"\"Windows\", \"Unix\", \"Linux\", and \"FreeBSD\" for the benefit of `the"
+" documentation`_, so it seems plausible that it could potentially be "
+"exposed programmatically as well."
 msgstr ""
 
-#: ../pep-0534.txt:307
+#: ../../peps/pep-0534.rst:307
 msgid "Emitting a warning when ``__main__`` shadows a standard library module"
 msgstr ""
 
-#: ../pep-0534.txt:309
+#: ../../peps/pep-0534.rst:309
 msgid ""
 "Given the new query APIs, the new default ``excepthook`` implementation "
-"could potentially detect when ``__main__.__file__`` or ``__main__.__spec__."
-"name`` match a standard library module, and emit a suitable warning."
+"could potentially detect when ``__main__.__file__`` or "
+"``__main__.__spec__.name`` match a standard library module, and emit a "
+"suitable warning."
 msgstr ""
 
-#: ../pep-0534.txt:313
+#: ../../peps/pep-0534.rst:313
 msgid ""
-"However, actually doing anything along this lines should review more cases "
-"where uses actually encounter this problem, and the various options for "
-"potentially offering more information to assist in debugging the situation, "
-"rather than needing to be incorporated right now."
+"However, actually doing anything along this lines should review more "
+"cases where uses actually encounter this problem, and the various options"
+" for potentially offering more information to assist in debugging the "
+"situation, rather than needing to be incorporated right now."
 msgstr ""
 
-#: ../pep-0534.txt:320
+#: ../../peps/pep-0534.rst:320
 msgid "Recommendation for Downstream Distributors"
 msgstr ""
 
-#: ../pep-0534.txt:322
+#: ../../peps/pep-0534.rst:322
 msgid ""
-"By patching `site.py`_ [*]_ to provide their own implementation of the `sys."
-"excepthook`_ function, Python distributors can display tailor-made error "
-"messages for any uncaught exceptions, including informing the user of a "
-"proper, distro-specific way to install missing standard library modules upon "
-"encountering a `ModuleNotFoundError`_."
+"By patching `site.py`_ [*]_ to provide their own implementation of the "
+"`sys.excepthook`_ function, Python distributors can display tailor-made "
+"error messages for any uncaught exceptions, including informing the user "
+"of a proper, distro-specific way to install missing standard library "
+"modules upon encountering a `ModuleNotFoundError`_."
 msgstr ""
 
-#: ../pep-0534.txt:328
+#: ../../peps/pep-0534.rst:328
 msgid ""
-"Some downstream distributors are already using this method of patching `sys."
-"excepthook` to integrate with platform crash reporting mechanisms."
+"Some downstream distributors are already using this method of patching "
+"``sys.excepthook`` to integrate with platform crash reporting mechanisms."
 msgstr ""
 
-#: ../pep-0534.txt:336
+#: ../../peps/pep-0534.rst:336
 msgid "Backwards Compatibility"
 msgstr ""
 
-#: ../pep-0534.txt:338
+#: ../../peps/pep-0534.rst:338
 msgid ""
-"No problems with backwards compatibility are expected.  Distributions that "
-"are already patching Python modules to provide custom handling of missing "
-"dependencies can continue to do so unhindered."
+"No problems with backwards compatibility are expected.  Distributions "
+"that are already patching Python modules to provide custom handling of "
+"missing dependencies can continue to do so unhindered."
 msgstr ""
 
-#: ../pep-0534.txt:344
+#: ../../peps/pep-0534.rst:344
 msgid "Reference and Example Implementation"
 msgstr ""
 
-#: ../pep-0534.txt:346
+#: ../../peps/pep-0534.rst:346
 msgid ""
 "TBD.  The finer details will depend on what's practical given the "
-"capabilities of the CPython build system (other implementations should then "
-"be able to use the generated CPython data, rather than having to regenerate "
-"it themselves)."
+"capabilities of the CPython build system (other implementations should "
+"then be able to use the generated CPython data, rather than having to "
+"regenerate it themselves)."
 msgstr ""
 
-#: ../pep-0534.txt:352
+#: ../../peps/pep-0534.rst:352
 msgid "Notes and References"
 msgstr ""
 
-#: ../pep-0534.txt:354
+#: ../../peps/pep-0534.rst:354
 msgid ""
 "Or `sitecustomize.py`_ for organizations with their own custom Python "
 "variant."
 msgstr ""
 
-#: ../pep-0534.txt:357
+#: ../../peps/pep-0534.rst:357
 msgid ""
-"http://bazaar.launchpad.net/~doko/python/pkg3.5-debian/view/head:/patches/"
-"tkinter-import.diff"
+"http://bazaar.launchpad.net/~doko/python/pkg3.5-debian/view/head:/patches"
+"/tkinter-import.diff"
 msgstr ""
 
-#: ../pep-0534.txt:359
+#: ../../peps/pep-0534.rst:359
 msgid ""
-"http://stackoverflow.com/questions/6463918/how-can-i-get-a-list-of-all-the-"
-"python-standard-library-modules"
+"http://stackoverflow.com/questions/6463918/how-can-i-get-a-list-of-all-"
+"the-python-standard-library-modules"
 msgstr ""
 
-#: ../pep-0534.txt:362
+#: ../../peps/pep-0534.rst:362
 msgid ""
 "Ideas leading up to this PEP were discussed on the `python-dev mailing "
 "list`_ and subsequently on `python-ideas`_."
 msgstr ""
 
-#: ../pep-0534.txt:372
+#: ../../peps/pep-0534.rst:372
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../pep-0534.txt:374
+#: ../../peps/pep-0534.rst:374
 msgid "This document has been placed in the public domain."
 msgstr "Este documento foi colocado em domínio público."
+
+#~ msgid ""
+#~ "Tomáš Orsava <tomas.n@orsava.cz>, Petr "
+#~ "Viktorin <encukou@gmail.com>, Nick Coghlan "
+#~ "<ncoghlan@gmail.com>"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Some downstream distributors are already "
+#~ "using this method of patching "
+#~ "`sys.excepthook` to integrate with platform"
+#~ " crash reporting mechanisms."
+#~ msgstr ""
+

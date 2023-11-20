@@ -1,0 +1,402 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the PEPs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PEPs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-20 10:43-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pt_BR\n"
+"Language-Team: pt_BR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.13.1\n"
+
+#: ../../peps/pep-0721.rst
+msgid "Author"
+msgstr ""
+
+#: ../../peps/pep-0721.rst:3
+msgid "Petr Viktorin <encukou@gmail.com>"
+msgstr ""
+
+#: ../../peps/pep-0721.rst
+msgid "PEP-Delegate"
+msgstr ""
+
+#: ../../peps/pep-0721.rst:4
+msgid "Paul Moore <p.f.moore@gmail.com>"
+msgstr ""
+
+#: ../../peps/pep-0721.rst
+msgid "Status"
+msgstr ""
+
+#: ../../peps/pep-0721.rst:5
+msgid "Final"
+msgstr ""
+
+#: ../../peps/pep-0721.rst
+msgid "Type"
+msgstr ""
+
+#: ../../peps/pep-0721.rst:6
+msgid "Standards Track"
+msgstr ""
+
+#: ../../peps/pep-0721.rst
+msgid "Topic"
+msgstr ""
+
+#: ../../peps/pep-0721.rst:7
+msgid "Packaging"
+msgstr ""
+
+#: ../../peps/pep-0721.rst
+msgid "Requires"
+msgstr ""
+
+#: ../../peps/pep-0721.rst:9
+msgid "706"
+msgstr ""
+
+#: ../../peps/pep-0721.rst
+msgid "Created"
+msgstr ""
+
+#: ../../peps/pep-0721.rst:10
+msgid "12-Jul-2023"
+msgstr ""
+
+#: ../../peps/pep-0721.rst
+msgid "Python-Version"
+msgstr ""
+
+#: ../../peps/pep-0721.rst:11
+msgid "3.12"
+msgstr ""
+
+#: ../../peps/pep-0721.rst
+msgid "Post-History"
+msgstr ""
+
+#: ../../peps/pep-0721.rst:12
+msgid "`04-Jul-2023 <https://discuss.python.org/t/28928>`__,"
+msgstr ""
+
+#: ../../peps/pep-0721.rst
+msgid "Resolution"
+msgstr ""
+
+#: ../../peps/pep-0721.rst:13
+msgid "https://discuss.python.org/t/28928/13"
+msgstr ""
+
+#: ../../peps/pep-0721.rst:18
+msgid "Abstract"
+msgstr ""
+
+#: ../../peps/pep-0721.rst:20
+msgid ""
+"Extracting a source distribution archive should normally use the ``data``"
+" filter added in :pep:`706`. We clarify details, and specify the "
+"behaviour for tools that cannot use the filter directly."
+msgstr ""
+
+#: ../../peps/pep-0721.rst:27
+msgid "Motivation"
+msgstr ""
+
+#: ../../peps/pep-0721.rst:29
+msgid "The *source distribution* ``sdist`` is defined as a tar archive."
+msgstr ""
+
+#: ../../peps/pep-0721.rst:31
+msgid ""
+"The ``tar`` format is designed to capture all metadata of Unix-like "
+"files. Some of these are dangerous, unnecessary for source code, and/or "
+"platform-dependent. As explained in :pep:`706`, when extracting a "
+"tarball, one should always either limit the allowed features, or "
+"explicitly give the tarball total control."
+msgstr ""
+
+#: ../../peps/pep-0721.rst:39
+msgid "Rationale"
+msgstr ""
+
+#: ../../peps/pep-0721.rst:41
+msgid ""
+"For source distributions, the ``data`` filter introduced in :pep:`706` is"
+" enough. It allows slightly more features than ``git`` and ``zip`` (both "
+"commonly used in packaging workflows)."
+msgstr ""
+
+#: ../../peps/pep-0721.rst:45
+msgid ""
+"However, not all tools can use the ``data`` filter, so this PEP specifies"
+" an explicit set of expectations. The aim is that the current behaviour "
+"of ``pip download`` and ``setuptools.archive_util.unpack_tarfile`` is "
+"valid, except cases deemed too dangerous to allow. Another consideration "
+"is ease of implementation for non-Python tools."
+msgstr ""
+
+#: ../../peps/pep-0721.rst:54
+msgid "Unpatched versions of Python"
+msgstr ""
+
+#: ../../peps/pep-0721.rst:56
+msgid ""
+"Tools are allowed to ignore this PEP when running on Python without "
+"tarfile filters."
+msgstr ""
+
+#: ../../peps/pep-0721.rst:59
+msgid ""
+"The feature has been backported to all versions of Python supported by "
+"``python.org``. Vendoring it in third-party libraries is tricky, and we "
+"should not force all tools to do so. This shifts the responsibility to "
+"keep up with security updates from the tools to the users."
+msgstr ""
+
+#: ../../peps/pep-0721.rst:67
+msgid "Permissions"
+msgstr ""
+
+#: ../../peps/pep-0721.rst:69
+msgid ""
+"Common tools (``git``, ``zip``) don't preserve Unix permissions (mode "
+"bits). Telling users to not rely on them in *sdists*, and allowing tools "
+"to handle them relatively freely, seems fair."
+msgstr ""
+
+#: ../../peps/pep-0721.rst:73
+msgid ""
+"The only exception is the *executable* permission. We recommend, but not "
+"require, that tools preserve it. Given that scripts are generally "
+"platform-specific, it seems fitting to say that keeping them executable "
+"is tool-specific behaviour."
+msgstr ""
+
+#: ../../peps/pep-0721.rst:78
+msgid ""
+"Note that while ``git`` preserves executability, ``zip`` (and thus "
+"``wheel``) doesn't do it natively. (It is possible to encode it in "
+"“external attributes”, but Python's ``ZipFile.extract`` does not honour "
+"that.)"
+msgstr ""
+
+#: ../../peps/pep-0721.rst:84
+msgid "Specification"
+msgstr ""
+
+#: ../../peps/pep-0721.rst:86
+msgid ""
+"The following will be added to `the PyPA source distribution format spec "
+"<https://packaging.python.org/en/latest/specifications/source-"
+"distribution-format/>`_ under a new heading, “*Source distribution "
+"archive features*”:"
+msgstr ""
+
+#: ../../peps/pep-0721.rst:89
+msgid ""
+"Because extracting tar files as-is is dangerous, and the results are "
+"platform-specific, archive features of source distributions are limited."
+msgstr ""
+
+#: ../../peps/pep-0721.rst:93
+msgid "Unpacking with the data filter"
+msgstr ""
+
+#: ../../peps/pep-0721.rst:95
+msgid ""
+"When extracting a source distribution, tools MUST either use "
+"``tarfile.data_filter`` (e.g. ``TarFile.extractall(..., "
+"filter='data')``), OR follow the *Unpacking without the data filter* "
+"section below."
+msgstr ""
+
+#: ../../peps/pep-0721.rst:99
+msgid ""
+"As an exception, on Python interpreters without ``hasattr(tarfile, "
+"'data_filter')`` (:pep:`706`), tools that normally use that filter "
+"(directly on indirectly) MAY warn the user and ignore this specification."
+" The trade-off between usability (e.g. fully trusting the archive) and "
+"security (e.g. refusing to unpack) is left up to the tool in this case."
+msgstr ""
+
+#: ../../peps/pep-0721.rst:107
+msgid "Unpacking without the data filter"
+msgstr ""
+
+#: ../../peps/pep-0721.rst:109
+msgid ""
+"Tools that do not use the ``data`` filter directly (e.g. for backwards "
+"compatibility, allowing additional features, or not using Python) MUST "
+"follow this section. (At the time of this writing, the ``data`` filter "
+"also follows this section, but it may get out of sync in the future.)"
+msgstr ""
+
+#: ../../peps/pep-0721.rst:115
+msgid ""
+"The following files are invalid in an ``sdist`` archive. Upon "
+"encountering such an entry, tools SHOULD notify the user, MUST NOT unpack"
+" the entry, and MAY abort with a failure:"
+msgstr ""
+
+#: ../../peps/pep-0721.rst:119
+msgid "Files that would be placed outside the destination directory."
+msgstr ""
+
+#: ../../peps/pep-0721.rst:120
+msgid "Links (symbolic or hard) pointing outside the destination directory."
+msgstr ""
+
+#: ../../peps/pep-0721.rst:121
+msgid "Device files (including pipes)."
+msgstr ""
+
+#: ../../peps/pep-0721.rst:123
+msgid ""
+"The following are also invalid. Tools MAY treat them as above, but are "
+"NOT REQUIRED to do so:"
+msgstr ""
+
+#: ../../peps/pep-0721.rst:126
+msgid "Files with a ``..`` component in the filename or link target."
+msgstr ""
+
+#: ../../peps/pep-0721.rst:127
+msgid "Links pointing to a file that is not part of the archive."
+msgstr ""
+
+#: ../../peps/pep-0721.rst:129
+msgid ""
+"Tools MAY unpack links (symbolic or hard) as regular files, using content"
+" from the archive."
+msgstr ""
+
+#: ../../peps/pep-0721.rst:132
+msgid "When extracting ``sdist`` archives:"
+msgstr ""
+
+#: ../../peps/pep-0721.rst:134
+msgid ""
+"Leading slashes in file names MUST be dropped. (This is nowadays standard"
+" behaviour for ``tar`` unpacking.)"
+msgstr ""
+
+#: ../../peps/pep-0721.rst:136
+msgid "For each ``mode`` (Unix permission) bit, tools MUST either:"
+msgstr ""
+
+#: ../../peps/pep-0721.rst:138
+msgid "use the platform's default for a new file/directory (respectively),"
+msgstr ""
+
+#: ../../peps/pep-0721.rst:139
+msgid "set the bit according to the archive, or"
+msgstr ""
+
+#: ../../peps/pep-0721.rst:140
+msgid ""
+"use the bit from ``rw-r--r--`` (``0o644``) for non-executable files or "
+"``rwxr-xr-x`` (``0o755``) for executable files and directories."
+msgstr ""
+
+#: ../../peps/pep-0721.rst:143
+msgid "High ``mode`` bits (setuid, setgid, sticky) MUST be cleared."
+msgstr ""
+
+#: ../../peps/pep-0721.rst:144
+msgid "It is RECOMMENDED to preserve the user *executable* bit."
+msgstr ""
+
+#: ../../peps/pep-0721.rst:148
+msgid "Further hints"
+msgstr ""
+
+#: ../../peps/pep-0721.rst:150
+msgid ""
+"Tool authors are encouraged to consider how *hints for further "
+"verification* in ``tarfile`` documentation apply for their tool."
+msgstr ""
+
+#: ../../peps/pep-0721.rst:155
+msgid "Backwards Compatibility"
+msgstr ""
+
+#: ../../peps/pep-0721.rst:157
+msgid ""
+"The existing behaviour is unspecified, and treated differently by "
+"different tools. This PEP makes the expectations explicit."
+msgstr ""
+
+#: ../../peps/pep-0721.rst:161
+msgid ""
+"There is no known case of backwards incompatibility, but some project out"
+" there probably does rely on details that aren't guaranteed. This PEP "
+"bans the most dangerous of those features, and the rest is made tool-"
+"specific."
+msgstr ""
+
+#: ../../peps/pep-0721.rst:168
+msgid "Security Implications"
+msgstr ""
+
+#: ../../peps/pep-0721.rst:170
+msgid ""
+"The recommended ``data`` filter is believed safe against common exploits,"
+" and is a single place to amend if flaws are found in the future."
+msgstr ""
+
+#: ../../peps/pep-0721.rst:173
+msgid "The explicit specification includes protections from the ``data`` filter."
+msgstr ""
+
+#: ../../peps/pep-0721.rst:177
+msgid "How to Teach This"
+msgstr ""
+
+#: ../../peps/pep-0721.rst:179
+msgid ""
+"The PEP is aimed at authors of packaging tools, who should be fine with a"
+" PEP and an updated packaging spec."
+msgstr ""
+
+#: ../../peps/pep-0721.rst:184
+msgid "Reference Implementation"
+msgstr ""
+
+#: ../../peps/pep-0721.rst:186
+msgid "TBD"
+msgstr ""
+
+#: ../../peps/pep-0721.rst:190
+msgid "Rejected Ideas"
+msgstr ""
+
+#: ../../peps/pep-0721.rst:192 ../../peps/pep-0721.rst:198
+msgid "None yet."
+msgstr ""
+
+#: ../../peps/pep-0721.rst:196
+msgid "Open Issues"
+msgstr ""
+
+#: ../../peps/pep-0721.rst:202
+msgid "Copyright"
+msgstr ""
+
+#: ../../peps/pep-0721.rst:204
+msgid ""
+"This document is placed in the public domain or under the "
+"CC0-1.0-Universal license, whichever is more permissive."
+msgstr ""
+

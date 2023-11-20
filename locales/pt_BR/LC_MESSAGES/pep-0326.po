@@ -6,585 +6,673 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PEPs\n"
+"Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 20:07+0000\n"
+"POT-Creation-Date: 2023-11-20 10:43-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.13.1\n"
 
-#: ../pep-0326.txt
+#: ../../peps/pep-0326.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../pep-0326.txt:5
+#: ../../peps/pep-0326.rst:5
 msgid "Josiah Carlson <jcarlson@uci.edu>, Terry Reedy <tjreedy@udel.edu>"
 msgstr ""
 
-#: ../pep-0326.txt
+#: ../../peps/pep-0326.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../pep-0326.txt:7
+#: ../../peps/pep-0326.rst:7
 msgid "Rejected"
 msgstr ""
 
-#: ../pep-0326.txt
+#: ../../peps/pep-0326.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../pep-0326.txt:8
+#: ../../peps/pep-0326.rst:8
 msgid "Standards Track"
 msgstr ""
 
-#: ../pep-0326.txt
+#: ../../peps/pep-0326.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../pep-0326.txt:10
+#: ../../peps/pep-0326.rst:10
 msgid "20-Dec-2003"
 msgstr ""
 
-#: ../pep-0326.txt
+#: ../../peps/pep-0326.rst
 msgid "Python-Version"
 msgstr ""
 
-#: ../pep-0326.txt:11
+#: ../../peps/pep-0326.rst:11
 msgid "2.4"
 msgstr ""
 
-#: ../pep-0326.txt
+#: ../../peps/pep-0326.rst
 msgid "Post-History"
 msgstr "Pós-história"
 
-#: ../pep-0326.txt:12
+#: ../../peps/pep-0326.rst:12
 msgid "20-Dec-2003, 03-Jan-2004, 05-Jan-2004, 07-Jan-2004, 21-Feb-2004"
 msgstr ""
 
-#: ../pep-0326.txt:16
+#: ../../peps/pep-0326.rst:16
 msgid "Results"
 msgstr ""
 
-#: ../pep-0326.txt:18
+#: ../../peps/pep-0326.rst:18
 msgid ""
-"This PEP has been rejected by the BDFL [12]_.  As per the pseudo-sunset "
-"clause [13]_, :pep:`326` is being updated one last time with the latest "
-"suggestions, code modifications, etc., and includes a link to a module [14]_ "
-"that implements the behavior described in the PEP.  Users who desire the "
-"behavior listed in this PEP are encouraged to use the module for the reasons "
-"listed in `Independent Implementations?`_."
+"This PEP has been rejected by the BDFL [8]_.  As per the pseudo-sunset "
+"clause [9]_, :pep:`326` is being updated one last time with the latest "
+"suggestions, code modifications, etc., and includes a link to a module "
+"[10]_ that implements the behavior described in the PEP.  Users who "
+"desire the behavior listed in this PEP are encouraged to use the module "
+"for the reasons listed in `Independent Implementations?`_."
 msgstr ""
 
-#: ../pep-0326.txt:28
+#: ../../peps/pep-0326.rst:28
 msgid "Abstract"
 msgstr ""
 
-#: ../pep-0326.txt:30
+#: ../../peps/pep-0326.rst:30
 msgid ""
-"This PEP proposes two singleton constants that represent a top and bottom "
-"[3]_ value: ``Max`` and ``Min`` (or two similarly suggestive names [4]_; see "
-"`Open Issues`_)."
+"This PEP proposes two singleton constants that represent a top and bottom"
+" [3]_ value: ``Max`` and ``Min`` (or two similarly suggestive names [4]_;"
+" see `Open Issues`_)."
 msgstr ""
 
-#: ../pep-0326.txt:34
+#: ../../peps/pep-0326.rst:34
 msgid ""
 "As suggested by their names, ``Max`` and ``Min`` would compare higher or "
-"lower than any other object (respectively).  Such behavior results in easier "
-"to understand code and fewer special cases in which a temporary minimum or "
-"maximum value is required, and an actual minimum or maximum numeric value is "
-"not limited."
+"lower than any other object (respectively).  Such behavior results in "
+"easier to understand code and fewer special cases in which a temporary "
+"minimum or maximum value is required, and an actual minimum or maximum "
+"numeric value is not limited."
 msgstr ""
 
-#: ../pep-0326.txt:42
+#: ../../peps/pep-0326.rst:42
 msgid "Rationale"
 msgstr ""
 
-#: ../pep-0326.txt:44
+#: ../../peps/pep-0326.rst:44
 msgid ""
-"While ``None`` can be used as an absolute minimum that any value can attain "
-"[1]_, this may be deprecated [4]_ in Python 3.0 and shouldn't be relied upon."
+"While ``None`` can be used as an absolute minimum that any value can "
+"attain [1]_, this may be deprecated [4]_ in Python 3.0 and shouldn't be "
+"relied upon."
 msgstr ""
 
-#: ../pep-0326.txt:48
+#: ../../peps/pep-0326.rst:48
 msgid ""
-"As a replacement for ``None`` being used as an absolute minimum, as well as "
-"the introduction of an absolute maximum, the introduction of two singleton "
-"constants ``Max`` and ``Min`` address concerns for the constants to be self-"
-"documenting."
+"As a replacement for ``None`` being used as an absolute minimum, as well "
+"as the introduction of an absolute maximum, the introduction of two "
+"singleton constants ``Max`` and ``Min`` address concerns for the "
+"constants to be self-documenting."
 msgstr ""
 
-#: ../pep-0326.txt:53
+#: ../../peps/pep-0326.rst:53
 msgid ""
-"What is commonly done to deal with absolute minimum or maximum values, is to "
-"set a value that is larger than the script author ever expects the input to "
-"reach, and hope that it isn't reached."
+"What is commonly done to deal with absolute minimum or maximum values, is"
+" to set a value that is larger than the script author ever expects the "
+"input to reach, and hope that it isn't reached."
 msgstr ""
 
-#: ../pep-0326.txt:57
+#: ../../peps/pep-0326.rst:57
 msgid ""
-"Guido has brought up [2]_ the fact that there exists two constants that can "
-"be used in the interim for maximum values: sys.maxint and floating point "
-"positive infinity (1e309 will evaluate to positive infinity).  However, each "
-"has their drawbacks."
+"Guido has brought up [2]_ the fact that there exists two constants that "
+"can be used in the interim for maximum values: sys.maxint and floating "
+"point positive infinity (1e309 will evaluate to positive infinity).  "
+"However, each has their drawbacks."
 msgstr ""
 
-#: ../pep-0326.txt:62
+#: ../../peps/pep-0326.rst:62
 msgid ""
-"On most architectures sys.maxint is arbitrarily small (2**31-1 or 2**63-1) "
-"and can be easily eclipsed by large 'long' integers or floating point "
-"numbers."
+"On most architectures sys.maxint is arbitrarily small (2**31-1 or "
+"2**63-1) and can be easily eclipsed by large 'long' integers or floating "
+"point numbers."
 msgstr ""
 
-#: ../pep-0326.txt:66
+#: ../../peps/pep-0326.rst:66
 msgid ""
 "Comparing long integers larger than the largest floating point number "
-"representable against any float will result in an exception being raised::"
+"representable against any float will result in an exception being "
+"raised::"
 msgstr ""
 
-#: ../pep-0326.txt:75
+#: ../../peps/pep-0326.rst:75
 msgid "Even when large integers are compared against positive infinity::"
 msgstr ""
 
-#: ../pep-0326.txt:82
+#: ../../peps/pep-0326.rst:82
 msgid "These same drawbacks exist when numbers are negative."
 msgstr ""
 
-#: ../pep-0326.txt:84
+#: ../../peps/pep-0326.rst:84
 msgid ""
-"Introducing ``Max`` and ``Min`` that work as described above does not take "
-"much effort.  A sample Python `reference implementation`_ of both is "
-"included."
+"Introducing ``Max`` and ``Min`` that work as described above does not "
+"take much effort.  A sample Python `reference implementation`_ of both is"
+" included."
 msgstr ""
 
-#: ../pep-0326.txt:90
+#: ../../peps/pep-0326.rst:90
 msgid "Motivation"
 msgstr ""
 
-#: ../pep-0326.txt:92
+#: ../../peps/pep-0326.rst:92
 msgid ""
 "There are hundreds of algorithms that begin by initializing some set of "
-"values to a logical (or numeric) infinity or negative infinity. Python lacks "
-"either infinity that works consistently or really is the most extreme value "
-"that can be attained.  By adding ``Max`` and ``Min``, Python would have a "
-"real maximum and minimum value, and such algorithms can become clearer due "
-"to the reduction of special cases."
+"values to a logical (or numeric) infinity or negative infinity. Python "
+"lacks either infinity that works consistently or really is the most "
+"extreme value that can be attained.  By adding ``Max`` and ``Min``, "
+"Python would have a real maximum and minimum value, and such algorithms "
+"can become clearer due to the reduction of special cases."
 msgstr ""
 
-#: ../pep-0326.txt:100
+#: ../../peps/pep-0326.rst:100
 msgid "``Max`` Examples"
 msgstr ""
 
-#: ../pep-0326.txt:102
+#: ../../peps/pep-0326.rst:102
 msgid ""
 "When testing various kinds of servers, it is sometimes necessary to only "
-"serve a certain number of clients before exiting, which results in code like "
-"the following::"
+"serve a certain number of clients before exiting, which results in code "
+"like the following::"
 msgstr ""
 
-#: ../pep-0326.txt:117
+#: ../../peps/pep-0326.rst:117
 msgid ""
 "When using ``Max`` as the value assigned to count, our testing server "
 "becomes a production server with minimal effort."
 msgstr ""
 
-#: ../pep-0326.txt:120
+#: ../../peps/pep-0326.rst:120
 msgid ""
-"As another example, in Dijkstra's shortest path algorithm on a graph with "
-"weighted edges (all positive)."
+"As another example, in Dijkstra's shortest path algorithm on a graph with"
+" weighted edges (all positive)."
 msgstr ""
 
-#: ../pep-0326.txt:123
+#: ../../peps/pep-0326.rst:123
 msgid "Set distances to every node in the graph to infinity."
 msgstr ""
 
-#: ../pep-0326.txt:124
+#: ../../peps/pep-0326.rst:124
 msgid "Set the distance to the start node to zero."
 msgstr ""
 
-#: ../pep-0326.txt:125
+#: ../../peps/pep-0326.rst:125
 msgid "Set visited to be an empty mapping."
 msgstr ""
 
-#: ../pep-0326.txt:126
+#: ../../peps/pep-0326.rst:126
 msgid ""
 "While shortest distance of a node that has not been visited is less than "
 "infinity and the destination has not been visited."
 msgstr ""
 
-#: ../pep-0326.txt:129
+#: ../../peps/pep-0326.rst:129
 msgid "Get the node with the shortest distance."
 msgstr ""
 
-#: ../pep-0326.txt:130
+#: ../../peps/pep-0326.rst:130
 msgid "Visit the node."
 msgstr ""
 
-#: ../pep-0326.txt:131
+#: ../../peps/pep-0326.rst:131
 msgid ""
 "Update neighbor distances and parent pointers if necessary for neighbors "
 "that have not been visited."
 msgstr ""
 
-#: ../pep-0326.txt:134
+#: ../../peps/pep-0326.rst:134
 msgid ""
-"If the destination has been visited, step back through parent pointers to "
-"find the reverse of the path to be taken."
+"If the destination has been visited, step back through parent pointers to"
+" find the reverse of the path to be taken."
 msgstr ""
 
-#: ../pep-0326.txt:139
+#: ../../peps/pep-0326.rst:139
 msgid ""
-"Below is an example of Dijkstra's shortest path algorithm on a graph with "
-"weighted edges using a table (a faster version that uses a heap is "
+"Below is an example of Dijkstra's shortest path algorithm on a graph with"
+" weighted edges using a table (a faster version that uses a heap is "
 "available, but this version is offered due to its similarity to the "
-"description above, the heap version is available via older versions of this "
-"document). ::"
+"description above, the heap version is available via older versions of "
+"this document). ::"
 msgstr ""
 
-#: ../pep-0326.txt:170
+#: ../../peps/pep-0326.rst:170
 msgid ""
 "Readers should note that replacing ``Max`` in the above code with an "
-"arbitrarily large number does not guarantee that the shortest path distance "
-"to a node will never exceed that number.  Well, with one caveat: one could "
-"certainly sum up the weights of every edge in the graph, and set the "
-"'arbitrarily large number' to that total.  However, doing so does not make "
-"the algorithm any easier to understand and has potential problems with "
-"numeric overflows."
+"arbitrarily large number does not guarantee that the shortest path "
+"distance to a node will never exceed that number.  Well, with one caveat:"
+" one could certainly sum up the weights of every edge in the graph, and "
+"set the 'arbitrarily large number' to that total.  However, doing so does"
+" not make the algorithm any easier to understand and has potential "
+"problems with numeric overflows."
 msgstr ""
 
-#: ../pep-0326.txt:180
+#: ../../peps/pep-0326.rst:180
 msgid ""
-"Gustavo Niemeyer [9]_ points out that using a more Pythonic data structure "
-"than tuples, to store information about node distances, increases "
-"readability.  Two equivalent node structures (one using ``None``, the other "
-"using ``Max``) and their use in a suitably modified Dijkstra's shortest path "
-"algorithm is given below. ::"
+"Gustavo Niemeyer [7]_ points out that using a more Pythonic data "
+"structure than tuples, to store information about node distances, "
+"increases readability.  Two equivalent node structures (one using "
+"``None``, the other using ``Max``) and their use in a suitably modified "
+"Dijkstra's shortest path algorithm is given below. ::"
 msgstr ""
 
-#: ../pep-0326.txt:237
+#: ../../peps/pep-0326.rst:237
 msgid ""
-"In the above, passing in either NoneNode or MaxNode would be sufficient to "
-"use either ``None`` or ``Max`` for the node distance 'infinity'.  Note the "
-"additional special case required for ``None`` being used as a sentinel in "
-"NoneNode in the __cmp__ method."
+"In the above, passing in either NoneNode or MaxNode would be sufficient "
+"to use either ``None`` or ``Max`` for the node distance 'infinity'.  Note"
+" the additional special case required for ``None`` being used as a "
+"sentinel in NoneNode in the __cmp__ method."
 msgstr ""
 
-#: ../pep-0326.txt:242
+#: ../../peps/pep-0326.rst:242
 msgid ""
-"This example highlights the special case handling where ``None`` is used as "
-"a sentinel value for maximum values \"in the wild\", even though None itself "
-"compares smaller than any other object in the standard distribution."
+"This example highlights the special case handling where ``None`` is used "
+"as a sentinel value for maximum values \"in the wild\", even though None "
+"itself compares smaller than any other object in the standard "
+"distribution."
 msgstr ""
 
-#: ../pep-0326.txt:247
+#: ../../peps/pep-0326.rst:247
 msgid ""
-"As an aside, it is not clear to the author that using Nodes as a replacement "
-"for tuples has increased readability significantly, if at all."
+"As an aside, it is not clear to the author that using Nodes as a "
+"replacement for tuples has increased readability significantly, if at "
+"all."
 msgstr ""
 
-#: ../pep-0326.txt:253
+#: ../../peps/pep-0326.rst:253
 msgid "A ``Min`` Example"
 msgstr ""
 
-#: ../pep-0326.txt:255
+#: ../../peps/pep-0326.rst:255
 msgid ""
-"An example of usage for ``Min`` is an algorithm that solves the following "
-"problem [6]_:"
+"An example of usage for ``Min`` is an algorithm that solves the following"
+" problem [5]_:"
 msgstr ""
 
-#: ../pep-0326.txt:258
+#: ../../peps/pep-0326.rst:258
 msgid ""
 "Suppose you are given a directed graph, representing a communication "
 "network.  The vertices are the nodes in the network, and each edge is a "
-"communication channel. Each edge ``(u, v)`` has an associated value ``r(u, "
-"v)``, with ``0 <= r(u, v) <= 1``, which represents the reliability of the "
-"channel from ``u`` to ``v`` (i.e., the probability that the channel from "
-"``u`` to ``v`` will **not** fail).  Assume that the reliability "
-"probabilities of the channels are independent.  (This implies that the "
-"reliability of any path is the product of the reliability of the edges along "
-"the path.)  Now suppose you are given two nodes in the graph, ``A`` and "
-"``B``."
+"communication channel. Each edge ``(u, v)`` has an associated value "
+"``r(u, v)``, with ``0 <= r(u, v) <= 1``, which represents the reliability"
+" of the channel from ``u`` to ``v`` (i.e., the probability that the "
+"channel from ``u`` to ``v`` will **not** fail).  Assume that the "
+"reliability probabilities of the channels are independent.  (This implies"
+" that the reliability of any path is the product of the reliability of "
+"the edges along the path.)  Now suppose you are given two nodes in the "
+"graph, ``A`` and ``B``."
 msgstr ""
 
-#: ../pep-0326.txt:270
+#: ../../peps/pep-0326.rst:270
 msgid ""
 "Such an algorithm is a 7 line modification to the `DijkstraSP_table`_ "
-"algorithm given above (modified lines prefixed with `*`)::"
+"algorithm given above (modified lines prefixed with ``*``)::"
 msgstr ""
 
-#: ../pep-0326.txt:298
+#: ../../peps/pep-0326.rst:298
 msgid ""
 "Note that there is a way of translating the graph to so that it can be "
-"passed unchanged into the original `DijkstraSP_table`_ algorithm. There also "
-"exists a handful of easy methods for constructing Node objects that would "
-"work with `DijkstraSP_table_node`_.  Such translations are left as an "
-"exercise to the reader."
+"passed unchanged into the original `DijkstraSP_table`_ algorithm. There "
+"also exists a handful of easy methods for constructing Node objects that "
+"would work with `DijkstraSP_table_node`_.  Such translations are left as "
+"an exercise to the reader."
 msgstr ""
 
-#: ../pep-0326.txt:306
+#: ../../peps/pep-0326.rst:306
 msgid "Other Examples"
 msgstr ""
 
-#: ../pep-0326.txt:308
+#: ../../peps/pep-0326.rst:308
 msgid ""
-"Andrew P. Lentvorski, Jr. [7]_ has pointed out that various data structures "
-"involving range searching have immediate use for ``Max`` and ``Min`` "
-"values.  More specifically; Segment trees, Range trees, k-d trees and "
-"database keys:"
+"Andrew P. Lentvorski, Jr. [6]_ has pointed out that various data "
+"structures involving range searching have immediate use for ``Max`` and "
+"``Min`` values.  More specifically; Segment trees, Range trees, k-d trees"
+" and database keys:"
 msgstr ""
 
-#: ../pep-0326.txt:313
+#: ../../peps/pep-0326.rst:313
 msgid ""
 "...The issue is that a range can be open on one side and does not always "
 "have an initialized case."
 msgstr ""
 
-#: ../pep-0326.txt:316
+#: ../../peps/pep-0326.rst:316
 msgid ""
-"The solutions I have seen are to either overload None as the extremum or use "
-"an arbitrary large magnitude number.  Overloading None means that the built-"
-"ins can't really be used without special case checks to work around the "
-"undefined (or \"wrongly defined\") ordering of None.  These checks tend to "
-"swamp the nice performance of built-ins like max() and min()."
+"The solutions I have seen are to either overload None as the extremum or "
+"use an arbitrary large magnitude number.  Overloading None means that the"
+" built-ins can't really be used without special case checks to work "
+"around the undefined (or \"wrongly defined\") ordering of None.  These "
+"checks tend to swamp the nice performance of built-ins like max() and "
+"min()."
 msgstr ""
 
-#: ../pep-0326.txt:323
+#: ../../peps/pep-0326.rst:323
 msgid ""
-"Choosing a large magnitude number throws away the ability of Python to cope "
-"with arbitrarily large integers and introduces a potential source of overrun/"
-"underrun bugs."
+"Choosing a large magnitude number throws away the ability of Python to "
+"cope with arbitrarily large integers and introduces a potential source of"
+" overrun/underrun bugs."
 msgstr ""
 
-#: ../pep-0326.txt:327
+#: ../../peps/pep-0326.rst:327
 msgid ""
-"Further use examples of both ``Max`` and ``Min`` are available in the realm "
-"of graph algorithms, range searching algorithms, computational geometry "
-"algorithms, and others."
+"Further use examples of both ``Max`` and ``Min`` are available in the "
+"realm of graph algorithms, range searching algorithms, computational "
+"geometry algorithms, and others."
 msgstr ""
 
-#: ../pep-0326.txt:333
+#: ../../peps/pep-0326.rst:333
 msgid "Independent Implementations?"
 msgstr ""
 
-#: ../pep-0326.txt:335
+#: ../../peps/pep-0326.rst:335
 msgid ""
-"Independent implementations of the ``Min``/``Max`` concept by users desiring "
-"such functionality are not likely to be compatible, and certainly will "
-"produce inconsistent orderings.  The following examples seek to show how "
-"inconsistent they can be."
+"Independent implementations of the ``Min``/``Max`` concept by users "
+"desiring such functionality are not likely to be compatible, and "
+"certainly will produce inconsistent orderings.  The following examples "
+"seek to show how inconsistent they can be."
 msgstr ""
 
-#: ../pep-0326.txt:340
+#: ../../peps/pep-0326.rst:340
 msgid ""
 "Let us pretend we have created proper separate implementations of MyMax, "
 "MyMin, YourMax and YourMin with the same code as given in the sample "
 "implementation (with some minor renaming)::"
 msgstr ""
 
-#: ../pep-0326.txt:351
+#: ../../peps/pep-0326.rst:351
 msgid ""
 "Notice that while all the \"Min\"s are before the \"Max\"s, there is no "
-"guarantee that all instances of YourMin will come before MyMin, the reverse, "
-"or the equivalent MyMax and YourMax."
+"guarantee that all instances of YourMin will come before MyMin, the "
+"reverse, or the equivalent MyMax and YourMax."
 msgstr ""
 
-#: ../pep-0326.txt:355
+#: ../../peps/pep-0326.rst:355
 msgid "The problem is also evident when using the heapq module::"
 msgstr ""
 
-#: ../pep-0326.txt:364
+#: ../../peps/pep-0326.rst:364
 msgid ""
-"Furthermore, the findmin_Max code and both versions of Dijkstra could result "
-"in incorrect output by passing in secondary versions of ``Max``."
+"Furthermore, the findmin_Max code and both versions of Dijkstra could "
+"result in incorrect output by passing in secondary versions of ``Max``."
 msgstr ""
 
-#: ../pep-0326.txt:368
+#: ../../peps/pep-0326.rst:368
 msgid ""
-"It has been pointed out [9]_ that the reference implementation given below "
-"would be incompatible with independent implementations of ``Max``/``Min``.  "
-"The point of this PEP is for the introduction of \"The One True "
-"Implementation\" of \"The One True Maximum\" and \"The One True Minimum\".  "
-"User-based implementations of ``Max`` and ``Min`` objects would thusly be "
-"discouraged, and use of \"The One True Implementation\" would obviously be "
-"encouraged.  Ambiguous behavior resulting from mixing users' implementations "
-"of ``Max`` and ``Min`` with \"The One True Implementation\" should be easy "
-"to discover through variable and/or source code introspection."
+"It has been pointed out [7]_ that the reference implementation given "
+"below would be incompatible with independent implementations of "
+"``Max``/``Min``.  The point of this PEP is for the introduction of \"The "
+"One True Implementation\" of \"The One True Maximum\" and \"The One True "
+"Minimum\".  User-based implementations of ``Max`` and ``Min`` objects "
+"would thusly be discouraged, and use of \"The One True Implementation\" "
+"would obviously be encouraged.  Ambiguous behavior resulting from mixing "
+"users' implementations of ``Max`` and ``Min`` with \"The One True "
+"Implementation\" should be easy to discover through variable and/or "
+"source code introspection."
 msgstr ""
 
-#: ../pep-0326.txt:381
+#: ../../peps/pep-0326.rst:381
 msgid "Reference Implementation"
 msgstr ""
 
-#: ../pep-0326.txt:404
+#: ../../peps/pep-0326.rst:404
 msgid "Results of Test Run::"
 msgstr ""
 
-#: ../pep-0326.txt:421
+#: ../../peps/pep-0326.rst:421
 msgid "Open Issues"
 msgstr ""
 
-#: ../pep-0326.txt:423
+#: ../../peps/pep-0326.rst:423
 msgid ""
 "As the PEP was rejected, all open issues are now closed and "
 "inconsequential.  The module will use the names ``UniversalMaximum`` and "
 "``UniversalMinimum`` due to the fact that it would be very difficult to "
-"mistake what each does.  For those who require a shorter name, renaming the "
-"singletons during import is suggested::"
+"mistake what each does.  For those who require a shorter name, renaming "
+"the singletons during import is suggested::"
 msgstr ""
 
-#: ../pep-0326.txt:434
+#: ../../peps/pep-0326.rst:434
 msgid "References"
 msgstr "Referências"
 
-#: ../pep-0326.txt:436
+#: ../../peps/pep-0326.rst:436
 msgid ""
-"RE: [Python-Dev] Re: Got None. Maybe Some?, Peters, Tim (https://mail.python."
-"org/pipermail/python-dev/2003-December/041374.html)"
+"RE: [Python-Dev] Re: Got None. Maybe Some?, Peters, Tim "
+"(https://mail.python.org/pipermail/python-dev/2003-December/041374.html)"
 msgstr ""
 
-#: ../pep-0326.txt:439
+#: ../../peps/pep-0326.rst:439
 msgid ""
-"Re: [Python-Dev] Got None. Maybe Some?, van Rossum, Guido (https://mail."
-"python.org/pipermail/python-dev/2003-December/041352.html)"
+"Re: [Python-Dev] Got None. Maybe Some?, van Rossum, Guido "
+"(https://mail.python.org/pipermail/python-dev/2003-December/041352.html)"
 msgstr ""
 
-#: ../pep-0326.txt:442
+#: ../../peps/pep-0326.rst:442
 msgid ""
-"RE: [Python-Dev] Got None. Maybe Some?, Peters, Tim (https://mail.python.org/"
-"pipermail/python-dev/2003-December/041332.html)"
+"RE: [Python-Dev] Got None. Maybe Some?, Peters, Tim "
+"(https://mail.python.org/pipermail/python-dev/2003-December/041332.html)"
 msgstr ""
 
-#: ../pep-0326.txt:445
+#: ../../peps/pep-0326.rst:445
 msgid ""
-"[Python-Dev] Re: PEP 326 now online, Reedy, Terry (https://mail.python.org/"
-"pipermail/python-dev/2004-January/041685.html)"
+"[Python-Dev] Re: PEP 326 now online, Reedy, Terry "
+"(https://mail.python.org/pipermail/python-dev/2004-January/041685.html)"
 msgstr ""
 
-#: ../pep-0326.txt:448
+#: ../../peps/pep-0326.rst:448
 msgid ""
-"[Python-Dev] PEP 326 now online, Chermside, Michael (https://mail.python.org/"
-"pipermail/python-dev/2004-January/041704.html)"
+"Homework 6, Problem 7, Dillencourt, Michael (link may not be valid in the"
+" future) (http://www.ics.uci.edu/~dillenco/ics161/hw/hw6.pdf)"
 msgstr ""
 
-#: ../pep-0326.txt:451
+#: ../../peps/pep-0326.rst:452
 msgid ""
-"Homework 6, Problem 7, Dillencourt, Michael (link may not be valid in the "
-"future) (http://www.ics.uci.edu/~dillenco/ics161/hw/hw6.pdf)"
+"RE: [Python-Dev] PEP 326 now online, Lentvorski, Andrew P., Jr. "
+"(https://mail.python.org/pipermail/python-dev/2004-January/041727.html)"
 msgstr ""
 
-#: ../pep-0326.txt:455
+#: ../../peps/pep-0326.rst:455
 msgid ""
-"RE: [Python-Dev] PEP 326 now online, Lentvorski, Andrew P., Jr. (https://"
-"mail.python.org/pipermail/python-dev/2004-January/041727.html)"
+"[Python-Dev] Re: PEP 326 now online, Niemeyer, Gustavo "
+"(https://mail.python.org/pipermail/python-dev/2004-January/042261.html); "
+"[Python-Dev] Re: PEP 326 now online, Carlson, Josiah "
+"(https://mail.python.org/pipermail/python-dev/2004-January/042272.html)"
 msgstr ""
 
-#: ../pep-0326.txt:458
-msgid ""
-"Re: It's not really Some is it?, Ippolito, Bob (http://www.livejournal.com/"
-"users/chouyu_31/138195.html?thread=274643#t274643)"
-msgstr ""
-
-#: ../pep-0326.txt:461
-msgid ""
-"[Python-Dev] Re: PEP 326 now online, Niemeyer, Gustavo (https://mail.python."
-"org/pipermail/python-dev/2004-January/042261.html); [Python-Dev] Re: PEP 326 "
-"now online, Carlson, Josiah (https://mail.python.org/pipermail/python-"
-"dev/2004-January/042272.html)"
-msgstr ""
-
-#: ../pep-0326.txt:466
-msgid ""
-"[Python-Dev] PEP 326 (quick location possibility), Carlson, Josiah (https://"
-"mail.python.org/pipermail/python-dev/2004-January/042275.html)"
-msgstr ""
-
-#: ../pep-0326.txt:469
+#: ../../peps/pep-0326.rst:460
 msgid ""
 "[Python-Dev] PEP 326 (quick location possibility), van Rossum, Guido "
 "(https://mail.python.org/pipermail/python-dev/2004-January/042306.html)"
 msgstr ""
 
-#: ../pep-0326.txt:472
+#: ../../peps/pep-0326.rst:463
 msgid ""
-"[Python-Dev] PEP 326 (quick location possibility), Carlson, Josiah (https://"
-"mail.python.org/pipermail/python-dev/2004-January/042300.html)"
+"[Python-Dev] PEP 326 (quick location possibility), Carlson, Josiah "
+"(https://mail.python.org/pipermail/python-dev/2004-January/042300.html)"
 msgstr ""
 
-#: ../pep-0326.txt:475
+#: ../../peps/pep-0326.rst:466
 msgid ""
-"Recommended standard implementation of PEP 326, extremes.py, Carlson, Josiah "
-"(http://www.ics.uci.edu/~jcarlson/pep326/extremes.py)"
+"Recommended standard implementation of PEP 326, extremes.py, Carlson, "
+"Josiah "
+"(https://web.archive.org/web/20040410135029/http://www.ics.uci.edu:80/~jcarlson/pep326/extremes.py)"
 msgstr ""
 
-#: ../pep-0326.txt:481
+#: ../../peps/pep-0326.rst:472
 msgid "Changes"
 msgstr ""
 
-#: ../pep-0326.txt:483
+#: ../../peps/pep-0326.rst:474
 msgid "Added this section."
 msgstr ""
 
-#: ../pep-0326.txt:485
+#: ../../peps/pep-0326.rst:476
 msgid "Added Motivation_ section."
 msgstr ""
 
-#: ../pep-0326.txt:487
+#: ../../peps/pep-0326.rst:478
 msgid "Changed markup to reStructuredText."
 msgstr ""
 
-#: ../pep-0326.txt:489
+#: ../../peps/pep-0326.rst:480
 msgid ""
 "Clarified Abstract_, Motivation_, `Reference Implementation`_ and `Open "
 "Issues`_ based on the simultaneous concepts of ``Max`` and ``Min``."
 msgstr ""
 
-#: ../pep-0326.txt:493
+#: ../../peps/pep-0326.rst:484
 msgid ""
-"Added two implementations of Dijkstra's Shortest Path algorithm that show "
-"where ``Max`` can be used to remove special cases."
+"Added two implementations of Dijkstra's Shortest Path algorithm that show"
+" where ``Max`` can be used to remove special cases."
 msgstr ""
 
-#: ../pep-0326.txt:496
+#: ../../peps/pep-0326.rst:487
 msgid "Added an example of use for ``Min`` to Motivation_."
 msgstr ""
 
-#: ../pep-0326.txt:498
+#: ../../peps/pep-0326.rst:489
 msgid "Added an example and `Other Examples`_ subheading."
 msgstr ""
 
-#: ../pep-0326.txt:500
+#: ../../peps/pep-0326.rst:491
 msgid ""
-"Modified `Reference Implementation`_ to instantiate both items from a single "
-"class/type."
+"Modified `Reference Implementation`_ to instantiate both items from a "
+"single class/type."
 msgstr ""
 
-#: ../pep-0326.txt:503
+#: ../../peps/pep-0326.rst:494
 msgid ""
-"Removed a large number of open issues that are not within the scope of this "
-"PEP."
+"Removed a large number of open issues that are not within the scope of "
+"this PEP."
 msgstr ""
 
-#: ../pep-0326.txt:506
+#: ../../peps/pep-0326.rst:497
 msgid ""
 "Replaced an example from `Max Examples`_, changed an example in `A Min "
 "Example`_."
 msgstr ""
 
-#: ../pep-0326.txt:509
+#: ../../peps/pep-0326.rst:500
 msgid "Added some `References`_."
 msgstr ""
 
-#: ../pep-0326.txt:511
-msgid "BDFL rejects [12]_ :pep:`326`"
+#: ../../peps/pep-0326.rst:502
+msgid "BDFL rejects [8]_ :pep:`326`"
 msgstr ""
 
-#: ../pep-0326.txt:515
+#: ../../peps/pep-0326.rst:506
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../pep-0326.txt:517
+#: ../../peps/pep-0326.rst:508
 msgid "This document has been placed in the public domain."
 msgstr "Este documento foi colocado em domínio público."
+
+#~ msgid ""
+#~ "This PEP has been rejected by the"
+#~ " BDFL [12]_.  As per the pseudo-"
+#~ "sunset clause [13]_, :pep:`326` is being"
+#~ " updated one last time with the "
+#~ "latest suggestions, code modifications, etc.,"
+#~ " and includes a link to a "
+#~ "module [14]_ that implements the "
+#~ "behavior described in the PEP.  Users"
+#~ " who desire the behavior listed in"
+#~ " this PEP are encouraged to use "
+#~ "the module for the reasons listed "
+#~ "in `Independent Implementations?`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Gustavo Niemeyer [9]_ points out that"
+#~ " using a more Pythonic data structure"
+#~ " than tuples, to store information "
+#~ "about node distances, increases readability."
+#~ "  Two equivalent node structures (one "
+#~ "using ``None``, the other using ``Max``)"
+#~ " and their use in a suitably "
+#~ "modified Dijkstra's shortest path algorithm"
+#~ " is given below. ::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "An example of usage for ``Min`` is"
+#~ " an algorithm that solves the "
+#~ "following problem [6]_:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Such an algorithm is a 7 line "
+#~ "modification to the `DijkstraSP_table`_ "
+#~ "algorithm given above (modified lines "
+#~ "prefixed with `*`)::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Andrew P. Lentvorski, Jr. [7]_ has "
+#~ "pointed out that various data structures"
+#~ " involving range searching have immediate"
+#~ " use for ``Max`` and ``Min`` values."
+#~ "  More specifically; Segment trees, Range"
+#~ " trees, k-d trees and database keys:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "It has been pointed out [9]_ that"
+#~ " the reference implementation given below"
+#~ " would be incompatible with independent "
+#~ "implementations of ``Max``/``Min``.  The point"
+#~ " of this PEP is for the "
+#~ "introduction of \"The One True "
+#~ "Implementation\" of \"The One True "
+#~ "Maximum\" and \"The One True Minimum\"."
+#~ "  User-based implementations of ``Max`` "
+#~ "and ``Min`` objects would thusly be "
+#~ "discouraged, and use of \"The One "
+#~ "True Implementation\" would obviously be "
+#~ "encouraged.  Ambiguous behavior resulting from"
+#~ " mixing users' implementations of ``Max``"
+#~ " and ``Min`` with \"The One True "
+#~ "Implementation\" should be easy to "
+#~ "discover through variable and/or source "
+#~ "code introspection."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "[Python-Dev] PEP 326 now online, "
+#~ "Chermside, Michael (https://mail.python.org/pipermail"
+#~ "/python-dev/2004-January/041704.html)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Re: It's not really Some is it?,"
+#~ " Ippolito, Bob "
+#~ "(http://www.livejournal.com/users/chouyu_31/138195.html?thread=274643#t274643)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "[Python-Dev] PEP 326 (quick location "
+#~ "possibility), Carlson, Josiah "
+#~ "(https://mail.python.org/pipermail/python-"
+#~ "dev/2004-January/042275.html)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Recommended standard implementation of PEP "
+#~ "326, extremes.py, Carlson, Josiah "
+#~ "(http://www.ics.uci.edu/~jcarlson/pep326/extremes.py)"
+#~ msgstr ""
+
+#~ msgid "BDFL rejects [12]_ :pep:`326`"
+#~ msgstr ""
+

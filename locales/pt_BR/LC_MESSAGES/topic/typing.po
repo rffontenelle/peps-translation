@@ -1,0 +1,673 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the PEPs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PEPs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-20 10:43-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pt_BR\n"
+"Language-Team: pt_BR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.13.1\n"
+
+#: ../../peps/topic/typing.rst:2
+msgid "Typing PEPs"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:6
+msgid "Introduction"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:8
+msgid ""
+"This is the index of all Python Enhancement Proposals (PEPs) labelled "
+"under the 'Typing' topic. This is a sub-index of :pep:`0`, the PEP index."
+msgstr ""
+
+#: ../../peps/topic/typing.rst:12
+msgid ""
+"Many recent PEPs propose changes to Python's static type system or "
+"otherwise relate to type annotations. They are listed here for reference."
+msgstr ""
+
+#: ../../peps/topic/typing.rst:19
+msgid "Index by Category"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:22
+msgid "Other Informational PEPs"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:30 ../../peps/topic/typing.rst:51
+#: ../../peps/topic/typing.rst:170 ../../peps/topic/typing.rst:214
+#: ../../peps/topic/typing.rst:248 ../../peps/topic/typing.rst:268
+msgid "PEP"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:31 ../../peps/topic/typing.rst:52
+#: ../../peps/topic/typing.rst:171 ../../peps/topic/typing.rst:215
+#: ../../peps/topic/typing.rst:249 ../../peps/topic/typing.rst:269
+msgid "Title"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:32 ../../peps/topic/typing.rst:53
+#: ../../peps/topic/typing.rst:172 ../../peps/topic/typing.rst:216
+#: ../../peps/topic/typing.rst:250 ../../peps/topic/typing.rst:270
+msgid "Authors"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:33 ../../peps/topic/typing.rst:37
+#: ../../peps/topic/typing.rst:272 ../../peps/topic/typing.rst:277
+msgid ":abbr:`IF (Informational, Final)`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:34 ../../peps/topic/typing.rst:273
+msgid ":pep:`482 <482>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:35 ../../peps/topic/typing.rst:274
+msgid ":pep:`Literature Overview for Type Hints <482>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:36 ../../peps/topic/typing.rst:63
+#: ../../peps/topic/typing.rst:236 ../../peps/topic/typing.rst:275
+#: ../../peps/topic/typing.rst:305 ../../peps/topic/typing.rst:310
+msgid "Łukasz Langa"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:38 ../../peps/topic/typing.rst:278
+msgid ":pep:`483 <483>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:39 ../../peps/topic/typing.rst:279
+msgid ":pep:`The Theory of Type Hints <483>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:40 ../../peps/topic/typing.rst:280
+msgid "Guido van Rossum, Ivan Levkivskyi"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:43
+msgid "Accepted PEPs (accepted; may not be implemented yet)"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:55 ../../peps/topic/typing.rst:60
+#: ../../peps/topic/typing.rst:65 ../../peps/topic/typing.rst:70
+#: ../../peps/topic/typing.rst:75 ../../peps/topic/typing.rst:80
+#: ../../peps/topic/typing.rst:85 ../../peps/topic/typing.rst:90
+#: ../../peps/topic/typing.rst:95 ../../peps/topic/typing.rst:100
+#: ../../peps/topic/typing.rst:105 ../../peps/topic/typing.rst:110
+#: ../../peps/topic/typing.rst:115 ../../peps/topic/typing.rst:120
+#: ../../peps/topic/typing.rst:125 ../../peps/topic/typing.rst:130
+#: ../../peps/topic/typing.rst:135 ../../peps/topic/typing.rst:140
+#: ../../peps/topic/typing.rst:145 ../../peps/topic/typing.rst:150
+#: ../../peps/topic/typing.rst:155 ../../peps/topic/typing.rst:292
+#: ../../peps/topic/typing.rst:302 ../../peps/topic/typing.rst:312
+#: ../../peps/topic/typing.rst:317 ../../peps/topic/typing.rst:322
+#: ../../peps/topic/typing.rst:327 ../../peps/topic/typing.rst:332
+#: ../../peps/topic/typing.rst:337 ../../peps/topic/typing.rst:342
+#: ../../peps/topic/typing.rst:347 ../../peps/topic/typing.rst:352
+#: ../../peps/topic/typing.rst:357 ../../peps/topic/typing.rst:362
+#: ../../peps/topic/typing.rst:367 ../../peps/topic/typing.rst:372
+#: ../../peps/topic/typing.rst:382 ../../peps/topic/typing.rst:387
+#: ../../peps/topic/typing.rst:392 ../../peps/topic/typing.rst:397
+#: ../../peps/topic/typing.rst:407 ../../peps/topic/typing.rst:412
+msgid ":abbr:`SA (Standards Track, Accepted)`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:56 ../../peps/topic/typing.rst:293
+msgid ":pep:`544 <544>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:57 ../../peps/topic/typing.rst:294
+msgid ":pep:`Protocols: Structural subtyping (static duck typing) <544>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:58 ../../peps/topic/typing.rst:295
+msgid "Ivan Levkivskyi, Jukka Lehtosalo, Łukasz Langa"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:59 ../../peps/topic/typing.rst:69
+#: ../../peps/topic/typing.rst:74 ../../peps/topic/typing.rst:79
+#: ../../peps/topic/typing.rst:296 ../../peps/topic/typing.rst:316
+#: ../../peps/topic/typing.rst:321 ../../peps/topic/typing.rst:326
+msgid "3.8"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:61 ../../peps/topic/typing.rst:303
+msgid ":pep:`563 <563>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:62 ../../peps/topic/typing.rst:304
+msgid ":pep:`Postponed Evaluation of Annotations <563>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:64 ../../peps/topic/typing.rst:232
+#: ../../peps/topic/typing.rst:301 ../../peps/topic/typing.rst:306
+msgid "3.7"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:66 ../../peps/topic/typing.rst:313
+msgid ":pep:`586 <586>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:67 ../../peps/topic/typing.rst:314
+msgid ":pep:`Literal Types <586>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:68 ../../peps/topic/typing.rst:315
+msgid "Michael Lee, Ivan Levkivskyi, Jukka Lehtosalo"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:71 ../../peps/topic/typing.rst:318
+msgid ":pep:`589 <589>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:72 ../../peps/topic/typing.rst:319
+msgid ""
+":pep:`TypedDict: Type Hints for Dictionaries with a Fixed Set of Keys "
+"<589>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:73 ../../peps/topic/typing.rst:320
+msgid "Jukka Lehtosalo"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:76 ../../peps/topic/typing.rst:323
+msgid ":pep:`591 <591>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:77 ../../peps/topic/typing.rst:324
+msgid ":pep:`Adding a final qualifier to typing <591>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:78 ../../peps/topic/typing.rst:325
+msgid "Michael J. Sullivan, Ivan Levkivskyi"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:81 ../../peps/topic/typing.rst:328
+msgid ":pep:`593 <593>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:82 ../../peps/topic/typing.rst:329
+msgid ":pep:`Flexible function and variable annotations <593>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:83 ../../peps/topic/typing.rst:330
+msgid "Till Varoquaux, Konstantin Kashin"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:84 ../../peps/topic/typing.rst:237
+#: ../../peps/topic/typing.rst:311 ../../peps/topic/typing.rst:331
+msgid "3.9"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:86 ../../peps/topic/typing.rst:333
+msgid ":pep:`604 <604>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:87 ../../peps/topic/typing.rst:334
+msgid ":pep:`Allow writing union types as X | Y <604>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:88 ../../peps/topic/typing.rst:335
+msgid "Philippe PRADOS, Maggie Moss"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:89 ../../peps/topic/typing.rst:94
+#: ../../peps/topic/typing.rst:99 ../../peps/topic/typing.rst:109
+#: ../../peps/topic/typing.rst:336 ../../peps/topic/typing.rst:341
+#: ../../peps/topic/typing.rst:346 ../../peps/topic/typing.rst:356
+msgid "3.10"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:91 ../../peps/topic/typing.rst:338
+msgid ":pep:`612 <612>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:92 ../../peps/topic/typing.rst:339
+msgid ":pep:`Parameter Specification Variables <612>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:93 ../../peps/topic/typing.rst:340
+msgid "Mark Mendoza"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:96 ../../peps/topic/typing.rst:343
+msgid ":pep:`613 <613>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:97 ../../peps/topic/typing.rst:344
+msgid ":pep:`Explicit Type Aliases <613>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:98 ../../peps/topic/typing.rst:345
+msgid "Shannon Zhu"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:101 ../../peps/topic/typing.rst:348
+msgid ":pep:`646 <646>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:102 ../../peps/topic/typing.rst:349
+msgid ":pep:`Variadic Generics <646>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:103 ../../peps/topic/typing.rst:350
+msgid "Mark Mendoza, Matthew Rahtz, Pradeep Kumar Srinivasan, Vincent Siles"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:104 ../../peps/topic/typing.rst:119
+#: ../../peps/topic/typing.rst:124 ../../peps/topic/typing.rst:129
+#: ../../peps/topic/typing.rst:134 ../../peps/topic/typing.rst:256
+#: ../../peps/topic/typing.rst:351 ../../peps/topic/typing.rst:366
+#: ../../peps/topic/typing.rst:371 ../../peps/topic/typing.rst:376
+#: ../../peps/topic/typing.rst:381 ../../peps/topic/typing.rst:386
+msgid "3.11"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:106 ../../peps/topic/typing.rst:353
+msgid ":pep:`647 <647>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:107 ../../peps/topic/typing.rst:354
+msgid ":pep:`User-Defined Type Guards <647>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:108 ../../peps/topic/typing.rst:148
+#: ../../peps/topic/typing.rst:355 ../../peps/topic/typing.rst:400
+msgid "Eric Traut"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:111 ../../peps/topic/typing.rst:358
+msgid ":pep:`649 <649>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:112 ../../peps/topic/typing.rst:359
+msgid ":pep:`Deferred Evaluation Of Annotations Using Descriptors <649>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:113 ../../peps/topic/typing.rst:360
+msgid "Larry Hastings"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:114 ../../peps/topic/typing.rst:159
+#: ../../peps/topic/typing.rst:183 ../../peps/topic/typing.rst:188
+#: ../../peps/topic/typing.rst:193 ../../peps/topic/typing.rst:198
+#: ../../peps/topic/typing.rst:361 ../../peps/topic/typing.rst:416
+#: ../../peps/topic/typing.rst:421 ../../peps/topic/typing.rst:426
+#: ../../peps/topic/typing.rst:431 ../../peps/topic/typing.rst:436
+msgid "3.13"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:116 ../../peps/topic/typing.rst:363
+msgid ":pep:`655 <655>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:117 ../../peps/topic/typing.rst:364
+msgid ""
+":pep:`Marking individual TypedDict items as required or potentially-"
+"missing <655>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:118 ../../peps/topic/typing.rst:365
+msgid "David Foster"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:121 ../../peps/topic/typing.rst:368
+msgid ":pep:`673 <673>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:122 ../../peps/topic/typing.rst:369
+msgid ":pep:`Self Type <673>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:123 ../../peps/topic/typing.rst:370
+msgid "Pradeep Kumar Srinivasan, James Hilton-Balfe"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:126 ../../peps/topic/typing.rst:373
+msgid ":pep:`675 <675>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:127 ../../peps/topic/typing.rst:374
+msgid ":pep:`Arbitrary Literal String Type <675>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:128 ../../peps/topic/typing.rst:375
+msgid "Pradeep Kumar Srinivasan, Graham Bleaney"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:131 ../../peps/topic/typing.rst:383
+msgid ":pep:`681 <681>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:132 ../../peps/topic/typing.rst:384
+msgid ":pep:`Data Class Transforms <681>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:133 ../../peps/topic/typing.rst:385
+msgid "Erik De Bonte, Eric Traut"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:136 ../../peps/topic/typing.rst:388
+msgid ":pep:`688 <688>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:137 ../../peps/topic/typing.rst:389
+msgid ":pep:`Making the buffer protocol accessible in Python <688>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:138 ../../peps/topic/typing.rst:158
+#: ../../peps/topic/typing.rst:390 ../../peps/topic/typing.rst:415
+msgid "Jelle Zijlstra"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:139 ../../peps/topic/typing.rst:144
+#: ../../peps/topic/typing.rst:149 ../../peps/topic/typing.rst:154
+#: ../../peps/topic/typing.rst:178 ../../peps/topic/typing.rst:391
+#: ../../peps/topic/typing.rst:396 ../../peps/topic/typing.rst:401
+#: ../../peps/topic/typing.rst:406 ../../peps/topic/typing.rst:411
+msgid "3.12"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:141 ../../peps/topic/typing.rst:393
+msgid ":pep:`692 <692>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:142 ../../peps/topic/typing.rst:394
+msgid ":pep:`Using TypedDict for more precise \\*\\*kwargs typing <692>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:143 ../../peps/topic/typing.rst:395
+msgid "Franek Magiera"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:146 ../../peps/topic/typing.rst:398
+msgid ":pep:`695 <695>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:147 ../../peps/topic/typing.rst:399
+msgid ":pep:`Type Parameter Syntax <695>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:151 ../../peps/topic/typing.rst:408
+msgid ":pep:`698 <698>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:152 ../../peps/topic/typing.rst:409
+msgid ":pep:`Override Decorator for Static Typing <698>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:153 ../../peps/topic/typing.rst:410
+msgid "Steven Troxler, Joshua Xu, Shannon Zhu"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:156 ../../peps/topic/typing.rst:413
+msgid ":pep:`702 <702>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:157 ../../peps/topic/typing.rst:414
+msgid ":pep:`Marking deprecations using the type system <702>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:162
+msgid "Open PEPs (under consideration)"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:174 ../../peps/topic/typing.rst:179
+#: ../../peps/topic/typing.rst:184 ../../peps/topic/typing.rst:189
+#: ../../peps/topic/typing.rst:194 ../../peps/topic/typing.rst:402
+#: ../../peps/topic/typing.rst:417 ../../peps/topic/typing.rst:422
+#: ../../peps/topic/typing.rst:427 ../../peps/topic/typing.rst:432
+msgid ":abbr:`S (Standards Track, Draft)`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:175 ../../peps/topic/typing.rst:403
+msgid ":pep:`696 <696>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:176 ../../peps/topic/typing.rst:404
+msgid ":pep:`Type defaults for TypeVarLikes <696>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:177 ../../peps/topic/typing.rst:187
+#: ../../peps/topic/typing.rst:405 ../../peps/topic/typing.rst:425
+msgid "James Hilton-Balfe"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:180 ../../peps/topic/typing.rst:418
+msgid ":pep:`705 <705>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:181 ../../peps/topic/typing.rst:419
+msgid ":pep:`TypedDict: Read-only items <705>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:182 ../../peps/topic/typing.rst:420
+msgid "Alice Purcell"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:185 ../../peps/topic/typing.rst:423
+msgid ":pep:`718 <718>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:186 ../../peps/topic/typing.rst:424
+msgid ":pep:`Subscriptable functions <718>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:190 ../../peps/topic/typing.rst:428
+msgid ":pep:`724 <724>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:191 ../../peps/topic/typing.rst:429
+msgid ":pep:`Stricter Type Guards <724>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:192 ../../peps/topic/typing.rst:430
+msgid "Rich Chiodo, Eric Traut, Erik De Bonte"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:195 ../../peps/topic/typing.rst:433
+msgid ":pep:`727 <727>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:196 ../../peps/topic/typing.rst:434
+msgid ":pep:`Documentation in Annotated Metadata <727>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:197 ../../peps/topic/typing.rst:435
+msgid "Sebastián Ramírez"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:199 ../../peps/topic/typing.rst:437
+msgid ":abbr:`P (Process, Draft)`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:200 ../../peps/topic/typing.rst:438
+msgid ":pep:`729 <729>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:201 ../../peps/topic/typing.rst:439
+msgid ":pep:`Typing governance process <729>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:202 ../../peps/topic/typing.rst:440
+msgid "Jelle Zijlstra, Shantanu Jain"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:206
+msgid "Finished PEPs (done, with a stable interface)"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:218 ../../peps/topic/typing.rst:223
+#: ../../peps/topic/typing.rst:228 ../../peps/topic/typing.rst:233
+#: ../../peps/topic/typing.rst:282 ../../peps/topic/typing.rst:287
+#: ../../peps/topic/typing.rst:297 ../../peps/topic/typing.rst:307
+msgid ":abbr:`SF (Standards Track, Final)`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:219 ../../peps/topic/typing.rst:283
+msgid ":pep:`484 <484>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:220 ../../peps/topic/typing.rst:284
+msgid ":pep:`Type Hints <484>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:221 ../../peps/topic/typing.rst:285
+msgid "Guido van Rossum, Jukka Lehtosalo, Łukasz Langa"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:222 ../../peps/topic/typing.rst:286
+msgid "3.5"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:224 ../../peps/topic/typing.rst:288
+msgid ":pep:`526 <526>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:225 ../../peps/topic/typing.rst:289
+msgid ":pep:`Syntax for Variable Annotations <526>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:226 ../../peps/topic/typing.rst:290
+msgid "Ryan Gonzalez, Philip House, Ivan Levkivskyi, Lisa Roach, Guido van Rossum"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:227 ../../peps/topic/typing.rst:291
+msgid "3.6"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:229 ../../peps/topic/typing.rst:298
+msgid ":pep:`561 <561>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:230 ../../peps/topic/typing.rst:299
+msgid ":pep:`Distributing and Packaging Type Information <561>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:231 ../../peps/topic/typing.rst:300
+msgid "Ethan Smith"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:234 ../../peps/topic/typing.rst:308
+msgid ":pep:`585 <585>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:235 ../../peps/topic/typing.rst:309
+msgid ":pep:`Type Hinting Generics In Standard Collections <585>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:240
+msgid "Abandoned, Withdrawn, and Rejected PEPs"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:252 ../../peps/topic/typing.rst:377
+msgid ":abbr:`SR (Standards Track, Rejected)`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:253 ../../peps/topic/typing.rst:378
+msgid ":pep:`677 <677>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:254 ../../peps/topic/typing.rst:379
+msgid ":pep:`Callable Type Syntax <677>`"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:255 ../../peps/topic/typing.rst:380
+msgid "Steven Troxler, Pradeep Kumar Srinivasan"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:260
+msgid "Numerical Index"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:444
+msgid "PEP Types Key"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:446
+msgid ""
+"**I** --- *Informational*: Non-normative PEP containing background, "
+"guidelines or other information relevant to the Python ecosystem"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:448
+msgid ""
+"**P** --- *Process*: Normative PEP describing or proposing a change to a "
+"Python community process, workflow or governance"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:450
+msgid ""
+"**S** --- *Standards Track*: Normative PEP with a new feature for Python,"
+" implementation change for CPython or interoperability standard for the "
+"ecosystem"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:452
+msgid ":pep:`More info in PEP 1 <1#pep-types>`."
+msgstr ""
+
+#: ../../peps/topic/typing.rst:455
+msgid "PEP Status Key"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:457
+msgid "**A** --- *Accepted*: Normative proposal accepted for implementation"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:459
+msgid ""
+"**A** --- *Active*: Currently valid informational guidance, or an in-use "
+"process"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:461
+msgid ""
+"**D** --- *Deferred*: Inactive draft that may be taken up again at a "
+"later time"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:463
+msgid "**<No letter>** --- *Draft*: Proposal under active discussion and revision"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:465
+msgid ""
+"**F** --- *Final*: Accepted and implementation complete, or no longer "
+"active"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:467
+msgid ""
+"**P** --- *Provisional*: Provisionally accepted but additional feedback "
+"needed"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:469
+msgid "**R** --- *Rejected*: Formally declined and will not be accepted"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:471
+msgid "**S** --- *Superseded*: Replaced by another succeeding PEP"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:473
+msgid "**W** --- *Withdrawn*: Removed from consideration by sponsor or authors"
+msgstr ""
+
+#: ../../peps/topic/typing.rst:475
+msgid ":pep:`More info in PEP 1 <1#pep-review-resolution>`."
+msgstr ""
+

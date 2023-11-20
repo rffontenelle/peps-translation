@@ -6,137 +6,150 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PEPs\n"
+"Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 20:07+0000\n"
+"POT-Creation-Date: 2023-11-20 10:43-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.13.1\n"
 
-#: ../pep-0336.txt
+#: ../../peps/pep-0336.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../pep-0336.txt:5
+#: ../../peps/pep-0336.rst:5
 msgid "Andrew McClelland <eternalsquire@comcast.net>"
 msgstr ""
 
-#: ../pep-0336.txt
+#: ../../peps/pep-0336.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../pep-0336.txt:6
+#: ../../peps/pep-0336.rst:6
 msgid "Rejected"
 msgstr ""
 
-#: ../pep-0336.txt
+#: ../../peps/pep-0336.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../pep-0336.txt:7
+#: ../../peps/pep-0336.rst:7
 msgid "Standards Track"
 msgstr ""
 
-#: ../pep-0336.txt
+#: ../../peps/pep-0336.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../pep-0336.txt:9
+#: ../../peps/pep-0336.rst:9
 msgid "28-Oct-2004"
 msgstr ""
 
-#: ../pep-0336.txt
+#: ../../peps/pep-0336.rst
 msgid "Post-History"
 msgstr "Pós-história"
 
-#: ../pep-0336.txt:14
+#: ../../peps/pep-0336.rst:14
 msgid "Abstract"
 msgstr ""
 
-#: ../pep-0336.txt:16
+#: ../../peps/pep-0336.rst:16
 msgid ""
-"``None`` should be a callable object that when called with any arguments has "
-"no side effect and returns ``None``."
+"``None`` should be a callable object that when called with any arguments "
+"has no side effect and returns ``None``."
 msgstr ""
 
-#: ../pep-0336.txt:21
+#: ../../peps/pep-0336.rst:21
 msgid "BDFL Pronouncement"
 msgstr ""
 
-#: ../pep-0336.txt:23
+#: ../../peps/pep-0336.rst:23
 msgid ""
-"This PEP is rejected.  It is considered a feature that ``None`` raises an "
-"error when called.  The proposal falls short in tests for obviousness, "
-"clarity, explicitness, and necessity.  The provided Switch example is nice "
-"but easily handled by a simple lambda definition. See python-dev discussion "
-"on 17 June 2005 [2]_."
+"This PEP is rejected.  It is considered a feature that ``None`` raises an"
+" error when called.  The proposal falls short in tests for obviousness, "
+"clarity, explicitness, and necessity.  The provided Switch example is "
+"nice but easily handled by a simple lambda definition. See python-dev "
+"discussion on 17 June 2005 [1]_."
 msgstr ""
 
-#: ../pep-0336.txt:31
+#: ../../peps/pep-0336.rst:31
 msgid "Motivation"
 msgstr ""
 
-#: ../pep-0336.txt:33
+#: ../../peps/pep-0336.rst:33
 msgid ""
 "To allow a programming style for selectable actions that is more in "
-"accordance with the minimalistic functional programming goals of the Python "
-"language."
+"accordance with the minimalistic functional programming goals of the "
+"Python language."
 msgstr ""
 
-#: ../pep-0336.txt:39
+#: ../../peps/pep-0336.rst:39
 msgid "Rationale"
 msgstr ""
 
-#: ../pep-0336.txt:41
+#: ../../peps/pep-0336.rst:41
 msgid ""
-"Allow the use of ``None`` in method tables as a universal no effect rather "
-"than either (1) checking a method table entry against ``None`` before "
-"calling, or (2) writing a local no effect method with arguments similar to "
-"other functions in the table."
+"Allow the use of ``None`` in method tables as a universal no effect "
+"rather than either (1) checking a method table entry against ``None`` "
+"before calling, or (2) writing a local no effect method with arguments "
+"similar to other functions in the table."
 msgstr ""
 
-#: ../pep-0336.txt:46
+#: ../../peps/pep-0336.rst:46
 msgid "The semantics would be effectively::"
 msgstr ""
 
-#: ../pep-0336.txt:55
+#: ../../peps/pep-0336.rst:55
 msgid "How To Use"
 msgstr ""
 
-#: ../pep-0336.txt:57
+#: ../../peps/pep-0336.rst:57
 msgid "Before, checking function table entry against ``None``::"
 msgstr ""
 
-#: ../pep-0336.txt:77
+#: ../../peps/pep-0336.rst:77
 msgid "Before, using a local no effect method::"
 msgstr ""
 
-#: ../pep-0336.txt:99
+#: ../../peps/pep-0336.rst:99
 msgid "After::"
 msgstr ""
 
-#: ../pep-0336.txt:120
+#: ../../peps/pep-0336.rst:120
 msgid "References"
 msgstr "Referências"
 
-#: ../pep-0336.txt:122
-msgid "Python Reference Manual, Section 3.2, http://docs.python.org/reference/"
-msgstr ""
-
-#: ../pep-0336.txt:125
+#: ../../peps/pep-0336.rst:122
 msgid ""
-"Raymond Hettinger, Propose to reject PEP 336 -- Make None Callable https://"
-"mail.python.org/pipermail/python-dev/2005-June/054280.html"
+"Raymond Hettinger, Propose to reject PEP 336 -- Make None Callable "
+"https://mail.python.org/pipermail/python-dev/2005-June/054280.html"
 msgstr ""
 
-#: ../pep-0336.txt:130
+#: ../../peps/pep-0336.rst:127
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../pep-0336.txt:132
+#: ../../peps/pep-0336.rst:129
 msgid "This document has been placed in the public domain."
 msgstr "Este documento foi colocado em domínio público."
+
+#~ msgid ""
+#~ "This PEP is rejected.  It is "
+#~ "considered a feature that ``None`` "
+#~ "raises an error when called.  The "
+#~ "proposal falls short in tests for "
+#~ "obviousness, clarity, explicitness, and "
+#~ "necessity.  The provided Switch example "
+#~ "is nice but easily handled by a"
+#~ " simple lambda definition. See python-"
+#~ "dev discussion on 17 June 2005 "
+#~ "[2]_."
+#~ msgstr ""
+
+#~ msgid "Python Reference Manual, Section 3.2, http://docs.python.org/reference/"
+#~ msgstr ""
+

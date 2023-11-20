@@ -6,132 +6,132 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PEPs\n"
+"Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 20:07+0000\n"
+"POT-Creation-Date: 2023-11-20 10:43-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.13.1\n"
 
-#: ../pep-3114.txt
+#: ../../peps/pep-3114.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../pep-3114.txt:5
+#: ../../peps/pep-3114.rst:3
 msgid "Ka-Ping Yee <ping@zesty.ca>"
 msgstr ""
 
-#: ../pep-3114.txt
+#: ../../peps/pep-3114.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../pep-3114.txt:6
+#: ../../peps/pep-3114.rst:4
 msgid "Final"
 msgstr ""
 
-#: ../pep-3114.txt
+#: ../../peps/pep-3114.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../pep-3114.txt:7
+#: ../../peps/pep-3114.rst:5
 msgid "Standards Track"
 msgstr ""
 
-#: ../pep-3114.txt
+#: ../../peps/pep-3114.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../pep-3114.txt:9
+#: ../../peps/pep-3114.rst:7
 msgid "04-Mar-2007"
 msgstr ""
 
-#: ../pep-3114.txt
+#: ../../peps/pep-3114.rst
 msgid "Python-Version"
 msgstr ""
 
-#: ../pep-3114.txt:10
+#: ../../peps/pep-3114.rst:8
 msgid "3.0"
 msgstr ""
 
-#: ../pep-3114.txt
+#: ../../peps/pep-3114.rst
 msgid "Post-History"
 msgstr "Pós-história"
 
-#: ../pep-3114.txt:15
+#: ../../peps/pep-3114.rst:13
 msgid "Abstract"
 msgstr ""
 
-#: ../pep-3114.txt:17
+#: ../../peps/pep-3114.rst:15
 msgid ""
-"The iterator protocol in Python 2.x consists of two methods: ``__iter__()`` "
-"called on an iterable object to yield an iterator, and ``next()`` called on "
-"an iterator object to yield the next item in the sequence.  Using a ``for`` "
-"loop to iterate over an iterable object implicitly calls both of these "
-"methods.  This PEP proposes that the ``next`` method be renamed to "
-"``__next__``, consistent with all the other protocols in Python in which a "
-"method is implicitly called as part of a language-level protocol, and that a "
-"built-in function named ``next`` be introduced to invoke ``__next__`` "
-"method, consistent with the manner in which other protocols are explicitly "
-"invoked."
+"The iterator protocol in Python 2.x consists of two methods: "
+"``__iter__()`` called on an iterable object to yield an iterator, and "
+"``next()`` called on an iterator object to yield the next item in the "
+"sequence.  Using a ``for`` loop to iterate over an iterable object "
+"implicitly calls both of these methods.  This PEP proposes that the "
+"``next`` method be renamed to ``__next__``, consistent with all the other"
+" protocols in Python in which a method is implicitly called as part of a "
+"language-level protocol, and that a built-in function named ``next`` be "
+"introduced to invoke ``__next__`` method, consistent with the manner in "
+"which other protocols are explicitly invoked."
 msgstr ""
 
-#: ../pep-3114.txt:30
+#: ../../peps/pep-3114.rst:28
 msgid "Names With Double Underscores"
 msgstr ""
 
-#: ../pep-3114.txt:32
+#: ../../peps/pep-3114.rst:30
 msgid ""
 "In Python, double underscores before and after a name are used to "
 "distinguish names that belong to the language itself.  Attributes and "
-"methods that are implicitly used or created by the interpreter employ this "
-"naming convention; some examples are:"
+"methods that are implicitly used or created by the interpreter employ "
+"this naming convention; some examples are:"
 msgstr ""
 
-#: ../pep-3114.txt:37
+#: ../../peps/pep-3114.rst:35
 msgid "``__file__`` - an attribute automatically created by the interpreter"
 msgstr ""
 
-#: ../pep-3114.txt:39
+#: ../../peps/pep-3114.rst:37
 msgid "``__dict__`` - an attribute with special meaning to the interpreter"
 msgstr ""
 
-#: ../pep-3114.txt:41
+#: ../../peps/pep-3114.rst:39
 msgid "``__init__`` - a method implicitly called by the interpreter"
 msgstr ""
 
-#: ../pep-3114.txt:43
+#: ../../peps/pep-3114.rst:41
 msgid ""
-"Note that this convention applies to methods such as ``__init__`` that are "
-"explicitly defined by the programmer, as well as attributes such as "
+"Note that this convention applies to methods such as ``__init__`` that "
+"are explicitly defined by the programmer, as well as attributes such as "
 "``__file__`` that can only be accessed by naming them explicitly, so it "
 "includes names that are used *or* created by the interpreter."
 msgstr ""
 
-#: ../pep-3114.txt:48
+#: ../../peps/pep-3114.rst:46
 msgid ""
 "(Not all things that are called \"protocols\" are made of methods with "
 "double-underscore names.  For example, the ``__contains__`` method has "
 "double underscores because the language construct ``x in y`` implicitly "
-"calls ``__contains__``.  But even though the ``read`` method is part of the "
-"file protocol, it does not have double underscores because there is no "
-"language construct that implicitly invokes ``x.read()``.)"
+"calls ``__contains__``.  But even though the ``read`` method is part of "
+"the file protocol, it does not have double underscores because there is "
+"no language construct that implicitly invokes ``x.read()``.)"
 msgstr ""
 
-#: ../pep-3114.txt:55
+#: ../../peps/pep-3114.rst:53
 msgid ""
-"The use of double underscores creates a separate namespace for names that "
-"are part of the Python language definition, so that programmers are free to "
-"create variables, attributes, and methods that start with letters, without "
-"fear of silently colliding with names that have a language-defined purpose.  "
-"(Colliding with reserved keywords is still a concern, but at least this will "
-"immediately yield a syntax error.)"
+"The use of double underscores creates a separate namespace for names that"
+" are part of the Python language definition, so that programmers are free"
+" to create variables, attributes, and methods that start with letters, "
+"without fear of silently colliding with names that have a language-"
+"defined purpose.  (Colliding with reserved keywords is still a concern, "
+"but at least this will immediately yield a syntax error.)"
 msgstr ""
 
-#: ../pep-3114.txt:62
+#: ../../peps/pep-3114.rst:60
 msgid ""
 "The naming of the ``next`` method on iterators is an exception to this "
 "convention.  Code that nowhere contains an explicit call to a ``next`` "
@@ -141,208 +141,217 @@ msgid ""
 "semantics)."
 msgstr ""
 
-#: ../pep-3114.txt:71
+#: ../../peps/pep-3114.rst:69
 msgid "Double-Underscore Methods and Built-In Functions"
 msgstr ""
 
-#: ../pep-3114.txt:73
+#: ../../peps/pep-3114.rst:71
 msgid ""
 "The Python language defines several protocols that are implemented or "
-"customized by defining methods with double-underscore names.  In each case, "
-"the protocol is provided by an internal method implemented as a C function "
-"in the interpreter.  For objects defined in Python, this C function supports "
-"customization by implicitly invoking a Python method with a double-"
-"underscore name (it often does a little bit of additional work beyond just "
-"calling the Python method.)"
+"customized by defining methods with double-underscore names.  In each "
+"case, the protocol is provided by an internal method implemented as a C "
+"function in the interpreter.  For objects defined in Python, this C "
+"function supports customization by implicitly invoking a Python method "
+"with a double-underscore name (it often does a little bit of additional "
+"work beyond just calling the Python method.)"
 msgstr ""
 
-#: ../pep-3114.txt:81
+#: ../../peps/pep-3114.rst:79
 msgid "Sometimes the protocol is invoked by a syntactic construct:"
 msgstr ""
 
-#: ../pep-3114.txt:83
+#: ../../peps/pep-3114.rst:81
 msgid "``x[y]`` --> internal ``tp_getitem`` --> ``x.__getitem__(y)``"
 msgstr ""
 
-#: ../pep-3114.txt:85
+#: ../../peps/pep-3114.rst:83
 msgid "``x + y`` --> internal ``nb_add`` --> ``x.__add__(y)``"
 msgstr ""
 
-#: ../pep-3114.txt:87
+#: ../../peps/pep-3114.rst:85
 msgid "``-x`` --> internal ``nb_negative`` --> ``x.__neg__()``"
 msgstr ""
 
-#: ../pep-3114.txt:89
+#: ../../peps/pep-3114.rst:87
 msgid ""
-"Sometimes there is no syntactic construct, but it is still useful to be able "
-"to explicitly invoke the protocol.  For such cases Python offers a built-in "
-"function of the same name but without the double underscores."
+"Sometimes there is no syntactic construct, but it is still useful to be "
+"able to explicitly invoke the protocol.  For such cases Python offers a "
+"built-in function of the same name but without the double underscores."
 msgstr ""
 
-#: ../pep-3114.txt:93
+#: ../../peps/pep-3114.rst:91
 msgid "``len(x)`` --> internal ``sq_length`` --> ``x.__len__()``"
 msgstr ""
 
-#: ../pep-3114.txt:95
+#: ../../peps/pep-3114.rst:93
 msgid "``hash(x)`` --> internal ``tp_hash`` --> ``x.__hash__()``"
 msgstr ""
 
-#: ../pep-3114.txt:97
+#: ../../peps/pep-3114.rst:95
 msgid "``iter(x)`` --> internal ``tp_iter`` --> ``x.__iter__()``"
 msgstr ""
 
-#: ../pep-3114.txt:99
+#: ../../peps/pep-3114.rst:97
 msgid ""
 "Following this pattern, the natural way to handle ``next`` is to add a "
 "``next`` built-in function that behaves in exactly the same fashion."
 msgstr ""
 
-#: ../pep-3114.txt:102
+#: ../../peps/pep-3114.rst:100
 msgid "``next(x)`` --> internal ``tp_iternext`` --> ``x.__next__()``"
 msgstr ""
 
-#: ../pep-3114.txt:104
+#: ../../peps/pep-3114.rst:102
 msgid ""
 "Further, it is proposed that the ``next`` built-in function accept a "
-"sentinel value as an optional second argument, following the style of the "
-"``getattr`` and ``iter`` built-in functions.  When called with two "
+"sentinel value as an optional second argument, following the style of the"
+" ``getattr`` and ``iter`` built-in functions.  When called with two "
 "arguments, ``next`` catches the StopIteration exception and returns the "
-"sentinel value instead of propagating the exception.  This creates a nice "
-"duality between ``iter`` and ``next``:"
+"sentinel value instead of propagating the exception.  This creates a nice"
+" duality between ``iter`` and ``next``:"
 msgstr ""
 
-#: ../pep-3114.txt:111
+#: ../../peps/pep-3114.rst:109
 msgid "iter(function, sentinel) <--> next(iterator, sentinel)"
 msgstr ""
 
-#: ../pep-3114.txt:115
+#: ../../peps/pep-3114.rst:113
 msgid "Previous Proposals"
 msgstr ""
 
-#: ../pep-3114.txt:117
+#: ../../peps/pep-3114.rst:115
 msgid ""
-"This proposal is not a new idea.  The idea proposed here was supported by "
-"the BDFL on python-dev [1]_ and is even mentioned in the original iterator "
-"PEP, :pep:`234`::"
+"This proposal is not a new idea.  The idea proposed here was supported by"
+" the BDFL on python-dev [1]_ and is even mentioned in the original "
+"iterator PEP, :pep:`234`::"
 msgstr ""
 
-#: ../pep-3114.txt:128
+#: ../../peps/pep-3114.rst:126
 msgid "Objections"
 msgstr ""
 
-#: ../pep-3114.txt:130
+#: ../../peps/pep-3114.rst:128
 msgid ""
 "There have been a few objections to the addition of more built-ins. In "
 "particular, Martin von Loewis writes [2]_::"
 msgstr ""
 
-#: ../pep-3114.txt:150
+#: ../../peps/pep-3114.rst:148
 msgid "Transition Plan"
 msgstr ""
 
-#: ../pep-3114.txt:152
+#: ../../peps/pep-3114.rst:150
 msgid ""
-"Two additional transformations will be added to the 2to3 translation tool "
-"[3]_:"
+"Two additional transformations will be added to the 2to3 translation tool"
+" [3]_:"
 msgstr ""
 
-#: ../pep-3114.txt:155
+#: ../../peps/pep-3114.rst:153
 msgid "Method definitions named ``next`` will be renamed to ``__next__``."
 msgstr ""
 
-#: ../pep-3114.txt:157
+#: ../../peps/pep-3114.rst:155
 msgid ""
 "Explicit calls to the ``next`` method will be replaced with calls to the "
 "built-in ``next`` function.  For example, ``x.next()`` will become "
 "``next(x)``."
 msgstr ""
 
-#: ../pep-3114.txt:161
+#: ../../peps/pep-3114.rst:159
 msgid ""
-"Collin Winter looked into the possibility of automatically deciding whether "
-"to perform the second transformation depending on the presence of a module-"
-"level binding to ``next`` [4]_ and found that it would be \"ugly and "
-"slow\".  Instead, the translation tool will emit warnings upon detecting "
-"such a binding.  Collin has proposed warnings for the following conditions "
-"[5]_:"
+"Collin Winter looked into the possibility of automatically deciding "
+"whether to perform the second transformation depending on the presence of"
+" a module-level binding to ``next`` [4]_ and found that it would be "
+"\"ugly and slow\".  Instead, the translation tool will emit warnings upon"
+" detecting such a binding.  Collin has proposed warnings for the "
+"following conditions [5]_:"
 msgstr ""
 
-#: ../pep-3114.txt:168
+#: ../../peps/pep-3114.rst:166
 msgid "Module-level assignments to ``next``."
 msgstr ""
 
-#: ../pep-3114.txt:170
+#: ../../peps/pep-3114.rst:168
 msgid "Module-level definitions of a function named ``next``."
 msgstr ""
 
-#: ../pep-3114.txt:172
+#: ../../peps/pep-3114.rst:170
 msgid "Module-level imports of the name ``next``."
 msgstr ""
 
-#: ../pep-3114.txt:174
+#: ../../peps/pep-3114.rst:172
 msgid "Assignments to ``__builtin__.next``."
 msgstr ""
 
-#: ../pep-3114.txt:178
+#: ../../peps/pep-3114.rst:176
 msgid "Approval"
 msgstr ""
 
-#: ../pep-3114.txt:180
-msgid "This PEP was accepted by Guido on March 6, 2007 [5]_."
+#: ../../peps/pep-3114.rst:178
+msgid "This PEP was accepted by Guido on March 6, 2007 [6]_."
 msgstr ""
 
-#: ../pep-3114.txt:184
+#: ../../peps/pep-3114.rst:182
 msgid "Implementation"
 msgstr ""
 
-#: ../pep-3114.txt:186
+#: ../../peps/pep-3114.rst:184
 msgid ""
 "A patch with the necessary changes (except the 2to3 tool) was written by "
 "Georg Brandl and committed as revision 54910."
 msgstr ""
 
-#: ../pep-3114.txt:191
+#: ../../peps/pep-3114.rst:189
 msgid "References"
 msgstr "Referências"
 
-#: ../pep-3114.txt:193
+#: ../../peps/pep-3114.rst:191
 msgid ""
-"Single- vs. Multi-pass iterability (Guido van Rossum) https://mail.python."
-"org/pipermail/python-dev/2002-July/026814.html"
+"Single- vs. Multi-pass iterability (Guido van Rossum) "
+"https://mail.python.org/pipermail/python-dev/2002-July/026814.html"
 msgstr ""
 
-#: ../pep-3114.txt:196
+#: ../../peps/pep-3114.rst:194
 msgid ""
-"PEP: rename it.next() to it.__next__()... (Martin von Loewis) https://mail."
-"python.org/pipermail/python-3000/2007-March/005965.html"
+"PEP: rename it.next() to it.__next__()... (Martin von Loewis) "
+"https://mail.python.org/pipermail/python-3000/2007-March/005965.html"
 msgstr ""
 
-#: ../pep-3114.txt:199
-msgid "2to3 refactoring tool http://svn.python.org/view/sandbox/trunk/2to3/"
-msgstr ""
-
-#: ../pep-3114.txt:202
+#: ../../peps/pep-3114.rst:197
 msgid ""
-"PEP: rename it.next() to it.__next__()... (Collin Winter) https://mail."
-"python.org/pipermail/python-3000/2007-March/006020.html"
+"2to3 refactoring tool "
+"https://github.com/python/cpython/tree/ef04c44e29a8276a484f58d03a75a2dec516302d/Lib/lib2to3"
 msgstr ""
 
-#: ../pep-3114.txt:205
+#: ../../peps/pep-3114.rst:200
 msgid ""
-"PEP 3113 transition plan https://mail.python.org/pipermail/python-3000/2007-"
-"March/006044.html"
+"PEP: rename it.next() to it.__next__()... (Collin Winter) "
+"https://mail.python.org/pipermail/python-3000/2007-March/006020.html"
 msgstr ""
 
-#: ../pep-3114.txt:208
+#: ../../peps/pep-3114.rst:203
 msgid ""
-"PEP: rename it.next() to it.__next__()... (Guido van Rossum) https://mail."
-"python.org/pipermail/python-3000/2007-March/006027.html"
+"PEP 3113 transition plan "
+"https://mail.python.org/pipermail/python-3000/2007-March/006044.html"
 msgstr ""
 
-#: ../pep-3114.txt:213
+#: ../../peps/pep-3114.rst:206
+msgid ""
+"PEP: rename it.next() to it.__next__()... (Guido van Rossum) "
+"https://mail.python.org/pipermail/python-3000/2007-March/006027.html"
+msgstr ""
+
+#: ../../peps/pep-3114.rst:211
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../pep-3114.txt:215
+#: ../../peps/pep-3114.rst:213
 msgid "This document has been placed in the public domain."
 msgstr "Este documento foi colocado em domínio público."
+
+#~ msgid "This PEP was accepted by Guido on March 6, 2007 [5]_."
+#~ msgstr ""
+
+#~ msgid "2to3 refactoring tool http://svn.python.org/view/sandbox/trunk/2to3/"
+#~ msgstr ""
+

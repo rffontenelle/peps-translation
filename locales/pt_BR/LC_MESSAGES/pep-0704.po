@@ -1,0 +1,514 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the PEPs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PEPs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-20 10:43-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pt_BR\n"
+"Language-Team: pt_BR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.13.1\n"
+
+#: ../../peps/pep-0704.rst
+msgid "Author"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:3
+msgid "Pradyun Gedam <pradyunsg@gmail.com>"
+msgstr ""
+
+#: ../../peps/pep-0704.rst
+msgid "Sponsor"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:4
+msgid "Brett Cannon <brett@python.org>"
+msgstr ""
+
+#: ../../peps/pep-0704.rst
+msgid "PEP-Delegate"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:5
+msgid "Paul Moore <p.f.moore@gmail.com>"
+msgstr ""
+
+#: ../../peps/pep-0704.rst
+msgid "Discussions-To"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:6
+msgid "https://discuss.python.org/t/22846"
+msgstr ""
+
+#: ../../peps/pep-0704.rst
+msgid "Status"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:7
+msgid "Withdrawn"
+msgstr ""
+
+#: ../../peps/pep-0704.rst
+msgid "Type"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:8
+msgid "Standards Track"
+msgstr ""
+
+#: ../../peps/pep-0704.rst
+msgid "Topic"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:9
+msgid "Packaging"
+msgstr ""
+
+#: ../../peps/pep-0704.rst
+msgid "Created"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:11
+msgid "16-Jan-2023"
+msgstr ""
+
+#: ../../peps/pep-0704.rst
+msgid "Post-History"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:12
+msgid "`16-Jan-2023 <https://discuss.python.org/t/22846>`__"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:16
+msgid "Abstract"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:18
+msgid ""
+"This PEP recommends that package installers like ``pip``  require a "
+"virtual environment by default on Python 3.13+."
+msgstr ""
+
+#: ../../peps/pep-0704.rst:21
+msgid "PEP Withdrawal"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:23
+msgid ""
+"During discussion of this PEP, it became clear that changes to pip's UX "
+"are not controlled by PEPs as proposed. It also became clear that a "
+"significant number of users rely on being able to mix managed-by-pip "
+"dependencies with managed-by-some-other-tool dependencies (most "
+"prominently, when using Conda)."
+msgstr ""
+
+#: ../../peps/pep-0704.rst:25
+msgid ""
+"Further, a significant subset of the benefits of the proposed change are "
+"achievable via :pep:`668` (accepted and implemented at the time of "
+"writing). It provides redistributors of the Python interpreter control "
+"over whether users should be required to use a virtual environment, what "
+"the messaging presented to the user is and how the rollout of that change"
+" should happen for their users."
+msgstr ""
+
+#: ../../peps/pep-0704.rst:27
+msgid ""
+"Since enforcement of virtual environments with ``pip`` was the primary "
+"focus of this PEP, it felt more appropriate to withdraw this PEP than to "
+"refocus it on a different topic."
+msgstr ""
+
+#: ../../peps/pep-0704.rst:29
+msgid ""
+"A future PEP to resolve the virtual environment naming convention "
+"question/issues would still be appropriate, but it's worth starting any "
+"such effort as a fresh PEP focused on the benefits of such a convention, "
+"rather than on the enforcement of it."
+msgstr ""
+
+#: ../../peps/pep-0704.rst:32
+msgid "Motivation"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:34
+msgid ""
+"Python virtual environments are an essential part of the development "
+"workflow for Python. However, they require extra effort since they are an"
+" opt-in feature, and requires users to either:"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:36
+msgid "take explicit steps to activate/deactivate a virtual environment"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:37
+msgid "use :samp:`{<path-to-venv>}/{<bin-path>}/{<executable>}` to run files"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:39
+msgid ""
+"For new users, things will seemingly work correctly when virtual "
+"environments are not used -— until they don't. Further, activating a "
+"virtual environment uses slightly different syntax and mechanisms on "
+"different platforms. This complicates the introduction to virtual "
+"environments, since now information and context about how/why they are "
+"useful needs to explained to justify adding additional steps to the "
+"workflow."
+msgstr ""
+
+#: ../../peps/pep-0704.rst:41
+msgid ""
+"It also creates a scope for mistakes, since users need to remember to "
+"activate the virtual environment before running an installer like ``pip``"
+" or configure those installers to error out. On certain Linux "
+"distributions, forgetting to do so can result in the installer modifying "
+"files that are owned by the operating system (which is partially "
+"mitigated by :pep:`668` for distributions that opt-in to marking their "
+"environments accordingly)."
+msgstr ""
+
+#: ../../peps/pep-0704.rst:45
+msgid "Rationale"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:47
+msgid ""
+"Changing the default behaviour of installers like ``pip`` to require a "
+"virtual environment to be active would:"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:49
+msgid ""
+"make it easier for new users to get started with Python (since there's a "
+"consistent experience and virtual environments are understood as a thing "
+"you're required to use)"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:50
+msgid ""
+"reduce the scope for accidental installation issues for all users by "
+"default (by explicitly flagging when you're not using a virtual "
+"environment)."
+msgstr ""
+
+#: ../../peps/pep-0704.rst:52
+msgid ""
+"Setting up a convention of placing the virtual environment in-tree in a "
+"directory named ``.venv`` removes a decision point for common workflows "
+"and creates a clear convention within the ecosystem."
+msgstr ""
+
+#: ../../peps/pep-0704.rst:55
+msgid "Specification"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:58
+msgid "Requiring a virtual environment by default"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:60
+msgid ""
+"When a user runs an installer without an active virtual environment, the "
+"installer SHOULD print an error message and exit with a non-zero exit "
+"code."
+msgstr ""
+
+#: ../../peps/pep-0704.rst:62
+msgid ""
+"The error message SHOULD inform the user that a virtual environment is "
+"required, SHOULD provide shell-specific instructions on how to create and"
+" activate a virtual environment named ``.venv``, and SHOULD provide a "
+"link to a documentation page that explains how to create and activate a "
+"virtual environment."
+msgstr ""
+
+#: ../../peps/pep-0704.rst:64
+msgid "See `Implementation Notes`_ for more details."
+msgstr ""
+
+#: ../../peps/pep-0704.rst:67
+msgid "Opting out of virtual environments"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:69
+msgid ""
+"The installer SHOULD also provide a explicit opt-in to disable this "
+"requirement, allowing an end user to use it outside of a virtual "
+"environment. If the installer does not provide this functionality, it "
+"SHOULD mention this in the error message and documentation page."
+msgstr ""
+
+#: ../../peps/pep-0704.rst:72
+msgid "Consistent timeline for the change"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:74
+msgid ""
+"Installers MAY choose to implement this default behaviour on any Python "
+"versions, but SHOULD implement it on Python 3.13 or newer."
+msgstr ""
+
+#: ../../peps/pep-0704.rst:78
+msgid "Backwards Compatibility"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:80
+msgid ""
+"This PEP is backwards incompatible with workflows where users are using "
+"installers outside of virtual environments. Such users will be prompted "
+"with an error message and will need to either:"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:82
+msgid ""
+"explicitly opt-in to running the installer outside of a virtual "
+"environment, or"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:83
+msgid "create and use a virtual environment"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:85
+msgid ""
+"Users who are already using virtual environments will not be affected by "
+"this change."
+msgstr ""
+
+#: ../../peps/pep-0704.rst:87
+msgid ""
+"Workflow tools (which manage virtual environments for the user, under the"
+" hood) should be unaffected, since they should already be using a virtual"
+" environment for running the installer."
+msgstr ""
+
+#: ../../peps/pep-0704.rst:91
+msgid "Security Implications"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:93
+msgid "This PEP does not introduce any new security implications."
+msgstr ""
+
+#: ../../peps/pep-0704.rst:97
+msgid "How to Teach This"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:99
+msgid ""
+"This PEP requires that new users create and use a virtual environment to "
+"get started with using Python packages. This is, however, a best "
+"practice, as `demonstrated "
+"<https://packaging.python.org/en/latest/tutorials/installing-packages"
+"/#creating-virtual-environments>`__ by the section on \"basics of how to "
+"install Python packages\" in the Python Packaging User Guide, which "
+"explains how/what virtual environments are before discussing using "
+"``pip``."
+msgstr ""
+
+#: ../../peps/pep-0704.rst:103
+msgid "Reference Implementation"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:105
+msgid ""
+"There is no reference implementation for this PEP. However, the proposed "
+"behaviour is largely already implemented in ``pip`` and can be activated "
+"by setting the ``PIP_REQUIRE_VENV`` environment variable to ``1``. "
+"(Leaving it unset results in the proposed opt-in behaviour of not "
+"requiring a virtual environment for installation.)"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:109
+msgid "Implementation Notes"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:112
+msgid "Detecting an active virtual environment"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:114
+msgid ""
+":pep:`As discussed in PEP 668 <668#backwards-compatibility>`, the logic "
+"for robustly detecting a virtual environment is something like::"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:120
+msgid "Documentation on using a virtual environment"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:122
+msgid ""
+"Package installers are expected to provide a link to a documentation page"
+" in the error message."
+msgstr ""
+
+#: ../../peps/pep-0704.rst:124
+msgid ""
+"Ideally, such a documentation page would explain what virtual "
+"environments are, why they are required, and how to create and activate a"
+" virtual environment using ``venv``. It should include instructions for "
+"the most common shells and platforms."
+msgstr ""
+
+#: ../../peps/pep-0704.rst:126
+msgid ""
+"Such a documentation page should be made available in the `Python "
+"Packaging User Guide <https://packaging.python.org>`__ to reduce "
+"duplicated effort across installers for covering this topic."
+msgstr ""
+
+#: ../../peps/pep-0704.rst:129
+msgid "Rejected Ideas"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:132
+msgid "Do not specify a name for the virtual environment directory"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:134
+msgid ""
+"Using a consistent name for the virtual environment directory is "
+"important for a few reasons:"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:136
+msgid ""
+"It makes it easier for users to find the virtual environment directory, "
+"and to activate it."
+msgstr ""
+
+#: ../../peps/pep-0704.rst:137
+msgid ""
+"It removes a decision point for new users, since they do not need to "
+"decide on a name for the virtual environment directory."
+msgstr ""
+
+#: ../../peps/pep-0704.rst:138
+msgid ""
+"It creates a clear convention within the ecosystem, which makes it easier"
+" for users to find documentation."
+msgstr ""
+
+#: ../../peps/pep-0704.rst:139
+msgid ""
+"It ensures consistency across different tools, so that differences in the"
+" error messages do not confuse users."
+msgstr ""
+
+#: ../../peps/pep-0704.rst:142
+msgid "Use a different name for the virtual environment directory"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:144
+msgid ""
+"Functionally, the directory name does not matter much as long as there is"
+" a single consistent suggestion."
+msgstr ""
+
+#: ../../peps/pep-0704.rst:146
+msgid "The name ``.venv`` was picked since it:"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:148
+msgid "does not conflict with any valid Python import name"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:149
+msgid "does not conflict ``venv`` module in the standard library"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:150
+msgid "has pre-existing usage in the Python community"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:151
+msgid "has support for auto-detection in common text editors"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:152
+msgid "can be typed without modifier keys on common keyboard layouts"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:155
+msgid "Do not couple tooling behaviour with a Python version"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:157
+msgid ""
+"This PEP creates a coupling between the behaviour of installers and the "
+"Python version."
+msgstr ""
+
+#: ../../peps/pep-0704.rst:159
+msgid ""
+"This is already a rollout mechanism being used for behaviour changes in "
+"the installation tooling. For example, ``pip`` on Python 3.11 will use "
+"``importlib.metadata`` instead of ``pkg_resources`` for parsing/fetching "
+"package metadata, and ``sysconfig`` instead of ``distutils.sysconfig`` "
+"for getting the paths to unpack wheels into."
+msgstr ""
+
+#: ../../peps/pep-0704.rst:161
+msgid ""
+"The difference with those cases is that they're supposed to be largely "
+"transparent to end users. This PEP is proposing a behaviour change that "
+"is not transparent to end users, and requires them to take action."
+msgstr ""
+
+#: ../../peps/pep-0704.rst:163
+msgid ""
+"The primary benefit of this is that it allows for redistributors to adapt"
+" their tooling in time for the new Python version and provides a clear "
+"and consistent point for change across the ecosystem. It also puts a "
+"clear deadline on when the default behaviour will consistently require a "
+"virtual environment by default (once Python 3.12 goes end-of-life)."
+msgstr ""
+
+#: ../../peps/pep-0704.rst:165
+msgid ""
+"The primary issue with this approach is that it enforces a behaviour "
+"change on users when they upgrade to a new Python version, which can "
+"hamper the adoption of a new Python version. However, this is a "
+"migration/upgrade for existing users and it is a common expectation that "
+"*some* changes will be needed for migration/upgrades."
+msgstr ""
+
+#: ../../peps/pep-0704.rst:167
+msgid ""
+"The author of this PEP believes that the benefits of applying this "
+"consistently throughout the ecosystem with a deadline outweigh the "
+"drawbacks of enforcing a best-practice on users when they upgrade."
+msgstr ""
+
+#: ../../peps/pep-0704.rst:171
+msgid "Open Issues"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:173
+msgid "None."
+msgstr ""
+
+#: ../../peps/pep-0704.rst:177
+msgid "Copyright"
+msgstr ""
+
+#: ../../peps/pep-0704.rst:179
+msgid ""
+"This document is placed in the public domain or under the "
+"CC0-1.0-Universal license, whichever is more permissive."
+msgstr ""
+

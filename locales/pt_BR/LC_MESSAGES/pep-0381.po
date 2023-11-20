@@ -6,111 +6,112 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PEPs\n"
+"Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 20:07+0000\n"
+"POT-Creation-Date: 2023-11-20 10:43-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.13.1\n"
 
-#: ../pep-0381.txt
+#: ../../peps/pep-0381.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../pep-0381.txt:5
-msgid "Tarek Ziadé <tarek@ziade.org>, Martin v. Löwis <martin@v.loewis.de>"
+#: ../../peps/pep-0381.rst:3
+msgid "Tarek Ziadé <tarek@ziade.org>, Martin von Löwis <martin@v.loewis.de>"
 msgstr ""
 
-#: ../pep-0381.txt
+#: ../../peps/pep-0381.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../pep-0381.txt:6
+#: ../../peps/pep-0381.rst:4
 msgid "Withdrawn"
 msgstr ""
 
-#: ../pep-0381.txt
+#: ../../peps/pep-0381.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../pep-0381.txt:7
+#: ../../peps/pep-0381.rst:5
 msgid "Standards Track"
 msgstr ""
 
-#: ../pep-0381.txt
+#: ../../peps/pep-0381.rst
 msgid "Topic"
 msgstr ""
 
-#: ../pep-0381.txt:8
+#: ../../peps/pep-0381.rst:6
 msgid "Packaging"
 msgstr ""
 
-#: ../pep-0381.txt
+#: ../../peps/pep-0381.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../pep-0381.txt:10
+#: ../../peps/pep-0381.rst:8
 msgid "21-Mar-2009"
 msgstr ""
 
-#: ../pep-0381.txt
+#: ../../peps/pep-0381.rst
 msgid "Post-History"
 msgstr "Pós-história"
 
-#: ../pep-0381.txt:15
+#: ../../peps/pep-0381.rst:13
 msgid "Abstract"
 msgstr ""
 
-#: ../pep-0381.txt:17
+#: ../../peps/pep-0381.rst:15
 msgid "This PEP describes a mirroring infrastructure for PyPI."
 msgstr ""
 
-#: ../pep-0381.txt:21
+#: ../../peps/pep-0381.rst:19
 msgid "PEP Withdrawal"
 msgstr ""
 
-#: ../pep-0381.txt:23
+#: ../../peps/pep-0381.rst:21
 msgid ""
 "The main PyPI web service was moved behind the Fastly caching CDN in May "
-"2013: https://mail.python.org/pipermail/distutils-sig/2013-May/020848.html"
+"2013: https://mail.python.org/pipermail/distutils-"
+"sig/2013-May/020848.html"
 msgstr ""
 
-#: ../pep-0381.txt:26
+#: ../../peps/pep-0381.rst:24
 msgid ""
-"Subsequently, this arrangement was formalised as an in-kind sponsorship with "
-"the PSF, and the PSF has also taken on the task of risk management in the "
-"event that that sponsorship arrangement were to ever cease."
+"Subsequently, this arrangement was formalised as an in-kind sponsorship "
+"with the PSF, and the PSF has also taken on the task of risk management "
+"in the event that that sponsorship arrangement were to ever cease."
 msgstr ""
 
-#: ../pep-0381.txt:30
+#: ../../peps/pep-0381.rst:28
 msgid ""
-"The download statistics that were previously provided directly on PyPI, are "
-"now published indirectly via Google Big Query: https://packaging.python.org/"
-"guides/analyzing-pypi-package-downloads/"
+"The download statistics that were previously provided directly on PyPI, "
+"are now published indirectly via Google Big Query: "
+"https://packaging.python.org/guides/analyzing-pypi-package-downloads/"
 msgstr ""
 
-#: ../pep-0381.txt:34
+#: ../../peps/pep-0381.rst:32
 msgid ""
 "Accordingly, the mirroring proposal described in this PEP is no longer "
 "required, and has been marked as Withdrawn."
 msgstr ""
 
-#: ../pep-0381.txt:39
+#: ../../peps/pep-0381.rst:37
 msgid "Rationale"
 msgstr ""
 
-#: ../pep-0381.txt:41
+#: ../../peps/pep-0381.rst:39
 msgid ""
-"PyPI is hosting over 6000 projects and is used on a daily basis by people to "
-"build applications. Especially systems like `easy_install` and `zc.buildout` "
-"make intensive usage of PyPI."
+"PyPI is hosting over 6000 projects and is used on a daily basis by people"
+" to build applications. Especially systems like ``easy_install`` and "
+"``zc.buildout`` make intensive usage of PyPI."
 msgstr ""
 
-#: ../pep-0381.txt:45
+#: ../../peps/pep-0381.rst:43
 msgid ""
 "For people making intensive use of PyPI, it can act as a single point of "
 "failure.  People have started to set up some mirrors, both private and "
@@ -118,578 +119,670 @@ msgid ""
 "browsing PyPI to get synced."
 msgstr ""
 
-#: ../pep-0381.txt:50
+#: ../../peps/pep-0381.rst:48
 msgid "In order to make the system more reliable, this PEP describes:"
 msgstr ""
 
-#: ../pep-0381.txt:52
+#: ../../peps/pep-0381.rst:50
 msgid "the mirror listing and registering at PyPI"
 msgstr ""
 
-#: ../pep-0381.txt:53
+#: ../../peps/pep-0381.rst:51
 msgid ""
 "the pages a public mirror should maintain.  These pages will be used by "
 "PyPI, in order to get hit counts and the last modified date."
 msgstr ""
 
-#: ../pep-0381.txt:55
+#: ../../peps/pep-0381.rst:53
 msgid "how a mirror should synchronize with PyPI"
 msgstr ""
 
-#: ../pep-0381.txt:56
+#: ../../peps/pep-0381.rst:54
 msgid "how a client can implement a fail-over mechanism"
 msgstr ""
 
-#: ../pep-0381.txt:60
+#: ../../peps/pep-0381.rst:58
 msgid "Mirror listing and registering"
 msgstr ""
 
-#: ../pep-0381.txt:62
+#: ../../peps/pep-0381.rst:60
 msgid ""
 "People that wants to mirror PyPI make a proposal on catalog-SIG. When a "
 "mirror is proposed on the mailing list, it is manually added in a mirror "
-"list in the PyPI application after it has been checked to be compliant with "
-"the mirroring rules."
+"list in the PyPI application after it has been checked to be compliant "
+"with the mirroring rules."
 msgstr ""
 
-#: ../pep-0381.txt:67
+#: ../../peps/pep-0381.rst:65
 msgid "The mirror list is provided as a list of host names of the form"
 msgstr ""
 
-#: ../pep-0381.txt:70
+#: ../../peps/pep-0381.rst:68
 msgid "X.pypi.python.org"
 msgstr ""
 
-#: ../pep-0381.txt:72
+#: ../../peps/pep-0381.rst:70
 msgid ""
-"The values of X are the sequence a,b,c,...,aa,ab,... a.pypi.python.org is "
-"the master server; the mirrors start with b. A CNAME record last.pypi.python."
-"org points to the last host name. Mirror operators should use a static "
-"address, and report planned changes to that address in advance to distutils-"
-"sig."
+"The values of X are the sequence a,b,c,...,aa,ab,... a.pypi.python.org is"
+" the master server; the mirrors start with b. A CNAME record "
+"last.pypi.python.org points to the last host name. Mirror operators "
+"should use a static address, and report planned changes to that address "
+"in advance to distutils-sig."
 msgstr ""
 
-#: ../pep-0381.txt:79
+#: ../../peps/pep-0381.rst:77
 msgid ""
-"The new mirror also appears at `http://pypi.python.org/mirrors` which is a "
-"human-readable page that gives the list of mirrors. This page also explains "
-"how to register a new mirror."
+"The new mirror also appears at ``http://pypi.python.org/mirrors`` which "
+"is a human-readable page that gives the list of mirrors. This page also "
+"explains how to register a new mirror."
 msgstr ""
 
-#: ../pep-0381.txt:84
+#: ../../peps/pep-0381.rst:82
 msgid "Statistics page"
 msgstr ""
 
-#: ../pep-0381.txt:86
+#: ../../peps/pep-0381.rst:84
 msgid ""
-"PyPI provides statistics on downloads at `/stats`. This page is calculated "
-"daily by PyPI, by reading all mirrors' local stats and summing them."
+"PyPI provides statistics on downloads at ``/stats``. This page is "
+"calculated daily by PyPI, by reading all mirrors' local stats and summing"
+" them."
 msgstr ""
 
-#: ../pep-0381.txt:90
+#: ../../peps/pep-0381.rst:88
 msgid ""
-"The stats are presented in daily or monthly files, under `/stats/days` and `/"
-"stats/months`. Each file is a `bzip2` file with these formats:"
+"The stats are presented in daily or monthly files, under ``/stats/days`` "
+"and ``/stats/months``. Each file is a ``bzip2`` file with these formats:"
 msgstr ""
 
-#: ../pep-0381.txt:93
+#: ../../peps/pep-0381.rst:91
 msgid "YYYY-MM-DD.bz2 for daily files"
 msgstr ""
 
-#: ../pep-0381.txt:94
+#: ../../peps/pep-0381.rst:92
 msgid "YYYY-MM.bz2 for monthly files"
 msgstr ""
 
-#: ../pep-0381.txt:96
+#: ../../peps/pep-0381.rst:94
 msgid "Examples:"
 msgstr ""
 
-#: ../pep-0381.txt:98
+#: ../../peps/pep-0381.rst:96
 msgid "/stats/days/2008-11-06.bz2"
 msgstr ""
 
-#: ../pep-0381.txt:99
+#: ../../peps/pep-0381.rst:97
 msgid "/stats/days/2008-11-07.bz2"
 msgstr ""
 
-#: ../pep-0381.txt:100
+#: ../../peps/pep-0381.rst:98
 msgid "/stats/days/2008-11-08.bz2"
 msgstr ""
 
-#: ../pep-0381.txt:101
+#: ../../peps/pep-0381.rst:99
 msgid "/stats/months/2008-11.bz2"
 msgstr ""
 
-#: ../pep-0381.txt:102
+#: ../../peps/pep-0381.rst:100
 msgid "/stats/months/2008-10.bz2"
 msgstr ""
 
-#: ../pep-0381.txt:105
+#: ../../peps/pep-0381.rst:103
 msgid "Mirror Authenticity"
 msgstr ""
 
-#: ../pep-0381.txt:107
+#: ../../peps/pep-0381.rst:105
 msgid ""
 "With a distributed mirroring system, clients may want to verify that the "
 "mirrored copies are authentic. There are multiple threats to consider:"
 msgstr ""
 
-#: ../pep-0381.txt:111
+#: ../../peps/pep-0381.rst:109
 msgid "the central index may get compromised"
 msgstr ""
 
-#: ../pep-0381.txt:112
+#: ../../peps/pep-0381.rst:110
 msgid ""
 "the central index is assumed to be trusted, but the mirrors might be "
 "tampered."
 msgstr ""
 
-#: ../pep-0381.txt:114
+#: ../../peps/pep-0381.rst:112
 msgid ""
-"a man in the middle between the central index and the end user, or between a "
-"mirror and the end user might tamper with datagrams."
+"a man in the middle between the central index and the end user, or "
+"between a mirror and the end user might tamper with datagrams."
 msgstr ""
 
-#: ../pep-0381.txt:117
+#: ../../peps/pep-0381.rst:115
 msgid ""
-"This specification only deals with the second threat. Some provisions are "
-"made to detect man-in-the-middle attacks. To detect the first attack, "
-"package authors need to sign their packages using PGP keys, so that users "
-"verify that the package comes from the author they trust."
+"This specification only deals with the second threat. Some provisions are"
+" made to detect man-in-the-middle attacks. To detect the first attack, "
+"package authors need to sign their packages using PGP keys, so that users"
+" verify that the package comes from the author they trust."
 msgstr ""
 
-#: ../pep-0381.txt:122
+#: ../../peps/pep-0381.rst:120
 msgid ""
 "The central index provides a DSA key at the URL /serverkey, in the PEM "
 "format as generated by \"openssl dsa -pubout\" (i.e. :rfc:`3280` "
-"SubjectPublicKeyInfo, with the algorithm 1.3.14.3.2.12). This URL must *not* "
-"be mirrored, and clients must fetch the official serverkey from PyPI "
-"directly, or use the copy that came with the PyPI client software. Mirrors "
-"should still download the key, to detect a key rollover."
+"SubjectPublicKeyInfo, with the algorithm 1.3.14.3.2.12). This URL must "
+"*not* be mirrored, and clients must fetch the official serverkey from "
+"PyPI directly, or use the copy that came with the PyPI client software. "
+"Mirrors should still download the key, to detect a key rollover."
 msgstr ""
 
-#: ../pep-0381.txt:129
+#: ../../peps/pep-0381.rst:127
 msgid ""
-"For each package, a mirrored signature is provided at /serversig/<package>. "
-"This is the DSA signature of the parallel URL /simple/<package>, in DER "
-"form, using SHA-1 with DSA (i.e. as a :rfc:`3279` Dsa-Sig-Value, created by "
-"algorithm 1.2.840.10040.4.3)"
+"For each package, a mirrored signature is provided at "
+"/serversig/<package>. This is the DSA signature of the parallel URL "
+"/simple/<package>, in DER form, using SHA-1 with DSA (i.e. as a "
+":rfc:`3279` Dsa-Sig-Value, created by algorithm 1.2.840.10040.4.3)"
 msgstr ""
 
-#: ../pep-0381.txt:134
+#: ../../peps/pep-0381.rst:132
 msgid ""
 "Clients using a mirror need to perform the following steps to verify a "
 "package:"
 msgstr ""
 
-#: ../pep-0381.txt:137
+#: ../../peps/pep-0381.rst:135
 msgid "download the /simple page, and compute its SHA-1 hash"
 msgstr ""
 
-#: ../pep-0381.txt:138
+#: ../../peps/pep-0381.rst:136
 msgid "compute the DSA signature of that hash"
 msgstr ""
 
-#: ../pep-0381.txt:139
+#: ../../peps/pep-0381.rst:137
 msgid ""
-"download the corresponding /serversig, and compare it (byte-for-byte) with "
-"the value computed in step 2."
+"download the corresponding /serversig, and compare it (byte-for-byte) "
+"with the value computed in step 2."
 msgstr ""
 
-#: ../pep-0381.txt:141
+#: ../../peps/pep-0381.rst:139
 msgid ""
-"compute and verify (against the /simple page) the MD-5 hashes of all files "
-"they download from the mirror."
+"compute and verify (against the /simple page) the MD-5 hashes of all "
+"files they download from the mirror."
 msgstr ""
 
-#: ../pep-0381.txt:144
+#: ../../peps/pep-0381.rst:142
 msgid ""
-"An implementation of the verification algorithm is available from https://"
-"svn.python.org/packages/trunk/pypi/tools/verify.py"
+"An implementation of the verification algorithm is available from "
+"https://svn.python.org/packages/trunk/pypi/tools/verify.py"
 msgstr ""
 
-#: ../pep-0381.txt:147
+#: ../../peps/pep-0381.rst:145
 msgid ""
-"Verification is not needed when downloading from central index, and should "
-"be avoided to reduce the computation overhead."
+"Verification is not needed when downloading from central index, and "
+"should be avoided to reduce the computation overhead."
 msgstr ""
 
-#: ../pep-0381.txt:150
+#: ../../peps/pep-0381.rst:148
 msgid ""
 "About once a year, the key will be replaced with a new one. Mirrors will "
-"have to re-fetch all /serversig pages. Clients using mirrors need to find a "
-"trusted copy of the new server key. One way to obtain one is to download it "
-"from https://pypi.python.org/serverkey. To detect man-in-the-middle attacks, "
-"clients need to verify the SSL server certificate, which will be signed by "
-"the CACert authority."
+"have to re-fetch all /serversig pages. Clients using mirrors need to find"
+" a trusted copy of the new server key. One way to obtain one is to "
+"download it from https://pypi.python.org/serverkey. To detect man-in-the-"
+"middle attacks, clients need to verify the SSL server certificate, which "
+"will be signed by the CACert authority."
 msgstr ""
 
-#: ../pep-0381.txt:159
+#: ../../peps/pep-0381.rst:157
 msgid "Special pages a mirror needs to provide"
 msgstr ""
 
-#: ../pep-0381.txt:161
+#: ../../peps/pep-0381.rst:159
 msgid ""
 "A mirror is a subset copy of PyPI, so it provides the same structure by "
 "copying it."
 msgstr ""
 
-#: ../pep-0381.txt:164
+#: ../../peps/pep-0381.rst:162
 msgid "simple: rest version of the package index"
 msgstr ""
 
-#: ../pep-0381.txt:165
+#: ../../peps/pep-0381.rst:163
 msgid "packages: packages, stored by Python version, and letters"
 msgstr ""
 
-#: ../pep-0381.txt:166
+#: ../../peps/pep-0381.rst:164
 msgid "serversig: signatures for the simple pages"
 msgstr ""
 
-#: ../pep-0381.txt:168
+#: ../../peps/pep-0381.rst:166
 msgid "It also needs to provide two specific elements:"
 msgstr ""
 
-#: ../pep-0381.txt:170
+#: ../../peps/pep-0381.rst:168
 msgid "last-modified"
 msgstr ""
 
-#: ../pep-0381.txt:171
+#: ../../peps/pep-0381.rst:169
 msgid "local-stats"
 msgstr ""
 
-#: ../pep-0381.txt:174
+#: ../../peps/pep-0381.rst:172
 msgid "Last modified date"
 msgstr ""
 
-#: ../pep-0381.txt:176
+#: ../../peps/pep-0381.rst:174
 msgid ""
-"CPAN uses a freshness date system where the mirror's last synchronisation "
-"date is made available."
+"CPAN uses a freshness date system where the mirror's last synchronisation"
+" date is made available."
 msgstr ""
 
-#: ../pep-0381.txt:179
+#: ../../peps/pep-0381.rst:177
 msgid ""
-"For PyPI, each mirror needs to maintain a URL with simple text content that "
-"represents the last synchronisation date the mirror maintains."
+"For PyPI, each mirror needs to maintain a URL with simple text content "
+"that represents the last synchronisation date the mirror maintains."
 msgstr ""
 
-#: ../pep-0381.txt:182
+#: ../../peps/pep-0381.rst:180
 msgid ""
 "The date is provided in GMT time, using the ISO 8601 format [#iso8601]_. "
 "Each mirror will be responsible to maintain its last modified date."
 msgstr ""
 
-#: ../pep-0381.txt:185
+#: ../../peps/pep-0381.rst:183
 msgid ""
-"This page must be located at : `/last-modified` and must be a text/plain "
-"page."
+"This page must be located at : ``/last-modified`` and must be a "
+"text/plain page."
 msgstr ""
 
-#: ../pep-0381.txt:189
+#: ../../peps/pep-0381.rst:187
 msgid "Local statistics"
 msgstr ""
 
-#: ../pep-0381.txt:191
+#: ../../peps/pep-0381.rst:189
 msgid ""
-"Each mirror is responsible to count all the downloads that where done via "
-"it.  This is used by PyPI to sum up all downloads, to be able to display the "
-"grand total."
+"Each mirror is responsible to count all the downloads that where done via"
+" it.  This is used by PyPI to sum up all downloads, to be able to display"
+" the grand total."
 msgstr ""
 
-#: ../pep-0381.txt:195
+#: ../../peps/pep-0381.rst:193
 msgid ""
-"These statistics are in CSV-like form, with a header in the first line.  It "
-"needs to obey :pep:`305`.  Basically, it should be readable by Python's "
-"`csv` module."
+"These statistics are in CSV-like form, with a header in the first line.  "
+"It needs to obey :pep:`305`.  Basically, it should be readable by "
+"Python's ``csv`` module."
 msgstr ""
 
-#: ../pep-0381.txt:199
+#: ../../peps/pep-0381.rst:197
 msgid "The fields in this file are:"
 msgstr ""
 
-#: ../pep-0381.txt:201
+#: ../../peps/pep-0381.rst:199
 msgid "package: the distutils id of the package."
 msgstr ""
 
-#: ../pep-0381.txt:202
+#: ../../peps/pep-0381.rst:200
 msgid "filename: the filename that has been downloaded."
 msgstr ""
 
-#: ../pep-0381.txt:203
-msgid ""
-"useragent: the User-Agent of the client that has downloaded the package."
+#: ../../peps/pep-0381.rst:201
+msgid "useragent: the User-Agent of the client that has downloaded the package."
 msgstr ""
 
-#: ../pep-0381.txt:205
+#: ../../peps/pep-0381.rst:203
 msgid "count: the number of downloads."
 msgstr ""
 
-#: ../pep-0381.txt:207
+#: ../../peps/pep-0381.rst:205
 msgid "The content will look like this::"
 msgstr ""
 
-#: ../pep-0381.txt:213
+#: ../../peps/pep-0381.rst:211
 msgid ""
-"The counting starts the day the mirror is launched, and there is one file "
-"per day, compressed using the `bzip2` format.  Each file is named like the "
-"day.  For example, `2008-11-06.bz2` is the file for the 6th of November 2008."
+"The counting starts the day the mirror is launched, and there is one file"
+" per day, compressed using the ``bzip2`` format.  Each file is named like"
+" the day.  For example, ``2008-11-06.bz2`` is the file for the 6th of "
+"November 2008."
 msgstr ""
 
-#: ../pep-0381.txt:218
-msgid "They are then provided in a folder called `days`. For example:"
+#: ../../peps/pep-0381.rst:216
+msgid "They are then provided in a folder called ``days``. For example:"
 msgstr ""
 
-#: ../pep-0381.txt:220
+#: ../../peps/pep-0381.rst:218
 msgid "/local-stats/days/2008-11-06.bz2"
 msgstr ""
 
-#: ../pep-0381.txt:221
+#: ../../peps/pep-0381.rst:219
 msgid "/local-stats/days/2008-11-07.bz2"
 msgstr ""
 
-#: ../pep-0381.txt:222
+#: ../../peps/pep-0381.rst:220
 msgid "/local-stats/days/2008-11-08.bz2"
 msgstr ""
 
-#: ../pep-0381.txt:224
-msgid "This page must be located at `/local-stats`."
+#: ../../peps/pep-0381.rst:222
+msgid "This page must be located at ``/local-stats``."
 msgstr ""
 
-#: ../pep-0381.txt:228
+#: ../../peps/pep-0381.rst:226
 msgid "How a mirror should synchronize with PyPI"
 msgstr ""
 
-#: ../pep-0381.txt:230
+#: ../../peps/pep-0381.rst:228
 msgid ""
-"A mirroring protocol called `Simple Index` was described and implemented by "
-"Martin v. Loewis and Jim Fulton, based on how `easy_install` works.  This "
-"section synthesizes it and gives a few relevant links, plus a small part "
-"about `User-Agent`."
+"A mirroring protocol called ``Simple Index`` was described and "
+"implemented by Martin v. Loewis and Jim Fulton, based on how "
+"``easy_install`` works.  This section synthesizes it and gives a few "
+"relevant links, plus a small part about ``User-Agent``."
 msgstr ""
 
-#: ../pep-0381.txt:236
+#: ../../peps/pep-0381.rst:234
 msgid "The mirroring protocol"
 msgstr ""
 
-#: ../pep-0381.txt:238
+#: ../../peps/pep-0381.rst:236
 msgid ""
 "Mirrors must reduce the amount of data transferred between the central "
-"server and the mirror. To achieve that, they MUST use the changelog() PyPI "
-"XML-RPC call, and only refetch the packages that have been changed since the "
-"last time. For each package P, they MUST copy documents /simple/P/ and /"
-"serversig/P. If a package is deleted on the central server, they MUST delete "
-"the package and all associated files. To detect modification of package "
-"files, they MAY cache the file's ETag, and MAY request skipping it using the "
-"If-none-match header."
+"server and the mirror. To achieve that, they MUST use the changelog() "
+"PyPI XML-RPC call, and only refetch the packages that have been changed "
+"since the last time. For each package P, they MUST copy documents "
+"/simple/P/ and /serversig/P. If a package is deleted on the central "
+"server, they MUST delete the package and all associated files. To detect "
+"modification of package files, they MAY cache the file's ETag, and MAY "
+"request skipping it using the If-none-match header."
 msgstr ""
 
-#: ../pep-0381.txt:247
+#: ../../peps/pep-0381.rst:245
 msgid ""
-"Each mirroring tool MUST identify itself using a descripte User-agent header."
+"Each mirroring tool MUST identify itself using a descripte User-agent "
+"header."
 msgstr ""
 
-#: ../pep-0381.txt:250
+#: ../../peps/pep-0381.rst:248
 msgid ""
 "The pep381client package [#pep381client]_ provides an application that "
 "respects this protocol to browse PyPI."
 msgstr ""
 
-#: ../pep-0381.txt:254
+#: ../../peps/pep-0381.rst:252
 msgid "User-agent request header"
 msgstr ""
 
-#: ../pep-0381.txt:256
+#: ../../peps/pep-0381.rst:254
 msgid ""
-"In order to be able to differentiate actions taken by clients over PyPI, a "
-"specific user agent name should be provided by all mirroring software."
+"In order to be able to differentiate actions taken by clients over PyPI, "
+"a specific user agent name should be provided by all mirroring software."
 msgstr ""
 
-#: ../pep-0381.txt:260
+#: ../../peps/pep-0381.rst:258
 msgid "This is also true for all clients like:"
 msgstr ""
 
-#: ../pep-0381.txt:262
+#: ../../peps/pep-0381.rst:260
 msgid "zc.buildout [#zc.buildout]_."
 msgstr ""
 
-#: ../pep-0381.txt:263
+#: ../../peps/pep-0381.rst:261
 msgid "setuptools [#setuptools]_."
 msgstr ""
 
-#: ../pep-0381.txt:264
+#: ../../peps/pep-0381.rst:262
 msgid "pip [#pip]_."
 msgstr ""
 
-#: ../pep-0381.txt:266
+#: ../../peps/pep-0381.rst:264
 msgid "XXX user agent registering mechanism at PyPI ?"
 msgstr ""
 
-#: ../pep-0381.txt:269
+#: ../../peps/pep-0381.rst:267
 msgid "How a client can use PyPI and its mirrors"
 msgstr ""
 
-#: ../pep-0381.txt:271
+#: ../../peps/pep-0381.rst:269
 msgid ""
-"Clients that are browsing PyPI should be able to use alternative mirrors, by "
-"getting the list of the mirrors using `last.pypi.python.org`."
+"Clients that are browsing PyPI should be able to use alternative mirrors,"
+" by getting the list of the mirrors using ``last.pypi.python.org``."
 msgstr ""
 
-#: ../pep-0381.txt:274
+#: ../../peps/pep-0381.rst:272
 msgid "Code example::"
 msgstr ""
 
-#: ../pep-0381.txt:280 ../pep-0381.txt:299
+#: ../../peps/pep-0381.rst:278 ../../peps/pep-0381.rst:297
 msgid "The clients so far that could use this mechanism:"
 msgstr ""
 
-#: ../pep-0381.txt:282 ../pep-0381.txt:301
+#: ../../peps/pep-0381.rst:280 ../../peps/pep-0381.rst:299
 msgid "setuptools"
 msgstr ""
 
-#: ../pep-0381.txt:283 ../pep-0381.txt:302
+#: ../../peps/pep-0381.rst:281 ../../peps/pep-0381.rst:300
 msgid "zc.buildout (through setuptools)"
 msgstr ""
 
-#: ../pep-0381.txt:284 ../pep-0381.txt:303
+#: ../../peps/pep-0381.rst:282 ../../peps/pep-0381.rst:301
 msgid "pip"
 msgstr ""
 
-#: ../pep-0381.txt:287
+#: ../../peps/pep-0381.rst:285
 msgid "Fail-over mechanism"
 msgstr ""
 
-#: ../pep-0381.txt:289
+#: ../../peps/pep-0381.rst:287
 msgid ""
-"Clients that are browsing PyPI should be able to use a fail-over mechanism "
-"when PyPI or the used mirror is not responding."
+"Clients that are browsing PyPI should be able to use a fail-over "
+"mechanism when PyPI or the used mirror is not responding."
 msgstr ""
 
-#: ../pep-0381.txt:292
+#: ../../peps/pep-0381.rst:290
 msgid ""
 "It is up to the client to decide which mirror should be used, maybe by "
 "looking at its geographical location and its responsiveness."
 msgstr ""
 
-#: ../pep-0381.txt:295
+#: ../../peps/pep-0381.rst:293
 msgid ""
-"This PEP does not describe how this fail-over mechanism should work, but it "
-"is strongly encouraged that the clients try to use the nearest mirror."
+"This PEP does not describe how this fail-over mechanism should work, but "
+"it is strongly encouraged that the clients try to use the nearest mirror."
 msgstr ""
 
-#: ../pep-0381.txt:306
+#: ../../peps/pep-0381.rst:304
 msgid "Extra package indexes"
 msgstr ""
 
-#: ../pep-0381.txt:308
+#: ../../peps/pep-0381.rst:306
 msgid ""
 "It is obvious that some packages will not be uploaded to PyPI, whether "
 "because they are private or whether because the project maintainer runs "
-"their own server where people might get the project package. However, it is "
-"strongly encouraged that a public package index follows PyPI and Distutils "
-"protocols."
+"their own server where people might get the project package. However, it "
+"is strongly encouraged that a public package index follows PyPI and "
+"Distutils protocols."
 msgstr ""
 
-#: ../pep-0381.txt:314
+#: ../../peps/pep-0381.rst:312
 msgid ""
-"In other words, the `register` and `upload` command should be compatible "
-"with any package index server out there."
+"In other words, the ``register`` and ``upload`` command should be "
+"compatible with any package index server out there."
 msgstr ""
 
-#: ../pep-0381.txt:317
+#: ../../peps/pep-0381.rst:315
 msgid "Software that are compatible with PyPI and Distutils so far:"
 msgstr ""
 
-#: ../pep-0381.txt:319
+#: ../../peps/pep-0381.rst:317
 msgid ""
-"PloneSoftwareCenter [#psc]_ which is used to run plone.org products section."
+"PloneSoftwareCenter [#psc]_ which is used to run plone.org products "
+"section."
 msgstr ""
 
-#: ../pep-0381.txt:320
+#: ../../peps/pep-0381.rst:318
 msgid "EggBasket [#eggbasket]_."
 msgstr ""
 
-#: ../pep-0381.txt:322
+#: ../../peps/pep-0381.rst:320
 msgid ""
-"**An extra package index is not a mirror of PyPI, but can have some mirrors "
-"itself.**"
+"**An extra package index is not a mirror of PyPI, but can have some "
+"mirrors itself.**"
 msgstr ""
 
-#: ../pep-0381.txt:326
+#: ../../peps/pep-0381.rst:324
 msgid "Merging several indexes"
 msgstr ""
 
-#: ../pep-0381.txt:328
+#: ../../peps/pep-0381.rst:326
 msgid ""
-"When a client needs to get some packages from several distinct indexes, it "
-"should be able to use each one of them as a potential source of packages.  "
-"Different indexes should be defined as a sorted list for the client to look "
-"for a package."
+"When a client needs to get some packages from several distinct indexes, "
+"it should be able to use each one of them as a potential source of "
+"packages.  Different indexes should be defined as a sorted list for the "
+"client to look for a package."
 msgstr ""
 
-#: ../pep-0381.txt:333
+#: ../../peps/pep-0381.rst:331
 msgid "Each independent index can of course provide a list of its mirrors."
 msgstr ""
 
-#: ../pep-0381.txt:335
-msgid ""
-"XXX define how to get the hostname for the mirrors of an arbitrary index."
+#: ../../peps/pep-0381.rst:333
+msgid "XXX define how to get the hostname for the mirrors of an arbitrary index."
 msgstr ""
 
-#: ../pep-0381.txt:338
+#: ../../peps/pep-0381.rst:336
 msgid ""
 "That permits all combinations at client level, for a reliable packaging "
 "system with all levels of privacy."
 msgstr ""
 
-#: ../pep-0381.txt:341
+#: ../../peps/pep-0381.rst:339
 msgid "It is up the client to deal with the merging."
 msgstr ""
 
-#: ../pep-0381.txt:345
+#: ../../peps/pep-0381.rst:343
 msgid "References"
 msgstr "Referências"
 
-#: ../pep-0381.txt:348
+#: ../../peps/pep-0381.rst:346
 msgid "http://pypi.python.org/pypi/pep381client"
 msgstr ""
 
-#: ../pep-0381.txt:351
+#: ../../peps/pep-0381.rst:349
 msgid "http://en.wikipedia.org/wiki/ISO_8601"
 msgstr ""
 
-#: ../pep-0381.txt:354
+#: ../../peps/pep-0381.rst:352
 msgid "http://pypi.python.org/pypi/zc.buildout"
 msgstr ""
 
-#: ../pep-0381.txt:357
+#: ../../peps/pep-0381.rst:355
 msgid "http://pypi.python.org/pypi/setuptools"
 msgstr ""
 
-#: ../pep-0381.txt:360
+#: ../../peps/pep-0381.rst:358
 msgid "http://pypi.python.org/pypi/pip"
 msgstr ""
 
-#: ../pep-0381.txt:363
+#: ../../peps/pep-0381.rst:361
 msgid "http://plone.org/products/plonesoftwarecenter"
 msgstr ""
 
-#: ../pep-0381.txt:366
+#: ../../peps/pep-0381.rst:364
 msgid "http://www.chrisarndt.de/projects/eggbasket"
 msgstr ""
 
-#: ../pep-0381.txt:370
+#: ../../peps/pep-0381.rst:368
 msgid "Acknowledgments"
 msgstr ""
 
-#: ../pep-0381.txt:372
+#: ../../peps/pep-0381.rst:370
 msgid "Georg Brandl."
 msgstr ""
 
-#: ../pep-0381.txt:376
+#: ../../peps/pep-0381.rst:374
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../pep-0381.txt:378
+#: ../../peps/pep-0381.rst:376
 msgid "This document has been placed in the public domain."
 msgstr "Este documento foi colocado em domínio público."
+
+#~ msgid "Tarek Ziadé <tarek@ziade.org>, Martin v. Löwis <martin@v.loewis.de>"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "PyPI is hosting over 6000 projects "
+#~ "and is used on a daily basis "
+#~ "by people to build applications. "
+#~ "Especially systems like `easy_install` and "
+#~ "`zc.buildout` make intensive usage of "
+#~ "PyPI."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The new mirror also appears at "
+#~ "`http://pypi.python.org/mirrors` which is a "
+#~ "human-readable page that gives the "
+#~ "list of mirrors. This page also "
+#~ "explains how to register a new "
+#~ "mirror."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "PyPI provides statistics on downloads at"
+#~ " `/stats`. This page is calculated "
+#~ "daily by PyPI, by reading all "
+#~ "mirrors' local stats and summing them."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The stats are presented in daily "
+#~ "or monthly files, under `/stats/days` "
+#~ "and `/stats/months`. Each file is a "
+#~ "`bzip2` file with these formats:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This page must be located at : "
+#~ "`/last-modified` and must be a "
+#~ "text/plain page."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "These statistics are in CSV-like "
+#~ "form, with a header in the first"
+#~ " line.  It needs to obey :pep:`305`."
+#~ "  Basically, it should be readable by"
+#~ " Python's `csv` module."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The counting starts the day the "
+#~ "mirror is launched, and there is "
+#~ "one file per day, compressed using "
+#~ "the `bzip2` format.  Each file is "
+#~ "named like the day.  For example, "
+#~ "`2008-11-06.bz2` is the file for the "
+#~ "6th of November 2008."
+#~ msgstr ""
+
+#~ msgid "They are then provided in a folder called `days`. For example:"
+#~ msgstr ""
+
+#~ msgid "This page must be located at `/local-stats`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A mirroring protocol called `Simple "
+#~ "Index` was described and implemented by"
+#~ " Martin v. Loewis and Jim Fulton, "
+#~ "based on how `easy_install` works.  This"
+#~ " section synthesizes it and gives a"
+#~ " few relevant links, plus a small "
+#~ "part about `User-Agent`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Clients that are browsing PyPI should"
+#~ " be able to use alternative mirrors,"
+#~ " by getting the list of the "
+#~ "mirrors using `last.pypi.python.org`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In other words, the `register` and "
+#~ "`upload` command should be compatible "
+#~ "with any package index server out "
+#~ "there."
+#~ msgstr ""
+

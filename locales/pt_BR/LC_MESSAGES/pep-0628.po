@@ -6,153 +6,163 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PEPs\n"
+"Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 20:07+0000\n"
+"POT-Creation-Date: 2023-11-20 10:43-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.13.1\n"
 
-#: ../pep-0628.txt
+#: ../../peps/pep-0628.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../pep-0628.txt:5
-msgid "Nick Coghlan <ncoghlan@gmail.com>"
+#: ../../peps/pep-0628.rst:5
+msgid "Alyssa Coghlan <ncoghlan@gmail.com>"
 msgstr ""
 
-#: ../pep-0628.txt
+#: ../../peps/pep-0628.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../pep-0628.txt:6
+#: ../../peps/pep-0628.rst:6
 msgid "Final"
 msgstr ""
 
-#: ../pep-0628.txt
+#: ../../peps/pep-0628.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../pep-0628.txt:7
+#: ../../peps/pep-0628.rst:7
 msgid "Standards Track"
 msgstr ""
 
-#: ../pep-0628.txt
+#: ../../peps/pep-0628.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../pep-0628.txt:9 ../pep-0628.txt:11
+#: ../../peps/pep-0628.rst:9 ../../peps/pep-0628.rst:11
 msgid "28-Jun-2011"
 msgstr ""
 
-#: ../pep-0628.txt
+#: ../../peps/pep-0628.rst
 msgid "Python-Version"
 msgstr ""
 
-#: ../pep-0628.txt:10
+#: ../../peps/pep-0628.rst:10
 msgid "3.6"
 msgstr ""
 
-#: ../pep-0628.txt
+#: ../../peps/pep-0628.rst
 msgid "Post-History"
 msgstr "Pós-história"
 
-#: ../pep-0628.txt:15
+#: ../../peps/pep-0628.rst:15
 msgid "Abstract"
 msgstr ""
 
-#: ../pep-0628.txt:17
+#: ../../peps/pep-0628.rst:17
 msgid ""
 "In honour of Tau Day 2011, this PEP proposes the addition of the circle "
 "constant ``math.tau`` to the Python standard library."
 msgstr ""
 
-#: ../pep-0628.txt:20
+#: ../../peps/pep-0628.rst:20
 msgid ""
-"The concept of ``tau`` (``τ``) is based on the observation that the ratio of "
-"a circle's circumference to its radius is far more fundamental and "
+"The concept of ``tau`` (``τ``) is based on the observation that the ratio"
+" of a circle's circumference to its radius is far more fundamental and "
 "interesting than the ratio between its circumference and diameter. It is "
 "simply a matter of assigning a name to the value ``2 * pi`` (``2π``)."
 msgstr ""
 
-#: ../pep-0628.txt:27
+#: ../../peps/pep-0628.rst:27
 msgid "PEP Acceptance"
 msgstr ""
 
-#: ../pep-0628.txt:29
+#: ../../peps/pep-0628.rst:29
 msgid ""
-"This PEP is now `accepted`_ and ``math.tau`` will be a part of Python 3.6. "
-"Happy birthday Nick!"
+"This PEP is now `accepted`_ and ``math.tau`` will be a part of Python "
+"3.6. Happy birthday Alyssa!"
 msgstr ""
 
-#: ../pep-0628.txt:32
+#: ../../peps/pep-0628.rst:32
 msgid ""
-"The idea in this PEP has been implemented in the auspiciously named `issue "
-"12345`_."
+"The idea in this PEP has been implemented in the auspiciously named "
+"`issue 12345`_."
 msgstr ""
 
-#: ../pep-0628.txt:40
+#: ../../peps/pep-0628.rst:40
 msgid "The Rationale for Tau"
 msgstr ""
 
-#: ../pep-0628.txt:42
+#: ../../peps/pep-0628.rst:42
 msgid ""
-"``pi`` is defined as the ratio of a circle's circumference to its diameter. "
-"However, a circle is defined by its centre point and its *radius*. This is "
-"shown clearly when we note that the parameter of integration to go from a "
-"circle's circumference to its area is the radius, not the diameter. If we "
-"use the diameter instead we have to divide by four to get rid of the "
-"extraneous multiplier."
+"``pi`` is defined as the ratio of a circle's circumference to its "
+"diameter. However, a circle is defined by its centre point and its "
+"*radius*. This is shown clearly when we note that the parameter of "
+"integration to go from a circle's circumference to its area is the "
+"radius, not the diameter. If we use the diameter instead we have to "
+"divide by four to get rid of the extraneous multiplier."
 msgstr ""
 
-#: ../pep-0628.txt:49
+#: ../../peps/pep-0628.rst:49
 msgid ""
-"When working with radians, it is trivial to convert any given fraction of a "
-"circle to a value in radians in terms of ``tau``. A quarter circle is "
-"``tau/4``, a half circle is ``tau/2``, seven 25ths is ``7*tau/25``, etc. In "
-"contrast with the equivalent expressions in terms of ``pi`` (``pi/2``, "
-"``pi``, ``14*pi/25``), the unnecessary and needlessly confusing "
+"When working with radians, it is trivial to convert any given fraction of"
+" a circle to a value in radians in terms of ``tau``. A quarter circle is "
+"``tau/4``, a half circle is ``tau/2``, seven 25ths is ``7*tau/25``, etc. "
+"In contrast with the equivalent expressions in terms of ``pi`` (``pi/2``,"
+" ``pi``, ``14*pi/25``), the unnecessary and needlessly confusing "
 "multiplication by two is gone."
 msgstr ""
 
-#: ../pep-0628.txt:58
+#: ../../peps/pep-0628.rst:58
 msgid "Other Resources"
 msgstr ""
 
-#: ../pep-0628.txt:60
+#: ../../peps/pep-0628.rst:60
 msgid ""
-"I've barely skimmed the surface of the many examples put forward to point "
-"out just how much *easier* and more *sensible* many aspects of mathematics "
-"become when conceived in terms of ``tau`` rather than ``pi``. If you don't "
-"find my specific examples sufficiently persuasive, here are some more "
-"resources that may be of interest:"
+"I've barely skimmed the surface of the many examples put forward to point"
+" out just how much *easier* and more *sensible* many aspects of "
+"mathematics become when conceived in terms of ``tau`` rather than ``pi``."
+" If you don't find my specific examples sufficiently persuasive, here are"
+" some more resources that may be of interest:"
 msgstr ""
 
-#: ../pep-0628.txt:66
-msgid ""
-"Michael Hartl is the primary instigator of Tau Day in his `Tau Manifesto`_"
+#: ../../peps/pep-0628.rst:66
+msgid "Michael Hartl is the primary instigator of Tau Day in his `Tau Manifesto`_"
 msgstr ""
 
-#: ../pep-0628.txt:67
+#: ../../peps/pep-0628.rst:67
 msgid ""
 "Bob Palais, the author of the original mathematics journal article "
-"highlighting the problems with ``pi`` has `a page of resources`_ on the topic"
+"highlighting the problems with ``pi`` has `a page of resources`_ on the "
+"topic"
 msgstr ""
 
-#: ../pep-0628.txt:70
+#: ../../peps/pep-0628.rst:70
 msgid ""
 "For those that prefer videos to written text, `Pi is wrong!`_ and `Pi is "
 "(still) wrong`_ are available on YouTube"
 msgstr ""
 
-#: ../pep-0628.txt:80
+#: ../../peps/pep-0628.rst:80
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../pep-0628.txt:82
+#: ../../peps/pep-0628.rst:82
 msgid "This document has been placed in the public domain."
 msgstr "Este documento foi colocado em domínio público."
+
+#~ msgid "Nick Coghlan <ncoghlan@gmail.com>"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This PEP is now `accepted`_ and "
+#~ "``math.tau`` will be a part of "
+#~ "Python 3.6. Happy birthday Nick!"
+#~ msgstr ""
+

@@ -6,579 +6,753 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PEPs\n"
+"Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 20:07+0000\n"
+"POT-Creation-Date: 2023-11-20 10:43-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.13.1\n"
 
-#: ../pep-0425.txt
+#: ../../peps/pep-0425.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../pep-0425.txt:5
+#: ../../peps/pep-0425.rst:5
 msgid "Daniel Holth <dholth@gmail.com>"
 msgstr ""
 
-#: ../pep-0425.txt
+#: ../../peps/pep-0425.rst
 msgid "BDFL-Delegate"
 msgstr ""
 
-#: ../pep-0425.txt:6
-msgid "Nick Coghlan <ncoghlan@gmail.com>"
+#: ../../peps/pep-0425.rst:6
+msgid "Alyssa Coghlan <ncoghlan@gmail.com>"
 msgstr ""
 
-#: ../pep-0425.txt
+#: ../../peps/pep-0425.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../pep-0425.txt:7
+#: ../../peps/pep-0425.rst:7
 msgid "Final"
 msgstr ""
 
-#: ../pep-0425.txt
+#: ../../peps/pep-0425.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../pep-0425.txt:8
+#: ../../peps/pep-0425.rst:8
 msgid "Standards Track"
 msgstr ""
 
-#: ../pep-0425.txt
+#: ../../peps/pep-0425.rst
 msgid "Topic"
 msgstr ""
 
-#: ../pep-0425.txt:9
+#: ../../peps/pep-0425.rst:9
 msgid "Packaging"
 msgstr ""
 
-#: ../pep-0425.txt
+#: ../../peps/pep-0425.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../pep-0425.txt:11
+#: ../../peps/pep-0425.rst:11
 msgid "27-Jul-2012"
 msgstr ""
 
-#: ../pep-0425.txt
+#: ../../peps/pep-0425.rst
 msgid "Python-Version"
 msgstr ""
 
-#: ../pep-0425.txt:12
+#: ../../peps/pep-0425.rst:12
 msgid "3.4"
 msgstr ""
 
-#: ../pep-0425.txt
+#: ../../peps/pep-0425.rst
 msgid "Post-History"
 msgstr "Pós-história"
 
-#: ../pep-0425.txt:13
+#: ../../peps/pep-0425.rst:13
 msgid "08-Aug-2012, 18-Oct-2012, 15-Feb-2013"
 msgstr ""
 
-#: ../pep-0425.txt
+#: ../../peps/pep-0425.rst
 msgid "Resolution"
 msgstr ""
 
-#: ../pep-0425.txt:14
+#: ../../peps/pep-0425.rst:14
 msgid "https://mail.python.org/pipermail/python-dev/2013-February/124116.html"
 msgstr ""
 
-#: ../pep-0425.txt:21
+#: ../../peps/pep-0425.rst:21
 msgid "Abstract"
 msgstr ""
 
-#: ../pep-0425.txt:23
+#: ../../peps/pep-0425.rst:23
 msgid ""
 "This PEP specifies a tagging system to indicate with which versions of "
-"Python a built or binary distribution is compatible.  A set of three tags "
-"indicate which Python implementation and language version, ABI, and platform "
-"a built distribution requires.  The tags are terse because they will be "
-"included in filenames."
+"Python a built or binary distribution is compatible.  A set of three tags"
+" indicate which Python implementation and language version, ABI, and "
+"platform a built distribution requires.  The tags are terse because they "
+"will be included in filenames."
 msgstr ""
 
-#: ../pep-0425.txt:31
+#: ../../peps/pep-0425.rst:31
 msgid "PEP Acceptance"
 msgstr ""
 
-#: ../pep-0425.txt:33
-msgid "This PEP was accepted by Nick Coghlan on 17th February, 2013."
+#: ../../peps/pep-0425.rst:33
+msgid "This PEP was accepted by Alyssa Coghlan on 17th February, 2013."
 msgstr ""
 
-#: ../pep-0425.txt:37
+#: ../../peps/pep-0425.rst:37
 msgid "Rationale"
 msgstr ""
 
-#: ../pep-0425.txt:39
+#: ../../peps/pep-0425.rst:39
 msgid ""
 "Today \"python setup.py bdist\" generates the same filename on PyPy and "
-"CPython, but an incompatible archive, making it inconvenient to share built "
-"distributions in the same folder or index.  Instead, built distributions "
-"should have a file naming convention that includes enough information to "
-"decide whether or not a particular archive is compatible with a particular "
-"implementation."
+"CPython, but an incompatible archive, making it inconvenient to share "
+"built distributions in the same folder or index.  Instead, built "
+"distributions should have a file naming convention that includes enough "
+"information to decide whether or not a particular archive is compatible "
+"with a particular implementation."
 msgstr ""
 
-#: ../pep-0425.txt:46
+#: ../../peps/pep-0425.rst:46
 msgid ""
 "Previous efforts come from a time where CPython was the only important "
-"implementation and the ABI was the same as the Python language release. This "
-"specification improves upon the older schemes by including the Python "
-"implementation, language version, ABI, and platform as a set of tags."
+"implementation and the ABI was the same as the Python language release. "
+"This specification improves upon the older schemes by including the "
+"Python implementation, language version, ABI, and platform as a set of "
+"tags."
 msgstr ""
 
-#: ../pep-0425.txt:51
+#: ../../peps/pep-0425.rst:51
 msgid ""
-"By comparing the tags it supports with the tags listed by the distribution, "
-"an installer can make an educated decision about whether to download a "
-"particular built distribution without having to read its full metadata."
+"By comparing the tags it supports with the tags listed by the "
+"distribution, an installer can make an educated decision about whether to"
+" download a particular built distribution without having to read its full"
+" metadata."
 msgstr ""
 
-#: ../pep-0425.txt:57
+#: ../../peps/pep-0425.rst:57
 msgid "Overview"
 msgstr ""
 
-#: ../pep-0425.txt:59
+#: ../../peps/pep-0425.rst:59
 msgid "The tag format is {python tag}-{abi tag}-{platform tag}"
 msgstr ""
 
-#: ../pep-0425.txt:61
+#: ../../peps/pep-0425.rst:61
 msgid "python tag"
 msgstr ""
 
-#: ../pep-0425.txt:62
+#: ../../peps/pep-0425.rst:62
 msgid "‘py27’, ‘cp33’"
 msgstr ""
 
-#: ../pep-0425.txt:63
+#: ../../peps/pep-0425.rst:63
 msgid "abi tag"
 msgstr ""
 
-#: ../pep-0425.txt:64
+#: ../../peps/pep-0425.rst:64
 msgid "‘cp32dmu’, ‘none’"
 msgstr ""
 
-#: ../pep-0425.txt:66
+#: ../../peps/pep-0425.rst:66
 msgid "platform tag"
 msgstr ""
 
-#: ../pep-0425.txt:66
+#: ../../peps/pep-0425.rst:66
 msgid "‘linux_x86_64’, ‘any’"
 msgstr ""
 
-#: ../pep-0425.txt:68
+#: ../../peps/pep-0425.rst:68
 msgid ""
-"For example, the tag py27-none-any indicates compatible with Python 2.7 (any "
-"Python 2.7 implementation) with no abi requirement, on any platform."
+"For example, the tag py27-none-any indicates compatible with Python 2.7 "
+"(any Python 2.7 implementation) with no abi requirement, on any platform."
 msgstr ""
 
-#: ../pep-0425.txt:72 ../pep-0425.txt:137
+#: ../../peps/pep-0425.rst:72 ../../peps/pep-0425.rst:137
 msgid "Use"
 msgstr ""
 
-#: ../pep-0425.txt:74
+#: ../../peps/pep-0425.rst:74
 msgid ""
-"The `wheel` built package format includes these tags in its filenames, of "
-"the form ``{distribution}-{version}(-{build tag})?-{python tag}-{abi tag}-"
-"{platform tag}.whl``.  Other package formats may have their own conventions."
+"The ``wheel`` built package format includes these tags in its filenames, "
+"of the form ``{distribution}-{version}(-{build tag})?-{python tag}-{abi "
+"tag}-{platform tag}.whl``.  Other package formats may have their own "
+"conventions."
 msgstr ""
 
-#: ../pep-0425.txt:80
+#: ../../peps/pep-0425.rst:80
 msgid "Details"
 msgstr ""
 
-#: ../pep-0425.txt:83
+#: ../../peps/pep-0425.rst:83
 msgid "Python Tag"
 msgstr ""
 
-#: ../pep-0425.txt:85
+#: ../../peps/pep-0425.rst:85
 msgid ""
 "The Python tag indicates the implementation and version required by a "
 "distribution.  Major implementations have abbreviated codes, initially:"
 msgstr ""
 
-#: ../pep-0425.txt:88
+#: ../../peps/pep-0425.rst:88
 msgid "py: Generic Python (does not require implementation-specific features)"
 msgstr ""
 
-#: ../pep-0425.txt:89
+#: ../../peps/pep-0425.rst:89
 msgid "cp: CPython"
 msgstr ""
 
-#: ../pep-0425.txt:90
+#: ../../peps/pep-0425.rst:90
 msgid "ip: IronPython"
 msgstr ""
 
-#: ../pep-0425.txt:91
+#: ../../peps/pep-0425.rst:91
 msgid "pp: PyPy"
 msgstr ""
 
-#: ../pep-0425.txt:92
+#: ../../peps/pep-0425.rst:92
 msgid "jy: Jython"
 msgstr ""
 
-#: ../pep-0425.txt:94
-msgid "Other Python implementations should use `sys.implementation.name`."
+#: ../../peps/pep-0425.rst:94
+msgid "Other Python implementations should use ``sys.implementation.name``."
 msgstr ""
 
-#: ../pep-0425.txt:96
+#: ../../peps/pep-0425.rst:96
 msgid ""
-"The version is `py_version_nodot`.  CPython gets away with no dot, but if "
-"one is needed the underscore `_` is used instead.  PyPy should probably use "
-"its own versions here `pp18`, `pp19`."
+"The version is ``py_version_nodot``.  CPython gets away with no dot, but "
+"if one is needed the underscore ``_`` is used instead.  PyPy should "
+"probably use its own versions here ``pp18``, ``pp19``."
 msgstr ""
 
-#: ../pep-0425.txt:100
+#: ../../peps/pep-0425.rst:100
 msgid ""
-"The version can be just the major version `2` or `3` `py2`, `py3` for many "
-"pure-Python distributions."
+"The version can be just the major version ``2`` or ``3`` ``py2``, ``py3``"
+" for many pure-Python distributions."
 msgstr ""
 
-#: ../pep-0425.txt:103
+#: ../../peps/pep-0425.rst:103
 msgid ""
-"Importantly, major-version-only tags like `py2` and `py3` are not shorthand "
-"for `py20` and `py30`.  Instead, these tags mean the packager intentionally "
-"released a cross-version-compatible distribution."
+"Importantly, major-version-only tags like ``py2`` and ``py3`` are not "
+"shorthand for ``py20`` and ``py30``.  Instead, these tags mean the "
+"packager intentionally released a cross-version-compatible distribution."
 msgstr ""
 
-#: ../pep-0425.txt:107
+#: ../../peps/pep-0425.rst:107
 msgid ""
-"A single-source Python 2/3 compatible distribution can use the compound tag "
-"`py2.py3`.  See `Compressed Tag Sets`, below."
+"A single-source Python 2/3 compatible distribution can use the compound "
+"tag ``py2.py3``.  See ``Compressed Tag Sets``, below."
 msgstr ""
 
-#: ../pep-0425.txt:111
+#: ../../peps/pep-0425.rst:111
 msgid "ABI Tag"
 msgstr ""
 
-#: ../pep-0425.txt:113
+#: ../../peps/pep-0425.rst:113
 msgid ""
-"The ABI tag indicates which Python ABI is required by any included extension "
-"modules.  For implementation-specific ABIs, the implementation is "
-"abbreviated in the same way as the Python Tag, e.g. `cp33d` would be the "
-"CPython 3.3 ABI with debugging."
+"The ABI tag indicates which Python ABI is required by any included "
+"extension modules.  For implementation-specific ABIs, the implementation "
+"is abbreviated in the same way as the Python Tag, e.g. ``cp33d`` would be"
+" the CPython 3.3 ABI with debugging."
 msgstr ""
 
-#: ../pep-0425.txt:118
-msgid "The CPython stable ABI is `abi3` as in the shared library suffix."
+#: ../../peps/pep-0425.rst:118
+msgid "The CPython stable ABI is ``abi3`` as in the shared library suffix."
 msgstr ""
 
-#: ../pep-0425.txt:120
+#: ../../peps/pep-0425.rst:120
 msgid ""
 "Implementations with a very unstable ABI may use the first 6 bytes (as 8 "
-"base64-encoded characters) of the SHA-256 hash of their source code revision "
-"and compiler flags, etc, but will probably not have a great need to "
-"distribute binary distributions. Each implementation's community may decide "
-"how to best use the ABI tag."
+"base64-encoded characters) of the SHA-256 hash of their source code "
+"revision and compiler flags, etc, but will probably not have a great need"
+" to distribute binary distributions. Each implementation's community may "
+"decide how to best use the ABI tag."
 msgstr ""
 
-#: ../pep-0425.txt:127
+#: ../../peps/pep-0425.rst:127
 msgid "Platform Tag"
 msgstr ""
 
-#: ../pep-0425.txt:129
+#: ../../peps/pep-0425.rst:129
 msgid ""
-"The platform tag is simply `distutils.util.get_platform()` with all hyphens "
-"`-` and periods `.` replaced with underscore `_`."
+"The platform tag is simply ``distutils.util.get_platform()`` with all "
+"hyphens ``-`` and periods ``.`` replaced with underscore ``_``."
 msgstr ""
 
-#: ../pep-0425.txt:132
+#: ../../peps/pep-0425.rst:132
 msgid "win32"
 msgstr ""
 
-#: ../pep-0425.txt:133
+#: ../../peps/pep-0425.rst:133
 msgid "linux_i386"
 msgstr ""
 
-#: ../pep-0425.txt:134
+#: ../../peps/pep-0425.rst:134
 msgid "linux_x86_64"
 msgstr ""
 
-#: ../pep-0425.txt:139
+#: ../../peps/pep-0425.rst:139
 msgid ""
-"The tags are used by installers to decide which built distribution (if any) "
-"to download from a list of potential built distributions. The installer "
-"maintains a list of (pyver, abi, arch) tuples that it will support.  If the "
-"built distribution's tag is `in` the list, then it can be installed."
+"The tags are used by installers to decide which built distribution (if "
+"any) to download from a list of potential built distributions. The "
+"installer maintains a list of (pyver, abi, arch) tuples that it will "
+"support.  If the built distribution's tag is ``in`` the list, then it can"
+" be installed."
 msgstr ""
 
-#: ../pep-0425.txt:145
+#: ../../peps/pep-0425.rst:145
 msgid ""
-"It is recommended that installers try to choose the most feature complete "
-"built distribution available (the one most specific to the installation "
+"It is recommended that installers try to choose the most feature complete"
+" built distribution available (the one most specific to the installation "
 "environment) by default before falling back to pure Python versions "
 "published for older Python releases. Installers are also recommended to "
-"provide a way to configure and re-order the list of allowed compatibility "
-"tags; for example, a user might accept only the `*-none-any` tags to only "
-"download built packages that advertise themselves as being pure Python."
+"provide a way to configure and re-order the list of allowed compatibility"
+" tags; for example, a user might accept only the ``*-none-any`` tags to "
+"only download built packages that advertise themselves as being pure "
+"Python."
 msgstr ""
 
-#: ../pep-0425.txt:153
+#: ../../peps/pep-0425.rst:153
 msgid ""
-"Another desirable installer feature might be to include \"re-compile from "
-"source if possible\" as more preferable than some of the compatible but "
+"Another desirable installer feature might be to include \"re-compile from"
+" source if possible\" as more preferable than some of the compatible but "
 "legacy pre-built options."
 msgstr ""
 
-#: ../pep-0425.txt:157
+#: ../../peps/pep-0425.rst:157
 msgid ""
 "This example list is for an installer running under CPython 3.3 on a "
-"linux_x86_64 system. It is in order from most-preferred (a distribution with "
-"a compiled extension module, built for the current version of Python) to "
-"least-preferred (a pure-Python distribution built with an older version of "
-"Python):"
+"linux_x86_64 system. It is in order from most-preferred (a distribution "
+"with a compiled extension module, built for the current version of "
+"Python) to least-preferred (a pure-Python distribution built with an "
+"older version of Python):"
 msgstr ""
 
-#: ../pep-0425.txt:163
+#: ../../peps/pep-0425.rst:163
 msgid "cp33-cp33m-linux_x86_64"
 msgstr ""
 
-#: ../pep-0425.txt:164
+#: ../../peps/pep-0425.rst:164
 msgid "cp33-abi3-linux_x86_64"
 msgstr ""
 
-#: ../pep-0425.txt:165
+#: ../../peps/pep-0425.rst:165
 msgid "cp3-abi3-linux_x86_64"
 msgstr ""
 
-#: ../pep-0425.txt:166
+#: ../../peps/pep-0425.rst:166
 msgid "cp33-none-linux_x86_64*"
 msgstr ""
 
-#: ../pep-0425.txt:167
+#: ../../peps/pep-0425.rst:167
 msgid "cp3-none-linux_x86_64*"
 msgstr ""
 
-#: ../pep-0425.txt:168
+#: ../../peps/pep-0425.rst:168
 msgid "py33-none-linux_x86_64*"
 msgstr ""
 
-#: ../pep-0425.txt:169
+#: ../../peps/pep-0425.rst:169
 msgid "py3-none-linux_x86_64*"
 msgstr ""
 
-#: ../pep-0425.txt:170
+#: ../../peps/pep-0425.rst:170
 msgid "cp33-none-any"
 msgstr ""
 
-#: ../pep-0425.txt:171
+#: ../../peps/pep-0425.rst:171
 msgid "cp3-none-any"
 msgstr ""
 
-#: ../pep-0425.txt:172
+#: ../../peps/pep-0425.rst:172
 msgid "py33-none-any"
 msgstr ""
 
-#: ../pep-0425.txt:173
+#: ../../peps/pep-0425.rst:173
 msgid "py3-none-any"
 msgstr ""
 
-#: ../pep-0425.txt:174
+#: ../../peps/pep-0425.rst:174
 msgid "py32-none-any"
 msgstr ""
 
-#: ../pep-0425.txt:175
+#: ../../peps/pep-0425.rst:175
 msgid "py31-none-any"
 msgstr ""
 
-#: ../pep-0425.txt:176
+#: ../../peps/pep-0425.rst:176
 msgid "py30-none-any"
 msgstr ""
 
-#: ../pep-0425.txt:178
+#: ../../peps/pep-0425.rst:178
 msgid ""
 "Built distributions may be platform specific for reasons other than C "
-"extensions, such as by including a native executable invoked as a subprocess."
+"extensions, such as by including a native executable invoked as a "
+"subprocess."
 msgstr ""
 
-#: ../pep-0425.txt:182
+#: ../../peps/pep-0425.rst:182
 msgid ""
 "Sometimes there will be more than one supported built distribution for a "
-"particular version of a package.  For example, a packager could release a "
-"package tagged `cp33-abi3-linux_x86_64` that contains an optional C "
-"extension and the same distribution tagged `py3-none-any` that does not. The "
-"index of the tag in the supported tags list breaks the tie, and the package "
-"with the C extension is installed in preference to the package without "
-"because that tag appears first in the list."
+"particular version of a package.  For example, a packager could release a"
+" package tagged ``cp33-abi3-linux_x86_64`` that contains an optional C "
+"extension and the same distribution tagged ``py3-none-any`` that does "
+"not. The index of the tag in the supported tags list breaks the tie, and "
+"the package with the C extension is installed in preference to the "
+"package without because that tag appears first in the list."
 msgstr ""
 
-#: ../pep-0425.txt:191
+#: ../../peps/pep-0425.rst:191
 msgid "Compressed Tag Sets"
 msgstr ""
 
-#: ../pep-0425.txt:193
+#: ../../peps/pep-0425.rst:193
 msgid ""
 "To allow for compact filenames of bdists that work with more than one "
-"compatibility tag triple, each tag in a filename can instead be a '.'-"
-"separated, sorted, set of tags.  For example, pip, a pure-Python package "
-"that is written to run under Python 2 and 3 with the same source code, could "
-"distribute a bdist with the tag `py2.py3-none-any`. The full list of simple "
-"tags is::"
+"compatibility tag triple, each tag in a filename can instead be a "
+"'.'-separated, sorted, set of tags.  For example, pip, a pure-Python "
+"package that is written to run under Python 2 and 3 with the same source "
+"code, could distribute a bdist with the tag ``py2.py3-none-any``. The "
+"full list of simple tags is::"
 msgstr ""
 
-#: ../pep-0425.txt:205
+#: ../../peps/pep-0425.rst:205
 msgid ""
-"A bdist format that implements this scheme should include the expanded tags "
-"in bdist-specific metadata.  This compression scheme can generate large "
-"numbers of unsupported tags and \"impossible\" tags that are supported by no "
-"Python implementation e.g. \"cp33-cp31u-win64\", so use it sparingly."
+"A bdist format that implements this scheme should include the expanded "
+"tags in bdist-specific metadata.  This compression scheme can generate "
+"large numbers of unsupported tags and \"impossible\" tags that are "
+"supported by no Python implementation e.g. \"cp33-cp31u-win64\", so use "
+"it sparingly."
 msgstr ""
 
-#: ../pep-0425.txt:211
+#: ../../peps/pep-0425.rst:211
 msgid "FAQ"
 msgstr ""
 
-#: ../pep-0425.txt:218
+#: ../../peps/pep-0425.rst:218
 msgid "What tags are used by default?"
 msgstr ""
 
-#: ../pep-0425.txt:214
+#: ../../peps/pep-0425.rst:214
 msgid ""
-"Tools should use the most-preferred architecture dependent tag e.g. `cp33-"
-"cp33m-win32` or the most-preferred pure python tag e.g. `py33-none-any` by "
-"default.  If the packager overrides the default it indicates that they "
-"intended to provide cross-Python compatibility."
+"Tools should use the most-preferred architecture dependent tag e.g. "
+"``cp33-cp33m-win32`` or the most-preferred pure python tag e.g. ``py33"
+"-none-any`` by default.  If the packager overrides the default it "
+"indicates that they intended to provide cross-Python compatibility."
 msgstr ""
 
-#: ../pep-0425.txt:228
+#: ../../peps/pep-0425.rst:228
 msgid ""
-"What tag do I use if my distribution uses a feature exclusive to the newest "
-"version of Python?"
+"What tag do I use if my distribution uses a feature exclusive to the "
+"newest version of Python?"
 msgstr ""
 
-#: ../pep-0425.txt:221
+#: ../../peps/pep-0425.rst:221
 msgid ""
-"Compatibility tags aid installers in selecting the *most compatible* build "
-"of a *single version* of a distribution. For example, when there is no "
-"Python 3.3 compatible build of ``beaglevote-1.2.0`` (it uses a Python 3.4 "
-"exclusive feature) it may still use the ``py3-none-any`` tag instead of the "
-"``py34-none-any`` tag. A Python 3.3 user must combine other qualifiers, such "
-"as a requirement for the older release ``beaglevote-1.1.0`` that does not "
-"use the new feature, to get a compatible build."
+"Compatibility tags aid installers in selecting the *most compatible* "
+"build of a *single version* of a distribution. For example, when there is"
+" no Python 3.3 compatible build of ``beaglevote-1.2.0`` (it uses a Python"
+" 3.4 exclusive feature) it may still use the ``py3-none-any`` tag instead"
+" of the ``py34-none-any`` tag. A Python 3.3 user must combine other "
+"qualifiers, such as a requirement for the older release "
+"``beaglevote-1.1.0`` that does not use the new feature, to get a "
+"compatible build."
 msgstr ""
 
-#: ../pep-0425.txt:233
-msgid "Why isn't there a `.` in the Python version number?"
+#: ../../peps/pep-0425.rst:233
+msgid "Why isn't there a ``.`` in the Python version number?"
 msgstr ""
 
-#: ../pep-0425.txt:231
+#: ../../peps/pep-0425.rst:231
 msgid ""
-"CPython has lasted 20+ years without a 3-digit major release. This should "
-"continue for some time.  Other implementations may use _ as a delimiter, "
-"since both - and . delimit the surrounding filename."
+"CPython has lasted 20+ years without a 3-digit major release. This should"
+" continue for some time.  Other implementations may use _ as a delimiter,"
+" since both - and . delimit the surrounding filename."
 msgstr ""
 
-#: ../pep-0425.txt:239
+#: ../../peps/pep-0425.rst:239
 msgid ""
-"Why normalise hyphens and other non-alphanumeric characters to underscores?"
+"Why normalise hyphens and other non-alphanumeric characters to "
+"underscores?"
 msgstr ""
 
-#: ../pep-0425.txt:236
+#: ../../peps/pep-0425.rst:236
 msgid ""
 "To avoid conflicting with the \".\" and \"-\" characters that separate "
 "components of the filename, and for better compatibility with the widest "
-"range of filesystem limitations for filenames (including being usable in URL "
-"paths without quoting)."
+"range of filesystem limitations for filenames (including being usable in "
+"URL paths without quoting)."
 msgstr ""
 
-#: ../pep-0425.txt:248
+#: ../../peps/pep-0425.rst:248
 msgid "Why not use special character <X> rather than \".\" or \"-\"?"
 msgstr ""
 
-#: ../pep-0425.txt:242
+#: ../../peps/pep-0425.rst:242
 msgid ""
-"Either because that character is inconvenient or potentially confusing in "
-"some contexts (for example, \"+\" must be quoted in URLs, \"~\" is used to "
-"denote the user's home directory in POSIX), or because the advantages "
-"weren't sufficiently compelling to justify changing the existing reference "
-"implementation for the wheel format defined in PEP 427 (for example, using "
-"\",\" rather than \".\" to separate components in a compressed tag)."
+"Either because that character is inconvenient or potentially confusing in"
+" some contexts (for example, \"+\" must be quoted in URLs, \"~\" is used "
+"to denote the user's home directory in POSIX), or because the advantages "
+"weren't sufficiently compelling to justify changing the existing "
+"reference implementation for the wheel format defined in PEP 427 (for "
+"example, using \",\" rather than \".\" to separate components in a "
+"compressed tag)."
 msgstr ""
 
-#: ../pep-0425.txt:253
+#: ../../peps/pep-0425.rst:253
 msgid "Who will maintain the registry of abbreviated implementations?"
 msgstr ""
 
-#: ../pep-0425.txt:251
+#: ../../peps/pep-0425.rst:251
 msgid ""
 "New two-letter abbreviations can be requested on the python-dev mailing "
-"list.  As a rule of thumb, abbreviations are reserved for the current 4 most "
-"prominent implementations."
+"list.  As a rule of thumb, abbreviations are reserved for the current 4 "
+"most prominent implementations."
 msgstr ""
 
-#: ../pep-0425.txt:258
+#: ../../peps/pep-0425.rst:258
 msgid "Does the compatibility tag go into METADATA or PKG-INFO?"
 msgstr ""
 
-#: ../pep-0425.txt:256
+#: ../../peps/pep-0425.rst:256
 msgid ""
-"No.  The compatibility tag is part of the built distribution's metadata.  "
-"METADATA / PKG-INFO should be valid for an entire distribution, not a single "
-"build of that distribution."
+"No.  The compatibility tag is part of the built distribution's metadata."
+"  METADATA / PKG-INFO should be valid for an entire distribution, not a "
+"single build of that distribution."
 msgstr ""
 
-#: ../pep-0425.txt:264
+#: ../../peps/pep-0425.rst:264
 msgid "Why didn't you mention my favorite Python implementation?"
 msgstr ""
 
-#: ../pep-0425.txt:261
+#: ../../peps/pep-0425.rst:261
 msgid ""
 "The abbreviated tags facilitate sharing compiled Python code in a public "
-"index.  Your Python implementation can use this specification too, but with "
-"longer tags. Recall that all \"pure Python\" built distributions just use "
-"'py'."
+"index.  Your Python implementation can use this specification too, but "
+"with longer tags. Recall that all \"pure Python\" built distributions "
+"just use 'py'."
 msgstr ""
 
-#: ../pep-0425.txt:272
+#: ../../peps/pep-0425.rst:272
 msgid ""
 "Why is the ABI tag (the second tag) sometimes \"none\" in the reference "
 "implementation?"
 msgstr ""
 
-#: ../pep-0425.txt:267
+#: ../../peps/pep-0425.rst:267
 msgid ""
-"Since Python 2 does not have an easy way to get to the SOABI (the concept "
-"comes from newer versions of Python 3) the reference implementation at the "
-"time of writing guesses \"none\".  Ideally it would detect \"py27(d|m|u)\" "
-"analogous to newer versions of Python, but in the meantime \"none\" is a "
-"good enough way to say \"don't know\"."
+"Since Python 2 does not have an easy way to get to the SOABI (the concept"
+" comes from newer versions of Python 3) the reference implementation at "
+"the time of writing guesses \"none\".  Ideally it would detect "
+"\"py27(d|m|u)\" analogous to newer versions of Python, but in the "
+"meantime \"none\" is a good enough way to say \"don't know\"."
 msgstr ""
 
-#: ../pep-0425.txt:275
+#: ../../peps/pep-0425.rst:275
 msgid "References"
 msgstr "Referências"
 
-#: ../pep-0425.txt:277
+#: ../../peps/pep-0425.rst:277
 msgid ""
-"Egg Filename-Embedded Metadata (http://peak.telecommunity.com/DevCenter/"
-"EggFormats#filename-embedded-metadata)"
+"[1] Egg Filename-Embedded Metadata \\   "
+"(http://peak.telecommunity.com/DevCenter/EggFormats#filename-embedded-"
+"metadata)"
 msgstr ""
 
-#: ../pep-0425.txt:280
+#: ../../peps/pep-0425.rst:280
 msgid ""
-"Creating Built Distributions (http://docs.python.org/distutils/builtdist."
-"html)"
+"[2] Creating Built Distributions \\   "
+"(https://docs.python.org/3.4/distutils/builtdist.html)"
 msgstr ""
 
-#: ../pep-0425.txt:284
+#: ../../peps/pep-0425.rst:284
 msgid "Acknowledgements"
 msgstr ""
 
-#: ../pep-0425.txt:286
+#: ../../peps/pep-0425.rst:286
 msgid ""
-"The author thanks Paul Moore, Nick Coghlan, Marc Abramowitz, and Mr. Michele "
-"Lacchia for their valuable help and advice."
+"The author thanks Paul Moore, Alyssa Coghlan, Marc Abramowitz, and Mr. "
+"Michele Lacchia for their valuable help and advice."
 msgstr ""
 
-#: ../pep-0425.txt:290
+#: ../../peps/pep-0425.rst:290
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../pep-0425.txt:292
+#: ../../peps/pep-0425.rst:292
 msgid "This document has been placed in the public domain."
 msgstr "Este documento foi colocado em domínio público."
+
+#~ msgid "Nick Coghlan <ncoghlan@gmail.com>"
+#~ msgstr ""
+
+#~ msgid "This PEP was accepted by Nick Coghlan on 17th February, 2013."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The `wheel` built package format "
+#~ "includes these tags in its filenames,"
+#~ " of the form ``{distribution}-{version}(-{build"
+#~ " tag})?-{python tag}-{abi tag}-{platform "
+#~ "tag}.whl``.  Other package formats may "
+#~ "have their own conventions."
+#~ msgstr ""
+
+#~ msgid "Other Python implementations should use `sys.implementation.name`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The version is `py_version_nodot`.  CPython"
+#~ " gets away with no dot, but if"
+#~ " one is needed the underscore `_` "
+#~ "is used instead.  PyPy should probably"
+#~ " use its own versions here `pp18`,"
+#~ " `pp19`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The version can be just the major"
+#~ " version `2` or `3` `py2`, `py3` "
+#~ "for many pure-Python distributions."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Importantly, major-version-only tags "
+#~ "like `py2` and `py3` are not "
+#~ "shorthand for `py20` and `py30`.  "
+#~ "Instead, these tags mean the packager"
+#~ " intentionally released a cross-version-"
+#~ "compatible distribution."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A single-source Python 2/3 compatible"
+#~ " distribution can use the compound "
+#~ "tag `py2.py3`.  See `Compressed Tag "
+#~ "Sets`, below."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The ABI tag indicates which Python "
+#~ "ABI is required by any included "
+#~ "extension modules.  For implementation-"
+#~ "specific ABIs, the implementation is "
+#~ "abbreviated in the same way as the"
+#~ " Python Tag, e.g. `cp33d` would be"
+#~ " the CPython 3.3 ABI with debugging."
+#~ msgstr ""
+
+#~ msgid "The CPython stable ABI is `abi3` as in the shared library suffix."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The platform tag is simply "
+#~ "`distutils.util.get_platform()` with all hyphens "
+#~ "`-` and periods `.` replaced with "
+#~ "underscore `_`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The tags are used by installers to"
+#~ " decide which built distribution (if "
+#~ "any) to download from a list of"
+#~ " potential built distributions. The "
+#~ "installer maintains a list of (pyver,"
+#~ " abi, arch) tuples that it will "
+#~ "support.  If the built distribution's "
+#~ "tag is `in` the list, then it "
+#~ "can be installed."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "It is recommended that installers try"
+#~ " to choose the most feature complete"
+#~ " built distribution available (the one "
+#~ "most specific to the installation "
+#~ "environment) by default before falling "
+#~ "back to pure Python versions published"
+#~ " for older Python releases. Installers "
+#~ "are also recommended to provide a "
+#~ "way to configure and re-order the"
+#~ " list of allowed compatibility tags; "
+#~ "for example, a user might accept "
+#~ "only the `*-none-any` tags to only"
+#~ " download built packages that advertise "
+#~ "themselves as being pure Python."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Sometimes there will be more than "
+#~ "one supported built distribution for a"
+#~ " particular version of a package.  "
+#~ "For example, a packager could release"
+#~ " a package tagged `cp33-abi3-linux_x86_64` "
+#~ "that contains an optional C extension"
+#~ " and the same distribution tagged "
+#~ "`py3-none-any` that does not. The "
+#~ "index of the tag in the supported"
+#~ " tags list breaks the tie, and "
+#~ "the package with the C extension "
+#~ "is installed in preference to the "
+#~ "package without because that tag appears"
+#~ " first in the list."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To allow for compact filenames of "
+#~ "bdists that work with more than "
+#~ "one compatibility tag triple, each tag"
+#~ " in a filename can instead be a"
+#~ " '.'-separated, sorted, set of tags.  "
+#~ "For example, pip, a pure-Python "
+#~ "package that is written to run "
+#~ "under Python 2 and 3 with the "
+#~ "same source code, could distribute a "
+#~ "bdist with the tag `py2.py3-none-any`."
+#~ " The full list of simple tags "
+#~ "is::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Tools should use the most-preferred "
+#~ "architecture dependent tag e.g. `cp33"
+#~ "-cp33m-win32` or the most-preferred "
+#~ "pure python tag e.g. `py33-none-any` "
+#~ "by default.  If the packager overrides"
+#~ " the default it indicates that they"
+#~ " intended to provide cross-Python "
+#~ "compatibility."
+#~ msgstr ""
+
+#~ msgid "Why isn't there a `.` in the Python version number?"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Egg Filename-Embedded Metadata "
+#~ "(http://peak.telecommunity.com/DevCenter/EggFormats#filename-"
+#~ "embedded-metadata)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Creating Built Distributions "
+#~ "(http://docs.python.org/distutils/builtdist.html)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The author thanks Paul Moore, Nick "
+#~ "Coghlan, Marc Abramowitz, and Mr. "
+#~ "Michele Lacchia for their valuable help"
+#~ " and advice."
+#~ msgstr ""
+

@@ -6,870 +6,888 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PEPs\n"
+"Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 20:07+0000\n"
+"POT-Creation-Date: 2023-11-20 10:43-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.13.1\n"
 
-#: ../pep-0513.txt
+#: ../../peps/pep-0513.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../pep-0513.txt:5
+#: ../../peps/pep-0513.rst:5
 msgid ""
-"Robert T. McGibbon <rmcgibbo@gmail.com>, Nathaniel J. Smith <njs@pobox.com>"
+"Robert T. McGibbon <rmcgibbo@gmail.com>, Nathaniel J. Smith "
+"<njs@pobox.com>"
 msgstr ""
 
-#: ../pep-0513.txt
+#: ../../peps/pep-0513.rst
 msgid "BDFL-Delegate"
 msgstr ""
 
-#: ../pep-0513.txt:6
-msgid "Nick Coghlan <ncoghlan@gmail.com>"
+#: ../../peps/pep-0513.rst:6
+msgid "Alyssa Coghlan <ncoghlan@gmail.com>"
 msgstr ""
 
-#: ../pep-0513.txt
+#: ../../peps/pep-0513.rst
 msgid "Discussions-To"
 msgstr ""
 
-#: ../pep-0513.txt:7
+#: ../../peps/pep-0513.rst:7
 msgid "distutils-sig@python.org"
 msgstr ""
 
-#: ../pep-0513.txt
+#: ../../peps/pep-0513.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../pep-0513.txt:8
+#: ../../peps/pep-0513.rst:8
 msgid "Superseded"
 msgstr ""
 
-#: ../pep-0513.txt
+#: ../../peps/pep-0513.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../pep-0513.txt:9
+#: ../../peps/pep-0513.rst:9
 msgid "Informational"
 msgstr ""
 
-#: ../pep-0513.txt
+#: ../../peps/pep-0513.rst
 msgid "Topic"
 msgstr ""
 
-#: ../pep-0513.txt:10
+#: ../../peps/pep-0513.rst:10
 msgid "Packaging"
 msgstr ""
 
-#: ../pep-0513.txt
+#: ../../peps/pep-0513.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../pep-0513.txt:12
+#: ../../peps/pep-0513.rst:12
 msgid "19-Jan-2016"
 msgstr ""
 
-#: ../pep-0513.txt
+#: ../../peps/pep-0513.rst
 msgid "Post-History"
 msgstr "Pós-história"
 
-#: ../pep-0513.txt:13
+#: ../../peps/pep-0513.rst:13
 msgid "19-Jan-2016, 25-Jan-2016, 29-Jan-2016"
 msgstr ""
 
-#: ../pep-0513.txt
+#: ../../peps/pep-0513.rst
 msgid "Superseded-By"
 msgstr ""
 
-#: ../pep-0513.txt:14
+#: ../../peps/pep-0513.rst:14
 msgid "600"
 msgstr ""
 
-#: ../pep-0513.txt
+#: ../../peps/pep-0513.rst
 msgid "Resolution"
 msgstr ""
 
-#: ../pep-0513.txt:15
-msgid ""
-"https://mail.python.org/pipermail/distutils-sig/2016-January/028211.html"
+#: ../../peps/pep-0513.rst:15
+msgid "https://mail.python.org/pipermail/distutils-sig/2016-January/028211.html"
 msgstr ""
 
-#: ../pep-0513.txt:19
+#: ../../peps/pep-0513.rst:19
 msgid "Abstract"
 msgstr ""
 
-#: ../pep-0513.txt:21
+#: ../../peps/pep-0513.rst:21
 msgid ""
 "This PEP proposes the creation of a new platform tag for Python package "
 "built distributions, such as wheels, called ``manylinux1_{x86_64,i686}`` "
-"with external dependencies limited to a standardized, restricted subset of "
-"the Linux kernel and core userspace ABI. It proposes that PyPI support "
-"uploading and distributing wheels with this platform tag, and that ``pip`` "
-"support downloading and installing these packages on compatible platforms."
+"with external dependencies limited to a standardized, restricted subset "
+"of the Linux kernel and core userspace ABI. It proposes that PyPI support"
+" uploading and distributing wheels with this platform tag, and that "
+"``pip`` support downloading and installing these packages on compatible "
+"platforms."
 msgstr ""
 
-#: ../pep-0513.txt:30
+#: ../../peps/pep-0513.rst:30
 msgid "Rationale"
 msgstr ""
 
-#: ../pep-0513.txt:32
+#: ../../peps/pep-0513.rst:32
 msgid ""
-"Currently, distribution of binary Python extensions for Windows and OS X is "
-"straightforward. Developers and packagers build wheels (:pep:`427`, :pep:"
-"`491`), which are assigned platform tags such as ``win32`` or "
-"``macosx_10_6_intel``, and upload these wheels to PyPI. Users can download "
-"and install these wheels using tools such as ``pip``."
+"Currently, distribution of binary Python extensions for Windows and OS X "
+"is straightforward. Developers and packagers build wheels (:pep:`427`, "
+":pep:`491`), which are assigned platform tags such as ``win32`` or "
+"``macosx_10_6_intel``, and upload these wheels to PyPI. Users can "
+"download and install these wheels using tools such as ``pip``."
 msgstr ""
 
-#: ../pep-0513.txt:39
+#: ../../peps/pep-0513.rst:39
 msgid ""
-"For Linux, the situation is much more delicate. In general, compiled Python "
-"extension modules built on one Linux distribution will not work on other "
-"Linux distributions, or even on different machines running the same Linux "
-"distribution with different system libraries installed."
+"For Linux, the situation is much more delicate. In general, compiled "
+"Python extension modules built on one Linux distribution will not work on"
+" other Linux distributions, or even on different machines running the "
+"same Linux distribution with different system libraries installed."
 msgstr ""
 
-#: ../pep-0513.txt:44
+#: ../../peps/pep-0513.rst:44
 msgid ""
-"Build tools using :pep:`425` platform tags do not track information about "
-"the particular Linux distribution or installed system libraries, and instead "
-"assign all wheels the too-vague ``linux_i686`` or ``linux_x86_64`` tags. "
-"Because of this ambiguity, there is no expectation that ``linux``-tagged "
-"built distributions compiled on one machine will work properly on another, "
-"and for this reason, PyPI has not permitted the uploading of wheels for "
-"Linux."
+"Build tools using :pep:`425` platform tags do not track information about"
+" the particular Linux distribution or installed system libraries, and "
+"instead assign all wheels the too-vague ``linux_i686`` or "
+"``linux_x86_64`` tags. Because of this ambiguity, there is no expectation"
+" that ``linux``-tagged built distributions compiled on one machine will "
+"work properly on another, and for this reason, PyPI has not permitted the"
+" uploading of wheels for Linux."
 msgstr ""
 
-#: ../pep-0513.txt:51
+#: ../../peps/pep-0513.rst:51
 msgid ""
 "It would be ideal if wheel packages could be compiled that would work on "
 "*any* linux system. But, because of the incredible diversity of Linux "
-"systems -- from PCs to Android to embedded systems with custom libcs -- this "
-"cannot be guaranteed in general."
+"systems -- from PCs to Android to embedded systems with custom libcs -- "
+"this cannot be guaranteed in general."
 msgstr ""
 
-#: ../pep-0513.txt:56
+#: ../../peps/pep-0513.rst:56
 msgid ""
-"Instead, we define a standard subset of the kernel+core userspace ABI that, "
-"in practice, is compatible enough that packages conforming to this standard "
-"will work on *many* linux systems, including essentially all of the desktop "
-"and server distributions in common use. We know this because there are "
-"companies who have been distributing such widely-portable pre-compiled "
-"Python extension modules for Linux -- e.g. Enthought with Canopy [4]_ and "
-"Continuum Analytics with Anaconda [5]_."
+"Instead, we define a standard subset of the kernel+core userspace ABI "
+"that, in practice, is compatible enough that packages conforming to this "
+"standard will work on *many* linux systems, including essentially all of "
+"the desktop and server distributions in common use. We know this because "
+"there are companies who have been distributing such widely-portable pre-"
+"compiled Python extension modules for Linux -- e.g. Enthought with Canopy"
+" [4]_ and Continuum Analytics with Anaconda [5]_."
 msgstr ""
 
-#: ../pep-0513.txt:64
+#: ../../peps/pep-0513.rst:64
 msgid ""
-"Building on the compatibility lessons learned from these companies, we thus "
-"define a baseline ``manylinux1`` platform tag for use by binary Python "
-"wheels, and introduce the implementation of preliminary tools to aid in the "
-"construction of these ``manylinux1`` wheels."
+"Building on the compatibility lessons learned from these companies, we "
+"thus define a baseline ``manylinux1`` platform tag for use by binary "
+"Python wheels, and introduce the implementation of preliminary tools to "
+"aid in the construction of these ``manylinux1`` wheels."
 msgstr ""
 
-#: ../pep-0513.txt:71
+#: ../../peps/pep-0513.rst:71
 msgid "Key Causes of Inter-Linux Binary Incompatibility"
 msgstr ""
 
-#: ../pep-0513.txt:73
+#: ../../peps/pep-0513.rst:73
 msgid ""
 "To properly define a standard that will guarantee that wheel packages "
 "meeting this specification will operate on *many* linux platforms, it is "
-"necessary to understand the root causes which often prevent portability of "
-"pre-compiled binaries on Linux. The two key causes are dependencies on "
-"shared libraries which are not present on users' systems, and dependencies "
-"on particular versions of certain core libraries like ``glibc``."
+"necessary to understand the root causes which often prevent portability "
+"of pre-compiled binaries on Linux. The two key causes are dependencies on"
+" shared libraries which are not present on users' systems, and "
+"dependencies on particular versions of certain core libraries like "
+"``glibc``."
 msgstr ""
 
-#: ../pep-0513.txt:82
+#: ../../peps/pep-0513.rst:82
 msgid "External Shared Libraries"
 msgstr ""
 
-#: ../pep-0513.txt:84
+#: ../../peps/pep-0513.rst:84
 msgid ""
 "Most desktop and server linux distributions come with a system package "
 "manager (examples include ``APT`` on Debian-based systems, ``yum`` on "
 "``RPM``-based systems, and ``pacman`` on Arch linux) that manages, among "
-"other responsibilities, the installation of shared libraries installed to "
-"system directories such as ``/usr/lib``. Most non-trivial Python extensions "
-"will depend on one or more of these shared libraries, and thus function "
-"properly only on systems where the user has the proper libraries (and the "
-"proper versions thereof), either installed using their package manager, or "
-"installed manually by setting certain environment variables such as "
-"``LD_LIBRARY_PATH`` to notify the runtime linker of the location of the "
-"depended-upon shared libraries."
+"other responsibilities, the installation of shared libraries installed to"
+" system directories such as ``/usr/lib``. Most non-trivial Python "
+"extensions will depend on one or more of these shared libraries, and thus"
+" function properly only on systems where the user has the proper "
+"libraries (and the proper versions thereof), either installed using their"
+" package manager, or installed manually by setting certain environment "
+"variables such as ``LD_LIBRARY_PATH`` to notify the runtime linker of the"
+" location of the depended-upon shared libraries."
 msgstr ""
 
-#: ../pep-0513.txt:98
+#: ../../peps/pep-0513.rst:98
 msgid "Versioning of Core Shared Libraries"
 msgstr ""
 
-#: ../pep-0513.txt:100
+#: ../../peps/pep-0513.rst:100
 msgid ""
 "Even if the developers a Python extension module wish to use no external "
 "shared libraries, the modules will generally have a dynamic runtime "
-"dependency on the GNU C library, ``glibc``. While it is possible, statically "
-"linking ``glibc`` is usually a bad idea because certain important C "
-"functions like ``dlopen()`` cannot be called from code that statically links "
-"``glibc``. A runtime shared library dependency on a system-provided "
-"``glibc`` is unavoidable in practice."
+"dependency on the GNU C library, ``glibc``. While it is possible, "
+"statically linking ``glibc`` is usually a bad idea because certain "
+"important C functions like ``dlopen()`` cannot be called from code that "
+"statically links ``glibc``. A runtime shared library dependency on a "
+"system-provided ``glibc`` is unavoidable in practice."
 msgstr ""
 
-#: ../pep-0513.txt:108
+#: ../../peps/pep-0513.rst:108
 msgid ""
 "The maintainers of the GNU C library follow a strict symbol versioning "
 "scheme for backward compatibility. This ensures that binaries compiled "
-"against an older version of ``glibc`` can run on systems that have a newer "
-"``glibc``. The opposite is generally not true -- binaries compiled on newer "
-"Linux distributions tend to rely upon versioned functions in ``glibc`` that "
-"are not available on older systems."
+"against an older version of ``glibc`` can run on systems that have a "
+"newer ``glibc``. The opposite is generally not true -- binaries compiled "
+"on newer Linux distributions tend to rely upon versioned functions in "
+"``glibc`` that are not available on older systems."
 msgstr ""
 
-#: ../pep-0513.txt:115
+#: ../../peps/pep-0513.rst:115
 msgid ""
-"This generally prevents wheels compiled on the latest Linux distributions "
-"from being portable."
+"This generally prevents wheels compiled on the latest Linux distributions"
+" from being portable."
 msgstr ""
 
-#: ../pep-0513.txt:120
+#: ../../peps/pep-0513.rst:120
 msgid "The ``manylinux1`` policy"
 msgstr ""
 
-#: ../pep-0513.txt:122
+#: ../../peps/pep-0513.rst:122
 msgid "For these reasons, to achieve broad portability, Python wheels"
 msgstr ""
 
-#: ../pep-0513.txt:124
+#: ../../peps/pep-0513.rst:124
 msgid ""
-"should depend only on an extremely limited set of external shared libraries; "
-"and"
+"should depend only on an extremely limited set of external shared "
+"libraries; and"
 msgstr ""
 
-#: ../pep-0513.txt:126
+#: ../../peps/pep-0513.rst:126
 msgid ""
 "should depend only on \"old\" symbol versions in those external shared "
 "libraries; and"
 msgstr ""
 
-#: ../pep-0513.txt:128
+#: ../../peps/pep-0513.rst:128
 msgid "should depend only on a widely-compatible kernel ABI."
 msgstr ""
 
-#: ../pep-0513.txt:130
+#: ../../peps/pep-0513.rst:130
 msgid ""
 "To be eligible for the ``manylinux1`` platform tag, a Python wheel must "
-"therefore both (a) contain binary executables and compiled code that links "
-"*only* to libraries with SONAMEs included in the following list: ::"
+"therefore both (a) contain binary executables and compiled code that "
+"links *only* to libraries with SONAMEs included in the following list: ::"
 msgstr ""
 
-#: ../pep-0513.txt:157
+#: ../../peps/pep-0513.rst:157
 msgid ""
-"and, (b) work on a stock CentOS 5.11 [6]_ system that contains the system "
-"package manager's provided versions of these libraries."
+"and, (b) work on a stock CentOS 5.11 [6]_ system that contains the system"
+" package manager's provided versions of these libraries."
 msgstr ""
 
-#: ../pep-0513.txt:160
+#: ../../peps/pep-0513.rst:160
 msgid ""
 "``libcrypt.so.1`` was retrospectively removed from the whitelist after "
 "Fedora 30 was released with ``libcrypt.so.2`` instead."
 msgstr ""
 
-#: ../pep-0513.txt:163
+#: ../../peps/pep-0513.rst:163
 msgid ""
-"Because CentOS 5 is only available for x86_64 and i686 architectures, these "
-"are the only architectures currently supported by the ``manylinux1`` policy."
+"Because CentOS 5 is only available for x86_64 and i686 architectures, "
+"these are the only architectures currently supported by the "
+"``manylinux1`` policy."
 msgstr ""
 
-#: ../pep-0513.txt:167
-msgid ""
-"On Debian-based systems, these libraries are provided by the packages ::"
+#: ../../peps/pep-0513.rst:167
+msgid "On Debian-based systems, these libraries are provided by the packages ::"
 msgstr ""
 
-#: ../pep-0513.txt:172
+#: ../../peps/pep-0513.rst:172
 msgid "On RPM-based systems, these libraries are provided by the packages ::"
 msgstr ""
 
-#: ../pep-0513.txt:177
+#: ../../peps/pep-0513.rst:177
 msgid ""
-"This list was compiled by checking the external shared library dependencies "
-"of the Canopy [4]_ and Anaconda [5]_ distributions, which both include a "
-"wide array of the most popular Python modules and have been confirmed in "
-"practice to work across a wide swath of Linux systems in the wild."
+"This list was compiled by checking the external shared library "
+"dependencies of the Canopy [4]_ and Anaconda [5]_ distributions, which "
+"both include a wide array of the most popular Python modules and have "
+"been confirmed in practice to work across a wide swath of Linux systems "
+"in the wild."
 msgstr ""
 
-#: ../pep-0513.txt:182
+#: ../../peps/pep-0513.rst:182
 msgid ""
-"Many of the permitted system libraries listed above use symbol versioning "
-"schemes for backward compatibility. The latest symbol versions provided with "
-"the CentOS 5.11 versions of these libraries are: ::"
+"Many of the permitted system libraries listed above use symbol versioning"
+" schemes for backward compatibility. The latest symbol versions provided "
+"with the CentOS 5.11 versions of these libraries are: ::"
 msgstr ""
 
-#: ../pep-0513.txt:191
+#: ../../peps/pep-0513.rst:191
 msgid ""
-"Therefore, as a consequence of requirement (b), any wheel that depends on "
-"versioned symbols from the above shared libraries may depend only on symbols "
-"with the following versions: ::"
+"Therefore, as a consequence of requirement (b), any wheel that depends on"
+" versioned symbols from the above shared libraries may depend only on "
+"symbols with the following versions: ::"
 msgstr ""
 
-#: ../pep-0513.txt:200
+#: ../../peps/pep-0513.rst:200
 msgid ""
-"These recommendations are the outcome of the relevant discussions in January "
-"2016 [7]_, [8]_."
+"These recommendations are the outcome of the relevant discussions in "
+"January 2016 [7]_, [8]_."
 msgstr ""
 
-#: ../pep-0513.txt:203
+#: ../../peps/pep-0513.rst:203
 msgid ""
-"Note that in our recommendations below, we do not suggest that ``pip`` or "
-"PyPI should attempt to check for and enforce the details of this policy "
-"(just as they don't check for and enforce the details of existing platform "
-"tags like ``win32``). The text above is provided (a) as advice to package "
-"builders, and (b) as a method for allocating blame if a given wheel doesn't "
-"work on some system: if it satisfies the policy above, then this is a bug in "
-"the spec or the installation tool; if it does not satisfy the policy above, "
-"then it's a bug in the wheel. One useful consequence of this approach is "
-"that it leaves open the possibility of further updates and tweaks as we gain "
-"more experience, e.g., we could have a \"manylinux 1.1\" policy which "
-"targets the same systems and uses the same ``manylinux1`` platform tag (and "
-"thus requires no further changes to ``pip`` or PyPI), but that adjusts the "
-"list above to remove libraries that have turned out to be problematic or add "
-"libraries that have turned out to be safe."
+"Note that in our recommendations below, we do not suggest that ``pip`` or"
+" PyPI should attempt to check for and enforce the details of this policy "
+"(just as they don't check for and enforce the details of existing "
+"platform tags like ``win32``). The text above is provided (a) as advice "
+"to package builders, and (b) as a method for allocating blame if a given "
+"wheel doesn't work on some system: if it satisfies the policy above, then"
+" this is a bug in the spec or the installation tool; if it does not "
+"satisfy the policy above, then it's a bug in the wheel. One useful "
+"consequence of this approach is that it leaves open the possibility of "
+"further updates and tweaks as we gain more experience, e.g., we could "
+"have a \"manylinux 1.1\" policy which targets the same systems and uses "
+"the same ``manylinux1`` platform tag (and thus requires no further "
+"changes to ``pip`` or PyPI), but that adjusts the list above to remove "
+"libraries that have turned out to be problematic or add libraries that "
+"have turned out to be safe."
 msgstr ""
 
-#: ../pep-0513.txt:221
+#: ../../peps/pep-0513.rst:221
 msgid "libpythonX.Y.so.1"
 msgstr ""
 
-#: ../pep-0513.txt:223
+#: ../../peps/pep-0513.rst:223
 msgid ""
 "Note that ``libpythonX.Y.so.1`` is *not* on the list of libraries that a "
 "``manylinux1`` extension is allowed to link to. Explicitly linking to "
 "``libpythonX.Y.so.1`` is unnecessary in almost all cases: the way ELF "
 "linking works, extension modules that are loaded into the interpreter "
-"automatically get access to all of the interpreter's symbols, regardless of "
-"whether or not the extension itself is explicitly linked against libpython. "
-"Furthermore, explicit linking to libpython creates problems in the common "
-"configuration where Python is not built with ``--enable-shared``. In "
-"particular, on Debian and Ubuntu systems, ``apt install pythonX.Y`` does not "
-"even install ``libpythonX.Y.so.1``, meaning that any wheel that *did* depend "
-"on ``libpythonX.Y.so.1`` could fail to import."
+"automatically get access to all of the interpreter's symbols, regardless "
+"of whether or not the extension itself is explicitly linked against "
+"libpython. Furthermore, explicit linking to libpython creates problems in"
+" the common configuration where Python is not built with ``--enable-"
+"shared``. In particular, on Debian and Ubuntu systems, ``apt install "
+"pythonX.Y`` does not even install ``libpythonX.Y.so.1``, meaning that any"
+" wheel that *did* depend on ``libpythonX.Y.so.1`` could fail to import."
 msgstr ""
 
-#: ../pep-0513.txt:236
+#: ../../peps/pep-0513.rst:236
 msgid ""
-"There is one situation where extensions that are linked in this way can fail "
-"to work: if a host program (e.g., ``apache2``) uses ``dlopen()`` to load a "
-"module (e.g., ``mod_wsgi``) that embeds the CPython interpreter, and the "
-"host program does *not* pass the ``RTLD_GLOBAL`` flag to ``dlopen()``, then "
-"the embedded CPython will be unable to load any extension modules that do "
-"not themselves link explicitly to ``libpythonX.Y.so.1``. Fortunately, "
-"``apache2`` *does* set the ``RTLD_GLOBAL`` flag, as do all the other "
-"programs that embed-CPython-via-a-dlopened-plugin that we could locate, so "
-"this does not seem to be a serious problem in practice. The incompatibility "
-"with Debian/Ubuntu is more of an issue than the theoretical incompatibility "
-"with a rather obscure corner case."
+"There is one situation where extensions that are linked in this way can "
+"fail to work: if a host program (e.g., ``apache2``) uses ``dlopen()`` to "
+"load a module (e.g., ``mod_wsgi``) that embeds the CPython interpreter, "
+"and the host program does *not* pass the ``RTLD_GLOBAL`` flag to "
+"``dlopen()``, then the embedded CPython will be unable to load any "
+"extension modules that do not themselves link explicitly to "
+"``libpythonX.Y.so.1``. Fortunately, ``apache2`` *does* set the "
+"``RTLD_GLOBAL`` flag, as do all the other programs that embed-CPython-"
+"via-a-dlopened-plugin that we could locate, so this does not seem to be a"
+" serious problem in practice. The incompatibility with Debian/Ubuntu is "
+"more of an issue than the theoretical incompatibility with a rather "
+"obscure corner case."
 msgstr ""
 
-#: ../pep-0513.txt:249
+#: ../../peps/pep-0513.rst:249
 msgid ""
-"This is a rather complex and subtle issue that extends beyond the scope of "
-"``manylinux1``; for more discussion see: [9]_, [10]_, [11]_."
+"This is a rather complex and subtle issue that extends beyond the scope "
+"of ``manylinux1``; for more discussion see: [9]_, [10]_, [11]_."
 msgstr ""
 
-#: ../pep-0513.txt:255
+#: ../../peps/pep-0513.rst:255
 msgid "UCS-2 vs UCS-4 builds"
 msgstr ""
 
-#: ../pep-0513.txt:257
+#: ../../peps/pep-0513.rst:257
 msgid ""
-"All versions of CPython 2.x, plus CPython 3.0-3.2 inclusive, can be built in "
-"two ABI-incompatible modes: builds using the ``--enable-unicode=ucs2`` "
-"configure flag store Unicode data in UCS-2 (or really UTF-16) format, while "
-"builds using the ``--enable-unicode=ucs4`` configure flag store Unicode data "
-"in UCS-4. (CPython 3.3 and greater use a different storage method that "
-"always supports UCS-4.) If we want to make sure ``ucs2`` wheels don't get "
-"installed into ``ucs4`` CPythons and vice-versa, then something must be done."
+"All versions of CPython 2.x, plus CPython 3.0-3.2 inclusive, can be built"
+" in two ABI-incompatible modes: builds using the ``--enable-"
+"unicode=ucs2`` configure flag store Unicode data in UCS-2 (or really "
+"UTF-16) format, while builds using the ``--enable-unicode=ucs4`` "
+"configure flag store Unicode data in UCS-4. (CPython 3.3 and greater use "
+"a different storage method that always supports UCS-4.) If we want to "
+"make sure ``ucs2`` wheels don't get installed into ``ucs4`` CPythons and "
+"vice-versa, then something must be done."
 msgstr ""
 
-#: ../pep-0513.txt:267
+#: ../../peps/pep-0513.rst:267
 msgid ""
-"An earlier version of this PEP included a requirement that ``manylinux1`` "
-"wheels targeting these older CPython versions should always use the ``ucs4`` "
-"ABI. But then, in between the PEP's initial acceptance and its "
+"An earlier version of this PEP included a requirement that ``manylinux1``"
+" wheels targeting these older CPython versions should always use the "
+"``ucs4`` ABI. But then, in between the PEP's initial acceptance and its "
 "implementation, ``pip`` and ``wheel`` gained first-class support for "
 "tracking and checking this aspect of ABI compatibility for the relevant "
 "CPython versions, which is a better solution. So we now allow the "
 "``manylinux1`` platform tags to be used in combination with any ABI tag. "
 "However, to maintain compatibility it is crucial to ensure that all "
-"``manylinux1`` wheels include a non-trivial abi tag. For example, a wheel "
-"built against a ``ucs4`` CPython might have a name like::"
+"``manylinux1`` wheels include a non-trivial abi tag. For example, a wheel"
+" built against a ``ucs4`` CPython might have a name like::"
 msgstr ""
 
-#: ../pep-0513.txt:282
+#: ../../peps/pep-0513.rst:282
 msgid "While a wheel built against the ``ucs2`` ABI might have a name like::"
 msgstr ""
 
-#: ../pep-0513.txt:287
+#: ../../peps/pep-0513.rst:287
 msgid "But you should never have a wheel with a name like::"
 msgstr ""
 
-#: ../pep-0513.txt:292
+#: ../../peps/pep-0513.rst:292
 msgid ""
-"This wheel claims to be simultaneously compatible with *both* ucs2 and ucs4 "
-"builds, which is bad."
+"This wheel claims to be simultaneously compatible with *both* ucs2 and "
+"ucs4 builds, which is bad."
 msgstr ""
 
-#: ../pep-0513.txt:295
+#: ../../peps/pep-0513.rst:295
 msgid ""
 "We note for information that the ``ucs4`` ABI appears to be much more "
 "widespread among Linux CPython distributors."
 msgstr ""
 
-#: ../pep-0513.txt:300
+#: ../../peps/pep-0513.rst:300
 msgid "fpectl builds vs. no fpectl builds"
 msgstr ""
 
-#: ../pep-0513.txt:302
+#: ../../peps/pep-0513.rst:302
 msgid ""
-"All extant versions of CPython can be built either with or without the ``--"
-"with-fpectl`` flag to ``configure``. It turns out that this changes the "
-"CPython ABI: extensions that are built against a no-``fpectl`` CPython are "
-"always compatible with yes-``fpectl`` CPython, but the reverse is not "
-"necessarily true. (Symptom: errors at import time complaining about "
-"``undefined symbol: PyFPE_jbuf``.) See: [16]_."
+"All extant versions of CPython can be built either with or without the "
+"``--with-fpectl`` flag to ``configure``. It turns out that this changes "
+"the CPython ABI: extensions that are built against a no-``fpectl`` "
+"CPython are always compatible with yes-``fpectl`` CPython, but the "
+"reverse is not necessarily true. (Symptom: errors at import time "
+"complaining about ``undefined symbol: PyFPE_jbuf``.) See: [16]_."
 msgstr ""
 
-#: ../pep-0513.txt:310
+#: ../../peps/pep-0513.rst:310
 msgid ""
-"For maximum compatibility, therefore, the CPython used to build manylinux1 "
-"wheels must be compiled *without* the ``--with-fpectl`` flag, and manylinux1 "
-"extensions must not reference the symbol ``PyFPE_jbuf``."
+"For maximum compatibility, therefore, the CPython used to build "
+"manylinux1 wheels must be compiled *without* the ``--with-fpectl`` flag, "
+"and manylinux1 extensions must not reference the symbol ``PyFPE_jbuf``."
 msgstr ""
 
-#: ../pep-0513.txt:317
+#: ../../peps/pep-0513.rst:317
 msgid "Compilation of Compliant Wheels"
 msgstr ""
 
-#: ../pep-0513.txt:319
+#: ../../peps/pep-0513.rst:319
 msgid ""
-"The way glibc, libgcc, and libstdc++ manage their symbol versioning means "
-"that in practice, the compiler toolchains that most developers use to do "
-"their daily work are incapable of building ``manylinux1``-compliant wheels. "
-"Therefore, we do not attempt to change the default behavior of ``pip "
-"wheel`` / ``bdist_wheel``: they will continue to generate regular "
-"``linux_*`` platform tags, and developers who wish to use them to generate "
-"``manylinux1``-tagged wheels will have to change the tag as a second post-"
-"processing step."
+"The way glibc, libgcc, and libstdc++ manage their symbol versioning means"
+" that in practice, the compiler toolchains that most developers use to do"
+" their daily work are incapable of building ``manylinux1``-compliant "
+"wheels. Therefore, we do not attempt to change the default behavior of "
+"``pip wheel`` / ``bdist_wheel``: they will continue to generate regular "
+"``linux_*`` platform tags, and developers who wish to use them to "
+"generate ``manylinux1``-tagged wheels will have to change the tag as a "
+"second post-processing step."
 msgstr ""
 
-#: ../pep-0513.txt:328
+#: ../../peps/pep-0513.rst:328
 msgid ""
-"To support the compilation of wheels meeting the ``manylinux1`` standard, we "
-"provide initial drafts of two tools."
+"To support the compilation of wheels meeting the ``manylinux1`` standard,"
+" we provide initial drafts of two tools."
 msgstr ""
 
-#: ../pep-0513.txt:333
+#: ../../peps/pep-0513.rst:333
 msgid "Docker Image"
 msgstr ""
 
-#: ../pep-0513.txt:335
+#: ../../peps/pep-0513.rst:335
 msgid ""
-"The first tool is a Docker image based on CentOS 5.11, which is recommended "
-"as an easy to use self-contained build box for compiling ``manylinux1`` "
-"wheels [12]_. Compiling on a more recently-released linux distribution will "
-"generally introduce dependencies on too-new versioned symbols. The image "
-"comes with a full compiler suite installed (``gcc``, ``g++``, and "
-"``gfortran`` 4.8.2) as well as the latest releases of Python and ``pip``."
+"The first tool is a Docker image based on CentOS 5.11, which is "
+"recommended as an easy to use self-contained build box for compiling "
+"``manylinux1`` wheels [12]_. Compiling on a more recently-released linux "
+"distribution will generally introduce dependencies on too-new versioned "
+"symbols. The image comes with a full compiler suite installed (``gcc``, "
+"``g++``, and ``gfortran`` 4.8.2) as well as the latest releases of Python"
+" and ``pip``."
 msgstr ""
 
-#: ../pep-0513.txt:343
+#: ../../peps/pep-0513.rst:343
 msgid "Auditwheel"
 msgstr ""
 
-#: ../pep-0513.txt:345
+#: ../../peps/pep-0513.rst:345
 msgid ""
 "The second tool is a command line executable called ``auditwheel`` [13]_ "
 "that may aid in package maintainers in dealing with third-party external "
 "dependencies."
 msgstr ""
 
-#: ../pep-0513.txt:349
+#: ../../peps/pep-0513.rst:349
 msgid ""
-"There are at least three methods for building wheels that use third-party "
-"external libraries in a way that meets the above policy."
+"There are at least three methods for building wheels that use third-party"
+" external libraries in a way that meets the above policy."
 msgstr ""
 
-#: ../pep-0513.txt:352
+#: ../../peps/pep-0513.rst:352
 msgid "The third-party libraries can be statically linked."
 msgstr ""
 
-#: ../pep-0513.txt:353
+#: ../../peps/pep-0513.rst:353
 msgid ""
-"The third-party shared libraries can be distributed in separate packages on "
-"PyPI which are depended upon by the wheel."
+"The third-party shared libraries can be distributed in separate packages "
+"on PyPI which are depended upon by the wheel."
 msgstr ""
 
-#: ../pep-0513.txt:355
+#: ../../peps/pep-0513.rst:355
 msgid ""
-"The third-party shared libraries can be bundled inside the wheel libraries, "
-"linked with a relative path."
+"The third-party shared libraries can be bundled inside the wheel "
+"libraries, linked with a relative path."
 msgstr ""
 
-#: ../pep-0513.txt:358
+#: ../../peps/pep-0513.rst:358
 msgid ""
 "All of these are valid option which may be effectively used by different "
 "packages and communities. Statically linking generally requires package-"
 "specific modifications to the build system, and distributing third-party "
-"dependencies on PyPI may require some coordination of the community of users "
-"of the package."
+"dependencies on PyPI may require some coordination of the community of "
+"users of the package."
 msgstr ""
 
-#: ../pep-0513.txt:364
+#: ../../peps/pep-0513.rst:364
 msgid ""
 "As an often-automatic alternative to these options, we introduce "
-"``auditwheel``. The tool inspects all of the ELF files  inside a wheel to "
-"check for dependencies on versioned symbols or external  shared libraries, "
-"and verifies conformance with the ``manylinux1`` policy. This  includes the "
-"ability to add the new platform tag to conforming wheels. More importantly, "
-"``auditwheel`` has the ability to automatically modify wheels that depend on "
-"external shared libraries by copying those shared libraries from the system "
-"into the wheel itself, and modifying the appropriate ``RPATH`` entries such "
-"that these libraries will be picked up at runtime. This accomplishes a "
-"similar result as if the libraries had been statically linked without "
-"requiring changes to the build system. Packagers are advised that bundling, "
-"like static linking, may implicate copyright concerns."
+"``auditwheel``. The tool inspects all of the ELF files  inside a wheel to"
+" check for dependencies on versioned symbols or external  shared "
+"libraries, and verifies conformance with the ``manylinux1`` policy. This"
+"  includes the ability to add the new platform tag to conforming wheels. "
+"More importantly, ``auditwheel`` has the ability to automatically modify "
+"wheels that depend on external shared libraries by copying those shared "
+"libraries from the system into the wheel itself, and modifying the "
+"appropriate ``RPATH`` entries such that these libraries will be picked up"
+" at runtime. This accomplishes a similar result as if the libraries had "
+"been statically linked without requiring changes to the build system. "
+"Packagers are advised that bundling, like static linking, may implicate "
+"copyright concerns."
 msgstr ""
 
-#: ../pep-0513.txt:379
+#: ../../peps/pep-0513.rst:379
 msgid "Bundled Wheels on Linux"
 msgstr ""
 
-#: ../pep-0513.txt:381
+#: ../../peps/pep-0513.rst:381
 msgid ""
-"While we acknowledge many approaches for dealing with third-party library "
-"dependencies within ``manylinux1`` wheels, we recognize that the "
-"``manylinux1`` policy encourages bundling external dependencies, a practice "
-"which runs counter to  the package management policies of many linux "
-"distributions' system package  managers [14]_, [15]_. The primary purpose of "
-"this is cross-distro compatibility.  Furthermore, ``manylinux1`` wheels on "
-"PyPI occupy a different  niche than the Python packages available through "
-"the system package manager."
+"While we acknowledge many approaches for dealing with third-party library"
+" dependencies within ``manylinux1`` wheels, we recognize that the "
+"``manylinux1`` policy encourages bundling external dependencies, a "
+"practice which runs counter to  the package management policies of many "
+"linux distributions' system package  managers [14]_, [15]_. The primary "
+"purpose of this is cross-distro compatibility.  Furthermore, "
+"``manylinux1`` wheels on PyPI occupy a different  niche than the Python "
+"packages available through the system package manager."
 msgstr ""
 
-#: ../pep-0513.txt:390
+#: ../../peps/pep-0513.rst:390
 msgid ""
 "The decision in this PEP to encourage departure from general Linux "
 "distribution unbundling policies is informed by the following concerns:"
 msgstr ""
 
-#: ../pep-0513.txt:393
+#: ../../peps/pep-0513.rst:393
 msgid ""
-"In these days of automated continuous integration and deployment pipelines, "
-"publishing new versions and updating dependencies is easier than it was when "
-"those policies were defined."
+"In these days of automated continuous integration and deployment "
+"pipelines, publishing new versions and updating dependencies is easier "
+"than it was when those policies were defined."
 msgstr ""
 
-#: ../pep-0513.txt:396
+#: ../../peps/pep-0513.rst:396
 msgid ""
-"``pip`` users remain free to use the ``\"--no-binary\"`` option if they want "
-"to force local builds rather than using pre-built wheel files."
+"``pip`` users remain free to use the ``\"--no-binary\"`` option if they "
+"want to force local builds rather than using pre-built wheel files."
 msgstr ""
 
-#: ../pep-0513.txt:398
+#: ../../peps/pep-0513.rst:398
 msgid ""
 "The popularity of modern container based deployment and \"immutable "
 "infrastructure\" models involve substantial bundling at the application "
 "layer anyway."
 msgstr ""
 
-#: ../pep-0513.txt:401
+#: ../../peps/pep-0513.rst:401
 msgid ""
 "Distribution of bundled wheels through PyPI is currently the norm for "
 "Windows and OS X."
 msgstr ""
 
-#: ../pep-0513.txt:403
+#: ../../peps/pep-0513.rst:403
 msgid ""
-"This PEP doesn't rule out the idea of offering more targeted binaries for "
-"particular Linux distributions in the future."
+"This PEP doesn't rule out the idea of offering more targeted binaries for"
+" particular Linux distributions in the future."
 msgstr ""
 
-#: ../pep-0513.txt:406
+#: ../../peps/pep-0513.rst:406
 msgid ""
-"The model described in this PEP is most ideally suited for cross-platform "
-"Python packages, because it means they can reuse much of the work that "
-"they're already doing to make static Windows and OS X wheels. We recognize "
-"that it is less optimal for Linux-specific packages that might prefer to "
-"interact more closely with Linux's unique package management functionality "
-"and only care about targeting a small set of particular distos."
+"The model described in this PEP is most ideally suited for cross-platform"
+" Python packages, because it means they can reuse much of the work that "
+"they're already doing to make static Windows and OS X wheels. We "
+"recognize that it is less optimal for Linux-specific packages that might "
+"prefer to interact more closely with Linux's unique package management "
+"functionality and only care about targeting a small set of particular "
+"distos."
 msgstr ""
 
-#: ../pep-0513.txt:415
+#: ../../peps/pep-0513.rst:415
 msgid "Security Implications"
 msgstr ""
 
-#: ../pep-0513.txt:417
+#: ../../peps/pep-0513.rst:417
 msgid ""
-"One of the advantages of dependencies on centralized libraries in Linux is "
-"that bugfixes and security updates can be deployed system-wide, and "
+"One of the advantages of dependencies on centralized libraries in Linux "
+"is that bugfixes and security updates can be deployed system-wide, and "
 "applications which depend on these libraries will automatically feel the "
-"effects of these patches when the underlying libraries are updated. This can "
-"be particularly important for security updates in packages engaged in "
-"communication across the network or cryptography."
+"effects of these patches when the underlying libraries are updated. This "
+"can be particularly important for security updates in packages engaged in"
+" communication across the network or cryptography."
 msgstr ""
 
-#: ../pep-0513.txt:424
+#: ../../peps/pep-0513.rst:424
 msgid ""
-"``manylinux1`` wheels distributed through PyPI that bundle security-critical "
-"libraries like OpenSSL will thus assume responsibility for prompt updates in "
-"response disclosed vulnerabilities and patches. This closely parallels the "
-"security implications of the distribution of binary wheels on Windows that, "
-"because the platform lacks a system package manager, generally bundle their "
-"dependencies. In particular, because it lacks a stable ABI, OpenSSL cannot "
-"be included in the ``manylinux1`` profile."
+"``manylinux1`` wheels distributed through PyPI that bundle security-"
+"critical libraries like OpenSSL will thus assume responsibility for "
+"prompt updates in response disclosed vulnerabilities and patches. This "
+"closely parallels the security implications of the distribution of binary"
+" wheels on Windows that, because the platform lacks a system package "
+"manager, generally bundle their dependencies. In particular, because it "
+"lacks a stable ABI, OpenSSL cannot be included in the ``manylinux1`` "
+"profile."
 msgstr ""
 
-#: ../pep-0513.txt:435
+#: ../../peps/pep-0513.rst:435
 msgid "Platform Detection for Installers"
 msgstr ""
 
-#: ../pep-0513.txt:437
+#: ../../peps/pep-0513.rst:437
 msgid ""
-"Above, we defined what it means for a *wheel* to be ``manylinux1``-"
-"compatible. Here we discuss what it means for a *Python installation* to be "
-"``manylinux1``-compatible. In particular, this is important for tools like "
-"``pip`` to know when deciding whether or not they should consider "
-"``manylinux1``-tagged wheels for installation."
+"Above, we defined what it means for a *wheel* to be "
+"``manylinux1``-compatible. Here we discuss what it means for a *Python "
+"installation* to be ``manylinux1``-compatible. In particular, this is "
+"important for tools like ``pip`` to know when deciding whether or not "
+"they should consider ``manylinux1``-tagged wheels for installation."
 msgstr ""
 
-#: ../pep-0513.txt:443
+#: ../../peps/pep-0513.rst:443
 msgid ""
 "Because the ``manylinux1`` profile is already known to work for the many "
-"thousands of users of popular commercial Python distributions, we suggest "
-"that installation tools should error on the side of assuming that a system "
-"*is* compatible, unless there is specific reason to think otherwise."
+"thousands of users of popular commercial Python distributions, we suggest"
+" that installation tools should error on the side of assuming that a "
+"system *is* compatible, unless there is specific reason to think "
+"otherwise."
 msgstr ""
 
-#: ../pep-0513.txt:449
+#: ../../peps/pep-0513.rst:449
 msgid ""
-"We know of four main sources of potential incompatibility that are likely to "
-"arise in practice:"
+"We know of four main sources of potential incompatibility that are likely"
+" to arise in practice:"
 msgstr ""
 
-#: ../pep-0513.txt:452
+#: ../../peps/pep-0513.rst:452
 msgid ""
 "Eventually, in the future, there may exist distributions that break "
 "compatibility with this profile (e.g., if one of the libraries in the "
 "profile changes its ABI in a backwards-incompatible way)"
 msgstr ""
 
-#: ../pep-0513.txt:455
+#: ../../peps/pep-0513.rst:455
 msgid "A linux distribution that is too old (e.g. RHEL 4)"
 msgstr ""
 
-#: ../pep-0513.txt:456
+#: ../../peps/pep-0513.rst:456
 msgid ""
-"A linux distribution that does not use ``glibc`` (e.g. Alpine Linux, which "
-"is based on musl ``libc``, or Android)"
+"A linux distribution that does not use ``glibc`` (e.g. Alpine Linux, "
+"which is based on musl ``libc``, or Android)"
 msgstr ""
 
-#: ../pep-0513.txt:459
+#: ../../peps/pep-0513.rst:459
 msgid ""
 "To address these we propose a two-pronged approach. To handle potential "
 "future incompatibilities, we standardize a mechanism for a Python "
-"distributor to signal that a particular Python install definitely is or is "
-"not compatible with ``manylinux1``: this is done by installing a module "
-"named ``_manylinux``, and setting its ``manylinux1_compatible`` attribute. "
-"We do not propose adding any such module to the standard library -- this is "
-"merely a well-known name by which distributors and installation tools can "
-"rendezvous. However, if a distributor does add this module, *they should add "
-"it to the standard library* rather than to a ``site-packages/`` directory, "
-"because the standard library is inherited by virtualenvs (which we want), "
-"and ``site-packages/`` in general is not."
+"distributor to signal that a particular Python install definitely is or "
+"is not compatible with ``manylinux1``: this is done by installing a "
+"module named ``_manylinux``, and setting its ``manylinux1_compatible`` "
+"attribute. We do not propose adding any such module to the standard "
+"library -- this is merely a well-known name by which distributors and "
+"installation tools can rendezvous. However, if a distributor does add "
+"this module, *they should add it to the standard library* rather than to "
+"a ``site-packages/`` directory, because the standard library is inherited"
+" by virtualenvs (which we want), and ``site-packages/`` in general is "
+"not."
 msgstr ""
 
-#: ../pep-0513.txt:473
+#: ../../peps/pep-0513.rst:473
 msgid ""
 "Then, to handle the last two cases for existing Python distributions, we "
-"suggest a simple and reliable method to check for the presence and version "
-"of ``glibc`` (basically using it as a \"clock\" for the overall age of the "
-"distribution)."
+"suggest a simple and reliable method to check for the presence and "
+"version of ``glibc`` (basically using it as a \"clock\" for the overall "
+"age of the distribution)."
 msgstr ""
 
-#: ../pep-0513.txt:478
+#: ../../peps/pep-0513.rst:478
 msgid "Specifically, the algorithm we propose is::"
 msgstr ""
 
-#: ../pep-0513.txt:524
+#: ../../peps/pep-0513.rst:524
 msgid ""
-"**Rejected alternatives:** We also considered using a configuration file, e."
-"g. ``/etc/python/compatibility.cfg``. The problem with this is that a single "
-"filesystem might contain many different interpreter environments, each with "
-"their own ABI profile -- the ``manylinux1`` compatibility of a system-"
-"installed x86_64 CPython might not tell us much about the ``manylinux1`` "
-"compatibility of a user-installed i686 PyPy. Locating this configuration "
-"information within the Python environment itself ensures that it remains "
-"attached to the correct binary, and dramatically simplifies lookup code."
+"**Rejected alternatives:** We also considered using a configuration file,"
+" e.g. ``/etc/python/compatibility.cfg``. The problem with this is that a "
+"single filesystem might contain many different interpreter environments, "
+"each with their own ABI profile -- the ``manylinux1`` compatibility of a "
+"system-installed x86_64 CPython might not tell us much about the "
+"``manylinux1`` compatibility of a user-installed i686 PyPy. Locating this"
+" configuration information within the Python environment itself ensures "
+"that it remains attached to the correct binary, and dramatically "
+"simplifies lookup code."
 msgstr ""
 
-#: ../pep-0513.txt:534
+#: ../../peps/pep-0513.rst:534
 msgid ""
 "We also considered using a more elaborate structure, like a list of all "
 "platform tags that should be considered compatible, together with their "
 "preference ordering, for example: ``_binary_compat.compatible = "
-"[\"manylinux1_x86_64\", \"centos5_x86_64\", \"linux_x86_64\"]``. However, "
-"this introduces several complications. For example, we want to be able to "
-"distinguish between the state of \"doesn't support ``manylinux1``\" (or "
-"eventually ``manylinux2``, etc.) versus \"doesn't specify either way whether "
-"it supports ``manylinux1``\", which is not entirely obvious in the above "
-"representation; and, it's not at all clear what features are really needed "
-"vis a vis preference ordering given that right now the only possible "
-"platform tags are ``manylinux1`` and ``linux``.  So we're deferring a more "
-"complete solution here for a separate PEP, when / if Linux gets more "
-"platform tags."
+"[\"manylinux1_x86_64\", \"centos5_x86_64\", \"linux_x86_64\"]``. However,"
+" this introduces several complications. For example, we want to be able "
+"to distinguish between the state of \"doesn't support ``manylinux1``\" "
+"(or eventually ``manylinux2``, etc.) versus \"doesn't specify either way "
+"whether it supports ``manylinux1``\", which is not entirely obvious in "
+"the above representation; and, it's not at all clear what features are "
+"really needed vis a vis preference ordering given that right now the only"
+" possible platform tags are ``manylinux1`` and ``linux``.  So we're "
+"deferring a more complete solution here for a separate PEP, when / if "
+"Linux gets more platform tags."
 msgstr ""
 
-#: ../pep-0513.txt:548
+#: ../../peps/pep-0513.rst:548
 msgid ""
-"For the library compatibility check, we also considered much more elaborate "
-"checks (e.g. checking the kernel version, searching for and checking the "
-"versions of all the individual libraries listed in the ``manylinux1`` "
-"profile, etc.), but ultimately decided that this would be more likely to "
-"introduce confusing bugs than actually help the user. (For example: "
-"different distributions vary in where they actually put these libraries, and "
-"if our checking code failed to use the correct path search then it could "
-"easily return incorrect answers.)"
+"For the library compatibility check, we also considered much more "
+"elaborate checks (e.g. checking the kernel version, searching for and "
+"checking the versions of all the individual libraries listed in the "
+"``manylinux1`` profile, etc.), but ultimately decided that this would be "
+"more likely to introduce confusing bugs than actually help the user. (For"
+" example: different distributions vary in where they actually put these "
+"libraries, and if our checking code failed to use the correct path search"
+" then it could easily return incorrect answers.)"
 msgstr ""
 
-#: ../pep-0513.txt:561
+#: ../../peps/pep-0513.rst:561
 msgid "PyPI Support"
 msgstr ""
 
-#: ../pep-0513.txt:563
+#: ../../peps/pep-0513.rst:563
 msgid ""
-"PyPI should permit wheels containing the ``manylinux1`` platform tag to be "
-"uploaded. PyPI should not attempt to formally verify that wheels containing "
-"the ``manylinux1`` platform tag adhere to the ``manylinux1`` policy "
-"described in this document. This verification tasks should be left to other "
-"tools, like ``auditwheel``, that are developed separately."
+"PyPI should permit wheels containing the ``manylinux1`` platform tag to "
+"be uploaded. PyPI should not attempt to formally verify that wheels "
+"containing the ``manylinux1`` platform tag adhere to the ``manylinux1`` "
+"policy described in this document. This verification tasks should be left"
+" to other tools, like ``auditwheel``, that are developed separately."
 msgstr ""
 
-#: ../pep-0513.txt:571
+#: ../../peps/pep-0513.rst:571
 msgid "Rejected Alternatives"
 msgstr ""
 
-#: ../pep-0513.txt:573
+#: ../../peps/pep-0513.rst:573
 msgid ""
-"One alternative would be to provide separate platform tags for each Linux "
-"distribution (and each version thereof), e.g. ``RHEL6``, ``ubuntu14_10``, "
-"``debian_jessie``, etc. Nothing in this proposal rules out the possibility "
-"of adding such platform tags in the future, or of further extensions to "
-"wheel metadata that would allow wheels to declare dependencies on external "
-"system-installed packages. However, such extensions would require "
-"substantially more work than this proposal, and still might not be "
-"appreciated by package developers who would prefer not to have to maintain "
-"multiple build environments and build multiple wheels in order to cover all "
-"the common Linux distributions. Therefore, we consider such proposals to be "
-"out-of-scope for this PEP."
+"One alternative would be to provide separate platform tags for each Linux"
+" distribution (and each version thereof), e.g. ``RHEL6``, "
+"``ubuntu14_10``, ``debian_jessie``, etc. Nothing in this proposal rules "
+"out the possibility of adding such platform tags in the future, or of "
+"further extensions to wheel metadata that would allow wheels to declare "
+"dependencies on external system-installed packages. However, such "
+"extensions would require substantially more work than this proposal, and "
+"still might not be appreciated by package developers who would prefer not"
+" to have to maintain multiple build environments and build multiple "
+"wheels in order to cover all the common Linux distributions. Therefore, "
+"we consider such proposals to be out-of-scope for this PEP."
 msgstr ""
 
-#: ../pep-0513.txt:586
+#: ../../peps/pep-0513.rst:586
 msgid "Future updates"
 msgstr ""
 
-#: ../pep-0513.txt:588
+#: ../../peps/pep-0513.rst:588
 msgid ""
 "We anticipate that at some point in the future there will be a "
-"``manylinux2`` specifying a more modern baseline environment (perhaps based "
-"on CentOS 6), and someday a ``manylinux3`` and so forth, but we defer "
-"specifying these until we have more experience with the initial "
+"``manylinux2`` specifying a more modern baseline environment (perhaps "
+"based on CentOS 6), and someday a ``manylinux3`` and so forth, but we "
+"defer specifying these until we have more experience with the initial "
 "``manylinux1`` proposal."
 msgstr ""
 
-#: ../pep-0513.txt:596
+#: ../../peps/pep-0513.rst:596
 msgid "References"
 msgstr "Referências"
 
-#: ../pep-0513.txt:598
+#: ../../peps/pep-0513.rst:598
 msgid ""
-"Enthought Canopy Python Distribution (https://store.enthought.com/downloads/)"
+"Enthought Canopy Python Distribution "
+"(https://store.enthought.com/downloads/)"
 msgstr ""
 
-#: ../pep-0513.txt:600
+#: ../../peps/pep-0513.rst:600
 msgid ""
-"Continuum Analytics Anaconda Python Distribution (https://www.continuum.io/"
-"downloads)"
+"Continuum Analytics Anaconda Python Distribution "
+"(https://www.continuum.io/downloads)"
 msgstr ""
 
-#: ../pep-0513.txt:602
+#: ../../peps/pep-0513.rst:602
 msgid ""
-"CentOS 5.11 Release Notes (https://wiki.centos.org/Manuals/ReleaseNotes/"
-"CentOS5.11)"
+"CentOS 5.11 Release Notes "
+"(https://wiki.centos.org/Manuals/ReleaseNotes/CentOS5.11)"
 msgstr ""
 
-#: ../pep-0513.txt:604
+#: ../../peps/pep-0513.rst:604
 msgid ""
-"manylinux-discuss mailing list discussion (https://groups.google.com/forum/#!"
-"topic/manylinux-discuss/-4l3rrjfr9U)"
+"manylinux-discuss mailing list discussion "
+"(https://groups.google.com/forum/#!topic/manylinux-discuss/-4l3rrjfr9U)"
 msgstr ""
 
-#: ../pep-0513.txt:606
+#: ../../peps/pep-0513.rst:606
 msgid ""
 "distutils-sig discussion (https://mail.python.org/pipermail/distutils-"
 "sig/2016-January/027997.html)"
 msgstr ""
 
-#: ../pep-0513.txt:608
+#: ../../peps/pep-0513.rst:608
 msgid ""
 "distutils-sig discussion (https://mail.python.org/pipermail/distutils-"
 "sig/2016-February/028275.html)"
 msgstr ""
 
-#: ../pep-0513.txt:610
+#: ../../peps/pep-0513.rst:610
 msgid "github issue discussion (https://github.com/pypa/manylinux/issues/30)"
 msgstr ""
 
-#: ../pep-0513.txt:612
+#: ../../peps/pep-0513.rst:612
 msgid "python bug tracker discussion (https://bugs.python.org/issue21536)"
 msgstr ""
 
-#: ../pep-0513.txt:614
+#: ../../peps/pep-0513.rst:614
 msgid ""
-"manylinux1 docker images (Source: https://github.com/pypa/manylinux; x86-64: "
-"https://quay.io/repository/pypa/manylinux1_x86_64; x86-32: https://quay.io/"
-"repository/pypa/manylinux1_i686)"
+"manylinux1 docker images (Source: https://github.com/pypa/manylinux; "
+"x86-64: https://quay.io/repository/pypa/manylinux1_x86_64; x86-32: "
+"https://quay.io/repository/pypa/manylinux1_i686)"
 msgstr ""
 
-#: ../pep-0513.txt:618
+#: ../../peps/pep-0513.rst:618
 msgid "auditwheel tool (https://pypi.python.org/pypi/auditwheel)"
 msgstr ""
 
-#: ../pep-0513.txt:620
+#: ../../peps/pep-0513.rst:620
 msgid ""
-"Fedora Bundled Software Policy (https://fedoraproject.org/wiki/"
-"Bundled_Software_policy)"
+"Fedora Bundled Software Policy "
+"(https://fedoraproject.org/wiki/Bundled_Software_policy)"
 msgstr ""
 
-#: ../pep-0513.txt:622
+#: ../../peps/pep-0513.rst:622
 msgid ""
-"Debian Policy Manual -- 4.13: Convenience copies of code (https://www.debian."
-"org/doc/debian-policy/ch-source.html#s-embeddedfiles)"
+"Debian Policy Manual -- 4.13: Convenience copies of code "
+"(https://www.debian.org/doc/debian-policy/ch-source.html#s-embeddedfiles)"
 msgstr ""
 
-#: ../pep-0513.txt:624
+#: ../../peps/pep-0513.rst:624
 msgid ""
-"numpy bug report: https://github.com/numpy/numpy/"
-"issues/8415#issuecomment-269095235"
+"numpy bug report: "
+"https://github.com/numpy/numpy/issues/8415#issuecomment-269095235"
 msgstr ""
 
-#: ../pep-0513.txt:629
+#: ../../peps/pep-0513.rst:629
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../pep-0513.txt:631
+#: ../../peps/pep-0513.rst:631
 msgid "This document has been placed into the public domain."
 msgstr ""
+
+#~ msgid "Nick Coghlan <ncoghlan@gmail.com>"
+#~ msgstr ""
+

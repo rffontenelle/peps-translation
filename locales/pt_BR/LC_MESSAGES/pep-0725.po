@@ -1,0 +1,816 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the PEPs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PEPs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-20 10:43-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pt_BR\n"
+"Language-Team: pt_BR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.13.1\n"
+
+#: ../../peps/pep-0725.rst
+msgid "Author"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:3
+msgid "Pradyun Gedam <pradyunsg@gmail.com>, Ralf Gommers <ralf.gommers@gmail.com>"
+msgstr ""
+
+#: ../../peps/pep-0725.rst
+msgid "Discussions-To"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:5
+msgid "https://discuss.python.org/t/31888"
+msgstr ""
+
+#: ../../peps/pep-0725.rst
+msgid "Status"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:6
+msgid "Draft"
+msgstr ""
+
+#: ../../peps/pep-0725.rst
+msgid "Type"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:7
+msgid "Standards Track"
+msgstr ""
+
+#: ../../peps/pep-0725.rst
+msgid "Topic"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:8
+msgid "Packaging"
+msgstr ""
+
+#: ../../peps/pep-0725.rst
+msgid "Created"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:10
+msgid "17-Aug-2023"
+msgstr ""
+
+#: ../../peps/pep-0725.rst
+msgid "Post-History"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:11
+msgid "`18-Aug-2023 <https://discuss.python.org/t/31888>`__"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:15
+msgid "Abstract"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:17
+msgid ""
+"This PEP specifies how to write a project's external, or non-PyPI, build "
+"and runtime dependencies in a ``pyproject.toml`` file for packaging-"
+"related tools to consume."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:23
+msgid "Motivation"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:25
+msgid ""
+"Python packages may have dependencies on build tools, libraries, command-"
+"line tools, or other software that is not present on PyPI. Currently "
+"there is no way to express those dependencies in standardized metadata "
+"[#singular-vision-native-deps]_, [#pypacking-native-deps]_. Key "
+"motivators for this PEP are to:"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:31
+msgid ""
+"Enable tools to automatically map external dependencies to packages in "
+"other packaging repositories,"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:33
+msgid ""
+"Make it possible to include needed dependencies in error messages "
+"emitting by Python package installers and build frontends,"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:35
+msgid ""
+"Provide a canonical place for package authors to record this dependency "
+"information."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:38
+msgid ""
+"Packaging ecosystems like Linux distros, Conda, Homebrew, Spack, and Nix "
+"need full sets of dependencies for Python packages, and have tools like "
+"pyp2rpm_ (Fedora), Grayskull_ (Conda), and dh_python_ (Debian) which "
+"attempt to automatically generate dependency metadata from the metadata "
+"in upstream Python packages. External dependencies are currently handled "
+"manually, because there is no metadata for this in ``pyproject.toml`` or "
+"any other standard location. Enabling automating this conversion is a key"
+" benefit of this PEP, making packaging Python easier and more reliable. "
+"In addition, the authors envision other types of tools making use of this"
+" information, e.g., dependency analysis tools like Repology_, Dependabot_"
+" and libraries.io_. Software bill of materials (SBOM) generation tools "
+"may also be able to use this information, e.g. for flagging that external"
+" dependencies listed in ``pyproject.toml`` but not contained in wheel "
+"metadata are likely vendored within the wheel."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:53
+msgid ""
+"Packages with external dependencies are typically hard to build from "
+"source, and error messages from build failures tend to be hard to "
+"decipher for end users. Missing external dependencies on the end user's "
+"system are the most likely cause of build failures. If installers can "
+"show the required external dependencies as part of their error message, "
+"this may save users a lot of time."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:59
+msgid ""
+"At the moment, information on external dependencies is only captured in "
+"installation documentation of individual packages. It is hard to maintain"
+" for package authors and tends to go out of date. It's also hard for "
+"users and distro packagers to find it. Having a canonical place to record"
+" this dependency information will improve this situation."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:65
+msgid ""
+"This PEP is not trying to specify how the external dependencies should be"
+" used, nor a mechanism to implement a name mapping from names of "
+"individual packages that are canonical for Python projects published on "
+"PyPI to those of other packaging ecosystems. Those topics should be "
+"addressed in separate PEPs."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:72
+msgid "Rationale"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:75
+msgid "Types of external dependencies"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:77
+msgid "Multiple types of external dependencies can be distinguished:"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:79
+msgid ""
+"Concrete packages that can be identified by name and have a canonical "
+"location in another language-specific package repository. E.g., Rust "
+"packages on `crates.io <https://crates.io/>`__, R packages on `CRAN "
+"<https://cran.r-project.org/>`__, JavaScript packages on the `npm "
+"registry <https://www.npmjs.com/>`__."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:84
+msgid ""
+"Concrete packages that can be identified by name but do not have a clear "
+"canonical location. This is typically the case for libraries and tools "
+"written in C, C++, Fortran, CUDA and other low-level languages. E.g., "
+"Boost, OpenSSL, Protobuf, Intel MKL, GCC."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:88
+msgid ""
+"\"Virtual\" packages, which are names for concepts, types of tools or "
+"interfaces. These typically have multiple implementations, which *are* "
+"concrete packages. E.g., a C++ compiler, BLAS, LAPACK, OpenMP, MPI."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:92
+msgid ""
+"Concrete packages are straightforward to understand, and are a concept "
+"present in virtually every package management system. Virtual packages "
+"are a concept also present in a number of packaging systems -- but not "
+"always, and the details of their implementation varies."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:98
+msgid "Cross compilation"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:100
+msgid ""
+"Cross compilation is not yet (as of August 2023) well-supported by stdlib"
+" modules and ``pyproject.toml`` metadata. It is however important when "
+"translating external dependencies to those of other packaging systems "
+"(with tools like ``pyp2rpm``). Introducing support for cross compilation "
+"immediately in this PEP is much easier than extending ``[external]`` in "
+"the future, hence the authors choose to include this now."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:108
+msgid "Terminology"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:110
+msgid "This PEP uses the following terminology:"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:112
+msgid ""
+"*build machine*: the machine on which the package build process is being "
+"executed"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:114
+msgid ""
+"*host machine*: the machine on which the produced artifact will be "
+"installed and run"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:116
+msgid ""
+"*build dependency*: dependency for building the package that needs to be "
+"present at build time and itself was built for the build machine's OS and"
+" architecture"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:119
+msgid ""
+"*host dependency*: dependency for building the package that needs to be "
+"present at build time and itself was built for the host machine's OS and "
+"architecture"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:123
+msgid ""
+"Note that this terminology is not consistent across build and packaging "
+"tools, so care must be taken when comparing build/host dependencies in "
+"``pyproject.toml`` to dependencies from other package managers."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:127
+msgid ""
+"Note that \"target machine\" or \"target dependency\" is not used in this"
+" PEP. That is typically only relevant for cross-compiling compilers or "
+"other such advanced scenarios [#gcc-cross-terminology]_, [#meson-cross]_ "
+"- this is out of scope for this PEP."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:132
+msgid ""
+"Finally, note that while \"dependency\" is the term most widely used for "
+"packages needed at build time, the existing key in ``pyproject.toml`` for"
+" PyPI build-time dependencies is ``build-requires``. Hence this PEP uses "
+"the keys ``build-requires`` and ``host-requires`` under ``[external]`` "
+"for consistency."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:138
+msgid "Build and host dependencies"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:140
+msgid ""
+"Clear separation of metadata associated with the definition of build and "
+"target platforms, rather than assuming that build and target platform "
+"will always be the same, is important [#pypackaging-native-cross]_."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:144
+msgid ""
+"Build dependencies are typically run during the build process - they may "
+"be compilers, code generators, or other such tools. In case the use of a "
+"build dependency implies a runtime dependency, that runtime dependency "
+"does not have to be declared explicitly. For example, when compiling "
+"Fortran code with ``gfortran`` into a Python extension module, the "
+"package likely incurs a dependency on the ``libgfortran`` runtime "
+"library. The rationale for not explicitly listing such runtime "
+"dependencies is two-fold: (1) it may depend on compiler/linker flags or "
+"details of the build environment whether the dependency is present, and "
+"(2) these runtime dependencies can be detected and handled automatically "
+"by tools like ``auditwheel``."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:155
+msgid ""
+"Host dependencies are typically not run during the build process, but "
+"only used for linking against. This is not a rule though -- it may be "
+"possible or necessary to run a host dependency under an emulator, or "
+"through a custom tool like crossenv_. When host dependencies imply a "
+"runtime dependency, that runtime dependency also does not have to be "
+"declared, just like for build dependencies."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:161
+msgid ""
+"When host dependencies are declared and a tool is not cross-compilation "
+"aware and has to do something with external dependencies, the tool MAY "
+"merge the ``host-requires`` list into ``build-requires``. This may for "
+"example happen if an installer like ``pip`` starts reporting external "
+"dependencies as a likely cause of a build failure when a package fails to"
+" build from an sdist."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:168
+msgid "Specifying external dependencies"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:171
+msgid "Concrete package specification through PURL"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:173
+msgid ""
+"The two types of concrete packages are supported by PURL_ (Package URL), "
+"which implements a scheme for identifying packages that is meant to be "
+"portable across packaging ecosystems. Its design is::"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:179
+msgid ""
+"The ``scheme`` component is a fixed string, ``pkg``, and of the other "
+"components only ``type`` and ``name`` are required. As an example, a "
+"package URL for the ``requests`` package on PyPI would be::"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:185
+msgid ""
+"Adopting PURL to specify external dependencies in ``pyproject.toml`` "
+"solves a number of problems at once - and there are already "
+"implementations of the specification in Python and multiple languages. "
+"PURL is also already supported by dependency-related tooling like SPDX "
+"(see `External Repository Identifiers in the SPDX 2.3 spec "
+"<https://spdx.github.io/spdx-spec/v2.3/external-repository-"
+"identifiers/#f35-purl>`__), the `Open Source Vulnerability format "
+"<https://ossf.github.io/osv-schema/#affectedpackage-field>`__, and the "
+"`Sonatype OSS Index <https://ossindex.sonatype.org/doc/coordinates>`__; "
+"not having to wait years before support in such tooling arrives is "
+"valuable."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:194
+msgid ""
+"For concrete packages without a canonical package manager to refer to, "
+"either ``pkg:generic/pkg-name`` can be used, or a direct reference to the"
+" VCS system that the package is maintained in (e.g., ``pkg:github/user-"
+"or-org-name/pkg-name``). Which of these is more appropriate is situation-"
+"dependent. This PEP recommends using ``pkg:generic`` when the package "
+"name is unambiguous and well-known (e.g., ``pkg:generic/git`` or "
+"``pkg:generic/openblas``), and using the VCS as the PURL type otherwise."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:203
+msgid "Virtual package specification"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:205
+msgid ""
+"There is no ready-made support for virtual packages in PURL or another "
+"standard. There are a relatively limited number of such dependencies "
+"though, and adoption a scheme similar to PURL but with the ``virtual:`` "
+"rather than ``pkg:`` scheme seems like it will be understandable and map "
+"well to Linux distros with virtual packages and the likes of Conda and "
+"Spack."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:211
+msgid "The two known virtual package types are ``compiler`` and ``interface``."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:214
+msgid "Versioning"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:216
+msgid ""
+"Support in PURL for version expressions and ranges beyond a fixed version"
+" is still pending, see the Open Issues section."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:220
+msgid "Dependency specifiers"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:222
+msgid ""
+"Regular Python dependency specifiers (as originally defined in "
+":pep:`508`) may be used behind PURLs. PURL qualifiers, which use ``?`` "
+"followed by a package type-specific dependency specifier component, must "
+"not be used. The reason for this is pragmatic: dependency specifiers are "
+"already used for other metadata in ``pyproject.toml``, any tooling that "
+"is used with ``pyproject.toml`` is likely to already have a robust "
+"implementation to parse it. And we do not expect to need the extra "
+"possibilities that PURL qualifiers provide (e.g. to specify a Conan or "
+"Conda channel, or a RubyGems platform)."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:232
+msgid "Usage of core metadata fields"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:234
+msgid ""
+"The `core metadata`_ specification contains one relevant field, namely "
+"``Requires-External``. This has no well-defined semantics in core "
+"metadata 2.1; this PEP chooses to reuse the field for external runtime "
+"dependencies. The core metadata specification does not contain fields for"
+" any metadata in ``pyproject.toml``'s ``[build-system]`` table. Therefore"
+" the ``build-requires`` and ``host-requires`` content also does not need "
+"to be reflected in core metadata fields. The ``optional-dependencies`` "
+"content from ``[external]`` would need to either reuse ``Provides-Extra``"
+" or require a new ``Provides-External-Extra`` field. Neither seems "
+"desirable."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:245
+msgid "Differences between sdist and wheel metadata"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:247
+msgid ""
+"A wheel may vendor its external dependencies. This happens in particular "
+"when distributing wheels on PyPI or other Python package indexes - and "
+"tools like auditwheel_, delvewheel_ and delocate_ automate this process. "
+"As a result, a ``Requires-External`` entry in an sdist may disappear from"
+" a wheel built from that sdist. It is also possible that a ``Requires-"
+"External`` entry remains in a wheel, either unchanged or with narrower "
+"constraints. ``auditwheel`` does not vendor certain allow-listed "
+"dependencies, such as OpenGL, by default. In addition, ``auditwheel`` and"
+" ``delvewheel`` allow a user to manually exclude dependencies via a "
+"``--exclude`` or ``--no-dll`` command-line flag. This is used to avoid "
+"vendoring large shared libraries, for example those from CUDA."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:258
+msgid ""
+"``Requires-External`` entries generated from external dependencies in "
+"``pyproject.toml`` in a wheel are therefore allowed to be narrower than "
+"those for the corresponding sdist. They must not be wider, i.e. "
+"constraints must not allow a version of a dependency for a wheel that "
+"isn't allowed for an sdist, nor contain new dependencies that are not "
+"listed in the sdist's metadata at all."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:267
+msgid "Specification"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:269
+msgid ""
+"If metadata is improperly specified then tools MUST raise an error to "
+"notify the user about their mistake."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:273
+msgid "Details"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:275
+msgid ""
+"Note that ``pyproject.toml`` content is in the same format as in "
+":pep:`621`."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:278
+msgid "Table name"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:280
+msgid ""
+"Tools MUST specify fields defined by this PEP in a table named "
+"``[external]``. No tools may add fields to this table which are not "
+"defined by this PEP or subsequent PEPs. The lack of an ``[external]`` "
+"table means the package either does not have any external dependencies, "
+"or the ones it does have are assumed to be present on the system already."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:287
+msgid "``build-requires``/``optional-build-requires``"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:289
+msgid ""
+"Format: Array of PURL_ strings (``build-requires``) and a table with "
+"values of arrays of PURL_ strings (``optional-build-requires``)"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:291 ../../peps/pep-0725.rst:308
+msgid "`Core metadata`_: N/A"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:293
+msgid "The (optional) external build requirements needed to build the project."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:295
+msgid ""
+"For ``build-requires``, it is a key whose value is an array of strings. "
+"Each string represents a build requirement of the project and MUST be "
+"formatted as either a valid PURL_ string or a ``virtual:`` string."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:299
+msgid ""
+"For ``optional-build-requires``, it is a table where each key specifies "
+"an extra set of build requirements and whose value is an array of "
+"strings. The strings of the arrays MUST be valid PURL_ strings."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:304
+msgid "``host-requires``/``optional-host-requires``"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:306
+msgid ""
+"Format: Array of PURL_ strings (``host-requires``) and a table with "
+"values of arrays of PURL_ strings (``optional-host-requires``)"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:310
+msgid "The (optional) external host requirements needed to build the project."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:312
+msgid ""
+"For ``host-requires``, it is a key whose value is an array of strings. "
+"Each string represents a host requirement of the project and MUST be "
+"formatted as either a valid PURL_ string or a ``virtual:`` string."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:316
+msgid ""
+"For ``optional-host-requires``, it is a table where each key specifies an"
+" extra set of host requirements and whose value is an array of strings. "
+"The strings of the arrays MUST be valid PURL_ strings."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:321
+msgid "``dependencies``/``optional-dependencies``"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:323
+msgid ""
+"Format: Array of PURL_ strings (``dependencies``) and a table with values"
+" of arrays of PURL_ strings (``optional-dependencies``)"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:325
+msgid "`Core metadata`_: ``Requires-External``, N/A"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:327
+msgid "The (optional) dependencies of the project."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:329
+msgid ""
+"For ``dependencies``, it is a key whose value is an array of strings. "
+"Each string represents a dependency of the project and MUST be formatted "
+"as either a valid PURL_ string or a ``virtual:`` string. Each string maps"
+" directly to a ``Requires-External`` entry in the `core metadata`_."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:334
+msgid ""
+"For ``optional-dependencies``, it is a table where each key specifies an "
+"extra and whose value is an array of strings. The strings of the arrays "
+"MUST be valid PURL_ strings. Optional dependencies do not map to a core "
+"metadata field."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:339
+msgid "Examples"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:341
+msgid ""
+"These examples show what the ``[external]`` content for a number of "
+"packages is expected to be."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:344
+msgid "cryptography 39.0:"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:356
+msgid "SciPy 1.10:"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:378
+msgid "pygraphviz 1.10:"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:390
+msgid "NAVis 1.4.0:"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:408
+msgid "Spyder 6.0:"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:419
+msgid "jupyterlab-git 0.41.0:"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:433
+msgid "PyEnchant 3.2.2:"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:447
+msgid "Backwards Compatibility"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:449
+msgid ""
+"There is no impact on backwards compatibility, as this PEP only adds new,"
+" optional metadata. In the absence of such metadata, nothing changes for "
+"package authors or packaging tooling."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:455
+msgid "Security Implications"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:457
+msgid ""
+"There are no direct security concerns as this PEP covers how to "
+"statically define metadata for external dependencies. Any security issues"
+" would stem from how tools consume the metadata and choose to act upon "
+"it."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:463
+msgid "How to Teach This"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:465
+msgid ""
+"External dependencies and if and how those external dependencies are "
+"vendored are topics that are typically not understood in detail by Python"
+" package authors. We intend to start from how an external dependency is "
+"defined, the different ways it can be depended on---from runtime-only "
+"with ``ctypes`` or a ``subprocess`` call to it being a build dependency "
+"that's linked against--- before going into how to declare external "
+"dependencies in metadata. The documentation should make explicit what is "
+"relevant for package authors, and what for distro packagers."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:474
+msgid ""
+"Material on this topic will be added to the most relevant packaging "
+"tutorials, primarily the `Python Packaging User Guide`_. In addition, we "
+"expect that any build backend that adds support for external dependencies"
+" metadata will include information about that in its documentation, as "
+"will tools like ``auditwheel``."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:481
+msgid "Reference Implementation"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:483
+msgid "There is no reference implementation at this time."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:487
+msgid "Rejected Ideas"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:490
+msgid "Specific syntax for external dependencies which are also packaged on PyPI"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:492
+msgid ""
+"There are non-Python packages which are packaged on PyPI, such as Ninja, "
+"patchelf and CMake. What is typically desired is to use the system "
+"version of those, and if it's not present on the system then install the "
+"PyPI package for it. The authors believe that specific support for this "
+"scenario is not necessary (or too complex to justify such support); a "
+"dependency provider for external dependencies can treat PyPI as one "
+"possible source for obtaining the package."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:501
+msgid "Using library and header names as external dependencies"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:503
+msgid ""
+"A previous draft PEP (`\"External dependencies\" (2015) "
+"<https://github.com/pypa/interoperability-peps/pull/30>`__) proposed "
+"using specific library and header names as external dependencies. This is"
+" too granular; using package names is a well-established pattern across "
+"packaging ecosystems and should be preferred."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:510
+msgid "Open Issues"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:513
+msgid "Version specifiers for PURLs"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:515
+msgid ""
+"Support in PURL for version expressions and ranges is still pending. The "
+"pull request at `vers implementation for PURL`_ seems close to being "
+"merged, at which point this PEP could adopt it."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:520
+msgid "Syntax for virtual dependencies"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:522
+msgid ""
+"The current syntax this PEP uses for virtual dependencies is "
+"``virtual:type/name``, which is analogous to but not part of the PURL "
+"spec. This open issue discusses supporting virtual dependencies within "
+"PURL: `purl-spec#222 <https://github.com/package-url/purl-"
+"spec/issues/222>`__."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:528
+msgid "Should a ``host-requires`` key be added under ``[build-system]``?"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:530
+msgid ""
+"Adding ``host-requires`` for host dependencies that are on PyPI in order "
+"to better support name mapping to other packaging systems with support "
+"for cross-compiling may make sense. `This issue "
+"<https://github.com/rgommers/peps/issues/6>`__ tracks this topic and has "
+"arguments in favor and against adding ``host-requires`` under ``[build-"
+"system]`` as part of this PEP."
+msgstr ""
+
+#: ../../peps/pep-0725.rst:539
+msgid "References"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:541
+msgid ""
+"The \"define native requirements metadata\" part of the \"Wanting a "
+"singular packaging vision\" thread (2022, Discourse): "
+"https://discuss.python.org/t/wanting-a-singular-packaging-tool-"
+"vision/21141/92"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:545
+msgid ""
+"pypackaging-native: \"Native dependencies\" https://pypackaging-"
+"native.github.io/key-issues/native-dependencies/"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:548
+msgid ""
+"GCC documentation - Configure Terms and History, "
+"https://gcc.gnu.org/onlinedocs/gccint/Configure-Terms.html"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:551
+msgid ""
+"Meson documentation - Cross compilation https://mesonbuild.com/Cross-"
+"compilation.html"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:554
+msgid ""
+"pypackaging-native: \"Cross compilation\" https://pypackaging-"
+"native.github.io/key-issues/cross_compilation/"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:557
+msgid ""
+"The \"``pkgconfig`` specification as an alternative to "
+"``ctypes.util.find_library``\" thread (2023, Discourse): "
+"https://discuss.python.org/t/pkgconfig-specification-as-an-alternative-"
+"to-ctypes-util-find-library/31379"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:563
+msgid "Copyright"
+msgstr ""
+
+#: ../../peps/pep-0725.rst:565
+msgid ""
+"This document is placed in the public domain or under the "
+"CC0-1.0-Universal license, whichever is more permissive."
+msgstr ""
+

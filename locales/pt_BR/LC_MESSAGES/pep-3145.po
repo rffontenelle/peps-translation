@@ -6,263 +6,329 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PEPs\n"
+"Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 20:07+0000\n"
+"POT-Creation-Date: 2023-11-20 10:43-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.13.1\n"
 
-#: ../pep-3145.txt
+#: ../../peps/pep-3145.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../pep-3145.txt:5
+#: ../../peps/pep-3145.rst:3
 msgid "Eric Pruitt, Charles R. McCreary, Josiah Carlson"
 msgstr ""
 
-#: ../pep-3145.txt
+#: ../../peps/pep-3145.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../pep-3145.txt:6
+#: ../../peps/pep-3145.rst:4
 msgid "Withdrawn"
 msgstr ""
 
-#: ../pep-3145.txt
+#: ../../peps/pep-3145.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../pep-3145.txt:7
+#: ../../peps/pep-3145.rst:5
 msgid "Standards Track"
 msgstr ""
 
-#: ../pep-3145.txt
+#: ../../peps/pep-3145.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../pep-3145.txt:9
+#: ../../peps/pep-3145.rst:7
 msgid "04-Aug-2009"
 msgstr ""
 
-#: ../pep-3145.txt
+#: ../../peps/pep-3145.rst
 msgid "Python-Version"
 msgstr ""
 
-#: ../pep-3145.txt:10
+#: ../../peps/pep-3145.rst:8
 msgid "3.2"
 msgstr ""
 
-#: ../pep-3145.txt
+#: ../../peps/pep-3145.rst
 msgid "Post-History"
 msgstr "Pós-história"
 
-#: ../pep-3145.txt:15
+#: ../../peps/pep-3145.rst:13
 msgid "Abstract"
 msgstr ""
 
-#: ../pep-3145.txt:17
+#: ../../peps/pep-3145.rst:15
 msgid ""
 "In its present form, the ``subprocess.Popen`` implementation is prone to "
-"dead-locking and blocking of the parent Python script while waiting on data "
-"from the child process. This PEP proposes to make ``subprocess.Popen`` more "
-"asynchronous to help alleviate these problems."
+"dead-locking and blocking of the parent Python script while waiting on "
+"data from the child process. This PEP proposes to make "
+"``subprocess.Popen`` more asynchronous to help alleviate these problems."
 msgstr ""
 
-#: ../pep-3145.txt:25
+#: ../../peps/pep-3145.rst:23
 msgid "PEP Deferral"
 msgstr ""
 
-#: ../pep-3145.txt:27
+#: ../../peps/pep-3145.rst:25
 msgid ""
-"Further exploration of the concepts covered in this PEP has been deferred at "
-"least until after :pep:`3156` has been resolved."
+"Further exploration of the concepts covered in this PEP has been deferred"
+" at least until after :pep:`3156` has been resolved."
 msgstr ""
 
-#: ../pep-3145.txt:32
+#: ../../peps/pep-3145.rst:30
 msgid "PEP Withdrawal"
 msgstr ""
 
-#: ../pep-3145.txt:34
+#: ../../peps/pep-3145.rst:32
 msgid ""
-"This can be dealt with in the bug tracker.  A specific proposal is attached "
-"to [11]_."
+"This can be dealt with in the bug tracker.  A specific proposal is "
+"attached to [11]_."
 msgstr ""
 
-#: ../pep-3145.txt:39
+#: ../../peps/pep-3145.rst:37
 msgid "Motivation"
 msgstr ""
 
-#: ../pep-3145.txt:41
+#: ../../peps/pep-3145.rst:39
 msgid ""
 "A search for \"python asynchronous subprocess\" will turn up numerous "
-"accounts of people wanting to execute a child process and communicate with "
-"it from time to time reading only the data that is available instead of "
-"blocking to wait for the program to produce data [1]_ [2]_ [3]_.  The "
-"current behavior of the ``subprocess`` module is that when a user sends or "
-"receives data via the stdin, stderr and stdout file objects, dead locks are "
-"common and documented [4]_ [5]_.  While communicate can be used to alleviate "
-"some of the buffering issues, it will still cause the parent process to "
-"block while attempting to read data when none is available to be read from "
-"the child process."
+"accounts of people wanting to execute a child process and communicate "
+"with it from time to time reading only the data that is available instead"
+" of blocking to wait for the program to produce data [1]_ [2]_ [3]_.  The"
+" current behavior of the ``subprocess`` module is that when a user sends "
+"or receives data via the stdin, stderr and stdout file objects, dead "
+"locks are common and documented [4]_ [5]_.  While communicate can be used"
+" to alleviate some of the buffering issues, it will still cause the "
+"parent process to block while attempting to read data when none is "
+"available to be read from the child process."
 msgstr ""
 
-#: ../pep-3145.txt:54
+#: ../../peps/pep-3145.rst:52
 msgid "Rationale"
 msgstr ""
 
-#: ../pep-3145.txt:56
+#: ../../peps/pep-3145.rst:54
 msgid ""
-"There is a documented need for asynchronous, non-blocking functionality in "
-"``subprocess.Popen`` [6]_ [7]_ [2]_ [3]_.  Inclusion of the code would "
-"improve the utility of the Python standard library that can be used on Unix "
-"based and Windows builds of Python.  Practically every I/O object in Python "
-"has a file-like wrapper of some sort.  Sockets already act as such and for "
-"strings there is ``StringIO``.  Popen can be made to act like a file by "
-"simply using the methods attached to the ``subprocess.Popen.stderr``, stdout "
-"and stdin file-like objects.  But when using the read and write methods of "
-"those options, you do not have the benefit of asynchronous I/O.  In the "
-"proposed solution the wrapper wraps the asynchronous methods to mimic a file "
-"object."
+"There is a documented need for asynchronous, non-blocking functionality "
+"in ``subprocess.Popen`` [6]_ [7]_ [2]_ [3]_.  Inclusion of the code would"
+" improve the utility of the Python standard library that can be used on "
+"Unix based and Windows builds of Python.  Practically every I/O object in"
+" Python has a file-like wrapper of some sort.  Sockets already act as "
+"such and for strings there is ``StringIO``.  Popen can be made to act "
+"like a file by simply using the methods attached to the "
+"``subprocess.Popen.stderr``, stdout and stdin file-like objects.  But "
+"when using the read and write methods of those options, you do not have "
+"the benefit of asynchronous I/O.  In the proposed solution the wrapper "
+"wraps the asynchronous methods to mimic a file object."
 msgstr ""
 
-#: ../pep-3145.txt:70
+#: ../../peps/pep-3145.rst:68
 msgid "Reference Implementation"
 msgstr ""
 
-#: ../pep-3145.txt:72
+#: ../../peps/pep-3145.rst:70
 msgid ""
 "I have been maintaining a Google Code repository that contains all of my "
-"changes including tests and documentation [9]_ as well as blog detailing the "
-"problems I have come across in the development process [10]_."
+"changes including tests and documentation [9]_ as well as blog detailing "
+"the problems I have come across in the development process [10]_."
 msgstr ""
 
-#: ../pep-3145.txt:76
+#: ../../peps/pep-3145.rst:74
 msgid ""
 "I have been working on implementing non-blocking asynchronous I/O in the "
-"``subprocess`` module as well as a wrapper class for ``subprocess.Popen`` "
-"that makes it so that an executed process can take the place of a file by "
-"duplicating all of the methods and attributes that file objects have."
+"``subprocess`` module as well as a wrapper class for ``subprocess.Popen``"
+" that makes it so that an executed process can take the place of a file "
+"by duplicating all of the methods and attributes that file objects have."
 msgstr ""
 
-#: ../pep-3145.txt:81
+#: ../../peps/pep-3145.rst:79
 msgid ""
-"There are two base functions that have been added to the ``subprocess."
-"Popen`` class: ``Popen.send`` and ``Popen._recv``, each with two separate "
-"implementations, one for Windows and one for Unix-based systems.  The "
-"Windows implementation uses ctypes to access the functions needed to control "
-"pipes in the kernel 32 DLL in an asynchronous manner.  On Unix based "
-"systems, the Python interface for file control serves the same purpose.  The "
-"different implementations of ``Popen.send`` and ``Popen._recv`` have "
-"identical arguments to make code that uses these functions work across "
-"multiple platforms."
+"There are two base functions that have been added to the "
+"``subprocess.Popen`` class: ``Popen.send`` and ``Popen._recv``, each with"
+" two separate implementations, one for Windows and one for Unix-based "
+"systems.  The Windows implementation uses ctypes to access the functions "
+"needed to control pipes in the kernel 32 DLL in an asynchronous manner.  "
+"On Unix based systems, the Python interface for file control serves the "
+"same purpose.  The different implementations of ``Popen.send`` and "
+"``Popen._recv`` have identical arguments to make code that uses these "
+"functions work across multiple platforms."
 msgstr ""
 
-#: ../pep-3145.txt:91
+#: ../../peps/pep-3145.rst:89
 msgid ""
 "When calling the ``Popen._recv`` function, it requires the pipe name be "
 "passed as an argument so there exists the ``Popen.recv`` function that "
-"passes selects stdout as the pipe for ``Popen._recv`` by default. ``Popen."
-"recv_err`` selects stderr as the pipe by default. ``Popen.recv`` and ``Popen."
-"recv_err`` are much easier to read and understand than ``Popen."
-"_recv('stdout' ...)`` and ``Popen._recv('stderr' ...)`` respectively."
+"passes selects stdout as the pipe for ``Popen._recv`` by default. "
+"``Popen.recv_err`` selects stderr as the pipe by default. ``Popen.recv`` "
+"and ``Popen.recv_err`` are much easier to read and understand than "
+"``Popen._recv('stdout' ...)`` and ``Popen._recv('stderr' ...)`` "
+"respectively."
 msgstr ""
 
-#: ../pep-3145.txt:98
+#: ../../peps/pep-3145.rst:96
 msgid ""
 "Since the ``Popen._recv`` function does not wait on data to be produced "
 "before returning a value, it may return empty bytes. ``Popen.asyncread`` "
 "handles this issue by returning all data read over a given time interval."
 msgstr ""
 
-#: ../pep-3145.txt:103
+#: ../../peps/pep-3145.rst:101
 msgid ""
 "The ``ProcessIOWrapper`` class uses the ``asyncread`` and ``asyncwrite`` "
 "functions to allow a process to act like a file so that there are no "
-"blocking issues that can arise from using the stdout and stdin file objects "
-"produced from a ``subprocess.Popen`` call."
+"blocking issues that can arise from using the stdout and stdin file "
+"objects produced from a ``subprocess.Popen`` call."
 msgstr ""
 
-#: ../pep-3145.txt:110
+#: ../../peps/pep-3145.rst:108
 msgid "References"
 msgstr "Referências"
 
-#: ../pep-3145.txt:112
+#: ../../peps/pep-3145.rst:110
 msgid ""
-"[ python-Feature Requests-1191964 ] asynchronous Subprocess https://mail."
-"python.org/pipermail/python-bugs-list/2006-December/ 036524.html"
+"[ python-Feature Requests-1191964 ] asynchronous Subprocess "
+"https://mail.python.org/pipermail/python-bugs-"
+"list/2006-December/036524.html"
 msgstr ""
 
-#: ../pep-3145.txt:116
+#: ../../peps/pep-3145.rst:113
 msgid ""
-"Daily Life in an Ivory Basement : /feb-07/problems-with-subprocess http://"
-"ivory.idyll.org/blog/feb-07/problems-with-subprocess"
+"Daily Life in an Ivory Basement : /feb-07/problems-with-subprocess "
+"http://ivory.idyll.org/blog/problems-with-subprocess.html"
 msgstr ""
 
-#: ../pep-3145.txt:119
+#: ../../peps/pep-3145.rst:116
 msgid ""
 "How can I run an external command asynchronously from Python? - Stack "
-"Overflow http://stackoverflow.com/questions/636561/how-can-i-run-an-"
-"external- command-asynchronously-from-python"
+"Overflow https://stackoverflow.com/q/636561"
 msgstr ""
 
-#: ../pep-3145.txt:124
+#: ../../peps/pep-3145.rst:120
 msgid ""
 "18.1. subprocess - Subprocess management - Python v2.6.2 documentation "
-"http://docs.python.org/library/subprocess.html#subprocess.Popen.wait"
+"https://docs.python.org/2.6/library/subprocess.html#subprocess.Popen.wait"
 msgstr ""
 
-#: ../pep-3145.txt:127
+#: ../../peps/pep-3145.rst:123
 msgid ""
 "18.1. subprocess - Subprocess management - Python v2.6.2 documentation "
-"http://docs.python.org/library/subprocess.html#subprocess.Popen.kill"
+"https://docs.python.org/2.6/library/subprocess.html#subprocess.Popen.kill"
 msgstr ""
 
-#: ../pep-3145.txt:130
+#: ../../peps/pep-3145.rst:126
 msgid ""
-"Issue 1191964: asynchronous Subprocess - Python tracker http://bugs.python."
-"org/issue1191964"
+"Issue 1191964: asynchronous Subprocess - Python tracker "
+"https://github.com/python/cpython/issues/41922"
 msgstr ""
 
-#: ../pep-3145.txt:133
+#: ../../peps/pep-3145.rst:129
 msgid ""
-"Module to allow Asynchronous subprocess use on Windows and Posix platforms - "
-"ActiveState Code http://code.activestate.com/recipes/440554/"
+"Module to allow Asynchronous subprocess use on Windows and Posix "
+"platforms - ActiveState Code https://code.activestate.com/recipes/440554/"
 msgstr ""
 
-#: ../pep-3145.txt:137
+#: ../../peps/pep-3145.rst:133
 msgid ""
-"subprocess.rst - subprocdev - Project Hosting on Google Code http://code."
-"google.com/p/subprocdev/source/browse/doc/subprocess.rst?"
-"spec=svn2c925e935cad0166d5da85e37c742d8e7f609de5&r=2c925e935cad0166d5da85e37c742d8e7f609de5#437"
+"[8] subprocess.rst - subprocdev - Project Hosting on Google Code \\   "
+"https://web.archive.org/web/20130306074135/http://code.google.com/p/subprocdev/source/browse/doc/subprocess.rst?spec=svn2c925e935cad0166d5da85e37c742d8e7f609de5&r=2c925e935cad0166d5da85e37c742d8e7f609de5"
 msgstr ""
 
-#: ../pep-3145.txt:140
+#: ../../peps/pep-3145.rst:136
 msgid ""
-"subprocdev - Project Hosting on Google Code http://code.google.com/p/"
-"subprocdev"
+"subprocdev - Project Hosting on Google Code "
+"https://code.google.com/archive/p/subprocdev/"
 msgstr ""
 
-#: ../pep-3145.txt:143
-msgid "Python Subprocess Dev http://subdev.blogspot.com/"
+#: ../../peps/pep-3145.rst:139
+msgid "Python Subprocess Dev https://subdev.blogspot.com/"
 msgstr ""
 
-#: ../pep-3145.txt:146
+#: ../../peps/pep-3145.rst:142
 msgid ""
-"https://bugs.python.org/issue18823 -- Idle: use pipes instead of sockets to "
-"talk with user subprocess"
+"https://github.com/python/cpython/issues/63023 -- Idle: use pipes instead"
+" of sockets to talk with user subprocess"
 msgstr ""
 
-#: ../pep-3145.txt:150
+#: ../../peps/pep-3145.rst:146
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../pep-3145.txt:152
+#: ../../peps/pep-3145.rst:148
 msgid ""
-"This P.E.P. is licensed under the Open Publication License; http://www."
-"opencontent.org/openpub/."
+"This P.E.P. is licensed under the Open Publication License; "
+"http://www.opencontent.org/openpub/."
 msgstr ""
+
+#~ msgid ""
+#~ "[ python-Feature Requests-1191964 ] "
+#~ "asynchronous Subprocess https://mail.python.org/pipermail"
+#~ "/python-bugs-list/2006-December/ 036524.html"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Daily Life in an Ivory Basement :"
+#~ " /feb-07/problems-with-subprocess "
+#~ "http://ivory.idyll.org/blog/feb-07/problems-with-"
+#~ "subprocess"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "How can I run an external command"
+#~ " asynchronously from Python? - Stack "
+#~ "Overflow http://stackoverflow.com/questions/636561/how-"
+#~ "can-i-run-an-external- command-"
+#~ "asynchronously-from-python"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "18.1. subprocess - Subprocess management "
+#~ "- Python v2.6.2 documentation "
+#~ "http://docs.python.org/library/subprocess.html#subprocess.Popen.wait"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "18.1. subprocess - Subprocess management "
+#~ "- Python v2.6.2 documentation "
+#~ "http://docs.python.org/library/subprocess.html#subprocess.Popen.kill"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Issue 1191964: asynchronous Subprocess - "
+#~ "Python tracker http://bugs.python.org/issue1191964"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Module to allow Asynchronous subprocess "
+#~ "use on Windows and Posix platforms "
+#~ "- ActiveState Code "
+#~ "http://code.activestate.com/recipes/440554/"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "subprocess.rst - subprocdev - Project "
+#~ "Hosting on Google Code "
+#~ "http://code.google.com/p/subprocdev/source/browse/doc/subprocess.rst?spec=svn2c925e935cad0166d5da85e37c742d8e7f609de5&r=2c925e935cad0166d5da85e37c742d8e7f609de5#437"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "subprocdev - Project Hosting on Google"
+#~ " Code http://code.google.com/p/subprocdev"
+#~ msgstr ""
+
+#~ msgid "Python Subprocess Dev http://subdev.blogspot.com/"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "https://bugs.python.org/issue18823 -- Idle: use "
+#~ "pipes instead of sockets to talk "
+#~ "with user subprocess"
+#~ msgstr ""
+

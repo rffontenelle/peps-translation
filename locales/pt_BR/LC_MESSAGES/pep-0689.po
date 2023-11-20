@@ -6,90 +6,103 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PEPs\n"
+"Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 20:07+0000\n"
+"POT-Creation-Date: 2023-11-20 10:43-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.13.1\n"
 
-#: ../pep-0689.rst
+#: ../../peps/pep-0689.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../pep-0689.rst:3
+#: ../../peps/pep-0689.rst:3
 msgid "Petr Viktorin <encukou@gmail.com>"
 msgstr ""
 
-#: ../pep-0689.rst
+#: ../../peps/pep-0689.rst
 msgid "Discussions-To"
 msgstr ""
 
-#: ../pep-0689.rst:4
+#: ../../peps/pep-0689.rst:4
 msgid "https://discuss.python.org/t/pep-689-unstable-c-api-tier/20452"
 msgstr ""
 
-#: ../pep-0689.rst
+#: ../../peps/pep-0689.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../pep-0689.rst:5
-msgid "Draft"
+#: ../../peps/pep-0689.rst:5
+msgid "Final"
 msgstr ""
 
-#: ../pep-0689.rst
+#: ../../peps/pep-0689.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../pep-0689.rst:6
+#: ../../peps/pep-0689.rst:6
 msgid "Standards Track"
 msgstr ""
 
-#: ../pep-0689.rst
+#: ../../peps/pep-0689.rst
 msgid "Requires"
 msgstr ""
 
-#: ../pep-0689.rst:8
+#: ../../peps/pep-0689.rst:8
 msgid "523"
 msgstr ""
 
-#: ../pep-0689.rst
+#: ../../peps/pep-0689.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../pep-0689.rst:9
+#: ../../peps/pep-0689.rst:9
 msgid "22-Apr-2022"
 msgstr ""
 
-#: ../pep-0689.rst
+#: ../../peps/pep-0689.rst
 msgid "Python-Version"
 msgstr ""
 
-#: ../pep-0689.rst:10
+#: ../../peps/pep-0689.rst:10
 msgid "3.12"
 msgstr ""
 
-#: ../pep-0689.rst
+#: ../../peps/pep-0689.rst
 msgid "Post-History"
 msgstr "Pós-história"
 
-#: ../pep-0689.rst:11
+#: ../../peps/pep-0689.rst:11
 msgid ""
-"`27-Apr-2022 <https://mail.python.org/archives/list/python-dev@python.org/"
-"thread/PQXSP7E2B6KNXTJ2AERWMKKX42YP5D6O/>`__, `25-Aug-2022 <https://discuss."
-"python.org/t/c-api-what-should-the-leading-underscore-py-mean/18486>`__, `27-"
-"Oct-2022 <https://discuss.python.org/t/pep-689-unstable-c-api-tier/20452>`__,"
+"`27-Apr-2022 <https://mail.python.org/archives/list/python-"
+"dev@python.org/thread/PQXSP7E2B6KNXTJ2AERWMKKX42YP5D6O/>`__, `25-Aug-2022"
+" <https://discuss.python.org/t/c-api-what-should-the-leading-underscore-"
+"py-mean/18486>`__, `27-Oct-2022 "
+"<https://discuss.python.org/t/pep-689-unstable-c-api-tier/20452>`__,"
 msgstr ""
 
-#: ../pep-0689.rst:17
+#: ../../peps/pep-0689.rst
+msgid "Resolution"
+msgstr ""
+
+#: ../../peps/pep-0689.rst:14
+msgid "https://discuss.python.org/t/pep-689-unstable-c-api-tier/20452/13"
+msgstr ""
+
+#: ../../peps/pep-0689.rst:18
+msgid "User-facing documentation is at :ref:`py3.12:unstable-c-api`."
+msgstr ""
+
+#: ../../peps/pep-0689.rst:22
 msgid "Abstract"
 msgstr ""
 
-#: ../pep-0689.rst:19
+#: ../../peps/pep-0689.rst:24
 msgid ""
 "Some functions and types of the C-API are designated *unstable*, meaning "
 "that they will not change in patch (bugfix/security) releases, but may "
@@ -97,439 +110,488 @@ msgid ""
 "deprecation warnings."
 msgstr ""
 
-#: ../pep-0689.rst:24
+#: ../../peps/pep-0689.rst:29
 msgid ""
-"Any C API with a leading underscore is designated *internal*, meaning that "
-"it may change or disappear without any notice."
+"Any C API with a leading underscore is designated *internal*, meaning "
+"that it may change or disappear without any notice."
 msgstr ""
 
-#: ../pep-0689.rst:29
+#: ../../peps/pep-0689.rst:34
 msgid "Motivation & Rationale"
 msgstr ""
 
-#: ../pep-0689.rst:32
+#: ../../peps/pep-0689.rst:37
 msgid "Unstable C API tier"
 msgstr ""
 
-#: ../pep-0689.rst:34
+#: ../../peps/pep-0689.rst:39
 msgid ""
-"The Python C-API is currently divided into `three stability tiers <https://"
-"devguide.python.org/developer-workflow/c-api/index.html>`__:"
+"The Python C-API is currently divided into `three stability tiers "
+"<https://devguide.python.org/developer-workflow/c-api/index.html>`__:"
 msgstr ""
 
-#: ../pep-0689.rst:36
+#: ../../peps/pep-0689.rst:41
 msgid "Limited API, with high compatibility expectations"
 msgstr ""
 
-#: ../pep-0689.rst:37
+#: ../../peps/pep-0689.rst:42
 msgid ""
-"Public API, which follows the :pep:`backwards compatibility policy <387>`, "
-"and requires deprecation warnings before changes"
+"Public API, which follows the :pep:`backwards compatibility policy "
+"<387>`, and requires deprecation warnings before changes"
 msgstr ""
 
-#: ../pep-0689.rst:39
+#: ../../peps/pep-0689.rst:44
 msgid "Internal (private) API, which can change at any time."
 msgstr ""
 
-#: ../pep-0689.rst:41
+#: ../../peps/pep-0689.rst:46
 msgid ""
-"Tools requring access to CPython internals (e.g. advanced debuggers and JIT "
-"compilers) are often built for minor series releases of CPython, and assume "
-"that the C-API internals used do not change in patch releases. To support "
-"these tools, we need a tier between the Public and Private C-API, with "
-"guarantees on stability throughout the minor-series release: the proposed "
-"*Unstable tier*."
+"Tools requiring access to CPython internals (e.g. advanced debuggers and "
+"JIT compilers) are often built for minor series releases of CPython, and "
+"assume that the C-API internals used do not change in patch releases. To "
+"support these tools, we need a tier between the Public and Private C-API,"
+" with guarantees on stability throughout the minor-series release: the "
+"proposed *Unstable tier*."
 msgstr ""
 
-#: ../pep-0689.rst:48
+#: ../../peps/pep-0689.rst:53
 msgid ""
-"Some functions, like ``PyCode_New()``, are documented as unstable (“Calling "
-"[it] directly can bind you to a precise Python version”), and also often "
-"change in practice. The unstable tier should make their status obvious even "
-"to people who don't read the docs carefully enough, making them hard to use "
-"accidentally."
+"Some functions, like ``PyCode_New()``, are documented as unstable "
+"(“Calling [it] directly can bind you to a precise Python version”), and "
+"also often change in practice. The unstable tier should make their status"
+" obvious even to people who don't read the docs carefully enough, making "
+"them hard to use accidentally."
 msgstr ""
 
-#: ../pep-0689.rst:56
+#: ../../peps/pep-0689.rst:61
 msgid "Reserving leading underscores for Private API"
 msgstr ""
 
-#: ../pep-0689.rst:58
+#: ../../peps/pep-0689.rst:63
 msgid ""
-"Currently, CPython developers don't agree on the exact meaning of a leading "
-"underscore in API names. It is used to mean two different things:"
+"Currently, CPython developers don't agree on the exact meaning of a "
+"leading underscore in API names. It is used to mean two different things:"
 msgstr ""
 
-#: ../pep-0689.rst:62
+#: ../../peps/pep-0689.rst:67
 msgid ""
-"API that may change between minor releases, as in the Unstable tier proposed "
-"here (e.g. functions introduced in :pep:`523`)."
+"API that may change between minor releases, as in the Unstable tier "
+"proposed here (e.g. functions introduced in :pep:`523`)."
 msgstr ""
 
-#: ../pep-0689.rst:64
+#: ../../peps/pep-0689.rst:69
 msgid ""
-"API that is *private* and should not be used outside of CPython at all (e.g. "
-"because it may change without notice, or it relies on undocumented "
+"API that is *private* and should not be used outside of CPython at all "
+"(e.g. because it may change without notice, or it relies on undocumented "
 "assumptions that non-CPython code cannot guarantee)."
 msgstr ""
 
-#: ../pep-0689.rst:68
+#: ../../peps/pep-0689.rst:73
 msgid ""
-"The unclear meaning makes the underscore less useful than it could be. If it "
-"only marked *private* API, CPython developers could change underscored "
-"functions, or remove unused ones, without researching how they're documented "
-"or used outside CPython."
+"The unclear meaning makes the underscore less useful than it could be. If"
+" it only marked *private* API, CPython developers could change "
+"underscored functions, or remove unused ones, without researching how "
+"they're documented or used outside CPython."
 msgstr ""
 
-#: ../pep-0689.rst:73
+#: ../../peps/pep-0689.rst:78
 msgid ""
 "With the introduction of a dedicated unstable tier, we can clarify the "
 "meaning of the leading underscore. It should mark private API only."
 msgstr ""
 
-#: ../pep-0689.rst:78
+#: ../../peps/pep-0689.rst:83
 msgid "Not breaking code unnecessarily"
 msgstr ""
 
-#: ../pep-0689.rst:80
+#: ../../peps/pep-0689.rst:85
 msgid ""
-"This PEP specifies that API in the unstable tier should have a special name "
-"prefix. This means functions (macros, etc.) will need to be renamed. After a "
-"rename, the old name should continue to be available until an incompatible "
-"change is made (i.e. until call sites need to be updated anyway). In other "
-"words, just changing the tier of a function shouldn't break users' code."
+"This PEP specifies that API in the unstable tier should have a special "
+"name prefix. This means functions (macros, etc.) will need to be renamed."
+" After a rename, the old name should continue to be available until an "
+"incompatible change is made (i.e. until call sites need to be updated "
+"anyway). In other words, just changing the tier of a function shouldn't "
+"break users' code."
 msgstr ""
 
-#: ../pep-0689.rst:90
+#: ../../peps/pep-0689.rst:95
 msgid "Specification"
 msgstr ""
 
-#: ../pep-0689.rst:92
+#: ../../peps/pep-0689.rst:97
 msgid ""
 "The C API is divided by stability expectations into `three “sections” "
 "<https://devguide.python.org/developer-workflow/c-api/index.html>`__ "
-"(internal, public, and limited). We'll now call these *stability tiers*, or "
-"*tiers* for short."
+"(internal, public, and limited). We'll now call these *stability tiers*, "
+"or *tiers* for short."
 msgstr ""
 
-#: ../pep-0689.rst:96
+#: ../../peps/pep-0689.rst:101
 msgid "An *Unstable tier* will be added."
 msgstr ""
 
-#: ../pep-0689.rst:98
+#: ../../peps/pep-0689.rst:103
 msgid ""
 "APIs (functions, types, etc.) in this tier will named with the "
 "``PyUnstable_`` prefix, with no leading underscore."
 msgstr ""
 
-#: ../pep-0689.rst:101
+#: ../../peps/pep-0689.rst:106
 msgid ""
 "They will be declared in headers used for public API (``Include/*.h``, "
-"rather than in a subdirectory like ``Include/ustable/``)."
+"rather than in a subdirectory like ``Include/unstable/``)."
 msgstr ""
 
-#: ../pep-0689.rst:104
+#: ../../peps/pep-0689.rst:109
 msgid "Several rules for dealing with the unstable tier will be introduced:"
 msgstr ""
 
-#: ../pep-0689.rst:106
+#: ../../peps/pep-0689.rst:111
 msgid ""
 "Unstable API should have no backwards-incompatible changes across patch "
-"releases, but may change or be removed in minor releases (3.x.0, including "
-"Alpha and Beta releases of 3.x.0). Such changes must be documented and "
-"mentioned in the What's New document."
+"releases, but may change or be removed in minor releases (3.x.0, "
+"including Alpha and Beta releases of 3.x.0). Such changes must be "
+"documented and mentioned in the What's New document."
 msgstr ""
 
-#: ../pep-0689.rst:111
+#: ../../peps/pep-0689.rst:116
 msgid ""
 "Backwards-incompatible changes to these APIs should be made so that code "
-"that uses them will need to be updated to compile with the new version (e.g. "
-"arguments should be added/removed, or a function should be renamed, but the "
-"semantic meaning of an argument should not change)."
+"that uses them will need to be updated to compile with the new version "
+"(e.g. arguments should be added/removed, or a function should be renamed,"
+" but the semantic meaning of an argument should not change)."
 msgstr ""
 
-#: ../pep-0689.rst:116
+#: ../../peps/pep-0689.rst:121
 msgid "Unstable API should be documented and tested."
 msgstr ""
 
-#: ../pep-0689.rst:118
+#: ../../peps/pep-0689.rst:123
 msgid ""
 "To move an API from the public tier to the unstable tier, it should be "
 "exposed under the new ``PyUnstable_*`` name."
 msgstr ""
 
-#: ../pep-0689.rst:121
+#: ../../peps/pep-0689.rst:126
 msgid ""
 "The old name should be deprecated (e.g. with ``Py_DEPRECATED``), but "
-"continue to be available until an incompatible change is made to the API. "
-"Per Python's backwards compatibility policy (:pep:`387`), this deprecation "
-"needs to last *at least* two releases (without an SC exceptions). But it can "
-"also last indefinitely -- for example, if :pep:`590`'s :pep:`“provisional” "
-"<590#finalizing-the-api>` ``_PyObject_Vectorcall`` was added today, it would "
-"be initially named ``PyUnstable_Object_Vectorcall`` and there would be no "
-"plan to remove this name."
+"continue to be available until an incompatible change is made to the API."
+" Per Python's backwards compatibility policy (:pep:`387`), this "
+"deprecation needs to last *at least* two releases (without an SC "
+"exceptions). But it can also last indefinitely -- for example, if "
+":pep:`590`'s :pep:`“provisional” <590#finalizing-the-api>` "
+"``_PyObject_Vectorcall`` was added today, it would be initially named "
+"``PyUnstable_Object_Vectorcall`` and there would be no plan to remove "
+"this name."
 msgstr ""
 
-#: ../pep-0689.rst:131
+#: ../../peps/pep-0689.rst:136
 msgid ""
 "In the following cases, an incompatible change (and thus removing the "
-"deprecated name) is allowed without an SC exeption, as if the function was "
-"already part of the Unstable tier:"
+"deprecated name) is allowed without an SC exception, as if the function "
+"was already part of the Unstable tier:"
 msgstr ""
 
-#: ../pep-0689.rst:135
+#: ../../peps/pep-0689.rst:140
 msgid ""
-"Any API introduced before Python 3.12 that is *documented* to be less stable "
-"than default."
+"Any API introduced before Python 3.12 that is *documented* to be less "
+"stable than default."
 msgstr ""
 
-#: ../pep-0689.rst:137
+#: ../../peps/pep-0689.rst:142
 msgid ""
 "Any API introduced before Python 3.12 that was named with a leading "
 "underscore."
 msgstr ""
 
-#: ../pep-0689.rst:140
-msgid ""
-"For examples, see the :ref:`initial unstable API <pep689-initial-list>` "
-"specified in this PEP."
+#: ../../peps/pep-0689.rst:145
+msgid "For examples, see the `initial unstable API`_ specified in this PEP."
 msgstr ""
 
-#: ../pep-0689.rst:143
+#: ../../peps/pep-0689.rst:148
 msgid ""
-"To move an *internal* API to the unstable tier, it should be exposed under "
-"the new ``PyUnstable_*`` name."
+"To move an *internal* API to the unstable tier, it should be exposed "
+"under the new ``PyUnstable_*`` name."
 msgstr ""
 
-#: ../pep-0689.rst:146
+#: ../../peps/pep-0689.rst:151
 msgid ""
-"If the old name is documented, or widely used externally, it should continue "
-"to be available until an incompatible change is made (and call sites need to "
-"be updated). It should start raising deprecation warnings (e.g. using "
-"``Py_DEPRECATED``)."
+"If the old name is documented, or widely used externally, it should "
+"continue to be available until an incompatible change is made (and call "
+"sites need to be updated). It should start raising deprecation warnings "
+"(e.g. using ``Py_DEPRECATED``)."
 msgstr ""
 
-#: ../pep-0689.rst:151
+#: ../../peps/pep-0689.rst:156
 msgid ""
 "To move an API from the unstable tier to the public tier, it should be "
 "exposed without the ``PyUnstable_*`` prefix."
 msgstr ""
 
-#: ../pep-0689.rst:154
+#: ../../peps/pep-0689.rst:159
 msgid ""
-"The old name should remain available until the first incompatible change is "
-"made or the API is removed."
+"The old name should remain available until the API is deprecated or "
+"removed."
 msgstr ""
 
-#: ../pep-0689.rst:157
+#: ../../peps/pep-0689.rst:161
 msgid ""
-"Adding new unstable API *for existing features* is allowed even after Beta "
-"feature freeze, up until the first Release Candidate. Consensus on Core "
-"Development Discourse or is needed in the Beta period."
+"Adding new unstable API *for existing features* is allowed even after "
+"Beta feature freeze, up until the first Release Candidate. Consensus on "
+"Core Development Discourse or is needed in the Beta period."
 msgstr ""
 
-#: ../pep-0689.rst:161
+#: ../../peps/pep-0689.rst:165
 msgid ""
-"These rules will be documented in the `devguide <https://devguide.python.org/"
-"developer-workflow/c-api/index.html>`__, and `user documentation <https://"
-"docs.python.org/3/c-api/stable.html>`__ will be updated accordingly."
+"These rules will be documented in the `devguide "
+"<https://devguide.python.org/developer-workflow/c-api/index.html>`__, and"
+" `user documentation <https://docs.python.org/3/c-api/stable.html>`__ "
+"will be updated accordingly."
 msgstr ""
 
-#: ../pep-0689.rst:165
+#: ../../peps/pep-0689.rst:169
 msgid ""
 "Reference docs for C API named ``PyUnstable_*`` will automatically show "
 "notes with links to the unstable tier documentation."
 msgstr ""
 
-#: ../pep-0689.rst:170
+#: ../../peps/pep-0689.rst:174
 msgid "Leading underscore"
 msgstr ""
 
-#: ../pep-0689.rst:172
+#: ../../peps/pep-0689.rst:176
 msgid ""
-"C API named with a leading underscore, as well as API only available with "
-"``Py_BUILD_CORE``, will be considered *internal*. This means:"
+"C API named with a leading underscore, as well as API only available with"
+" ``Py_BUILD_CORE``, will be considered *internal*. This means:"
 msgstr ""
 
-#: ../pep-0689.rst:176
+#: ../../peps/pep-0689.rst:180
 msgid ""
 "It may change or be removed *without notice* in minor releases (3.x.0, "
-"including Alpha and Beta releases of 3.x.0). API changes in patch releases "
-"or Release Candidates should only be done if absolutely necessary."
+"including Alpha and Beta releases of 3.x.0). API changes in patch "
+"releases or Release Candidates should only be done if absolutely "
+"necessary."
 msgstr ""
 
-#: ../pep-0689.rst:181
+#: ../../peps/pep-0689.rst:185
 msgid ""
 "It should be documented in source comments or Devguide only, not in the "
 "public documentation."
 msgstr ""
 
-#: ../pep-0689.rst:184
+#: ../../peps/pep-0689.rst:188
 msgid ""
 "API introduced before Python 3.12 that is documented or widely used "
 "externally should be moved to the Unstable tier as explained above."
 msgstr ""
 
-#: ../pep-0689.rst:187
+#: ../../peps/pep-0689.rst:191
 msgid ""
-"This might happen long after this PEP is accepted. Consequently, for a few "
-"years core devs should do some research before changing underscored API, "
-"especially if it doesn't need ``Py_BUILD_CORE``."
+"This might happen long after this PEP is accepted. Consequently, for a "
+"few years core devs should do some research before changing underscored "
+"API, especially if it doesn't need ``Py_BUILD_CORE``."
 msgstr ""
 
-#: ../pep-0689.rst:191
+#: ../../peps/pep-0689.rst:195
 msgid ""
-"Users of the C API are encouraged to search their codebase for ``_Py`` and "
-"``_PY`` identifier prefixes, and treat any hits as issues to be eventually "
-"fixed -- either by switching to an existing alternative, or by opening a "
-"CPython issue to request exposing public API for their use case, and "
-"eventually switching to that."
+"Users of the C API are encouraged to search their codebase for ``_Py`` "
+"and ``_PY`` identifier prefixes, and treat any hits as issues to be "
+"eventually fixed -- either by switching to an existing alternative, or by"
+" opening a CPython issue to request exposing public API for their use "
+"case, and eventually switching to that."
 msgstr ""
 
-#: ../pep-0689.rst:201
+#: ../../peps/pep-0689.rst:203
 msgid "Initial unstable API"
 msgstr ""
 
-#: ../pep-0689.rst:203
+#: ../../peps/pep-0689.rst:205
 msgid ""
 "The following API will be moved to the Unstable tier in the initial "
 "implementation as proof of the concept."
 msgstr ""
 
-#: ../pep-0689.rst:206
+#: ../../peps/pep-0689.rst:208
 msgid "Code object constructors:"
 msgstr ""
 
-#: ../pep-0689.rst:208
+#: ../../peps/pep-0689.rst:210
 msgid "``PyUnstable_Code_New()`` (renamed from ``PyCode_New``)"
 msgstr ""
 
-#: ../pep-0689.rst:209
+#: ../../peps/pep-0689.rst:211
 msgid ""
 "``PyUnstable_Code_NewWithPosOnlyArgs()`` (renamed from "
 "``PyCode_NewWithPosOnlyArgs``)"
 msgstr ""
 
-#: ../pep-0689.rst:211
+#: ../../peps/pep-0689.rst:213
 msgid "Code extra information (:pep:`523`):"
 msgstr ""
 
-#: ../pep-0689.rst:213
+#: ../../peps/pep-0689.rst:215
 msgid ""
 "``PyUnstable_Eval_RequestCodeExtraIndex()`` (renamed from "
 "``_PyEval_RequestCodeExtraIndex``)"
 msgstr ""
 
-#: ../pep-0689.rst:214
+#: ../../peps/pep-0689.rst:216
 msgid "``PyUnstable_Code_GetExtra()`` (renamed from ``_PyCode_GetExtra``)"
 msgstr ""
 
-#: ../pep-0689.rst:215
+#: ../../peps/pep-0689.rst:217
 msgid "``PyUnstable_Code_SetExtra()`` (renamed from ``_PyCode_SetExtra``)"
 msgstr ""
 
-#: ../pep-0689.rst:217
+#: ../../peps/pep-0689.rst:219
 msgid "More are expected in Python 3.12, without the need for another PEP."
 msgstr ""
 
-#: ../pep-0689.rst:221
+#: ../../peps/pep-0689.rst:223
 msgid "Backwards Compatibility"
 msgstr ""
 
-#: ../pep-0689.rst:223
+#: ../../peps/pep-0689.rst:225
 msgid "The C API backwards compatibility expectations will be made clearer."
 msgstr ""
 
-#: ../pep-0689.rst:225
-msgid ""
-"All renamed API will be available under old names for as long as feasible."
+#: ../../peps/pep-0689.rst:227
+msgid "All renamed API will be available under old names for as long as feasible."
 msgstr ""
 
-#: ../pep-0689.rst:229
+#: ../../peps/pep-0689.rst:231
 msgid "How to Teach This"
 msgstr ""
 
-#: ../pep-0689.rst:231
+#: ../../peps/pep-0689.rst:233
 msgid ""
-"The changes affect advanced C programmers, who should consult the updated "
-"reference documentation, devguide and/or What's New document."
+"The changes affect advanced C programmers, who should consult the updated"
+" reference documentation, devguide and/or What's New document."
 msgstr ""
 
-#: ../pep-0689.rst:236
+#: ../../peps/pep-0689.rst:238
 msgid "Reference Implementation"
 msgstr ""
 
-#: ../pep-0689.rst:238
+#: ../../peps/pep-0689.rst:240
 msgid "https://github.com/python/cpython/compare/main...encukou:unstable-tier"
 msgstr ""
 
-#: ../pep-0689.rst:242
+#: ../../peps/pep-0689.rst:244
 msgid "Rejected Ideas"
 msgstr ""
 
-#: ../pep-0689.rst:245
+#: ../../peps/pep-0689.rst:247
 msgid "No special prefix"
 msgstr ""
 
-#: ../pep-0689.rst:247
+#: ../../peps/pep-0689.rst:249
 msgid ""
 "In the initial version of this PEP, unstable API didn't have the "
-"``PyUnstable`` prefix. Instead, defining ``Py_USING_UNSTABLE_API`` made the "
-"API available in a given source file, signifying acknowledgement that the "
-"file as a whole will potentially need to be revisited for each Python "
-"release."
+"``PyUnstable`` prefix. Instead, defining ``Py_USING_UNSTABLE_API`` made "
+"the API available in a given source file, signifying acknowledgement that"
+" the file as a whole will potentially need to be revisited for each "
+"Python release."
 msgstr ""
 
-#: ../pep-0689.rst:253
+#: ../../peps/pep-0689.rst:255
 msgid ""
 "However, it was decided that unstable-ness needs to be exposed in the "
 "individual names."
 msgstr ""
 
-#: ../pep-0689.rst:257
+#: ../../peps/pep-0689.rst:259
 msgid "Underscore prefix"
 msgstr ""
 
-#: ../pep-0689.rst:259
+#: ../../peps/pep-0689.rst:261
 msgid ""
 "It would be possible to mark both private and unstable API with leading "
 "underscores. However, that would dilute the meaning of ``_Py`` prefix. "
-"Reserving the prefix for internal API only makes it trivial to search for."
+"Reserving the prefix for internal API only makes it trivial to search "
+"for."
 msgstr ""
 
-#: ../pep-0689.rst:266
+#: ../../peps/pep-0689.rst:268
 msgid "New header directory"
 msgstr ""
 
-#: ../pep-0689.rst:268
+#: ../../peps/pep-0689.rst:270
 msgid ""
-"Other API tiers have dedicated directories for headers (``Include/cpython/"
-"``, ``Include/internal/``)."
+"Other API tiers have dedicated directories for headers "
+"(``Include/cpython/``, ``Include/internal/``)."
 msgstr ""
 
-#: ../pep-0689.rst:271
+#: ../../peps/pep-0689.rst:273
 msgid ""
-"Since the unstable tier uses a very obvious naming convention and the names "
-"are always available, a directory like ``Include/unstable/`` is unnecessary."
+"Since the unstable tier uses a very obvious naming convention and the "
+"names are always available, a directory like ``Include/unstable/`` is "
+"unnecessary."
 msgstr ""
 
-#: ../pep-0689.rst:277
+#: ../../peps/pep-0689.rst:279
 msgid "Python API"
 msgstr ""
 
-#: ../pep-0689.rst:279
+#: ../../peps/pep-0689.rst:281
 msgid ""
-"It might be good to add a similar tier in the Python (not C) API, e.g. for "
-"``types.CodeType``. However, the mechanism for that would need to be "
+"It might be good to add a similar tier in the Python (not C) API, e.g. "
+"for ``types.CodeType``. However, the mechanism for that would need to be "
 "different. This is outside the scope of the PEP."
 msgstr ""
 
-#: ../pep-0689.rst:286
+#: ../../peps/pep-0689.rst:288
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../pep-0689.rst:288
+#: ../../peps/pep-0689.rst:290
 msgid ""
-"This document is placed in the public domain or under the CC0-1.0-Universal "
-"license, whichever is more permissive."
+"This document is placed in the public domain or under the "
+"CC0-1.0-Universal license, whichever is more permissive."
 msgstr ""
+
+#~ msgid "Draft"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Tools requring access to CPython "
+#~ "internals (e.g. advanced debuggers and "
+#~ "JIT compilers) are often built for "
+#~ "minor series releases of CPython, and"
+#~ " assume that the C-API internals used"
+#~ " do not change in patch releases. "
+#~ "To support these tools, we need a"
+#~ " tier between the Public and Private"
+#~ " C-API, with guarantees on stability "
+#~ "throughout the minor-series release: the"
+#~ " proposed *Unstable tier*."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "They will be declared in headers "
+#~ "used for public API (``Include/*.h``, "
+#~ "rather than in a subdirectory like "
+#~ "``Include/ustable/``)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In the following cases, an incompatible"
+#~ " change (and thus removing the "
+#~ "deprecated name) is allowed without an"
+#~ " SC exeption, as if the function "
+#~ "was already part of the Unstable "
+#~ "tier:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "For examples, see the :ref:`initial "
+#~ "unstable API <pep689-initial-list>` specified"
+#~ " in this PEP."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The old name should remain available "
+#~ "until the first incompatible change is"
+#~ " made or the API is removed."
+#~ msgstr ""
+

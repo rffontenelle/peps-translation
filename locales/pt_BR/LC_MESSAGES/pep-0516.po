@@ -6,699 +6,710 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PEPs\n"
+"Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 20:07+0000\n"
+"POT-Creation-Date: 2023-11-20 10:43-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.13.1\n"
 
-#: ../pep-0516.txt
+#: ../../peps/pep-0516.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../pep-0516.txt:5
-msgid "Robert Collins <rbtcollins@hp.com>, Nathaniel Smith <njs@pobox.com>"
+#: ../../peps/pep-0516.rst:3
+msgid "Robert Collins <rbtcollins@hp.com>, Nathaniel J. Smith <njs@pobox.com>"
 msgstr ""
 
-#: ../pep-0516.txt
+#: ../../peps/pep-0516.rst
 msgid "BDFL-Delegate"
 msgstr ""
 
-#: ../pep-0516.txt:7
-msgid "Nick Coghlan <ncoghlan@gmail.com>"
+#: ../../peps/pep-0516.rst:5
+msgid "Alyssa Coghlan <ncoghlan@gmail.com>"
 msgstr ""
 
-#: ../pep-0516.txt
+#: ../../peps/pep-0516.rst
 msgid "Discussions-To"
 msgstr ""
 
-#: ../pep-0516.txt:8
+#: ../../peps/pep-0516.rst:6
 msgid "distutils-sig@python.org"
 msgstr ""
 
-#: ../pep-0516.txt
+#: ../../peps/pep-0516.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../pep-0516.txt:9
+#: ../../peps/pep-0516.rst:7
 msgid "Rejected"
 msgstr ""
 
-#: ../pep-0516.txt
+#: ../../peps/pep-0516.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../pep-0516.txt:10
+#: ../../peps/pep-0516.rst:8
 msgid "Standards Track"
 msgstr ""
 
-#: ../pep-0516.txt
+#: ../../peps/pep-0516.rst
 msgid "Topic"
 msgstr ""
 
-#: ../pep-0516.txt:11
+#: ../../peps/pep-0516.rst:9
 msgid "Packaging"
 msgstr ""
 
-#: ../pep-0516.txt
+#: ../../peps/pep-0516.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../pep-0516.txt:13
+#: ../../peps/pep-0516.rst:11
 msgid "26-Oct-2015"
 msgstr ""
 
-#: ../pep-0516.txt
+#: ../../peps/pep-0516.rst
 msgid "Resolution"
 msgstr ""
 
-#: ../pep-0516.txt:14
+#: ../../peps/pep-0516.rst:12
 msgid "https://mail.python.org/pipermail/distutils-sig/2017-May/030517.html"
 msgstr ""
 
-#: ../pep-0516.txt:18
+#: ../../peps/pep-0516.rst:16
 msgid "Abstract"
 msgstr ""
 
-#: ../pep-0516.txt:20
+#: ../../peps/pep-0516.rst:18
 msgid ""
 "This PEP specifies a programmatic interface for pip [#pip]_ and other "
-"distribution or installation tools to use when working with Python source "
-"trees (both the developer tree - e.g. the git tree - and source "
+"distribution or installation tools to use when working with Python source"
+" trees (both the developer tree - e.g. the git tree - and source "
 "distributions)."
 msgstr ""
 
-#: ../pep-0516.txt:25
+#: ../../peps/pep-0516.rst:23
 msgid ""
-"The programmatic interface allows decoupling of pip from its current hard "
-"dependency on setuptools [#setuptools]_ able for two key reasons:"
+"The programmatic interface allows decoupling of pip from its current hard"
+" dependency on setuptools [#setuptools]_ able for two key reasons:"
 msgstr ""
 
-#: ../pep-0516.txt:29
+#: ../../peps/pep-0516.rst:27
 msgid ""
 "It enables new build systems that may be much easier to use without "
 "requiring them to even appear to be setuptools."
 msgstr ""
 
-#: ../pep-0516.txt:32
+#: ../../peps/pep-0516.rst:30
 msgid ""
 "It facilitates setuptools itself changing its user interface without "
 "breaking pip, giving looser coupling."
 msgstr ""
 
-#: ../pep-0516.txt:35
+#: ../../peps/pep-0516.rst:33
 msgid ""
-"The interface needed to permit pip to install build systems also enables pip "
-"to install build time requirements for packages which is an important step "
-"in getting pip to full feature parity with the installation components of "
-"easy-install."
+"The interface needed to permit pip to install build systems also enables "
+"pip to install build time requirements for packages which is an important"
+" step in getting pip to full feature parity with the installation "
+"components of easy-install."
 msgstr ""
 
-#: ../pep-0516.txt:40
+#: ../../peps/pep-0516.rst:38
 msgid ""
-"As :pep:`426` is draft, we cannot utilise the metadata format it defined. "
-"However :pep:`427` wheels are in wide use and fairly well specified, so we "
-"have adopted the METADATA format from that for specifying distribution "
-"dependencies and general project metadata. :pep:`508` provides a self-"
-"contained language for describing a dependency, which we encapsulate in a "
-"thin JSON schema to describe bootstrap dependencies."
+"As :pep:`426` is draft, we cannot utilise the metadata format it defined."
+" However :pep:`427` wheels are in wide use and fairly well specified, so "
+"we have adopted the METADATA format from that for specifying distribution"
+" dependencies and general project metadata. :pep:`508` provides a self-"
+"contained language for describing a dependency, which we encapsulate in a"
+" thin JSON schema to describe bootstrap dependencies."
 msgstr ""
 
-#: ../pep-0516.txt:47
+#: ../../peps/pep-0516.rst:45
 msgid ""
-"Since Python sdists specified in :pep:`314` are also source trees, this PEP "
-"is updating the definition of sdists."
+"Since Python sdists specified in :pep:`314` are also source trees, this "
+"PEP is updating the definition of sdists."
 msgstr ""
 
-#: ../pep-0516.txt:52
+#: ../../peps/pep-0516.rst:50
 msgid "PEP Rejection"
 msgstr ""
 
-#: ../pep-0516.txt:54
+#: ../../peps/pep-0516.rst:52
 msgid ""
-"The CLI based approach proposed in this PEP has been rejected in favour of "
-"the Python API based approach proposed in :pep:`517`. The specific CLI used "
-"to communicate with build backends running as isolated subprocesses will be "
-"considered an implementation detail of front-end developer tool "
+"The CLI based approach proposed in this PEP has been rejected in favour "
+"of the Python API based approach proposed in :pep:`517`. The specific CLI"
+" used to communicate with build backends running as isolated subprocesses"
+" will be considered an implementation detail of front-end developer tool "
 "implementations."
 msgstr ""
 
-#: ../pep-0516.txt:61
+#: ../../peps/pep-0516.rst:59
 msgid "Motivation"
 msgstr ""
 
-#: ../pep-0516.txt:63
+#: ../../peps/pep-0516.rst:61
 msgid ""
-"There is significant pent-up frustration in the Python packaging ecosystem "
-"around the current lock-in between build system and pip. Breaking that lock-"
-"in is better for pip, for setuptools, and for other build systems like flit "
-"[#flit]_."
+"There is significant pent-up frustration in the Python packaging "
+"ecosystem around the current lock-in between build system and pip. "
+"Breaking that lock-in is better for pip, for setuptools, and for other "
+"build systems like flit [#flit]_."
 msgstr ""
 
-#: ../pep-0516.txt:69
+#: ../../peps/pep-0516.rst:67
 msgid "Specification"
 msgstr ""
 
-#: ../pep-0516.txt:72
+#: ../../peps/pep-0516.rst:70
 msgid "Overview"
 msgstr ""
 
-#: ../pep-0516.txt:74
+#: ../../peps/pep-0516.rst:72
 msgid ""
-"Build tools will be located by reading a file ``pypa.json`` from the root "
-"directory of the source tree. That file describes how to get the build tool "
-"and the name of the command to run to invoke the tool."
+"Build tools will be located by reading a file ``pypa.json`` from the root"
+" directory of the source tree. That file describes how to get the build "
+"tool and the name of the command to run to invoke the tool."
 msgstr ""
 
-#: ../pep-0516.txt:78
+#: ../../peps/pep-0516.rst:76
 msgid ""
 "All tools will be expected to conform to a single command line interface "
 "modelled on pip's existing use of the setuptools setup.py interface."
 msgstr ""
 
-#: ../pep-0516.txt:82
+#: ../../peps/pep-0516.rst:80
 msgid "pypa.json"
 msgstr ""
 
-#: ../pep-0516.txt:84
+#: ../../peps/pep-0516.rst:82
 msgid ""
 "The file ``pypa.json`` acts as a neutral configuration file for pip and "
-"other tools that want to build source trees to consult for configuration. "
-"The absence of a ``pypa.json`` file in a Python source tree implies a "
+"other tools that want to build source trees to consult for configuration."
+" The absence of a ``pypa.json`` file in a Python source tree implies a "
 "setuptools or setuptools compatible build system."
 msgstr ""
 
-#: ../pep-0516.txt:89
+#: ../../peps/pep-0516.rst:87
 msgid ""
-"The JSON has the following schema. Extra keys are ignored, which permits the "
-"use of ``pypa.json`` as a configuration file for other related tools. If "
-"doing that the chosen keys must be namespaced under ``tools``::"
+"The JSON has the following schema. Extra keys are ignored, which permits "
+"the use of ``pypa.json`` as a configuration file for other related tools."
+" If doing that the chosen keys must be namespaced under ``tools``::"
 msgstr ""
 
-#: ../pep-0516.txt:98
+#: ../../peps/pep-0516.rst:96
 msgid "schema"
 msgstr ""
 
-#: ../pep-0516.txt:96
+#: ../../peps/pep-0516.rst:94
 msgid ""
 "The version of the schema. This PEP defines version \"1\".  Defaults to "
-"\"1\" when absent. All tools reading the file must error on an unrecognised "
-"schema version."
+"\"1\" when absent. All tools reading the file must error on an "
+"unrecognised schema version."
 msgstr ""
 
-#: ../pep-0516.txt:105
+#: ../../peps/pep-0516.rst:103
 msgid "bootstrap_requires"
 msgstr ""
 
-#: ../pep-0516.txt:101
+#: ../../peps/pep-0516.rst:99
 msgid ""
-"Optional list of :pep:`508` dependency specifications that must be installed "
-"before running the build tool. For instance, if using flit, then the "
-"requirements might be::"
+"Optional list of :pep:`508` dependency specifications that must be "
+"installed before running the build tool. For instance, if using flit, "
+"then the requirements might be::"
 msgstr ""
 
-#: ../pep-0516.txt:116
+#: ../../peps/pep-0516.rst:114
 msgid "build_command"
 msgstr ""
 
-#: ../pep-0516.txt:108
+#: ../../peps/pep-0516.rst:106
 msgid ""
 "A mandatory key, this is a list of Python format strings [#strformat]_ "
-"describing the command to run. For instance, if using flit then the build "
-"command might be::"
+"describing the command to run. For instance, if using flit then the build"
+" command might be::"
 msgstr ""
 
-#: ../pep-0516.txt:114
+#: ../../peps/pep-0516.rst:112
 msgid "If using a command which is a runnable module fred::"
 msgstr ""
 
-#: ../pep-0516.txt:119
+#: ../../peps/pep-0516.rst:117
 msgid "Process interface"
 msgstr ""
 
-#: ../pep-0516.txt:121
+#: ../../peps/pep-0516.rst:119
 msgid ""
-"The command to run is defined by a simple Python format string [#strformat]_."
+"The command to run is defined by a simple Python format string "
+"[#strformat]_."
 msgstr ""
 
-#: ../pep-0516.txt:123
+#: ../../peps/pep-0516.rst:121
 msgid ""
-"This permits build systems with dedicated scripts and those that are invoked "
-"using \"python -m somemodule\"."
+"This permits build systems with dedicated scripts and those that are "
+"invoked using \"python -m somemodule\"."
 msgstr ""
 
-#: ../pep-0516.txt:126
+#: ../../peps/pep-0516.rst:124
 msgid ""
-"Processes will be run with the current working directory set to the root of "
-"the source tree."
+"Processes will be run with the current working directory set to the root "
+"of the source tree."
 msgstr ""
 
-#: ../pep-0516.txt:129
+#: ../../peps/pep-0516.rst:127
 msgid ""
-"When run, processes should not read from stdin - while pip currently runs "
-"build systems with stdin connected to its own stdin, stdout and stderr are "
-"redirected and no communication with the user is possible."
+"When run, processes should not read from stdin - while pip currently runs"
+" build systems with stdin connected to its own stdin, stdout and stderr "
+"are redirected and no communication with the user is possible."
 msgstr ""
 
-#: ../pep-0516.txt:133
+#: ../../peps/pep-0516.rst:131
 msgid "As usual with processes, a non-zero exit status indicates an error."
 msgstr ""
 
-#: ../pep-0516.txt:136
+#: ../../peps/pep-0516.rst:134
 msgid "Available format variables"
 msgstr ""
 
-#: ../pep-0516.txt:142 ../pep-0516.txt:154
+#: ../../peps/pep-0516.rst:140 ../../peps/pep-0516.rst:152
 msgid "PYTHON"
 msgstr ""
 
-#: ../pep-0516.txt:139
+#: ../../peps/pep-0516.rst:137
 msgid ""
-"The Python interpreter in use. This is important to enable calling things "
-"which are just Python entry points."
+"The Python interpreter in use. This is important to enable calling things"
+" which are just Python entry points."
 msgstr ""
 
-#: ../pep-0516.txt:142
+#: ../../peps/pep-0516.rst:140
 msgid "{PYTHON} -m foo"
 msgstr ""
 
-#: ../pep-0516.txt:145
+#: ../../peps/pep-0516.rst:143
 msgid "Available environment variables"
 msgstr ""
 
-#: ../pep-0516.txt:147
+#: ../../peps/pep-0516.rst:145
 msgid ""
-"These variables are set by the caller of the build system and will always be "
-"available."
+"These variables are set by the caller of the build system and will always"
+" be available."
 msgstr ""
 
-#: ../pep-0516.txt:151
+#: ../../peps/pep-0516.rst:149
 msgid "PATH"
 msgstr ""
 
-#: ../pep-0516.txt:151
+#: ../../peps/pep-0516.rst:149
 msgid "The standard system path."
 msgstr ""
 
-#: ../pep-0516.txt:154
+#: ../../peps/pep-0516.rst:152
 msgid "As for format variables."
 msgstr ""
 
-#: ../pep-0516.txt:157
+#: ../../peps/pep-0516.rst:155
 msgid "PYTHONPATH"
 msgstr ""
 
-#: ../pep-0516.txt:157
+#: ../../peps/pep-0516.rst:155
 msgid "Used to control sys.path per the normal Python mechanisms."
 msgstr ""
 
-#: ../pep-0516.txt:160
+#: ../../peps/pep-0516.rst:158
 msgid "Subcommands"
 msgstr ""
 
-#: ../pep-0516.txt:162
+#: ../../peps/pep-0516.rst:160
 msgid ""
-"There are a number of separate subcommands that build systems must support. "
-"The examples below use a build_command of ``flit`` for illustrative purposes."
+"There are a number of separate subcommands that build systems must "
+"support. The examples below use a build_command of ``flit`` for "
+"illustrative purposes."
 msgstr ""
 
-#: ../pep-0516.txt:174
+#: ../../peps/pep-0516.rst:172
 msgid "build_requires"
 msgstr ""
 
-#: ../pep-0516.txt:166
+#: ../../peps/pep-0516.rst:164
 msgid ""
-"Query build requirements. Build requirements are returned as a UTF-8 encoded "
-"JSON document with one key ``build_requires`` consisting of a list of :pep:"
-"`508` dependency specifications. Additional keys must be ignored. The "
-"build_requires command is the only command run without setting up a build "
-"environment."
+"Query build requirements. Build requirements are returned as a UTF-8 "
+"encoded JSON document with one key ``build_requires`` consisting of a "
+"list of :pep:`508` dependency specifications. Additional keys must be "
+"ignored. The build_requires command is the only command run without "
+"setting up a build environment."
 msgstr ""
 
-#: ../pep-0516.txt:172 ../pep-0516.txt:185 ../pep-0516.txt:195
+#: ../../peps/pep-0516.rst:170 ../../peps/pep-0516.rst:183
+#: ../../peps/pep-0516.rst:193
 msgid "Example command::"
 msgstr ""
 
-#: ../pep-0516.txt:187
+#: ../../peps/pep-0516.rst:185
 msgid "metadata"
 msgstr ""
 
-#: ../pep-0516.txt:177
+#: ../../peps/pep-0516.rst:175
 msgid ""
-"Query project metadata.  The metadata and only the metadata should be output "
-"on stdout in UTF-8 encoding. pip would run metadata just once to determine "
-"what other packages need to be downloaded and installed. The metadata is "
-"output as a wheel METADATA file per :pep:`427`."
+"Query project metadata.  The metadata and only the metadata should be "
+"output on stdout in UTF-8 encoding. pip would run metadata just once to "
+"determine what other packages need to be downloaded and installed. The "
+"metadata is output as a wheel METADATA file per :pep:`427`."
 msgstr ""
 
-#: ../pep-0516.txt:182
+#: ../../peps/pep-0516.rst:180
 msgid ""
-"Note that the metadata generated by the metadata command, and the metadata "
-"present in a generated wheel must be identical."
+"Note that the metadata generated by the metadata command, and the "
+"metadata present in a generated wheel must be identical."
 msgstr ""
 
-#: ../pep-0516.txt:197
+#: ../../peps/pep-0516.rst:195
 msgid "wheel -d OUTPUT_DIR"
 msgstr ""
 
-#: ../pep-0516.txt:190
+#: ../../peps/pep-0516.rst:188
 msgid ""
-"Command to run to build a wheel of the project. OUTPUT_DIR will point to an "
-"existing directory where the wheel should be output. Stdout and stderr have "
-"no semantic meaning. Only one file should be output - if more are output "
-"then pip would pick an arbitrary one to consume."
+"Command to run to build a wheel of the project. OUTPUT_DIR will point to "
+"an existing directory where the wheel should be output. Stdout and stderr"
+" have no semantic meaning. Only one file should be output - if more are "
+"output then pip would pick an arbitrary one to consume."
 msgstr ""
 
-#: ../pep-0516.txt:223
+#: ../../peps/pep-0516.rst:222
 msgid "develop [--prefix PREFIX]"
 msgstr ""
 
-#: ../pep-0516.txt:200
+#: ../../peps/pep-0516.rst:198
 msgid ""
-"Command to do an in-place 'development' installation of the project. Stdout "
-"and stderr have no semantic meaning."
+"Command to do an in-place 'development' installation of the project. "
+"Stdout and stderr have no semantic meaning."
 msgstr ""
 
-#: ../pep-0516.txt:203
+#: ../../peps/pep-0516.rst:201
 msgid ""
-"Not all build systems will be able to perform develop installs. If a build "
-"system cannot do develop installs, then it should error when run. Note that "
-"doing so will cause use operations like ``pip install -e foo`` to fail."
+"Not all build systems will be able to perform develop installs. If a "
+"build system cannot do develop installs, then it should error when run. "
+"Note that doing so will cause use operations like ``pip install -e foo`` "
+"to fail."
 msgstr ""
 
-#: ../pep-0516.txt:208
+#: ../../peps/pep-0516.rst:206
 msgid ""
 "The prefix option is used for defining an alternative prefix for the "
-"installation. While setuptools has ``--root`` and ``--user`` options, they "
-"can be done equivalently using ``--prefix``, and pip or other tools that "
-"accept ``--root`` or ``--user`` options should translate appropriately."
+"installation. While setuptools has ``--root`` and ``--user`` options, "
+"they can be done equivalently using ``--prefix``, and pip or other tools "
+"that accept ``--root`` or ``--user`` options should translate "
+"appropriately."
 msgstr ""
 
-#: ../pep-0516.txt:214
+#: ../../peps/pep-0516.rst:212
 msgid ""
 "The root option is used to define an alternative root within which the "
 "command should operate."
 msgstr ""
 
-#: ../pep-0516.txt:217
+#: ../../peps/pep-0516.rst:215
 msgid "For instance::"
 msgstr ""
 
-#: ../pep-0516.txt:221
+#: ../../peps/pep-0516.rst:219
 msgid ""
-"Should install scripts within `/tmp/usr/local/bin`, even if the Python "
-"environment in use reports that the sys.prefix is `/usr/` which would lead "
-"to using `/tmp/usr/bin/`. Similar logic applies for package files etc."
+"Should install scripts within ``/tmp/usr/local/bin``, even if the Python "
+"environment in use reports that the sys.prefix is ``/usr/`` which would "
+"lead to using ``/tmp/usr/bin/``. Similar logic applies for package files "
+"etc."
 msgstr ""
 
-#: ../pep-0516.txt:226
+#: ../../peps/pep-0516.rst:225
 msgid "The build environment"
 msgstr ""
 
-#: ../pep-0516.txt:228
+#: ../../peps/pep-0516.rst:227
 msgid ""
-"Except for the build_requires command, all commands are run within a build "
-"environment. No specific implementation is required, but a build environment "
-"must achieve the following requirements."
+"Except for the build_requires command, all commands are run within a "
+"build environment. No specific implementation is required, but a build "
+"environment must achieve the following requirements."
 msgstr ""
 
-#: ../pep-0516.txt:232
+#: ../../peps/pep-0516.rst:231
 msgid ""
-"All dependencies specified by the project's build_requires must be available "
-"for import from within ``$PYTHON``."
+"All dependencies specified by the project's build_requires must be "
+"available for import from within ``$PYTHON``."
 msgstr ""
 
-#: ../pep-0516.txt:235
+#: ../../peps/pep-0516.rst:234
 msgid ""
 "All command-line scripts provided by the build-required packages must be "
 "present in ``$PATH``."
 msgstr ""
 
-#: ../pep-0516.txt:238
+#: ../../peps/pep-0516.rst:237
 msgid ""
-"A corollary of this is that build systems cannot assume access to any Python "
-"package that is not declared as a build_requires or in the Python standard "
-"library."
+"A corollary of this is that build systems cannot assume access to any "
+"Python package that is not declared as a build_requires or in the Python "
+"standard library."
 msgstr ""
 
-#: ../pep-0516.txt:243
+#: ../../peps/pep-0516.rst:242
 msgid "Hermetic builds"
 msgstr ""
 
-#: ../pep-0516.txt:245
+#: ../../peps/pep-0516.rst:244
 msgid ""
-"This specification does not prescribe whether builds should be hermetic or "
-"not. Existing build tools like setuptools will use installed versions of "
-"build time requirements (e.g. setuptools_scm) and only install other "
-"versions on version conflicts or missing dependencies. However its likely "
-"that better consistency can be created by always isolation builds and using "
-"only the specified dependencies."
+"This specification does not prescribe whether builds should be hermetic "
+"or not. Existing build tools like setuptools will use installed versions "
+"of build time requirements (e.g. setuptools_scm) and only install other "
+"versions on version conflicts or missing dependencies. However its likely"
+" that better consistency can be created by always isolation builds and "
+"using only the specified dependencies."
 msgstr ""
 
-#: ../pep-0516.txt:251
+#: ../../peps/pep-0516.rst:250
 msgid ""
-"However, there are nuanced problems there - such as how can users force the "
-"avoidance of a bad version of a build requirement which meets some packages "
-"dependencies. Future PEPs may tackle this problem, but it is not currently "
-"in scope - it does not affect the metadata required to coordinate between "
-"build systems and things that need to do builds, and thus is not PEP "
-"material."
+"However, there are nuanced problems there - such as how can users force "
+"the avoidance of a bad version of a build requirement which meets some "
+"packages dependencies. Future PEPs may tackle this problem, but it is not"
+" currently in scope - it does not affect the metadata required to "
+"coordinate between build systems and things that need to do builds, and "
+"thus is not PEP material."
 msgstr ""
 
-#: ../pep-0516.txt:258
+#: ../../peps/pep-0516.rst:257
 msgid "Upgrades"
 msgstr ""
 
-#: ../pep-0516.txt:260
+#: ../../peps/pep-0516.rst:259
 msgid ""
 "'pypa.json' is versioned to permit future changes without requiring "
 "compatibility."
 msgstr ""
 
-#: ../pep-0516.txt:263
+#: ../../peps/pep-0516.rst:262
 msgid "The sequence for upgrading either of schemas in a new PEP will be:"
 msgstr ""
 
-#: ../pep-0516.txt:265
+#: ../../peps/pep-0516.rst:264
 msgid ""
 "Issue new PEP defining an updated schema. If the schema is not entirely "
 "backward compatible then a new version number must be defined."
 msgstr ""
 
-#: ../pep-0516.txt:267
+#: ../../peps/pep-0516.rst:266
 msgid "Consumers (e.g. pip) implement support for the new schema version."
 msgstr ""
 
-#: ../pep-0516.txt:268
+#: ../../peps/pep-0516.rst:267
 msgid ""
-"Package authors opt into the new schema when they are happy to introduce a "
-"dependency on the version of 'pip' (and potentially other consumers) that "
-"introduced support for the new schema version."
+"Package authors opt into the new schema when they are happy to introduce "
+"a dependency on the version of 'pip' (and potentially other consumers) "
+"that introduced support for the new schema version."
 msgstr ""
 
-#: ../pep-0516.txt:272
+#: ../../peps/pep-0516.rst:271
 msgid ""
-"The *same* process will take place for the initial deployment of this PEP:- "
-"the propagation of the capability to use this PEP without a `setuptools "
-"shim`_ will be largely gated by the adoption rate of the first version of "
-"pip that supports it."
+"The *same* process will take place for the initial deployment of this "
+"PEP:- the propagation of the capability to use this PEP without a "
+"`setuptools shim`_ will be largely gated by the adoption rate of the "
+"first version of pip that supports it."
 msgstr ""
 
-#: ../pep-0516.txt:278
+#: ../../peps/pep-0516.rst:277
 msgid "Static metadata in sdists"
 msgstr ""
 
-#: ../pep-0516.txt:280
+#: ../../peps/pep-0516.rst:279
 msgid ""
-"This PEP does not tackle the current inability to trust static metadata in "
-"sdists. That is a separate problem to identifying and consuming the build "
-"system that is in use in a source tree, whether it came from an sdist or not."
+"This PEP does not tackle the current inability to trust static metadata "
+"in sdists. That is a separate problem to identifying and consuming the "
+"build system that is in use in a source tree, whether it came from an "
+"sdist or not."
 msgstr ""
 
-#: ../pep-0516.txt:285
+#: ../../peps/pep-0516.rst:284
 msgid "Handling of compiler options"
 msgstr ""
 
-#: ../pep-0516.txt:287
+#: ../../peps/pep-0516.rst:286
 msgid ""
 "Handling of different compiler options is out of scope for this "
 "specification."
 msgstr ""
 
-#: ../pep-0516.txt:289
+#: ../../peps/pep-0516.rst:288
 msgid ""
-"pip currently handles compiler options by appending user supplied strings to "
-"the command line it runs when running setuptools. This approach is "
-"sufficient to work with the build system interface defined in this PEP, with "
-"the exception that globally specified options will stop working globally as "
-"different build systems evolve. That problem can be solved in pip (or conda "
-"or other installers) without affecting interoperability."
+"pip currently handles compiler options by appending user supplied strings"
+" to the command line it runs when running setuptools. This approach is "
+"sufficient to work with the build system interface defined in this PEP, "
+"with the exception that globally specified options will stop working "
+"globally as different build systems evolve. That problem can be solved in"
+" pip (or conda or other installers) without affecting interoperability."
 msgstr ""
 
-#: ../pep-0516.txt:296
+#: ../../peps/pep-0516.rst:295
 msgid ""
-"In the long term, wheels should be able to express the difference between "
-"wheels built with one compiler or options vs another, and that is PEP "
+"In the long term, wheels should be able to express the difference between"
+" wheels built with one compiler or options vs another, and that is PEP "
 "material."
 msgstr ""
 
-#: ../pep-0516.txt:301
+#: ../../peps/pep-0516.rst:300
 msgid "Examples"
 msgstr ""
 
-#: ../pep-0516.txt:303
+#: ../../peps/pep-0516.rst:302
 msgid "An example 'pypa.json' for using flit::"
 msgstr ""
 
-#: ../pep-0516.txt:308
+#: ../../peps/pep-0516.rst:307
 msgid ""
-"When 'pip' reads this it would prepare an environment with flit in it before "
-"trying to use flit."
+"When 'pip' reads this it would prepare an environment with flit in it "
+"before trying to use flit."
 msgstr ""
 
-#: ../pep-0516.txt:311
+#: ../../peps/pep-0516.rst:310
 msgid ""
-"Because flit doesn't have setup-requires support today, `flit "
-"build_requires` would just output a constant string::"
+"Because flit doesn't have setup-requires support today, ``flit "
+"build_requires`` would just output a constant string::"
 msgstr ""
 
-#: ../pep-0516.txt:316
+#: ../../peps/pep-0516.rst:315
 msgid ""
-"`flit metadata` would interrogate `flit.ini` and marshal the metadata into a "
-"wheel METADATA file and output that on stdout."
+"``flit metadata`` would interrogate ``flit.ini`` and marshal the metadata"
+" into a wheel METADATA file and output that on stdout."
 msgstr ""
 
-#: ../pep-0516.txt:319
+#: ../../peps/pep-0516.rst:318
 msgid ""
-"`flit wheel` would need to accept a `-d` parameter that tells it where to "
-"output the wheel (pip needs this)."
+"``flit wheel`` would need to accept a ``-d`` parameter that tells it "
+"where to output the wheel (pip needs this)."
 msgstr ""
 
-#: ../pep-0516.txt:323
+#: ../../peps/pep-0516.rst:322
 msgid "Backwards Compatibility"
 msgstr ""
 
-#: ../pep-0516.txt:325
+#: ../../peps/pep-0516.rst:324
 msgid ""
-"Older pips will remain unable to handle alternative build systems. This is "
-"no worse than the status quo - and individual build system projects can "
-"decide whether to include a shim ``setup.py`` or not."
+"Older pips will remain unable to handle alternative build systems. This "
+"is no worse than the status quo - and individual build system projects "
+"can decide whether to include a shim ``setup.py`` or not."
 msgstr ""
 
-#: ../pep-0516.txt:329
+#: ../../peps/pep-0516.rst:328
 msgid ""
-"All existing build systems that can product wheels and do develop installs "
-"should be able to run under this abstraction and will only need a specific "
-"adapter for them constructed and published on PyPI."
+"All existing build systems that can product wheels and do develop "
+"installs should be able to run under this abstraction and will only need "
+"a specific adapter for them constructed and published on PyPI."
 msgstr ""
 
-#: ../pep-0516.txt:333
+#: ../../peps/pep-0516.rst:332
 msgid ""
 "In the absence of a ``pypa.json`` file, tools like pip should assume a "
 "setuptools build system and use setuptools commands directly."
 msgstr ""
 
-#: ../pep-0516.txt:337
+#: ../../peps/pep-0516.rst:336
 msgid "Network effects"
 msgstr ""
 
-#: ../pep-0516.txt:339
+#: ../../peps/pep-0516.rst:338
 msgid ""
-"Projects that adopt build systems that are not setuptools compatible - that "
-"is that they have no setup.py, or the setup.py doesn't accept commands that "
-"existing tools try to use - will not be installable by those existing tools."
+"Projects that adopt build systems that are not setuptools compatible - "
+"that is that they have no setup.py, or the setup.py doesn't accept "
+"commands that existing tools try to use - will not be installable by "
+"those existing tools."
 msgstr ""
 
-#: ../pep-0516.txt:343
-msgid ""
-"Where those projects are used by other projects, this effect will cascade."
+#: ../../peps/pep-0516.rst:342
+msgid "Where those projects are used by other projects, this effect will cascade."
 msgstr ""
 
-#: ../pep-0516.txt:345
+#: ../../peps/pep-0516.rst:344
 msgid ""
-"In particular, because pip does not handle setup-requires today, any project "
-"(A) that adopts a setuptools-incompatible build system and is consumed as a "
-"setup-requirement by a second project (B) which has not itself transitioned "
-"to having a pypa.json will make B uninstallable by any version of pip. This "
-"is because setup.py in B will trigger easy-install when 'setup.py egg_info' "
-"is run by pip, and that will try and fail to install A."
+"In particular, because pip does not handle setup-requires today, any "
+"project (A) that adopts a setuptools-incompatible build system and is "
+"consumed as a setup-requirement by a second project (B) which has not "
+"itself transitioned to having a pypa.json will make B uninstallable by "
+"any version of pip. This is because setup.py in B will trigger easy-"
+"install when 'setup.py egg_info' is run by pip, and that will try and "
+"fail to install A."
 msgstr ""
 
-#: ../pep-0516.txt:352
+#: ../../peps/pep-0516.rst:351
 msgid ""
-"As such we recommend that tools which are currently used as setup-requires "
-"either ensure that they keep a `setuptools shim`_ or find their consumers "
-"and get them all to upgrade to the use of a `pypa.json` in advance of moving "
-"themselves. Pragmatically that is impossible, so the advice is to keep a "
-"setuptools shim indefinitely - both for projects like pbr, setuptools_scm "
-"and also projects like numpy."
+"As such we recommend that tools which are currently used as setup-"
+"requires either ensure that they keep a `setuptools shim`_ or find their "
+"consumers and get them all to upgrade to the use of a ``pypa.json`` in "
+"advance of moving themselves. Pragmatically that is impossible, so the "
+"advice is to keep a setuptools shim indefinitely - both for projects like"
+" pbr, setuptools_scm and also projects like numpy."
 msgstr ""
 
-#: ../pep-0516.txt:360
+#: ../../peps/pep-0516.rst:359
 msgid "setuptools shim"
 msgstr ""
 
-#: ../pep-0516.txt:362
+#: ../../peps/pep-0516.rst:361
 msgid ""
 "It would be possible to write a generic setuptools shim that looks like "
-"``setup.py`` and under the hood uses ``pypa.json`` to drive the builds. This "
-"is not needed for pip to use the system, but would allow package authors to "
-"use the new features while still retaining compatibility with older pip "
-"versions."
+"``setup.py`` and under the hood uses ``pypa.json`` to drive the builds. "
+"This is not needed for pip to use the system, but would allow package "
+"authors to use the new features while still retaining compatibility with "
+"older pip versions."
 msgstr ""
 
-#: ../pep-0516.txt:369
+#: ../../peps/pep-0516.rst:368
 msgid "Rationale"
 msgstr ""
 
-#: ../pep-0516.txt:371
+#: ../../peps/pep-0516.rst:370
 msgid ""
 "This PEP started with a long mailing list thread on distutils-sig "
-"[#thread]_. Subsequent to that an online meeting was held to debug all the "
-"positions folk had.  Minutes from that were posted to the list [#minutes]_."
+"[#thread]_. Subsequent to that an online meeting was held to debug all "
+"the positions folk had.  Minutes from that were posted to the list "
+"[#minutes]_."
 msgstr ""
 
-#: ../pep-0516.txt:375
+#: ../../peps/pep-0516.rst:374
 msgid ""
-"This specification is a translation of the consensus reached there into PEP "
-"form, along with some arbitrary choices on the minor remaining questions."
+"This specification is a translation of the consensus reached there into "
+"PEP form, along with some arbitrary choices on the minor remaining "
+"questions."
 msgstr ""
 
-#: ../pep-0516.txt:378
+#: ../../peps/pep-0516.rst:377
 msgid ""
 "The basic heuristic for the design has been to focus on introducing an "
 "abstraction without requiring development not strictly tied to the "
-"abstraction. Where the gap is small to improvements, or the cost of using "
-"the existing interface is very high, then we've taken on having the "
+"abstraction. Where the gap is small to improvements, or the cost of using"
+" the existing interface is very high, then we've taken on having the "
 "improvement as a dependency, but otherwise deferred such to future "
 "iterations."
 msgstr ""
 
-#: ../pep-0516.txt:384
+#: ../../peps/pep-0516.rst:383
 msgid ""
 "We chose wheel METADATA files rather than defining a new specification, "
-"because pip can already handle wheel .dist-info directories which encode all "
-"the necessary data in a METADATA file. :pep:`426` can't be used as it's "
-"still draft, and defining a new metadata format, while we should do that, is "
-"a separate problem. Using a directory on disk would not add any value to the "
-"interface (pip has to do that today due to limitations in the setuptools "
-"CLI)."
+"because pip can already handle wheel .dist-info directories which encode "
+"all the necessary data in a METADATA file. :pep:`426` can't be used as "
+"it's still draft, and defining a new metadata format, while we should do "
+"that, is a separate problem. Using a directory on disk would not add any "
+"value to the interface (pip has to do that today due to limitations in "
+"the setuptools CLI)."
 msgstr ""
 
-#: ../pep-0516.txt:392
+#: ../../peps/pep-0516.rst:391
 msgid ""
-"The use of 'develop' as a command is because there is no PEP specifying the "
-"interoperability of things that do what 'setuptools develop' does - so we'll "
-"need to define that before pip can take on the responsibility for doing the "
-"'develop' step. Once that's done we can issue a successor PEP to this one."
+"The use of 'develop' as a command is because there is no PEP specifying "
+"the interoperability of things that do what 'setuptools develop' does - "
+"so we'll need to define that before pip can take on the responsibility "
+"for doing the 'develop' step. Once that's done we can issue a successor "
+"PEP to this one."
 msgstr ""
 
-#: ../pep-0516.txt:397
+#: ../../peps/pep-0516.rst:396
 msgid ""
 "The use of a command line API rather than a Python API is a little "
 "contentious. Fundamentally anything can be made to work, and the pip "
@@ -706,18 +717,18 @@ msgid ""
 "interface - something that is mature and robust in pip today."
 msgstr ""
 
-#: ../pep-0516.txt:402
+#: ../../peps/pep-0516.rst:401
 msgid ""
 "The choice of JSON as a file format is a compromise between several "
-"constraints. Firstly there is no stdlib YAML interpreter, nor one for any of "
-"the other low-friction structured file formats. Secondly, INIParser is a "
-"poor format for a number of reasons, primarily that it has very minimal "
-"structure - but pip's maintainers are not fond of it. JSON is in the stdlib, "
-"has sufficient structure to permit embedding anything we want in future "
-"without requiring embedded DSL's."
+"constraints. Firstly there is no stdlib YAML interpreter, nor one for any"
+" of the other low-friction structured file formats. Secondly, INIParser "
+"is a poor format for a number of reasons, primarily that it has very "
+"minimal structure - but pip's maintainers are not fond of it. JSON is in "
+"the stdlib, has sufficient structure to permit embedding anything we want"
+" in future without requiring embedded DSL's."
 msgstr ""
 
-#: ../pep-0516.txt:410
+#: ../../peps/pep-0516.rst:409
 msgid ""
 "Donald suggested using ``setup.cfg`` and the existing setuptools command "
 "line rather than inventing something new. While that would permit "
@@ -730,92 +741,143 @@ msgid ""
 "custom build tool."
 msgstr ""
 
-#: ../pep-0516.txt:419
+#: ../../peps/pep-0516.rst:418
 msgid ""
-"The metadata and wheel commands are required to have consistent metadata to "
-"avoid a race condition that could otherwise happen where pip reads the "
-"metadata, acts on it, and then the resulting wheel has incompatible "
+"The metadata and wheel commands are required to have consistent metadata "
+"to avoid a race condition that could otherwise happen where pip reads the"
+" metadata, acts on it, and then the resulting wheel has incompatible "
 "requirements. That race is exploited today by packages using :pep:`426` "
 "environment markers, to work with older pip versions that do not support "
 "environment markers. That exploit is not needed with this PEP, because "
 "either the setuptools shim is in use (with older pip versions), or an "
-"environment marker ready pip is in use. The setuptools shim can take care of "
-"exploiting the difference older pip versions require."
+"environment marker ready pip is in use. The setuptools shim can take care"
+" of exploiting the difference older pip versions require."
 msgstr ""
 
-#: ../pep-0516.txt:429
+#: ../../peps/pep-0516.rst:428
 msgid ""
-"We discussed having an sdist verb. The main driver for this was to make sure "
-"that build systems were able to produce sdists that pip can build - but this "
-"is circular: the whole point of this PEP is to let pip consume such sdists "
-"or VCS source trees reliably and without requiring an implementation of "
-"setuptools. Being able to create new sdists from existing source trees isn't "
-"a thing pip does today, and while there is a PR to do that as part of "
-"building from source, it is contentious and lacks consensus. Rather than "
-"impose a requirement on all build systems, we are treating it as a YAGNI, "
-"and will add such a verb in a future version of the interface if required. "
-"The existing :pep:`314` requirements for sdists still apply, and distutils "
-"or setuptools users can use ``setup.py sdist`` to create an sdist. Other "
-"tools should create sdists compatible with :pep:`314`. Note that pip itself "
-"does not require :pep:`314` compatibility - it does not use any of the "
-"metadata from sdists - they are treated like source trees from disk or "
-"version control."
+"We discussed having an sdist verb. The main driver for this was to make "
+"sure that build systems were able to produce sdists that pip can build - "
+"but this is circular: the whole point of this PEP is to let pip consume "
+"such sdists or VCS source trees reliably and without requiring an "
+"implementation of setuptools. Being able to create new sdists from "
+"existing source trees isn't a thing pip does today, and while there is a "
+"PR to do that as part of building from source, it is contentious and "
+"lacks consensus. Rather than impose a requirement on all build systems, "
+"we are treating it as a YAGNI, and will add such a verb in a future "
+"version of the interface if required. The existing :pep:`314` "
+"requirements for sdists still apply, and distutils or setuptools users "
+"can use ``setup.py sdist`` to create an sdist. Other tools should create "
+"sdists compatible with :pep:`314`. Note that pip itself does not require "
+":pep:`314` compatibility - it does not use any of the metadata from "
+"sdists - they are treated like source trees from disk or version control."
 msgstr ""
 
-#: ../pep-0516.txt:445
+#: ../../peps/pep-0516.rst:444
 msgid "References"
 msgstr "Referências"
 
-#: ../pep-0516.txt:447
+#: ../../peps/pep-0516.rst:446
 msgid ""
-"pip, the recommended installer for Python packages (http://pip.readthedocs."
-"org/en/stable/)"
+"pip, the recommended installer for Python packages "
+"(http://pip.readthedocs.org/en/stable/)"
 msgstr ""
 
-#: ../pep-0516.txt:450
+#: ../../peps/pep-0516.rst:449
 msgid ""
-"setuptools, the de facto Python package build system (https://pythonhosted."
-"org/setuptools/)"
+"setuptools, the de facto Python package build system "
+"(https://pythonhosted.org/setuptools/)"
 msgstr ""
 
-#: ../pep-0516.txt:453
+#: ../../peps/pep-0516.rst:452
 msgid ""
-"flit, a simple way to put packages in PyPI (http://flit.readthedocs.org/en/"
-"latest/)"
+"flit, a simple way to put packages in PyPI "
+"(http://flit.readthedocs.org/en/latest/)"
 msgstr ""
 
-#: ../pep-0516.txt:456
+#: ../../peps/pep-0516.rst:455
 msgid "PyPI, the Python Package Index (https://pypi.python.org/)"
 msgstr ""
 
-#: ../pep-0516.txt:459
+#: ../../peps/pep-0516.rst:458
 msgid ""
-"Shellvars, an implementation of shell variable rules for Python. (https://"
-"github.com/testing-cabal/shellvars)"
+"Shellvars, an implementation of shell variable rules for Python. "
+"(https://github.com/testing-cabal/shellvars)"
 msgstr ""
 
-#: ../pep-0516.txt:462
+#: ../../peps/pep-0516.rst:461
 msgid ""
-"The kick-off thread. (https://mail.python.org/pipermail/distutils-sig/2015-"
-"October/026925.html)"
+"The kick-off thread. (https://mail.python.org/pipermail/distutils-"
+"sig/2015-October/026925.html)"
 msgstr ""
 
-#: ../pep-0516.txt:465
+#: ../../peps/pep-0516.rst:464
 msgid ""
-"The minutes. (https://mail.python.org/pipermail/distutils-sig/2015-"
-"October/027214.html)"
+"The minutes. (https://mail.python.org/pipermail/distutils-"
+"sig/2015-October/027214.html)"
 msgstr ""
 
-#: ../pep-0516.txt:468
+#: ../../peps/pep-0516.rst:467
 msgid ""
-"The Python string formatting syntax. (https://docs.python.org/3.1/library/"
-"string.html#format-string-syntax)"
+"The Python string formatting syntax. "
+"(https://docs.python.org/3.1/library/string.html#format-string-syntax)"
 msgstr ""
 
-#: ../pep-0516.txt:473
+#: ../../peps/pep-0516.rst:472
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../pep-0516.txt:475
+#: ../../peps/pep-0516.rst:474
 msgid "This document has been placed in the public domain."
 msgstr "Este documento foi colocado em domínio público."
+
+#~ msgid "Robert Collins <rbtcollins@hp.com>, Nathaniel Smith <njs@pobox.com>"
+#~ msgstr ""
+
+#~ msgid "Nick Coghlan <ncoghlan@gmail.com>"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Should install scripts within "
+#~ "`/tmp/usr/local/bin`, even if the Python "
+#~ "environment in use reports that the "
+#~ "sys.prefix is `/usr/` which would lead"
+#~ " to using `/tmp/usr/bin/`. Similar logic"
+#~ " applies for package files etc."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Because flit doesn't have setup-requires"
+#~ " support today, `flit build_requires` would"
+#~ " just output a constant string::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`flit metadata` would interrogate `flit.ini`"
+#~ " and marshal the metadata into a "
+#~ "wheel METADATA file and output that "
+#~ "on stdout."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`flit wheel` would need to accept "
+#~ "a `-d` parameter that tells it "
+#~ "where to output the wheel (pip "
+#~ "needs this)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "As such we recommend that tools "
+#~ "which are currently used as setup-"
+#~ "requires either ensure that they keep"
+#~ " a `setuptools shim`_ or find their"
+#~ " consumers and get them all to "
+#~ "upgrade to the use of a "
+#~ "`pypa.json` in advance of moving "
+#~ "themselves. Pragmatically that is impossible,"
+#~ " so the advice is to keep a "
+#~ "setuptools shim indefinitely - both for"
+#~ " projects like pbr, setuptools_scm and "
+#~ "also projects like numpy."
+#~ msgstr ""
+

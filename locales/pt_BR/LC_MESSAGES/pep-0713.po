@@ -1,0 +1,295 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the PEPs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PEPs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-20 10:43-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pt_BR\n"
+"Language-Team: pt_BR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.13.1\n"
+
+#: ../../peps/pep-0713.rst
+msgid "Author"
+msgstr ""
+
+#: ../../peps/pep-0713.rst:3
+msgid "Amethyst Reese <amethyst at n7.gg>"
+msgstr ""
+
+#: ../../peps/pep-0713.rst
+msgid "Sponsor"
+msgstr ""
+
+#: ../../peps/pep-0713.rst:4
+msgid "Łukasz Langa <lukasz at python.org>"
+msgstr ""
+
+#: ../../peps/pep-0713.rst
+msgid "Discussions-To"
+msgstr ""
+
+#: ../../peps/pep-0713.rst:5
+msgid "https://discuss.python.org/t/pep-713-callable-modules/26127"
+msgstr ""
+
+#: ../../peps/pep-0713.rst
+msgid "Status"
+msgstr ""
+
+#: ../../peps/pep-0713.rst:6
+msgid "Rejected"
+msgstr ""
+
+#: ../../peps/pep-0713.rst
+msgid "Type"
+msgstr ""
+
+#: ../../peps/pep-0713.rst:7
+msgid "Standards Track"
+msgstr ""
+
+#: ../../peps/pep-0713.rst
+msgid "Created"
+msgstr ""
+
+#: ../../peps/pep-0713.rst:9
+msgid "20-Apr-2023"
+msgstr ""
+
+#: ../../peps/pep-0713.rst
+msgid "Python-Version"
+msgstr ""
+
+#: ../../peps/pep-0713.rst:10
+msgid "3.12"
+msgstr ""
+
+#: ../../peps/pep-0713.rst
+msgid "Post-History"
+msgstr ""
+
+#: ../../peps/pep-0713.rst:11
+msgid ""
+"`23-Apr-2023 <https://discuss.python.org/t/pep-713-callable-"
+"modules/26127>`__"
+msgstr ""
+
+#: ../../peps/pep-0713.rst
+msgid "Resolution"
+msgstr ""
+
+#: ../../peps/pep-0713.rst:12
+msgid "https://discuss.python.org/t/26127/86"
+msgstr ""
+
+#: ../../peps/pep-0713.rst:16
+msgid "Rejection Notice"
+msgstr ""
+
+#: ../../peps/pep-0713.rst:18
+msgid ""
+"The Steering Council didn't feel that there was a compelling reason to "
+"have this PEP, even though it clearly could be done from a consistency "
+"point of view. If this idea comes up again in the future, this is a "
+"useful prior discussion to refer to."
+msgstr ""
+
+#: ../../peps/pep-0713.rst:26
+msgid "Abstract"
+msgstr ""
+
+#: ../../peps/pep-0713.rst:28
+msgid ""
+"Modules are currently not directly callable. Classes can define a "
+"``__call__`` method that makes instance objects callable, but defining a "
+"similarly named function in the global module scope has no effect, and "
+"that function can only be called by importing or referencing it directly "
+"as ``module.__call__``. :pep:`562` added support for "
+":meth:`~object.__getattr__` and :meth:`~object.__dir__` for modules, but "
+"defining ``__getattr__`` to return a value for ``__call__`` still does "
+"not make a module callable."
+msgstr ""
+
+#: ../../peps/pep-0713.rst:36
+msgid ""
+"This PEP proposes support for making modules directly callable by "
+"defining a ``__call__`` object in the module's global namespace, either "
+"as a standard function, or an arbitrary callable object."
+msgstr ""
+
+#: ../../peps/pep-0713.rst:42
+msgid "Motivation"
+msgstr ""
+
+#: ../../peps/pep-0713.rst:44
+msgid ""
+"Many modules have only a single primary interface to their functionality."
+" In many cases, that interface is a single callable object, where being "
+"able to import and use the module directly as a callable provides a more "
+"\"Pythonic\" interface for users::"
+msgstr ""
+
+#: ../../peps/pep-0713.rst:57
+msgid ""
+"Currently, providing this style of interface requires modifying the "
+"module object at runtime to make it callable."
+msgstr ""
+
+#: ../../peps/pep-0713.rst:60
+msgid ""
+"This is commonly done by replacing the module object in ``sys.modules`` "
+"with a callable alternative (such as a function or class instance)::"
+msgstr ""
+
+#: ../../peps/pep-0713.rst:70
+msgid ""
+"This has the effect of making the original module effectively unreachable"
+" without further hooks from the author, even with ``from module import "
+"member``. It also results in a \"module\" object that is missing all of "
+"the special module attributes, including ``__doc__``, ``__package__``, "
+"``__path__``, etc."
+msgstr ""
+
+#: ../../peps/pep-0713.rst:75
+msgid ""
+"Alternatively, a module author can choose to override the module's "
+"``__class__`` property with a custom type that provides a callable "
+"interface::"
+msgstr ""
+
+#: ../../peps/pep-0713.rst:89
+msgid ""
+"The downside of either approach is that it not only results in extra "
+"boilerplate, but also results in type checker failures because they don't"
+" recognize that the module is callable at runtime:"
+msgstr ""
+
+#: ../../peps/pep-0713.rst:101
+msgid "Specification"
+msgstr ""
+
+#: ../../peps/pep-0713.rst:103
+msgid ""
+"When a module object is called, and a ``__call__`` object is found "
+"(either as the result of a ``__getattr__`` or ``__dict__`` lookup), then "
+"that object will be called with the given arguments."
+msgstr ""
+
+#: ../../peps/pep-0713.rst:107
+msgid ""
+"If a ``__call__`` object is not found, then a ``TypeError`` will be "
+"raised, matching the existing behavior."
+msgstr ""
+
+#: ../../peps/pep-0713.rst:110
+msgid "All of these examples would be considered valid, callable modules:"
+msgstr ""
+
+#: ../../peps/pep-0713.rst:139
+msgid ""
+"The first two styles should generally be preferred, as it allows for "
+"easier static analysis from tools like type checkers, though the third "
+"form would be allowed in order to make the implementation more "
+"consistent."
+msgstr ""
+
+#: ../../peps/pep-0713.rst:143
+msgid ""
+"The intent is to allow arbitrary callable object to be assigned to the "
+"module's ``__call__`` property or returned by the module's "
+"``__getattr__`` method, enabling module authors to pick the most suitable"
+" mechanism for making their module callable by users."
+msgstr ""
+
+#: ../../peps/pep-0713.rst:150
+msgid "Backwards Compatibility and Impact on Performance"
+msgstr ""
+
+#: ../../peps/pep-0713.rst:152
+msgid ""
+"This PEP is not expected to cause any backwards incompatibility. Any "
+"modules that already contain a ``__call__`` object will continue to "
+"function the same as before, though with the additional ability to be "
+"called directly. It is considered unlikely that modules with an existing "
+"``__call__`` object would depend on the existing behavior of raising "
+"``TypeError`` when called."
+msgstr ""
+
+#: ../../peps/pep-0713.rst:158
+msgid ""
+"Performance implications of this PEP are minimal, as it defines a new "
+"interface. Calling a module would trigger a lookup for the name "
+"``__call__`` on a module object. Existing workarounds for creating "
+"callable modules already depend on this behavior for generic objects, "
+"resulting in similar performance for these callable modules."
+msgstr ""
+
+#: ../../peps/pep-0713.rst:164
+msgid ""
+"Type checkers will likely need to be updated accordingly to treat modules"
+" with a ``__call__`` object as callable. This should be possible to "
+"support in type checkers when checking code targeted at older Python "
+"versions that do not support callable modules, with the expectation that "
+"these modules would also include one of the workarounds mentioned earlier"
+" to make the module callable."
+msgstr ""
+
+#: ../../peps/pep-0713.rst:172
+msgid "How to Teach This"
+msgstr ""
+
+#: ../../peps/pep-0713.rst:174
+msgid ""
+"The documentation for :external+python:ref:`callable types <types>` will "
+"include modules in the list, with a link to :meth:`~object.__call__`. The"
+" :external+python:ref:`callable-types` documentation will include a "
+"section covering callable modules, with example code, similar to the "
+"section for `customizing module attribute access`__."
+msgstr ""
+
+#: ../../peps/pep-0713.rst:184
+msgid "Reference Implementation"
+msgstr ""
+
+#: ../../peps/pep-0713.rst:186
+msgid ""
+"The proposed implementation of callable modules is available in `CPython "
+"PR #103742 <https://github.com/python/cpython/pull/103742>`_."
+msgstr ""
+
+#: ../../peps/pep-0713.rst:191
+msgid "Rejected Ideas"
+msgstr ""
+
+#: ../../peps/pep-0713.rst:193
+msgid ""
+"Given the introduction of ``__getattr__`` and ``__dir__``, and the "
+"proposal to enable use of ``__call__``, it was considered if it was worth"
+" allowing use of *all* :external+python:ref:`specialnames` for modules, "
+"such as ``__or__`` and ``__iter__``. While this would not be completely "
+"undesired, it increases the potential for backward compatibility "
+"concerns, and these other special methods are likely to provide less "
+"utility to library authors in comparison to ``__call__``."
+msgstr ""
+
+#: ../../peps/pep-0713.rst:203
+msgid "Copyright"
+msgstr ""
+
+#: ../../peps/pep-0713.rst:205
+msgid ""
+"This document is placed in the public domain or under the "
+"CC0-1.0-Universal license, whichever is more permissive."
+msgstr ""
+

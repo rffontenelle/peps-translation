@@ -6,1217 +6,1246 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PEPs\n"
+"Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 20:07+0000\n"
+"POT-Creation-Date: 2023-11-20 10:43-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.13.1\n"
 
-#: ../pep-8015.rst
+#: ../../peps/pep-8015.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../pep-8015.rst:3
+#: ../../peps/pep-8015.rst:3
 msgid "Victor Stinner"
 msgstr ""
 
-#: ../pep-8015.rst
+#: ../../peps/pep-8015.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../pep-8015.rst:4
+#: ../../peps/pep-8015.rst:4
 msgid "Rejected"
 msgstr ""
 
-#: ../pep-8015.rst
+#: ../../peps/pep-8015.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../pep-8015.rst:5
+#: ../../peps/pep-8015.rst:5
 msgid "Informational"
 msgstr ""
 
-#: ../pep-8015.rst
+#: ../../peps/pep-8015.rst
+msgid "Topic"
+msgstr ""
+
+#: ../../peps/pep-8015.rst:6
+msgid "Governance"
+msgstr ""
+
+#: ../../peps/pep-8015.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../pep-8015.rst:7
+#: ../../peps/pep-8015.rst:8
 msgid "04-Oct-2018"
 msgstr ""
 
-#: ../pep-8015.rst:10
+#: ../../peps/pep-8015.rst:11
 msgid "Abstract"
 msgstr ""
 
-#: ../pep-8015.rst:12
+#: ../../peps/pep-8015.rst:13
 msgid ""
 "This PEP formalizes the current organization of the Python community and "
 "proposes 3 main changes:"
 msgstr ""
 
-#: ../pep-8015.rst:15
+#: ../../peps/pep-8015.rst:16
 msgid "Formalize the existing concept of \"Python teams\";"
 msgstr ""
 
-#: ../pep-8015.rst:16
+#: ../../peps/pep-8015.rst:17
 msgid "Give more autonomy to Python teams;"
 msgstr ""
 
-#: ../pep-8015.rst:17
+#: ../../peps/pep-8015.rst:18
 msgid ""
-"Replace the BDFL (Guido van Rossum) with a new \"Python Steering Committee\" "
-"of 5 members which has limited roles: basically decide how decisions are "
-"taken, but don't take decisions."
+"Replace the BDFL (Guido van Rossum) with a new \"Python Steering "
+"Committee\" of 5 members which has limited roles: basically decide how "
+"decisions are taken, but don't take decisions."
 msgstr ""
 
-#: ../pep-8015.rst:21
+#: ../../peps/pep-8015.rst:22
 msgid ""
 "PEPs are approved by a PEP delegate or by a vote (reserved to core "
 "developers, need ``>= 2/3`` majority)."
 msgstr ""
 
-#: ../pep-8015.rst:26
+#: ../../peps/pep-8015.rst:27
 msgid "PEP Rejection"
 msgstr ""
 
-#: ../pep-8015.rst:28
+#: ../../peps/pep-8015.rst:29
 msgid ""
-":pep:`8015` was rejected `by a core developer vote <https://discuss.python."
-"org/t/python-governance-vote-december-2018-results/546/>`__ described in :"
-"pep:`8001` on Monday, December 17, 2018."
+":pep:`8015` was rejected `by a core developer vote "
+"<https://discuss.python.org/t/python-governance-vote-"
+"december-2018-results/546/>`__ described in :pep:`8001` on Monday, "
+"December 17, 2018."
 msgstr ""
 
-#: ../pep-8015.rst:32
+#: ../../peps/pep-8015.rst:33
 msgid ":pep:`8016` and the governance model it describes were chosen instead."
 msgstr ""
 
-#: ../pep-8015.rst:36
+#: ../../peps/pep-8015.rst:37
 msgid "Rationale"
 msgstr ""
 
-#: ../pep-8015.rst:38
+#: ../../peps/pep-8015.rst:39
 msgid ""
 "This PEP describes the organization of the whole Python development "
-"community, from Python users to the Python Steering Committee. Describing "
-"all groups and all roles in the same document helps to make the organization "
-"more consistent."
+"community, from Python users to the Python Steering Committee. Describing"
+" all groups and all roles in the same document helps to make the "
+"organization more consistent."
 msgstr ""
 
-#: ../pep-8015.rst:43
+#: ../../peps/pep-8015.rst:44
 msgid ""
 "The number of governance changes is minimized to get a smooth transition "
-"from the old BDFL organization to the new Steering Committee organization."
+"from the old BDFL organization to the new Steering Committee "
+"organization."
 msgstr ""
 
-#: ../pep-8015.rst:47
+#: ../../peps/pep-8015.rst:48
 msgid ""
 "One key design of the organization is to avoid decision bottlenecks. "
-"Discussions and decisions are distributed into Python teams where experts in "
-"each topic can be found. The expectation is smoother discussions on PEPs: "
-"fewer people with better knowledge of the topic."
+"Discussions and decisions are distributed into Python teams where experts"
+" in each topic can be found. The expectation is smoother discussions on "
+"PEPs: fewer people with better knowledge of the topic."
 msgstr ""
 
-#: ../pep-8015.rst:52
+#: ../../peps/pep-8015.rst:53
 msgid ""
-"Previously, most decisions have been taken by the Benevolent Dictator For "
-"Life (BDFL), Guido van Rossum. The growing popularity of Python increased "
-"the pressure on a single person. The proposed organization distributes "
-"decisions and responsibilities to reduce the pressure and avoid wearing any "
-"individual down."
+"Previously, most decisions have been taken by the Benevolent Dictator For"
+" Life (BDFL), Guido van Rossum. The growing popularity of Python "
+"increased the pressure on a single person. The proposed organization "
+"distributes decisions and responsibilities to reduce the pressure and "
+"avoid wearing any individual down."
 msgstr ""
 
-#: ../pep-8015.rst:58
+#: ../../peps/pep-8015.rst:59
 msgid ""
-"To keep most of the decision power within the hands of the community, the "
-"Python Steering Committee has very limited roles. The idea is to reduce the "
-"risk that a group of people or companies \"takes over\" the Python project "
-"through just a couple individuals. The project must remain autonomous and "
-"open to everybody."
+"To keep most of the decision power within the hands of the community, the"
+" Python Steering Committee has very limited roles. The idea is to reduce "
+"the risk that a group of people or companies \"takes over\" the Python "
+"project through just a couple individuals. The project must remain "
+"autonomous and open to everybody."
 msgstr ""
 
-#: ../pep-8015.rst:64
+#: ../../peps/pep-8015.rst:65
 msgid ""
-"The most sensitives PEPs are decided by democracy: a vote reserved to core "
-"developers, see the `PEP process`_ section below for the voting method."
+"The most sensitives PEPs are decided by democracy: a vote reserved to "
+"core developers, see the `PEP process`_ section below for the voting "
+"method."
 msgstr ""
 
-#: ../pep-8015.rst:70
+#: ../../peps/pep-8015.rst:71
 msgid "Common Guidelines"
 msgstr ""
 
-#: ../pep-8015.rst:72
+#: ../../peps/pep-8015.rst:73
 msgid "The Python community is open to everyone."
 msgstr ""
 
-#: ../pep-8015.rst:73
+#: ../../peps/pep-8015.rst:74
 msgid ""
-"Members must respect the `Python Community Code of Conduct <https://www."
-"python.org/psf/codeofconduct/>`_ which ensures that discussions remain "
-"constructive and that everybody feels welcomed."
+"Members must respect the `Python Community Code of Conduct "
+"<https://www.python.org/psf/codeofconduct/>`_ which ensures that "
+"discussions remain constructive and that everybody feels welcomed."
 msgstr ""
 
-#: ../pep-8015.rst:76
+#: ../../peps/pep-8015.rst:77
 msgid "Python is and will remain an autonomous project."
 msgstr ""
 
-#: ../pep-8015.rst:77
+#: ../../peps/pep-8015.rst:78
 msgid ""
-"People with decisions power should reflect the diversity of its users and "
-"contributors."
+"People with decisions power should reflect the diversity of its users and"
+" contributors."
 msgstr ""
 
-#: ../pep-8015.rst:82
+#: ../../peps/pep-8015.rst:83
 msgid "Community Organization"
 msgstr ""
 
-#: ../pep-8015.rst:84
+#: ../../peps/pep-8015.rst:85
 msgid ""
 "Right now, there are different group of people involved in the Python "
-"project. The more involved you are, the more decisions power you get. It is "
-"important that the people acceding to the deepest group are the most trusted "
-"ones."
+"project. The more involved you are, the more decisions power you get. It "
+"is important that the people acceding to the deepest group are the most "
+"trusted ones."
 msgstr ""
 
-#: ../pep-8015.rst:89
+#: ../../peps/pep-8015.rst:90
 msgid "This PEP formalizes the following groups:"
 msgstr ""
 
-#: ../pep-8015.rst:91 ../pep-8015.rst:100
+#: ../../peps/pep-8015.rst:92 ../../peps/pep-8015.rst:101
 msgid "Python Users"
 msgstr ""
 
-#: ../pep-8015.rst:92 ../pep-8015.rst:106
+#: ../../peps/pep-8015.rst:93 ../../peps/pep-8015.rst:107
 msgid "Python Contributors"
 msgstr ""
 
-#: ../pep-8015.rst:93
+#: ../../peps/pep-8015.rst:94
 msgid "Python Teams Members"
 msgstr ""
 
-#: ../pep-8015.rst:94 ../pep-8015.rst:142
+#: ../../peps/pep-8015.rst:95 ../../peps/pep-8015.rst:143
 msgid "Python Core Developers"
 msgstr ""
 
-#: ../pep-8015.rst:95
+#: ../../peps/pep-8015.rst:96
 msgid "Python Steering Committee Members"
 msgstr ""
 
-#: ../pep-8015.rst:96 ../pep-8015.rst:319
+#: ../../peps/pep-8015.rst:97 ../../peps/pep-8015.rst:320
 msgid "PSF Code of Conduct Workgroup"
 msgstr ""
 
-#: ../pep-8015.rst:102
+#: ../../peps/pep-8015.rst:103
 msgid "This is the largest group: anyone who uses Python."
 msgstr ""
 
-#: ../pep-8015.rst:108
+#: ../../peps/pep-8015.rst:109
 msgid ""
-"Once a Python user sends an email to a Python mailing list, comments on the "
-"Python bug tracker, proposes or reviews a Python change, they become a "
-"Python contributor."
+"Once a Python user sends an email to a Python mailing list, comments on "
+"the Python bug tracker, proposes or reviews a Python change, they become "
+"a Python contributor."
 msgstr ""
 
-#: ../pep-8015.rst:114
+#: ../../peps/pep-8015.rst:115
 msgid "Python Teams"
 msgstr ""
 
-#: ../pep-8015.rst:116
+#: ../../peps/pep-8015.rst:117
 msgid ""
 "Python became too big to work as a unique team anymore, people naturally "
-"have grouped themselves as teams to work more closely on specific topics, "
-"sometimes called \"Special Interest Group\" (SIG)."
+"have grouped themselves as teams to work more closely on specific topics,"
+" sometimes called \"Special Interest Group\" (SIG)."
 msgstr ""
 
-#: ../pep-8015.rst:120
+#: ../../peps/pep-8015.rst:121
 msgid ""
-"When enough developers are interested by a specific topic, they can create a "
-"new team. Usually, the main action is to ask the Python postmaster to create "
-"a new \"SIG\" mailing list, but the team can choose to use a different "
-"communication channel."
+"When enough developers are interested by a specific topic, they can "
+"create a new team. Usually, the main action is to ask the Python "
+"postmaster to create a new \"SIG\" mailing list, but the team can choose "
+"to use a different communication channel."
 msgstr ""
 
-#: ../pep-8015.rst:125
+#: ../../peps/pep-8015.rst:126
 msgid ""
-"Team members are Python contributors and Python core developers. The team is "
-"self-organized and is responsible to select who can join the team and how."
+"Team members are Python contributors and Python core developers. The team"
+" is self-organized and is responsible to select who can join the team and"
+" how."
 msgstr ""
 
-#: ../pep-8015.rst:129
+#: ../../peps/pep-8015.rst:130
 msgid ""
 "Team members can get the bug triage permission on the team bug tracker "
-"component. The more involved in a team you are, the more decisions power and "
-"responsibilities you get."
+"component. The more involved in a team you are, the more decisions power "
+"and responsibilities you get."
 msgstr ""
 
-#: ../pep-8015.rst:133
+#: ../../peps/pep-8015.rst:134
 msgid ""
-"A team might become allowed to decide on their own PEPs, but only the Python "
-"Steering Committee can allow that (and it has the power to revoke it as "
-"well). Such a case is exceptional, currently a single team has such "
-"permission: the Packaging Team."
+"A team might become allowed to decide on their own PEPs, but only the "
+"Python Steering Committee can allow that (and it has the power to revoke "
+"it as well). Such a case is exceptional, currently a single team has such"
+" permission: the Packaging Team."
 msgstr ""
 
-#: ../pep-8015.rst:138
+#: ../../peps/pep-8015.rst:139
 msgid "See `Annex: Examples of Python Teams`_."
 msgstr ""
 
-#: ../pep-8015.rst:144
+#: ../../peps/pep-8015.rst:145
 msgid ""
 "One restricted definition of a core developer is the ability to merge a "
-"change (anywhere in the code) and have the bug triage permission (on all bug "
-"tracker components)."
+"change (anywhere in the code) and have the bug triage permission (on all "
+"bug tracker components)."
 msgstr ""
 
-#: ../pep-8015.rst:148
+#: ../../peps/pep-8015.rst:149
 msgid ""
-"Core developers are developers who are proven to have the required skills to "
-"decide if a change can be approved or must be rejected, but also (and this "
-"is more important) what changes should not be made. Python has a long "
-"history, big constraints on backward compatibility, high quality standards "
-"(ex: changes require new tests). For these reasons, becoming a core can take "
-"several months or longer."
+"Core developers are developers who are proven to have the required skills"
+" to decide if a change can be approved or must be rejected, but also (and"
+" this is more important) what changes should not be made. Python has a "
+"long history, big constraints on backward compatibility, high quality "
+"standards (ex: changes require new tests). For these reasons, becoming a "
+"core can take several months or longer."
 msgstr ""
 
-#: ../pep-8015.rst:155
+#: ../../peps/pep-8015.rst:156
 msgid ""
 "Becoming a core developer means more responsibilities. For example, if a "
-"developer merges a change, they become responsible for regressions and for "
-"the maintenance of that modified code."
+"developer merges a change, they become responsible for regressions and "
+"for the maintenance of that modified code."
 msgstr ""
 
-#: ../pep-8015.rst:159
+#: ../../peps/pep-8015.rst:160
 msgid ""
-"Core developers are expected to be exemplary when it comes to the Code of "
-"Conduct. They are encouraged to mentor contributors."
+"Core developers are expected to be exemplary when it comes to the Code of"
+" Conduct. They are encouraged to mentor contributors."
 msgstr ""
 
-#: ../pep-8015.rst:163
+#: ../../peps/pep-8015.rst:164
 msgid "Promote a contributor as core developer"
 msgstr ""
 
-#: ../pep-8015.rst:165
+#: ../../peps/pep-8015.rst:166
 msgid ""
 "Once an existing core developer considers that a contributor is ready to "
-"join the core group, to become a core developer, that core developer asks "
-"the contributor if they would like to become a core developer. If the "
-"contributor is interested in such new responsibilities, a vote is organized."
+"join the core group, to become a core developer, that core developer asks"
+" the contributor if they would like to become a core developer. If the "
+"contributor is interested in such new responsibilities, a vote is "
+"organized."
 msgstr ""
 
-#: ../pep-8015.rst:171
+#: ../../peps/pep-8015.rst:172
 msgid ""
-"The vote is reserved to core developers, is public, and is open for 1 week.  "
-"Usually the core developer who proposes the promotion has to describe the "
-"work and skills of the candidate in the description of the vote. A "
-"contributor is only promoted if two thirds (``>= 2/3``) of votes approve "
-"(\"+1\") the promotion. Only \"+1\" and \"-1\" votes are accounted; other "
-"votes (ex: null, \"-0\", \"+0.5\") are ignored."
+"The vote is reserved to core developers, is public, and is open for 1 "
+"week.  Usually the core developer who proposes the promotion has to "
+"describe the work and skills of the candidate in the description of the "
+"vote. A contributor is only promoted if two thirds (``>= 2/3``) of votes "
+"approve (\"+1\") the promotion. Only \"+1\" and \"-1\" votes are "
+"accounted; other votes (ex: null, \"-0\", \"+0.5\") are ignored."
 msgstr ""
 
-#: ../pep-8015.rst:178
+#: ../../peps/pep-8015.rst:179
 msgid ""
-"If the candidate is promoted, usually they get a mentor for 1 month to help "
-"them to handle new responsibilities."
+"If the candidate is promoted, usually they get a mentor for 1 month to "
+"help them to handle new responsibilities."
 msgstr ""
 
-#: ../pep-8015.rst:181
+#: ../../peps/pep-8015.rst:182
 msgid ""
-"If the candidate is not promoted, a new vote can be organized later, when "
-"the candidate gets the missing skills, for example 6 months later."
+"If the candidate is not promoted, a new vote can be organized later, when"
+" the candidate gets the missing skills, for example 6 months later."
 msgstr ""
 
-#: ../pep-8015.rst:186
+#: ../../peps/pep-8015.rst:187
 msgid "Python Steering Committee"
 msgstr ""
 
-#: ../pep-8015.rst:188
+#: ../../peps/pep-8015.rst:189
 msgid ""
-"The Python Steering Committee is made of the most trusted core developers "
-"since it has the most decision power. The roles of this group are strictly "
-"limited to ensure that Python keeps its autonomy and remains open."
+"The Python Steering Committee is made of the most trusted core developers"
+" since it has the most decision power. The roles of this group are "
+"strictly limited to ensure that Python keeps its autonomy and remains "
+"open."
 msgstr ""
 
-#: ../pep-8015.rst:193
+#: ../../peps/pep-8015.rst:194
 msgid ""
-"The Python Steering Committee is composed of 5 members. They are elected for "
-"3 years and 1/3 is replaced every year (first year: 1, second year: 2, third "
-"year: 2). This way, a member will stay for one full Python release and the "
-"committee composition will be updated frequently. A committee member can be "
-"a candidate for the seat they are leaving. There are no term limits."
+"The Python Steering Committee is composed of 5 members. They are elected "
+"for 3 years and 1/3 is replaced every year (first year: 1, second year: "
+"2, third year: 2). This way, a member will stay for one full Python "
+"release and the committee composition will be updated frequently. A "
+"committee member can be a candidate for the seat they are leaving. There "
+"are no term limits."
 msgstr ""
 
-#: ../pep-8015.rst:200
+#: ../../peps/pep-8015.rst:201
 #, python-format
 msgid ""
-"Committee members must be Python core developers. It is important that the "
-"members of the committee reflect the diversity of Python' users and "
-"contributors. A small step to ensure that is to enforce that only 2 members "
-"(strictly less than 50% of the 5 members) can work for the same employer "
-"(same company or subsidiaries of the same company)."
+"Committee members must be Python core developers. It is important that "
+"the members of the committee reflect the diversity of Python' users and "
+"contributors. A small step to ensure that is to enforce that only 2 "
+"members (strictly less than 50% of the 5 members) can work for the same "
+"employer (same company or subsidiaries of the same company)."
 msgstr ""
 
-#: ../pep-8015.rst:206
+#: ../../peps/pep-8015.rst:207
 msgid ""
 "The size of 5 members has been chosen for the members diversity and to "
 "ensure that the committee can continue to work even if a member becomes "
 "unavailable for an unknown duration."
 msgstr ""
 
-#: ../pep-8015.rst:211
+#: ../../peps/pep-8015.rst:212
 msgid "Python Steering Committee Roles"
 msgstr ""
 
-#: ../pep-8015.rst:213
+#: ../../peps/pep-8015.rst:214
 msgid "Python Steering Committee roles:"
 msgstr ""
 
-#: ../pep-8015.rst:215
+#: ../../peps/pep-8015.rst:216
 msgid "Decide how a PEP is approved (or rejected or deferred)."
 msgstr ""
 
-#: ../pep-8015.rst:216
+#: ../../peps/pep-8015.rst:217
 msgid ""
-"Grant or revoke permissions to a Python team. For example, allow a team to "
-"give the bug triage permission (on the team component) to a contributor."
+"Grant or revoke permissions to a Python team. For example, allow a team "
+"to give the bug triage permission (on the team component) to a "
+"contributor."
 msgstr ""
 
-#: ../pep-8015.rst:220
+#: ../../peps/pep-8015.rst:221
 msgid ""
 "To decide how a PEP is approved (or rejected or deferred), there are two "
 "options:"
 msgstr ""
 
-#: ../pep-8015.rst:223
+#: ../../peps/pep-8015.rst:224
 msgid ""
-"The committee elects a PEP delegate (previously known as \"BDFL-delegate\"): "
-"a core developer who will take the final decision for the specific PEP. The "
-"committee select the PEP delegate who can be proposed by the Python team "
-"where the PEP is discussed."
+"The committee elects a PEP delegate (previously known as \"BDFL-"
+"delegate\"): a core developer who will take the final decision for the "
+"specific PEP. The committee select the PEP delegate who can be proposed "
+"by the Python team where the PEP is discussed."
 msgstr ""
 
-#: ../pep-8015.rst:227
+#: ../../peps/pep-8015.rst:228
 msgid ""
 "The committee can organize a vote on the PEP, see `PEP process`_ for the "
-"vote organization. The committee decides when the vote is organized. A vote "
-"is preferred for changes affecting all Python users, like language changes."
+"vote organization. The committee decides when the vote is organized. A "
+"vote is preferred for changes affecting all Python users, like language "
+"changes."
 msgstr ""
 
-#: ../pep-8015.rst:232
+#: ../../peps/pep-8015.rst:233
 msgid ""
-"The committee keeps the \"vision\" and consistency of Python. It also makes "
-"sure that important features reach completion. Their ability to pick PEP "
-"delegates is meant to help them to achieve that goal."
+"The committee keeps the \"vision\" and consistency of Python. It also "
+"makes sure that important features reach completion. Their ability to "
+"pick PEP delegates is meant to help them to achieve that goal."
 msgstr ""
 
-#: ../pep-8015.rst:237
+#: ../../peps/pep-8015.rst:238
 msgid "Election of Python Steering Committee Members"
 msgstr ""
 
-#: ../pep-8015.rst:239
+#: ../../peps/pep-8015.rst:240
 msgid ""
-"The vote is organized by the Steering Committee. It is announced 3 weeks in "
-"advance: candidates have to apply during this period. The vote is reserved "
-"to core developers and is open for 1 week. To avoid self-censorship, the "
-"vote uses secret ballots: avoid the risk of hostility from someone who may "
-"get more power (if they get elected)."
+"The vote is organized by the Steering Committee. It is announced 3 weeks "
+"in advance: candidates have to apply during this period. The vote is "
+"reserved to core developers and is open for 1 week. To avoid self-"
+"censorship, the vote uses secret ballots: avoid the risk of hostility "
+"from someone who may get more power (if they get elected)."
 msgstr ""
 
-#: ../pep-8015.rst:245
+#: ../../peps/pep-8015.rst:246
 msgid ""
-"The vote uses the `Schulze/Beatpath/CSSD variant <https://en.wikipedia.org/"
-"wiki/Schulze_method>`_ of the `Condorcet method <https://en.wikipedia.org/"
-"wiki/Condorcet_method>`_ using an online service like `Condorcet Internet "
-"Voting Service (CIVS) <https://civs.cs.cornell.edu/>`_. This voting method "
-"reduces the risk of tie. It also produces a ranking of all candidates, "
-"needed for the creation of the committee."
+"The vote uses the `Schulze/Beatpath/CSSD variant "
+"<https://en.wikipedia.org/wiki/Schulze_method>`_ of the `Condorcet method"
+" <https://en.wikipedia.org/wiki/Condorcet_method>`_ using an online "
+"service like `Condorcet Internet Voting Service (CIVS) "
+"<https://civs.cs.cornell.edu/>`_. This voting method reduces the risk of "
+"tie. It also produces a ranking of all candidates, needed for the "
+"creation of the committee."
 msgstr ""
 
-#: ../pep-8015.rst:253
+#: ../../peps/pep-8015.rst:254
 msgid ""
 "In case of tie, a new vote is organized immediately between candidates "
-"involved in the tie using the same voting method and also during 1 week. If "
-"the second vote leads to a tie again, the current Steering Committee is "
-"responsible to select the elected member(s)."
+"involved in the tie using the same voting method and also during 1 week. "
+"If the second vote leads to a tie again, the current Steering Committee "
+"is responsible to select the elected member(s)."
 msgstr ""
 
-#: ../pep-8015.rst:258
-msgid ""
-"If a committee member steps down, a new vote is organized to replace them."
+#: ../../peps/pep-8015.rst:259
+msgid "If a committee member steps down, a new vote is organized to replace them."
 msgstr ""
 
-#: ../pep-8015.rst:261
+#: ../../peps/pep-8015.rst:262
 msgid ""
 "If the situation of a committee member changes in a way that no longer "
-"satisfies the committee constraint (ex: they move to the same company as two "
-"other committee members), they have to resign. If the employer of a member "
-"is acquired by the employer of two other members, the member with the "
-"mandate ending earlier has to resign once the acquisition completes."
+"satisfies the committee constraint (ex: they move to the same company as "
+"two other committee members), they have to resign. If the employer of a "
+"member is acquired by the employer of two other members, the member with "
+"the mandate ending earlier has to resign once the acquisition completes."
 msgstr ""
 
-#: ../pep-8015.rst:268
+#: ../../peps/pep-8015.rst:269
 msgid "Election Creating the Python Steering Committee Members"
 msgstr ""
 
-#: ../pep-8015.rst:270
+#: ../../peps/pep-8015.rst:271
 msgid ""
-"To bootstrap the process, 5 members are elected at the committee creation. "
-"The vote follows the same rules than regular committee votes, except that "
-"the election needs 5 members, and the vote is organized by the PSF Board."
+"To bootstrap the process, 5 members are elected at the committee "
+"creation. The vote follows the same rules than regular committee votes, "
+"except that the election needs 5 members, and the vote is organized by "
+"the PSF Board."
 msgstr ""
 
-#: ../pep-8015.rst:275
+#: ../../peps/pep-8015.rst:276
 msgid ""
 "In a council election, if 3 of the top 5 vote-getters work for the same "
-"employer, then whichever of them ranked lowest is disqualified and the 6th-"
-"ranking candidate moves up into 5th place; this is repeated until a valid "
-"council is formed."
+"employer, then whichever of them ranked lowest is disqualified and the "
+"6th-ranking candidate moves up into 5th place; this is repeated until a "
+"valid council is formed."
 msgstr ""
 
-#: ../pep-8015.rst:280
+#: ../../peps/pep-8015.rst:281
 msgid ""
-"In case of tie, a second vote is organized immediately between candidates "
-"involved in the tie and following candidates to fill the remaining seats. "
-"The vote follows the same rules as the regular committee vote. If the second "
-"vote still result in a tie, the PSF Board is responsible to elect members "
-"and decide their position in the vote result."
+"In case of tie, a second vote is organized immediately between candidates"
+" involved in the tie and following candidates to fill the remaining "
+"seats. The vote follows the same rules as the regular committee vote. If "
+"the second vote still result in a tie, the PSF Board is responsible to "
+"elect members and decide their position in the vote result."
 msgstr ""
 
-#: ../pep-8015.rst:287
+#: ../../peps/pep-8015.rst:288
 msgid ""
-"The order in the vote result must be unique for elected members: #1 and #2 "
-"are elected for 3 years, #2 and #3 for 2 years, and #5 for 1 year."
+"The order in the vote result must be unique for elected members: #1 and "
+"#2 are elected for 3 years, #2 and #3 for 2 years, and #5 for 1 year."
 msgstr ""
 
-#: ../pep-8015.rst:290
+#: ../../peps/pep-8015.rst:291
 msgid "Example of vote result with a tie:"
 msgstr ""
 
-#: ../pep-8015.rst:292
+#: ../../peps/pep-8015.rst:293
 msgid "A"
 msgstr ""
 
-#: ../pep-8015.rst:293
+#: ../../peps/pep-8015.rst:294
 msgid "B"
 msgstr ""
 
-#: ../pep-8015.rst:294
+#: ../../peps/pep-8015.rst:295
 msgid "C"
 msgstr ""
 
-#: ../pep-8015.rst:295
+#: ../../peps/pep-8015.rst:296
 msgid "D"
 msgstr ""
 
-#: ../pep-8015.rst:296
+#: ../../peps/pep-8015.rst:297
 msgid "E, F"
 msgstr ""
 
-#: ../pep-8015.rst:297
+#: ../../peps/pep-8015.rst:298
 msgid "G"
 msgstr ""
 
-#: ../pep-8015.rst:298
+#: ../../peps/pep-8015.rst:299
 msgid "..."
 msgstr ""
 
-#: ../pep-8015.rst:300
+#: ../../peps/pep-8015.rst:301
 msgid ""
-"The first 4 candidates (A, B, C and D) are elected immediately. If E works "
-"for the same employer than two other elected member, F is also elected. "
-"Otherwise, a second vote is organized for the 5th seat between E and F."
+"The first 4 candidates (A, B, C and D) are elected immediately. If E "
+"works for the same employer than two other elected member, F is also "
+"elected. Otherwise, a second vote is organized for the 5th seat between E"
+" and F."
 msgstr ""
 
-#: ../pep-8015.rst:306
+#: ../../peps/pep-8015.rst:307
 msgid "Special Case: Steering Committee Members And PEPs"
 msgstr ""
 
-#: ../pep-8015.rst:308
+#: ../../peps/pep-8015.rst:309
 msgid "A committee member can be a PEP delegate."
 msgstr ""
 
-#: ../pep-8015.rst:310
+#: ../../peps/pep-8015.rst:311
 msgid ""
 "A committee member can propose a PEP, but cannot be the PEP delegate of "
 "their own PEP."
 msgstr ""
 
-#: ../pep-8015.rst:313
+#: ../../peps/pep-8015.rst:314
 msgid ""
-"When the committee decides that a PEP must be voted, committee members can "
-"vote as they are also core developers, but they don't have more power than "
-"other core developer."
+"When the committee decides that a PEP must be voted, committee members "
+"can vote as they are also core developers, but they don't have more power"
+" than other core developer."
 msgstr ""
 
-#: ../pep-8015.rst:322
+#: ../../peps/pep-8015.rst:323
 msgid "Charter"
 msgstr ""
 
-#: ../pep-8015.rst:324
+#: ../../peps/pep-8015.rst:325
 msgid ""
 "The workgroup's purpose is to foster a diverse and inclusive Python "
 "community by enforcing the PSF code of conduct, along with providing "
-"guidance and recommendations to the Python community on codes of conduct, "
-"that supports the PSF mission of “ongoing development of Python-related "
+"guidance and recommendations to the Python community on codes of conduct,"
+" that supports the PSF mission of “ongoing development of Python-related "
 "technology and educational resources”."
 msgstr ""
 
-#: ../pep-8015.rst:330
+#: ../../peps/pep-8015.rst:331
 msgid "We work toward this common goal in three ways:"
 msgstr ""
 
-#: ../pep-8015.rst:332
+#: ../../peps/pep-8015.rst:333
 msgid ""
-"Review, revise, and advise on policies relating to the PSF code of conducts "
-"and other communities that the PSF supports. This includes any #python chat "
-"community & python.org email list under PSF jurisdiction."
+"Review, revise, and advise on policies relating to the PSF code of "
+"conducts and other communities that the PSF supports. This includes any "
+"#python chat community & python.org email list under PSF jurisdiction."
 msgstr ""
 
-#: ../pep-8015.rst:336
+#: ../../peps/pep-8015.rst:337
 msgid ""
 "Create a standard set of codes of conduct and supporting documents for "
-"multiple channels of interaction such as, but not limited to, conferences, "
-"mailing lists, slack/IRC, code repositories, and more."
+"multiple channels of interaction such as, but not limited to, "
+"conferences, mailing lists, slack/IRC, code repositories, and more."
 msgstr ""
 
-#: ../pep-8015.rst:339
+#: ../../peps/pep-8015.rst:340
 msgid ""
-"Develop training materials and other processes to support Python community "
-"organizers in implementing and enforcing the code of conduct."
+"Develop training materials and other processes to support Python "
+"community organizers in implementing and enforcing the code of conduct."
 msgstr ""
 
-#: ../pep-8015.rst:343
+#: ../../peps/pep-8015.rst:344
 msgid ""
 "The organization of this workgroup is defined by the `ConductWG Charter "
 "<https://wiki.python.org/psf/ConductWG/Charter>`_."
 msgstr ""
 
-#: ../pep-8015.rst:347
+#: ../../peps/pep-8015.rst:348
 msgid "Special Case: Ban a core developer"
 msgstr ""
 
-#: ../pep-8015.rst:349
+#: ../../peps/pep-8015.rst:350
 msgid ""
 "As any other member of the Python community, the PSF Code of Conduct "
 "Workgroup can ban a core developer for a limited amount of time. In this "
-"case, the core developer immediately loses their core developer status. Core "
-"developers are expected to be exemplary when it comes to the Code of Conduct."
+"case, the core developer immediately loses their core developer status. "
+"Core developers are expected to be exemplary when it comes to the Code of"
+" Conduct."
 msgstr ""
 
-#: ../pep-8015.rst:355
+#: ../../peps/pep-8015.rst:356
 msgid ""
-"In general, a ban is only the last resort action when all other options have "
-"been exhausted."
+"In general, a ban is only the last resort action when all other options "
+"have been exhausted."
 msgstr ""
 
-#: ../pep-8015.rst:358
+#: ../../peps/pep-8015.rst:359
 msgid ""
 "At the end of the ban, the developer is allowed to contribute again as a "
 "regular contributor."
 msgstr ""
 
-#: ../pep-8015.rst:361
+#: ../../peps/pep-8015.rst:362
 msgid ""
-"If the developer changes their behavior, another core developer can organize "
-"a new vote to propose the developer for promotion to core developer. The "
-"vote follows the same process than for any other Python contributor."
+"If the developer changes their behavior, another core developer can "
+"organize a new vote to propose the developer for promotion to core "
+"developer. The vote follows the same process than for any other Python "
+"contributor."
 msgstr ""
 
-#: ../pep-8015.rst:368
+#: ../../peps/pep-8015.rst:369
 msgid "PEP process"
 msgstr ""
 
-#: ../pep-8015.rst:370
+#: ../../peps/pep-8015.rst:371
 msgid "There are 2 main roles on PEPs:"
 msgstr ""
 
-#: ../pep-8015.rst:372
+#: ../../peps/pep-8015.rst:373
 msgid "PEP Authors"
 msgstr ""
 
-#: ../pep-8015.rst:373
+#: ../../peps/pep-8015.rst:374
 msgid "PEP Delegate"
 msgstr ""
 
-#: ../pep-8015.rst:375
+#: ../../peps/pep-8015.rst:376
 msgid "PEP Authors do their best to write high quality PEP."
 msgstr ""
 
-#: ../pep-8015.rst:377
+#: ../../peps/pep-8015.rst:378
 msgid ""
-"The PEP delegate is responsible to help the authors to enhance their PEP and "
-"is the one taking the final decision (accept, reject or defer the PEP). They "
-"can also help to guide the discussion."
+"The PEP delegate is responsible to help the authors to enhance their PEP "
+"and is the one taking the final decision (accept, reject or defer the "
+"PEP). They can also help to guide the discussion."
 msgstr ""
 
-#: ../pep-8015.rst:381
+#: ../../peps/pep-8015.rst:382
 msgid ""
-"If no decision is taken, the authors can propose again the PEP later (ex: "
-"one year later), if possible with new data to motivate the change. A PEP "
-"Delegate can also choose to mark a PEP as \"Deferred\" to not reject the PEP "
-"and encourage to reopen the discussion later."
+"If no decision is taken, the authors can propose again the PEP later (ex:"
+" one year later), if possible with new data to motivate the change. A PEP"
+" Delegate can also choose to mark a PEP as \"Deferred\" to not reject the"
+" PEP and encourage to reopen the discussion later."
 msgstr ""
 
-#: ../pep-8015.rst:386
+#: ../../peps/pep-8015.rst:387
 msgid ""
-"PEPs specific to a Python team are discussed on the team mailing list. PEPs "
-"impacting all Python developers (like language changes) must be discussed on "
-"the python-dev mailing list."
+"PEPs specific to a Python team are discussed on the team mailing list. "
+"PEPs impacting all Python developers (like language changes) must be "
+"discussed on the python-dev mailing list."
 msgstr ""
 
-#: ../pep-8015.rst:391
+#: ../../peps/pep-8015.rst:392
 msgid "Vote on a PEP"
 msgstr ""
 
-#: ../pep-8015.rst:393
+#: ../../peps/pep-8015.rst:394
 msgid ""
 "When the Python Steering Committee decides that a PEP needs a wider "
 "approval, a vote is organized."
 msgstr ""
 
-#: ../pep-8015.rst:396
+#: ../../peps/pep-8015.rst:397
 msgid ""
-"The vote is reserved to core developers, is public, is announced 1 week in "
-"advance, and is open for 1 week. The PEP can still be updated during the 1 "
-"week notice, but must not be modified during the vote. Such vote happens on "
-"the mailing list where the PEP has been discussed. The committee decides "
-"when the vote is organized. The PEP must have been discussed for a "
-"reasonable amount of time before it is put to vote."
+"The vote is reserved to core developers, is public, is announced 1 week "
+"in advance, and is open for 1 week. The PEP can still be updated during "
+"the 1 week notice, but must not be modified during the vote. Such vote "
+"happens on the mailing list where the PEP has been discussed. The "
+"committee decides when the vote is organized. The PEP must have been "
+"discussed for a reasonable amount of time before it is put to vote."
 msgstr ""
 
-#: ../pep-8015.rst:404
+#: ../../peps/pep-8015.rst:405
 msgid ""
-"A PEP is only approved if two thirds (``>= 2/3``) of votes approve (\"+1\") "
-"the PEP.  Only \"+1\" and \"-1\" votes are accounted; other votes (ex: null, "
-"\"-0\", \"+0.5\") are ignored."
+"A PEP is only approved if two thirds (``>= 2/3``) of votes approve "
+"(\"+1\") the PEP.  Only \"+1\" and \"-1\" votes are accounted; other "
+"votes (ex: null, \"-0\", \"+0.5\") are ignored."
 msgstr ""
 
-#: ../pep-8015.rst:408
+#: ../../peps/pep-8015.rst:409
 msgid "A PEP can only be approved or rejected by a vote, not be deferred."
 msgstr ""
 
-#: ../pep-8015.rst:412
+#: ../../peps/pep-8015.rst:413
 msgid "Lack of Decision"
 msgstr ""
 
-#: ../pep-8015.rst:414
+#: ../../peps/pep-8015.rst:415
 msgid ""
-"If a discussion fails to reach a consensus, if the Python Steering Committee "
-"fail to choose a PEP delegate, or if a PEP delegate fails to take a "
-"decision, the obvious risk is that Python fails to evolve."
+"If a discussion fails to reach a consensus, if the Python Steering "
+"Committee fail to choose a PEP delegate, or if a PEP delegate fails to "
+"take a decision, the obvious risk is that Python fails to evolve."
 msgstr ""
 
-#: ../pep-8015.rst:418
+#: ../../peps/pep-8015.rst:419
 msgid "That's fine. Sometimes, doing nothing is the wisest choice."
 msgstr ""
 
-#: ../pep-8015.rst:422 ../pep-8015.rst:450
+#: ../../peps/pep-8015.rst:423 ../../peps/pep-8015.rst:451
 msgid "Change this PEP"
 msgstr ""
 
-#: ../pep-8015.rst:424
+#: ../../peps/pep-8015.rst:425
 msgid ""
 "The first version of this PEP has been written after Guido van Rossum "
-"decided to resign from his role of BDFL in July 2018. Before this PEP, the "
-"roles of Python community members have never been formalized. It is "
-"difficult to design a perfect organization at the first attempt. This PEP "
-"can be updated in the future to adjust the organization, specify how to "
+"decided to resign from his role of BDFL in July 2018. Before this PEP, "
+"the roles of Python community members have never been formalized. It is "
+"difficult to design a perfect organization at the first attempt. This PEP"
+" can be updated in the future to adjust the organization, specify how to "
 "handle corner cases and fix mistakes."
 msgstr ""
 
-#: ../pep-8015.rst:431
+#: ../../peps/pep-8015.rst:432
 msgid ""
-"Any change to this PEP must be validated by a vote. The vote is announced 3 "
-"weeks in advance, is reserved to core developers, happens in public on the "
-"python-committers mailing list, and is open for 1 week. The proposed PEP "
-"change can still be updated during the 3 weeks notice, but must not be "
-"modified during the vote."
+"Any change to this PEP must be validated by a vote. The vote is announced"
+" 3 weeks in advance, is reserved to core developers, happens in public on"
+" the python-committers mailing list, and is open for 1 week. The proposed"
+" PEP change can still be updated during the 3 weeks notice, but must not "
+"be modified during the vote."
 msgstr ""
 
-#: ../pep-8015.rst:437
+#: ../../peps/pep-8015.rst:438
 msgid ""
 "The change is only approved if four fifths (``>= 4/5``) of votes approve "
-"(\"+1\") the change. Only \"+1\" and \"-1\" votes are accounted; other votes "
-"(ex: null, \"-0\", \"+0.5\") are ignored."
+"(\"+1\") the change. Only \"+1\" and \"-1\" votes are accounted; other "
+"votes (ex: null, \"-0\", \"+0.5\") are ignored."
 msgstr ""
 
-#: ../pep-8015.rst:443
+#: ../../peps/pep-8015.rst:444
 msgid "Annex: Summary on votes"
 msgstr ""
 
-#: ../pep-8015.rst:446
+#: ../../peps/pep-8015.rst:447
 msgid "Vote"
 msgstr ""
 
-#: ../pep-8015.rst:446
+#: ../../peps/pep-8015.rst:447
 msgid "Notice"
 msgstr ""
 
-#: ../pep-8015.rst:446
+#: ../../peps/pep-8015.rst:447
 msgid "Open"
 msgstr ""
 
-#: ../pep-8015.rst:446
+#: ../../peps/pep-8015.rst:447
 msgid "Ballot"
 msgstr ""
 
-#: ../pep-8015.rst:446
+#: ../../peps/pep-8015.rst:447
 msgid "Method"
 msgstr ""
 
-#: ../pep-8015.rst:448
+#: ../../peps/pep-8015.rst:449
 msgid "Promote contributor"
 msgstr ""
 
-#: ../pep-8015.rst:448
+#: ../../peps/pep-8015.rst:449
 msgid "none"
 msgstr ""
 
-#: ../pep-8015.rst:448 ../pep-8015.rst:449 ../pep-8015.rst:450
-#: ../pep-8015.rst:451
+#: ../../peps/pep-8015.rst:449 ../../peps/pep-8015.rst:450
+#: ../../peps/pep-8015.rst:451 ../../peps/pep-8015.rst:452
 msgid "1 week"
 msgstr ""
 
-#: ../pep-8015.rst:448 ../pep-8015.rst:449 ../pep-8015.rst:450
+#: ../../peps/pep-8015.rst:449 ../../peps/pep-8015.rst:450
+#: ../../peps/pep-8015.rst:451
 msgid "public"
 msgstr ""
 
-#: ../pep-8015.rst:448 ../pep-8015.rst:449
+#: ../../peps/pep-8015.rst:449 ../../peps/pep-8015.rst:450
 msgid "``>= 2/3`` majority"
 msgstr ""
 
-#: ../pep-8015.rst:449
+#: ../../peps/pep-8015.rst:450
 msgid "PEP"
 msgstr ""
 
-#: ../pep-8015.rst:450 ../pep-8015.rst:451
+#: ../../peps/pep-8015.rst:451 ../../peps/pep-8015.rst:452
 msgid "3 weeks"
 msgstr ""
 
-#: ../pep-8015.rst:450
+#: ../../peps/pep-8015.rst:451
 msgid "``>= 4/5`` majority"
 msgstr ""
 
-#: ../pep-8015.rst:451
+#: ../../peps/pep-8015.rst:452
 msgid "Steering Committee"
 msgstr ""
 
-#: ../pep-8015.rst:451
+#: ../../peps/pep-8015.rst:452
 msgid "private"
 msgstr ""
 
-#: ../pep-8015.rst:451
+#: ../../peps/pep-8015.rst:452
 msgid "Condorcet (Schulze/Beatpath/CSSD)"
 msgstr ""
 
-#: ../pep-8015.rst:454
+#: ../../peps/pep-8015.rst:455
 msgid "All these votes are reserved to core developers."
 msgstr ""
 
-#: ../pep-8015.rst:458
+#: ../../peps/pep-8015.rst:459
 msgid "Annex: Examples of Python Teams"
 msgstr ""
 
-#: ../pep-8015.rst:460
+#: ../../peps/pep-8015.rst:461
 msgid ""
 "Below are examples of some Python teams (the list will not be kept up to "
 "date in this PEP)."
 msgstr ""
 
-#: ../pep-8015.rst:464
+#: ../../peps/pep-8015.rst:465
 msgid "Packaging Team"
 msgstr ""
 
-#: ../pep-8015.rst:466
+#: ../../peps/pep-8015.rst:467
 msgid ""
 "The packaging team runs its own PEP category and can approve (or reject) "
 "their own PEPs."
 msgstr ""
 
-#: ../pep-8015.rst:469
+#: ../../peps/pep-8015.rst:470
 msgid "Website: `packaging.python.org <https://packaging.python.org/>`_"
 msgstr ""
 
-#: ../pep-8015.rst:470
+#: ../../peps/pep-8015.rst:471
 msgid ""
-"Mailing list: `distutils-sig <https://mail.python.org/mm3/mailman3/lists/"
-"distutils-sig.python.org/>`_"
+"Mailing list: `distutils-sig <https://mail.python.org/mm3/mailman3/lists"
+"/distutils-sig.python.org/>`_"
 msgstr ""
 
-#: ../pep-8015.rst:472
+#: ../../peps/pep-8015.rst:473
 msgid "Bug tracker component: ``Distutils``"
 msgstr ""
 
-#: ../pep-8015.rst:473
-msgid "Example of members: Paul Moore, Nick Coghlan, Donald Stuff"
+#: ../../peps/pep-8015.rst:474
+msgid "Example of members: Paul Moore, Alyssa Coghlan, Donald Stuff"
 msgstr ""
 
-#: ../pep-8015.rst:474
+#: ../../peps/pep-8015.rst:475
 msgid "Stdlib module: ``distutils``"
 msgstr ""
 
-#: ../pep-8015.rst:475
+#: ../../peps/pep-8015.rst:476
 msgid "Current PEP delegate: Paul Moore"
 msgstr ""
 
-#: ../pep-8015.rst:478
+#: ../../peps/pep-8015.rst:479
 msgid "IDLE Team"
 msgstr ""
 
-#: ../pep-8015.rst:480
+#: ../../peps/pep-8015.rst:481
 msgid ""
 "IDLE is a special case in the Python standard library: it's a whole "
-"application, not just a module. For this reason, it has been decided that "
-"the code will be the same in all Python stable branches (whereas the stdlib "
-"diverges in newer stable branches)."
+"application, not just a module. For this reason, it has been decided that"
+" the code will be the same in all Python stable branches (whereas the "
+"stdlib diverges in newer stable branches)."
 msgstr ""
 
-#: ../pep-8015.rst:485
+#: ../../peps/pep-8015.rst:486
 msgid "Bug tracker component: ``IDLE``"
 msgstr ""
 
-#: ../pep-8015.rst:486
+#: ../../peps/pep-8015.rst:487
 msgid "Example of members: Terry Reedy, Cheryl Sabella, Serhiy Storchaka"
 msgstr ""
 
-#: ../pep-8015.rst:487
+#: ../../peps/pep-8015.rst:488
 msgid "Stdlib module: ``idlelib``"
 msgstr ""
 
-#: ../pep-8015.rst:490
+#: ../../peps/pep-8015.rst:491
 msgid "Mentorship Team"
 msgstr ""
 
-#: ../pep-8015.rst:492
+#: ../../peps/pep-8015.rst:493
 msgid ""
 "Becoming a core developer is long and slow process. Mentorship is an "
-"efficient way to train contributors as future core developers and build a "
-"trust relationship."
+"efficient way to train contributors as future core developers and build a"
+" trust relationship."
 msgstr ""
 
-#: ../pep-8015.rst:496
+#: ../../peps/pep-8015.rst:497
 msgid "Websites:"
 msgstr ""
 
-#: ../pep-8015.rst:498
+#: ../../peps/pep-8015.rst:499
 msgid "https://www.python.org/dev/core-mentorship/"
 msgstr ""
 
-#: ../pep-8015.rst:499
+#: ../../peps/pep-8015.rst:500
 msgid "https://devguide.python.org/"
 msgstr ""
 
-#: ../pep-8015.rst:501
+#: ../../peps/pep-8015.rst:502
 msgid "Repository: https://github.com/python/devguide"
 msgstr ""
 
-#: ../pep-8015.rst:502
+#: ../../peps/pep-8015.rst:503
 msgid ""
-"Mailing list: `core-mentorship <https://www.python.org/dev/core-mentorship/"
-">`_ (private archives)"
+"Mailing list: `core-mentorship <https://www.python.org/dev/core-"
+"mentorship/>`_ (private archives)"
 msgstr ""
 
-#: ../pep-8015.rst:504
+#: ../../peps/pep-8015.rst:505
 msgid "Example of members: Guido van Rossum, Carol Willing, Victor Stinner"
 msgstr ""
 
-#: ../pep-8015.rst:506
+#: ../../peps/pep-8015.rst:507
 msgid "Note: The group is not responsible to promote core developers."
 msgstr ""
 
-#: ../pep-8015.rst:509
+#: ../../peps/pep-8015.rst:510
 msgid "Documentation Team"
 msgstr ""
 
-#: ../pep-8015.rst:511
+#: ../../peps/pep-8015.rst:512
 msgid ""
-"Mailing list: `doc-sig <https://mail.python.org/mailman/listinfo/doc-sig>`_"
+"Mailing list: `doc-sig <https://mail.python.org/mailman/listinfo/doc-"
+"sig>`_"
 msgstr ""
 
-#: ../pep-8015.rst:513
+#: ../../peps/pep-8015.rst:514
 msgid "Bug tracker component: ``Documentation``"
 msgstr ""
 
-#: ../pep-8015.rst:514
+#: ../../peps/pep-8015.rst:515
 msgid "GitHub tag: ``type-doc``"
 msgstr ""
 
-#: ../pep-8015.rst:515
+#: ../../peps/pep-8015.rst:516
 msgid "Example of members: Julien Palard, INADA Naoki, Raymond Hettinger."
 msgstr ""
 
-#: ../pep-8015.rst:517
+#: ../../peps/pep-8015.rst:518
 msgid "The team also manages documentation translations."
 msgstr ""
 
-#: ../pep-8015.rst:519
+#: ../../peps/pep-8015.rst:520
 msgid "See also the Mentorship team which maintains the \"Devguide\"."
 msgstr ""
 
-#: ../pep-8015.rst:522
+#: ../../peps/pep-8015.rst:523
 msgid "Security Team"
 msgstr ""
 
-#: ../pep-8015.rst:524
+#: ../../peps/pep-8015.rst:525
 msgid "Website: https://www.python.org/news/security/"
 msgstr ""
 
-#: ../pep-8015.rst:525
+#: ../../peps/pep-8015.rst:526
 msgid "Mailing lists:"
 msgstr ""
 
-#: ../pep-8015.rst:527
+#: ../../peps/pep-8015.rst:528
 msgid "``security@python.org`` (to report vulnerabilities)"
 msgstr ""
 
-#: ../pep-8015.rst:528
+#: ../../peps/pep-8015.rst:529
 msgid ""
-"`security-sig <https://mail.python.org/mm3/mailman3/lists/security-sig."
-"python.org/>`_ (public list)"
+"`security-sig <https://mail.python.org/mm3/mailman3/lists/security-"
+"sig.python.org/>`_ (public list)"
 msgstr ""
 
-#: ../pep-8015.rst:532
+#: ../../peps/pep-8015.rst:533
 msgid "Stdlib modules: ``hashlib``, ``secrets`` and ``ssl``"
 msgstr ""
 
-#: ../pep-8015.rst:533
+#: ../../peps/pep-8015.rst:534
 msgid "Example of members: Christian Heimes, Benjamin Peterson"
 msgstr ""
 
-#: ../pep-8015.rst:535
+#: ../../peps/pep-8015.rst:536
 msgid ""
-"The ``security@python.org`` mailing list is invite-only: only members of the "
-"\"Python Security Response Team\" (PSRT) can read emails and reply; whereas "
-"security-sig is public."
+"The ``security@python.org`` mailing list is invite-only: only members of "
+"the \"Python Security Response Team\" (PSRT) can read emails and reply; "
+"whereas security-sig is public."
 msgstr ""
 
-#: ../pep-8015.rst:539
+#: ../../peps/pep-8015.rst:540
 msgid "Note: This team rarely proposed PEPs."
 msgstr ""
 
-#: ../pep-8015.rst:542
+#: ../../peps/pep-8015.rst:543
 msgid "Performance Team"
 msgstr ""
 
-#: ../pep-8015.rst:544
+#: ../../peps/pep-8015.rst:545
 msgid "Website: https://speed.python.org/"
 msgstr ""
 
-#: ../pep-8015.rst:545
+#: ../../peps/pep-8015.rst:546
 msgid ""
-"Mailing list: `speed <https://mail.python.org/mm3/mailman3/lists/speed."
-"python.org/>`_"
+"Mailing list: `speed "
+"<https://mail.python.org/mm3/mailman3/lists/speed.python.org/>`_"
 msgstr ""
 
-#: ../pep-8015.rst:547
+#: ../../peps/pep-8015.rst:548
 msgid "Repositories:"
 msgstr ""
 
-#: ../pep-8015.rst:549
+#: ../../peps/pep-8015.rst:550
 msgid "https://github.com/python/performance"
 msgstr ""
 
-#: ../pep-8015.rst:550
+#: ../../peps/pep-8015.rst:551
 msgid "https://github.com/tobami/codespeed"
 msgstr ""
 
-#: ../pep-8015.rst:552
+#: ../../peps/pep-8015.rst:553
 msgid "Bug tracker type: ``Performance``"
 msgstr ""
 
-#: ../pep-8015.rst:553
+#: ../../peps/pep-8015.rst:554
 msgid "GitHub label: ``type-performance``"
 msgstr ""
 
-#: ../pep-8015.rst:554
+#: ../../peps/pep-8015.rst:555
 msgid "Stdlib module: ``cProfile``, ``profile``, ``pstats`` and ``timeit``"
 msgstr ""
 
-#: ../pep-8015.rst:555
+#: ../../peps/pep-8015.rst:556
 msgid "Example of members: Victor Stinner, INADA Naoki, Serhiy Storchaka"
 msgstr ""
 
-#: ../pep-8015.rst:557
+#: ../../peps/pep-8015.rst:558
 msgid ""
-"Usually PEPs involving performance impact everybody and so are discussed on "
-"the python-dev mailing list, rather than the speed mailing list."
+"Usually PEPs involving performance impact everybody and so are discussed "
+"on the python-dev mailing list, rather than the speed mailing list."
 msgstr ""
 
-#: ../pep-8015.rst:561
+#: ../../peps/pep-8015.rst:562
 msgid "Asynchronous Programming Team"
 msgstr ""
 
-#: ../pep-8015.rst:563
+#: ../../peps/pep-8015.rst:564
 msgid "Website: https://docs.python.org/dev/library/asyncio.html"
 msgstr ""
 
-#: ../pep-8015.rst:564
+#: ../../peps/pep-8015.rst:565
 msgid ""
 "Mailing list: `async-sig <https://mail.python.org/mailman/listinfo/async-"
 "sig>`_"
 msgstr ""
 
-#: ../pep-8015.rst:566
+#: ../../peps/pep-8015.rst:567
 msgid "Bug tracker component: ``asyncio``"
 msgstr ""
 
-#: ../pep-8015.rst:567
+#: ../../peps/pep-8015.rst:568
 msgid "GitHub label: ``expert-asyncio``"
 msgstr ""
 
-#: ../pep-8015.rst:568
+#: ../../peps/pep-8015.rst:569
 msgid "Stdlib modules: ``asyncio`` and ``contextvars``"
 msgstr ""
 
-#: ../pep-8015.rst:569
+#: ../../peps/pep-8015.rst:570
 msgid "Example of members: Andrew Sveltov, Yury Selivanov"
 msgstr ""
 
-#: ../pep-8015.rst:571
+#: ../../peps/pep-8015.rst:572
 msgid ""
-"PEP only modifying ``asyncio`` and ``contextvars`` can be discussed on the "
-"async-sig mailing list, whereas changes impacting the Python language must "
-"be discussed on python-dev."
+"PEP only modifying ``asyncio`` and ``contextvars`` can be discussed on "
+"the async-sig mailing list, whereas changes impacting the Python language"
+" must be discussed on python-dev."
 msgstr ""
 
-#: ../pep-8015.rst:576
+#: ../../peps/pep-8015.rst:577
 msgid "Type Hints Team"
 msgstr ""
 
-#: ../pep-8015.rst:578
+#: ../../peps/pep-8015.rst:579
 msgid "Website: http://mypy-lang.org/"
 msgstr ""
 
-#: ../pep-8015.rst:579
+#: ../../peps/pep-8015.rst:580
 msgid "Repository: https://github.com/python/typing"
 msgstr ""
 
-#: ../pep-8015.rst:580
+#: ../../peps/pep-8015.rst:581
 msgid ""
-"GitHub label for mypy project: `topic-pep-484 <https://github.com/python/"
-"mypy/labels/topic-pep-484>`_"
+"GitHub label for mypy project: `topic-pep-484 "
+"<https://github.com/python/mypy/labels/topic-pep-484>`_"
 msgstr ""
 
-#: ../pep-8015.rst:582
+#: ../../peps/pep-8015.rst:583
 msgid "Stdlib modules: ``typing``"
 msgstr ""
 
-#: ../pep-8015.rst:583
+#: ../../peps/pep-8015.rst:584
 msgid ""
 "Example of members: Guido van Rossum, Ivan Levkivskyi, Jukka Lehtosalo, "
 "Łukasz Langa, Mark Shannon."
 msgstr ""
 
-#: ../pep-8015.rst:586
+#: ../../peps/pep-8015.rst:587
 msgid ""
 "Note: There is a backport for Python 3.6 and older, see `typing on PyPI "
 "<https://pypi.org/project/typing/>`_."
 msgstr ""
 
-#: ../pep-8015.rst:591
+#: ../../peps/pep-8015.rst:592
 msgid "Version History"
 msgstr ""
 
-#: ../pep-8015.rst:593
+#: ../../peps/pep-8015.rst:594
 msgid "History of this PEP:"
 msgstr ""
 
-#: ../pep-8015.rst:595
+#: ../../peps/pep-8015.rst:596
 msgid "Version 7: Adjust the Steering Committee"
 msgstr ""
 
-#: ../pep-8015.rst:597
+#: ../../peps/pep-8015.rst:598
 msgid "The Steering Committee is now made of 5 people instead of 3."
 msgstr ""
 
-#: ../pep-8015.rst:598
+#: ../../peps/pep-8015.rst:599
 msgid ""
 "There are no term limits (instead of a limit of 2 mandates: 6 years in "
 "total)."
 msgstr ""
 
-#: ../pep-8015.rst:600
+#: ../../peps/pep-8015.rst:601
 msgid "A committee member can now be a PEP delegate."
 msgstr ""
 
-#: ../pep-8015.rst:602
+#: ../../peps/pep-8015.rst:603
 msgid "Version 6: Adjust votes"
 msgstr ""
 
-#: ../pep-8015.rst:604
+#: ../../peps/pep-8015.rst:605
 msgid ""
 "Specify the Condorcet method: use Schulze/Beatpath/CSSD variant to elect "
 "Python Steering Committee members. Specify how to deal with tie and the "
 "constraint on the employers."
 msgstr ""
 
-#: ../pep-8015.rst:607
+#: ../../peps/pep-8015.rst:608
 msgid ""
-"Vote on promoting a contributor and on PEPs now requires ``>= 2/3`` rather "
-"than ``50%+1``."
+"Vote on promoting a contributor and on PEPs now requires ``>= 2/3`` "
+"rather than ``50%+1``."
 msgstr ""
 
-#: ../pep-8015.rst:609
-msgid ""
-"Vote on changing this PEP now requires ``>= 4/5`` rather than ``50%+1``."
+#: ../../peps/pep-8015.rst:610
+msgid "Vote on changing this PEP now requires ``>= 4/5`` rather than ``50%+1``."
 msgstr ""
 
-#: ../pep-8015.rst:611
+#: ../../peps/pep-8015.rst:612
 msgid "Explain how to deal with a company acquisition."
 msgstr ""
 
-#: ../pep-8015.rst:613
+#: ../../peps/pep-8015.rst:614
 msgid ""
-"Version 5: Election of Python Steering Committee Members uses secret ballots"
+"Version 5: Election of Python Steering Committee Members uses secret "
+"ballots"
 msgstr ""
 
-#: ../pep-8015.rst:615
+#: ../../peps/pep-8015.rst:616
 msgid "Version 4:"
 msgstr ""
 
-#: ../pep-8015.rst:617
+#: ../../peps/pep-8015.rst:618
 msgid ""
-"Adjust votes: open for 1 week instead of 1 month, and announced in advance."
+"Adjust votes: open for 1 week instead of 1 month, and announced in "
+"advance."
 msgstr ""
 
-#: ../pep-8015.rst:619
+#: ../../peps/pep-8015.rst:620
 msgid "Rename the \"Python Core Board\" to the \"Python Steering Committee\";"
 msgstr ""
 
-#: ../pep-8015.rst:620
+#: ../../peps/pep-8015.rst:621
 msgid ""
-"Clarify that this committee doesn't approve PEPs and that committee members "
-"cannot cumulate more than 2 mandates;"
+"Clarify that this committee doesn't approve PEPs and that committee "
+"members cannot cumulate more than 2 mandates;"
 msgstr ""
 
-#: ../pep-8015.rst:622
+#: ../../peps/pep-8015.rst:623
 msgid "Add the \"Type Hints\" team to the annex."
 msgstr ""
 
-#: ../pep-8015.rst:624
+#: ../../peps/pep-8015.rst:625
 msgid ""
-"Version 3: Add \"Special Case: Ban a core developer\" and \"How to update "
-"this PEP\" sections."
+"Version 3: Add \"Special Case: Ban a core developer\" and \"How to update"
+" this PEP\" sections."
 msgstr ""
 
-#: ../pep-8015.rst:626
+#: ../../peps/pep-8015.rst:627
 msgid ""
 "Version 2: Rename the \"Python board\" to the \"Python Core Board\", to "
 "avoid confusion with the PSF Board."
 msgstr ""
 
-#: ../pep-8015.rst:628
+#: ../../peps/pep-8015.rst:629
 msgid ""
-"Version 1: First version posted to python-committers and discuss.python.org."
+"Version 1: First version posted to python-committers and "
+"discuss.python.org."
 msgstr ""
 
-#: ../pep-8015.rst:633
+#: ../../peps/pep-8015.rst:634
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../pep-8015.rst:635
+#: ../../peps/pep-8015.rst:636
 msgid "This document has been placed in the public domain."
 msgstr "Este documento foi colocado em domínio público."
+
+#~ msgid "Example of members: Paul Moore, Nick Coghlan, Donald Stuff"
+#~ msgstr ""
+

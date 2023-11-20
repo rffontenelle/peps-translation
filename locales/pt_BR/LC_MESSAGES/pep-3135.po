@@ -6,88 +6,90 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PEPs\n"
+"Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 20:07+0000\n"
+"POT-Creation-Date: 2023-11-20 10:43-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.13.1\n"
 
-#: ../pep-3135.txt
+#: ../../peps/pep-3135.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../pep-3135.txt:5
+#: ../../peps/pep-3135.rst:3
 msgid ""
-"Calvin Spealman <ironfroggy@gmail.com>, Tim Delaney <timothy.c.delaney@gmail."
-"com>, Lie Ryan <lie.1296@gmail.com>"
+"Calvin Spealman <ironfroggy@gmail.com>, Tim Delaney "
+"<timothy.c.delaney@gmail.com>, Lie Ryan <lie.1296@gmail.com>"
 msgstr ""
 
-#: ../pep-3135.txt
+#: ../../peps/pep-3135.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../pep-3135.txt:8
+#: ../../peps/pep-3135.rst:6
 msgid "Final"
 msgstr ""
 
-#: ../pep-3135.txt
+#: ../../peps/pep-3135.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../pep-3135.txt:9
+#: ../../peps/pep-3135.rst:7
 msgid "Standards Track"
 msgstr ""
 
-#: ../pep-3135.txt
+#: ../../peps/pep-3135.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../pep-3135.txt:11
+#: ../../peps/pep-3135.rst:9
 msgid "28-Apr-2007"
 msgstr ""
 
-#: ../pep-3135.txt
+#: ../../peps/pep-3135.rst
 msgid "Python-Version"
 msgstr ""
 
-#: ../pep-3135.txt:12
+#: ../../peps/pep-3135.rst:10
 msgid "3.0"
 msgstr ""
 
-#: ../pep-3135.txt
+#: ../../peps/pep-3135.rst
 msgid "Post-History"
 msgstr "Pós-história"
 
-#: ../pep-3135.txt:13
+#: ../../peps/pep-3135.rst:11
 msgid ""
-"`28-Apr-2007 <https://mail.python.org/pipermail/python-dev/2007-April/072807."
-"html>`__, `29-Apr-2007 <https://mail.python.org/pipermail/python-dev/2007-"
-"April/072835.html>`__, `29-Apr-2007 <https://mail.python.org/pipermail/"
-"python-dev/2007-April/072858.html>`__, `14-May-2007 <https://mail.python.org/"
-"pipermail/python-dev/2007-May/073127.html>`__, `12-Mar-2009 <https://mail."
-"python.org/pipermail/python-bugs-list/2009-March/072665.html>`__"
+"`28-Apr-2007 <https://mail.python.org/pipermail/python-"
+"dev/2007-April/072807.html>`__, `29-Apr-2007 "
+"<https://mail.python.org/pipermail/python-dev/2007-April/072835.html>`__,"
+" `29-Apr-2007 <https://mail.python.org/pipermail/python-"
+"dev/2007-April/072858.html>`__, `14-May-2007 "
+"<https://mail.python.org/pipermail/python-dev/2007-May/073127.html>`__, "
+"`12-Mar-2009 <https://mail.python.org/pipermail/python-bugs-"
+"list/2009-March/072665.html>`__"
 msgstr ""
 
-#: ../pep-3135.txt:20
+#: ../../peps/pep-3135.rst:19
 msgid "Numbering Note"
 msgstr ""
 
-#: ../pep-3135.txt:22
+#: ../../peps/pep-3135.rst:21
 msgid ""
 "This PEP started its life as :pep:`367`.  Since it is now targeted for "
 "Python 3000, it has been moved into the 3xxx space."
 msgstr ""
 
-#: ../pep-3135.txt:26
+#: ../../peps/pep-3135.rst:26
 msgid "Abstract"
 msgstr ""
 
-#: ../pep-3135.txt:28
+#: ../../peps/pep-3135.rst:28
 msgid ""
 "This PEP proposes syntactic sugar for use of the ``super`` type to "
 "automatically construct instances of the super type binding to the class "
@@ -95,271 +97,328 @@ msgid ""
 "classmethods) that the method is currently acting upon."
 msgstr ""
 
-#: ../pep-3135.txt:33
+#: ../../peps/pep-3135.rst:33
 msgid "The premise of the new super usage suggested is as follows::"
 msgstr ""
 
-#: ../pep-3135.txt:37
+#: ../../peps/pep-3135.rst:37
 msgid "to replace the old::"
 msgstr ""
 
-#: ../pep-3135.txt:42
+#: ../../peps/pep-3135.rst:43
 msgid "Rationale"
 msgstr ""
 
-#: ../pep-3135.txt:44
+#: ../../peps/pep-3135.rst:45
 msgid ""
-"The current usage of super requires an explicit passing of both the class "
-"and instance it must operate from, requiring a breaking of the DRY (Don't "
-"Repeat Yourself) rule. This hinders any change in class name, and is often "
-"considered a wart by many."
+"The current usage of super requires an explicit passing of both the class"
+" and instance it must operate from, requiring a breaking of the DRY "
+"(Don't Repeat Yourself) rule. This hinders any change in class name, and "
+"is often considered a wart by many."
 msgstr ""
 
-#: ../pep-3135.txt:51
+#: ../../peps/pep-3135.rst:52
 msgid "Specification"
 msgstr ""
 
-#: ../pep-3135.txt:53
+#: ../../peps/pep-3135.rst:54
 msgid ""
-"Within the specification section, some special terminology will be used to "
-"distinguish similar and closely related concepts. \"super class\" will refer "
-"to the actual builtin class named \"super\". A \"super instance\" is simply "
-"an instance of the super class, which is associated with another class and "
-"possibly with an instance of that class."
+"Within the specification section, some special terminology will be used "
+"to distinguish similar and closely related concepts. \"super class\" will"
+" refer to the actual builtin class named \"super\". A \"super instance\" "
+"is simply an instance of the super class, which is associated with "
+"another class and possibly with an instance of that class."
 msgstr ""
 
-#: ../pep-3135.txt:59
+#: ../../peps/pep-3135.rst:60
 msgid "The new ``super`` semantics are only available in Python 3.0."
 msgstr ""
 
-#: ../pep-3135.txt:61
+#: ../../peps/pep-3135.rst:62
 msgid ""
-"Replacing the old usage of super, calls to the next class in the MRO (method "
-"resolution order) can be made without explicitly passing the class object "
-"(although doing so will still be supported). Every function will have a cell "
-"named ``__class__`` that contains the class object that the function is "
-"defined in."
+"Replacing the old usage of super, calls to the next class in the MRO "
+"(method resolution order) can be made without explicitly passing the "
+"class object (although doing so will still be supported). Every function "
+"will have a cell named ``__class__`` that contains the class object that "
+"the function is defined in."
 msgstr ""
 
-#: ../pep-3135.txt:67
+#: ../../peps/pep-3135.rst:68
 msgid "The new syntax::"
 msgstr ""
 
-#: ../pep-3135.txt:71
+#: ../../peps/pep-3135.rst:72
 msgid "is equivalent to::"
 msgstr ""
 
-#: ../pep-3135.txt:75
+#: ../../peps/pep-3135.rst:76
 msgid ""
 "where ``__class__`` is the class that the method was defined in, and "
-"``<firstarg>`` is the first parameter of the method (normally ``self`` for "
-"instance methods, and ``cls`` for class methods). For functions defined "
-"outside a class body, ``__class__`` is not defined, and will result in "
-"runtime ``SystemError``."
+"``<firstarg>`` is the first parameter of the method (normally ``self`` "
+"for instance methods, and ``cls`` for class methods). For functions "
+"defined outside a class body, ``__class__`` is not defined, and will "
+"result in runtime ``SystemError``."
 msgstr ""
 
-#: ../pep-3135.txt:81
+#: ../../peps/pep-3135.rst:82
 msgid ""
 "While ``super`` is not a reserved word, the parser recognizes the use of "
-"``super`` in a method definition and only passes in the ``__class__`` cell "
-"when this is found.  Thus, calling a global alias of ``super`` without "
-"arguments will not necessarily work."
+"``super`` in a method definition and only passes in the ``__class__`` "
+"cell when this is found.  Thus, calling a global alias of ``super`` "
+"without arguments will not necessarily work."
 msgstr ""
 
-#: ../pep-3135.txt:87
+#: ../../peps/pep-3135.rst:89
 msgid "Closed Issues"
 msgstr ""
 
-#: ../pep-3135.txt:90
+#: ../../peps/pep-3135.rst:92
 msgid "Determining the class object to use"
 msgstr ""
 
-#: ../pep-3135.txt:92
+#: ../../peps/pep-3135.rst:94
 msgid "The class object is taken from a cell named ``__class__``."
 msgstr ""
 
-#: ../pep-3135.txt:96
+#: ../../peps/pep-3135.rst:98
 msgid "Should ``super`` actually become a keyword?"
 msgstr ""
 
-#: ../pep-3135.txt:98
+#: ../../peps/pep-3135.rst:100
 msgid "No. It is not necessary for super to become a keyword."
 msgstr ""
 
-#: ../pep-3135.txt:101
+#: ../../peps/pep-3135.rst:103
 msgid "super used with __call__ attributes"
 msgstr ""
 
-#: ../pep-3135.txt:103
+#: ../../peps/pep-3135.rst:105
 msgid ""
 "It was considered that it might be a problem that instantiating super "
 "instances the classic way, because calling it would lookup the __call__ "
 "attribute and thus try to perform an automatic super lookup to the next "
-"class in the MRO. However, this was found to be false, because calling an "
-"object only looks up the __call__ method directly on the object's type. The "
-"following example shows this in action."
+"class in the MRO. However, this was found to be false, because calling an"
+" object only looks up the __call__ method directly on the object's type. "
+"The following example shows this in action."
 msgstr ""
 
-#: ../pep-3135.txt:122
+#: ../../peps/pep-3135.rst:124
 msgid ""
 "In any case, this issue goes away entirely because classic calls to "
 "``super(<class>, <instance>)`` are still supported with the same meaning."
 msgstr ""
 
-#: ../pep-3135.txt:126
+#: ../../peps/pep-3135.rst:129
 msgid "Alternative Proposals"
 msgstr ""
 
-#: ../pep-3135.txt:129
+#: ../../peps/pep-3135.rst:132
 msgid "No Changes"
 msgstr ""
 
-#: ../pep-3135.txt:131
+#: ../../peps/pep-3135.rst:134
 msgid ""
-"Although its always attractive to just keep things how they are, people have "
-"sought a change in the usage of super calling for some time, and for good "
-"reason, all mentioned previously."
+"Although its always attractive to just keep things how they are, people "
+"have sought a change in the usage of super calling for some time, and for"
+" good reason, all mentioned previously."
 msgstr ""
 
-#: ../pep-3135.txt:135
+#: ../../peps/pep-3135.rst:138
 msgid ""
-"Decoupling from the class name (which might not even be bound to the right "
-"class anymore!)"
+"Decoupling from the class name (which might not even be bound to the "
+"right class anymore!)"
 msgstr ""
 
-#: ../pep-3135.txt:137
+#: ../../peps/pep-3135.rst:140
 msgid "Simpler looking, cleaner super calls would be better"
 msgstr ""
 
-#: ../pep-3135.txt:140
+#: ../../peps/pep-3135.rst:143
 msgid "Dynamic attribute on super type"
 msgstr ""
 
-#: ../pep-3135.txt:142
+#: ../../peps/pep-3135.rst:145
 msgid ""
-"The proposal adds a dynamic attribute lookup to the super type, which will "
-"automatically determine the proper class and instance parameters. Each super "
-"attribute lookup identifies these parameters and performs the super lookup "
-"on the instance, as the current super implementation does with the explicit "
-"invocation of a super instance upon a class and instance."
+"The proposal adds a dynamic attribute lookup to the super type, which "
+"will automatically determine the proper class and instance parameters. "
+"Each super attribute lookup identifies these parameters and performs the "
+"super lookup on the instance, as the current super implementation does "
+"with the explicit invocation of a super instance upon a class and "
+"instance."
 msgstr ""
 
-#: ../pep-3135.txt:148
+#: ../../peps/pep-3135.rst:151
 msgid ""
 "This proposal relies on sys._getframe(), which is not appropriate for "
 "anything except a prototype implementation."
 msgstr ""
 
-#: ../pep-3135.txt:152
+#: ../../peps/pep-3135.rst:155
 msgid "self.__super__.foo(\\*args)"
 msgstr ""
 
-#: ../pep-3135.txt:154
+#: ../../peps/pep-3135.rst:157
 msgid ""
 "The __super__ attribute is mentioned in this PEP in several places, and "
-"could be a candidate for the complete solution, actually using it explicitly "
-"instead of any super usage directly. However, double-underscore names are "
-"usually an internal detail, and attempted to be kept out of everyday code."
+"could be a candidate for the complete solution, actually using it "
+"explicitly instead of any super usage directly. However, double-"
+"underscore names are usually an internal detail, and attempted to be kept"
+" out of everyday code."
 msgstr ""
 
-#: ../pep-3135.txt:160
+#: ../../peps/pep-3135.rst:163
 msgid "super(self, \\*args) or __super__(self, \\*args)"
 msgstr ""
 
-#: ../pep-3135.txt:162
+#: ../../peps/pep-3135.rst:165
 msgid ""
 "This solution only solves the problem of the type indication, does not "
-"handle differently named super methods, and is explicit about the name of "
-"the instance. It is less flexible without being able to enacted on other "
-"method names, in cases where that is needed. One use case this fails is "
-"where a base- class has a factory classmethod and a subclass has two factory "
-"classmethods, both of which needing to properly make super calls to the one "
-"in the base- class."
+"handle differently named super methods, and is explicit about the name of"
+" the instance. It is less flexible without being able to enacted on other"
+" method names, in cases where that is needed. One use case this fails is "
+"where a base-class has a factory classmethod and a subclass has two "
+"factory classmethods,both of which needing to properly make super calls "
+"to the one in the base-class."
 msgstr ""
 
-#: ../pep-3135.txt:171
+#: ../../peps/pep-3135.rst:174
 msgid "super.foo(self, \\*args)"
 msgstr ""
 
-#: ../pep-3135.txt:173
+#: ../../peps/pep-3135.rst:176
 msgid ""
 "This variation actually eliminates the problems with locating the proper "
-"instance, and if any of the alternatives were pushed into the spotlight, I "
-"would want it to be this one."
+"instance, and if any of the alternatives were pushed into the spotlight, "
+"I would want it to be this one."
 msgstr ""
 
-#: ../pep-3135.txt:178
+#: ../../peps/pep-3135.rst:181
 msgid "super(\\*p, \\*\\*kw)"
 msgstr ""
 
-#: ../pep-3135.txt:180
+#: ../../peps/pep-3135.rst:183
 msgid ""
-"There has been the proposal that directly calling ``super(*p, **kw)`` would "
-"be equivalent to calling the method on the ``super`` object with the same "
-"name as the method currently being executed i.e. the following two methods "
-"would be equivalent:"
+"There has been the proposal that directly calling ``super(*p, **kw)`` "
+"would be equivalent to calling the method on the ``super`` object with "
+"the same name as the method currently being executed i.e. the following "
+"two methods would be equivalent:"
 msgstr ""
 
-#: ../pep-3135.txt:195
+#: ../../peps/pep-3135.rst:198
 msgid ""
-"There is strong sentiment for and against this, but implementation and style "
-"concerns are obvious. Guido has suggested that this should be excluded from "
-"this PEP on the principle of KISS (Keep It Simple Stupid)."
+"There is strong sentiment for and against this, but implementation and "
+"style concerns are obvious. Guido has suggested that this should be "
+"excluded from this PEP on the principle of KISS (Keep It Simple Stupid)."
 msgstr ""
 
-#: ../pep-3135.txt:202
+#: ../../peps/pep-3135.rst:204
 msgid "History"
 msgstr ""
 
-#: ../pep-3135.txt:203
-msgid "12-Mar-2009 - Updated to reflect the current state of implementation."
+#: ../../peps/pep-3135.rst:210
+msgid "29-Apr-2007"
 msgstr ""
 
-#: ../pep-3135.txt:208
-msgid ""
-"29-Apr-2007 - Changed title from \"Super As A Keyword\" to \"New Super\""
+#: ../../peps/pep-3135.rst:207
+msgid "Changed title from \"Super As A Keyword\" to \"New Super\""
 msgstr ""
 
-#: ../pep-3135.txt:206
+#: ../../peps/pep-3135.rst:208
 msgid ""
 "Updated much of the language and added a terminology section for "
 "clarification in confusing places."
 msgstr ""
 
-#: ../pep-3135.txt:208
+#: ../../peps/pep-3135.rst:210
 msgid "Added reference implementation and history sections."
 msgstr ""
 
-#: ../pep-3135.txt:211
+#: ../../peps/pep-3135.rst:214
+msgid "06-May-2007"
+msgstr ""
+
+#: ../../peps/pep-3135.rst:213
 msgid ""
-"06-May-2007 - Updated by Tim Delaney to reflect discussions on the "
-"python-3000"
+"Updated by Tim Delaney to reflect discussions on the python-3000 and "
+"python-dev mailing lists."
 msgstr ""
 
-#: ../pep-3135.txt:211
-msgid "and python-dev mailing lists."
+#: ../../peps/pep-3135.rst:218
+msgid "12-Mar-2009"
 msgstr ""
 
-#: ../pep-3135.txt:214
+#: ../../peps/pep-3135.rst:217
+msgid "Updated to reflect the current state of implementation."
+msgstr ""
+
+#: ../../peps/pep-3135.rst:221
 msgid "References"
 msgstr "Referências"
 
-#: ../pep-3135.txt:216
+#: ../../peps/pep-3135.rst:223
 msgid ""
-"Fixing super anyone? (https://mail.python.org/pipermail/python-3000/2007-"
-"April/006667.html)"
+"[1] Fixing super anyone? \\   "
+"(https://mail.python.org/pipermail/python-3000/2007-April/006667.html)"
 msgstr ""
 
-#: ../pep-3135.txt:219
+#: ../../peps/pep-3135.rst:226
 msgid ""
-"PEP 3130: Access to Module/Class/Function Currently Being Defined (this) "
-"(https://mail.python.org/pipermail/python-ideas/2007-April/000542.html)"
+"[2] PEP 3130: Access to Module/Class/Function Currently Being Defined "
+"(this) \\   (https://mail.python.org/pipermail/python-"
+"ideas/2007-April/000542.html)"
 msgstr ""
 
-#: ../pep-3135.txt:224
+#: ../../peps/pep-3135.rst:231
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../pep-3135.txt:226
+#: ../../peps/pep-3135.rst:233
 msgid "This document has been placed in the public domain."
 msgstr "Este documento foi colocado em domínio público."
+
+#~ msgid ""
+#~ "This solution only solves the problem"
+#~ " of the type indication, does not "
+#~ "handle differently named super methods, "
+#~ "and is explicit about the name of"
+#~ " the instance. It is less flexible"
+#~ " without being able to enacted on "
+#~ "other method names, in cases where "
+#~ "that is needed. One use case this"
+#~ " fails is where a base- class "
+#~ "has a factory classmethod and a "
+#~ "subclass has two factory classmethods, "
+#~ "both of which needing to properly "
+#~ "make super calls to the one in "
+#~ "the base- class."
+#~ msgstr ""
+
+#~ msgid "12-Mar-2009 - Updated to reflect the current state of implementation."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "29-Apr-2007 - Changed title from \"Super"
+#~ " As A Keyword\" to \"New Super\""
+#~ msgstr ""
+
+#~ msgid ""
+#~ "06-May-2007 - Updated by Tim Delaney "
+#~ "to reflect discussions on the "
+#~ "python-3000"
+#~ msgstr ""
+
+#~ msgid "and python-dev mailing lists."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Fixing super anyone? "
+#~ "(https://mail.python.org/pipermail/python-3000/2007-April/006667.html)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "PEP 3130: Access to Module/Class/Function "
+#~ "Currently Being Defined (this) "
+#~ "(https://mail.python.org/pipermail/python-"
+#~ "ideas/2007-April/000542.html)"
+#~ msgstr ""
+

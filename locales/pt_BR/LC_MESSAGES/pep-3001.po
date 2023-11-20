@@ -6,226 +6,237 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PEPs\n"
+"Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 20:07+0000\n"
+"POT-Creation-Date: 2023-11-20 10:43-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.13.1\n"
 
-#: ../pep-3001.txt
+#: ../../peps/pep-3001.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../pep-3001.txt:5
+#: ../../peps/pep-3001.rst:5
 msgid "Georg Brandl <georg@python.org>"
 msgstr ""
 
-#: ../pep-3001.txt
+#: ../../peps/pep-3001.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../pep-3001.txt:6
+#: ../../peps/pep-3001.rst:6
 msgid "Withdrawn"
 msgstr ""
 
-#: ../pep-3001.txt
+#: ../../peps/pep-3001.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../pep-3001.txt:7
+#: ../../peps/pep-3001.rst:7
 msgid "Process"
 msgstr "Processo"
 
-#: ../pep-3001.txt
+#: ../../peps/pep-3001.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../pep-3001.txt:9
+#: ../../peps/pep-3001.rst:9
 msgid "05-Apr-2006"
 msgstr ""
 
-#: ../pep-3001.txt
+#: ../../peps/pep-3001.rst
 msgid "Post-History"
 msgstr "Pós-história"
 
-#: ../pep-3001.txt:14
+#: ../../peps/pep-3001.rst:14
 msgid "Abstract"
 msgstr ""
 
-#: ../pep-3001.txt:16
+#: ../../peps/pep-3001.rst:16
 msgid ""
-"This PEP describes a procedure for reviewing and improving standard library "
-"modules, especially those written in Python, making them ready for Python "
-"3000.  There can be different steps of refurbishing, each of which is "
-"described in a section below.  Of course, not every step has to be performed "
-"for every module."
+"This PEP describes a procedure for reviewing and improving standard "
+"library modules, especially those written in Python, making them ready "
+"for Python 3000.  There can be different steps of refurbishing, each of "
+"which is described in a section below.  Of course, not every step has to "
+"be performed for every module."
 msgstr ""
 
-#: ../pep-3001.txt:24
+#: ../../peps/pep-3001.rst:24
 msgid "Removal of obsolete modules"
 msgstr ""
 
-#: ../pep-3001.txt:26
+#: ../../peps/pep-3001.rst:26
 msgid ""
 "All modules marked as deprecated in 2.x versions should be removed for "
-"Python 3000.  The same applies to modules which are seen as obsolete today, "
-"but are too widely used to be deprecated or removed.  Python 3000 is the big "
-"occasion to get rid of them."
+"Python 3000.  The same applies to modules which are seen as obsolete "
+"today, but are too widely used to be deprecated or removed.  Python 3000 "
+"is the big occasion to get rid of them."
 msgstr ""
 
-#: ../pep-3001.txt:31
+#: ../../peps/pep-3001.rst:31
 msgid ""
-"There will have to be a document listing all removed modules, together with "
-"information on possible substitutes or alternatives.  This infor- mation "
-"will also have to be provided by the python3warn.py porting helper script "
-"mentioned in PEP XXX."
+"There will have to be a document listing all removed modules, together "
+"with information on possible substitutes or alternatives.  This "
+"information will also have to be provided by the python3warn.py porting "
+"helper script mentioned in PEP XXX."
 msgstr ""
 
-#: ../pep-3001.txt:38
+#: ../../peps/pep-3001.rst:38
 msgid "Renaming modules"
 msgstr ""
 
-#: ../pep-3001.txt:40
+#: ../../peps/pep-3001.rst:40
 msgid ""
-"There are proposals for a \"great stdlib renaming\" introducing a hierarchic "
-"library namespace or a top-level package from which to import standard "
-"modules.  That possibility aside, some modules' names are known to have been "
-"chosen unwisely, a mistake which could never be corrected in the 2.x "
-"series.  Examples are names like \"StringIO\" or \"Cookie\".  For Python "
-"3000, there will be the possibility to give those modules less confusing and "
-"more conforming names."
+"There are proposals for a \"great stdlib renaming\" introducing a "
+"hierarchic library namespace or a top-level package from which to import "
+"standard modules.  That possibility aside, some modules' names are known "
+"to have been chosen unwisely, a mistake which could never be corrected in"
+" the 2.x series.  Examples are names like \"StringIO\" or \"Cookie\".  "
+"For Python 3000, there will be the possibility to give those modules less"
+" confusing and more conforming names."
 msgstr ""
 
-#: ../pep-3001.txt:48
+#: ../../peps/pep-3001.rst:48
 msgid ""
-"Of course, each rename will have to be stated in the documentation of the "
-"respective module and perhaps in the global document of Step 1. "
-"Additionally, the python3warn.py script will recognize the old module names "
-"and notify the user accordingly."
+"Of course, each rename will have to be stated in the documentation of the"
+" respective module and perhaps in the global document of Step 1. "
+"Additionally, the python3warn.py script will recognize the old module "
+"names and notify the user accordingly."
 msgstr ""
 
-#: ../pep-3001.txt:53
+#: ../../peps/pep-3001.rst:53
 msgid ""
 "If the name change is made in time for another release of the Python 2.x "
-"series, it is worth considering to introduce the new name in the 2.x branch "
-"to ease transition."
+"series, it is worth considering to introduce the new name in the 2.x "
+"branch to ease transition."
 msgstr ""
 
-#: ../pep-3001.txt:59
+#: ../../peps/pep-3001.rst:59
 msgid "Code cleanup"
 msgstr ""
 
-#: ../pep-3001.txt:61
+#: ../../peps/pep-3001.rst:61
 msgid ""
-"As most library modules written in Python have not been touched except for "
-"bug fixes, following the policy of never changing a running system, many of "
-"them may contain code that is not up to the newest language features and "
-"could be rewritten in a more concise, modern Python."
+"As most library modules written in Python have not been touched except "
+"for bug fixes, following the policy of never changing a running system, "
+"many of them may contain code that is not up to the newest language "
+"features and could be rewritten in a more concise, modern Python."
 msgstr ""
 
-#: ../pep-3001.txt:66
+#: ../../peps/pep-3001.rst:66
 msgid ""
 "PyChecker should run cleanly over the library.  With a carefully tuned "
 "configuration file, PyLint should also emit as few warnings as possible."
 msgstr ""
 
-#: ../pep-3001.txt:69
+#: ../../peps/pep-3001.rst:69
 msgid ""
-"As long as these changes don't change the module's interface and behavior, "
-"no documentation updates are necessary."
+"As long as these changes don't change the module's interface and "
+"behavior, no documentation updates are necessary."
 msgstr ""
 
-#: ../pep-3001.txt:74
+#: ../../peps/pep-3001.rst:74
 msgid "Enhancement of test and documentation coverage"
 msgstr ""
 
-#: ../pep-3001.txt:76
+#: ../../peps/pep-3001.rst:76
 msgid ""
-"Code coverage by unit tests varies greatly between modules.  Each test suite "
-"should be checked for completeness, and the remaining classic tests should "
-"be converted to PyUnit (or whatever new shiny testing framework comes with "
-"Python 3000, perhaps py.test?)."
+"Code coverage by unit tests varies greatly between modules.  Each test "
+"suite should be checked for completeness, and the remaining classic tests"
+" should be converted to PyUnit (or whatever new shiny testing framework "
+"comes with Python 3000, perhaps py.test?)."
 msgstr ""
 
-#: ../pep-3001.txt:81
+#: ../../peps/pep-3001.rst:81
 msgid ""
 "It should also be verified that each publicly visible function has a "
 "meaningful docstring which ideally contains several doctests."
 msgstr ""
 
-#: ../pep-3001.txt:84
+#: ../../peps/pep-3001.rst:84
 msgid "No documentation changes are necessary for enhancing test coverage."
 msgstr ""
 
-#: ../pep-3001.txt:88
+#: ../../peps/pep-3001.rst:88
 msgid "Unification of module metadata"
 msgstr ""
 
-#: ../pep-3001.txt:90
+#: ../../peps/pep-3001.rst:90
 msgid ""
 "This is a small and probably not very important step.  There have been "
 "various attempts at providing author, version and similar metadata in "
-"modules (such as a \"__version__\" global).  Those could be standardized and "
-"used throughout the library."
+"modules (such as a \"__version__\" global).  Those could be standardized "
+"and used throughout the library."
 msgstr ""
 
-#: ../pep-3001.txt:95
+#: ../../peps/pep-3001.rst:95
 msgid "No documentation changes are necessary for this step, too."
 msgstr ""
 
-#: ../pep-3001.txt:99
+#: ../../peps/pep-3001.rst:99
 msgid "Backwards incompatible bug fixes"
 msgstr ""
 
-#: ../pep-3001.txt:101
+#: ../../peps/pep-3001.rst:101
 msgid ""
-"Over the years, many bug reports have been filed which complained about bugs "
-"in standard library modules, but have subsequently been closed as \"Won't "
-"fix\" since a fix would have introduced a major incompatibility which was "
-"not acceptable in the Python 2.x series.  In Python 3000, the fix can be "
-"applied if the interface per se is still acceptable."
+"Over the years, many bug reports have been filed which complained about "
+"bugs in standard library modules, but have subsequently been closed as "
+"\"Won't fix\" since a fix would have introduced a major incompatibility "
+"which was not acceptable in the Python 2.x series.  In Python 3000, the "
+"fix can be applied if the interface per se is still acceptable."
 msgstr ""
 
-#: ../pep-3001.txt:107
+#: ../../peps/pep-3001.rst:107
 msgid ""
-"Each slight behavioral change caused by such fixes must be mentioned in the "
-"documentation, perhaps in a \"Changed in Version 3.0\" paragraph."
+"Each slight behavioral change caused by such fixes must be mentioned in "
+"the documentation, perhaps in a \"Changed in Version 3.0\" paragraph."
 msgstr ""
 
-#: ../pep-3001.txt:112
+#: ../../peps/pep-3001.rst:112
 msgid "Interface changes"
 msgstr ""
 
-#: ../pep-3001.txt:114
+#: ../../peps/pep-3001.rst:114
 msgid ""
 "The last and most disruptive change is the overhaul of a module's public "
-"interface.  If a module's interface is to be changed, a justification should "
-"be made beforehand, or a PEP should be written."
+"interface.  If a module's interface is to be changed, a justification "
+"should be made beforehand, or a PEP should be written."
 msgstr ""
 
-#: ../pep-3001.txt:118
+#: ../../peps/pep-3001.rst:118
 msgid ""
 "The change must be fully documented as \"New in Version 3.0\", and the "
 "python3warn.py script must know about it."
 msgstr ""
 
-#: ../pep-3001.txt:123
+#: ../../peps/pep-3001.rst:123
 msgid "References"
 msgstr "Referências"
 
-#: ../pep-3001.txt:125
+#: ../../peps/pep-3001.rst:125
 msgid "None yet."
 msgstr ""
 
-#: ../pep-3001.txt:129
+#: ../../peps/pep-3001.rst:129
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../pep-3001.txt:131
+#: ../../peps/pep-3001.rst:131
 msgid "This document has been placed in the public domain."
 msgstr "Este documento foi colocado em domínio público."
+
+#~ msgid ""
+#~ "There will have to be a document"
+#~ " listing all removed modules, together "
+#~ "with information on possible substitutes "
+#~ "or alternatives.  This infor- mation "
+#~ "will also have to be provided by"
+#~ " the python3warn.py porting helper script"
+#~ " mentioned in PEP XXX."
+#~ msgstr ""
+

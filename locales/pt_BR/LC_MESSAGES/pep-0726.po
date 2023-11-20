@@ -1,0 +1,329 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the PEPs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PEPs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-20 10:43-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pt_BR\n"
+"Language-Team: pt_BR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.13.1\n"
+
+#: ../../peps/pep-0726.rst
+msgid "Author"
+msgstr ""
+
+#: ../../peps/pep-0726.rst:3
+msgid "Sergey B Kirpichev <skirpichev@gmail.com>"
+msgstr ""
+
+#: ../../peps/pep-0726.rst
+msgid "Sponsor"
+msgstr ""
+
+#: ../../peps/pep-0726.rst:4
+msgid "Adam Turner <python@quite.org.uk>"
+msgstr ""
+
+#: ../../peps/pep-0726.rst
+msgid "Discussions-To"
+msgstr ""
+
+#: ../../peps/pep-0726.rst:5
+msgid "https://discuss.python.org/t/32640/"
+msgstr ""
+
+#: ../../peps/pep-0726.rst
+msgid "Status"
+msgstr ""
+
+#: ../../peps/pep-0726.rst:6
+msgid "Draft"
+msgstr ""
+
+#: ../../peps/pep-0726.rst
+msgid "Type"
+msgstr ""
+
+#: ../../peps/pep-0726.rst:7
+msgid "Standards Track"
+msgstr ""
+
+#: ../../peps/pep-0726.rst
+msgid "Created"
+msgstr ""
+
+#: ../../peps/pep-0726.rst:9
+msgid "24-Aug-2023"
+msgstr ""
+
+#: ../../peps/pep-0726.rst
+msgid "Python-Version"
+msgstr ""
+
+#: ../../peps/pep-0726.rst:10
+msgid "3.13"
+msgstr ""
+
+#: ../../peps/pep-0726.rst
+msgid "Post-History"
+msgstr ""
+
+#: ../../peps/pep-0726.rst:11
+msgid ""
+"`06-Apr-2023 <https://discuss.python.org/t/25506/>`__, `31-Aug-2023 "
+"<https://discuss.python.org/t/32640/>`__,"
+msgstr ""
+
+#: ../../peps/pep-0726.rst:16
+msgid "Abstract"
+msgstr ""
+
+#: ../../peps/pep-0726.rst:18
+msgid ""
+"This PEP proposes supporting user-defined ``__setattr__`` and "
+"``__delattr__`` methods on modules to extend customization of module "
+"attribute access beyond :pep:`562`."
+msgstr ""
+
+#: ../../peps/pep-0726.rst:23
+msgid "Motivation"
+msgstr ""
+
+#: ../../peps/pep-0726.rst:25
+msgid "There are several potential uses of a module ``__setattr__``:"
+msgstr ""
+
+#: ../../peps/pep-0726.rst:27
+msgid "To prevent setting an attribute at all (i.e. make it read-only)"
+msgstr ""
+
+#: ../../peps/pep-0726.rst:28
+msgid "To validate the value to be assigned"
+msgstr ""
+
+#: ../../peps/pep-0726.rst:29
+msgid "To intercept setting an attribute and update some other state"
+msgstr ""
+
+#: ../../peps/pep-0726.rst:31
+msgid ""
+"Proper support for read-only attributes would also require adding the "
+"``__delattr__`` function to prevent their deletion."
+msgstr ""
+
+#: ../../peps/pep-0726.rst:34
+msgid ""
+"It would be convenient to directly support such customization, by "
+"recognizing ``__setattr__`` and ``__delattr__`` methods defined in a "
+"module that would act like normal :py:meth:`python:object.__setattr__` "
+"and :py:meth:`python:object.__delattr__` methods, except that they will "
+"be defined on module *instances*.  Together with existing ``__getattr__``"
+" and ``__dir__`` methods this will streamline all variants of customizing"
+" module attribute access."
+msgstr ""
+
+#: ../../peps/pep-0726.rst:41
+msgid "For example"
+msgstr ""
+
+#: ../../peps/pep-0726.rst:112
+msgid "Existing Options"
+msgstr ""
+
+#: ../../peps/pep-0726.rst:114
+msgid ""
+"The current workaround is assigning the ``__class__`` of a module object "
+"to a custom subclass of :py:class:`python:types.ModuleType` (see [1]_)."
+msgstr ""
+
+#: ../../peps/pep-0726.rst:117
+msgid ""
+"For example, to prevent modification or deletion of an attribute we could"
+" use:"
+msgstr ""
+
+#: ../../peps/pep-0726.rst:137
+msgid ""
+"But this variant is slower (~2x) than the proposed solution.  More "
+"importantly, it also brings a noticeable speed regression (~2-3x) for "
+"attribute *access*."
+msgstr ""
+
+#: ../../peps/pep-0726.rst:142
+msgid "Specification"
+msgstr ""
+
+#: ../../peps/pep-0726.rst:144
+msgid ""
+"The ``__setattr__`` function at the module level should accept two "
+"arguments, the name of an attribute and the value to be assigned, and "
+"return :py:obj:`None` or raise an :exc:`AttributeError`."
+msgstr ""
+
+#: ../../peps/pep-0726.rst:152
+msgid ""
+"The ``__delattr__`` function should accept one argument, the name of an "
+"attribute, and return :py:obj:`None` or raise an "
+":py:exc:`AttributeError`:"
+msgstr ""
+
+#: ../../peps/pep-0726.rst:160
+msgid ""
+"The ``__setattr__`` and ``__delattr__`` functions are looked up in the "
+"module ``__dict__``.  If present, the appropriate function is called to "
+"customize setting the attribute or its deletion, else the normal "
+"mechanism (storing/deleting the value in the module dictionary) will "
+"work."
+msgstr ""
+
+#: ../../peps/pep-0726.rst:165
+msgid ""
+"Defining module ``__setattr__`` or ``__delattr__`` only affects lookups "
+"made using the attribute access syntax --- directly accessing the module "
+"globals (whether by ``globals()`` within the module, or via a reference "
+"to the module's globals dictionary) is unaffected.  For example:"
+msgstr ""
+
+#: ../../peps/pep-0726.rst:175
+msgid "or"
+msgstr ""
+
+#: ../../peps/pep-0726.rst:193
+msgid ""
+"To use a module global and trigger ``__setattr__`` (or ``__delattr__``), "
+"one can access it via ``sys.modules[__name__]`` within the module's code:"
+msgstr ""
+
+#: ../../peps/pep-0726.rst:207
+msgid ""
+"This limitation is intentional (just as for the :pep:`562`), because the "
+"interpreter highly optimizes access to module globals and disabling all "
+"that and going through special methods written in Python would slow down "
+"the code unacceptably."
+msgstr ""
+
+#: ../../peps/pep-0726.rst:214
+msgid "How to Teach This"
+msgstr ""
+
+#: ../../peps/pep-0726.rst:216
+msgid ""
+"The \"Customizing module attribute access\" [1]_ section of the "
+"documentation will be expanded to include new functions."
+msgstr ""
+
+#: ../../peps/pep-0726.rst:221
+msgid "Reference Implementation"
+msgstr ""
+
+#: ../../peps/pep-0726.rst:223
+msgid ""
+"The reference implementation for this PEP can be found in `CPython PR "
+"#108261 <https://github.com/python/cpython/pull/108261>`__."
+msgstr ""
+
+#: ../../peps/pep-0726.rst:228
+msgid "Backwards compatibility"
+msgstr ""
+
+#: ../../peps/pep-0726.rst:230
+msgid ""
+"This PEP may break code that uses module level (global) names "
+"``__setattr__`` and ``__delattr__``, but the language reference "
+"explicitly reserves *all* undocumented dunder names, and allows "
+"\"breakage without warning\" [2]_."
+msgstr ""
+
+#: ../../peps/pep-0726.rst:235
+msgid ""
+"The performance implications of this PEP are small, since additional "
+"dictionary lookup is much cheaper than storing/deleting the value in the "
+"dictionary.  Also it is hard to imagine a module that expects the user to"
+" set (and/or delete) attributes enough times to be a performance concern."
+"  On another hand, proposed mechanism allows to override setting/deleting"
+" of attributes without affecting speed of attribute access, which is much"
+" more likely scenario to get a performance penalty."
+msgstr ""
+
+#: ../../peps/pep-0726.rst:246
+msgid "Discussion"
+msgstr ""
+
+#: ../../peps/pep-0726.rst:248
+msgid ""
+"As pointed out by Victor Stinner, the proposed API could be useful "
+"already in the stdlib, for example to ensure that :py:obj:`sys.modules` "
+"type is always a list:"
+msgstr ""
+
+#: ../../peps/pep-0726.rst:262
+msgid ""
+"or to prevent deletion of critical :py:mod:`sys` attributes, which makes "
+"the code more complicated.  For example, code using :py:obj:`sys.stderr` "
+"has to check if the attribute exists and if it's not :py:obj:`None`.  "
+"Currently, it's possible to remove any :py:mod:`sys` attribute, including"
+" functions:"
+msgstr ""
+
+#: ../../peps/pep-0726.rst:278
+msgid ""
+"See `related issue "
+"<https://github.com/python/cpython/issues/106016#issue-1771174774>`__ for"
+" other details."
+msgstr ""
+
+#: ../../peps/pep-0726.rst:282
+msgid ""
+"Other stdlib modules also come with attributes which can be overriden (as"
+" a feature) and some input validation here could be helpful.  Examples: "
+":py:obj:`threading.excepthook`, :py:obj:`warnings.showwarning`, "
+":py:obj:`io.DEFAULT_BUFFER_SIZE` or :py:obj:`os.SEEK_SET`."
+msgstr ""
+
+#: ../../peps/pep-0726.rst:287
+msgid ""
+"Also a typical use case for customizing module attribute access is "
+"managing deprecation warnings.  But the :pep:`562` accomplishes this "
+"scenario only partially: e.g. it's impossible to issue a warning during "
+"an attempt to *change* a renamed attribute."
+msgstr ""
+
+#: ../../peps/pep-0726.rst:294
+msgid "Footnotes"
+msgstr ""
+
+#: ../../peps/pep-0726.rst:296
+msgid ""
+"Customizing module attribute access "
+"(https://docs.python.org/3.11/reference/datamodel.html#customizing-"
+"module-attribute-access)"
+msgstr ""
+
+#: ../../peps/pep-0726.rst:299
+msgid ""
+"Reserved classes of identifiers "
+"(https://docs.python.org/3.11/reference/lexical_analysis.html#reserved-"
+"classes-of-identifiers)"
+msgstr ""
+
+#: ../../peps/pep-0726.rst:304
+msgid "Copyright"
+msgstr ""
+
+#: ../../peps/pep-0726.rst:306
+msgid ""
+"This document is placed in the public domain or under the "
+"CC0-1.0-Universal license, whichever is more permissive."
+msgstr ""
+

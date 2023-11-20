@@ -6,250 +6,255 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PEPs\n"
+"Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 20:07+0000\n"
+"POT-Creation-Date: 2023-11-20 10:43-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.13.1\n"
 
-#: ../pep-3121.txt
+#: ../../peps/pep-3121.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../pep-3121.txt:5
+#: ../../peps/pep-3121.rst:5
 msgid "Martin von Löwis <martin@v.loewis.de>"
 msgstr ""
 
-#: ../pep-3121.txt
+#: ../../peps/pep-3121.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../pep-3121.txt:6
-msgid "Accepted"
+#: ../../peps/pep-3121.rst:6
+msgid "Final"
 msgstr ""
 
-#: ../pep-3121.txt
+#: ../../peps/pep-3121.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../pep-3121.txt:7
+#: ../../peps/pep-3121.rst:7
 msgid "Standards Track"
 msgstr ""
 
-#: ../pep-3121.txt
+#: ../../peps/pep-3121.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../pep-3121.txt:9
+#: ../../peps/pep-3121.rst:9
 msgid "27-Apr-2007"
 msgstr ""
 
-#: ../pep-3121.txt
+#: ../../peps/pep-3121.rst
 msgid "Python-Version"
 msgstr ""
 
-#: ../pep-3121.txt:10
+#: ../../peps/pep-3121.rst:10
 msgid "3.0"
 msgstr ""
 
-#: ../pep-3121.txt
+#: ../../peps/pep-3121.rst
 msgid "Post-History"
 msgstr "Pós-história"
 
-#: ../pep-3121.txt:14
+#: ../../peps/pep-3121.rst:17
 msgid "Abstract"
 msgstr ""
 
-#: ../pep-3121.txt:16
+#: ../../peps/pep-3121.rst:19
 msgid ""
-"Extension module initialization currently has a few deficiencies. There is "
-"no cleanup for modules, the entry point name might give naming conflicts, "
-"the entry functions don't follow the usual calling convention, and multiple "
-"interpreters are not supported well. This PEP addresses these issues."
+"Extension module initialization currently has a few deficiencies. There "
+"is no cleanup for modules, the entry point name might give naming "
+"conflicts, the entry functions don't follow the usual calling convention,"
+" and multiple interpreters are not supported well. This PEP addresses "
+"these issues."
 msgstr ""
 
-#: ../pep-3121.txt:23
+#: ../../peps/pep-3121.rst:26
 msgid "Problems"
 msgstr ""
 
-#: ../pep-3121.txt:26
+#: ../../peps/pep-3121.rst:29
 msgid "Module Finalization"
 msgstr ""
 
-#: ../pep-3121.txt:28
+#: ../../peps/pep-3121.rst:31
 msgid ""
-"Currently, extension modules are initialized usually once and then \"live\" "
-"forever. The only exception is when Py_Finalize() is called: then the "
-"initialization routine is invoked a second time. This is bad from a resource "
-"management point of view: memory and other resources might get allocated "
-"each time initialization is called, but there is no way to reclaim them. As "
-"a result, there is currently no way to completely release all resources "
-"Python has allocated."
+"Currently, extension modules are initialized usually once and then "
+"\"live\" forever. The only exception is when Py_Finalize() is called: "
+"then the initialization routine is invoked a second time. This is bad "
+"from a resource management point of view: memory and other resources "
+"might get allocated each time initialization is called, but there is no "
+"way to reclaim them. As a result, there is currently no way to completely"
+" release all resources Python has allocated."
 msgstr ""
 
-#: ../pep-3121.txt:37
+#: ../../peps/pep-3121.rst:40
 msgid "Entry point name conflicts"
 msgstr ""
 
-#: ../pep-3121.txt:39
+#: ../../peps/pep-3121.rst:42
 msgid ""
-"The entry point is currently called init<module>. This might conflict with "
-"other symbols also called init<something>. In particular, initsocket is "
-"known to have conflicted in the past (this specific problem got resolved as "
-"a side effect of renaming the module to _socket)."
+"The entry point is currently called init<module>. This might conflict "
+"with other symbols also called init<something>. In particular, initsocket"
+" is known to have conflicted in the past (this specific problem got "
+"resolved as a side effect of renaming the module to _socket)."
 msgstr ""
 
-#: ../pep-3121.txt:46
+#: ../../peps/pep-3121.rst:49
 msgid "Entry point signature"
 msgstr ""
 
-#: ../pep-3121.txt:48
+#: ../../peps/pep-3121.rst:51
 msgid ""
-"The entry point is currently a procedure (returning void).  This deviates "
-"from the usual calling conventions; callers can find out whether there was "
-"an error during initialization only by checking PyErr_Occurred. The entry "
-"point should return a PyObject*, which will be the module created, or NULL "
-"in case of an exception."
+"The entry point is currently a procedure (returning void).  This deviates"
+" from the usual calling conventions; callers can find out whether there "
+"was an error during initialization only by checking PyErr_Occurred. The "
+"entry point should return a PyObject*, which will be the module created, "
+"or NULL in case of an exception."
 msgstr ""
 
-#: ../pep-3121.txt:55
+#: ../../peps/pep-3121.rst:58
 msgid "Multiple Interpreters"
 msgstr ""
 
-#: ../pep-3121.txt:57
+#: ../../peps/pep-3121.rst:60
 msgid ""
-"Currently, extension modules share their state across all interpreters. This "
-"allows for undesirable information leakage across interpreters: one script "
-"could permanently corrupt objects in an extension module, possibly breaking "
-"all scripts in other interpreters."
+"Currently, extension modules share their state across all interpreters. "
+"This allows for undesirable information leakage across interpreters: one "
+"script could permanently corrupt objects in an extension module, possibly"
+" breaking all scripts in other interpreters."
 msgstr ""
 
-#: ../pep-3121.txt:63
+#: ../../peps/pep-3121.rst:66
 msgid "Specification"
 msgstr ""
 
-#: ../pep-3121.txt:65
+#: ../../peps/pep-3121.rst:68
 msgid "The module initialization routines change their signature to::"
 msgstr ""
 
-#: ../pep-3121.txt:70
+#: ../../peps/pep-3121.rst:73
 msgid ""
-"The initialization routine will be invoked once per interpreter, when the "
-"module is imported. It should return a new module object each time."
+"The initialization routine will be invoked once per interpreter, when the"
+" module is imported. It should return a new module object each time."
 msgstr ""
 
-#: ../pep-3121.txt:74
+#: ../../peps/pep-3121.rst:77
 msgid ""
-"In order to store per-module state in C variables, each module object will "
-"contain a block of memory that is interpreted only by the module. The amount "
-"of memory used for the module is specified at the point of creation of the "
-"module."
+"In order to store per-module state in C variables, each module object "
+"will contain a block of memory that is interpreted only by the module. "
+"The amount of memory used for the module is specified at the point of "
+"creation of the module."
 msgstr ""
 
-#: ../pep-3121.txt:80
+#: ../../peps/pep-3121.rst:83
 msgid ""
-"In addition to the initialization function, a module may implement a number "
-"of additional callback functions, which are invoked when the module's "
-"tp_traverse, tp_clear, and tp_free functions are invoked, and when the "
-"module is reloaded."
+"In addition to the initialization function, a module may implement a "
+"number of additional callback functions, which are invoked when the "
+"module's tp_traverse, tp_clear, and tp_free functions are invoked, and "
+"when the module is reloaded."
 msgstr ""
 
-#: ../pep-3121.txt:86
+#: ../../peps/pep-3121.rst:89
 msgid "The entire module definition is combined in a struct PyModuleDef::"
 msgstr ""
 
-#: ../pep-3121.txt:99
+#: ../../peps/pep-3121.rst:102
 msgid ""
 "Creation of a module is changed to expect an optional PyModuleDef*. The "
 "module state will be null-initialized."
 msgstr ""
 
-#: ../pep-3121.txt:103
+#: ../../peps/pep-3121.rst:106
 msgid ""
-"Each module method will be passed the module object as the first parameter. "
-"To access the module data, a function::"
+"Each module method will be passed the module object as the first "
+"parameter. To access the module data, a function::"
 msgstr ""
 
-#: ../pep-3121.txt:109
+#: ../../peps/pep-3121.rst:112
 msgid ""
 "will be provided. In addition, to lookup a module more efficiently than "
 "going through sys.modules, a function::"
 msgstr ""
 
-#: ../pep-3121.txt:115
+#: ../../peps/pep-3121.rst:118
 msgid ""
 "will be provided. This lookup function will use an index located in the "
 "m_base field, to find the module by index, not by name."
 msgstr ""
 
-#: ../pep-3121.txt:119
+#: ../../peps/pep-3121.rst:122
 msgid ""
 "As all Python objects should be controlled through the Python memory "
-"management, usage of \"static\" type objects is discouraged, unless the type "
-"object itself has no memory-managed state. To simplify definition of heap "
-"types, a new method::"
+"management, usage of \"static\" type objects is discouraged, unless the "
+"type object itself has no memory-managed state. To simplify definition of"
+" heap types, a new method::"
 msgstr ""
 
-#: ../pep-3121.txt:127
+#: ../../peps/pep-3121.rst:130
 msgid "is added."
 msgstr ""
 
-#: ../pep-3121.txt:130
+#: ../../peps/pep-3121.rst:133
 msgid "Example"
 msgstr ""
 
-#: ../pep-3121.txt:132
+#: ../../peps/pep-3121.rst:135
 msgid ""
 "xxmodule.c would be changed to remove the initxx function, and add the "
 "following code instead::"
 msgstr ""
 
-#: ../pep-3121.txt:187
+#: ../../peps/pep-3121.rst:190
 msgid "Discussion"
 msgstr ""
 
-#: ../pep-3121.txt:189
+#: ../../peps/pep-3121.rst:192
 msgid ""
-"Tim Peters reports in [1]_ that PythonLabs considered such a feature at one "
-"point, and lists the following additional hooks which aren't currently "
-"supported in this PEP:"
+"Tim Peters reports in [1]_ that PythonLabs considered such a feature at "
+"one point, and lists the following additional hooks which aren't "
+"currently supported in this PEP:"
 msgstr ""
 
-#: ../pep-3121.txt:193
+#: ../../peps/pep-3121.rst:196
 msgid "when the module object is deleted from sys.modules"
 msgstr ""
 
-#: ../pep-3121.txt:195
+#: ../../peps/pep-3121.rst:198
 msgid "when Py_Finalize is called"
 msgstr ""
 
-#: ../pep-3121.txt:197
+#: ../../peps/pep-3121.rst:200
 msgid "when Python exits"
 msgstr ""
 
-#: ../pep-3121.txt:199
+#: ../../peps/pep-3121.rst:202
 msgid "when the Python DLL is unloaded (Windows only)"
 msgstr ""
 
-#: ../pep-3121.txt:203
+#: ../../peps/pep-3121.rst:206
 msgid "References"
 msgstr "Referências"
 
-#: ../pep-3121.txt:205
+#: ../../peps/pep-3121.rst:208
 msgid ""
-"Tim Peters, reporting earlier conversation about such a feature https://mail."
-"python.org/pipermail/python-3000/2006-April/000726.html"
+"Tim Peters, reporting earlier conversation about such a feature "
+"https://mail.python.org/pipermail/python-3000/2006-April/000726.html"
 msgstr ""
 
-#: ../pep-3121.txt:210
+#: ../../peps/pep-3121.rst:213
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../pep-3121.txt:212
+#: ../../peps/pep-3121.rst:215
 msgid "This document has been placed in the public domain."
 msgstr "Este documento foi colocado em domínio público."
+
+#~ msgid "Accepted"
+#~ msgstr ""
+

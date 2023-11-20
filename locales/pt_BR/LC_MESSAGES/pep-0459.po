@@ -6,925 +6,932 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PEPs\n"
+"Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 20:07+0000\n"
+"POT-Creation-Date: 2023-11-20 10:43-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.13.1\n"
 
-#: ../pep-0459.txt
+#: ../../peps/pep-0459.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../pep-0459.txt:5 ../pep-0459.txt:6
-msgid "Nick Coghlan <ncoghlan@gmail.com>"
+#: ../../peps/pep-0459.rst:5 ../../peps/pep-0459.rst:6
+msgid "Alyssa Coghlan <ncoghlan@gmail.com>"
 msgstr ""
 
-#: ../pep-0459.txt
+#: ../../peps/pep-0459.rst
 msgid "BDFL-Delegate"
 msgstr ""
 
-#: ../pep-0459.txt
+#: ../../peps/pep-0459.rst
 msgid "Discussions-To"
 msgstr ""
 
-#: ../pep-0459.txt:7
+#: ../../peps/pep-0459.rst:7
 msgid "distutils-sig@python.org"
 msgstr ""
 
-#: ../pep-0459.txt
+#: ../../peps/pep-0459.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../pep-0459.txt:8
+#: ../../peps/pep-0459.rst:8
 msgid "Withdrawn"
 msgstr ""
 
-#: ../pep-0459.txt
+#: ../../peps/pep-0459.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../pep-0459.txt:9
+#: ../../peps/pep-0459.rst:9
 msgid "Standards Track"
 msgstr ""
 
-#: ../pep-0459.txt
+#: ../../peps/pep-0459.rst
 msgid "Topic"
 msgstr ""
 
-#: ../pep-0459.txt:10
+#: ../../peps/pep-0459.rst:10
 msgid "Packaging"
 msgstr ""
 
-#: ../pep-0459.txt
+#: ../../peps/pep-0459.rst
 msgid "Requires"
 msgstr ""
 
-#: ../pep-0459.txt:12
+#: ../../peps/pep-0459.rst:12
 msgid "426"
 msgstr ""
 
-#: ../pep-0459.txt
+#: ../../peps/pep-0459.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../pep-0459.txt:13
+#: ../../peps/pep-0459.rst:13
 msgid "11-Nov-2013"
 msgstr ""
 
-#: ../pep-0459.txt
+#: ../../peps/pep-0459.rst
 msgid "Post-History"
 msgstr "Pós-história"
 
-#: ../pep-0459.txt:14
+#: ../../peps/pep-0459.rst:14
 msgid "21-Dec-2013"
 msgstr ""
 
-#: ../pep-0459.txt:18
+#: ../../peps/pep-0459.rst:18
 msgid "PEP Withdrawal"
 msgstr ""
 
-#: ../pep-0459.txt:20
+#: ../../peps/pep-0459.rst:20
 msgid ""
-"This PEP depends on :pep:`426`, which has itself been withdrawn. See the PEP "
-"Withdrawal section in that PEP for details."
+"This PEP depends on :pep:`426`, which has itself been withdrawn. See the "
+"PEP Withdrawal section in that PEP for details."
 msgstr ""
 
-#: ../pep-0459.txt:23
+#: ../../peps/pep-0459.rst:23
 msgid ""
 "In the meantime, metadata extensions will continue to be handled as they "
-"have been for past examples like ``entry_points.txt``: as additional files "
-"installed into metadata directories alongside the main `METADATA` file."
+"have been for past examples like ``entry_points.txt``: as additional "
+"files installed into metadata directories alongside the main ``METADATA``"
+" file."
 msgstr ""
 
-#: ../pep-0459.txt:29
+#: ../../peps/pep-0459.rst:29
 msgid "Abstract"
 msgstr ""
 
-#: ../pep-0459.txt:31
+#: ../../peps/pep-0459.rst:31
 msgid "This PEP describes several standard extensions to the Python metadata."
 msgstr ""
 
-#: ../pep-0459.txt:33
+#: ../../peps/pep-0459.rst:33
 msgid ""
 "Like all metadata extensions, each standard extension format is "
-"independently versioned. Changing any of the formats requires an update to "
-"this PEP, but does not require an update to the core packaging metadata."
+"independently versioned. Changing any of the formats requires an update "
+"to this PEP, but does not require an update to the core packaging "
+"metadata."
 msgstr ""
 
-#: ../pep-0459.txt:39
+#: ../../peps/pep-0459.rst:39
 msgid "Standard Extension Namespace"
 msgstr ""
 
-#: ../pep-0459.txt:41
+#: ../../peps/pep-0459.rst:41
 msgid ""
 "The ``python`` project on the Python Package Index refers to the CPython "
 "reference interpreter. This namespace is used as the namespace for the "
 "standard metadata extensions."
 msgstr ""
 
-#: ../pep-0459.txt:45
+#: ../../peps/pep-0459.rst:45
 msgid "The currently defined standard extensions are:"
 msgstr ""
 
-#: ../pep-0459.txt:47
+#: ../../peps/pep-0459.rst:47
 msgid "``python.details``"
 msgstr ""
 
-#: ../pep-0459.txt:48
+#: ../../peps/pep-0459.rst:48
 msgid "``python.project``"
 msgstr ""
 
-#: ../pep-0459.txt:49
+#: ../../peps/pep-0459.rst:49
 msgid "``python.integrator``"
 msgstr ""
 
-#: ../pep-0459.txt:50
+#: ../../peps/pep-0459.rst:50
 msgid "``python.exports``"
 msgstr ""
 
-#: ../pep-0459.txt:51
+#: ../../peps/pep-0459.rst:51
 msgid "``python.commands``"
 msgstr ""
 
-#: ../pep-0459.txt:52
+#: ../../peps/pep-0459.rst:52
 msgid "``python.constraints``"
 msgstr ""
 
-#: ../pep-0459.txt:54
+#: ../../peps/pep-0459.rst:54
 msgid ""
 "All standard extensions are currently at version ``1.0``, and thus the "
 "``extension_metadata`` field may be omitted without losing access to any "
 "functionality."
 msgstr ""
 
-#: ../pep-0459.txt:60
+#: ../../peps/pep-0459.rst:60
 msgid "The ``python.details`` extension"
 msgstr ""
 
-#: ../pep-0459.txt:62
+#: ../../peps/pep-0459.rst:62
 msgid ""
-"The ``python.details`` extension allows for more information to be provided "
-"regarding the software distribution."
+"The ``python.details`` extension allows for more information to be "
+"provided regarding the software distribution."
 msgstr ""
 
-#: ../pep-0459.txt:65
+#: ../../peps/pep-0459.rst:65
 msgid "The ``python.details`` extension contains four custom subfields:"
 msgstr ""
 
-#: ../pep-0459.txt:67
+#: ../../peps/pep-0459.rst:67
 msgid "``license``: the copyright license for the distribution"
 msgstr ""
 
-#: ../pep-0459.txt:68
+#: ../../peps/pep-0459.rst:68
 msgid "``keywords``: package index keywords for the distribution"
 msgstr ""
 
-#: ../pep-0459.txt:69
+#: ../../peps/pep-0459.rst:69
 msgid "``classifiers``: package index Trove classifiers for the distribution"
 msgstr ""
 
-#: ../pep-0459.txt:70
+#: ../../peps/pep-0459.rst:70
 msgid "``document_names``: the names of additional metadata files"
 msgstr ""
 
-#: ../pep-0459.txt:72
+#: ../../peps/pep-0459.rst:72
 msgid ""
-"All of these fields are optional. Automated tools MUST operate correctly if "
-"a distribution does not provide them, including failing cleanly when an "
-"operation depending on one of these fields is requested."
+"All of these fields are optional. Automated tools MUST operate correctly "
+"if a distribution does not provide them, including failing cleanly when "
+"an operation depending on one of these fields is requested."
 msgstr ""
 
-#: ../pep-0459.txt:78
+#: ../../peps/pep-0459.rst:78
 msgid "License"
 msgstr ""
 
-#: ../pep-0459.txt:80
+#: ../../peps/pep-0459.rst:80
 msgid "A short string summarising the license used for this distribution."
 msgstr ""
 
-#: ../pep-0459.txt:82
+#: ../../peps/pep-0459.rst:82
 msgid ""
 "Note that distributions that provide this field should still specify any "
-"applicable license Trove classifiers in the `Classifiers`_ field. Even when "
-"an appropriate Trove classifier is available, the license summary can be a "
-"good way to specify a particular version of that license, or to indicate any "
-"variations or exception to the license."
+"applicable license Trove classifiers in the `Classifiers`_ field. Even "
+"when an appropriate Trove classifier is available, the license summary "
+"can be a good way to specify a particular version of that license, or to "
+"indicate any variations or exception to the license."
 msgstr ""
 
-#: ../pep-0459.txt:88
+#: ../../peps/pep-0459.rst:88
 msgid ""
-"This field SHOULD contain fewer than 512 characters and MUST contain fewer "
-"than 2048."
+"This field SHOULD contain fewer than 512 characters and MUST contain "
+"fewer than 2048."
 msgstr ""
 
-#: ../pep-0459.txt:91
+#: ../../peps/pep-0459.rst:91
 msgid "This field SHOULD NOT contain any line breaks."
 msgstr ""
 
-#: ../pep-0459.txt:93
+#: ../../peps/pep-0459.rst:93
 msgid ""
-"The full license text SHOULD be included as a separate file in the source "
-"archive for the distribution. See `Document names`_ for details."
+"The full license text SHOULD be included as a separate file in the source"
+" archive for the distribution. See `Document names`_ for details."
 msgstr ""
 
-#: ../pep-0459.txt:96 ../pep-0459.txt:107 ../pep-0459.txt:118
-#: ../pep-0459.txt:166 ../pep-0459.txt:232 ../pep-0459.txt:260
-#: ../pep-0459.txt:286 ../pep-0459.txt:397 ../pep-0459.txt:431
-#: ../pep-0459.txt:462 ../pep-0459.txt:511 ../pep-0459.txt:541
+#: ../../peps/pep-0459.rst:96 ../../peps/pep-0459.rst:107
+#: ../../peps/pep-0459.rst:118 ../../peps/pep-0459.rst:166
+#: ../../peps/pep-0459.rst:232 ../../peps/pep-0459.rst:260
+#: ../../peps/pep-0459.rst:286 ../../peps/pep-0459.rst:397
+#: ../../peps/pep-0459.rst:431 ../../peps/pep-0459.rst:462
+#: ../../peps/pep-0459.rst:511 ../../peps/pep-0459.rst:541
 msgid "Example::"
 msgstr ""
 
-#: ../pep-0459.txt:102
+#: ../../peps/pep-0459.rst:102
 msgid "Keywords"
 msgstr ""
 
-#: ../pep-0459.txt:104
+#: ../../peps/pep-0459.rst:104
 msgid ""
 "A list of additional keywords to be used to assist searching for the "
 "distribution in a larger catalog."
 msgstr ""
 
-#: ../pep-0459.txt:113
+#: ../../peps/pep-0459.rst:113
 msgid "Classifiers"
 msgstr ""
 
-#: ../pep-0459.txt:115
+#: ../../peps/pep-0459.rst:115
 msgid ""
-"A list of strings, with each giving a single classification value for the "
-"distribution.  Classifiers are described in :pep:`301` [2]."
+"A list of strings, with each giving a single classification value for the"
+" distribution.  Classifiers are described in :pep:`301` [2]."
 msgstr ""
 
-#: ../pep-0459.txt:128
+#: ../../peps/pep-0459.rst:128
 msgid "Document names"
 msgstr ""
 
-#: ../pep-0459.txt:130
+#: ../../peps/pep-0459.rst:130
 msgid ""
 "Filenames for supporting documents included in the distribution's ``dist-"
 "info`` metadata directory."
 msgstr ""
 
-#: ../pep-0459.txt:133
+#: ../../peps/pep-0459.rst:133
 msgid "The following supporting documents can be named:"
 msgstr ""
 
-#: ../pep-0459.txt:135
-msgid ""
-"``description``: a file containing a long description of the distribution"
+#: ../../peps/pep-0459.rst:135
+msgid "``description``: a file containing a long description of the distribution"
 msgstr ""
 
-#: ../pep-0459.txt:136
+#: ../../peps/pep-0459.rst:136
 msgid "``license``: a file with the full text of the distribution's license"
 msgstr ""
 
-#: ../pep-0459.txt:137
+#: ../../peps/pep-0459.rst:137
 msgid "``changelog``: a file describing changes made to the distribution"
 msgstr ""
 
-#: ../pep-0459.txt:139
+#: ../../peps/pep-0459.rst:139
 msgid ""
 "Supporting documents MUST be included directly in the ``dist-info`` "
 "directory. Directory separators are NOT permitted in document names."
 msgstr ""
 
-#: ../pep-0459.txt:142
+#: ../../peps/pep-0459.rst:142
 msgid ""
-"The markup format (if any) for the file is indicated by the file extension. "
-"This allows index servers and other automated tools to render included text "
-"documents correctly and provide feedback on rendering errors, rather than "
-"having to guess the intended format."
+"The markup format (if any) for the file is indicated by the file "
+"extension. This allows index servers and other automated tools to render "
+"included text documents correctly and provide feedback on rendering "
+"errors, rather than having to guess the intended format."
 msgstr ""
 
-#: ../pep-0459.txt:147
+#: ../../peps/pep-0459.rst:147
 msgid ""
-"If the filename has no extension, or the extension is not recognised, the "
-"default rendering format MUST be plain text."
+"If the filename has no extension, or the extension is not recognised, the"
+" default rendering format MUST be plain text."
 msgstr ""
 
-#: ../pep-0459.txt:150
+#: ../../peps/pep-0459.rst:150
 msgid ""
 "The following markup renderers SHOULD be used for the specified file "
 "extensions:"
 msgstr ""
 
-#: ../pep-0459.txt:153
+#: ../../peps/pep-0459.rst:153
 msgid "Plain text: ``.txt``, no extension, unknown extension"
 msgstr ""
 
-#: ../pep-0459.txt:154
+#: ../../peps/pep-0459.rst:154
 msgid "reStructured Text: ``.rst``"
 msgstr ""
 
-#: ../pep-0459.txt:155
+#: ../../peps/pep-0459.rst:155
 msgid "Markdown: ``.md``"
 msgstr ""
 
-#: ../pep-0459.txt:156
+#: ../../peps/pep-0459.rst:156
 msgid "AsciiDoc: ``.adoc``, ``.asc``, ``.asciidoc``"
 msgstr ""
 
-#: ../pep-0459.txt:157
+#: ../../peps/pep-0459.rst:157
 msgid "HTML: ``.html``, ``.htm``"
 msgstr ""
 
-#: ../pep-0459.txt:159
+#: ../../peps/pep-0459.rst:159
 msgid ""
 "Automated tools MAY render one or more of the specified formats as plain "
 "text and MAY render other markup formats beyond those listed."
 msgstr ""
 
-#: ../pep-0459.txt:162
+#: ../../peps/pep-0459.rst:162
 msgid ""
-"Automated tools SHOULD NOT make any assumptions regarding the maximum length "
-"of supporting document content, except as necessary to protect the integrity "
-"of a service."
+"Automated tools SHOULD NOT make any assumptions regarding the maximum "
+"length of supporting document content, except as necessary to protect the"
+" integrity of a service."
 msgstr ""
 
-#: ../pep-0459.txt:176
+#: ../../peps/pep-0459.rst:176
 msgid "The ``python.project`` extension"
 msgstr ""
 
-#: ../pep-0459.txt:178
+#: ../../peps/pep-0459.rst:178
 msgid ""
-"The ``python.project`` extension allows for more information to be provided "
-"regarding the creation and maintenance of the distribution."
+"The ``python.project`` extension allows for more information to be "
+"provided regarding the creation and maintenance of the distribution."
 msgstr ""
 
-#: ../pep-0459.txt:181
+#: ../../peps/pep-0459.rst:181
 msgid "The ``python.project`` extension contains three custom subfields:"
 msgstr ""
 
-#: ../pep-0459.txt:183
+#: ../../peps/pep-0459.rst:183
 msgid "``contacts``: key contact points for the distribution"
 msgstr ""
 
-#: ../pep-0459.txt:184
+#: ../../peps/pep-0459.rst:184
 msgid "``contributors``: other contributors to the distribution"
 msgstr ""
 
-#: ../pep-0459.txt:185
+#: ../../peps/pep-0459.rst:185
 msgid "``project_urls``: relevant URLs for the distribution"
 msgstr ""
 
-#: ../pep-0459.txt:189
+#: ../../peps/pep-0459.rst:189
 msgid "Contact information"
 msgstr ""
 
-#: ../pep-0459.txt:191
+#: ../../peps/pep-0459.rst:191
 msgid ""
-"Details on individuals and organisations are recorded as mappings with the "
-"following subfields:"
+"Details on individuals and organisations are recorded as mappings with "
+"the following subfields:"
 msgstr ""
 
-#: ../pep-0459.txt:194
+#: ../../peps/pep-0459.rst:194
 msgid "``name``: the name of an individual or group"
 msgstr ""
 
-#: ../pep-0459.txt:195
+#: ../../peps/pep-0459.rst:195
 msgid "``email``: an email address (this may be a mailing list)"
 msgstr ""
 
-#: ../pep-0459.txt:196
-msgid ""
-"``url``: a URL (such as a profile page on a source code hosting service)"
+#: ../../peps/pep-0459.rst:196
+msgid "``url``: a URL (such as a profile page on a source code hosting service)"
 msgstr ""
 
-#: ../pep-0459.txt:197
-msgid ""
-"``role``: one of ``\"author\"``, ``\"maintainer\"`` or ``\"contributor\"``"
+#: ../../peps/pep-0459.rst:197
+msgid "``role``: one of ``\"author\"``, ``\"maintainer\"`` or ``\"contributor\"``"
 msgstr ""
 
-#: ../pep-0459.txt:199
+#: ../../peps/pep-0459.rst:199
 msgid "The ``name`` subfield is required, the other subfields are optional."
 msgstr ""
 
-#: ../pep-0459.txt:201
+#: ../../peps/pep-0459.rst:201
 msgid "If no specific role is stated, the default is ``contributor``."
 msgstr ""
 
-#: ../pep-0459.txt:203
+#: ../../peps/pep-0459.rst:203
 msgid ""
-"Email addresses must be in the form ``local-part@domain`` where the local-"
-"part may be up to 64 characters long and the entire email address contains "
-"no more than 254 characters. The formal specification of the format is in :"
-"rfc:`5322` (sections 3.2.3 and 3.4.1) and :rfc:`5321`, with a more readable "
-"form given in the informational :rfc:`3696` and the associated errata."
+"Email addresses must be in the form ``local-part@domain`` where the "
+"local-part may be up to 64 characters long and the entire email address "
+"contains no more than 254 characters. The formal specification of the "
+"format is in :rfc:`5322` (sections 3.2.3 and 3.4.1) and :rfc:`5321`, with"
+" a more readable form given in the informational :rfc:`3696` and the "
+"associated errata."
 msgstr ""
 
-#: ../pep-0459.txt:209
+#: ../../peps/pep-0459.rst:209
 msgid "The defined contributor roles are as follows:"
 msgstr ""
 
-#: ../pep-0459.txt:211
+#: ../../peps/pep-0459.rst:211
 msgid "``author``: the original creator of a distribution"
 msgstr ""
 
-#: ../pep-0459.txt:212
+#: ../../peps/pep-0459.rst:212
 msgid ""
-"``maintainer``: the current lead contributor for a distribution, when they "
-"are not the original creator"
+"``maintainer``: the current lead contributor for a distribution, when "
+"they are not the original creator"
 msgstr ""
 
-#: ../pep-0459.txt:214
+#: ../../peps/pep-0459.rst:214
 msgid ""
 "``contributor``: any other individuals or organizations involved in the "
 "creation of the distribution"
 msgstr ""
 
-#: ../pep-0459.txt:217
+#: ../../peps/pep-0459.rst:217
 msgid ""
-"Contact and contributor metadata is optional. Automated tools MUST operate "
-"correctly if a distribution does not provide it, including failing cleanly "
-"when an operation depending on one of these fields is requested."
+"Contact and contributor metadata is optional. Automated tools MUST "
+"operate correctly if a distribution does not provide it, including "
+"failing cleanly when an operation depending on one of these fields is "
+"requested."
 msgstr ""
 
-#: ../pep-0459.txt:223
+#: ../../peps/pep-0459.rst:223
 msgid "Contacts"
 msgstr ""
 
-#: ../pep-0459.txt:225
+#: ../../peps/pep-0459.rst:225
 msgid ""
 "A list of contributor entries giving the recommended contact points for "
 "getting more information about the project."
 msgstr ""
 
-#: ../pep-0459.txt:228
+#: ../../peps/pep-0459.rst:228
 msgid ""
-"The example below would be suitable for a project that was in the process of "
-"handing over from the original author to a new lead maintainer, while "
-"operating as part of a larger development group."
+"The example below would be suitable for a project that was in the process"
+" of handing over from the original author to a new lead maintainer, while"
+" operating as part of a larger development group."
 msgstr ""
 
-#: ../pep-0459.txt:254
+#: ../../peps/pep-0459.rst:254
 msgid "Contributors"
 msgstr ""
 
-#: ../pep-0459.txt:256
+#: ../../peps/pep-0459.rst:256
 msgid ""
-"A list of contributor entries for other contributors not already listed as "
-"current project points of contact. The subfields within the list elements "
-"are the same as those for the main contact field."
+"A list of contributor entries for other contributors not already listed "
+"as current project points of contact. The subfields within the list "
+"elements are the same as those for the main contact field."
 msgstr ""
 
-#: ../pep-0459.txt:273
+#: ../../peps/pep-0459.rst:273
 msgid "Project URLs"
 msgstr ""
 
-#: ../pep-0459.txt:275
+#: ../../peps/pep-0459.rst:275
 msgid ""
 "A mapping of arbitrary text labels to additional URLs relevant to the "
 "project."
 msgstr ""
 
-#: ../pep-0459.txt:278
+#: ../../peps/pep-0459.rst:278
 msgid ""
-"While projects are free to choose their own labels and specific URLs, it is "
-"RECOMMENDED that home page, source control, issue tracker and documentation "
-"links be provided using the labels in the example below."
+"While projects are free to choose their own labels and specific URLs, it "
+"is RECOMMENDED that home page, source control, issue tracker and "
+"documentation links be provided using the labels in the example below."
 msgstr ""
 
-#: ../pep-0459.txt:282
+#: ../../peps/pep-0459.rst:282
 msgid ""
-"URL labels MUST be treated as case insensitive by automated tools, but they "
-"are not required to be valid Python identifiers. Any legal JSON string is "
-"permitted as a URL label."
+"URL labels MUST be treated as case insensitive by automated tools, but "
+"they are not required to be valid Python identifiers. Any legal JSON "
+"string is permitted as a URL label."
 msgstr ""
 
-#: ../pep-0459.txt:297
+#: ../../peps/pep-0459.rst:297
 msgid "The ``python.integrator`` extension"
 msgstr ""
 
-#: ../pep-0459.txt:299
+#: ../../peps/pep-0459.rst:299
 msgid ""
-"Structurally, this extension is largely identical to the ``python.project`` "
-"extension (the extension name is the only difference)."
+"Structurally, this extension is largely identical to the "
+"``python.project`` extension (the extension name is the only difference)."
 msgstr ""
 
-#: ../pep-0459.txt:302
+#: ../../peps/pep-0459.rst:302
 msgid ""
-"However, where the ``project`` metadata refers to the upstream creators of "
-"the software, the ``integrator`` metadata refers to the downstream "
+"However, where the ``project`` metadata refers to the upstream creators "
+"of the software, the ``integrator`` metadata refers to the downstream "
 "redistributor of a modified version."
 msgstr ""
 
-#: ../pep-0459.txt:306
+#: ../../peps/pep-0459.rst:306
 msgid ""
 "If the software is being redistributed unmodified, then typically this "
-"extension will not be used. However, if the software has been patched (for "
-"example, backporting compatible fixes from a later version, or addressing a "
-"platform compatibility issue), then this extension SHOULD be used, and a "
-"local version label added to the distribution's version identifier."
+"extension will not be used. However, if the software has been patched "
+"(for example, backporting compatible fixes from a later version, or "
+"addressing a platform compatibility issue), then this extension SHOULD be"
+" used, and a local version label added to the distribution's version "
+"identifier."
 msgstr ""
 
-#: ../pep-0459.txt:312
+#: ../../peps/pep-0459.rst:312
 msgid ""
-"If there are multiple redistributors in the chain, each one just overwrites "
-"this extension with their particular metadata."
+"If there are multiple redistributors in the chain, each one just "
+"overwrites this extension with their particular metadata."
 msgstr ""
 
-#: ../pep-0459.txt:317
+#: ../../peps/pep-0459.rst:317
 msgid "The ``python.exports`` extension"
 msgstr ""
 
-#: ../pep-0459.txt:319
+#: ../../peps/pep-0459.rst:319
 msgid ""
-"Most Python distributions expose packages and modules for import through the "
-"Python module namespace. Distributions may also expose other interfaces when "
-"installed."
+"Most Python distributions expose packages and modules for import through "
+"the Python module namespace. Distributions may also expose other "
+"interfaces when installed."
 msgstr ""
 
-#: ../pep-0459.txt:323
+#: ../../peps/pep-0459.rst:323
 msgid "The ``python.exports`` extension contains three custom subfields:"
 msgstr ""
 
-#: ../pep-0459.txt:325
+#: ../../peps/pep-0459.rst:325
 msgid "``modules``: modules exported by the distribution"
 msgstr ""
 
-#: ../pep-0459.txt:326
+#: ../../peps/pep-0459.rst:326
 msgid "``namespaces``: namespace packages that the distribution contributes to"
 msgstr ""
 
-#: ../pep-0459.txt:327
+#: ../../peps/pep-0459.rst:327
 msgid "``exports``: other Python interfaces exported by the distribution"
 msgstr ""
 
-#: ../pep-0459.txt:331
+#: ../../peps/pep-0459.rst:331
 msgid "Export specifiers"
 msgstr ""
 
-#: ../pep-0459.txt:333
+#: ../../peps/pep-0459.rst:333
 msgid ""
 "An export specifier is a string consisting of a fully qualified name, as "
-"well as an optional extra name enclosed in square brackets. This gives the "
-"following four possible forms for an export specifier::"
+"well as an optional extra name enclosed in square brackets. This gives "
+"the following four possible forms for an export specifier::"
 msgstr ""
 
-#: ../pep-0459.txt:344 ../pep-0459.txt:372 ../pep-0459.txt:418
+#: ../../peps/pep-0459.rst:344 ../../peps/pep-0459.rst:372
+#: ../../peps/pep-0459.rst:418
 msgid ""
-"The jsonschema file currently restricts qualified names using the Python 2 "
-"ASCII identifier rules. This may need to be reconsidered given the more "
-"relaxed identifier rules in Python 3."
+"The jsonschema file currently restricts qualified names using the Python "
+"2 ASCII identifier rules. This may need to be reconsidered given the more"
+" relaxed identifier rules in Python 3."
 msgstr ""
 
-#: ../pep-0459.txt:348
+#: ../../peps/pep-0459.rst:348
 msgid "The meaning of the subfields is as follows:"
 msgstr ""
 
-#: ../pep-0459.txt:350
+#: ../../peps/pep-0459.rst:350
 msgid "``module``: the module providing the export"
 msgstr ""
 
-#: ../pep-0459.txt:351
+#: ../../peps/pep-0459.rst:351
 msgid ""
-"``name``: if applicable, the qualified name of the export within the module"
+"``name``: if applicable, the qualified name of the export within the "
+"module"
 msgstr ""
 
-#: ../pep-0459.txt:352
+#: ../../peps/pep-0459.rst:352
 msgid ""
 "``requires_extra``: indicates the export will only work correctly if the "
 "additional dependencies named in the given extra are available in the "
 "installed environment"
 msgstr ""
 
-#: ../pep-0459.txt:358
+#: ../../peps/pep-0459.rst:358
 msgid ""
 "I tried this as a mapping with subfields, and it made the examples below "
-"unreadable. While this PEP is mostly for tool use, readability still matters "
-"to some degree for debugging purposes, and because I expect snippets of the "
-"format to be reused elsewhere."
+"unreadable. While this PEP is mostly for tool use, readability still "
+"matters to some degree for debugging purposes, and because I expect "
+"snippets of the format to be reused elsewhere."
 msgstr ""
 
-#: ../pep-0459.txt:365
+#: ../../peps/pep-0459.rst:365
 msgid "Modules"
 msgstr ""
 
-#: ../pep-0459.txt:367
+#: ../../peps/pep-0459.rst:367
 msgid ""
 "A list of qualified names of modules and packages that the distribution "
 "provides for import."
 msgstr ""
 
-#: ../pep-0459.txt:376
+#: ../../peps/pep-0459.rst:376
 msgid ""
-"For names that contain dots, the portion of the name before the final dot "
-"MUST appear either in the installed module list or in the namespace package "
-"list."
+"For names that contain dots, the portion of the name before the final dot"
+" MUST appear either in the installed module list or in the namespace "
+"package list."
 msgstr ""
 
-#: ../pep-0459.txt:380
+#: ../../peps/pep-0459.rst:380
 msgid ""
-"To help avoid name conflicts, it is RECOMMENDED that distributions provide a "
-"single top level module or package that matches the distribution name (or a "
-"lower case equivalent). This requires that the distribution name also meet "
-"the requirements of a Python identifier, which are stricter than those for "
-"distribution names). This practice will also make it easier to find "
-"authoritative sources for modules."
+"To help avoid name conflicts, it is RECOMMENDED that distributions "
+"provide a single top level module or package that matches the "
+"distribution name (or a lower case equivalent). This requires that the "
+"distribution name also meet the requirements of a Python identifier, "
+"which are stricter than those for distribution names). This practice will"
+" also make it easier to find authoritative sources for modules."
 msgstr ""
 
-#: ../pep-0459.txt:387
+#: ../../peps/pep-0459.rst:387
 msgid ""
 "Index servers SHOULD allow multiple distributions to publish the same "
 "modules, but MAY notify distribution authors of potential conflicts."
 msgstr ""
 
-#: ../pep-0459.txt:390
+#: ../../peps/pep-0459.rst:390
 msgid ""
 "Installation tools SHOULD report an error when asked to install a "
-"distribution that provides a module that is also provided by a different, "
-"previously installed, distribution."
+"distribution that provides a module that is also provided by a different,"
+" previously installed, distribution."
 msgstr ""
 
-#: ../pep-0459.txt:394
+#: ../../peps/pep-0459.rst:394
 msgid ""
 "Note that attempting to import some declared modules may result in an "
 "exception if the appropriate extras are not installed."
 msgstr ""
 
-#: ../pep-0459.txt:403
+#: ../../peps/pep-0459.rst:403
 msgid ""
-"Making this a list of export specifiers instead would allow a distribution "
-"to declare when a particular module requires a particular extra in order to "
-"run correctly. On the other hand, there's an argument to be made that that "
-"is the point where it starts to become worthwhile to split out a separate "
-"distribution rather than using extras."
+"Making this a list of export specifiers instead would allow a "
+"distribution to declare when a particular module requires a particular "
+"extra in order to run correctly. On the other hand, there's an argument "
+"to be made that that is the point where it starts to become worthwhile to"
+" split out a separate distribution rather than using extras."
 msgstr ""
 
-#: ../pep-0459.txt:411
+#: ../../peps/pep-0459.rst:411
 msgid "Namespaces"
 msgstr ""
 
-#: ../pep-0459.txt:413
+#: ../../peps/pep-0459.rst:413
 msgid ""
 "A list of qualified names of namespace packages that the distribution "
 "contributes modules to."
 msgstr ""
 
-#: ../pep-0459.txt:422
+#: ../../peps/pep-0459.rst:422
 msgid ""
-"On versions of Python prior to Python 3.3 (which provides native namespace "
-"package support), installation tools SHOULD emit a suitable ``__init__.py`` "
-"file to properly initialise the namespace rather than using a distribution "
-"provided file."
+"On versions of Python prior to Python 3.3 (which provides native "
+"namespace package support), installation tools SHOULD emit a suitable "
+"``__init__.py`` file to properly initialise the namespace rather than "
+"using a distribution provided file."
 msgstr ""
 
-#: ../pep-0459.txt:427
+#: ../../peps/pep-0459.rst:427
 msgid ""
 "Installation tools SHOULD emit a warning and MAY emit an error if a "
-"distribution declares a namespace package that conflicts with the name of an "
-"already installed module or vice-versa."
+"distribution declares a namespace package that conflicts with the name of"
+" an already installed module or vice-versa."
 msgstr ""
 
-#: ../pep-0459.txt:437
+#: ../../peps/pep-0459.rst:437
 msgid "Exports"
 msgstr ""
 
-#: ../pep-0459.txt:439
+#: ../../peps/pep-0459.rst:439
 msgid ""
-"The ``exports`` field is a mapping containing prefixed names as keys. Each "
-"key identifies an export group containing one or more exports published by "
-"the distribution."
+"The ``exports`` field is a mapping containing prefixed names as keys. "
+"Each key identifies an export group containing one or more exports "
+"published by the distribution."
 msgstr ""
 
-#: ../pep-0459.txt:443
+#: ../../peps/pep-0459.rst:443
 msgid ""
-"Export group names are defined by distributions that will then make use of "
-"the published export information in some way. The primary use case is for "
-"distributions that support a plugin model: defining an export group allows "
-"other distributions to indicate which plugins they provide, how they can be "
-"imported and accessed, and which additional dependencies (if any) are needed "
-"for the plugin to work correctly."
+"Export group names are defined by distributions that will then make use "
+"of the published export information in some way. The primary use case is "
+"for distributions that support a plugin model: defining an export group "
+"allows other distributions to indicate which plugins they provide, how "
+"they can be imported and accessed, and which additional dependencies (if "
+"any) are needed for the plugin to work correctly."
 msgstr ""
 
-#: ../pep-0459.txt:450
+#: ../../peps/pep-0459.rst:450
 msgid ""
 "To reduce the chance of name conflicts, export group names SHOULD use a "
-"prefix that corresponds to a module name in the distribution that defines "
-"the meaning of the export group. This practice will also make it easier to "
-"find authoritative documentation for export groups."
+"prefix that corresponds to a module name in the distribution that defines"
+" the meaning of the export group. This practice will also make it easier "
+"to find authoritative documentation for export groups."
 msgstr ""
 
-#: ../pep-0459.txt:455
+#: ../../peps/pep-0459.rst:455
 msgid ""
-"Each individual export group is then a mapping of arbitrary non-empty string "
-"keys to export specifiers. The meaning of export names within an export "
-"group is up to the distribution that defines the export group. Creating an "
-"appropriate definition for the export name format can allow the importing "
-"distribution to determine whether or not an export is relevant without "
-"needing to import every exporting module."
+"Each individual export group is then a mapping of arbitrary non-empty "
+"string keys to export specifiers. The meaning of export names within an "
+"export group is up to the distribution that defines the export group. "
+"Creating an appropriate definition for the export name format can allow "
+"the importing distribution to determine whether or not an export is "
+"relevant without needing to import every exporting module."
 msgstr ""
 
-#: ../pep-0459.txt:472
+#: ../../peps/pep-0459.rst:472
 msgid "The ``python.commands`` extension"
 msgstr ""
 
-#: ../pep-0459.txt:474
+#: ../../peps/pep-0459.rst:474
 msgid "The ``python.commands`` extension contains three custom subfields:"
 msgstr ""
 
-#: ../pep-0459.txt:476
-msgid ""
-"``wrap_console``: console wrapper scripts to be generated by the installer"
+#: ../../peps/pep-0459.rst:476
+msgid "``wrap_console``: console wrapper scripts to be generated by the installer"
 msgstr ""
 
-#: ../pep-0459.txt:477
+#: ../../peps/pep-0459.rst:477
 msgid "``wrap_gui``: GUI wrapper scripts to be generated by the installer"
 msgstr ""
 
-#: ../pep-0459.txt:478
+#: ../../peps/pep-0459.rst:478
 msgid ""
 "``prebuilt``: scripts created by the distribution's build process and "
 "installed directly to the configured scripts directory"
 msgstr ""
 
-#: ../pep-0459.txt:481
+#: ../../peps/pep-0459.rst:481
 msgid ""
 "``wrap_console`` and ``wrap_gui`` are both mappings of script names to "
 "export specifiers. The script names must follow the same naming rules as "
 "distribution names."
 msgstr ""
 
-#: ../pep-0459.txt:485
+#: ../../peps/pep-0459.rst:485
 msgid ""
 "The export specifiers for wrapper scripts must refer to either a package "
-"with a __main__ submodule (if no ``name`` subfield is given in the export "
-"specifier) or else to a callable inside the named module."
+"with a __main__ submodule (if no ``name`` subfield is given in the export"
+" specifier) or else to a callable inside the named module."
 msgstr ""
 
-#: ../pep-0459.txt:489
+#: ../../peps/pep-0459.rst:489
 msgid ""
 "Installation tools should generate appropriate wrappers as part of the "
 "installation process."
 msgstr ""
 
-#: ../pep-0459.txt:494
+#: ../../peps/pep-0459.rst:494
 msgid ""
 "Still needs more detail on what \"appropriate wrappers\" means. For now, "
 "refer to what setuptools and zc.buildout generate as wrapper scripts."
 msgstr ""
 
-#: ../pep-0459.txt:497
+#: ../../peps/pep-0459.rst:497
 msgid ""
-"``prebuilt`` is a list of script paths, relative to the scripts directory in "
-"a wheel file or following installation. They are provided for informational "
-"purpose only - installing them is handled through the normal processes for "
-"files created when building a distribution."
+"``prebuilt`` is a list of script paths, relative to the scripts directory"
+" in a wheel file or following installation. They are provided for "
+"informational purpose only - installing them is handled through the "
+"normal processes for files created when building a distribution."
 msgstr ""
 
-#: ../pep-0459.txt:502 ../pep-0459.txt:530
+#: ../../peps/pep-0459.rst:502 ../../peps/pep-0459.rst:530
 msgid ""
-"Build tools SHOULD mark this extension as requiring handling by installers."
+"Build tools SHOULD mark this extension as requiring handling by "
+"installers."
 msgstr ""
 
-#: ../pep-0459.txt:504
+#: ../../peps/pep-0459.rst:504
 msgid ""
 "Index servers SHOULD allow multiple distributions to publish the same "
 "commands, but MAY notify distribution authors of potential conflicts."
 msgstr ""
 
-#: ../pep-0459.txt:507
+#: ../../peps/pep-0459.rst:507
 msgid ""
 "Installation tools SHOULD report an error when asked to install a "
-"distribution that provides a command that is also provided by a different, "
-"previously installed, distribution."
+"distribution that provides a command that is also provided by a "
+"different, previously installed, distribution."
 msgstr ""
 
-#: ../pep-0459.txt:522
+#: ../../peps/pep-0459.rst:522
 msgid "The ``python.constraints`` extension"
 msgstr ""
 
-#: ../pep-0459.txt:524
+#: ../../peps/pep-0459.rst:524
 msgid "The ``python.constraints`` extension contains two custom subfields:"
 msgstr ""
 
-#: ../pep-0459.txt:526
+#: ../../peps/pep-0459.rst:526
 msgid "``environments``: supported installation environments"
 msgstr ""
 
-#: ../pep-0459.txt:527
+#: ../../peps/pep-0459.rst:527
 msgid ""
-"``extension_metadata``: required exact matches in extension metadata fields "
-"published by other installed components"
+"``extension_metadata``: required exact matches in extension metadata "
+"fields published by other installed components"
 msgstr ""
 
-#: ../pep-0459.txt:532
+#: ../../peps/pep-0459.rst:532
 msgid ""
 "Index servers SHOULD allow distributions to be uploaded with constraints "
 "that cannot be satisfied using that index, but MAY notify distribution "
 "authors of any such potential compatibility issues."
 msgstr ""
 
-#: ../pep-0459.txt:536
+#: ../../peps/pep-0459.rst:536
 msgid ""
-"Installation tools SHOULD report an error if constraints are specified by "
-"the distribution and the target installation environment fails to satisfy "
-"them, MUST at least emit a warning, and MAY allow the user to force the "
-"installation to proceed regardless."
+"Installation tools SHOULD report an error if constraints are specified by"
+" the distribution and the target installation environment fails to "
+"satisfy them, MUST at least emit a warning, and MAY allow the user to "
+"force the installation to proceed regardless."
 msgstr ""
 
-#: ../pep-0459.txt:557
+#: ../../peps/pep-0459.rst:557
 msgid "Supported Environments"
 msgstr ""
 
-#: ../pep-0459.txt:559
+#: ../../peps/pep-0459.rst:559
 msgid ""
 "The ``environments`` subfield is a list of strings specifying the "
-"environments that the distribution explicitly supports. An environment is "
-"considered supported if it matches at least one of the environment markers "
-"given."
+"environments that the distribution explicitly supports. An environment is"
+" considered supported if it matches at least one of the environment "
+"markers given."
 msgstr ""
 
-#: ../pep-0459.txt:564
+#: ../../peps/pep-0459.rst:564
 msgid ""
 "If this field is not given in the metadata, it is assumed that the "
 "distribution supports any platform supported by Python."
 msgstr ""
 
-#: ../pep-0459.txt:567
+#: ../../peps/pep-0459.rst:567
 msgid "Individual entries are environment markers, as described in :pep:`426`."
 msgstr ""
 
-#: ../pep-0459.txt:569
+#: ../../peps/pep-0459.rst:569
 msgid ""
-"The two main uses of this field are to declare which versions of Python and "
-"which underlying operating systems are supported."
+"The two main uses of this field are to declare which versions of Python "
+"and which underlying operating systems are supported."
 msgstr ""
 
-#: ../pep-0459.txt:572
+#: ../../peps/pep-0459.rst:572
 msgid "Examples indicating supported Python versions::"
 msgstr ""
 
-#: ../pep-0459.txt:581
+#: ../../peps/pep-0459.rst:581
 msgid "Examples indicating supported operating systems::"
 msgstr ""
 
-#: ../pep-0459.txt:593
+#: ../../peps/pep-0459.rst:593
 msgid "Example where the supported Python version varies by platform::"
 msgstr ""
 
-#: ../pep-0459.txt:604
+#: ../../peps/pep-0459.rst:604
 msgid "Extension metadata constraints"
 msgstr ""
 
-#: ../pep-0459.txt:606
+#: ../../peps/pep-0459.rst:606
 msgid ""
-"The ``extension_metadata`` subfield is a mapping from distribution names to "
-"extension metadata snippets that are expected to exactly match the metadata "
-"of the named distribution in the target installation environment."
+"The ``extension_metadata`` subfield is a mapping from distribution names "
+"to extension metadata snippets that are expected to exactly match the "
+"metadata of the named distribution in the target installation "
+"environment."
 msgstr ""
 
-#: ../pep-0459.txt:610
+#: ../../peps/pep-0459.rst:610
 msgid ""
-"Each submapping then consists of a mapping from metadata extension names to "
-"the exact expected values of a subset of fields."
+"Each submapping then consists of a mapping from metadata extension names "
+"to the exact expected values of a subset of fields."
 msgstr ""
 
-#: ../pep-0459.txt:613
+#: ../../peps/pep-0459.rst:613
 msgid ""
-"For example, a distribution called ``fortranlib`` may publish a different "
-"FORTRAN ABI depending on how it is built, and any related projects that are "
-"installed into the same runtime environment should use matching build "
-"options. This can be handled by having the base distribution publish a "
-"custom extension that indicates the build option that was used to create the "
-"binary extensions::"
+"For example, a distribution called ``fortranlib`` may publish a different"
+" FORTRAN ABI depending on how it is built, and any related projects that "
+"are installed into the same runtime environment should use matching build"
+" options. This can be handled by having the base distribution publish a "
+"custom extension that indicates the build option that was used to create "
+"the binary extensions::"
 msgstr ""
 
-#: ../pep-0459.txt:626
+#: ../../peps/pep-0459.rst:626
 msgid ""
 "Other distributions that contain binary extensions that need to be "
 "compatible with the base distribution would then define a suitable "
 "constraint in their own metadata::"
 msgstr ""
 
-#: ../pep-0459.txt:641
+#: ../../peps/pep-0459.rst:641
 msgid "This constraint specifies that:"
 msgstr ""
 
-#: ../pep-0459.txt:643
+#: ../../peps/pep-0459.rst:643
 msgid ""
-"``fortranlib`` must be installed (this should also be expressed as a normal "
-"dependency so that installers ensure it is satisfied)"
+"``fortranlib`` must be installed (this should also be expressed as a "
+"normal dependency so that installers ensure it is satisfied)"
 msgstr ""
 
-#: ../pep-0459.txt:645
+#: ../../peps/pep-0459.rst:645
 msgid ""
-"The installed version of ``fortranlib`` must include the custom ``fortranlib."
-"compatibility`` extension in its published metadata"
+"The installed version of ``fortranlib`` must include the custom "
+"``fortranlib.compatibility`` extension in its published metadata"
 msgstr ""
 
-#: ../pep-0459.txt:647
+#: ../../peps/pep-0459.rst:647
 msgid ""
-"The ``fortan_abi`` subfield of that extension must have the *exact* value "
-"``openblas-g77``."
+"The ``fortan_abi`` subfield of that extension must have the *exact* value"
+" ``openblas-g77``."
 msgstr ""
 
-#: ../pep-0459.txt:650
+#: ../../peps/pep-0459.rst:650
 msgid ""
 "If all of these conditions are met (the distribution is installed, the "
 "specified extension is included in the metadata, the specified subfields "
@@ -932,27 +939,41 @@ msgid ""
 "satisfied."
 msgstr ""
 
-#: ../pep-0459.txt:657
+#: ../../peps/pep-0459.rst:657
 msgid ""
-"The primary intended use case here is allowing C extensions with additional "
-"ABI compatibility requirements to declare those in a way that any "
-"installation tool can enforce without needing to understand the details. In "
-"particular, many NumPy based scientific libraries need to be built using a "
-"consistent set of FORTRAN libraries, hence the \"fortranlib\" example."
+"The primary intended use case here is allowing C extensions with "
+"additional ABI compatibility requirements to declare those in a way that "
+"any installation tool can enforce without needing to understand the "
+"details. In particular, many NumPy based scientific libraries need to be "
+"built using a consistent set of FORTRAN libraries, hence the "
+"\"fortranlib\" example."
 msgstr ""
 
-#: ../pep-0459.txt:664
+#: ../../peps/pep-0459.rst:664
 msgid ""
-"This is the reason there's no support for pattern matching or boolean logic: "
-"even the \"simple\" version of this extension is relatively complex, and "
-"there's currently no compelling rationale for making it more complicated "
-"than it already is."
+"This is the reason there's no support for pattern matching or boolean "
+"logic: even the \"simple\" version of this extension is relatively "
+"complex, and there's currently no compelling rationale for making it more"
+" complicated than it already is."
 msgstr ""
 
-#: ../pep-0459.txt:671
+#: ../../peps/pep-0459.rst:671
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../pep-0459.txt:673
+#: ../../peps/pep-0459.rst:673
 msgid "This document has been placed in the public domain."
 msgstr "Este documento foi colocado em domínio público."
+
+#~ msgid "Nick Coghlan <ncoghlan@gmail.com>"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In the meantime, metadata extensions "
+#~ "will continue to be handled as "
+#~ "they have been for past examples "
+#~ "like ``entry_points.txt``: as additional files"
+#~ " installed into metadata directories "
+#~ "alongside the main `METADATA` file."
+#~ msgstr ""
+

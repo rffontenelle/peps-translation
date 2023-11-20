@@ -6,1437 +6,1456 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PEPs\n"
+"Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 20:07+0000\n"
+"POT-Creation-Date: 2023-11-20 10:43-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.13.1\n"
 
-#: ../pep-0423.txt
+#: ../../peps/pep-0423.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../pep-0423.txt:5
+#: ../../peps/pep-0423.rst:5
 msgid "Benoit Bryon <benoit@marmelune.net>"
 msgstr ""
 
-#: ../pep-0423.txt
+#: ../../peps/pep-0423.rst
 msgid "Discussions-To"
 msgstr ""
 
-#: ../pep-0423.txt:6
+#: ../../peps/pep-0423.rst:6
 msgid "distutils-sig@python.org"
 msgstr ""
 
-#: ../pep-0423.txt
+#: ../../peps/pep-0423.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../pep-0423.txt:7
+#: ../../peps/pep-0423.rst:7
 msgid "Deferred"
 msgstr ""
 
-#: ../pep-0423.txt
+#: ../../peps/pep-0423.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../pep-0423.txt:8
+#: ../../peps/pep-0423.rst:8
 msgid "Informational"
 msgstr ""
 
-#: ../pep-0423.txt
+#: ../../peps/pep-0423.rst
 msgid "Topic"
 msgstr ""
 
-#: ../pep-0423.txt:9
+#: ../../peps/pep-0423.rst:9
 msgid "Packaging"
 msgstr ""
 
-#: ../pep-0423.txt
+#: ../../peps/pep-0423.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../pep-0423.txt:11
+#: ../../peps/pep-0423.rst:11
 msgid "24-May-2012"
 msgstr ""
 
-#: ../pep-0423.txt
+#: ../../peps/pep-0423.rst
 msgid "Post-History"
 msgstr "Pós-história"
 
-#: ../pep-0423.txt:16
+#: ../../peps/pep-0423.rst:16
 msgid "Abstract"
 msgstr ""
 
-#: ../pep-0423.txt:18
+#: ../../peps/pep-0423.rst:18
 msgid "This document deals with:"
 msgstr ""
 
-#: ../pep-0423.txt:20
+#: ../../peps/pep-0423.rst:20
 msgid "names of Python projects,"
 msgstr ""
 
-#: ../pep-0423.txt:21
+#: ../../peps/pep-0423.rst:21
 msgid "names of Python packages or modules being distributed,"
 msgstr ""
 
-#: ../pep-0423.txt:22
+#: ../../peps/pep-0423.rst:22
 msgid "namespace packages."
 msgstr ""
 
-#: ../pep-0423.txt:24
+#: ../../peps/pep-0423.rst:24
 msgid "It provides guidelines and recipes for distribution authors:"
 msgstr ""
 
-#: ../pep-0423.txt:26
+#: ../../peps/pep-0423.rst:26
 msgid "new projects should follow the `guidelines <#overview>`_ below."
 msgstr ""
 
-#: ../pep-0423.txt:28
+#: ../../peps/pep-0423.rst:28
 msgid ""
 "existing projects should be aware of these guidelines and can follow "
-"`specific recipes for existing projects <#how-to-apply-naming-guidelines-on-"
-"existing-projects>`_."
+"`specific recipes for existing projects <#how-to-apply-naming-guidelines-"
+"on-existing-projects>`_."
 msgstr ""
 
-#: ../pep-0423.txt:33
+#: ../../peps/pep-0423.rst:33
 msgid "PEP Deferral"
 msgstr ""
 
-#: ../pep-0423.txt:35
+#: ../../peps/pep-0423.rst:35
 msgid ""
-"Further consideration of this PEP has been deferred at least until after :"
-"pep:`426` (package metadata 2.0) and related updates have been resolved."
+"Further consideration of this PEP has been deferred at least until after "
+":pep:`426` (package metadata 2.0) and related updates have been resolved."
 msgstr ""
 
-#: ../pep-0423.txt:39
+#: ../../peps/pep-0423.rst:39
 msgid "Terminology"
 msgstr ""
 
-#: ../pep-0423.txt:41
+#: ../../peps/pep-0423.rst:41
 msgid "Reference is `packaging terminology in Python documentation`_."
 msgstr ""
 
-#: ../pep-0423.txt:45
+#: ../../peps/pep-0423.rst:45
 msgid "Relationship with other PEPs"
 msgstr ""
 
-#: ../pep-0423.txt:47
+#: ../../peps/pep-0423.rst:47
 msgid ""
 ":pep:`8#package-and-module-names` deals with code style guide, including "
-"names of Python packages and modules. It covers syntax of package/modules "
-"names."
+"names of Python packages and modules. It covers syntax of package/modules"
+" names."
 msgstr ""
 
-#: ../pep-0423.txt:51
+#: ../../peps/pep-0423.rst:51
 msgid ""
-":pep:`345` deals with packaging metadata, and defines name argument of the "
-"``packaging.core.setup()`` function."
+":pep:`345` deals with packaging metadata, and defines name argument of "
+"the ``packaging.core.setup()`` function."
 msgstr ""
 
-#: ../pep-0423.txt:54
+#: ../../peps/pep-0423.rst:54
 msgid ""
 ":pep:`420` deals with namespace packages. It brings support of namespace "
 "packages to Python core. Before, namespaces packages were implemented by "
 "external libraries."
 msgstr ""
 
-#: ../pep-0423.txt:58
+#: ../../peps/pep-0423.rst:58
 msgid ""
-":pep:`3108` deals with transition between Python 2.x and Python 3.x applied "
-"to standard library: some modules to be deleted, some to be renamed. It "
-"points out that naming conventions matter and is an example of transition "
-"plan."
+":pep:`3108` deals with transition between Python 2.x and Python 3.x "
+"applied to standard library: some modules to be deleted, some to be "
+"renamed. It points out that naming conventions matter and is an example "
+"of transition plan."
 msgstr ""
 
-#: ../pep-0423.txt:65
+#: ../../peps/pep-0423.rst:65
 msgid "Overview"
 msgstr ""
 
-#: ../pep-0423.txt:67
-msgid ""
-"Here is a summarized list of guidelines you should follow to choose names:"
+#: ../../peps/pep-0423.rst:67
+msgid "Here is a summarized list of guidelines you should follow to choose names:"
 msgstr ""
 
-#: ../pep-0423.txt:70
+#: ../../peps/pep-0423.rst:70
 msgid "`understand and respect namespace ownership <#respect-ownership>`_."
 msgstr ""
 
-#: ../pep-0423.txt:72
+#: ../../peps/pep-0423.rst:72
 msgid "if your project is related to another project or community:"
 msgstr ""
 
-#: ../pep-0423.txt:74
+#: ../../peps/pep-0423.rst:74
 msgid ""
-"search for conventions in main project's documentation, because `projects "
-"should organize community contributions <#organize-community-"
+"search for conventions in main project's documentation, because `projects"
+" should organize community contributions <#organize-community-"
 "contributions>`_."
 msgstr ""
 
-#: ../pep-0423.txt:78
+#: ../../peps/pep-0423.rst:78
 msgid ""
-"`follow specific project or related community conventions <#follow-community-"
-"or-related-project-conventions-if-any>`_, if any."
+"`follow specific project or related community conventions <#follow-"
+"community-or-related-project-conventions-if-any>`_, if any."
 msgstr ""
 
-#: ../pep-0423.txt:81
+#: ../../peps/pep-0423.rst:81
 msgid ""
-"if there is no convention, `follow a standard naming pattern <#use-standard-"
-"pattern-for-community-contributions>`_."
+"if there is no convention, `follow a standard naming pattern <#use-"
+"standard-pattern-for-community-contributions>`_."
 msgstr ""
 
-#: ../pep-0423.txt:84
+#: ../../peps/pep-0423.rst:84
 msgid "make sure your project name is unique, i.e. avoid duplicates:"
 msgstr ""
 
-#: ../pep-0423.txt:86
+#: ../../peps/pep-0423.rst:86
 msgid ""
-"`use top-level namespace for ownership <#top-level-namespace-relates-to-code-"
-"ownership>`_,"
+"`use top-level namespace for ownership <#top-level-namespace-relates-to-"
+"code-ownership>`_,"
 msgstr ""
 
-#: ../pep-0423.txt:88
+#: ../../peps/pep-0423.rst:88
 msgid "`check for name availability <#how-to-check-for-name-availability>`_,"
 msgstr ""
 
-#: ../pep-0423.txt:90
+#: ../../peps/pep-0423.rst:90
 msgid "`register names with PyPI`_."
 msgstr ""
 
-#: ../pep-0423.txt:92
+#: ../../peps/pep-0423.rst:92
 msgid ""
 "make sure distributed packages and modules names are unique, unless you "
-"explicitly want to distribute alternatives to existing packages or modules. "
-"`Using the same value for package/module name and project name <#use-a-"
-"single-name>`_ is the recommended way to achieve this."
+"explicitly want to distribute alternatives to existing packages or "
+"modules. `Using the same value for package/module name and project name "
+"<#use-a-single-name>`_ is the recommended way to achieve this."
 msgstr ""
 
-#: ../pep-0423.txt:98
+#: ../../peps/pep-0423.rst:98
 msgid ""
-"`distribute only one package or module at a time <#multiple-packages-modules-"
-"should-be-rare>`_, unless you know what you are doing. It makes it possible "
-"to apply the \"`use a single name`_\" rule, and thus make names consistent."
+"`distribute only one package or module at a time <#multiple-packages-"
+"modules-should-be-rare>`_, unless you know what you are doing. It makes "
+"it possible to apply the \"`use a single name`_\" rule, and thus make "
+"names consistent."
 msgstr ""
 
-#: ../pep-0423.txt:103
+#: ../../peps/pep-0423.rst:103
 msgid "make it easy to discover and remember your project:"
 msgstr ""
 
-#: ../pep-0423.txt:105
+#: ../../peps/pep-0423.rst:105
 msgid "`use as much memorable names as possible <#pick-memorable-names>`_,"
 msgstr ""
 
-#: ../pep-0423.txt:107
+#: ../../peps/pep-0423.rst:107
 msgid "`use as much meaningful names as possible <#pick-meaningful-names>`_,"
 msgstr ""
 
-#: ../pep-0423.txt:109
+#: ../../peps/pep-0423.rst:109
 msgid "`use other packaging metadata <#use-packaging-metadata>`_."
 msgstr ""
 
-#: ../pep-0423.txt:111
+#: ../../peps/pep-0423.rst:111
 msgid ""
 "`avoid deep nesting`_. Flat things are easier to use and remember than "
 "nested ones:"
 msgstr ""
 
-#: ../pep-0423.txt:114
+#: ../../peps/pep-0423.rst:114
 msgid ""
-"one or two namespace levels are recommended, because they are almost always "
-"enough."
+"one or two namespace levels are recommended, because they are almost "
+"always enough."
 msgstr ""
 
-#: ../pep-0423.txt:116
+#: ../../peps/pep-0423.rst:116
 msgid "even if not recommended, three levels are, de facto, a common case."
 msgstr ""
 
-#: ../pep-0423.txt:118
+#: ../../peps/pep-0423.rst:118
 msgid "in most cases, you should not need more than three levels."
 msgstr ""
 
-#: ../pep-0423.txt:120
+#: ../../peps/pep-0423.rst:120
 msgid ""
-"`follow PEP 8 <#follow-pep-8-for-syntax-of-package-and-module-names>`_ for "
-"syntax of package and module names."
+"`follow PEP 8 <#follow-pep-8-for-syntax-of-package-and-module-names>`_ "
+"for syntax of package and module names."
 msgstr ""
 
-#: ../pep-0423.txt:124
+#: ../../peps/pep-0423.rst:124
 msgid ""
 "if you followed specific conventions, or if your project is intended to "
 "receive contributions from the community, `organize community "
 "contributions`_."
 msgstr ""
 
-#: ../pep-0423.txt:128
+#: ../../peps/pep-0423.rst:128
 msgid "`if still in doubt, ask <#if-in-doubt-ask>`_."
 msgstr ""
 
-#: ../pep-0423.txt:132
+#: ../../peps/pep-0423.rst:132
 msgid "If in doubt, ask"
 msgstr ""
 
-#: ../pep-0423.txt:134
+#: ../../peps/pep-0423.rst:134
 msgid ""
-"If you feel unsure after reading this document, ask `Python community`_ on "
-"IRC or on a mailing list."
+"If you feel unsure after reading this document, ask `Python community`_ "
+"on IRC or on a mailing list."
 msgstr ""
 
-#: ../pep-0423.txt:139
+#: ../../peps/pep-0423.rst:139
 msgid "Top-level namespace relates to code ownership"
 msgstr ""
 
-#: ../pep-0423.txt:141
+#: ../../peps/pep-0423.rst:141
 msgid "This helps avoid clashes between project names."
 msgstr ""
 
-#: ../pep-0423.txt:143
+#: ../../peps/pep-0423.rst:143
 msgid "Ownership could be:"
 msgstr ""
 
-#: ../pep-0423.txt:145
+#: ../../peps/pep-0423.rst:145
 msgid ""
 "an individual. Example: `gp.fileupload`_ is owned and maintained by Gael "
 "Pasgrimaud."
 msgstr ""
 
-#: ../pep-0423.txt:149
+#: ../../peps/pep-0423.rst:149
 msgid "an organization. Examples:"
 msgstr ""
 
-#: ../pep-0423.txt:152
+#: ../../peps/pep-0423.rst:152
 msgid "`zest.releaser`_ is owned and maintained by Zest Software."
 msgstr ""
 
-#: ../pep-0423.txt:153
+#: ../../peps/pep-0423.rst:153
 msgid "`Django`_ is owned and maintained by the Django Software Foundation."
 msgstr ""
 
-#: ../pep-0423.txt:156
+#: ../../peps/pep-0423.rst:156
 msgid ""
-"a group or community. Example: `sphinx`_ is maintained by developers of the "
-"Sphinx project, not only by its author, Georg Brandl."
+"a group or community. Example: `sphinx`_ is maintained by developers of "
+"the Sphinx project, not only by its author, Georg Brandl."
 msgstr ""
 
-#: ../pep-0423.txt:160
+#: ../../peps/pep-0423.rst:160
 msgid ""
-"a group or community related to another package. Example: `collective."
-"recaptcha`_ is owned by its author: David Glick, Groundwire. But the "
-"\"collective\" namespace is owned by Plone community."
+"a group or community related to another package. Example: "
+"`collective.recaptcha`_ is owned by its author: David Glick, Groundwire. "
+"But the \"collective\" namespace is owned by Plone community."
 msgstr ""
 
-#: ../pep-0423.txt:166
+#: ../../peps/pep-0423.rst:166
 msgid "Respect ownership"
 msgstr ""
 
-#: ../pep-0423.txt:168
+#: ../../peps/pep-0423.rst:168
 msgid "Understand the purpose of namespace before you use it."
 msgstr ""
 
-#: ../pep-0423.txt:170
-msgid ""
-"Don't plug into a namespace you don't own, unless explicitly authorized."
+#: ../../peps/pep-0423.rst:170
+msgid "Don't plug into a namespace you don't own, unless explicitly authorized."
 msgstr ""
 
-#: ../pep-0423.txt:173
+#: ../../peps/pep-0423.rst:173
 msgid "`If in doubt, ask`_."
 msgstr ""
 
-#: ../pep-0423.txt:175
+#: ../../peps/pep-0423.rst:175
 msgid ""
 "As an example, don't plug in \"django.contrib\" namespace because it is "
 "managed by Django's core contributors."
 msgstr ""
 
-#: ../pep-0423.txt:178
+#: ../../peps/pep-0423.rst:178
 msgid ""
 "Exceptions can be defined by project authors. See `Organize community "
 "contributions`_ below."
 msgstr ""
 
-#: ../pep-0423.txt:181
+#: ../../peps/pep-0423.rst:181
 msgid "Also, this rule applies to non-Python projects."
 msgstr ""
 
-#: ../pep-0423.txt:183
+#: ../../peps/pep-0423.rst:183
 msgid ""
-"As an example, don't use \"apache\" as top-level namespace: \"Apache\" is "
-"the name of an existing project (in the case of \"Apache\", it is also a "
-"trademark)."
+"As an example, don't use \"apache\" as top-level namespace: \"Apache\" is"
+" the name of an existing project (in the case of \"Apache\", it is also a"
+" trademark)."
 msgstr ""
 
-#: ../pep-0423.txt:188
+#: ../../peps/pep-0423.rst:188
 msgid "Private (including closed-source) projects use a namespace"
 msgstr ""
 
-#: ../pep-0423.txt:190
+#: ../../peps/pep-0423.rst:190
 msgid ""
-"... because private projects are owned by somebody. So apply the `ownership "
-"rule <#top-level-namespace-relates-to-code-ownership>`_."
+"... because private projects are owned by somebody. So apply the "
+"`ownership rule <#top-level-namespace-relates-to-code-ownership>`_."
 msgstr ""
 
-#: ../pep-0423.txt:193
+#: ../../peps/pep-0423.rst:193
 msgid "For internal/customer projects, use your company name as the namespace."
 msgstr ""
 
-#: ../pep-0423.txt:196
+#: ../../peps/pep-0423.rst:196
 msgid "This rule applies to closed-source projects."
 msgstr ""
 
-#: ../pep-0423.txt:198
+#: ../../peps/pep-0423.rst:198
 msgid ""
-"As an example, if you are creating a \"climbing\" project for the \"Python "
-"Sport\" company: use \"pythonsport.climbing\" name, even if it is closed "
-"source."
+"As an example, if you are creating a \"climbing\" project for the "
+"\"Python Sport\" company: use \"pythonsport.climbing\" name, even if it "
+"is closed source."
 msgstr ""
 
-#: ../pep-0423.txt:203
+#: ../../peps/pep-0423.rst:203
 msgid "Individual projects use a namespace"
 msgstr ""
 
-#: ../pep-0423.txt:205
+#: ../../peps/pep-0423.rst:205
 msgid ""
 "... because they are owned by individuals. So apply the `ownership rule "
 "<#top-level-namespace-relates-to-code-ownership>`_."
 msgstr ""
 
-#: ../pep-0423.txt:208
+#: ../../peps/pep-0423.rst:208
 msgid ""
-"There is no shame in releasing a project as open source even if it has an "
-"\"internal\" or \"individual\" name."
+"There is no shame in releasing a project as open source even if it has an"
+" \"internal\" or \"individual\" name."
 msgstr ""
 
-#: ../pep-0423.txt:211
+#: ../../peps/pep-0423.rst:211
 msgid ""
-"If the project comes to a point where the author wants to change ownership "
-"(i.e. the project no longer belongs to an individual), keep in mind `it is "
-"easy to rename the project <#how-to-rename-a-project>`_."
+"If the project comes to a point where the author wants to change "
+"ownership (i.e. the project no longer belongs to an individual), keep in "
+"mind `it is easy to rename the project <#how-to-rename-a-project>`_."
 msgstr ""
 
-#: ../pep-0423.txt:217
+#: ../../peps/pep-0423.rst:217
 msgid "Community-owned projects can avoid namespace packages"
 msgstr ""
 
-#: ../pep-0423.txt:219
+#: ../../peps/pep-0423.rst:219
 msgid ""
 "If your project is generic enough (i.e. it is not a contrib to another "
-"product or framework), you can avoid namespace packages. The base condition "
-"is generally that your project is owned by a group (i.e. the development "
-"team) which is dedicated to this project."
+"product or framework), you can avoid namespace packages. The base "
+"condition is generally that your project is owned by a group (i.e. the "
+"development team) which is dedicated to this project."
 msgstr ""
 
-#: ../pep-0423.txt:224
+#: ../../peps/pep-0423.rst:224
 msgid ""
 "Only use a \"shared\" namespace if you really intend the code to be "
 "community owned."
 msgstr ""
 
-#: ../pep-0423.txt:227
+#: ../../peps/pep-0423.rst:227
 msgid ""
 "As an example, `sphinx`_ project belongs to the Sphinx development team. "
 "There is no need to have some \"sphinx\" namespace package with only one "
 "\"sphinx.sphinx\" project inside."
 msgstr ""
 
-#: ../pep-0423.txt:232
+#: ../../peps/pep-0423.rst:232
 msgid "In doubt, use an individual/organization namespace"
 msgstr ""
 
-#: ../pep-0423.txt:234
+#: ../../peps/pep-0423.rst:234
 msgid ""
-"If your project is really experimental, best choice is to use an individual "
-"or organization namespace:"
+"If your project is really experimental, best choice is to use an "
+"individual or organization namespace:"
 msgstr ""
 
-#: ../pep-0423.txt:237
+#: ../../peps/pep-0423.rst:237
 msgid "it allows projects to be released early."
 msgstr ""
 
-#: ../pep-0423.txt:239
+#: ../../peps/pep-0423.rst:239
 msgid "it won't block a name if the project is abandoned."
 msgstr ""
 
-#: ../pep-0423.txt:241
+#: ../../peps/pep-0423.rst:241
 msgid ""
-"it doesn't block future changes. When a project becomes mature and there is "
-"no reason to keep individual ownership, `it remains possible to rename the "
-"project <#how-to-rename-a-project>`_."
+"it doesn't block future changes. When a project becomes mature and there "
+"is no reason to keep individual ownership, `it remains possible to rename"
+" the project <#how-to-rename-a-project>`_."
 msgstr ""
 
-#: ../pep-0423.txt:247
+#: ../../peps/pep-0423.rst:247
 msgid "Use a single name"
 msgstr ""
 
-#: ../pep-0423.txt:249
+#: ../../peps/pep-0423.rst:249
 msgid ""
 "Distribute only one package (or only one module) per project, and use "
 "package (or module) name as project name."
 msgstr ""
 
-#: ../pep-0423.txt:252
+#: ../../peps/pep-0423.rst:252
 msgid ""
-"It avoids possible confusion between project name and distributed package or "
-"module name."
+"It avoids possible confusion between project name and distributed package"
+" or module name."
 msgstr ""
 
-#: ../pep-0423.txt:255
+#: ../../peps/pep-0423.rst:255
 msgid "It makes the name consistent."
 msgstr ""
 
-#: ../pep-0423.txt:257
+#: ../../peps/pep-0423.rst:257
 msgid ""
-"It is explicit: when one sees project name, he guesses package/module name, "
-"and vice versa."
+"It is explicit: when one sees project name, he guesses package/module "
+"name, and vice versa."
 msgstr ""
 
-#: ../pep-0423.txt:260
+#: ../../peps/pep-0423.rst:260
 msgid ""
 "It also limits implicit clashes between package/module names. By using a "
-"single name, when you register a project name to `PyPI`_, you also perform a "
-"basic package/module name availability verification."
+"single name, when you register a project name to `PyPI`_, you also "
+"perform a basic package/module name availability verification."
 msgstr ""
 
-#: ../pep-0423.txt:265
+#: ../../peps/pep-0423.rst:265
 msgid ""
-"As an example, `pipeline`_, `python-pipeline`_ and `django-pipeline`_ all "
-"distribute a package or module called \"pipeline\". So installing two of "
-"them leads to errors. This issue wouldn't have occurred if these "
+"As an example, `pipeline`_, `python-pipeline`_ and `django-pipeline`_ all"
+" distribute a package or module called \"pipeline\". So installing two of"
+" them leads to errors. This issue wouldn't have occurred if these "
 "distributions used a single name."
 msgstr ""
 
-#: ../pep-0423.txt:270
+#: ../../peps/pep-0423.rst:270
 msgid "Yes:"
 msgstr ""
 
-#: ../pep-0423.txt:272
+#: ../../peps/pep-0423.rst:272
 msgid "Package name: \"kheops.pyramid\", i.e. ``import kheops.pyramid``"
 msgstr ""
 
-#: ../pep-0423.txt:275
+#: ../../peps/pep-0423.rst:275
 msgid "Project name: \"kheops.pyramid\", i.e. ``pip install kheops.pyramid``"
 msgstr ""
 
-#: ../pep-0423.txt:278
+#: ../../peps/pep-0423.rst:278
 msgid "No:"
 msgstr ""
 
-#: ../pep-0423.txt:280
+#: ../../peps/pep-0423.rst:280
 msgid "Package name: \"kheops\""
 msgstr ""
 
-#: ../pep-0423.txt:281
+#: ../../peps/pep-0423.rst:281
 msgid "Project name: \"KheopsPyramid\""
 msgstr ""
 
-#: ../pep-0423.txt:285
+#: ../../peps/pep-0423.rst:285
 msgid ""
-"For historical reasons, `PyPI`_ contains many distributions where project "
-"and distributed package/module names differ."
+"For historical reasons, `PyPI`_ contains many distributions where project"
+" and distributed package/module names differ."
 msgstr ""
 
-#: ../pep-0423.txt:289
+#: ../../peps/pep-0423.rst:289
 msgid "Multiple packages/modules should be rare"
 msgstr ""
 
-#: ../pep-0423.txt:291
+#: ../../peps/pep-0423.rst:291
 msgid ""
 "Technically, Python distributions can provide multiple packages and/or "
 "modules. See `setup script reference`_ for details."
 msgstr ""
 
-#: ../pep-0423.txt:294
+#: ../../peps/pep-0423.rst:294
 msgid ""
 "Some distributions actually do. As an example, `setuptools`_ and "
 "`distribute`_ are both declaring \"pkg_resources\", \"easy_install\" and "
-"\"site\" modules in addition to respective \"setuptools\" and \"distribute\" "
-"packages."
+"\"site\" modules in addition to respective \"setuptools\" and "
+"\"distribute\" packages."
 msgstr ""
 
-#: ../pep-0423.txt:299
+#: ../../peps/pep-0423.rst:299
 msgid ""
-"Consider this use case as exceptional. In most cases, you don't need this "
-"feature. So a distribution should provide only one package or module at a "
-"time."
+"Consider this use case as exceptional. In most cases, you don't need this"
+" feature. So a distribution should provide only one package or module at "
+"a time."
 msgstr ""
 
-#: ../pep-0423.txt:304
+#: ../../peps/pep-0423.rst:304
 msgid "Distinct names should be rare"
 msgstr ""
 
-#: ../pep-0423.txt:306
+#: ../../peps/pep-0423.rst:306
 msgid ""
-"A notable exception to the `Use a single name`_ rule is when you explicitly "
-"need distinct names."
+"A notable exception to the `Use a single name`_ rule is when you "
+"explicitly need distinct names."
 msgstr ""
 
-#: ../pep-0423.txt:309
+#: ../../peps/pep-0423.rst:309
 msgid ""
-"As an example, the `Pillow`_ project provides an alternative to the original "
-"`PIL`_ distribution. Both projects distribute a \"PIL\" package."
+"As an example, the `Pillow`_ project provides an alternative to the "
+"original `PIL`_ distribution. Both projects distribute a \"PIL\" package."
 msgstr ""
 
-#: ../pep-0423.txt:313
+#: ../../peps/pep-0423.rst:313
 msgid ""
-"Consider this use case as exceptional. In most cases, you don't need this "
-"feature. So a distributed package name should be equal to project name."
+"Consider this use case as exceptional. In most cases, you don't need this"
+" feature. So a distributed package name should be equal to project name."
 msgstr ""
 
-#: ../pep-0423.txt:319
+#: ../../peps/pep-0423.rst:319
 msgid "Follow PEP 8 for syntax of package and module names"
 msgstr ""
 
-#: ../pep-0423.txt:321
+#: ../../peps/pep-0423.rst:321
 msgid ""
 ":pep:`PEP 8 <8#package-and-module-names>` applies to names of Python "
 "packages and modules."
 msgstr ""
 
-#: ../pep-0423.txt:323
+#: ../../peps/pep-0423.rst:323
 msgid ""
-"If you `Use a single name`_, :pep:`PEP 8 <8#package-and-module-names>` also "
-"applies to project names. The exceptions are namespace packages, where dots "
-"are required in project name."
+"If you `Use a single name`_, :pep:`PEP 8 <8#package-and-module-names>` "
+"also applies to project names. The exceptions are namespace packages, "
+"where dots are required in project name."
 msgstr ""
 
-#: ../pep-0423.txt:330
+#: ../../peps/pep-0423.rst:330
 msgid "Pick memorable names"
 msgstr ""
 
-#: ../pep-0423.txt:332
+#: ../../peps/pep-0423.rst:332
 msgid "One important thing about a project name is that it be memorable."
 msgstr ""
 
-#: ../pep-0423.txt:334
+#: ../../peps/pep-0423.rst:334
 msgid ""
 "As an example, `celery`_ is not a meaningful name. At first, it is not "
 "obvious that it deals with message queuing. But it is memorable, partly "
 "because it can be used to feed a `RabbitMQ`_ server."
 msgstr ""
 
-#: ../pep-0423.txt:340
+#: ../../peps/pep-0423.rst:340
 msgid "Pick meaningful names"
 msgstr ""
 
-#: ../pep-0423.txt:342
+#: ../../peps/pep-0423.rst:342
 msgid ""
-"Ask yourself \"how would I describe in one sentence what this name is for?"
-"\", and then \"could anyone have guessed that by looking at the name?\"."
+"Ask yourself \"how would I describe in one sentence what this name is "
+"for?\", and then \"could anyone have guessed that by looking at the "
+"name?\"."
 msgstr ""
 
-#: ../pep-0423.txt:346
+#: ../../peps/pep-0423.rst:346
 msgid ""
 "As an example, `DateUtils`_ is a meaningful name. It is obvious that it "
 "deals with utilities for dates."
 msgstr ""
 
-#: ../pep-0423.txt:349
+#: ../../peps/pep-0423.rst:349
 msgid "When you are using namespaces, try to make each part meaningful."
 msgstr ""
 
-#: ../pep-0423.txt:353
+#: ../../peps/pep-0423.rst:353
 msgid "Use packaging metadata"
 msgstr ""
 
-#: ../pep-0423.txt:355
+#: ../../peps/pep-0423.rst:355
 msgid "Consider project names as unique identifiers on PyPI:"
 msgstr ""
 
-#: ../pep-0423.txt:357
+#: ../../peps/pep-0423.rst:357
 msgid "it is important that these identifiers remain human-readable."
 msgstr ""
 
-#: ../pep-0423.txt:358
+#: ../../peps/pep-0423.rst:358
 msgid "it is even better when these identifiers are meaningful."
 msgstr ""
 
-#: ../pep-0423.txt:359
+#: ../../peps/pep-0423.rst:359
 msgid ""
 "but the primary purpose of identifiers is not to classify or describe "
 "projects."
 msgstr ""
 
-#: ../pep-0423.txt:362
+#: ../../peps/pep-0423.rst:362
 msgid ""
 "**Classifiers and keywords metadata are made for categorization of "
-"distributions.** Summary and description metadata are meant to describe the "
-"project."
+"distributions.** Summary and description metadata are meant to describe "
+"the project."
 msgstr ""
 
-#: ../pep-0423.txt:366
+#: ../../peps/pep-0423.rst:366
 msgid ""
-"As an example, there is a \"`Framework :: Twisted`_\" classifier. Even if "
-"names are quite heterogeneous (they don't follow a particular pattern), we "
-"get the list."
+"As an example, there is a \"`Framework :: Twisted`_\" classifier. Even if"
+" names are quite heterogeneous (they don't follow a particular pattern), "
+"we get the list."
 msgstr ""
 
-#: ../pep-0423.txt:370
+#: ../../peps/pep-0423.rst:370
 msgid ""
-"In order to `Organize community contributions`_, conventions about names and "
-"namespaces matter, but conventions about metadata should be even more "
-"important."
+"In order to `Organize community contributions`_, conventions about names "
+"and namespaces matter, but conventions about metadata should be even more"
+" important."
 msgstr ""
 
-#: ../pep-0423.txt:374
+#: ../../peps/pep-0423.rst:374
 msgid "As an example, we can find Plone portlets in many places:"
 msgstr ""
 
-#: ../pep-0423.txt:376
+#: ../../peps/pep-0423.rst:376
 msgid "plone.portlet.*"
 msgstr ""
 
-#: ../pep-0423.txt:377
+#: ../../peps/pep-0423.rst:377
 msgid "collective.portlet.*"
 msgstr ""
 
-#: ../pep-0423.txt:378
+#: ../../peps/pep-0423.rst:378
 msgid "collective.portlets.*"
 msgstr ""
 
-#: ../pep-0423.txt:379
+#: ../../peps/pep-0423.rst:379
 msgid "collective.*.portlets"
 msgstr ""
 
-#: ../pep-0423.txt:380
+#: ../../peps/pep-0423.rst:380
 msgid "some vendor-related projects such as \"quintagroup.portlet.cumulus\""
 msgstr ""
 
-#: ../pep-0423.txt:381
+#: ../../peps/pep-0423.rst:381
 msgid "and even projects where \"portlet\" pattern doesn't appear in the name."
 msgstr ""
 
-#: ../pep-0423.txt:384
+#: ../../peps/pep-0423.rst:384
 msgid ""
 "Even if Plone community has conventions, using the name to categorize "
 "distributions is inappropriate. It's impossible to get the full list of "
-"distributions that provide portlets for Plone by filtering on names. But it "
-"would be possible if all these distributions used \"Framework :: Plone\" "
-"classifier and \"portlet\" keyword."
+"distributions that provide portlets for Plone by filtering on names. But "
+"it would be possible if all these distributions used \"Framework :: "
+"Plone\" classifier and \"portlet\" keyword."
 msgstr ""
 
-#: ../pep-0423.txt:392
+#: ../../peps/pep-0423.rst:392
 msgid "Avoid deep nesting"
 msgstr ""
 
-#: ../pep-0423.txt:394
+#: ../../peps/pep-0423.rst:394
 msgid ":pep:`The Zen of Python <20>` says \"Flat is better than nested\"."
 msgstr ""
 
-#: ../pep-0423.txt:397
+#: ../../peps/pep-0423.rst:397
 msgid "Two levels is almost always enough"
 msgstr ""
 
-#: ../pep-0423.txt:399
+#: ../../peps/pep-0423.rst:399
 msgid ""
-"Don't define everything in deeply nested hierarchies: you will end up with "
-"projects and packages like \"pythonsport.common.maps.forest\". This type of "
-"name is both verbose and cumbersome (e.g. if you have many imports from the "
-"package)."
+"Don't define everything in deeply nested hierarchies: you will end up "
+"with projects and packages like \"pythonsport.common.maps.forest\". This "
+"type of name is both verbose and cumbersome (e.g. if you have many "
+"imports from the package)."
 msgstr ""
 
-#: ../pep-0423.txt:404
+#: ../../peps/pep-0423.rst:404
 msgid ""
-"Furthermore, big hierarchies tend to break down over time as the boundaries "
-"between different packages blur."
+"Furthermore, big hierarchies tend to break down over time as the "
+"boundaries between different packages blur."
 msgstr ""
 
-#: ../pep-0423.txt:407
+#: ../../peps/pep-0423.rst:407
 msgid "The consensus is that two levels of nesting are preferred."
 msgstr ""
 
-#: ../pep-0423.txt:409
+#: ../../peps/pep-0423.rst:409
 msgid ""
-"For example, we have ``plone.principalsource`` instead of ``plone.source."
-"principal`` or something like that. The name is shorter, the package "
-"structure is simpler, and there would be very little to gain from having "
-"three levels of nesting here. It would be impractical to try to put all "
-"\"core Plone\" sources (a source is kind of vocabulary) into the ``plone."
-"source.*`` namespace, in part because some sources are part of other "
-"packages, and in part because sources already exist in other places. Had we "
-"made a new namespace, it would be inconsistently used from the start."
+"For example, we have ``plone.principalsource`` instead of "
+"``plone.source.principal`` or something like that. The name is shorter, "
+"the package structure is simpler, and there would be very little to gain "
+"from having three levels of nesting here. It would be impractical to try "
+"to put all \"core Plone\" sources (a source is kind of vocabulary) into "
+"the ``plone.source.*`` namespace, in part because some sources are part "
+"of other packages, and in part because sources already exist in other "
+"places. Had we made a new namespace, it would be inconsistently used from"
+" the start."
 msgstr ""
 
-#: ../pep-0423.txt:419
+#: ../../peps/pep-0423.rst:419
 msgid "Yes: \"pyranha\""
 msgstr ""
 
-#: ../pep-0423.txt:421
+#: ../../peps/pep-0423.rst:421
 msgid "Yes: \"pythonsport.climbing\""
 msgstr ""
 
-#: ../pep-0423.txt:423
+#: ../../peps/pep-0423.rst:423
 msgid "Yes: \"pythonsport.forestmap\""
 msgstr ""
 
-#: ../pep-0423.txt:425
+#: ../../peps/pep-0423.rst:425
 msgid "No: \"pythonsport.maps.forest\""
 msgstr ""
 
-#: ../pep-0423.txt:428
+#: ../../peps/pep-0423.rst:428
 msgid "Use only one level for ownership"
 msgstr ""
 
-#: ../pep-0423.txt:430
+#: ../../peps/pep-0423.rst:430
 msgid ""
-"Don't use 3 levels to set individual/organization ownership in a community "
-"namespace."
+"Don't use 3 levels to set individual/organization ownership in a "
+"community namespace."
 msgstr ""
 
-#: ../pep-0423.txt:433
+#: ../../peps/pep-0423.rst:433
 msgid "As an example, let's consider:"
 msgstr ""
 
-#: ../pep-0423.txt:435
+#: ../../peps/pep-0423.rst:435
 msgid "you are plugging into a community namespace, such as \"collective\"."
 msgstr ""
 
-#: ../pep-0423.txt:437
+#: ../../peps/pep-0423.rst:437
 msgid ""
-"and you want to add a more restrictive \"ownership\" level, to avoid clashes "
-"inside the community."
+"and you want to add a more restrictive \"ownership\" level, to avoid "
+"clashes inside the community."
 msgstr ""
 
-#: ../pep-0423.txt:440
+#: ../../peps/pep-0423.rst:440
 msgid ""
-"In such a case, **you'd better use the most restrictive ownership level as "
-"first level.**"
+"In such a case, **you'd better use the most restrictive ownership level "
+"as first level.**"
 msgstr ""
 
-#: ../pep-0423.txt:443
+#: ../../peps/pep-0423.rst:443
 msgid ""
 "As an example, where \"collective\" is a major community namespace that "
-"\"gergovie\" belongs to, and \"vercingetorix\" it the name of \"gergovie\" "
-"author:"
+"\"gergovie\" belongs to, and \"vercingetorix\" it the name of "
+"\"gergovie\" author:"
 msgstr ""
 
-#: ../pep-0423.txt:447
+#: ../../peps/pep-0423.rst:447
 msgid "No: \"collective.vercingetorix.gergovie\""
 msgstr ""
 
-#: ../pep-0423.txt:449
+#: ../../peps/pep-0423.rst:449
 msgid "Yes: \"vercingetorix.gergovie\""
 msgstr ""
 
-#: ../pep-0423.txt:452
+#: ../../peps/pep-0423.rst:452
 msgid "Don't use namespace levels for categorization"
 msgstr ""
 
-#: ../pep-0423.txt:454
+#: ../../peps/pep-0423.rst:454
 msgid "`Use packaging metadata`_ instead."
 msgstr ""
 
-#: ../pep-0423.txt:457
+#: ../../peps/pep-0423.rst:457
 msgid "Don't use more than 3 levels"
 msgstr ""
 
-#: ../pep-0423.txt:459
+#: ../../peps/pep-0423.rst:459
 msgid ""
 "Technically, you can create deeply nested hierarchies. However, in most "
 "cases, you shouldn't need it."
 msgstr ""
 
-#: ../pep-0423.txt:464
+#: ../../peps/pep-0423.rst:464
 msgid ""
-"Even communities where namespaces are standard don't use more than 3 levels."
+"Even communities where namespaces are standard don't use more than 3 "
+"levels."
 msgstr ""
 
-#: ../pep-0423.txt:468
+#: ../../peps/pep-0423.rst:468
 msgid "Conventions for communities or related projects"
 msgstr ""
 
-#: ../pep-0423.txt:471
+#: ../../peps/pep-0423.rst:471
 msgid "Follow community or related project conventions, if any"
 msgstr ""
 
-#: ../pep-0423.txt:473
+#: ../../peps/pep-0423.rst:473
 msgid ""
 "Projects or related communities can have specific conventions, which may "
 "differ from those explained in this document."
 msgstr ""
 
-#: ../pep-0423.txt:476
+#: ../../peps/pep-0423.rst:476
 msgid ""
-"In such a case, `they should declare specific conventions in documentation "
-"<#organize-community-contributions>`_."
+"In such a case, `they should declare specific conventions in "
+"documentation <#organize-community-contributions>`_."
 msgstr ""
 
-#: ../pep-0423.txt:479
+#: ../../peps/pep-0423.rst:479
 msgid ""
-"So, if your project belongs to another project or to a community, first look "
-"for specific conventions in main project's documentation."
+"So, if your project belongs to another project or to a community, first "
+"look for specific conventions in main project's documentation."
 msgstr ""
 
-#: ../pep-0423.txt:482
+#: ../../peps/pep-0423.rst:482
 msgid ""
 "If there is no specific conventions, follow the ones declared in this "
 "document."
 msgstr ""
 
-#: ../pep-0423.txt:485
+#: ../../peps/pep-0423.rst:485
 msgid ""
-"As an example, `Plone community`_ releases community contributions in the "
-"\"collective\" namespace package. It differs from the `standard namespace "
-"for contributions <#use-standard-pattern-for-community-contributions>`_ "
-"proposed here. But since it is documented, there is no ambiguity and you "
-"should follow this specific convention."
+"As an example, `Plone community`_ releases community contributions in the"
+" \"collective\" namespace package. It differs from the `standard "
+"namespace for contributions <#use-standard-pattern-for-community-"
+"contributions>`_ proposed here. But since it is documented, there is no "
+"ambiguity and you should follow this specific convention."
 msgstr ""
 
-#: ../pep-0423.txt:493
+#: ../../peps/pep-0423.rst:493
 msgid "Use standard pattern for community contributions"
 msgstr ""
 
-#: ../pep-0423.txt:495
+#: ../../peps/pep-0423.rst:495
 msgid ""
-"When no specific rule is defined, use the ``${MAINPROJECT}contrib.${PROJECT}"
-"`` pattern to store community contributions for any product or framework, "
-"where:"
+"When no specific rule is defined, use the "
+"``${MAINPROJECT}contrib.${PROJECT}`` pattern to store community "
+"contributions for any product or framework, where:"
 msgstr ""
 
-#: ../pep-0423.txt:499
+#: ../../peps/pep-0423.rst:499
 msgid ""
-"``${MAINPROJECT}`` is the name of the related project. \"pyranha\" in the "
-"example below."
+"``${MAINPROJECT}`` is the name of the related project. \"pyranha\" in the"
+" example below."
 msgstr ""
 
-#: ../pep-0423.txt:502
+#: ../../peps/pep-0423.rst:502
 msgid ""
-"``${PROJECT}`` is the name of your project. \"giantteeth\" in the example "
-"below."
+"``${PROJECT}`` is the name of your project. \"giantteeth\" in the example"
+" below."
 msgstr ""
 
-#: ../pep-0423.txt:505
+#: ../../peps/pep-0423.rst:505
 msgid "As an example:"
 msgstr ""
 
-#: ../pep-0423.txt:507
+#: ../../peps/pep-0423.rst:507
 msgid ""
-"you are the author of \"pyranha\" project. You own the \"pyranha\" namespace."
+"you are the author of \"pyranha\" project. You own the \"pyranha\" "
+"namespace."
 msgstr ""
 
-#: ../pep-0423.txt:510
+#: ../../peps/pep-0423.rst:510
 msgid ""
-"you didn't defined specific naming conventions for community contributions."
+"you didn't defined specific naming conventions for community "
+"contributions."
 msgstr ""
 
-#: ../pep-0423.txt:513
+#: ../../peps/pep-0423.rst:513
 msgid ""
-"a third-party developer wants to publish a \"giantteeth\" project related to "
-"your \"pyranha\" project in a community namespace. So he should publish it "
-"as \"pyranhacontrib.giantteeth\"."
+"a third-party developer wants to publish a \"giantteeth\" project related"
+" to your \"pyranha\" project in a community namespace. So he should "
+"publish it as \"pyranhacontrib.giantteeth\"."
 msgstr ""
 
-#: ../pep-0423.txt:517
+#: ../../peps/pep-0423.rst:517
 msgid "It is the simplest way to `Organize community contributions`_."
 msgstr ""
 
-#: ../pep-0423.txt:521
+#: ../../peps/pep-0423.rst:521
 msgid "Why ``${MAINPROJECT}contrib.*`` pattern?"
 msgstr ""
 
-#: ../pep-0423.txt:523
+#: ../../peps/pep-0423.rst:523
 msgid ""
-"``${MAINPROJECT}c.*`` is not explicit enough. As examples, \"zc\" belongs to "
-"\"Zope Corporation\" whereas \"z3c\" belongs to \"Zope 3 community\"."
+"``${MAINPROJECT}c.*`` is not explicit enough. As examples, \"zc\" belongs"
+" to \"Zope Corporation\" whereas \"z3c\" belongs to \"Zope 3 community\"."
 msgstr ""
 
-#: ../pep-0423.txt:527
+#: ../../peps/pep-0423.rst:527
 msgid "``${MAINPROJECT}community`` is too long."
 msgstr ""
 
-#: ../pep-0423.txt:529
+#: ../../peps/pep-0423.rst:529
 msgid ""
 "``${MAINPROJECT}community`` conflicts with existing namespaces such as "
 "\"iccommunity\" or \"PyCommunity\"."
 msgstr ""
 
-#: ../pep-0423.txt:532
+#: ../../peps/pep-0423.rst:532
 msgid ""
-"``${MAINPROJECT}.contrib.*`` is inside ${MAINPROJECT} namespace, i.e. it is "
-"owned by ${MAINPROJECT} authors. It breaks the `Top-level namespace relates "
-"to code ownership`_ rule."
+"``${MAINPROJECT}.contrib.*`` is inside ${MAINPROJECT} namespace, i.e. it "
+"is owned by ${MAINPROJECT} authors. It breaks the `Top-level namespace "
+"relates to code ownership`_ rule."
 msgstr ""
 
-#: ../pep-0423.txt:536
+#: ../../peps/pep-0423.rst:536
 msgid "``${MAINPROJECT}.contrib.*`` breaks the `Avoid deep nesting`_ rule."
 msgstr ""
 
-#: ../pep-0423.txt:539
+#: ../../peps/pep-0423.rst:539
 msgid ""
-"names where ``${MAINPROJECT}`` doesn't appear are not explicit enough, i.e. "
-"nobody can guess they are related to ``${MAINPROJECT}``. As an example, it "
-"is not obvious that \"collective.*\" belongs to Plone community."
+"names where ``${MAINPROJECT}`` doesn't appear are not explicit enough, "
+"i.e. nobody can guess they are related to ``${MAINPROJECT}``. As an "
+"example, it is not obvious that \"collective.*\" belongs to Plone "
+"community."
 msgstr ""
 
-#: ../pep-0423.txt:544
+#: ../../peps/pep-0423.rst:544
 msgid ""
-"``{$DIST}contrib.*`` looks like existing ``sphinxcontrib-*`` packages. But "
-"``sphinxcontrib-*`` is actually about Sphinx contrib, so this is not a real "
-"conflict... In fact, the \"contrib\" suffix was inspired by "
+"``{$DIST}contrib.*`` looks like existing ``sphinxcontrib-*`` packages. "
+"But ``sphinxcontrib-*`` is actually about Sphinx contrib, so this is not "
+"a real conflict... In fact, the \"contrib\" suffix was inspired by "
 "\"sphinxcontrib\"."
 msgstr ""
 
-#: ../pep-0423.txt:550
+#: ../../peps/pep-0423.rst:550
 msgid "Organize community contributions"
 msgstr ""
 
-#: ../pep-0423.txt:552
+#: ../../peps/pep-0423.rst:552
 msgid ""
 "This is the counterpart of the `follow community conventions <#follow-"
-"community-or-related-project-conventions-if-any>`_ and `standard pattern for "
-"contributions <#use-standard-pattern-for-community-contributions>`_ rules."
+"community-or-related-project-conventions-if-any>`_ and `standard pattern "
+"for contributions <#use-standard-pattern-for-community-contributions>`_ "
+"rules."
 msgstr ""
 
-#: ../pep-0423.txt:557
+#: ../../peps/pep-0423.rst:557
 msgid "Actions:"
 msgstr ""
 
-#: ../pep-0423.txt:559
+#: ../../peps/pep-0423.rst:559
 msgid "Choose a naming convention for community contributions."
 msgstr ""
 
-#: ../pep-0423.txt:561
+#: ../../peps/pep-0423.rst:561
 msgid ""
 "If it is not `the default <#use-standard-pattern-for-community-"
 "contributions>`_, then document it."
 msgstr ""
 
-#: ../pep-0423.txt:565
+#: ../../peps/pep-0423.rst:565
 msgid ""
 "if you use the `default convention <#use-standard-pattern-for-community-"
-"contributions>`_, then this document should be enough. Don't repeat it. You "
-"may reference it."
+"contributions>`_, then this document should be enough. Don't repeat it. "
+"You may reference it."
 msgstr ""
 
-#: ../pep-0423.txt:570
+#: ../../peps/pep-0423.rst:570
 msgid ""
 "else, tell users about custom conventions in project's \"contribute\" or "
 "\"create modules\" documentation."
 msgstr ""
 
-#: ../pep-0423.txt:573
+#: ../../peps/pep-0423.rst:573
 msgid ""
 "Also recommend the use of additional metadata, such as `classifiers and "
 "keywords <#use-packaging-metadata>`_."
 msgstr ""
 
-#: ../pep-0423.txt:576
+#: ../../peps/pep-0423.rst:576
 msgid "About convention choices:"
 msgstr ""
 
-#: ../pep-0423.txt:578
+#: ../../peps/pep-0423.rst:578
 msgid ""
 "New projects should choose the `default contrib pattern <#use-standard-"
 "pattern-for-community-contributions>`_."
 msgstr ""
 
-#: ../pep-0423.txt:581
+#: ../../peps/pep-0423.rst:581
 msgid ""
 "Existing projects with community contributions should start with custom "
 "conventions. Then they can `Promote migrations`_."
 msgstr ""
 
-#: ../pep-0423.txt:584
+#: ../../peps/pep-0423.rst:584
 msgid ""
-"It means that existing community conventions don't have to be changed. But, "
-"at least, they should be explicitly documented."
+"It means that existing community conventions don't have to be changed. "
+"But, at least, they should be explicitly documented."
 msgstr ""
 
-#: ../pep-0423.txt:587
+#: ../../peps/pep-0423.rst:587
 msgid ""
 "Example: \"pyranha\" is your project name and package name. Tell "
 "contributors that:"
 msgstr ""
 
-#: ../pep-0423.txt:590
+#: ../../peps/pep-0423.rst:590
 msgid "pyranha-related distributions should use the \"pyranha\" keyword"
 msgstr ""
 
-#: ../pep-0423.txt:592
+#: ../../peps/pep-0423.rst:592
 msgid ""
 "pyranha-related distributions providing templates should also use "
 "\"templates\" keyword."
 msgstr ""
 
-#: ../pep-0423.txt:595
+#: ../../peps/pep-0423.rst:595
 msgid ""
 "community contributions should be released under \"pyranhacontrib\" "
 "namespace (i.e. use \"pyranhacontrib.*\" pattern)."
 msgstr ""
 
-#: ../pep-0423.txt:600
+#: ../../peps/pep-0423.rst:600
 msgid "Register names with PyPI"
 msgstr ""
 
-#: ../pep-0423.txt:602
+#: ../../peps/pep-0423.rst:602
 msgid ""
-"`PyPI`_ is the central place for distributions in Python community. So, it "
-"is also the place where to register project and package names."
+"`PyPI`_ is the central place for distributions in Python community. So, "
+"it is also the place where to register project and package names."
 msgstr ""
 
-#: ../pep-0423.txt:605
+#: ../../peps/pep-0423.rst:605
 msgid "See `Registering with the Package Index`_ for details."
 msgstr ""
 
-#: ../pep-0423.txt:609
+#: ../../peps/pep-0423.rst:609
 msgid "Recipes"
 msgstr ""
 
-#: ../pep-0423.txt:611
+#: ../../peps/pep-0423.rst:611
 msgid ""
-"The following recipes will help you follow the guidelines and conventions "
-"above."
+"The following recipes will help you follow the guidelines and conventions"
+" above."
 msgstr ""
 
-#: ../pep-0423.txt:615
+#: ../../peps/pep-0423.rst:615
 msgid "How to check for name availability?"
 msgstr ""
 
-#: ../pep-0423.txt:617
+#: ../../peps/pep-0423.rst:617
 msgid ""
 "Before you choose a project name, make sure it hasn't already been "
 "registered in the following locations:"
 msgstr ""
 
-#: ../pep-0423.txt:620
+#: ../../peps/pep-0423.rst:620
 msgid "`PyPI`_"
 msgstr ""
 
-#: ../pep-0423.txt:621
+#: ../../peps/pep-0423.rst:621
 msgid "that's all. PyPI is the only official place."
 msgstr ""
 
-#: ../pep-0423.txt:623
+#: ../../peps/pep-0423.rst:623
 msgid ""
 "As an example, you could also check in various locations such as popular "
-"code hosting services, but keep in mind that PyPI is the only place you can "
-"**register** for names in Python community."
+"code hosting services, but keep in mind that PyPI is the only place you "
+"can **register** for names in Python community."
 msgstr ""
 
-#: ../pep-0423.txt:627
+#: ../../peps/pep-0423.rst:627
 msgid "That's why it is important you `register names with PyPI`_."
 msgstr ""
 
-#: ../pep-0423.txt:629
+#: ../../peps/pep-0423.rst:629
 msgid ""
-"Also make sure the names of distributed packages or modules haven't already "
-"been registered:"
+"Also make sure the names of distributed packages or modules haven't "
+"already been registered:"
 msgstr ""
 
-#: ../pep-0423.txt:632
+#: ../../peps/pep-0423.rst:632
 msgid "in the `Python Standard Library`_."
 msgstr ""
 
-#: ../pep-0423.txt:634
+#: ../../peps/pep-0423.rst:634
 msgid ""
-"inside projects at `PyPI`. There is currently no helper for that. Notice "
-"that the more projects follow the `use a single name`_ rule, the easier is "
-"the verification."
+"inside projects at ``PyPI``. There is currently no helper for that. "
+"Notice that the more projects follow the `use a single name`_ rule, the "
+"easier is the verification."
 msgstr ""
 
-#: ../pep-0423.txt:638
+#: ../../peps/pep-0423.rst:638
 msgid "you may `ask the community <#if-in-doubt-ask>`_."
 msgstr ""
 
-#: ../pep-0423.txt:640
+#: ../../peps/pep-0423.rst:640
 msgid ""
 "The `use a single name`_ rule also helps you avoid clashes with package "
 "names: if a project name is available, then the package name has good "
 "chances to be available too."
 msgstr ""
 
-#: ../pep-0423.txt:645
+#: ../../peps/pep-0423.rst:645
 msgid "How to rename a project?"
 msgstr ""
 
-#: ../pep-0423.txt:647
+#: ../../peps/pep-0423.rst:647
 msgid ""
 "Renaming a project is possible, but keep in mind that it will cause some "
 "confusions. So, pay particular attention to README and documentation, so "
 "that users understand what happened."
 msgstr ""
 
-#: ../pep-0423.txt:651
+#: ../../peps/pep-0423.rst:651
 msgid ""
-"First of all, **do not remove legacy distributions from PyPI**. Because some "
-"users may be using them."
+"First of all, **do not remove legacy distributions from PyPI**. Because "
+"some users may be using them."
 msgstr ""
 
-#: ../pep-0423.txt:654
+#: ../../peps/pep-0423.rst:654
 msgid ""
-"Copy the legacy project, then change names (project and package/module). Pay "
-"attention to, at least:"
+"Copy the legacy project, then change names (project and package/module). "
+"Pay attention to, at least:"
 msgstr ""
 
-#: ../pep-0423.txt:657
+#: ../../peps/pep-0423.rst:657
 msgid "packaging files,"
 msgstr ""
 
-#: ../pep-0423.txt:658
+#: ../../peps/pep-0423.rst:658
 msgid "folder name that contains source files,"
 msgstr ""
 
-#: ../pep-0423.txt:659
+#: ../../peps/pep-0423.rst:659
 msgid "documentation, including README,"
 msgstr ""
 
-#: ../pep-0423.txt:660
+#: ../../peps/pep-0423.rst:660
 msgid "import statements in code."
 msgstr ""
 
-#: ../pep-0423.txt:662
+#: ../../peps/pep-0423.rst:662
 msgid ""
-"Assign ``Obsoletes-Dist`` metadata to new distribution in setup.cfg file. "
-"See :pep:`PEP 345 about Obsolete-Dist <345#obsoletes-dist-multiple-use>` and "
-"`setup.cfg specification`_."
+"Assign ``Obsoletes-Dist`` metadata to new distribution in setup.cfg file."
+" See :pep:`PEP 345 about Obsolete-Dist <345#obsoletes-dist-multiple-use>`"
+" and `setup.cfg specification`_."
 msgstr ""
 
-#: ../pep-0423.txt:667
+#: ../../peps/pep-0423.rst:667
 msgid "Release a new version of the renamed project, then publish it."
 msgstr ""
 
-#: ../pep-0423.txt:669
+#: ../../peps/pep-0423.rst:669
 msgid "Edit legacy project:"
 msgstr ""
 
-#: ../pep-0423.txt:671
+#: ../../peps/pep-0423.rst:671
 msgid "add dependency to new project,"
 msgstr ""
 
-#: ../pep-0423.txt:672
+#: ../../peps/pep-0423.rst:672
 msgid "drop everything except packaging stuff,"
 msgstr ""
 
-#: ../pep-0423.txt:673
-msgid ""
-"add the ``Development Status :: 7 - Inactive`` classifier in setup script,"
+#: ../../peps/pep-0423.rst:673
+msgid "add the ``Development Status :: 7 - Inactive`` classifier in setup script,"
 msgstr ""
 
-#: ../pep-0423.txt:675
+#: ../../peps/pep-0423.rst:675
 msgid "publish a new release."
 msgstr ""
 
-#: ../pep-0423.txt:677
+#: ../../peps/pep-0423.rst:677
 msgid "So, users of the legacy package:"
 msgstr ""
 
-#: ../pep-0423.txt:679
+#: ../../peps/pep-0423.rst:679
 msgid "can continue using the legacy distributions at a deprecated version,"
 msgstr ""
 
-#: ../pep-0423.txt:680
+#: ../../peps/pep-0423.rst:680
 msgid "can upgrade to last version of legacy distribution, which is empty..."
 msgstr ""
 
-#: ../pep-0423.txt:682
+#: ../../peps/pep-0423.rst:682
 msgid ""
 "... and automatically download new distribution as a dependency of the "
 "legacy one."
 msgstr ""
 
-#: ../pep-0423.txt:685
+#: ../../peps/pep-0423.rst:685
 msgid "Users who discover the legacy project see it is inactive."
 msgstr ""
 
-#: ../pep-0423.txt:688
+#: ../../peps/pep-0423.rst:688
 msgid "Improved handling of renamed projects on PyPI"
 msgstr ""
 
-#: ../pep-0423.txt:690
+#: ../../peps/pep-0423.rst:690
 msgid ""
-"If many projects follow `Renaming howto <#how-to-rename-a-project>`_ recipe, "
-"then many legacy distributions will have the following characteristics:"
+"If many projects follow `Renaming howto <#how-to-rename-a-project>`_ "
+"recipe, then many legacy distributions will have the following "
+"characteristics:"
 msgstr ""
 
-#: ../pep-0423.txt:694
+#: ../../peps/pep-0423.rst:694
 msgid "``Development Status :: 7 - Inactive`` classifier."
 msgstr ""
 
-#: ../pep-0423.txt:695
+#: ../../peps/pep-0423.rst:695
 msgid "latest version is empty, except packaging stuff."
 msgstr ""
 
-#: ../pep-0423.txt:696
+#: ../../peps/pep-0423.rst:696
 msgid ""
-"latest version \"redirects\" to another distribution. E.g. it has a single "
-"dependency on the renamed project."
+"latest version \"redirects\" to another distribution. E.g. it has a "
+"single dependency on the renamed project."
 msgstr ""
 
-#: ../pep-0423.txt:698
+#: ../../peps/pep-0423.rst:698
 msgid "referenced as ``Obsoletes-Dist`` in a newer distribution."
 msgstr ""
 
-#: ../pep-0423.txt:700
+#: ../../peps/pep-0423.rst:700
 msgid ""
-"So it will be possible to detect renamed projects and improve readability on "
-"PyPI. So that users can focus on active distributions. But this feature is "
-"not required now. There is no urge. It won't be covered in this document."
+"So it will be possible to detect renamed projects and improve readability"
+" on PyPI. So that users can focus on active distributions. But this "
+"feature is not required now. There is no urge. It won't be covered in "
+"this document."
 msgstr ""
 
-#: ../pep-0423.txt:706
+#: ../../peps/pep-0423.rst:706
 msgid "How to apply naming guidelines on existing projects?"
 msgstr ""
 
-#: ../pep-0423.txt:708
+#: ../../peps/pep-0423.rst:708
 msgid ""
-"**There is no obligation for existing projects to be renamed**. The choice "
-"is left to project authors and mainteners for obvious reasons."
+"**There is no obligation for existing projects to be renamed**. The "
+"choice is left to project authors and mainteners for obvious reasons."
 msgstr ""
 
-#: ../pep-0423.txt:711
+#: ../../peps/pep-0423.rst:711
 msgid "However, project authors are invited to:"
 msgstr ""
 
-#: ../pep-0423.txt:713
+#: ../../peps/pep-0423.rst:713
 msgid "at least, `state about current naming`_."
 msgstr ""
 
-#: ../pep-0423.txt:714
+#: ../../peps/pep-0423.rst:714
 msgid "then `plan and promote migration <#promote-migrations>`_."
 msgstr ""
 
-#: ../pep-0423.txt:715
+#: ../../peps/pep-0423.rst:715
 msgid ""
-"optionally actually `rename existing project or distributed packages/modules "
-"<#how-to-rename-a-project>`_."
+"optionally actually `rename existing project or distributed "
+"packages/modules <#how-to-rename-a-project>`_."
 msgstr ""
 
-#: ../pep-0423.txt:719
+#: ../../peps/pep-0423.rst:719
 msgid "State about current naming"
 msgstr ""
 
-#: ../pep-0423.txt:721
+#: ../../peps/pep-0423.rst:721
 msgid "The important thing, at first, is that you state about current choices:"
 msgstr ""
 
-#: ../pep-0423.txt:724
+#: ../../peps/pep-0423.rst:724
 msgid "Ask yourself \"why did I choose the current name?\", then document it."
 msgstr ""
 
-#: ../pep-0423.txt:725
+#: ../../peps/pep-0423.rst:725
 msgid ""
-"If there are differences with the guidelines provided in this document, you "
-"should tell your users."
+"If there are differences with the guidelines provided in this document, "
+"you should tell your users."
 msgstr ""
 
-#: ../pep-0423.txt:727
+#: ../../peps/pep-0423.rst:727
 msgid ""
-"If possible, create issues in the project's bugtracker, at least for record. "
-"Then you are free to resolve them later, or maybe mark them as \"wontfix\"."
+"If possible, create issues in the project's bugtracker, at least for "
+"record. Then you are free to resolve them later, or maybe mark them as "
+"\"wontfix\"."
 msgstr ""
 
-#: ../pep-0423.txt:731
+#: ../../peps/pep-0423.rst:731
 msgid ""
-"Projects that are meant to receive contributions from community should also "
-"`organize community contributions`_."
+"Projects that are meant to receive contributions from community should "
+"also `organize community contributions`_."
 msgstr ""
 
-#: ../pep-0423.txt:735
+#: ../../peps/pep-0423.rst:735
 msgid "Promote migrations"
 msgstr ""
 
-#: ../pep-0423.txt:737
+#: ../../peps/pep-0423.rst:737
 msgid ""
 "Every Python developer should migrate whenever possible, or promote the "
 "migrations in their respective communities."
 msgstr ""
 
-#: ../pep-0423.txt:740
+#: ../../peps/pep-0423.rst:740
 msgid ""
-"Apply these guidelines on your projects, then the community will see it is "
-"safe."
+"Apply these guidelines on your projects, then the community will see it "
+"is safe."
 msgstr ""
 
-#: ../pep-0423.txt:743
+#: ../../peps/pep-0423.rst:743
 msgid ""
 "In particular, \"leaders\" such as authors of popular projects are "
 "influential, they have power and, thus, responsibility over communities."
 msgstr ""
 
-#: ../pep-0423.txt:747
+#: ../../peps/pep-0423.rst:747
 msgid ""
-"Apply these guidelines on popular projects, then communities will adopt the "
-"conventions too."
+"Apply these guidelines on popular projects, then communities will adopt "
+"the conventions too."
 msgstr ""
 
-#: ../pep-0423.txt:750
+#: ../../peps/pep-0423.rst:750
 msgid ""
 "**Projects should promote migrations when they release a new (major) "
-"version**, particularly `if this version introduces support for Python 3.x, "
-"new standard library's packaging or namespace packages <#opportunity>`_."
+"version**, particularly `if this version introduces support for Python "
+"3.x, new standard library's packaging or namespace packages "
+"<#opportunity>`_."
 msgstr ""
 
-#: ../pep-0423.txt:756
+#: ../../peps/pep-0423.rst:756
 msgid "Opportunity"
 msgstr ""
 
-#: ../pep-0423.txt:758
+#: ../../peps/pep-0423.rst:758
 msgid "As of Python 3.3 being developed:"
 msgstr ""
 
-#: ../pep-0423.txt:760
+#: ../../peps/pep-0423.rst:760
 msgid ""
-"many projects are not Python 3.x compatible. It includes \"big\" products or "
-"frameworks. It means that many projects will have to do a migration to "
-"support Python 3.x."
+"many projects are not Python 3.x compatible. It includes \"big\" products"
+" or frameworks. It means that many projects will have to do a migration "
+"to support Python 3.x."
 msgstr ""
 
-#: ../pep-0423.txt:764
+#: ../../peps/pep-0423.rst:764
 msgid ""
-"packaging (aka distutils2) is on the starting blocks. When it is released, "
-"projects will be invited to migrate and use new packaging."
+"packaging (aka distutils2) is on the starting blocks. When it is "
+"released, projects will be invited to migrate and use new packaging."
 msgstr ""
 
-#: ../pep-0423.txt:767
+#: ../../peps/pep-0423.rst:767
 msgid ":pep:`420` brings official support of namespace packages to Python."
 msgstr ""
 
-#: ../pep-0423.txt:769
+#: ../../peps/pep-0423.rst:769
 msgid ""
-"It means that most active projects should be about to migrate in the next "
-"year(s) to support Python 3.x, new packaging or new namespace packages."
+"It means that most active projects should be about to migrate in the next"
+" year(s) to support Python 3.x, new packaging or new namespace packages."
 msgstr ""
 
-#: ../pep-0423.txt:773
+#: ../../peps/pep-0423.rst:773
 msgid ""
-"Such an opportunity is unique and won't come again soon! So let's introduce "
-"and promote naming conventions as soon as possible (i.e. **now**)."
+"Such an opportunity is unique and won't come again soon! So let's "
+"introduce and promote naming conventions as soon as possible (i.e. "
+"**now**)."
 msgstr ""
 
-#: ../pep-0423.txt:779
+#: ../../peps/pep-0423.rst:779
 msgid "References"
 msgstr "Referências"
 
-#: ../pep-0423.txt:781
+#: ../../peps/pep-0423.rst:781
 msgid "Additional background:"
 msgstr ""
 
-#: ../pep-0423.txt:783
+#: ../../peps/pep-0423.rst:783
 msgid ""
 "`Martin Aspeli's article about names`_. Some parts of this document are "
 "quotes from this article."
 msgstr ""
 
-#: ../pep-0423.txt:786
+#: ../../peps/pep-0423.rst:786
 msgid "`in development official packaging documentation`_."
 msgstr ""
 
-#: ../pep-0423.txt:788
+#: ../../peps/pep-0423.rst:788
 msgid ""
-"`The Hitchhiker's Guide to Packaging`_, which has an empty placeholder for "
-"\"naming specification\"."
+"`The Hitchhiker's Guide to Packaging`_, which has an empty placeholder "
+"for \"naming specification\"."
 msgstr ""
 
-#: ../pep-0423.txt:791
+#: ../../peps/pep-0423.rst:791
 msgid "References and footnotes:"
 msgstr ""
 
-#: ../pep-0423.txt:833
+#: ../../peps/pep-0423.rst:833
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../pep-0423.txt:835
+#: ../../peps/pep-0423.rst:835
 msgid "This document has been placed in the public domain."
 msgstr "Este documento foi colocado em domínio público."
+
+#~ msgid ""
+#~ "inside projects at `PyPI`. There is "
+#~ "currently no helper for that. Notice "
+#~ "that the more projects follow the "
+#~ "`use a single name`_ rule, the "
+#~ "easier is the verification."
+#~ msgstr ""
+

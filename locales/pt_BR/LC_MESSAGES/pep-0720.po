@@ -1,0 +1,1310 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the PEPs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PEPs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-20 10:43-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pt_BR\n"
+"Language-Team: pt_BR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.13.1\n"
+
+#: ../../peps/pep-0720.rst
+msgid "Author"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:3
+msgid "Filipe Laíns <lains@riseup.net>"
+msgstr ""
+
+#: ../../peps/pep-0720.rst
+msgid "PEP-Delegate"
+msgstr ""
+
+#: ../../peps/pep-0720.rst
+msgid "Status"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:5
+msgid "Draft"
+msgstr ""
+
+#: ../../peps/pep-0720.rst
+msgid "Type"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:6
+msgid "Informational"
+msgstr ""
+
+#: ../../peps/pep-0720.rst
+msgid "Created"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:8
+msgid "01-Jul-2023"
+msgstr ""
+
+#: ../../peps/pep-0720.rst
+msgid "Python-Version"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:9
+msgid "3.12"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:13
+msgid "Abstract"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:15
+msgid ""
+"This PEP attempts to document the status of cross-compilation of "
+"downstream projects."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:18
+msgid ""
+"It should give an overview of the approaches currently used by "
+"distributors (Linux distros, WASM environment providers, etc.) to cross-"
+"compile downstream projects (3rd party extensions, etc.)."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:24
+msgid "Motivation"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:26
+msgid ""
+"We write this PEP to express the challenges in cross-compilation and act "
+"as a supporting document in future improvement proposals."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:31
+msgid "Analysis"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:35
+msgid "Introduction"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:37
+msgid ""
+"There are a couple different approaches being used to tackle this, with "
+"different levels of interaction required from the user, but they all "
+"require a significant amount of effort. This is due to the lack of "
+"standardized cross-compilation infrastructure on the Python packaging "
+"ecosystem, which itself stems from the complexity of cross-builds, making"
+" it a huge undertaking."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:45
+msgid "Upstream support"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:47
+msgid ""
+"Some major projects like CPython, setuptools, etc. provide some support "
+"to help with cross-compilation, but it's unofficial and at a best-effort "
+"basis. For example, the ``sysconfig`` module allows overwriting the data "
+"module name via the ``_PYTHON_SYSCONFIGDATA_NAME`` environment variable, "
+"something that is required for cross-builds, and setuptools `accepts "
+"patches`__ [1]_ to tweak/fix its logic to be compatible with popular "
+"`\"environment faking\" <faking the target environment_>`_ workflows "
+"[2]_."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:55
+msgid ""
+"The lack of first-party support in upstream projects leads to cross-"
+"compilation being fragile and requiring a significant effort from users, "
+"but at the same time, the lack of standardization makes it harder for "
+"upstreams to improve support as there's no clarity on how this feature "
+"should be provided."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:60
+msgid ""
+"At the time of writing (Jun 2023), setuptools' compiler interface code, "
+"the component that most of affects cross-compilation, is developed on the"
+" `pypa/distutils`__ repository, which gets periodically synced to the "
+"setuptools repository."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:65
+msgid ""
+"We specifically mention *popular* workflows, because this is not "
+"standardized. Though, many of the most popular implementations "
+"(crossenv_, conda-forge_'s build system, etc.) work similarly, and this "
+"is what we are referring to here. For clarity, the implementations we are"
+" referring to here could be described as *crossenv-style*."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:75
+msgid "Projects with decent cross-build support"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:77
+msgid ""
+"It seems relevant to point out that there are a few modern Python package"
+" build-backends with, at least, decent cross-compilation support, those "
+"being scikit-build__ and meson-python__. Both these projects integrate "
+"external mature build-systems into Python packaging — CMake__ and "
+"Meson__, respectively — so cross-build support is inherited from them."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:90
+msgid "Downstream approaches"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:92
+msgid ""
+"Cross-compilation approaches fall in a spectrum that goes from, by "
+"design, requiring extensive user interaction to (ideally) almost none. "
+"Usually, they'll be based on one of two main strategies, using a `cross-"
+"build environment`_, or `faking the target environment`_."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:100
+msgid "Cross-build environment"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:102
+msgid ""
+"This consists of running the Python interpreter normally and utilizing "
+"the cross-build provided by the projects' build-system. However, as we "
+"saw above, upstream support is lacking, so this approach only works for a"
+" small-ish set of projects. When this fails, the usual strategy is to "
+"patch the build-system code to build use the correct toolchain, system "
+"details, etc. [3]_."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:108
+msgid ""
+"Since this approach often requires package-specific patching, it requires"
+" a lot of user interaction."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:111 ../../peps/pep-0720.rst:146
+msgid "Examples"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:114
+msgid "`python-for-android`_, `kivy-ios`_, etc."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:116
+msgid ""
+"The scope of the build-system patching varies between users and usually "
+"depends on the their goal — some (eg. Linux distributions) may patch the "
+"build-system to support cross-builds, while others might hardcode "
+"compiler paths and system information in the build-system, to simply make"
+" the build work."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:123
+msgid "Faking the target environment"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:125
+msgid ""
+"Aiming to drop the requirement for user input, a popular approach is "
+"trying to fake the target environment. It generally consists of "
+"monkeypatching the Python interpreter to get it to mimic the interpreter "
+"on the target system, which constitutes of changing many of the ``sys`` "
+"module attributes, the ``sysconfig`` data, etc. Using this strategy, "
+"build-backends do not need to have any cross-build support, and should "
+"just work without any code changes."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:132
+msgid ""
+"Unfortunately, though, it isn't possible to truly fake the target "
+"environment. There are many reasons for this, one of the main ones being "
+"that it breaks code that actually needs to introspect the running "
+"interpreter. As a result, monkeypatching Python to look like target is "
+"very tricky — to achieve the less amount of breakage, we can only patch "
+"certain aspects of the interpreter. Consequently, build-backends may need"
+" some code changes, but these are generally much smaller than the "
+"previous approach. This is an inherent limitation of the technique, "
+"meaning this strategy still requires some user interaction."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:141
+msgid ""
+"Nonetheless, this strategy still works out-of-the-box with significantly "
+"more projects than the approach above, and requires much less effort in "
+"these cases. It is successful in decreasing the amount of user "
+"interaction needed, even though it doesn't succeed in being generic."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:149
+msgid "`crossenv`_, `conda-forge`_, etc."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:153
+msgid "Environment introspection"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:155
+msgid ""
+"As explained above, most build system code is written with the assumption"
+" that the target system is the same as where the build is occurring, so "
+"introspection is usually used to guide the build."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:159
+msgid ""
+"In this section, we try to document most of the ways this is "
+"accomplished. It should give a decent overview of of environment details "
+"that are required by build systems."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:166
+msgid "Snippet"
+msgstr ""
+
+#: ../../peps/pep-0720.rst ../../peps/pep-0720.rst:167
+#: ../../peps/pep-0720.rst:517
+msgid "Description"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:168 ../../peps/pep-0720.rst:518
+msgid "Variance"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:179
+msgid "Extension (native module) suffixes supported by this interpreter."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:180
+msgid ""
+"This is implementation-defined, but it **usually** differs based on the "
+"implementation, system architecture, build configuration, Python language"
+" version, and implementation version — if one exists."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:189
+msgid "Source (pure-Python) suffixes supported by this interpreter."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:190
+msgid ""
+"This is implementation-defined, but it **usually** doesn't differ "
+"(outside exotic implementations or systems)."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:204
+msgid ""
+"All module file suffixes supported by this interpreter. It *should* be "
+"the union of all ``importlib.machinery.*_SUFFIXES`` attributes."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:206
+msgid ""
+"This is implementation-defined, but it **usually** differs based on the "
+"implementation, system architecture, build configuration, Python language"
+" version, and implementation version — if one exists. See the entries "
+"above for more information."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:216
+msgid "ABI flags, as specified in :pep:`3149`."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:217 ../../peps/pep-0720.rst:568
+#: ../../peps/pep-0720.rst:573 ../../peps/pep-0720.rst:578
+#: ../../peps/pep-0720.rst:586 ../../peps/pep-0720.rst:591
+#: ../../peps/pep-0720.rst:596 ../../peps/pep-0720.rst:601
+#: ../../peps/pep-0720.rst:606 ../../peps/pep-0720.rst:611
+msgid "Differs based on the build configuration."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:224
+msgid "C API version."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:225
+msgid "Differs based on the Python installation."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:232
+msgid ""
+"Prefix of the installation-wide directories where platform independent "
+"files are installed."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:234 ../../peps/pep-0720.rst:243
+#: ../../peps/pep-0720.rst:653 ../../peps/pep-0720.rst:659
+msgid "Differs based on the platform, and installation."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:241
+msgid ""
+"Prefix of the installation-wide directories where platform dependent "
+"files are installed."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:250
+msgid "Native byte order."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:251 ../../peps/pep-0720.rst:321
+#: ../../peps/pep-0720.rst:335 ../../peps/pep-0720.rst:405
+#: ../../peps/pep-0720.rst:529
+msgid "Differs based on the platform."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:258
+msgid "Names of all modules that are compiled into the Python interpreter."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:259
+msgid ""
+"Differs based on the platform, system architecture, and build "
+"configuration."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:267
+msgid ""
+"Prefix of the site-specific directories where platform independent files "
+"are installed. Because it concerns the site-specific directories, in "
+"standard virtual environment implementation, it will be a virtual-"
+"environment-specific path."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:271 ../../peps/pep-0720.rst:416
+#: ../../peps/pep-0720.rst:633 ../../peps/pep-0720.rst:638
+#: ../../peps/pep-0720.rst:643 ../../peps/pep-0720.rst:648
+msgid "Differs based on the platform, installation, and environment."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:278
+msgid "Path of the Python interpreter being used."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:279 ../../peps/pep-0720.rst:293
+msgid "Differs based on the installation."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:290
+msgid ""
+"Whether the Python interpreter is an ELF file, and the ELF header. This "
+"approach is something used to identify the target architecture of the "
+"installation (example__)."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:312
+msgid "Low level information about the float type, as defined by ``float.h``."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:313
+msgid "Differs based on the architecture, and platform."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:320
+msgid "Integer representing the Android API level."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:334
+msgid "Windows version of the system."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:342
+msgid "Python version encoded as an integer."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:343 ../../peps/pep-0720.rst:616
+#: ../../peps/pep-0720.rst:622 ../../peps/pep-0720.rst:628
+msgid "Differs based on the Python language version."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:362
+msgid "Interpreter implementation details."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:363
+msgid ""
+"Differs based on the interpreter implementation, Python language version,"
+" and implementation version — if one exists. It may also include "
+"architecture-dependent information, so it may also differ based on the "
+"system architecture."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:378
+msgid "Low level information about Python's internal integer representation."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:379
+msgid ""
+"Differs based on the architecture, platform, implementation, build, and "
+"runtime flags."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:387
+msgid "Maximum value a variable of type ``Py_ssize_t`` can take."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:388
+msgid "Differs based on the architecture, platform, and implementation."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:395
+msgid "Value of the largest Unicode code point."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:396
+msgid ""
+"Differs based on the implementation, and on Python versions older than "
+"3.3, the build."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:404
+msgid "Platform identifier."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:412
+msgid ""
+"Prefix of the site-specific directories where platform dependent files "
+"are installed. Because it concerns the site-specific directories, in "
+"standard virtual environment implementation, it will be a virtual-"
+"environment-specific path."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:423
+msgid "Platform-specific library directory."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:424 ../../peps/pep-0720.rst:664
+msgid "Differs based on the platform, and vendor."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:437
+msgid "Python language version implemented by the interpreter."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:438
+msgid "Differs if the target Python version is not the same [4]_."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:449
+msgid "Information about the thread implementation."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:450 ../../peps/pep-0720.rst:458
+msgid "Differs based on the platform, and implementation."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:457
+msgid "Version number used to form Windows registry keys."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:467
+msgid ""
+"Python distribution configuration variables. It includes a set of "
+"variables [5]_ — like ``prefix``, ``exec_prefix``, etc. — based on the "
+"running context [6]_, and may include some extra variables based on the "
+"Python implementation and system."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:472
+msgid ""
+"In CPython and most other implementations that use the same build-system,"
+" the \"extra\" variables mention above are: on POSIX, all variables from "
+"the ``Makefile`` used to build the interpreter, and on Windows, it "
+"usually only includes a small subset of the those [7]_ — like "
+"``EXT_SUFFIX``, ``BINDIR``, etc."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:478
+msgid ""
+"This is implementation-defined, but it **usually** differs between non-"
+"identical builds. Please refer to the `sysconfig configuration "
+"variables`_ table for a overview of the different configuration variable "
+"that are usually present."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:483
+msgid ""
+"Ideally, you want to perform cross-builds with the same Python version "
+"and implementation, however, this is often not the case. It should not be"
+" very problematic as long as the major and minor versions don't change."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:488
+msgid ""
+"The set of config variables that will always be present mostly consists "
+"of variables needed to calculate the installation scheme paths."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:491
+msgid ""
+"The context we refer here consists of the \"path initialization\", which "
+"is a process that happens in the interpreter startup and is responsible "
+"for figuring out which environment it is being run — eg. global "
+"environment, virtual environment, etc. — and setting ``sys.prefix`` and "
+"other attributes accordingly."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:497
+msgid ""
+"This is because Windows builds may not use the ``Makefile``, and instead "
+"`use the Visual Studio build system`__. A subset of the most relevant "
+"``Makefile`` variables is provided to make user code that uses them "
+"simpler."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:507
+msgid "CPython (and similar)"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:510
+msgid "``sysconfig`` configuration variables"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:515 ../../peps/pep-0720.rst:733
+msgid "Name"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:516
+msgid "Example Value"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:520
+msgid "``SOABI``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:521
+msgid "``cpython-311-x86_64-linux-gnu``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:522
+msgid "ABI string — defined by :pep:`3149`."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:523 ../../peps/pep-0720.rst:535
+msgid ""
+"Differs based on the implementation, system architecture, Python language"
+" version, and implementation version — if one exists."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:526
+msgid "``SHLIB_SUFFIX``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:527
+msgid "``.so``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:528
+msgid "Shared library suffix."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:531
+msgid "``EXT_SUFFIX``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:532
+msgid "``.cpython-311-x86_64-linux-gnu.so``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:533
+msgid ""
+"Interpreter-specific Python extension (native module) suffix — generally "
+"defined as ``.{SOABI}.{SHLIB_SUFFIX}``."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:538
+msgid "``LDLIBRARY``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:539
+msgid "``libpython3.11.so``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:540
+msgid ""
+"Shared ``libpython`` library name — if available. If unavailable [8]_, "
+"the variable will be empty, if available, the library should be located "
+"in ``LIBDIR``."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:543 ../../peps/pep-0720.rst:552
+#: ../../peps/pep-0720.rst:561
+msgid ""
+"Differs based on the implementation, system architecture, build "
+"configuration, Python language version, and implementation version — if "
+"one exists."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:547
+msgid "``PY3LIBRARY``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:548
+msgid "``libpython3.so``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:549
+msgid ""
+"Shared Python 3 only (major version bound only) [9]_ ``libpython`` "
+"library name — if available. If unavailable [8]_, the variable will be "
+"empty, if available, the library should be located in ``LIBDIR``."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:556
+msgid "``LIBRARY``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:557
+msgid "``libpython3.11.a``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:558
+msgid ""
+"Static ``libpython`` library name — if available. If unavailable [8]_, "
+"the variable will be empty, if available, the library should be located "
+"in ``LIBDIR``."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:565
+msgid "``Py_DEBUG``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:566 ../../peps/pep-0720.rst:576
+msgid "``0``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:567
+msgid "Whether this is a `debug build`__."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:570
+msgid "``WITH_PYMALLOC``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:571 ../../peps/pep-0720.rst:589
+#: ../../peps/pep-0720.rst:594
+msgid "``1``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:572
+msgid "Whether this build has pymalloc__ support."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:575
+msgid "``Py_TRACE_REFS``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:577
+msgid "Whether reference tracing (debug build only) is enabled."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:580
+msgid "``Py_UNICODE_SIZE``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:582
+msgid ""
+"Size of the ``Py_UNICODE`` object, in bytes. This variable is only "
+"present in CPython versions older than 3.3, and was commonly used to "
+"detect if the build uses UCS2 or UCS4 for unicode objects — before "
+":pep:`393`."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:588
+msgid "``Py_ENABLE_SHARED``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:590 ../../peps/pep-0720.rst:595
+msgid "Whether a shared ``libpython`` is available."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:593
+msgid "``PY_ENABLE_SHARED``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:598
+msgid "``CC``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:599
+msgid "``gcc``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:600 ../../peps/pep-0720.rst:605
+msgid "The C compiler used to build the Python distribution."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:603
+msgid "``CXX``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:604
+msgid "``g++``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:608
+msgid "``CFLAGS``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:609
+msgid "``-DNDEBUG -g -fwrapv ...``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:610
+msgid "The C compiler flags used to build the Python distribution."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:613
+msgid "``py_version``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:614
+msgid "``3.11.3``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:615
+msgid "Full form of the Python version."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:618
+msgid "``py_version_short``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:619
+msgid "``3.11``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:620
+msgid ""
+"Custom form of the Python version, containing only the major and minor "
+"numbers."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:624
+msgid "``py_version_nodot``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:625
+msgid "``311``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:626
+msgid ""
+"Custom form of the Python version, containing only the major and minor "
+"numbers, and no dots."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:630 ../../peps/pep-0720.rst:735
+msgid "``prefix``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:631 ../../peps/pep-0720.rst:636
+#: ../../peps/pep-0720.rst:641 ../../peps/pep-0720.rst:646
+#: ../../peps/pep-0720.rst:651 ../../peps/pep-0720.rst:656
+msgid "``/usr``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:632 ../../peps/pep-0720.rst:637
+msgid "Same as ``sys.prefix``, please refer to the entry in table above."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:635
+msgid "``base``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:640 ../../peps/pep-0720.rst:736
+msgid "``exec_prefix``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:642 ../../peps/pep-0720.rst:647
+msgid "Same as ``sys.exec_prefix``, please refer to the entry in table above."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:645
+msgid "``platbase``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:650
+msgid "``installed_base``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:652
+msgid "Same as ``sys.base_prefix``, please refer to the entry in table above."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:655
+msgid "``installed_platbase``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:657
+msgid ""
+"Same as ``sys.base_exec_prefix``, please refer to the entry in table "
+"above."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:661
+msgid "``platlibdir``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:662
+msgid "``lib``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:663
+msgid "Same as ``sys.platlibdir``, please refer to the entry in table above."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:666
+msgid "``SIZEOF_*``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:667
+msgid "``4``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:668
+msgid "Size of a certain C type (``double``, ``float``, etc.)."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:669
+msgid "Differs based on the system architecture, and build details."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:672
+msgid ""
+"Due to Python bring compiled without shared or static ``libpython`` "
+"support, respectively."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:675
+msgid ""
+"This is the ``libpython`` library that users of the `stable ABI`__ should"
+" link against, if they need to link against ``libpython``."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:684
+msgid "Relevant Information"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:686
+msgid ""
+"There are some bits of information required by build systems — eg. "
+"platform particularities — scattered across many places, and it often is "
+"difficult to identify code with assumptions based on them. In this "
+"section, we try to document the most relevant cases."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:693
+msgid "When should extensions be linked against ``libpython``?"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:697
+msgid "Short answer"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:696
+msgid ""
+"Yes, on Windows. No on POSIX platforms, except Android, Cygwin, and other"
+" Windows-based POSIX-like platforms."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:699
+msgid ""
+"When building extensions for dynamic loading, depending on the target "
+"platform, they may need to be linked against ``libpython``."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:702
+msgid ""
+"On Windows, extensions need to link against ``libpython``, because all "
+"symbols must be resolvable at link time. POSIX-like platforms based on "
+"Windows — like Cygwin, MinGW, or MSYS — will also require linking against"
+" ``libpython``."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:706
+msgid ""
+"On most POSIX platforms, it is not necessary to link against "
+"``libpython``, as the symbols will already be available in the due to the"
+" interpreter — or, when embedding, the executable/library in question — "
+"already linking to ``libpython``. Not linking an extension module against"
+" ``libpython`` will allow it to be loaded by static Python builds, so "
+"when possible, it is desirable to do so (see GH-65735__)."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:713
+msgid ""
+"This might not be the case on all POSIX platforms, so make sure you "
+"check. One example is Android, where only the main executable and "
+"``LD_PRELOAD`` entries are considered to be ``RTLD_GLOBAL`` (meaning "
+"dependencies are ``RTLD_LOCAL``) [10]_, which causes the ``libpython`` "
+"symbols be unavailable when loading the extension."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:719
+msgid "Refer to `dlopen's man page`__ for more information."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:726
+msgid ""
+"What are ``prefix``, ``exec_prefix``, ``base_prefix``, and "
+"``base_exec_prefix``?"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:728
+msgid ""
+"These are ``sys`` attributes `set in the Python initialization`__ that "
+"describe the running environment. They refer to the prefix of directories"
+" where installation/environment files are installed, according to the "
+"table below."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:733
+msgid "Target files"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:733
+msgid "Environment Scope"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:735 ../../peps/pep-0720.rst:737
+msgid "platform independent (eg. pure Python)"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:735 ../../peps/pep-0720.rst:736
+msgid "site-specific"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:736 ../../peps/pep-0720.rst:738
+msgid "platform dependent (eg. native code)"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:737
+msgid "``base_prefix``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:737 ../../peps/pep-0720.rst:738
+msgid "installation-wide"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:738
+msgid "``base_exec_prefix``"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:741
+msgid ""
+"Because the site-specific prefixes will be different inside virtual "
+"environments, checking ``sys.prexix != sys.base_prefix`` is commonly used"
+" to check if we are in a virtual environment."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:748
+msgid "Case studies"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:752
+msgid "crossenv"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:754
+msgid "Virtual Environments for Cross-Compiling Python Extension Modules."
+msgstr ""
+
+#: ../../peps/pep-0720.rst
+msgid "URL"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:755
+msgid "https://github.com/benfogle/crossenv"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:757
+msgid ""
+"``crossenv`` is a tool to create a virtual environment with a "
+"monkeypatched Python installation that tries to emulate the target "
+"machine in certain scenarios. More about this approach can be found in "
+"the `Faking the target environment`_ section."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:764
+msgid "conda-forge"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:766
+msgid ""
+"A community-led collection of recipes, build infrastructure and "
+"distributions for the conda package manager."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:767
+msgid "https://conda-forge.org/"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:769
+msgid "XXX: Jaime will write a quick summary once the PEP draft is public."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:771
+msgid "XXX Uses a modified crossenv."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:776
+msgid "Yocto Project"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:778
+msgid ""
+"The Yocto Project is an open source collaboration project that helps "
+"developers create custom Linux-based systems regardless of the hardware "
+"architecture."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:779
+msgid "https://www.yoctoproject.org/"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:781
+msgid "XXX: Sent email to the mailing list."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:783 ../../peps/pep-0720.rst:792
+#: ../../peps/pep-0720.rst:824 ../../peps/pep-0720.rst:873
+#: ../../peps/pep-0720.rst:882 ../../peps/pep-0720.rst:894
+#: ../../peps/pep-0720.rst:903 ../../peps/pep-0720.rst:912
+#: ../../peps/pep-0720.rst:921 ../../peps/pep-0720.rst:930
+msgid "TODO"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:787
+msgid "Buildroot"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:789
+msgid ""
+"Buildroot is a simple, efficient and easy-to-use tool to generate "
+"embedded Linux systems through cross-compilation."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:790
+msgid "https://buildroot.org/"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:796
+msgid "Pyodide"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:798
+msgid ""
+"Pyodide is a Python distribution for the browser and Node.js based on "
+"WebAssembly."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:799
+msgid "https://pyodide.org/en/stable/"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:801
+msgid "XXX: Hood should review/expand this section."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:803
+msgid ""
+"``Pyodide`` is a provides a Python distribution compiled to WebAssembly__"
+" using the Emscripten__ toolchain."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:806
+msgid ""
+"It patches several aspects of the CPython installation and some external "
+"components. A custom package manager — micropip__ — supporting both Pure "
+"and wasm32/Emscripten wheels, is also provided as a part of the "
+"distribution. On top of this, a repo with a `selected set of 3rd party "
+"packages`__ is also provided and enabled by default."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:819
+msgid "Beeware"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:821
+msgid ""
+"BeeWare allows you to write your app in Python and release it on multiple"
+" platforms."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:822
+msgid "https://beeware.org/"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:828
+msgid "python-for-android"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:830
+msgid "Turn your Python application into an Android APK."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:831
+msgid "https://github.com/kivy/python-for-android"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:833
+msgid "resource https://github.com/Android-for-Python/Android-for-Python-Users"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:835
+msgid ""
+"``python-for-android`` is a tool to package Python apps on Android. It "
+"creates a Python distribution with your app and its dependencies."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:838
+msgid ""
+"Pure-Python dependencies are handled automatically and in a generic way, "
+"but native dependencies need recipes__. A set of recipes for `popular "
+"dependencies`__ is provided, but users need to provide their own recipes "
+"for any other native dependencies."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:848
+msgid "kivy-ios"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:850
+msgid "Toolchain for compiling Python / Kivy / other libraries for iOS."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:851
+msgid "https://github.com/kivy/kivy-ios"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:853
+msgid ""
+"``kivy-ios`` is a tool to package Python apps on iOS. It provides a "
+"toolchain to build a Python distribution with your app and its "
+"dependencies, as well as a CLI to create and manage Xcode projects that "
+"integrate with the toolchain."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:857
+msgid ""
+"It uses the same approach as `python-for-android`_ (also maintained by "
+"the `Kivy project`__) for app dependencies — pure-Python dependencies are"
+" handled automatically, but native dependencies need recipes__, and the "
+"project provides recipes for `popular dependencies`__."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:868
+msgid "AidLearning"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:870
+msgid ""
+"AI, Android, Linux, ARM: AI application development platform based on "
+"Android+Linux integrated ecology."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:871
+msgid "https://github.com/aidlearning/AidLearning-FrameWork"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:877
+msgid "QPython"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:879
+msgid "QPython is the Python engine for android."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:880
+msgid "https://github.com/qpython-android/qpython"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:886
+msgid "pyqtdeploy"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:888
+msgid "pyqtdeploy is a tool for deploying PyQt applications."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:889
+msgid "https://www.riverbankcomputing.com/software/pyqtdeploy/"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:891
+msgid ""
+"contact "
+"https://www.riverbankcomputing.com/pipermail/pyqt/2023-May/thread.html "
+"contacted Phil, the maintainer"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:898
+msgid "Chaquopy"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:900
+msgid ""
+"Chaquopy provides everything you need to include Python components in an "
+"Android app."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:901
+msgid "https://chaquo.com/chaquopy/"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:907
+msgid "EDK II"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:909
+msgid ""
+"EDK II is a modern, feature-rich, cross-platform firmware development "
+"environment for the UEFI and PI specifications."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:910
+msgid "https://github.com/tianocore/edk2-libc/tree/master/AppPkg/Applications/Python"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:916
+msgid "ActivePython"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:918
+msgid ""
+"Commercial-grade, quality-assured Python distribution focusing on easy "
+"installation and cross-platform compatibility on Windows, Linux, Mac OS "
+"X, Solaris, HP-UX and AIX."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:919
+msgid "https://www.activestate.com/products/python/"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:925
+msgid "Termux"
+msgstr ""
+
+#: ../../peps/pep-0720.rst:927
+msgid ""
+"Termux is an Android terminal emulator and Linux environment app that "
+"works directly with no rooting or setup required."
+msgstr ""
+
+#: ../../peps/pep-0720.rst:928
+msgid "https://termux.dev/en/"
+msgstr ""
+

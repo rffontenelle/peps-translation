@@ -1,0 +1,930 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the PEPs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PEPs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-20 10:43-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pt_BR\n"
+"Language-Team: pt_BR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.13.1\n"
+
+#: ../../peps/pep-0727.rst
+msgid "Author"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:3
+msgid "Sebastián Ramírez <tiangolo@gmail.com>"
+msgstr ""
+
+#: ../../peps/pep-0727.rst
+msgid "Sponsor"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:4
+msgid "Jelle Zijlstra <jelle.zijlstra@gmail.com>"
+msgstr ""
+
+#: ../../peps/pep-0727.rst
+msgid "Discussions-To"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:5
+msgid "https://discuss.python.org/t/32566"
+msgstr ""
+
+#: ../../peps/pep-0727.rst
+msgid "Status"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:6
+msgid "Draft"
+msgstr ""
+
+#: ../../peps/pep-0727.rst
+msgid "Type"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:7
+msgid "Standards Track"
+msgstr ""
+
+#: ../../peps/pep-0727.rst
+msgid "Topic"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:8
+msgid "Typing"
+msgstr ""
+
+#: ../../peps/pep-0727.rst
+msgid "Created"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:10
+msgid "28-Aug-2023"
+msgstr ""
+
+#: ../../peps/pep-0727.rst
+msgid "Python-Version"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:11
+msgid "3.13"
+msgstr ""
+
+#: ../../peps/pep-0727.rst
+msgid "Post-History"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:12
+msgid "`30-Aug-2023 <https://discuss.python.org/t/32566>`__"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:16
+msgid "Abstract"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:18
+msgid ""
+"This PEP proposes a standardized way to provide documentation strings for"
+" Python symbols defined with :py:class:`~typing.Annotated` using a new "
+"class ``typing.Doc``."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:24
+msgid "Motivation"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:26
+msgid ""
+"There's already a well-defined way to provide documentation for classes, "
+"functions, class methods, and modules: using docstrings."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:29
+msgid ""
+"Currently there is no formalized standard to provide documentation "
+"strings for other types of symbols: parameters, return values, class-"
+"scoped variables (class variables and instance variables), local "
+"variables, and type aliases."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:33
+msgid ""
+"Nevertheless, to allow documenting most of these additional symbols, "
+"several conventions have been created as microsyntaxes inside of "
+"docstrings, and are currently commonly used: Sphinx, numpydoc, Google, "
+"Keras, etc."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:37
+msgid ""
+"There are two scenarios in which these conventions would be supported by "
+"tools: for authors, while **editing** the contents of the documentation "
+"strings and for users, while **rendering** that content in some way (in "
+"documentation sites, tooltips in editors, etc)."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:42
+msgid ""
+"Because each of these conventions uses a microsyntax inside a string, "
+"when **editing** those docstrings, editors can't easily provide support "
+"for autocompletion, inline errors for broken syntax, etc. Any type of "
+"**editing** support for these conventions would be on top of the support "
+"for editing standard Python syntax."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:47
+msgid ""
+"When documenting parameters with current conventions, because the "
+"docstring is in a different place in the code than the actual parameters "
+"and it requires duplication of information (the parameter name) the "
+"information about a parameter is easily in a place in the code quite far "
+"away from the declaration of the actual parameter and it is disconnected "
+"from it. This means it's easy to refactor a function, remove a parameter,"
+" and forget to remove its docs. The same happens when adding a new "
+"parameter: it's easy to forget to add the docstring for it."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:56
+msgid ""
+"And because of this same duplication of information (the parameter name) "
+"editors and other tools need complex custom logic to check or ensure the "
+"consistency of the parameters in the signature and in their docstring, or"
+" they simply don't fully support that."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:61
+msgid ""
+"As these existing conventions are different types of microsyntaxes inside"
+" of strings, robustly parsing them for **rendering** requires complex "
+"logic that needs to be implemented by the tools supporting them. "
+"Additionally, libraries and tools don't have a straightforward way to "
+"obtain the documentation for each individual parameter or variable at "
+"runtime, without depending on a specific docstring convention parser. "
+"Accessing the parameter documentation strings at runtime would be useful,"
+" for example, for testing the contents of each parameter's documentation,"
+" to ensure consistency across several similar functions, or to extract "
+"and expose that same parameter documentation in some other way (e.g. an "
+"API with FastAPI, a CLI with Typer, etc)."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:72
+msgid ""
+"Some of these previous formats tried to account for the lack of type "
+"annotations in older Python versions by including typing information in "
+"the docstrings (e.g. `Sphinx <https://www.sphinx-"
+"doc.org/en/master/usage/restructuredtext/domains.html#info-field-"
+"lists>`__, `numpydoc "
+"<https://numpydoc.readthedocs.io/en/latest/format.html#parameters>`__) "
+"but now that information doesn't need to be in docstrings as there is now"
+" an official :pep:`syntax for type annotations <484>`."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:81
+msgid "Rationale"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:83
+msgid ""
+"This proposal intends to address these shortcomings by extending and "
+"complementing the information in docstrings, keeping backwards "
+"compatibility with existing docstrings (it doesn't deprecate them), and "
+"doing it in a way that leverages the Python language and structure, via "
+"type annotations with :py:class:`~typing.Annotated`, and a new class "
+"``Doc`` in ``typing``."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:89
+msgid ""
+"The reason why this would belong in the standard Python library instead "
+"of an external package is because although the implementation would be "
+"quite trivial, the actual power and benefit from it would come from being"
+" a standard, to facilitate its usage from library authors and to provide "
+"a default way to document Python symbols using "
+":py:class:`~typing.Annotated`. Some tool providers (at least VS Code and "
+"PyCharm) have shown they would consider implementing support for this "
+"only if it was a standard."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:97
+msgid ""
+"This doesn't deprecate current usage of docstrings, docstrings should be "
+"considered the preferred documentation method when available (not "
+"available in type aliases, parameters, etc). And docstrings would be "
+"complemented by this proposal for documentation specific to the symbols "
+"that can be declared with :py:class:`~typing.Annotated` (currently only "
+"covered by the several available microsyntax conventions)."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:104
+msgid ""
+"This should be relatively transparent to common developers (library "
+"users) unless they manually open the source files from libraries adopting"
+" it."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:107
+msgid ""
+"It should be considered opt-in for library authors who would like to "
+"adopt it and they should be free to decide to use it or not."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:110
+msgid ""
+"It would be only useful for libraries that are willing to use optional "
+"type hints."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:114
+msgid "Summary"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:116
+msgid ""
+"Here's a short summary of the features of this proposal in contrast to "
+"current conventions:"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:119
+msgid ""
+"**Editing** would be already fully supported by default by any editor "
+"(current or future) supporting Python syntax, including syntax errors, "
+"syntax highlighting, etc."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:123
+msgid ""
+"**Rendering** would be relatively straightforward to implement by static "
+"tools (tools that don't need runtime execution), as the information can "
+"be extracted from the AST they normally already create."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:127
+msgid ""
+"Deduplication of information: the name of a parameter would be defined in"
+" a single place, not duplicated inside of a docstring."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:130
+msgid ""
+"Elimination of the possibility of having inconsistencies when removing a "
+"parameter or class variable and forgetting to remove its documentation."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:133
+msgid ""
+"Minimization of the probability of adding a new parameter or class "
+"variable and forgetting to add its documentation."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:136
+msgid ""
+"Elimination of the possibility of having inconsistencies between the name"
+" of a parameter in the signature and the name in the docstring when it is"
+" renamed."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:139
+msgid ""
+"Reuse of documentation for symbols used in multiple places via type "
+"aliases."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:141
+msgid ""
+"Access to the documentation string for each symbol at runtime, including "
+"existing (older) Python versions."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:144
+msgid "No microsyntax to learn for newcomers, it's just Python syntax."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:146
+msgid ""
+"Parameter documentation inheritance for functions captured by "
+":py:class:`~typing.ParamSpec`."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:151
+msgid "Specification"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:153
+msgid ""
+"The main proposal is to introduce a new class, ``typing.Doc``. This class"
+" should only be used within :py:class:`~typing.Annotated` annotations. It"
+" takes a single positional-only string argument. It should be used to "
+"document the intended meaning and use of the symbol declared using "
+":py:class:`~typing.Annotated`."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:159 ../../peps/pep-0727.rst:178
+#: ../../peps/pep-0727.rst:197 ../../peps/pep-0727.rst:300
+#: ../../peps/pep-0727.rst:366 ../../peps/pep-0727.rst:401
+#: ../../peps/pep-0727.rst:421 ../../peps/pep-0727.rst:448
+msgid "For example:"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:171
+msgid ""
+":py:class:`~typing.Annotated` is normally used as a type annotation, in "
+"those cases, any ``typing.Doc`` inside of it would document the symbol "
+"being annotated."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:174
+msgid ""
+"When :py:class:`~typing.Annotated` is used to declare a type alias and "
+"that type alias is used in an annotation, ``typing.Doc`` would document "
+"the symbol being annotated instead of exclusively the type alias."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:193
+msgid ""
+"When a type alias is put inside of :py:class:`~typing.Annotated` and it "
+"has a ``typing.Doc``, the last one used (the top-most) takes precedence, "
+"this allows overriding the documentation."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:212
+msgid ""
+"In this case, for the ``name`` parameter in ``delete_user()``, the "
+"documentation string would be ``\"The user to delete\"``."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:215
+msgid ""
+"For tools extracting the information at runtime, they would normally use "
+":py:func:`~typing.get_type_hints` with the parameter "
+"``include_extras=True``, and as :py:class:`~typing.Annotated` is "
+"normalized (even with type aliases), this would mean they should use the "
+"last ``typing.Doc`` available, as that is the last one used."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:221
+msgid ""
+"At runtime, ``typing.Doc`` instances have an attribute ``documentation`` "
+"with the string passed to it."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:224
+msgid ""
+"When a type alias is used on its own, without annotating any additional "
+"symbol, ``typing.Doc`` documents the type alias itself. This would be "
+"useful if the type alias is included on its own in documentation systems "
+"or if it's used directly in some way, to show tooltips in editors."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:229
+msgid ""
+"When a function's signature is captured by a "
+":py:class:`~typing.ParamSpec`, any documentation strings associated with "
+"the parameters should be retained."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:232
+msgid ""
+"Any tool processing ``typing.Doc`` objects should interpret the string as"
+" a docstring, and therefore should normalize whitespace as if "
+"``inspect.cleandoc()`` were used."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:236
+msgid ""
+"The string passed to ``typing.Doc`` should be of the form that would be a"
+" valid docstring. This means that `f-strings`__ and string operations "
+"should not be used. As this cannot be enforced by the Python runtime, "
+"tools should not rely on this behavior."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:242
+msgid ""
+"When tools providing **rendering** show the raw signature, they could "
+"allow configuring if the whole raw :py:class:`~typing.Annotated` code "
+"should be displayed, but they should default to not include "
+":py:class:`~typing.Annotated` and its internal code metadata, only the "
+"type of the symbols annotated. When those tools support ``typing.Doc`` "
+"and rendering in other ways than just a raw signature, they should show "
+"the string value passed to ``typing.Doc`` in a convenient way that shows "
+"the relation between the documented symbol and the documentation string."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:250
+msgid ""
+"Tools providing **rendering** could allow ways to configure where to show"
+" the parameter documentation and the prose docstring in different ways. "
+"Otherwise, they could simply show the prose docstring first and then the "
+"parameter documentation second."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:258
+msgid "Examples"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:260
+msgid "Class attributes may be documented:"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:272
+msgid "As can function or method parameters and return values:"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:291
+msgid "Backwards Compatibility"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:293
+msgid ""
+"This proposal is fully backwards compatible with existing code and it "
+"doesn't deprecate existing usage of docstring conventions."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:296
+msgid ""
+"For developers that wish to adopt it before it is available in the "
+"standard library, or to support older versions of Python, they can use "
+"``typing_extensions`` and import and use ``Doc`` from there."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:315
+msgid "Security Implications"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:317
+msgid "There are no known security implications."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:321
+msgid "How to Teach This"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:323
+msgid ""
+"The main mechanism of documentation should continue to be standard "
+"docstrings for prose information, this applies to modules, classes, "
+"functions and methods."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:326
+msgid ""
+"For authors that want to adopt this proposal to add more granularity, "
+"they can use ``typing.Doc`` inside of :py:class:`~typing.Annotated` "
+"annotations for the symbols that support it."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:330
+msgid ""
+"Library authors that wish to adopt this proposal while keeping backwards "
+"compatibility with older versions of Python should use "
+"``typing_extensions.Doc`` instead of ``typing.Doc``."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:336
+msgid "Reference Implementation"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:338
+msgid "``typing.Doc`` is implemented equivalently to:"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:347
+msgid "It has been implemented in the `typing_extensions`__ package."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:353
+msgid "Survey of Other languages"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:355
+msgid "Here's a short survey of how other languages document their symbols."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:359
+msgid "Java"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:361
+msgid ""
+"Java functions and their parameters are documented with `Javadoc "
+"<https://www.oracle.com/technical-resources/articles/java/javadoc-"
+"tool.html>`__, a special format for comments put on top of the function "
+"definition. This would be similar to Python current docstring microsyntax"
+" conventions (but only one)."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:395
+msgid "JavaScript"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:397
+msgid "Both JavaScript and TypeScript use a similar system to Javadoc."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:399
+msgid "JavaScript uses `JSDoc <https://jsdoc.app/>`__."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:415
+msgid "TypeScript"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:417
+msgid ""
+"TypeScript has `its own JSDoc reference "
+"<https://www.typescriptlang.org/docs/handbook/jsdoc-supported-"
+"types.html>`__ with some variations."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:439
+msgid "Rust"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:441
+msgid ""
+"Rust uses another similar variation of a microsyntax in `Doc comments "
+"<https://doc.rust-lang.org/rust-by-example/meta/doc.html#doc-"
+"comments>`__."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:444
+msgid ""
+"But it doesn't have a particular well defined microsyntax structure to "
+"denote what documentation refers to what symbol/parameter other than what"
+" can be inferred from the pure Markdown."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:497
+msgid "Go Lang"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:499
+msgid "Go also uses a form of `Doc Comments <https://go.dev/doc/comment>`__."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:501
+msgid ""
+"It doesn't have a well defined microsyntax structure to denote what "
+"documentation refers to which symbol/parameter, but parameters can be "
+"referenced by name without any special syntax or marker, this also means "
+"that ordinary words that could appear in the documentation text should be"
+" avoided as parameter names."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:518
+msgid "Rejected Ideas"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:522
+msgid "Standardize Current Docstrings"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:524
+msgid ""
+"A possible alternative would be to support and try to push as a standard "
+"one of the existing docstring formats. But that would only solve the "
+"standardization."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:527
+msgid ""
+"It wouldn't solve any of the other problems derived from using a "
+"microsyntax inside of a docstring instead of pure Python syntax, the same"
+" as described above in the **Rationale - Summary**."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:533
+msgid "Extra Metadata and Decorator"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:535
+msgid ""
+"Some ideas before this proposal included having a function ``doc()`` "
+"instead of the single class ``Doc`` with several parameters to indicate "
+"whether an object is discouraged from use, what exceptions it may raise, "
+"etc. To allow also deprecating functions and classes, it was also "
+"expected that ``doc()`` could be used as a decorator. But this "
+"functionality is covered by ``typing.deprecated()`` in :pep:`702`, so it "
+"was dropped from this proposal."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:542
+msgid ""
+"A way to declare additional information could still be useful in the "
+"future, but taking early feedback on this idea, all that was postponed to"
+" future proposals."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:546
+msgid ""
+"This also shifted the focus from an all-encompassing function ``doc()`` "
+"with multiple parameters to a single ``Doc`` class to be used in "
+":py:class:`~typing.Annotated` in a way that could be composed with other "
+"future proposals."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:551
+msgid ""
+"This design change also allows better interoperability with other "
+"proposals like ``typing.deprecated()``, as in the future it could be "
+"considered to allow having ``typing.deprecated()`` also in "
+":py:class:`~typing.Annotated` to deprecate individual parameters, "
+"coexisting with ``Doc``."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:558
+msgid "String Under Definition"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:560
+msgid ""
+"A proposed alternative in the discussion is declaring a string under the "
+"definition of a symbol and providing runtime access to those values:"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:573
+msgid ""
+"This was already proposed and rejected in :pep:`224`, mainly due to the "
+"ambiguity of how is the string connected with the symbol it's "
+"documenting."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:576
+msgid ""
+"Additionally, there would be no way to provide runtime access to this "
+"value in previous versions of Python."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:581
+msgid "Plain String in Annotated"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:583
+msgid ""
+"In the discussion, it was also suggested to use a plain string inside of "
+":py:class:`~typing.Annotated`:"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:597
+msgid ""
+"But this would create a predefined meaning for any plain string inside of"
+" :py:class:`~typing.Annotated`, and any tool that was using plain strings"
+" in them for any other purpose, which is currently allowed, would now be "
+"invalid."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:601
+msgid ""
+"Having an explicit ``typing.Doc`` makes it compatible with current valid "
+"uses of :py:class:`~typing.Annotated`."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:606
+msgid "Another Annotated-Like Type"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:608
+msgid ""
+"In the discussion it was suggested to define a new type similar to "
+":py:class:`~typing.Annotated`, it would take the type and a parameter "
+"with the documentation string:"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:623
+msgid ""
+"This idea was rejected as it would only support that use case and would "
+"make it more difficult to combine it with :py:class:`~typing.Annotated` "
+"for other purposes ( e.g. with FastAPI metadata, Pydantic fields, etc.) "
+"or adding additional metadata apart from the documentation string (e.g. "
+"deprecation)."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:629
+msgid "Open Issues"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:633
+msgid "Verbosity"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:635
+msgid "The main argument against this would be the increased verbosity."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:637
+msgid ""
+"If the signature was not viewed independently of the documentation and "
+"the body of the function with the docstring was also measured, the total "
+"verbosity would be somewhat similar, as what this proposal does is to "
+"move some of the contents from the docstring in the body to the "
+"signature."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:642
+msgid ""
+"Considering the signature alone, without the body, they could be much "
+"longer than they currently are, they could end up being more than one "
+"page long. In exchange, the equivalent docstrings that currently are more"
+" than one page long would be much shorter."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:647
+msgid ""
+"When comparing the total verbosity, including the signature and the "
+"docstring, the main additional verbosity added by this would be from "
+"using :py:class:`~typing.Annotated` and ``typing.Doc``. If "
+":py:class:`~typing.Annotated` had more usage, it could make sense to have"
+" an improved shorter syntax for it and for the type of metadata it would "
+"carry. But that would only make sense once :py:class:`~typing.Annotated` "
+"is more widely used."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:654
+msgid ""
+"On the other hand, this verbosity would not affect end users as they "
+"would not see the internal code using ``typing.Doc``. The majority of "
+"users would interact with libraries through editors without looking at "
+"the internals, and if anything, they would have tooltips from editors "
+"supporting this proposal."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:659
+msgid ""
+"The cost of dealing with the additional verbosity would mainly be carried"
+" by those library maintainers that use this feature."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:662
+msgid ""
+"This argument could be analogous to the argument against type annotations"
+" in general, as they do indeed increase verbosity, in exchange for their "
+"features. But again, as with type annotations, this would be optional and"
+" only to be used by those that are willing to take the extra verbosity in"
+" exchange for the benefits."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:668
+msgid ""
+"Additionally, if type aliases were used, documentation could be put "
+"outside of the signature and the docstring, reducing the total verbosity "
+"of the signature and the function body."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:672
+msgid ""
+"Of course, more advanced users might want to look at the source code of "
+"the libraries and if the authors of those libraries adopted this, those "
+"advanced users would end up having to look at that code with additional "
+"signature verbosity instead of docstring verbosity."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:677
+msgid ""
+"Any authors that decide not to adopt it should be free to continue using "
+"docstrings with any particular format they decide, no docstrings at all, "
+"etc."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:680
+msgid ""
+"Still, there's a high chance that library authors could receive pressure "
+"to adopt this if it became the blessed solution."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:685
+msgid "Documentation is not Typing"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:687
+msgid ""
+"It could also be argued that documentation is not really part of typing, "
+"or that it should live in a different module. Or that this information "
+"should not be part of the signature but live in another place (like the "
+"docstring)."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:691
+msgid ""
+"Nevertheless, type annotations in Python could already be considered, by "
+"default, additional metadata: they carry additional information about "
+"variables, parameters, return types, and by default they don't have any "
+"runtime behavior. And this proposal would add one more type of metadata "
+"to them."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:696
+msgid ""
+"It could be argued that this proposal extends the type of information "
+"that type annotations carry, the same way as :pep:`702` extends them to "
+"include deprecation information."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:700
+msgid ""
+":py:class:`~typing.Annotated` was added to the standard library precisely"
+" to support adding additional metadata to the annotations, and as the new"
+" proposed ``Doc`` class is tightly coupled to "
+":py:class:`~typing.Annotated`, it makes sense for it to live in the same "
+"module. If :py:class:`~typing.Annotated` was moved to another module, it "
+"would make sense to move ``Doc`` with it."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:708
+msgid "Multiple Standards"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:710
+msgid ""
+"Another argument against this would be that it would create another "
+"standard, and that there are already several conventions for docstrings. "
+"It could seem better to formalize one of the currently existing "
+"standards."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:714
+msgid ""
+"Nevertheless, as stated above, none of those conventions cover the "
+"general drawbacks of a doctsring-based approach that this proposal solves"
+" naturally."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:717
+msgid ""
+"To see a list of the drawbacks of a docstring-based approach, see the "
+"section above in the **Rationale - Summary**."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:720
+msgid ""
+"In the same way, it can be seen that, in many cases, a new standard that "
+"takes advantage of new features and solves several problems from previous"
+" methods can be worth having. As is the case with the new "
+"``pyproject.toml``, ``dataclass_transform``, the new typing pipe/union "
+"(``|``) operator, and other cases."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:727
+msgid "Adoption"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:729
+msgid ""
+"As this is a new standard proposal, it would only make sense if it had "
+"interest from the community."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:732
+msgid ""
+"Fortunately there's already interest from several mainstream libraries "
+"from several developers and teams, including FastAPI, Typer, SQLModel, "
+"Asyncer (from the author of this proposal), Pydantic, Strawberry "
+"(GraphQL), and others."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:737
+msgid ""
+"There's also interest and support from documentation tools, like "
+"`mkdocstrings <https://github.com/mkdocstrings/mkdocstrings>`__, which "
+"added support even for an earlier version of this proposal."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:741
+msgid ""
+"All the CPython core developers contacted for early feedback (at least 4)"
+" have shown interest and support for this proposal."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:744
+msgid ""
+"Editor developers (VS Code and PyCharm) have shown some interest, while "
+"showing concerns about the signature verbosity of the proposal, although "
+"not about the implementation (which is what would affect them the most). "
+"And they have shown they would consider adding support for this if it "
+"were to become an official standard. In that case, they would only need "
+"to add support for rendering, as support for editing, which is normally "
+"non-existing for other standards, is already there, as they already "
+"support editing standard Python syntax."
+msgstr ""
+
+#: ../../peps/pep-0727.rst:755
+msgid "Copyright"
+msgstr ""
+
+#: ../../peps/pep-0727.rst:757
+msgid ""
+"This document is placed in the public domain or under the "
+"CC0-1.0-Universal license, whichever is more permissive."
+msgstr ""
+

@@ -6,150 +6,151 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PEPs\n"
+"Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 20:07+0000\n"
+"POT-Creation-Date: 2023-11-20 10:43-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.13.1\n"
 
-#: ../pep-0432.txt
+#: ../../peps/pep-0432.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../pep-0432.txt:5
+#: ../../peps/pep-0432.rst:5
 msgid ""
-"Nick Coghlan <ncoghlan@gmail.com>, Victor Stinner <vstinner@python.org>, "
-"Eric Snow <ericsnowcurrently@gmail.com>"
+"Alyssa Coghlan <ncoghlan@gmail.com>, Victor Stinner "
+"<vstinner@python.org>, Eric Snow <ericsnowcurrently@gmail.com>"
 msgstr ""
 
-#: ../pep-0432.txt
+#: ../../peps/pep-0432.rst
 msgid "Discussions-To"
 msgstr ""
 
-#: ../pep-0432.txt:8
+#: ../../peps/pep-0432.rst:8
 msgid "capi-sig@python.org"
 msgstr ""
 
-#: ../pep-0432.txt
+#: ../../peps/pep-0432.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../pep-0432.txt:9
+#: ../../peps/pep-0432.rst:9
 msgid "Withdrawn"
 msgstr ""
 
-#: ../pep-0432.txt
+#: ../../peps/pep-0432.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../pep-0432.txt:10
+#: ../../peps/pep-0432.rst:10
 msgid "Standards Track"
 msgstr ""
 
-#: ../pep-0432.txt
+#: ../../peps/pep-0432.rst
 msgid "Requires"
 msgstr ""
 
-#: ../pep-0432.txt:12
+#: ../../peps/pep-0432.rst:12
 msgid "587"
 msgstr ""
 
-#: ../pep-0432.txt
+#: ../../peps/pep-0432.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../pep-0432.txt:13
+#: ../../peps/pep-0432.rst:13
 msgid "28-Dec-2012"
 msgstr ""
 
-#: ../pep-0432.txt
+#: ../../peps/pep-0432.rst
 msgid "Post-History"
 msgstr "Pós-história"
 
-#: ../pep-0432.txt:14
+#: ../../peps/pep-0432.rst:14
 msgid "28-Dec-2012, 02-Jan-2013, 30-Mar-2019, 28-Jun-2020"
 msgstr ""
 
-#: ../pep-0432.txt:19
+#: ../../peps/pep-0432.rst:19
 msgid "PEP Withdrawal"
 msgstr ""
 
-#: ../pep-0432.txt:21
+#: ../../peps/pep-0432.rst:21
 msgid ""
 "From late 2012 to mid 2020, this PEP provided general background and "
-"specific concrete proposals for making the CPython startup sequence easier "
-"to maintain and the CPython runtime easier to embed as part of a larger "
-"application."
+"specific concrete proposals for making the CPython startup sequence "
+"easier to maintain and the CPython runtime easier to embed as part of a "
+"larger application."
 msgstr ""
 
-#: ../pep-0432.txt:25
+#: ../../peps/pep-0432.rst:25
 msgid ""
 "For most of that time, the changes were maintained either in a separate "
 "feature branch, or else as underscore-prefixed private APIs in the main "
 "CPython repo."
 msgstr ""
 
-#: ../pep-0432.txt:28
+#: ../../peps/pep-0432.rst:28
 msgid ""
 "In 2019, :pep:`587` migrated a subset of those API changes to the public "
-"CPython API for Python 3.8+ (specifically, the PEP updated the interpreter "
-"runtime to offer an explicitly multi-stage struct-based configuration "
-"interface)."
+"CPython API for Python 3.8+ (specifically, the PEP updated the "
+"interpreter runtime to offer an explicitly multi-stage struct-based "
+"configuration interface)."
 msgstr ""
 
-#: ../pep-0432.txt:32
+#: ../../peps/pep-0432.rst:32
 msgid ""
 "In June 2020, in response to a query from the Steering Council, the PEP "
-"authors decided that it made sense to withdraw the original PEP, as enough "
-"has changed since :pep:`432` was first written that we think any further "
-"changes to the startup sequence and embedding API would be best formulated "
-"as a new PEP (or PEPs) that take into account not only the not-yet-"
-"implemented ideas from :pep:`432` that weren't considered sufficiently well "
-"validated to make their way into :pep:`587`, but also any feedback on the "
-"public :pep:`587` API, and any other lessons that have been learned while "
-"adjusting the CPython implementation to be more embedding and subinterpreter "
-"friendly."
+"authors decided that it made sense to withdraw the original PEP, as "
+"enough has changed since :pep:`432` was first written that we think any "
+"further changes to the startup sequence and embedding API would be best "
+"formulated as a new PEP (or PEPs) that take into account not only the "
+"not-yet-implemented ideas from :pep:`432` that weren't considered "
+"sufficiently well validated to make their way into :pep:`587`, but also "
+"any feedback on the public :pep:`587` API, and any other lessons that "
+"have been learned while adjusting the CPython implementation to be more "
+"embedding and subinterpreter friendly."
 msgstr ""
 
-#: ../pep-0432.txt:42
+#: ../../peps/pep-0432.rst:42
 msgid ""
 "In particular, PEPs proposing the following changes, and any further "
-"infrastructure changes needed to enable them, would likely still be worth "
-"exploring:"
+"infrastructure changes needed to enable them, would likely still be worth"
+" exploring:"
 msgstr ""
 
-#: ../pep-0432.txt:46
+#: ../../peps/pep-0432.rst:46
 msgid ""
-"shipping an alternate Python executable that ignores all user level settings "
-"and runs in isolated mode by default, and would hence be more suitable for "
-"execution of system level Python applications than the default interpreter"
+"shipping an alternate Python executable that ignores all user level "
+"settings and runs in isolated mode by default, and would hence be more "
+"suitable for execution of system level Python applications than the "
+"default interpreter"
 msgstr ""
 
-#: ../pep-0432.txt:50
+#: ../../peps/pep-0432.rst:50
 msgid ""
 "enhancing the zipapp module to support the creation of single-file "
-"executables from pure Python scripts (and potentially even Python extension "
-"modules, given the introduction of multi-phase extension module "
-"initialisation)"
+"executables from pure Python scripts (and potentially even Python "
+"extension modules, given the introduction of multi-phase extension module"
+" initialisation)"
 msgstr ""
 
-#: ../pep-0432.txt:53
+#: ../../peps/pep-0432.rst:53
 msgid ""
 "migrating the complex sys.path initialisation logic from C to Python in "
-"order to improve test suite coverage and the general maintainability of that "
-"code"
+"order to improve test suite coverage and the general maintainability of "
+"that code"
 msgstr ""
 
-#: ../pep-0432.txt:58
+#: ../../peps/pep-0432.rst:58
 msgid "Abstract"
 msgstr ""
 
-#: ../pep-0432.txt:60
+#: ../../peps/pep-0432.rst:60
 msgid ""
 "This PEP proposes a mechanism for restructuring the startup sequence for "
 "CPython, making it easier to modify the initialization behaviour of the "
@@ -158,670 +159,680 @@ msgid ""
 "embedding it as a Python execution engine inside a larger application."
 msgstr ""
 
-#: ../pep-0432.txt:66
+#: ../../peps/pep-0432.rst:66
 msgid ""
-"When implementation of this proposal is completed, interpreter startup will "
-"consist of three clearly distinct and independently configurable phases:"
+"When implementation of this proposal is completed, interpreter startup "
+"will consist of three clearly distinct and independently configurable "
+"phases:"
 msgstr ""
 
-#: ../pep-0432.txt:69
+#: ../../peps/pep-0432.rst:69
 msgid "Python core runtime preinitialization"
 msgstr ""
 
-#: ../pep-0432.txt:71
+#: ../../peps/pep-0432.rst:71
 msgid "setting up memory management"
 msgstr ""
 
-#: ../pep-0432.txt:72
+#: ../../peps/pep-0432.rst:72
 msgid ""
 "determining the encodings used for system interfaces (including settings "
 "passed in for later configuration phase)"
 msgstr ""
 
-#: ../pep-0432.txt:75
+#: ../../peps/pep-0432.rst:75
 msgid "Python core runtime initialization"
 msgstr ""
 
-#: ../pep-0432.txt:77
+#: ../../peps/pep-0432.rst:77
 msgid "ensuring C API is ready for use"
 msgstr ""
 
-#: ../pep-0432.txt:78
+#: ../../peps/pep-0432.rst:78
 msgid "ensuring builtin and frozen modules are accessible"
 msgstr ""
 
-#: ../pep-0432.txt:80
+#: ../../peps/pep-0432.rst:80
 msgid "Main interpreter configuration"
 msgstr ""
 
-#: ../pep-0432.txt:82
+#: ../../peps/pep-0432.rst:82
 msgid "ensuring external modules are accessible"
 msgstr ""
 
-#: ../pep-0432.txt:83
+#: ../../peps/pep-0432.rst:83
 msgid "(Note: the name of this phase is quite likely to change)"
 msgstr ""
 
-#: ../pep-0432.txt:85
+#: ../../peps/pep-0432.rst:85
 msgid ""
 "Changes are also proposed that impact main module execution and "
 "subinterpreter initialization."
 msgstr ""
 
-#: ../pep-0432.txt:88
+#: ../../peps/pep-0432.rst:88
 msgid ""
 "Note: TBC = To Be Confirmed, TBD = To Be Determined. The appropriate "
 "resolution for most of these should become clearer as the reference "
 "implementation is developed."
 msgstr ""
 
-#: ../pep-0432.txt:94
+#: ../../peps/pep-0432.rst:94
 msgid "Proposal"
 msgstr ""
 
-#: ../pep-0432.txt:96
+#: ../../peps/pep-0432.rst:96
 msgid ""
-"This PEP proposes that initialization of the CPython runtime be split into "
-"three clearly distinct phases:"
+"This PEP proposes that initialization of the CPython runtime be split "
+"into three clearly distinct phases:"
 msgstr ""
 
-#: ../pep-0432.txt:99
+#: ../../peps/pep-0432.rst:99
 msgid "core runtime preinitialization"
 msgstr ""
 
-#: ../pep-0432.txt:100
+#: ../../peps/pep-0432.rst:100
 msgid "core runtime initialization"
 msgstr ""
 
-#: ../pep-0432.txt:101
+#: ../../peps/pep-0432.rst:101
 msgid "main interpreter configuration"
 msgstr ""
 
-#: ../pep-0432.txt:103
+#: ../../peps/pep-0432.rst:103
 msgid ""
-"(Earlier versions proposed only two phases, but experience with attempting "
-"to implement the PEP as an internal CPython refactoring showed that at least "
-"3 phases are needed to get clear separation of concerns)"
+"(Earlier versions proposed only two phases, but experience with "
+"attempting to implement the PEP as an internal CPython refactoring showed"
+" that at least 3 phases are needed to get clear separation of concerns)"
 msgstr ""
 
-#: ../pep-0432.txt:107
+#: ../../peps/pep-0432.rst:107
 msgid "The proposed design also has significant implications for:"
 msgstr ""
 
-#: ../pep-0432.txt:109
+#: ../../peps/pep-0432.rst:109
 msgid "main module execution"
 msgstr ""
 
-#: ../pep-0432.txt:110
+#: ../../peps/pep-0432.rst:110
 msgid "subinterpreter initialization"
 msgstr ""
 
-#: ../pep-0432.txt:112
+#: ../../peps/pep-0432.rst:112
 msgid ""
 "In the new design, the interpreter will move through the following well-"
 "defined phases during the initialization sequence:"
 msgstr ""
 
-#: ../pep-0432.txt:115
+#: ../../peps/pep-0432.rst:115
 msgid "Uninitialized - haven't even started the pre-initialization phase yet"
 msgstr ""
 
-#: ../pep-0432.txt:116
+#: ../../peps/pep-0432.rst:116
 msgid "Pre-Initialization - no interpreter available"
 msgstr ""
 
-#: ../pep-0432.txt:117
+#: ../../peps/pep-0432.rst:117
 msgid ""
-"Runtime Initialized - main interpreter partially available, subinterpreter "
-"creation not yet available"
+"Runtime Initialized - main interpreter partially available, "
+"subinterpreter creation not yet available"
 msgstr ""
 
-#: ../pep-0432.txt:119
+#: ../../peps/pep-0432.rst:119
 msgid ""
 "Initialized - main interpreter fully available, subinterpreter creation "
 "available"
 msgstr ""
 
-#: ../pep-0432.txt:122
+#: ../../peps/pep-0432.rst:122
 msgid ""
-":pep:`587` is a more detailed proposal that covers separating out the Pre-"
-"Initialization phase from the last two phases, but doesn't allow embedding "
-"applications to run arbitrary code while in the \"Runtime Initialized\" "
-"state (instead, initializing the core runtime will also always fully "
-"initialize the main interpreter, as that's the way the native CPython CLI "
-"still works in Python 3.8)."
+":pep:`587` is a more detailed proposal that covers separating out the "
+"Pre-Initialization phase from the last two phases, but doesn't allow "
+"embedding applications to run arbitrary code while in the \"Runtime "
+"Initialized\" state (instead, initializing the core runtime will also "
+"always fully initialize the main interpreter, as that's the way the "
+"native CPython CLI still works in Python 3.8)."
 msgstr ""
 
-#: ../pep-0432.txt:129
+#: ../../peps/pep-0432.rst:129
 msgid ""
 "As a concrete use case to help guide any design changes, and to solve a "
 "known problem where the appropriate defaults for system utilities differ "
 "from those for running user scripts, this PEP proposes the creation and "
 "distribution of a separate system Python (``system-python``) executable "
-"which, by default, operates in \"isolated mode\" (as selected by the CPython "
-"``-I`` switch), as well as the creation of an example stub binary that just "
-"runs an appended zip archive (permitting single-file pure Python "
-"executables) rather than going through the normal CPython startup sequence."
+"which, by default, operates in \"isolated mode\" (as selected by the "
+"CPython ``-I`` switch), as well as the creation of an example stub binary"
+" that just runs an appended zip archive (permitting single-file pure "
+"Python executables) rather than going through the normal CPython startup "
+"sequence."
 msgstr ""
 
-#: ../pep-0432.txt:138
+#: ../../peps/pep-0432.rst:138
 msgid ""
 "To keep the implementation complexity under control, this PEP does *not* "
-"propose wholesale changes to the way the interpreter state is accessed at "
-"runtime. Changing the order in which the existing initialization steps occur "
-"in order to make the startup sequence easier to maintain is already a "
-"substantial change, and attempting to make those other changes at the same "
-"time will make the change significantly more invasive and much harder to "
-"review. However, such proposals may be suitable topics for follow-on PEPs or "
-"patches - one key benefit of this PEP and its related subproposals is "
-"decreasing the coupling between the internal storage model and the "
-"configuration interface, so such changes should be easier once this PEP has "
-"been implemented."
+"propose wholesale changes to the way the interpreter state is accessed at"
+" runtime. Changing the order in which the existing initialization steps "
+"occur in order to make the startup sequence easier to maintain is already"
+" a substantial change, and attempting to make those other changes at the "
+"same time will make the change significantly more invasive and much "
+"harder to review. However, such proposals may be suitable topics for "
+"follow-on PEPs or patches - one key benefit of this PEP and its related "
+"subproposals is decreasing the coupling between the internal storage "
+"model and the configuration interface, so such changes should be easier "
+"once this PEP has been implemented."
 msgstr ""
 
-#: ../pep-0432.txt:151
+#: ../../peps/pep-0432.rst:151
 msgid "Background"
 msgstr ""
 
-#: ../pep-0432.txt:153
+#: ../../peps/pep-0432.rst:153
 msgid ""
-"Over time, CPython's initialization sequence has become progressively more "
-"complicated, offering more options, as well as performing more complex tasks "
-"(such as configuring the Unicode settings for OS interfaces in Python 3 "
-"[10]_, bootstrapping a pure Python implementation of the import system, and "
-"implementing an isolated mode more suitable for system applications that run "
-"with elevated privileges [6]_)."
+"Over time, CPython's initialization sequence has become progressively "
+"more complicated, offering more options, as well as performing more "
+"complex tasks (such as configuring the Unicode settings for OS interfaces"
+" in Python 3 [10]_, bootstrapping a pure Python implementation of the "
+"import system, and implementing an isolated mode more suitable for system"
+" applications that run with elevated privileges [6]_)."
 msgstr ""
 
-#: ../pep-0432.txt:160
+#: ../../peps/pep-0432.rst:160
 msgid ""
-"Much of this complexity is formally accessible only through the ``Py_Main`` "
-"and ``Py_Initialize`` APIs, offering embedding applications little "
-"opportunity for customisation. This creeping complexity also makes life "
-"difficult for maintainers, as much of the configuration needs to take place "
-"prior to the ``Py_Initialize`` call, meaning much of the Python C API cannot "
-"be used safely."
+"Much of this complexity is formally accessible only through the "
+"``Py_Main`` and ``Py_Initialize`` APIs, offering embedding applications "
+"little opportunity for customisation. This creeping complexity also makes"
+" life difficult for maintainers, as much of the configuration needs to "
+"take place prior to the ``Py_Initialize`` call, meaning much of the "
+"Python C API cannot be used safely."
 msgstr ""
 
-#: ../pep-0432.txt:167
+#: ../../peps/pep-0432.rst:167
 msgid ""
-"A number of proposals are on the table for even *more* sophisticated startup "
-"behaviour, such as better control over ``sys.path`` initialization (e.g. "
-"easily adding additional directories on the command line in a cross-platform "
-"fashion [7]_, controlling the configuration of ``sys.path[0]`` [8]_), easier "
-"configuration of utilities like coverage tracing when launching Python "
-"subprocesses [9]_)."
+"A number of proposals are on the table for even *more* sophisticated "
+"startup behaviour, such as better control over ``sys.path`` "
+"initialization (e.g. easily adding additional directories on the command "
+"line in a cross-platform fashion [7]_, controlling the configuration of "
+"``sys.path[0]`` [8]_), easier configuration of utilities like coverage "
+"tracing when launching Python subprocesses [9]_)."
 msgstr ""
 
-#: ../pep-0432.txt:174
+#: ../../peps/pep-0432.rst:174
 msgid ""
-"Rather than continuing to bolt such behaviour onto an already complicated "
-"system indefinitely, this PEP proposes to start simplifying the status quo "
-"by introducing a more structured startup sequence, with the aim of making "
-"these further feature requests easier to implement."
+"Rather than continuing to bolt such behaviour onto an already complicated"
+" system indefinitely, this PEP proposes to start simplifying the status "
+"quo by introducing a more structured startup sequence, with the aim of "
+"making these further feature requests easier to implement."
 msgstr ""
 
-#: ../pep-0432.txt:179
+#: ../../peps/pep-0432.rst:179
 msgid ""
 "Originally the entire proposal was maintained in this one PEP, but that "
-"proved impractical, so as parts of the proposed design stabilised, they are "
-"now split out into their own PEPs, allowing progress to be made, even while "
-"the details of the overall design are still evolving."
+"proved impractical, so as parts of the proposed design stabilised, they "
+"are now split out into their own PEPs, allowing progress to be made, even"
+" while the details of the overall design are still evolving."
 msgstr ""
 
-#: ../pep-0432.txt:186
+#: ../../peps/pep-0432.rst:186
 msgid "Key Concerns"
 msgstr ""
 
-#: ../pep-0432.txt:188
+#: ../../peps/pep-0432.rst:188
 msgid ""
-"There are a few key concerns that any change to the startup sequence needs "
-"to take into account."
+"There are a few key concerns that any change to the startup sequence "
+"needs to take into account."
 msgstr ""
 
-#: ../pep-0432.txt:193
+#: ../../peps/pep-0432.rst:193
 msgid "Maintainability"
 msgstr ""
 
-#: ../pep-0432.txt:195
+#: ../../peps/pep-0432.rst:195
 msgid ""
-"The CPython startup sequence as of Python 3.6 was difficult to understand, "
-"and even more difficult to modify. It was not clear what state the "
-"interpreter was in while much of the initialization code executed, leading "
-"to behaviour such as lists, dictionaries and Unicode values being created "
-"prior to the call to ``Py_Initialize`` when the ``-X`` or ``-W`` options are "
-"used [1]_."
+"The CPython startup sequence as of Python 3.6 was difficult to "
+"understand, and even more difficult to modify. It was not clear what "
+"state the interpreter was in while much of the initialization code "
+"executed, leading to behaviour such as lists, dictionaries and Unicode "
+"values being created prior to the call to ``Py_Initialize`` when the "
+"``-X`` or ``-W`` options are used [1]_."
 msgstr ""
 
-#: ../pep-0432.txt:201
+#: ../../peps/pep-0432.rst:201
 msgid ""
-"By moving to an explicitly multi-phase startup sequence, developers should "
-"only need to understand:"
+"By moving to an explicitly multi-phase startup sequence, developers "
+"should only need to understand:"
 msgstr ""
 
-#: ../pep-0432.txt:204
+#: ../../peps/pep-0432.rst:204
 msgid ""
 "which APIs and features are available prior to pre-configuration "
 "(essentially none, except for the pre-configuration API itself)"
 msgstr ""
 
-#: ../pep-0432.txt:206
+#: ../../peps/pep-0432.rst:206
 msgid ""
-"which APIs and features are available prior to core runtime configuration, "
-"and will implicitly run the pre-configuration with default settings that "
-"match the behaviour of Python 3.6 if the pre-configuration hasn't been run "
-"explicitly"
+"which APIs and features are available prior to core runtime "
+"configuration, and will implicitly run the pre-configuration with default"
+" settings that match the behaviour of Python 3.6 if the pre-configuration"
+" hasn't been run explicitly"
 msgstr ""
 
-#: ../pep-0432.txt:209
+#: ../../peps/pep-0432.rst:209
 msgid ""
-"which APIs and features are only available after the main interpreter has "
-"been fully configured (which will hopefully be a relatively small subset of "
-"the full C API)"
+"which APIs and features are only available after the main interpreter has"
+" been fully configured (which will hopefully be a relatively small subset"
+" of the full C API)"
 msgstr ""
 
-#: ../pep-0432.txt:213
+#: ../../peps/pep-0432.rst:213
 msgid ""
-"The first two aspects of that are covered by :pep:`587`, while the details "
-"of the latter distinction are still being considered."
+"The first two aspects of that are covered by :pep:`587`, while the "
+"details of the latter distinction are still being considered."
 msgstr ""
 
-#: ../pep-0432.txt:216
+#: ../../peps/pep-0432.rst:216
 msgid ""
-"By basing the new design on a combination of C structures and Python data "
-"types, it should also be easier to modify the system in the future to add "
-"new configuration options."
+"By basing the new design on a combination of C structures and Python data"
+" types, it should also be easier to modify the system in the future to "
+"add new configuration options."
 msgstr ""
 
-#: ../pep-0432.txt:222
+#: ../../peps/pep-0432.rst:222
 msgid "Testability"
 msgstr ""
 
-#: ../pep-0432.txt:224
+#: ../../peps/pep-0432.rst:224
 msgid ""
-"One of the problems with the complexity of the CPython startup sequence is "
-"the combinatorial explosion of possible interactions between different "
-"configuration settings."
+"One of the problems with the complexity of the CPython startup sequence "
+"is the combinatorial explosion of possible interactions between different"
+" configuration settings."
 msgstr ""
 
-#: ../pep-0432.txt:228
+#: ../../peps/pep-0432.rst:228
 msgid ""
-"This concern impacts both the design of the new initialisation system, and "
-"the proposed approach for getting there."
+"This concern impacts both the design of the new initialisation system, "
+"and the proposed approach for getting there."
 msgstr ""
 
-#: ../pep-0432.txt:233
+#: ../../peps/pep-0432.rst:233
 msgid "Performance"
 msgstr ""
 
-#: ../pep-0432.txt:235
+#: ../../peps/pep-0432.rst:235
 msgid ""
-"CPython is used heavily to run short scripts where the runtime is dominated "
-"by the interpreter initialization time. Any changes to the startup sequence "
-"should minimise their impact on the startup overhead."
+"CPython is used heavily to run short scripts where the runtime is "
+"dominated by the interpreter initialization time. Any changes to the "
+"startup sequence should minimise their impact on the startup overhead."
 msgstr ""
 
-#: ../pep-0432.txt:239
+#: ../../peps/pep-0432.rst:239
 msgid ""
-"Experience with the importlib migration suggests that the startup time is "
-"dominated by IO operations. However, to monitor the impact of any changes, a "
-"simple benchmark can be used to check how long it takes to start and then "
-"tear down the interpreter:"
+"Experience with the importlib migration suggests that the startup time is"
+" dominated by IO operations. However, to monitor the impact of any "
+"changes, a simple benchmark can be used to check how long it takes to "
+"start and then tear down the interpreter:"
 msgstr ""
 
-#: ../pep-0432.txt:248
+#: ../../peps/pep-0432.rst:248
 msgid ""
-"Current numbers on my system for Python 3.7 (as built by the Fedora project):"
+"Current numbers on my system for Python 3.7 (as built by the Fedora "
+"project):"
 msgstr ""
 
-#: ../pep-0432.txt:255
+#: ../../peps/pep-0432.rst:255
 msgid "(TODO: run this microbenchmark with perf rather than the stdlib timeit)"
 msgstr ""
 
-#: ../pep-0432.txt:257
+#: ../../peps/pep-0432.rst:257
 msgid ""
-"This PEP is not expected to have any significant effect on the startup time, "
-"as it is aimed primarily at *reordering* the existing initialization "
-"sequence, without making substantial changes to the individual steps."
+"This PEP is not expected to have any significant effect on the startup "
+"time, as it is aimed primarily at *reordering* the existing "
+"initialization sequence, without making substantial changes to the "
+"individual steps."
 msgstr ""
 
-#: ../pep-0432.txt:261
+#: ../../peps/pep-0432.rst:261
 msgid ""
 "However, if this simple check suggests that the proposed changes to the "
 "initialization sequence may pose a performance problem, then a more "
-"sophisticated microbenchmark will be developed to assist in investigation."
+"sophisticated microbenchmark will be developed to assist in "
+"investigation."
 msgstr ""
 
-#: ../pep-0432.txt:267
+#: ../../peps/pep-0432.rst:267
 msgid "Required Configuration Settings"
 msgstr ""
 
-#: ../pep-0432.txt:269
+#: ../../peps/pep-0432.rst:269
 msgid ""
-"See :pep:`587` for a detailed listing of CPython interpreter configuration "
-"settings and the various means available for setting them."
+"See :pep:`587` for a detailed listing of CPython interpreter "
+"configuration settings and the various means available for setting them."
 msgstr ""
 
-#: ../pep-0432.txt:274
+#: ../../peps/pep-0432.rst:274
 msgid "Implementation Strategy"
 msgstr ""
 
-#: ../pep-0432.txt:276
+#: ../../peps/pep-0432.rst:276
 msgid ""
-"An initial attempt was made at implementing an earlier version of this PEP "
-"for Python 3.4 [2]_, with one of the significant problems encountered being "
-"merge conflicts after the initial structural changes were put in place to "
-"start the refactoring process. Unlike some other previous major changes, "
-"such as the switch to an AST-based compiler in Python 2.5, or the switch to "
-"the importlib implementation of the import system in Python 3.3, there is no "
-"clear way to structure a draft implementation that won't be prone to the "
-"kinds of merge conflicts that afflicted the original attempt."
+"An initial attempt was made at implementing an earlier version of this "
+"PEP for Python 3.4 [2]_, with one of the significant problems encountered"
+" being merge conflicts after the initial structural changes were put in "
+"place to start the refactoring process. Unlike some other previous major "
+"changes, such as the switch to an AST-based compiler in Python 2.5, or "
+"the switch to the importlib implementation of the import system in Python"
+" 3.3, there is no clear way to structure a draft implementation that "
+"won't be prone to the kinds of merge conflicts that afflicted the "
+"original attempt."
 msgstr ""
 
-#: ../pep-0432.txt:285
+#: ../../peps/pep-0432.rst:285
 msgid ""
 "Accordingly, the implementation strategy was revised to instead first "
-"implement this refactoring as a private API for CPython 3.7, and then review "
-"the viability of exposing the new functions and structures as public API "
-"elements in CPython 3.8."
+"implement this refactoring as a private API for CPython 3.7, and then "
+"review the viability of exposing the new functions and structures as "
+"public API elements in CPython 3.8."
 msgstr ""
 
-#: ../pep-0432.txt:290
+#: ../../peps/pep-0432.rst:290
 msgid ""
-"After the initial merge, Victor Stinner then proceeded to actually migrate "
-"settings to the new structure in order to successfully implement the :pep:"
-"`540` UTF-8 mode changes (which required the ability to track all settings "
-"that had previously been decoded with the locale encoding, and decode them "
-"again using UTF-8 instead). Eric Snow also migrated a number of internal "
-"subsystems over as part of making the subinterpreter feature more robust."
+"After the initial merge, Victor Stinner then proceeded to actually "
+"migrate settings to the new structure in order to successfully implement "
+"the :pep:`540` UTF-8 mode changes (which required the ability to track "
+"all settings that had previously been decoded with the locale encoding, "
+"and decode them again using UTF-8 instead). Eric Snow also migrated a "
+"number of internal subsystems over as part of making the subinterpreter "
+"feature more robust."
 msgstr ""
 
-#: ../pep-0432.txt:297
+#: ../../peps/pep-0432.rst:297
 msgid ""
-"That work showed that the detailed design originally proposed in this PEP "
-"had a range of practical issues, so Victor designed and implemented an "
-"improved private API (inspired by an earlier iteration of this PEP), which :"
-"pep:`587` proposes to promote to a public API in Python 3.8."
+"That work showed that the detailed design originally proposed in this PEP"
+" had a range of practical issues, so Victor designed and implemented an "
+"improved private API (inspired by an earlier iteration of this PEP), "
+"which :pep:`587` proposes to promote to a public API in Python 3.8."
 msgstr ""
 
-#: ../pep-0432.txt:304
+#: ../../peps/pep-0432.rst:304
 msgid "Design Details"
 msgstr ""
 
-#: ../pep-0432.txt:308
+#: ../../peps/pep-0432.rst:308
 msgid ""
-"The API details here are still very much in flux. The header files that show "
-"the current state of the private API are mainly:"
+"The API details here are still very much in flux. The header files that "
+"show the current state of the private API are mainly:"
 msgstr ""
 
-#: ../pep-0432.txt:311
-msgid ""
-"https://github.com/python/cpython/blob/master/Include/cpython/coreconfig.h"
+#: ../../peps/pep-0432.rst:311
+msgid "https://github.com/python/cpython/blob/master/Include/cpython/coreconfig.h"
 msgstr ""
 
-#: ../pep-0432.txt:312
+#: ../../peps/pep-0432.rst:312
 msgid "https://github.com/python/cpython/blob/master/Include/cpython/pystate.h"
 msgstr ""
 
-#: ../pep-0432.txt:313
-msgid ""
-"https://github.com/python/cpython/blob/master/Include/cpython/pylifecycle.h"
+#: ../../peps/pep-0432.rst:313
+msgid "https://github.com/python/cpython/blob/master/Include/cpython/pylifecycle.h"
 msgstr ""
 
-#: ../pep-0432.txt:315
+#: ../../peps/pep-0432.rst:315
 msgid ""
 ":pep:`587` covers the aspects of the API that are considered potentially "
-"stable enough to make public. Where a proposed API is covered by that PEP, "
-"\"(see PEP 587)\" is added to the text below."
+"stable enough to make public. Where a proposed API is covered by that "
+"PEP, \"(see PEP 587)\" is added to the text below."
 msgstr ""
 
-#: ../pep-0432.txt:319
+#: ../../peps/pep-0432.rst:319
 msgid ""
-"The main theme of this proposal is to initialize the core language runtime "
-"and create a partially initialized interpreter state for the main "
-"interpreter *much* earlier in the startup process. This will allow most of "
-"the CPython API to be used during the remainder of the initialization "
-"process, potentially simplifying a number of operations that currently need "
-"to rely on basic C functionality rather than being able to use the richer "
-"data structures provided by the CPython C API."
+"The main theme of this proposal is to initialize the core language "
+"runtime and create a partially initialized interpreter state for the main"
+" interpreter *much* earlier in the startup process. This will allow most "
+"of the CPython API to be used during the remainder of the initialization "
+"process, potentially simplifying a number of operations that currently "
+"need to rely on basic C functionality rather than being able to use the "
+"richer data structures provided by the CPython C API."
 msgstr ""
 
-#: ../pep-0432.txt:327
+#: ../../peps/pep-0432.rst:327
 msgid ""
 ":pep:`587` covers a subset of that task, which is splitting out the "
-"components that even the existing \"May be called before ``Py_Initialize``\" "
-"interfaces need (like memory allocators and operating system interface "
-"encoding details) into a separate pre-configuration step."
+"components that even the existing \"May be called before "
+"``Py_Initialize``\" interfaces need (like memory allocators and operating"
+" system interface encoding details) into a separate pre-configuration "
+"step."
 msgstr ""
 
-#: ../pep-0432.txt:332
+#: ../../peps/pep-0432.rst:332
 msgid ""
 "In the following, the term \"embedding application\" also covers the "
 "standard CPython command line application."
 msgstr ""
 
-#: ../pep-0432.txt:337
+#: ../../peps/pep-0432.rst:337
 msgid "Interpreter Initialization Phases"
 msgstr ""
 
-#: ../pep-0432.txt:339
+#: ../../peps/pep-0432.rst:339
 msgid "The following distinct interpreter initialisation phases are proposed:"
 msgstr ""
 
-#: ../pep-0432.txt:341
+#: ../../peps/pep-0432.rst:341
 msgid "Uninitialized:"
 msgstr ""
 
-#: ../pep-0432.txt:343
+#: ../../peps/pep-0432.rst:343
 msgid "Not really a phase, but the absence of a phase"
 msgstr ""
 
-#: ../pep-0432.txt:344 ../pep-0432.txt:384
+#: ../../peps/pep-0432.rst:344 ../../peps/pep-0432.rst:384
 msgid "``Py_IsInitializing()`` returns ``0``"
 msgstr ""
 
-#: ../pep-0432.txt:345 ../pep-0432.txt:357
+#: ../../peps/pep-0432.rst:345 ../../peps/pep-0432.rst:357
 msgid "``Py_IsRuntimeInitialized()`` returns ``0``"
 msgstr ""
 
-#: ../pep-0432.txt:346 ../pep-0432.txt:358 ../pep-0432.txt:372
+#: ../../peps/pep-0432.rst:346 ../../peps/pep-0432.rst:358
+#: ../../peps/pep-0432.rst:372
 msgid "``Py_IsInitialized()`` returns ``0``"
 msgstr ""
 
-#: ../pep-0432.txt:347
+#: ../../peps/pep-0432.rst:347
 msgid ""
 "The embedding application determines which memory allocator to use, and "
-"which encoding to use to access operating system interfaces (or chooses to "
-"delegate those decisions to the Python runtime)"
+"which encoding to use to access operating system interfaces (or chooses "
+"to delegate those decisions to the Python runtime)"
 msgstr ""
 
-#: ../pep-0432.txt:350
+#: ../../peps/pep-0432.rst:350
 msgid ""
 "Application starts the initialization process by calling one of the "
 "``Py_PreInitialize`` APIs (see :pep:`587`)"
 msgstr ""
 
-#: ../pep-0432.txt:353
+#: ../../peps/pep-0432.rst:353
 msgid "Runtime Pre-Initialization:"
 msgstr ""
 
-#: ../pep-0432.txt:355
+#: ../../peps/pep-0432.rst:355
 msgid "no interpreter is available"
 msgstr ""
 
-#: ../pep-0432.txt:356 ../pep-0432.txt:370
+#: ../../peps/pep-0432.rst:356 ../../peps/pep-0432.rst:370
 msgid "``Py_IsInitializing()`` returns ``1``"
 msgstr ""
 
-#: ../pep-0432.txt:359
+#: ../../peps/pep-0432.rst:359
 msgid ""
-"The embedding application determines the settings required to initialize the "
-"core CPython runtime and create the main interpreter and moves to the next "
-"phase by calling ``Py_InitializeRuntime``"
+"The embedding application determines the settings required to initialize "
+"the core CPython runtime and create the main interpreter and moves to the"
+" next phase by calling ``Py_InitializeRuntime``"
 msgstr ""
 
-#: ../pep-0432.txt:362
+#: ../../peps/pep-0432.rst:362
 msgid ""
 "Note: as of :pep:`587`, the embedding application instead calls "
-"``Py_Main()``, ``Py_UnixMain``, or one of the ``Py_Initialize`` APIs, and "
-"hence jumps directly to the Initialized state."
+"``Py_Main()``, ``Py_UnixMain``, or one of the ``Py_Initialize`` APIs, and"
+" hence jumps directly to the Initialized state."
 msgstr ""
 
-#: ../pep-0432.txt:366
+#: ../../peps/pep-0432.rst:366
 msgid "Main Interpreter Initialization:"
 msgstr ""
 
-#: ../pep-0432.txt:368
+#: ../../peps/pep-0432.rst:368
 msgid "the builtin data types and other core runtime services are available"
 msgstr ""
 
-#: ../pep-0432.txt:369
+#: ../../peps/pep-0432.rst:369
 msgid "the main interpreter is available, but only partially configured"
 msgstr ""
 
-#: ../pep-0432.txt:371 ../pep-0432.txt:385
+#: ../../peps/pep-0432.rst:371 ../../peps/pep-0432.rst:385
 msgid "``Py_IsRuntimeInitialized()`` returns ``1``"
 msgstr ""
 
-#: ../pep-0432.txt:373
+#: ../../peps/pep-0432.rst:373
 msgid ""
-"The embedding application determines and applies the settings required to "
-"complete the initialization process by calling "
+"The embedding application determines and applies the settings required to"
+" complete the initialization process by calling "
 "``Py_InitializeMainInterpreter``"
 msgstr ""
 
-#: ../pep-0432.txt:376
+#: ../../peps/pep-0432.rst:376
 msgid ""
-"Note: as of :pep:`587`, this state is not reachable via any public API, it "
-"only exists as an implicit internal state while one of the ``Py_Initialize`` "
-"functions is running"
+"Note: as of :pep:`587`, this state is not reachable via any public API, "
+"it only exists as an implicit internal state while one of the "
+"``Py_Initialize`` functions is running"
 msgstr ""
 
-#: ../pep-0432.txt:380
+#: ../../peps/pep-0432.rst:380
 msgid "Initialized:"
 msgstr ""
 
-#: ../pep-0432.txt:382
+#: ../../peps/pep-0432.rst:382
 msgid ""
-"the main interpreter is available and fully operational, but ``__main__`` "
-"related metadata is incomplete"
+"the main interpreter is available and fully operational, but ``__main__``"
+" related metadata is incomplete"
 msgstr ""
 
-#: ../pep-0432.txt:386
+#: ../../peps/pep-0432.rst:386
 msgid "``Py_IsInitialized()`` returns ``1``"
 msgstr ""
 
-#: ../pep-0432.txt:390
+#: ../../peps/pep-0432.rst:390
 msgid "Invocation of Phases"
 msgstr ""
 
-#: ../pep-0432.txt:392
+#: ../../peps/pep-0432.rst:392
 msgid ""
-"All listed phases will be used by the standard CPython interpreter and the "
-"proposed System Python interpreter."
+"All listed phases will be used by the standard CPython interpreter and "
+"the proposed System Python interpreter."
 msgstr ""
 
-#: ../pep-0432.txt:395
+#: ../../peps/pep-0432.rst:395
 msgid ""
-"An embedding application may still continue to leave initialization almost "
-"entirely under CPython's control by using the existing ``Py_Initialize`` or "
-"``Py_Main()`` APIs - backwards compatibility will be preserved."
+"An embedding application may still continue to leave initialization "
+"almost entirely under CPython's control by using the existing "
+"``Py_Initialize`` or ``Py_Main()`` APIs - backwards compatibility will be"
+" preserved."
 msgstr ""
 
-#: ../pep-0432.txt:399
+#: ../../peps/pep-0432.rst:399
 msgid ""
 "Alternatively, if an embedding application wants greater control over "
-"CPython's initial state, it will be able to use the new, finer grained API, "
-"which allows the embedding application greater control over the "
+"CPython's initial state, it will be able to use the new, finer grained "
+"API, which allows the embedding application greater control over the "
 "initialization process."
 msgstr ""
 
-#: ../pep-0432.txt:404
+#: ../../peps/pep-0432.rst:404
 msgid ""
-":pep:`587` covers an initial iteration of that API, separating out the pre-"
-"initialization phase without attempting to separate core runtime "
+":pep:`587` covers an initial iteration of that API, separating out the "
+"pre-initialization phase without attempting to separate core runtime "
 "initialization from main interpreter initialization."
 msgstr ""
 
-#: ../pep-0432.txt:410
+#: ../../peps/pep-0432.rst:410
 msgid "Uninitialized State"
 msgstr ""
 
-#: ../pep-0432.txt:412
+#: ../../peps/pep-0432.rst:412
 msgid ""
 "The uninitialized state is where an embedding application determines the "
 "settings which are required in order to be able to correctly pass "
 "configurations settings to the embedded Python runtime."
 msgstr ""
 
-#: ../pep-0432.txt:416
+#: ../../peps/pep-0432.rst:416
 msgid ""
-"This covers telling Python which memory allocator to use, as well as which "
-"text encoding to use when processing provided settings."
+"This covers telling Python which memory allocator to use, as well as "
+"which text encoding to use when processing provided settings."
 msgstr ""
 
-#: ../pep-0432.txt:419
+#: ../../peps/pep-0432.rst:419
 msgid ""
 ":pep:`587` defines the settings needed to exit this state in its "
 "``PyPreConfig`` struct."
 msgstr ""
 
-#: ../pep-0432.txt:422
+#: ../../peps/pep-0432.rst:422
 msgid ""
-"A new query API will allow code to determine if the interpreter hasn't even "
-"started the initialization process::"
+"A new query API will allow code to determine if the interpreter hasn't "
+"even started the initialization process::"
 msgstr ""
 
-#: ../pep-0432.txt:427
+#: ../../peps/pep-0432.rst:427
 msgid ""
-"The query for a completely uninitialized environment would then be ``!"
-"(Py_Initialized() || Py_Initializing())``."
+"The query for a completely uninitialized environment would then be "
+"``!(Py_Initialized() || Py_Initializing())``."
 msgstr ""
 
-#: ../pep-0432.txt:432
+#: ../../peps/pep-0432.rst:432
 msgid "Runtime Pre-Initialization Phase"
 msgstr ""
 
-#: ../pep-0432.txt:434
+#: ../../peps/pep-0432.rst:434
 msgid ""
-"In :pep:`587`, the settings for this phase are not yet separated out, and "
-"are instead only available through the combined ``PyConfig`` struct"
+"In :pep:`587`, the settings for this phase are not yet separated out, and"
+" are instead only available through the combined ``PyConfig`` struct"
 msgstr ""
 
-#: ../pep-0432.txt:437
+#: ../../peps/pep-0432.rst:437
 msgid ""
-"The pre-initialization phase is where an embedding application determines "
-"the settings which are absolutely required before the CPython runtime can be "
-"initialized at all. Currently, the primary configuration settings in this "
-"category are those related to the randomised hash algorithm - the hash "
-"algorithms must be consistent for the lifetime of the process, and so they "
-"must be in place before the core interpreter is created."
+"The pre-initialization phase is where an embedding application determines"
+" the settings which are absolutely required before the CPython runtime "
+"can be initialized at all. Currently, the primary configuration settings "
+"in this category are those related to the randomised hash algorithm - the"
+" hash algorithms must be consistent for the lifetime of the process, and "
+"so they must be in place before the core interpreter is created."
 msgstr ""
 
-#: ../pep-0432.txt:444
+#: ../../peps/pep-0432.rst:444
 msgid ""
-"The essential settings needed are a flag indicating whether or not to use a "
-"specific seed value for the randomised hashes, and if so, the specific value "
-"for the seed (a seed value of zero disables randomised hashing). In "
-"addition, due to the possible use of ``PYTHONHASHSEED`` in configuring the "
-"hash randomisation, the question of whether or not to consider environment "
-"variables must also be addressed early. Finally, to support the CPython "
-"build process, an option is offered to completely disable the import system."
+"The essential settings needed are a flag indicating whether or not to use"
+" a specific seed value for the randomised hashes, and if so, the specific"
+" value for the seed (a seed value of zero disables randomised hashing). "
+"In addition, due to the possible use of ``PYTHONHASHSEED`` in configuring"
+" the hash randomisation, the question of whether or not to consider "
+"environment variables must also be addressed early. Finally, to support "
+"the CPython build process, an option is offered to completely disable the"
+" import system."
 msgstr ""
 
-#: ../pep-0432.txt:453
+#: ../../peps/pep-0432.rst:453
 msgid "The proposed APIs for this step in the startup sequence are::"
 msgstr ""
 
-#: ../pep-0432.txt:467
+#: ../../peps/pep-0432.rst:467
 msgid ""
-"If ``Py_IsInitializing()`` is false, the ``Py_InitializeRuntime`` functions "
-"will implicitly call the corresponding ``Py_PreInitialize`` function. The "
-"``use_environment`` setting will be passed down, while other settings will "
-"be processed according to their defaults, as described in :pep:`587`."
+"If ``Py_IsInitializing()`` is false, the ``Py_InitializeRuntime`` "
+"functions will implicitly call the corresponding ``Py_PreInitialize`` "
+"function. The ``use_environment`` setting will be passed down, while "
+"other settings will be processed according to their defaults, as "
+"described in :pep:`587`."
 msgstr ""
 
-#: ../pep-0432.txt:472
+#: ../../peps/pep-0432.rst:472
 msgid ""
 "The ``PyInitError`` return type is defined in :pep:`587`, and allows an "
 "embedding application to gracefully handle Python runtime initialization "
@@ -829,258 +840,261 @@ msgid ""
 "``Py_FatalError``."
 msgstr ""
 
-#: ../pep-0432.txt:476
+#: ../../peps/pep-0432.rst:476
 msgid ""
 "The new ``PyRuntimeConfig`` struct holds the settings required for "
 "preliminary configuration of the core runtime and creation of the main "
 "interpreter::"
 msgstr ""
 
-#: ../pep-0432.txt:491
+#: ../../peps/pep-0432.rst:491
 msgid ""
-"The core configuration settings pointer may be ``NULL``, in which case the "
-"default values are as specified in ``PyRuntimeConfig_INIT``."
+"The core configuration settings pointer may be ``NULL``, in which case "
+"the default values are as specified in ``PyRuntimeConfig_INIT``."
 msgstr ""
 
-#: ../pep-0432.txt:494
+#: ../../peps/pep-0432.rst:494
 msgid ""
-"The ``PyRuntimeConfig_INIT`` macro is designed to allow easy initialization "
-"of a struct instance with sensible defaults::"
+"The ``PyRuntimeConfig_INIT`` macro is designed to allow easy "
+"initialization of a struct instance with sensible defaults::"
 msgstr ""
 
-#: ../pep-0432.txt:499
+#: ../../peps/pep-0432.rst:499
 msgid ""
 "``use_environment`` controls the processing of all Python related "
 "environment variables. If the flag is true, then ``PYTHONHASHSEED`` is "
-"processed normally. Otherwise, all Python-specific environment variables are "
-"considered undefined (exceptions may be made for some OS specific "
-"environment variables, such as those used on Mac OS X to communicate between "
-"the App bundle and the main Python binary)."
+"processed normally. Otherwise, all Python-specific environment variables "
+"are considered undefined (exceptions may be made for some OS specific "
+"environment variables, such as those used on Mac OS X to communicate "
+"between the App bundle and the main Python binary)."
 msgstr ""
 
-#: ../pep-0432.txt:506
+#: ../../peps/pep-0432.rst:506
 msgid ""
 "``use_hash_seed`` controls the configuration of the randomised hash "
-"algorithm. If it is zero, then randomised hashes with a random seed will be "
-"used. It is positive, then the value in ``hash_seed`` will be used to seed "
-"the random number generator. If the ``hash_seed`` is zero in this case, then "
-"the randomised hashing is disabled completely."
+"algorithm. If it is zero, then randomised hashes with a random seed will "
+"be used. It is positive, then the value in ``hash_seed`` will be used to "
+"seed the random number generator. If the ``hash_seed`` is zero in this "
+"case, then the randomised hashing is disabled completely."
 msgstr ""
 
-#: ../pep-0432.txt:512
+#: ../../peps/pep-0432.rst:512
 msgid ""
 "If ``use_hash_seed`` is negative (and ``use_environment`` is true), then "
 "CPython will inspect the ``PYTHONHASHSEED`` environment variable. If the "
-"environment variable is not set, is set to the empty string, or to the value "
-"``\"random\"``, then randomised hashes with a random seed will be used. If "
-"the environment variable is set to the string ``\"0\"`` the randomised "
-"hashing will be disabled. Otherwise, the hash seed is expected to be a "
-"string representation of an integer in the range ``[0; 4294967295]``."
+"environment variable is not set, is set to the empty string, or to the "
+"value ``\"random\"``, then randomised hashes with a random seed will be "
+"used. If the environment variable is set to the string ``\"0\"`` the "
+"randomised hashing will be disabled. Otherwise, the hash seed is expected"
+" to be a string representation of an integer in the range ``[0; "
+"4294967295]``."
 msgstr ""
 
-#: ../pep-0432.txt:520
+#: ../../peps/pep-0432.rst:520
 msgid ""
-"To make it easier for embedding applications to use the ``PYTHONHASHSEED`` "
-"processing with a different data source, the following helper function will "
-"be added to the C API::"
+"To make it easier for embedding applications to use the "
+"``PYTHONHASHSEED`` processing with a different data source, the following"
+" helper function will be added to the C API::"
 msgstr ""
 
-#: ../pep-0432.txt:528
+#: ../../peps/pep-0432.rst:528
 msgid ""
-"This function accepts a seed string in ``seed_text`` and converts it to the "
-"appropriate flag and seed values. If ``seed_text`` is ``NULL``, the empty "
-"string or the value ``\"random\"``, both ``use_hash_seed`` and ``hash_seed`` "
-"will be set to zero. Otherwise, ``use_hash_seed`` will be set to ``1`` and "
-"the seed text will be interpreted as an integer and reported as "
-"``hash_seed``. On success the function will return zero. A non-zero return "
-"value indicates an error (most likely in the conversion to an integer)."
+"This function accepts a seed string in ``seed_text`` and converts it to "
+"the appropriate flag and seed values. If ``seed_text`` is ``NULL``, the "
+"empty string or the value ``\"random\"``, both ``use_hash_seed`` and "
+"``hash_seed`` will be set to zero. Otherwise, ``use_hash_seed`` will be "
+"set to ``1`` and the seed text will be interpreted as an integer and "
+"reported as ``hash_seed``. On success the function will return zero. A "
+"non-zero return value indicates an error (most likely in the conversion "
+"to an integer)."
 msgstr ""
 
-#: ../pep-0432.txt:536
+#: ../../peps/pep-0432.rst:536
 msgid ""
 "The ``_install_importlib`` setting is used as part of the CPython build "
 "process to create an interpreter with no import capability at all. It is "
 "considered private to the CPython development team (hence the leading "
-"underscore), as the only currently supported use case is to permit compiler "
-"changes that invalidate the previously frozen bytecode for ``importlib."
-"_bootstrap`` without breaking the build process."
+"underscore), as the only currently supported use case is to permit "
+"compiler changes that invalidate the previously frozen bytecode for "
+"``importlib._bootstrap`` without breaking the build process."
 msgstr ""
 
-#: ../pep-0432.txt:543
+#: ../../peps/pep-0432.rst:543
 msgid ""
-"The aim is to keep this initial level of configuration as small as possible "
-"in order to keep the bootstrapping environment consistent across different "
-"embedding applications. If we can create a valid interpreter state without "
-"the setting, then the setting should appear solely in the comprehensive "
-"``PyConfig`` struct rather than in the core runtime configuration."
+"The aim is to keep this initial level of configuration as small as "
+"possible in order to keep the bootstrapping environment consistent across"
+" different embedding applications. If we can create a valid interpreter "
+"state without the setting, then the setting should appear solely in the "
+"comprehensive ``PyConfig`` struct rather than in the core runtime "
+"configuration."
 msgstr ""
 
-#: ../pep-0432.txt:549
+#: ../../peps/pep-0432.rst:549
 msgid ""
-"A new query API will allow code to determine if the interpreter is in the "
-"bootstrapping state between the core runtime initialization and the creation "
-"of the main interpreter state and the completion of the bulk of the main "
-"interpreter initialization process::"
+"A new query API will allow code to determine if the interpreter is in the"
+" bootstrapping state between the core runtime initialization and the "
+"creation of the main interpreter state and the completion of the bulk of "
+"the main interpreter initialization process::"
 msgstr ""
 
-#: ../pep-0432.txt:556
+#: ../../peps/pep-0432.rst:556
 msgid ""
 "Attempting to call ``Py_InitializeRuntime()`` again when "
 "``Py_IsRuntimeInitialized()`` is already true is reported as a user "
-"configuration error. (TBC, as existing public initialisation APIs support "
-"being called multiple times without error, and simply ignore changes to any "
-"write-once settings. It may make sense to keep that behaviour rather than "
-"trying to make the new API stricter than the old one)"
+"configuration error. (TBC, as existing public initialisation APIs support"
+" being called multiple times without error, and simply ignore changes to "
+"any write-once settings. It may make sense to keep that behaviour rather "
+"than trying to make the new API stricter than the old one)"
 msgstr ""
 
-#: ../pep-0432.txt:563
+#: ../../peps/pep-0432.rst:563
 msgid ""
-"As frozen bytecode may now be legitimately run in an interpreter which is "
-"not yet fully initialized, ``sys.flags`` will gain a new ``initialized`` "
-"flag."
+"As frozen bytecode may now be legitimately run in an interpreter which is"
+" not yet fully initialized, ``sys.flags`` will gain a new ``initialized``"
+" flag."
 msgstr ""
 
-#: ../pep-0432.txt:566
+#: ../../peps/pep-0432.rst:566
 msgid ""
 "With the core runtime initialised, the main interpreter and most of the "
 "CPython C API should be fully functional except that:"
 msgstr ""
 
-#: ../pep-0432.txt:569
+#: ../../peps/pep-0432.rst:569
 msgid ""
 "compilation is not allowed (as the parser and compiler are not yet "
 "configured properly)"
 msgstr ""
 
-#: ../pep-0432.txt:571
+#: ../../peps/pep-0432.rst:571
 msgid "creation of subinterpreters is not allowed"
 msgstr ""
 
-#: ../pep-0432.txt:572
+#: ../../peps/pep-0432.rst:572
 msgid "creation of additional thread states is not allowed"
 msgstr ""
 
-#: ../pep-0432.txt:573
+#: ../../peps/pep-0432.rst:573
 msgid ""
 "The following attributes in the ``sys`` module are all either missing or "
-"``None``: * ``sys.path`` * ``sys.argv`` * ``sys.executable`` * ``sys."
-"base_exec_prefix`` * ``sys.base_prefix`` * ``sys.exec_prefix`` * ``sys."
-"prefix`` * ``sys.warnoptions`` * ``sys.dont_write_bytecode`` * ``sys.stdin`` "
-"* ``sys.stdout``"
+"``None``: * ``sys.path`` * ``sys.argv`` * ``sys.executable`` * "
+"``sys.base_exec_prefix`` * ``sys.base_prefix`` * ``sys.exec_prefix`` * "
+"``sys.prefix`` * ``sys.warnoptions`` * ``sys.dont_write_bytecode`` * "
+"``sys.stdin`` * ``sys.stdout``"
 msgstr ""
 
-#: ../pep-0432.txt:586
+#: ../../peps/pep-0432.rst:586
 msgid "The filesystem encoding is not yet defined"
 msgstr ""
 
-#: ../pep-0432.txt:587
+#: ../../peps/pep-0432.rst:587
 msgid "The IO encoding is not yet defined"
 msgstr ""
 
-#: ../pep-0432.txt:588
+#: ../../peps/pep-0432.rst:588
 msgid "CPython signal handlers are not yet installed"
 msgstr ""
 
-#: ../pep-0432.txt:589
-msgid ""
-"Only builtin and frozen modules may be imported (due to above limitations)"
+#: ../../peps/pep-0432.rst:589
+msgid "Only builtin and frozen modules may be imported (due to above limitations)"
 msgstr ""
 
-#: ../pep-0432.txt:590
+#: ../../peps/pep-0432.rst:590
 msgid ""
-"``sys.stderr`` is set to a temporary IO object using unbuffered binary mode"
+"``sys.stderr`` is set to a temporary IO object using unbuffered binary "
+"mode"
 msgstr ""
 
-#: ../pep-0432.txt:592
+#: ../../peps/pep-0432.rst:592
 msgid ""
 "The ``sys.flags`` attribute exists, but the individual flags may not yet "
 "have their final values."
 msgstr ""
 
-#: ../pep-0432.txt:594
+#: ../../peps/pep-0432.rst:594
 msgid "The ``sys.flags.initialized`` attribute is set to ``0``"
 msgstr ""
 
-#: ../pep-0432.txt:595
+#: ../../peps/pep-0432.rst:595
 msgid "The ``warnings`` module is not yet initialized"
 msgstr ""
 
-#: ../pep-0432.txt:596
+#: ../../peps/pep-0432.rst:596
 msgid "The ``__main__`` module does not yet exist"
 msgstr ""
 
-#: ../pep-0432.txt:598
+#: ../../peps/pep-0432.rst:598
 msgid "<TBD: identify any other notable missing functionality>"
 msgstr ""
 
-#: ../pep-0432.txt:600
+#: ../../peps/pep-0432.rst:600
 msgid ""
 "The main things made available by this step will be the core Python data "
-"types, in particular dictionaries, lists and strings. This allows them to be "
-"used safely for all of the remaining configuration steps (unlike the status "
-"quo)."
+"types, in particular dictionaries, lists and strings. This allows them to"
+" be used safely for all of the remaining configuration steps (unlike the "
+"status quo)."
 msgstr ""
 
-#: ../pep-0432.txt:605
+#: ../../peps/pep-0432.rst:605
 msgid ""
-"In addition, the current thread will possess a valid Python thread state, "
-"allowing any further configuration data to be stored on the main interpreter "
-"object rather than in C process globals."
+"In addition, the current thread will possess a valid Python thread state,"
+" allowing any further configuration data to be stored on the main "
+"interpreter object rather than in C process globals."
 msgstr ""
 
-#: ../pep-0432.txt:609
+#: ../../peps/pep-0432.rst:609
 msgid ""
 "Any call to ``Py_InitializeRuntime()`` must have a matching call to "
 "``Py_Finalize()``. It is acceptable to skip calling "
-"``Py_InitializeMainInterpreter()`` in between (e.g. if attempting to build "
-"the main interpreter configuration settings fails)."
+"``Py_InitializeMainInterpreter()`` in between (e.g. if attempting to "
+"build the main interpreter configuration settings fails)."
 msgstr ""
 
-#: ../pep-0432.txt:616
+#: ../../peps/pep-0432.rst:616
 msgid "Determining the remaining configuration settings"
 msgstr ""
 
-#: ../pep-0432.txt:618
+#: ../../peps/pep-0432.rst:618
 msgid ""
-"The next step in the initialization sequence is to determine the remaining "
-"settings needed to complete the process. No changes are made to the "
-"interpreter state at this point. The core APIs for this step are::"
+"The next step in the initialization sequence is to determine the "
+"remaining settings needed to complete the process. No changes are made to"
+" the interpreter state at this point. The core APIs for this step are::"
 msgstr ""
 
-#: ../pep-0432.txt:634
+#: ../../peps/pep-0432.rst:634
 msgid ""
-"The ``py_config`` argument should be a pointer to a PyConfigAsObjects struct "
-"(which may be a temporary one stored on the C stack). For any already "
-"configured value (i.e. any non-NULL pointer), CPython will sanity check the "
-"supplied value, but otherwise accept it as correct."
+"The ``py_config`` argument should be a pointer to a PyConfigAsObjects "
+"struct (which may be a temporary one stored on the C stack). For any "
+"already configured value (i.e. any non-NULL pointer), CPython will sanity"
+" check the supplied value, but otherwise accept it as correct."
 msgstr ""
 
-#: ../pep-0432.txt:639
+#: ../../peps/pep-0432.rst:639
 msgid ""
-"A struct is used rather than a Python dictionary as the struct is easier to "
-"work with from C, the list of supported fields is fixed for a given CPython "
-"version and only a read-only view needs to be exposed to Python code (which "
-"is relatively straightforward, thanks to the infrastructure already put in "
-"place to expose ``sys.implementation``)."
+"A struct is used rather than a Python dictionary as the struct is easier "
+"to work with from C, the list of supported fields is fixed for a given "
+"CPython version and only a read-only view needs to be exposed to Python "
+"code (which is relatively straightforward, thanks to the infrastructure "
+"already put in place to expose ``sys.implementation``)."
 msgstr ""
 
-#: ../pep-0432.txt:645
+#: ../../peps/pep-0432.rst:645
 msgid ""
-"Unlike ``Py_InitializeRuntime``, this call will raise a Python exception and "
-"report an error return rather than returning a Python initialization "
+"Unlike ``Py_InitializeRuntime``, this call will raise a Python exception "
+"and report an error return rather than returning a Python initialization "
 "specific C struct if a problem is found with the config data."
 msgstr ""
 
-#: ../pep-0432.txt:649
+#: ../../peps/pep-0432.rst:649
 msgid ""
 "Any supported configuration setting which is not already set will be "
-"populated appropriately in the supplied configuration struct. The default "
-"configuration can be overridden entirely by setting the value *before* "
-"calling ``Py_BuildPythonConfig``. The provided value will then also be used "
-"in calculating any other settings derived from that value."
+"populated appropriately in the supplied configuration struct. The default"
+" configuration can be overridden entirely by setting the value *before* "
+"calling ``Py_BuildPythonConfig``. The provided value will then also be "
+"used in calculating any other settings derived from that value."
 msgstr ""
 
-#: ../pep-0432.txt:655
+#: ../../peps/pep-0432.rst:655
 msgid ""
 "Alternatively, settings may be overridden *after* the "
 "``Py_BuildPythonConfig`` call (this can be useful if an embedding "
@@ -1088,352 +1102,360 @@ msgid ""
 "such as removing ``sys.path[0]``)."
 msgstr ""
 
-#: ../pep-0432.txt:660
+#: ../../peps/pep-0432.rst:660
 msgid ""
 "The ``c_config`` argument is an optional pointer to a ``PyConfig`` "
-"structure, as defined in :pep:`587`. If provided, it is used in preference "
-"to reading settings directly from the environment or process global state."
+"structure, as defined in :pep:`587`. If provided, it is used in "
+"preference to reading settings directly from the environment or process "
+"global state."
 msgstr ""
 
-#: ../pep-0432.txt:664
+#: ../../peps/pep-0432.rst:664
 msgid ""
-"Merely reading the configuration has no effect on the interpreter state: it "
-"only modifies the passed in configuration struct. The settings are not "
-"applied to the running interpreter until the "
+"Merely reading the configuration has no effect on the interpreter state: "
+"it only modifies the passed in configuration struct. The settings are not"
+" applied to the running interpreter until the "
 "``Py_InitializeMainInterpreter`` call (see below)."
 msgstr ""
 
-#: ../pep-0432.txt:671
+#: ../../peps/pep-0432.rst:671
 msgid "Supported configuration settings"
 msgstr ""
 
-#: ../pep-0432.txt:673
+#: ../../peps/pep-0432.rst:673
 msgid ""
-"The interpreter configuration is split into two parts: settings which are "
-"either relevant only to the main interpreter or must be identical across the "
-"main interpreter and all subinterpreters, and settings which may vary across "
-"subinterpreters."
+"The interpreter configuration is split into two parts: settings which are"
+" either relevant only to the main interpreter or must be identical across"
+" the main interpreter and all subinterpreters, and settings which may "
+"vary across subinterpreters."
 msgstr ""
 
-#: ../pep-0432.txt:678
+#: ../../peps/pep-0432.rst:678
 msgid ""
-"NOTE: For initial implementation purposes, only the flag indicating whether "
-"or not the interpreter is the main interpreter will be configured on a per "
-"interpreter basis. Other fields will be reviewed for whether or not they can "
-"feasibly be made interpreter specific over the course of the implementation."
+"NOTE: For initial implementation purposes, only the flag indicating "
+"whether or not the interpreter is the main interpreter will be configured"
+" on a per interpreter basis. Other fields will be reviewed for whether or"
+" not they can feasibly be made interpreter specific over the course of "
+"the implementation."
 msgstr ""
 
-#: ../pep-0432.txt:683
+#: ../../peps/pep-0432.rst:683
 msgid ""
-"The list of config fields below is currently out of sync with :pep:`587`. "
-"Where they differ, :pep:`587` takes precedence."
+"The list of config fields below is currently out of sync with :pep:`587`."
+" Where they differ, :pep:`587` takes precedence."
 msgstr ""
 
-#: ../pep-0432.txt:686
+#: ../../peps/pep-0432.rst:686
 msgid ""
-"The ``PyConfigAsObjects`` struct mirrors the ``PyConfig`` struct from :pep:"
-"`587`, but uses full Python objects to store values, rather than C level "
-"data types. It adds ``raw_argv`` and ``argv`` list fields, so later "
-"initialisation steps don't need to accept those separately."
+"The ``PyConfigAsObjects`` struct mirrors the ``PyConfig`` struct from "
+":pep:`587`, but uses full Python objects to store values, rather than C "
+"level data types. It adds ``raw_argv`` and ``argv`` list fields, so later"
+" initialisation steps don't need to accept those separately."
 msgstr ""
 
-#: ../pep-0432.txt:691
+#: ../../peps/pep-0432.rst:691
 msgid ""
-"Fields are always pointers to Python data types, with unset values indicated "
-"by ``NULL``::"
+"Fields are always pointers to Python data types, with unset values "
+"indicated by ``NULL``::"
 msgstr ""
 
-#: ../pep-0432.txt:768
+#: ../../peps/pep-0432.rst:768
 msgid ""
-"The ``PyInterpreterConfig`` struct holds the settings that may vary between "
-"the main interpreter and subinterpreters. For the main interpreter, these "
-"settings are automatically populated by ``Py_InitializeMainInterpreter()``."
+"The ``PyInterpreterConfig`` struct holds the settings that may vary "
+"between the main interpreter and subinterpreters. For the main "
+"interpreter, these settings are automatically populated by "
+"``Py_InitializeMainInterpreter()``."
 msgstr ""
 
-#: ../pep-0432.txt:778
+#: ../../peps/pep-0432.rst:778
 msgid ""
-"As these structs consist solely of object pointers, no explicit initializer "
-"definitions are needed - C99's default initialization of struct memory to "
-"zero is sufficient."
+"As these structs consist solely of object pointers, no explicit "
+"initializer definitions are needed - C99's default initialization of "
+"struct memory to zero is sufficient."
 msgstr ""
 
-#: ../pep-0432.txt:784
+#: ../../peps/pep-0432.rst:784
 msgid "Completing the main interpreter initialization"
 msgstr ""
 
-#: ../pep-0432.txt:786
+#: ../../peps/pep-0432.rst:786
 msgid ""
 "The final step in the initialization process is to actually put the "
 "configuration settings into effect and finish bootstrapping the main "
 "interpreter up to full operation::"
 msgstr ""
 
-#: ../pep-0432.txt:792
+#: ../../peps/pep-0432.rst:792
 msgid ""
-"Like ``Py_BuildPythonConfig``, this call will raise an exception and report "
-"an error return rather than exhibiting fatal errors if a problem is found "
-"with the config data. (TBC, as existing public initialisation APIs support "
-"being called multiple times without error, and simply ignore changes to any "
-"write-once settings. It may make sense to keep that behaviour rather than "
-"trying to make the new API stricter than the old one)"
+"Like ``Py_BuildPythonConfig``, this call will raise an exception and "
+"report an error return rather than exhibiting fatal errors if a problem "
+"is found with the config data. (TBC, as existing public initialisation "
+"APIs support being called multiple times without error, and simply ignore"
+" changes to any write-once settings. It may make sense to keep that "
+"behaviour rather than trying to make the new API stricter than the old "
+"one)"
 msgstr ""
 
-#: ../pep-0432.txt:799
+#: ../../peps/pep-0432.rst:799
 msgid ""
-"All configuration settings are required - the configuration struct should "
-"always be passed through ``Py_BuildPythonConfig`` to ensure it is fully "
+"All configuration settings are required - the configuration struct should"
+" always be passed through ``Py_BuildPythonConfig`` to ensure it is fully "
 "populated."
 msgstr ""
 
-#: ../pep-0432.txt:803
+#: ../../peps/pep-0432.rst:803
 msgid ""
 "After a successful call ``Py_IsInitialized()`` will become true and "
-"``Py_IsInitializing()`` will become false. The caveats described above for "
-"the interpreter during the phase where only the core runtime is initialized "
-"will no longer hold."
+"``Py_IsInitializing()`` will become false. The caveats described above "
+"for the interpreter during the phase where only the core runtime is "
+"initialized will no longer hold."
 msgstr ""
 
-#: ../pep-0432.txt:808
+#: ../../peps/pep-0432.rst:808
 msgid ""
 "Attempting to call ``Py_InitializeMainInterpreter()`` again when "
 "``Py_IsInitialized()`` is true is an error."
 msgstr ""
 
-#: ../pep-0432.txt:811
+#: ../../peps/pep-0432.rst:811
 msgid ""
 "However, some metadata related to the ``__main__`` module may still be "
 "incomplete:"
 msgstr ""
 
-#: ../pep-0432.txt:814
+#: ../../peps/pep-0432.rst:814
 msgid "``sys.argv[0]`` may not yet have its final value"
 msgstr ""
 
-#: ../pep-0432.txt:816
+#: ../../peps/pep-0432.rst:816
 msgid "it will be ``-m`` when executing a module or package with CPython"
 msgstr ""
 
-#: ../pep-0432.txt:817
+#: ../../peps/pep-0432.rst:817
 msgid ""
 "it will be the same as ``sys.path[0]`` rather than the location of the "
-"``__main__`` module when executing a valid ``sys.path`` entry (typically a "
-"zipfile or directory)"
+"``__main__`` module when executing a valid ``sys.path`` entry (typically "
+"a zipfile or directory)"
 msgstr ""
 
-#: ../pep-0432.txt:820
+#: ../../peps/pep-0432.rst:820
 msgid "otherwise, it will be accurate:"
 msgstr ""
 
-#: ../pep-0432.txt:822
+#: ../../peps/pep-0432.rst:822
 msgid "the script name if running an ordinary script"
 msgstr ""
 
-#: ../pep-0432.txt:823
+#: ../../peps/pep-0432.rst:823
 msgid "``-c`` if executing a supplied string"
 msgstr ""
 
-#: ../pep-0432.txt:824
+#: ../../peps/pep-0432.rst:824
 msgid "``-`` or the empty string if running from stdin"
 msgstr ""
 
-#: ../pep-0432.txt:826
+#: ../../peps/pep-0432.rst:826
 msgid ""
-"the metadata in the ``__main__`` module will still indicate it is a builtin "
-"module"
+"the metadata in the ``__main__`` module will still indicate it is a "
+"builtin module"
 msgstr ""
 
-#: ../pep-0432.txt:829
+#: ../../peps/pep-0432.rst:829
 msgid ""
-"This function will normally implicitly import site as its final operation "
-"(after ``Py_IsInitialized()`` is already set). Setting the "
-"\"enable_site_config\" flag to ``Py_False`` in the configuration settings "
-"will disable this behaviour, as well as eliminating any side effects on "
-"global state if ``import site`` is later explicitly executed in the process."
+"This function will normally implicitly import site as its final operation"
+" (after ``Py_IsInitialized()`` is already set). Setting the "
+"\"enable_site_config\" flag to ``Py_False`` in the configuration settings"
+" will disable this behaviour, as well as eliminating any side effects on "
+"global state if ``import site`` is later explicitly executed in the "
+"process."
 msgstr ""
 
-#: ../pep-0432.txt:837
+#: ../../peps/pep-0432.rst:837
 msgid "Preparing the main module"
 msgstr ""
 
-#: ../pep-0432.txt:839 ../pep-0432.txt:910
+#: ../../peps/pep-0432.rst:839 ../../peps/pep-0432.rst:910
 msgid ""
-"In :pep:`587`, ``PyRun_PrepareMain`` and ``PyRun_ExecMain`` are not exposed "
-"separately, and are instead accessed through a ``Py_RunMain`` API that both "
-"prepares and executes main, and then finalizes the Python interpreter."
+"In :pep:`587`, ``PyRun_PrepareMain`` and ``PyRun_ExecMain`` are not "
+"exposed separately, and are instead accessed through a ``Py_RunMain`` API"
+" that both prepares and executes main, and then finalizes the Python "
+"interpreter."
 msgstr ""
 
-#: ../pep-0432.txt:844
+#: ../../peps/pep-0432.rst:844
 msgid ""
-"This subphase completes the population of the ``__main__`` module related "
-"metadata, without actually starting execution of the ``__main__`` module "
-"code."
+"This subphase completes the population of the ``__main__`` module related"
+" metadata, without actually starting execution of the ``__main__`` module"
+" code."
 msgstr ""
 
-#: ../pep-0432.txt:848 ../pep-0432.txt:918
+#: ../../peps/pep-0432.rst:848 ../../peps/pep-0432.rst:918
 msgid "It is handled by calling the following API::"
 msgstr ""
 
-#: ../pep-0432.txt:852 ../pep-0432.txt:922
+#: ../../peps/pep-0432.rst:852 ../../peps/pep-0432.rst:922
 msgid ""
-"This operation is only permitted for the main interpreter, and will raise "
-"``RuntimeError`` when invoked from a thread where the current thread state "
-"belongs to a subinterpreter."
+"This operation is only permitted for the main interpreter, and will raise"
+" ``RuntimeError`` when invoked from a thread where the current thread "
+"state belongs to a subinterpreter."
 msgstr ""
 
-#: ../pep-0432.txt:856 ../pep-0432.txt:926
+#: ../../peps/pep-0432.rst:856 ../../peps/pep-0432.rst:926
 msgid ""
-"The actual processing is driven by the main related settings stored in the "
-"interpreter state as part of the configuration struct."
+"The actual processing is driven by the main related settings stored in "
+"the interpreter state as part of the configuration struct."
 msgstr ""
 
-#: ../pep-0432.txt:859
+#: ../../peps/pep-0432.rst:859
 msgid "If ``prepare_main`` is zero, this call does nothing."
 msgstr ""
 
-#: ../pep-0432.txt:861
+#: ../../peps/pep-0432.rst:861
 msgid ""
-"If all of ``main_source``, ``main_path``, ``main_module``, ``main_stream`` "
-"and ``main_code`` are NULL, this call does nothing."
+"If all of ``main_source``, ``main_path``, ``main_module``, "
+"``main_stream`` and ``main_code`` are NULL, this call does nothing."
 msgstr ""
 
-#: ../pep-0432.txt:864
+#: ../../peps/pep-0432.rst:864
 msgid ""
 "If more than one of ``main_source``, ``main_path``, ``main_module``, "
-"``main_stream`` or ``main_code`` are set, ``RuntimeError`` will be reported."
+"``main_stream`` or ``main_code`` are set, ``RuntimeError`` will be "
+"reported."
 msgstr ""
 
-#: ../pep-0432.txt:867
+#: ../../peps/pep-0432.rst:867
 msgid "If ``main_code`` is already set, then this call does nothing."
 msgstr ""
 
-#: ../pep-0432.txt:869
+#: ../../peps/pep-0432.rst:869
 msgid ""
-"If ``main_stream`` is set, and ``run_implicit_code`` is also set, then the "
-"file identified in ``startup_file`` will be read, compiled and executed in "
-"the ``__main__`` namespace."
+"If ``main_stream`` is set, and ``run_implicit_code`` is also set, then "
+"the file identified in ``startup_file`` will be read, compiled and "
+"executed in the ``__main__`` namespace."
 msgstr ""
 
-#: ../pep-0432.txt:873
+#: ../../peps/pep-0432.rst:873
 msgid ""
-"If ``main_source``, ``main_path`` or ``main_module`` are set, then this call "
-"will take whatever steps are needed to populate ``main_code``:"
+"If ``main_source``, ``main_path`` or ``main_module`` are set, then this "
+"call will take whatever steps are needed to populate ``main_code``:"
 msgstr ""
 
-#: ../pep-0432.txt:876
+#: ../../peps/pep-0432.rst:876
 msgid ""
 "For ``main_source``, the supplied string will be compiled and saved to "
 "``main_code``."
 msgstr ""
 
-#: ../pep-0432.txt:879
+#: ../../peps/pep-0432.rst:879
 msgid "For ``main_path``:"
 msgstr ""
 
-#: ../pep-0432.txt:881
+#: ../../peps/pep-0432.rst:881
 msgid ""
 "if the supplied path is recognised as a valid ``sys.path`` entry, it is "
 "inserted as ``sys.path[0]``, ``main_module`` is set to ``__main__`` and "
 "processing continues as for ``main_module`` below."
 msgstr ""
 
-#: ../pep-0432.txt:884
+#: ../../peps/pep-0432.rst:884
 msgid "otherwise, path is read as a CPython bytecode file"
 msgstr ""
 
-#: ../pep-0432.txt:885
+#: ../../peps/pep-0432.rst:885
 msgid "if that fails, it is read as a Python source file and compiled"
 msgstr ""
 
-#: ../pep-0432.txt:886
+#: ../../peps/pep-0432.rst:886
 msgid ""
 "in the latter two cases, the code object is saved to ``main_code`` and "
 "``__main__.__file__`` is set appropriately"
 msgstr ""
 
-#: ../pep-0432.txt:889
+#: ../../peps/pep-0432.rst:889
 msgid "For ``main_module``:"
 msgstr ""
 
-#: ../pep-0432.txt:891
+#: ../../peps/pep-0432.rst:891
 msgid "any parent package is imported"
 msgstr ""
 
-#: ../pep-0432.txt:892
+#: ../../peps/pep-0432.rst:892
 msgid "the loader for the module is determined"
 msgstr ""
 
-#: ../pep-0432.txt:893
+#: ../../peps/pep-0432.rst:893
 msgid ""
-"if the loader indicates the module is a package, add ``.__main__`` to the "
-"end of ``main_module`` and try again (if the final name segment is already "
-"``.__main__`` then fail immediately)"
+"if the loader indicates the module is a package, add ``.__main__`` to the"
+" end of ``main_module`` and try again (if the final name segment is "
+"already ``.__main__`` then fail immediately)"
 msgstr ""
 
-#: ../pep-0432.txt:896
+#: ../../peps/pep-0432.rst:896
 msgid ""
 "once the module source code is located, save the compiled module code as "
 "``main_code`` and populate the following attributes in ``__main__`` "
-"appropriately: ``__name__``, ``__loader__``, ``__file__``, ``__cached__``, "
-"``__package__``."
+"appropriately: ``__name__``, ``__loader__``, ``__file__``, "
+"``__cached__``, ``__package__``."
 msgstr ""
 
-#: ../pep-0432.txt:902
+#: ../../peps/pep-0432.rst:902
 msgid ""
-"(Note: the behaviour described in this section isn't new, it's a write-up of "
-"the current behaviour of the CPython interpreter adjusted for the new "
-"configuration system)"
+"(Note: the behaviour described in this section isn't new, it's a write-up"
+" of the current behaviour of the CPython interpreter adjusted for the new"
+" configuration system)"
 msgstr ""
 
-#: ../pep-0432.txt:908
+#: ../../peps/pep-0432.rst:908
 msgid "Executing the main module"
 msgstr ""
 
-#: ../pep-0432.txt:916
-msgid ""
-"This subphase covers the execution of the actual ``__main__`` module code."
+#: ../../peps/pep-0432.rst:916
+msgid "This subphase covers the execution of the actual ``__main__`` module code."
 msgstr ""
 
-#: ../pep-0432.txt:929
+#: ../../peps/pep-0432.rst:929
 msgid ""
-"If both ``main_stream`` and ``main_code`` are NULL, this call does nothing."
+"If both ``main_stream`` and ``main_code`` are NULL, this call does "
+"nothing."
 msgstr ""
 
-#: ../pep-0432.txt:931
+#: ../../peps/pep-0432.rst:931
 msgid ""
-"If both ``main_stream`` and ``main_code`` are set, ``RuntimeError`` will be "
-"reported."
+"If both ``main_stream`` and ``main_code`` are set, ``RuntimeError`` will "
+"be reported."
 msgstr ""
 
-#: ../pep-0432.txt:934
+#: ../../peps/pep-0432.rst:934
 msgid ""
-"If ``main_stream`` and ``prompt_stream`` are both set, main execution will "
-"be delegated to a new internal API::"
+"If ``main_stream`` and ``prompt_stream`` are both set, main execution "
+"will be delegated to a new internal API::"
 msgstr ""
 
-#: ../pep-0432.txt:939
+#: ../../peps/pep-0432.rst:939
 msgid ""
-"If ``main_stream`` is set and ``prompt_stream`` is NULL, main execution will "
-"be delegated to a new internal API::"
+"If ``main_stream`` is set and ``prompt_stream`` is NULL, main execution "
+"will be delegated to a new internal API::"
 msgstr ""
 
-#: ../pep-0432.txt:944
+#: ../../peps/pep-0432.rst:944
 msgid ""
-"If ``main_code`` is set, main execution will be delegated to a new internal "
-"API::"
+"If ``main_code`` is set, main execution will be delegated to a new "
+"internal API::"
 msgstr ""
 
-#: ../pep-0432.txt:949
+#: ../../peps/pep-0432.rst:949
 msgid ""
 "After execution of main completes, if ``inspect_main`` is set, or the "
-"``PYTHONINSPECT`` environment variable has been set, then ``PyRun_ExecMain`` "
-"will invoke ``_PyRun_InteractiveMain(sys.__stdin__, sys.__stdout__)``."
+"``PYTHONINSPECT`` environment variable has been set, then "
+"``PyRun_ExecMain`` will invoke ``_PyRun_InteractiveMain(sys.__stdin__, "
+"sys.__stdout__)``."
 msgstr ""
 
-#: ../pep-0432.txt:956
+#: ../../peps/pep-0432.rst:956
 msgid "Internal Storage of Configuration Data"
 msgstr ""
 
-#: ../pep-0432.txt:958
+#: ../../peps/pep-0432.rst:958
 msgid ""
 "The interpreter state will be updated to include details of the "
 "configuration settings supplied during initialization by extending the "
@@ -1441,806 +1463,818 @@ msgid ""
 "``PyConfigAsObjects`` and ``PyInterpreterConfig`` structs."
 msgstr ""
 
-#: ../pep-0432.txt:963
+#: ../../peps/pep-0432.rst:963
 msgid ""
 "For debugging purposes, the configuration settings will be exposed as a "
-"``sys._configuration`` simple namespace (similar to ``sys.flags`` and ``sys."
-"implementation``. The attributes will be themselves by simple namespaces "
-"corresponding to the two levels of configuration setting:"
+"``sys._configuration`` simple namespace (similar to ``sys.flags`` and "
+"``sys.implementation``. The attributes will be themselves by simple "
+"namespaces corresponding to the two levels of configuration setting:"
 msgstr ""
 
-#: ../pep-0432.txt:968
+#: ../../peps/pep-0432.rst:968
 msgid "``all_interpreters``"
 msgstr ""
 
-#: ../pep-0432.txt:969
+#: ../../peps/pep-0432.rst:969
 msgid "``active_interpreter``"
 msgstr ""
 
-#: ../pep-0432.txt:971
+#: ../../peps/pep-0432.rst:971
 msgid ""
 "Field names will match those in the configuration structs, except for "
 "``hash_seed``, which will be deliberately excluded."
 msgstr ""
 
-#: ../pep-0432.txt:974
+#: ../../peps/pep-0432.rst:974
 msgid ""
 "An underscored attribute is chosen deliberately, as these configuration "
 "settings are part of the CPython implementation, rather than part of the "
 "Python language definition. If new settings are needed to support cross-"
-"implementation compatibility in the standard library, then those should be "
-"agreed with the other implementations and exposed as new required attributes "
-"on ``sys.implementation``, as described in :pep:`421`."
+"implementation compatibility in the standard library, then those should "
+"be agreed with the other implementations and exposed as new required "
+"attributes on ``sys.implementation``, as described in :pep:`421`."
 msgstr ""
 
-#: ../pep-0432.txt:981
+#: ../../peps/pep-0432.rst:981
 msgid ""
-"These are *snapshots* of the initial configuration settings. They are not "
-"modified by the interpreter during runtime (except as noted above)."
+"These are *snapshots* of the initial configuration settings. They are not"
+" modified by the interpreter during runtime (except as noted above)."
 msgstr ""
 
-#: ../pep-0432.txt:986
+#: ../../peps/pep-0432.rst:986
 msgid "Creating and Configuring Subinterpreters"
 msgstr ""
 
-#: ../pep-0432.txt:988
+#: ../../peps/pep-0432.rst:988
 msgid ""
-"As the new configuration settings are stored in the interpreter state, they "
-"need to be initialised when a new subinterpreter is created. This turns out "
-"to be trickier than one might expect due to ``PyThreadState_Swap(NULL);`` "
-"(which is fortunately exercised by CPython's own embedding tests, allowing "
-"this problem to be detected during development)."
+"As the new configuration settings are stored in the interpreter state, "
+"they need to be initialised when a new subinterpreter is created. This "
+"turns out to be trickier than one might expect due to "
+"``PyThreadState_Swap(NULL);`` (which is fortunately exercised by "
+"CPython's own embedding tests, allowing this problem to be detected "
+"during development)."
 msgstr ""
 
-#: ../pep-0432.txt:994
+#: ../../peps/pep-0432.rst:994
 msgid ""
-"To provide a straightforward solution for this case, the PEP proposes to add "
-"a new API::"
+"To provide a straightforward solution for this case, the PEP proposes to "
+"add a new API::"
 msgstr ""
 
-#: ../pep-0432.txt:999
+#: ../../peps/pep-0432.rst:999
 msgid ""
-"This will be a counterpart to ``Py_InterpreterState_Head()``, only reporting "
-"the oldest currently existing interpreter rather than the newest. If "
-"``Py_NewInterpreter()`` is called from a thread with an existing thread "
-"state, then the interpreter configuration for that thread will be used when "
-"initialising the new subinterpreter. If there is no current thread state, "
-"the configuration from ``Py_InterpreterState_Main()`` will be used."
+"This will be a counterpart to ``Py_InterpreterState_Head()``, only "
+"reporting the oldest currently existing interpreter rather than the "
+"newest. If ``Py_NewInterpreter()`` is called from a thread with an "
+"existing thread state, then the interpreter configuration for that thread"
+" will be used when initialising the new subinterpreter. If there is no "
+"current thread state, the configuration from "
+"``Py_InterpreterState_Main()`` will be used."
 msgstr ""
 
-#: ../pep-0432.txt:1007
+#: ../../peps/pep-0432.rst:1007
 msgid ""
-"While the existing ``Py_InterpreterState_Head()`` API could be used instead, "
-"that reference changes as subinterpreters are created and destroyed, while "
-"``PyInterpreterState_Main()`` will always refer to the initial interpreter "
-"state created in ``Py_InitializeRuntime()``."
+"While the existing ``Py_InterpreterState_Head()`` API could be used "
+"instead, that reference changes as subinterpreters are created and "
+"destroyed, while ``PyInterpreterState_Main()`` will always refer to the "
+"initial interpreter state created in ``Py_InitializeRuntime()``."
 msgstr ""
 
-#: ../pep-0432.txt:1012
+#: ../../peps/pep-0432.rst:1012
 msgid ""
-"A new constraint is also added to the embedding API: attempting to delete "
-"the main interpreter while subinterpreters still exist will now be a fatal "
-"error."
+"A new constraint is also added to the embedding API: attempting to delete"
+" the main interpreter while subinterpreters still exist will now be a "
+"fatal error."
 msgstr ""
 
-#: ../pep-0432.txt:1018
+#: ../../peps/pep-0432.rst:1018
 msgid "Stable ABI"
 msgstr ""
 
-#: ../pep-0432.txt:1020
+#: ../../peps/pep-0432.rst:1020
 msgid ""
-"Most of the APIs proposed in this PEP are excluded from the stable ABI, as "
-"embedding a Python interpreter involves a much higher degree of coupling "
-"than merely writing an extension module."
+"Most of the APIs proposed in this PEP are excluded from the stable ABI, "
+"as embedding a Python interpreter involves a much higher degree of "
+"coupling than merely writing an extension module."
 msgstr ""
 
-#: ../pep-0432.txt:1024
+#: ../../peps/pep-0432.rst:1024
 msgid ""
 "The only newly exposed APIs that will be part of the stable ABI are the "
 "``Py_IsInitializing()`` and ``Py_IsRuntimeInitialized()`` queries."
 msgstr ""
 
-#: ../pep-0432.txt:1029
+#: ../../peps/pep-0432.rst:1029
 msgid "Build time configuration"
 msgstr ""
 
-#: ../pep-0432.txt:1031
+#: ../../peps/pep-0432.rst:1031
 msgid ""
 "This PEP makes no changes to the handling of build time configuration "
-"settings, and thus has no effect on the contents of ``sys.implementation`` "
-"or the result of ``sysconfig.get_config_vars()``."
+"settings, and thus has no effect on the contents of "
+"``sys.implementation`` or the result of ``sysconfig.get_config_vars()``."
 msgstr ""
 
-#: ../pep-0432.txt:1037
+#: ../../peps/pep-0432.rst:1037
 msgid "Backwards Compatibility"
 msgstr ""
 
-#: ../pep-0432.txt:1039
+#: ../../peps/pep-0432.rst:1039
 msgid ""
 "Backwards compatibility will be preserved primarily by ensuring that "
 "``Py_BuildPythonConfig()`` interrogates all the previously defined "
-"configuration settings stored in global variables and environment variables, "
-"and that ``Py_InitializeMainInterpreter()`` writes affected settings back to "
-"the relevant locations."
+"configuration settings stored in global variables and environment "
+"variables, and that ``Py_InitializeMainInterpreter()`` writes affected "
+"settings back to the relevant locations."
 msgstr ""
 
-#: ../pep-0432.txt:1045
+#: ../../peps/pep-0432.rst:1045
 msgid ""
-"One acknowledged incompatibility is that some environment variables which "
-"are currently read lazily may instead be read once during interpreter "
+"One acknowledged incompatibility is that some environment variables which"
+" are currently read lazily may instead be read once during interpreter "
 "initialization. As the reference implementation matures, these will be "
-"discussed in more detail on a case-by-case basis. The environment variables "
-"which are currently known to be looked up dynamically are:"
+"discussed in more detail on a case-by-case basis. The environment "
+"variables which are currently known to be looked up dynamically are:"
 msgstr ""
 
-#: ../pep-0432.txt:1051
+#: ../../peps/pep-0432.rst:1051
 msgid ""
-"``PYTHONCASEOK``: writing to ``os.environ['PYTHONCASEOK']`` will no longer "
-"dynamically alter the interpreter's handling of filename case differences on "
-"import (TBC)"
+"``PYTHONCASEOK``: writing to ``os.environ['PYTHONCASEOK']`` will no "
+"longer dynamically alter the interpreter's handling of filename case "
+"differences on import (TBC)"
 msgstr ""
 
-#: ../pep-0432.txt:1054
+#: ../../peps/pep-0432.rst:1054
 msgid ""
 "``PYTHONINSPECT``: ``os.environ['PYTHONINSPECT']`` will still be checked "
 "after execution of the ``__main__`` module terminates"
 msgstr ""
 
-#: ../pep-0432.txt:1057
+#: ../../peps/pep-0432.rst:1057
 msgid ""
 "The ``Py_Initialize()`` style of initialization will continue to be "
-"supported. It will use (at least some elements of) the new API internally, "
-"but will continue to exhibit the same behaviour as it does today, ensuring "
-"that ``sys.argv`` is not populated until a subsequent ``PySys_SetArgv`` call "
-"(TBC). All APIs that currently support being called prior to "
-"``Py_Initialize()`` will continue to do so, and will also support being "
-"called prior to ``Py_InitializeRuntime()``."
+"supported. It will use (at least some elements of) the new API "
+"internally, but will continue to exhibit the same behaviour as it does "
+"today, ensuring that ``sys.argv`` is not populated until a subsequent "
+"``PySys_SetArgv`` call (TBC). All APIs that currently support being "
+"called prior to ``Py_Initialize()`` will continue to do so, and will also"
+" support being called prior to ``Py_InitializeRuntime()``."
 msgstr ""
 
-#: ../pep-0432.txt:1068
+#: ../../peps/pep-0432.rst:1068
 msgid "A System Python Executable"
 msgstr ""
 
-#: ../pep-0432.txt:1070
+#: ../../peps/pep-0432.rst:1070
 msgid ""
-"When executing system utilities with administrative access to a system, many "
-"of the default behaviours of CPython are undesirable, as they may allow "
-"untrusted code to execute with elevated privileges. The most problematic "
-"aspects are the fact that user site directories are enabled, environment "
-"variables are trusted and that the directory containing the executed file is "
-"placed at the beginning of the import path."
+"When executing system utilities with administrative access to a system, "
+"many of the default behaviours of CPython are undesirable, as they may "
+"allow untrusted code to execute with elevated privileges. The most "
+"problematic aspects are the fact that user site directories are enabled, "
+"environment variables are trusted and that the directory containing the "
+"executed file is placed at the beginning of the import path."
 msgstr ""
 
-#: ../pep-0432.txt:1077
+#: ../../peps/pep-0432.rst:1077
 msgid ""
-"Issue 16499 [6]_ added a ``-I`` option to change the behaviour of the normal "
-"CPython executable, but this is a hard to discover solution (and adds yet "
-"another option to an already complex CLI). This PEP proposes to instead add "
-"a separate ``system-python`` executable"
+"Issue 16499 [6]_ added a ``-I`` option to change the behaviour of the "
+"normal CPython executable, but this is a hard to discover solution (and "
+"adds yet another option to an already complex CLI). This PEP proposes to "
+"instead add a separate ``system-python`` executable"
 msgstr ""
 
-#: ../pep-0432.txt:1082
+#: ../../peps/pep-0432.rst:1082
 msgid ""
-"Currently, providing a separate executable with different default behaviour "
-"would be prohibitively hard to maintain. One of the goals of this PEP is to "
-"make it possible to replace much of the hard to maintain bootstrapping code "
-"with more normal CPython code, as well as making it easier for a separate "
-"application to make use of key components of ``Py_Main``. Including this "
-"change in the PEP is designed to help avoid acceptance of a design that "
-"sounds good in theory but proves to be problematic in practice."
+"Currently, providing a separate executable with different default "
+"behaviour would be prohibitively hard to maintain. One of the goals of "
+"this PEP is to make it possible to replace much of the hard to maintain "
+"bootstrapping code with more normal CPython code, as well as making it "
+"easier for a separate application to make use of key components of "
+"``Py_Main``. Including this change in the PEP is designed to help avoid "
+"acceptance of a design that sounds good in theory but proves to be "
+"problematic in practice."
 msgstr ""
 
-#: ../pep-0432.txt:1090
+#: ../../peps/pep-0432.rst:1090
 msgid ""
-"Cleanly supporting this kind of \"alternate CLI\" is the main reason for the "
-"proposed changes to better expose the core logic for deciding between the "
-"different execution modes supported by CPython:"
+"Cleanly supporting this kind of \"alternate CLI\" is the main reason for "
+"the proposed changes to better expose the core logic for deciding between"
+" the different execution modes supported by CPython:"
 msgstr ""
 
-#: ../pep-0432.txt:1094
+#: ../../peps/pep-0432.rst:1094
 msgid "script execution"
 msgstr ""
 
-#: ../pep-0432.txt:1095
+#: ../../peps/pep-0432.rst:1095
 msgid "directory/zipfile execution"
 msgstr ""
 
-#: ../pep-0432.txt:1096
+#: ../../peps/pep-0432.rst:1096
 msgid "command execution (\"-c\" switch)"
 msgstr ""
 
-#: ../pep-0432.txt:1097
+#: ../../peps/pep-0432.rst:1097
 msgid "module or package execution (\"-m\" switch)"
 msgstr ""
 
-#: ../pep-0432.txt:1098
+#: ../../peps/pep-0432.rst:1098
 msgid "execution from stdin (non-interactive)"
 msgstr ""
 
-#: ../pep-0432.txt:1099
+#: ../../peps/pep-0432.rst:1099
 msgid "interactive stdin"
 msgstr ""
 
-#: ../pep-0432.txt:1101
+#: ../../peps/pep-0432.rst:1101
 msgid ""
-"Actually implementing this may also reveal the need for some better argument "
-"parsing infrastructure for use during the initializing phase."
+"Actually implementing this may also reveal the need for some better "
+"argument parsing infrastructure for use during the initializing phase."
 msgstr ""
 
-#: ../pep-0432.txt:1106
+#: ../../peps/pep-0432.rst:1106
 msgid "Open Questions"
 msgstr ""
 
-#: ../pep-0432.txt:1108
+#: ../../peps/pep-0432.rst:1108
 msgid ""
 "Error details for ``Py_BuildPythonConfig`` and "
 "``Py_InitializeMainInterpreter`` (these should become clearer as the "
 "implementation progresses)"
 msgstr ""
 
-#: ../pep-0432.txt:1114
+#: ../../peps/pep-0432.rst:1114
 msgid "Implementation"
 msgstr ""
 
-#: ../pep-0432.txt:1116
+#: ../../peps/pep-0432.rst:1116
 msgid ""
-"The reference implementation is being developed as a private API refactoring "
-"within the CPython reference interpreter (as attempting to maintain it as an "
-"independent project proved impractical)."
+"The reference implementation is being developed as a private API "
+"refactoring within the CPython reference interpreter (as attempting to "
+"maintain it as an independent project proved impractical)."
 msgstr ""
 
-#: ../pep-0432.txt:1120
+#: ../../peps/pep-0432.rst:1120
 msgid ""
-":pep:`587` extracts a subset of the proposal that is considered sufficiently "
-"stable to be worth proposing as a public API for Python 3.8."
+":pep:`587` extracts a subset of the proposal that is considered "
+"sufficiently stable to be worth proposing as a public API for Python 3.8."
 msgstr ""
 
-#: ../pep-0432.txt:1125
+#: ../../peps/pep-0432.rst:1125
 msgid "The Status Quo (as of Python 3.6)"
 msgstr ""
 
-#: ../pep-0432.txt:1127
+#: ../../peps/pep-0432.rst:1127
 msgid ""
-"The current mechanisms for configuring the interpreter have accumulated in a "
-"fairly ad hoc fashion over the past 20+ years, leading to a rather "
+"The current mechanisms for configuring the interpreter have accumulated "
+"in a fairly ad hoc fashion over the past 20+ years, leading to a rather "
 "inconsistent interface with varying levels of documentation."
 msgstr ""
 
-#: ../pep-0432.txt:1131
+#: ../../peps/pep-0432.rst:1131
 msgid ""
 "Also see :pep:`587` for further discussion of the existing settings and "
 "their handling."
 msgstr ""
 
-#: ../pep-0432.txt:1134
+#: ../../peps/pep-0432.rst:1134
 msgid ""
-"(Note: some of the info below could probably be cleaned up and added to the "
-"C API documentation for 3.x - it's all CPython specific, so it doesn't "
-"belong in the language reference)"
+"(Note: some of the info below could probably be cleaned up and added to "
+"the C API documentation for 3.x - it's all CPython specific, so it "
+"doesn't belong in the language reference)"
 msgstr ""
 
-#: ../pep-0432.txt:1140
+#: ../../peps/pep-0432.rst:1140
 msgid "Ignoring Environment Variables"
 msgstr ""
 
-#: ../pep-0432.txt:1142
+#: ../../peps/pep-0432.rst:1142
 msgid ""
 "The ``-E`` command line option allows all environment variables to be "
-"ignored when initializing the Python interpreter. An embedding application "
-"can enable this behaviour by setting ``Py_IgnoreEnvironmentFlag`` before "
-"calling ``Py_Initialize()``."
+"ignored when initializing the Python interpreter. An embedding "
+"application can enable this behaviour by setting "
+"``Py_IgnoreEnvironmentFlag`` before calling ``Py_Initialize()``."
 msgstr ""
 
-#: ../pep-0432.txt:1147
+#: ../../peps/pep-0432.rst:1147
 msgid ""
-"In the CPython source code, the ``Py_GETENV`` macro implicitly checks this "
-"flag, and always produces ``NULL`` if it is set."
+"In the CPython source code, the ``Py_GETENV`` macro implicitly checks "
+"this flag, and always produces ``NULL`` if it is set."
 msgstr ""
 
-#: ../pep-0432.txt:1150
+#: ../../peps/pep-0432.rst:1150
 msgid ""
-"<TBD: I believe PYTHONCASEOK is checked regardless of this setting > <TBD: "
-"Does -E also ignore Windows registry keys? >"
+"<TBD: I believe PYTHONCASEOK is checked regardless of this setting > "
+"<TBD: Does -E also ignore Windows registry keys? >"
 msgstr ""
 
-#: ../pep-0432.txt:1155
+#: ../../peps/pep-0432.rst:1155
 msgid "Randomised Hashing"
 msgstr ""
 
-#: ../pep-0432.txt:1157
+#: ../../peps/pep-0432.rst:1157
 msgid ""
-"The randomised hashing is controlled via the ``-R`` command line option (in "
-"releases prior to 3.3), as well as the ``PYTHONHASHSEED`` environment "
-"variable."
+"The randomised hashing is controlled via the ``-R`` command line option "
+"(in releases prior to 3.3), as well as the ``PYTHONHASHSEED`` environment"
+" variable."
 msgstr ""
 
-#: ../pep-0432.txt:1161
+#: ../../peps/pep-0432.rst:1161
 msgid ""
 "In Python 3.3, only the environment variable remains relevant. It can be "
-"used to disable randomised hashing (by using a seed value of 0) or else to "
-"force a specific hash value (e.g. for repeatability of testing, or to share "
-"hash values between processes)"
+"used to disable randomised hashing (by using a seed value of 0) or else "
+"to force a specific hash value (e.g. for repeatability of testing, or to "
+"share hash values between processes)"
 msgstr ""
 
-#: ../pep-0432.txt:1166
+#: ../../peps/pep-0432.rst:1166
 msgid ""
-"However, embedding applications must use the ``Py_HashRandomizationFlag`` to "
-"explicitly request hash randomisation (CPython sets it in ``Py_Main()`` "
-"rather than in ``Py_Initialize()``)."
+"However, embedding applications must use the ``Py_HashRandomizationFlag``"
+" to explicitly request hash randomisation (CPython sets it in "
+"``Py_Main()`` rather than in ``Py_Initialize()``)."
 msgstr ""
 
-#: ../pep-0432.txt:1170
+#: ../../peps/pep-0432.rst:1170
 msgid ""
-"The new configuration API should make it straightforward for an embedding "
-"application to reuse the ``PYTHONHASHSEED`` processing with a text based "
-"configuration setting provided by other means (e.g. a config file or "
+"The new configuration API should make it straightforward for an embedding"
+" application to reuse the ``PYTHONHASHSEED`` processing with a text based"
+" configuration setting provided by other means (e.g. a config file or "
 "separate environment variable)."
 msgstr ""
 
-#: ../pep-0432.txt:1177
+#: ../../peps/pep-0432.rst:1177
 msgid "Locating Python and the standard library"
 msgstr ""
 
-#: ../pep-0432.txt:1179
+#: ../../peps/pep-0432.rst:1179
 msgid ""
-"The location of the Python binary and the standard library is influenced by "
-"several elements. The algorithm used to perform the calculation is not "
-"documented anywhere other than in the source code [3]_, [4]_. Even that "
+"The location of the Python binary and the standard library is influenced "
+"by several elements. The algorithm used to perform the calculation is not"
+" documented anywhere other than in the source code [3]_, [4]_. Even that "
 "description is incomplete, as it failed to be updated for the virtual "
 "environment support added in Python 3.3 (detailed in :pep:`405`)."
 msgstr ""
 
-#: ../pep-0432.txt:1185
+#: ../../peps/pep-0432.rst:1185
 msgid ""
-"These calculations are affected by the following function calls (made prior "
-"to calling ``Py_Initialize()``) and environment variables:"
+"These calculations are affected by the following function calls (made "
+"prior to calling ``Py_Initialize()``) and environment variables:"
 msgstr ""
 
-#: ../pep-0432.txt:1188
+#: ../../peps/pep-0432.rst:1188
 msgid "``Py_SetProgramName()``"
 msgstr ""
 
-#: ../pep-0432.txt:1189
+#: ../../peps/pep-0432.rst:1189
 msgid "``Py_SetPythonHome()``"
 msgstr ""
 
-#: ../pep-0432.txt:1190
+#: ../../peps/pep-0432.rst:1190
 msgid "``PYTHONHOME``"
 msgstr ""
 
-#: ../pep-0432.txt:1192
+#: ../../peps/pep-0432.rst:1192
 msgid ""
-"The filesystem is also inspected for ``pyvenv.cfg`` files (see :pep:`405`) "
-"or, failing that, a ``lib/os.py`` (Windows) or ``lib/python$VERSION/os.py`` "
-"file."
+"The filesystem is also inspected for ``pyvenv.cfg`` files (see "
+":pep:`405`) or, failing that, a ``lib/os.py`` (Windows) or "
+"``lib/python$VERSION/os.py`` file."
 msgstr ""
 
-#: ../pep-0432.txt:1196
+#: ../../peps/pep-0432.rst:1196
 msgid ""
 "The build time settings for ``PREFIX`` and ``EXEC_PREFIX`` are also "
-"relevant, as are some registry settings on Windows. The hardcoded fallbacks "
-"are based on the layout of the CPython source tree and build output when "
-"working in a source checkout."
+"relevant, as are some registry settings on Windows. The hardcoded "
+"fallbacks are based on the layout of the CPython source tree and build "
+"output when working in a source checkout."
 msgstr ""
 
-#: ../pep-0432.txt:1203
+#: ../../peps/pep-0432.rst:1203
 msgid "Configuring ``sys.path``"
 msgstr ""
 
-#: ../pep-0432.txt:1205
+#: ../../peps/pep-0432.rst:1205
 msgid ""
 "An embedding application may call ``Py_SetPath()`` prior to "
-"``Py_Initialize()`` to completely override the calculation of ``sys.path``. "
-"It is not straightforward to only allow *some* of the calculations, as "
-"modifying ``sys.path`` after initialization is already complete means those "
-"modifications will not be in effect when standard library modules are "
-"imported during the startup sequence."
+"``Py_Initialize()`` to completely override the calculation of "
+"``sys.path``. It is not straightforward to only allow *some* of the "
+"calculations, as modifying ``sys.path`` after initialization is already "
+"complete means those modifications will not be in effect when standard "
+"library modules are imported during the startup sequence."
 msgstr ""
 
-#: ../pep-0432.txt:1212
+#: ../../peps/pep-0432.rst:1212
 msgid ""
-"If ``Py_SetPath()`` is not used prior to the first call to ``Py_GetPath()`` "
-"(implicit in ``Py_Initialize()``), then it builds on the location data "
-"calculations above to calculate suitable path entries, along with the "
-"``PYTHONPATH`` environment variable."
+"If ``Py_SetPath()`` is not used prior to the first call to "
+"``Py_GetPath()`` (implicit in ``Py_Initialize()``), then it builds on the"
+" location data calculations above to calculate suitable path entries, "
+"along with the ``PYTHONPATH`` environment variable."
 msgstr ""
 
-#: ../pep-0432.txt:1217
-msgid ""
-"<TBD: On Windows, there's also a bunch of stuff to do with the registry>"
+#: ../../peps/pep-0432.rst:1217
+msgid "<TBD: On Windows, there's also a bunch of stuff to do with the registry>"
 msgstr ""
 
-#: ../pep-0432.txt:1219
+#: ../../peps/pep-0432.rst:1219
 msgid ""
 "The ``site`` module, which is implicitly imported at startup (unless "
-"disabled via the ``-S`` option) adds additional paths to this initial set of "
-"paths, as described in its documentation [5]_."
+"disabled via the ``-S`` option) adds additional paths to this initial set"
+" of paths, as described in its documentation [5]_."
 msgstr ""
 
-#: ../pep-0432.txt:1223
+#: ../../peps/pep-0432.rst:1223
 msgid ""
 "The ``-s`` command line option can be used to exclude the user site "
 "directory from the list of directories added. Embedding applications can "
 "control this by setting the ``Py_NoUserSiteDirectory`` global variable."
 msgstr ""
 
-#: ../pep-0432.txt:1227
+#: ../../peps/pep-0432.rst:1227
 msgid ""
-"The following commands can be used to check the default path configurations "
-"for a given Python executable on a given system:"
+"The following commands can be used to check the default path "
+"configurations for a given Python executable on a given system:"
 msgstr ""
 
-#: ../pep-0432.txt:1230
+#: ../../peps/pep-0432.rst:1230
 msgid ""
-"``./python -c \"import sys, pprint; pprint.pprint(sys.path)\"`` - standard "
-"configuration"
+"``./python -c \"import sys, pprint; pprint.pprint(sys.path)\"`` - "
+"standard configuration"
 msgstr ""
 
-#: ../pep-0432.txt:1232
+#: ../../peps/pep-0432.rst:1232
 msgid ""
-"``./python -s -c \"import sys, pprint; pprint.pprint(sys.path)\"`` - user "
-"site directory disabled"
+"``./python -s -c \"import sys, pprint; pprint.pprint(sys.path)\"`` - user"
+" site directory disabled"
 msgstr ""
 
-#: ../pep-0432.txt:1234
+#: ../../peps/pep-0432.rst:1234
 msgid ""
 "``./python -S -c \"import sys, pprint; pprint.pprint(sys.path)\"`` - all "
 "site path modifications disabled"
 msgstr ""
 
-#: ../pep-0432.txt:1237
+#: ../../peps/pep-0432.rst:1237
 msgid ""
-"(Note: you can see similar information using ``-m site`` instead of ``-c``, "
-"but this is slightly misleading as it calls ``os.abspath`` on all of the "
-"path entries, making relative path entries look absolute. Using the ``site`` "
-"module also causes problems in the last case, as on Python versions prior to "
-"3.3, explicitly importing site will carry out the path modifications ``-S`` "
-"avoids, while on 3.3+ combining ``-m site`` with ``-S`` currently fails)"
+"(Note: you can see similar information using ``-m site`` instead of "
+"``-c``, but this is slightly misleading as it calls ``os.abspath`` on all"
+" of the path entries, making relative path entries look absolute. Using "
+"the ``site`` module also causes problems in the last case, as on Python "
+"versions prior to 3.3, explicitly importing site will carry out the path "
+"modifications ``-S`` avoids, while on 3.3+ combining ``-m site`` with "
+"``-S`` currently fails)"
 msgstr ""
 
-#: ../pep-0432.txt:1244
+#: ../../peps/pep-0432.rst:1244
 msgid "The calculation of ``sys.path[0]`` is comparatively straightforward:"
 msgstr ""
 
-#: ../pep-0432.txt:1246
+#: ../../peps/pep-0432.rst:1246
 msgid ""
-"For an ordinary script (Python source or compiled bytecode), ``sys.path[0]`` "
-"will be the directory containing the script."
+"For an ordinary script (Python source or compiled bytecode), "
+"``sys.path[0]`` will be the directory containing the script."
 msgstr ""
 
-#: ../pep-0432.txt:1248
+#: ../../peps/pep-0432.rst:1248
 msgid ""
-"For a valid ``sys.path`` entry (typically a zipfile or directory), ``sys."
-"path[0]`` will be that path"
+"For a valid ``sys.path`` entry (typically a zipfile or directory), "
+"``sys.path[0]`` will be that path"
 msgstr ""
 
-#: ../pep-0432.txt:1250
+#: ../../peps/pep-0432.rst:1250
 msgid ""
-"For an interactive session, running from stdin or when using the ``-c`` or "
-"``-m`` switches, ``sys.path[0]`` will be the empty string, which the import "
-"system interprets as allowing imports from the current directory"
+"For an interactive session, running from stdin or when using the ``-c`` "
+"or ``-m`` switches, ``sys.path[0]`` will be the empty string, which the "
+"import system interprets as allowing imports from the current directory"
 msgstr ""
 
-#: ../pep-0432.txt:1256
+#: ../../peps/pep-0432.rst:1256
 msgid "Configuring ``sys.argv``"
 msgstr ""
 
-#: ../pep-0432.txt:1258
+#: ../../peps/pep-0432.rst:1258
 msgid ""
-"Unlike most other settings discussed in this PEP, ``sys.argv`` is not set "
-"implicitly by ``Py_Initialize()``. Instead, it must be set via an explicitly "
-"call to ``Py_SetArgv()``."
+"Unlike most other settings discussed in this PEP, ``sys.argv`` is not set"
+" implicitly by ``Py_Initialize()``. Instead, it must be set via an "
+"explicitly call to ``Py_SetArgv()``."
 msgstr ""
 
-#: ../pep-0432.txt:1262
+#: ../../peps/pep-0432.rst:1262
 msgid ""
-"CPython calls this in ``Py_Main()`` after calling ``Py_Initialize()``. The "
-"calculation of ``sys.argv[1:]`` is straightforward: they're the command line "
-"arguments passed after the script name or the argument to the ``-c`` or ``-"
-"m`` options."
+"CPython calls this in ``Py_Main()`` after calling ``Py_Initialize()``. "
+"The calculation of ``sys.argv[1:]`` is straightforward: they're the "
+"command line arguments passed after the script name or the argument to "
+"the ``-c`` or ``-m`` options."
 msgstr ""
 
-#: ../pep-0432.txt:1267
+#: ../../peps/pep-0432.rst:1267
 msgid "The calculation of ``sys.argv[0]`` is a little more complicated:"
 msgstr ""
 
-#: ../pep-0432.txt:1269
+#: ../../peps/pep-0432.rst:1269
 msgid "For an ordinary script (source or bytecode), it will be the script name"
 msgstr ""
 
-#: ../pep-0432.txt:1270
+#: ../../peps/pep-0432.rst:1270
 msgid ""
 "For a ``sys.path`` entry (typically a zipfile or directory) it will "
-"initially be the zipfile or directory name, but will later be changed by the "
-"``runpy`` module to the full path to the imported ``__main__`` module."
+"initially be the zipfile or directory name, but will later be changed by "
+"the ``runpy`` module to the full path to the imported ``__main__`` "
+"module."
 msgstr ""
 
-#: ../pep-0432.txt:1273
+#: ../../peps/pep-0432.rst:1273
 msgid ""
 "For a module specified with the ``-m`` switch, it will initially be the "
-"string ``\"-m\"``, but will later be changed by the ``runpy`` module to the "
-"full path to the executed module."
+"string ``\"-m\"``, but will later be changed by the ``runpy`` module to "
+"the full path to the executed module."
 msgstr ""
 
-#: ../pep-0432.txt:1276
+#: ../../peps/pep-0432.rst:1276
 msgid ""
 "For a package specified with the ``-m`` switch, it will initially be the "
-"string ``\"-m\"``, but will later be changed by the ``runpy`` module to the "
-"full path to the executed ``__main__`` submodule of the package."
+"string ``\"-m\"``, but will later be changed by the ``runpy`` module to "
+"the full path to the executed ``__main__`` submodule of the package."
 msgstr ""
 
-#: ../pep-0432.txt:1279
+#: ../../peps/pep-0432.rst:1279
 msgid "For a command executed with ``-c``, it will be the string ``\"-c\"``"
 msgstr ""
 
-#: ../pep-0432.txt:1280
-msgid ""
-"For explicitly requested input from stdin, it will be the string ``\"-\"``"
+#: ../../peps/pep-0432.rst:1280
+msgid "For explicitly requested input from stdin, it will be the string ``\"-\"``"
 msgstr ""
 
-#: ../pep-0432.txt:1281
+#: ../../peps/pep-0432.rst:1281
 msgid "Otherwise, it will be the empty string"
 msgstr ""
 
-#: ../pep-0432.txt:1283
+#: ../../peps/pep-0432.rst:1283
 msgid ""
-"Embedding applications must call Py_SetArgv themselves. The CPython logic "
-"for doing so is part of ``Py_Main()`` and is not exposed separately. "
+"Embedding applications must call Py_SetArgv themselves. The CPython logic"
+" for doing so is part of ``Py_Main()`` and is not exposed separately. "
 "However, the ``runpy`` module does provide roughly equivalent logic in "
 "``runpy.run_module`` and ``runpy.run_path``."
 msgstr ""
 
-#: ../pep-0432.txt:1291
+#: ../../peps/pep-0432.rst:1291
 msgid "Other configuration settings"
 msgstr ""
 
-#: ../pep-0432.txt:1293
+#: ../../peps/pep-0432.rst:1293
 msgid "TBD: Cover the initialization of the following in more detail:"
 msgstr ""
 
-#: ../pep-0432.txt:1295
+#: ../../peps/pep-0432.rst:1295
 msgid "Completely disabling the import system"
 msgstr ""
 
-#: ../pep-0432.txt:1296
+#: ../../peps/pep-0432.rst:1296
 msgid "The initial warning system state:"
 msgstr ""
 
-#: ../pep-0432.txt:1298
+#: ../../peps/pep-0432.rst:1298
 msgid "``sys.warnoptions``"
 msgstr ""
 
-#: ../pep-0432.txt:1299
+#: ../../peps/pep-0432.rst:1299
 msgid "(-W option, PYTHONWARNINGS)"
 msgstr ""
 
-#: ../pep-0432.txt:1301
+#: ../../peps/pep-0432.rst:1301
 msgid ""
-"Arbitrary extended options (e.g. to automatically enable ``faulthandler``):"
+"Arbitrary extended options (e.g. to automatically enable "
+"``faulthandler``):"
 msgstr ""
 
-#: ../pep-0432.txt:1303
+#: ../../peps/pep-0432.rst:1303
 msgid "``sys._xoptions``"
 msgstr ""
 
-#: ../pep-0432.txt:1304
+#: ../../peps/pep-0432.rst:1304
 msgid "(-X option)"
 msgstr ""
 
-#: ../pep-0432.txt:1306
+#: ../../peps/pep-0432.rst:1306
 msgid "The filesystem encoding used by:"
 msgstr ""
 
-#: ../pep-0432.txt:1308
+#: ../../peps/pep-0432.rst:1308
 msgid "``sys.getfsencoding``"
 msgstr ""
 
-#: ../pep-0432.txt:1309
+#: ../../peps/pep-0432.rst:1309
 msgid "``os.fsencode``"
 msgstr ""
 
-#: ../pep-0432.txt:1310
+#: ../../peps/pep-0432.rst:1310
 msgid "``os.fsdecode``"
 msgstr ""
 
-#: ../pep-0432.txt:1312
+#: ../../peps/pep-0432.rst:1312
 msgid "The IO encoding and buffering used by:"
 msgstr ""
 
-#: ../pep-0432.txt:1314
+#: ../../peps/pep-0432.rst:1314
 msgid "``sys.stdin``"
 msgstr ""
 
-#: ../pep-0432.txt:1315
+#: ../../peps/pep-0432.rst:1315
 msgid "``sys.stdout``"
 msgstr ""
 
-#: ../pep-0432.txt:1316
+#: ../../peps/pep-0432.rst:1316
 msgid "``sys.stderr``"
 msgstr ""
 
-#: ../pep-0432.txt:1317
+#: ../../peps/pep-0432.rst:1317
 msgid "(-u option, PYTHONIOENCODING, PYTHONUNBUFFEREDIO)"
 msgstr ""
 
-#: ../pep-0432.txt:1319
+#: ../../peps/pep-0432.rst:1319
 msgid "Whether or not to implicitly cache bytecode files:"
 msgstr ""
 
-#: ../pep-0432.txt:1321
+#: ../../peps/pep-0432.rst:1321
 msgid "``sys.dont_write_bytecode``"
 msgstr ""
 
-#: ../pep-0432.txt:1322
+#: ../../peps/pep-0432.rst:1322
 msgid "(-B option, PYTHONDONTWRITEBYTECODE)"
 msgstr ""
 
-#: ../pep-0432.txt:1324
+#: ../../peps/pep-0432.rst:1324
 msgid ""
 "Whether or not to enforce correct case in filenames on case-insensitive "
 "platforms"
 msgstr ""
 
-#: ../pep-0432.txt:1327
+#: ../../peps/pep-0432.rst:1327
 msgid "``os.environ[\"PYTHONCASEOK\"]``"
 msgstr ""
 
-#: ../pep-0432.txt:1329
+#: ../../peps/pep-0432.rst:1329
 msgid "The other settings exposed to Python code in ``sys.flags``:"
 msgstr ""
 
-#: ../pep-0432.txt:1331
+#: ../../peps/pep-0432.rst:1331
 msgid "``debug`` (Enable debugging output in the pgen parser)"
 msgstr ""
 
-#: ../pep-0432.txt:1332
+#: ../../peps/pep-0432.rst:1332
 msgid "``inspect`` (Enter interactive interpreter after __main__ terminates)"
 msgstr ""
 
-#: ../pep-0432.txt:1333
+#: ../../peps/pep-0432.rst:1333
 msgid "``interactive`` (Treat stdin as a tty)"
 msgstr ""
 
-#: ../pep-0432.txt:1334
+#: ../../peps/pep-0432.rst:1334
 msgid "``optimize`` (__debug__ status, write .pyc or .pyo, strip doc strings)"
 msgstr ""
 
-#: ../pep-0432.txt:1335
+#: ../../peps/pep-0432.rst:1335
 msgid "``no_user_site`` (don't add the user site directory to sys.path)"
 msgstr ""
 
-#: ../pep-0432.txt:1336
+#: ../../peps/pep-0432.rst:1336
 msgid "``no_site`` (don't implicitly import site during startup)"
 msgstr ""
 
-#: ../pep-0432.txt:1337
-msgid ""
-"``ignore_environment`` (whether environment vars are used during config)"
+#: ../../peps/pep-0432.rst:1337
+msgid "``ignore_environment`` (whether environment vars are used during config)"
 msgstr ""
 
-#: ../pep-0432.txt:1338
+#: ../../peps/pep-0432.rst:1338
 msgid "``verbose`` (enable all sorts of random output)"
 msgstr ""
 
-#: ../pep-0432.txt:1339
+#: ../../peps/pep-0432.rst:1339
 msgid "``bytes_warning`` (warnings/errors for implicit str/bytes interaction)"
 msgstr ""
 
-#: ../pep-0432.txt:1340
+#: ../../peps/pep-0432.rst:1340
 msgid ""
-"``quiet`` (disable banner output even if verbose is also enabled or stdin is "
-"a tty and the interpreter is launched in interactive mode)"
+"``quiet`` (disable banner output even if verbose is also enabled or stdin"
+" is a tty and the interpreter is launched in interactive mode)"
 msgstr ""
 
-#: ../pep-0432.txt:1343
+#: ../../peps/pep-0432.rst:1343
 msgid "Whether or not CPython's signal handlers should be installed"
 msgstr ""
 
-#: ../pep-0432.txt:1345
+#: ../../peps/pep-0432.rst:1345
 msgid ""
-"Much of the configuration of CPython is currently handled through C level "
-"global variables::"
+"Much of the configuration of CPython is currently handled through C level"
+" global variables::"
 msgstr ""
 
-#: ../pep-0432.txt:1359
+#: ../../peps/pep-0432.rst:1359
 msgid ""
 "For the above variables, the conversion of command line options and "
-"environment variables to C global variables is handled by ``Py_Main``, so "
-"each embedding application must set those appropriately in order to change "
-"them from their defaults."
+"environment variables to C global variables is handled by ``Py_Main``, so"
+" each embedding application must set those appropriately in order to "
+"change them from their defaults."
 msgstr ""
 
-#: ../pep-0432.txt:1364
+#: ../../peps/pep-0432.rst:1364
 msgid ""
-"Some configuration can only be provided as OS level environment variables::"
+"Some configuration can only be provided as OS level environment "
+"variables::"
 msgstr ""
 
-#: ../pep-0432.txt:1370
+#: ../../peps/pep-0432.rst:1370
 msgid ""
 "The ``Py_InitializeEx()`` API also accepts a boolean flag to indicate "
 "whether or not CPython's signal handlers should be installed."
 msgstr ""
 
-#: ../pep-0432.txt:1373
+#: ../../peps/pep-0432.rst:1373
 msgid ""
 "Finally, some interactive behaviour (such as printing the introductory "
 "banner) is triggered only when standard input is reported as a terminal "
 "connection by the operating system."
 msgstr ""
 
-#: ../pep-0432.txt:1377
+#: ../../peps/pep-0432.rst:1377
 msgid ""
 "TBD: Document how the \"-x\" option is handled (skips processing of the "
 "first comment line in the main script)"
 msgstr ""
 
-#: ../pep-0432.txt:1380
+#: ../../peps/pep-0432.rst:1380
 msgid "Also see detailed sequence of operations notes at [1]_."
 msgstr ""
 
-#: ../pep-0432.txt:1384
+#: ../../peps/pep-0432.rst:1384
 msgid "References"
 msgstr "Referências"
 
-#: ../pep-0432.txt:1386
+#: ../../peps/pep-0432.rst:1386
 msgid ""
-"CPython interpreter initialization notes (http://wiki.python.org/moin/"
-"CPythonInterpreterInitialization)"
+"CPython interpreter initialization notes "
+"(http://wiki.python.org/moin/CPythonInterpreterInitialization)"
 msgstr ""
 
-#: ../pep-0432.txt:1389
+#: ../../peps/pep-0432.rst:1389
 msgid ""
-"BitBucket Sandbox (https://bitbucket.org/ncoghlan/cpython_sandbox/compare/"
-"pep432_modular_bootstrap..default#commits)"
+"BitBucket Sandbox "
+"(https://bitbucket.org/ncoghlan/cpython_sandbox/compare/pep432_modular_bootstrap..default#commits)"
 msgstr ""
 
-#: ../pep-0432.txt:1392
+#: ../../peps/pep-0432.rst:1392
 msgid ""
-"\\*nix getpath implementation (http://hg.python.org/cpython/file/default/"
-"Modules/getpath.c)"
+"\\*nix getpath implementation "
+"(http://hg.python.org/cpython/file/default/Modules/getpath.c)"
 msgstr ""
 
-#: ../pep-0432.txt:1395
+#: ../../peps/pep-0432.rst:1395
 msgid ""
-"Windows getpath implementation (http://hg.python.org/cpython/file/default/PC/"
-"getpathp.c)"
+"Windows getpath implementation "
+"(http://hg.python.org/cpython/file/default/PC/getpathp.c)"
 msgstr ""
 
-#: ../pep-0432.txt:1398
+#: ../../peps/pep-0432.rst:1398
 msgid "Site module documentation (http://docs.python.org/3/library/site.html)"
 msgstr ""
 
-#: ../pep-0432.txt:1401
-msgid ""
-"Proposed CLI option for isolated mode (http://bugs.python.org/issue16499)"
+#: ../../peps/pep-0432.rst:1401
+msgid "Proposed CLI option for isolated mode (http://bugs.python.org/issue16499)"
 msgstr ""
 
-#: ../pep-0432.txt:1404
+#: ../../peps/pep-0432.rst:1404
 msgid ""
-"Adding to sys.path on the command line (https://mail.python.org/pipermail/"
-"python-ideas/2010-October/008299.html) (https://mail.python.org/pipermail/"
-"python-ideas/2012-September/016128.html)"
+"Adding to sys.path on the command line (https://mail.python.org/pipermail"
+"/python-ideas/2010-October/008299.html) "
+"(https://mail.python.org/pipermail/python-"
+"ideas/2012-September/016128.html)"
 msgstr ""
 
-#: ../pep-0432.txt:1408
+#: ../../peps/pep-0432.rst:1408
 msgid "Control sys.path[0] initialisation (http://bugs.python.org/issue13475)"
 msgstr ""
 
-#: ../pep-0432.txt:1411
+#: ../../peps/pep-0432.rst:1411
 msgid ""
-"Enabling code coverage in subprocesses when testing (http://bugs.python.org/"
-"issue14803)"
+"Enabling code coverage in subprocesses when testing "
+"(http://bugs.python.org/issue14803)"
 msgstr ""
 
-#: ../pep-0432.txt:1414
+#: ../../peps/pep-0432.rst:1414
 msgid ""
-"Problems with PYTHONIOENCODING in Blender (http://bugs.python.org/issue16129)"
+"Problems with PYTHONIOENCODING in Blender "
+"(http://bugs.python.org/issue16129)"
 msgstr ""
 
-#: ../pep-0432.txt:1420
+#: ../../peps/pep-0432.rst:1420
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../pep-0432.txt:1421
+#: ../../peps/pep-0432.rst:1421
 msgid "This document has been placed in the public domain."
 msgstr "Este documento foi colocado em domínio público."
+
+#~ msgid ""
+#~ "Nick Coghlan <ncoghlan@gmail.com>, Victor "
+#~ "Stinner <vstinner@python.org>, Eric Snow "
+#~ "<ericsnowcurrently@gmail.com>"
+#~ msgstr ""
+
