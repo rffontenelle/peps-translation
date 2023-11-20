@@ -24,8 +24,8 @@ Update translation files:
 .. codeblock:: sh
 
     git -C peps apply ../enable-i18n.diff
-    python peps/build.py
-    ./update-po.sh
+    python peps/build.py --getext
+    (cd peps && sphinx-intl update -d ../locales -p build/gettext)
 
 Commit updated po files
 
