@@ -27,7 +27,7 @@ jobs:
           cd peps && git fetch origin && git checkout main && git reset --hard origin
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
           cache: 'pip'
@@ -46,11 +46,11 @@ jobs:
 
       - name: Generate POT files
         run: |
-          cd peps/peps && sphinx-build -E -b gettext -D gettext_compact=0 -d ../build/.doctrees . ../../locales/pot
+          sphinx-build -E -b gettext -D gettext_compact=0 -d peps/build/.doctrees . locales/pot
 
       - name: Add/Update message catalog files
         run: |
-          cd peps/peps && sphinx-intl update -d ../../locales -p ../../locales/pot
+          sphinx-intl update -d locales
 
       - name: powrap
         run: |
@@ -61,6 +61,6 @@ jobs:
                 github.event_name == 'workflow_dispatch' }}
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "Translation update"
+          commit_message: "Update translations"
           file_pattern: .gitmodules locales/**/*.po
           add_options: '-A'

@@ -19,13 +19,19 @@ Update peps git submodule:
     git -C peps checkout main
     git -C peps reset --hard origin
 
-Update translation files:
+Prepare and enter the virtual environment:
 
 .. codeblock:: sh
 
-    git -C peps apply ../enable-i18n.diff
-    python peps/build.py --getext
-    (cd peps && sphinx-intl update -d ../locales -p build/gettext)
+    make -C peps venv
+    source peps/.venv/bin/activate
+
+Update translation files:
+
+.. codeblock:: sh
+    
+    sphinx-build -E -bgettext -Dgettext_compact=False -d peps/build/.doctrees peps/peps locales/pot
+    sphinx-intl update --locale-dir locales
 
 Commit updated po files
 
@@ -36,6 +42,12 @@ Commit updated po files
 
 PO files are now ready for translation. Use a offline translation editor software, like
 `Poedit`_, `Gtranslator`_, or any other of your preference.
+
+Build documentation:
+
+.. codeblock:: sh
+
+    sphinx-build -bhtml -jauto -Dlanguage=pt_BR -Dlocale_dirs=locales/ -Dgettext_compact=False -Dgettext_auto_build=True -W --keep-going -w sphinx-warnings.txt peps/peps peps/build/html
 
 .. _PEP website: https://peps.python.org
 .. _GitHub repository: https://github.com/python/peps
