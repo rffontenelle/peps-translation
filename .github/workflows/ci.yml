@@ -45,7 +45,7 @@ jobs:
 
       - name: Generate POT files
         run: |
-          sphinx-build -E -b gettext -D gettext_compact=0 -d peps/build/.doctrees-gettext . locales/pot
+          sphinx-build -E -bgettext -Dgettext_compact=0 -d peps/build/.doctrees-gettext peps/peps locales/pot
 
       - name: Add/Update message catalog files
         run: |
