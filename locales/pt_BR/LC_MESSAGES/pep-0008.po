@@ -7,258 +7,256 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-20 10:43-0300\n"
+"POT-Creation-Date: 2024-07-14 02:33+0000\n"
 "PO-Revision-Date: 2022-11-28 22:46-0300\n"
 "Last-Translator: Rafael Fontenelle <rffontenelle@gmail.com>\n"
 "Language: pt_BR\n"
-"Language-Team: Brazilian Portuguese <https://github.com/rffontenelle"
-"/peps-pt-br>\n"
+"Language-Team: Brazilian Portuguese <https://github.com/rffontenelle/peps-pt-"
+"br>\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.13.1\n"
+"Generated-By: Babel 2.15.0\n"
 
-#: ../../peps/pep-0008.rst
+#: ../../peps/peps/pep-0008.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../../peps/pep-0008.rst:5
+#: ../../peps/peps/pep-0008.rst:3
 #, fuzzy
 msgid ""
-"Guido van Rossum <guido@python.org>, Barry Warsaw <barry@python.org>, "
-"Alyssa Coghlan <ncoghlan@gmail.com>"
+"Guido van Rossum <guido@python.org>, Barry Warsaw <barry@python.org>, Alyssa "
+"Coghlan <ncoghlan@gmail.com>"
 msgstr ""
-"Guido van Rossum <guido@python.org>, Barry Warsaw <barry@python.org>, "
-"Nick Coghlan <ncoghlan@gmail.com>"
+"Guido van Rossum <guido@python.org>, Barry Warsaw <barry@python.org>, Nick "
+"Coghlan <ncoghlan@gmail.com>"
 
-#: ../../peps/pep-0008.rst
+#: ../../peps/peps/pep-0008.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../../peps/pep-0008.rst:8
+#: ../../peps/peps/pep-0008.rst:6
 msgid "Active"
 msgstr "Ativa"
 
-#: ../../peps/pep-0008.rst
+#: ../../peps/peps/pep-0008.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../../peps/pep-0008.rst:9
+#: ../../peps/peps/pep-0008.rst:7
 msgid "Process"
 msgstr "Processo"
 
-#: ../../peps/pep-0008.rst
+#: ../../peps/peps/pep-0008.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../../peps/pep-0008.rst:11
+#: ../../peps/peps/pep-0008.rst:8
 msgid "05-Jul-2001"
 msgstr "05-Jul-2001"
 
-#: ../../peps/pep-0008.rst
+#: ../../peps/peps/pep-0008.rst
 msgid "Post-History"
 msgstr "Pós-história"
 
-#: ../../peps/pep-0008.rst:12
+#: ../../peps/peps/pep-0008.rst:9
 msgid "05-Jul-2001, 01-Aug-2013"
 msgstr "05-Jul-2001, 01-Aug-2013"
 
-#: ../../peps/pep-0008.rst:16
+#: ../../peps/peps/pep-0008.rst:13
 msgid "Introduction"
 msgstr "Introdução"
 
-#: ../../peps/pep-0008.rst:18
+#: ../../peps/peps/pep-0008.rst:15
 msgid ""
-"This document gives coding conventions for the Python code comprising the"
-" standard library in the main Python distribution.  Please see the "
-"companion informational PEP describing :pep:`style guidelines for the C "
-"code in the C implementation of Python <7>`."
+"This document gives coding conventions for the Python code comprising the "
+"standard library in the main Python distribution.  Please see the companion "
+"informational PEP describing :pep:`style guidelines for the C code in the C "
+"implementation of Python <7>`."
 msgstr ""
-"Este documento fornece convenções de codificação para o código Python que"
-" compreende a biblioteca padrão na distribuição principal do Python. "
-"Consulte a PEP informativa complementar descrevendo :pep:`diretrizes de "
-"estilo para o código C na implementação C do Python <7>`."
+"Este documento fornece convenções de codificação para o código Python que "
+"compreende a biblioteca padrão na distribuição principal do Python. Consulte "
+"a PEP informativa complementar descrevendo :pep:`diretrizes de estilo para o "
+"código C na implementação C do Python <7>`."
 
-#: ../../peps/pep-0008.rst:23
+#: ../../peps/peps/pep-0008.rst:20
 msgid ""
 "This document and :pep:`257` (Docstring Conventions) were adapted from "
-"Guido's original Python Style Guide essay, with some additions from "
-"Barry's style guide [2]_."
+"Guido's original Python Style Guide essay, with some additions from Barry's "
+"style guide [2]_."
 msgstr ""
-"Este documento e :pep:`257` (Convenções de docstrings) foram adaptados do"
-" ensaio original do Guia de Estilo Python do Guido, com algumas adições "
-"do guia de estilo de Barry [2]_."
+"Este documento e :pep:`257` (Convenções de docstrings) foram adaptados do "
+"ensaio original do Guia de Estilo Python do Guido, com algumas adições do "
+"guia de estilo de Barry [2]_."
 
-#: ../../peps/pep-0008.rst:27
+#: ../../peps/peps/pep-0008.rst:24
 msgid ""
-"This style guide evolves over time as additional conventions are "
-"identified and past conventions are rendered obsolete by changes in the "
-"language itself."
+"This style guide evolves over time as additional conventions are identified "
+"and past conventions are rendered obsolete by changes in the language itself."
 msgstr ""
 "Este guia de estilo evolui ao longo do tempo à medida que convenções "
-"adicionais são identificadas e convenções anteriores se tornam obsoletas "
-"por mudanças na própria linguagem."
+"adicionais são identificadas e convenções anteriores se tornam obsoletas por "
+"mudanças na própria linguagem."
 
-#: ../../peps/pep-0008.rst:31
+#: ../../peps/peps/pep-0008.rst:28
 msgid ""
-"Many projects have their own coding style guidelines. In the event of any"
-" conflicts, such project-specific guides take precedence for that "
-"project."
+"Many projects have their own coding style guidelines. In the event of any "
+"conflicts, such project-specific guides take precedence for that project."
 msgstr ""
-"Muitos projetos têm suas próprias diretrizes de estilo de codificação. Em"
-" caso de conflito, esses guias específicos do projeto têm precedência "
-"para esse projeto."
+"Muitos projetos têm suas próprias diretrizes de estilo de codificação. Em "
+"caso de conflito, esses guias específicos do projeto têm precedência para "
+"esse projeto."
 
-#: ../../peps/pep-0008.rst:36
+#: ../../peps/peps/pep-0008.rst:33
 msgid "A Foolish Consistency is the Hobgoblin of Little Minds"
 msgstr "Uma tola consistência é o duende das pequenas mentes"
 
-#: ../../peps/pep-0008.rst:38
+#: ../../peps/peps/pep-0008.rst:35
 msgid ""
-"One of Guido's key insights is that code is read much more often than it "
-"is written.  The guidelines provided here are intended to improve the "
+"One of Guido's key insights is that code is read much more often than it is "
+"written.  The guidelines provided here are intended to improve the "
 "readability of code and make it consistent across the wide spectrum of "
 "Python code.  As :pep:`20` says, \"Readability counts\"."
 msgstr ""
-"Um dos principais *insights* de Guido é que o código é lido com muito "
-"mais frequência do que escrito. As diretrizes fornecidas aqui destinam-se"
-" a melhorar a legibilidade do código e torná-lo consistente em todo o "
-"amplo espectro do código Python. Como a :pep:`20` diz, \"A legibilidade "
-"conta\"."
+"Um dos principais *insights* de Guido é que o código é lido com muito mais "
+"frequência do que escrito. As diretrizes fornecidas aqui destinam-se a "
+"melhorar a legibilidade do código e torná-lo consistente em todo o amplo "
+"espectro do código Python. Como a :pep:`20` diz, \"A legibilidade conta\"."
 
-#: ../../peps/pep-0008.rst:43
+#: ../../peps/peps/pep-0008.rst:40
 msgid ""
-"A style guide is about consistency.  Consistency with this style guide is"
-" important.  Consistency within a project is more important. Consistency "
+"A style guide is about consistency.  Consistency with this style guide is "
+"important.  Consistency within a project is more important. Consistency "
 "within one module or function is the most important."
 msgstr ""
 "Um guia de estilo é sobre consistência. A consistência com este guia de "
-"estilo é importante. A consistência dentro de um projeto é mais "
-"importante. A consistência dentro de um módulo ou função é o mais "
-"importante."
+"estilo é importante. A consistência dentro de um projeto é mais importante. "
+"A consistência dentro de um módulo ou função é o mais importante."
 
-#: ../../peps/pep-0008.rst:47
+#: ../../peps/peps/pep-0008.rst:44
 msgid ""
 "However, know when to be inconsistent -- sometimes style guide "
 "recommendations just aren't applicable.  When in doubt, use your best "
 "judgment.  Look at other examples and decide what looks best.  And don't "
 "hesitate to ask!"
 msgstr ""
-"No entanto, saiba quando ser inconsistente - às vezes, as recomendações "
-"do guia de estilo simplesmente não são aplicáveis. Em caso de dúvida, use"
-" seu bom senso. Veja outros exemplos e decida o que fica melhor. E não "
-"deixe de perguntar!"
+"No entanto, saiba quando ser inconsistente - às vezes, as recomendações do "
+"guia de estilo simplesmente não são aplicáveis. Em caso de dúvida, use seu "
+"bom senso. Veja outros exemplos e decida o que fica melhor. E não deixe de "
+"perguntar!"
 
-#: ../../peps/pep-0008.rst:52
+#: ../../peps/peps/pep-0008.rst:49
 msgid ""
-"In particular: do not break backwards compatibility just to comply with "
-"this PEP!"
+"In particular: do not break backwards compatibility just to comply with this "
+"PEP!"
 msgstr ""
-"Em particular: não quebre a compatibilidade com versões anteriores apenas"
-" para cumprir esta PEP!"
+"Em particular: não quebre a compatibilidade com versões anteriores apenas "
+"para cumprir esta PEP!"
 
-#: ../../peps/pep-0008.rst:55
+#: ../../peps/peps/pep-0008.rst:52
 msgid "Some other good reasons to ignore a particular guideline:"
 msgstr "Algumas outras boas razões para ignorar uma diretriz específica:"
 
-#: ../../peps/pep-0008.rst:57
+#: ../../peps/peps/pep-0008.rst:54
 msgid ""
 "When applying the guideline would make the code less readable, even for "
 "someone who is used to reading code that follows this PEP."
 msgstr ""
-"Ao aplicar a diretriz tornaria o código menos legível, mesmo para quem "
-"está acostumado a ler código que segue este PEP."
+"Ao aplicar a diretriz tornaria o código menos legível, mesmo para quem está "
+"acostumado a ler código que segue este PEP."
 
-#: ../../peps/pep-0008.rst:60
+#: ../../peps/peps/pep-0008.rst:57
 msgid ""
 "To be consistent with surrounding code that also breaks it (maybe for "
 "historic reasons) -- although this is also an opportunity to clean up "
 "someone else's mess (in true XP style)."
 msgstr ""
-"Para ser consistente com o código circundante que também o quebra (talvez"
-" por razões históricas) - embora esta também seja uma oportunidade de "
-"limpar a bagunça de outra pessoa (no verdadeiro estilo XP)."
+"Para ser consistente com o código circundante que também o quebra (talvez "
+"por razões históricas) - embora esta também seja uma oportunidade de limpar "
+"a bagunça de outra pessoa (no verdadeiro estilo XP)."
 
-#: ../../peps/pep-0008.rst:64
+#: ../../peps/peps/pep-0008.rst:61
 msgid ""
-"Because the code in question predates the introduction of the guideline "
-"and there is no other reason to be modifying that code."
+"Because the code in question predates the introduction of the guideline and "
+"there is no other reason to be modifying that code."
 msgstr ""
 "Porque o código em questão é anterior à introdução da diretriz e não há "
 "outro motivo para modificar esse código."
 
-#: ../../peps/pep-0008.rst:67
+#: ../../peps/peps/pep-0008.rst:64
 msgid ""
-"When the code needs to remain compatible with older versions of Python "
-"that don't support the feature recommended by the style guide."
+"When the code needs to remain compatible with older versions of Python that "
+"don't support the feature recommended by the style guide."
 msgstr ""
-"Quando o código precisa permanecer compatível com versões mais antigas do"
-" Python que não suportam o recurso recomendado pelo guia de estilo."
+"Quando o código precisa permanecer compatível com versões mais antigas do "
+"Python que não suportam o recurso recomendado pelo guia de estilo."
 
-#: ../../peps/pep-0008.rst:72
+#: ../../peps/peps/pep-0008.rst:69
 msgid "Code Lay-out"
 msgstr "Disposição do código"
 
-#: ../../peps/pep-0008.rst:75
+#: ../../peps/peps/pep-0008.rst:72
 msgid "Indentation"
 msgstr "Recuo (indentação)"
 
-#: ../../peps/pep-0008.rst:77
+#: ../../peps/peps/pep-0008.rst:74
 msgid "Use 4 spaces per indentation level."
 msgstr "Use 4 espaços por nível de recuo."
 
-#: ../../peps/pep-0008.rst:79
+#: ../../peps/peps/pep-0008.rst:76
+#, fuzzy
 msgid ""
 "Continuation lines should align wrapped elements either vertically using "
-"Python's implicit line joining inside parentheses, brackets and braces, "
-"or using a *hanging indent* [#fn-hi]_.  When using a hanging indent the "
-"following should be considered; there should be no arguments on the first"
-" line and further indentation should be used to clearly distinguish "
-"itself as a continuation line::"
+"Python's implicit line joining inside parentheses, brackets and braces, or "
+"using a *hanging indent* [#fn-hi]_.  When using a hanging indent the "
+"following should be considered; there should be no arguments on the first "
+"line and further indentation should be used to clearly distinguish itself as "
+"a continuation line:"
 msgstr ""
-"As linhas de continuação devem alinhar os elementos agrupados "
-"verticalmente usando a junção de linha implícita do Python entre "
-"parênteses, colchetes e chaves, ou usando um *recuo suspenso* [#fn-hi]_. "
-"Ao usar um recuo deslocado, o seguinte deve ser considerado; não deve "
-"haver argumentos na primeira linha e recuo adicional deve ser usado para "
-"se distinguir claramente como uma linha de continuação::"
+"As linhas de continuação devem alinhar os elementos agrupados verticalmente "
+"usando a junção de linha implícita do Python entre parênteses, colchetes e "
+"chaves, ou usando um *recuo suspenso* [#fn-hi]_. Ao usar um recuo deslocado, "
+"o seguinte deve ser considerado; não deve haver argumentos na primeira linha "
+"e recuo adicional deve ser usado para se distinguir claramente como uma "
+"linha de continuação::"
 
-#: ../../peps/pep-0008.rst:117
+#: ../../peps/peps/pep-0008.rst:118
 msgid "The 4-space rule is optional for continuation lines."
 msgstr "A regra dos 4 espaços é opcional para linhas de continuação."
 
-#: ../../peps/pep-0008.rst:119
-msgid "Optional::"
+#: ../../peps/peps/pep-0008.rst:120
+#, fuzzy
+msgid "Optional:"
 msgstr "Opcional::"
 
-#: ../../peps/pep-0008.rst:128
+#: ../../peps/peps/pep-0008.rst:132
+#, fuzzy
 msgid ""
-"When the conditional part of an ``if``-statement is long enough to "
-"require that it be written across multiple lines, it's worth noting that "
-"the combination of a two character keyword (i.e. ``if``), plus a single "
-"space, plus an opening parenthesis creates a natural 4-space indent for "
-"the subsequent lines of the multiline conditional.  This can produce a "
-"visual conflict with the indented suite of code nested inside the "
-"``if``-statement, which would also naturally be indented to 4 spaces.  "
-"This PEP takes no explicit position on how (or whether) to further "
-"visually distinguish such conditional lines from the nested suite inside "
-"the ``if``-statement. Acceptable options in this situation include, but "
-"are not limited to::"
+"When the conditional part of an ``if``-statement is long enough to require "
+"that it be written across multiple lines, it's worth noting that the "
+"combination of a two character keyword (i.e. ``if``), plus a single space, "
+"plus an opening parenthesis creates a natural 4-space indent for the "
+"subsequent lines of the multiline conditional.  This can produce a visual "
+"conflict with the indented suite of code nested inside the ``if``-statement, "
+"which would also naturally be indented to 4 spaces.  This PEP takes no "
+"explicit position on how (or whether) to further visually distinguish such "
+"conditional lines from the nested suite inside the ``if``-statement. "
+"Acceptable options in this situation include, but are not limited to:"
 msgstr ""
-"Quando a parte condicional de uma instrução ``if`` é longa o suficiente "
-"para exigir que seja escrita em várias linhas, vale a pena notar que a "
-"combinação de uma palavra-chave de dois caracteres (ou seja, ``if``), "
-"mais um único espaço , mais um parêntese de abertura cria um recuo "
-"natural de 4 espaços para as linhas subsequentes da condicional "
-"multilinha. Isso pode produzir um conflito visual com o conjunto de "
-"código recuado aninhado dentro da instrução ``if``, que também seria "
-"naturalmente recuado para 4 espaços. Esta PEP não assume uma posição "
-"explícita sobre como (ou se) distinguir visualmente tais linhas "
-"condicionais do conjunto aninhado dentro da instrução ``if``. As opções "
-"aceitáveis nesta situação incluem, mas não estão limitadas a::"
+"Quando a parte condicional de uma instrução ``if`` é longa o suficiente para "
+"exigir que seja escrita em várias linhas, vale a pena notar que a combinação "
+"de uma palavra-chave de dois caracteres (ou seja, ``if``), mais um único "
+"espaço , mais um parêntese de abertura cria um recuo natural de 4 espaços "
+"para as linhas subsequentes da condicional multilinha. Isso pode produzir um "
+"conflito visual com o conjunto de código recuado aninhado dentro da "
+"instrução ``if``, que também seria naturalmente recuado para 4 espaços. Esta "
+"PEP não assume uma posição explícita sobre como (ou se) distinguir "
+"visualmente tais linhas condicionais do conjunto aninhado dentro da "
+"instrução ``if``. As opções aceitáveis nesta situação incluem, mas não estão "
+"limitadas a::"
 
-#: ../../peps/pep-0008.rst:156
+#: ../../peps/peps/pep-0008.rst:163
 msgid ""
 "(Also see the discussion of whether to break before or after binary "
 "operators below.)"
@@ -266,195 +264,195 @@ msgstr ""
 "(Veja também a discussão sobre a quebra antes ou depois dos operadores "
 "binários abaixo.)"
 
-#: ../../peps/pep-0008.rst:159
+#: ../../peps/peps/pep-0008.rst:166
+#, fuzzy
 msgid ""
 "The closing brace/bracket/parenthesis on multiline constructs may either "
-"line up under the first non-whitespace character of the last line of "
-"list, as in::"
+"line up under the first non-whitespace character of the last line of list, "
+"as in:"
 msgstr ""
 "A chave/colchete/parêntese de fechamento em construções de várias linhas "
 "podem se alinhar sob o primeiro caractere sem espaço em branco da última "
 "linha da lista, como em::"
 
-#: ../../peps/pep-0008.rst:172
+#: ../../peps/peps/pep-0008.rst:182
+#, fuzzy
 msgid ""
-"or it may be lined up under the first character of the line that starts "
-"the multiline construct, as in::"
+"or it may be lined up under the first character of the line that starts the "
+"multiline construct, as in:"
 msgstr ""
 "ou pode ser alinhado sob o primeiro caractere da linha que inicia a "
 "construção multilinha, como em::"
 
-#: ../../peps/pep-0008.rst:185
+#: ../../peps/peps/pep-0008.rst:198
 msgid "Tabs or Spaces?"
 msgstr "Tabs ou espaços?"
 
-#: ../../peps/pep-0008.rst:187
+#: ../../peps/peps/pep-0008.rst:200
 msgid "Spaces are the preferred indentation method."
 msgstr "Os espaços são o método de recuo preferido."
 
-#: ../../peps/pep-0008.rst:189
+#: ../../peps/peps/pep-0008.rst:202
 msgid ""
-"Tabs should be used solely to remain consistent with code that is already"
-" indented with tabs."
+"Tabs should be used solely to remain consistent with code that is already "
+"indented with tabs."
 msgstr ""
 "As tabulações devem ser usadas apenas para permanecer consistentes com o "
 "código que já está recuado com tabulações."
 
-#: ../../peps/pep-0008.rst:192
+#: ../../peps/peps/pep-0008.rst:205
 msgid "Python disallows mixing tabs and spaces for indentation."
 msgstr "O Python não permite a mistura de tabulações e espaços para recuo."
 
-#: ../../peps/pep-0008.rst:196
+#: ../../peps/peps/pep-0008.rst:209
 msgid "Maximum Line Length"
 msgstr "Comprimento máximo da linha"
 
-#: ../../peps/pep-0008.rst:198
+#: ../../peps/peps/pep-0008.rst:211
 msgid "Limit all lines to a maximum of 79 characters."
 msgstr "Limite todas as linhas a um máximo de 79 caracteres."
 
-#: ../../peps/pep-0008.rst:200
+#: ../../peps/peps/pep-0008.rst:213
 msgid ""
 "For flowing long blocks of text with fewer structural restrictions "
-"(docstrings or comments), the line length should be limited to 72 "
-"characters."
+"(docstrings or comments), the line length should be limited to 72 characters."
 msgstr ""
 "Para longos blocos de texto fluindo com menos restrições estruturais "
-"(docstrings ou comentários), o comprimento da linha deve ser limitado a "
-"72 caracteres."
+"(docstrings ou comentários), o comprimento da linha deve ser limitado a 72 "
+"caracteres."
 
-#: ../../peps/pep-0008.rst:204
+#: ../../peps/peps/pep-0008.rst:217
 msgid ""
-"Limiting the required editor window width makes it possible to have "
-"several files open side by side, and works well when using code review "
-"tools that present the two versions in adjacent columns."
+"Limiting the required editor window width makes it possible to have several "
+"files open side by side, and works well when using code review tools that "
+"present the two versions in adjacent columns."
 msgstr ""
-"Limitar a largura necessária da janela do editor possibilita abrir vários"
-" arquivos lado a lado e funciona bem ao usar ferramentas de revisão de "
-"código que apresentam as duas versões em colunas adjacentes."
+"Limitar a largura necessária da janela do editor possibilita abrir vários "
+"arquivos lado a lado e funciona bem ao usar ferramentas de revisão de código "
+"que apresentam as duas versões em colunas adjacentes."
 
-#: ../../peps/pep-0008.rst:208
+#: ../../peps/peps/pep-0008.rst:221
 msgid ""
 "The default wrapping in most tools disrupts the visual structure of the "
-"code, making it more difficult to understand. The limits are chosen to "
-"avoid wrapping in editors with the window width set to 80, even if the "
-"tool places a marker glyph in the final column when wrapping lines. Some "
-"web based tools may not offer dynamic line wrapping at all."
+"code, making it more difficult to understand. The limits are chosen to avoid "
+"wrapping in editors with the window width set to 80, even if the tool places "
+"a marker glyph in the final column when wrapping lines. Some web based tools "
+"may not offer dynamic line wrapping at all."
 msgstr ""
 "O empacotamento padrão na maioria das ferramentas atrapalha a estrutura "
 "visual do código, tornando-o mais difícil de entender. Os limites são "
-"escolhidos para evitar a quebra em editores com a largura da janela "
-"definida como 80, mesmo que a ferramenta coloque um glifo de marcador na "
-"coluna final ao quebrar as linhas. Algumas ferramentas baseadas na web "
-"podem não oferecer quebra de linha dinâmica."
+"escolhidos para evitar a quebra em editores com a largura da janela definida "
+"como 80, mesmo que a ferramenta coloque um glifo de marcador na coluna final "
+"ao quebrar as linhas. Algumas ferramentas baseadas na web podem não oferecer "
+"quebra de linha dinâmica."
 
-#: ../../peps/pep-0008.rst:214
+#: ../../peps/peps/pep-0008.rst:227
 msgid ""
 "Some teams strongly prefer a longer line length.  For code maintained "
-"exclusively or primarily by a team that can reach agreement on this "
-"issue, it is okay to increase the line length limit up to 99 characters, "
-"provided that comments and docstrings are still wrapped at 72 characters."
+"exclusively or primarily by a team that can reach agreement on this issue, "
+"it is okay to increase the line length limit up to 99 characters, provided "
+"that comments and docstrings are still wrapped at 72 characters."
 msgstr ""
-"Algumas equipes preferem fortemente um comprimento de linha mais longo. "
-"Para o código mantido exclusivamente ou principalmente por uma equipe que"
-" pode chegar a um acordo sobre esse problema, não há problema em aumentar"
-" o limite de comprimento da linha para até 99 caracteres, desde que os "
-"comentários e docstrings ainda tenham 72 caracteres."
+"Algumas equipes preferem fortemente um comprimento de linha mais longo. Para "
+"o código mantido exclusivamente ou principalmente por uma equipe que pode "
+"chegar a um acordo sobre esse problema, não há problema em aumentar o limite "
+"de comprimento da linha para até 99 caracteres, desde que os comentários e "
+"docstrings ainda tenham 72 caracteres."
 
-#: ../../peps/pep-0008.rst:220
+#: ../../peps/peps/pep-0008.rst:233
 msgid ""
-"The Python standard library is conservative and requires limiting lines "
-"to 79 characters (and docstrings/comments to 72)."
+"The Python standard library is conservative and requires limiting lines to "
+"79 characters (and docstrings/comments to 72)."
 msgstr ""
-"A biblioteca padrão do Python é conservadora e requer limitar as linhas a"
-" 79 caracteres (e docstrings/comentários a 72)."
+"A biblioteca padrão do Python é conservadora e requer limitar as linhas a 79 "
+"caracteres (e docstrings/comentários a 72)."
 
-#: ../../peps/pep-0008.rst:223
+#: ../../peps/peps/pep-0008.rst:236
 msgid ""
-"The preferred way of wrapping long lines is by using Python's implied "
-"line continuation inside parentheses, brackets and braces.  Long lines "
-"can be broken over multiple lines by wrapping expressions in parentheses."
-" These should be used in preference to using a backslash for line "
-"continuation."
+"The preferred way of wrapping long lines is by using Python's implied line "
+"continuation inside parentheses, brackets and braces.  Long lines can be "
+"broken over multiple lines by wrapping expressions in parentheses. These "
+"should be used in preference to using a backslash for line continuation."
 msgstr ""
-"A maneira preferida de quebrar linhas longas é usando a continuação de "
-"linha implícita do Python entre parênteses, colchetes e chaves. Linhas "
-"longas podem ser quebradas em várias linhas envolvendo as expressões "
-"entre parênteses. Estes devem ser usados em vez de usar uma barra "
-"invertida para continuação de linha."
+"A maneira preferida de quebrar linhas longas é usando a continuação de linha "
+"implícita do Python entre parênteses, colchetes e chaves. Linhas longas "
+"podem ser quebradas em várias linhas envolvendo as expressões entre "
+"parênteses. Estes devem ser usados em vez de usar uma barra invertida para "
+"continuação de linha."
 
-#: ../../peps/pep-0008.rst:229
+#: ../../peps/peps/pep-0008.rst:242
+#, fuzzy
 msgid ""
-"Backslashes may still be appropriate at times.  For example, long, "
-"multiple ``with``-statements could not use implicit continuation before "
-"Python 3.10, so backslashes were acceptable for that case::"
+"Backslashes may still be appropriate at times.  For example, long, multiple "
+"``with``-statements could not use implicit continuation before Python 3.10, "
+"so backslashes were acceptable for that case:"
 msgstr ""
 "Barras invertidas ainda podem ser apropriadas às vezes. Por exemplo, "
-"instruções ``with`` longas e múltiplas não podiam usar continuação "
-"implícita antes do Python 3.10, então barras invertidas eram aceitáveis "
-"para esse caso::"
+"instruções ``with`` longas e múltiplas não podiam usar continuação implícita "
+"antes do Python 3.10, então barras invertidas eram aceitáveis para esse "
+"caso::"
 
-#: ../../peps/pep-0008.rst:237
+#: ../../peps/peps/pep-0008.rst:253
 msgid ""
 "(See the previous discussion on `multiline if-statements`_ for further "
 "thoughts on the indentation of such multiline ``with``-statements.)"
 msgstr ""
-"(Veja a discussão anterior sobre `instruções if multilinhas <multiline "
-"if-statements>`_ para mais pensamentos sobre o recuo de tais instruções "
+"(Veja a discussão anterior sobre `instruções if multilinhas <multiline if-"
+"statements>`_ para mais pensamentos sobre o recuo de tais instruções "
 "``with`` multilinhas.)"
 
-#: ../../peps/pep-0008.rst:240
+#: ../../peps/peps/pep-0008.rst:256
 msgid "Another such case is with ``assert`` statements."
 msgstr "Outro caso é com instruções ``assert``."
 
-#: ../../peps/pep-0008.rst:242
+#: ../../peps/peps/pep-0008.rst:258
 msgid "Make sure to indent the continued line appropriately."
 msgstr "Certifique-se de recuar a linha continuada adequadamente."
 
-#: ../../peps/pep-0008.rst:245
+#: ../../peps/peps/pep-0008.rst:261
 msgid "Should a Line Break Before or After a Binary Operator?"
 msgstr "Uma linha deve quebrar antes ou depois de um operador binário?"
 
-#: ../../peps/pep-0008.rst:247
+#: ../../peps/peps/pep-0008.rst:263
+#, fuzzy
 msgid ""
-"For decades the recommended style was to break after binary operators. "
-"But this can hurt readability in two ways: the operators tend to get "
-"scattered across different columns on the screen, and each operator is "
-"moved away from its operand and onto the previous line.  Here, the eye "
-"has to do extra work to tell which items are added and which are "
-"subtracted::"
+"For decades the recommended style was to break after binary operators. But "
+"this can hurt readability in two ways: the operators tend to get scattered "
+"across different columns on the screen, and each operator is moved away from "
+"its operand and onto the previous line.  Here, the eye has to do extra work "
+"to tell which items are added and which are subtracted:"
 msgstr ""
-"Durante décadas, o estilo recomendado era quebrar após operadores "
-"binários. Mas isso pode prejudicar a legibilidade de duas maneiras: os "
-"operadores tendem a se espalhar por diferentes colunas na tela e cada "
-"operador é movido para longe de seu operando e para a linha anterior. "
-"Aqui, o olho tem que fazer um trabalho extra para saber quais itens são "
-"adicionados e quais são subtraídos::"
+"Durante décadas, o estilo recomendado era quebrar após operadores binários. "
+"Mas isso pode prejudicar a legibilidade de duas maneiras: os operadores "
+"tendem a se espalhar por diferentes colunas na tela e cada operador é movido "
+"para longe de seu operando e para a linha anterior. Aqui, o olho tem que "
+"fazer um trabalho extra para saber quais itens são adicionados e quais são "
+"subtraídos::"
 
-#: ../../peps/pep-0008.rst:262
+#: ../../peps/peps/pep-0008.rst:281
 msgid ""
 "To solve this readability problem, mathematicians and their publishers "
-"follow the opposite convention.  Donald Knuth explains the traditional "
-"rule in his *Computers and Typesetting* series: \"Although formulas "
-"within a paragraph always break after binary operations and relations, "
-"displayed formulas always break before binary operations\" [3]_."
+"follow the opposite convention.  Donald Knuth explains the traditional rule "
+"in his *Computers and Typesetting* series: \"Although formulas within a "
+"paragraph always break after binary operations and relations, displayed "
+"formulas always break before binary operations\" [3]_."
 msgstr ""
-"Para resolver esse problema de legibilidade, os matemáticos e seus "
-"editores seguem a convenção oposta. Donald Knuth explica a regra "
-"tradicional em sua série *Computers and Typesetting* (em português, "
-"\"Computadores e Composição\"): \"Embora as fórmulas dentro de um "
-"parágrafo sempre sejam interrompidas após operações e relações binárias, "
-"as fórmulas exibidas sempre são interrompidas antes de operações "
-"binárias\" [3]_."
+"Para resolver esse problema de legibilidade, os matemáticos e seus editores "
+"seguem a convenção oposta. Donald Knuth explica a regra tradicional em sua "
+"série *Computers and Typesetting* (em português, \"Computadores e "
+"Composição\"): \"Embora as fórmulas dentro de um parágrafo sempre sejam "
+"interrompidas após operações e relações binárias, as fórmulas exibidas "
+"sempre são interrompidas antes de operações binárias\" [3]_."
 
-#: ../../peps/pep-0008.rst:268
+#: ../../peps/peps/pep-0008.rst:287
+#, fuzzy
 msgid ""
-"Following the tradition from mathematics usually results in more readable"
-" code::"
+"Following the tradition from mathematics usually results in more readable "
+"code:"
 msgstr ""
-"Seguir a tradição da matemática geralmente resulta em código mais "
-"legível::"
+"Seguir a tradição da matemática geralmente resulta em código mais legível::"
 
-#: ../../peps/pep-0008.rst:279
+#: ../../peps/peps/pep-0008.rst:301
 msgid ""
 "In Python code, it is permissible to break before or after a binary "
 "operator, as long as the convention is consistent locally.  For new code "
@@ -464,111 +462,113 @@ msgstr ""
 "binário, desde que a convenção seja consistente localmente. Para o novo "
 "código, o estilo de Knuth é sugerido."
 
-#: ../../peps/pep-0008.rst:284
+#: ../../peps/peps/pep-0008.rst:306
 msgid "Blank Lines"
 msgstr "Linhas em branco"
 
-#: ../../peps/pep-0008.rst:286
+#: ../../peps/peps/pep-0008.rst:308
 msgid "Surround top-level function and class definitions with two blank lines."
 msgstr ""
-"Envolva funções de nível superior e definições de classe com duas linhas "
-"em branco."
+"Envolva funções de nível superior e definições de classe com duas linhas em "
+"branco."
 
-#: ../../peps/pep-0008.rst:289
-msgid "Method definitions inside a class are surrounded by a single blank line."
+#: ../../peps/peps/pep-0008.rst:311
+msgid ""
+"Method definitions inside a class are surrounded by a single blank line."
 msgstr ""
 "As definições de método dentro de uma classe são cercadas por uma única "
 "linha em branco."
 
-#: ../../peps/pep-0008.rst:292
+#: ../../peps/peps/pep-0008.rst:314
 msgid ""
 "Extra blank lines may be used (sparingly) to separate groups of related "
-"functions.  Blank lines may be omitted between a bunch of related one-"
-"liners (e.g. a set of dummy implementations)."
+"functions.  Blank lines may be omitted between a bunch of related one-liners "
+"(e.g. a set of dummy implementations)."
 msgstr ""
-"Linhas em branco extras podem ser usadas (com moderação) para separar "
-"grupos de funções relacionadas. Linhas em branco podem ser omitidas entre"
-" vários códigos de uma linha relacionados (por exemplo, um conjunto de "
+"Linhas em branco extras podem ser usadas (com moderação) para separar grupos "
+"de funções relacionadas. Linhas em branco podem ser omitidas entre vários "
+"códigos de uma linha relacionados (por exemplo, um conjunto de "
 "implementações fictícias)."
 
-#: ../../peps/pep-0008.rst:296
+#: ../../peps/peps/pep-0008.rst:318
 msgid "Use blank lines in functions, sparingly, to indicate logical sections."
 msgstr ""
-"Use linhas em branco em funções, com moderação, para indicar seções "
-"lógicas."
+"Use linhas em branco em funções, com moderação, para indicar seções lógicas."
 
-#: ../../peps/pep-0008.rst:298
+#: ../../peps/peps/pep-0008.rst:320
 msgid ""
-"Python accepts the control-L (i.e. ^L) form feed character as whitespace;"
-" many tools treat these characters as page separators, so you may use "
-"them to separate pages of related sections of your file. Note, some "
-"editors and web-based code viewers may not recognize control-L as a form "
-"feed and will show another glyph in its place."
+"Python accepts the control-L (i.e. ^L) form feed character as whitespace; "
+"many tools treat these characters as page separators, so you may use them to "
+"separate pages of related sections of your file. Note, some editors and web-"
+"based code viewers may not recognize control-L as a form feed and will show "
+"another glyph in its place."
 msgstr ""
-"O Python aceita o caractere de feed de formulário control-L (ou seja, ^L)"
-" como espaço em branco; muitas ferramentas tratam esses caracteres como "
+"O Python aceita o caractere de feed de formulário control-L (ou seja, ^L) "
+"como espaço em branco; muitas ferramentas tratam esses caracteres como "
 "separadores de página, então você pode usá-los para separar páginas de "
 "seções relacionadas de seu arquivo. Observe que alguns editores e "
-"visualizadores de código baseados na Web podem não reconhecer control-L "
-"como um feed de formulário e mostrarão outro glifo em seu lugar."
+"visualizadores de código baseados na Web podem não reconhecer control-L como "
+"um feed de formulário e mostrarão outro glifo em seu lugar."
 
-#: ../../peps/pep-0008.rst:305
+#: ../../peps/peps/pep-0008.rst:327
 msgid "Source File Encoding"
 msgstr "Codificação do arquivo-fonte"
 
-#: ../../peps/pep-0008.rst:307
+#: ../../peps/peps/pep-0008.rst:329
 msgid ""
-"Code in the core Python distribution should always use UTF-8, and should "
-"not have an encoding declaration."
+"Code in the core Python distribution should always use UTF-8, and should not "
+"have an encoding declaration."
 msgstr ""
-"O código na distribuição principal do Python sempre deve usar UTF-8 e não"
-" deve ter uma declaração de codificação."
+"O código na distribuição principal do Python sempre deve usar UTF-8 e não "
+"deve ter uma declaração de codificação."
 
-#: ../../peps/pep-0008.rst:310
+#: ../../peps/peps/pep-0008.rst:332
 msgid ""
-"In the standard library, non-UTF-8 encodings should be used only for test"
-" purposes. Use non-ASCII characters sparingly, preferably only to denote "
-"places and human names. If using non-ASCII characters as data, avoid "
-"noisy Unicode characters like z̯̯͡a̧͎̺l̡͓̫g̹̲o̡̼̘ and byte order marks."
+"In the standard library, non-UTF-8 encodings should be used only for test "
+"purposes. Use non-ASCII characters sparingly, preferably only to denote "
+"places and human names. If using non-ASCII characters as data, avoid noisy "
+"Unicode characters like z̯̯͡a̧͎̺l̡͓̫g̹̲o̡̼̘ and byte order marks."
 msgstr ""
-"Na biblioteca padrão, as codificações não UTF-8 devem ser usadas apenas "
-"para fins de teste. Use caracteres não ASCII com moderação, de "
-"preferência apenas para denotar lugares e nomes humanos. Se estiver "
-"usando caracteres não ASCII como dados, evite caracteres Unicode ruidosos"
-" como z̯̯͡a̧͎̺l̡͓̫g̹̲o̡̼̘ e marcas de ordem de byte."
+"Na biblioteca padrão, as codificações não UTF-8 devem ser usadas apenas para "
+"fins de teste. Use caracteres não ASCII com moderação, de preferência apenas "
+"para denotar lugares e nomes humanos. Se estiver usando caracteres não ASCII "
+"como dados, evite caracteres Unicode ruidosos como z̯̯͡a̧͎̺l̡͓̫g̹̲o̡̼̘ e marcas de ordem "
+"de byte."
 
-#: ../../peps/pep-0008.rst:316
+#: ../../peps/peps/pep-0008.rst:338
 msgid ""
 "All identifiers in the Python standard library MUST use ASCII-only "
-"identifiers, and SHOULD use English words wherever feasible (in many "
-"cases, abbreviations and technical terms are used which aren't English)."
+"identifiers, and SHOULD use English words wherever feasible (in many cases, "
+"abbreviations and technical terms are used which aren't English)."
 msgstr ""
 "Todos os identificadores na biblioteca padrão do Python DEVEM usar "
 "identificadores somente ASCII e DEVEM usar palavras em inglês sempre que "
-"possível (em muitos casos, são usadas abreviações e termos técnicos que "
-"não são em inglês)."
+"possível (em muitos casos, são usadas abreviações e termos técnicos que não "
+"são em inglês)."
 
-#: ../../peps/pep-0008.rst:321
+#: ../../peps/peps/pep-0008.rst:343
 msgid ""
 "Open source projects with a global audience are encouraged to adopt a "
 "similar policy."
 msgstr ""
-"Projetos de código aberto com público global são incentivados a adotar "
-"uma política semelhante."
+"Projetos de código aberto com público global são incentivados a adotar uma "
+"política semelhante."
 
-#: ../../peps/pep-0008.rst:325
+#: ../../peps/peps/pep-0008.rst:347
 msgid "Imports"
 msgstr "Importações"
 
-#: ../../peps/pep-0008.rst:327
-msgid "Imports should usually be on separate lines::"
+#: ../../peps/peps/pep-0008.rst:349
+#, fuzzy
+msgid "Imports should usually be on separate lines:"
 msgstr "As importações geralmente devem estar em linhas separadas::"
 
-#: ../../peps/pep-0008.rst:339
-msgid "It's okay to say this though::"
+#: ../../peps/peps/pep-0008.rst:365
+#, fuzzy
+msgid "It's okay to say this though:"
 msgstr "Não há problema em dizer isso::"
 
-#: ../../peps/pep-0008.rst:344
+#: ../../peps/peps/pep-0008.rst:373
 msgid ""
 "Imports are always put at the top of the file, just after any module "
 "comments and docstrings, and before module globals and constants."
@@ -577,918 +577,926 @@ msgstr ""
 "quaisquer comentários e docstrings do módulo e antes das constantes e "
 "globais do módulo."
 
-#: ../../peps/pep-0008.rst:347
+#: ../../peps/peps/pep-0008.rst:376
 msgid "Imports should be grouped in the following order:"
 msgstr "As importações devem ser agrupadas na seguinte ordem:"
 
-#: ../../peps/pep-0008.rst:349
+#: ../../peps/peps/pep-0008.rst:378
 msgid "Standard library imports."
 msgstr "Importações de biblioteca padrão."
 
-#: ../../peps/pep-0008.rst:350
+#: ../../peps/peps/pep-0008.rst:379
 msgid "Related third party imports."
 msgstr "Importações de terceiros relacionadas."
 
-#: ../../peps/pep-0008.rst:351
+#: ../../peps/peps/pep-0008.rst:380
 msgid "Local application/library specific imports."
 msgstr "Importações específicas de aplicativo/biblioteca local."
 
-#: ../../peps/pep-0008.rst:353
+#: ../../peps/peps/pep-0008.rst:382
 msgid "You should put a blank line between each group of imports."
 msgstr "Você deve colocar uma linha em branco entre cada grupo de importações."
 
-#: ../../peps/pep-0008.rst:355
+#: ../../peps/peps/pep-0008.rst:384
+#, fuzzy
 msgid ""
-"Absolute imports are recommended, as they are usually more readable and "
-"tend to be better behaved (or at least give better error messages) if the"
-" import system is incorrectly configured (such as when a directory inside"
-" a package ends up on ``sys.path``)::"
+"Absolute imports are recommended, as they are usually more readable and tend "
+"to be better behaved (or at least give better error messages) if the import "
+"system is incorrectly configured (such as when a directory inside a package "
+"ends up on ``sys.path``):"
 msgstr ""
-"Importações absolutas são recomendadas, pois geralmente são mais legíveis"
-" e tendem a se comportar melhor (ou pelo menos fornecer mensagens de erro"
-" melhores) se o sistema de importação estiver configurado incorretamente "
+"Importações absolutas são recomendadas, pois geralmente são mais legíveis e "
+"tendem a se comportar melhor (ou pelo menos fornecer mensagens de erro "
+"melhores) se o sistema de importação estiver configurado incorretamente "
 "(como quando um diretório dentro de um pacote termina em ``sys.path``)::"
 
-#: ../../peps/pep-0008.rst:364
+#: ../../peps/peps/pep-0008.rst:396
+#, fuzzy
 msgid ""
-"However, explicit relative imports are an acceptable alternative to "
-"absolute imports, especially when dealing with complex package layouts "
-"where using absolute imports would be unnecessarily verbose::"
+"However, explicit relative imports are an acceptable alternative to absolute "
+"imports, especially when dealing with complex package layouts where using "
+"absolute imports would be unnecessarily verbose:"
 msgstr ""
 "No entanto, as importações relativas explícitas são uma alternativa "
-"aceitável às importações absolutas, especialmente ao lidar com layouts de"
-" pacotes complexos em que o uso de importações absolutas seria "
+"aceitável às importações absolutas, especialmente ao lidar com layouts de "
+"pacotes complexos em que o uso de importações absolutas seria "
 "desnecessariamente detalhado::"
 
-#: ../../peps/pep-0008.rst:371
+#: ../../peps/peps/pep-0008.rst:406
 msgid ""
-"Standard library code should avoid complex package layouts and always use"
-" absolute imports."
+"Standard library code should avoid complex package layouts and always use "
+"absolute imports."
 msgstr ""
 "O código de biblioteca padrão deve evitar layouts de pacote complexos e "
 "sempre usar importações absolutas."
 
-#: ../../peps/pep-0008.rst:374
+#: ../../peps/peps/pep-0008.rst:409
+#, fuzzy
 msgid ""
-"When importing a class from a class-containing module, it's usually okay "
-"to spell this::"
+"When importing a class from a class-containing module, it's usually okay to "
+"spell this:"
 msgstr ""
-"Ao importar uma classe de um módulo que contém a classe, geralmente não "
-"há problema em soletrar isto::"
+"Ao importar uma classe de um módulo que contém a classe, geralmente não há "
+"problema em soletrar isto::"
 
-#: ../../peps/pep-0008.rst:380
-msgid "If this spelling causes local name clashes, then spell them explicitly::"
+#: ../../peps/peps/pep-0008.rst:418
+#, fuzzy
+msgid "If this spelling causes local name clashes, then spell them explicitly:"
 msgstr ""
 "Se esta ortografia causar conflitos de nomes locais, soletre-os "
 "explicitamente::"
 
-#: ../../peps/pep-0008.rst:385
-msgid "and use \"myclass.MyClass\" and \"foo.bar.yourclass.YourClass\"."
+#: ../../peps/peps/pep-0008.rst:426
+#, fuzzy
+msgid "and use ``myclass.MyClass`` and ``foo.bar.yourclass.YourClass``."
 msgstr "e use \"myclass.MyClass\" e \"foo.bar.yourclass.YourClass\"."
 
-#: ../../peps/pep-0008.rst:387
+#: ../../peps/peps/pep-0008.rst:428
 msgid ""
 "Wildcard imports (``from <module> import *``) should be avoided, as they "
 "make it unclear which names are present in the namespace, confusing both "
 "readers and many automated tools. There is one defensible use case for a "
-"wildcard import, which is to republish an internal interface as part of a"
-" public API (for example, overwriting a pure Python implementation of an "
+"wildcard import, which is to republish an internal interface as part of a "
+"public API (for example, overwriting a pure Python implementation of an "
 "interface with the definitions from an optional accelerator module and "
 "exactly which definitions will be overwritten isn't known in advance)."
 msgstr ""
-"Importações curinga (``from <módulo> import *``) devem ser evitadas, pois"
-" não deixam claro quais nomes estão presentes no espaço de nomes, "
-"confundindo os leitores e muitas ferramentas automatizadas. Há um caso de"
-" uso defensável para uma importação curinga, que é republicar uma "
-"interface interna como parte de uma API pública (por exemplo, "
-"sobrescrever uma implementação Python pura de uma interface com as "
-"definições de um módulo acelerador opcional e exatamente quais definições"
-" serão substituído não é conhecido antecipadamente)."
+"Importações curinga (``from <módulo> import *``) devem ser evitadas, pois "
+"não deixam claro quais nomes estão presentes no espaço de nomes, confundindo "
+"os leitores e muitas ferramentas automatizadas. Há um caso de uso defensável "
+"para uma importação curinga, que é republicar uma interface interna como "
+"parte de uma API pública (por exemplo, sobrescrever uma implementação Python "
+"pura de uma interface com as definições de um módulo acelerador opcional e "
+"exatamente quais definições serão substituído não é conhecido "
+"antecipadamente)."
 
-#: ../../peps/pep-0008.rst:396
+#: ../../peps/peps/pep-0008.rst:437
 msgid ""
-"When republishing names this way, the guidelines below regarding public "
-"and internal interfaces still apply."
+"When republishing names this way, the guidelines below regarding public and "
+"internal interfaces still apply."
 msgstr ""
 "Ao republicar nomes dessa maneira, as diretrizes abaixo sobre interfaces "
 "públicas e internas ainda se aplicam."
 
-#: ../../peps/pep-0008.rst:400
+#: ../../peps/peps/pep-0008.rst:441
 msgid "Module Level Dunder Names"
 msgstr "Nomes dunder de nível de módulo"
 
-#: ../../peps/pep-0008.rst:402
+#: ../../peps/peps/pep-0008.rst:443
+#, fuzzy
 msgid ""
 "Module level \"dunders\" (i.e. names with two leading and two trailing "
 "underscores) such as ``__all__``, ``__author__``, ``__version__``, etc. "
-"should be placed after the module docstring but before any import "
-"statements *except* ``from __future__`` imports.  Python mandates that "
-"future-imports must appear in the module before any other code except "
-"docstrings::"
+"should be placed after the module docstring but before any import statements "
+"*except* ``from __future__`` imports.  Python mandates that future-imports "
+"must appear in the module before any other code except docstrings:"
 msgstr ""
 "\"Dunders\" de nível de módulo (ou seja, nomes com dois sublinhados à "
 "esquerda e dois à direita), como ``__all__``, ``__author__``, "
-"``__version__``, etc. devem ser colocados após a docstring do módulo, mas"
-" antes de qualquer instrução de importação *exceto* importações ``from "
-"__future__``. O Python exige que as importações futuras apareçam no "
-"módulo antes de qualquer outro código, exceto docstrings::"
+"``__version__``, etc. devem ser colocados após a docstring do módulo, mas "
+"antes de qualquer instrução de importação *exceto* importações ``from "
+"__future__``. O Python exige que as importações futuras apareçam no módulo "
+"antes de qualquer outro código, exceto docstrings::"
 
-#: ../../peps/pep-0008.rst:425
+#: ../../peps/peps/pep-0008.rst:469
 msgid "String Quotes"
 msgstr "Apas de strings"
 
-#: ../../peps/pep-0008.rst:427
+#: ../../peps/peps/pep-0008.rst:471
 msgid ""
-"In Python, single-quoted strings and double-quoted strings are the same."
-"  This PEP does not make a recommendation for this.  Pick a rule and "
-"stick to it.  When a string contains single or double quote characters, "
-"however, use the other one to avoid backslashes in the string. It "
-"improves readability."
+"In Python, single-quoted strings and double-quoted strings are the same.  "
+"This PEP does not make a recommendation for this.  Pick a rule and stick to "
+"it.  When a string contains single or double quote characters, however, use "
+"the other one to avoid backslashes in the string. It improves readability."
 msgstr ""
-"Em Python, strings com aspas simples e strings com aspas duplas são "
-"iguais. Este PEP não faz uma recomendação para isso. Escolha uma regra e "
-"cumpra-a. No entanto, quando uma string contém aspas simples ou duplas, "
-"use a outra para evitar barras invertidas na string. Melhora a "
-"legibilidade."
+"Em Python, strings com aspas simples e strings com aspas duplas são iguais. "
+"Este PEP não faz uma recomendação para isso. Escolha uma regra e cumpra-a. "
+"No entanto, quando uma string contém aspas simples ou duplas, use a outra "
+"para evitar barras invertidas na string. Melhora a legibilidade."
 
-#: ../../peps/pep-0008.rst:433
+#: ../../peps/peps/pep-0008.rst:477
 msgid ""
 "For triple-quoted strings, always use double quote characters to be "
 "consistent with the docstring convention in :pep:`257`."
 msgstr ""
-"Para strings com aspas triplas, sempre use caracteres de aspas duplas "
-"para ser consistente com a convenção de docstrings em :pep:`257`."
+"Para strings com aspas triplas, sempre use caracteres de aspas duplas para "
+"ser consistente com a convenção de docstrings em :pep:`257`."
 
-#: ../../peps/pep-0008.rst:438
+#: ../../peps/peps/pep-0008.rst:482
 msgid "Whitespace in Expressions and Statements"
 msgstr "Espaço em branco em expressões e instruções"
 
-#: ../../peps/pep-0008.rst:441
+#: ../../peps/peps/pep-0008.rst:485
 msgid "Pet Peeves"
 msgstr "Particularmente incômodo"
 
-#: ../../peps/pep-0008.rst:443
+#: ../../peps/peps/pep-0008.rst:487
 msgid "Avoid extraneous whitespace in the following situations:"
 msgstr "Evite espaços em branco estranhos nas seguintes situações:"
 
-#: ../../peps/pep-0008.rst:445
-msgid "Immediately inside parentheses, brackets or braces::"
+#: ../../peps/peps/pep-0008.rst:489
+#, fuzzy
+msgid "Immediately inside parentheses, brackets or braces:"
 msgstr "Imediatamente dentro de parênteses, colchetes ou colchetes::"
 
-#: ../../peps/pep-0008.rst:455
-msgid "Between a trailing comma and a following close parenthesis::"
+#: ../../peps/peps/pep-0008.rst:503
+#, fuzzy
+msgid "Between a trailing comma and a following close parenthesis:"
 msgstr "Entre uma vírgula à direita e um próximo parêntese::"
 
-#: ../../peps/pep-0008.rst:465
-msgid "Immediately before a comma, semicolon, or colon::"
+#: ../../peps/peps/pep-0008.rst:517
+#, fuzzy
+msgid "Immediately before a comma, semicolon, or colon:"
 msgstr "Imediatamente antes de uma vírgula, ponto e vírgula ou dois pontos::"
 
-#: ../../peps/pep-0008.rst:475
+#: ../../peps/peps/pep-0008.rst:532
+#, fuzzy
 msgid ""
-"However, in a slice the colon acts like a binary operator, and should "
-"have equal amounts on either side (treating it as the operator with the "
-"lowest priority).  In an extended slice, both colons must have the same "
-"amount of spacing applied.  Exception: when a slice parameter is omitted,"
-" the space is omitted::"
+"However, in a slice the colon acts like a binary operator, and should have "
+"equal amounts on either side (treating it as the operator with the lowest "
+"priority).  In an extended slice, both colons must have the same amount of "
+"spacing applied.  Exception: when a slice parameter is omitted, the space is "
+"omitted:"
 msgstr ""
-"No entanto, em um fatiamento, os dois pontos atuam como um operador "
-"binário e devem ter valores iguais em ambos os lados (tratando-o como o "
-"operador com a menor prioridade). Em um fatiamento estendido, ambos os "
-"dois-pontos devem ter o mesmo espaçamento aplicado. Exceção: quando um "
-"parâmetro de fatiamento é omitido, o espaço é omitido::"
+"No entanto, em um fatiamento, os dois pontos atuam como um operador binário "
+"e devem ter valores iguais em ambos os lados (tratando-o como o operador com "
+"a menor prioridade). Em um fatiamento estendido, ambos os dois-pontos devem "
+"ter o mesmo espaçamento aplicado. Exceção: quando um parâmetro de fatiamento "
+"é omitido, o espaço é omitido::"
 
-#: ../../peps/pep-0008.rst:496
+#: ../../peps/peps/pep-0008.rst:557
+#, fuzzy
 msgid ""
-"Immediately before the open parenthesis that starts the argument list of "
-"a function call::"
+"Immediately before the open parenthesis that starts the argument list of a "
+"function call:"
 msgstr ""
 "Imediatamente antes do parêntese de abertura que inicia a lista de "
 "argumentos de uma chamada de função::"
 
-#: ../../peps/pep-0008.rst:507
+#: ../../peps/peps/pep-0008.rst:572
+#, fuzzy
 msgid ""
-"Immediately before the open parenthesis that starts an indexing or "
-"slicing::"
+"Immediately before the open parenthesis that starts an indexing or slicing:"
 msgstr ""
-"Imediatamente antes do parêntese aberto que inicia uma indexação ou "
-"divisão::"
+"Imediatamente antes do parêntese aberto que inicia uma indexação ou divisão::"
 
-#: ../../peps/pep-0008.rst:518
+#: ../../peps/peps/pep-0008.rst:587
+#, fuzzy
 msgid ""
 "More than one space around an assignment (or other) operator to align it "
-"with another::"
+"with another:"
 msgstr ""
 "Mais de um espaço ao redor de um operador de atribuição (ou outro) para "
 "alinhá-lo com outro::"
 
-#: ../../peps/pep-0008.rst:534
+#: ../../peps/peps/pep-0008.rst:607
 msgid "Other Recommendations"
 msgstr "Outras recomendações"
 
-#: ../../peps/pep-0008.rst:536
+#: ../../peps/peps/pep-0008.rst:609
 msgid ""
-"Avoid trailing whitespace anywhere.  Because it's usually invisible, it "
-"can be confusing: e.g. a backslash followed by a space and a newline does"
-" not count as a line continuation marker.  Some editors don't preserve it"
-" and many projects (like CPython itself) have pre-commit hooks that "
-"reject it."
+"Avoid trailing whitespace anywhere.  Because it's usually invisible, it can "
+"be confusing: e.g. a backslash followed by a space and a newline does not "
+"count as a line continuation marker.  Some editors don't preserve it and "
+"many projects (like CPython itself) have pre-commit hooks that reject it."
 msgstr ""
 "Evite espaços em branco à direita em qualquer lugar. Por ser geralmente "
 "invisível, pode ser confuso: por ex. uma barra invertida seguida por um "
-"espaço e uma nova linha não contam como um marcador de continuação de "
-"linha. Alguns editores não o preservam e muitos projetos (como o próprio "
-"CPython) têm ganchos de pré-commit que o rejeitam."
+"espaço e uma nova linha não contam como um marcador de continuação de linha. "
+"Alguns editores não o preservam e muitos projetos (como o próprio CPython) "
+"têm ganchos de pré-commit que o rejeitam."
 
-#: ../../peps/pep-0008.rst:542
+#: ../../peps/peps/pep-0008.rst:615
 msgid ""
-"Always surround these binary operators with a single space on either "
-"side: assignment (``=``), augmented assignment (``+=``, ``-=`` etc.), "
-"comparisons (``==``, ``<``, ``>``, ``!=``, ``<>``, ``<=``, ``>=``, "
-"``in``, ``not in``, ``is``, ``is not``), Booleans (``and``, ``or``, "
-"``not``)."
+"Always surround these binary operators with a single space on either side: "
+"assignment (``=``), augmented assignment (``+=``, ``-=`` etc.), comparisons "
+"(``==``, ``<``, ``>``, ``!=``, ``<>``, ``<=``, ``>=``, ``in``, ``not in``, "
+"``is``, ``is not``), Booleans (``and``, ``or``, ``not``)."
 msgstr ""
-"Sempre coloque esses operadores binários com um único espaço em cada "
-"lado: atribuição (``=``), atribuição aumentada (``+=``, ``-=`` etc.), "
-"comparações (``==`` , ``<``, ``>``, ``!=``, ``<>``, ``<=``, ``>=``, "
-"``in``, ``not in``, ``is``, ``is not``), booleanos (``and``, ``or``, "
-"``not``)."
+"Sempre coloque esses operadores binários com um único espaço em cada lado: "
+"atribuição (``=``), atribuição aumentada (``+=``, ``-=`` etc.), comparações "
+"(``==`` , ``<``, ``>``, ``!=``, ``<>``, ``<=``, ``>=``, ``in``, ``not in``, "
+"``is``, ``is not``), booleanos (``and``, ``or``, ``not``)."
 
-#: ../../peps/pep-0008.rst:548
+#: ../../peps/peps/pep-0008.rst:621
+#, fuzzy
 msgid ""
-"If operators with different priorities are used, consider adding "
-"whitespace around the operators with the lowest priority(ies). Use your "
-"own judgment; however, never use more than one space, and always have the"
-" same amount of whitespace on both sides of a binary operator::"
+"If operators with different priorities are used, consider adding whitespace "
+"around the operators with the lowest priority(ies). Use your own judgment; "
+"however, never use more than one space, and always have the same amount of "
+"whitespace on both sides of a binary operator:"
 msgstr ""
-"Se forem usados operadores com prioridades diferentes, considere "
-"adicionar espaços em branco ao redor dos operadores com a(s) "
-"prioridade(s) mais baixa(s). Use seu próprio julgamento; no entanto, "
-"nunca use mais de um espaço e sempre tenha a mesma quantidade de espaço "
-"em branco em ambos os lados de um operador binário::"
+"Se forem usados operadores com prioridades diferentes, considere adicionar "
+"espaços em branco ao redor dos operadores com a(s) prioridade(s) mais "
+"baixa(s). Use seu próprio julgamento; no entanto, nunca use mais de um "
+"espaço e sempre tenha a mesma quantidade de espaço em branco em ambos os "
+"lados de um operador binário::"
 
-#: ../../peps/pep-0008.rst:570
+#: ../../peps/peps/pep-0008.rst:647
+#, fuzzy
 msgid ""
-"Function annotations should use the normal rules for colons and always "
-"have spaces around the ``->`` arrow if present.  (See `Function "
-"Annotations`_ below for more about function annotations.)::"
+"Function annotations should use the normal rules for colons and always have "
+"spaces around the ``->`` arrow if present.  (See `Function Annotations`_ "
+"below for more about function annotations.):"
 msgstr ""
 "As anotações de função devem usar as regras normais para dois-pontos e "
-"sempre ter espaços ao redor da seta ``->``, se houver. (Consulte "
-"`Anotações de Funções <Function Annotations>`_ abaixo para saber mais "
-"sobre as anotações de função.)::"
+"sempre ter espaços ao redor da seta ``->``, se houver. (Consulte `Anotações "
+"de Funções <Function Annotations>`_ abaixo para saber mais sobre as "
+"anotações de função.)::"
 
-#: ../../peps/pep-0008.rst:584
+#: ../../peps/peps/pep-0008.rst:665
+#, fuzzy
 msgid ""
 "Don't use spaces around the ``=`` sign when used to indicate a keyword "
 "argument, or when used to indicate a default value for an *unannotated* "
-"function parameter::"
+"function parameter:"
 msgstr ""
 "Não use espaços ao redor do sinal ``=`` quando usado para indicar um "
 "argumento nomeado ou quando usado para indicar um valor padrão para um "
 "parâmetro de função *não anotado*::"
 
-#: ../../peps/pep-0008.rst:599
+#: ../../peps/peps/pep-0008.rst:684
+#, fuzzy
 msgid ""
-"When combining an argument annotation with a default value, however, do "
-"use spaces around the ``=`` sign::"
+"When combining an argument annotation with a default value, however, do use "
+"spaces around the ``=`` sign:"
 msgstr ""
-"Ao combinar uma anotação de argumento com um valor padrão, no entanto, "
-"use espaços ao redor do sinal ``=``::"
+"Ao combinar uma anotação de argumento com um valor padrão, no entanto, use "
+"espaços ao redor do sinal ``=``::"
 
-#: ../../peps/pep-0008.rst:612
+#: ../../peps/peps/pep-0008.rst:701
+#, fuzzy
 msgid ""
 "Compound statements (multiple statements on the same line) are generally "
-"discouraged::"
+"discouraged:"
 msgstr ""
 "Instruções compostas (várias instruções na mesma linha) geralmente são "
 "desencorajadas::"
 
-#: ../../peps/pep-0008.rst:622 ../../peps/pep-0008.rst:632
-msgid "Rather not::"
+#: ../../peps/peps/pep-0008.rst:714 ../../peps/peps/pep-0008.rst:727
+#, fuzzy
+msgid "Rather not:"
 msgstr "Melhor não::"
 
-#: ../../peps/pep-0008.rst:628
+#: ../../peps/peps/pep-0008.rst:723
 msgid ""
-"While sometimes it's okay to put an if/for/while with a small body on the"
-" same line, never do this for multi-clause statements.  Also avoid "
-"folding such long lines!"
+"While sometimes it's okay to put an if/for/while with a small body on the "
+"same line, never do this for multi-clause statements.  Also avoid folding "
+"such long lines!"
 msgstr ""
-"Embora às vezes não haja problema em colocar um if/for/while com um corpo"
-" pequeno na mesma linha, nunca faça isso para declarações com várias "
+"Embora às vezes não haja problema em colocar um if/for/while com um corpo "
+"pequeno na mesma linha, nunca faça isso para declarações com várias "
 "cláusulas. Evite também dobrar linhas tão longas!"
 
-#: ../../peps/pep-0008.rst:639
-msgid "Definitely not::"
+#: ../../peps/peps/pep-0008.rst:737
+#, fuzzy
+msgid "Definitely not:"
 msgstr "Definitivamente não::"
 
-#: ../../peps/pep-0008.rst:655
+#: ../../peps/peps/pep-0008.rst:756
 msgid "When to Use Trailing Commas"
 msgstr "Quando usar vírgulas à direita"
 
-#: ../../peps/pep-0008.rst:657
+#: ../../peps/peps/pep-0008.rst:758
+#, fuzzy
 msgid ""
-"Trailing commas are usually optional, except they are mandatory when "
-"making a tuple of one element.  For clarity, it is recommended to "
-"surround the latter in (technically redundant) parentheses::"
+"Trailing commas are usually optional, except they are mandatory when making "
+"a tuple of one element.  For clarity, it is recommended to surround the "
+"latter in (technically redundant) parentheses:"
 msgstr ""
-"As vírgulas à direita geralmente são opcionais, exceto que são "
-"obrigatórias ao criar uma tupla de um elemento. Para maior clareza, "
-"recomenda-se colocar o último entre parênteses (tecnicamente "
-"redundantes)::"
+"As vírgulas à direita geralmente são opcionais, exceto que são obrigatórias "
+"ao criar uma tupla de um elemento. Para maior clareza, recomenda-se colocar "
+"o último entre parênteses (tecnicamente redundantes)::"
 
-#: ../../peps/pep-0008.rst:669
+#: ../../peps/peps/pep-0008.rst:774
+#, fuzzy
 msgid ""
-"When trailing commas are redundant, they are often helpful when a version"
-" control system is used, when a list of values, arguments or imported "
-"items is expected to be extended over time.  The pattern is to put each "
-"value (etc.) on a line by itself, always adding a trailing comma, and add"
-" the close parenthesis/bracket/brace on the next line. However it does "
-"not make sense to have a trailing comma on the same line as the closing "
-"delimiter (except in the above case of singleton tuples)::"
+"When trailing commas are redundant, they are often helpful when a version "
+"control system is used, when a list of values, arguments or imported items "
+"is expected to be extended over time.  The pattern is to put each value "
+"(etc.) on a line by itself, always adding a trailing comma, and add the "
+"close parenthesis/bracket/brace on the next line. However it does not make "
+"sense to have a trailing comma on the same line as the closing delimiter "
+"(except in the above case of singleton tuples):"
 msgstr ""
 "Quando as vírgulas à direita são redundantes, elas geralmente são úteis "
-"quando um sistema de controle de versão é usado, quando se espera que uma"
-" lista de valores, argumentos ou itens importados seja estendida ao longo"
-" do tempo. O padrão é colocar cada valor (etc.) em uma linha por si só, "
-"sempre adicionando uma vírgula à direita e adicionar o "
-"parêntese/colchete/chave na próxima linha. No entanto, não faz sentido "
-"ter uma vírgula à direita na mesma linha que o delimitador de fechamento "
-"(exceto no caso acima de tuplas singleton)::"
+"quando um sistema de controle de versão é usado, quando se espera que uma "
+"lista de valores, argumentos ou itens importados seja estendida ao longo do "
+"tempo. O padrão é colocar cada valor (etc.) em uma linha por si só, sempre "
+"adicionando uma vírgula à direita e adicionar o parêntese/colchete/chave na "
+"próxima linha. No entanto, não faz sentido ter uma vírgula à direita na "
+"mesma linha que o delimitador de fechamento (exceto no caso acima de tuplas "
+"singleton)::"
 
-#: ../../peps/pep-0008.rst:695
+#: ../../peps/peps/pep-0008.rst:804
 msgid "Comments"
 msgstr "Comentários"
 
-#: ../../peps/pep-0008.rst:697
+#: ../../peps/peps/pep-0008.rst:806
 msgid ""
-"Comments that contradict the code are worse than no comments.  Always "
-"make a priority of keeping the comments up-to-date when the code changes!"
+"Comments that contradict the code are worse than no comments.  Always make a "
+"priority of keeping the comments up-to-date when the code changes!"
 msgstr ""
-"Comentários que contradizem o código são piores do que nenhum comentário."
-" Sempre tenha como prioridade manter os comentários atualizados quando o "
+"Comentários que contradizem o código são piores do que nenhum comentário. "
+"Sempre tenha como prioridade manter os comentários atualizados quando o "
 "código mudar!"
 
-#: ../../peps/pep-0008.rst:701
+#: ../../peps/peps/pep-0008.rst:810
 msgid ""
 "Comments should be complete sentences.  The first word should be "
-"capitalized, unless it is an identifier that begins with a lower case "
-"letter (never alter the case of identifiers!)."
+"capitalized, unless it is an identifier that begins with a lower case letter "
+"(never alter the case of identifiers!)."
 msgstr ""
 "Os comentários devem ser frases completas. A primeira palavra deve ser "
 "maiúscula, a menos que seja um identificador que comece com uma letra "
 "minúscula (nunca altere a caixa dos identificadores!)."
 
-#: ../../peps/pep-0008.rst:705
+#: ../../peps/peps/pep-0008.rst:814
 msgid ""
 "Block comments generally consist of one or more paragraphs built out of "
 "complete sentences, with each sentence ending in a period."
 msgstr ""
 "Os comentários em bloco geralmente consistem em um ou mais parágrafos "
-"construídos a partir de frases completas, com cada frase terminando em um"
-" ponto."
+"construídos a partir de frases completas, com cada frase terminando em um "
+"ponto."
 
-#: ../../peps/pep-0008.rst:708
+#: ../../peps/peps/pep-0008.rst:817
 #, fuzzy
 msgid ""
 "You should use one or two spaces after a sentence-ending period in multi-"
 "sentence comments, except after the final sentence."
 msgstr ""
-"Você deve usar dois espaços após o final da frase em comentários de "
-"várias frases, exceto após a frase final."
+"Você deve usar dois espaços após o final da frase em comentários de várias "
+"frases, exceto após a frase final."
 
-#: ../../peps/pep-0008.rst:711
+#: ../../peps/peps/pep-0008.rst:820
 msgid ""
 "Ensure that your comments are clear and easily understandable to other "
 "speakers of the language you are writing in."
 msgstr ""
 "Certifique-se de que seus comentários sejam claros e facilmente "
-"compreensíveis para outros falantes do idioma em que você está "
-"escrevendo."
+"compreensíveis para outros falantes do idioma em que você está escrevendo."
 
-#: ../../peps/pep-0008.rst:714
+#: ../../peps/peps/pep-0008.rst:823
 #, python-format
 msgid ""
 "Python coders from non-English speaking countries: please write your "
-"comments in English, unless you are 120% sure that the code will never be"
-" read by people who don't speak your language."
+"comments in English, unless you are 120% sure that the code will never be "
+"read by people who don't speak your language."
 msgstr ""
-"Programadores em Python de países que não falam inglês: por favor, "
-"escreva seus comentários em inglês, a menos que você tenha certeza de "
-"120% sem dúvida alguma de que o código nunca será lido por pessoas que "
-"não falam seu idioma."
+"Programadores em Python de países que não falam inglês: por favor, escreva "
+"seus comentários em inglês, a menos que você tenha certeza de 120% sem "
+"dúvida alguma de que o código nunca será lido por pessoas que não falam seu "
+"idioma."
 
-#: ../../peps/pep-0008.rst:719
+#: ../../peps/peps/pep-0008.rst:828
 msgid "Block Comments"
 msgstr "Comentários de bloco"
 
-#: ../../peps/pep-0008.rst:721
+#: ../../peps/peps/pep-0008.rst:830
 msgid ""
-"Block comments generally apply to some (or all) code that follows them, "
-"and are indented to the same level as that code.  Each line of a block "
-"comment starts with a ``#`` and a single space (unless it is indented "
-"text inside the comment)."
+"Block comments generally apply to some (or all) code that follows them, and "
+"are indented to the same level as that code.  Each line of a block comment "
+"starts with a ``#`` and a single space (unless it is indented text inside "
+"the comment)."
 msgstr ""
-"Os comentários em bloco geralmente se aplicam a algum (ou a todos) o "
-"código que os segue e são recuados no mesmo nível desse código. Cada "
-"linha de um comentário de bloco começa com um ``#`` e um único espaço (a "
-"menos que seja um texto recuado dentro do comentário)."
+"Os comentários em bloco geralmente se aplicam a algum (ou a todos) o código "
+"que os segue e são recuados no mesmo nível desse código. Cada linha de um "
+"comentário de bloco começa com um ``#`` e um único espaço (a menos que seja "
+"um texto recuado dentro do comentário)."
 
-#: ../../peps/pep-0008.rst:726
+#: ../../peps/peps/pep-0008.rst:835
 msgid ""
 "Paragraphs inside a block comment are separated by a line containing a "
 "single ``#``."
 msgstr ""
-"Os parágrafos dentro de um comentário em bloco são separados por uma "
-"linha contendo um único ``#``."
+"Os parágrafos dentro de um comentário em bloco são separados por uma linha "
+"contendo um único ``#``."
 
-#: ../../peps/pep-0008.rst:730
+#: ../../peps/peps/pep-0008.rst:839
 msgid "Inline Comments"
 msgstr "Comentários em linha"
 
-#: ../../peps/pep-0008.rst:732
+#: ../../peps/peps/pep-0008.rst:841
 msgid "Use inline comments sparingly."
 msgstr "Use comentários em linha (*inline* ou embutidos) com moderação."
 
-#: ../../peps/pep-0008.rst:734
+#: ../../peps/peps/pep-0008.rst:843
 msgid ""
 "An inline comment is a comment on the same line as a statement. Inline "
 "comments should be separated by at least two spaces from the statement.  "
 "They should start with a # and a single space."
 msgstr ""
-"Um comentário em linha é um comentário na mesma linha que uma instrução. "
-"Os comentários em linha devem ser separados por pelo menos dois espaços "
-"da instrução. Eles devem começar com um # e um único espaço."
+"Um comentário em linha é um comentário na mesma linha que uma instrução. Os "
+"comentários em linha devem ser separados por pelo menos dois espaços da "
+"instrução. Eles devem começar com um # e um único espaço."
 
-#: ../../peps/pep-0008.rst:738
+#: ../../peps/peps/pep-0008.rst:847
+#, fuzzy
 msgid ""
-"Inline comments are unnecessary and in fact distracting if they state the"
-" obvious.  Don't do this::"
+"Inline comments are unnecessary and in fact distracting if they state the "
+"obvious.  Don't do this:"
 msgstr ""
 "Os comentários em linha são desnecessários e, na verdade, distraem se "
 "afirmarem o óbvio. Não faça isso::"
 
-#: ../../peps/pep-0008.rst:743
-msgid "But sometimes, this is useful::"
+#: ../../peps/peps/pep-0008.rst:855
+#, fuzzy
+msgid "But sometimes, this is useful:"
 msgstr "Mas, às vezes, isso é útil::"
 
-#: ../../peps/pep-0008.rst:748
+#: ../../peps/peps/pep-0008.rst:863
 msgid "Documentation Strings"
 msgstr "Strings de documentação"
 
-#: ../../peps/pep-0008.rst:750
+#: ../../peps/peps/pep-0008.rst:865
 msgid ""
-"Conventions for writing good documentation strings (a.k.a. "
-"\"docstrings\") are immortalized in :pep:`257`."
+"Conventions for writing good documentation strings (a.k.a. \"docstrings\") "
+"are immortalized in :pep:`257`."
 msgstr ""
-"As convenções para escrever boas strings de documentação (também "
-"conhecidas como \"docstrings\") são imortalizadas na :pep:`257`."
+"As convenções para escrever boas strings de documentação (também conhecidas "
+"como \"docstrings\") são imortalizadas na :pep:`257`."
 
-#: ../../peps/pep-0008.rst:753
+#: ../../peps/peps/pep-0008.rst:868
 msgid ""
-"Write docstrings for all public modules, functions, classes, and methods."
-"  Docstrings are not necessary for non-public methods, but you should "
-"have a comment that describes what the method does.  This comment should "
-"appear after the ``def`` line."
+"Write docstrings for all public modules, functions, classes, and methods.  "
+"Docstrings are not necessary for non-public methods, but you should have a "
+"comment that describes what the method does.  This comment should appear "
+"after the ``def`` line."
 msgstr ""
 "Escreva docstrings para todos os módulos, funções, classes e métodos "
-"públicos. Docstrings não são necessárias para métodos não públicos, mas "
-"você deve ter um comentário que descreva o que o método faz. Este "
-"comentário deve aparecer após a linha ``def``."
+"públicos. Docstrings não são necessárias para métodos não públicos, mas você "
+"deve ter um comentário que descreva o que o método faz. Este comentário deve "
+"aparecer após a linha ``def``."
 
-#: ../../peps/pep-0008.rst:758
+#: ../../peps/peps/pep-0008.rst:873
+#, fuzzy
 msgid ""
 ":pep:`257` describes good docstring conventions.  Note that most "
-"importantly, the ``\"\"\"`` that ends a multiline docstring should be on "
-"a line by itself::"
+"importantly, the ``\"\"\"`` that ends a multiline docstring should be on a "
+"line by itself:"
 msgstr ""
 ":pep:`257` descreve boas convenções de docstring. Observe que o mais "
-"importante, o ``\"\"\"`` que termina uma docstring multilinha deve estar "
-"em uma linha por si só::"
+"importante, o ``\"\"\"`` que termina uma docstring multilinha deve estar em "
+"uma linha por si só::"
 
-#: ../../peps/pep-0008.rst:767
+#: ../../peps/peps/pep-0008.rst:886
+#, fuzzy
 msgid ""
 "For one liner docstrings, please keep the closing ``\"\"\"`` on the same "
-"line::"
+"line:"
 msgstr ""
-"Para docstrings de um forro, por favor, mantenha o fechamento ``\"\"\"`` "
-"na mesma linha::"
+"Para docstrings de um forro, por favor, mantenha o fechamento ``\"\"\"`` na "
+"mesma linha::"
 
-#: ../../peps/pep-0008.rst:774
+#: ../../peps/peps/pep-0008.rst:896
 msgid "Naming Conventions"
 msgstr "Convenções de nomenclatura"
 
-#: ../../peps/pep-0008.rst:776
+#: ../../peps/peps/pep-0008.rst:898
 msgid ""
 "The naming conventions of Python's library are a bit of a mess, so we'll "
-"never get this completely consistent -- nevertheless, here are the "
-"currently recommended naming standards.  New modules and packages "
-"(including third party frameworks) should be written to these standards, "
-"but where an existing library has a different style, internal consistency"
-" is preferred."
+"never get this completely consistent -- nevertheless, here are the currently "
+"recommended naming standards.  New modules and packages (including third "
+"party frameworks) should be written to these standards, but where an "
+"existing library has a different style, internal consistency is preferred."
 msgstr ""
-"As convenções de nomenclatura da biblioteca do Python são um pouco "
-"confusas, então nunca conseguiremos isso completamente consistente -- no "
-"entanto, aqui estão os padrões de nomenclatura atualmente recomendados. "
-"Novos módulos e pacotes (incluindo estruturas de terceiros) devem ser "
-"escritos de acordo com esses padrões, mas onde uma biblioteca existente "
-"tiver um estilo diferente, a consistência interna é preferida."
+"As convenções de nomenclatura da biblioteca do Python são um pouco confusas, "
+"então nunca conseguiremos isso completamente consistente -- no entanto, aqui "
+"estão os padrões de nomenclatura atualmente recomendados. Novos módulos e "
+"pacotes (incluindo estruturas de terceiros) devem ser escritos de acordo com "
+"esses padrões, mas onde uma biblioteca existente tiver um estilo diferente, "
+"a consistência interna é preferida."
 
-#: ../../peps/pep-0008.rst:784
+#: ../../peps/peps/pep-0008.rst:906
 msgid "Overriding Principle"
 msgstr "Princípio primordial"
 
-#: ../../peps/pep-0008.rst:786
+#: ../../peps/peps/pep-0008.rst:908
 msgid ""
-"Names that are visible to the user as public parts of the API should "
-"follow conventions that reflect usage rather than implementation."
+"Names that are visible to the user as public parts of the API should follow "
+"conventions that reflect usage rather than implementation."
 msgstr ""
-"Os nomes que são visíveis para o usuário como partes públicas da API "
-"devem seguir convenções que reflitam o uso em vez da implementação."
+"Os nomes que são visíveis para o usuário como partes públicas da API devem "
+"seguir convenções que reflitam o uso em vez da implementação."
 
-#: ../../peps/pep-0008.rst:790
+#: ../../peps/peps/pep-0008.rst:912
 msgid "Descriptive: Naming Styles"
 msgstr "Descritivo: estilos de nomenclatura"
 
-#: ../../peps/pep-0008.rst:792
+#: ../../peps/peps/pep-0008.rst:914
 msgid ""
 "There are a lot of different naming styles.  It helps to be able to "
-"recognize what naming style is being used, independently from what they "
-"are used for."
+"recognize what naming style is being used, independently from what they are "
+"used for."
 msgstr ""
-"Existem muitos estilos de nomenclatura diferentes. Ajuda a reconhecer "
-"qual estilo de nomenclatura está sendo usado, independentemente de para "
-"que são usados."
+"Existem muitos estilos de nomenclatura diferentes. Ajuda a reconhecer qual "
+"estilo de nomenclatura está sendo usado, independentemente de para que são "
+"usados."
 
-#: ../../peps/pep-0008.rst:796
+#: ../../peps/peps/pep-0008.rst:918
 msgid "The following naming styles are commonly distinguished:"
 msgstr "Os seguintes estilos de nomenclatura são comumente distinguidos:"
 
-#: ../../peps/pep-0008.rst:798
+#: ../../peps/peps/pep-0008.rst:920
 msgid "``b`` (single lowercase letter)"
 msgstr "``b`` (única letra minúscula)"
 
-#: ../../peps/pep-0008.rst:799
+#: ../../peps/peps/pep-0008.rst:921
 msgid "``B`` (single uppercase letter)"
 msgstr "``B`` (única letra maiúscula)"
 
-#: ../../peps/pep-0008.rst:800
+#: ../../peps/peps/pep-0008.rst:922
 msgid "``lowercase``"
 msgstr "``minúsculo``"
 
-#: ../../peps/pep-0008.rst:801
+#: ../../peps/peps/pep-0008.rst:923
 msgid "``lower_case_with_underscores``"
 msgstr "``letras_maiúsculas_com_sublinhados``"
 
-#: ../../peps/pep-0008.rst:802
+#: ../../peps/peps/pep-0008.rst:924
 msgid "``UPPERCASE``"
 msgstr "``CAIXAALTA``"
 
-#: ../../peps/pep-0008.rst:803
+#: ../../peps/peps/pep-0008.rst:925
 msgid "``UPPER_CASE_WITH_UNDERSCORES``"
 msgstr "``CAIXA_ALTA_COM_SUBLINHADOS``"
 
-#: ../../peps/pep-0008.rst:804
+#: ../../peps/peps/pep-0008.rst:926
 msgid ""
-"``CapitalizedWords`` (or CapWords, or CamelCase -- so named because of "
-"the bumpy look of its letters [4]_).  This is also sometimes known as "
-"StudlyCaps."
+"``CapitalizedWords`` (or CapWords, or CamelCase -- so named because of the "
+"bumpy look of its letters [4]_).  This is also sometimes known as StudlyCaps."
 msgstr ""
 "``PalavrasComMaiúsculos`` (ou CapWords ou CamelCase -- assim chamado por "
-"causa da aparência irregular de suas letras [4]_). Isso também é "
-"conhecido como StudlyCaps."
+"causa da aparência irregular de suas letras [4]_). Isso também é conhecido "
+"como StudlyCaps."
 
-#: ../../peps/pep-0008.rst:808
+#: ../../peps/peps/pep-0008.rst:930
 msgid ""
 "Note: When using acronyms in CapWords, capitalize all the letters of the "
 "acronym.  Thus HTTPServerError is better than HttpServerError."
 msgstr ""
-"Nota: Ao usar acrônimos em CapWords, coloque todas as letras do acrônimo "
-"em maiúsculas. Assim, HTTPServerError é melhor que HttpServerError."
+"Nota: Ao usar acrônimos em CapWords, coloque todas as letras do acrônimo em "
+"maiúsculas. Assim, HTTPServerError é melhor que HttpServerError."
 
-#: ../../peps/pep-0008.rst:811
+#: ../../peps/peps/pep-0008.rst:933
 msgid ""
-"``mixedCase`` (differs from CapitalizedWords by initial lowercase "
-"character!)"
+"``mixedCase`` (differs from CapitalizedWords by initial lowercase character!)"
 msgstr ""
-"``misturaMaiúsculo`` (difere de PalavrasComMaiúsculos pelo caractere "
-"inicial minúsculo!)"
+"``misturaMaiúsculo`` (difere de PalavrasComMaiúsculos pelo caractere inicial "
+"minúsculo!)"
 
-#: ../../peps/pep-0008.rst:813
+#: ../../peps/peps/pep-0008.rst:935
 msgid "``Capitalized_Words_With_Underscores`` (ugly!)"
 msgstr "``Palavras_Maiúsculas_Com_Sublinhado`` (feio!)"
 
-#: ../../peps/pep-0008.rst:815
+#: ../../peps/peps/pep-0008.rst:937
 msgid ""
-"There's also the style of using a short unique prefix to group related "
-"names together.  This is not used much in Python, but it is mentioned for"
-" completeness.  For example, the ``os.stat()`` function returns a tuple "
-"whose items traditionally have names like ``st_mode``, ``st_size``, "
-"``st_mtime`` and so on.  (This is done to emphasize the correspondence "
-"with the fields of the POSIX system call struct, which helps programmers "
-"familiar with that.)"
+"There's also the style of using a short unique prefix to group related names "
+"together.  This is not used much in Python, but it is mentioned for "
+"completeness.  For example, the ``os.stat()`` function returns a tuple whose "
+"items traditionally have names like ``st_mode``, ``st_size``, ``st_mtime`` "
+"and so on.  (This is done to emphasize the correspondence with the fields of "
+"the POSIX system call struct, which helps programmers familiar with that.)"
 msgstr ""
 "Há também o estilo de usar um prefixo exclusivo curto para agrupar nomes "
-"relacionados. Isso não é muito usado em Python, mas é mencionado para "
-"fins de integridade. Por exemplo, a função ``os.stat()`` retorna uma "
-"tupla cujos itens tradicionalmente têm nomes como ``st_mode``, "
-"``st_size``, ``st_mtime`` e assim por diante. (Isso é feito para "
-"enfatizar a correspondência com os campos da estrutura de chamada do "
-"sistema POSIX, que ajuda os programadores familiarizados com isso.)"
+"relacionados. Isso não é muito usado em Python, mas é mencionado para fins "
+"de integridade. Por exemplo, a função ``os.stat()`` retorna uma tupla cujos "
+"itens tradicionalmente têm nomes como ``st_mode``, ``st_size``, ``st_mtime`` "
+"e assim por diante. (Isso é feito para enfatizar a correspondência com os "
+"campos da estrutura de chamada do sistema POSIX, que ajuda os programadores "
+"familiarizados com isso.)"
 
-#: ../../peps/pep-0008.rst:823
+#: ../../peps/peps/pep-0008.rst:945
 msgid ""
-"The X11 library uses a leading X for all its public functions.  In "
-"Python, this style is generally deemed unnecessary because attribute and "
-"method names are prefixed with an object, and function names are prefixed"
-" with a module name."
+"The X11 library uses a leading X for all its public functions.  In Python, "
+"this style is generally deemed unnecessary because attribute and method "
+"names are prefixed with an object, and function names are prefixed with a "
+"module name."
 msgstr ""
-"A biblioteca X11 usa um X inicial para todas as suas funções públicas. Em"
-" Python, esse estilo geralmente é considerado desnecessário porque os "
-"nomes de atributos e métodos são prefixados com um objeto e os nomes das "
-"funções são prefixados com um nome de módulo."
+"A biblioteca X11 usa um X inicial para todas as suas funções públicas. Em "
+"Python, esse estilo geralmente é considerado desnecessário porque os nomes "
+"de atributos e métodos são prefixados com um objeto e os nomes das funções "
+"são prefixados com um nome de módulo."
 
-#: ../../peps/pep-0008.rst:828
+#: ../../peps/peps/pep-0008.rst:950
 msgid ""
 "In addition, the following special forms using leading or trailing "
-"underscores are recognized (these can generally be combined with any case"
-" convention):"
+"underscores are recognized (these can generally be combined with any case "
+"convention):"
 msgstr ""
-"Além disso, as seguintes formas especiais usando sublinhados à esquerda "
-"ou à direita são reconhecidas (geralmente podem ser combinadas com "
-"qualquer convenção de maiúsculas e minúsculas):"
+"Além disso, as seguintes formas especiais usando sublinhados à esquerda ou à "
+"direita são reconhecidas (geralmente podem ser combinadas com qualquer "
+"convenção de maiúsculas e minúsculas):"
 
-#: ../../peps/pep-0008.rst:832
+#: ../../peps/peps/pep-0008.rst:954
 msgid ""
-"``_single_leading_underscore``: weak \"internal use\" indicator. E.g. "
-"``from M import *`` does not import objects whose names start with an "
-"underscore."
+"``_single_leading_underscore``: weak \"internal use\" indicator. E.g. ``from "
+"M import *`` does not import objects whose names start with an underscore."
 msgstr ""
 "``_sublinhado_inicial_único``: fraco indicador de \"uso interno\". Por "
-"exemplo. ``from M import *`` não importa objetos cujos nomes começam com "
-"um sublinhado."
+"exemplo. ``from M import *`` não importa objetos cujos nomes começam com um "
+"sublinhado."
 
-#: ../../peps/pep-0008.rst:836
+#: ../../peps/peps/pep-0008.rst:958
+#, fuzzy
 msgid ""
-"``single_trailing_underscore_``: used by convention to avoid conflicts "
-"with Python keyword, e.g. ::"
+"``single_trailing_underscore_``: used by convention to avoid conflicts with "
+"Python keyword, e.g. :"
 msgstr ""
-"``sublinhado_único_ao_final_``: usado por convenção para evitar conflitos"
-" com a palavra-chave do Python, por exemplo::"
+"``sublinhado_único_ao_final_``: usado por convenção para evitar conflitos "
+"com a palavra-chave do Python, por exemplo::"
 
-#: ../../peps/pep-0008.rst:841
+#: ../../peps/peps/pep-0008.rst:966
 msgid ""
-"``__double_leading_underscore``: when naming a class attribute, invokes "
-"name mangling (inside class FooBar, ``__boo`` becomes ``_FooBar__boo``; "
-"see below)."
+"``__double_leading_underscore``: when naming a class attribute, invokes name "
+"mangling (inside class FooBar, ``__boo`` becomes ``_FooBar__boo``; see "
+"below)."
 msgstr ""
 "``__sublinhados_inicial_duplo``: ao nomear um atributo de classe, invoca "
 "alteração de nome (dentro da classe FooBar, ``__boo`` torna-se "
 "``_FooBar__boo``; veja abaixo)."
 
-#: ../../peps/pep-0008.rst:845
+#: ../../peps/peps/pep-0008.rst:970
 msgid ""
 "``__double_leading_and_trailing_underscore__``: \"magic\" objects or "
 "attributes that live in user-controlled namespaces. E.g. ``__init__``, "
-"``__import__`` or ``__file__``.  Never invent such names; only use them "
-"as documented."
+"``__import__`` or ``__file__``.  Never invent such names; only use them as "
+"documented."
 msgstr ""
-"``__sublinhados_inicial_e_final_duplo__``: objetos ou atributos "
-"\"mágicos\" que vivem em espaços de nomes controlados pelo usuário. Por "
-"exemplo. ``__init__``, ``__import__`` ou ``__file__``. Nunca invente tais"
-" nomes; use-os apenas conforme documentado."
+"``__sublinhados_inicial_e_final_duplo__``: objetos ou atributos \"mágicos\" "
+"que vivem em espaços de nomes controlados pelo usuário. Por exemplo. "
+"``__init__``, ``__import__`` ou ``__file__``. Nunca invente tais nomes; use-"
+"os apenas conforme documentado."
 
-#: ../../peps/pep-0008.rst:851
+#: ../../peps/peps/pep-0008.rst:976
 msgid "Prescriptive: Naming Conventions"
 msgstr "Prescritivo: convenções de nomenclatura"
 
-#: ../../peps/pep-0008.rst:854
+#: ../../peps/peps/pep-0008.rst:979
 msgid "Names to Avoid"
 msgstr "Nomes para evitar"
 
-#: ../../peps/pep-0008.rst:856
+#: ../../peps/peps/pep-0008.rst:981
 msgid ""
-"Never use the characters 'l' (lowercase letter el), 'O' (uppercase letter"
-" oh), or 'I' (uppercase letter eye) as single character variable names."
+"Never use the characters 'l' (lowercase letter el), 'O' (uppercase letter "
+"oh), or 'I' (uppercase letter eye) as single character variable names."
 msgstr ""
-"Nunca use os caracteres 'l' (letra minúscula ele), 'O' (letra maiúscula "
-"oh) ou 'I' (letra maiúscula i) como nomes de variáveis de um único "
-"caractere."
+"Nunca use os caracteres 'l' (letra minúscula ele), 'O' (letra maiúscula oh) "
+"ou 'I' (letra maiúscula i) como nomes de variáveis de um único caractere."
 
-#: ../../peps/pep-0008.rst:860
+#: ../../peps/peps/pep-0008.rst:985
 msgid ""
-"In some fonts, these characters are indistinguishable from the numerals "
-"one and zero.  When tempted to use 'l', use 'L' instead."
+"In some fonts, these characters are indistinguishable from the numerals one "
+"and zero.  When tempted to use 'l', use 'L' instead."
 msgstr ""
-"Em algumas fontes, esses caracteres são indistinguíveis dos numerais um e"
-" zero. Quando tentado a usar 'l', use 'L'."
+"Em algumas fontes, esses caracteres são indistinguíveis dos numerais um e "
+"zero. Quando tentado a usar 'l', use 'L'."
 
-#: ../../peps/pep-0008.rst:864
+#: ../../peps/peps/pep-0008.rst:989
 msgid "ASCII Compatibility"
 msgstr "Compatibilidade com ASCII"
 
-#: ../../peps/pep-0008.rst:866
+#: ../../peps/peps/pep-0008.rst:991
 msgid ""
 "Identifiers used in the standard library must be ASCII compatible as "
-"described in the :pep:`policy section <3131#policy-specification>` of "
-":pep:`3131`."
+"described in the :pep:`policy section <3131#policy-specification>` of :pep:"
+"`3131`."
 msgstr ""
 "Os identificadores usados na biblioteca padrão devem ser compatíveis com "
 "ASCII conforme descrito na :pep:`seção de políticas <3131#policy-"
 "specification>` da :pep:`3131`."
 
-#: ../../peps/pep-0008.rst:872
+#: ../../peps/peps/pep-0008.rst:997
 msgid "Package and Module Names"
 msgstr "Nomes de pacotes e módulos"
 
-#: ../../peps/pep-0008.rst:874
+#: ../../peps/peps/pep-0008.rst:999
 msgid ""
-"Modules should have short, all-lowercase names.  Underscores can be used "
-"in the module name if it improves readability.  Python packages should "
-"also have short, all-lowercase names, although the use of underscores is "
+"Modules should have short, all-lowercase names.  Underscores can be used in "
+"the module name if it improves readability.  Python packages should also "
+"have short, all-lowercase names, although the use of underscores is "
 "discouraged."
 msgstr ""
-"Os módulos devem ter nomes curtos, todos em minúsculas. Sublinhados podem"
-" ser usados no nome do módulo se melhorarem a legibilidade. Os pacotes "
-"Python também devem ter nomes curtos, todos em minúsculas, embora o uso "
-"de sublinhados seja desencorajado."
+"Os módulos devem ter nomes curtos, todos em minúsculas. Sublinhados podem "
+"ser usados no nome do módulo se melhorarem a legibilidade. Os pacotes Python "
+"também devem ter nomes curtos, todos em minúsculas, embora o uso de "
+"sublinhados seja desencorajado."
 
-#: ../../peps/pep-0008.rst:879
+#: ../../peps/peps/pep-0008.rst:1004
 msgid ""
 "When an extension module written in C or C++ has an accompanying Python "
-"module that provides a higher level (e.g. more object oriented) "
-"interface, the C/C++ module has a leading underscore (e.g. ``_socket``)."
+"module that provides a higher level (e.g. more object oriented) interface, "
+"the C/C++ module has a leading underscore (e.g. ``_socket``)."
 msgstr ""
-"Quando um módulo de extensão escrito em C ou C++ possui um módulo Python "
-"que fornece uma interface de nível superior (por exemplo, mais orientada "
-"a objetos), o módulo C/C++ possui um sublinhado inicial (por exemplo, "
+"Quando um módulo de extensão escrito em C ou C++ possui um módulo Python que "
+"fornece uma interface de nível superior (por exemplo, mais orientada a "
+"objetos), o módulo C/C++ possui um sublinhado inicial (por exemplo, "
 "``_socket``)."
 
-#: ../../peps/pep-0008.rst:885
+#: ../../peps/peps/pep-0008.rst:1010
 msgid "Class Names"
 msgstr "Nomes de classe"
 
-#: ../../peps/pep-0008.rst:887
+#: ../../peps/peps/pep-0008.rst:1012
 msgid "Class names should normally use the CapWords convention."
 msgstr ""
 "Nomes de classe normalmente devem usar a convenção CapWords "
 "(PalavrasMaiúsculas)."
 
-#: ../../peps/pep-0008.rst:889
+#: ../../peps/peps/pep-0008.rst:1014
 msgid ""
-"The naming convention for functions may be used instead in cases where "
-"the interface is documented and used primarily as a callable."
+"The naming convention for functions may be used instead in cases where the "
+"interface is documented and used primarily as a callable."
 msgstr ""
-"A convenção de nomenclatura para funções pode ser usada nos casos em que "
-"a interface é documentada e usada principalmente como um chamável."
+"A convenção de nomenclatura para funções pode ser usada nos casos em que a "
+"interface é documentada e usada principalmente como um chamável."
 
-#: ../../peps/pep-0008.rst:892
+#: ../../peps/peps/pep-0008.rst:1017
 msgid ""
 "Note that there is a separate convention for builtin names: most builtin "
 "names are single words (or two words run together), with the CapWords "
 "convention used only for exception names and builtin constants."
 msgstr ""
-"Observe que há uma convenção separada para nomes embutidos: a maioria dos"
-" nomes embutidos são palavras únicas (ou duas palavras juntas), com a "
-"convenção CapWords usada apenas para nomes de exceção e constantes "
-"embutidas."
+"Observe que há uma convenção separada para nomes embutidos: a maioria dos "
+"nomes embutidos são palavras únicas (ou duas palavras juntas), com a "
+"convenção CapWords usada apenas para nomes de exceção e constantes embutidas."
 
-#: ../../peps/pep-0008.rst:897
+#: ../../peps/peps/pep-0008.rst:1022
 msgid "Type Variable Names"
 msgstr "Nomes de variáveis de tipo"
 
-#: ../../peps/pep-0008.rst:899
+#: ../../peps/peps/pep-0008.rst:1024
+#, fuzzy
 msgid ""
 "Names of type variables introduced in :pep:`484` should normally use "
 "CapWords preferring short names: ``T``, ``AnyStr``, ``Num``. It is "
-"recommended to add suffixes ``_co`` or ``_contra`` to the variables used "
-"to declare covariant or contravariant behavior correspondingly::"
+"recommended to add suffixes ``_co`` or ``_contra`` to the variables used to "
+"declare covariant or contravariant behavior correspondingly:"
 msgstr ""
-"Nomes de variáveis de tipo introduzidas na :pep:`484` devem normalmente "
-"usar CapWords preferindo nomes curtos: ``T``, ``AnyStr``, ``Num``. "
-"Recomenda-se adicionar os sufixos ``_co`` ou ``_contra`` às variáveis "
-"usadas para declarar o comportamento covariante ou contravariante "
-"correspondentemente::"
+"Nomes de variáveis de tipo introduzidas na :pep:`484` devem normalmente usar "
+"CapWords preferindo nomes curtos: ``T``, ``AnyStr``, ``Num``. Recomenda-se "
+"adicionar os sufixos ``_co`` ou ``_contra`` às variáveis usadas para "
+"declarar o comportamento covariante ou contravariante correspondentemente::"
 
-#: ../../peps/pep-0008.rst:910
+#: ../../peps/peps/pep-0008.rst:1038
 msgid "Exception Names"
 msgstr "Nomes de exceção"
 
-#: ../../peps/pep-0008.rst:912
+#: ../../peps/peps/pep-0008.rst:1040
 msgid ""
-"Because exceptions should be classes, the class naming convention applies"
-" here.  However, you should use the suffix \"Error\" on your exception "
-"names (if the exception actually is an error)."
+"Because exceptions should be classes, the class naming convention applies "
+"here.  However, you should use the suffix \"Error\" on your exception names "
+"(if the exception actually is an error)."
 msgstr ""
-"Como as exceções devem ser classes, a convenção de nomenclatura de classe"
-" se aplica aqui. No entanto, você deve usar o sufixo \"Error\" em seus "
-"nomes de exceção (se a exceção for realmente um erro)."
+"Como as exceções devem ser classes, a convenção de nomenclatura de classe se "
+"aplica aqui. No entanto, você deve usar o sufixo \"Error\" em seus nomes de "
+"exceção (se a exceção for realmente um erro)."
 
-#: ../../peps/pep-0008.rst:917
+#: ../../peps/peps/pep-0008.rst:1045
 msgid "Global Variable Names"
 msgstr "Nomes de variáveis globais"
 
-#: ../../peps/pep-0008.rst:919
+#: ../../peps/peps/pep-0008.rst:1047
 msgid ""
-"(Let's hope that these variables are meant for use inside one module "
-"only.)  The conventions are about the same as those for functions."
+"(Let's hope that these variables are meant for use inside one module only.)  "
+"The conventions are about the same as those for functions."
 msgstr ""
 "(Espero que essas variáveis sejam usadas apenas dentro de um módulo.) As "
 "convenções são quase as mesmas das funções."
 
-#: ../../peps/pep-0008.rst:922
+#: ../../peps/peps/pep-0008.rst:1050
 msgid ""
 "Modules that are designed for use via ``from M import *`` should use the "
 "``__all__`` mechanism to prevent exporting globals, or use the older "
 "convention of prefixing such globals with an underscore (which you might "
 "want to do to indicate these globals are \"module non-public\")."
 msgstr ""
-"Os módulos que são projetados para uso via ``from M import *`` devem usar"
-" o mecanismo ``__all__`` para evitar a exportação de globais, ou usar a "
-"convenção mais antiga de prefixar tais globais com um sublinhado (o que "
-"você pode querer fazer para indicar esses globais são \"módulo não "
-"público\")."
+"Os módulos que são projetados para uso via ``from M import *`` devem usar o "
+"mecanismo ``__all__`` para evitar a exportação de globais, ou usar a "
+"convenção mais antiga de prefixar tais globais com um sublinhado (o que você "
+"pode querer fazer para indicar esses globais são \"módulo não público\")."
 
-#: ../../peps/pep-0008.rst:929
+#: ../../peps/peps/pep-0008.rst:1057
 msgid "Function and Variable Names"
 msgstr "Nomes de funções e variáveis"
 
-#: ../../peps/pep-0008.rst:931
+#: ../../peps/peps/pep-0008.rst:1059
 msgid ""
-"Function names should be lowercase, with words separated by underscores "
-"as necessary to improve readability."
+"Function names should be lowercase, with words separated by underscores as "
+"necessary to improve readability."
 msgstr ""
 "Os nomes das funções devem estar em letras minúsculas, com palavras "
-"separadas por sublinhados conforme necessário para melhorar a "
-"legibilidade."
+"separadas por sublinhados conforme necessário para melhorar a legibilidade."
 
-#: ../../peps/pep-0008.rst:934
+#: ../../peps/peps/pep-0008.rst:1062
 msgid "Variable names follow the same convention as function names."
 msgstr "Os nomes das variáveis seguem a mesma convenção dos nomes das funções."
 
-#: ../../peps/pep-0008.rst:936
+#: ../../peps/peps/pep-0008.rst:1064
 msgid ""
-"mixedCase is allowed only in contexts where that's already the prevailing"
-" style (e.g. threading.py), to retain backwards compatibility."
+"mixedCase is allowed only in contexts where that's already the prevailing "
+"style (e.g. threading.py), to retain backwards compatibility."
 msgstr ""
 "misturaMaiúsculo é permitido apenas em contextos onde esse já é o estilo "
-"predominante (por exemplo, threading.py), para manter a compatibilidade "
-"com versões anteriores."
+"predominante (por exemplo, threading.py), para manter a compatibilidade com "
+"versões anteriores."
 
-#: ../../peps/pep-0008.rst:941
+#: ../../peps/peps/pep-0008.rst:1069
 msgid "Function and Method Arguments"
 msgstr "Argumentos de função e método"
 
-#: ../../peps/pep-0008.rst:943
+#: ../../peps/peps/pep-0008.rst:1071
 msgid "Always use ``self`` for the first argument to instance methods."
-msgstr "Sempre use ``self`` para o primeiro argumento para métodos de instância."
+msgstr ""
+"Sempre use ``self`` para o primeiro argumento para métodos de instância."
 
-#: ../../peps/pep-0008.rst:945
+#: ../../peps/peps/pep-0008.rst:1073
 msgid "Always use ``cls`` for the first argument to class methods."
 msgstr "Sempre use ``cls`` para o primeiro argumento para métodos de classe."
 
-#: ../../peps/pep-0008.rst:947
+#: ../../peps/peps/pep-0008.rst:1075
 msgid ""
 "If a function argument's name clashes with a reserved keyword, it is "
-"generally better to append a single trailing underscore rather than use "
-"an abbreviation or spelling corruption.  Thus ``class_`` is better than "
+"generally better to append a single trailing underscore rather than use an "
+"abbreviation or spelling corruption.  Thus ``class_`` is better than "
 "``clss``.  (Perhaps better is to avoid such clashes by using a synonym.)"
 msgstr ""
 "Se o nome de um argumento de função entrar em conflito com uma palavra "
-"reservada, geralmente é melhor acrescentar um único sublinhado à direita "
-"em vez de usar uma abreviação ou corrupção da ortografia. Portanto "
-"``class_`` é melhor que ``clss``. (Talvez seja melhor evitar tais "
-"conflitos usando um sinônimo.)"
+"reservada, geralmente é melhor acrescentar um único sublinhado à direita em "
+"vez de usar uma abreviação ou corrupção da ortografia. Portanto ``class_`` é "
+"melhor que ``clss``. (Talvez seja melhor evitar tais conflitos usando um "
+"sinônimo.)"
 
-#: ../../peps/pep-0008.rst:954
+#: ../../peps/peps/pep-0008.rst:1082
 msgid "Method Names and Instance Variables"
 msgstr "Nomes de métodos e variáveis de instância"
 
-#: ../../peps/pep-0008.rst:956
+#: ../../peps/peps/pep-0008.rst:1084
 msgid ""
-"Use the function naming rules: lowercase with words separated by "
-"underscores as necessary to improve readability."
+"Use the function naming rules: lowercase with words separated by underscores "
+"as necessary to improve readability."
 msgstr ""
 "Use as regras de nomenclatura de funções: letras minúsculas com palavras "
-"separadas por sublinhados conforme necessário para melhorar a "
-"legibilidade."
+"separadas por sublinhados conforme necessário para melhorar a legibilidade."
 
-#: ../../peps/pep-0008.rst:959
+#: ../../peps/peps/pep-0008.rst:1087
 msgid ""
 "Use one leading underscore only for non-public methods and instance "
 "variables."
 msgstr ""
-"Use um sublinhado inicial apenas para métodos não públicos e variáveis de"
-" instância."
+"Use um sublinhado inicial apenas para métodos não públicos e variáveis de "
+"instância."
 
-#: ../../peps/pep-0008.rst:962
+#: ../../peps/peps/pep-0008.rst:1090
 msgid ""
-"To avoid name clashes with subclasses, use two leading underscores to "
-"invoke Python's name mangling rules."
+"To avoid name clashes with subclasses, use two leading underscores to invoke "
+"Python's name mangling rules."
 msgstr ""
-"Para evitar conflitos de nomes com subclasses, use dois sublinhados "
-"iniciais para invocar as regras de alteração de nomes do Python."
+"Para evitar conflitos de nomes com subclasses, use dois sublinhados iniciais "
+"para invocar as regras de alteração de nomes do Python."
 
-#: ../../peps/pep-0008.rst:965
+#: ../../peps/peps/pep-0008.rst:1093
 msgid ""
 "Python mangles these names with the class name: if class Foo has an "
 "attribute named ``__a``, it cannot be accessed by ``Foo.__a``.  (An "
@@ -1496,203 +1504,199 @@ msgid ""
 "Generally, double leading underscores should be used only to avoid name "
 "conflicts with attributes in classes designed to be subclassed."
 msgstr ""
-"Python confunde esses nomes com o nome da classe: se a classe Foo tiver "
-"um atributo chamado ``__a``, ele não pode ser acessado por ``Foo.__a``. "
-"(Um usuário insistente ainda pode obter acesso chamando ``Foo._Foo__a``.)"
-" Geralmente, sublinhados iniciais duplos devem ser usados apenas para "
-"evitar conflitos de nome com atributos em classes projetadas para serem "
-"subclasses."
+"Python confunde esses nomes com o nome da classe: se a classe Foo tiver um "
+"atributo chamado ``__a``, ele não pode ser acessado por ``Foo.__a``. (Um "
+"usuário insistente ainda pode obter acesso chamando ``Foo._Foo__a``.) "
+"Geralmente, sublinhados iniciais duplos devem ser usados apenas para evitar "
+"conflitos de nome com atributos em classes projetadas para serem subclasses."
 
-#: ../../peps/pep-0008.rst:971
+#: ../../peps/peps/pep-0008.rst:1099
 msgid "Note: there is some controversy about the use of __names (see below)."
 msgstr "Nota: existe alguma controvérsia sobre o uso de __names (veja abaixo)."
 
-#: ../../peps/pep-0008.rst:974
+#: ../../peps/peps/pep-0008.rst:1102
 msgid "Constants"
 msgstr "Constantes"
 
-#: ../../peps/pep-0008.rst:976
+#: ../../peps/peps/pep-0008.rst:1104
 msgid ""
-"Constants are usually defined on a module level and written in all "
-"capital letters with underscores separating words.  Examples include "
+"Constants are usually defined on a module level and written in all capital "
+"letters with underscores separating words.  Examples include "
 "``MAX_OVERFLOW`` and ``TOTAL``."
 msgstr ""
-"As constantes geralmente são definidas em um nível de módulo e escritas "
-"em letras maiúsculas com sublinhados separando as palavras. Exemplos "
-"incluem ``MAX_OVERFLOW`` e ``TOTAL``."
+"As constantes geralmente são definidas em um nível de módulo e escritas em "
+"letras maiúsculas com sublinhados separando as palavras. Exemplos incluem "
+"``MAX_OVERFLOW`` e ``TOTAL``."
 
-#: ../../peps/pep-0008.rst:981
+#: ../../peps/peps/pep-0008.rst:1109
 msgid "Designing for Inheritance"
 msgstr "Projetando para herança"
 
-#: ../../peps/pep-0008.rst:983
+#: ../../peps/peps/pep-0008.rst:1111
 msgid ""
 "Always decide whether a class's methods and instance variables "
-"(collectively: \"attributes\") should be public or non-public.  If in "
-"doubt, choose non-public; it's easier to make it public later than to "
-"make a public attribute non-public."
+"(collectively: \"attributes\") should be public or non-public.  If in doubt, "
+"choose non-public; it's easier to make it public later than to make a public "
+"attribute non-public."
 msgstr ""
 "Sempre decida se os métodos de uma classe e as variáveis de instância "
-"(coletivamente: \"atributos\") devem ser públicos ou não públicos. Em "
-"caso de dúvida, escolha não público; é mais fácil torná-lo público "
-"posteriormente do que tornar um atributo público não público."
+"(coletivamente: \"atributos\") devem ser públicos ou não públicos. Em caso "
+"de dúvida, escolha não público; é mais fácil torná-lo público posteriormente "
+"do que tornar um atributo público não público."
 
-#: ../../peps/pep-0008.rst:988
+#: ../../peps/peps/pep-0008.rst:1116
 msgid ""
-"Public attributes are those that you expect unrelated clients of your "
-"class to use, with your commitment to avoid backwards incompatible "
-"changes.  Non-public attributes are those that are not intended to be "
-"used by third parties; you make no guarantees that non-public attributes "
-"won't change or even be removed."
+"Public attributes are those that you expect unrelated clients of your class "
+"to use, with your commitment to avoid backwards incompatible changes.  Non-"
+"public attributes are those that are not intended to be used by third "
+"parties; you make no guarantees that non-public attributes won't change or "
+"even be removed."
 msgstr ""
-"Atributos públicos são aqueles que você espera que clientes não "
-"relacionados de sua classe usem, com seu compromisso de evitar alterações"
-" incompatíveis com versões anteriores. Atributos não públicos são aqueles"
-" que não se destinam a ser usados por terceiros; você não garante que os "
-"atributos não públicos não serão alterados ou mesmo removidos."
+"Atributos públicos são aqueles que você espera que clientes não relacionados "
+"de sua classe usem, com seu compromisso de evitar alterações incompatíveis "
+"com versões anteriores. Atributos não públicos são aqueles que não se "
+"destinam a ser usados por terceiros; você não garante que os atributos não "
+"públicos não serão alterados ou mesmo removidos."
 
-#: ../../peps/pep-0008.rst:994
+#: ../../peps/peps/pep-0008.rst:1122
 msgid ""
-"We don't use the term \"private\" here, since no attribute is really "
-"private in Python (without a generally unnecessary amount of work)."
+"We don't use the term \"private\" here, since no attribute is really private "
+"in Python (without a generally unnecessary amount of work)."
 msgstr ""
 "Não usamos o termo \"privado\" aqui, pois nenhum atributo é realmente "
-"privado em Python (sem uma quantidade de trabalho geralmente "
-"desnecessária)."
+"privado em Python (sem uma quantidade de trabalho geralmente desnecessária)."
 
-#: ../../peps/pep-0008.rst:997
+#: ../../peps/peps/pep-0008.rst:1125
 msgid ""
 "Another category of attributes are those that are part of the \"subclass "
 "API\" (often called \"protected\" in other languages).  Some classes are "
 "designed to be inherited from, either to extend or modify aspects of the "
-"class's behavior.  When designing such a class, take care to make "
-"explicit decisions about which attributes are public, which are part of "
-"the subclass API, and which are truly only to be used by your base class."
+"class's behavior.  When designing such a class, take care to make explicit "
+"decisions about which attributes are public, which are part of the subclass "
+"API, and which are truly only to be used by your base class."
 msgstr ""
 "Outra categoria de atributos são aqueles que fazem parte da \"API de "
-"subclasse\" (muitas vezes chamada de \"protegida\" em outras linguagens)."
-" Algumas classes são projetadas para serem herdadas, seja para estender "
-"ou modificar aspectos do comportamento da classe. Ao projetar essa "
-"classe, tome cuidado para tomar decisões explícitas sobre quais atributos"
-" são públicos, quais fazem parte da API da subclasse e quais devem ser "
-"realmente usados apenas por sua classe base."
+"subclasse\" (muitas vezes chamada de \"protegida\" em outras linguagens). "
+"Algumas classes são projetadas para serem herdadas, seja para estender ou "
+"modificar aspectos do comportamento da classe. Ao projetar essa classe, tome "
+"cuidado para tomar decisões explícitas sobre quais atributos são públicos, "
+"quais fazem parte da API da subclasse e quais devem ser realmente usados "
+"apenas por sua classe base."
 
-#: ../../peps/pep-0008.rst:1005
+#: ../../peps/peps/pep-0008.rst:1133
 msgid "With this in mind, here are the Pythonic guidelines:"
 msgstr "Com isso em mente, aqui estão as diretrizes pythônica:"
 
-#: ../../peps/pep-0008.rst:1007
+#: ../../peps/peps/pep-0008.rst:1135
 msgid "Public attributes should have no leading underscores."
 msgstr "Os atributos públicos não devem ter sublinhados à esquerda."
 
-#: ../../peps/pep-0008.rst:1009
+#: ../../peps/peps/pep-0008.rst:1137
 msgid ""
 "If your public attribute name collides with a reserved keyword, append a "
-"single trailing underscore to your attribute name.  This is preferable to"
-" an abbreviation or corrupted spelling.  (However, notwithstanding this "
-"rule, 'cls' is the preferred spelling for any variable or argument which "
-"is known to be a class, especially the first argument to a class method.)"
+"single trailing underscore to your attribute name.  This is preferable to an "
+"abbreviation or corrupted spelling.  (However, notwithstanding this rule, "
+"'cls' is the preferred spelling for any variable or argument which is known "
+"to be a class, especially the first argument to a class method.)"
 msgstr ""
-"Se o nome do atributo público colidir com uma palavra-chave reservada, "
-"anexe um único sublinhado à direita ao nome do atributo. Isso é "
-"preferível a uma abreviação ou ortografia corrompida. (No entanto, não "
-"obstante esta regra, 'cls' é a ortografia preferida para qualquer "
-"variável ou argumento que seja conhecido como uma classe, especialmente o"
-" primeiro argumento para um método de classe.)"
+"Se o nome do atributo público colidir com uma palavra-chave reservada, anexe "
+"um único sublinhado à direita ao nome do atributo. Isso é preferível a uma "
+"abreviação ou ortografia corrompida. (No entanto, não obstante esta regra, "
+"'cls' é a ortografia preferida para qualquer variável ou argumento que seja "
+"conhecido como uma classe, especialmente o primeiro argumento para um método "
+"de classe.)"
 
-#: ../../peps/pep-0008.rst:1016
+#: ../../peps/peps/pep-0008.rst:1144
 msgid "Note 1: See the argument name recommendation above for class methods."
 msgstr ""
 "Observação 1: consulte a recomendação de nome de argumento acima para "
 "métodos de classe."
 
-#: ../../peps/pep-0008.rst:1018
+#: ../../peps/peps/pep-0008.rst:1146
 msgid ""
-"For simple public data attributes, it is best to expose just the "
-"attribute name, without complicated accessor/mutator methods.  Keep in "
-"mind that Python provides an easy path to future enhancement, should you "
-"find that a simple data attribute needs to grow functional behavior.  In "
-"that case, use properties to hide functional implementation behind simple"
-" data attribute access syntax."
+"For simple public data attributes, it is best to expose just the attribute "
+"name, without complicated accessor/mutator methods.  Keep in mind that "
+"Python provides an easy path to future enhancement, should you find that a "
+"simple data attribute needs to grow functional behavior.  In that case, use "
+"properties to hide functional implementation behind simple data attribute "
+"access syntax."
 msgstr ""
-"Para atributos de dados públicos simples, é melhor expor apenas o nome do"
-" atributo, sem métodos complicados de acessador/mutador. Lembre-se de que"
-" o Python fornece um caminho fácil para melhorias futuras, caso você "
-"descubra que um atributo de dados simples precisa aumentar o "
-"comportamento funcional. Nesse caso, use propriedades para ocultar a "
-"implementação funcional por trás da sintaxe simples de acesso ao atributo"
-" de dados."
+"Para atributos de dados públicos simples, é melhor expor apenas o nome do "
+"atributo, sem métodos complicados de acessador/mutador. Lembre-se de que o "
+"Python fornece um caminho fácil para melhorias futuras, caso você descubra "
+"que um atributo de dados simples precisa aumentar o comportamento funcional. "
+"Nesse caso, use propriedades para ocultar a implementação funcional por trás "
+"da sintaxe simples de acesso ao atributo de dados."
 
-#: ../../peps/pep-0008.rst:1026
+#: ../../peps/peps/pep-0008.rst:1154
 msgid ""
-"Note 1: Try to keep the functional behavior side-effect free, although "
-"side-effects such as caching are generally fine."
+"Note 1: Try to keep the functional behavior side-effect free, although side-"
+"effects such as caching are generally fine."
 msgstr ""
 "Observação 1: tente manter o efeito colateral do comportamento funcional "
 "livre, embora efeitos colaterais como o armazenamento em cache sejam "
 "geralmente bons."
 
-#: ../../peps/pep-0008.rst:1029
+#: ../../peps/peps/pep-0008.rst:1157
 msgid ""
-"Note 2: Avoid using properties for computationally expensive operations; "
-"the attribute notation makes the caller believe that access is "
-"(relatively) cheap."
+"Note 2: Avoid using properties for computationally expensive operations; the "
+"attribute notation makes the caller believe that access is (relatively) "
+"cheap."
 msgstr ""
-"Nota 2: Evite usar propriedades para operações computacionalmente caras; "
-"a notação de atributo faz o chamador acreditar que o acesso é "
-"(relativamente) barato."
+"Nota 2: Evite usar propriedades para operações computacionalmente caras; a "
+"notação de atributo faz o chamador acreditar que o acesso é (relativamente) "
+"barato."
 
-#: ../../peps/pep-0008.rst:1033
+#: ../../peps/peps/pep-0008.rst:1161
 msgid ""
-"If your class is intended to be subclassed, and you have attributes that "
-"you do not want subclasses to use, consider naming them with double "
-"leading underscores and no trailing underscores.  This invokes Python's "
-"name mangling algorithm, where the name of the class is mangled into the "
+"If your class is intended to be subclassed, and you have attributes that you "
+"do not want subclasses to use, consider naming them with double leading "
+"underscores and no trailing underscores.  This invokes Python's name "
+"mangling algorithm, where the name of the class is mangled into the "
 "attribute name.  This helps avoid attribute name collisions should "
 "subclasses inadvertently contain attributes with the same name."
 msgstr ""
-"Se sua classe for destinada a ter subclasses e você tiver atributos que "
-"não deseja que as subclasses usem, considere nomeá-los com sublinhados "
-"duplos à esquerda e sem sublinhados à direita. Isso invoca o algoritmo de"
-" confusão de nomes do Python, onde o nome da classe é confundido com o "
-"nome do atributo. Isso ajuda a evitar colisões de nomes de atributos caso"
-" as subclasses contenham inadvertidamente atributos com o mesmo nome."
+"Se sua classe for destinada a ter subclasses e você tiver atributos que não "
+"deseja que as subclasses usem, considere nomeá-los com sublinhados duplos à "
+"esquerda e sem sublinhados à direita. Isso invoca o algoritmo de confusão de "
+"nomes do Python, onde o nome da classe é confundido com o nome do atributo. "
+"Isso ajuda a evitar colisões de nomes de atributos caso as subclasses "
+"contenham inadvertidamente atributos com o mesmo nome."
 
-#: ../../peps/pep-0008.rst:1041
+#: ../../peps/peps/pep-0008.rst:1169
 msgid ""
-"Note 1: Note that only the simple class name is used in the mangled name,"
-" so if a subclass chooses both the same class name and attribute name, "
-"you can still get name collisions."
+"Note 1: Note that only the simple class name is used in the mangled name, so "
+"if a subclass chooses both the same class name and attribute name, you can "
+"still get name collisions."
 msgstr ""
-"Observação 1: observe que apenas o nome de classe simples é usado no nome"
-" desconfigurado, portanto, se uma subclasse escolher o mesmo nome de "
-"classe e o mesmo nome de atributo, você ainda poderá obter colisões de "
-"nomes."
+"Observação 1: observe que apenas o nome de classe simples é usado no nome "
+"desconfigurado, portanto, se uma subclasse escolher o mesmo nome de classe e "
+"o mesmo nome de atributo, você ainda poderá obter colisões de nomes."
 
-#: ../../peps/pep-0008.rst:1045
+#: ../../peps/peps/pep-0008.rst:1173
 msgid ""
 "Note 2: Name mangling can make certain uses, such as debugging and "
-"``__getattr__()``, less convenient.  However the name mangling algorithm "
-"is well documented and easy to perform manually."
+"``__getattr__()``, less convenient.  However the name mangling algorithm is "
+"well documented and easy to perform manually."
 msgstr ""
 "Nota 2: A confusão de nomes pode tornar certos usos, como depuração e "
-"``__getattr__()``, menos convenientes. No entanto, o algoritmo de "
-"alteração de nomes é bem documentado e fácil de executar manualmente."
+"``__getattr__()``, menos convenientes. No entanto, o algoritmo de alteração "
+"de nomes é bem documentado e fácil de executar manualmente."
 
-#: ../../peps/pep-0008.rst:1049
+#: ../../peps/peps/pep-0008.rst:1177
 msgid ""
-"Note 3: Not everyone likes name mangling.  Try to balance the need to "
-"avoid accidental name clashes with potential use by advanced callers."
+"Note 3: Not everyone likes name mangling.  Try to balance the need to avoid "
+"accidental name clashes with potential use by advanced callers."
 msgstr ""
 "Nota 3: Nem todo mundo gosta de confusão de nomes. Tente equilibrar a "
-"necessidade de evitar conflitos acidentais de nomes com o uso potencial "
-"por chamadores avançados."
+"necessidade de evitar conflitos acidentais de nomes com o uso potencial por "
+"chamadores avançados."
 
-#: ../../peps/pep-0008.rst:1054
+#: ../../peps/peps/pep-0008.rst:1182
 msgid "Public and Internal Interfaces"
 msgstr "Interfaces públicas e internas"
 
-#: ../../peps/pep-0008.rst:1056
+#: ../../peps/peps/pep-0008.rst:1184
 msgid ""
 "Any backwards compatibility guarantees apply only to public interfaces. "
 "Accordingly, it is important that users be able to clearly distinguish "
@@ -1702,7 +1706,7 @@ msgstr ""
 "apenas a interfaces públicas. Assim, é importante que os usuários possam "
 "distinguir claramente entre interfaces públicas e internas."
 
-#: ../../peps/pep-0008.rst:1060
+#: ../../peps/peps/pep-0008.rst:1188
 msgid ""
 "Documented interfaces are considered public, unless the documentation "
 "explicitly declares them to be provisional or internal interfaces exempt "
@@ -1715,28 +1719,28 @@ msgstr ""
 "anteriores. Todas as interfaces não documentadas devem ser consideradas "
 "internas."
 
-#: ../../peps/pep-0008.rst:1065
+#: ../../peps/peps/pep-0008.rst:1193
 msgid ""
-"To better support introspection, modules should explicitly declare the "
-"names in their public API using the ``__all__`` attribute. Setting "
-"``__all__`` to an empty list indicates that the module has no public API."
+"To better support introspection, modules should explicitly declare the names "
+"in their public API using the ``__all__`` attribute. Setting ``__all__`` to "
+"an empty list indicates that the module has no public API."
 msgstr ""
 "Para ter melhor suporte a introspecção, os módulos devem declarar "
-"explicitamente os nomes em sua API pública usando o atributo ``__all__``."
-" Definir ``__all__`` como uma lista vazia indica que o módulo não possui "
-"API pública."
+"explicitamente os nomes em sua API pública usando o atributo ``__all__``. "
+"Definir ``__all__`` como uma lista vazia indica que o módulo não possui API "
+"pública."
 
-#: ../../peps/pep-0008.rst:1069
+#: ../../peps/peps/pep-0008.rst:1197
 msgid ""
 "Even with ``__all__`` set appropriately, internal interfaces (packages, "
 "modules, classes, functions, attributes or other names) should still be "
 "prefixed with a single leading underscore."
 msgstr ""
 "Mesmo com ``__all__`` definido apropriadamente, as interfaces internas "
-"(pacotes, módulos, classes, funções, atributos ou outros nomes) ainda "
-"devem ser prefixadas com um único sublinhado à esquerda."
+"(pacotes, módulos, classes, funções, atributos ou outros nomes) ainda devem "
+"ser prefixadas com um único sublinhado à esquerda."
 
-#: ../../peps/pep-0008.rst:1073
+#: ../../peps/peps/pep-0008.rst:1201
 msgid ""
 "An interface is also considered internal if any containing namespace "
 "(package, module or class) is considered internal."
@@ -1744,573 +1748,574 @@ msgstr ""
 "Uma interface também é considerada interna se qualquer espaço de nomes "
 "(pacote, módulo ou classe) for considerado interno."
 
-#: ../../peps/pep-0008.rst:1076
+#: ../../peps/peps/pep-0008.rst:1204
 msgid ""
-"Imported names should always be considered an implementation detail. "
-"Other modules must not rely on indirect access to such imported names "
-"unless they are an explicitly documented part of the containing module's "
-"API, such as ``os.path`` or a package's ``__init__`` module that exposes "
-"functionality from submodules."
+"Imported names should always be considered an implementation detail. Other "
+"modules must not rely on indirect access to such imported names unless they "
+"are an explicitly documented part of the containing module's API, such as "
+"``os.path`` or a package's ``__init__`` module that exposes functionality "
+"from submodules."
 msgstr ""
 "Os nomes importados devem sempre ser considerados um detalhe de "
-"implementação. Outros módulos não devem contar com acesso indireto a tais"
-" nomes importados, a menos que sejam uma parte explicitamente documentada"
-" da API do módulo recipiente, como ``os.path`` ou um módulo ``__init__`` "
-"de um pacote que exponha a funcionalidade dos submódulos."
+"implementação. Outros módulos não devem contar com acesso indireto a tais "
+"nomes importados, a menos que sejam uma parte explicitamente documentada da "
+"API do módulo recipiente, como ``os.path`` ou um módulo ``__init__`` de um "
+"pacote que exponha a funcionalidade dos submódulos."
 
-#: ../../peps/pep-0008.rst:1084
+#: ../../peps/peps/pep-0008.rst:1212
 msgid "Programming Recommendations"
 msgstr "Recomendações de programação"
 
-#: ../../peps/pep-0008.rst:1086
+#: ../../peps/peps/pep-0008.rst:1214
 msgid ""
 "Code should be written in a way that does not disadvantage other "
 "implementations of Python (PyPy, Jython, IronPython, Cython, Psyco, and "
 "such)."
 msgstr ""
-"O código deve ser escrito de forma que não prejudique outras "
-"implementações do Python (PyPy, Jython, IronPython, Cython, Psyco e "
-"outros)."
+"O código deve ser escrito de forma que não prejudique outras implementações "
+"do Python (PyPy, Jython, IronPython, Cython, Psyco e outros)."
 
-#: ../../peps/pep-0008.rst:1090
+#: ../../peps/peps/pep-0008.rst:1218
 msgid ""
-"For example, do not rely on CPython's efficient implementation of in-"
-"place string concatenation for statements in the form ``a += b`` or ``a ="
-" a + b``.  This optimization is fragile even in CPython (it only works "
-"for some types) and isn't present at all in implementations that don't "
-"use refcounting.  In performance sensitive parts of the library, the "
-"``''.join()`` form should be used instead.  This will ensure that "
-"concatenation occurs in linear time across various implementations."
+"For example, do not rely on CPython's efficient implementation of in-place "
+"string concatenation for statements in the form ``a += b`` or ``a = a + "
+"b``.  This optimization is fragile even in CPython (it only works for some "
+"types) and isn't present at all in implementations that don't use "
+"refcounting.  In performance sensitive parts of the library, the ``''."
+"join()`` form should be used instead.  This will ensure that concatenation "
+"occurs in linear time across various implementations."
 msgstr ""
 "Por exemplo, não confie na implementação eficiente do CPython de "
-"concatenação de strings no local para instruções na forma ``a += b`` ou "
-"``a = a + b``. Essa otimização é frágil mesmo no CPython (funciona apenas"
-" para alguns tipos) e não está presente em implementações que não usam "
-"refcounting. Em partes sensíveis ao desempenho da biblioteca, o "
-"formulário ``''.join()`` deve ser usado. Isso garantirá que a "
-"concatenação ocorra em tempo linear em várias implementações."
+"concatenação de strings no local para instruções na forma ``a += b`` ou ``a "
+"= a + b``. Essa otimização é frágil mesmo no CPython (funciona apenas para "
+"alguns tipos) e não está presente em implementações que não usam "
+"refcounting. Em partes sensíveis ao desempenho da biblioteca, o formulário "
+"``''.join()`` deve ser usado. Isso garantirá que a concatenação ocorra em "
+"tempo linear em várias implementações."
 
-#: ../../peps/pep-0008.rst:1099
+#: ../../peps/peps/pep-0008.rst:1227
 msgid ""
 "Comparisons to singletons like None should always be done with ``is`` or "
 "``is not``, never the equality operators."
 msgstr ""
-"Comparações com singletons como None devem sempre ser feitas com ``is`` "
-"ou ``is not``, nunca os operadores de igualdade."
+"Comparações com singletons como None devem sempre ser feitas com ``is`` ou "
+"``is not``, nunca os operadores de igualdade."
 
-#: ../../peps/pep-0008.rst:1102
+#: ../../peps/peps/pep-0008.rst:1230
 msgid ""
-"Also, beware of writing ``if x`` when you really mean ``if x is not "
-"None`` -- e.g. when testing whether a variable or argument that defaults "
-"to None was set to some other value.  The other value might have a type "
-"(such as a container) that could be false in a boolean context!"
+"Also, beware of writing ``if x`` when you really mean ``if x is not None`` "
+"-- e.g. when testing whether a variable or argument that defaults to None "
+"was set to some other value.  The other value might have a type (such as a "
+"container) that could be false in a boolean context!"
 msgstr ""
-"Além disso, cuidado ao escrever ``if x`` quando você realmente quer dizer"
-" ``if x is not None`` -- por exemplo ao testar se uma variável ou "
-"argumento cujo padrão é None foi definido para algum outro valor. O outro"
-" valor pode ter um tipo (como um contêiner) que pode ser falso em um "
-"contexto booleano!"
+"Além disso, cuidado ao escrever ``if x`` quando você realmente quer dizer "
+"``if x is not None`` -- por exemplo ao testar se uma variável ou argumento "
+"cujo padrão é None foi definido para algum outro valor. O outro valor pode "
+"ter um tipo (como um contêiner) que pode ser falso em um contexto booleano!"
 
-#: ../../peps/pep-0008.rst:1108
+#: ../../peps/peps/pep-0008.rst:1236
+#, fuzzy
 msgid ""
-"Use ``is not`` operator rather than ``not ... is``.  While both "
-"expressions are functionally identical, the former is more readable and "
-"preferred::"
+"Use ``is not`` operator rather than ``not ... is``.  While both expressions "
+"are functionally identical, the former is more readable and preferred:"
 msgstr ""
 "Use o operador ``is not`` em vez de ``não ... é``. Embora ambas as "
 "expressões sejam funcionalmente idênticas, a primeira é mais legível e "
 "preferida::"
 
-#: ../../peps/pep-0008.rst:1120
+#: ../../peps/peps/pep-0008.rst:1252
 msgid ""
-"When implementing ordering operations with rich comparisons, it is best "
-"to implement all six operations (``__eq__``, ``__ne__``, ``__lt__``, "
+"When implementing ordering operations with rich comparisons, it is best to "
+"implement all six operations (``__eq__``, ``__ne__``, ``__lt__``, "
 "``__le__``, ``__gt__``, ``__ge__``) rather than relying on other code to "
 "only exercise a particular comparison."
 msgstr ""
 "Ao implementar operações de ordenação com comparações ricas, é melhor "
 "implementar todas as seis operações (``__eq__``, ``__ne__``, ``__lt__``, "
-"``__le__``, ``__gt__``, ``__ge__``) em vez de depender de outro código "
-"para apenas exercer uma comparação específica."
+"``__le__``, ``__gt__``, ``__ge__``) em vez de depender de outro código para "
+"apenas exercer uma comparação específica."
 
-#: ../../peps/pep-0008.rst:1125
+#: ../../peps/peps/pep-0008.rst:1257
 msgid ""
 "To minimize the effort involved, the ``functools.total_ordering()`` "
 "decorator provides a tool to generate missing comparison methods."
 msgstr ""
-"Para minimizar o esforço envolvido, o decorador "
-"``functools.total_ordering()`` fornece uma ferramenta para gerar métodos "
-"de comparação ausentes."
+"Para minimizar o esforço envolvido, o decorador ``functools."
+"total_ordering()`` fornece uma ferramenta para gerar métodos de comparação "
+"ausentes."
 
-#: ../../peps/pep-0008.rst:1128
+#: ../../peps/peps/pep-0008.rst:1260
 msgid ""
-":pep:`207` indicates that reflexivity rules *are* assumed by Python. "
-"Thus, the interpreter may swap ``y > x`` with ``x < y``, ``y >= x`` with "
-"``x <= y``, and may swap the arguments of ``x == y`` and ``x != y``.  The"
-" ``sort()`` and ``min()`` operations are guaranteed to use the ``<`` "
-"operator and the ``max()`` function uses the ``>`` operator.  However, it"
-" is best to implement all six operations so that confusion doesn't arise "
-"in other contexts."
+":pep:`207` indicates that reflexivity rules *are* assumed by Python. Thus, "
+"the interpreter may swap ``y > x`` with ``x < y``, ``y >= x`` with ``x <= "
+"y``, and may swap the arguments of ``x == y`` and ``x != y``.  The "
+"``sort()`` and ``min()`` operations are guaranteed to use the ``<`` operator "
+"and the ``max()`` function uses the ``>`` operator.  However, it is best to "
+"implement all six operations so that confusion doesn't arise in other "
+"contexts."
 msgstr ""
 ":pep:`207` indica que as regras de reflexividade *são* assumidas pelo "
-"Python. Assim, o interpretador pode trocar ``y > x`` por ``x < y``, ``y "
-">= x`` por ``x <= y``, e pode trocar os argumentos de ``x == y`` e ``x !="
-" y``. As operações ``sort()`` e ``min()`` são garantidas para usar o "
-"operador ``<`` e a função ``max()`` usa o operador ``>``. No entanto, é "
-"melhor implementar todas as seis operações para que não surja confusão em"
-" outros contextos."
+"Python. Assim, o interpretador pode trocar ``y > x`` por ``x < y``, ``y >= "
+"x`` por ``x <= y``, e pode trocar os argumentos de ``x == y`` e ``x != y``. "
+"As operações ``sort()`` e ``min()`` são garantidas para usar o operador "
+"``<`` e a função ``max()`` usa o operador ``>``. No entanto, é melhor "
+"implementar todas as seis operações para que não surja confusão em outros "
+"contextos."
 
-#: ../../peps/pep-0008.rst:1136
+#: ../../peps/peps/pep-0008.rst:1268
+#, fuzzy
 msgid ""
-"Always use a def statement instead of an assignment statement that binds "
-"a lambda expression directly to an identifier::"
+"Always use a def statement instead of an assignment statement that binds a "
+"lambda expression directly to an identifier:"
 msgstr ""
 "Sempre use uma instrução def em vez de uma instrução de atribuição que "
 "vincula uma expressão lambda diretamente a um identificador::"
 
-#: ../../peps/pep-0008.rst:1147
+#: ../../peps/peps/pep-0008.rst:1283
 msgid ""
 "The first form means that the name of the resulting function object is "
-"specifically 'f' instead of the generic '<lambda>'. This is more useful "
-"for tracebacks and string representations in general. The use of the "
-"assignment statement eliminates the sole benefit a lambda expression can "
-"offer over an explicit def statement (i.e. that it can be embedded inside"
-" a larger expression)"
+"specifically 'f' instead of the generic '<lambda>'. This is more useful for "
+"tracebacks and string representations in general. The use of the assignment "
+"statement eliminates the sole benefit a lambda expression can offer over an "
+"explicit def statement (i.e. that it can be embedded inside a larger "
+"expression)"
 msgstr ""
 "A primeira forma significa que o nome do objeto de função resultante é "
 "especificamente 'f' em vez do genérico '<lambda>'. Isso é mais útil para "
 "tracebacks e representações de strings em geral. O uso da instrução de "
-"atribuição elimina o único benefício que uma expressão lambda pode "
-"oferecer sobre uma instrução def explícita (ou seja, que ela pode ser "
-"incorporada dentro de uma expressão maior)"
+"atribuição elimina o único benefício que uma expressão lambda pode oferecer "
+"sobre uma instrução def explícita (ou seja, que ela pode ser incorporada "
+"dentro de uma expressão maior)"
 
-#: ../../peps/pep-0008.rst:1154
+#: ../../peps/peps/pep-0008.rst:1290
 msgid ""
-"Derive exceptions from ``Exception`` rather than ``BaseException``. "
-"Direct inheritance from ``BaseException`` is reserved for exceptions "
-"where catching them is almost always the wrong thing to do."
+"Derive exceptions from ``Exception`` rather than ``BaseException``. Direct "
+"inheritance from ``BaseException`` is reserved for exceptions where catching "
+"them is almost always the wrong thing to do."
 msgstr ""
-"Derive exceções de ``Exception`` em vez de ``BaseException``. Herança "
-"direta de ``BaseException`` é reservada para exceções onde capturá-las é "
-"quase sempre a coisa errada a se fazer."
+"Derive exceções de ``Exception`` em vez de ``BaseException``. Herança direta "
+"de ``BaseException`` é reservada para exceções onde capturá-las é quase "
+"sempre a coisa errada a se fazer."
 
-#: ../../peps/pep-0008.rst:1158
+#: ../../peps/peps/pep-0008.rst:1294
 msgid ""
-"Design exception hierarchies based on the distinctions that code "
-"*catching* the exceptions is likely to need, rather than the locations "
-"where the exceptions are raised. Aim to answer the question \"What went "
-"wrong?\" programmatically, rather than only stating that \"A problem "
-"occurred\" (see :pep:`3151` for an example of this lesson being learned "
-"for the builtin exception hierarchy)"
+"Design exception hierarchies based on the distinctions that code *catching* "
+"the exceptions is likely to need, rather than the locations where the "
+"exceptions are raised. Aim to answer the question \"What went wrong?\" "
+"programmatically, rather than only stating that \"A problem occurred\" (see :"
+"pep:`3151` for an example of this lesson being learned for the builtin "
+"exception hierarchy)"
 msgstr ""
-"Projete hierarquias de exceção com base nas distinções que o código "
-"*pega* as exceções provavelmente precisará, em vez dos locais onde as "
-"exceções são levantadas. Procure responder à pergunta \"O que deu "
-"errado?\" programaticamente, em vez de apenas declarar que \"Ocorreu um "
+"Projete hierarquias de exceção com base nas distinções que o código *pega* "
+"as exceções provavelmente precisará, em vez dos locais onde as exceções são "
+"levantadas. Procure responder à pergunta \"O que deu errado?\" "
+"programaticamente, em vez de apenas declarar que \"Ocorreu um "
 "problema\" (consulte :pep:`3151` para obter um exemplo desta lição sendo "
 "aprendida para a hierarquia de exceção embutida)"
 
-#: ../../peps/pep-0008.rst:1165
+#: ../../peps/peps/pep-0008.rst:1301
 msgid ""
 "Class naming conventions apply here, although you should add the suffix "
-"\"Error\" to your exception classes if the exception is an error.  Non-"
-"error exceptions that are used for non-local flow control or other forms "
-"of signaling need no special suffix."
+"\"Error\" to your exception classes if the exception is an error.  Non-error "
+"exceptions that are used for non-local flow control or other forms of "
+"signaling need no special suffix."
 msgstr ""
-"As convenções de nomenclatura de classe se aplicam aqui, embora você deva"
-" adicionar o sufixo \"Error\" às suas classes de exceção se a exceção for"
-" um erro. Exceções sem erro que são usadas para controle de fluxo não "
-"local ou outras formas de sinalização não precisam de sufixo especial."
+"As convenções de nomenclatura de classe se aplicam aqui, embora você deva "
+"adicionar o sufixo \"Error\" às suas classes de exceção se a exceção for um "
+"erro. Exceções sem erro que são usadas para controle de fluxo não local ou "
+"outras formas de sinalização não precisam de sufixo especial."
 
-#: ../../peps/pep-0008.rst:1170
+#: ../../peps/peps/pep-0008.rst:1306
 msgid ""
-"Use exception chaining appropriately. ``raise X from Y`` should be used "
-"to indicate explicit replacement without losing the original traceback."
+"Use exception chaining appropriately. ``raise X from Y`` should be used to "
+"indicate explicit replacement without losing the original traceback."
 msgstr ""
-"Use o encadeamento de exceções adequadamente. ``raise X from Y`` deve ser"
-" usado para indicar substituição explícita sem perder o traceback "
-"original."
+"Use o encadeamento de exceções adequadamente. ``raise X from Y`` deve ser "
+"usado para indicar substituição explícita sem perder o traceback original."
 
-#: ../../peps/pep-0008.rst:1174
+#: ../../peps/peps/pep-0008.rst:1310
 msgid ""
 "When deliberately replacing an inner exception (using ``raise X from "
-"None``), ensure that relevant details are transferred to the new "
-"exception (such as preserving the attribute name when converting KeyError"
-" to AttributeError, or embedding the text of the original exception in "
-"the new exception message)."
+"None``), ensure that relevant details are transferred to the new exception "
+"(such as preserving the attribute name when converting KeyError to "
+"AttributeError, or embedding the text of the original exception in the new "
+"exception message)."
 msgstr ""
 "Ao substituir deliberadamente uma exceção interna (usando ``raise X from "
-"None``), certifique-se de que os detalhes relevantes sejam transferidos "
-"para a nova exceção (como preservar o nome do atributo ao converter "
-"KeyError em AttributeError ou incorporar o texto da exceção original em a"
-" nova mensagem de exceção)."
+"None``), certifique-se de que os detalhes relevantes sejam transferidos para "
+"a nova exceção (como preservar o nome do atributo ao converter KeyError em "
+"AttributeError ou incorporar o texto da exceção original em a nova mensagem "
+"de exceção)."
 
-#: ../../peps/pep-0008.rst:1180
+#: ../../peps/peps/pep-0008.rst:1316
+#, fuzzy
 msgid ""
 "When catching exceptions, mention specific exceptions whenever possible "
-"instead of using a bare ``except:`` clause::"
+"instead of using a bare ``except:`` clause:"
 msgstr ""
-"Ao capturar exceções, mencione exceções específicas sempre que possível, "
-"em vez de usar uma simples cláusula ``except:``::"
+"Ao capturar exceções, mencione exceções específicas sempre que possível, em "
+"vez de usar uma simples cláusula ``except:``::"
 
-#: ../../peps/pep-0008.rst:1188
+#: ../../peps/peps/pep-0008.rst:1327
 msgid ""
 "A bare ``except:`` clause will catch SystemExit and KeyboardInterrupt "
-"exceptions, making it harder to interrupt a program with Control-C, and "
-"can disguise other problems.  If you want to catch all exceptions that "
-"signal program errors, use ``except Exception:`` (bare except is "
-"equivalent to ``except BaseException:``)."
+"exceptions, making it harder to interrupt a program with Control-C, and can "
+"disguise other problems.  If you want to catch all exceptions that signal "
+"program errors, use ``except Exception:`` (bare except is equivalent to "
+"``except BaseException:``)."
 msgstr ""
 "Uma simples cláusula ``except:`` capturará as exceções SystemExit e "
-"KeyboardInterrupt, dificultando a interrupção de um programa com "
-"Control-C e pode disfarçar outros problemas. Se você deseja capturar "
-"todas as exceções que sinalizam erros de programa, use ``except "
-"Exception:`` (bare except é equivalente a ``except BaseException:``)."
+"KeyboardInterrupt, dificultando a interrupção de um programa com Control-C e "
+"pode disfarçar outros problemas. Se você deseja capturar todas as exceções "
+"que sinalizam erros de programa, use ``except Exception:`` (bare except é "
+"equivalente a ``except BaseException:``)."
 
-#: ../../peps/pep-0008.rst:1195
+#: ../../peps/peps/pep-0008.rst:1334
 msgid ""
-"A good rule of thumb is to limit use of bare 'except' clauses to two "
-"cases:"
-msgstr "Uma boa regra é limitar o uso de cláusulas 'except' simples a dois casos:"
-
-#: ../../peps/pep-0008.rst:1198
-msgid ""
-"If the exception handler will be printing out or logging the traceback; "
-"at least the user will be aware that an error has occurred."
+"A good rule of thumb is to limit use of bare 'except' clauses to two cases:"
 msgstr ""
-"Se o manipulador de exceção for exibir ou registrar o traceback; pelo "
-"menos o usuário saberá que ocorreu um erro."
+"Uma boa regra é limitar o uso de cláusulas 'except' simples a dois casos:"
 
-#: ../../peps/pep-0008.rst:1202
+#: ../../peps/peps/pep-0008.rst:1337
+msgid ""
+"If the exception handler will be printing out or logging the traceback; at "
+"least the user will be aware that an error has occurred."
+msgstr ""
+"Se o manipulador de exceção for exibir ou registrar o traceback; pelo menos "
+"o usuário saberá que ocorreu um erro."
+
+#: ../../peps/peps/pep-0008.rst:1341
 msgid ""
 "If the code needs to do some cleanup work, but then lets the exception "
-"propagate upwards with ``raise``.  ``try...finally`` can be a better way "
-"to handle this case."
+"propagate upwards with ``raise``.  ``try...finally`` can be a better way to "
+"handle this case."
 msgstr ""
 "Se o código precisa fazer algum trabalho de limpeza, mas permite que a "
-"exceção se propague para cima com ``raise``. ``try...finally`` pode ser "
-"uma maneira melhor de lidar com este caso."
+"exceção se propague para cima com ``raise``. ``try...finally`` pode ser uma "
+"maneira melhor de lidar com este caso."
 
-#: ../../peps/pep-0008.rst:1206
+#: ../../peps/peps/pep-0008.rst:1345
 msgid ""
 "When catching operating system errors, prefer the explicit exception "
-"hierarchy introduced in Python 3.3 over introspection of ``errno`` "
-"values."
+"hierarchy introduced in Python 3.3 over introspection of ``errno`` values."
 msgstr ""
-"Ao capturar erros do sistema operacional, prefira a hierarquia de exceção"
-" explícita introduzida no Python 3.3 em vez da introspecção de valores "
+"Ao capturar erros do sistema operacional, prefira a hierarquia de exceção "
+"explícita introduzida no Python 3.3 em vez da introspecção de valores "
 "``errno``."
 
-#: ../../peps/pep-0008.rst:1210
+#: ../../peps/peps/pep-0008.rst:1349
+#, fuzzy
 msgid ""
-"Additionally, for all try/except clauses, limit the ``try`` clause to the"
-" absolute minimum amount of code necessary.  Again, this avoids masking "
-"bugs::"
+"Additionally, for all try/except clauses, limit the ``try`` clause to the "
+"absolute minimum amount of code necessary.  Again, this avoids masking bugs:"
 msgstr ""
-"Além disso, para todas as cláusulas try/except, limite a cláusula ``try``"
-" ao mínimo absoluto de código necessário. Novamente, isso evita mascarar "
-"bugs::"
+"Além disso, para todas as cláusulas try/except, limite a cláusula ``try`` ao "
+"mínimo absoluto de código necessário. Novamente, isso evita mascarar bugs::"
 
-#: ../../peps/pep-0008.rst:1232
+#: ../../peps/peps/pep-0008.rst:1375
 msgid ""
 "When a resource is local to a particular section of code, use a ``with`` "
-"statement to ensure it is cleaned up promptly and reliably after use. A "
-"try/finally statement is also acceptable."
+"statement to ensure it is cleaned up promptly and reliably after use. A try/"
+"finally statement is also acceptable."
 msgstr ""
 "Quando um recurso é local para uma determinada seção de código, use uma "
-"instrução ``with`` para garantir que ele seja limpo prontamente e de "
-"forma confiável após o uso. Uma instrução try/finally também é aceitável."
+"instrução ``with`` para garantir que ele seja limpo prontamente e de forma "
+"confiável após o uso. Uma instrução try/finally também é aceitável."
 
-#: ../../peps/pep-0008.rst:1236
+#: ../../peps/peps/pep-0008.rst:1379
+#, fuzzy
 msgid ""
 "Context managers should be invoked through separate functions or methods "
-"whenever they do something other than acquire and release resources::"
+"whenever they do something other than acquire and release resources:"
 msgstr ""
 "Os gerenciadores de contexto devem ser chamados por meio de funções ou "
-"métodos separados sempre que fizerem algo diferente de adquirir e liberar"
-" recursos::"
+"métodos separados sempre que fizerem algo diferente de adquirir e liberar "
+"recursos::"
 
-#: ../../peps/pep-0008.rst:1249
+#: ../../peps/peps/pep-0008.rst:1396
 msgid ""
 "The latter example doesn't provide any information to indicate that the "
 "``__enter__`` and ``__exit__`` methods are doing something other than "
-"closing the connection after a transaction.  Being explicit is important "
-"in this case."
+"closing the connection after a transaction.  Being explicit is important in "
+"this case."
 msgstr ""
-"O último exemplo não fornece nenhuma informação para indicar que os "
-"métodos ``__enter__`` e ``__exit__`` estão fazendo algo diferente de "
-"fechar a conexão após uma transação. Ser explícito é importante neste "
-"caso."
+"O último exemplo não fornece nenhuma informação para indicar que os métodos "
+"``__enter__`` e ``__exit__`` estão fazendo algo diferente de fechar a "
+"conexão após uma transação. Ser explícito é importante neste caso."
 
-#: ../../peps/pep-0008.rst:1254
+#: ../../peps/peps/pep-0008.rst:1401
+#, fuzzy
 msgid ""
 "Be consistent in return statements.  Either all return statements in a "
-"function should return an expression, or none of them should.  If any "
-"return statement returns an expression, any return statements where no "
-"value is returned should explicitly state this as ``return None``, and an"
-" explicit return statement should be present at the end of the function "
-"(if reachable)::"
+"function should return an expression, or none of them should.  If any return "
+"statement returns an expression, any return statements where no value is "
+"returned should explicitly state this as ``return None``, and an explicit "
+"return statement should be present at the end of the function (if reachable):"
 msgstr ""
-"Seja consistente nas instruções de retorno. Todas as instruções de "
-"retorno em uma função devem retornar uma expressão ou nenhuma delas deve."
-" Se qualquer instrução de retorno retornar uma expressão, qualquer "
-"instrução de retorno em que nenhum valor é retornado deve declarar isso "
-"explicitamente como ``return None``, e uma instrução de retorno explícita"
-" deve estar presente no final da função (se acessível)::"
+"Seja consistente nas instruções de retorno. Todas as instruções de retorno "
+"em uma função devem retornar uma expressão ou nenhuma delas deve. Se "
+"qualquer instrução de retorno retornar uma expressão, qualquer instrução de "
+"retorno em que nenhum valor é retornado deve declarar isso explicitamente "
+"como ``return None``, e uma instrução de retorno explícita deve estar "
+"presente no final da função (se acessível)::"
 
-#: ../../peps/pep-0008.rst:1287
+#: ../../peps/peps/pep-0008.rst:1438
 msgid ""
-"Use ``''.startswith()`` and ``''.endswith()`` instead of string slicing "
-"to check for prefixes or suffixes."
+"Use ``''.startswith()`` and ``''.endswith()`` instead of string slicing to "
+"check for prefixes or suffixes."
 msgstr ""
-"Use ``''.startswith()`` e ``''.endswith()`` ao invés de fatiar strings "
-"para verificar por prefixos ou sufixos."
+"Use ``''.startswith()`` e ``''.endswith()`` ao invés de fatiar strings para "
+"verificar por prefixos ou sufixos."
 
-#: ../../peps/pep-0008.rst:1290
-msgid "startswith() and endswith() are cleaner and less error prone::"
+#: ../../peps/peps/pep-0008.rst:1441
+#, fuzzy
+msgid "startswith() and endswith() are cleaner and less error prone:"
 msgstr "startswith() e endswith() são mais limpos e menos propensos a erros::"
 
-#: ../../peps/pep-0008.rst:1300
+#: ../../peps/peps/pep-0008.rst:1455
+#, fuzzy
 msgid ""
-"Object type comparisons should always use isinstance() instead of "
-"comparing types directly::"
+"Object type comparisons should always use isinstance() instead of comparing "
+"types directly:"
 msgstr ""
-"As comparações de tipo de objeto sempre devem usar isinstance() em vez de"
-" comparar tipos diretamente::"
+"As comparações de tipo de objeto sempre devem usar isinstance() em vez de "
+"comparar tipos diretamente::"
 
-#: ../../peps/pep-0008.rst:1311
+#: ../../peps/peps/pep-0008.rst:1470
+#, fuzzy
 msgid ""
-"For sequences, (strings, lists, tuples), use the fact that empty "
-"sequences are false::"
+"For sequences, (strings, lists, tuples), use the fact that empty sequences "
+"are false:"
 msgstr ""
 "Para sequências (strings, listas, tuplas), use o fato de que sequências "
 "vazias são falsas::"
 
-#: ../../peps/pep-0008.rst:1324
+#: ../../peps/peps/pep-0008.rst:1487
 msgid ""
-"Don't write string literals that rely on significant trailing whitespace."
-"  Such trailing whitespace is visually indistinguishable and some editors"
-" (or more recently, reindent.py) will trim them."
+"Don't write string literals that rely on significant trailing whitespace.  "
+"Such trailing whitespace is visually indistinguishable and some editors (or "
+"more recently, reindent.py) will trim them."
 msgstr ""
 "Não escreva strings literais que dependem de espaços em branco "
-"significativos à direita. Esses espaços em branco à direita são "
-"visualmente indistinguíveis e alguns editores (ou mais recentemente, "
-"reindent.py) os aparam."
+"significativos à direita. Esses espaços em branco à direita são visualmente "
+"indistinguíveis e alguns editores (ou mais recentemente, reindent.py) os "
+"aparam."
 
-#: ../../peps/pep-0008.rst:1328
-msgid "Don't compare boolean values to True or False using ``==``::"
+#: ../../peps/peps/pep-0008.rst:1491
+#, fuzzy
+msgid "Don't compare boolean values to True or False using ``==``:"
 msgstr "Não compare valores booleanos com True ou False usando ``==``::"
 
-#: ../../peps/pep-0008.rst:1338
-msgid "Worse::"
+#: ../../peps/peps/pep-0008.rst:1505
+#, fuzzy
+msgid "Worse:"
 msgstr "Pior::"
 
-#: ../../peps/pep-0008.rst:1343
+#: ../../peps/peps/pep-0008.rst:1513
+#, fuzzy
 msgid ""
-"Use of the flow control statements ``return``/``break``/``continue`` "
-"within the finally suite of a ``try...finally``, where the flow control "
-"statement would jump outside the finally suite, is discouraged.  This is "
-"because such statements will implicitly cancel any active exception that "
-"is propagating through the finally suite::"
+"Use of the flow control statements ``return``/``break``/``continue`` within "
+"the finally suite of a ``try...finally``, where the flow control statement "
+"would jump outside the finally suite, is discouraged.  This is because such "
+"statements will implicitly cancel any active exception that is propagating "
+"through the finally suite:"
 msgstr ""
-"Uso das instruções de controle de fluxo ``return``/``break``/``continue``"
-" dentro do pacote final de um ``try...finally``, onde a instrução de "
-"controle de fluxo pularia para fora do pacote final , é desencorajado. "
-"Isso ocorre porque essas instruções cancelarão implicitamente qualquer "
-"exceção ativa que esteja se propagando por meio do conjunto finally::"
+"Uso das instruções de controle de fluxo ``return``/``break``/``continue`` "
+"dentro do pacote final de um ``try...finally``, onde a instrução de controle "
+"de fluxo pularia para fora do pacote final , é desencorajado. Isso ocorre "
+"porque essas instruções cancelarão implicitamente qualquer exceção ativa que "
+"esteja se propagando por meio do conjunto finally::"
 
-#: ../../peps/pep-0008.rst:1357
+#: ../../peps/peps/pep-0008.rst:1530
 msgid "Function Annotations"
 msgstr "Anotações de funções"
 
-#: ../../peps/pep-0008.rst:1359
+#: ../../peps/peps/pep-0008.rst:1532
 msgid ""
-"With the acceptance of :pep:`484`, the style rules for function "
-"annotations have changed."
+"With the acceptance of :pep:`484`, the style rules for function annotations "
+"have changed."
 msgstr ""
-"Com a aceitação de :pep:`484`, as regras de estilo para anotações de "
-"funções mudaram."
+"Com a aceitação de :pep:`484`, as regras de estilo para anotações de funções "
+"mudaram."
 
-#: ../../peps/pep-0008.rst:1362
+#: ../../peps/peps/pep-0008.rst:1535
 msgid ""
-"Function annotations should use :pep:`484` syntax (there are some "
-"formatting recommendations for annotations in the previous section)."
+"Function annotations should use :pep:`484` syntax (there are some formatting "
+"recommendations for annotations in the previous section)."
 msgstr ""
 "As anotações de função devem usar a sintaxe :pep:`484` (existem algumas "
 "recomendações de formatação para anotações na seção anterior)."
 
-#: ../../peps/pep-0008.rst:1365
+#: ../../peps/peps/pep-0008.rst:1538
 msgid ""
-"The experimentation with annotation styles that was recommended "
-"previously in this PEP is no longer encouraged."
+"The experimentation with annotation styles that was recommended previously "
+"in this PEP is no longer encouraged."
 msgstr ""
-"A experimentação com estilos de anotação que era recomendada "
-"anteriormente nesta PEP não é mais encorajada."
+"A experimentação com estilos de anotação que era recomendada anteriormente "
+"nesta PEP não é mais encorajada."
 
-#: ../../peps/pep-0008.rst:1368
+#: ../../peps/peps/pep-0008.rst:1541
 msgid ""
-"However, outside the stdlib, experiments within the rules of :pep:`484` "
-"are now encouraged.  For example, marking up a large third party library "
-"or application with :pep:`484` style type annotations, reviewing how easy"
-" it was to add those annotations, and observing whether their presence "
-"increases code understandability."
+"However, outside the stdlib, experiments within the rules of :pep:`484` are "
+"now encouraged.  For example, marking up a large third party library or "
+"application with :pep:`484` style type annotations, reviewing how easy it "
+"was to add those annotations, and observing whether their presence increases "
+"code understandability."
 msgstr ""
 "No entanto, fora da stdlib, experimentos dentro das regras da :pep:`484` "
 "agora são encorajados. Por exemplo, marcar uma grande biblioteca ou "
-"aplicação de terceiros com anotações de tipo de estilo :pep:`484`, "
-"revisar como foi fácil adicionar essas anotações e observar se sua "
-"presença aumenta a compreensão do código."
+"aplicação de terceiros com anotações de tipo de estilo :pep:`484`, revisar "
+"como foi fácil adicionar essas anotações e observar se sua presença aumenta "
+"a compreensão do código."
 
-#: ../../peps/pep-0008.rst:1374
+#: ../../peps/peps/pep-0008.rst:1547
 msgid ""
 "The Python standard library should be conservative in adopting such "
-"annotations, but their use is allowed for new code and for big "
-"refactorings."
+"annotations, but their use is allowed for new code and for big refactorings."
 msgstr ""
 "A biblioteca padrão do Python deve ser conservadora ao adotar tais "
 "anotações, mas seu uso é permitido para novos códigos e para grandes "
 "refatorações."
 
-#: ../../peps/pep-0008.rst:1378
+#: ../../peps/peps/pep-0008.rst:1551
+#, fuzzy
 msgid ""
-"For code that wants to make a different use of function annotations it is"
-" recommended to put a comment of the form::"
+"For code that wants to make a different use of function annotations it is "
+"recommended to put a comment of the form:"
 msgstr ""
-"Para o código que deseja fazer um uso diferente das anotações de função, "
-"é recomendável colocar um comentário na forma::"
+"Para o código que deseja fazer um uso diferente das anotações de função, é "
+"recomendável colocar um comentário na forma::"
 
-#: ../../peps/pep-0008.rst:1383
+#: ../../peps/peps/pep-0008.rst:1559
 msgid ""
 "near the top of the file; this tells type checkers to ignore all "
 "annotations.  (More fine-grained ways of disabling complaints from type "
 "checkers can be found in :pep:`484`.)"
 msgstr ""
-"próximo ao topo do arquivo; isso diz aos verificadores de tipo para "
-"ignorar todas as anotações. (Maneiras mais refinadas de desabilitar "
-"reclamações de verificadores de tipo podem ser encontradas na "
-":pep:`484`.)"
+"próximo ao topo do arquivo; isso diz aos verificadores de tipo para ignorar "
+"todas as anotações. (Maneiras mais refinadas de desabilitar reclamações de "
+"verificadores de tipo podem ser encontradas na :pep:`484`.)"
 
-#: ../../peps/pep-0008.rst:1387
+#: ../../peps/peps/pep-0008.rst:1563
 msgid ""
 "Like linters, type checkers are optional, separate tools.  Python "
-"interpreters by default should not issue any messages due to type "
-"checking and should not alter their behavior based on annotations."
+"interpreters by default should not issue any messages due to type checking "
+"and should not alter their behavior based on annotations."
 msgstr ""
-"Assim como os linters, os verificadores de tipo são ferramentas opcionais"
-" e separadas. Os interpretadores Python, por padrão, não devem emitir "
-"nenhuma mensagem devido à verificação de tipo e não devem alterar seu "
-"comportamento com base em anotações."
+"Assim como os linters, os verificadores de tipo são ferramentas opcionais e "
+"separadas. Os interpretadores Python, por padrão, não devem emitir nenhuma "
+"mensagem devido à verificação de tipo e não devem alterar seu comportamento "
+"com base em anotações."
 
-#: ../../peps/pep-0008.rst:1391
+#: ../../peps/peps/pep-0008.rst:1567
 msgid ""
-"Users who don't want to use type checkers are free to ignore them. "
-"However, it is expected that users of third party library packages may "
-"want to run type checkers over those packages.  For this purpose "
-":pep:`484` recommends the use of stub files: .pyi files that are read by "
-"the type checker in preference of the corresponding .py files. Stub files"
-" can be distributed with a library, or separately (with the library "
-"author's permission) through the typeshed repo [5]_."
+"Users who don't want to use type checkers are free to ignore them. However, "
+"it is expected that users of third party library packages may want to run "
+"type checkers over those packages.  For this purpose :pep:`484` recommends "
+"the use of stub files: .pyi files that are read by the type checker in "
+"preference of the corresponding .py files. Stub files can be distributed "
+"with a library, or separately (with the library author's permission) through "
+"the typeshed repo [5]_."
 msgstr ""
-"Os usuários que não desejam usar verificadores de tipo podem ignorá-los. "
-"No entanto, espera-se que os usuários de pacotes de bibliotecas de "
-"terceiros possam querer executar verificadores de tipo nesses pacotes. "
-"Para este propósito, a :pep:`484` recomenda o uso de arquivos stub: "
-"arquivos .pyi que são lidos pelo verificador de tipos em preferência aos "
-"arquivos .py correspondentes. Arquivos stub podem ser distribuídos com "
-"uma biblioteca ou separadamente (com a permissão do autor da biblioteca) "
-"através do repositório typeshed [5]_."
+"Os usuários que não desejam usar verificadores de tipo podem ignorá-los. No "
+"entanto, espera-se que os usuários de pacotes de bibliotecas de terceiros "
+"possam querer executar verificadores de tipo nesses pacotes. Para este "
+"propósito, a :pep:`484` recomenda o uso de arquivos stub: arquivos .pyi que "
+"são lidos pelo verificador de tipos em preferência aos arquivos .py "
+"correspondentes. Arquivos stub podem ser distribuídos com uma biblioteca ou "
+"separadamente (com a permissão do autor da biblioteca) através do "
+"repositório typeshed [5]_."
 
-#: ../../peps/pep-0008.rst:1401
+#: ../../peps/peps/pep-0008.rst:1577
 msgid "Variable Annotations"
 msgstr "Anotações de variáveis"
 
-#: ../../peps/pep-0008.rst:1403
+#: ../../peps/peps/pep-0008.rst:1579
 msgid ""
-":pep:`526` introduced variable annotations. The style recommendations for"
-" them are similar to those on function annotations described above:"
+":pep:`526` introduced variable annotations. The style recommendations for "
+"them are similar to those on function annotations described above:"
 msgstr ""
 ":pep:`526` introduziu anotações de variáveis. As recomendações de estilo "
 "para eles são semelhantes às das anotações de função descritas acima:"
 
-#: ../../peps/pep-0008.rst:1406
+#: ../../peps/peps/pep-0008.rst:1582
 msgid ""
-"Annotations for module level variables, class and instance variables, and"
-" local variables should have a single space after the colon."
+"Annotations for module level variables, class and instance variables, and "
+"local variables should have a single space after the colon."
 msgstr ""
-"Anotações para variáveis de nível de módulo, variáveis de classe e "
-"instância e variáveis locais devem ter um único espaço após os dois "
-"pontos."
+"Anotações para variáveis de nível de módulo, variáveis de classe e instância "
+"e variáveis locais devem ter um único espaço após os dois pontos."
 
-#: ../../peps/pep-0008.rst:1409
+#: ../../peps/peps/pep-0008.rst:1585
 msgid "There should be no space before the colon."
 msgstr "Não deve haver espaço antes dos dois pontos."
 
-#: ../../peps/pep-0008.rst:1411
+#: ../../peps/peps/pep-0008.rst:1587
+#, fuzzy
 msgid ""
-"If an assignment has a right hand side, then the equality sign should "
-"have exactly one space on both sides::"
+"If an assignment has a right hand side, then the equality sign should have "
+"exactly one space on both sides:"
 msgstr ""
 "Se uma atribuição tiver um lado direito, o sinal de igualdade deve ter "
 "exatamente um espaço em ambos os lados::"
 
-#: ../../peps/pep-0008.rst:1432
+#: ../../peps/peps/pep-0008.rst:1612
 msgid ""
-"Although the :pep:`526` is accepted for Python 3.6, the variable "
-"annotation syntax is the preferred syntax for stub files on all versions "
-"of Python (see :pep:`484` for details)."
+"Although the :pep:`526` is accepted for Python 3.6, the variable annotation "
+"syntax is the preferred syntax for stub files on all versions of Python "
+"(see :pep:`484` for details)."
 msgstr ""
-"Embora a :pep:`526` seja aceita para Python 3.6, a sintaxe de anotação de"
-" variáveis é a sintaxe preferida para arquivos stub em todas as versões "
-"do Python (consulte a :pep:`484` para obter detalhes)."
+"Embora a :pep:`526` seja aceita para Python 3.6, a sintaxe de anotação de "
+"variáveis é a sintaxe preferida para arquivos stub em todas as versões do "
+"Python (consulte a :pep:`484` para obter detalhes)."
 
-#: ../../peps/pep-0008.rst:1437
+#: ../../peps/peps/pep-0008.rst:1617
 msgid "Footnotes"
 msgstr "Notas de rodapé"
 
-#: ../../peps/pep-0008.rst:1438
+#: ../../peps/peps/pep-0008.rst:1618
 msgid ""
 "*Hanging indentation* is a type-setting style where all the lines in a "
-"paragraph are indented except the first line.  In the context of Python, "
-"the term is used to describe a style where the opening parenthesis of a "
-"parenthesized statement is the last non-whitespace character of the line,"
-" with subsequent lines being indented until the closing parenthesis."
+"paragraph are indented except the first line.  In the context of Python, the "
+"term is used to describe a style where the opening parenthesis of a "
+"parenthesized statement is the last non-whitespace character of the line, "
+"with subsequent lines being indented until the closing parenthesis."
 msgstr ""
-"*Recuo suspenso* é um estilo de configuração de tipo em que todas as "
-"linhas de um parágrafo são recuadas, exceto a primeira linha. No contexto"
-" do Python, o termo é usado para descrever um estilo em que o parêntese "
-"de abertura de uma instrução entre parênteses é o último caractere sem "
-"espaço em branco da linha, com as linhas subsequentes sendo recuadas até "
-"o parêntese de fechamento."
+"*Recuo suspenso* é um estilo de configuração de tipo em que todas as linhas "
+"de um parágrafo são recuadas, exceto a primeira linha. No contexto do "
+"Python, o termo é usado para descrever um estilo em que o parêntese de "
+"abertura de uma instrução entre parênteses é o último caractere sem espaço "
+"em branco da linha, com as linhas subsequentes sendo recuadas até o "
+"parêntese de fechamento."
 
-#: ../../peps/pep-0008.rst:1447
+#: ../../peps/peps/pep-0008.rst:1627
 msgid "References"
 msgstr "Referências"
 
-#: ../../peps/pep-0008.rst:1449
+#: ../../peps/peps/pep-0008.rst:1629
 msgid ""
-"Barry's GNU Mailman style guide "
-"http://barry.warsaw.us/software/STYLEGUIDE.txt"
+"Barry's GNU Mailman style guide http://barry.warsaw.us/software/STYLEGUIDE."
+"txt"
 msgstr ""
-"O guia de estilo do GNU Mailman do Barry "
-"http://barry.warsaw.us/software/STYLEGUIDE.txt"
+"O guia de estilo do GNU Mailman do Barry http://barry.warsaw.us/software/"
+"STYLEGUIDE.txt"
 
-#: ../../peps/pep-0008.rst:1452
+#: ../../peps/peps/pep-0008.rst:1632
 msgid "Donald Knuth's *The TeXBook*, pages 195 and 196."
 msgstr "*The TeXBook* do Donald Knuth, páginas 195 e 196."
 
-#: ../../peps/pep-0008.rst:1454
+#: ../../peps/peps/pep-0008.rst:1634
 msgid "http://www.wikipedia.com/wiki/CamelCase"
 msgstr "http://www.wikipedia.com/wiki/CamelCase"
 
-#: ../../peps/pep-0008.rst:1456
+#: ../../peps/peps/pep-0008.rst:1636
 msgid "Typeshed repo https://github.com/python/typeshed"
 msgstr "Repositório do typeshed https://github.com/python/typeshed"
 
-#: ../../peps/pep-0008.rst:1462
+#: ../../peps/peps/pep-0008.rst:1642
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../../peps/pep-0008.rst:1464
+#: ../../peps/peps/pep-0008.rst:1644
 msgid "This document has been placed in the public domain."
 msgstr "Este documento foi colocado em domínio público."
-

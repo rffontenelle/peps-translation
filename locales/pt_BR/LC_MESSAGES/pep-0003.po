@@ -6,80 +6,74 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PEPs\n"
+"Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 20:07+0000\n"
+"POT-Creation-Date: 2024-07-14 02:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.15.0\n"
 
-#: ../pep-0003.txt
+#: ../../peps/peps/pep-0003.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../pep-0003.txt:3
+#: ../../peps/peps/pep-0003.rst:3
 msgid "Jeremy Hylton <jeremy@alum.mit.edu>"
 msgstr ""
 
-#: ../pep-0003.txt
+#: ../../peps/peps/pep-0003.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../pep-0003.txt:4
+#: ../../peps/peps/pep-0003.rst:4
 msgid "Withdrawn"
 msgstr ""
 
-#: ../pep-0003.txt
+#: ../../peps/peps/pep-0003.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../pep-0003.txt:5
+#: ../../peps/peps/pep-0003.rst:5
 msgid "Process"
 msgstr "Processo"
 
-#: ../pep-0003.txt
+#: ../../peps/peps/pep-0003.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../pep-0003.txt:7
+#: ../../peps/peps/pep-0003.rst:6
 msgid "25-Sep-2000"
 msgstr ""
 
-#: ../pep-0003.txt
+#: ../../peps/peps/pep-0003.rst
 msgid "Post-History"
 msgstr "Pós-história"
 
-#: ../pep-0003.txt:12
-msgid "Introduction"
-msgstr "Introdução"
-
-#: ../pep-0003.txt:14
+#: ../../peps/peps/pep-0003.rst:11
 msgid ""
 "This PEP contained guidelines for handling bug reports in the Python bug "
-"tracker.  It has been replaced by the Developer's Guide description of issue "
-"triaging at"
+"tracker.  It has been replaced by the `Developer's Guide description of "
+"issue triaging <https://devguide.python.org/triage/triaging/index.html>`_. "
+"Guidelines for people submitting Python bugs are `in the Python docs <http://"
+"docs.python.org/bugs.html>`__."
 msgstr ""
 
-#: ../pep-0003.txt:22
-msgid "Guidelines for people submitting Python bugs are at"
-msgstr ""
-
-#: ../pep-0003.txt:29
+#: ../../peps/peps/pep-0003.rst:19
 msgid "Original Guidelines"
 msgstr ""
 
-#: ../pep-0003.txt:31
+#: ../../peps/peps/pep-0003.rst:21
 msgid ""
 "Make sure the bug category and bug group are correct.  If they are correct, "
 "it is easier for someone interested in helping to find out, say, what all "
 "the open Tkinter bugs are."
 msgstr ""
 
-#: ../pep-0003.txt:35
+#: ../../peps/peps/pep-0003.rst:25
 msgid ""
 "If it's a minor feature request that you don't plan to address right away, "
 "add it to :pep:`42` or ask the owner to add it for you. If you add the bug "
@@ -88,14 +82,14 @@ msgid ""
 "(mentioning the PEP explicitly)."
 msgstr ""
 
-#: ../pep-0003.txt:45
+#: ../../peps/peps/pep-0003.rst:35
 msgid ""
 "Assign the bug a reasonable priority.  We don't yet have a clear sense of "
 "what each priority should mean.  One rule, however, is that bugs with "
 "priority \"urgent\" or higher must be fixed before the next release."
 msgstr ""
 
-#: ../pep-0003.txt:50
+#: ../../peps/peps/pep-0003.rst:40
 msgid ""
 "If a bug report doesn't have enough information to allow you to reproduce or "
 "diagnose it, ask the original submitter for more information.  If the "
@@ -103,7 +97,7 @@ msgid ""
 "reasonable waiting period, you can close the bug."
 msgstr ""
 
-#: ../pep-0003.txt:56
+#: ../../peps/peps/pep-0003.rst:46
 msgid ""
 "If you fix a bug, mark the status as \"Fixed\" and close it.  In the "
 "comments, include the SVN revision numbers of the commit(s). In the SVN "
@@ -111,17 +105,20 @@ msgid ""
 "the change, mentioning the contributor if a patch was applied."
 msgstr ""
 
-#: ../pep-0003.txt:62
+#: ../../peps/peps/pep-0003.rst:52
 msgid ""
 "If you are assigned a bug that you are unable to deal with, assign it to "
 "someone else if you think they will be able to deal with it, otherwise it's "
 "probably best to unassign it."
 msgstr ""
 
-#: ../pep-0003.txt:68
+#: ../../peps/peps/pep-0003.rst:58
 msgid "References"
 msgstr "Referências"
 
-#: ../pep-0003.txt:70
+#: ../../peps/peps/pep-0003.rst:60
 msgid "https://bugs.python.org"
 msgstr ""
+
+#~ msgid "Introduction"
+#~ msgstr "Introdução"

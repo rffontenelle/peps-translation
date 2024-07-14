@@ -8,528 +8,430 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-20 10:43-0300\n"
+"POT-Creation-Date: 2024-07-14 02:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.13.1\n"
+"Generated-By: Babel 2.15.0\n"
 
-#: ../../peps/pep-0667.rst
+#: ../../peps/peps/pep-0667.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../../peps/pep-0667.rst:3
-msgid "Mark Shannon <mark@hotpy.org>"
+#: ../../peps/peps/pep-0667.rst:3
+msgid "Mark Shannon <mark@hotpy.org>, Tian Gao <gaogaotiantian@hotmail.com>"
 msgstr ""
 
-#: ../../peps/pep-0667.rst
+#: ../../peps/peps/pep-0667.rst
+msgid "Discussions-To"
+msgstr ""
+
+#: ../../peps/peps/pep-0667.rst:5
+msgid "https://discuss.python.org/t/46631"
+msgstr ""
+
+#: ../../peps/peps/pep-0667.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../../peps/pep-0667.rst:4
-msgid "Draft"
-msgstr ""
+#: ../../peps/peps/pep-0667.rst:6
+#, fuzzy
+msgid "Accepted"
+msgstr "Criada em"
 
-#: ../../peps/pep-0667.rst
+#: ../../peps/peps/pep-0667.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../../peps/pep-0667.rst:5
+#: ../../peps/peps/pep-0667.rst:7
 msgid "Standards Track"
 msgstr ""
 
-#: ../../peps/pep-0667.rst
+#: ../../peps/peps/pep-0667.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../../peps/pep-0667.rst:7
+#: ../../peps/peps/pep-0667.rst:8
 msgid "30-Jul-2021"
 msgstr ""
 
-#: ../../peps/pep-0667.rst
+#: ../../peps/peps/pep-0667.rst
 msgid "Python-Version"
 msgstr ""
 
-#: ../../peps/pep-0667.rst:8
+#: ../../peps/peps/pep-0667.rst:9
 msgid "3.13"
 msgstr ""
 
-#: ../../peps/pep-0667.rst
+#: ../../peps/peps/pep-0667.rst
 msgid "Post-History"
 msgstr "Pós-história"
 
-#: ../../peps/pep-0667.rst:9
+#: ../../peps/peps/pep-0667.rst:10
 msgid "20-Aug-2021"
 msgstr ""
 
-#: ../../peps/pep-0667.rst:13
+#: ../../peps/peps/pep-0667.rst
+msgid "Resolution"
+msgstr ""
+
+#: ../../peps/peps/pep-0667.rst:11
+msgid ""
+"https://discuss.python.org/t/pep-667-consistent-views-of-namespaces/46631/25"
+msgstr ""
+
+#: ../../peps/peps/pep-0667.rst:15
 msgid "Abstract"
 msgstr ""
 
-#: ../../peps/pep-0667.rst:15
+#: ../../peps/peps/pep-0667.rst:17
 msgid ""
-"In early versions of Python all namespaces, whether in functions, classes"
-" or modules, were all implemented the same way: as a dictionary."
+"In early versions of Python all namespaces, whether in functions, classes or "
+"modules, were all implemented the same way: as a dictionary."
 msgstr ""
 
-#: ../../peps/pep-0667.rst:18
+#: ../../peps/peps/pep-0667.rst:20
 msgid ""
 "For performance reasons, the implementation of function namespaces was "
-"changed. Unfortunately this meant that accessing these namespaces through"
-" ``locals()`` and ``frame.f_locals`` ceased to be consistent and some odd"
-" bugs crept in over the years as threads, generators and coroutines were "
+"changed. Unfortunately this meant that accessing these namespaces through "
+"``locals()`` and ``frame.f_locals`` ceased to be consistent and some odd "
+"bugs crept in over the years as threads, generators and coroutines were "
 "added."
 msgstr ""
 
-#: ../../peps/pep-0667.rst:24
+#: ../../peps/peps/pep-0667.rst:26
 msgid ""
 "This PEP proposes making these namespaces consistent once more. "
-"Modifications to ``frame.f_locals`` will always be visible in the "
-"underlying variables. Modifications to local variables will immediately "
-"be visible in ``frame.f_locals``, and they will be consistent regardless "
-"of threading or coroutines."
+"Modifications to ``frame.f_locals`` will always be visible in the underlying "
+"variables. Modifications to local variables will immediately be visible in "
+"``frame.f_locals``, and they will be consistent regardless of threading or "
+"coroutines."
 msgstr ""
 
-#: ../../peps/pep-0667.rst:30
+#: ../../peps/peps/pep-0667.rst:32
 msgid ""
 "The ``locals()`` function will act the same as it does now for class and "
-"modules scopes. For function scopes it will return an instantaneous "
-"snapshot of the underlying ``frame.f_locals``."
+"modules scopes. For function scopes it will return an instantaneous snapshot "
+"of the underlying ``frame.f_locals``."
 msgstr ""
 
-#: ../../peps/pep-0667.rst:35
+#: ../../peps/peps/pep-0667.rst:37
 msgid "Motivation"
 msgstr ""
 
-#: ../../peps/pep-0667.rst:37
+#: ../../peps/peps/pep-0667.rst:39
 msgid ""
-"The current implementation of ``locals()`` and ``frame.f_locals`` is "
-"slow, inconsistent and buggy. We want to make it faster, consistent, and "
-"most importantly fix the bugs."
+"The current implementation of ``locals()`` and ``frame.f_locals`` is slow, "
+"inconsistent and buggy. We want to make it faster, consistent, and most "
+"importantly fix the bugs."
 msgstr ""
 
-#: ../../peps/pep-0667.rst:41 ../../peps/pep-0667.rst:107
+#: ../../peps/peps/pep-0667.rst:43 ../../peps/peps/pep-0667.rst:110
 msgid "For example::"
 msgstr ""
 
-#: ../../peps/pep-0667.rst:48
+#: ../../peps/peps/pep-0667.rst:50
 msgid "prints ``2``"
 msgstr ""
 
-#: ../../peps/pep-0667.rst:50
+#: ../../peps/peps/pep-0667.rst:52
 msgid "but::"
 msgstr ""
 
-#: ../../peps/pep-0667.rst:58
+#: ../../peps/peps/pep-0667.rst:60
 msgid "prints ``1``"
 msgstr ""
 
-#: ../../peps/pep-0667.rst:60
+#: ../../peps/peps/pep-0667.rst:62
 msgid ""
-"This is inconsistent, and confusing. With this PEP both examples would "
-"print ``2``."
+"This is inconsistent, and confusing. With this PEP both examples would print "
+"``2``."
 msgstr ""
 
-#: ../../peps/pep-0667.rst:63
-msgid "Worse than that, the current behavior can result in strange bugs [1]_"
+#: ../../peps/peps/pep-0667.rst:65
+msgid ""
+"Worse than that, the current behavior can result in strange `bugs <https://"
+"github.com/python/cpython/issues/74929>`__."
 msgstr ""
 
-#: ../../peps/pep-0667.rst:65
+#: ../../peps/peps/pep-0667.rst:68
 msgid ""
 "There are no compensating advantages for the current behavior; it is "
 "unreliable and slow."
 msgstr ""
 
-#: ../../peps/pep-0667.rst:69
+#: ../../peps/peps/pep-0667.rst:72
 msgid "Rationale"
 msgstr ""
 
-#: ../../peps/pep-0667.rst:71
+#: ../../peps/peps/pep-0667.rst:74
 msgid ""
-"The current implementation of ``frame.f_locals`` returns a dictionary "
-"that is created on the fly from the array of local variables. This can "
-"result in the array and dictionary getting out of sync with each other. "
-"Writes to the ``f_locals`` may not show up as modifications to local "
-"variables. Writes to local variables can get lost."
+"The current implementation of ``frame.f_locals`` returns a dictionary that "
+"is created on the fly from the array of local variables. This can result in "
+"the array and dictionary getting out of sync with each other. Writes to the "
+"``f_locals`` may not show up as modifications to local variables. Writes to "
+"local variables can get lost."
 msgstr ""
 
-#: ../../peps/pep-0667.rst:77
+#: ../../peps/peps/pep-0667.rst:80
 msgid ""
-"By making ``frame.f_locals`` return a view on the underlying frame, these"
-" problems go away. ``frame.f_locals`` is always in sync with the frame "
+"By making ``frame.f_locals`` return a view on the underlying frame, these "
+"problems go away. ``frame.f_locals`` is always in sync with the frame "
 "because it is a view of it, not a copy of it."
 msgstr ""
 
-#: ../../peps/pep-0667.rst:82
+#: ../../peps/peps/pep-0667.rst:85
 msgid "Specification"
 msgstr ""
 
-#: ../../peps/pep-0667.rst:85 ../../peps/pep-0667.rst:197
+#: ../../peps/peps/pep-0667.rst:88 ../../peps/peps/pep-0667.rst:195
 msgid "Python"
 msgstr ""
 
-#: ../../peps/pep-0667.rst:87
+#: ../../peps/peps/pep-0667.rst:90
 msgid ""
-"``frame.f_locals`` will return a view object on the frame that implements"
-" the ``collections.abc.Mapping`` interface."
+"``frame.f_locals`` will return a view object on the frame that implements "
+"the ``collections.abc.Mapping`` interface."
 msgstr ""
 
-#: ../../peps/pep-0667.rst:90
+#: ../../peps/peps/pep-0667.rst:93
 msgid ""
 "For module and class scopes ``frame.f_locals`` will be a dictionary, for "
 "function scopes it will be a custom class."
 msgstr ""
 
-#: ../../peps/pep-0667.rst:93
+#: ../../peps/peps/pep-0667.rst:96
 msgid "``locals()`` will be defined as::"
 msgstr ""
 
-#: ../../peps/pep-0667.rst:102
+#: ../../peps/peps/pep-0667.rst:105
 msgid ""
-"All writes to the ``f_locals`` mapping will be immediately visible in the"
-" underlying variables. All changes to the underlying variables will be "
-"immediately visible in the mapping. The ``f_locals`` object will be a "
-"full mapping, and can have arbitrary key-value pairs added to it."
+"All writes to the ``f_locals`` mapping will be immediately visible in the "
+"underlying variables. All changes to the underlying variables will be "
+"immediately visible in the mapping. The ``f_locals`` object will be a full "
+"mapping, and can have arbitrary key-value pairs added to it."
 msgstr ""
 
-#: ../../peps/pep-0667.rst:122
+#: ../../peps/peps/pep-0667.rst:125
 msgid "``test()`` will print ``{'x': 2, 'y': 4, 'z': 5} 2``."
 msgstr ""
 
-#: ../../peps/pep-0667.rst:124
+#: ../../peps/peps/pep-0667.rst:127
 msgid ""
-"In Python 3.10, the above will fail with an ``UnboundLocalError``, as the"
-" definition of ``y`` by ``l()['y'] = 4`` is lost."
+"In Python 3.10, the above will fail with an ``UnboundLocalError``, as the "
+"definition of ``y`` by ``l()['y'] = 4`` is lost."
 msgstr ""
 
-#: ../../peps/pep-0667.rst:127
+#: ../../peps/peps/pep-0667.rst:130
 msgid ""
-"If the second-to-last line were changed from ``y`` to ``z``, this would "
-"be a ``NameError``, as it is today. Keys added to ``frame.f_locals`` that"
-" are not lexically local variables remain visible in ``frame.f_locals``, "
-"but do not dynamically become local variables."
+"If the second-to-last line were changed from ``y`` to ``z``, this would be a "
+"``NameError``, as it is today. Keys added to ``frame.f_locals`` that are not "
+"lexically local variables remain visible in ``frame.f_locals``, but do not "
+"dynamically become local variables."
 msgstr ""
 
-#: ../../peps/pep-0667.rst:133 ../../peps/pep-0667.rst:207
+#: ../../peps/peps/pep-0667.rst:136 ../../peps/peps/pep-0667.rst:205
 msgid "C-API"
 msgstr ""
 
-#: ../../peps/pep-0667.rst:136
+#: ../../peps/peps/pep-0667.rst:139
 msgid "Extensions to the API"
 msgstr ""
 
-#: ../../peps/pep-0667.rst:138
-msgid "Four new C-API functions will be added::"
+#: ../../peps/peps/pep-0667.rst:141
+msgid "Three new C-API functions will be added::"
 msgstr ""
 
-#: ../../peps/pep-0667.rst:145
+#: ../../peps/peps/pep-0667.rst:147
 msgid ""
 "``PyEval_GetFrameLocals()`` is equivalent to: ``locals()``. "
 "``PyEval_GetFrameGlobals()`` is equivalent to: ``globals()``."
 msgstr ""
 
-#: ../../peps/pep-0667.rst:148
-msgid "``PyFrame_GetLocals(f)`` is equivalent to: ``f.f_locals``."
-msgstr ""
-
-#: ../../peps/pep-0667.rst:150
+#: ../../peps/peps/pep-0667.rst:150
 msgid "All these functions will return a new reference."
 msgstr ""
 
-#: ../../peps/pep-0667.rst:153
+#: ../../peps/peps/pep-0667.rst:153
 msgid "Changes to existing APIs"
 msgstr ""
 
-#: ../../peps/pep-0667.rst:155
+#: ../../peps/peps/pep-0667.rst:155
 msgid ""
-"The following C-API functions will be deprecated, as they return borrowed"
-" references::"
+"``PyFrame_GetLocals(f)`` is equivalent to ``f.f_locals``, and hence its "
+"return value will change as described above for accessing ``f.f_locals``."
 msgstr ""
 
-#: ../../peps/pep-0667.rst:161 ../../peps/pep-0667.rst:180
-msgid "They will be removed in 3.15."
+#: ../../peps/peps/pep-0667.rst:158
+msgid ""
+"The following C-API functions will be deprecated, as they return borrowed "
+"references::"
 msgstr ""
 
-#: ../../peps/pep-0667.rst:163
+#: ../../peps/peps/pep-0667.rst:164
 msgid "The following functions should be used instead::"
 msgstr ""
 
-#: ../../peps/pep-0667.rst:169
+#: ../../peps/peps/pep-0667.rst:170
 msgid "which return new references."
 msgstr ""
 
-#: ../../peps/pep-0667.rst:171
+#: ../../peps/peps/pep-0667.rst:172
 msgid ""
-"The semantics of ``PyEval_GetLocals()`` is changed as it now returns a "
-"view of the frame locals, not a dictionary."
+"The semantics of ``PyEval_GetLocals()`` is changed as it now returns a proxy "
+"for the frame locals in optimized frames, not a dictionary."
 msgstr ""
 
-#: ../../peps/pep-0667.rst:174
-msgid "The following three functions will become no-ops, and will be deprecated::"
+#: ../../peps/peps/pep-0667.rst:175
+msgid ""
+"The following three functions will become no-ops, and will be deprecated::"
 msgstr ""
 
-#: ../../peps/pep-0667.rst:183
+#: ../../peps/peps/pep-0667.rst:182
 msgid "Behavior of f_locals for optimized functions"
 msgstr ""
 
-#: ../../peps/pep-0667.rst:185
+#: ../../peps/peps/pep-0667.rst:184
 msgid ""
-"Although ``f.f_locals`` behaves as if it were the namespace of the "
-"function, there will be some observable differences. For example, "
-"``f.f_locals is f.f_locals`` may be ``False``."
+"Although ``f.f_locals`` behaves as if it were the namespace of the function, "
+"there will be some observable differences. For example, ``f.f_locals is f."
+"f_locals`` may be ``False``."
 msgstr ""
 
-#: ../../peps/pep-0667.rst:189
+#: ../../peps/peps/pep-0667.rst:188
 msgid ""
-"However ``f.f_locals == f.f_locals`` will be ``True``, and all changes to"
-" the underlying variables, by any means, will be always be visible."
+"However ``f.f_locals == f.f_locals`` will be ``True``, and all changes to "
+"the underlying variables, by any means, will always be visible."
 msgstr ""
 
-#: ../../peps/pep-0667.rst:194
+#: ../../peps/peps/pep-0667.rst:192
 msgid "Backwards Compatibility"
 msgstr ""
 
-#: ../../peps/pep-0667.rst:199
+#: ../../peps/peps/pep-0667.rst:197
 msgid ""
 "The current implementation has many corner cases and oddities. Code that "
-"works around those may need to be changed. Code that uses ``locals()`` "
-"for simple templating, or print debugging, will continue to work "
-"correctly. Debuggers and other tools that use ``f_locals`` to modify "
-"local variables, will now work correctly, even in the presence of "
-"threaded code, coroutines and generators."
+"works around those may need to be changed. Code that uses ``locals()`` for "
+"simple templating, or print debugging, will continue to work correctly. "
+"Debuggers and other tools that use ``f_locals`` to modify local variables, "
+"will now work correctly, even in the presence of threaded code, coroutines "
+"and generators."
 msgstr ""
 
-#: ../../peps/pep-0667.rst:210
+#: ../../peps/peps/pep-0667.rst:208
 msgid "PyEval_GetLocals"
 msgstr ""
 
-#: ../../peps/pep-0667.rst:212
+#: ../../peps/peps/pep-0667.rst:210
 msgid ""
-"Because ``PyEval_GetLocals()`` returns a borrowed reference, it requires "
-"the dictionary to be cached on the frame, extending its lifetime and "
-"creating a cycle. ``PyEval_GetFrameLocals()`` should be used instead."
+"Because ``PyEval_GetLocals()`` returns a borrowed reference, it requires the "
+"proxy mapping to be cached on the frame, extending its lifetime and creating "
+"a cycle. ``PyEval_GetFrameLocals()`` should be used instead."
 msgstr ""
 
-#: ../../peps/pep-0667.rst:216
+#: ../../peps/peps/pep-0667.rst:214
 msgid "This code::"
 msgstr ""
 
-#: ../../peps/pep-0667.rst:224
+#: ../../peps/peps/pep-0667.rst:222
 msgid "should be replaced with::"
 msgstr ""
 
-#: ../../peps/pep-0667.rst:232
-msgid "PyFrame_FastToLocals, etc."
-msgstr ""
-
-#: ../../peps/pep-0667.rst:234
-msgid ""
-"These functions were designed to convert the internal \"fast\" "
-"representation of the locals variables of a function to a dictionary, and"
-" vice versa."
-msgstr ""
-
-#: ../../peps/pep-0667.rst:237
-msgid ""
-"Calls to them are no longer required. C code that directly accesses the "
-"``f_locals`` field of a frame should be modified to call "
-"``PyFrame_GetLocals()`` instead::"
-msgstr ""
-
-#: ../../peps/pep-0667.rst:245
-msgid "becomes::"
-msgstr ""
-
-#: ../../peps/pep-0667.rst:252
+#: ../../peps/peps/pep-0667.rst:230 ../../peps/peps/pep-0667.rst:406
 msgid "Implementation"
 msgstr ""
 
-#: ../../peps/pep-0667.rst:254
+#: ../../peps/peps/pep-0667.rst:232
 msgid ""
-"Each read of ``frame.f_locals`` will create a new proxy object that gives"
-" the appearance of being the mapping of local (including cell and free) "
+"Each read of ``frame.f_locals`` will create a new proxy object that gives "
+"the appearance of being the mapping of local (including cell and free) "
 "variable names to the values of those local variables."
 msgstr ""
 
-#: ../../peps/pep-0667.rst:258
+#: ../../peps/peps/pep-0667.rst:236
 msgid ""
-"A possible implementation is sketched out below. All attributes that "
-"start with an underscore are invisible and cannot be accessed directly. "
-"They serve only to illustrate the proposed design."
+"A possible implementation is sketched out below. All attributes that start "
+"with an underscore are invisible and cannot be accessed directly. They serve "
+"only to illustrate the proposed design."
 msgstr ""
 
-#: ../../peps/pep-0667.rst:381
+#: ../../peps/peps/pep-0667.rst:359
 msgid "C API"
 msgstr ""
 
-#: ../../peps/pep-0667.rst:383
+#: ../../peps/peps/pep-0667.rst:361
 msgid "``PyEval_GetLocals()`` will be implemented roughly as follows::"
 msgstr ""
 
-#: ../../peps/pep-0667.rst:393
+#: ../../peps/peps/pep-0667.rst:371
 msgid ""
-"As with all functions that return a borrowed reference, care must be "
-"taken to ensure that the reference is not used beyond the lifetime of the"
-" object."
+"As with all functions that return a borrowed reference, care must be taken "
+"to ensure that the reference is not used beyond the lifetime of the object."
 msgstr ""
 
-#: ../../peps/pep-0667.rst:397
+#: ../../peps/peps/pep-0667.rst:375
 msgid "Impact on PEP 709 inlined comprehensions"
 msgstr ""
 
-#: ../../peps/pep-0667.rst:399
+#: ../../peps/peps/pep-0667.rst:377
 msgid ""
-"For inlined comprehensions within a function, ``locals()`` currently "
-"behaves the same inside or outside of the comprehension, and this will "
-"not change. The behavior of ``locals()`` inside functions will generally "
-"change as specified in the rest of this PEP."
+"For inlined comprehensions within a function, ``locals()`` currently behaves "
+"the same inside or outside of the comprehension, and this will not change. "
+"The behavior of ``locals()`` inside functions will generally change as "
+"specified in the rest of this PEP."
 msgstr ""
 
-#: ../../peps/pep-0667.rst:404
+#: ../../peps/peps/pep-0667.rst:382
 msgid ""
 "For inlined comprehensions at module or class scope, currently calling "
-"``locals()`` within the inlined comprehension returns a new dictionary "
-"for each call. This PEP will make ``locals()`` within a function also "
-"always return a new dictionary for each call, improving consistency; "
-"class or module scope inlined comprehensions will appear to behave as if "
-"the inlined comprehension is still a distinct function."
+"``locals()`` within the inlined comprehension returns a new dictionary for "
+"each call. This PEP will make ``locals()`` within a function also always "
+"return a new dictionary for each call, improving consistency; class or "
+"module scope inlined comprehensions will appear to behave as if the inlined "
+"comprehension is still a distinct function."
 msgstr ""
 
-#: ../../peps/pep-0667.rst:412
+#: ../../peps/peps/pep-0667.rst:390
 msgid "Comparison with PEP 558"
 msgstr ""
 
-#: ../../peps/pep-0667.rst:414
+#: ../../peps/peps/pep-0667.rst:392
 msgid ""
 "This PEP and :pep:`558` share a common goal: to make the semantics of  "
 "``locals()`` and ``frame.f_locals()`` intelligible, and their operation "
 "reliable."
 msgstr ""
 
-#: ../../peps/pep-0667.rst:419
+#: ../../peps/peps/pep-0667.rst:397
 msgid ""
-"The key difference between this PEP and :pep:`558` is that :pep:`558` "
-"keeps an internal copy of the local variables, whereas this PEP does not."
+"The key difference between this PEP and :pep:`558` is that :pep:`558` keeps "
+"an internal copy of the local variables, whereas this PEP does not."
 msgstr ""
 
-#: ../../peps/pep-0667.rst:423
+#: ../../peps/peps/pep-0667.rst:401
 msgid ""
 ":pep:`558` does not specify exactly when the internal copy is updated, "
 "making the behavior of :pep:`558` impossible to reason about."
 msgstr ""
 
-#: ../../peps/pep-0667.rst:427
-msgid "Open Issues"
-msgstr ""
-
-#: ../../peps/pep-0667.rst:430
-msgid "Have locals() return a mapping proxy"
-msgstr ""
-
-#: ../../peps/pep-0667.rst:432
-msgid "An alternative way to define ``locals()`` would be simply as::"
-msgstr ""
-
-#: ../../peps/pep-0667.rst:437
+#: ../../peps/peps/pep-0667.rst:408
 msgid ""
-"This would be simpler and easier to understand. However, there would be "
-"backwards compatibility issues when ``locals()`` is assigned to a local "
-"variable or passed to ``eval`` or ``exec``."
+"The implementation is in development as a `draft pull request on GitHub "
+"<https://github.com/python/cpython/pull/115153>`__."
 msgstr ""
 
-#: ../../peps/pep-0667.rst:442
-msgid "Lifetime of the mapping proxy"
-msgstr ""
-
-#: ../../peps/pep-0667.rst:444
-msgid ""
-"Each read of the ``f_locals`` attributes creates a new mapping proxy. "
-"This is done to avoid creating a reference cycle."
-msgstr ""
-
-#: ../../peps/pep-0667.rst:447
-msgid ""
-"An alternative would be to cache the proxy on the frame, so that "
-"``frame.f_locals is frame.f_locals`` would be true. The downside of this "
-"is that the reference cycle would delay collection of both the frame and "
-"mapping proxy until the next cycle collection."
-msgstr ""
-
-#: ../../peps/pep-0667.rst:452
-msgid ""
-"``PyEval_GetLocals()`` already creates a cycle, as it returns a borrowed "
-"reference."
-msgstr ""
-
-#: ../../peps/pep-0667.rst:456
-msgid "References"
-msgstr "Referências"
-
-#: ../../peps/pep-0667.rst:458
-msgid "https://bugs.python.org/issue30744"
-msgstr ""
-
-#: ../../peps/pep-0667.rst:461
+#: ../../peps/peps/pep-0667.rst:412
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../../peps/pep-0667.rst:463
+#: ../../peps/peps/pep-0667.rst:414
 msgid ""
-"This document is placed in the public domain or under the "
-"CC0-1.0-Universal license, whichever is more permissive."
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
 msgstr ""
 
-#~ msgid "``test()`` will print ``{'x': 2, 'y': 4, 'z': 5} 2``"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "In Python 3.10, the above will "
-#~ "fail with a ``NameError``, as the "
-#~ "definition of ``y`` by ``l()['y'] = "
-#~ "4`` is lost."
-#~ msgstr ""
-
-#~ msgid "Two new C-API functions will be added::"
-#~ msgstr ""
-
-#~ msgid "``PyEval_Locals()`` is equivalent to: ``locals()``."
-#~ msgstr ""
-
-#~ msgid "Both functions will return a new reference."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The C-API function ``PyEval_GetLocals()`` will"
-#~ " be deprecated. ``PyEval_Locals()`` should "
-#~ "be used instead."
-#~ msgstr ""
-
-#~ msgid "The above four deprecated functions will be removed in 3.13."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Because ``PyEval_GetLocals()`` returns a "
-#~ "borrowed reference, it requires the "
-#~ "dictionary to be cached on the "
-#~ "frame, extending its lifetime and forces"
-#~ " memory to be allocated for the "
-#~ "frame object on the heap as well."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Using ``PyEval_Locals()`` will be much "
-#~ "more efficient than ``PyEval_GetLocals()``."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "This would be simpler and easier "
-#~ "to understand. However, there would be"
-#~ " backwards compatibility issues when "
-#~ "``locals`` is assigned to a local "
-#~ "variable or when passed to ``eval`` "
-#~ "or ``exec``."
-#~ msgstr ""
-
+#~ msgid "References"
+#~ msgstr "Referências"

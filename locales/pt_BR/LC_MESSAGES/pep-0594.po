@@ -8,641 +8,634 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-20 10:43-0300\n"
+"POT-Creation-Date: 2024-07-14 02:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.13.1\n"
+"Generated-By: Babel 2.15.0\n"
 
-#: ../../peps/pep-0594.rst
+#: ../../peps/peps/pep-0594.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../../peps/pep-0594.rst:3
-msgid "Christian Heimes <christian@python.org>, Brett Cannon <brett@python.org>"
+#: ../../peps/peps/pep-0594.rst:3
+msgid ""
+"Christian Heimes <christian@python.org>, Brett Cannon <brett@python.org>"
 msgstr ""
 
-#: ../../peps/pep-0594.rst
+#: ../../peps/peps/pep-0594.rst
 msgid "Discussions-To"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:5
+#: ../../peps/peps/pep-0594.rst:5
 msgid "https://discuss.python.org/t/13508"
 msgstr ""
 
-#: ../../peps/pep-0594.rst
+#: ../../peps/peps/pep-0594.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../../peps/pep-0594.rst:6
+#: ../../peps/peps/pep-0594.rst:6
 msgid "Final"
 msgstr ""
 
-#: ../../peps/pep-0594.rst
+#: ../../peps/peps/pep-0594.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../../peps/pep-0594.rst:7
+#: ../../peps/peps/pep-0594.rst:7
 msgid "Standards Track"
 msgstr ""
 
-#: ../../peps/pep-0594.rst
+#: ../../peps/peps/pep-0594.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../../peps/pep-0594.rst:9
+#: ../../peps/peps/pep-0594.rst:8
 msgid "20-May-2019"
 msgstr ""
 
-#: ../../peps/pep-0594.rst
+#: ../../peps/peps/pep-0594.rst
 msgid "Python-Version"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1 ../../peps/pep-0594.rst:10
-#: ../../peps/pep-0594.rst:106
+#: ../../peps/peps/pep-0594.rst:1 ../../peps/peps/pep-0594.rst:9
+#: ../../peps/peps/pep-0594.rst:105
 msgid "3.11"
 msgstr ""
 
-#: ../../peps/pep-0594.rst
+#: ../../peps/peps/pep-0594.rst
 msgid "Post-History"
 msgstr "Pós-história"
 
-#: ../../peps/pep-0594.rst:11
+#: ../../peps/peps/pep-0594.rst:10
 msgid "21-May-2019, 04-Feb-2022"
 msgstr ""
 
-#: ../../peps/pep-0594.rst
+#: ../../peps/peps/pep-0594.rst
 msgid "Resolution"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:12
+#: ../../peps/peps/pep-0594.rst:11
 msgid "https://discuss.python.org/t/13508/22"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:16
+#: ../../peps/peps/pep-0594.rst:15
 msgid "Abstract"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:18
+#: ../../peps/peps/pep-0594.rst:17
 msgid ""
-"This PEP proposed a list of standard library modules to be removed from "
-"the standard library. The modules are mostly historic data formats (e.g. "
-"Commodore and SUN file formats), APIs and operating systems that have "
-"been superseded a long time ago (e.g. Mac OS 9), or modules that have "
-"security implications and better alternatives (e.g. password and login)."
+"This PEP proposed a list of standard library modules to be removed from the "
+"standard library. The modules are mostly historic data formats (e.g. "
+"Commodore and SUN file formats), APIs and operating systems that have been "
+"superseded a long time ago (e.g. Mac OS 9), or modules that have security "
+"implications and better alternatives (e.g. password and login)."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:24
+#: ../../peps/peps/pep-0594.rst:23
 msgid ""
 "The PEP follows in the footsteps of other PEPS like :pep:`3108`. The "
-"*Standard Library Reorganization* proposal removed a bunch of modules "
-"from Python 3.0. In 2007, the PEP referred to maintenance burden as:"
+"*Standard Library Reorganization* proposal removed a bunch of modules from "
+"Python 3.0. In 2007, the PEP referred to maintenance burden as:"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:28
+#: ../../peps/peps/pep-0594.rst:27
 msgid ""
-"\"Over the years, certain modules have become a heavy burden upon python-"
-"dev to maintain. In situations like this, it is better for the module to "
-"be given to the community to maintain to free python-dev to focus more on"
-" language support and other modules in the standard library that do not "
-"take up an undue amount of time and effort.\""
+"\"Over the years, certain modules have become a heavy burden upon python-dev "
+"to maintain. In situations like this, it is better for the module to be "
+"given to the community to maintain to free python-dev to focus more on "
+"language support and other modules in the standard library that do not take "
+"up an undue amount of time and effort.\""
 msgstr ""
 
-#: ../../peps/pep-0594.rst:34
+#: ../../peps/peps/pep-0594.rst:33
 msgid ""
-"The withdrawn :pep:`206` from 2000 expresses issues with the Python "
-"standard library in an unvarnished and forthright manner:"
+"The withdrawn :pep:`206` from 2000 expresses issues with the Python standard "
+"library in an unvarnished and forthright manner:"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:37
+#: ../../peps/peps/pep-0594.rst:36
 msgid ""
-"\"[...] the standard library modules aren't always the best choices for a"
-" job. Some library modules were quick hacks (e.g. ``calendar``, "
-"``commands``), some were designed poorly and are now near-impossible to "
-"fix (``cgi``), and some have been rendered obsolete by other, more "
-"complete modules [...].\""
+"\"[...] the standard library modules aren't always the best choices for a "
+"job. Some library modules were quick hacks (e.g. ``calendar``, "
+"``commands``), some were designed poorly and are now near-impossible to fix "
+"(``cgi``), and some have been rendered obsolete by other, more complete "
+"modules [...].\""
 msgstr ""
 
-#: ../../peps/pep-0594.rst:45
+#: ../../peps/peps/pep-0594.rst:44
 msgid "Rationale"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:47
+#: ../../peps/peps/pep-0594.rst:46
 msgid ""
-"Back in the early days of Python, the interpreter came with a large set "
-"of useful modules. This was often referred to as \"batteries included\" "
-"philosophy and was one of the cornerstones to Python's success story. "
-"Users didn't have to figure out how to download and install separate "
-"packages in order to write a simple web server or parse email."
+"Back in the early days of Python, the interpreter came with a large set of "
+"useful modules. This was often referred to as \"batteries included\" "
+"philosophy and was one of the cornerstones to Python's success story. Users "
+"didn't have to figure out how to download and install separate packages in "
+"order to write a simple web server or parse email."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:53
+#: ../../peps/peps/pep-0594.rst:52
 msgid ""
 "Times have changed. With the introduction of PyPI (née Cheeseshop), "
-"setuptools, and later pip, it became simple and straightforward to "
-"download and install packages. Nowadays Python has a rich and vibrant "
-"ecosystem of third-party packages. It's pretty much standard to either "
-"install packages from PyPI or use one of the many Python or Linux "
-"distributions."
+"setuptools, and later pip, it became simple and straightforward to download "
+"and install packages. Nowadays Python has a rich and vibrant ecosystem of "
+"third-party packages. It's pretty much standard to either install packages "
+"from PyPI or use one of the many Python or Linux distributions."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:59
+#: ../../peps/peps/pep-0594.rst:58
 msgid ""
 "On the other hand, Python's standard library is piling up with cruft, "
-"unnecessary duplication of functionality, and dispensable features. This "
-"is undesirable for several reasons."
+"unnecessary duplication of functionality, and dispensable features. This is "
+"undesirable for several reasons."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:63
+#: ../../peps/peps/pep-0594.rst:62
 msgid ""
 "Any additional module increases the maintenance cost for the Python core "
-"development team. The team has limited resources, reduced maintenance "
-"cost frees development time for other improvements."
+"development team. The team has limited resources, reduced maintenance cost "
+"frees development time for other improvements."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:66
+#: ../../peps/peps/pep-0594.rst:65
 msgid ""
 "Modules in the standard library are generally favored and seen as the de "
 "facto solution for a problem. A majority of users only pick third-party "
-"modules to replace a stdlib module, when they have a compelling reason, "
-"e.g. ``lxml`` instead of ``xml``. The removal of an unmaintained stdlib "
-"module increases the chances of a community-contributed module to become "
-"widely used."
+"modules to replace a stdlib module, when they have a compelling reason, e.g. "
+"``lxml`` instead of ``xml``. The removal of an unmaintained stdlib module "
+"increases the chances of a community-contributed module to become widely "
+"used."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:72
+#: ../../peps/peps/pep-0594.rst:71
 msgid ""
-"A lean and mean standard library benefits platforms with limited "
-"resources like devices with just a few hundred kilobyte of storage (e.g. "
-"BBC Micro:bit). Python on mobile platforms like BeeWare or WebAssembly "
-"(e.g. pyodide) also benefit from reduced download size."
+"A lean and mean standard library benefits platforms with limited resources "
+"like devices with just a few hundred kilobyte of storage (e.g. BBC Micro:"
+"bit). Python on mobile platforms like BeeWare or WebAssembly (e.g. pyodide) "
+"also benefit from reduced download size."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:77
+#: ../../peps/peps/pep-0594.rst:76
 msgid ""
 "The modules in this PEP have been selected for deprecation because their "
-"removal is either least controversial or most beneficial. For example, "
-"least controversial are 30-year-old multimedia formats like the ``sunau``"
-" audio format, which was used on SPARC and NeXT workstations in the late "
-"1980s. The ``crypt`` module has fundamental flaws that are better solved "
-"outside the standard library."
+"removal is either least controversial or most beneficial. For example, least "
+"controversial are 30-year-old multimedia formats like the ``sunau`` audio "
+"format, which was used on SPARC and NeXT workstations in the late 1980s. The "
+"``crypt`` module has fundamental flaws that are better solved outside the "
+"standard library."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:84
+#: ../../peps/peps/pep-0594.rst:83
 msgid ""
 "This PEP also designates some modules as not scheduled for removal. Some "
 "modules have been deprecated for several releases or seem unnecessary at "
-"first glance. However it is beneficial to keep the modules in the "
-"standard library, mostly for environments where installing a package from"
-" PyPI is not an option. This can be corporate environments or classrooms "
-"where external code is not permitted without legal approval."
+"first glance. However it is beneficial to keep the modules in the standard "
+"library, mostly for environments where installing a package from PyPI is not "
+"an option. This can be corporate environments or classrooms where external "
+"code is not permitted without legal approval."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:91
+#: ../../peps/peps/pep-0594.rst:90
 msgid ""
-"The usage of FTP is declining, but some files are still provided over the"
-" FTP protocol or hosters offer FTP to upload content. Therefore, "
-"``ftplib`` is going to stay."
+"The usage of FTP is declining, but some files are still provided over the "
+"FTP protocol or hosters offer FTP to upload content. Therefore, ``ftplib`` "
+"is going to stay."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:94
+#: ../../peps/peps/pep-0594.rst:93
 msgid ""
 "The ``optparse`` and ``getopt`` modules are widely used. They are mature "
 "modules with very low maintenance overhead."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:96
+#: ../../peps/peps/pep-0594.rst:95
 msgid ""
-"According to David Beazley [5]_ the ``wave`` module is easy to teach to "
-"kids and can make crazy sounds. Making a computer generate sounds is a "
-"powerful and highly motivating exercise for a nine-year-old aspiring "
-"developer. It's a fun battery to keep."
+"According to David Beazley [5]_ the ``wave`` module is easy to teach to kids "
+"and can make crazy sounds. Making a computer generate sounds is a powerful "
+"and highly motivating exercise for a nine-year-old aspiring developer. It's "
+"a fun battery to keep."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:103
+#: ../../peps/peps/pep-0594.rst:102
 msgid "Deprecation schedule"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:108
+#: ../../peps/peps/pep-0594.rst:107
 msgid ""
 "Starting with Python 3.11, deprecated modules will start issuing "
-"``DeprecationWarning``. The estimated EOL of Python 3.10, the last "
-"version without the warning, is October 2026."
+"``DeprecationWarning``. The estimated EOL of Python 3.10, the last version "
+"without the warning, is October 2026."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1 ../../peps/pep-0594.rst:113
+#: ../../peps/peps/pep-0594.rst:1 ../../peps/peps/pep-0594.rst:112
 msgid "3.12"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:115
+#: ../../peps/peps/pep-0594.rst:114
 msgid ""
-"There should be no specific change compared to Python 3.11. This is the "
-"last version of Python with the deprecated modules, with an estimated EOL"
-" of October 2028."
+"There should be no specific change compared to Python 3.11. This is the last "
+"version of Python with the deprecated modules, with an estimated EOL of "
+"October 2028."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1 ../../peps/pep-0594.rst:120
+#: ../../peps/peps/pep-0594.rst:1 ../../peps/peps/pep-0594.rst:119
 msgid "3.13"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:122
+#: ../../peps/peps/pep-0594.rst:121
 msgid ""
-"All modules deprecated by this PEP are removed from the ``main`` branch "
-"of the CPython repository and are no longer distributed as part of "
-"Python."
+"All modules deprecated by this PEP are removed from the ``main`` branch of "
+"the CPython repository and are no longer distributed as part of Python."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:127
+#: ../../peps/peps/pep-0594.rst:126
 msgid "Deprecated modules"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:129
+#: ../../peps/peps/pep-0594.rst:128
 msgid ""
-"The modules are grouped as data encoding, multimedia, network, OS "
-"interface, and misc modules. The majority of modules are for old data "
-"formats or old APIs. Some others are rarely useful and have better "
-"replacements on PyPI, e.g. Pillow for image processing or NumPy-based "
-"projects to deal with audio processing."
+"The modules are grouped as data encoding, multimedia, network, OS interface, "
+"and misc modules. The majority of modules are for old data formats or old "
+"APIs. Some others are rarely useful and have better replacements on PyPI, e."
+"g. Pillow for image processing or NumPy-based projects to deal with audio "
+"processing."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:135
+#: ../../peps/peps/pep-0594.rst:134
 msgid "Table 1: Proposed modules deprecations"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1
+#: ../../peps/peps/pep-0594.rst:1
 msgid "Module"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1
+#: ../../peps/peps/pep-0594.rst:1
 msgid "Deprecated in"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1
+#: ../../peps/peps/pep-0594.rst:1
 msgid "To be removed"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1
+#: ../../peps/peps/pep-0594.rst:1
 msgid "Added in"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1
+#: ../../peps/peps/pep-0594.rst:1
 msgid "Has maintainer?"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1
+#: ../../peps/peps/pep-0594.rst:1
 msgid "Replacement"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1 ../../peps/pep-0594.rst:215
+#: ../../peps/peps/pep-0594.rst:1 ../../peps/peps/pep-0594.rst:195
 msgid "aifc"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1
+#: ../../peps/peps/pep-0594.rst:1
 msgid "3.11 (3.0\\*)"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1
+#: ../../peps/peps/pep-0594.rst:1
 msgid "1993"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1
+#: ../../peps/peps/pep-0594.rst:1
 msgid "**yes (inactive)**"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1
+#: ../../peps/peps/pep-0594.rst:1
 msgid "\\-"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1 ../../peps/pep-0594.rst:308
+#: ../../peps/peps/pep-0594.rst:1 ../../peps/peps/pep-0594.rst:288
 msgid "asynchat"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1
+#: ../../peps/peps/pep-0594.rst:1
 msgid "**3.6** (3.0\\*)"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1
+#: ../../peps/peps/pep-0594.rst:1
 msgid "1999"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1
+#: ../../peps/peps/pep-0594.rst:1
 msgid "**yes**"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1
-msgid "asyncio_"
+#: ../../peps/peps/pep-0594.rst:1
+msgid ":mod:`asyncio`"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1 ../../peps/pep-0594.rst:315
+#: ../../peps/peps/pep-0594.rst:1 ../../peps/peps/pep-0594.rst:295
 msgid "asyncore"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1 ../../peps/pep-0594.rst:232
+#: ../../peps/peps/pep-0594.rst:1 ../../peps/peps/pep-0594.rst:212
 msgid "audioop"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1
+#: ../../peps/peps/pep-0594.rst:1
 msgid "1992"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1 ../../peps/pep-0594.rst:328
+#: ../../peps/peps/pep-0594.rst:1 ../../peps/peps/pep-0594.rst:308
 msgid "cgi"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1
+#: ../../peps/peps/pep-0594.rst:1
 msgid "3.11 (2.0\\*\\*)"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1
+#: ../../peps/peps/pep-0594.rst:1
 msgid "1995"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1
+#: ../../peps/peps/pep-0594.rst:1
 msgid "no"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1 ../../peps/pep-0594.rst:368
+#: ../../peps/peps/pep-0594.rst:1 ../../peps/peps/pep-0594.rst:347
 msgid "cgitb"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1 ../../peps/pep-0594.rst:248
+#: ../../peps/peps/pep-0594.rst:1 ../../peps/peps/pep-0594.rst:228
 msgid "chunk"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1 ../../peps/pep-0594.rst:418
+#: ../../peps/peps/pep-0594.rst:1 ../../peps/peps/pep-0594.rst:397
 msgid "crypt"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1
+#: ../../peps/peps/pep-0594.rst:1
 msgid "1994"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1
-msgid "legacycrypt_, bcrypt_, argon2-cffi_, hashlib_, passlib_"
+#: ../../peps/peps/pep-0594.rst:1
+msgid ""
+":pypi:`legacycrypt`, :pypi:`bcrypt`, :pypi:`argon2-cffi`, :mod:`hashlib`, :"
+"pypi:`passlib`"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1 ../../peps/pep-0594.rst:257
+#: ../../peps/peps/pep-0594.rst:1 ../../peps/peps/pep-0594.rst:237
 msgid "imghdr"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1
-msgid "filetype_, puremagic_, python-magic_"
+#: ../../peps/peps/pep-0594.rst:1
+msgid ":pypi:`filetype`, :pypi:`puremagic`, :pypi:`python-magic`"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1 ../../peps/pep-0594.rst:475
+#: ../../peps/peps/pep-0594.rst:1 ../../peps/peps/pep-0594.rst:454
 msgid "mailcap"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1 ../../peps/pep-0594.rst:487
+#: ../../peps/peps/pep-0594.rst:1 ../../peps/peps/pep-0594.rst:466
 msgid "msilib"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1
+#: ../../peps/peps/pep-0594.rst:1
 msgid "2006"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1 ../../peps/pep-0594.rst:388
+#: ../../peps/peps/pep-0594.rst:1 ../../peps/peps/pep-0594.rst:367
 msgid "nntplib"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1 ../../peps/pep-0594.rst:442
+#: ../../peps/peps/pep-0594.rst:1 ../../peps/peps/pep-0594.rst:421
 msgid "nis"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1 ../../peps/pep-0594.rst:266
+#: ../../peps/peps/pep-0594.rst:1 ../../peps/peps/pep-0594.rst:246
 msgid "ossaudiodev"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1
+#: ../../peps/peps/pep-0594.rst:1
 msgid "2002"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1 ../../peps/pep-0594.rst:501
+#: ../../peps/peps/pep-0594.rst:1 ../../peps/peps/pep-0594.rst:480
 msgid "pipes"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1
-msgid "subprocess_"
+#: ../../peps/peps/pep-0594.rst:1
+msgid ":mod:`subprocess`"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1 ../../peps/pep-0594.rst:379
+#: ../../peps/peps/pep-0594.rst:1 ../../peps/peps/pep-0594.rst:358
 msgid "smtpd"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1
+#: ../../peps/peps/pep-0594.rst:1
 msgid "**3.4.7**, **3.5.4**"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1
+#: ../../peps/peps/pep-0594.rst:1
 msgid "2001"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1
-msgid "aiosmtpd_"
+#: ../../peps/peps/pep-0594.rst:1
+msgid ":pypi:`aiosmtpd`"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1 ../../peps/pep-0594.rst:288
+#: ../../peps/peps/pep-0594.rst:1 ../../peps/peps/pep-0594.rst:268
 msgid "sndhdr"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1 ../../peps/pep-0594.rst:453
+#: ../../peps/peps/pep-0594.rst:1 ../../peps/peps/pep-0594.rst:432
 msgid "spwd"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1
+#: ../../peps/peps/pep-0594.rst:1
 msgid "2005"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1
-msgid "python-pam_"
+#: ../../peps/peps/pep-0594.rst:1
+msgid ":pypi:`python-pam`"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1 ../../peps/pep-0594.rst:298
+#: ../../peps/peps/pep-0594.rst:1 ../../peps/peps/pep-0594.rst:278
 msgid "sunau"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1 ../../peps/pep-0594.rst:408
+#: ../../peps/peps/pep-0594.rst:1 ../../peps/peps/pep-0594.rst:387
 msgid "telnetlib"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1
+#: ../../peps/peps/pep-0594.rst:1
 msgid "1997"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1
-msgid "telnetlib3_, Exscript_"
+#: ../../peps/peps/pep-0594.rst:1
+msgid ":pypi:`telnetlib3`, :pypi:`Exscript`"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1
+#: ../../peps/peps/pep-0594.rst:1
 msgid "uu"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1 ../../peps/pep-0594.rst:203
+#: ../../peps/peps/pep-0594.rst:1 ../../peps/peps/pep-0594.rst:183
 msgid "xdrlib"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1
+#: ../../peps/peps/pep-0594.rst:1
 msgid "1992/1996"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:181
+#: ../../peps/peps/pep-0594.rst:161
 msgid ""
-"Some module deprecations proposed by :pep:`3108` for 3.0 and :pep:`206` "
-"for 2.0. The *added in* column illustrates, when a module was originally "
+"Some module deprecations proposed by :pep:`3108` for 3.0 and :pep:`206` for "
+"2.0. The *added in* column illustrates, when a module was originally "
 "designed and added to the standard library. The *has maintainer* column "
-"refers to the `expert index <https://devguide.python.org/experts/>`_, a "
-"list of domain experts and maintainers in the DevGuide."
+"refers to the `expert index <https://devguide.python.org/experts/>`_, a list "
+"of domain experts and maintainers in the DevGuide."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:189
+#: ../../peps/peps/pep-0594.rst:169
 msgid "Data encoding modules"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:193
+#: ../../peps/peps/pep-0594.rst:173
 msgid "uu and the uu encoding"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:195
+#: ../../peps/peps/pep-0594.rst:175
 msgid ""
-"The `uu <https://docs.python.org/3/library/uu.html>`_ module provides "
-"uuencode format, an old binary encoding format for email from 1980. The "
-"uu format has been replaced by MIME. The uu codec is provided by the "
-"``binascii`` module.  There's also ``encodings/uu_codec.py`` which is a "
-"codec for the same encoding; it should also be deprecated."
+"The :external+py3.12:mod:`uu` module provides uuencode format, an old binary "
+"encoding format for email from 1980. The uu format has been replaced by "
+"MIME. The uu codec is provided by the ``binascii`` module.  There's also "
+"``encodings/uu_codec.py`` which is a codec for the same encoding; it should "
+"also be deprecated."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:205
+#: ../../peps/peps/pep-0594.rst:185
 msgid ""
-"The `xdrlib <https://docs.python.org/3/library/xdrlib.html>`_ module "
-"supports the Sun External Data Representation Standard. XDR is an old "
-"binary serialization format from 1987. These days it's rarely used "
-"outside specialized domains like NFS."
+"The :external+py3.12:mod:`xdrlib` module supports the Sun External Data "
+"Representation Standard. XDR is an old binary serialization format from "
+"1987. These days it's rarely used outside specialized domains like NFS."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:212
+#: ../../peps/peps/pep-0594.rst:192
 msgid "Multimedia modules"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:217
+#: ../../peps/peps/pep-0594.rst:197
 msgid ""
-"The `aifc <https://docs.python.org/3/library/aifc.html>`_ module provides"
-" support for reading and writing AIFF and AIFF-C files. The Audio "
-"Interchange File Format is an old audio format from 1988 based on Amiga "
-"IFF. It was most commonly used on the Apple Macintosh. These days only "
-"few specialized application use AIFF."
+"The :external+py3.12:mod:`aifc` module provides support for reading and "
+"writing AIFF and AIFF-C files. The Audio Interchange File Format is an old "
+"audio format from 1988 based on Amiga IFF. It was most commonly used on the "
+"Apple Macintosh. These days only few specialized application use AIFF."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:223
+#: ../../peps/peps/pep-0594.rst:203
 msgid ""
-"A user disclosed [6]_ that the post production film industry makes heavy "
-"use of the AIFC file format. The usage of the ``aifc`` module in closed "
-"source and internal software was unknown prior to the first posting of "
-"this PEP. This may be a compelling argument to keep the ``aifc`` module "
-"in the standard library. The file format is stable and the module does "
-"not require much maintenance. The strategic benefits for Python may "
-"outmatch the burden."
+"A user disclosed [6]_ that the post production film industry makes heavy use "
+"of the AIFC file format. The usage of the ``aifc`` module in closed source "
+"and internal software was unknown prior to the first posting of this PEP. "
+"This may be a compelling argument to keep the ``aifc`` module in the "
+"standard library. The file format is stable and the module does not require "
+"much maintenance. The strategic benefits for Python may outmatch the burden."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:234
+#: ../../peps/peps/pep-0594.rst:214
 msgid ""
-"The `audioop <https://docs.python.org/3/library/audioop.html>`_ module "
-"contains helper functions to manipulate raw audio data and adaptive "
-"differential pulse-code modulated audio data. The module is implemented "
-"in C without any additional dependencies. The `aifc`_, `sunau`_, and "
-"`wave`_ modules depend on `audioop`_ for some operations."
+"The :external+py3.12:mod:`audioop` module contains helper functions to "
+"manipulate raw audio data and adaptive differential pulse-code modulated "
+"audio data. The module is implemented in C without any additional "
+"dependencies. The `aifc`_, `sunau`_, and `wave`_ modules depend on "
+"`audioop`_ for some operations."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:240
+#: ../../peps/peps/pep-0594.rst:220
 msgid ""
-"The byteswap operation in the ``wave`` module can be substituted with "
-"little extra work. In case ``aifc`` is not deprecated as well, a reduced "
-"version of the ``audioop`` module is converted into a private "
-"implementation detail, e.g. ``_audioop`` with ``byteswap``, ``alaw2lin``,"
-" ``ulaw2lin``, ``lin2alaw``, ``lin2ulaw``, and ``lin2adpcm``."
+"The byteswap operation in the ``wave`` module can be substituted with little "
+"extra work. In case ``aifc`` is not deprecated as well, a reduced version of "
+"the ``audioop`` module is converted into a private implementation detail, e."
+"g. ``_audioop`` with ``byteswap``, ``alaw2lin``, ``ulaw2lin``, ``lin2alaw``, "
+"``lin2ulaw``, and ``lin2adpcm``."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:250
+#: ../../peps/peps/pep-0594.rst:230
 msgid ""
-"The `chunk <https://docs.python.org/3/library/chunk.html>`_ module "
-"provides support for reading and writing Electronic Arts' Interchange "
-"File Format. IFF is an old audio file format originally introduced for "
-"Commodore and Amiga. The format is no longer relevant."
+"The :external+py3.12:mod:`chunk` module provides support for reading and "
+"writing Electronic Arts' Interchange File Format. IFF is an old audio file "
+"format originally introduced for Commodore and Amiga. The format is no "
+"longer relevant."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:259
+#: ../../peps/peps/pep-0594.rst:239
 msgid ""
-"The `imghdr <https://docs.python.org/3/library/imghdr.html>`_ module is a"
-" simple tool to guess the image file format from the first 32 bytes of a "
-"file or buffer. It supports only a limited number of formats and neither "
-"returns resolution nor color depth."
+"The :external+py3.12:mod:`imghdr` module is a simple tool to guess the image "
+"file format from the first 32 bytes of a file or buffer. It supports only a "
+"limited number of formats and neither returns resolution nor color depth."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:268
+#: ../../peps/peps/pep-0594.rst:248
 msgid ""
-"The `ossaudiodev <https://docs.python.org/3/library/ossaudiodev.html>`_ "
-"module provides support for Open Sound System, an interface to sound "
-"playback and capture devices. OSS was initially free software, but later "
-"support for newer sound devices and improvements were proprietary. Linux "
-"community abandoned OSS in favor of ALSA [1]_. Some operating systems "
-"like OpenBSD and NetBSD provide an incomplete [2]_ emulation of OSS."
+"The :external+py3.12:mod:`ossaudiodev` module provides support for Open "
+"Sound System, an interface to sound playback and capture devices. OSS was "
+"initially free software, but later support for newer sound devices and "
+"improvements were proprietary. Linux community abandoned OSS in favor of "
+"ALSA [1]_. Some operating systems like OpenBSD and NetBSD provide an "
+"incomplete [2]_ emulation of OSS."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:275
+#: ../../peps/peps/pep-0594.rst:255
 msgid ""
 "To best of my knowledge, FreeBSD is the only widespread operating system "
-"that uses Open Sound System as of today. The ``ossaudiodev`` hasn't seen "
-"any improvements or new features since 2003. All commits since 2003 are "
-"project-wide code cleanups and a couple of bug fixes. It would be "
-"beneficial for both FreeBSD community and core development, if the module"
-" would be maintained and distributed by people that care for it and use "
-"it."
+"that uses Open Sound System as of today. The ``ossaudiodev`` hasn't seen any "
+"improvements or new features since 2003. All commits since 2003 are project-"
+"wide code cleanups and a couple of bug fixes. It would be beneficial for "
+"both FreeBSD community and core development, if the module would be "
+"maintained and distributed by people that care for it and use it."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:282
+#: ../../peps/peps/pep-0594.rst:262
 msgid ""
 "The standard library used to have more audio-related modules. The other "
-"audio device interfaces (``audiodev``, ``linuxaudiodev``, "
-"``sunaudiodev``) were removed in 2007 as part of the :pep:`3108` stdlib "
-"re-organization."
+"audio device interfaces (``audiodev``, ``linuxaudiodev``, ``sunaudiodev``) "
+"were removed in 2007 as part of the :pep:`3108` stdlib re-organization."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:290
+#: ../../peps/peps/pep-0594.rst:270
 msgid ""
-"The `sndhdr <https://docs.python.org/3/library/sndhdr.html>`_ module is "
-"similar to the `imghdr`_ module but for audio formats. It guesses file "
-"format, channels, frame rate, and sample widths from the first 512 bytes "
-"of a file or buffer. The module only supports AU, AIFF, HCOM, VOC, WAV, "
-"and other ancient formats."
+"The :external+py3.12:mod:`sndhdr` module is similar to the `imghdr`_ module "
+"but for audio formats. It guesses file format, channels, frame rate, and "
+"sample widths from the first 512 bytes of a file or buffer. The module only "
+"supports AU, AIFF, HCOM, VOC, WAV, and other ancient formats."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:300
+#: ../../peps/peps/pep-0594.rst:280
 msgid ""
-"The `sunau <https://docs.python.org/3/library/sunau.html>`_ module "
-"provides support for Sun AU sound format. It's yet another old, obsolete "
-"file format."
+"The :external+py3.12:mod:`sunau` module provides support for Sun AU sound "
+"format. It's yet another old, obsolete file format."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:305
+#: ../../peps/peps/pep-0594.rst:285
 msgid "Networking modules"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:310
+#: ../../peps/peps/pep-0594.rst:290
 msgid ""
-"The `asynchat <https://docs.python.org/3/library/asynchat.html>`_ module "
-"is built on top of `asyncore`_ and has been deprecated since Python 3.6."
+"The :external+py3.11:mod:`asynchat` module is built on top of :"
+"external+py3.11:mod:`asyncore` and has been deprecated since Python 3.6."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:317
+#: ../../peps/peps/pep-0594.rst:297
 msgid ""
-"The `asyncore <https://docs.python.org/3/library/asyncore.html>`_ module "
-"was the first module for asynchronous socket service clients and servers."
-" It has been replaced by asyncio and is deprecated since Python 3.6."
+"The :external+py3.11:mod:`asyncore` module was the first module for "
+"asynchronous socket service clients and servers. It has been replaced by "
+"asyncio and is deprecated since Python 3.6."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:321
+#: ../../peps/peps/pep-0594.rst:301
 msgid ""
 "The ``asyncore`` module is also used in stdlib tests. The tests for "
 "``ftplib``, ``logging``, ``smptd``, ``smtplib``, and ``ssl`` are partly "
@@ -650,135 +643,128 @@ msgid ""
 "threading."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:330
+#: ../../peps/peps/pep-0594.rst:310
 msgid ""
-"The `cgi <https://docs.python.org/3/library/cgi.html>`_ module is a "
-"support module for Common Gateway Interface (CGI) scripts. CGI is deemed "
-"as inefficient because every incoming request is handled in a new "
-"process. :pep:`206` considers the module as:"
+"The :external+py3.12:mod:`cgi` module is a support module for Common Gateway "
+"Interface (CGI) scripts. CGI is deemed as inefficient because every incoming "
+"request is handled in a new process. :pep:`206` considers the module as:"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:335
+#: ../../peps/peps/pep-0594.rst:315
 msgid ""
-"\"[...] designed poorly and are now near-impossible to fix (``cgi``) "
-"[...]\""
+"\"[...] designed poorly and are now near-impossible to fix (``cgi``) [...]\""
 msgstr ""
 
-#: ../../peps/pep-0594.rst:337
+#: ../../peps/peps/pep-0594.rst:317
 msgid ""
-"Replacements for the various parts of ``cgi`` which are not directly "
-"related to executing code are:"
+"Replacements for the various parts of ``cgi`` which are not directly related "
+"to executing code are:"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:340
+#: ../../peps/peps/pep-0594.rst:320
 msgid "``parse`` with ``urllib.parse.parse_qs`` (``parse`` is just a wrapper)"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:341
+#: ../../peps/peps/pep-0594.rst:321
 msgid "``parse_header`` with ``email.message.Message`` (see example below)"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:342
+#: ../../peps/peps/pep-0594.rst:322
 msgid "``parse_multipart`` with ``email.message.Message`` (same MIME RFCs)"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:343
+#: ../../peps/peps/pep-0594.rst:323
 msgid ""
 "``FieldStorage``/``MiniFieldStorage`` has no direct replacement, but can "
-"typically be replaced by using `multipart "
-"<https://pypi.org/project/multipart/>`_ (for ``POST`` and ``PUT`` "
-"requests) or ``urllib.parse.parse_qsl`` (for ``GET`` and ``HEAD`` "
-"requests)"
+"typically be replaced by using :pypi:`multipart` (for ``POST`` and ``PUT`` "
+"requests) or ``urllib.parse.parse_qsl`` (for ``GET`` and ``HEAD`` requests)"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:348
+#: ../../peps/peps/pep-0594.rst:327
 msgid ""
-"``valid_boundary`` (undocumented) with ``re.compile(\"^[ "
-"-~]{0,200}[!-~]$\")``"
+"``valid_boundary`` (undocumented) with ``re.compile(\"^[ -~]{0,200}[!-~]$"
+"\")``"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:350
+#: ../../peps/peps/pep-0594.rst:329
 msgid ""
-"As an explicit example of how close ``parse_header`` and "
-"``email.message.Message`` are:"
+"As an explicit example of how close ``parse_header`` and ``email.message."
+"Message`` are:"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:370
+#: ../../peps/peps/pep-0594.rst:349
 msgid ""
-"The `cgitb <https://docs.python.org/3/library/cgitb.html>`_ module is a "
-"helper for the ``cgi`` module for configurable tracebacks."
+"The :external+py3.12:mod:`cgitb` module is a helper for the ``cgi`` module "
+"for configurable tracebacks."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:373
+#: ../../peps/peps/pep-0594.rst:352
 msgid ""
-"The ``cgitb`` module is not used by any major Python web framework "
-"(Django, Pyramid, Plone, Flask, CherryPy, or Bottle). Only Paste uses it "
-"in an optional debugging middleware."
+"The ``cgitb`` module is not used by any major Python web framework (Django, "
+"Pyramid, Plone, Flask, CherryPy, or Bottle). Only Paste uses it in an "
+"optional debugging middleware."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:381
+#: ../../peps/peps/pep-0594.rst:360
 msgid ""
-"The `smtpd <https://docs.python.org/3/library/smtpd.html>`_ module "
-"provides a simple implementation of a SMTP mail server. The module "
-"documentation marks the module as deprecated and recommends ``aiosmtpd`` "
-"instead. The deprecation message was added in releases 3.4.7, 3.5.4, and "
-"3.6.1."
+"The :external+py3.11:mod:`smtpd` module provides a simple implementation of "
+"a SMTP mail server. The module documentation marks the module as deprecated "
+"and recommends ``aiosmtpd`` instead. The deprecation message was added in "
+"releases 3.4.7, 3.5.4, and 3.6.1."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:390
+#: ../../peps/peps/pep-0594.rst:369
 msgid ""
-"The `nntplib <https://docs.python.org/3/library/nntplib.html>`_ module "
-"implements the client side of the Network News Transfer Protocol (nntp). "
-"News groups used to be a dominant platform for online discussions. Over "
-"the last two decades, news has been slowly but steadily replaced with "
-"mailing lists and web-based discussion platforms. Twisted is also "
-"`planning <https://twistedmatrix.com/trac/ticket/9405>`_ to deprecate "
-"NNTP support and `pynntp <https://github.com/greenbender/pynntp>`_ hasn't"
-" seen any activity since 2014. This is a good indicator that the public "
-"interest in NNTP support is declining."
+"The :external+py3.12:mod:`nntplib` module implements the client side of the "
+"Network News Transfer Protocol (nntp). News groups used to be a dominant "
+"platform for online discussions. Over the last two decades, news has been "
+"slowly but steadily replaced with mailing lists and web-based discussion "
+"platforms. Twisted is also `planning <https://github.com/twisted/twisted/"
+"issues/9405>`_ to deprecate NNTP support and `pynntp <https://github.com/"
+"greenbender/pynntp>`_ hasn't seen any activity since 2014. This is a good "
+"indicator that the public interest in NNTP support is declining."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:400
+#: ../../peps/peps/pep-0594.rst:379
 msgid ""
-"The ``nntplib`` tests have been the cause of additional work in the "
-"recent past. Python only contains the client side of NNTP, so the tests "
-"connect to external news servers. The servers are sometimes unavailable, "
-"too slow, or do not work correctly over IPv6. The situation causes flaky "
-"test runs on buildbots."
+"The ``nntplib`` tests have been the cause of additional work in the recent "
+"past. Python only contains the client side of NNTP, so the tests connect to "
+"external news servers. The servers are sometimes unavailable, too slow, or "
+"do not work correctly over IPv6. The situation causes flaky test runs on "
+"buildbots."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:410
+#: ../../peps/peps/pep-0594.rst:389
 msgid ""
-"The `telnetlib <https://docs.python.org/3/library/telnetlib.html>`_ "
-"module provides a Telnet class that implements the Telnet protocol."
+"The :external+py3.12:mod:`telnetlib` module provides a Telnet class that "
+"implements the Telnet protocol."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:415
+#: ../../peps/peps/pep-0594.rst:394
 msgid "Operating system interface"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:420
+#: ../../peps/peps/pep-0594.rst:399
 msgid ""
-"The `crypt <https://docs.python.org/3/library/crypt.html>`_ module "
-"implements password hashing based on the ``crypt(3)`` function from "
-"``libcrypt`` or ``libxcrypt`` on Unix-like platforms. The algorithms are "
-"mostly old, of poor quality and insecure. Users are discouraged from "
-"using them."
+"The :external+py3.12:mod:`crypt` module implements password hashing based on "
+"the ``crypt(3)`` function from ``libcrypt`` or ``libxcrypt`` on Unix-like "
+"platforms. The algorithms are mostly old, of poor quality and insecure. "
+"Users are discouraged from using them."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:425
+#: ../../peps/peps/pep-0594.rst:404
 msgid ""
-"The module is not available on Windows. Cross-platform applications need "
-"an alternative implementation anyway."
+"The module is not available on Windows. Cross-platform applications need an "
+"alternative implementation anyway."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:427
+#: ../../peps/peps/pep-0594.rst:406
 msgid ""
 "Only DES encryption is guaranteed to be available. DES has an extremely "
 "limited key space of 2**56."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:429
+#: ../../peps/peps/pep-0594.rst:408
 msgid ""
 "MD5, salted SHA256, salted SHA512, and Blowfish are optional extensions. "
 "SSHA256 and SSHA512 are glibc extensions. Blowfish (bcrypt) is the only "
@@ -786,454 +772,438 @@ msgid ""
 "commonly available on Linux."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:433
+#: ../../peps/peps/pep-0594.rst:412
 msgid ""
 "Depending on the platform, the ``crypt`` module is not thread safe. Only "
 "implementations with ``crypt_r(3)`` are thread safe."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:435
+#: ../../peps/peps/pep-0594.rst:414
 msgid ""
 "The module was never useful to interact with system user and password "
-"databases. On BSD, macOS, and Linux, all user authentication and password"
-" modification operations must go through PAM (pluggable authentication "
+"databases. On BSD, macOS, and Linux, all user authentication and password "
+"modification operations must go through PAM (pluggable authentication "
 "module); see the `spwd`_ deprecation."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:444
+#: ../../peps/peps/pep-0594.rst:423
 msgid ""
-"The `nis <https://docs.python.org/3/library/nis.html>`_ module provides "
-"NIS/YP support. Network Information Service / Yellow Pages is an old and "
-"deprecated directory service protocol developed by Sun Microsystems. Its "
-"designed successor NIS+ from 1992 never took off. For a long time, libc's"
-" Name Service Switch, LDAP, and Kerberos/GSSAPI have been considered a "
-"more powerful and more secure replacement for NIS."
+"The :external+py3.12:mod:`nis` module provides NIS/YP support. Network "
+"Information Service / Yellow Pages is an old and deprecated directory "
+"service protocol developed by Sun Microsystems. Its designed successor NIS+ "
+"from 1992 never took off. For a long time, libc's Name Service Switch, LDAP, "
+"and Kerberos/GSSAPI have been considered a more powerful and more secure "
+"replacement for NIS."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:455
+#: ../../peps/peps/pep-0594.rst:434
 msgid ""
-"The `spwd <https://docs.python.org/3/library/spwd.html>`_ module provides"
-" direct access to Unix shadow password database using non-standard APIs."
+"The :external+py3.12:mod:`spwd` module provides direct access to Unix shadow "
+"password database using non-standard APIs."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:458
+#: ../../peps/peps/pep-0594.rst:437
 msgid ""
-"In general, it's a bad idea to use ``spwd``. It circumvents system "
-"security policies, does not use the PAM stack, and is only compatible "
-"with local user accounts, because it ignores NSS. The use of the ``spwd``"
-" module for access control must be considered a *security bug*, as it "
-"bypasses PAM's access control."
+"In general, it's a bad idea to use ``spwd``. It circumvents system security "
+"policies, does not use the PAM stack, and is only compatible with local user "
+"accounts, because it ignores NSS. The use of the ``spwd`` module for access "
+"control must be considered a *security bug*, as it bypasses PAM's access "
+"control."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:464
+#: ../../peps/peps/pep-0594.rst:443
 msgid ""
-"Furthermore, the ``spwd`` module uses the `shadow(3) "
-"<http://man7.org/linux/man-pages/man3/shadow.3.html>`_ APIs. Functions "
-"like ``getspnam(3)`` access the ``/etc/shadow`` file directly. This is "
-"dangerous and even forbidden for confined services on systems with a "
-"security engine like SELinux or AppArmor."
+"Furthermore, the ``spwd`` module uses the `shadow(3) <https://man7.org/linux/"
+"man-pages/man3/shadow.3.html>`_ APIs. Functions like ``getspnam(3)`` access "
+"the ``/etc/shadow`` file directly. This is dangerous and even forbidden for "
+"confined services on systems with a security engine like SELinux or AppArmor."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:472
+#: ../../peps/peps/pep-0594.rst:451
 msgid "Misc modules"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:477
+#: ../../peps/peps/pep-0594.rst:456
 msgid ""
-"The `mailcap <https://docs.python.org/3/library/mailcap.html>`__ package "
-"reads *mail capability* files to assist in handling a file attachment in "
-"an email. In most modern operating systems the email client itself "
-"handles reacting to file attachments. Operating systems also have their "
-"own way to register handling files by their file name extension. Finally,"
-" the module has `CVE-2015-20107 "
-"<https://nvd.nist.gov/vuln/detail/CVE-2015-20107>`__ filed against it "
-"while having no maintainer to help fix it."
+"The :external+py3.12:mod:`mailcap` package reads *mail capability* files to "
+"assist in handling a file attachment in an email. In most modern operating "
+"systems the email client itself handles reacting to file attachments. "
+"Operating systems also have their own way to register handling files by "
+"their file name extension. Finally, the module has `CVE-2015-20107 <https://"
+"nvd.nist.gov/vuln/detail/CVE-2015-20107>`__ filed against it while having no "
+"maintainer to help fix it."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:489
+#: ../../peps/peps/pep-0594.rst:468
 msgid ""
-"The `msilib <https://docs.python.org/3/library/msilib.html>`_ package is "
-"a Windows-only package. It supports the creation of Microsoft Installers "
-"(MSI). The package also exposes additional APIs to create cabinet files "
-"(CAB). The module is used to facilitate distutils to create MSI "
-"installers with the ``bdist_msi`` command. In the past it was used to "
-"create CPython's official Windows installer, too."
+"The :external+py3.12:mod:`msilib` package is a Windows-only package. It "
+"supports the creation of Microsoft Installers (MSI). The package also "
+"exposes additional APIs to create cabinet files (CAB). The module is used to "
+"facilitate distutils to create MSI installers with the ``bdist_msi`` "
+"command. In the past it was used to create CPython's official Windows "
+"installer, too."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:496
+#: ../../peps/peps/pep-0594.rst:475
 msgid ""
-"Microsoft is slowly moving away from MSI in favor of Windows 10 Apps "
-"(AppX) as a new deployment model [3]_."
+"Microsoft is slowly moving away from MSI in favor of Windows 10 Apps (AppX) "
+"as a new deployment model [3]_."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:503
+#: ../../peps/peps/pep-0594.rst:482
 msgid ""
-"The `pipes <https://docs.python.org/3/library/pipes.html>`_ module "
-"provides helpers to pipe the input of one command into the output of "
-"another command. The module is built on top of ``os.popen``. Users are "
-"encouraged to use the ``subprocess`` module instead."
+"The :external+py3.12:mod:`pipes` module provides helpers to pipe the input "
+"of one command into the output of another command. The module is built on "
+"top of ``os.popen``. Users are encouraged to use the :mod:`subprocess` "
+"module instead."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:510
+#: ../../peps/peps/pep-0594.rst:489
 msgid "Modules to keep"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:512
+#: ../../peps/peps/pep-0594.rst:491
 msgid ""
 "Some modules were originally proposed for deprecation but are no longer "
 "listed as such in this PEP."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:515
+#: ../../peps/peps/pep-0594.rst:494
 msgid "Table 2: Withdrawn deprecations"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1 ../../peps/pep-0594.rst:526
+#: ../../peps/peps/pep-0594.rst:1 ../../peps/peps/pep-0594.rst:505
 msgid "colorsys"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1
+#: ../../peps/peps/pep-0594.rst:1
 msgid "colormath, colour, colorspacious, Pillow"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1 ../../peps/pep-0594.rst:543
+#: ../../peps/peps/pep-0594.rst:1 ../../peps/peps/pep-0594.rst:522
 msgid "fileinput"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1
+#: ../../peps/peps/pep-0594.rst:1
 msgid "argparse"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1 ../../peps/pep-0594.rst:555
+#: ../../peps/peps/pep-0594.rst:1 ../../peps/peps/pep-0594.rst:534
 msgid "getopt"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1
+#: ../../peps/peps/pep-0594.rst:1
 msgid "argparse, optparse"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1 ../../peps/pep-0594.rst:566
+#: ../../peps/peps/pep-0594.rst:1 ../../peps/peps/pep-0594.rst:545
 msgid "optparse"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1
+#: ../../peps/peps/pep-0594.rst:1
 msgid "**3.2**"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:1 ../../peps/pep-0594.rst:576
+#: ../../peps/peps/pep-0594.rst:1 ../../peps/peps/pep-0594.rst:555
 msgid "wave"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:528
+#: ../../peps/peps/pep-0594.rst:507
 msgid ""
-"The `colorsys <https://docs.python.org/3/library/colorsys.html>`_ module "
-"defines color conversion functions between RGB, YIQ, HSL, and HSV "
-"coordinate systems."
+"The :external+py3.12:mod:`colorsys` module defines color conversion "
+"functions between RGB, YIQ, HSL, and HSV coordinate systems."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:532
+#: ../../peps/peps/pep-0594.rst:511
 msgid ""
-"Walter Dörwald, Petr Viktorin, and others requested to keep ``colorsys``."
-" The module is useful to convert CSS colors between coordinate systems. "
-"The implementation is simple, mature, and does not impose maintenance "
-"overhead on core development."
+"Walter Dörwald, Petr Viktorin, and others requested to keep ``colorsys``. "
+"The module is useful to convert CSS colors between coordinate systems. The "
+"implementation is simple, mature, and does not impose maintenance overhead "
+"on core development."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:537
+#: ../../peps/peps/pep-0594.rst:516
 msgid ""
-"The PyPI packages ``colormath``, ``colour``, and ``colorspacious`` "
-"provide more and advanced features. The Pillow library is better suited "
-"to transform images between color systems."
+"The PyPI packages ``colormath``, ``colour``, and ``colorspacious`` provide "
+"more and advanced features. The Pillow library is better suited to transform "
+"images between color systems."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:545
+#: ../../peps/peps/pep-0594.rst:524
 msgid ""
-"The `fileinput <https://docs.python.org/3/library/fileinput.html>`_ "
-"module implements helpers to iterate over a list of files from "
-"``sys.argv``. The module predates the ``optparse`` and ``argparse`` "
-"modules. The same functionality can be implemented with the ``argparse`` "
-"module."
+"The :external+py3.12:mod:`fileinput` module implements helpers to iterate "
+"over a list of files from ``sys.argv``. The module predates the ``optparse`` "
+"and ``argparse`` modules. The same functionality can be implemented with the "
+"``argparse`` module."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:550
+#: ../../peps/peps/pep-0594.rst:529
 msgid ""
-"Several core developers expressed their interest to keep the module in "
-"the standard library, as it is handy for quick scripts."
+"Several core developers expressed their interest to keep the module in the "
+"standard library, as it is handy for quick scripts."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:557
+#: ../../peps/peps/pep-0594.rst:536
 msgid ""
-"The `getopt <https://docs.python.org/3/library/getopt.html>`_ module "
-"mimics C's ``getopt()`` option parser."
+"The :external+py3.12:mod:`getopt` module mimics C's ``getopt()`` option "
+"parser."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:560
+#: ../../peps/peps/pep-0594.rst:539
 msgid ""
-"Although users are encouraged to use ``argparse`` instead, the ``getopt``"
-" module is still widely used. The module is small, simple, and handy for "
-"C developers to write simple Python scripts."
+"Although users are encouraged to use ``argparse`` instead, the ``getopt`` "
+"module is still widely used. The module is small, simple, and handy for C "
+"developers to write simple Python scripts."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:568
+#: ../../peps/peps/pep-0594.rst:547
 msgid ""
-"The `optparse <https://docs.python.org/3/library/optparse.html>`_ module "
-"is the predecessor of the ``argparse`` module."
+"The :external+py3.12:mod:`optparse` module is the predecessor of the "
+"``argparse`` module."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:571
+#: ../../peps/peps/pep-0594.rst:550
 msgid ""
-"Although it has been deprecated for many years, it's still too widely "
-"used to remove it."
+"Although it has been deprecated for many years, it's still too widely used "
+"to remove it."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:578
+#: ../../peps/peps/pep-0594.rst:557
 msgid ""
-"The `wave <https://docs.python.org/3/library/wave.html>`_ module provides"
-" support for the WAV sound format."
+"The :external+py3.12:mod:`wave` module provides support for the WAV sound "
+"format."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:581
+#: ../../peps/peps/pep-0594.rst:560
 msgid ""
-"The module is not deprecated, because the WAV format is still relevant "
-"these days. The ``wave`` module is also used in education, e.g. to show "
-"kids how to make noise with a computer."
+"The module is not deprecated, because the WAV format is still relevant these "
+"days. The ``wave`` module is also used in education, e.g. to show kids how "
+"to make noise with a computer."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:585
+#: ../../peps/peps/pep-0594.rst:564
 msgid ""
-"The module uses one simple function from the `audioop`_ module to perform"
-" byte swapping between little and big endian formats. Before 24 bit WAV "
+"The module uses one simple function from the `audioop`_ module to perform "
+"byte swapping between little and big endian formats. Before 24 bit WAV "
 "support was added, byte swap used to be implemented with the ``array`` "
 "module. To remove ``wave``'s dependency on ``audioop``, the byte swap "
-"function could be either be moved to another module (e.g. ``operator``) "
-"or the ``array`` module could gain support for 24-bit (3-byte) arrays."
+"function could be either be moved to another module (e.g. ``operator``) or "
+"the ``array`` module could gain support for 24-bit (3-byte) arrays."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:594
+#: ../../peps/peps/pep-0594.rst:573
 msgid "Discussions"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:596
-msgid "Elana Hashman and Alyssa Coghlan suggested to keep the ``getopt`` module."
+#: ../../peps/peps/pep-0594.rst:575
+msgid ""
+"Elana Hashman and Alyssa Coghlan suggested to keep the ``getopt`` module."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:597
+#: ../../peps/peps/pep-0594.rst:576
 msgid "Berker Peksag proposed to deprecate and remove ``msilib``."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:598
+#: ../../peps/peps/pep-0594.rst:577
 msgid ""
-"Brett Cannon recommended to delay active deprecation warnings and removal"
-" of modules like ``imp`` until Python 3.10. Version 3.8 will be released "
-"shortly before Python 2 reaches end-of-life. A delay reduced churn for "
-"users that migrate from Python 2 to 3.8."
+"Brett Cannon recommended to delay active deprecation warnings and removal of "
+"modules like ``imp`` until Python 3.10. Version 3.8 will be released shortly "
+"before Python 2 reaches end-of-life. A delay reduced churn for users that "
+"migrate from Python 2 to 3.8."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:602
+#: ../../peps/peps/pep-0594.rst:581
 msgid ""
-"At one point, distutils was mentioned in the same sentence as this PEP. "
-"To avoid lengthy discussion and delay of the PEP, I decided against "
-"dealing with distutils. Deprecation of the distutils package will be "
-"handled by another PEP."
+"At one point, distutils was mentioned in the same sentence as this PEP. To "
+"avoid lengthy discussion and delay of the PEP, I decided against dealing "
+"with distutils. Deprecation of the distutils package will be handled by "
+"another PEP."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:606
+#: ../../peps/peps/pep-0594.rst:585
 msgid ""
 "Multiple people (Gregory P. Smith, David Beazley, Alyssa Coghlan, ...) "
 "convinced me to keep the `wave`_ module. [4]_"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:608
+#: ../../peps/peps/pep-0594.rst:587
 msgid "Gregory P. Smith proposed to deprecate `nntplib`_. [4]_"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:609
+#: ../../peps/peps/pep-0594.rst:588
 msgid ""
 "Andrew Svetlov mentioned the ``socketserver`` module is questionable. "
-"However it's used to implement ``http.server`` and ``xmlrpc.server``. The"
-" stdlib doesn't have a replacement for the servers, yet."
+"However it's used to implement ``http.server`` and ``xmlrpc.server``. The "
+"stdlib doesn't have a replacement for the servers, yet."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:615
+#: ../../peps/peps/pep-0594.rst:594
 msgid "Rejected ideas"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:618
+#: ../../peps/peps/pep-0594.rst:597
 msgid "Creating/maintaining a separate repo for the deprecated modules"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:620
+#: ../../peps/peps/pep-0594.rst:599
 msgid ""
-"It was previously proposed to create a separate repository containing the"
-" deprecated modules packaged for installation. One of the PEP authors "
-"went so far as to create a `demo repository "
-"<https://github.com/tiran/legacylib>`_. In the end, though, it was "
-"decided that the added workload to create and maintain such a repo "
-"officially wasn't justified, as the source code will continue to be "
-"available in the CPython repository for people to vendor as necessary. "
-"Similar work has also not been done when previous modules were deprecated"
-" and removed, and it seemingly wasn't an undue burden on the community."
+"It was previously proposed to create a separate repository containing the "
+"deprecated modules packaged for installation. One of the PEP authors went so "
+"far as to create a `demo repository <https://github.com/tiran/legacylib>`_. "
+"In the end, though, it was decided that the added workload to create and "
+"maintain such a repo officially wasn't justified, as the source code will "
+"continue to be available in the CPython repository for people to vendor as "
+"necessary. Similar work has also not been done when previous modules were "
+"deprecated and removed, and it seemingly wasn't an undue burden on the "
+"community."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:631
+#: ../../peps/peps/pep-0594.rst:610
 msgid "Update history"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:634
+#: ../../peps/peps/pep-0594.rst:613
 msgid "Update 1"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:636
+#: ../../peps/peps/pep-0594.rst:615
 msgid "Deprecate ``parser`` module"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:637
+#: ../../peps/peps/pep-0594.rst:616
 msgid "Keep `fileinput`_ module"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:638
+#: ../../peps/peps/pep-0594.rst:617
 msgid "Elaborate why ``crypt`` and ``spwd`` are dangerous and bad"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:639
+#: ../../peps/peps/pep-0594.rst:618
 msgid ""
-"Improve sections for `cgitb`_, `colorsys`_, `nntplib`_, and `smtpd`_ "
-"modules"
+"Improve sections for `cgitb`_, `colorsys`_, `nntplib`_, and `smtpd`_ modules"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:640
+#: ../../peps/peps/pep-0594.rst:619
 msgid ""
-"The `colorsys`_, ``crypt``, `imghdr`_, `sndhdr`_, and ``spwd`` sections "
-"now list suitable substitutions"
+"The `colorsys`_, ``crypt``, `imghdr`_, `sndhdr`_, and ``spwd`` sections now "
+"list suitable substitutions"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:642
+#: ../../peps/peps/pep-0594.rst:621
 msgid ""
 "Mention that ``socketserver`` is going to stay for ``http.server`` and "
 "``xmlrpc.server``"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:644
+#: ../../peps/peps/pep-0594.rst:623
 msgid ""
-"The future maintenance section now states that the deprecated modules may"
-" be adopted by Python community members"
+"The future maintenance section now states that the deprecated modules may be "
+"adopted by Python community members"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:648
+#: ../../peps/peps/pep-0594.rst:627
 msgid "Update 2"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:650
+#: ../../peps/peps/pep-0594.rst:629
 msgid "Keep ``colorsys`` module"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:651
+#: ../../peps/peps/pep-0594.rst:630
 msgid "Add experts"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:652
+#: ../../peps/peps/pep-0594.rst:631
 msgid "Redirect discussions to discuss.python.org"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:653
+#: ../../peps/peps/pep-0594.rst:632
 msgid "Deprecate `telnetlib`_"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:654
+#: ../../peps/peps/pep-0594.rst:633
 msgid "Deprecate compat32 policy of ``email`` package"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:655
+#: ../../peps/peps/pep-0594.rst:634
 msgid "Add creation year to overview table"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:656
+#: ../../peps/peps/pep-0594.rst:635
 msgid "Mention :pep:`206` and :pep:`3108`"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:657
+#: ../../peps/peps/pep-0594.rst:636
 msgid "Update sections for ``aifc``, ``audioop``, ``cgi``, and ``wave``."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:660
+#: ../../peps/peps/pep-0594.rst:639
 msgid "Update 3"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:662
+#: ../../peps/peps/pep-0594.rst:641
 msgid ""
-"Keep the legacy email API modules.  Internal deprecations will be handled"
-" separately."
+"Keep the legacy email API modules.  Internal deprecations will be handled "
+"separately."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:666
+#: ../../peps/peps/pep-0594.rst:645
 msgid "Update 4"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:668
+#: ../../peps/peps/pep-0594.rst:647
 msgid "Add Brett as a co-author."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:669
+#: ../../peps/peps/pep-0594.rst:648
 msgid "Retarget the PEP for Python 3.11."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:670
+#: ../../peps/peps/pep-0594.rst:649
 msgid ""
 "Examples of how to replace the relevant parts of ``cgi`` (thanks Martijn "
 "Pieters)."
 msgstr ""
 
-#: ../../peps/pep-0594.rst:675
+#: ../../peps/peps/pep-0594.rst:654
 msgid "References"
 msgstr "Referências"
 
-#: ../../peps/pep-0594.rst:677
-msgid "https://en.wikipedia.org/wiki/Open_Sound_System#Free,_proprietary,_free"
+#: ../../peps/peps/pep-0594.rst:656
+msgid "https://en.wikipedia.org/wiki/Open_Sound_System#History"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:678
+#: ../../peps/peps/pep-0594.rst:657
 msgid "https://man.openbsd.org/ossaudio"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:679
+#: ../../peps/peps/pep-0594.rst:658
 msgid ""
-"https://blogs.msmvps.com/installsite/blog/2015/05/03/the-future-of-"
-"windows-installer-msi-in-the-light-of-windows-10-and-the-universal-"
-"windows-platform/"
+"https://web.archive.org/web/20221206204209/https://blogs.msmvps.com/"
+"installsite/blog/2015/05/03/the-future-of-windows-installer-msi-in-the-light-"
+"of-windows-10-and-the-universal-windows-platform/"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:680
+#: ../../peps/peps/pep-0594.rst:659
 msgid "https://twitter.com/ChristianHeimes/status/1130257799475335169"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:681
-msgid "https://twitter.com/dabeaz/status/1130278844479545351"
+#: ../../peps/peps/pep-0594.rst:660
+msgid ""
+"https://web.archive.org/web/20220420154535/https://twitter.com/dabeaz/"
+"status/1130278844479545351"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:682
+#: ../../peps/peps/pep-0594.rst:661
 msgid "https://mail.python.org/pipermail/python-dev/2019-May/157634.html"
 msgstr ""
 
-#: ../../peps/pep-0594.rst:686
+#: ../../peps/peps/pep-0594.rst:665
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../../peps/pep-0594.rst:688
+#: ../../peps/peps/pep-0594.rst:667
 msgid ""
-"This document is placed in the public domain or under the "
-"CC0-1.0-Universal license, whichever is more permissive."
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
 msgstr ""
-
-#~ msgid "Accepted"
-#~ msgstr ""
-
-#~ msgid "Elana Hashman and Nick Coghlan suggested to keep the ``getopt`` module."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Multiple people (Gregory P. Smith, David"
-#~ " Beazley, Nick Coghlan, ...) convinced "
-#~ "me to keep the `wave`_ module. "
-#~ "[4]_"
-#~ msgstr ""
-

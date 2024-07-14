@@ -6,78 +6,78 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PEPs\n"
+"Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 20:07+0000\n"
+"POT-Creation-Date: 2024-07-14 02:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.15.0\n"
 
-#: ../pep-0578.rst
+#: ../../peps/peps/pep-0578.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../pep-0578.rst:5
+#: ../../peps/peps/pep-0578.rst:3
 msgid "Steve Dower <steve.dower@python.org>"
 msgstr ""
 
-#: ../pep-0578.rst
+#: ../../peps/peps/pep-0578.rst
 msgid "BDFL-Delegate"
 msgstr ""
 
-#: ../pep-0578.rst:6
+#: ../../peps/peps/pep-0578.rst:4
 msgid "Christian Heimes <christian@python.org>"
 msgstr ""
 
-#: ../pep-0578.rst
+#: ../../peps/peps/pep-0578.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../pep-0578.rst:7
-msgid "Accepted"
+#: ../../peps/peps/pep-0578.rst:5
+msgid "Final"
 msgstr ""
 
-#: ../pep-0578.rst
+#: ../../peps/peps/pep-0578.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../pep-0578.rst:8
+#: ../../peps/peps/pep-0578.rst:6
 msgid "Standards Track"
 msgstr ""
 
-#: ../pep-0578.rst
+#: ../../peps/peps/pep-0578.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../pep-0578.rst:10
+#: ../../peps/peps/pep-0578.rst:7
 msgid "16-Jun-2018"
 msgstr ""
 
-#: ../pep-0578.rst
+#: ../../peps/peps/pep-0578.rst
 msgid "Python-Version"
 msgstr ""
 
-#: ../pep-0578.rst:11
+#: ../../peps/peps/pep-0578.rst:8
 msgid "3.8"
 msgstr ""
 
-#: ../pep-0578.rst
+#: ../../peps/peps/pep-0578.rst
 msgid "Post-History"
 msgstr "Pós-história"
 
-#: ../pep-0578.rst:12
+#: ../../peps/peps/pep-0578.rst:9
 msgid "28-Mar-2019, 07-May-2019"
 msgstr ""
 
-#: ../pep-0578.rst:15
+#: ../../peps/peps/pep-0578.rst:14
 msgid "Abstract"
 msgstr ""
 
-#: ../pep-0578.rst:17
+#: ../../peps/peps/pep-0578.rst:16
 msgid ""
 "This PEP describes additions to the Python API and specific behaviors for "
 "the CPython implementation that make actions taken by the Python runtime "
@@ -86,7 +86,7 @@ msgid ""
 "monitor and optionally limit actions taken by the runtime."
 msgstr ""
 
-#: ../pep-0578.rst:24
+#: ../../peps/peps/pep-0578.rst:23
 msgid ""
 "This PEP proposes adding two APIs to provide insights into a running Python "
 "application: one for arbitrary events, and another specific to the module "
@@ -97,17 +97,17 @@ msgid ""
 "CPython are provided for explanatory purposes."
 msgstr ""
 
-#: ../pep-0578.rst:32
+#: ../../peps/peps/pep-0578.rst:31
 msgid ""
 "See :pep:`551` for discussion and recommendations on enhancing the security "
 "of a Python runtime making use of these auditing APIs."
 msgstr ""
 
-#: ../pep-0578.rst:36
+#: ../../peps/peps/pep-0578.rst:35
 msgid "Background"
 msgstr ""
 
-#: ../pep-0578.rst:38
+#: ../../peps/peps/pep-0578.rst:37
 msgid ""
 "Python provides access to a wide range of low-level functionality on many "
 "common operating systems. While this is incredibly useful for \"write-once, "
@@ -116,7 +116,7 @@ msgid ""
 "monitoring tools either suffer from limited context or auditing bypass."
 msgstr ""
 
-#: ../pep-0578.rst:45
+#: ../../peps/peps/pep-0578.rst:44
 msgid ""
 "Limited context occurs when system monitoring can report that an action "
 "occurred, but cannot explain the sequence of events leading to it. For "
@@ -129,7 +129,7 @@ msgid ""
 "file correlated with other application messages."
 msgstr ""
 
-#: ../pep-0578.rst:56
+#: ../../peps/peps/pep-0578.rst:55
 msgid ""
 "Auditing bypass can occur when the typical system tool used for an action "
 "would ordinarily report its use, but accessing the APIs via Python do not "
@@ -138,7 +138,7 @@ msgid ""
 "function is not."
 msgstr ""
 
-#: ../pep-0578.rst:62
+#: ../../peps/peps/pep-0578.rst:61
 msgid ""
 "Within a long-running Python application, particularly one that processes "
 "user-provided information such as a web app, there is a risk of unexpected "
@@ -147,7 +147,7 @@ msgid ""
 "resulting in no indication that anything out of the ordinary has occurred."
 msgstr ""
 
-#: ../pep-0578.rst:69
+#: ../../peps/peps/pep-0578.rst:68
 msgid ""
 "Additionally, and somewhat unique to Python, it is very easy to affect the "
 "code that is run in an application by manipulating either the import "
@@ -157,34 +157,34 @@ msgid ""
 "to import the standard library ``random`` module."
 msgstr ""
 
-#: ../pep-0578.rst:77
+#: ../../peps/peps/pep-0578.rst:76
 msgid ""
 "This is not sandboxing, as this proposal does not attempt to prevent "
 "malicious behavior (though it enables some new options to do so). See the "
 "`Why Not A Sandbox`_ section below for further discussion."
 msgstr ""
 
-#: ../pep-0578.rst:82
+#: ../../peps/peps/pep-0578.rst:81
 msgid "Overview of Changes"
 msgstr ""
 
-#: ../pep-0578.rst:84
+#: ../../peps/peps/pep-0578.rst:83
 msgid ""
 "The aim of these changes is to enable both application developers and system "
 "administrators to integrate Python into their existing monitoring systems "
 "without dictating how those systems look or behave."
 msgstr ""
 
-#: ../pep-0578.rst:88
+#: ../../peps/peps/pep-0578.rst:87
 msgid ""
-"We propose two API changes to enable this: an Audit Hook and Verified Open "
+"We propose two API changes to enable this: an Audit Hook and Verified Open "
 "Hook. Both are available from Python and native code, allowing applications "
 "and frameworks written in pure Python code to take advantage of the extra "
 "messages, while also allowing embedders or system administrators to deploy "
 "builds of Python where auditing is always enabled."
 msgstr ""
 
-#: ../pep-0578.rst:95
+#: ../../peps/peps/pep-0578.rst:94
 msgid ""
 "Only CPython is bound to provide the native APIs as described here. Other "
 "implementations should provide the pure Python APIs, and may provide native "
@@ -193,11 +193,11 @@ msgid ""
 "compatibility guarantees."
 msgstr ""
 
-#: ../pep-0578.rst:102
+#: ../../peps/peps/pep-0578.rst:101
 msgid "Audit Hook"
 msgstr ""
 
-#: ../pep-0578.rst:104
+#: ../../peps/peps/pep-0578.rst:103
 msgid ""
 "In order to observe actions taken by the runtime (on behalf of the caller), "
 "an API is required to raise messages from within certain operations. These "
@@ -206,17 +206,17 @@ msgid ""
 "certain modules such as ``ctypes``."
 msgstr ""
 
-#: ../pep-0578.rst:110
+#: ../../peps/peps/pep-0578.rst:109
 msgid ""
 "The following new C APIs allow embedders and CPython implementors to send "
 "and receive audit hook messages::"
 msgstr ""
 
-#: ../pep-0578.rst:121
+#: ../../peps/peps/pep-0578.rst:120
 msgid "The new Python APIs for receiving and raising audit hooks are::"
 msgstr ""
 
-#: ../pep-0578.rst:130
+#: ../../peps/peps/pep-0578.rst:129
 msgid ""
 "Hooks are added by calling ``PySys_AddAuditHook()`` from C at any time, "
 "including before ``Py_Initialize()``, or by calling ``sys.addaudithook()`` "
@@ -225,7 +225,7 @@ msgid ""
 "current interpreter. Global hooks are executed before interpreter hooks."
 msgstr ""
 
-#: ../pep-0578.rst:137
+#: ../../peps/peps/pep-0578.rst:136
 msgid ""
 "When events of interest are occurring, code can either call "
 "``PySys_Audit()`` from C (while the GIL is held) or ``sys.audit()``. The "
@@ -237,7 +237,7 @@ msgid ""
 "arguments are not supported."
 msgstr ""
 
-#: ../pep-0578.rst:146
+#: ../../peps/peps/pep-0578.rst:145
 msgid ""
 "For maximum compatibility, events using the same name as an event in the "
 "reference interpreter CPython should make every attempt to use compatible "
@@ -248,7 +248,7 @@ msgid ""
 "module or package name in the event name."
 msgstr ""
 
-#: ../pep-0578.rst:155
+#: ../../peps/peps/pep-0578.rst:154
 msgid ""
 "While event names may be arbitrary UTF-8 strings, for consistency across "
 "implementations it is recommended to use valid Python dotted names and avoid "
@@ -258,7 +258,7 @@ msgid ""
 "you may upset those who implement hooks using C."
 msgstr ""
 
-#: ../pep-0578.rst:162
+#: ../../peps/peps/pep-0578.rst:161
 msgid ""
 "When an event is audited, each hook is called in the order it was added (as "
 "much as is possible), passing the event name and arguments. If any hook "
@@ -271,7 +271,7 @@ msgid ""
 "exit call."
 msgstr ""
 
-#: ../pep-0578.rst:172
+#: ../../peps/peps/pep-0578.rst:171
 msgid ""
 "When an event is audited but no hooks have been set, the ``audit()`` "
 "function should impose minimal overhead. Ideally, each argument is a "
@@ -279,14 +279,14 @@ msgid ""
 "auditing call."
 msgstr ""
 
-#: ../pep-0578.rst:177
+#: ../../peps/peps/pep-0578.rst:176
 msgid ""
 "As hooks may be Python objects, they need to be freed during interpreter or "
 "runtime finalization. These should not be triggered at any other time, and "
 "should raise an event hook to ensure that any unexpected calls are observed."
 msgstr ""
 
-#: ../pep-0578.rst:182
+#: ../../peps/peps/pep-0578.rst:181
 msgid ""
 "Below in `Suggested Audit Hook Locations`_, we recommend some important "
 "operations that should raise audit events. In general, events should be "
@@ -295,18 +295,18 @@ msgid ""
 "preferred."
 msgstr ""
 
-#: ../pep-0578.rst:188
+#: ../../peps/peps/pep-0578.rst:187
 msgid ""
 "Python implementations should document which operations will raise audit "
 "events, along with the event schema. It is intentional that ``sys."
 "addaudithook(print)`` is a trivial way to display all messages."
 msgstr ""
 
-#: ../pep-0578.rst:193
+#: ../../peps/peps/pep-0578.rst:192
 msgid "Verified Open Hook"
 msgstr ""
 
-#: ../pep-0578.rst:195
+#: ../../peps/peps/pep-0578.rst:194
 msgid ""
 "Most operating systems have a mechanism to distinguish between files that "
 "can be executed and those that can not. For example, this may be an execute "
@@ -316,7 +316,7 @@ msgid ""
 "approved for a given environment is executed."
 msgstr ""
 
-#: ../pep-0578.rst:203
+#: ../../peps/peps/pep-0578.rst:202
 msgid ""
 "Most kernels offer ways to restrict or audit binaries loaded and executed by "
 "the kernel. File types owned by Python appear as regular data and these "
@@ -325,15 +325,15 @@ msgid ""
 "code."
 msgstr ""
 
-#: ../pep-0578.rst:209
+#: ../../peps/peps/pep-0578.rst:208
 msgid "The new public C API for the verified open hook is::"
 msgstr ""
 
-#: ../pep-0578.rst:218
+#: ../../peps/peps/pep-0578.rst:217
 msgid "The new public Python API for the verified open hook is::"
 msgstr ""
 
-#: ../pep-0578.rst:224
+#: ../../peps/peps/pep-0578.rst:223
 msgid ""
 "The ``io.open_code()`` function is a drop-in replacement for "
 "``open(abspath(str(pathlike)), 'rb')``. Its default behaviour is to open a "
@@ -344,7 +344,7 @@ msgid ""
 "correctly resolved."
 msgstr ""
 
-#: ../pep-0578.rst:232
+#: ../../peps/peps/pep-0578.rst:231
 msgid ""
 "A custom handler may be set by calling ``PyFile_SetOpenCodeHook()`` from C "
 "at any time, including before ``Py_Initialize()``. However, if a hook has "
@@ -356,20 +356,20 @@ msgid ""
 "into memory."
 msgstr ""
 
-#: ../pep-0578.rst:241
+#: ../../peps/peps/pep-0578.rst:240
 msgid ""
 "Note that these hooks can import and call the ``_io.open()`` function on "
 "CPython without triggering themselves. They can also use ``_io.BytesIO`` to "
 "return a compatible result using an in-memory buffer."
 msgstr ""
 
-#: ../pep-0578.rst:245
+#: ../../peps/peps/pep-0578.rst:244
 msgid ""
 "If the hook determines that the file should not be loaded, it should raise "
 "an exception of its choice, as well as performing any other logging."
 msgstr ""
 
-#: ../pep-0578.rst:249
+#: ../../peps/peps/pep-0578.rst:248
 msgid ""
 "All import and execution functionality involving code from a file will be "
 "changed to use ``open_code()`` unconditionally. It is important to note that "
@@ -381,7 +381,7 @@ msgid ""
 "care should be taken to avoid repeating verification steps."
 msgstr ""
 
-#: ../pep-0578.rst:259
+#: ../../peps/peps/pep-0578.rst:258
 msgid ""
 "File accesses that are not intentionally planning to execute code are not "
 "expected to use this function. This includes loading pickles, XML or YAML "
@@ -391,7 +391,7 @@ msgid ""
 "``Unpickler.load``) and code execution (``Unpickler.find_class``)."
 msgstr ""
 
-#: ../pep-0578.rst:267
+#: ../../peps/peps/pep-0578.rst:266
 msgid ""
 "A few examples: if the file type normally requires an execute bit (on POSIX) "
 "or would warn when marked as having been downloaded from the internet (on "
@@ -405,26 +405,26 @@ msgid ""
 "presence of arbitrary code."
 msgstr ""
 
-#: ../pep-0578.rst:278
+#: ../../peps/peps/pep-0578.rst:277
 msgid ""
 "There is no Python API provided for changing the open hook. To modify import "
 "behavior from Python code, use the existing functionality provided by "
 "``importlib``."
 msgstr ""
 
-#: ../pep-0578.rst:283
+#: ../../peps/peps/pep-0578.rst:282
 msgid "API Availability"
 msgstr ""
 
-#: ../pep-0578.rst:285
+#: ../../peps/peps/pep-0578.rst:284
 msgid ""
 "While all the functions added here are considered public and stable API, the "
 "behavior of the functions is implementation specific. Most descriptions here "
-"refer to the CPython implementation, and while other implementations should "
+"refer to the CPython implementation, and while other implementations should "
 "provide the functions, there is no requirement that they behave the same."
 msgstr ""
 
-#: ../pep-0578.rst:291
+#: ../../peps/peps/pep-0578.rst:290
 msgid ""
 "For example, ``sys.addaudithook()`` and ``sys.audit()`` should exist but may "
 "do nothing. This allows code to make calls to ``sys.audit()`` without having "
@@ -434,7 +434,7 @@ msgid ""
 "exist.)"
 msgstr ""
 
-#: ../pep-0578.rst:298
+#: ../../peps/peps/pep-0578.rst:297
 msgid ""
 "``io.open_code(path)`` should at a minimum always return ``_io.open(path, "
 "'rb')``. Code using the function should make no further assumptions about "
@@ -442,11 +442,11 @@ msgid ""
 "let developers override the behavior of this function with a hook."
 msgstr ""
 
-#: ../pep-0578.rst:305
+#: ../../peps/peps/pep-0578.rst:304
 msgid "Suggested Audit Hook Locations"
 msgstr ""
 
-#: ../pep-0578.rst:307
+#: ../../peps/peps/pep-0578.rst:306
 msgid ""
 "The locations and parameters in calls to ``sys.audit()`` or "
 "``PySys_Audit()`` are to be determined by individual Python implementations. "
@@ -455,149 +455,149 @@ msgid ""
 "potentially expensive or noisy events."
 msgstr ""
 
-#: ../pep-0578.rst:313
+#: ../../peps/peps/pep-0578.rst:312
 msgid ""
 "Table 1 acts as both suggestions of operations that should trigger audit "
 "events on all implementations, and examples of event schemas."
 msgstr ""
 
-#: ../pep-0578.rst:316
+#: ../../peps/peps/pep-0578.rst:315
 msgid ""
 "Table 2 provides further examples that are not required, but are likely to "
 "be available in CPython."
 msgstr ""
 
-#: ../pep-0578.rst:319
+#: ../../peps/peps/pep-0578.rst:318
 msgid ""
 "Refer to the documentation associated with your version of Python to see "
 "which operations provide audit events."
 msgstr ""
 
-#: ../pep-0578.rst:322
+#: ../../peps/peps/pep-0578.rst:321
 msgid "Table 1: Suggested Audit Hooks"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "API Function"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "Event Name"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "Arguments"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "Rationale"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``PySys_AddAuditHook``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``sys.addaudithook``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "Detect when new audit hooks are being added."
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``PyFile_SetOpenCodeHook``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``cpython.PyFile_SetOpenCodeHook``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "Detects any attempt to set the ``open_code`` hook."
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid ""
 "``compile``, ``exec``, ``eval``, ``PyAst_CompileString``, ``PyAST_obj2mod``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``compile``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``(code, filename_or_none)``"
 msgstr ""
 
-#: ../pep-0578.rst:2
+#: ../../peps/peps/pep-0578.rst:2
 msgid ""
 "Detect dynamic code compilation, where ``code`` could be a string or AST. "
 "Note that this will be called for regular imports of source code, including "
 "those that were opened with ``open_code``."
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``exec``, ``eval``, ``run_mod``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``exec``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``(code_object,)``"
 msgstr ""
 
-#: ../pep-0578.rst:2
+#: ../../peps/peps/pep-0578.rst:2
 msgid ""
 "Detect dynamic execution of code objects. This only occurs for explicit "
 "calls, and is not raised for normal function invocation."
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``import``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``(module, filename, sys.path, sys.meta_path, sys.path_hooks)``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid ""
 "Detect when modules are imported. This is raised before the module name is "
 "resolved to a file. All arguments other than the module name may be ``None`` "
 "if they are not used or available."
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``open``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``io.open``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``(path, mode, flags)``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid ""
 "Detect when a file is about to be opened. *path* and *mode* are the usual "
 "parameters to ``open`` if available, while *flags* is provided instead of "
 "*mode* in some cases."
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``PyEval_SetProfile``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``sys.setprofile``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid ""
 "Detect when code is injecting trace functions. Because of the "
 "implementation, exceptions raised from the hook will abort the operation, "
@@ -605,15 +605,15 @@ msgid ""
 "eventually calls this function, so the event will be audited for each thread."
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``PyEval_SetTrace``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``sys.settrace``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid ""
 "Detect when code is injecting trace functions. Because of the "
 "implementation, exceptions raised from the hook will abort the operation, "
@@ -621,253 +621,253 @@ msgid ""
 "eventually calls this function, so the event will be audited for each thread."
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid ""
 "``_PyObject_GenericSetAttr``, ``check_set_special_type_attr``, "
 "``object_set_class``, ``func_set_code``, ``func_set_[kw]defaults``"
 msgstr ""
 
-#: ../pep-0578.rst:2
+#: ../../peps/peps/pep-0578.rst:2
 msgid "``object.__setattr__``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``(object, attr, value)``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid ""
 "Detect monkey patching of types and objects. This event is raised for the "
 "``__class__`` attribute and any attribute on ``type`` objects."
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``_PyObject_GenericSetAttr``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``object.__delattr__``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``(object, attr)``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid ""
 "Detect deletion of object attributes. This event is raised for any attribute "
 "on ``type`` objects."
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``Unpickler.find_class``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``pickle.find_class``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``(module_name, global_name)``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "Detect imports and global name lookup when unpickling."
 msgstr ""
 
-#: ../pep-0578.rst:382
+#: ../../peps/peps/pep-0578.rst:381
 msgid "Table 2: Potential CPython Audit Hooks"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``_PySys_ClearAuditHooks``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``sys._clearaudithooks``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid ""
 "Notifies hooks they are being cleaned up, mainly in case the event is "
 "triggered unexpectedly. This event cannot be aborted."
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``code_new``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``code.__new__``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``(bytecode, filename, name)``"
 msgstr ""
 
-#: ../pep-0578.rst:2
+#: ../../peps/peps/pep-0578.rst:2
 msgid ""
 "Detect dynamic creation of code objects. This only occurs for direct "
 "instantiation, and is not raised for normal compilation."
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``func_new_impl``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``function.__new__``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``(code,)``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid ""
 "Detect dynamic creation of function objects. This only occurs for direct "
 "instantiation, and is not raised for normal compilation."
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``_ctypes.dlopen``, ``_ctypes.LoadLibrary``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``ctypes.dlopen``"
 msgstr ""
 
-#: ../pep-0578.rst:2
+#: ../../peps/peps/pep-0578.rst:2
 msgid "``(module_or_path,)``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "Detect when native modules are used."
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``_ctypes._FuncPtr``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``ctypes.dlsym``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``(lib_object, name)``"
 msgstr ""
 
-#: ../pep-0578.rst:2
+#: ../../peps/peps/pep-0578.rst:2
 msgid ""
 "Collect information about specific symbols retrieved from native modules."
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``_ctypes._CData``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``ctypes.cdata``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``(ptr_as_int,)``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "Detect when code is accessing arbitrary memory using ``ctypes``."
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``new_mmap_object``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``mmap.__new__``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``(fileno, map_size, access, offset)``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid ""
 "Detects creation of mmap objects. On POSIX, access may have been calculated "
 "from the ``prot`` and ``flags`` arguments."
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``sys._getframe``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``(frame_object,)``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "Detect when code is accessing frames directly."
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``sys._current_frames``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid ""
 "``socket.bind``, ``socket.connect``, ``socket.connect_ex``, ``socket."
 "getaddrinfo``, ``socket.getnameinfo``, ``socket.sendmsg``, ``socket.sendto``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``socket.address``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``(socket, address,)``"
 msgstr ""
 
-#: ../pep-0578.rst:2
+#: ../../peps/peps/pep-0578.rst:2
 msgid ""
 "Detect access to network resources. The address is unmodified from the "
 "original call."
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``member_get``, ``func_get_code``, ``func_get_[kw]defaults``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``object.__getattr__``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid ""
 "Detect access to restricted attributes. This event is raised for any built-"
 "in members that are marked as restricted, and members that may allow "
 "bypassing imports."
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``urllib.urlopen``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``urllib.Request``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "``(url, data, headers, method)``"
 msgstr ""
 
-#: ../pep-0578.rst:1
+#: ../../peps/peps/pep-0578.rst:1
 msgid "Detects URL requests."
 msgstr ""
 
-#: ../pep-0578.rst:435
+#: ../../peps/peps/pep-0578.rst:434
 msgid "Performance Impact"
 msgstr ""
 
-#: ../pep-0578.rst:437
+#: ../../peps/peps/pep-0578.rst:436
 msgid ""
 "The important performance impact is the case where events are being raised "
 "but there are no hooks attached. This is the unavoidable case - once a "
@@ -876,28 +876,28 @@ msgid ""
 "of interest here, since this is opt-in functionality."
 msgstr ""
 
-#: ../pep-0578.rst:443
+#: ../../peps/peps/pep-0578.rst:442
 msgid ""
 "Analysis using the Python Performance Benchmark Suite [1]_ shows no "
 "significant impact, with the vast majority of benchmarks showing between "
 "1.05x faster to 1.05x slower."
 msgstr ""
 
-#: ../pep-0578.rst:447
+#: ../../peps/peps/pep-0578.rst:446
 msgid ""
 "In our opinion, the performance impact of the set of auditing points "
 "described in this PEP is negligible."
 msgstr ""
 
-#: ../pep-0578.rst:451
+#: ../../peps/peps/pep-0578.rst:450
 msgid "Rejected Ideas"
 msgstr ""
 
-#: ../pep-0578.rst:454
+#: ../../peps/peps/pep-0578.rst:453
 msgid "Separate module for audit hooks"
 msgstr ""
 
-#: ../pep-0578.rst:456
+#: ../../peps/peps/pep-0578.rst:455
 msgid ""
 "The proposal is to add a new module for audit hooks, hypothetically "
 "``audit``. This would separate the API and implementation from the ``sys`` "
@@ -905,7 +905,7 @@ msgid ""
 "``PyAudit_Audit`` rather than the current variations."
 msgstr ""
 
-#: ../pep-0578.rst:461
+#: ../../peps/peps/pep-0578.rst:460
 msgid ""
 "Any such module would need to be a built-in module that is guaranteed to "
 "always be present. The nature of these hooks is that they must be callable "
@@ -913,7 +913,7 @@ msgid ""
 "to intercept and suppress or modify events."
 msgstr ""
 
-#: ../pep-0578.rst:466
+#: ../../peps/peps/pep-0578.rst:465
 msgid ""
 "Given it is one of the most core modules, the ``sys`` module is somewhat "
 "protected against module shadowing attacks. Replacing ``sys`` with a "
@@ -925,24 +925,24 @@ msgid ""
 "the search path::"
 msgstr ""
 
-#: ../pep-0578.rst:478
+#: ../../peps/peps/pep-0578.rst:477
 msgid ""
 "Multiple layers of protection already exist for monkey patching attacks "
 "against either ``sys`` or ``audit``, but assignments or insertions to ``sys."
 "modules`` are not audited."
 msgstr ""
 
-#: ../pep-0578.rst:482
+#: ../../peps/peps/pep-0578.rst:481
 msgid ""
 "This idea is rejected because it makes it trivial to suppress all calls to "
 "``audit``."
 msgstr ""
 
-#: ../pep-0578.rst:486
+#: ../../peps/peps/pep-0578.rst:485
 msgid "Flag in sys.flags to indicate \"audited\" mode"
 msgstr ""
 
-#: ../pep-0578.rst:488
+#: ../../peps/peps/pep-0578.rst:487
 msgid ""
 "The proposal is to add a value in ``sys.flags`` to indicate when Python is "
 "running in a \"secure\" or \"audited\" mode. This would allow applications "
@@ -950,13 +950,13 @@ msgid ""
 "modify their behaviour appropriately."
 msgstr ""
 
-#: ../pep-0578.rst:493
+#: ../../peps/peps/pep-0578.rst:492
 msgid ""
 "Currently, we are not aware of any legitimate reasons for a program to "
 "behave differently in the presence of audit hooks."
 msgstr ""
 
-#: ../pep-0578.rst:496
+#: ../../peps/peps/pep-0578.rst:495
 msgid ""
 "Both application-level APIs ``sys.audit`` and ``io.open_code`` are always "
 "present and functional, regardless of whether the regular ``python`` entry "
@@ -967,26 +967,26 @@ msgid ""
 "any added hooks are fast enough to not affect application performance."
 msgstr ""
 
-#: ../pep-0578.rst:505
+#: ../../peps/peps/pep-0578.rst:504
 msgid ""
 "The argument that this is \"security by obscurity\" is valid, but "
 "irrelevant. Security by obscurity is only an issue when there are no other "
 "protective mechanisms; obscurity as the first step in avoiding attack is "
-"strongly recommended (see `this article <https://danielmiessler.com/study/"
+"strongly recommended (see `this article <https://danielmiessler.com/p/"
 "security-by-obscurity/>`_ for discussion)."
 msgstr ""
 
-#: ../pep-0578.rst:512
+#: ../../peps/peps/pep-0578.rst:511
 msgid ""
 "This idea is rejected because there are no appropriate reasons for an "
 "application to change its behaviour based on whether these APIs are in use."
 msgstr ""
 
-#: ../pep-0578.rst:517
+#: ../../peps/peps/pep-0578.rst:516
 msgid "Why Not A Sandbox"
 msgstr ""
 
-#: ../pep-0578.rst:519
+#: ../../peps/peps/pep-0578.rst:518
 msgid ""
 "Sandboxing CPython has been attempted many times in the past, and each past "
 "attempt has failed. Fundamentally, the problem is that certain functionality "
@@ -1000,7 +1000,7 @@ msgid ""
 "references available at [2]_."
 msgstr ""
 
-#: ../pep-0578.rst:530
+#: ../../peps/peps/pep-0578.rst:529
 msgid ""
 "This proposal does not attempt to restrict functionality, but simply exposes "
 "the fact that the functionality is being used. Particularly for intrusion "
@@ -1012,7 +1012,7 @@ msgid ""
 "possible."
 msgstr ""
 
-#: ../pep-0578.rst:539
+#: ../../peps/peps/pep-0578.rst:538
 msgid ""
 "Since audit hooks have the ability to safely prevent an operation occurring, "
 "this feature does enable the ability to provide some level of sandboxing. In "
@@ -1020,51 +1020,52 @@ msgid ""
 "a sandbox."
 msgstr ""
 
-#: ../pep-0578.rst:545
+#: ../../peps/peps/pep-0578.rst:544
 msgid "Relationship to PEP 551"
 msgstr ""
 
-#: ../pep-0578.rst:547
+#: ../../peps/peps/pep-0578.rst:546
 msgid ""
 "This API was originally presented as part of :pep:`551` Security "
 "Transparency in the Python Runtime."
 msgstr ""
 
-#: ../pep-0578.rst:551
+#: ../../peps/peps/pep-0578.rst:550
 msgid ""
 "For simpler review purposes, and due to the broader applicability of these "
 "APIs beyond security, the API design is now presented separately."
 msgstr ""
 
-#: ../pep-0578.rst:554
+#: ../../peps/peps/pep-0578.rst:553
 msgid ""
 ":pep:`551` is an informational PEP discussing how to integrate Python into a "
 "secure or audited environment."
 msgstr ""
 
-#: ../pep-0578.rst:558
+#: ../../peps/peps/pep-0578.rst:557
 msgid "References"
 msgstr "Referências"
 
-#: ../pep-0578.rst:560
+#: ../../peps/peps/pep-0578.rst:559
 msgid ""
-"Python Performance Benchmark Suite `<https://github.com/python/performance>`_"
+"Python Performance Benchmark Suite `<https://github.com/python/"
+"pyperformance>`_"
 msgstr ""
 
-#: ../pep-0578.rst:562
+#: ../../peps/peps/pep-0578.rst:561
 msgid ""
 "Python Security model - Sandbox `<https://python-security.readthedocs.io/"
 "security.html#sandbox>`_"
 msgstr ""
 
-#: ../pep-0578.rst:565
+#: ../../peps/peps/pep-0578.rst:564
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../pep-0578.rst:567
+#: ../../peps/peps/pep-0578.rst:566
 msgid ""
 "Copyright (c) 2019 by Microsoft Corporation. This material may be "
 "distributed only subject to the terms and conditions set forth in the Open "
 "Publication License, v1.0 or later (the latest version is presently "
-"available at http://www.opencontent.org/openpub/)."
+"available at https://spdx.org/licenses/OPUBL-1.0.html)."
 msgstr ""

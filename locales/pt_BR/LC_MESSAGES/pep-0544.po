@@ -8,1012 +8,1001 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-20 10:43-0300\n"
+"POT-Creation-Date: 2024-07-14 02:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.13.1\n"
+"Generated-By: Babel 2.15.0\n"
 
-#: ../../peps/pep-0544.rst
+#: ../../peps/peps/pep-0544.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../../peps/pep-0544.rst:5
+#: ../../peps/peps/pep-0544.rst:3
 msgid ""
-"Ivan Levkivskyi <levkivskyi@gmail.com>, Jukka Lehtosalo "
-"<jukka.lehtosalo@iki.fi>, Łukasz Langa <lukasz@python.org>"
+"Ivan Levkivskyi <levkivskyi@gmail.com>, Jukka Lehtosalo <jukka.lehtosalo@iki."
+"fi>, Łukasz Langa <lukasz@python.org>"
 msgstr ""
 
-#: ../../peps/pep-0544.rst
+#: ../../peps/peps/pep-0544.rst
 msgid "BDFL-Delegate"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:6
+#: ../../peps/peps/pep-0544.rst:4
 msgid "Guido van Rossum <guido@python.org>"
 msgstr ""
 
-#: ../../peps/pep-0544.rst
+#: ../../peps/peps/pep-0544.rst
 msgid "Discussions-To"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:7
+#: ../../peps/peps/pep-0544.rst:5
 msgid "python-dev@python.org"
 msgstr ""
 
-#: ../../peps/pep-0544.rst
+#: ../../peps/peps/pep-0544.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../../peps/pep-0544.rst:8
-msgid "Accepted"
+#: ../../peps/peps/pep-0544.rst:6
+msgid "Final"
 msgstr ""
 
-#: ../../peps/pep-0544.rst
+#: ../../peps/peps/pep-0544.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../../peps/pep-0544.rst:9
+#: ../../peps/peps/pep-0544.rst:7
 msgid "Standards Track"
 msgstr ""
 
-#: ../../peps/pep-0544.rst
+#: ../../peps/peps/pep-0544.rst
 msgid "Topic"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:10
+#: ../../peps/peps/pep-0544.rst:8
 msgid "Typing"
 msgstr ""
 
-#: ../../peps/pep-0544.rst
+#: ../../peps/peps/pep-0544.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../../peps/pep-0544.rst:12
+#: ../../peps/peps/pep-0544.rst:9
 msgid "05-Mar-2017"
 msgstr ""
 
-#: ../../peps/pep-0544.rst
+#: ../../peps/peps/pep-0544.rst
 msgid "Python-Version"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:13
+#: ../../peps/peps/pep-0544.rst:10
 msgid "3.8"
 msgstr ""
 
-#: ../../peps/pep-0544.rst
+#: ../../peps/peps/pep-0544.rst
 msgid "Resolution"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:14
+#: ../../peps/peps/pep-0544.rst:11
 msgid ""
-"https://mail.python.org/archives/list/typing-"
-"sig@python.org/message/FDO4KFYWYQEP3U2HVVBEBR3SXPHQSHYR/"
+"https://mail.python.org/archives/list/typing-sig@python.org/message/"
+"FDO4KFYWYQEP3U2HVVBEBR3SXPHQSHYR/"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:18
+#: ../../peps/peps/pep-0544.rst:18
 msgid "Abstract"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:20
+#: ../../peps/peps/pep-0544.rst:20
 msgid ""
-"Type hints introduced in :pep:`484` can be used to specify type metadata "
-"for static type checkers and other third party tools. However, :pep:`484`"
-" only specifies the semantics of *nominal* subtyping. In this PEP we "
-"specify static and runtime semantics of protocol classes that will "
-"provide a support for *structural* subtyping (static duck typing)."
+"Type hints introduced in :pep:`484` can be used to specify type metadata for "
+"static type checkers and other third party tools. However, :pep:`484` only "
+"specifies the semantics of *nominal* subtyping. In this PEP we specify "
+"static and runtime semantics of protocol classes that will provide a support "
+"for *structural* subtyping (static duck typing)."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:30
+#: ../../peps/peps/pep-0544.rst:30
 msgid "Rationale and Goals"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:32
+#: ../../peps/peps/pep-0544.rst:32
 msgid ""
-"Currently, :pep:`484` and the ``typing`` module [typing]_ define abstract"
-" base classes for several common Python protocols such as ``Iterable`` "
-"and ``Sized``. The problem with them is that a class has to be explicitly"
-" marked to support them, which is unpythonic and unlike what one would "
-"normally do in idiomatic dynamically typed Python code. For example, this"
-" conforms to :pep:`484`::"
+"Currently, :pep:`484` and the ``typing`` module [typing]_ define abstract "
+"base classes for several common Python protocols such as ``Iterable`` and "
+"``Sized``. The problem with them is that a class has to be explicitly marked "
+"to support them, which is unpythonic and unlike what one would normally do "
+"in idiomatic dynamically typed Python code. For example, this conforms to :"
+"pep:`484`::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:46
+#: ../../peps/peps/pep-0544.rst:46
 msgid ""
 "The same problem appears with user-defined ABCs: they must be explicitly "
-"subclassed or registered. This is particularly difficult to do with "
-"library types as the type objects may be hidden deep in the "
-"implementation of the library. Also, extensive use of ABCs might impose "
-"additional runtime costs."
+"subclassed or registered. This is particularly difficult to do with library "
+"types as the type objects may be hidden deep in the implementation of the "
+"library. Also, extensive use of ABCs might impose additional runtime costs."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:52
+#: ../../peps/peps/pep-0544.rst:52
 msgid ""
-"The intention of this PEP is to solve all these problems by allowing "
-"users to write the above code without explicit base classes in the class "
+"The intention of this PEP is to solve all these problems by allowing users "
+"to write the above code without explicit base classes in the class "
 "definition, allowing ``Bucket`` to be implicitly considered a subtype of "
 "both ``Sized`` and ``Iterable[int]`` by static type checkers using "
 "structural [wiki-structural]_ subtyping::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:68
+#: ../../peps/peps/pep-0544.rst:68
 msgid ""
-"Note that ABCs in ``typing`` module already provide structural behavior "
-"at runtime, ``isinstance(Bucket(), Iterable)`` returns ``True``. The main"
-" goal of this proposal is to support such behavior statically. The same "
+"Note that ABCs in ``typing`` module already provide structural behavior at "
+"runtime, ``isinstance(Bucket(), Iterable)`` returns ``True``. The main goal "
+"of this proposal is to support such behavior statically. The same "
 "functionality will be provided for user-defined protocols, as specified "
 "below. The above code with a protocol class matches common Python "
-"conventions much better. It is also automatically extensible and works "
-"with additional, unrelated classes that happen to implement the required "
-"protocol."
+"conventions much better. It is also automatically extensible and works with "
+"additional, unrelated classes that happen to implement the required protocol."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:79
+#: ../../peps/peps/pep-0544.rst:79
 msgid "Nominal vs structural subtyping"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:81
+#: ../../peps/peps/pep-0544.rst:81
 msgid ""
-"Structural subtyping is natural for Python programmers since it matches "
-"the runtime semantics of duck typing: an object that has certain "
-"properties is treated independently of its actual runtime class. However,"
-" as discussed in :pep:`483`, both nominal and structural subtyping have "
-"their strengths and weaknesses. Therefore, in this PEP we *do not "
-"propose* to replace the nominal subtyping described by :pep:`484` with "
-"structural subtyping completely. Instead, protocol classes as specified "
-"in this PEP complement normal classes, and users are free to choose where"
-" to apply a particular solution. See section on `rejected <PEP 544 "
-"rejected_>`_ ideas at the end of this PEP for additional motivation."
+"Structural subtyping is natural for Python programmers since it matches the "
+"runtime semantics of duck typing: an object that has certain properties is "
+"treated independently of its actual runtime class. However, as discussed in :"
+"pep:`483`, both nominal and structural subtyping have their strengths and "
+"weaknesses. Therefore, in this PEP we *do not propose* to replace the "
+"nominal subtyping described by :pep:`484` with structural subtyping "
+"completely. Instead, protocol classes as specified in this PEP complement "
+"normal classes, and users are free to choose where to apply a particular "
+"solution. See section on `rejected <PEP 544 rejected_>`_ ideas at the end of "
+"this PEP for additional motivation."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:94
+#: ../../peps/peps/pep-0544.rst:94
 msgid "Non-goals"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:96
+#: ../../peps/peps/pep-0544.rst:96
 msgid ""
 "At runtime, protocol classes will be simple ABCs. There is no intent to "
 "provide sophisticated runtime instance and class checks against protocol "
 "classes. This would be difficult and error-prone and will contradict the "
-"logic of :pep:`484`. As well, following :pep:`484` and :pep:`526` we "
-"state that protocols are **completely optional**:"
+"logic of :pep:`484`. As well, following :pep:`484` and :pep:`526` we state "
+"that protocols are **completely optional**:"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:102
+#: ../../peps/peps/pep-0544.rst:102
 msgid ""
-"No runtime semantics will be imposed for variables or parameters "
-"annotated with a protocol class."
+"No runtime semantics will be imposed for variables or parameters annotated "
+"with a protocol class."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:104
+#: ../../peps/peps/pep-0544.rst:104
 msgid ""
 "Any checks will be performed only by third-party type checkers and other "
 "tools."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:106
+#: ../../peps/peps/pep-0544.rst:106
 msgid "Programmers are free to not use them even if they use type annotations."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:107
+#: ../../peps/peps/pep-0544.rst:107
 msgid "There is no intent to make protocols non-optional in the future."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:109
+#: ../../peps/peps/pep-0544.rst:109
 msgid ""
-"To reiterate, providing complex runtime semantics for protocol classes is"
-" not a goal of this PEP, the main goal is to provide a support and "
-"standards for *static* structural subtyping. The possibility to use "
-"protocols in the runtime context as ABCs is rather a minor bonus that "
-"exists mostly to provide a seamless transition for projects that already "
-"use ABCs."
+"To reiterate, providing complex runtime semantics for protocol classes is "
+"not a goal of this PEP, the main goal is to provide a support and standards "
+"for *static* structural subtyping. The possibility to use protocols in the "
+"runtime context as ABCs is rather a minor bonus that exists mostly to "
+"provide a seamless transition for projects that already use ABCs."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:117
+#: ../../peps/peps/pep-0544.rst:117
 msgid "Existing Approaches to Structural Subtyping"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:119
+#: ../../peps/peps/pep-0544.rst:119
 msgid ""
 "Before describing the actual specification, we review and comment on "
 "existing approaches related to structural subtyping in Python and other "
 "languages:"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:122
+#: ../../peps/peps/pep-0544.rst:122
 msgid ""
 "``zope.interface`` [zope-interfaces]_ was one of the first widely used "
-"approaches to structural subtyping in Python. It is implemented by "
-"providing special classes to distinguish interface classes from normal "
-"classes, to mark interface attributes, and to explicitly declare "
-"implementation. For example::"
+"approaches to structural subtyping in Python. It is implemented by providing "
+"special classes to distinguish interface classes from normal classes, to "
+"mark interface attributes, and to explicitly declare implementation. For "
+"example::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:145
+#: ../../peps/peps/pep-0544.rst:145
 msgid ""
 "Zope interfaces support various contracts and constraints for interface "
 "classes. For example::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:162
+#: ../../peps/peps/pep-0544.rst:162
 msgid ""
-"Even more detailed invariants are supported. However, Zope interfaces "
-"rely entirely on runtime validation. Such focus on runtime properties "
-"goes beyond the scope of the current proposal, and static support for "
-"invariants might be difficult to implement. However, the idea of marking "
-"an interface class with a special base class is reasonable and easy to "
-"implement both statically and at runtime."
+"Even more detailed invariants are supported. However, Zope interfaces rely "
+"entirely on runtime validation. Such focus on runtime properties goes beyond "
+"the scope of the current proposal, and static support for invariants might "
+"be difficult to implement. However, the idea of marking an interface class "
+"with a special base class is reasonable and easy to implement both "
+"statically and at runtime."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:169
+#: ../../peps/peps/pep-0544.rst:169
 msgid ""
-"Python abstract base classes [abstract-classes]_ are the standard library"
-" tool to provide some functionality similar to structural subtyping. The "
-"drawback of this approach is the necessity to either subclass the "
-"abstract class or register an implementation explicitly::"
+"Python abstract base classes [abstract-classes]_ are the standard library "
+"tool to provide some functionality similar to structural subtyping. The "
+"drawback of this approach is the necessity to either subclass the abstract "
+"class or register an implementation explicitly::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:184
+#: ../../peps/peps/pep-0544.rst:184
 msgid ""
-"As mentioned in the `rationale <PEP 544 rationale_>`_, we want to avoid "
-"such necessity, especially in static context. However, in a runtime "
-"context, ABCs are good candidates for protocol classes and they are "
-"already used extensively in the ``typing`` module."
+"As mentioned in the `rationale <PEP 544 rationale_>`_, we want to avoid such "
+"necessity, especially in static context. However, in a runtime context, ABCs "
+"are good candidates for protocol classes and they are already used "
+"extensively in the ``typing`` module."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:190
+#: ../../peps/peps/pep-0544.rst:190
 msgid ""
-"Abstract classes defined in ``collections.abc`` module [collections-abc]_"
-" are slightly more advanced since they implement a custom "
-"``__subclasshook__()`` method that allows runtime structural checks "
-"without explicit registration::"
+"Abstract classes defined in ``collections.abc`` module [collections-abc]_ "
+"are slightly more advanced since they implement a custom "
+"``__subclasshook__()`` method that allows runtime structural checks without "
+"explicit registration::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:203
+#: ../../peps/peps/pep-0544.rst:203
 msgid ""
-"Such behavior seems to be a perfect fit for both runtime and static "
-"behavior of protocols. As discussed in `rationale <PEP 544 rationale_>`_,"
-" we propose to add static support for such behavior. In addition, to "
-"allow users to achieve such runtime behavior for *user-defined* protocols"
-" a special ``@runtime_checkable`` decorator will be provided, see "
-"detailed `discussion`_ below."
+"Such behavior seems to be a perfect fit for both runtime and static behavior "
+"of protocols. As discussed in `rationale <PEP 544 rationale_>`_, we propose "
+"to add static support for such behavior. In addition, to allow users to "
+"achieve such runtime behavior for *user-defined* protocols a special "
+"``@runtime_checkable`` decorator will be provided, see detailed "
+"`discussion`_ below."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:210
+#: ../../peps/peps/pep-0544.rst:210
 msgid ""
 "TypeScript [typescript]_ provides support for user-defined classes and "
 "interfaces. Explicit implementation declaration is not required and "
 "structural subtyping is verified statically. For example::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:226
+#: ../../peps/peps/pep-0544.rst:226
 msgid ""
 "Note that optional interface members are supported. Also, TypeScript "
-"prohibits redundant members in implementations. While the idea of "
-"optional members looks interesting, it would complicate this proposal and"
-" it is not clear how useful it will be. Therefore, it is proposed to "
-"postpone this; see `rejected <PEP 544 rejected_>`_ ideas. In general, the"
-" idea of static protocol checking without runtime implications looks "
-"reasonable, and basically this proposal follows the same line."
+"prohibits redundant members in implementations. While the idea of optional "
+"members looks interesting, it would complicate this proposal and it is not "
+"clear how useful it will be. Therefore, it is proposed to postpone this; see "
+"`rejected <PEP 544 rejected_>`_ ideas. In general, the idea of static "
+"protocol checking without runtime implications looks reasonable, and "
+"basically this proposal follows the same line."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:234
+#: ../../peps/peps/pep-0544.rst:234
 msgid ""
-"Go [golang]_ uses a more radical approach and makes interfaces the "
-"primary way to provide type information. Also, assignments are used to "
-"explicitly ensure implementation::"
+"Go [golang]_ uses a more radical approach and makes interfaces the primary "
+"way to provide type information. Also, assignments are used to explicitly "
+"ensure implementation::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:246
+#: ../../peps/peps/pep-0544.rst:246
 msgid ""
-"Both these ideas are questionable in the context of this proposal. See "
-"the section on `rejected <PEP 544 rejected_>`_ ideas."
+"Both these ideas are questionable in the context of this proposal. See the "
+"section on `rejected <PEP 544 rejected_>`_ ideas."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:251
+#: ../../peps/peps/pep-0544.rst:251
 msgid "Specification"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:254
+#: ../../peps/peps/pep-0544.rst:254
 msgid "Terminology"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:256
+#: ../../peps/peps/pep-0544.rst:256
 msgid ""
 "We propose to use the term *protocols* for types supporting structural "
-"subtyping. The reason is that the term *iterator protocol*, for example, "
-"is widely understood in the community, and coming up with a new term for "
-"this concept in a statically typed context would just create confusion."
+"subtyping. The reason is that the term *iterator protocol*, for example, is "
+"widely understood in the community, and coming up with a new term for this "
+"concept in a statically typed context would just create confusion."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:262
+#: ../../peps/peps/pep-0544.rst:262
 msgid ""
-"This has the drawback that the term *protocol* becomes overloaded with "
-"two subtly different meanings: the first is the traditional, well-known "
-"but slightly fuzzy concept of protocols such as iterator; the second is "
-"the more explicitly defined concept of protocols in statically typed "
-"code. The distinction is not important most of the time, and in other "
-"cases we propose to just add a qualifier such as *protocol classes* when "
-"referring to the static type concept."
+"This has the drawback that the term *protocol* becomes overloaded with two "
+"subtly different meanings: the first is the traditional, well-known but "
+"slightly fuzzy concept of protocols such as iterator; the second is the more "
+"explicitly defined concept of protocols in statically typed code. The "
+"distinction is not important most of the time, and in other cases we propose "
+"to just add a qualifier such as *protocol classes* when referring to the "
+"static type concept."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:270
+#: ../../peps/peps/pep-0544.rst:270
 msgid ""
-"If a class includes a protocol in its MRO, the class is called an "
-"*explicit* subclass of the protocol. If a class is a structural subtype "
-"of a protocol, it is said to implement the protocol and to be compatible "
-"with a protocol. If a class is compatible with a protocol but the "
-"protocol is not included in the MRO, the class is an *implicit* subtype "
-"of the protocol. (Note that one can explicitly subclass a protocol and "
-"still not implement it if a protocol attribute is set to ``None`` in the "
-"subclass, see Python [data-model]_ for details.)"
+"If a class includes a protocol in its MRO, the class is called an *explicit* "
+"subclass of the protocol. If a class is a structural subtype of a protocol, "
+"it is said to implement the protocol and to be compatible with a protocol. "
+"If a class is compatible with a protocol but the protocol is not included in "
+"the MRO, the class is an *implicit* subtype of the protocol. (Note that one "
+"can explicitly subclass a protocol and still not implement it if a protocol "
+"attribute is set to ``None`` in the subclass, see Python [data-model]_ for "
+"details.)"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:279
+#: ../../peps/peps/pep-0544.rst:279
 msgid ""
-"The attributes (variables and methods) of a protocol that are mandatory "
-"for other class in order to be considered a structural subtype are called"
-" protocol members."
+"The attributes (variables and methods) of a protocol that are mandatory for "
+"other class in order to be considered a structural subtype are called "
+"protocol members."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:287
+#: ../../peps/peps/pep-0544.rst:287
 msgid "Defining a protocol"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:289
+#: ../../peps/peps/pep-0544.rst:289
 msgid ""
-"Protocols are defined by including a special new class "
-"``typing.Protocol`` (an instance of ``abc.ABCMeta``) in the base classes "
-"list, typically at the end of the list. Here is a simple example::"
+"Protocols are defined by including a special new class ``typing.Protocol`` "
+"(an instance of ``abc.ABCMeta``) in the base classes list, typically at the "
+"end of the list. Here is a simple example::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:299
+#: ../../peps/peps/pep-0544.rst:299
 msgid ""
-"Now if one defines a class ``Resource`` with a ``close()`` method that "
-"has a compatible signature, it would implicitly be a subtype of "
-"``SupportsClose``, since the structural subtyping is used for protocol "
-"types::"
+"Now if one defines a class ``Resource`` with a ``close()`` method that has a "
+"compatible signature, it would implicitly be a subtype of ``SupportsClose``, "
+"since the structural subtyping is used for protocol types::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:310
+#: ../../peps/peps/pep-0544.rst:310
 msgid ""
-"Apart from few restrictions explicitly mentioned below, protocol types "
-"can be used in every context where a normal types can::"
+"Apart from few restrictions explicitly mentioned below, protocol types can "
+"be used in every context where a normal types can::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:322
+#: ../../peps/peps/pep-0544.rst:322
 msgid ""
-"Note that both the user-defined class ``Resource`` and the built-in "
-"``IO`` type (the return type of ``open()``) are considered subtypes of "
+"Note that both the user-defined class ``Resource`` and the built-in ``IO`` "
+"type (the return type of ``open()``) are considered subtypes of "
 "``SupportsClose``, because they provide a ``close()`` method with a "
 "compatible type signature."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:329
+#: ../../peps/peps/pep-0544.rst:329
 msgid "Protocol members"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:331
+#: ../../peps/peps/pep-0544.rst:331
 msgid ""
-"All methods defined in the protocol class body are protocol members, both"
-" normal and decorated with ``@abstractmethod``. If any parameters of a "
+"All methods defined in the protocol class body are protocol members, both "
+"normal and decorated with ``@abstractmethod``. If any parameters of a "
 "protocol method are not annotated, then their types are assumed to be "
-"``Any`` (see :pep:`484`). Bodies of protocol methods are type checked. An"
-" abstract method that should not be called via ``super()`` ought to raise"
-" ``NotImplementedError``. Example::"
+"``Any`` (see :pep:`484`). Bodies of protocol methods are type checked. An "
+"abstract method that should not be called via ``super()`` ought to raise "
+"``NotImplementedError``. Example::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:349
+#: ../../peps/peps/pep-0544.rst:349
 msgid ""
 "Static methods, class methods, and properties are equally allowed in "
 "protocols."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:352
+#: ../../peps/peps/pep-0544.rst:352
 msgid ""
-"To define a protocol variable, one can use :pep:`526` variable "
-"annotations in the class body. Additional attributes *only* defined in "
-"the body of a method by assignment via ``self`` are not allowed. The "
-"rationale for this is that the protocol class implementation is often not"
-" shared by subtypes, so the interface should not depend on the default "
-"implementation. Examples::"
+"To define a protocol variable, one can use :pep:`526` variable annotations "
+"in the class body. Additional attributes *only* defined in the body of a "
+"method by assignment via ``self`` are not allowed. The rationale for this is "
+"that the protocol class implementation is often not shared by subtypes, so "
+"the interface should not depend on the default implementation. Examples::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:378
+#: ../../peps/peps/pep-0544.rst:378
 msgid ""
 "To distinguish between protocol class variables and protocol instance "
-"variables, the special ``ClassVar`` annotation should be used as "
-"specified by :pep:`526`. By default, protocol variables as defined above "
-"are considered readable and writable. To define a read-only protocol "
-"variable, one can use an (abstract) property."
+"variables, the special ``ClassVar`` annotation should be used as specified "
+"by :pep:`526`. By default, protocol variables as defined above are "
+"considered readable and writable. To define a read-only protocol variable, "
+"one can use an (abstract) property."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:386
+#: ../../peps/peps/pep-0544.rst:386
 msgid "Explicitly declaring implementation"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:388
+#: ../../peps/peps/pep-0544.rst:388
 msgid ""
-"To explicitly declare that a certain class implements a given protocol, "
-"it can be used as a regular base class. In this case a class could use "
-"default implementations of protocol members. Static analysis tools are "
-"expected to automatically detect that a class implements a given "
-"protocol. So while it's possible to subclass a protocol explicitly, it's "
-"*not necessary* to do so for the sake of type-checking."
+"To explicitly declare that a certain class implements a given protocol, it "
+"can be used as a regular base class. In this case a class could use default "
+"implementations of protocol members. Static analysis tools are expected to "
+"automatically detect that a class implements a given protocol. So while it's "
+"possible to subclass a protocol explicitly, it's *not necessary* to do so "
+"for the sake of type-checking."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:395
+#: ../../peps/peps/pep-0544.rst:395
 msgid ""
-"The default implementations cannot be used if the subtype relationship is"
-" implicit and only via structural subtyping -- the semantics of "
-"inheritance is not changed. Examples::"
+"The default implementations cannot be used if the subtype relationship is "
+"implicit and only via structural subtyping -- the semantics of inheritance "
+"is not changed. Examples::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:429
+#: ../../peps/peps/pep-0544.rst:431
 msgid ""
-"Note that there is little difference between explicit and implicit "
-"subtypes, the main benefit of explicit subclassing is to get some "
-"protocol methods \"for free\". In addition, type checkers can statically "
-"verify that the class actually implements the protocol correctly::"
+"Note that there is little difference between explicit and implicit subtypes, "
+"the main benefit of explicit subclassing is to get some protocol methods "
+"\"for free\". In addition, type checkers can statically verify that the "
+"class actually implements the protocol correctly::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:447
+#: ../../peps/peps/pep-0544.rst:449
 msgid ""
-"A class can explicitly inherit from multiple protocols and also from "
-"normal classes. In this case methods are resolved using normal MRO and a "
-"type checker verifies that all subtyping are correct. The semantics of "
-"``@abstractmethod`` is not changed, all of them must be implemented by an"
-" explicit subclass before it can be instantiated."
+"A class can explicitly inherit from multiple protocols and also from normal "
+"classes. In this case methods are resolved using normal MRO and a type "
+"checker verifies that all subtyping are correct. The semantics of "
+"``@abstractmethod`` is not changed, all of them must be implemented by an "
+"explicit subclass before it can be instantiated."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:455
+#: ../../peps/peps/pep-0544.rst:457
 msgid "Merging and extending protocols"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:457
+#: ../../peps/peps/pep-0544.rst:459
 msgid ""
-"The general philosophy is that protocols are mostly like regular ABCs, "
-"but a static type checker will handle them specially. Subclassing a "
-"protocol class would not turn the subclass into a protocol unless it also"
-" has ``typing.Protocol`` as an explicit base class. Without this base, "
-"the class is \"downgraded\" to a regular ABC that cannot be used with "
-"structural subtyping. The rationale for this rule is that we don't want "
-"to accidentally have some class act as a protocol just because one of its"
-" base classes happens to be one. We still slightly prefer nominal "
-"subtyping over structural subtyping in the static typing world."
+"The general philosophy is that protocols are mostly like regular ABCs, but a "
+"static type checker will handle them specially. Subclassing a protocol class "
+"would not turn the subclass into a protocol unless it also has ``typing."
+"Protocol`` as an explicit base class. Without this base, the class is "
+"\"downgraded\" to a regular ABC that cannot be used with structural "
+"subtyping. The rationale for this rule is that we don't want to accidentally "
+"have some class act as a protocol just because one of its base classes "
+"happens to be one. We still slightly prefer nominal subtyping over "
+"structural subtyping in the static typing world."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:467
+#: ../../peps/peps/pep-0544.rst:469
 msgid ""
 "A subprotocol can be defined by having *both* one or more protocols as "
-"immediate base classes and also having ``typing.Protocol`` as an "
-"immediate base class::"
+"immediate base classes and also having ``typing.Protocol`` as an immediate "
+"base class::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:477
+#: ../../peps/peps/pep-0544.rst:479
 msgid ""
 "Now the protocol ``SizedAndClosable`` is a protocol with two methods, "
-"``__len__`` and ``close``. If one omits ``Protocol`` in the base class "
-"list, this would be a regular (non-protocol) class that must implement "
-"``Sized``. Alternatively, one can implement ``SizedAndClosable`` protocol"
-" by merging the ``SupportsClose`` protocol from the example in the "
-"`definition`_ section with ``typing.Sized``::"
+"``__len__`` and ``close``. If one omits ``Protocol`` in the base class list, "
+"this would be a regular (non-protocol) class that must implement ``Sized``. "
+"Alternatively, one can implement ``SizedAndClosable`` protocol by merging "
+"the ``SupportsClose`` protocol from the example in the `definition`_ section "
+"with ``typing.Sized``::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:493
+#: ../../peps/peps/pep-0544.rst:495
 msgid ""
 "The two definitions of ``SizedAndClosable`` are equivalent. Subclass "
 "relationships between protocols are not meaningful when considering "
 "subtyping, since structural compatibility is the criterion, not the MRO."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:498
+#: ../../peps/peps/pep-0544.rst:500
 msgid ""
 "If ``Protocol`` is included in the base class list, all the other base "
 "classes must be protocols. A protocol can't extend a regular class, see "
-"`rejected <PEP 544 rejected_>`_ ideas for rationale. Note that rules "
-"around explicit subclassing are different from regular ABCs, where "
-"abstractness is simply defined by having at least one abstract method "
-"being unimplemented. Protocol classes must be marked *explicitly*."
+"`rejected <PEP 544 rejected_>`_ ideas for rationale. Note that rules around "
+"explicit subclassing are different from regular ABCs, where abstractness is "
+"simply defined by having at least one abstract method being unimplemented. "
+"Protocol classes must be marked *explicitly*."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:508
+#: ../../peps/peps/pep-0544.rst:510
 msgid "Generic protocols"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:510
+#: ../../peps/peps/pep-0544.rst:512
 msgid ""
-"Generic protocols are important. For example, ``SupportsAbs``, "
-"``Iterable`` and ``Iterator`` are generic protocols. They are defined "
-"similar to normal non-protocol generic types::"
+"Generic protocols are important. For example, ``SupportsAbs``, ``Iterable`` "
+"and ``Iterator`` are generic protocols. They are defined similar to normal "
+"non-protocol generic types::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:519
+#: ../../peps/peps/pep-0544.rst:521
 msgid ""
-"``Protocol[T, S, ...]`` is allowed as a shorthand for ``Protocol, "
-"Generic[T, S, ...]``."
+"``Protocol[T, S, ...]`` is allowed as a shorthand for ``Protocol, Generic[T, "
+"S, ...]``."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:522
+#: ../../peps/peps/pep-0544.rst:524
 msgid ""
-"User-defined generic protocols support explicitly declared variance. Type"
-" checkers will warn if the inferred variance is different from the "
-"declared variance. Examples::"
+"User-defined generic protocols support explicitly declared variance. Type "
+"checkers will warn if the inferred variance is different from the declared "
+"variance. Examples::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:553
+#: ../../peps/peps/pep-0544.rst:555
 msgid ""
 "Note that unlike nominal classes, de facto covariant protocols cannot be "
-"declared as invariant, since this can break transitivity of subtyping "
-"(see `rejected <PEP 544 rejected_>`_ ideas for details). For example::"
+"declared as invariant, since this can break transitivity of subtyping (see "
+"`rejected <PEP 544 rejected_>`_ ideas for details). For example::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:565
+#: ../../peps/peps/pep-0544.rst:567
 msgid "Recursive protocols"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:567
+#: ../../peps/peps/pep-0544.rst:569
 msgid ""
-"Recursive protocols are also supported. Forward references to the "
-"protocol class names can be given as strings as specified by :pep:`484`. "
-"Recursive protocols are useful for representing self-referential data "
-"structures like trees in an abstract fashion::"
+"Recursive protocols are also supported. Forward references to the protocol "
+"class names can be given as strings as specified by :pep:`484`. Recursive "
+"protocols are useful for representing self-referential data structures like "
+"trees in an abstract fashion::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:576
+#: ../../peps/peps/pep-0544.rst:578
 msgid ""
-"Note that for recursive protocols, a class is considered a subtype of the"
-" protocol in situations where the decision depends on itself. Continuing "
-"the previous example::"
+"Note that for recursive protocols, a class is considered a subtype of the "
+"protocol in situations where the decision depends on itself. Continuing the "
+"previous example::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:597
+#: ../../peps/peps/pep-0544.rst:599
 msgid "Self-types in protocols"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:599
+#: ../../peps/peps/pep-0544.rst:601
 msgid ""
 "The self-types in protocols follow the :pep:`corresponding specification "
 "<484#annotating-instance-and-class-methods>` of :pep:`484`. For example::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:622
+#: ../../peps/peps/pep-0544.rst:624
 msgid "Callback protocols"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:624
+#: ../../peps/peps/pep-0544.rst:626
 msgid ""
-"Protocols can be used to define flexible callback types that are hard (or"
-" even impossible) to express using the ``Callable[...]`` syntax specified"
-" by :pep:`484`, such as variadic, overloaded, and complex generic "
-"callbacks. They can be defined as protocols with a ``__call__`` member::"
+"Protocols can be used to define flexible callback types that are hard (or "
+"even impossible) to express using the ``Callable[...]`` syntax specified by :"
+"pep:`484`, such as variadic, overloaded, and complex generic callbacks. They "
+"can be defined as protocols with a ``__call__`` member::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:644
+#: ../../peps/peps/pep-0544.rst:646
 msgid ""
-"Callback protocols and ``Callable[...]`` types can be used "
-"interchangeably."
+"Callback protocols and ``Callable[...]`` types can be used interchangeably."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:648
+#: ../../peps/peps/pep-0544.rst:650
 msgid "Using Protocols"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:651
+#: ../../peps/peps/pep-0544.rst:653
 msgid "Subtyping relationships with other types"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:653
+#: ../../peps/peps/pep-0544.rst:655
 msgid ""
-"Protocols cannot be instantiated, so there are no values whose runtime "
-"type is a protocol. For variables and parameters with protocol types, "
-"subtyping relationships are subject to the following rules:"
+"Protocols cannot be instantiated, so there are no values whose runtime type "
+"is a protocol. For variables and parameters with protocol types, subtyping "
+"relationships are subject to the following rules:"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:657
+#: ../../peps/peps/pep-0544.rst:659
 msgid "A protocol is never a subtype of a concrete type."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:658
+#: ../../peps/peps/pep-0544.rst:660
 msgid ""
-"A concrete type ``X`` is a subtype of protocol ``P`` if and only if ``X``"
-" implements all protocol members of ``P`` with compatible types. In other"
-" words, subtyping with respect to a protocol is always structural."
+"A concrete type ``X`` is a subtype of protocol ``P`` if and only if ``X`` "
+"implements all protocol members of ``P`` with compatible types. In other "
+"words, subtyping with respect to a protocol is always structural."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:662
+#: ../../peps/peps/pep-0544.rst:664
 msgid ""
-"A protocol ``P1`` is a subtype of another protocol ``P2`` if ``P1`` "
-"defines all protocol members of ``P2`` with compatible types."
+"A protocol ``P1`` is a subtype of another protocol ``P2`` if ``P1`` defines "
+"all protocol members of ``P2`` with compatible types."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:665
+#: ../../peps/peps/pep-0544.rst:667
 msgid ""
 "Generic protocol types follow the same rules of variance as non-protocol "
-"types. Protocol types can be used in all contexts where any other types "
-"can be used, such as in ``Union``, ``ClassVar``, type variables bounds, "
-"etc. Generic protocols follow the rules for generic abstract classes, "
-"except for using structural compatibility instead of compatibility "
-"defined by inheritance relationships."
+"types. Protocol types can be used in all contexts where any other types can "
+"be used, such as in ``Union``, ``ClassVar``, type variables bounds, etc. "
+"Generic protocols follow the rules for generic abstract classes, except for "
+"using structural compatibility instead of compatibility defined by "
+"inheritance relationships."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:672
+#: ../../peps/peps/pep-0544.rst:674
 msgid ""
-"Static type checkers will recognize protocol implementations, even if the"
-" corresponding protocols are *not imported*::"
+"Static type checkers will recognize protocol implementations, even if the "
+"corresponding protocols are *not imported*::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:700
+#: ../../peps/peps/pep-0544.rst:702
 msgid "Unions and intersections of protocols"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:702
+#: ../../peps/peps/pep-0544.rst:704
 msgid ""
 "``Union`` of protocol classes behaves the same way as for non-protocol "
 "classes. For example::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:722
+#: ../../peps/peps/pep-0544.rst:724
 msgid ""
 "One can use multiple inheritance to define an intersection of protocols. "
 "Example::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:734
+#: ../../peps/peps/pep-0544.rst:736
 msgid ""
-"If this will prove to be a widely used scenario, then a special "
-"intersection type construct could be added in future as specified by "
-":pep:`483`, see `rejected <PEP 544 rejected_>`_ ideas for more details."
+"If this will prove to be a widely used scenario, then a special intersection "
+"type construct could be added in future as specified by :pep:`483`, see "
+"`rejected <PEP 544 rejected_>`_ ideas for more details."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:740
+#: ../../peps/peps/pep-0544.rst:742
 msgid "``Type[]`` and class objects vs protocols"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:742
+#: ../../peps/peps/pep-0544.rst:744
 msgid ""
-"Variables and parameters annotated with ``Type[Proto]`` accept only "
-"concrete (non-protocol) subtypes of ``Proto``. The main reason for this "
-"is to allow instantiation of parameters with such type. For example::"
+"Variables and parameters annotated with ``Type[Proto]`` accept only concrete "
+"(non-protocol) subtypes of ``Proto``. The main reason for this is to allow "
+"instantiation of parameters with such type. For example::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:759
+#: ../../peps/peps/pep-0544.rst:761
 msgid "The same rule applies to variables::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:766
+#: ../../peps/peps/pep-0544.rst:768
 msgid ""
-"Assigning an ABC or a protocol class to a variable is allowed if it is "
-"not explicitly typed, and such assignment creates a type alias. For "
-"normal (non-abstract) classes, the behavior of ``Type[]`` is not changed."
+"Assigning an ABC or a protocol class to a variable is allowed if it is not "
+"explicitly typed, and such assignment creates a type alias. For normal (non-"
+"abstract) classes, the behavior of ``Type[]`` is not changed."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:771
+#: ../../peps/peps/pep-0544.rst:773
 msgid ""
-"A class object is considered an implementation of a protocol if accessing"
-" all members on it results in types compatible with the protocol members."
-" For example::"
+"A class object is considered an implementation of a protocol if accessing "
+"all members on it results in types compatible with the protocol members. For "
+"example::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:790
+#: ../../peps/peps/pep-0544.rst:792
 msgid "``NewType()`` and type aliases"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:792
+#: ../../peps/peps/pep-0544.rst:794
 msgid ""
-"Protocols are essentially anonymous. To emphasize this point, static type"
-" checkers might refuse protocol classes inside ``NewType()`` to avoid an "
+"Protocols are essentially anonymous. To emphasize this point, static type "
+"checkers might refuse protocol classes inside ``NewType()`` to avoid an "
 "illusion that a distinct type is provided::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:804
+#: ../../peps/peps/pep-0544.rst:806
 msgid ""
 "In contrast, type aliases are fully supported, including generic type "
 "aliases::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:816
+#: ../../peps/peps/pep-0544.rst:818
 msgid "Modules as implementations of protocols"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:818
+#: ../../peps/peps/pep-0544.rst:820
 msgid ""
 "A module object is accepted where a protocol is expected if the public "
-"interface of the given module is compatible with the expected protocol. "
-"For example::"
+"interface of the given module is compatible with the expected protocol. For "
+"example::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:841
+#: ../../peps/peps/pep-0544.rst:843
 msgid ""
-"To determine compatibility of module level functions, the ``self`` "
-"argument of the corresponding protocol methods is dropped. For example::"
+"To determine compatibility of module level functions, the ``self`` argument "
+"of the corresponding protocol methods is dropped. For example::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:866
-msgid "``@runtime_checkable`` decorator and narrowing types by ``isinstance()``"
-msgstr ""
-
-#: ../../peps/pep-0544.rst:868
+#: ../../peps/peps/pep-0544.rst:868
 msgid ""
-"The default semantics is that ``isinstance()`` and ``issubclass()`` fail "
-"for protocol types. This is in the spirit of duck typing -- protocols "
-"basically would be used to model duck typing statically, not explicitly "
-"at runtime."
+"``@runtime_checkable`` decorator and narrowing types by ``isinstance()``"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:873
+#: ../../peps/peps/pep-0544.rst:870
+msgid ""
+"The default semantics is that ``isinstance()`` and ``issubclass()`` fail for "
+"protocol types. This is in the spirit of duck typing -- protocols basically "
+"would be used to model duck typing statically, not explicitly at runtime."
+msgstr ""
+
+#: ../../peps/peps/pep-0544.rst:875
 msgid ""
 "However, it should be possible for protocol types to implement custom "
-"instance and class checks when this makes sense, similar to how "
-"``Iterable`` and other ABCs in ``collections.abc`` and ``typing`` already"
-" do it, but this is limited to non-generic and unsubscripted generic "
-"protocols (``Iterable`` is statically equivalent to ``Iterable[Any]``). "
-"The ``typing`` module will define a special ``@runtime_checkable`` class "
-"decorator that provides the same semantics for class and instance checks "
-"as for ``collections.abc`` classes, essentially making them \"runtime "
-"protocols\"::"
+"instance and class checks when this makes sense, similar to how ``Iterable`` "
+"and other ABCs in ``collections.abc`` and ``typing`` already do it, but this "
+"is limited to non-generic and unsubscripted generic protocols (``Iterable`` "
+"is statically equivalent to ``Iterable[Any]``). The ``typing`` module will "
+"define a special ``@runtime_checkable`` class decorator that provides the "
+"same semantics for class and instance checks as for ``collections.abc`` "
+"classes, essentially making them \"runtime protocols\"::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:891
+#: ../../peps/peps/pep-0544.rst:893
 #, python-format
 msgid ""
-"Note that instance checks are not 100% reliable statically, this is why "
-"this behavior is opt-in, see section on `rejected <PEP 544 rejected_>`_ "
-"ideas for examples. The most type checkers can do is to treat "
-"``isinstance(obj, Iterator)`` roughly as a simpler way to write "
-"``hasattr(x, '__iter__') and hasattr(x, '__next__')``. To minimize the "
-"risks for this feature, the following rules are applied."
+"Note that instance checks are not 100% reliable statically, this is why this "
+"behavior is opt-in, see section on `rejected <PEP 544 rejected_>`_ ideas for "
+"examples. The most type checkers can do is to treat ``isinstance(obj, "
+"Iterator)`` roughly as a simpler way to write ``hasattr(x, '__iter__') and "
+"hasattr(x, '__next__')``. To minimize the risks for this feature, the "
+"following rules are applied."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:899
+#: ../../peps/peps/pep-0544.rst:901
 msgid "**Definitions**:"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:901
+#: ../../peps/peps/pep-0544.rst:903
 msgid ""
-"*Data, and non-data protocols*: A protocol is called non-data protocol if"
-" it only contains methods as members (for example ``Sized``, "
-"``Iterator``, etc). A protocol that contains at least one non-method "
-"member (like ``x: int``) is called a data protocol."
+"*Data, and non-data protocols*: A protocol is called non-data protocol if it "
+"only contains methods as members (for example ``Sized``, ``Iterator``, etc). "
+"A protocol that contains at least one non-method member (like ``x: int``) is "
+"called a data protocol."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:905
+#: ../../peps/peps/pep-0544.rst:907
 msgid ""
 "*Unsafe overlap*: A type ``X`` is called unsafely overlapping with a "
-"protocol ``P``, if ``X`` is not a subtype of ``P``, but it is a subtype "
-"of the type erased version of ``P`` where all members have type ``Any``. "
-"In addition, if at least one element of a union unsafely overlaps with a "
+"protocol ``P``, if ``X`` is not a subtype of ``P``, but it is a subtype of "
+"the type erased version of ``P`` where all members have type ``Any``. In "
+"addition, if at least one element of a union unsafely overlaps with a "
 "protocol ``P``, then the whole union is unsafely overlapping with ``P``."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:911
+#: ../../peps/peps/pep-0544.rst:913
 msgid "**Specification**:"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:913
+#: ../../peps/peps/pep-0544.rst:915
 msgid ""
 "A protocol can be used as a second argument in ``isinstance()`` and "
-"``issubclass()`` only if it is explicitly opt-in by "
-"``@runtime_checkable`` decorator. This requirement exists because "
-"protocol checks are not type safe in case of dynamically set attributes, "
-"and because type checkers can only prove that an ``isinstance()`` check "
-"is safe only for a given class, not for all its subclasses."
+"``issubclass()`` only if it is explicitly opt-in by ``@runtime_checkable`` "
+"decorator. This requirement exists because protocol checks are not type safe "
+"in case of dynamically set attributes, and because type checkers can only "
+"prove that an ``isinstance()`` check is safe only for a given class, not for "
+"all its subclasses."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:919
+#: ../../peps/peps/pep-0544.rst:921
 msgid ""
-"``isinstance()`` can be used with both data and non-data protocols, while"
-" ``issubclass()`` can be used only with non-data protocols. This "
-"restriction exists because some data attributes can be set on an instance"
-" in constructor and this information is not always available on the class"
-" object."
+"``isinstance()`` can be used with both data and non-data protocols, while "
+"``issubclass()`` can be used only with non-data protocols. This restriction "
+"exists because some data attributes can be set on an instance in constructor "
+"and this information is not always available on the class object."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:923
+#: ../../peps/peps/pep-0544.rst:925
 msgid ""
-"Type checkers should reject an ``isinstance()`` or ``issubclass()`` call,"
-" if there is an unsafe overlap between the type of the first argument and"
-" the protocol."
+"Type checkers should reject an ``isinstance()`` or ``issubclass()`` call, if "
+"there is an unsafe overlap between the type of the first argument and the "
+"protocol."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:926
+#: ../../peps/peps/pep-0544.rst:928
 msgid ""
-"Type checkers should be able to select a correct element from a union "
-"after a safe ``isinstance()`` or ``issubclass()`` call. For narrowing "
-"from non-union types, type checkers can use their best judgement (this is"
-" intentionally unspecified, since a precise specification would require "
+"Type checkers should be able to select a correct element from a union after "
+"a safe ``isinstance()`` or ``issubclass()`` call. For narrowing from non-"
+"union types, type checkers can use their best judgement (this is "
+"intentionally unspecified, since a precise specification would require "
 "intersection types)."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:933
+#: ../../peps/peps/pep-0544.rst:935
 msgid "Using Protocols in Python 2.7 - 3.5"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:935
+#: ../../peps/peps/pep-0544.rst:937
 msgid ""
-"Variable annotation syntax was added in Python 3.6, so that the syntax "
-"for defining protocol variables proposed in `specification`_ section "
-"can't be used if support for earlier versions is needed. To define these "
-"in a manner compatible with older versions of Python one can use "
-"properties. Properties can be settable and/or abstract if needed::"
+"Variable annotation syntax was added in Python 3.6, so that the syntax for "
+"defining protocol variables proposed in `specification`_ section can't be "
+"used if support for earlier versions is needed. To define these in a manner "
+"compatible with older versions of Python one can use properties. Properties "
+"can be settable and/or abstract if needed::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:950
+#: ../../peps/peps/pep-0544.rst:952
 msgid ""
-"Also function type comments can be used as per :pep:`484` (for example to"
-" provide compatibility with Python 2). The ``typing`` module changes "
-"proposed in this PEP will also be backported to earlier versions via the "
-"backport currently available on PyPI."
+"Also function type comments can be used as per :pep:`484` (for example to "
+"provide compatibility with Python 2). The ``typing`` module changes proposed "
+"in this PEP will also be backported to earlier versions via the backport "
+"currently available on PyPI."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:957
+#: ../../peps/peps/pep-0544.rst:959
 msgid "Runtime Implementation of Protocol Classes"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:960
+#: ../../peps/peps/pep-0544.rst:962
 msgid "Implementation details"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:962
+#: ../../peps/peps/pep-0544.rst:964
 msgid ""
-"The runtime implementation could be done in pure Python without any "
-"effects on the core interpreter and standard library except in the "
-"``typing`` module, and a minor update to ``collections.abc``:"
+"The runtime implementation could be done in pure Python without any effects "
+"on the core interpreter and standard library except in the ``typing`` "
+"module, and a minor update to ``collections.abc``:"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:966
+#: ../../peps/peps/pep-0544.rst:968
 msgid "Define class ``typing.Protocol`` similar to ``typing.Generic``."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:967
+#: ../../peps/peps/pep-0544.rst:969
 msgid ""
-"Implement functionality to detect whether a class is a protocol or not. "
-"Add a class attribute ``_is_protocol = True`` if that is the case. Verify"
-" that a protocol class only has protocol base classes in the MRO (except "
-"for object)."
+"Implement functionality to detect whether a class is a protocol or not. Add "
+"a class attribute ``_is_protocol = True`` if that is the case. Verify that a "
+"protocol class only has protocol base classes in the MRO (except for object)."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:971
+#: ../../peps/peps/pep-0544.rst:973
 msgid ""
 "Implement ``@runtime_checkable`` that allows ``__subclasshook__()`` "
-"performing structural instance and subclass checks as in "
-"``collections.abc`` classes."
+"performing structural instance and subclass checks as in ``collections.abc`` "
+"classes."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:974
+#: ../../peps/peps/pep-0544.rst:976
 msgid ""
-"All structural subtyping checks will be performed by static type "
-"checkers, such as ``mypy`` [mypy]_. No additional support for protocol "
-"validation will be provided at runtime."
+"All structural subtyping checks will be performed by static type checkers, "
+"such as ``mypy`` [mypy]_. No additional support for protocol validation will "
+"be provided at runtime."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:980
+#: ../../peps/peps/pep-0544.rst:982
 msgid "Changes in the typing module"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:982
+#: ../../peps/peps/pep-0544.rst:984
 msgid "The following classes in ``typing`` module will be protocols:"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:984
+#: ../../peps/peps/pep-0544.rst:986
 msgid "``Callable``"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:985
+#: ../../peps/peps/pep-0544.rst:987
 msgid "``Awaitable``"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:986
+#: ../../peps/peps/pep-0544.rst:988
 msgid "``Iterable``, ``Iterator``"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:987
+#: ../../peps/peps/pep-0544.rst:989
 msgid "``AsyncIterable``, ``AsyncIterator``"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:988
+#: ../../peps/peps/pep-0544.rst:990
 msgid "``Hashable``"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:989
+#: ../../peps/peps/pep-0544.rst:991
 msgid "``Sized``"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:990
+#: ../../peps/peps/pep-0544.rst:992
 msgid "``Container``"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:991
+#: ../../peps/peps/pep-0544.rst:993
 msgid "``Collection``"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:992
+#: ../../peps/peps/pep-0544.rst:994
 msgid "``Reversible``"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:993
+#: ../../peps/peps/pep-0544.rst:995
 msgid "``ContextManager``, ``AsyncContextManager``"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:994
+#: ../../peps/peps/pep-0544.rst:996
 msgid "``SupportsAbs`` (and other ``Supports*`` classes)"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:996
+#: ../../peps/peps/pep-0544.rst:998
 msgid ""
-"Most of these classes are small and conceptually simple. It is easy to "
-"see what are the methods these protocols implement, and immediately "
-"recognize the corresponding runtime protocol counterpart. Practically, "
-"few changes will be needed in ``typing`` since some of these classes "
-"already behave the necessary way at runtime. Most of these will need to "
-"be updated only in the corresponding ``typeshed`` stubs [typeshed]_."
+"Most of these classes are small and conceptually simple. It is easy to see "
+"what are the methods these protocols implement, and immediately recognize "
+"the corresponding runtime protocol counterpart. Practically, few changes "
+"will be needed in ``typing`` since some of these classes already behave the "
+"necessary way at runtime. Most of these will need to be updated only in the "
+"corresponding ``typeshed`` stubs [typeshed]_."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1003
+#: ../../peps/peps/pep-0544.rst:1005
 msgid ""
 "All other concrete generic classes such as ``List``, ``Set``, ``IO``, "
-"``Deque``, etc are sufficiently complex that it makes sense to keep them "
-"non-protocols (i.e. require code to be explicit about them). Also, it is "
-"too easy to leave some methods unimplemented by accident, and explicitly "
-"marking the subclass relationship allows type checkers to pinpoint the "
-"missing implementations."
+"``Deque``, etc are sufficiently complex that it makes sense to keep them non-"
+"protocols (i.e. require code to be explicit about them). Also, it is too "
+"easy to leave some methods unimplemented by accident, and explicitly marking "
+"the subclass relationship allows type checkers to pinpoint the missing "
+"implementations."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1012
+#: ../../peps/peps/pep-0544.rst:1014
 msgid "Introspection"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1014
+#: ../../peps/peps/pep-0544.rst:1016
 msgid ""
 "The existing class introspection machinery (``dir``, ``__annotations__`` "
 "etc) can be used with protocols. In addition, all introspection tools "
 "implemented in the ``typing`` module will support protocols. Since all "
 "attributes need to be defined in the class body based on this proposal, "
-"protocol classes will have even better perspective for introspection than"
-" regular classes where attributes can be defined implicitly -- protocol "
+"protocol classes will have even better perspective for introspection than "
+"regular classes where attributes can be defined implicitly -- protocol "
 "attributes can't be initialized in ways that are not visible to "
-"introspection (using ``setattr()``, assignment via ``self``, etc.). "
-"Still, some things like types of attributes will not be visible at "
-"runtime in Python 3.5 and earlier, but this looks like a reasonable "
-"limitation."
+"introspection (using ``setattr()``, assignment via ``self``, etc.). Still, "
+"some things like types of attributes will not be visible at runtime in "
+"Python 3.5 and earlier, but this looks like a reasonable limitation."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1025
+#: ../../peps/peps/pep-0544.rst:1027
 msgid ""
-"There will be only limited support of ``isinstance()`` and "
-"``issubclass()`` as discussed above (these will *always* fail with "
-"``TypeError`` for subscripted generic protocols, since a reliable answer "
-"could not be given at runtime in this case). But together with other "
-"introspection tools this give a reasonable perspective for runtime type "
-"checking tools."
+"There will be only limited support of ``isinstance()`` and ``issubclass()`` "
+"as discussed above (these will *always* fail with ``TypeError`` for "
+"subscripted generic protocols, since a reliable answer could not be given at "
+"runtime in this case). But together with other introspection tools this give "
+"a reasonable perspective for runtime type checking tools."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1035
+#: ../../peps/peps/pep-0544.rst:1037
 msgid "Rejected/Postponed Ideas"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1037
+#: ../../peps/peps/pep-0544.rst:1039
 msgid ""
 "The ideas in this section were previously discussed in [several]_ "
 "[discussions]_ [elsewhere]_."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1041
+#: ../../peps/peps/pep-0544.rst:1043
 msgid "Make every class a protocol by default"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1043
+#: ../../peps/peps/pep-0544.rst:1045
 msgid ""
-"Some languages such as Go make structural subtyping the only or the "
-"primary form of subtyping. We could achieve a similar result by making "
-"all classes protocols by default (or even always). However we believe "
-"that it is better to require classes to be explicitly marked as "
-"protocols, for the following reasons:"
+"Some languages such as Go make structural subtyping the only or the primary "
+"form of subtyping. We could achieve a similar result by making all classes "
+"protocols by default (or even always). However we believe that it is better "
+"to require classes to be explicitly marked as protocols, for the following "
+"reasons:"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1049
+#: ../../peps/peps/pep-0544.rst:1051
 msgid ""
 "Protocols don't have some properties of regular classes. In particular, "
 "``isinstance()``, as defined for normal classes, is based on the nominal "
@@ -1022,30 +1011,30 @@ msgid ""
 "happen."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1054
+#: ../../peps/peps/pep-0544.rst:1056
 msgid ""
-"Protocol classes should generally not have many method implementations, "
-"as they describe an interface, not an implementation. Most classes have "
-"many method implementations, making them bad protocol classes."
+"Protocol classes should generally not have many method implementations, as "
+"they describe an interface, not an implementation. Most classes have many "
+"method implementations, making them bad protocol classes."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1058
+#: ../../peps/peps/pep-0544.rst:1060
 msgid ""
-"Experience suggests that many classes are not practical as protocols "
-"anyway, mainly because their interfaces are too large, complex or "
-"implementation-oriented (for example, they may include de facto private "
-"attributes and methods without a ``__`` prefix)."
+"Experience suggests that many classes are not practical as protocols anyway, "
+"mainly because their interfaces are too large, complex or implementation-"
+"oriented (for example, they may include de facto private attributes and "
+"methods without a ``__`` prefix)."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1062
+#: ../../peps/peps/pep-0544.rst:1064
 msgid ""
-"Most actually useful protocols in existing Python code seem to be "
-"implicit. The ABCs in ``typing`` and ``collections.abc`` are rather an "
-"exception, but even they are recent additions to Python and most "
-"programmers do not use them yet."
+"Most actually useful protocols in existing Python code seem to be implicit. "
+"The ABCs in ``typing`` and ``collections.abc`` are rather an exception, but "
+"even they are recent additions to Python and most programmers do not use "
+"them yet."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1066
+#: ../../peps/peps/pep-0544.rst:1068
 msgid ""
 "Many built-in functions only accept concrete instances of ``int`` (and "
 "subclass instances), and similarly for other built-in classes. Making "
@@ -1053,369 +1042,365 @@ msgid ""
 "Python runtime, which won't happen."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1073
+#: ../../peps/peps/pep-0544.rst:1075
 msgid "Protocols subclassing normal classes"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1075
+#: ../../peps/peps/pep-0544.rst:1077
 msgid ""
 "The main rationale to prohibit this is to preserve transitivity of "
 "subtyping, consider this example::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1092
+#: ../../peps/peps/pep-0544.rst:1094
 msgid ""
 "Now, ``C`` is a subtype of ``Proto``, and ``Proto`` is a subtype of "
-"``Base``. But ``C`` cannot be a subtype of ``Base`` (since the latter is "
-"not a protocol). This situation would be really weird. In addition, there"
-" is an ambiguity about whether attributes of ``Base`` should become "
-"protocol members of ``Proto``."
+"``Base``. But ``C`` cannot be a subtype of ``Base`` (since the latter is not "
+"a protocol). This situation would be really weird. In addition, there is an "
+"ambiguity about whether attributes of ``Base`` should become protocol "
+"members of ``Proto``."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1100
+#: ../../peps/peps/pep-0544.rst:1102
 msgid "Support optional protocol members"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1102
+#: ../../peps/peps/pep-0544.rst:1104
 msgid ""
-"We can come up with examples where it would be handy to be able to say "
-"that a method or data attribute does not need to be present in a class "
-"implementing a protocol, but if it is present, it must conform to a "
-"specific signature or type. One could use a ``hasattr()`` check to "
-"determine whether they can use the attribute on a particular instance."
+"We can come up with examples where it would be handy to be able to say that "
+"a method or data attribute does not need to be present in a class "
+"implementing a protocol, but if it is present, it must conform to a specific "
+"signature or type. One could use a ``hasattr()`` check to determine whether "
+"they can use the attribute on a particular instance."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1108
+#: ../../peps/peps/pep-0544.rst:1110
 msgid ""
-"Languages such as TypeScript have similar features and apparently they "
-"are pretty commonly used. The current realistic potential use cases for "
-"protocols in Python don't require these. In the interest of simplicity, "
-"we propose to not support optional methods or attributes. We can always "
-"revisit this later if there is an actual need."
+"Languages such as TypeScript have similar features and apparently they are "
+"pretty commonly used. The current realistic potential use cases for "
+"protocols in Python don't require these. In the interest of simplicity, we "
+"propose to not support optional methods or attributes. We can always revisit "
+"this later if there is an actual need."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1116
+#: ../../peps/peps/pep-0544.rst:1118
 msgid "Allow only protocol methods and force use of getters and setters"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1118
+#: ../../peps/peps/pep-0544.rst:1120
 msgid ""
 "One could argue that protocols typically only define methods, but not "
-"variables. However, using getters and setters in cases where only a "
-"simple variable is needed would be quite unpythonic. Moreover, the "
-"widespread use of properties (that often act as type validators) in large"
-" code bases is partially due to previous absence of static type checkers "
-"for Python, the problem that :pep:`484` and this PEP are aiming to solve."
-" For example::"
+"variables. However, using getters and setters in cases where only a simple "
+"variable is needed would be quite unpythonic. Moreover, the widespread use "
+"of properties (that often act as type validators) in large code bases is "
+"partially due to previous absence of static type checkers for Python, the "
+"problem that :pep:`484` and this PEP are aiming to solve. For example::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1144
+#: ../../peps/peps/pep-0544.rst:1146
 msgid "Support non-protocol members"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1146
+#: ../../peps/peps/pep-0544.rst:1148
 msgid ""
-"There was an idea to make some methods \"non-protocol\" (i.e. not "
-"necessary to implement, and inherited in explicit subclassing), but it "
-"was rejected, since this complicates things. For example, consider this "
-"situation::"
+"There was an idea to make some methods \"non-protocol\" (i.e. not necessary "
+"to implement, and inherited in explicit subclassing), but it was rejected, "
+"since this complicates things. For example, consider this situation::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1160
+#: ../../peps/peps/pep-0544.rst:1162
 msgid ""
-"The question is should this be an error? We think most people would "
-"expect this to be valid. Therefore, to be on the safe side, we need to "
-"require both methods to be implemented in implicit subclasses. In "
-"addition, if one looks at definitions in ``collections.abc``, there are "
-"very few methods that could be considered \"non-protocol\". Therefore, it"
-" was decided to not introduce \"non-protocol\" methods."
+"The question is should this be an error? We think most people would expect "
+"this to be valid. Therefore, to be on the safe side, we need to require both "
+"methods to be implemented in implicit subclasses. In addition, if one looks "
+"at definitions in ``collections.abc``, there are very few methods that could "
+"be considered \"non-protocol\". Therefore, it was decided to not introduce "
+"\"non-protocol\" methods."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1167
+#: ../../peps/peps/pep-0544.rst:1169
 msgid ""
 "There is only one downside to this: it will require some boilerplate for "
-"implicit subtypes of \"large\" protocols. But, this doesn't apply to "
-"\"built-in\" protocols that are all \"small\" (i.e. have only few "
-"abstract methods). Also, such style is discouraged for user-defined "
-"protocols. It is recommended to create compact protocols and combine "
-"them."
+"implicit subtypes of \"large\" protocols. But, this doesn't apply to \"built-"
+"in\" protocols that are all \"small\" (i.e. have only few abstract methods). "
+"Also, such style is discouraged for user-defined protocols. It is "
+"recommended to create compact protocols and combine them."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1175
+#: ../../peps/peps/pep-0544.rst:1177
 msgid "Make protocols interoperable with other approaches"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1177
+#: ../../peps/peps/pep-0544.rst:1179
 msgid ""
 "The protocols as described here are basically a minimal extension to the "
 "existing concept of ABCs. We argue that this is the way they should be "
 "understood, instead of as something that *replaces* Zope interfaces, for "
-"example. Attempting such interoperabilities will significantly complicate"
-" both the concept and the implementation."
+"example. Attempting such interoperabilities will significantly complicate "
+"both the concept and the implementation."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1183
+#: ../../peps/peps/pep-0544.rst:1185
 msgid ""
-"On the other hand, Zope interfaces are conceptually a superset of "
-"protocols defined here, but using an incompatible syntax to define them, "
-"because before :pep:`526` there was no straightforward way to annotate "
-"attributes. In the 3.6+ world, ``zope.interface`` might potentially adopt"
-" the ``Protocol`` syntax. In this case, type checkers could be taught to "
+"On the other hand, Zope interfaces are conceptually a superset of protocols "
+"defined here, but using an incompatible syntax to define them, because "
+"before :pep:`526` there was no straightforward way to annotate attributes. "
+"In the 3.6+ world, ``zope.interface`` might potentially adopt the "
+"``Protocol`` syntax. In this case, type checkers could be taught to "
 "recognize interfaces as protocols and make simple structural checks with "
 "respect to them."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1192
+#: ../../peps/peps/pep-0544.rst:1194
 msgid "Use assignments to check explicitly that a class implements a protocol"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1194
+#: ../../peps/peps/pep-0544.rst:1196
 msgid ""
-"In the Go language the explicit checks for implementation are performed "
-"via dummy assignments [golang]_. Such a way is also possible with the "
-"current proposal. Example::"
+"In the Go language the explicit checks for implementation are performed via "
+"dummy assignments [golang]_. Such a way is also possible with the current "
+"proposal. Example::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1205
+#: ../../peps/peps/pep-0544.rst:1207
 msgid ""
-"This approach moves the check away from the class definition and it "
-"almost requires a comment as otherwise the code probably would not make "
-"any sense to an average reader -- it looks like dead code. Besides, in "
-"the simplest form it requires one to construct an instance of ``A``, "
-"which could be problematic if this requires accessing or allocating some "
-"resources such as files or sockets. We could work around the latter by "
-"using a cast, for example, but then the code would be ugly. Therefore, we"
-" discourage the use of this pattern."
+"This approach moves the check away from the class definition and it almost "
+"requires a comment as otherwise the code probably would not make any sense "
+"to an average reader -- it looks like dead code. Besides, in the simplest "
+"form it requires one to construct an instance of ``A``, which could be "
+"problematic if this requires accessing or allocating some resources such as "
+"files or sockets. We could work around the latter by using a cast, for "
+"example, but then the code would be ugly. Therefore, we discourage the use "
+"of this pattern."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1216
+#: ../../peps/peps/pep-0544.rst:1218
 msgid "Support ``isinstance()`` checks by default"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1218
+#: ../../peps/peps/pep-0544.rst:1220
 msgid ""
 "The problem with this is instance checks could be unreliable, except for "
 "situations where there is a common signature convention such as "
 "``Iterable``. For example::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1234
+#: ../../peps/peps/pep-0544.rst:1236
 msgid ""
 "Another potentially problematic case is assignment of attributes *after* "
 "instantiation::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1259
+#: ../../peps/peps/pep-0544.rst:1261
 msgid ""
-"We argue that requiring an explicit class decorator would be better, "
-"since one can then attach warnings about problems like this in the "
-"documentation. The user would be able to evaluate whether the benefits "
-"outweigh the potential for confusion for each protocol and explicitly opt"
-" in -- but the default behavior would be safer. Finally, it will be easy "
-"to make this behavior default if necessary, while it might be problematic"
-" to make it opt-in after being default."
+"We argue that requiring an explicit class decorator would be better, since "
+"one can then attach warnings about problems like this in the documentation. "
+"The user would be able to evaluate whether the benefits outweigh the "
+"potential for confusion for each protocol and explicitly opt in -- but the "
+"default behavior would be safer. Finally, it will be easy to make this "
+"behavior default if necessary, while it might be problematic to make it opt-"
+"in after being default."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1269
+#: ../../peps/peps/pep-0544.rst:1271
 msgid "Provide a special intersection type construct"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1271
+#: ../../peps/peps/pep-0544.rst:1273
 msgid ""
 "There was an idea to allow ``Proto = All[Proto1, Proto2, ...]`` as a "
 "shorthand for::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1277
+#: ../../peps/peps/pep-0544.rst:1279
 msgid ""
-"However, it is not yet clear how popular/useful it will be and "
-"implementing this in type checkers for non-protocol classes could be "
-"difficult. Finally, it will be very easy to add this later if needed."
+"However, it is not yet clear how popular/useful it will be and implementing "
+"this in type checkers for non-protocol classes could be difficult. Finally, "
+"it will be very easy to add this later if needed."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1283
+#: ../../peps/peps/pep-0544.rst:1285
 msgid "Prohibit explicit subclassing of protocols by non-protocols"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1285
+#: ../../peps/peps/pep-0544.rst:1287
 msgid "This was rejected for the following reasons:"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1287
+#: ../../peps/peps/pep-0544.rst:1289
 msgid ""
 "Backward compatibility: People are already using ABCs, including generic "
-"ABCs from ``typing`` module. If we prohibit explicit subclassing of these"
-" ABCs, then quite a lot of code will break."
+"ABCs from ``typing`` module. If we prohibit explicit subclassing of these "
+"ABCs, then quite a lot of code will break."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1291
+#: ../../peps/peps/pep-0544.rst:1293
 msgid ""
-"Convenience: There are existing protocol-like ABCs (that may be turned "
-"into protocols) that have many useful \"mix-in\" (non-abstract) methods. "
-"For example, in the case of ``Sequence`` one only needs to implement "
+"Convenience: There are existing protocol-like ABCs (that may be turned into "
+"protocols) that have many useful \"mix-in\" (non-abstract) methods. For "
+"example, in the case of ``Sequence`` one only needs to implement "
 "``__getitem__`` and ``__len__`` in an explicit subclass, and one gets "
-"``__iter__``, ``__contains__``, ``__reversed__``, ``index``, and "
-"``count`` for free."
+"``__iter__``, ``__contains__``, ``__reversed__``, ``index``, and ``count`` "
+"for free."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1298
+#: ../../peps/peps/pep-0544.rst:1300
 msgid ""
-"Explicit subclassing makes it explicit that a class implements a "
-"particular protocol, making subtyping relationships easier to see."
+"Explicit subclassing makes it explicit that a class implements a particular "
+"protocol, making subtyping relationships easier to see."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1301
+#: ../../peps/peps/pep-0544.rst:1303
 msgid ""
 "Type checkers can warn about missing protocol members or members with "
 "incompatible types more easily, without having to use hacks like dummy "
 "assignments discussed above in this section."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1305
+#: ../../peps/peps/pep-0544.rst:1307
 msgid ""
-"Explicit subclassing makes it possible to force a class to be considered "
-"a subtype of a protocol (by using ``# type: ignore`` together with an "
-"explicit base class) when it is not strictly compatible, such as when it "
-"has an unsafe override."
+"Explicit subclassing makes it possible to force a class to be considered a "
+"subtype of a protocol (by using ``# type: ignore`` together with an explicit "
+"base class) when it is not strictly compatible, such as when it has an "
+"unsafe override."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1312
+#: ../../peps/peps/pep-0544.rst:1314
 msgid "Covariant subtyping of mutable attributes"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1314
+#: ../../peps/peps/pep-0544.rst:1316
 msgid ""
 "Rejected because covariant subtyping of mutable attributes is not safe. "
 "Consider this example::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1331
+#: ../../peps/peps/pep-0544.rst:1333
 msgid ""
-"It was initially proposed to allow this for practical reasons, but it was"
-" subsequently rejected, since this may mask some hard to spot bugs."
+"It was initially proposed to allow this for practical reasons, but it was "
+"subsequently rejected, since this may mask some hard to spot bugs."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1336
+#: ../../peps/peps/pep-0544.rst:1338
 msgid "Overriding inferred variance of protocol classes"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1338
+#: ../../peps/peps/pep-0544.rst:1340
 msgid ""
 "It was proposed to allow declaring protocols as invariant if they are "
-"actually covariant or contravariant (as it is possible for nominal "
-"classes, see :pep:`484`). However, it was decided not to do this because "
-"of several downsides:"
+"actually covariant or contravariant (as it is possible for nominal classes, "
+"see :pep:`484`). However, it was decided not to do this because of several "
+"downsides:"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1342
+#: ../../peps/peps/pep-0544.rst:1344
 msgid ""
 "Declared protocol invariance breaks transitivity of sub-typing. Consider "
 "this situation::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1357
+#: ../../peps/peps/pep-0544.rst:1359
 msgid ""
 "Now we have that ``D`` is a subtype of ``C``, and ``C`` is a subtype of "
 "``P[float]``. But ``D`` is *not* a subtype of ``P[float]`` since ``D`` "
 "implements ``P[int]``, and ``P`` is invariant. There is a possibility to "
-"\"cure\" this by looking for protocol implementations in MROs but this "
-"will be too complex in a general case, and this \"cure\" requires "
-"abandoning simple idea of purely structural subtyping for protocols."
+"\"cure\" this by looking for protocol implementations in MROs but this will "
+"be too complex in a general case, and this \"cure\" requires abandoning "
+"simple idea of purely structural subtyping for protocols."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1364
+#: ../../peps/peps/pep-0544.rst:1366
 msgid ""
-"Subtyping checks will always require type inference for protocols. In the"
-" above example a user may complain: \"Why did you infer ``P[int]`` for my"
-" ``D``? It implements ``P[float]``!\". Normally, inference can be "
-"overruled by an explicit annotation, but here this will require explicit "
-"subclassing, defeating the purpose of using protocols."
+"Subtyping checks will always require type inference for protocols. In the "
+"above example a user may complain: \"Why did you infer ``P[int]`` for my "
+"``D``? It implements ``P[float]``!\". Normally, inference can be overruled "
+"by an explicit annotation, but here this will require explicit subclassing, "
+"defeating the purpose of using protocols."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1370
+#: ../../peps/peps/pep-0544.rst:1372
 msgid ""
 "Allowing overriding variance will make impossible more detailed error "
 "messages in type checkers citing particular conflicts in member type "
 "signatures."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1374
+#: ../../peps/peps/pep-0544.rst:1376
 msgid ""
-"Finally, explicit is better than implicit in this case. Requiring user to"
-" declare correct variance will simplify understanding the code and will "
-"avoid unexpected errors at the point of use."
+"Finally, explicit is better than implicit in this case. Requiring user to "
+"declare correct variance will simplify understanding the code and will avoid "
+"unexpected errors at the point of use."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1380
+#: ../../peps/peps/pep-0544.rst:1382
 msgid "Support adapters and adaptation"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1382
+#: ../../peps/peps/pep-0544.rst:1384
 msgid ""
-"Adaptation was proposed by :pep:`246` (rejected) and is supported by "
-"``zope.interface``, see `the Zope documentation on adapter registries "
-"<https://web.archive.org/web/20160802080957/https://docs.zope.org/zope.interface/adapter.html>`_."
-" Adapters is quite an advanced concept, and :pep:`484` supports unions "
-"and generic aliases that can be used instead of adapters. This can be "
-"illustrated with an example of ``Iterable`` protocol, there is another "
-"way of supporting iteration by providing ``__getitem__`` and ``__len__``."
-" If a function supports both this way and the now standard ``__iter__`` "
-"method, then it could be annotated by a union type::"
+"Adaptation was proposed by :pep:`246` (rejected) and is supported by ``zope."
+"interface``, see `the Zope documentation on adapter registries <https://web."
+"archive.org/web/20160802080957/https://docs.zope.org/zope.interface/adapter."
+"html>`_. Adapters is quite an advanced concept, and :pep:`484` supports "
+"unions and generic aliases that can be used instead of adapters. This can be "
+"illustrated with an example of ``Iterable`` protocol, there is another way "
+"of supporting iteration by providing ``__getitem__`` and ``__len__``. If a "
+"function supports both this way and the now standard ``__iter__`` method, "
+"then it could be annotated by a union type::"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1409
+#: ../../peps/peps/pep-0544.rst:1411
 msgid ""
 "Since there is a reasonable alternative for such cases with existing "
 "tooling, it is therefore proposed not to include adaptation in this PEP."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1414
+#: ../../peps/peps/pep-0544.rst:1416
 msgid "Call structural base types \"interfaces\""
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1416
+#: ../../peps/peps/pep-0544.rst:1418
 msgid ""
-"\"Protocol\" is a term already widely used in Python to describe duck "
-"typing contracts such as the iterator protocol (providing ``__iter__`` "
-"and ``__next__``), and the descriptor protocol (providing ``__get__``, "
+"\"Protocol\" is a term already widely used in Python to describe duck typing "
+"contracts such as the iterator protocol (providing ``__iter__`` and "
+"``__next__``), and the descriptor protocol (providing ``__get__``, "
 "``__set__``, and ``__delete__``). In addition to this and other reasons "
-"given in `specification`_, protocols are different from Java interfaces "
-"in several aspects: protocols don't require explicit declaration of "
-"implementation (they are mainly oriented on duck-typing), protocols can "
-"have default implementations of members and store state."
+"given in `specification`_, protocols are different from Java interfaces in "
+"several aspects: protocols don't require explicit declaration of "
+"implementation (they are mainly oriented on duck-typing), protocols can have "
+"default implementations of members and store state."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1427
+#: ../../peps/peps/pep-0544.rst:1429
 msgid "Make protocols special objects at runtime rather than normal ABCs"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1429
+#: ../../peps/peps/pep-0544.rst:1431
 msgid ""
-"Making protocols non-ABCs will make the backwards compatibility "
-"problematic if possible at all. For example, ``collections.abc.Iterable``"
-" is already an ABC, and lots of existing code use patterns like "
-"``isinstance(obj, collections.abc.Iterable)`` and similar checks with "
-"other ABCs (also in a structural manner, i.e., via ``__subclasshook__``)."
-" Disabling this behavior will cause breakages. If we keep this behavior "
-"for ABCs in ``collections.abc`` but will not provide a similar runtime "
-"behavior for protocols in ``typing``, then a smooth transition to "
-"protocols will be not possible. In addition, having two parallel "
-"hierarchies may cause confusions."
+"Making protocols non-ABCs will make the backwards compatibility problematic "
+"if possible at all. For example, ``collections.abc.Iterable`` is already an "
+"ABC, and lots of existing code use patterns like ``isinstance(obj, "
+"collections.abc.Iterable)`` and similar checks with other ABCs (also in a "
+"structural manner, i.e., via ``__subclasshook__``). Disabling this behavior "
+"will cause breakages. If we keep this behavior for ABCs in ``collections."
+"abc`` but will not provide a similar runtime behavior for protocols in "
+"``typing``, then a smooth transition to protocols will be not possible. In "
+"addition, having two parallel hierarchies may cause confusions."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1442
+#: ../../peps/peps/pep-0544.rst:1444
 msgid "Backwards Compatibility"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1444
+#: ../../peps/peps/pep-0544.rst:1446
 msgid "This PEP is fully backwards compatible."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1448
+#: ../../peps/peps/pep-0544.rst:1450
 msgid "Implementation"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1450
+#: ../../peps/peps/pep-0544.rst:1452
 msgid ""
 "The ``mypy`` type checker fully supports protocols (modulo a few known "
 "bugs). This includes treating all the builtin protocols, such as "
@@ -1423,182 +1408,68 @@ msgid ""
 "available in ``typing_extensions`` module on PyPI."
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1457
+#: ../../peps/peps/pep-0544.rst:1459
 msgid "References"
 msgstr "Referências"
 
-#: ../../peps/pep-0544.rst:1460
+#: ../../peps/peps/pep-0544.rst:1462
 msgid "https://docs.python.org/3/library/typing.html"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1463
+#: ../../peps/peps/pep-0544.rst:1465
 msgid "https://en.wikipedia.org/wiki/Structural_type_system"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1466
+#: ../../peps/peps/pep-0544.rst:1468
 msgid "https://zopeinterface.readthedocs.io/en/latest/"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1469
+#: ../../peps/peps/pep-0544.rst:1471
 msgid "https://docs.python.org/3/library/abc.html"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1472
+#: ../../peps/peps/pep-0544.rst:1474
 msgid "https://docs.python.org/3/library/collections.abc.html"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1475
+#: ../../peps/peps/pep-0544.rst:1477
 msgid "https://www.typescriptlang.org/docs/handbook/interfaces.html"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1478
+#: ../../peps/peps/pep-0544.rst:1480
 msgid "https://golang.org/doc/effective_go.html#interfaces_and_types"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1481
+#: ../../peps/peps/pep-0544.rst:1483
 msgid "https://docs.python.org/3/reference/datamodel.html#special-method-names"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1484
+#: ../../peps/peps/pep-0544.rst:1486
 msgid "https://github.com/python/typeshed/"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1487
+#: ../../peps/peps/pep-0544.rst:1489
 msgid "http://github.com/python/mypy/"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1490
+#: ../../peps/peps/pep-0544.rst:1492
 msgid ""
-"https://mail.python.org/pipermail/python-"
-"ideas/2015-September/thread.html#35859"
+"https://mail.python.org/pipermail/python-ideas/2015-September/thread."
+"html#35859"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1493
+#: ../../peps/peps/pep-0544.rst:1495
 msgid "https://github.com/python/typing/issues/11"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1496
+#: ../../peps/peps/pep-0544.rst:1498
 msgid "https://github.com/python/peps/pull/224"
 msgstr ""
 
-#: ../../peps/pep-0544.rst:1500
+#: ../../peps/peps/pep-0544.rst:1502
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../../peps/pep-0544.rst:1502
+#: ../../peps/peps/pep-0544.rst:1504
 msgid "This document has been placed in the public domain."
 msgstr "Este documento foi colocado em domínio público."
-
-#~ msgid ""
-#~ "Structural subtyping is natural for "
-#~ "Python programmers since it matches the"
-#~ " runtime semantics of duck typing: an"
-#~ " object that has certain properties "
-#~ "is treated independently of its actual"
-#~ " runtime class. However, as discussed "
-#~ "in :pep:`483`, both nominal and "
-#~ "structural subtyping have their strengths "
-#~ "and weaknesses. Therefore, in this PEP"
-#~ " we *do not propose* to replace "
-#~ "the nominal subtyping described by "
-#~ ":pep:`484` with structural subtyping "
-#~ "completely. Instead, protocol classes as "
-#~ "specified in this PEP complement normal"
-#~ " classes, and users are free to "
-#~ "choose where to apply a particular "
-#~ "solution. See section on `rejected`_ "
-#~ "ideas at the end of this PEP "
-#~ "for additional motivation."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "As mentioned in the `rationale`_, we "
-#~ "want to avoid such necessity, especially"
-#~ " in static context. However, in a "
-#~ "runtime context, ABCs are good "
-#~ "candidates for protocol classes and they"
-#~ " are already used extensively in the"
-#~ " ``typing`` module."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Such behavior seems to be a "
-#~ "perfect fit for both runtime and "
-#~ "static behavior of protocols. As "
-#~ "discussed in `rationale`_, we propose to"
-#~ " add static support for such "
-#~ "behavior. In addition, to allow users"
-#~ " to achieve such runtime behavior for"
-#~ " *user-defined* protocols a special "
-#~ "``@runtime_checkable`` decorator will be "
-#~ "provided, see detailed `discussion`_ below."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Note that optional interface members are"
-#~ " supported. Also, TypeScript prohibits "
-#~ "redundant members in implementations. While"
-#~ " the idea of optional members looks"
-#~ " interesting, it would complicate this "
-#~ "proposal and it is not clear how"
-#~ " useful it will be. Therefore, it "
-#~ "is proposed to postpone this; see "
-#~ "`rejected`_ ideas. In general, the idea"
-#~ " of static protocol checking without "
-#~ "runtime implications looks reasonable, and "
-#~ "basically this proposal follows the same"
-#~ " line."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Both these ideas are questionable in "
-#~ "the context of this proposal. See "
-#~ "the section on `rejected`_ ideas."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "If ``Protocol`` is included in the "
-#~ "base class list, all the other "
-#~ "base classes must be protocols. A "
-#~ "protocol can't extend a regular class,"
-#~ " see `rejected`_ ideas for rationale. "
-#~ "Note that rules around explicit "
-#~ "subclassing are different from regular "
-#~ "ABCs, where abstractness is simply "
-#~ "defined by having at least one "
-#~ "abstract method being unimplemented. Protocol"
-#~ " classes must be marked *explicitly*."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Note that unlike nominal classes, de "
-#~ "facto covariant protocols cannot be "
-#~ "declared as invariant, since this can"
-#~ " break transitivity of subtyping (see "
-#~ "`rejected`_ ideas for details). For "
-#~ "example::"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "If this will prove to be a "
-#~ "widely used scenario, then a special "
-#~ "intersection type construct could be "
-#~ "added in future as specified by "
-#~ ":pep:`483`, see `rejected`_ ideas for "
-#~ "more details."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Note that instance checks are not "
-#~ "100% reliable statically, this is why"
-#~ " this behavior is opt-in, see "
-#~ "section on `rejected`_ ideas for "
-#~ "examples. The most type checkers can "
-#~ "do is to treat ``isinstance(obj, "
-#~ "Iterator)`` roughly as a simpler way "
-#~ "to write ``hasattr(x, '__iter__') and "
-#~ "hasattr(x, '__next__')``. To minimize the "
-#~ "risks for this feature, the following"
-#~ " rules are applied."
-#~ msgstr ""
-

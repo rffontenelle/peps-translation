@@ -6,70 +6,83 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PEPs\n"
+"Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 20:07+0000\n"
+"POT-Creation-Date: 2024-07-14 02:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.15.0\n"
 
-#: ../pep-0242.txt
+#: ../../peps/peps/pep-0242.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../pep-0242.txt:3
+#: ../../peps/peps/pep-0242.rst:3
 msgid "Paul F. Dubois <paul@pfdubois.com>"
 msgstr ""
 
-#: ../pep-0242.txt
+#: ../../peps/peps/pep-0242.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../pep-0242.txt:4
-msgid "Rejected"
+#: ../../peps/peps/pep-0242.rst:4
+msgid "Withdrawn"
 msgstr ""
 
-#: ../pep-0242.txt
+#: ../../peps/peps/pep-0242.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../pep-0242.txt:5
+#: ../../peps/peps/pep-0242.rst:5
 msgid "Standards Track"
 msgstr ""
 
-#: ../pep-0242.txt
+#: ../../peps/peps/pep-0242.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../pep-0242.txt:7
+#: ../../peps/peps/pep-0242.rst:6
 msgid "17-Mar-2001"
 msgstr ""
 
-#: ../pep-0242.txt
+#: ../../peps/peps/pep-0242.rst
 msgid "Python-Version"
 msgstr ""
 
-#: ../pep-0242.txt:8
+#: ../../peps/peps/pep-0242.rst:7
 msgid "2.2"
 msgstr ""
 
-#: ../pep-0242.txt
+#: ../../peps/peps/pep-0242.rst
 msgid "Post-History"
 msgstr "Pós-história"
 
-#: ../pep-0242.txt:9
+#: ../../peps/peps/pep-0242.rst:8
 msgid "17-Apr-2001"
 msgstr ""
 
-#: ../pep-0242.txt:13
+#: ../../peps/peps/pep-0242.rst:12
+msgid "The kinds module will not be added to the standard library."
+msgstr ""
+
+#: ../../peps/peps/pep-0242.rst:14
+msgid ""
+"There was no opposition to the proposal but only mild interest in using it, "
+"not enough to justify adding the module to the standard library.  Instead, "
+"it will be made available as a separate distribution item at the Numerical "
+"Python site.  At the next release of Numerical Python, it will no longer be "
+"a part of the Numeric distribution."
+msgstr ""
+
+#: ../../peps/peps/pep-0242.rst:22
 msgid "Abstract"
 msgstr ""
 
-#: ../pep-0242.txt:15
+#: ../../peps/peps/pep-0242.rst:24
 msgid ""
 "This proposal gives the user optional control over the precision and range "
 "of numeric computations so that a computation can be written once and run "
@@ -77,11 +90,11 @@ msgid ""
 "compatible with existing code.  The meaning of decimal literals is clarified."
 msgstr ""
 
-#: ../pep-0242.txt:23
+#: ../../peps/peps/pep-0242.rst:32
 msgid "Rationale"
 msgstr ""
 
-#: ../pep-0242.txt:25
+#: ../../peps/peps/pep-0242.rst:34
 msgid ""
 "Currently it is impossible in every language except Fortran 90 to write a "
 "program in a portable way that uses floating point and gets roughly the same "
@@ -90,7 +103,7 @@ msgid ""
 "double in the C implementation."
 msgstr ""
 
-#: ../pep-0242.txt:31
+#: ../../peps/peps/pep-0242.rst:40
 msgid ""
 "No type exists corresponding to single or quad floats.  It would complicate "
 "the language to try to introduce such types directly and their subsequent "
@@ -103,17 +116,17 @@ msgid ""
 "will fail, this is the next best thing to not compiling."
 msgstr ""
 
-#: ../pep-0242.txt:45
+#: ../../peps/peps/pep-0242.rst:54
 msgid "Supported Kinds of Ints and Floats"
 msgstr ""
 
-#: ../pep-0242.txt:47
+#: ../../peps/peps/pep-0242.rst:56
 msgid ""
 "Complex numbers are treated separately below, since Python can be built "
 "without them."
 msgstr ""
 
-#: ../pep-0242.txt:50
+#: ../../peps/peps/pep-0242.rst:59
 msgid ""
 "Each Python compiler may define as many \"kinds\" of integer and floating "
 "point numbers as it likes, except that it must support at least two kinds of "
@@ -121,14 +134,14 @@ msgid ""
 "least one kind of floating point number, equivalent to the present float."
 msgstr ""
 
-#: ../pep-0242.txt:56
+#: ../../peps/peps/pep-0242.rst:65
 msgid ""
 "The range and precision of these required kinds are processor dependent, as "
 "at present, except for the \"long integer\" kind, which can hold an "
 "arbitrary integer."
 msgstr ""
 
-#: ../pep-0242.txt:60
+#: ../../peps/peps/pep-0242.rst:69
 msgid ""
 "The built-in functions ``int()``, ``long()``, and ``float()`` convert inputs "
 "to these default kinds as they do at present.  (Note that a Unicode string "
@@ -136,18 +149,18 @@ msgid ""
 "knowledgeable person might be able to expand this PEP to cover that case.)"
 msgstr ""
 
-#: ../pep-0242.txt:66
+#: ../../peps/peps/pep-0242.rst:75
 msgid ""
 "Within each type (integer, floating) the compiler supports a linearly-"
 "ordered set of kinds, with the ordering determined by the ability to hold "
 "numbers of an increased range and/or precision."
 msgstr ""
 
-#: ../pep-0242.txt:72
+#: ../../peps/peps/pep-0242.rst:81
 msgid "Kind Objects"
 msgstr ""
 
-#: ../pep-0242.txt:74
+#: ../../peps/peps/pep-0242.rst:83
 msgid ""
 "Two new standard functions are defined in a module named \"kinds\". They "
 "return callable objects called kind objects.  Each int or floating kind "
@@ -155,11 +168,11 @@ msgid ""
 "has the signature ``result = f(x, y=0.)``."
 msgstr ""
 
-#: ../pep-0242.txt:84
+#: ../../peps/peps/pep-0242.rst:88
 msgid "``int_kind(n)``"
 msgstr ""
 
-#: ../pep-0242.txt:80
+#: ../../peps/peps/pep-0242.rst:89
 msgid ""
 "For an integer argument ``n >= 1``, return a callable object whose result is "
 "an integer kind that will hold an integer number in the open interval "
@@ -168,11 +181,11 @@ msgid ""
 "corresponding to the Python literal 0."
 msgstr ""
 
-#: ../pep-0242.txt:94
+#: ../../peps/peps/pep-0242.rst:95
 msgid "``float_kind(nd, n)``"
 msgstr ""
 
-#: ../pep-0242.txt:87
+#: ../../peps/peps/pep-0242.rst:96
 msgid ""
 "For ``nd >= 0`` and ``n >= 1``, return a callable object whose result is a "
 "floating point kind that will hold a floating-point number with at least nd "
@@ -180,13 +193,13 @@ msgid ""
 "n]``.  The kind object accepts arguments that are integer or float."
 msgstr ""
 
-#: ../pep-0242.txt:93
+#: ../../peps/peps/pep-0242.rst:102
 msgid ""
 "If nd and n are both zero, returns the kind object corresponding to the "
 "Python literal 0.0."
 msgstr ""
 
-#: ../pep-0242.txt:96
+#: ../../peps/peps/pep-0242.rst:105
 msgid ""
 "The compiler will return a kind object corresponding to the least of its "
 "available set of kinds for that type that has the desired properties.  If no "
@@ -196,26 +209,26 @@ msgid ""
 "kind's range, an ``OverflowError`` exception is thrown."
 msgstr ""
 
-#: ../pep-0242.txt:104
+#: ../../peps/peps/pep-0242.rst:113
 msgid ""
 "Besides their callable behavior, kind objects have attributes giving the "
 "traits of the kind in question."
 msgstr ""
 
-#: ../pep-0242.txt:107
+#: ../../peps/peps/pep-0242.rst:116
 msgid ""
 "``name`` is the name of the kind.  The standard kinds are called int, long, "
 "double."
 msgstr ""
 
-#: ../pep-0242.txt:110
+#: ../../peps/peps/pep-0242.rst:119
 msgid ""
 "``typecode`` is a single-letter string that would be appropriate for use "
 "with ``Numeric`` or module ``array`` to form an array of this kind.  The "
 "standard types' typecodes are 'i', 'O', 'd' respectively."
 msgstr ""
 
-#: ../pep-0242.txt:115
+#: ../../peps/peps/pep-0242.rst:124
 msgid ""
 "Integer kinds have these additional attributes: ``MAX``, equal to the "
 "maximum permissible integer of this kind, or ``None`` for the long kind. "
@@ -223,7 +236,7 @@ msgid ""
 "``None`` for the long kind."
 msgstr ""
 
-#: ../pep-0242.txt:120
+#: ../../peps/peps/pep-0242.rst:129
 msgid ""
 "Float kinds have these additional attributes whose properties are equal to "
 "the corresponding value for the corresponding C type in the standard header "
@@ -234,44 +247,44 @@ msgid ""
 "the Python floating type to which the kind corresponds."
 msgstr ""
 
-#: ../pep-0242.txt:132
+#: ../../peps/peps/pep-0242.rst:141
 msgid "Attributes of Module kinds"
 msgstr ""
 
-#: ../pep-0242.txt:134
+#: ../../peps/peps/pep-0242.rst:143
 msgid ""
 "``int_kinds`` is a list of the available integer kinds, sorted from lowest "
 "to highest kind.  By definition, ``int_kinds[-1]`` is the long kind."
 msgstr ""
 
-#: ../pep-0242.txt:137
+#: ../../peps/peps/pep-0242.rst:146
 msgid ""
 "``float_kinds`` is a list of the available floating point kinds, sorted from "
 "lowest to highest kind."
 msgstr ""
 
-#: ../pep-0242.txt:140
+#: ../../peps/peps/pep-0242.rst:149
 msgid ""
 "``default_int_kind`` is the kind object corresponding to the Python literal 0"
 msgstr ""
 
-#: ../pep-0242.txt:143
+#: ../../peps/peps/pep-0242.rst:152
 msgid ""
 "``default_long_kind`` is the kind object corresponding to the Python literal "
 "0L"
 msgstr ""
 
-#: ../pep-0242.txt:146
+#: ../../peps/peps/pep-0242.rst:155
 msgid ""
 "``default_float_kind`` is the kind object corresponding to the Python "
 "literal 0.0"
 msgstr ""
 
-#: ../pep-0242.txt:151
+#: ../../peps/peps/pep-0242.rst:160
 msgid "Complex Numbers"
 msgstr ""
 
-#: ../pep-0242.txt:153
+#: ../../peps/peps/pep-0242.rst:162
 msgid ""
 "If supported, complex numbers have real and imaginary parts that are "
 "floating-point numbers with the same kind.  A Python compiler must support a "
@@ -279,17 +292,17 @@ msgid ""
 "complex numbers at all."
 msgstr ""
 
-#: ../pep-0242.txt:158
+#: ../../peps/peps/pep-0242.rst:167
 msgid ""
 "If complex numbers are supported, the following are available in module "
 "kinds:"
 msgstr ""
 
-#: ../pep-0242.txt:166
+#: ../../peps/peps/pep-0242.rst:170
 msgid "``complex_kind(nd, n)``"
 msgstr ""
 
-#: ../pep-0242.txt:162
+#: ../../peps/peps/pep-0242.rst:171
 msgid ""
 "Return a callable object whose result is a complex kind that will hold a "
 "complex number each of whose components (.real, .imag) is of kind "
@@ -297,46 +310,46 @@ msgid ""
 "any integer, real, or complex kind, or two arguments, each integer or real."
 msgstr ""
 
-#: ../pep-0242.txt:168
+#: ../../peps/peps/pep-0242.rst:177
 msgid ""
 "``complex_kinds`` is a list of the available complex kinds, sorted from "
 "lowest to highest kind."
 msgstr ""
 
-#: ../pep-0242.txt:171
+#: ../../peps/peps/pep-0242.rst:180
 msgid ""
 "``default_complex_kind`` is the kind object corresponding to the Python "
 "literal 0.0j.  The name of this kind is doublecomplex, and its typecode is "
 "'D'."
 msgstr ""
 
-#: ../pep-0242.txt:175
+#: ../../peps/peps/pep-0242.rst:184
 msgid "Complex kind objects have these addition attributes:"
 msgstr ""
 
-#: ../pep-0242.txt:177
+#: ../../peps/peps/pep-0242.rst:186
 msgid "``floatkind`` is the kind object of the corresponding float type."
 msgstr ""
 
-#: ../pep-0242.txt:181
+#: ../../peps/peps/pep-0242.rst:190
 msgid "Examples"
 msgstr ""
 
-#: ../pep-0242.txt:183
+#: ../../peps/peps/pep-0242.rst:192
 msgid "In module myprecision.py::"
 msgstr ""
 
-#: ../pep-0242.txt:191
+#: ../../peps/peps/pep-0242.rst:200
 msgid "In the rest of my code::"
 msgstr ""
 
-#: ../pep-0242.txt:205
+#: ../../peps/peps/pep-0242.rst:214
 msgid ""
 "Note how that entire code can then be changed to a higher precision by "
 "changing the arguments in myprecision.py."
 msgstr ""
 
-#: ../pep-0242.txt:208
+#: ../../peps/peps/pep-0242.rst:217
 msgid ""
 "Comment: note that you aren't promised that single != double; but you are "
 "promised that ``double(1.e20)`` will hold a number with 15 decimal digits of "
@@ -344,37 +357,18 @@ msgid ""
 "fail."
 msgstr ""
 
-#: ../pep-0242.txt:215
+#: ../../peps/peps/pep-0242.rst:224
 msgid "Open Issues"
 msgstr ""
 
-#: ../pep-0242.txt:217
+#: ../../peps/peps/pep-0242.rst:226
 msgid "No open issues have been raised at this time."
 msgstr ""
 
-#: ../pep-0242.txt:221
-msgid "Rejection"
-msgstr ""
-
-#: ../pep-0242.txt:223
-msgid ""
-"This PEP has been closed by the author.  The kinds module will not be added "
-"to the standard library."
-msgstr ""
-
-#: ../pep-0242.txt:226
-msgid ""
-"There was no opposition to the proposal but only mild interest in using it, "
-"not enough to justify adding the module to the standard library.  Instead, "
-"it will be made available as a separate distribution item at the Numerical "
-"Python site.  At the next release of Numerical Python, it will no longer be "
-"a part of the Numeric distribution."
-msgstr ""
-
-#: ../pep-0242.txt:235
+#: ../../peps/peps/pep-0242.rst:230
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../pep-0242.txt:237
+#: ../../peps/peps/pep-0242.rst:232
 msgid "This document has been placed in the public domain."
 msgstr "Este documento foi colocado em domínio público."

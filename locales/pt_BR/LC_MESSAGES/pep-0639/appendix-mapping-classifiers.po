@@ -1,0 +1,216 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the PEPs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PEPs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-14 02:33+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pt_BR\n"
+"Language-Team: pt_BR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../peps/peps/pep-0639/appendix-mapping-classifiers.rst:6
+msgid "Appendix: Mapping License Classifiers to SPDX Identifiers"
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-mapping-classifiers.rst:8
+msgid ""
+"Most single license classifiers (namely, all those not mentioned below) "
+"map to a single valid SPDX license identifier, allowing tools to infer "
+"the SPDX license identifier they correspond to, both for use when "
+"analyzing and auditing packages, and providing a semi-automated mechanism"
+" of filling the ``license`` key or the ``License-Expression`` field "
+"following the :ref:`PEP 639 specification <639-spec-converting-"
+"metadata>`."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-mapping-classifiers.rst:16
+msgid ""
+"Some legacy license classifiers intend to specify a particular license, "
+"but do not specify the particular version or variant, leading to a "
+"`critical ambiguity <classifierissue_>`__ as to their terms, "
+"compatibility and acceptability. Tools MUST NOT attempt to automatically "
+"infer a ``License-Expression`` when one of these classifiers is used "
+"without affirmative user action:"
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-mapping-classifiers.rst:23
+msgid "``License :: OSI Approved :: Academic Free License (AFL)``"
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-mapping-classifiers.rst:24
+msgid "``License :: OSI Approved :: Apache Software License``"
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-mapping-classifiers.rst:25
+msgid "``License :: OSI Approved :: Apple Public Source License``"
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-mapping-classifiers.rst:26
+msgid "``License :: OSI Approved :: Artistic License``"
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-mapping-classifiers.rst:27
+msgid "``License :: OSI Approved :: BSD License``"
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-mapping-classifiers.rst:28
+msgid "``License :: OSI Approved :: GNU Affero General Public License v3``"
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-mapping-classifiers.rst:29
+msgid "``License :: OSI Approved :: GNU Free Documentation License (FDL)``"
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-mapping-classifiers.rst:30
+msgid "``License :: OSI Approved :: GNU General Public License (GPL)``"
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-mapping-classifiers.rst:31
+msgid "``License :: OSI Approved :: GNU General Public License v2 (GPLv2)``"
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-mapping-classifiers.rst:32
+msgid "``License :: OSI Approved :: GNU General Public License v3 (GPLv3)``"
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-mapping-classifiers.rst:33
+msgid ""
+"``License :: OSI Approved :: GNU Lesser General Public License v2 "
+"(LGPLv2)``"
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-mapping-classifiers.rst:34
+msgid ""
+"``License :: OSI Approved :: GNU Lesser General Public License v2 or "
+"later (LGPLv2+)``"
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-mapping-classifiers.rst:35
+msgid ""
+"``License :: OSI Approved :: GNU Lesser General Public License v3 "
+"(LGPLv3)``"
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-mapping-classifiers.rst:36
+msgid ""
+"``License :: OSI Approved :: GNU Library or Lesser General Public License"
+" (LGPL)``"
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-mapping-classifiers.rst:38
+msgid ""
+"A comprehensive mapping of these classifiers to their possible specific "
+"identifiers was `assembled by Dustin Ingram <badclassifiers_>`__, which "
+"tools MAY use as a reference for the identifier selection options to "
+"offer users when prompting the user to explicitly select the license "
+"identifier they intended for their project."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-mapping-classifiers.rst:46
+msgid ""
+"Several additional classifiers, namely the \"or later\" variants of the "
+"AGPLv3, GPLv2, GPLv3 and LGPLv3, are also listed in the aforementioned "
+"mapping, but unambiguously map to their respective licenses, and so are "
+"not listed here. However, LGPLv2 is included above, as it could "
+"ambiguously refer to either the distinct v2.0 or v2.1 variants of that "
+"license."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-mapping-classifiers.rst:53
+msgid ""
+"In addition, for the various special cases, the following mappings are "
+"considered canonical and normative for the purposes of this "
+"specification:"
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-mapping-classifiers.rst:56
+msgid ""
+"Classifier ``License :: Public Domain`` MAY be mapped to the generic "
+"``License-Expression: LicenseRef-Public-Domain``. If tools do so, they "
+"SHOULD issue an informational warning encouraging the use of more "
+"explicit and legally portable license identifiers, such as those for the "
+"`CC0 1.0 license <cc0_>`__ (``CC0-1.0``), the `Unlicense <unlicense_>`__ "
+"(``Unlicense``), or the `MIT license <mitlicense_>`__ (``MIT``), since "
+"the meaning associated with the term \"public domain\" is thoroughly "
+"dependent on the specific legal jurisdiction involved, some of which lack"
+" the concept entirely. Alternatively, tools MAY choose to treat these "
+"classifiers as ambiguous."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-mapping-classifiers.rst:68
+msgid "The generic and sometimes ambiguous classifiers:"
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-mapping-classifiers.rst:70
+msgid "``License :: Free For Educational Use``"
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-mapping-classifiers.rst:71
+msgid "``License :: Free For Home Use``"
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-mapping-classifiers.rst:72
+msgid "``License :: Free for non-commercial use``"
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-mapping-classifiers.rst:73
+msgid "``License :: Freely Distributable``"
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-mapping-classifiers.rst:74
+msgid "``License :: Free To Use But Restricted``"
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-mapping-classifiers.rst:75
+msgid "``License :: Freeware``"
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-mapping-classifiers.rst:76
+msgid "``License :: Other/Proprietary License``"
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-mapping-classifiers.rst:78
+msgid ""
+"MAY be mapped to the generic ``License-Expression: LicenseRef-"
+"Proprietary``, but tools MUST issue a prominent, informative warning if "
+"they do so. Alternatively, tools MAY choose to treat these classifiers as"
+" ambiguous."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-mapping-classifiers.rst:83
+msgid ""
+"The generic and ambiguous classifiers ``License :: OSI Approved`` and "
+"``License :: DFSG approved`` do not map to any license expression, and "
+"thus tools SHOULD treat them as ambiguous, or if not MUST ignore them."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-mapping-classifiers.rst:87
+msgid ""
+"The classifiers ``License :: GUST Font License 1.0`` and ``License :: "
+"GUST Font License 2006-09-30`` have no mapping to SPDX license "
+"identifiers, and no PyPI package uses them as of 2022-07-09."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-mapping-classifiers.rst:91
+msgid ""
+"When multiple license classifiers are used, their relationship is "
+"ambiguous, and it is typically not possible to determine if all the "
+"licenses apply or if there is a choice that is possible among the "
+"licenses, In this case, tools MUST NOT automatically infer a license "
+"expression, unless one license classifier is a parent of the other, i.e. "
+"the child contains all ``::``-delineated components of the parent, in "
+"which case tools MAY ignore the parent classifier but SHOULD issue an "
+"informative warning when doing so."
+msgstr ""
+

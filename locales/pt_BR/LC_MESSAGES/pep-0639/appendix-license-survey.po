@@ -1,0 +1,471 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the PEPs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PEPs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-14 02:33+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pt_BR\n"
+"Language-Team: pt_BR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:4
+msgid "Appendix: License Documentation in Python and Other Projects"
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:7
+msgid "Abstract"
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:9
+msgid ""
+"There are multiple ways used or recommended to document licenses. This "
+"document contains the results of a comprehensive survey of license "
+"documentation in Python and other languages."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:13
+msgid ""
+"The key takeaways from the survey, which have guided the recommendations "
+"of PEP 639, are as follows:"
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:16
+msgid "Most package formats use a single ``License`` field."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:18
+msgid ""
+"Many modern package systems use some form of :term:`license expression` "
+"to optionally combine more than one :term:`license identifier` together. "
+"SPDX and SPDX-like syntaxes are the most popular in use."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:22
+msgid ""
+"SPDX license identifiers are becoming the de facto way to reference "
+"common licenses everywhere, whether or not a full license expression "
+"syntax is used."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:25
+msgid ""
+"Several package formats support documenting both a license expression and"
+" the paths of the corresponding files that contain the license text. Most"
+" Free and Open Source Software licenses require package authors to "
+"include their full text in a :term:`Distribution Package`."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:34
+msgid "License Documentation in Python"
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:39
+msgid "Core Metadata"
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:41
+msgid ""
+"There are two overlapping Core Metadata fields to document a license: the"
+" license ``Classifier`` `strings <classifiers_>`__ prefixed with "
+"``License ::`` and the ``License`` `field <licensefield_>`__ as free "
+"text."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:45
+msgid "The Core Metadata ``License`` field documentation is currently:"
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:69
+msgid ""
+"Even though there are two fields, it is at times difficult to convey "
+"anything but simpler licensing. For instance, some classifiers lack "
+"precision (GPL without a version) and when multiple license classifiers "
+"are listed, it is not clear if both licenses must apply, or the user may "
+"choose between them. Furthermore, the list of available license "
+"classifiers is rather limited and out-of-date."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:80
+msgid "Setuptools and Wheel"
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:82
+msgid ""
+"Beyond a license code or qualifier, license text files are documented and"
+" included in a built package either implicitly or explicitly, and this is"
+" another possible source of confusion:"
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:86
+msgid ""
+"In the `Setuptools <setuptoolssdist_>`__ and `Wheel <wheels_>`__ "
+"projects, license files are automatically added to the distribution (at "
+"their source location in a source distribution/sdist, and in the ``.dist-"
+"info`` directory of a built wheel) if they match one of a number of "
+"common license file name patterns (``LICEN[CS]E*``, ``COPYING*``, "
+"``NOTICE*`` and ``AUTHORS*``). Alternatively, a package author can "
+"specify a list of license file paths to include in the built wheel under "
+"the ``license_files`` key in the ``[metadata]`` section of the project's "
+"``setup.cfg``, or as an argument to the ``setuptools.setup()`` function. "
+"At present, following the Wheel project's lead, Setuptools flattens the "
+"collected license files into the metadata directory, clobbering files "
+"with the same name, and dumps license files directly into the top-level "
+"``.dist-info`` directory, but there is a `desire to resolve both these "
+"issues <setuptoolsfiles_>`__, contingent on PEP 639 being accepted."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:101
+msgid ""
+"Both tools also support an older, singular ``license_file`` parameter "
+"that allows specifying only one license file to add to the distribution, "
+"which has been deprecated for some time but still sees `some use "
+"<pipsetup_>`__."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:105
+msgid ""
+"Following the publication of an earlier draft of PEP 639, Setuptools "
+"`added support <setuptoolspep639_>`__ for ``License-File`` in "
+"distribution metadata as described in this specification. This allows "
+"other tools consuming the resulting metadata to unambiguously locate the "
+"license file(s) for a given package."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:115
+msgid "PyPA Packaging Guide and Sample Project"
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:117
+msgid ""
+"Both the `PyPA beginner packaging tutorial <packagingtuttxt_>`__ and its "
+"more comprehensive `packaging guide <packagingguidetxt_>`__ state that it"
+" is important that every package include a license file. They point to "
+"the ``LICENSE.txt`` in the official PyPA sample project as an example, "
+"which is `explicitly listed <samplesetupcfg_>`__ under the "
+"``license_files`` key in its ``setup.cfg``, following existing practice "
+"formally specified by PEP 639."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:124
+msgid ""
+"Both the `beginner packaging tutorial <packagingtutkey_>`__ and the "
+"`sample project <samplesetuppy_>`__ only use classifiers to declare a "
+"package's license, and do not include or mention the ``License`` field. "
+"The `full packaging guide <licensefield_>`__ does mention this field, but"
+" states that authors should use the license classifiers instead, unless "
+"the project uses a non-standard license (which the guide discourages)."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:135
+msgid "Python source code files"
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:137
+msgid ""
+"**Note:** Documenting licenses in source code is not in the scope of PEP "
+"639."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:139
+msgid ""
+"Beside using comments and/or ``SPDX-License-Identifier`` conventions, the"
+" license is `sometimes <pycode_>`__ documented in Python code files using"
+" a \"dunder\" module-level constant, typically named ``__license__``."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:143
+msgid ""
+"This convention, while perhaps somewhat antiquated, is recognized by the "
+"built-in ``help()`` function and the standard ``pydoc`` module. The "
+"dunder variable will show up in the ``help()`` DATA section for a module."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:151
+msgid "License Documentation in Other Projects"
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:154
+msgid "Linux distribution packages"
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:156
+msgid ""
+"**Note:** in most cases, the texts of the most common licenses are "
+"included globally in a shared documentation directory (e.g. "
+"``/usr/share/doc``)."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:159
+msgid ""
+"Debian documents package licenses with `machine readable copyright files "
+"<dep5_>`__. It defines its own license expression syntax and list of "
+"identifiers for common licenses, both of which are closely related to "
+"those of SPDX."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:164
+msgid ""
+"`Fedora packages <fedora_>`__ specify how to include `License Texts "
+"<fedoratext_>`__ and use a `License field <fedoralicense_>`__ that must "
+"be filled with appropriate short license identifier(s) from an extensive "
+"list of `\"Good Licenses\" <fedoralist_>`__. Fedora uses SPDX license "
+"expression syntax."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:171
+msgid ""
+"`OpenSUSE packages <opensuse_>`__ use SPDX license expressions with SPDX "
+"license IDs and a `list of additional license identifiers "
+"<opensuselist_>`__."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:175
+msgid ""
+"`Gentoo ebuild <gentoo_>`__ uses a ``LICENSE`` variable. This field is "
+"specified in `GLEP-0023 <glep23_>`__ and in the `Gentoo development "
+"manual <gentoodev_>`__. Gentoo also defines a list of allowed licenses "
+"and a license expression syntax, which is rather different from SPDX."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:181
+msgid ""
+"The `FreeBSD package Makefile <freebsd_>`__ provides ``LICENSE`` and "
+"``LICENSE_FILE`` fields with a list of custom license symbols. For non-"
+"standard licenses, FreeBSD recommends using ``LICENSE=UNKNOWN`` and "
+"adding ``LICENSE_NAME`` and ``LICENSE_TEXT`` fields, as well as "
+"sophisticated ``LICENSE_PERMS`` to qualify the license permissions and "
+"``LICENSE_GROUPS`` to document a license grouping. The ``LICENSE_COMB`` "
+"allows documenting more than one license and how they apply together, "
+"forming a custom license expression syntax. FreeBSD also recommends the "
+"use of ``SPDX-License-Identifier`` in source code files."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:191
+msgid ""
+"`Arch Linux PKGBUILD <archinux_>`__ defines its `own license identifiers "
+"<archlinuxlist_>`__. The value ``'unknown'`` can be used if the license "
+"is not defined."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:195
+msgid ""
+"`OpenWRT ipk packages <openwrt_>`__ use the ``PKG_LICENSE`` and "
+"``PKG_LICENSE_FILES`` variables and recommend the use of SPDX License "
+"identifiers."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:199
+msgid ""
+"`NixOS uses SPDX identifiers <nixos_>`__ and some extra license IDs in "
+"its license field."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:202
+msgid ""
+"GNU Guix (based on NixOS) has a single License field, uses its own "
+"`license symbols list <guix_>`__ and specifies how to use one license or "
+"a `list of them <guixlicense_>`__."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:206
+msgid ""
+"`Alpine Linux packages <alpine_>`__ recommend using SPDX identifiers in "
+"the license field."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:211
+msgid "Language and application packages"
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:213
+msgid ""
+"In Java, `Maven POM <maven_>`__ defines a ``licenses`` XML tag with a "
+"list of licenses, each with a name, URL, comments and \"distribution\" "
+"type. This is not mandatory, and the content of each field is not "
+"specified."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:217
+msgid ""
+"The `JavaScript NPM package.json <npm_>`__ uses a single license field "
+"with a SPDX license expression, or the ``UNLICENSED`` ID if none is "
+"specified. A license file can be referenced as an alternative using ``SEE"
+" LICENSE IN <filename>`` in the single ``license`` field."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:222
+msgid ""
+"`Rubygems gemspec <gem_>`__ specifies either a single or list of license "
+"strings. The relationship between multiple licenses in a list is not "
+"specified. They recommend using SPDX license identifiers."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:226
+msgid ""
+"`CPAN Perl modules <perl_>`__ use a single license field, which is either"
+" a single or a list of strings. The relationship between the licenses in "
+"a list is not specified. There is a list of custom license identifiers "
+"plus these generic identifiers: ``open_source``, ``restricted``, "
+"``unrestricted``, ``unknown``."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:232
+msgid ""
+"`Rust Cargo <cargo_>`__ specifies the use of an SPDX license expression "
+"(v2.1) in the ``license`` field. It also supports an alternative "
+"expression syntax using slash-separated SPDX license identifiers, and "
+"there is also a ``license_file`` field. The `crates.io package registry "
+"<cratesio_>`__ requires that either ``license`` or ``license_file`` "
+"fields are set when uploading a package."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:239
+msgid ""
+"`PHP composer.json <composer_>`__ uses a ``license`` field with an SPDX "
+"license ID or ``proprietary``. The ``license`` field is either a single "
+"string with resembling the SPDX license expression syntax with ``and`` "
+"and ``or`` keywords; or is a list of strings if there is a (disjunctive) "
+"choice of licenses."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:245
+msgid ""
+"`NuGet packages <nuget_>`__ previously used only a simple license URL, "
+"but now specify using a SPDX license expression and/or the path to a "
+"license file within the package. The NuGet.org repository states that "
+"they only accept license expressions that are \"approved by the Open "
+"Source Initiative or the Free Software Foundation.\""
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:251
+msgid ""
+"Go language modules ``go.mod`` have no provision for any metadata beyond "
+"dependencies. Licensing information is left for code authors and other "
+"community package managers to document."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:255
+msgid ""
+"The `Dart/Flutter spec <flutter_>`__ recommends using a single "
+"``LICENSE`` file that should contain all the license texts, each "
+"separated by a line with 80 hyphens."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:259
+msgid ""
+"The `JavaScript Bower <bower_>`__ ``license`` field is either a single "
+"string or list of strings using either SPDX license identifiers, or a "
+"path/URL to a license file."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:263
+msgid ""
+"The `Cocoapods podspec <cocoapod_>`__ ``license`` field is either a "
+"single string, or a mapping with ``type``, ``file`` and ``text`` keys. "
+"This is mandatory unless there is a ``LICENSE``/``LICENCE`` file "
+"provided."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:267
+msgid ""
+"`Haskell Cabal <cabal_>`__ accepts an SPDX license expression since "
+"version 2.2. The version of the SPDX license list used is a function of "
+"the Cabal version. The specification also provides a mapping between "
+"legacy (pre-SPDX) and SPDX license Identifiers. Cabal also specifies a "
+"``license-file(s)`` field that lists license files to be installed with "
+"the package."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:274
+msgid ""
+"`Erlang/Elixir mix/hex package <mix_>`__ specifies a ``licenses`` field "
+"as a required list of license strings, and recommends using SPDX license "
+"identifiers."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:278
+msgid ""
+"`D Langanguage dub packages <dub_>`__ define their own list of license "
+"identifiers and license expression syntax, similar to the SPDX standard."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:281
+msgid ""
+"The `R Package DESCRIPTION <cran_>`__ defines its own sophisticated "
+"license expression syntax and list of licenses identifiers. R has a "
+"unique way of supporting specifiers for license versions (such as ``LGPL "
+"(>= 2.0, < 3)``) in its license expression syntax."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:288
+msgid "Other ecosystems"
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:290
+msgid ""
+"The ``SPDX-License-Identifier`` `header <spdxid_>`__ is a simple "
+"convention to document the license inside a file."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:293
+msgid ""
+"The `Free Software Foundation (FSF) <fsf_>`__ promotes the use of SPDX "
+"license identifiers for clarity in the `GPL <gnu_>`__ and other versioned"
+" free software licenses."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:297
+msgid ""
+"The Free Software Foundation Europe (FSFE) `REUSE project <reuse_>`__ "
+"promotes using ``SPDX-License-Identifier``."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:300
+msgid ""
+"The `Linux kernel <linux_>`__ uses ``SPDX-License-Identifier`` and parts "
+"of the FSFE REUSE conventions to document its licenses."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:303
+msgid ""
+"`U-Boot <uboot_>`__ spearheaded using ``SPDX-License-Identifier`` in code"
+" and now follows the Linux approach."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:306
+msgid ""
+"The Apache Software Foundation projects use `RDF DOAP <apache_>`__ with a"
+" single license field pointing to SPDX license identifiers."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:309
+msgid ""
+"The `Eclipse Foundation <eclipse_>`__ promotes using ``SPDX-license-"
+"Identifiers``."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:312
+msgid ""
+"The `ClearlyDefined project <clearlydefined_>`__ promotes using SPDX "
+"license identifiers and expressions to improve license clarity."
+msgstr ""
+
+#: ../../peps/peps/pep-0639/appendix-license-survey.rst:315
+msgid ""
+"The `Android Open Source Project <android_>`__ uses "
+"``MODULE_LICENSE_XXX`` empty tag files, where ``XXX`` is a license code "
+"such as ``BSD``, ``APACHE``, ``GPL``, etc. It also uses a ``NOTICE`` file"
+" that contains license and notice texts."
+msgstr ""
+

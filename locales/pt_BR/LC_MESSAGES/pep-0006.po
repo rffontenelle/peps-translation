@@ -8,243 +8,247 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-20 10:43-0300\n"
+"POT-Creation-Date: 2024-07-14 02:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.13.1\n"
+"Generated-By: Babel 2.15.0\n"
 
-#: ../../peps/pep-0006.rst
+#: ../../peps/peps/pep-0006.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../../peps/pep-0006.rst:3
+#: ../../peps/peps/pep-0006.rst:3
 msgid "Aahz <aahz@pythoncraft.com>, Anthony Baxter <anthony@interlink.com.au>"
 msgstr ""
 
-#: ../../peps/pep-0006.rst
+#: ../../peps/peps/pep-0006.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../../peps/pep-0006.rst:4
-msgid "Active"
-msgstr "Ativa"
+#: ../../peps/peps/pep-0006.rst:4
+msgid "Superseded"
+msgstr ""
 
-#: ../../peps/pep-0006.rst
+#: ../../peps/peps/pep-0006.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../../peps/pep-0006.rst:5
+#: ../../peps/peps/pep-0006.rst:5
 msgid "Process"
 msgstr "Processo"
 
-#: ../../peps/pep-0006.rst
+#: ../../peps/peps/pep-0006.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../../peps/pep-0006.rst:7
+#: ../../peps/peps/pep-0006.rst:7
 msgid "15-Mar-2001"
 msgstr ""
 
-#: ../../peps/pep-0006.rst
+#: ../../peps/peps/pep-0006.rst
 msgid "Post-History"
 msgstr "Pós-história"
 
-#: ../../peps/pep-0006.rst:8
+#: ../../peps/peps/pep-0006.rst:8
 msgid "15-Mar-2001, 18-Apr-2001, 19-Aug-2004"
 msgstr ""
 
-#: ../../peps/pep-0006.rst:13
+#: ../../peps/peps/pep-0006.rst:10
+msgid ""
+"This PEP is obsolete. The current release policy is documented in `the "
+"devguide <https://devguide.python.org/developer-workflow/development-cycle/"
+">`__. See also :pep:`101` for mechanics of the release process."
+msgstr ""
+
+#: ../../peps/peps/pep-0006.rst:17
 msgid "Abstract"
 msgstr ""
 
-#: ../../peps/pep-0006.rst:15
+#: ../../peps/peps/pep-0006.rst:19
 msgid ""
-"Python has historically had only a single fork of development, with "
-"releases having the combined purpose of adding new features and "
-"delivering bug fixes (these kinds of releases will be referred to as "
-"\"major releases\").  This PEP describes how to fork off maintenance, or "
-"bug fix, releases of old versions for the primary purpose of fixing bugs."
+"Python has historically had only a single fork of development, with releases "
+"having the combined purpose of adding new features and delivering bug fixes "
+"(these kinds of releases will be referred to as \"major releases\").  This "
+"PEP describes how to fork off maintenance, or bug fix, releases of old "
+"versions for the primary purpose of fixing bugs."
 msgstr ""
 
-#: ../../peps/pep-0006.rst:22
+#: ../../peps/peps/pep-0006.rst:26
 msgid ""
 "This PEP is not, repeat NOT, a guarantee of the existence of bug fix "
-"releases; it only specifies a procedure to be followed if bug fix "
-"releases are desired by enough of the Python community willing to do the "
-"work."
+"releases; it only specifies a procedure to be followed if bug fix releases "
+"are desired by enough of the Python community willing to do the work."
 msgstr ""
 
-#: ../../peps/pep-0006.rst:29
+#: ../../peps/peps/pep-0006.rst:33
 msgid "Motivation"
 msgstr ""
 
-#: ../../peps/pep-0006.rst:31
+#: ../../peps/peps/pep-0006.rst:35
 msgid ""
-"With the move to SourceForge, Python development has accelerated. There "
-"is a sentiment among part of the community that there was too much "
-"acceleration, and many people are uncomfortable with upgrading to new "
-"versions to get bug fixes when so many features have been added, "
-"sometimes late in the development cycle."
+"With the move to SourceForge, Python development has accelerated. There is a "
+"sentiment among part of the community that there was too much acceleration, "
+"and many people are uncomfortable with upgrading to new versions to get bug "
+"fixes when so many features have been added, sometimes late in the "
+"development cycle."
 msgstr ""
 
-#: ../../peps/pep-0006.rst:37
+#: ../../peps/peps/pep-0006.rst:41
 msgid ""
 "One solution for this issue is to maintain the previous major release, "
-"providing bug fixes until the next major release.  This should make "
-"Python more attractive for enterprise development, where Python may need "
-"to be installed on hundreds or thousands of machines."
+"providing bug fixes until the next major release.  This should make Python "
+"more attractive for enterprise development, where Python may need to be "
+"installed on hundreds or thousands of machines."
 msgstr ""
 
-#: ../../peps/pep-0006.rst:44
+#: ../../peps/peps/pep-0006.rst:48
 msgid "Prohibitions"
 msgstr ""
 
-#: ../../peps/pep-0006.rst:46
+#: ../../peps/peps/pep-0006.rst:50
 msgid "Bug fix releases are required to adhere to the following restrictions:"
 msgstr ""
 
-#: ../../peps/pep-0006.rst:48
+#: ../../peps/peps/pep-0006.rst:52
 msgid ""
 "There must be zero syntax changes.  All ``.pyc`` and ``.pyo`` files must "
 "work (no regeneration needed) with all bugfix releases forked off from a "
 "major release."
 msgstr ""
 
-#: ../../peps/pep-0006.rst:52
+#: ../../peps/peps/pep-0006.rst:56
 msgid "There must be zero pickle changes."
 msgstr ""
 
-#: ../../peps/pep-0006.rst:54
+#: ../../peps/peps/pep-0006.rst:58
 msgid ""
-"There must be no incompatible C API changes.  All extensions must "
-"continue to work without recompiling in all bugfix releases in the same "
-"fork as a major release."
+"There must be no incompatible C API changes.  All extensions must continue "
+"to work without recompiling in all bugfix releases in the same fork as a "
+"major release."
 msgstr ""
 
-#: ../../peps/pep-0006.rst:58
+#: ../../peps/peps/pep-0006.rst:62
 msgid ""
 "Breaking any of these prohibitions requires a BDFL proclamation (and a "
 "prominent warning in the release notes)."
 msgstr ""
 
-#: ../../peps/pep-0006.rst:63
+#: ../../peps/peps/pep-0006.rst:67
 msgid "Not-Quite-Prohibitions"
 msgstr ""
 
-#: ../../peps/pep-0006.rst:65
+#: ../../peps/peps/pep-0006.rst:69
 msgid "Where possible, bug fix releases should also:"
 msgstr ""
 
-#: ../../peps/pep-0006.rst:67
+#: ../../peps/peps/pep-0006.rst:71
 msgid ""
-"Have no new features. The purpose of a bug fix release is to fix bugs, "
-"not add the latest and greatest whizzo feature from the HEAD of the CVS "
-"root."
+"Have no new features. The purpose of a bug fix release is to fix bugs, not "
+"add the latest and greatest whizzo feature from the HEAD of the CVS root."
 msgstr ""
 
-#: ../../peps/pep-0006.rst:71
+#: ../../peps/peps/pep-0006.rst:75
 msgid ""
-"Be a painless upgrade. Users should feel confident that an upgrade from "
-"2.x.y to 2.x.(y+1) will not break their running systems. This means that,"
-" unless it is necessary to fix a bug, the standard library should not "
-"change behavior, or worse yet, APIs."
+"Be a painless upgrade. Users should feel confident that an upgrade from 2.x."
+"y to 2.x.(y+1) will not break their running systems. This means that, unless "
+"it is necessary to fix a bug, the standard library should not change "
+"behavior, or worse yet, APIs."
 msgstr ""
 
-#: ../../peps/pep-0006.rst:78
+#: ../../peps/peps/pep-0006.rst:82
 msgid "Applicability of Prohibitions"
 msgstr ""
 
-#: ../../peps/pep-0006.rst:80
+#: ../../peps/peps/pep-0006.rst:84
 msgid ""
 "The above prohibitions and not-quite-prohibitions apply both for a final "
-"release to a bugfix release (for instance, 2.4 to 2.4.1) and for one "
-"bugfix release to the next in a series (for instance 2.4.1 to 2.4.2)."
+"release to a bugfix release (for instance, 2.4 to 2.4.1) and for one bugfix "
+"release to the next in a series (for instance 2.4.1 to 2.4.2)."
 msgstr ""
 
-#: ../../peps/pep-0006.rst:85
+#: ../../peps/peps/pep-0006.rst:89
 msgid ""
-"Following the prohibitions listed in this PEP should help keep the "
-"community happy that a bug fix release is a painless and safe upgrade."
+"Following the prohibitions listed in this PEP should help keep the community "
+"happy that a bug fix release is a painless and safe upgrade."
 msgstr ""
 
-#: ../../peps/pep-0006.rst:90
+#: ../../peps/peps/pep-0006.rst:94
 msgid "Helping the Bug Fix Releases Happen"
 msgstr ""
 
-#: ../../peps/pep-0006.rst:92
+#: ../../peps/peps/pep-0006.rst:96
 msgid "Here's a few pointers on helping the bug fix release process along."
 msgstr ""
 
-#: ../../peps/pep-0006.rst:94
+#: ../../peps/peps/pep-0006.rst:98
 msgid ""
-"Backport bug fixes. If you fix a bug, and it seems appropriate, port it "
-"to the CVS branch for the current bug fix release. If you're unwilling or"
-" unable to backport it yourself, make a note in the commit message, with "
+"Backport bug fixes. If you fix a bug, and it seems appropriate, port it to "
+"the CVS branch for the current bug fix release. If you're unwilling or "
+"unable to backport it yourself, make a note in the commit message, with "
 "words like 'Bugfix candidate' or 'Backport candidate'."
 msgstr ""
 
-#: ../../peps/pep-0006.rst:100
+#: ../../peps/peps/pep-0006.rst:104
 msgid ""
 "If you're not sure, ask. Ask the person managing the current bug fix "
 "releases if they think a particular fix is appropriate."
 msgstr ""
 
-#: ../../peps/pep-0006.rst:103
+#: ../../peps/peps/pep-0006.rst:107
 msgid ""
 "If there's a particular bug you'd particularly like fixed in a bug fix "
-"release, jump up and down and try to get it done. Do not wait until 48 "
-"hours before a bug fix release is due, and then start asking for bug "
-"fixes to be included."
+"release, jump up and down and try to get it done. Do not wait until 48 hours "
+"before a bug fix release is due, and then start asking for bug fixes to be "
+"included."
 msgstr ""
 
-#: ../../peps/pep-0006.rst:110
+#: ../../peps/peps/pep-0006.rst:114
 msgid "Version Numbers"
 msgstr ""
 
-#: ../../peps/pep-0006.rst:112
+#: ../../peps/peps/pep-0006.rst:116
 msgid ""
-"Starting with Python 2.0, all major releases are required to have a "
-"version number of the form X.Y; bugfix releases will always be of the "
-"form X.Y.Z."
+"Starting with Python 2.0, all major releases are required to have a version "
+"number of the form X.Y; bugfix releases will always be of the form X.Y.Z."
 msgstr ""
 
-#: ../../peps/pep-0006.rst:116
+#: ../../peps/peps/pep-0006.rst:120
 msgid ""
-"The current major release under development is referred to as release N; "
-"the just-released major version is referred to as N-1."
+"The current major release under development is referred to as release N; the "
+"just-released major version is referred to as N-1."
 msgstr ""
 
-#: ../../peps/pep-0006.rst:119
+#: ../../peps/peps/pep-0006.rst:123
 msgid ""
-"In CVS, the bug fix releases happen on a branch. For release 2.x, the "
-"branch is named 'release2x-maint'. For example, the branch for the 2.3 "
-"maintenance releases is release23-maint"
+"In CVS, the bug fix releases happen on a branch. For release 2.x, the branch "
+"is named 'release2x-maint'. For example, the branch for the 2.3 maintenance "
+"releases is release23-maint"
 msgstr ""
 
-#: ../../peps/pep-0006.rst:125
+#: ../../peps/peps/pep-0006.rst:129
 msgid "Procedure"
 msgstr ""
 
-#: ../../peps/pep-0006.rst:127
+#: ../../peps/peps/pep-0006.rst:131
 msgid ""
 "The process for managing bugfix releases is modeled in part on the Tcl "
 "system [1]_."
 msgstr ""
 
-#: ../../peps/pep-0006.rst:130
+#: ../../peps/peps/pep-0006.rst:134
 msgid ""
-"The Patch Czar is the counterpart to the BDFL for bugfix releases. "
-"However, the BDFL and designated appointees retain veto power over "
-"individual patches. A Patch Czar might only be looking after a single "
-"branch of development - it's quite possible that a different person might"
-" be maintaining the 2.3.x and the 2.4.x releases."
+"The Patch Czar is the counterpart to the BDFL for bugfix releases. However, "
+"the BDFL and designated appointees retain veto power over individual "
+"patches. A Patch Czar might only be looking after a single branch of "
+"development - it's quite possible that a different person might be "
+"maintaining the 2.3.x and the 2.4.x releases."
 msgstr ""
 
-#: ../../peps/pep-0006.rst:136
+#: ../../peps/peps/pep-0006.rst:140
 msgid ""
 "As individual patches get contributed to the current trunk of CVS, each "
 "patch committer is requested to consider whether the patch is a bug fix "
@@ -253,74 +257,74 @@ msgid ""
 "branch, or else mark the patch in the commit message."
 msgstr ""
 
-#: ../../peps/pep-0006.rst:142
+#: ../../peps/peps/pep-0006.rst:146
 msgid ""
-"In addition, anyone from the Python community is free to suggest patches "
-"for inclusion. Patches may be submitted specifically for bugfix releases;"
-" they should follow the guidelines in :pep:`3`. In general, though, it's "
-"probably better that a bug in a specific release also be fixed on the "
-"HEAD as well as the branch."
+"In addition, anyone from the Python community is free to suggest patches for "
+"inclusion. Patches may be submitted specifically for bugfix releases; they "
+"should follow the guidelines in :pep:`3`. In general, though, it's probably "
+"better that a bug in a specific release also be fixed on the HEAD as well as "
+"the branch."
 msgstr ""
 
-#: ../../peps/pep-0006.rst:148
+#: ../../peps/peps/pep-0006.rst:152
 msgid ""
 "The Patch Czar decides when there are a sufficient number of patches to "
 "warrant a release. The release gets packaged up, including a Windows "
-"installer, and made public. If any new bugs are found, they must be fixed"
-" immediately and a new bugfix release publicized (with an incremented "
-"version number). For the 2.3.x cycle, the Patch Czar (Anthony) has been "
-"trying for a release approximately every six months, but this should not "
-"be considered binding in any way on any future releases."
+"installer, and made public. If any new bugs are found, they must be fixed "
+"immediately and a new bugfix release publicized (with an incremented version "
+"number). For the 2.3.x cycle, the Patch Czar (Anthony) has been trying for a "
+"release approximately every six months, but this should not be considered "
+"binding in any way on any future releases."
 msgstr ""
 
-#: ../../peps/pep-0006.rst:157
+#: ../../peps/peps/pep-0006.rst:161
 msgid ""
-"Bug fix releases are expected to occur at an interval of roughly six "
-"months. This is only a guideline, however - obviously, if a major bug is "
-"found, a bugfix release may be appropriate sooner. In general, only the "
-"N-1 release will be under active maintenance at any time. That is, during"
-" Python 2.4's development, Python 2.3 gets bugfix releases. If, however, "
-"someone qualified wishes to continue the work to maintain an older "
-"release, they should be encouraged."
+"Bug fix releases are expected to occur at an interval of roughly six months. "
+"This is only a guideline, however - obviously, if a major bug is found, a "
+"bugfix release may be appropriate sooner. In general, only the N-1 release "
+"will be under active maintenance at any time. That is, during Python 2.4's "
+"development, Python 2.3 gets bugfix releases. If, however, someone qualified "
+"wishes to continue the work to maintain an older release, they should be "
+"encouraged."
 msgstr ""
 
-#: ../../peps/pep-0006.rst:167
+#: ../../peps/peps/pep-0006.rst:171
 msgid "Patch Czar History"
 msgstr ""
 
-#: ../../peps/pep-0006.rst:169
+#: ../../peps/peps/pep-0006.rst:173
 msgid "Anthony Baxter is the Patch Czar for 2.3.1 through 2.3.4."
 msgstr ""
 
-#: ../../peps/pep-0006.rst:171
+#: ../../peps/peps/pep-0006.rst:175
 msgid "Barry Warsaw is the Patch Czar for 2.2.3."
 msgstr ""
 
-#: ../../peps/pep-0006.rst:173
+#: ../../peps/peps/pep-0006.rst:177
 msgid "Guido van Rossum is the Patch Czar for 2.2.2."
 msgstr ""
 
-#: ../../peps/pep-0006.rst:175
+#: ../../peps/peps/pep-0006.rst:179
 msgid "Michael Hudson is the Patch Czar for 2.2.1."
 msgstr ""
 
-#: ../../peps/pep-0006.rst:177
+#: ../../peps/peps/pep-0006.rst:181
 msgid "Anthony Baxter is the Patch Czar for 2.1.2 and 2.1.3."
 msgstr ""
 
-#: ../../peps/pep-0006.rst:179
+#: ../../peps/peps/pep-0006.rst:183
 msgid "Thomas Wouters is the Patch Czar for 2.1.1."
 msgstr ""
 
-#: ../../peps/pep-0006.rst:181
+#: ../../peps/peps/pep-0006.rst:185
 msgid "Moshe Zadka is the Patch Czar for 2.0.1."
 msgstr ""
 
-#: ../../peps/pep-0006.rst:185
+#: ../../peps/peps/pep-0006.rst:189
 msgid "History"
 msgstr ""
 
-#: ../../peps/pep-0006.rst:187
+#: ../../peps/peps/pep-0006.rst:191
 msgid ""
 "This PEP started life as a proposal on comp.lang.python.  The original "
 "version suggested a single patch for the N-1 release to be released "
@@ -328,51 +332,45 @@ msgid ""
 "sticking with a strict bug fix policy."
 msgstr ""
 
-#: ../../peps/pep-0006.rst:192
+#: ../../peps/peps/pep-0006.rst:196
 msgid ""
 "Following feedback from the BDFL and others, the draft PEP was written "
 "containing an expanded bugfix release cycle that permitted any previous "
 "major release to obtain patches and also relaxed the strict bug fix "
-"requirement (mainly due to the example of :pep:`235`, which could be "
-"argued as either a bug fix or a feature)."
+"requirement (mainly due to the example of :pep:`235`, which could be argued "
+"as either a bug fix or a feature)."
 msgstr ""
 
-#: ../../peps/pep-0006.rst:198
+#: ../../peps/peps/pep-0006.rst:202
 msgid ""
 "Discussion then mostly moved to python-dev, where BDFL finally issued a "
 "proclamation basing the Python bugfix release process on Tcl's, which "
-"essentially returned to the original proposal in terms of being only the "
-"N-1 release and only bug fixes, but allowing multiple bugfix releases "
-"until release N is published."
+"essentially returned to the original proposal in terms of being only the N-1 "
+"release and only bug fixes, but allowing multiple bugfix releases until "
+"release N is published."
 msgstr ""
 
-#: ../../peps/pep-0006.rst:204
+#: ../../peps/peps/pep-0006.rst:208
 msgid ""
-"Anthony Baxter then took this PEP and revised it, based on lessons from "
-"the 2.3 release cycle."
+"Anthony Baxter then took this PEP and revised it, based on lessons from the "
+"2.3 release cycle."
 msgstr ""
 
-#: ../../peps/pep-0006.rst:209
+#: ../../peps/peps/pep-0006.rst:213
 msgid "References"
 msgstr "Referências"
 
-#: ../../peps/pep-0006.rst:211
+#: ../../peps/peps/pep-0006.rst:215
 msgid "http://www.tcl.tk/cgi-bin/tct/tip/28.html"
 msgstr ""
 
-#: ../../peps/pep-0006.rst:215
+#: ../../peps/peps/pep-0006.rst:219
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../../peps/pep-0006.rst:217
+#: ../../peps/peps/pep-0006.rst:221
 msgid "This document has been placed in the public domain."
 msgstr "Este documento foi colocado em domínio público."
 
-#~ msgid ""
-#~ "There must be zero syntax changes.  "
-#~ "All `.pyc` and `.pyo` files must "
-#~ "work (no regeneration needed) with all"
-#~ " bugfix releases forked off from a"
-#~ " major release."
-#~ msgstr ""
-
+#~ msgid "Active"
+#~ msgstr "Ativa"

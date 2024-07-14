@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PEPs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-20 10:43-0300\n"
+"POT-Creation-Date: 2024-07-14 02:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: pt_BR\n"
@@ -17,378 +17,429 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.13.1\n"
+"Generated-By: Babel 2.15.0\n"
 
-#: ../../peps/pep-0732.rst
+#: ../../peps/peps/pep-0732.rst
 msgid "Author"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:3 ../../peps/pep-0732.rst:105
+#: ../../peps/peps/pep-0732.rst:3 ../../peps/peps/pep-0732.rst:115
 msgid "Joanna Jablonski"
 msgstr ""
 
-#: ../../peps/pep-0732.rst
+#: ../../peps/peps/pep-0732.rst
 msgid "Sponsor"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:4 ../../peps/pep-0732.rst:103
+#: ../../peps/peps/pep-0732.rst:4 ../../peps/peps/pep-0732.rst:113
 msgid "Mariatta Wijaya"
 msgstr ""
 
-#: ../../peps/pep-0732.rst
+#: ../../peps/peps/pep-0732.rst
 msgid "Discussions-To"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:5
+#: ../../peps/peps/pep-0732.rst:5
 msgid ""
 "https://discuss.python.org/t/pep-732-the-python-documentation-editorial-"
 "board/36710"
 msgstr ""
 
-#: ../../peps/pep-0732.rst
+#: ../../peps/peps/pep-0732.rst
 msgid "Status"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:6
-msgid "Draft"
+#: ../../peps/peps/pep-0732.rst:6
+msgid "Active"
 msgstr ""
 
-#: ../../peps/pep-0732.rst
+#: ../../peps/peps/pep-0732.rst
 msgid "Type"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:7
+#: ../../peps/peps/pep-0732.rst:7
 msgid "Process"
 msgstr ""
 
-#: ../../peps/pep-0732.rst
+#: ../../peps/peps/pep-0732.rst
 msgid "Topic"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:8
+#: ../../peps/peps/pep-0732.rst:8
 msgid "Governance"
 msgstr ""
 
-#: ../../peps/pep-0732.rst
+#: ../../peps/peps/pep-0732.rst
 msgid "Created"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:9
+#: ../../peps/peps/pep-0732.rst:9
 msgid "14-Oct-2023"
 msgstr ""
 
-#: ../../peps/pep-0732.rst
+#: ../../peps/peps/pep-0732.rst
 msgid "Post-History"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:10
+#: ../../peps/peps/pep-0732.rst:10
 msgid ""
-"`20-Oct-2023 <https://discuss.python.org/t/pep-732-the-python-"
-"documentation-editorial-board/36710>`__"
+"`20-Oct-2023 <https://discuss.python.org/t/pep-732-the-python-documentation-"
+"editorial-board/36710>`__"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:14
+#: ../../peps/peps/pep-0732.rst
+msgid "Resolution"
+msgstr ""
+
+#: ../../peps/peps/pep-0732.rst:11
+msgid ""
+"https://discuss.python.org/t/pep-732-the-python-documentation-editorial-"
+"board/36710/9"
+msgstr ""
+
+#: ../../peps/peps/pep-0732.rst:15
 msgid "Abstract"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:16
+#: ../../peps/peps/pep-0732.rst:17
 msgid "This PEP:"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:18
+#: ../../peps/peps/pep-0732.rst:19
 msgid "Establishes the Python Documentation Editorial Board"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:19
+#: ../../peps/peps/pep-0732.rst:20
 msgid "Proposes how the editorial board will work"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:22
+#: ../../peps/peps/pep-0732.rst:23
 msgid "Motivation"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:24
+#: ../../peps/peps/pep-0732.rst:25
 msgid ""
-"The Steering Council approved the creation of a `Documentation Working "
-"Group <https://github.com/python/docs-"
-"community/blame/main/docs/workgroup/workgroup_charter.rst>`_ in March "
-"2021 to set direction for the docs. This group is now called the "
-"Editorial Board to differentiate it from the Documentation Working Group "
-"that was created since then to focus on more tactical work."
+"The Steering Council approved the creation of a `Documentation Working Group "
+"<https://github.com/python/docs-community/blame/main/docs/workgroup/"
+"workgroup_charter.rst>`_ in March 2021 to set direction for the docs. This "
+"group is now called the Editorial Board to differentiate it from the "
+"Documentation Working Group that was created since then to focus on more "
+"tactical work."
 msgstr ""
 
-#: ../../peps/pep-0732.rst:31
+#: ../../peps/peps/pep-0732.rst:32
 msgid ""
-"The purpose of the Python documentation is to serve the present and "
-"future end users of Python. As such, the core development community and "
-"the greater Python documentation contributors work together to achieve "
-"this:"
+"The purpose of the Python documentation is to serve the present and future "
+"end users of Python. As such, the core development community and the greater "
+"Python documentation contributors work together to achieve this:"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:41
+#: ../../peps/peps/pep-0732.rst:37
+msgid ""
+"Three concentric circles. At the centre: Documentation Editorial\n"
+"Board, trusted group. Around this: Documentation Working Group,\n"
+"volunteers who contribute to the docs. Finally, the outer circle\n"
+"is the world, includes readers of the documentation."
+msgstr ""
+
+#: ../../peps/peps/pep-0732.rst:48
 msgid "Specification"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:44
+#: ../../peps/peps/pep-0732.rst:51
 msgid "Mandate"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:46
+#: ../../peps/peps/pep-0732.rst:53
 msgid "The editorial board will:"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:48
+#: ../../peps/peps/pep-0732.rst:55
 msgid ""
 "Ensure processes are in place to maintain and improve the quality of "
 "Python's documentation"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:49
+#: ../../peps/peps/pep-0732.rst:56
 msgid ""
-"Foster Python documentation as a community resource to serve the current "
-"and future users"
+"Foster Python documentation as a community resource to serve the current and "
+"future users"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:50
+#: ../../peps/peps/pep-0732.rst:57
 msgid ""
-"Act in alignment with the `Python Software Foundation mission "
-"<https://www.python.org/psf/mission/>`_, which is to advance the Python "
-"programming language, and to support and facilitate the growth of a "
-"diverse and international community of Python programmers"
+"Act in alignment with the `Python Software Foundation mission <https://www."
+"python.org/psf/mission/>`_, which is to advance the Python programming "
+"language, and to support and facilitate the growth of a diverse and "
+"international community of Python programmers"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:54
+#: ../../peps/peps/pep-0732.rst:61
 msgid ""
 "Ensure that contributing to documentation is accessible, inclusive, and "
 "sustainable"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:55
-msgid "Establish appropriate decision-making processes for documentation content"
+#: ../../peps/peps/pep-0732.rst:62
+msgid ""
+"Establish appropriate decision-making processes for documentation content"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:56
+#: ../../peps/peps/pep-0732.rst:63
 msgid "Seek to achieve consensus among contributors prior to making decisions"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:57
+#: ../../peps/peps/pep-0732.rst:64
 msgid "Be the final arbiter for documentation content decisions"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:60
+#: ../../peps/peps/pep-0732.rst:67
 msgid "Responsibilities"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:62
+#: ../../peps/peps/pep-0732.rst:69
 msgid ""
-"The board has authority to make decisions about Python’s documentation, "
-"as scoped below. For example, it can:"
+"The board has authority to make decisions about Python’s documentation, as "
+"scoped below. For example, it can:"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:65
+#: ../../peps/peps/pep-0732.rst:72
 msgid "Set big-picture strategy for Python’s documentation"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:66
+#: ../../peps/peps/pep-0732.rst:73
 msgid "Set the intended structure for documentation"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:67
+#: ../../peps/peps/pep-0732.rst:74
 msgid "Make style and editorial decisions for both writing and design"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:68
+#: ../../peps/peps/pep-0732.rst:75
 msgid ""
-"Handle documentation governance (for example, delegation of decision-"
-"making to subject-matter experts, resolution of disagreements, "
-"decisions.)"
+"Handle documentation governance (for example, delegation of decision-making "
+"to subject-matter experts, resolution of disagreements, decisions.)"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:72
+#: ../../peps/peps/pep-0732.rst:79
 msgid "Scope"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:74
-msgid "The Editorial board oversees the content and strategy for the following:"
+#: ../../peps/peps/pep-0732.rst:81
+msgid ""
+"The Editorial board oversees the content and strategy for the following:"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:80
+#: ../../peps/peps/pep-0732.rst:87
 msgid "In scope"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:81
+#: ../../peps/peps/pep-0732.rst:88
 msgid "Not in scope"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:82
+#: ../../peps/peps/pep-0732.rst:89
 msgid "CPython documentation (docs.python.org)"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:83
+#: ../../peps/peps/pep-0732.rst:90
 msgid "Code comments in CPython codebase"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:84
+#: ../../peps/peps/pep-0732.rst:91
 msgid "CPython devguide (devguide.python.org)"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:85
+#: ../../peps/peps/pep-0732.rst:92
 msgid "CPython docstrings"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:86
+#: ../../peps/peps/pep-0732.rst:93
 msgid "Translations of CPython docs"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:87
+#: ../../peps/peps/pep-0732.rst:94
 msgid "PEPs (peps.python.org)"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:89
+#: ../../peps/peps/pep-0732.rst:96
 msgid "PyPA documentation"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:91
+#: ../../peps/peps/pep-0732.rst:98
 msgid "www.python.org"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:94
+#: ../../peps/peps/pep-0732.rst:100
+msgid "The Python Wiki (wiki.python.org)"
+msgstr ""
+
+#: ../../peps/peps/pep-0732.rst:104
 msgid "Composition"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:96
+#: ../../peps/peps/pep-0732.rst:106
 msgid "The Python Documentation Editorial Board is composed of five members."
 msgstr ""
 
-#: ../../peps/pep-0732.rst:99
+#: ../../peps/peps/pep-0732.rst:109
 msgid "Editorial Board Members"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:101
+#: ../../peps/peps/pep-0732.rst:111
 msgid "The initial Editorial Board members are:"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:104
+#: ../../peps/peps/pep-0732.rst:114
 msgid "Ned Batchelder"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:106
+#: ../../peps/peps/pep-0732.rst:116
 msgid "Guido van Rossum"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:107
+#: ../../peps/peps/pep-0732.rst:117
 msgid "Carol Willing"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:110
+#: ../../peps/peps/pep-0732.rst:120
 msgid "Editorial Board Member Qualifications"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:112
+#: ../../peps/peps/pep-0732.rst:122
 msgid "Editorial board members should have:"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:114
+#: ../../peps/peps/pep-0732.rst:124
 msgid "A good grasp of the philosophy of the Python project"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:115
+#: ../../peps/peps/pep-0732.rst:125
 msgid "A background in Python education and developer-facing documentation"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:116
+#: ../../peps/peps/pep-0732.rst:126
 msgid "A solid track record of being constructive and helpful"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:117
+#: ../../peps/peps/pep-0732.rst:127
 msgid "A history of making significant contributions to Python"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:118
+#: ../../peps/peps/pep-0732.rst:128
 msgid "A willingness to dedicate time to improving Python's docs"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:120
+#: ../../peps/peps/pep-0732.rst:130
 msgid ""
 "Members of the Editorial Board should have experience in education, "
 "communication, technical writing, Python’s documentation, accessibility, "
 "translation, or community management."
 msgstr ""
 
-#: ../../peps/pep-0732.rst:125
+#: ../../peps/peps/pep-0732.rst:135
 msgid "Term"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:127
+#: ../../peps/peps/pep-0732.rst:137
 msgid ""
-"Editorial Board members serve for an indefinite term, though it is "
-"generally expected that there will be changes in Editorial Board "
-"composition each year. Editorial Board members will confirm annually "
-"whether they wish to continue as a board member. Members may resign at "
-"any time."
+"Editorial Board members serve for an indefinite term, though it is generally "
+"expected that there will be changes in Editorial Board composition each "
+"year. Editorial Board members will confirm annually whether they wish to "
+"continue as a board member. Members may resign at any time."
 msgstr ""
 
-#: ../../peps/pep-0732.rst:133
+#: ../../peps/peps/pep-0732.rst:143
 msgid ""
-"If a board member drops out of touch and cannot be contacted for a month "
-"or longer, then the rest of the board may vote to replace them."
+"If a board member drops out of touch and cannot be contacted for a month or "
+"longer, then the rest of the board may vote to replace them."
 msgstr ""
 
-#: ../../peps/pep-0732.rst:137
+#: ../../peps/peps/pep-0732.rst:147
 msgid "Changes to the Editorial Board's Size"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:139
+#: ../../peps/peps/pep-0732.rst:149
 #, python-format
 msgid ""
-"Annually after each major Python release, the Editorial Board will review"
-" whether the board's size should change. This provides flexibility if the"
-" needs of the documentation community change over time. A simple majority"
-" is needed to make a decision to increase the board's size where quorum "
-"is 80% of the current board."
+"Annually after each major Python release, the Editorial Board will review "
+"whether the board's size should change. This provides flexibility if the "
+"needs of the documentation community change over time. A simple majority is "
+"needed to make a decision to increase the board's size where quorum is "
+"80% of the current board."
 msgstr ""
 
-#: ../../peps/pep-0732.rst:145
+#: ../../peps/peps/pep-0732.rst:155
 msgid ""
 "As the sponsoring organization of the Documentation Editorial Board, the "
-"Steering Council may change the number of members of the Board at any "
-"time, including appointing new members or dismissing existing members."
+"Steering Council may change the number of members of the Board at any time, "
+"including appointing new members or dismissing existing members."
 msgstr ""
 
-#: ../../peps/pep-0732.rst:151
+#: ../../peps/peps/pep-0732.rst:161
 msgid "Vacancies"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:153
+#: ../../peps/peps/pep-0732.rst:163
 #, python-format
 msgid ""
-"If a vacancy exists on the board for any reason, the Documentation "
-"Editorial Board will publicly announce a call for prospective board "
-"members. Prospective board members would submit a brief document stating "
+"If a vacancy exists on the board for any reason, the Documentation Editorial "
+"Board will publicly announce a call for prospective board members. "
+"Prospective board members would submit a brief document stating "
 "qualifications and their motivation to serve. The sitting members of the "
 "Editorial Board will select new board members by a simple majority where "
 "quorum is 80% of the current board."
 msgstr ""
 
-#: ../../peps/pep-0732.rst:161
+#: ../../peps/peps/pep-0732.rst:171
 msgid "Amendments"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:163
+#: ../../peps/peps/pep-0732.rst:173
 msgid ""
-"This PEP serves as a charter for the Docs Editorial Board. Changes to its"
-" operation can be made either through a new PEP or through a change to "
-"this PEP. In either case, the change would be decided upon by the "
-"Steering Council after discussion in the community."
+"This PEP serves as a charter for the Docs Editorial Board. Changes to its "
+"operation can be made either through a new PEP or through a change to this "
+"PEP. In either case, the change would be decided upon by the Steering "
+"Council after discussion in the community."
 msgstr ""
 
-#: ../../peps/pep-0732.rst:169
+#: ../../peps/peps/pep-0732.rst:180
+msgid "PEP Acceptance"
+msgstr ""
+
+#: ../../peps/peps/pep-0732.rst:182
+msgid ""
+":pep:`732` was `accepted by the Python Steering Council on December 11, 2023 "
+"<https://discuss.python.org/t/pep-732-the-python-documentation-editorial-"
+"board/36710/8>`_."
+msgstr ""
+
+#: ../../peps/peps/pep-0732.rst:185
+msgid ""
+"The Steering Council commented that, while they don't disagree with the "
+"scoping set out in the PEP, it would probably make sense for the Editorial "
+"Board to consider expanding the scope to include docstrings in the standard "
+"library, once the Board is sufficiently established and the higher "
+"priorities have been taken care of."
+msgstr ""
+
+#: ../../peps/peps/pep-0732.rst:193
+msgid "Contact"
+msgstr ""
+
+#: ../../peps/peps/pep-0732.rst:195
+msgid ""
+"To ask the Editorial Board for a decision, community members may open an "
+"issue in the `python/editorial-board <https://github.com/python/editorial-"
+"board/>`__ repository."
+msgstr ""
+
+#: ../../peps/peps/pep-0732.rst:202
 msgid "Copyright"
 msgstr ""
 
-#: ../../peps/pep-0732.rst:171
+#: ../../peps/peps/pep-0732.rst:204
 msgid ""
-"This document is placed in the public domain or under the "
-"CC0-1.0-Universal license, whichever is more permissive."
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
 msgstr ""
-

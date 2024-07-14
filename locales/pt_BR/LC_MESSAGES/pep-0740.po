@@ -1,0 +1,905 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the PEPs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PEPs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-14 02:33+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pt_BR\n"
+"Language-Team: pt_BR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../peps/peps/pep-0740.rst
+msgid "Author"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:3
+msgid ""
+"William Woodruff <william@yossarian.net>, Facundo Tuesca <facundo."
+"tuesca@trailofbits.com>, Dustin Ingram <di@python.org>"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst
+msgid "Sponsor"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:6 ../../peps/peps/pep-0740.rst:7
+msgid "Donald Stufft <donald@stufft.io>"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst
+msgid "PEP-Delegate"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst
+msgid "Discussions-To"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:8
+msgid ""
+"https://discuss.python.org/t/pep-740-index-support-for-digital-"
+"attestations/44498"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst
+msgid "Status"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:9
+msgid "Draft"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst
+msgid "Type"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:10
+msgid "Informational"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst
+msgid "Topic"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:11
+msgid "Packaging"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst
+msgid "Created"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:12
+msgid "08-Jan-2024"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst
+msgid "Post-History"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:13
+msgid ""
+"`02-Jan-2024 <https://discuss.python.org/t/pre-pep-exposing-trusted-"
+"publisher-provenance-on-pypi/42337>`__, `29-Jan-2024 <https://discuss.python."
+"org/t/pep-740-index-support-for-digital-attestations/44498>`__"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:17
+msgid "Abstract"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:19
+msgid ""
+"This PEP proposes a collection of changes related to the upload and "
+"distribution of digitally signed attestations and metadata used to verify "
+"them on a Python package repository, such as PyPI."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:23
+msgid "These changes have two subcomponents:"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:25
+msgid ""
+"Changes to the currently unstandardized PyPI upload API, allowing clients to "
+"upload digital attestations as :ref:`attestation objects <attestation-"
+"object>`;"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:27
+msgid ""
+"Changes to the :ref:`HTML and JSON \"simple\" APIs <packaging:simple-"
+"repository-api>`, allowing clients to retrieve both digital attestations and "
+"`Trusted Publishing <https://docs.pypi.org/trusted-publishers/>`_ metadata "
+"for individual release files as :ref:`provenance objects <provenance-"
+"object>`."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:32
+msgid ""
+"This PEP does not make a policy recommendation around mandatory digital "
+"attestations on release uploads or their subsequent verification by "
+"installing clients like ``pip``."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:37
+msgid "Rationale and Motivation"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:39
+msgid ""
+"Desire for digital signatures on Python packages has been repeatedly "
+"expressed by both package maintainers and downstream users:"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:42
+msgid ""
+"Maintainers wish to demonstrate the integrity and authenticity of their "
+"package uploads;"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:44
+msgid ""
+"Individual downstream users wish to verify package integrity and "
+"authenticity without placing additional trust in their index's honesty;"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:46
+msgid ""
+"\"Bulk\" downstream users (such as Operating System distributions) wish to "
+"perform similar verifications and potentially re-expose or countersign for "
+"their own downstream packaging ecosystems."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:50
+msgid "This proposal seeks to accommodate each of the above use cases."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:52
+msgid "Additionally, this proposal identifies the following motivations:"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:54
+msgid ""
+"Verifiable provenance for Python package distributions: many Python packages "
+"currently contain *unauthenticated* provenance metadata, such as URLs for "
+"source hosts. A cryptographic attestation format could enable strong "
+"*authenticated* links between these packages and their source hosts, "
+"allowing both the index and downstream users to cryptographically verify "
+"that a package originates from its claimed source repository."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:60
+msgid ""
+"Raising attacker requirements: an attacker who seeks to take over a Python "
+"package can be described along *sophistication* (unsophisticated to "
+"sophisticated) and *targeting* dimensions (opportunistic to targeted)."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:65
+msgid ""
+"Digital attestations impose additional sophistication requirements: the "
+"attacker must be sufficiently sophisticated to access private signing "
+"material (or signing identities)."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:68
+msgid ""
+"Index verifiability: in the status quo, the only attestation provided by the "
+"index is an optional PGP signature per release file (see :ref:`PGP "
+"signatures <pgp-signatures>`). These signatures are not (and cannot be) "
+"checked by the index either for well-formedness or for validity, since the "
+"index has no mechanism for identifying the right public key for the "
+"signature. This PEP overcomes this limitation by ensuring that :ref:"
+"`provenance objects <provenance-object>` contain all of the metadata needed "
+"by the index to verify an attestation's validity."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:77
+msgid ""
+"This PEP proposes a generic attestation format, containing an :ref:"
+"`attestation statement for signature generation <payload-and-signature-"
+"generation>`, with the expectation that index providers adopt the format "
+"with a suitable source of identity for signature verification, such as "
+"Trusted Publishing."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:84
+msgid "Design Considerations"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:86
+msgid ""
+"This PEP identifies the following design considerations when evaluating both "
+"its own proposed changes and previous work in the same or adjacent areas of "
+"Python packaging:"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:90
+msgid ""
+"Index accessibility: digital attestations for Python packages are ideally "
+"retrievable directly from the index itself, as \"detached\" resources."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:94
+msgid ""
+"This both simplifies some compatibility concerns (by avoiding the need to "
+"modify the distribution formats themselves) and also simplifies the behavior "
+"of potential installing clients (by allowing them to retrieve each "
+"attestation before its corresponding package without needing to do streaming "
+"decompression)."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:100
+msgid ""
+"Verification by the index itself: in addition to enabling verification by "
+"installing clients, each digital attestation is *ideally* verifiable in some "
+"form by the index itself."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:104
+msgid ""
+"This both increases the overall quality of attestations uploaded to the "
+"index (preventing, for example, users from accidentally uploading incorrect "
+"or invalid attestations) and also enables UI and UX refinements on the index "
+"itself (such as a \"provenance\" view for each uploaded package)."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:110
+msgid ""
+"General applicability: digital attestations should be applicable to *any and "
+"every* package uploaded to the index, regardless of its format (sdist or "
+"wheel) or interior contents."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:114
+msgid ""
+"Metadata support: this PEP refers to \"digital attestations\" rather than "
+"just \"digital signatures\" to emphasize the ideal presence of additional "
+"metadata within the cryptographic envelope."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:118
+msgid ""
+"For example, to prevent domain separation between a distribution's name and "
+"its contents, this PEP uses '`Statements <https://github.com/in-toto/"
+"attestation/blob/v1.0/spec/v1.0/statement.md>`__' from the `in-toto project "
+"<https://in-toto.io/>`__ to bind the distribution's contents (via SHA-256 "
+"digest) to its filename."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:125
+msgid "Previous Work"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:130
+msgid "PGP signatures"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:132
+msgid ""
+"PyPI and other indices have historically supported PGP signatures on "
+"uploaded distributions. These could be supplied during upload, and could be "
+"retrieved by installing clients via the ``data-gpg-sig`` attribute in the :"
+"pep:`503` API, the ``gpg-sig`` key on the :pep:`691` API, or via an adjacent "
+"``.asc``-suffixed URL."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:138
+msgid ""
+"PGP signature uploads have been disabled on PyPI since `May 2023 <https://"
+"blog.pypi.org/posts/2023-05-23-removing-pgp/>`_, after `an investigation "
+"<https://blog.yossarian.net/2023/05/21/PGP-signatures-on-PyPI-worse-than-"
+"useless>`_ determined that the majority of signatures (which, themselves, "
+"constituted a tiny percentage of overall uploads) could not be associated "
+"with a public key or otherwise meaningfully verified."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:145
+msgid ""
+"In their previously supported form on PyPI, PGP signatures satisfied "
+"considerations (1) and (3) above but not (2) (owing to the need for external "
+"keyservers and key distribution) or (4) (due to PGP signatures typically "
+"being constructed over just an input file, without any associated signed "
+"metadata)."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:151
+msgid "Wheel signatures"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:153
+msgid ""
+":pep:`427` (and its :ref:`living PyPA counterpart <packaging:binary-"
+"distribution-format>`) specify the :term:`wheel format <packaging:Wheel>`."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:156
+msgid ""
+"This format includes accommodations for digital signatures embedded directly "
+"into the wheel, in either JWS or S/MIME format. These signatures are "
+"specified over a :pep:`376` RECORD, which is modified to include a "
+"cryptographic digest for each recorded file in the wheel."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:161
+msgid ""
+"While wheel signatures are fully specified, they do not appear to be broadly "
+"used; the official `wheel tooling <https://github.com/pypa/wheel>`_ "
+"deprecated signature generation and verification support `in 0.32.0 <https://"
+"wheel.readthedocs.io/en/stable/news.html>`_, which was released in 2018."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:167
+msgid ""
+"Additionally, wheel signatures do not satisfy any of the above "
+"considerations (due to the \"attached\" nature of the signatures, non-"
+"verifiability on the index itself, and support for wheels only)."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:172
+msgid "Specification"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:177
+msgid "Upload endpoint changes"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:179
+msgid ""
+"The current upload API is not standardized. However, we propose the "
+"following changes to it:"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:182
+msgid ""
+"In addition to the current top-level ``content`` and ``gpg_signature`` "
+"fields, the index **SHALL** accept ``attestations`` as an additional "
+"multipart form field."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:185
+msgid "The new ``attestations`` field **SHALL** be a JSON array."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:186
+msgid ""
+"The ``attestations`` array **SHALL** have one or more items, each a JSON "
+"object representing an individual attestation."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:188
+msgid ""
+"Each attestation object **MUST** be verifiable by the index. If the index "
+"fails to verify any attestation in ``attestations``, it **MUST** reject the "
+"upload. The format of attestation objects is defined under :ref:`attestation-"
+"object` and the process for verifying attestations is defined under :ref:"
+"`attestation-verification`."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:195
+msgid "Index changes"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:198
+msgid "Simple Index"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:200
+msgid ""
+"The following changes are made to the :ref:`simple repository API <packaging:"
+"simple-repository-api-base>`:"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:203
+msgid ""
+"When an uploaded file has one or more attestations, the index **MAY** "
+"provide a ``.provenance`` file adjacent to the hosted distribution. The "
+"format of the ``.provenance`` file **SHALL** be a JSON-encoded :ref:"
+"`provenance object <provenance-object>`, which **SHALL** contain the file's "
+"attestations."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:209
+msgid ""
+"For example, if an uploaded file is hosted at the URL ``https://example.com/"
+"sampleproject-1.2.3.tar.gz``, the provenance URL would be ``https://example."
+"com/sampleproject-1.2.3.tar.gz.provenance``."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:213
+msgid ""
+"When a ``.provenance`` file is present, the index **MAY** include a ``data-"
+"provenance`` attribute on its file link. The value of the ``data-"
+"provenance`` attribute **SHALL** be the SHA-256 digest of the associated ``."
+"provenance`` file."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:218
+msgid ""
+"The index **MAY** choose to modify the ``.provenance`` file. For example, "
+"the index **MAY** permit adding additional attestations and verification "
+"materials, such as attestations from third-party auditors or other services. "
+"When the index modifies the ``.provenance`` file, it **MUST** also update "
+"the ``data-provenance`` attribute's value to the new SHA-256 digest."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:224
+msgid ""
+"See :ref:`changes-to-provenance-objects` for an additional discussion of "
+"reasons why a file's provenance may change."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:228
+msgid "JSON-based Simple API"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:230
+msgid ""
+"The following changes are made to the :ref:`JSON simple API <packaging:"
+"simple-repository-api-json>`:"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:233
+msgid ""
+"When an uploaded file has one or more attestations, the index **MAY** "
+"include a ``provenance`` key in the ``file`` dictionary for that file."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:236
+msgid ""
+"The value of the ``provenance`` key **SHALL** be a JSON string, which "
+"**SHALL** be the SHA-256 digest of the associated ``.provenance`` file, as "
+"in the Simple Index."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:240
+msgid ""
+"See :ref:`appendix-3` for an explanation of the technical decision to embed "
+"the SHA-256 digest in the JSON API, rather than the full :ref:`provenance "
+"object <provenance-object>`."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:244
+msgid "These changes require a version change to the JSON API:"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:246
+msgid "The ``api-version`` **SHALL** specify version 1.2 or later."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:251
+msgid "Attestation objects"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:253
+msgid ""
+"An attestation object is a JSON object with several required keys; "
+"applications or signers may include additional keys so long as all "
+"explicitly listed keys are provided. The required layout of an attestation "
+"object is provided as pseudocode below."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:306
+msgid ""
+"A full data model for each object in ``transparency_entries`` is provided "
+"in :ref:`appendix-2`. Attestation objects **SHOULD** include one or more "
+"transparency log entries, and **MAY** include additional keys for other "
+"sources of signed time (such as an :rfc:`3161` Time Stamping Authority or a "
+"`Roughtime <https://blog.cloudflare.com/roughtime>`__ server)."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:312
+msgid ""
+"Attestation objects are versioned; this PEP specifies version 1. Each "
+"version is tied to a single cryptographic suite to minimize unnecessary "
+"cryptographic agility. In version 1, the suite is as follows:"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:316
+msgid ""
+"Certificates are specified as X.509 certificates, and comply with the "
+"profile in :rfc:`5280`."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:318
+msgid ""
+"The message signature algorithm is ECDSA, with the P-256 curve for public "
+"keys and SHA-256 as the cryptographic digest function."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:321
+msgid ""
+"Future PEPs may change this suite (and the overall shape of the attestation "
+"object) by selecting a new version number."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:327
+msgid "Attestation statement and signature generation"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:329
+msgid ""
+"The *attestation statement* is the actual claim that is cryptographically "
+"signed over within the attestation object (i.e., the ``envelope.statement``)."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:332
+msgid ""
+"The attestation statement is encoded as a `v1 in-toto Statement object "
+"<https://github.com/in-toto/attestation/blob/v1.0/spec/v1.0/statement."
+"md>`__, in JSON form. When serialized the statement is treated as an opaque "
+"binary blob, avoiding the need for canonicalization. An example JSON-encoded "
+"statement is provided in :ref:`appendix-4`."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:338
+msgid ""
+"In addition to being a v1 in-toto Statement, the attestation statement is "
+"constrained in the following ways:"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:341
+msgid "The in-toto ``subject`` **MUST** contain only a single subject."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:342
+msgid ""
+"``subject[0].name`` is the distribution's filename, which **MUST** be a "
+"valid :ref:`source distribution <packaging:source-distribution-format>` or :"
+"ref:`wheel distribution <packaging:binary-distribution-format>` filename."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:345
+msgid ""
+"``subject[0].digest`` **MUST** contain a SHA-256 digest. Other digests "
+"**MAY** be present. The digests **MUST** be represented as hexadecimal "
+"strings."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:347
+msgid "The following ``predicateType`` values are supported:"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:349
+msgid ""
+"`SLSA Provenance <https://slsa.dev/provenance/v1>`__: ``https://slsa.dev/"
+"provenance/v1``"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:350
+msgid ""
+"`PyPI Publish Attestation <https://docs.pypi.org/attestations/publish/"
+"v1>`__: ``https://docs.pypi.org/attestations/publish/v1``"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:352
+msgid ""
+"The signature over this statement is constructed using the `v1 DSSE "
+"signature protocol <https://github.com/secure-systems-lab/dsse/blob/v1.0.0/"
+"protocol.md>`__, with a ``PAYLOAD_TYPE`` of ``application/vnd.in-toto+json`` "
+"and a ``PAYLOAD_BODY`` of the JSON-encoded statement above. No other "
+"``PAYLOAD_TYPE`` is permitted."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:360
+msgid "Provenance objects"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:362
+msgid ""
+"The index will serve uploaded attestations along with metadata that can "
+"assist in verifying them in the form of JSON serialized objects."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:365
+msgid ""
+"These *provenance objects* will be available via both the Simple Index and "
+"JSON-based Simple API as described above, and will have the following layout:"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:388
+msgid "or, as pseudocode:"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:436
+msgid ""
+"``version`` is ``1``. Like attestation objects, provenance objects are "
+"versioned, and this PEP only defines version ``1``."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:438
+msgid ""
+"``attestation_bundles`` is a **required** JSON array, containing one or more "
+"\"bundles\" of attestations. Each bundle corresponds to a signing identity "
+"(such as a Trusted Publishing identity), and contains one or more "
+"attestation objects."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:443
+msgid ""
+"As noted in the ``Publisher`` model, each ``AttestationBundle.publisher`` "
+"object is specific to its Trusted Publisher but must include at minimum:"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:447
+msgid ""
+"A ``kind`` key, which **MUST** be a JSON string that uniquely identifies the "
+"kind of Trusted Publisher."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:449
+msgid ""
+"A ``claims`` key, which **MUST** be a JSON object containing any context-"
+"specific claims retained by the index during Trusted Publisher "
+"authentication."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:452
+msgid ""
+"All other keys in the publisher object are publisher-specific. A full "
+"illustrative example of a publisher object is provided in :ref:`appendix-1`."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:455
+msgid ""
+"Each array of attestation objects is a superset of the ``attestations`` "
+"array supplied by the uploaded through the ``attestations`` field at upload "
+"time, as described in :ref:`upload-endpoint` and :ref:`changes-to-provenance-"
+"objects`."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:463
+msgid "Changes to provenance objects"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:465
+msgid ""
+"Provenance objects are *not* immutable, and may change over time. Reasons "
+"for changes to the provenance object include but are not limited to:"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:468
+msgid ""
+"Addition of new attestations for a pre-existing signing identity: the index "
+"**MAY** choose to allow additional attestations by pre-existing signing "
+"identities, such as newer attestation versions for already uploaded files."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:473
+msgid ""
+"Addition of new signing identities and associated attestations: the index "
+"**MAY** choose to support attestations from sources other than the file's "
+"uploader, such as third-party auditors or the index itself. These "
+"attestations may be performed asynchronously, requiring the index to insert "
+"them into the provenance object *post facto*."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:482
+msgid "Attestation verification"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:484
+msgid ""
+"Verifying an attestation object against a distribution file requires "
+"verification of each of the following:"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:487
+msgid "``version`` is ``1``. The verifier **MUST** reject any other version."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:488
+msgid ""
+"``verification_material.certificate`` is a valid signing certificate, as "
+"issued by an *a priori* trusted authority (such as a root of trust already "
+"present within the verifying client)."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:491
+msgid ""
+"``verification_material.certificate`` identifies an appropriate signing "
+"subject, such as the machine identity of the Trusted Publisher that "
+"published the package."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:494
+msgid ""
+"``envelope.statement`` is a valid in-toto v1 Statement, with a subject and "
+"digest that **MUST** match the distribution's filename and contents. For the "
+"distribution's filename, matching **MUST** be performed by parsing using the "
+"appropriate source distribution or wheel filename format, as the statement's "
+"subject may be equivalent but normalized."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:499
+msgid ""
+"``envelope.signature`` is a valid signature for ``envelope.statement`` "
+"corresponding to ``verification_material.certificate``, as reconstituted via "
+"the `v1 DSSE signature protocol <https://github.com/secure-systems-lab/dsse/"
+"blob/v1.0.0/protocol.md>`__."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:504
+msgid ""
+"In addition to the above required steps, a verifier **MAY** additionally "
+"verify ``verification_material.transparency_entries`` on a policy basis, e."
+"g. requiring at least one transparency log entry or a threshold of entries. "
+"When verifying transparency entries, the verifier **MUST** confirm that the "
+"inclusion time for each entry lies within the signing certificate's validity "
+"period."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:511
+msgid "Security Implications"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:513
+msgid ""
+"This PEP is primarily \"mechanical\" in nature; it provides layouts for "
+"structuring and serving verifiable digital attestations without specifying "
+"higher level security \"policies\" around attestation validity, thresholds "
+"between attestations, and so forth."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:519
+msgid "Cryptographic agility in attestations"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:521
+msgid ""
+"Algorithmic agility is a common source of exploitable vulnerabilities in "
+"cryptographic schemes. This PEP limits algorithmic agility in two ways:"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:524
+msgid ""
+"All algorithms are specified in a single suite, rather than a geometric "
+"collection of parameters. This makes it impossible (for example) for an "
+"attacker to select a strong signature algorithm with a weak hash function, "
+"compromising the scheme as a whole."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:528
+msgid ""
+"Attestation objects are versioned, and may only contain the algorithmic "
+"suite specified for their version. If a specific suite is considered "
+"insecure in the future, clients may choose to blanket reject or qualify "
+"verifications of attestations that contain that suite."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:534
+msgid "Index trust"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:536
+msgid ""
+"This PEP does **not** increase (or decrease) trust in the index itself: the "
+"index is still effectively trusted to honestly deliver unmodified package "
+"distributions, since a dishonest index capable of modifying package contents "
+"could also dishonestly modify or omit package attestations. As a result, "
+"this PEP's presumption of index trust is equivalent to the unstated "
+"presumption with earlier mechanisms, like PGP and wheel signatures."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:543
+msgid ""
+"This PEP does not preclude or exclude future index trust mechanisms, such "
+"as :pep:`458` and/or :pep:`480`."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:547
+msgid "Recommendations"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:549
+msgid ""
+"This PEP recommends, but does not mandate, that attestation objects contain "
+"one or more verifiable sources of signed time that corroborate the signing "
+"certificate's claimed validity period. Indices that implement this PEP may "
+"choose to strictly enforce this requirement."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:557
+msgid "Appendix 1: Example Trusted Publisher Representation"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:559
+msgid ""
+"This appendix provides a fictional example of a ``publisher`` key within a "
+"simple JSON API ``project.files[].provenance`` listing:"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:581
+msgid "Appendix 2: Data models for Transparency Log Entries"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:583
+msgid ""
+"This appendix contains pseudocoded data models for transparency log entries "
+"in attestation objects. Each transparency log entry serves as a source of "
+"signed inclusion time, and can be verified either online or offline."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:661
+msgid "Appendix 3: Simple JSON API size considerations"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:663
+msgid ""
+"A previous draft of this PEP required embedding each :ref:`provenance object "
+"<provenance-object>` directly into its appropriate part of the JSON Simple "
+"API."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:667
+msgid ""
+"The current version of this PEP embeds the SHA-256 digest of the provenance "
+"object instead. This is done for size and network bandwidth consideration "
+"reasons:"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:671
+msgid ""
+"We estimate the typical size of an attestation object to be approximately "
+"5.3 KB of JSON."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:673
+msgid ""
+"We conservatively estimate that indices eventually host around 3 "
+"attestations per release file, or approximately 15.9 KB of JSON per combined "
+"provenance object."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:676
+msgid ""
+"As of May 2024, the average project on PyPI has approximately 21 release "
+"files. We conservatively expect this average to increase over time."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:678
+msgid ""
+"Combined, these numbers imply that a typical project might expect to host "
+"between 60 and 70 attestations, or approximately 339 KB of additional JSON "
+"in its \"project detail\" endpoint."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:682
+msgid ""
+"These numbers are significantly worse in \"pathological\" cases, where "
+"projects have hundreds or thousands of releases and/or dozens of files per "
+"release."
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:688
+msgid "Appendix 4: Example attestation statement"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:690
+msgid ""
+"Given a source distribution ``sampleproject-1.2.3.tar.gz`` with a SHA-256 "
+"digest of "
+"``e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855``, the "
+"following is an appropriate in-toto Statement, as a JSON object:"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:711
+msgid "Copyright"
+msgstr ""
+
+#: ../../peps/peps/pep-0740.rst:713
+msgid ""
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
+msgstr ""

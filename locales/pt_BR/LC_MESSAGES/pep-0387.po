@@ -8,427 +8,409 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-20 10:43-0300\n"
+"POT-Creation-Date: 2024-07-14 02:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.13.1\n"
+"Generated-By: Babel 2.15.0\n"
 
-#: ../../peps/pep-0387.rst
+#: ../../peps/peps/pep-0387.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../../peps/pep-0387.rst:5
+#: ../../peps/peps/pep-0387.rst:3
 msgid "Benjamin Peterson <benjamin@python.org>"
 msgstr ""
 
-#: ../../peps/pep-0387.rst
+#: ../../peps/peps/pep-0387.rst
 msgid "PEP-Delegate"
 msgstr ""
 
-#: ../../peps/pep-0387.rst:6
+#: ../../peps/peps/pep-0387.rst:4
 msgid "Brett Cannon <brett@python.org>"
 msgstr ""
 
-#: ../../peps/pep-0387.rst
+#: ../../peps/peps/pep-0387.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../../peps/pep-0387.rst:7
+#: ../../peps/peps/pep-0387.rst:5
 msgid "Active"
 msgstr "Ativa"
 
-#: ../../peps/pep-0387.rst
+#: ../../peps/peps/pep-0387.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../../peps/pep-0387.rst:8
+#: ../../peps/peps/pep-0387.rst:6
 msgid "Process"
 msgstr "Processo"
 
-#: ../../peps/pep-0387.rst
+#: ../../peps/peps/pep-0387.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../../peps/pep-0387.rst:10
+#: ../../peps/peps/pep-0387.rst:7
 msgid "18-Jun-2009"
 msgstr ""
 
-#: ../../peps/pep-0387.rst
+#: ../../peps/peps/pep-0387.rst
 msgid "Post-History"
 msgstr "Pós-história"
 
-#: ../../peps/pep-0387.rst:11
+#: ../../peps/peps/pep-0387.rst:8
 msgid ""
-"`19-Jun-2009 <https://mail.python.org/archives/list/python-"
-"dev@python.org/thread/YAZQHFUCYEYIX5MIG6LFJLCVQ5ORVUM6/>`__, `12-Jun-2020"
-" <https://discuss.python.org/t/pep-387-backwards-compatibilty-"
-"policy/4421>`__, `16-Jun-2023 <https://discuss.python.org/t/formalize-"
-"the-concept-of-soft-deprecation-dont-schedule-removal-in-pep-387"
-"-backwards-compatibility-policy/27957>`__"
+"`19-Jun-2009 <https://mail.python.org/archives/list/python-dev@python.org/"
+"thread/YAZQHFUCYEYIX5MIG6LFJLCVQ5ORVUM6/>`__, `12-Jun-2020 <https://discuss."
+"python.org/t/pep-387-backwards-compatibilty-policy/4421>`__, `19-Dec-2022 "
+"<https://discuss.python.org/t/22042>`__, `16-Jun-2023 <https://discuss."
+"python.org/t/formalize-the-concept-of-soft-deprecation-dont-schedule-removal-"
+"in-pep-387-backwards-compatibility-policy/27957>`__"
 msgstr ""
 
-#: ../../peps/pep-0387.rst:17
+#: ../../peps/peps/pep-0387.rst:15
 msgid "Abstract"
 msgstr ""
 
-#: ../../peps/pep-0387.rst:19
+#: ../../peps/peps/pep-0387.rst:17
 msgid "This PEP outlines Python's backwards compatibility policy."
 msgstr ""
 
-#: ../../peps/pep-0387.rst:23
+#: ../../peps/peps/pep-0387.rst:21
 msgid "Rationale"
 msgstr ""
 
-#: ../../peps/pep-0387.rst:25
+#: ../../peps/peps/pep-0387.rst:23
 msgid ""
-"As one of the most used programming languages today [#tiobe]_, the Python"
-" core language and its standard library play a critical role in millions "
-"of applications and libraries. This is fantastic. However, it means the "
-"development team must be very careful not to break this existing 3rd "
-"party code with new releases."
+"As one of the most used programming languages today [#tiobe]_, the Python "
+"core language and its standard library play a critical role in millions of "
+"applications and libraries. This is fantastic. However, it means the "
+"development team must be very careful not to break this existing 3rd party "
+"code with new releases."
 msgstr ""
 
-#: ../../peps/pep-0387.rst:31
+#: ../../peps/peps/pep-0387.rst:29
 msgid ""
 "This PEP takes the perspective that \"backwards incompatibility\" means "
 "preexisting code ceases to comparatively function after a change. It is "
-"acknowledged that this is not a concrete definition, but the expectation "
-"is people in general understand what is meant by \"backwards "
-"incompatibility\", and if they are unsure they may ask the Python "
-"development team and/or steering council for guidance."
+"acknowledged that this is not a concrete definition, but the expectation is "
+"people in general understand what is meant by \"backwards incompatibility\", "
+"and if they are unsure they may ask the Python development team and/or "
+"steering council for guidance."
 msgstr ""
 
-#: ../../peps/pep-0387.rst:40
+#: ../../peps/peps/pep-0387.rst:38
 msgid "Backwards Compatibility Rules"
 msgstr ""
 
-#: ../../peps/pep-0387.rst:42
+#: ../../peps/peps/pep-0387.rst:40
 msgid "This policy applies to all public APIs.  These include:"
 msgstr ""
 
-#: ../../peps/pep-0387.rst:44
+#: ../../peps/peps/pep-0387.rst:42
 msgid ""
-"Syntax and behavior of these constructs as defined by the reference "
-"manual."
+"Syntax and behavior of these constructs as defined by the reference manual."
 msgstr ""
 
-#: ../../peps/pep-0387.rst:47
+#: ../../peps/peps/pep-0387.rst:45
 msgid "The C-API."
 msgstr ""
 
-#: ../../peps/pep-0387.rst:49
+#: ../../peps/peps/pep-0387.rst:47
 msgid "Function, class, module, attribute, and method names and types."
 msgstr ""
 
-#: ../../peps/pep-0387.rst:51
+#: ../../peps/peps/pep-0387.rst:49
 msgid ""
 "Given a set of arguments, the return value, side effects, and raised "
-"exceptions of a function.  This does not preclude changes from reasonable"
-" bug fixes."
+"exceptions of a function.  This does not preclude changes from reasonable "
+"bug fixes."
 msgstr ""
 
-#: ../../peps/pep-0387.rst:55
+#: ../../peps/peps/pep-0387.rst:53
 msgid "The position and expected types of arguments and returned values."
 msgstr ""
 
-#: ../../peps/pep-0387.rst:57
+#: ../../peps/peps/pep-0387.rst:55
 msgid ""
-"Behavior of classes with regards to subclasses: the conditions under "
-"which overridden methods are called."
+"Behavior of classes with regards to subclasses: the conditions under which "
+"overridden methods are called."
 msgstr ""
 
-#: ../../peps/pep-0387.rst:60
+#: ../../peps/peps/pep-0387.rst:58
 msgid "Documented exceptions and the semantics which lead to their raising."
 msgstr ""
 
-#: ../../peps/pep-0387.rst:62
+#: ../../peps/peps/pep-0387.rst:60
 msgid "Exceptions commonly raised in EAFP scenarios."
 msgstr ""
 
-#: ../../peps/pep-0387.rst:64
+#: ../../peps/peps/pep-0387.rst:62
 msgid ""
 "Others are explicitly not part of the public API.  They can change or be "
 "removed at any time in any way.  These include:"
 msgstr ""
 
-#: ../../peps/pep-0387.rst:67
+#: ../../peps/peps/pep-0387.rst:65
 msgid ""
-"Function, class, module, attribute, method, and C-API names and types "
-"that are prefixed by \"_\" (except special names)."
+"Function, class, module, attribute, method, and C-API names and types that "
+"are prefixed by \"_\" (except special names)."
 msgstr ""
 
-#: ../../peps/pep-0387.rst:70
+#: ../../peps/peps/pep-0387.rst:68
 msgid ""
-"Anything documented publicly as being private. Note that if something is "
-"not documented at all, it is *not* automatically considered private."
+"Anything documented publicly as being private. Note that if something is not "
+"documented at all, it is *not* automatically considered private."
 msgstr ""
 
-#: ../../peps/pep-0387.rst:74
+#: ../../peps/peps/pep-0387.rst:72
 msgid ""
-"Imported modules (unless explicitly documented as part of the public API;"
-" e.g. importing the ``bacon`` module in the ``spam`` does not "
-"automatically mean ``spam.bacon`` is part of the public API unless it is "
-"documented as such)."
+"Imported modules (unless explicitly documented as part of the public API; e."
+"g. importing the ``bacon`` module in the ``spam`` does not automatically "
+"mean ``spam.bacon`` is part of the public API unless it is documented as "
+"such)."
 msgstr ""
 
-#: ../../peps/pep-0387.rst:79
+#: ../../peps/peps/pep-0387.rst:77
 msgid "Inheritance patterns of internal classes."
 msgstr ""
 
-#: ../../peps/pep-0387.rst:81
+#: ../../peps/peps/pep-0387.rst:79
 msgid ""
-"Test suites.  (Anything in the ``Lib/test`` directory or test "
-"subdirectories of packages.)"
+"Test suites.  (Anything in the ``Lib/test`` directory or test subdirectories "
+"of packages.)"
 msgstr ""
 
-#: ../../peps/pep-0387.rst:84
+#: ../../peps/peps/pep-0387.rst:82
 msgid ""
 "Backward compatibility rules do not apply to any module or API that is "
 "explicitly documented as **Provisional** per :pep:`411`."
 msgstr ""
 
-#: ../../peps/pep-0387.rst:89
+#: ../../peps/peps/pep-0387.rst:87
 msgid "Basic policy for backwards compatibility"
 msgstr ""
 
-#: ../../peps/pep-0387.rst:91
+#: ../../peps/peps/pep-0387.rst:89
 msgid ""
-"In general, incompatibilities should have a large benefit to breakage "
-"ratio, and the incompatibility should be easy to resolve in affected "
-"code.  For example, adding an stdlib module with the same name as a third"
-" party package is generally not acceptable.  Adding a method or attribute"
-" that conflicts with 3rd party code through inheritance, however, is "
-"likely reasonable."
+"In general, incompatibilities should have a large benefit to breakage ratio, "
+"and the incompatibility should be easy to resolve in affected code.  For "
+"example, adding an stdlib module with the same name as a third party package "
+"is generally not acceptable.  Adding a method or attribute that conflicts "
+"with 3rd party code through inheritance, however, is likely reasonable."
 msgstr ""
 
-#: ../../peps/pep-0387.rst:98
+#: ../../peps/peps/pep-0387.rst:96
 msgid ""
-"Unless it is going through the deprecation process below, the behavior of"
-" an API *must* not change in an incompatible fashion between any two "
-"consecutive releases.  Python's yearly release process (:pep:`602`) means"
-" that the deprecation period must last at least two years."
+"Unless it is going through the deprecation process below, the behavior of an "
+"API *must* not change in an incompatible fashion between any two consecutive "
+"releases.  Python's yearly release process (:pep:`602`) means that the "
+"deprecation period must last at least two years."
 msgstr ""
 
-#: ../../peps/pep-0387.rst:104
+#: ../../peps/peps/pep-0387.rst:102
 msgid ""
 "Similarly a feature cannot be removed without notice between any two "
 "consecutive releases."
 msgstr ""
 
-#: ../../peps/pep-0387.rst:107
+#: ../../peps/peps/pep-0387.rst:105
 msgid ""
-"For changes that are unable to raise a deprecation warning, consult with "
-"the steering council."
+"For changes that are unable to raise a deprecation warning, consult with the "
+"steering council."
 msgstr ""
 
-#: ../../peps/pep-0387.rst:110
+#: ../../peps/peps/pep-0387.rst:108
 msgid ""
 "The steering council may grant exceptions to this policy. In particular, "
-"they may shorten the required deprecation period for a feature. "
-"Exceptions are only granted for extreme situations such as dangerously "
-"broken or insecure features or features no one could reasonably be "
-"depending on (e.g., support for completely obsolete platforms)."
+"they may shorten the required deprecation period for a feature. Exceptions "
+"are only granted for extreme situations such as dangerously broken or "
+"insecure features or features no one could reasonably be depending on (e.g., "
+"support for completely obsolete platforms)."
 msgstr ""
 
-#: ../../peps/pep-0387.rst:119
+#: ../../peps/peps/pep-0387.rst:117
 msgid "Soft Deprecation"
 msgstr ""
 
-#: ../../peps/pep-0387.rst:121
+#: ../../peps/peps/pep-0387.rst:119
 msgid ""
-"A soft deprecation can be used when using an API which should no longer "
-"be used to write new code, but it remains safe to continue using it in "
-"existing code. The API remains documented and tested, but will not be "
-"developed further (no enhancement)."
+"A soft deprecation can be used when using an API which should no longer be "
+"used to write new code, but it remains safe to continue using it in existing "
+"code. The API remains documented and tested, but will not be developed "
+"further (no enhancement)."
 msgstr ""
 
-#: ../../peps/pep-0387.rst:126
+#: ../../peps/peps/pep-0387.rst:124
 msgid ""
-"The main difference between a \"soft\" and a (regular) \"hard\" "
-"deprecation is that the soft deprecation does not imply scheduling the "
-"removal of the deprecated API."
+"The main difference between a \"soft\" and a (regular) \"hard\" deprecation "
+"is that the soft deprecation does not imply scheduling the removal of the "
+"deprecated API."
 msgstr ""
 
-#: ../../peps/pep-0387.rst:130
+#: ../../peps/peps/pep-0387.rst:128
 msgid ""
-"Another difference is that a soft deprecation does not issue a warning: "
-"it's only mentioned in the documentation, whereas usually a \"hard\" "
-"deprecation issues a ``DeprecationWarning`` warning at runtime. The "
-"documentation of a soft deprecation should explain why the API should be "
-"avoided, and if possible propose a replacement."
+"Another difference is that a soft deprecation does not issue a warning: it's "
+"only mentioned in the documentation, whereas usually a \"hard\" deprecation "
+"issues a ``DeprecationWarning`` warning at runtime. The documentation of a "
+"soft deprecation should explain why the API should be avoided, and if "
+"possible propose a replacement."
 msgstr ""
 
-#: ../../peps/pep-0387.rst:136
+#: ../../peps/peps/pep-0387.rst:134
 msgid ""
-"If the decision is made to deprecate (in the regular sense) a feature "
-"that is currently soft deprecated, the deprecation must follow the "
-"`Backwards Compatibility Rules`_ (i.e., there is no exception because the"
-" feature is already soft deprecated)."
+"If the decision is made to deprecate (in the regular sense) a feature that "
+"is currently soft deprecated, the deprecation must follow the `Backwards "
+"Compatibility Rules`_ (i.e., there is no exception because the feature is "
+"already soft deprecated)."
 msgstr ""
 
-#: ../../peps/pep-0387.rst:143
+#: ../../peps/peps/pep-0387.rst:141
 msgid "Making Incompatible Changes"
 msgstr ""
 
-#: ../../peps/pep-0387.rst:145
+#: ../../peps/peps/pep-0387.rst:143
 msgid ""
-"Making an incompatible change is a gradual process performed over several"
-" releases:"
+"Making an incompatible change is a gradual process performed over several "
+"releases:"
 msgstr ""
 
-#: ../../peps/pep-0387.rst:148
+#: ../../peps/peps/pep-0387.rst:146
 msgid ""
-"Discuss the change.  Depending on the degree of incompatibility, this "
-"could be on the bug tracker, python-dev, python-list, or the appropriate "
-"SIG.  A PEP or similar document may be written. Hopefully users of the "
-"affected API will pipe up to comment."
+"Discuss the change.  Depending on the degree of incompatibility, this could "
+"be on the bug tracker, python-dev, python-list, or the appropriate SIG.  A "
+"PEP or similar document may be written. Hopefully users of the affected API "
+"will pipe up to comment."
 msgstr ""
 
-#: ../../peps/pep-0387.rst:153
+#: ../../peps/peps/pep-0387.rst:151
 msgid ""
-"Add a warning to the current ``main`` branch. If behavior is changing, "
-"the API may gain a new function or method to perform the new behavior; "
-"old usage should raise the warning.  If an API is being removed, simply "
-"warn whenever it is entered.  ``DeprecationWarning`` is the usual warning"
-" category to use, but ``PendingDeprecationWarning`` may be used in "
-"special cases where the old and new versions of the API will coexist for "
-"many releases [#warnings]_.  The warning message should include the "
-"release the incompatibility is expected to become the default and a link "
-"to an issue that users can post feedback to. When feasible, also change "
-"`typeshed <https://github.com/python/typeshed>`_ to add the "
-"``@deprecated`` decorator (see :pep:`702`) to the deprecated API, so that"
-" users of static type checkers have another way to learn about the "
-"deprecation."
+"Add a warning to the current ``main`` branch. If behavior is changing, the "
+"API may gain a new function or method to perform the new behavior; old usage "
+"should raise the warning.  If an API is being removed, simply warn whenever "
+"it is entered.  ``DeprecationWarning`` is the usual warning category to use, "
+"but ``PendingDeprecationWarning`` may be used in special cases where the old "
+"and new versions of the API will coexist for many releases [#warnings]_.  "
+"The warning message should include the release the incompatibility is "
+"expected to become the default and a link to an issue that users can post "
+"feedback to. When feasible, also change `typeshed <https://github.com/python/"
+"typeshed>`_ to add the ``@deprecated`` decorator (see :pep:`702`) to the "
+"deprecated API, so that users of static type checkers have another way to "
+"learn about the deprecation."
 msgstr ""
 
-#: ../../peps/pep-0387.rst:168
+#: ../../peps/peps/pep-0387.rst:166
 msgid ""
-"For C API, a compiler warning generated by the ``Py_DEPRECATED`` macro is"
-" also acceptable."
+"For C API, a compiler warning generated by the ``Py_DEPRECATED`` macro is "
+"also acceptable."
 msgstr ""
 
-#: ../../peps/pep-0387.rst:171
+#: ../../peps/peps/pep-0387.rst:169
 msgid ""
-"Wait for the warning to appear in at least two minor Python versions of "
-"the same major version, or one minor version in an older major version "
-"(e.g. for a warning in Python 3.10.0, you either wait until at least "
-"Python 3.12 or Python 4.0 to make the change)."
+"Wait for the warning to appear in at least two minor Python versions of the "
+"same major version, or one minor version in an older major version (e.g. for "
+"a warning in Python 3.10.0, you either wait until at least Python 3.12 or "
+"Python 4.0 to make the change)."
 msgstr ""
 
-#: ../../peps/pep-0387.rst:176
+#: ../../peps/peps/pep-0387.rst:174
 msgid "It's fine to wait more than two releases, for example:"
 msgstr ""
 
-#: ../../peps/pep-0387.rst:178
+#: ../../peps/peps/pep-0387.rst:176
 msgid ""
 "If the expected maintenance overhead and security risk of the deprecated "
-"behavior is small (e.g. an old function is reimplemented in terms of a "
-"new, more general one), it can stay indefinitely (or until the situation "
-"changes)."
+"behavior is small (e.g. an old function is reimplemented in terms of a new, "
+"more general one), it can stay indefinitely (or until the situation changes)."
 msgstr ""
 
-#: ../../peps/pep-0387.rst:183
+#: ../../peps/peps/pep-0387.rst:181
 msgid ""
-"If the deprecated feature is replaced by a new one, it should generally "
-"be removed only after the last Python version *without* the new feature "
-"reaches end of support."
+"If the deprecated feature is replaced by a new one, it should generally be "
+"removed only after the last Python version *without* the new feature reaches "
+"end of support."
 msgstr ""
 
-#: ../../peps/pep-0387.rst:187
+#: ../../peps/peps/pep-0387.rst:185
 msgid ""
-"See if there's any feedback.  Users not involved in the original "
-"discussions may comment now after seeing the warning.  Perhaps "
-"reconsider."
+"See if there's any feedback.  Users not involved in the original discussions "
+"may comment now after seeing the warning.  Perhaps reconsider."
 msgstr ""
 
-#: ../../peps/pep-0387.rst:191
+#: ../../peps/peps/pep-0387.rst:189
 msgid ""
-"The behavior change or feature removal may now be made default or "
-"permanent having reached the declared version. Remove the old version and"
-" warning."
+"The behavior change or feature removal may now be made default or permanent "
+"having reached the declared version. Remove the old version and warning."
 msgstr ""
 
-#: ../../peps/pep-0387.rst:195
+#: ../../peps/peps/pep-0387.rst:193
 msgid ""
-"If a warning cannot be provided to users, consult with the steering "
-"council."
+"If a warning cannot be provided to users, consult with the steering council."
 msgstr ""
 
-#: ../../peps/pep-0387.rst:200
+#: ../../peps/peps/pep-0387.rst:198
+msgid "Changelog"
+msgstr ""
+
+#: ../../peps/peps/pep-0387.rst:200
+msgid "2023-Nov-14: Added ``@deprecated`` decorator per :pep:`702`."
+msgstr ""
+
+#: ../../peps/peps/pep-0387.rst:201
+msgid ""
+"2023-Jul-03: Added the Soft Deprecation section, as discussed in `<https://"
+"discuss.python.org/t/27957>`__."
+msgstr ""
+
+#: ../../peps/peps/pep-0387.rst:203
+msgid ""
+"2023-Jun-26: Multiple smaller updates and clarifications, discussed in "
+"`<https://discuss.python.org/t/22042>`__."
+msgstr ""
+
+#: ../../peps/peps/pep-0387.rst:205
+msgid ""
+"2022-Apr-04: Added explicit notes to ask the Steering Council in several "
+"exceptional cases."
+msgstr ""
+
+#: ../../peps/peps/pep-0387.rst:207
+msgid ""
+"2021-Apr-16: Clarified how long a warning must be emitted before a change "
+"can be made."
+msgstr ""
+
+#: ../../peps/peps/pep-0387.rst:209
+msgid "2020-Jul-20: Initial accepted version."
+msgstr ""
+
+#: ../../peps/peps/pep-0387.rst:213
 msgid "References"
 msgstr "Referências"
 
-#: ../../peps/pep-0387.rst:202
+#: ../../peps/peps/pep-0387.rst:215
 msgid "TIOBE Programming Community Index"
 msgstr ""
 
-#: ../../peps/pep-0387.rst:204
+#: ../../peps/peps/pep-0387.rst:217
 msgid "http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html"
 msgstr ""
 
-#: ../../peps/pep-0387.rst:206
+#: ../../peps/peps/pep-0387.rst:219
 msgid "The warnings module"
 msgstr ""
 
-#: ../../peps/pep-0387.rst:208
+#: ../../peps/peps/pep-0387.rst:221
 msgid "http://docs.python.org/library/warnings.html"
 msgstr ""
 
-#: ../../peps/pep-0387.rst:212
+#: ../../peps/peps/pep-0387.rst:225
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../../peps/pep-0387.rst:214
+#: ../../peps/peps/pep-0387.rst:227
 msgid "This document has been placed in the public domain."
 msgstr "Este documento foi colocado em domínio público."
-
-#~ msgid "Discussions-To"
-#~ msgstr ""
-
-#~ msgid "https://discuss.python.org/t/pep-387-backwards-compatibilty-policy/4421"
-#~ msgstr ""
-
-#~ msgid "19-Jun-2009, 12-Jun-2020"
-#~ msgstr ""
-
-#~ msgid "Anything documented publicly as being private."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Add a warning.  If behavior is "
-#~ "changing, the API may gain a new"
-#~ " function or method to perform the"
-#~ " new behavior; old usage should raise"
-#~ " the warning.  If an API is "
-#~ "being removed, simply warn whenever it"
-#~ " is entered.  ``DeprecationWarning`` is the"
-#~ " usual warning category to use, but"
-#~ " ``PendingDeprecationWarning`` may be used "
-#~ "in special cases where the old and"
-#~ " new versions of the API will "
-#~ "coexist for many releases [#warnings]_. "
-#~ "Compiler warnings are also acceptable. "
-#~ "The warning message should include the"
-#~ " release the incompatibility is expected"
-#~ " to become the default and a "
-#~ "link to an issue that users can"
-#~ " post feedback to."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Wait for the warning to appear in"
-#~ " at least two minor Python versions"
-#~ " of the same major version, or "
-#~ "one minor version in an older "
-#~ "major version (e.g. for a warning "
-#~ "in Python 3.10, you either wait "
-#~ "until at least Python 3.12 or "
-#~ "Python 4.0 to make the change). "
-#~ "It's fine to wait more than two"
-#~ " releases."
-#~ msgstr ""
-

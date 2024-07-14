@@ -6,98 +6,98 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PEPs\n"
+"Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 20:07+0000\n"
+"POT-Creation-Date: 2024-07-14 02:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.15.0\n"
 
-#: ../pep-0646.rst
+#: ../../peps/peps/pep-0646.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../pep-0646.rst:3
+#: ../../peps/peps/pep-0646.rst:3
 msgid ""
 "Mark Mendoza <mendoza.mark.a@gmail.com>, Matthew Rahtz <mrahtz@google.com>, "
 "Pradeep Kumar Srinivasan <gohanpra@gmail.com>, Vincent Siles <vsiles@fb.com>"
 msgstr ""
 
-#: ../pep-0646.rst
+#: ../../peps/peps/pep-0646.rst
 msgid "Sponsor"
 msgstr ""
 
-#: ../pep-0646.rst:7
+#: ../../peps/peps/pep-0646.rst:7
 msgid "Guido van Rossum <guido@python.org>"
 msgstr ""
 
-#: ../pep-0646.rst
+#: ../../peps/peps/pep-0646.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../pep-0646.rst:8
-msgid "Accepted"
+#: ../../peps/peps/pep-0646.rst:8
+msgid "Final"
 msgstr ""
 
-#: ../pep-0646.rst
+#: ../../peps/peps/pep-0646.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../pep-0646.rst:9
+#: ../../peps/peps/pep-0646.rst:9
 msgid "Standards Track"
 msgstr ""
 
-#: ../pep-0646.rst
+#: ../../peps/peps/pep-0646.rst
 msgid "Topic"
 msgstr ""
 
-#: ../pep-0646.rst:10
+#: ../../peps/peps/pep-0646.rst:10
 msgid "Typing"
 msgstr ""
 
-#: ../pep-0646.rst
+#: ../../peps/peps/pep-0646.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../pep-0646.rst:12
+#: ../../peps/peps/pep-0646.rst:12
 msgid "16-Sep-2020"
 msgstr ""
 
-#: ../pep-0646.rst
+#: ../../peps/peps/pep-0646.rst
 msgid "Python-Version"
 msgstr ""
 
-#: ../pep-0646.rst:13
+#: ../../peps/peps/pep-0646.rst:13
 msgid "3.11"
 msgstr ""
 
-#: ../pep-0646.rst
+#: ../../peps/peps/pep-0646.rst
 msgid "Post-History"
 msgstr "Pós-história"
 
-#: ../pep-0646.rst:14
+#: ../../peps/peps/pep-0646.rst:14
 msgid "07-Oct-2020, 23-Dec-2020, 29-Dec-2020"
 msgstr ""
 
-#: ../pep-0646.rst
+#: ../../peps/peps/pep-0646.rst
 msgid "Resolution"
 msgstr ""
 
-#: ../pep-0646.rst:15
+#: ../../peps/peps/pep-0646.rst:15
 msgid ""
 "https://mail.python.org/archives/list/python-dev@python.org/message/"
 "OR5RKV7GAVSGLVH3JAGQ6OXFAXIP5XDX/"
 msgstr ""
 
-#: ../pep-0646.rst:18
+#: ../../peps/peps/pep-0646.rst:20
 msgid "Abstract"
 msgstr ""
 
-#: ../pep-0646.rst:20
+#: ../../peps/peps/pep-0646.rst:22
 msgid ""
 ":pep:`484` introduced ``TypeVar``, enabling creation of generics "
 "parameterised with a single type. In this PEP, we introduce "
@@ -109,11 +109,11 @@ msgid ""
 "checkers to catch shape-related bugs in code that uses these libraries."
 msgstr ""
 
-#: ../pep-0646.rst:30
+#: ../../peps/peps/pep-0646.rst:32
 msgid "Acceptance"
 msgstr ""
 
-#: ../pep-0646.rst:32
+#: ../../peps/peps/pep-0646.rst:34
 msgid ""
 "This PEP was accepted for Python 3.11, with the caveat that details around "
 "multiple unpackings in a type expression aren't specified precisely. This "
@@ -121,11 +121,11 @@ msgid ""
 "PEPs."
 msgstr ""
 
-#: ../pep-0646.rst:38
+#: ../../peps/peps/pep-0646.rst:40
 msgid "Motivation"
 msgstr ""
 
-#: ../pep-0646.rst:40
+#: ../../peps/peps/pep-0646.rst:42
 msgid ""
 "Variadic generics have long been a requested feature, for a myriad of use "
 "cases [#typing193]_. One particular use case - a use case with potentially "
@@ -133,7 +133,7 @@ msgid ""
 "numerical libraries."
 msgstr ""
 
-#: ../pep-0646.rst:45
+#: ../../peps/peps/pep-0646.rst:47
 msgid ""
 "In the context of numerical computation with libraries such as NumPy and "
 "TensorFlow, the *shape* of variables is often just as important as the "
@@ -141,36 +141,36 @@ msgid ""
 "a batch [#batch]_ of videos to grayscale:"
 msgstr ""
 
-#: ../pep-0646.rst:54
+#: ../../peps/peps/pep-0646.rst:56
 msgid ""
 "From the signature alone, it is not obvious what shape of array [#array]_ we "
 "should pass for the ``videos`` argument. Possibilities include, for example,"
 msgstr ""
 
-#: ../pep-0646.rst:58
+#: ../../peps/peps/pep-0646.rst:60
 msgid "batch × time × height × width × channels"
 msgstr ""
 
-#: ../pep-0646.rst:60
+#: ../../peps/peps/pep-0646.rst:62
 msgid "and"
 msgstr ""
 
-#: ../pep-0646.rst:62
+#: ../../peps/peps/pep-0646.rst:64
 msgid "time × batch × channels × height × width. [#timebatch]_"
 msgstr ""
 
-#: ../pep-0646.rst:64
+#: ../../peps/peps/pep-0646.rst:66
 msgid "This is important for three reasons:"
 msgstr ""
 
-#: ../pep-0646.rst:66
+#: ../../peps/peps/pep-0646.rst:68
 msgid ""
 "**Documentation**. Without the required shape being clear in the signature, "
 "the user must hunt in the docstring or the code in question to determine "
 "what the input/output shape requirements are."
 msgstr ""
 
-#: ../pep-0646.rst:69
+#: ../../peps/peps/pep-0646.rst:71
 msgid ""
 "**Catching shape bugs before runtime**. Ideally, use of incorrect shapes "
 "should be an error we can catch ahead of time using static analysis. (This "
@@ -178,7 +178,7 @@ msgid ""
 "can be slow.)"
 msgstr ""
 
-#: ../pep-0646.rst:73
+#: ../../peps/peps/pep-0646.rst:75
 msgid ""
 "**Preventing subtle shape bugs**. In the worst case, use of the wrong shape "
 "will result in the program appearing to run fine, but with a subtle bug that "
@@ -186,7 +186,7 @@ msgid ""
 "learning tutorial for a particularly pernicious example.)"
 msgstr ""
 
-#: ../pep-0646.rst:78
+#: ../../peps/peps/pep-0646.rst:80
 msgid ""
 "Ideally, we should have some way of making shape requirements explicit in "
 "type signatures. Multiple proposals [#numeric-stack]_ [#typing-ideas]_ "
@@ -194,14 +194,14 @@ msgid ""
 "for this purpose. We would write:"
 msgstr ""
 
-#: ../pep-0646.rst:87
+#: ../../peps/peps/pep-0646.rst:89
 msgid ""
 "However, note that arrays can be of arbitrary rank - ``Array`` as used above "
 "is generic in an arbitrary number of axes. One way around this would be to "
 "use a different ``Array`` class for each rank..."
 msgstr ""
 
-#: ../pep-0646.rst:100
+#: ../../peps/peps/pep-0646.rst:102
 msgid ""
 "...but this would be cumbersome, both for users (who would have to sprinkle "
 "1s and 2s and so on throughout their code) and for the authors of array "
@@ -209,35 +209,35 @@ msgid ""
 "classes)."
 msgstr ""
 
-#: ../pep-0646.rst:103
+#: ../../peps/peps/pep-0646.rst:105
 msgid ""
 "Variadic generics are necessary for an ``Array`` that is generic in an "
 "arbitrary number of axes to be cleanly defined as a single class."
 msgstr ""
 
-#: ../pep-0646.rst:107
+#: ../../peps/peps/pep-0646.rst:109
 msgid "Summary Examples"
 msgstr ""
 
-#: ../pep-0646.rst:109
+#: ../../peps/peps/pep-0646.rst:111
 msgid ""
 "Cutting right to the chase, this PEP allows an ``Array`` class that is "
 "generic in its shape (and datatype) to be defined using a newly-introduced "
 "arbitrary-length type variable, ``TypeVarTuple``, as follows:"
 msgstr ""
 
-#: ../pep-0646.rst:126
+#: ../../peps/peps/pep-0646.rst:128
 msgid ""
 "Such an ``Array`` can be used to support a number of different kinds of "
 "shape annotations. For example, we can add labels describing the semantic "
 "meaning of each axis:"
 msgstr ""
 
-#: ../pep-0646.rst:139
+#: ../../peps/peps/pep-0646.rst:141
 msgid "We could also add annotations describing the actual size of each axis:"
 msgstr ""
 
-#: ../pep-0646.rst:148
+#: ../../peps/peps/pep-0646.rst:150
 msgid ""
 "For consistency, we use semantic axis annotations as the basis of the "
 "examples in this PEP, but this PEP is agnostic about which of these two (or "
@@ -245,24 +245,24 @@ msgid ""
 "to library authors."
 msgstr ""
 
-#: ../pep-0646.rst:152
+#: ../../peps/peps/pep-0646.rst:154
 msgid ""
 "(Note also that for the rest of this PEP, for conciseness of example, we use "
 "a simpler version of ``Array`` which is generic only in the shape - *not* "
 "the data type.)"
 msgstr ""
 
-#: ../pep-0646.rst:157
+#: ../../peps/peps/pep-0646.rst:159
 msgid "Specification"
 msgstr ""
 
-#: ../pep-0646.rst:159
+#: ../../peps/peps/pep-0646.rst:161
 msgid ""
 "In order to support the above use cases, we introduce ``TypeVarTuple``. This "
 "serves as a placeholder not for a single type but for a *tuple* of types."
 msgstr ""
 
-#: ../pep-0646.rst:163
+#: ../../peps/peps/pep-0646.rst:165
 msgid ""
 "In addition, we introduce a new use for the star operator: to 'unpack' "
 "``TypeVarTuple`` instances and tuple types such as ``Tuple[int, str]``. "
@@ -270,32 +270,32 @@ msgid ""
 "unpacking a variable or a tuple of values."
 msgstr ""
 
-#: ../pep-0646.rst:169
+#: ../../peps/peps/pep-0646.rst:171
 msgid "Type Variable Tuples"
 msgstr ""
 
-#: ../pep-0646.rst:171
+#: ../../peps/peps/pep-0646.rst:173
 msgid ""
 "In the same way that a normal type variable is a stand-in for a single type "
 "such as ``int``, a type variable *tuple* is a stand-in for a *tuple* type "
 "such as ``Tuple[int, str]``."
 msgstr ""
 
-#: ../pep-0646.rst:175
+#: ../../peps/peps/pep-0646.rst:177
 msgid "Type variable tuples are created with:"
 msgstr ""
 
-#: ../pep-0646.rst:184
+#: ../../peps/peps/pep-0646.rst:186
 msgid "Using Type Variable Tuples in Generic Classes"
 msgstr ""
 
-#: ../pep-0646.rst:186
+#: ../../peps/peps/pep-0646.rst:188
 msgid ""
 "Type variable tuples behave like a number of individual type variables "
 "packed in a ``Tuple``. To understand this, consider the following example:"
 msgstr ""
 
-#: ../pep-0646.rst:199
+#: ../../peps/peps/pep-0646.rst:201
 msgid ""
 "The ``Shape`` type variable tuple here behaves like ``Tuple[T1, T2]``, where "
 "``T1`` and ``T2`` are type variables. To use these type variables as type "
@@ -304,7 +304,7 @@ msgid ""
 "had simply written ``class Array(Generic[T1, T2]): ...``."
 msgstr ""
 
-#: ../pep-0646.rst:205
+#: ../../peps/peps/pep-0646.rst:207
 msgid ""
 "In contrast to ``Generic[T1, T2]``, however, ``Generic[*Shape]`` allows us "
 "to parameterise the class with an *arbitrary* number of type parameters. "
@@ -313,22 +313,22 @@ msgid ""
 "and so on:"
 msgstr ""
 
-#: ../pep-0646.rst:219
+#: ../../peps/peps/pep-0646.rst:221
 msgid "Using Type Variable Tuples in Functions"
 msgstr ""
 
-#: ../pep-0646.rst:221
+#: ../../peps/peps/pep-0646.rst:223
 msgid ""
 "Type variable tuples can be used anywhere a normal ``TypeVar`` can. This "
 "includes class definitions, as shown above, as well as function signatures "
 "and variable annotations:"
 msgstr ""
 
-#: ../pep-0646.rst:241
+#: ../../peps/peps/pep-0646.rst:243
 msgid "Type Variable Tuples Must Always be Unpacked"
 msgstr ""
 
-#: ../pep-0646.rst:243
+#: ../../peps/peps/pep-0646.rst:245
 msgid ""
 "Note that in the previous example, the ``shape`` argument to ``__init__`` "
 "was annotated as ``Tuple[*Shape]``. Why is this necessary - if ``Shape`` "
@@ -336,31 +336,31 @@ msgid ""
 "``shape`` argument as ``Shape`` directly?"
 msgstr ""
 
-#: ../pep-0646.rst:248
+#: ../../peps/peps/pep-0646.rst:250
 msgid ""
 "This is, in fact, deliberately not possible: type variable tuples must "
 "*always* be used unpacked (that is, prefixed by the star operator). This is "
 "for two reasons:"
 msgstr ""
 
-#: ../pep-0646.rst:252
+#: ../../peps/peps/pep-0646.rst:254
 msgid ""
 "To avoid potential confusion about whether to use a type variable tuple in a "
 "packed or unpacked form (\"Hmm, should I write '``-> Shape``', or '``-> "
 "Tuple[Shape]``', or '``-> Tuple[*Shape]``'...?\")"
 msgstr ""
 
-#: ../pep-0646.rst:255
+#: ../../peps/peps/pep-0646.rst:257
 msgid ""
 "To improve readability: the star also functions as an explicit visual "
 "indicator that the type variable tuple is not a normal type variable."
 msgstr ""
 
-#: ../pep-0646.rst:259
+#: ../../peps/peps/pep-0646.rst:261
 msgid "``Unpack`` for Backwards Compatibility"
 msgstr ""
 
-#: ../pep-0646.rst:261
+#: ../../peps/peps/pep-0646.rst:263
 msgid ""
 "Note that the use of the star operator in this context requires a grammar "
 "change, and is therefore available only in new versions of Python. To enable "
@@ -368,47 +368,47 @@ msgid ""
 "``Unpack`` type operator that can be used in place of the star operator:"
 msgstr ""
 
-#: ../pep-0646.rst:275
+#: ../../peps/peps/pep-0646.rst:277
 msgid "Variance, Type Constraints and Type Bounds: Not (Yet) Supported"
 msgstr ""
 
-#: ../pep-0646.rst:277
+#: ../../peps/peps/pep-0646.rst:279
 msgid ""
 "To keep this PEP minimal, ``TypeVarTuple`` does not yet support "
 "specification of:"
 msgstr ""
 
-#: ../pep-0646.rst:279
+#: ../../peps/peps/pep-0646.rst:281
 msgid "Variance (e.g. ``TypeVar('T', covariant=True)``)"
 msgstr ""
 
-#: ../pep-0646.rst:280
+#: ../../peps/peps/pep-0646.rst:282
 msgid "Type constraints (``TypeVar('T', int, float)``)"
 msgstr ""
 
-#: ../pep-0646.rst:281
+#: ../../peps/peps/pep-0646.rst:283
 msgid "Type bounds (``TypeVar('T', bound=ParentClass)``)"
 msgstr ""
 
-#: ../pep-0646.rst:283
+#: ../../peps/peps/pep-0646.rst:285
 msgid ""
 "We leave the decision of how these arguments should behave to a future PEP, "
 "when variadic generics have been tested in the field. As of this PEP, type "
 "variable tuples are invariant."
 msgstr ""
 
-#: ../pep-0646.rst:287
+#: ../../peps/peps/pep-0646.rst:289
 msgid "Type Variable Tuple Equality"
 msgstr ""
 
-#: ../pep-0646.rst:289
+#: ../../peps/peps/pep-0646.rst:291
 msgid ""
 "If the same ``TypeVarTuple`` instance is used in multiple places in a "
 "signature or class, a valid type inference might be to bind the "
 "``TypeVarTuple`` to a ``Tuple`` of a ``Union`` of types:"
 msgstr ""
 
-#: ../pep-0646.rst:301
+#: ../../peps/peps/pep-0646.rst:303
 msgid ""
 "We do *not* allow this; type unions may *not* appear within the ``Tuple``. "
 "If a type variable tuple appears in multiple places in a signature, the "
@@ -416,41 +416,41 @@ msgid ""
 "length, and the type parameters themselves must be identical):"
 msgstr ""
 
-#: ../pep-0646.rst:321
+#: ../../peps/peps/pep-0646.rst:323
 msgid "Multiple Type Variable Tuples: Not Allowed"
 msgstr ""
 
-#: ../pep-0646.rst:323
+#: ../../peps/peps/pep-0646.rst:325
 msgid ""
 "As of this PEP, only a single type variable tuple may appear in a type "
 "parameter list:"
 msgstr ""
 
-#: ../pep-0646.rst:329
+#: ../../peps/peps/pep-0646.rst:331
 msgid ""
 "The reason is that multiple type variable tuples make it ambiguous which "
 "parameters get bound to which type variable tuple: ::"
 msgstr ""
 
-#: ../pep-0646.rst:335
+#: ../../peps/peps/pep-0646.rst:337
 msgid "Type Concatenation"
 msgstr ""
 
-#: ../pep-0646.rst:337
+#: ../../peps/peps/pep-0646.rst:339
 msgid ""
 "Type variable tuples don't have to be alone; normal types can be prefixed "
 "and/or suffixed:"
 msgstr ""
 
-#: ../pep-0646.rst:358
+#: ../../peps/peps/pep-0646.rst:360
 msgid "Normal ``TypeVar`` instances can also be prefixed and/or suffixed:"
 msgstr ""
 
-#: ../pep-0646.rst:374
+#: ../../peps/peps/pep-0646.rst:376
 msgid "Unpacking Tuple Types"
 msgstr ""
 
-#: ../pep-0646.rst:376
+#: ../../peps/peps/pep-0646.rst:378
 msgid ""
 "We mentioned that a ``TypeVarTuple`` stands for a tuple of types. Since we "
 "can unpack a ``TypeVarTuple``, for consistency, we also allow unpacking a "
@@ -458,22 +458,22 @@ msgid ""
 "features."
 msgstr ""
 
-#: ../pep-0646.rst:383
+#: ../../peps/peps/pep-0646.rst:385
 msgid "Unpacking Concrete Tuple Types"
 msgstr ""
 
-#: ../pep-0646.rst:385
+#: ../../peps/peps/pep-0646.rst:387
 msgid ""
 "Unpacking a concrete tuple type is analogous to unpacking a tuple of values "
 "at runtime. ``Tuple[int, *Tuple[bool, bool], str]`` is equivalent to "
 "``Tuple[int, bool, bool, str]``."
 msgstr ""
 
-#: ../pep-0646.rst:390
+#: ../../peps/peps/pep-0646.rst:392
 msgid "Unpacking Unbounded Tuple Types"
 msgstr ""
 
-#: ../pep-0646.rst:392
+#: ../../peps/peps/pep-0646.rst:394
 msgid ""
 "Unpacking an unbounded tuple preserves the unbounded tuple as it is. That "
 "is, ``*Tuple[int, ...]`` remains ``*Tuple[int, ...]``; there's no simpler "
@@ -485,14 +485,14 @@ msgid ""
 "``Tuple[int, ...]``."
 msgstr ""
 
-#: ../pep-0646.rst:401
+#: ../../peps/peps/pep-0646.rst:403
 msgid ""
 "Unpacking unbounded tuples is also useful in function signatures where we "
 "don't care about the exact elements and don't want to define an unnecessary "
 "``TypeVarTuple``:"
 msgstr ""
 
-#: ../pep-0646.rst:421
+#: ../../peps/peps/pep-0646.rst:423
 msgid ""
 "We can also pass a ``*Tuple[int, ...]`` wherever a ``*Ts`` is expected. This "
 "is useful when we have particularly dynamic code and cannot state the "
@@ -500,7 +500,7 @@ msgid ""
 "dimensions. In those cases, we can smoothly fall back to an unbounded tuple:"
 msgstr ""
 
-#: ../pep-0646.rst:443
+#: ../../peps/peps/pep-0646.rst:445
 msgid ""
 "``Array[*Tuple[Any, ...]]`` stands for an array with an arbitrary number of "
 "dimensions of type ``Any``. This means that, in the call to "
@@ -510,7 +510,7 @@ msgid ""
 "to ``Any``."
 msgstr ""
 
-#: ../pep-0646.rst:450
+#: ../../peps/peps/pep-0646.rst:452
 msgid ""
 "This allows users to handle dynamic code gracefully while still explicitly "
 "marking the code as unsafe (by using ``y: Array[*Tuple[Any, ...]]``).  "
@@ -519,21 +519,21 @@ msgid ""
 "a legacy code base to use ``TypeVarTuple``."
 msgstr ""
 
-#: ../pep-0646.rst:457
+#: ../../peps/peps/pep-0646.rst:459
 msgid "Multiple Unpackings in a Tuple: Not Allowed"
 msgstr ""
 
-#: ../pep-0646.rst:459
+#: ../../peps/peps/pep-0646.rst:461
 msgid ""
 "As with ``TypeVarTuples``, `only one <Multiple Type Variable Tuples: Not "
 "Allowed_>`_ unpacking may appear in a tuple:"
 msgstr ""
 
-#: ../pep-0646.rst:470
+#: ../../peps/peps/pep-0646.rst:472
 msgid "``*args`` as a Type Variable Tuple"
 msgstr ""
 
-#: ../pep-0646.rst:472
+#: ../../peps/peps/pep-0646.rst:474
 msgid ""
 ":pep:`484` states that when a type annotation is provided for ``*args``, "
 "every argument must be of the type annotated. That is, if we specify "
@@ -542,62 +542,62 @@ msgid ""
 "take heterogeneous argument types."
 msgstr ""
 
-#: ../pep-0646.rst:477
+#: ../../peps/peps/pep-0646.rst:479
 msgid ""
 "If ``*args`` is annotated as a type variable tuple, however, the types of "
 "the individual arguments become the types in the type variable tuple:"
 msgstr ""
 
-#: ../pep-0646.rst:488
+#: ../../peps/peps/pep-0646.rst:490
 msgid ""
 "In the above example, ``Ts`` is bound to ``Tuple[int, str]``. If no "
 "arguments are passed, the type variable tuple behaves like an empty tuple, "
 "``Tuple[()]``."
 msgstr ""
 
-#: ../pep-0646.rst:492
+#: ../../peps/peps/pep-0646.rst:494
 msgid ""
 "As usual, we can unpack any tuple types. For example, by using a type "
 "variable tuple inside a tuple of other types, we can refer to prefixes or "
 "suffixes of the variadic argument list. For example:"
 msgstr ""
 
-#: ../pep-0646.rst:501
+#: ../../peps/peps/pep-0646.rst:503
 msgid "Note that this is different to"
 msgstr ""
 
-#: ../pep-0646.rst:507
+#: ../../peps/peps/pep-0646.rst:509
 msgid "as this would make ``env`` a keyword-only argument."
 msgstr ""
 
-#: ../pep-0646.rst:509
+#: ../../peps/peps/pep-0646.rst:511
 msgid ""
 "Using an unpacked unbounded tuple is equivalent to the :pep:`484#arbitrary-"
 "argument-lists-and-default-argument-values` behavior of ``*args: int``, "
 "which accepts zero or more values of type ``int``:"
 msgstr ""
 
-#: ../pep-0646.rst:521
+#: ../../peps/peps/pep-0646.rst:523
 msgid ""
 "Unpacking tuple types also allows more precise types for heterogeneous "
 "``*args``. The following function expects an ``int`` at the beginning, zero "
 "or more ``str`` values, and a ``str`` at the end:"
 msgstr ""
 
-#: ../pep-0646.rst:529
+#: ../../peps/peps/pep-0646.rst:531
 msgid ""
 "For completeness, we mention that unpacking a concrete tuple allows us to "
 "specify ``*args`` of a fixed number of heterogeneous types:"
 msgstr ""
 
-#: ../pep-0646.rst:538
+#: ../../peps/peps/pep-0646.rst:540
 msgid ""
 "Note that, in keeping with the rule that type variable tuples must always be "
 "used unpacked, annotating ``*args`` as being a plain type variable tuple "
 "instance is *not* allowed:"
 msgstr ""
 
-#: ../pep-0646.rst:546
+#: ../../peps/peps/pep-0646.rst:548
 msgid ""
 "``*args`` is the only case where an argument can be annotated as ``*Ts`` "
 "directly; other arguments should use ``*Ts`` to parameterise something else, "
@@ -606,30 +606,30 @@ msgid ""
 "with the same types."
 msgstr ""
 
-#: ../pep-0646.rst:559
+#: ../../peps/peps/pep-0646.rst:561
 msgid ""
 "Finally, note that a type variable tuple may *not* be used as the type of "
 "``**kwargs``. (We do not yet know of a use case for this feature, so we "
 "prefer to leave the ground fresh for a potential future PEP.)"
 msgstr ""
 
-#: ../pep-0646.rst:569
+#: ../../peps/peps/pep-0646.rst:571
 msgid "Type Variable Tuples with ``Callable``"
 msgstr ""
 
-#: ../pep-0646.rst:571
+#: ../../peps/peps/pep-0646.rst:573
 msgid ""
 "Type variable tuples can also be used in the arguments section of a "
 "``Callable``:"
 msgstr ""
 
-#: ../pep-0646.rst:588
+#: ../../peps/peps/pep-0646.rst:590
 msgid ""
 "Other types and normal type variables can also be prefixed/suffixed to the "
 "type variable tuple:"
 msgstr ""
 
-#: ../pep-0646.rst:597
+#: ../../peps/peps/pep-0646.rst:599
 msgid ""
 "The behavior of a Callable containing an unpacked item, whether the item is "
 "a ``TypeVarTuple`` or a tuple type, is to treat the elements as if they were "
@@ -637,39 +637,39 @@ msgid ""
 "of the function:"
 msgstr ""
 
-#: ../pep-0646.rst:606
+#: ../../peps/peps/pep-0646.rst:608
 msgid ""
 "``Callable[[int, *Ts, T], Tuple[T, *Ts]]`` is treated as the type of the "
 "function:"
 msgstr ""
 
-#: ../pep-0646.rst:614
+#: ../../peps/peps/pep-0646.rst:616
 msgid "Behaviour when Type Parameters are not Specified"
 msgstr ""
 
-#: ../pep-0646.rst:616
+#: ../../peps/peps/pep-0646.rst:618
 msgid ""
 "When a generic class parameterised by a type variable tuple is used without "
 "any type parameters, it behaves as if the type variable tuple was "
 "substituted with ``Tuple[Any, ...]``:"
 msgstr ""
 
-#: ../pep-0646.rst:632
+#: ../../peps/peps/pep-0646.rst:634
 msgid ""
 "This enables gradual typing: existing functions accepting, for example, a "
 "plain TensorFlow ``Tensor`` will still be valid even if ``Tensor`` is made "
 "generic and calling code passes a ``Tensor[Height, Width]``."
 msgstr ""
 
-#: ../pep-0646.rst:636
+#: ../../peps/peps/pep-0646.rst:638
 msgid "This also works in the opposite direction:"
 msgstr ""
 
-#: ../pep-0646.rst:647
+#: ../../peps/peps/pep-0646.rst:649
 msgid "(For details, see the section on `Unpacking Unbounded Tuple Types`_.)"
 msgstr ""
 
-#: ../pep-0646.rst:649
+#: ../../peps/peps/pep-0646.rst:651
 msgid ""
 "This way, even if libraries are updated to use types like ``Array[Height, "
 "Width]``, users of those libraries won't be forced to also apply type "
@@ -677,115 +677,115 @@ msgid ""
 "of their code to type and which parts to not."
 msgstr ""
 
-#: ../pep-0646.rst:655
+#: ../../peps/peps/pep-0646.rst:657
 msgid "Aliases"
 msgstr ""
 
-#: ../pep-0646.rst:657
+#: ../../peps/peps/pep-0646.rst:659
 msgid ""
 "Generic aliases can be created using a type variable tuple in a similar way "
 "to regular type variables:"
 msgstr ""
 
-#: ../pep-0646.rst:668
+#: ../../peps/peps/pep-0646.rst:670
 msgid ""
 "As this example shows, all type parameters passed to the alias are bound to "
 "the type variable tuple."
 msgstr ""
 
-#: ../pep-0646.rst:671
+#: ../../peps/peps/pep-0646.rst:673
 msgid ""
 "Importantly for our original ``Array`` example (see `Summary Examples`_), "
 "this allows us to define convenience aliases for arrays of a fixed shape or "
 "datatype:"
 msgstr ""
 
-#: ../pep-0646.rst:687
+#: ../../peps/peps/pep-0646.rst:689
 msgid ""
 "If an explicitly empty type parameter list is given, the type variable tuple "
 "in the alias is set empty:"
 msgstr ""
 
-#: ../pep-0646.rst:695
+#: ../../peps/peps/pep-0646.rst:697
 msgid ""
 "If the type parameter list is omitted entirely, the unspecified type "
 "variable tuples are treated as ``Tuple[Any, ...]`` (similar to `Behaviour "
 "when Type Parameters are not Specified`_):"
 msgstr ""
 
-#: ../pep-0646.rst:711
+#: ../../peps/peps/pep-0646.rst:713
 msgid "Normal ``TypeVar`` instances can also be used in such aliases:"
 msgstr ""
 
-#: ../pep-0646.rst:727
+#: ../../peps/peps/pep-0646.rst:729
 msgid "Substitution in Aliases"
 msgstr ""
 
-#: ../pep-0646.rst:729
+#: ../../peps/peps/pep-0646.rst:731
 msgid ""
 "In the previous section, we only discussed simple usage of generic aliases "
 "in which the type arguments were just simple types. However, a number of "
 "more exotic constructions are also possible."
 msgstr ""
 
-#: ../pep-0646.rst:735
+#: ../../peps/peps/pep-0646.rst:737
 msgid "Type Arguments can be Variadic"
 msgstr ""
 
-#: ../pep-0646.rst:737
+#: ../../peps/peps/pep-0646.rst:739
 msgid ""
 "First, type arguments to generic aliases can be variadic. For example, a "
 "``TypeVarTuple`` can be used as a type argument:"
 msgstr ""
 
-#: ../pep-0646.rst:748
+#: ../../peps/peps/pep-0646.rst:750
 msgid ""
 "Here, ``*Ts1`` in the ``IntTuple`` alias is bound to ``Tuple[float, *Ts2]``, "
 "resulting in an alias ``IntFloatTuple`` equivalent to ``Tuple[int, float, "
 "*Ts2]``."
 msgstr ""
 
-#: ../pep-0646.rst:752
+#: ../../peps/peps/pep-0646.rst:754
 msgid ""
 "Unpacked arbitrary-length tuples can also be used as type arguments, with "
 "similar effects:"
 msgstr ""
 
-#: ../pep-0646.rst:759
+#: ../../peps/peps/pep-0646.rst:761
 msgid ""
 "Here, ``*Ts1`` is bound to ``*Tuple[float, ...]``, resulting in "
 "``IntFloatsTuple`` being equivalent to ``Tuple[int, *Tuple[float, ...]]``: a "
 "tuple consisting of an ``int`` then zero or more ``float``\\s."
 msgstr ""
 
-#: ../pep-0646.rst:765
+#: ../../peps/peps/pep-0646.rst:767
 msgid "Variadic Arguments Require Variadic Aliases"
 msgstr ""
 
-#: ../pep-0646.rst:767
+#: ../../peps/peps/pep-0646.rst:769
 msgid ""
 "Variadic type arguments can only be used with generic aliases that are "
 "themselves variadic. For example:"
 msgstr ""
 
-#: ../pep-0646.rst:780
+#: ../../peps/peps/pep-0646.rst:782
 msgid ""
 "Here, ``IntTuple`` is a *non*-variadic generic alias that takes exactly one "
 "type argument. Hence, it cannot accept ``*Ts`` or ``*Tuple[float, ...]`` as "
 "type arguments, because they represent an arbitrary number of types."
 msgstr ""
 
-#: ../pep-0646.rst:786
+#: ../../peps/peps/pep-0646.rst:788
 msgid "Aliases with Both TypeVars and TypeVarTuples"
 msgstr ""
 
-#: ../pep-0646.rst:788
+#: ../../peps/peps/pep-0646.rst:790
 msgid ""
 "In `Aliases`_, we briefly mentioned that aliases can be generic in both "
 "``TypeVar``\\s and ``TypeVarTuple``\\s:"
 msgstr ""
 
-#: ../pep-0646.rst:799
+#: ../../peps/peps/pep-0646.rst:801
 msgid ""
 "In accordance with `Multiple Type Variable Tuples: Not Allowed`_, at most "
 "one ``TypeVarTuple`` may appear in the type parameters to an alias. However, "
@@ -793,7 +793,7 @@ msgid ""
 "``TypeVar``\\s, both before and after:"
 msgstr ""
 
-#: ../pep-0646.rst:814
+#: ../../peps/peps/pep-0646.rst:816
 msgid ""
 "In order to substitute these type variables with supplied type arguments, "
 "any type variables at the beginning or end of the type parameter list first "
@@ -801,24 +801,24 @@ msgid ""
 "the ``TypeVarTuple``:"
 msgstr ""
 
-#: ../pep-0646.rst:832
+#: ../../peps/peps/pep-0646.rst:834
 msgid ""
 "Note that the minimum number of type arguments in such cases is set by the "
 "number of ``TypeVar``\\s:"
 msgstr ""
 
-#: ../pep-0646.rst:841
+#: ../../peps/peps/pep-0646.rst:843
 msgid "Splitting Arbitrary-Length Tuples"
 msgstr ""
 
-#: ../pep-0646.rst:843
+#: ../../peps/peps/pep-0646.rst:845
 msgid ""
 "A final complication occurs when an unpacked arbitrary-length tuple is used "
 "as a type argument to an alias consisting of both ``TypeVar``\\s and a "
 "``TypeVarTuple``:"
 msgstr ""
 
-#: ../pep-0646.rst:852
+#: ../../peps/peps/pep-0646.rst:854
 msgid ""
 "In such cases, the arbitrary-length tuple is split between the "
 "``TypeVar``\\s and the ``TypeVarTuple``. We assume the arbitrary-length "
@@ -829,31 +829,31 @@ msgid ""
 "still arbitrary-length - is bound to the ``TypeVarTuple``."
 msgstr ""
 
-#: ../pep-0646.rst:860
+#: ../../peps/peps/pep-0646.rst:862
 msgid ""
 "Here, therefore, ``Hamster`` is equivalent to ``Tuple[*Tuple[int, ...], "
 "int]``: a tuple consisting of zero or more ``int``\\s, then a final ``int``."
 msgstr ""
 
-#: ../pep-0646.rst:863
+#: ../../peps/peps/pep-0646.rst:865
 msgid ""
 "Of course, such splitting only occurs if necessary. For example, if we "
 "instead did:"
 msgstr ""
 
-#: ../pep-0646.rst:870
+#: ../../peps/peps/pep-0646.rst:872
 msgid ""
 "Then splitting would not occur; ``T1`` would be bound to ``str``, and ``Ts`` "
 "to ``*Tuple[int, ...]``."
 msgstr ""
 
-#: ../pep-0646.rst:873
+#: ../../peps/peps/pep-0646.rst:875
 msgid ""
 "In particularly awkward cases, a ``TypeVarTuple`` may consume both a type "
 "*and* a part of an arbitrary-length tuple type:"
 msgstr ""
 
-#: ../pep-0646.rst:880
+#: ../../peps/peps/pep-0646.rst:882
 msgid ""
 "Here, ``T1`` is bound to ``int``, and ``Ts`` is bound to ``Tuple[str, "
 "*Tuple[int, ...]]``. This expression is therefore equivalent to ``Tuple[str, "
@@ -861,36 +861,36 @@ msgid ""
 "``int``\\s, ending with an ``int``."
 msgstr ""
 
-#: ../pep-0646.rst:887
+#: ../../peps/peps/pep-0646.rst:889
 msgid "TypeVarTuples Cannot be Split"
 msgstr ""
 
-#: ../pep-0646.rst:889
+#: ../../peps/peps/pep-0646.rst:891
 msgid ""
 "Finally, although any arbitrary-length tuples in the type argument list can "
 "be split between the type variables and the type variable tuple, the same is "
 "not true of ``TypeVarTuple``\\s in the argument list:"
 msgstr ""
 
-#: ../pep-0646.rst:901
+#: ../../peps/peps/pep-0646.rst:903
 msgid ""
 "This is not possible because, unlike in the case of an unpacked arbitrary-"
 "length tuple, there is no way to 'peer inside' the ``TypeVarTuple`` to see "
 "what its individual types are."
 msgstr ""
 
-#: ../pep-0646.rst:907
+#: ../../peps/peps/pep-0646.rst:909
 msgid "Overloads for Accessing Individual Types"
 msgstr ""
 
-#: ../pep-0646.rst:909
+#: ../../peps/peps/pep-0646.rst:911
 msgid ""
 "For situations where we require access to each individual type in the type "
 "variable tuple, overloads can be used with individual ``TypeVar`` instances "
 "in place of the type variable tuple:"
 msgstr ""
 
-#: ../pep-0646.rst:931
+#: ../../peps/peps/pep-0646.rst:933
 msgid ""
 "(For array shape operations in particular, having to specify overloads for "
 "each possible rank is, of course, a rather cumbersome solution. However, "
@@ -898,15 +898,15 @@ msgid ""
 "plan to introduce these in a future PEP.)"
 msgstr ""
 
-#: ../pep-0646.rst:938
+#: ../../peps/peps/pep-0646.rst:940
 msgid "Rationale and Rejected Ideas"
 msgstr ""
 
-#: ../pep-0646.rst:941
+#: ../../peps/peps/pep-0646.rst:943
 msgid "Shape Arithmetic"
 msgstr ""
 
-#: ../pep-0646.rst:943
+#: ../../peps/peps/pep-0646.rst:945
 msgid ""
 "Considering the use case of array shapes in particular, note that as of this "
 "PEP, it is not yet possible to describe arithmetic transformations of array "
@@ -915,40 +915,40 @@ msgid ""
 "propose additional mechanisms that *will* enable this in a future PEP."
 msgstr ""
 
-#: ../pep-0646.rst:951
+#: ../../peps/peps/pep-0646.rst:953
 msgid "Supporting Variadicity Through Aliases"
 msgstr ""
 
-#: ../pep-0646.rst:953
+#: ../../peps/peps/pep-0646.rst:955
 msgid ""
 "As noted in the introduction, it *is* possible to avoid variadic generics by "
 "simply defining aliases for each possible number of type parameters:"
 msgstr ""
 
-#: ../pep-0646.rst:961
+#: ../../peps/peps/pep-0646.rst:963
 msgid ""
 "However, this seems somewhat clumsy - it requires users to unnecessarily "
 "pepper their code with 1s, 2s, and so on for each rank necessary."
 msgstr ""
 
-#: ../pep-0646.rst:965
+#: ../../peps/peps/pep-0646.rst:967
 msgid "Construction of ``TypeVarTuple``"
 msgstr ""
 
-#: ../pep-0646.rst:967
+#: ../../peps/peps/pep-0646.rst:969
 msgid ""
 "``TypeVarTuple`` began as ``ListVariadic``, based on its naming in an early "
 "implementation in Pyre."
 msgstr ""
 
-#: ../pep-0646.rst:970
+#: ../../peps/peps/pep-0646.rst:972
 msgid ""
 "We then changed this to ``TypeVar(list=True)``, on the basis that a) it "
 "better emphasises the similarity to ``TypeVar``, and b) the meaning of "
 "'list' is more easily understood than the jargon of 'variadic'."
 msgstr ""
 
-#: ../pep-0646.rst:974
+#: ../../peps/peps/pep-0646.rst:976
 msgid ""
 "Once we'd decided that a variadic type variable should behave like a "
 "``Tuple``, we also considered ``TypeVar(bound=Tuple)``, which is similarly "
@@ -961,27 +961,27 @@ msgid ""
 "``arbitrary_len`` [#arbitrary_len]_)."
 msgstr ""
 
-#: ../pep-0646.rst:982
+#: ../../peps/peps/pep-0646.rst:984
 msgid "We therefore settled on ``TypeVarTuple``."
 msgstr ""
 
-#: ../pep-0646.rst:985
+#: ../../peps/peps/pep-0646.rst:987
 msgid "Unspecified Type Parameters: Tuple vs TypeVarTuple"
 msgstr ""
 
-#: ../pep-0646.rst:987
+#: ../../peps/peps/pep-0646.rst:989
 msgid ""
 "In order to support gradual typing, this PEP states that *both* of the "
 "following examples should type-check correctly:"
 msgstr ""
 
-#: ../pep-0646.rst:1000
+#: ../../peps/peps/pep-0646.rst:1002
 msgid ""
 "Note that this is in contrast to the behaviour of the only currently-"
 "existing variadic type in Python, ``Tuple``:"
 msgstr ""
 
-#: ../pep-0646.rst:1013
+#: ../../peps/peps/pep-0646.rst:1015
 msgid ""
 "The rules for ``Tuple`` were deliberately chosen such that the latter case "
 "is an error: it was thought to be more likely that the programmer has made a "
@@ -993,7 +993,7 @@ msgid ""
 "incomplete typing."
 msgstr ""
 
-#: ../pep-0646.rst:1021
+#: ../../peps/peps/pep-0646.rst:1023
 msgid ""
 "In contrast, if an object's type is inferred to be an unparameterised "
 "``Array``, it is much more likely that the user has simply not yet fully "
@@ -1007,7 +1007,7 @@ msgid ""
 "Time, ...]``."
 msgstr ""
 
-#: ../pep-0646.rst:1031
+#: ../../peps/peps/pep-0646.rst:1033
 msgid ""
 "We therefore made the decision to have variadic generics *other* than "
 "``Tuple`` behave differently, in order to give the user more flexibility in "
@@ -1016,11 +1016,11 @@ msgid ""
 "these type annotations."
 msgstr ""
 
-#: ../pep-0646.rst:1039
+#: ../../peps/peps/pep-0646.rst:1041
 msgid "Alternatives"
 msgstr ""
 
-#: ../pep-0646.rst:1041
+#: ../../peps/peps/pep-0646.rst:1043
 msgid ""
 "It should be noted that the approach outlined in this PEP to solve the issue "
 "of shape checking in numerical libraries is *not* the only approach "
@@ -1029,7 +1029,7 @@ msgid ""
 "PyContracts [#pycontracts]_."
 msgstr ""
 
-#: ../pep-0646.rst:1046
+#: ../../peps/peps/pep-0646.rst:1048
 msgid ""
 "While these existing approaches improve significantly on the default "
 "situation of shape checking only being possible through lengthy and verbose "
@@ -1042,7 +1042,7 @@ msgid ""
 "experience."
 msgstr ""
 
-#: ../pep-0646.rst:1056
+#: ../../peps/peps/pep-0646.rst:1058
 msgid ""
 "Our hope with this PEP is to begin to codify generic type annotations as an "
 "official, language-supported way of dealing with shape correctness. With "
@@ -1051,34 +1051,34 @@ msgid ""
 "properties of numerical computing programs."
 msgstr ""
 
-#: ../pep-0646.rst:1064
+#: ../../peps/peps/pep-0646.rst:1066
 msgid "Grammar Changes"
 msgstr ""
 
-#: ../pep-0646.rst:1066
+#: ../../peps/peps/pep-0646.rst:1068
 msgid "This PEP requires two grammar changes."
 msgstr ""
 
-#: ../pep-0646.rst:1069
+#: ../../peps/peps/pep-0646.rst:1071
 msgid "Change 1: Star Expressions in Indexes"
 msgstr ""
 
-#: ../pep-0646.rst:1071
+#: ../../peps/peps/pep-0646.rst:1073
 msgid ""
 "The first grammar change enables use of star expressions in index operations "
 "(that is, within square brackets), necessary to support star-unpacking of "
 "TypeVarTuples:"
 msgstr ""
 
-#: ../pep-0646.rst:1081 ../pep-0646.rst:1178
+#: ../../peps/peps/pep-0646.rst:1083 ../../peps/peps/pep-0646.rst:1180
 msgid "Before:"
 msgstr ""
 
-#: ../pep-0646.rst:1089 ../pep-0646.rst:1187
+#: ../../peps/peps/pep-0646.rst:1091 ../../peps/peps/pep-0646.rst:1189
 msgid "After:"
 msgstr ""
 
-#: ../pep-0646.rst:1097
+#: ../../peps/peps/pep-0646.rst:1099
 msgid ""
 "As with star-unpacking in other contexts, the star operator calls "
 "``__iter__`` on the callee, and adds the contents of the resulting iterator "
@@ -1087,7 +1087,7 @@ msgid ""
 "``foo.__getitem__`` would receive ``(a, d, e, c)``."
 msgstr ""
 
-#: ../pep-0646.rst:1103
+#: ../../peps/peps/pep-0646.rst:1105
 msgid ""
 "To put it another way, note that ``x[..., *a, ...]`` produces the same "
 "result as ``x[(..., *a, ...)]`` (with any slices ``i:j`` in ``...`` replaced "
@@ -1095,11 +1095,11 @@ msgid ""
 "``x[(*a,)]``)."
 msgstr ""
 
-#: ../pep-0646.rst:1108
+#: ../../peps/peps/pep-0646.rst:1110
 msgid "TypeVarTuple Implementation"
 msgstr ""
 
-#: ../pep-0646.rst:1110
+#: ../../peps/peps/pep-0646.rst:1112
 msgid ""
 "With this grammar change, ``TypeVarTuple`` is implemented as follows. Note "
 "that this implementation is useful only for the benefit of a) correct "
@@ -1107,11 +1107,11 @@ msgid ""
 "implementation."
 msgstr ""
 
-#: ../pep-0646.rst:1133 ../pep-0646.rst:1271
+#: ../../peps/peps/pep-0646.rst:1135 ../../peps/peps/pep-0646.rst:1273
 msgid "Implications"
 msgstr ""
 
-#: ../pep-0646.rst:1135
+#: ../../peps/peps/pep-0646.rst:1137
 msgid ""
 "This grammar change implies a number of additional changes in behaviour not "
 "required by this PEP. We choose to allow these additional changes rather "
@@ -1119,47 +1119,47 @@ msgid ""
 "as small as possible."
 msgstr ""
 
-#: ../pep-0646.rst:1140
+#: ../../peps/peps/pep-0646.rst:1142
 msgid ""
 "First, the grammar change enables star-unpacking of other structures, such "
 "as lists, within indexing operations:"
 msgstr ""
 
-#: ../pep-0646.rst:1149
+#: ../../peps/peps/pep-0646.rst:1151
 msgid ""
 "Second, more than one instance of a star-unpack can occur within an index:"
 msgstr ""
 
-#: ../pep-0646.rst:1155
+#: ../../peps/peps/pep-0646.rst:1157
 msgid ""
 "Note that this PEP disallows multiple unpacked TypeVarTuples within a single "
 "type parameter list. This requirement would therefore need to be implemented "
 "in type checking tools themselves rather than at the syntax level."
 msgstr ""
 
-#: ../pep-0646.rst:1159
+#: ../../peps/peps/pep-0646.rst:1161
 msgid "Third, slices may co-occur with starred expressions:"
 msgstr ""
 
-#: ../pep-0646.rst:1165
+#: ../../peps/peps/pep-0646.rst:1167
 msgid ""
 "However, note that slices involving starred expressions are still invalid:"
 msgstr ""
 
-#: ../pep-0646.rst:1174
+#: ../../peps/peps/pep-0646.rst:1176
 msgid "Change 2: ``*args`` as a TypeVarTuple"
 msgstr ""
 
-#: ../pep-0646.rst:1176
+#: ../../peps/peps/pep-0646.rst:1178
 msgid ""
 "The second change enables use of ``*args: *Ts`` in function definitions."
 msgstr ""
 
-#: ../pep-0646.rst:1197
+#: ../../peps/peps/pep-0646.rst:1199
 msgid "Where:"
 msgstr ""
 
-#: ../pep-0646.rst:1209
+#: ../../peps/peps/pep-0646.rst:1211
 msgid ""
 "We also need to deal with the ``star_expression`` that results from this "
 "construction. Normally, a ``star_expression`` occurs within the context of e."
@@ -1169,7 +1169,7 @@ msgid ""
 "however, we must process the ``star_expression`` in a different way."
 msgstr ""
 
-#: ../pep-0646.rst:1217
+#: ../../peps/peps/pep-0646.rst:1219
 msgid ""
 "We do this by instead making a special case for the ``star_expression`` "
 "resulting from ``*args: *Ts``, emitting code equivalent to "
@@ -1180,7 +1180,7 @@ msgid ""
 "runtime annotation for ``*args``:"
 msgstr ""
 
-#: ../pep-0646.rst:1233
+#: ../../peps/peps/pep-0646.rst:1235
 msgid ""
 "This allows the runtime annotation to be consistent with an AST "
 "representation that uses a ``Starred`` node for the annotations of ``args`` "
@@ -1188,14 +1188,14 @@ msgid ""
 "recognise the construction:"
 msgstr ""
 
-#: ../pep-0646.rst:1261
+#: ../../peps/peps/pep-0646.rst:1263
 msgid ""
 "Note that the only scenario in which this grammar change allows ``*Ts`` to "
 "be used as a direct annotation (rather than being wrapped in e.g. "
 "``Tuple[*Ts]``) is ``*args``. Other uses are still invalid:"
 msgstr ""
 
-#: ../pep-0646.rst:1273
+#: ../../peps/peps/pep-0646.rst:1275
 msgid ""
 "As with the first grammar change, this change also has a number of side "
 "effects. In particular, the annotation of ``*args`` could be set to a "
@@ -1203,36 +1203,36 @@ msgid ""
 "nonsensical annotations are possible:"
 msgstr ""
 
-#: ../pep-0646.rst:1289
+#: ../../peps/peps/pep-0646.rst:1291
 msgid ""
 "Again, prevention of such annotations will need to be done by, say, static "
 "checkers, rather than at the level of syntax."
 msgstr ""
 
-#: ../pep-0646.rst:1293
+#: ../../peps/peps/pep-0646.rst:1295
 msgid "Alternatives (Why Not Just Use ``Unpack``?)"
 msgstr ""
 
-#: ../pep-0646.rst:1295
+#: ../../peps/peps/pep-0646.rst:1297
 msgid ""
 "If these grammar changes are considered too burdensome, there are two "
 "alternatives."
 msgstr ""
 
-#: ../pep-0646.rst:1298
+#: ../../peps/peps/pep-0646.rst:1300
 msgid ""
 "The first would be to **support change 1 but not change 2**. Variadic "
 "generics are more important to us than the ability to annotate ``*args``."
 msgstr ""
 
-#: ../pep-0646.rst:1301
+#: ../../peps/peps/pep-0646.rst:1303
 msgid ""
 "The second alternative would be to **use ``Unpack`` instead**, requiring no "
 "grammar changes. However, we regard this as a suboptimal solution for two "
 "reasons:"
 msgstr ""
 
-#: ../pep-0646.rst:1305
+#: ../../peps/peps/pep-0646.rst:1307
 msgid ""
 "**Readability**. ``class Array(Generic[DType, Unpack[Shape]])`` is a bit of "
 "a mouthful; the flow of reading is interrupted by length of ``Unpack`` and "
@@ -1240,7 +1240,7 @@ msgid ""
 "much easier to skim, while still marking ``Shape`` as special."
 msgstr ""
 
-#: ../pep-0646.rst:1309
+#: ../../peps/peps/pep-0646.rst:1311
 msgid ""
 "**Intuitiveness**. We think a user is more likely to intuitively understand "
 "the meaning of ``*Ts`` - especially when they see that ``Ts`` is a "
@@ -1249,24 +1249,24 @@ msgid ""
 "reading or writing code that uses variadic generics, this seems reasonable.)"
 msgstr ""
 
-#: ../pep-0646.rst:1316
+#: ../../peps/peps/pep-0646.rst:1318
 msgid ""
 "If even change 1 is thought too significant a change, therefore, it might be "
 "better for us to reconsider our options before going ahead with this second "
 "alternative."
 msgstr ""
 
-#: ../pep-0646.rst:1321
+#: ../../peps/peps/pep-0646.rst:1323
 msgid "Backwards Compatibility"
 msgstr ""
 
-#: ../pep-0646.rst:1323
+#: ../../peps/peps/pep-0646.rst:1325
 msgid ""
 "The ``Unpack`` version of the PEP should be back-portable to previous "
 "versions of Python."
 msgstr ""
 
-#: ../pep-0646.rst:1326
+#: ../../peps/peps/pep-0646.rst:1328
 msgid ""
 "Gradual typing is enabled by the fact that unparameterised variadic classes "
 "are compatible with an arbitrary number of type parameters. This means that "
@@ -1277,17 +1277,17 @@ msgid ""
 "versa)."
 msgstr ""
 
-#: ../pep-0646.rst:1334
+#: ../../peps/peps/pep-0646.rst:1336
 msgid "Reference Implementation"
 msgstr ""
 
-#: ../pep-0646.rst:1336
+#: ../../peps/peps/pep-0646.rst:1338
 msgid ""
 "Two reference implementations of type-checking functionality exist: one in "
 "Pyre, as of v0.9.0, and one in Pyright, as of v1.1.108."
 msgstr ""
 
-#: ../pep-0646.rst:1339
+#: ../../peps/peps/pep-0646.rst:1341
 msgid ""
 "A preliminary implementation of the ``Unpack`` version of the PEP in CPython "
 "is available in `cpython/23527`_. A preliminary version of the version using "
@@ -1295,32 +1295,32 @@ msgid ""
 "available at `mrahtz/cpython/pep637+646`_."
 msgstr ""
 
-#: ../pep-0646.rst:1345
+#: ../../peps/peps/pep-0646.rst:1347
 msgid "Appendix A: Shape Typing Use Cases"
 msgstr ""
 
-#: ../pep-0646.rst:1347
+#: ../../peps/peps/pep-0646.rst:1349
 msgid ""
 "To give this PEP additional context for those particularly interested in the "
 "array typing use case, in this appendix we expand on the different ways this "
 "PEP can be used for specifying shape-based subtypes."
 msgstr ""
 
-#: ../pep-0646.rst:1352
+#: ../../peps/peps/pep-0646.rst:1354
 msgid "Use Case 1: Specifying Shape Values"
 msgstr ""
 
-#: ../pep-0646.rst:1354
+#: ../../peps/peps/pep-0646.rst:1356
 msgid ""
 "The simplest way to parameterise array types is using ``Literal`` type "
 "parameters - e.g. ``Array[Literal[64], Literal[64]]``."
 msgstr ""
 
-#: ../pep-0646.rst:1357
+#: ../../peps/peps/pep-0646.rst:1359
 msgid "We can attach names to each parameter using normal type variables:"
 msgstr ""
 
-#: ../pep-0646.rst:1371
+#: ../../peps/peps/pep-0646.rst:1373
 msgid ""
 "Note that such names have a purely local scope. That is, the name ``K`` is "
 "bound to ``Literal[64]`` only within ``matrix_vector_multiply``. To put it "
@@ -1329,7 +1329,7 @@ msgid ""
 "``K`` were constrained to have the same value throughout the entire program."
 msgstr ""
 
-#: ../pep-0646.rst:1377
+#: ../../peps/peps/pep-0646.rst:1379
 msgid ""
 "The disadvantage of this approach is that we have no ability to enforce "
 "shape semantics across different calls. For example, we can't address the "
@@ -1338,7 +1338,7 @@ msgid ""
 "assuming leading dimensions 'Batch × Time', we have no way of detecting this."
 msgstr ""
 
-#: ../pep-0646.rst:1382
+#: ../../peps/peps/pep-0646.rst:1384
 msgid ""
 "The main advantage is that in some cases, axis sizes really are what we care "
 "about. This is true for both simple linear algebra operations such as the "
@@ -1350,30 +1350,30 @@ msgid ""
 "on array shapes - for example:"
 msgstr ""
 
-#: ../pep-0646.rst:1393
+#: ../../peps/peps/pep-0646.rst:1395
 msgid ""
 "Such arithmetic type operators would only make sense if names such as ``N`` "
 "refer to axis size."
 msgstr ""
 
-#: ../pep-0646.rst:1396
+#: ../../peps/peps/pep-0646.rst:1398
 msgid "Use Case 2: Specifying Shape Semantics"
 msgstr ""
 
-#: ../pep-0646.rst:1398
+#: ../../peps/peps/pep-0646.rst:1400
 msgid ""
 "A second approach (the one that most of the examples in this PEP are based "
 "around) is to forgo annotation with actual axis size, and instead annotate "
 "axis *type*."
 msgstr ""
 
-#: ../pep-0646.rst:1401
+#: ../../peps/peps/pep-0646.rst:1403
 msgid ""
 "This would enable us to solve the problem of enforcing shape properties "
 "across calls. For example:"
 msgstr ""
 
-#: ../pep-0646.rst:1421
+#: ../../peps/peps/pep-0646.rst:1423
 msgid ""
 "Note that in this case, names are *global* (to the extent that we use the "
 "same ``Batch`` type in different place). However, because names refer only "
@@ -1382,84 +1382,84 @@ msgid ""
 "to have a value of, say, 480 throughout)."
 msgstr ""
 
-#: ../pep-0646.rst:1427
+#: ../../peps/peps/pep-0646.rst:1429
 msgid ""
 "The argument *for* this approach is that in many cases, axis *type* is the "
 "more important thing to verify; we care more about which axis is which than "
 "what the specific size of each axis is."
 msgstr ""
 
-#: ../pep-0646.rst:1431
+#: ../../peps/peps/pep-0646.rst:1433
 msgid ""
 "It also does not preclude cases where we wish to describe shape "
 "transformations without knowing the type ahead of time. For example, we can "
 "still write:"
 msgstr ""
 
-#: ../pep-0646.rst:1441
+#: ../../peps/peps/pep-0646.rst:1443
 msgid "We can then use this with:"
 msgstr ""
 
-#: ../pep-0646.rst:1453
+#: ../../peps/peps/pep-0646.rst:1455
 msgid ""
 "The disadvantages are the inverse of the advantages from use case 1. In "
 "particular, this approach does not lend itself well to arithmetic on axis "
 "types: ``Mul[2, Batch]`` would be as meaningless as ``2 * int``."
 msgstr ""
 
-#: ../pep-0646.rst:1458
+#: ../../peps/peps/pep-0646.rst:1460
 msgid "Discussion"
 msgstr ""
 
-#: ../pep-0646.rst:1460
+#: ../../peps/peps/pep-0646.rst:1462
 msgid ""
 "Note that use cases 1 and 2 are mutually exclusive in user code. Users can "
 "verify size or semantic type but not both."
 msgstr ""
 
-#: ../pep-0646.rst:1463
+#: ../../peps/peps/pep-0646.rst:1465
 msgid ""
 "As of this PEP, we are agnostic about which approach will provide most "
 "benefit. Since the features introduced in this PEP are compatible with both "
 "approaches, however, we leave the door open."
 msgstr ""
 
-#: ../pep-0646.rst:1468
+#: ../../peps/peps/pep-0646.rst:1470
 msgid "Why Not Both?"
 msgstr ""
 
-#: ../pep-0646.rst:1470
+#: ../../peps/peps/pep-0646.rst:1472
 msgid "Consider the following 'normal' code:"
 msgstr ""
 
-#: ../pep-0646.rst:1476
+#: ../../peps/peps/pep-0646.rst:1478
 msgid ""
 "Note that we have symbols for both the value of the thing (``x``) and the "
 "type of the thing (``int``). Why can't we do the same with axes? For "
 "example, with an imaginary syntax, we could write:"
 msgstr ""
 
-#: ../pep-0646.rst:1484
+#: ../../peps/peps/pep-0646.rst:1486
 msgid ""
 "This would allow us to access the axis size (say, 32) through the symbol "
 "``TimeValue`` *and* the type through the symbol ``TypeType``."
 msgstr ""
 
-#: ../pep-0646.rst:1487
+#: ../../peps/peps/pep-0646.rst:1489
 msgid ""
 "This might even be possible using existing syntax, through a second level of "
 "parameterisation:"
 msgstr ""
 
-#: ../pep-0646.rst:1493
+#: ../../peps/peps/pep-0646.rst:1495
 msgid "However, we leave exploration of this approach to the future."
 msgstr ""
 
-#: ../pep-0646.rst:1496
+#: ../../peps/peps/pep-0646.rst:1498
 msgid "Appendix B: Shaped Types vs Named Axes"
 msgstr ""
 
-#: ../pep-0646.rst:1498
+#: ../../peps/peps/pep-0646.rst:1500
 msgid ""
 "An issue related to those addressed by this PEP concerns axis *selection*. "
 "For example, if we have an image stored in an array of shape 64×64x3, we "
@@ -1470,35 +1470,35 @@ msgid ""
 "keep on running, resulting in a bug that is serious but silent)."
 msgstr ""
 
-#: ../pep-0646.rst:1506
+#: ../../peps/peps/pep-0646.rst:1508
 msgid ""
 "In response, some libraries have implemented so-called 'named tensors' (in "
 "this context, 'tensor' is synonymous with 'array'), in which axes are "
 "selected not by index but by label - e.g. ``mean(image, axis='channels')``."
 msgstr ""
 
-#: ../pep-0646.rst:1510
+#: ../../peps/peps/pep-0646.rst:1512
 msgid ""
 "A question we are often asked about this PEP is: why not just use named "
 "tensors? The answer is that we consider the named tensors approach "
 "insufficient, for two main reasons:"
 msgstr ""
 
-#: ../pep-0646.rst:1513
+#: ../../peps/peps/pep-0646.rst:1515
 msgid ""
 "**Static checking** of shape correctness is not possible. As mentioned in "
 "`Motivation`_, this is a highly desirable feature in machine learning code "
 "where iteration times are slow by default."
 msgstr ""
 
-#: ../pep-0646.rst:1516
+#: ../../peps/peps/pep-0646.rst:1518
 msgid ""
 "**Interface documentation** is still not possible with this approach. If a "
 "function should *only* be willing to take array arguments that have image-"
 "like shapes, this cannot be stipulated with named tensors."
 msgstr ""
 
-#: ../pep-0646.rst:1520
+#: ../../peps/peps/pep-0646.rst:1522
 msgid ""
 "Additionally, there's the issue of **poor uptake**. At the time of writing, "
 "named tensors have only been implemented in a small number of numerical "
@@ -1511,14 +1511,14 @@ msgid ""
 "this is the case."
 msgstr ""
 
-#: ../pep-0646.rst:1528
+#: ../../peps/peps/pep-0646.rst:1530
 msgid ""
 "Can the named tensors approach be combined with the approach we advocate for "
 "in this PEP? We're not sure. One area of overlap is that in some contexts, "
 "we could do, say:"
 msgstr ""
 
-#: ../pep-0646.rst:1537
+#: ../../peps/peps/pep-0646.rst:1539
 msgid ""
 "Ideally, we might write something like ``im: Array[Height=64, Width=64, "
 "Channels=3]`` - but this won't be possible in the short term, due to the "
@@ -1526,59 +1526,59 @@ msgid ""
 "\"Wait and see what happens before taking any further steps\"."
 msgstr ""
 
-#: ../pep-0646.rst:1543
+#: ../../peps/peps/pep-0646.rst:1545
 msgid "Footnotes"
 msgstr "Notas de rodapé"
 
-#: ../pep-0646.rst:1545
+#: ../../peps/peps/pep-0646.rst:1547
 msgid "'Batch' is machine learning parlance for 'a number of'."
 msgstr ""
 
-#: ../pep-0646.rst:1547
+#: ../../peps/peps/pep-0646.rst:1549
 msgid ""
 "We use the term 'array' to refer to a matrix with an arbitrary number of "
 "dimensions. In NumPy, the corresponding class is the ``ndarray``; in "
 "TensorFlow, the ``Tensor``; and so on."
 msgstr ""
 
-#: ../pep-0646.rst:1551
+#: ../../peps/peps/pep-0646.rst:1553
 msgid ""
 "If the shape begins with 'batch × time', then ``videos_batch[0][1]`` would "
 "select the second frame of the first video. If the shape begins with 'time × "
 "batch', then ``videos_batch[1][0]`` would select the same frame."
 msgstr ""
 
-#: ../pep-0646.rst:1557
+#: ../../peps/peps/pep-0646.rst:1559
 msgid "Endorsements"
 msgstr ""
 
-#: ../pep-0646.rst:1559
+#: ../../peps/peps/pep-0646.rst:1561
 msgid ""
 "Variadic generics have a wide range of uses. For the fraction of that range "
 "involving numerical computing, how likely is it that relevant libraries will "
 "actually make use of the features proposed in this PEP?"
 msgstr ""
 
-#: ../pep-0646.rst:1563
+#: ../../peps/peps/pep-0646.rst:1565
 msgid ""
 "We reached out to a number of people with this question, and received the "
 "following endorsements."
 msgstr ""
 
-#: ../pep-0646.rst:1566
+#: ../../peps/peps/pep-0646.rst:1568
 msgid ""
 "From **Stephan Hoyer**, member of the NumPy Steering Council: [#stephan-"
 "endorsement]_"
 msgstr ""
 
-#: ../pep-0646.rst:1569
+#: ../../peps/peps/pep-0646.rst:1571
 msgid ""
 "I just wanted to thank Matthew & Pradeep for writing this PEP and for "
 "clarifications to the broader context of :pep:`646` for array typing in "
 "https://github.com/python/peps/pull/1904."
 msgstr ""
 
-#: ../pep-0646.rst:1573
+#: ../../peps/peps/pep-0646.rst:1575
 msgid ""
 "As someone who is heavily involved in the Python numerical computing "
 "community (e.g., NumPy, JAX, Xarray), but who is not so familiar with the "
@@ -1587,7 +1587,7 @@ msgid ""
 "considered, and could build upon the infrastructure in this PEP."
 msgstr ""
 
-#: ../pep-0646.rst:1579
+#: ../../peps/peps/pep-0646.rst:1581
 msgid ""
 "Type checking for shapes is something the NumPy community is very interested "
 "in -- there are more thumbs up on the relevant issue on NumPy's GitHub than "
@@ -1595,26 +1595,26 @@ msgid ""
 "added a \"typing\" module that is under active development."
 msgstr ""
 
-#: ../pep-0646.rst:1584
+#: ../../peps/peps/pep-0646.rst:1586
 msgid ""
 "It will certainly require experimentation to figure out the best ways to use "
 "type checking for ndarrays, but this PEP looks like an excellent foundation "
 "for such work."
 msgstr ""
 
-#: ../pep-0646.rst:1588
+#: ../../peps/peps/pep-0646.rst:1590
 msgid ""
 "From **Bas van Beek**, who has worked on preliminary support for shape-"
 "generics in NumPy:"
 msgstr ""
 
-#: ../pep-0646.rst:1591
+#: ../../peps/peps/pep-0646.rst:1593
 msgid ""
 "I very much share Stephan's opinion here and look forward to integrating the "
 "new :pep:`646` variadics into numpy."
 msgstr ""
 
-#: ../pep-0646.rst:1594
+#: ../../peps/peps/pep-0646.rst:1596
 msgid ""
 "In the context of numpy (and tensor typing general): the typing of array "
 "shapes is a fairly complicated subject and the introduction of variadics "
@@ -1622,20 +1622,20 @@ msgid ""
 "expression of both dimensioability as well as basic shape manipulation."
 msgstr ""
 
-#: ../pep-0646.rst:1599
+#: ../../peps/peps/pep-0646.rst:1601
 msgid ""
 "All in all, I'm very interested in where both :pep:`646` and future PEPs "
 "will take us and look forward to further developments."
 msgstr ""
 
-#: ../pep-0646.rst:1602
+#: ../../peps/peps/pep-0646.rst:1604
 msgid ""
 "From **Dan Moldovan**, a Senior Software Engineer on the TensorFlow Dev Team "
 "and author of the TensorFlow RFC, `TensorFlow Canonical Type System`_: [#dan-"
 "endorsement]_"
 msgstr ""
 
-#: ../pep-0646.rst:1605
+#: ../../peps/peps/pep-0646.rst:1607
 msgid ""
 "I'd be interested in using this the mechanisms defined in this PEP to define "
 "rank-generic Tensor types in TensorFlow, which are important in specifying "
@@ -1646,7 +1646,7 @@ msgid ""
 "type definitions for tensors and shapes."
 msgstr ""
 
-#: ../pep-0646.rst:1613
+#: ../../peps/peps/pep-0646.rst:1615
 msgid ""
 "(For the sake of transparency - we also reached out to folks from a third "
 "popular numerical computing library, PyTorch, but did *not* receive a "
@@ -1656,11 +1656,11 @@ msgid ""
 "Python type system.)"
 msgstr ""
 
-#: ../pep-0646.rst:1620
+#: ../../peps/peps/pep-0646.rst:1622
 msgid "Acknowledgements"
 msgstr ""
 
-#: ../pep-0646.rst:1622
+#: ../../peps/peps/pep-0646.rst:1624
 msgid ""
 "Thank you to **Alfonso Castaño**, **Antoine Pitrou**, **Bas v.B.**, **David "
 "Foster**, **Dimitris Vardoulakis**, **Eric Traut**, **Guido van Rossum**, "
@@ -1669,71 +1669,71 @@ msgid ""
 "Mikulik** for helpful feedback and suggestions on drafts of this PEP."
 msgstr ""
 
-#: ../pep-0646.rst:1627
+#: ../../peps/peps/pep-0646.rst:1629
 msgid ""
 "Thank you especially to **Lucio** for suggesting the star syntax (which has "
 "made multiple aspects of this proposal much more concise and intuitive), and "
 "to **Stephan Hoyer** and **Dan Moldovan** for their endorsements."
 msgstr ""
 
-#: ../pep-0646.rst:1630
+#: ../../peps/peps/pep-0646.rst:1632
 msgid "Resources"
 msgstr ""
 
-#: ../pep-0646.rst:1632
+#: ../../peps/peps/pep-0646.rst:1634
 msgid ""
 "Discussions on variadic generics in Python started in 2016 with Issue 193 on "
 "the python/typing GitHub repository [#typing193]_."
 msgstr ""
 
-#: ../pep-0646.rst:1635
+#: ../../peps/peps/pep-0646.rst:1637
 msgid ""
 "Inspired by this discussion, **Ivan Levkivskyi** made a concrete proposal at "
 "PyCon 2019, summarised in notes on 'Type system improvements' [#type-"
 "improvements]_ and 'Static typing of Python numeric stack' [#numeric-stack]_."
 msgstr ""
 
-#: ../pep-0646.rst:1639
+#: ../../peps/peps/pep-0646.rst:1641
 msgid ""
 "Expanding on these ideas, **Mark Mendoza** and **Vincent Siles** gave a "
 "presentation on 'Variadic Type Variables for Decorators and "
 "Tensors' [#variadic-type-variables]_ at the 2019 Python Typing Summit."
 msgstr ""
 
-#: ../pep-0646.rst:1643
+#: ../../peps/peps/pep-0646.rst:1645
 msgid ""
 "Discussion over how type substitution in generic aliases should behave took "
 "place in `cpython#91162`_."
 msgstr ""
 
-#: ../pep-0646.rst:1648
+#: ../../peps/peps/pep-0646.rst:1650
 msgid "References"
 msgstr "Referências"
 
-#: ../pep-0646.rst:1650
+#: ../../peps/peps/pep-0646.rst:1652
 msgid "Python typing issue #193: https://github.com/python/typing/issues/193"
 msgstr ""
 
-#: ../pep-0646.rst:1653
+#: ../../peps/peps/pep-0646.rst:1655
 msgid ""
 "Ivan Levkivskyi, 'Type system improvements', PyCon 2019: https://paper."
 "dropbox.com/doc/Type-system-improvements-HHOkniMG9WcCgS0LzXZAe"
 msgstr ""
 
-#: ../pep-0646.rst:1656
+#: ../../peps/peps/pep-0646.rst:1658
 msgid ""
 "Ivan Levkivskyi, 'Static typing of Python numeric stack', PyCon 2019: "
 "https://paper.dropbox.com/doc/Static-typing-of-Python-numeric-stack-"
 "summary-6ZQzTkgN6e0oXko8fEWwN"
 msgstr ""
 
-#: ../pep-0646.rst:1659
+#: ../../peps/peps/pep-0646.rst:1661
 msgid ""
 "Stephan Hoyer, 'Ideas for array shape typing in Python': https://docs.google."
 "com/document/d/1vpMse4c6DrWH5rq2tQSx3qwP_m_0lyn-Ij4WHqQqRHY/edit"
 msgstr ""
 
-#: ../pep-0646.rst:1662
+#: ../../peps/peps/pep-0646.rst:1664
 msgid ""
 "Mark Mendoza, 'Variadic Type Variables for Decorators and Tensors', Python "
 "Typing Summit 2019: https://github.com/facebook/pyre-check/blob/"
@@ -1741,47 +1741,47 @@ msgid ""
 "Variadic_Type_Variables_for_Decorators_and_Tensors.pdf"
 msgstr ""
 
-#: ../pep-0646.rst:1665
+#: ../../peps/peps/pep-0646.rst:1667
 msgid ""
 "Matthew Rahtz et al., 'Shape annotation syntax proposal': https://docs."
 "google.com/document/d/1But-hjet8-djv519HEKvBN6Ik2lW3yu0ojZo6pG9osY/edit"
 msgstr ""
 
-#: ../pep-0646.rst:1668
+#: ../../peps/peps/pep-0646.rst:1670
 msgid ""
 "Discussion on Python typing-sig mailing list: https://mail.python.org/"
 "archives/list/typing-sig@python.org/thread/SQVTQYWIOI4TIO7NNBTFFWFMSMS2TA4J/"
 msgstr ""
 
-#: ../pep-0646.rst:1671
+#: ../../peps/peps/pep-0646.rst:1673
 msgid "tsanley: https://github.com/ofnote/tsanley"
 msgstr ""
 
-#: ../pep-0646.rst:1673
+#: ../../peps/peps/pep-0646.rst:1675
 msgid "PyContracts: https://github.com/AndreaCensi/contracts"
 msgstr ""
 
-#: ../pep-0646.rst:1675
+#: ../../peps/peps/pep-0646.rst:1677
 msgid "ShapeGuard: https://github.com/Qwlouse/shapeguard"
 msgstr ""
 
-#: ../pep-0646.rst:1685
+#: ../../peps/peps/pep-0646.rst:1687
 msgid ""
 "https://mail.python.org/archives/list/python-dev@python.org/message/"
 "UDM7Y6HLHQBKXQEBIBD5ZLB5XNPDZDXV/"
 msgstr ""
 
-#: ../pep-0646.rst:1687
+#: ../../peps/peps/pep-0646.rst:1689
 msgid ""
 "https://mail.python.org/archives/list/python-dev@python.org/message/"
 "HTCARTYYCHETAMHB6OVRNR5EW5T2CP4J/"
 msgstr ""
 
-#: ../pep-0646.rst:1692
+#: ../../peps/peps/pep-0646.rst:1694
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../pep-0646.rst:1694
+#: ../../peps/peps/pep-0646.rst:1696
 msgid ""
 "This document is placed in the public domain or under the CC0-1.0-Universal "
 "license, whichever is more permissive."

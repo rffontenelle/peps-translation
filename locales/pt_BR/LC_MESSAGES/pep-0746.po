@@ -1,0 +1,305 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the PEPs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PEPs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-14 02:33+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pt_BR\n"
+"Language-Team: pt_BR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../peps/peps/pep-0746.rst
+msgid "Author"
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:3
+msgid "Adrian Garcia Badaracco <adrian@adriangb.com>"
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst
+msgid "Sponsor"
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:4
+msgid "Jelle Zijlstra <jelle.zijlstra@gmail.com>"
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst
+msgid "Discussions-To"
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:5
+msgid ""
+"https://discuss.python.org/t/pep-746-typedmetadata-for-type-checking-of-"
+"pep-593-annotated/53834"
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst
+msgid "Status"
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:6
+msgid "Draft"
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst
+msgid "Type"
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:7
+msgid "Standards Track"
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst
+msgid "Topic"
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:8
+msgid "Typing"
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst
+msgid "Created"
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:9 ../../peps/peps/pep-0746.rst:11
+msgid "20-May-2024"
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst
+msgid "Python-Version"
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:10
+msgid "3.14"
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst
+msgid "Post-History"
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:14
+msgid "Abstract"
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:16
+msgid ""
+"This PEP proposes a mechanism for type checking metadata that uses the :py:"
+"data:`typing.Annotated` type. Metadata objects that implement the new "
+"``__supports_type__`` protocol will be type checked by static type checkers "
+"to ensure that the metadata is valid for the given type."
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:22
+msgid "Motivation"
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:24
+msgid ""
+":pep:`593` introduced ``Annotated`` as a way to attach runtime metadata to "
+"types. In general, the metadata is not meant for static type checkers, but "
+"even so, it is often useful to be able to check that the metadata makes "
+"sense for the given type."
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:29
+msgid ""
+"Take the first example in :pep:`593`, which uses ``Annotated`` to attach "
+"serialization information to a field::"
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:35
+msgid ""
+"Here, the ``struct2.ctype(\"<10s\")`` metadata is meant to be used by a "
+"serialization library to serialize the field. Such libraries can only "
+"serialize a subset of types: it would not make sense to write, for example, "
+"``Annotated[list[str], struct2.ctype(\"<10s\")]``. Yet the type system "
+"provides no way to enforce this. The metadata are completely ignored by type "
+"checkers."
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:41
+msgid ""
+"This use case comes up in libraries like :pypi:`pydantic`, which use "
+"``Annotated`` to attach validation and conversion information to fields."
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:45
+msgid "Specification"
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:46
+msgid ""
+"This PEP introduces a protocol that can be used by static and runtime type "
+"checkers to validate the consistency between ``Annotated`` metadata and a "
+"given type. Objects that implement this protocol have a method named "
+"``__supports_type__`` that takes a single positional argument and returns "
+"``bool``::"
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:55
+msgid ""
+"The protocol being introduced would be defined as follows if it were to be "
+"defined in code form::"
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:63
+msgid ""
+"When a static type checker encounters a type expression of the form "
+"``Annotated[T, M1, M2, ...]``, it should enforce that for each metadata "
+"element in ``M1, M2, ...``, one of the following is true:"
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:66
+msgid ""
+"The metadata element evaluates to an object that does not have a "
+"``__supports_type__`` attribute; or"
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:67
+msgid ""
+"The metadata element evaluates to an object ``M`` that implements the "
+"``SupportsType`` protocol; and, with ``T`` instantiated to a value ``v``, a "
+"call to ``M.__supports_type__(v)`` type checks without errors; and that call "
+"does not evaluate to ``Literal[False]``."
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:71
+msgid ""
+"The body of the ``__supports_type__`` method is not used to check the "
+"validity of the metadata and static type checkers can ignore it. However, "
+"tools that use the annotation at runtime may call the method to check that a "
+"particular value is valid."
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:75
+msgid "For example, to support a generic ``Gt`` metadata, one might write::"
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:94
+msgid ""
+"Implementations may be generic and may use overloads that return "
+"``Literal[True]`` or ``Literal[False]`` to indicate if the metadata is valid "
+"for the given type."
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:97
+msgid ""
+"Implementations may raise a NotImplementedError if they cannot determine if "
+"the metadata is valid for the given type. Tools calling "
+"``__supports_type__`` at runtime should catch this exception and treat it as "
+"if ``__supports_type__`` was not present; they should not take this as an "
+"indication that the metadata is invalid for the type."
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:101
+msgid ""
+"Tools that use the metadata at runtime may choose to ignore the "
+"implementation of ``__supports_type__``; this PEP does not specify how the "
+"method should be used at runtime, only that it may be available for use."
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:105
+msgid "Backwards Compatibility"
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:107
+msgid ""
+"Metadata that does not implement the protocol will be considered valid for "
+"all types, so no breaking changes are introduced for existing code. The new "
+"checks only apply to metadata objects that explicitly implement the protocol "
+"specified by this PEP."
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:112
+msgid "Security Implications"
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:114
+msgid "None."
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:117
+msgid "How to Teach This"
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:119
+msgid ""
+"This protocol is intended mostly for libraries that provide ``Annotated`` "
+"metadata; end users of those libraries are unlikely to need to implement the "
+"protocol themselves. The protocol should be mentioned in the documentation "
+"for :py:data:`typing.Annotated` and in the typing specification."
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:125
+msgid "Reference Implementation"
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:127
+msgid "None yet."
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:130
+msgid "Rejected ideas"
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:133
+msgid "Introducing a type variable instead of a generic class"
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:135
+msgid ""
+"We considered using a special type variable, ``AnnotatedT = "
+"TypeVar(\"AnnotatedT\")``, to represent the type ``T`` of the inner type in "
+"``Annotated``; metadata would be type checked against this type variable. "
+"However, this would require using the old type variable syntax (before :pep:"
+"`695`), which is now a discouraged feature. In addition, this would use type "
+"variables in an unusual way that does not fit well with the rest of the type "
+"system."
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:143
+msgid ""
+"Introducing a new type to ``typing.py`` that all metadata objects should "
+"subclass"
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:145
+msgid ""
+"A previous version of this PEP suggested adding a new generic base class, "
+"``TypedMetadata[U]``, that metadata objects would subclass. If a metadata "
+"object is a subclass of ``TypedMetadata[U]``, then type checkers would check "
+"that the annotation's base type is assignable to ``U``. However, this "
+"mechanism does not integrate as well with the rest of the language; Python "
+"does not generally use marker base classes. In addition, it provides less "
+"flexibility than the current proposal: it would not allow overloads, and it "
+"would require metadata objects to add a new base class, which may make their "
+"runtime implementation more complex."
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:154
+msgid "Acknowledgments"
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:156
+msgid "We thank Eric Traut for suggesting the idea of using a protocol."
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:159
+msgid "Copyright"
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:161
+msgid "This document has been placed in the public domain."
+msgstr ""

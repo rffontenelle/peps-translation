@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PEPs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-20 10:43-0300\n"
+"POT-Creation-Date: 2024-07-14 02:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: pt_BR\n"
@@ -17,427 +17,416 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.13.1\n"
+"Generated-By: Babel 2.15.0\n"
 
-#: ../../peps/pep-0702.rst
+#: ../../peps/peps/pep-0702.rst
 msgid "Author"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:3
+#: ../../peps/peps/pep-0702.rst:3
 msgid "Jelle Zijlstra <jelle.zijlstra@gmail.com>"
 msgstr ""
 
-#: ../../peps/pep-0702.rst
+#: ../../peps/peps/pep-0702.rst
 msgid "Discussions-To"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:4
+#: ../../peps/peps/pep-0702.rst:4
 msgid ""
 "https://discuss.python.org/t/pep-702-marking-deprecations-using-the-type-"
 "system/23036"
 msgstr ""
 
-#: ../../peps/pep-0702.rst
+#: ../../peps/peps/pep-0702.rst
 msgid "Status"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:5
+#: ../../peps/peps/pep-0702.rst:5
 msgid "Accepted"
 msgstr ""
 
-#: ../../peps/pep-0702.rst
+#: ../../peps/peps/pep-0702.rst
 msgid "Type"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:6
+#: ../../peps/peps/pep-0702.rst:6
 msgid "Standards Track"
 msgstr ""
 
-#: ../../peps/pep-0702.rst
+#: ../../peps/peps/pep-0702.rst
 msgid "Topic"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:7
+#: ../../peps/peps/pep-0702.rst:7
 msgid "Typing"
 msgstr ""
 
-#: ../../peps/pep-0702.rst
+#: ../../peps/peps/pep-0702.rst
 msgid "Created"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:9
+#: ../../peps/peps/pep-0702.rst:9
 msgid "30-Dec-2022"
 msgstr ""
 
-#: ../../peps/pep-0702.rst
+#: ../../peps/peps/pep-0702.rst
 msgid "Python-Version"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:10
+#: ../../peps/peps/pep-0702.rst:10
 msgid "3.13"
 msgstr ""
 
-#: ../../peps/pep-0702.rst
+#: ../../peps/peps/pep-0702.rst
 msgid "Post-History"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:11
+#: ../../peps/peps/pep-0702.rst:11
 msgid ""
-"`01-Jan-2023 <https://mail.python.org/archives/list/typing-"
-"sig@python.org/thread/AKTFUYW3WDT7R7PGRIJQZMYHMDJNE4QH/>`__, `22-Jan-2023"
-" <https://discuss.python.org/t/pep-702-marking-deprecations-using-the-"
-"type-system/23036>`__"
+"`01-Jan-2023 <https://mail.python.org/archives/list/typing-sig@python.org/"
+"thread/AKTFUYW3WDT7R7PGRIJQZMYHMDJNE4QH/>`__, `22-Jan-2023 <https://discuss."
+"python.org/t/pep-702-marking-deprecations-using-the-type-system/23036>`__"
 msgstr ""
 
-#: ../../peps/pep-0702.rst
+#: ../../peps/peps/pep-0702.rst
 msgid "Resolution"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:13
+#: ../../peps/peps/pep-0702.rst:13
 msgid ""
 "https://discuss.python.org/t/pep-702-marking-deprecations-using-the-type-"
 "system/23036/61"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:17
+#: ../../peps/peps/pep-0702.rst:17
 msgid "Abstract"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:19
+#: ../../peps/peps/pep-0702.rst:19
 msgid ""
-"This PEP adds an ``@warnings.deprecated()`` decorator that marks a class "
-"or function as deprecated, enabling static checkers to warn when it is "
-"used. By default, this decorator will also raise a runtime "
-"``DeprecationWarning``."
+"This PEP adds an ``@warnings.deprecated()`` decorator that marks a class or "
+"function as deprecated, enabling static checkers to warn when it is used. By "
+"default, this decorator will also raise a runtime ``DeprecationWarning``."
 msgstr ""
 
-#: ../../peps/pep-0702.rst:24
+#: ../../peps/peps/pep-0702.rst:24
 msgid "Motivation"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:26
+#: ../../peps/peps/pep-0702.rst:26
 msgid ""
 "As software evolves, new functionality is added and old functionality "
-"becomes obsolete. Library developers want to work towards removing "
-"obsolete code while giving their users time to migrate to new APIs. "
-"Python provides a mechanism for achieving these goals: the "
-":exc:`DeprecationWarning` warning class, which is used to show warnings "
-"when deprecated functionality is used. This mechanism is widely used: as "
-"of the writing of this PEP, the CPython main branch contains about 150 "
-"distinct code paths that raise :exc:`!DeprecationWarning`. Many third-"
-"party libraries also use :exc:`!DeprecationWarning` to mark deprecations."
-" In the `top 5000 PyPI packages <https://dev.to/hugovk/how-to-search-5000"
-"-python-projects-31gk>`__, there are:"
+"becomes obsolete. Library developers want to work towards removing obsolete "
+"code while giving their users time to migrate to new APIs. Python provides a "
+"mechanism for achieving these goals: the :exc:`DeprecationWarning` warning "
+"class, which is used to show warnings when deprecated functionality is used. "
+"This mechanism is widely used: as of the writing of this PEP, the CPython "
+"main branch contains about 150 distinct code paths that raise :exc:`!"
+"DeprecationWarning`. Many third-party libraries also use :exc:`!"
+"DeprecationWarning` to mark deprecations. In the `top 5000 PyPI packages "
+"<https://dev.to/hugovk/how-to-search-5000-python-projects-31gk>`__, there "
+"are:"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:37
+#: ../../peps/peps/pep-0702.rst:37
 msgid ""
-"1911 matches for the regex ``warnings\\.warn.*\\bDeprecationWarning\\b``,"
-" indicating use of :exc:`!DeprecationWarning` (not including cases where "
-"the warning is split over multiple lines);"
+"1911 matches for the regex ``warnings\\.warn.*\\bDeprecationWarning\\b``, "
+"indicating use of :exc:`!DeprecationWarning` (not including cases where the "
+"warning is split over multiple lines);"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:40
+#: ../../peps/peps/pep-0702.rst:40
 msgid ""
-"1661 matches for the regex ``^\\s*@deprecated``, indicating use of some "
-"sort of deprecation decorator."
+"1661 matches for the regex ``^\\s*@deprecated``, indicating use of some sort "
+"of deprecation decorator."
 msgstr ""
 
-#: ../../peps/pep-0702.rst:43
+#: ../../peps/peps/pep-0702.rst:43
 msgid ""
-"However, the current mechanism is often insufficient to ensure that users"
-" of deprecated functionality update their code in time. For example, the "
-"removal of various long-deprecated :mod:`unittest` features had to be "
-"`reverted "
-"<https://github.com/python/cpython/commit/b50322d20337ca468f2070eedb051a16ee1eba94>`__"
-" from Python 3.11 to give users more time to update their code. Users may"
-" run their test suite with warnings disabled for practical reasons, or "
-"deprecations may be triggered in code paths that are not covered by "
-"tests."
+"However, the current mechanism is often insufficient to ensure that users of "
+"deprecated functionality update their code in time. For example, the removal "
+"of various long-deprecated :mod:`unittest` features had to be `reverted "
+"<https://github.com/python/cpython/commit/"
+"b50322d20337ca468f2070eedb051a16ee1eba94>`__ from Python 3.11 to give users "
+"more time to update their code. Users may run their test suite with warnings "
+"disabled for practical reasons, or deprecations may be triggered in code "
+"paths that are not covered by tests."
 msgstr ""
 
-#: ../../peps/pep-0702.rst:51
+#: ../../peps/peps/pep-0702.rst:51
 msgid ""
-"Providing more ways for users to find out about deprecated functionality "
-"can speed up the migration process. This PEP proposes to leverage static "
-"type checkers to communicate deprecations to users. Such checkers have a "
-"thorough semantic understanding of user code, enabling them to detect and"
-" report deprecations that a single ``grep`` invocation could not find. In"
-" addition, many type checkers integrate with IDEs, enabling users to see "
-"deprecation warnings right in their editors."
+"Providing more ways for users to find out about deprecated functionality can "
+"speed up the migration process. This PEP proposes to leverage static type "
+"checkers to communicate deprecations to users. Such checkers have a thorough "
+"semantic understanding of user code, enabling them to detect and report "
+"deprecations that a single ``grep`` invocation could not find. In addition, "
+"many type checkers integrate with IDEs, enabling users to see deprecation "
+"warnings right in their editors."
 msgstr ""
 
-#: ../../peps/pep-0702.rst:60
+#: ../../peps/peps/pep-0702.rst:60
 msgid "Rationale"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:62
+#: ../../peps/peps/pep-0702.rst:62
 msgid ""
-"At first glance, deprecations may not seem like a topic that type "
-"checkers should touch. After all, type checkers are concerned with "
-"checking whether code will work as is, not with potential future changes."
-" However, the analysis that type checkers perform on code to find type "
-"errors is very similar to the analysis that would be needed to detect "
-"usage of many deprecations. Therefore, type checkers are well placed to "
-"find and report deprecations."
+"At first glance, deprecations may not seem like a topic that type checkers "
+"should touch. After all, type checkers are concerned with checking whether "
+"code will work as is, not with potential future changes. However, the "
+"analysis that type checkers perform on code to find type errors is very "
+"similar to the analysis that would be needed to detect usage of many "
+"deprecations. Therefore, type checkers are well placed to find and report "
+"deprecations."
 msgstr ""
 
-#: ../../peps/pep-0702.rst:69
+#: ../../peps/peps/pep-0702.rst:69
 msgid "Other languages already have similar functionality:"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:71
+#: ../../peps/peps/pep-0702.rst:71
 msgid ""
-"GCC supports a ``deprecated`` `attribute "
-"<https://gcc.gnu.org/onlinedocs/gcc-3.1.1/gcc/Type-Attributes.html>`__ on"
-" function declarations. This powers CPython's ``Py_DEPRECATED`` macro."
+"GCC supports a ``deprecated`` `attribute <https://gcc.gnu.org/onlinedocs/"
+"gcc-3.1.1/gcc/Type-Attributes.html>`__ on function declarations. This powers "
+"CPython's ``Py_DEPRECATED`` macro."
 msgstr ""
 
-#: ../../peps/pep-0702.rst:73
+#: ../../peps/peps/pep-0702.rst:73
 msgid ""
 "GraphQL `supports <https://spec.graphql.org/June2018/#sec-Field-"
 "Deprecation>`__ marking fields as ``@deprecated``."
 msgstr ""
 
-#: ../../peps/pep-0702.rst:75
+#: ../../peps/peps/pep-0702.rst:75
 msgid ""
-"Kotlin `supports "
-"<https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-deprecated/>`__ a "
-"``Deprecated`` annotation."
+"Kotlin `supports <https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-"
+"deprecated/>`__ a ``Deprecated`` annotation."
 msgstr ""
 
-#: ../../peps/pep-0702.rst:77
+#: ../../peps/peps/pep-0702.rst:77
 msgid ""
-"Scala `supports <https://www.scala-"
-"lang.org/api/2.12.5/scala/deprecated.html>`__ an ``@deprecated`` "
-"annotation."
+"Scala `supports <https://www.scala-lang.org/api/2.12.5/scala/deprecated."
+"html>`__ an ``@deprecated`` annotation."
 msgstr ""
 
-#: ../../peps/pep-0702.rst:79
+#: ../../peps/peps/pep-0702.rst:79
 msgid ""
-"Swift `supports <https://docs.swift.org/swift-"
-"book/ReferenceManual/Attributes.html>`__ using the ``@available`` "
-"attribute to mark APIs as deprecated."
+"Swift `supports <https://docs.swift.org/swift-book/ReferenceManual/"
+"Attributes.html>`__ using the ``@available`` attribute to mark APIs as "
+"deprecated."
 msgstr ""
 
-#: ../../peps/pep-0702.rst:81
+#: ../../peps/peps/pep-0702.rst:81
 msgid ""
 "TypeScript `uses <https://www.typescriptlang.org/docs/handbook/jsdoc-"
-"supported-types.html#deprecated>`__ the ``@deprecated`` JSDoc tag to "
-"issue a hint marking use of deprecated functionality."
+"supported-types.html#deprecated>`__ the ``@deprecated`` JSDoc tag to issue a "
+"hint marking use of deprecated functionality."
 msgstr ""
 
-#: ../../peps/pep-0702.rst:85
+#: ../../peps/peps/pep-0702.rst:85
 msgid "Several users have requested support for such a feature:"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:87
+#: ../../peps/peps/pep-0702.rst:87
 msgid ""
-"`typing-sig thread <https://mail.python.org/archives/list/typing-"
-"sig@python.org/thread/E24WTMQUTGKPFKEXVCGGEFFMG7LDF3WT/>`__"
+"`typing-sig thread <https://mail.python.org/archives/list/typing-sig@python."
+"org/thread/E24WTMQUTGKPFKEXVCGGEFFMG7LDF3WT/>`__"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:88
+#: ../../peps/peps/pep-0702.rst:88
 msgid ""
-"`Pyright feature request "
-"<https://github.com/microsoft/pyright/discussions/2300>`__"
+"`Pyright feature request <https://github.com/microsoft/pyright/"
+"discussions/2300>`__"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:89
+#: ../../peps/peps/pep-0702.rst:89
 msgid "`mypy feature request <https://github.com/python/mypy/issues/11439>`__"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:91
+#: ../../peps/peps/pep-0702.rst:91
 msgid "There are similar existing third-party tools:"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:93
+#: ../../peps/peps/pep-0702.rst:93
 msgid ""
-"`Deprecated <https://pypi.org/project/Deprecated/>`__ provides a "
-"decorator to mark classes, functions, or methods as deprecated. Access to"
-" decorated objects raises a runtime warning, but is not detected by type "
-"checkers."
+"`Deprecated <https://pypi.org/project/Deprecated/>`__ provides a decorator "
+"to mark classes, functions, or methods as deprecated. Access to decorated "
+"objects raises a runtime warning, but is not detected by type checkers."
 msgstr ""
 
-#: ../../peps/pep-0702.rst:96
+#: ../../peps/peps/pep-0702.rst:96
 msgid ""
 "`flake8-deprecated <https://pypi.org/project/flake8-deprecated/>`__ is a "
-"linter plugin that warns about use of deprecated features. However, it is"
-" limited to a short, hard-coded list of deprecations."
+"linter plugin that warns about use of deprecated features. However, it is "
+"limited to a short, hard-coded list of deprecations."
 msgstr ""
 
-#: ../../peps/pep-0702.rst:101
+#: ../../peps/peps/pep-0702.rst:101
 msgid "Specification"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:103
+#: ../../peps/peps/pep-0702.rst:103
 msgid ""
-"A new decorator ``@deprecated()`` is added to the :mod:`warnings` module."
-" This decorator can be used on a class, function or method to mark it as "
-"deprecated. This includes :class:`typing.TypedDict` and "
-":class:`typing.NamedTuple` definitions. With overloaded functions, the "
-"decorator may be applied to individual overloads, indicating that the "
-"particular overload is deprecated. The decorator may also be applied to "
-"the overload implementation function, indicating that the entire function"
-" is deprecated."
+"A new decorator ``@deprecated()`` is added to the :mod:`warnings` module. "
+"This decorator can be used on a class, function or method to mark it as "
+"deprecated. This includes :class:`typing.TypedDict` and :class:`typing."
+"NamedTuple` definitions. With overloaded functions, the decorator may be "
+"applied to individual overloads, indicating that the particular overload is "
+"deprecated. The decorator may also be applied to the overload implementation "
+"function, indicating that the entire function is deprecated."
 msgstr ""
 
-#: ../../peps/pep-0702.rst:111
+#: ../../peps/peps/pep-0702.rst:111
 msgid "The decorator takes the following arguments:"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:113
-msgid "A required positional-only argument representing the deprecation message."
+#: ../../peps/peps/pep-0702.rst:113
+msgid ""
+"A required positional-only argument representing the deprecation message."
 msgstr ""
 
-#: ../../peps/pep-0702.rst:114
+#: ../../peps/peps/pep-0702.rst:114
 msgid ""
 "Two keyword-only arguments, ``category`` and ``stacklevel``, controlling "
 "runtime behavior (see under \"Runtime behavior\" below)."
 msgstr ""
 
-#: ../../peps/pep-0702.rst:117
+#: ../../peps/peps/pep-0702.rst:117
 msgid ""
-"The positional-only argument is of type ``str`` and contains a message "
-"that should be shown by the type checker when it encounters a usage of "
-"the decorated object. Tools may clean up the deprecation message for "
-"display, for example by using :func:`inspect.cleandoc` or equivalent "
-"logic. The message must be a string literal. The content of deprecation "
-"messages is up to the user, but it may include the version in which the "
-"deprecated object is to be removed, and information about suggested "
-"replacement APIs."
+"The positional-only argument is of type ``str`` and contains a message that "
+"should be shown by the type checker when it encounters a usage of the "
+"decorated object. Tools may clean up the deprecation message for display, "
+"for example by using :func:`inspect.cleandoc` or equivalent logic. The "
+"message must be a string literal. The content of deprecation messages is up "
+"to the user, but it may include the version in which the deprecated object "
+"is to be removed, and information about suggested replacement APIs."
 msgstr ""
 
-#: ../../peps/pep-0702.rst:126
+#: ../../peps/peps/pep-0702.rst:126
 msgid ""
-"Type checkers should produce a diagnostic whenever they encounter a usage"
-" of an object marked as deprecated. For deprecated overloads, this "
-"includes all calls that resolve to the deprecated overload. For "
-"deprecated classes and functions, this includes:"
+"Type checkers should produce a diagnostic whenever they encounter a usage of "
+"an object marked as deprecated. For deprecated overloads, this includes all "
+"calls that resolve to the deprecated overload. For deprecated classes and "
+"functions, this includes:"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:131
+#: ../../peps/peps/pep-0702.rst:131
 msgid ""
-"References through module, class, or instance attributes "
-"(``module.deprecated_object``, ``module.SomeClass.deprecated_method``, "
-"``module.SomeClass().deprecated_method``)"
+"References through module, class, or instance attributes (``module."
+"deprecated_object``, ``module.SomeClass.deprecated_method``, ``module."
+"SomeClass().deprecated_method``)"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:133
+#: ../../peps/peps/pep-0702.rst:133
 msgid ""
 "Any usage of deprecated objects in their defining module (``x = "
 "deprecated_object()`` in ``module.py``)"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:135
+#: ../../peps/peps/pep-0702.rst:135
 msgid ""
-"If ``import *`` is used, usage of deprecated objects from the module "
-"(``from module import *; x = deprecated_object()``)"
+"If ``import *`` is used, usage of deprecated objects from the module (``from "
+"module import *; x = deprecated_object()``)"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:137
+#: ../../peps/peps/pep-0702.rst:137
 msgid "``from`` imports (``from module import deprecated_object``)"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:138
+#: ../../peps/peps/pep-0702.rst:138
 msgid ""
-"Any syntax that indirectly triggers a call to the function. For example, "
-"if the ``__add__`` method of a class ``C`` is deprecated, then the code "
-"``C() + C()`` should trigger a diagnostic. Similarly, if the setter of a "
-"property is marked deprecated, attempts to set the property should "
-"trigger a diagnostic."
+"Any syntax that indirectly triggers a call to the function. For example, if "
+"the ``__add__`` method of a class ``C`` is deprecated, then the code ``C() + "
+"C()`` should trigger a diagnostic. Similarly, if the setter of a property is "
+"marked deprecated, attempts to set the property should trigger a diagnostic."
 msgstr ""
 
-#: ../../peps/pep-0702.rst:144
+#: ../../peps/peps/pep-0702.rst:144
 msgid ""
-"If a method is marked with the :func:`typing.override` decorator from "
-":pep:`698` and the base class method it overrides is deprecated, the type"
-" checker should produce a diagnostic."
+"If a method is marked with the :func:`typing.override` decorator from :pep:"
+"`698` and the base class method it overrides is deprecated, the type checker "
+"should produce a diagnostic."
 msgstr ""
 
-#: ../../peps/pep-0702.rst:148
+#: ../../peps/peps/pep-0702.rst:148
 msgid ""
-"There are additional scenarios where deprecations could come into play. "
-"For example, an object may implement a :class:`typing.Protocol`, but one "
-"of the methods required for protocol compliance is deprecated. As "
-"scenarios such as this one appear complex and relatively unlikely to come"
-" up in practice, this PEP does not mandate that type checkers detect "
-"them."
+"There are additional scenarios where deprecations could come into play. For "
+"example, an object may implement a :class:`typing.Protocol`, but one of the "
+"methods required for protocol compliance is deprecated. As scenarios such as "
+"this one appear complex and relatively unlikely to come up in practice, this "
+"PEP does not mandate that type checkers detect them."
 msgstr ""
 
-#: ../../peps/pep-0702.rst:155
+#: ../../peps/peps/pep-0702.rst:155
 msgid "Example"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:157
+#: ../../peps/peps/pep-0702.rst:157
 msgid "As an example, consider this library stub named ``library.pyi``:"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:189
+#: ../../peps/peps/pep-0702.rst:189
 msgid "Here is how type checkers should handle usage of this library:"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:211
+#: ../../peps/peps/pep-0702.rst:211
 msgid ""
-"The exact wording of the diagnostics is up to the type checker and is not"
-" part of the specification."
+"The exact wording of the diagnostics is up to the type checker and is not "
+"part of the specification."
 msgstr ""
 
-#: ../../peps/pep-0702.rst:215
+#: ../../peps/peps/pep-0702.rst:215
 msgid "Runtime behavior"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:217
+#: ../../peps/peps/pep-0702.rst:217
 msgid ""
-"In addition to the positional-only ``message`` argument, the "
-"``@deprecated`` decorator takes two keyword-only arguments:"
+"In addition to the positional-only ``message`` argument, the ``@deprecated`` "
+"decorator takes two keyword-only arguments:"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:220
+#: ../../peps/peps/pep-0702.rst:220
 msgid ""
 "``category``: A warning class. Defaults to :exc:`DeprecationWarning`. If "
-"this is set to ``None``, no warning is issued at runtime and the "
-"decorator returns the original object, except for setting the "
-"``__deprecated__`` attribute (see below)."
+"this is set to ``None``, no warning is issued at runtime and the decorator "
+"returns the original object, except for setting the ``__deprecated__`` "
+"attribute (see below)."
 msgstr ""
 
-#: ../../peps/pep-0702.rst:223
+#: ../../peps/peps/pep-0702.rst:223
 msgid ""
-"``stacklevel``: The number of stack frames to skip when issuing the "
-"warning. Defaults to 1, indicating that the warning should be issued at "
-"the site where the deprecated object is called. Internally, the "
-"implementation will add the number of stack frames it uses in wrapper "
-"code."
+"``stacklevel``: The number of stack frames to skip when issuing the warning. "
+"Defaults to 1, indicating that the warning should be issued at the site "
+"where the deprecated object is called. Internally, the implementation will "
+"add the number of stack frames it uses in wrapper code."
 msgstr ""
 
-#: ../../peps/pep-0702.rst:228
+#: ../../peps/peps/pep-0702.rst:228
 msgid ""
 "If the decorated object is a class, the decorator wraps the ``__new__`` "
-"method such that instantiating the class issues a warning. If the "
-"decorated object is a callable, the decorator returns a new callable that"
-" wraps the original callable but raises a warning when called. Otherwise,"
-" the decorator raises a ``TypeError`` (unless ``category=None`` is "
-"passed)."
+"method such that instantiating the class issues a warning. If the decorated "
+"object is a callable, the decorator returns a new callable that wraps the "
+"original callable but raises a warning when called. Otherwise, the decorator "
+"raises a ``TypeError`` (unless ``category=None`` is passed)."
 msgstr ""
 
-#: ../../peps/pep-0702.rst:234
+#: ../../peps/peps/pep-0702.rst:234
 msgid ""
-"There are several scenarios where use of the decorated object cannot "
-"issue a warning, including overloads, ``Protocol`` classes, and abstract "
-"methods. Type checkers may show a warning if ``@deprecated`` is used "
-"without ``category=None`` in these cases."
+"There are several scenarios where use of the decorated object cannot issue a "
+"warning, including overloads, ``Protocol`` classes, and abstract methods. "
+"Type checkers may show a warning if ``@deprecated`` is used without "
+"``category=None`` in these cases."
 msgstr ""
 
-#: ../../peps/pep-0702.rst:238
+#: ../../peps/peps/pep-0702.rst:238
 msgid ""
 "To accommodate runtime introspection, the decorator sets an attribute "
 "``__deprecated__`` on the object it is passed, as well as on the wrapper "
-"callables it generates for deprecated classes and functions. The value of"
-" the attribute is the message passed to the decorator. Decorating objecs "
+"callables it generates for deprecated classes and functions. The value of "
+"the attribute is the message passed to the decorator. Decorating objects "
 "that do not allow setting this attribute is not supported."
 msgstr ""
 
-#: ../../peps/pep-0702.rst:244
+#: ../../peps/peps/pep-0702.rst:244
 msgid ""
 "If a ``Protocol`` with the ``@runtime_checkable`` decorator is marked as "
 "deprecated, the ``__deprecated__`` attribute should not be considered a "
@@ -445,189 +434,185 @@ msgid ""
 "checks."
 msgstr ""
 
-#: ../../peps/pep-0702.rst:248
+#: ../../peps/peps/pep-0702.rst:248
 msgid ""
 "For compatibility with :func:`typing.get_overloads`, the ``@deprecated`` "
 "decorator should be placed after the ``@overload`` decorator."
 msgstr ""
 
-#: ../../peps/pep-0702.rst:252
+#: ../../peps/peps/pep-0702.rst:252
 msgid "Type checker behavior"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:254
+#: ../../peps/peps/pep-0702.rst:254
 msgid ""
 "This PEP does not specify exactly how type checkers should present "
 "deprecation diagnostics to their users. However, some users (e.g., "
-"application developers targeting only a specific version of Python) may "
-"not care about deprecations, while others (e.g., library developers who "
-"want their library to remain compatible with future versions of Python) "
-"would want to catch any use of deprecated functionality in their CI "
-"pipeline. Therefore, it is recommended that type checkers provide "
-"configuration options that cover both use cases. As with any other type "
-"checker error, it is also possible to ignore deprecations using ``# type:"
-" ignore`` comments."
+"application developers targeting only a specific version of Python) may not "
+"care about deprecations, while others (e.g., library developers who want "
+"their library to remain compatible with future versions of Python) would "
+"want to catch any use of deprecated functionality in their CI pipeline. "
+"Therefore, it is recommended that type checkers provide configuration "
+"options that cover both use cases. As with any other type checker error, it "
+"is also possible to ignore deprecations using ``# type: ignore`` comments."
 msgstr ""
 
-#: ../../peps/pep-0702.rst:265
+#: ../../peps/peps/pep-0702.rst:265
 msgid "Deprecation policy"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:267
+#: ../../peps/peps/pep-0702.rst:267
 msgid ""
 "We propose that CPython's deprecation policy (:pep:`387`) is updated to "
 "require that new deprecations use the functionality in this PEP to alert "
-"users about the deprecation, if possible. Concretely, this means that new"
-" deprecations should be accompanied by a change to the ``typeshed`` repo "
-"to add the ``@deprecated`` decorator in the appropriate place. This "
-"requirement does not apply to deprecations that cannot be expressed using"
-" this PEP's functionality."
+"users about the deprecation, if possible. Concretely, this means that new "
+"deprecations should be accompanied by a change to the ``typeshed`` repo to "
+"add the ``@deprecated`` decorator in the appropriate place. This requirement "
+"does not apply to deprecations that cannot be expressed using this PEP's "
+"functionality."
 msgstr ""
 
-#: ../../peps/pep-0702.rst:276
+#: ../../peps/peps/pep-0702.rst:276
 msgid "Backwards compatibility"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:278
+#: ../../peps/peps/pep-0702.rst:278
 msgid ""
-"Creating a new decorator poses no backwards compatibility concerns. As "
-"with all new typing functionality, the ``@deprecated`` decorator will be "
-"added to the ``typing_extensions`` module, enabling its use in older "
-"versions of Python."
+"Creating a new decorator poses no backwards compatibility concerns. As with "
+"all new typing functionality, the ``@deprecated`` decorator will be added to "
+"the ``typing_extensions`` module, enabling its use in older versions of "
+"Python."
 msgstr ""
 
-#: ../../peps/pep-0702.rst:284
+#: ../../peps/peps/pep-0702.rst:284
 msgid "How to teach this"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:286
+#: ../../peps/peps/pep-0702.rst:286
 msgid ""
-"For users who encounter deprecation warnings in their IDE or type checker"
-" output, the messages they receive should be clear and self-explanatory. "
-"Usage of the ``@deprecated`` decorator will be an advanced feature mostly"
-" relevant to library authors. The decorator should be mentioned in "
-"relevant documentation (e.g., :pep:`387` and the "
-":exc:`DeprecationWarning` documentation) as an additional way to mark "
-"deprecated functionality."
+"For users who encounter deprecation warnings in their IDE or type checker "
+"output, the messages they receive should be clear and self-explanatory. "
+"Usage of the ``@deprecated`` decorator will be an advanced feature mostly "
+"relevant to library authors. The decorator should be mentioned in relevant "
+"documentation (e.g., :pep:`387` and the :exc:`DeprecationWarning` "
+"documentation) as an additional way to mark deprecated functionality."
 msgstr ""
 
-#: ../../peps/pep-0702.rst:294
+#: ../../peps/peps/pep-0702.rst:294
 msgid "Reference implementation"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:296
+#: ../../peps/peps/pep-0702.rst:296
 msgid ""
-"A runtime implementation of the ``@deprecated`` decorator is available in"
-" the `typing-extensions <https://pypi.org/project/typing-extensions/>`_ "
-"library since version 4.5.0. The ``pyanalyze`` type checker has "
-"`prototype support <https://github.com/quora/pyanalyze/pull/578>`__ for "
-"emitting deprecation errors, as does `Pyright "
-"<https://github.com/microsoft/pyright/issues/4456>`__."
+"A runtime implementation of the ``@deprecated`` decorator is available in "
+"the `typing-extensions <https://pypi.org/project/typing-extensions/>`_ "
+"library since version 4.5.0. The ``pyanalyze`` type checker has `prototype "
+"support <https://github.com/quora/pyanalyze/pull/578>`__ for emitting "
+"deprecation errors, as does `Pyright <https://github.com/microsoft/pyright/"
+"issues/4456>`__."
 msgstr ""
 
-#: ../../peps/pep-0702.rst:305
+#: ../../peps/peps/pep-0702.rst:305
 msgid "Rejected ideas"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:308
+#: ../../peps/peps/pep-0702.rst:308
 msgid "Deprecation of modules and attributes"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:310
+#: ../../peps/peps/pep-0702.rst:310
 msgid ""
 "This PEP covers deprecations of classes, functions and overloads. This "
-"allows type checkers to detect many but not all possible deprecations. To"
-" evaluate whether additional functionality would be worthwhile, I "
-"`examined "
-"<https://gist.github.com/JelleZijlstra/ff459edc5ff0918e22b56740bb28eb8b>`__"
-" all current deprecations in the CPython standard library."
+"allows type checkers to detect many but not all possible deprecations. To "
+"evaluate whether additional functionality would be worthwhile, I `examined "
+"<https://gist.github.com/JelleZijlstra/ff459edc5ff0918e22b56740bb28eb8b>`__ "
+"all current deprecations in the CPython standard library."
 msgstr ""
 
-#: ../../peps/pep-0702.rst:316
+#: ../../peps/peps/pep-0702.rst:316
 msgid "I found:"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:318
-msgid "74 deprecations of functions, methods and classes (supported by this PEP)"
+#: ../../peps/peps/pep-0702.rst:318
+msgid ""
+"74 deprecations of functions, methods and classes (supported by this PEP)"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:319
+#: ../../peps/peps/pep-0702.rst:319
 msgid "28 deprecations of whole modules (largely due to :pep:`594`)"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:320
+#: ../../peps/peps/pep-0702.rst:320
 msgid ""
 "9 deprecations of function parameters (supported by this PEP through "
 "decorating overloads)"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:322
+#: ../../peps/peps/pep-0702.rst:322
 msgid "1 deprecation of a constant"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:323
+#: ../../peps/peps/pep-0702.rst:323
 msgid ""
 "38 deprecations that are not easily detectable in the type system (for "
-"example, for calling :func:`asyncio.get_event_loop` without an active "
-"event loop)"
+"example, for calling :func:`asyncio.get_event_loop` without an active event "
+"loop)"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:327
+#: ../../peps/peps/pep-0702.rst:327
 msgid ""
-"Modules could be marked as deprecated by adding a ``__deprecated__`` "
-"module-level constant. However, the need for this is limited, and it is "
-"relatively easy to detect usage of deprecated modules simply by grepping."
-" Therefore, this PEP omits support for whole-module deprecations. As a "
-"workaround, users could mark all module-level classes and functions with "
-"``@deprecated``."
+"Modules could be marked as deprecated by adding a ``__deprecated__`` module-"
+"level constant. However, the need for this is limited, and it is relatively "
+"easy to detect usage of deprecated modules simply by grepping. Therefore, "
+"this PEP omits support for whole-module deprecations. As a workaround, users "
+"could mark all module-level classes and functions with ``@deprecated``."
 msgstr ""
 
-#: ../../peps/pep-0702.rst:334
+#: ../../peps/peps/pep-0702.rst:334
 msgid ""
 "For deprecating module-level constants, object attributes, and function "
 "parameters, a ``Deprecated[type, message]`` type modifier, similar to "
-"``Annotated`` could be added. However, this would create a new place in "
-"the type system where strings are just strings, not forward references, "
-"complicating the implementation of type checkers. In addition, my data "
-"show that this feature is not commonly needed."
+"``Annotated`` could be added. However, this would create a new place in the "
+"type system where strings are just strings, not forward references, "
+"complicating the implementation of type checkers. In addition, my data show "
+"that this feature is not commonly needed."
 msgstr ""
 
-#: ../../peps/pep-0702.rst:341
+#: ../../peps/peps/pep-0702.rst:341
 msgid ""
-"Features for deprecating more kinds of objects could be added in a future"
-" PEP."
+"Features for deprecating more kinds of objects could be added in a future "
+"PEP."
 msgstr ""
 
-#: ../../peps/pep-0702.rst:345
+#: ../../peps/peps/pep-0702.rst:345
 msgid "Placing the decorator in the ``typing`` module"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:347
+#: ../../peps/peps/pep-0702.rst:347
 msgid ""
 "An earlier version of this PEP proposed placing the ``@deprecated`` "
-"decorator in the :mod:`typing` module. However, there was feedback that "
-"it would be unexpected for a decorator in the :mod:`typing` module to "
-"have runtime behavior. Therefore, the PEP now proposes adding the "
-"decorator the :mod:`warnings` module instead."
+"decorator in the :mod:`typing` module. However, there was feedback that it "
+"would be unexpected for a decorator in the :mod:`typing` module to have "
+"runtime behavior. Therefore, the PEP now proposes adding the decorator the :"
+"mod:`warnings` module instead."
 msgstr ""
 
-#: ../../peps/pep-0702.rst:354
+#: ../../peps/peps/pep-0702.rst:354
 msgid "Acknowledgments"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:356
+#: ../../peps/peps/pep-0702.rst:356
 msgid ""
 "A call with the typing-sig meetup group led to useful feedback on this "
 "proposal."
 msgstr ""
 
-#: ../../peps/pep-0702.rst:360
+#: ../../peps/peps/pep-0702.rst:360
 msgid "Copyright"
 msgstr ""
 
-#: ../../peps/pep-0702.rst:362
+#: ../../peps/peps/pep-0702.rst:362
 msgid ""
-"This document is placed in the public domain or under the "
-"CC0-1.0-Universal license, whichever is more permissive."
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
 msgstr ""
-

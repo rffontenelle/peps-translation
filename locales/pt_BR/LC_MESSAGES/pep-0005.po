@@ -6,58 +6,66 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PEPs\n"
+"Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 20:07+0000\n"
+"POT-Creation-Date: 2024-07-14 02:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.15.0\n"
 
-#: ../pep-0005.txt
+#: ../../peps/peps/pep-0005.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../pep-0005.txt:3
+#: ../../peps/peps/pep-0005.rst:3
 msgid "Paul Prescod <paul@prescod.net>"
 msgstr ""
 
-#: ../pep-0005.txt
+#: ../../peps/peps/pep-0005.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../pep-0005.txt:4
-msgid "Active"
-msgstr "Ativa"
+#: ../../peps/peps/pep-0005.rst:4
+msgid "Superseded"
+msgstr ""
 
-#: ../pep-0005.txt
+#: ../../peps/peps/pep-0005.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../pep-0005.txt:5
+#: ../../peps/peps/pep-0005.rst:5
 msgid "Process"
 msgstr "Processo"
 
-#: ../pep-0005.txt
+#: ../../peps/peps/pep-0005.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../pep-0005.txt:7
+#: ../../peps/peps/pep-0005.rst:7
 msgid "26-Oct-2000"
 msgstr ""
 
-#: ../pep-0005.txt
+#: ../../peps/peps/pep-0005.rst
 msgid "Post-History"
 msgstr "Pós-história"
 
-#: ../pep-0005.txt:12
+#: ../../peps/peps/pep-0005.rst
+msgid "Superseded-By"
+msgstr ""
+
+#: ../../peps/peps/pep-0005.rst:9
+msgid "387"
+msgstr ""
+
+#: ../../peps/peps/pep-0005.rst:13
 msgid "Abstract"
 msgstr ""
 
-#: ../pep-0005.txt:14
+#: ../../peps/peps/pep-0005.rst:15
 msgid ""
 "In the natural evolution of programming languages it is sometimes necessary "
 "to make changes that modify the behavior of older programs. This PEP "
@@ -65,21 +73,21 @@ msgid ""
 "the installed base of Python users."
 msgstr ""
 
-#: ../pep-0005.txt:21
+#: ../../peps/peps/pep-0005.rst:22
 msgid "Implementation Details"
 msgstr ""
 
-#: ../pep-0005.txt:23
+#: ../../peps/peps/pep-0005.rst:24
 msgid ""
 "Implementation of this PEP requires the addition of a formal warning and "
 "deprecation facility that will be described in another proposal."
 msgstr ""
 
-#: ../pep-0005.txt:28
+#: ../../peps/peps/pep-0005.rst:29
 msgid "Scope"
 msgstr ""
 
-#: ../pep-0005.txt:30
+#: ../../peps/peps/pep-0005.rst:31
 msgid ""
 "These guidelines apply to future versions of Python that introduce backward-"
 "incompatible behavior.  Backward incompatible behavior is a major deviation "
@@ -88,7 +96,7 @@ msgid ""
 "behavior."
 msgstr ""
 
-#: ../pep-0005.txt:36
+#: ../../peps/peps/pep-0005.rst:37
 msgid ""
 "This PEP does not replace or preclude other compatibility strategies such as "
 "dynamic loading of backwards-compatible parsers.  On the other hand, if "
@@ -97,25 +105,25 @@ msgid ""
 "change should be implemented according to these guidelines."
 msgstr ""
 
-#: ../pep-0005.txt:43
+#: ../../peps/peps/pep-0005.rst:44
 msgid ""
 "In general, common sense must prevail in the implementation of these "
 "guidelines.  For instance changing \"sys.copyright\" does not constitute a "
 "backwards-incompatible change of behavior!"
 msgstr ""
 
-#: ../pep-0005.txt:49
+#: ../../peps/peps/pep-0005.rst:50
 msgid "Steps For Introducing Backwards-Incompatible Features"
 msgstr ""
 
-#: ../pep-0005.txt:51
+#: ../../peps/peps/pep-0005.rst:52
 msgid ""
 "Propose backwards-incompatible behavior in a PEP.  The PEP must include a "
 "section on backwards compatibility that describes in detail a plan to "
 "complete the remainder of these steps."
 msgstr ""
 
-#: ../pep-0005.txt:55
+#: ../../peps/peps/pep-0005.rst:56
 msgid ""
 "Once the PEP is accepted as a productive direction, implement an alternate "
 "way to accomplish the task previously provided by the feature that is being "
@@ -124,11 +132,11 @@ msgid ""
 "function."
 msgstr ""
 
-#: ../pep-0005.txt:61
+#: ../../peps/peps/pep-0005.rst:62
 msgid "Formally deprecate the obsolete construct in the Python documentation."
 msgstr ""
 
-#: ../pep-0005.txt:64
+#: ../../peps/peps/pep-0005.rst:65
 msgid ""
 "Add an optional warning mode to the parser that will inform users when the "
 "deprecated construct is used.  In other words, all programs that will behave "
@@ -137,7 +145,7 @@ msgid ""
 "steer people from the deprecated construct to the alternative construct."
 msgstr ""
 
-#: ../pep-0005.txt:71
+#: ../../peps/peps/pep-0005.rst:72
 msgid ""
 "There must be at least a one-year transition period between the release of "
 "the transitional version of Python and the release of the backwards "
@@ -145,3 +153,6 @@ msgid ""
 "programs and migrate them from use of the deprecated construct to the "
 "alternative one."
 msgstr ""
+
+#~ msgid "Active"
+#~ msgstr "Ativa"

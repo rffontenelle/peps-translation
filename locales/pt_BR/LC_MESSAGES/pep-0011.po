@@ -8,733 +8,748 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-20 10:43-0300\n"
+"POT-Creation-Date: 2024-07-14 02:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.13.1\n"
+"Generated-By: Babel 2.15.0\n"
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../../peps/pep-0011.rst:3
+#: ../../peps/peps/pep-0011.rst:3
 msgid "Martin von Löwis <martin@v.loewis.de>, Brett Cannon <brett@python.org>"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../../peps/pep-0011.rst:5
+#: ../../peps/peps/pep-0011.rst:5
 msgid "Active"
 msgstr "Ativa"
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../../peps/pep-0011.rst:6
+#: ../../peps/peps/pep-0011.rst:6
 msgid "Process"
 msgstr "Processo"
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../../peps/pep-0011.rst:8
+#: ../../peps/peps/pep-0011.rst:8
 msgid "07-Jul-2002"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Post-History"
 msgstr "Pós-história"
 
-#: ../../peps/pep-0011.rst:9
+#: ../../peps/peps/pep-0011.rst:9
 msgid ""
-"`18-Aug-2007 <https://mail.python.org/archives/list/python-"
-"dev@python.org/thread/DSSGXU5LBCMKYMZBRVB6RF3YAB6ST5AV/>`__, `14-May-2014"
-" <https://mail.python.org/archives/list/python-"
-"dev@python.org/thread/T7WTUJ6TD3IGYGWV3M4PHJWNLM2WPZAW/>`__, `20-Feb-2015"
-" <https://mail.python.org/archives/list/python-"
-"dev@python.org/thread/OEQHRR2COYZDL6LZ42RBZOMIUB32WI34/>`__, `10-Mar-2022"
-" <https://mail.python.org/archives/list/python-"
+"`18-Aug-2007 <https://mail.python.org/archives/list/python-dev@python.org/"
+"thread/DSSGXU5LBCMKYMZBRVB6RF3YAB6ST5AV/>`__, `14-May-2014 <https://mail."
+"python.org/archives/list/python-dev@python.org/thread/"
+"T7WTUJ6TD3IGYGWV3M4PHJWNLM2WPZAW/>`__, `20-Feb-2015 <https://mail.python.org/"
+"archives/list/python-dev@python.org/thread/OEQHRR2COYZDL6LZ42RBZOMIUB32WI34/"
+">`__, `10-Mar-2022 <https://mail.python.org/archives/list/python-"
 "committers@python.org/thread/K757345KX6W5ZLTWYBUXOXQTJJTL7GW5/>`__,"
 msgstr ""
 
-#: ../../peps/pep-0011.rst:16
+#: ../../peps/peps/pep-0011.rst:16
 msgid "Abstract"
 msgstr ""
 
-#: ../../peps/pep-0011.rst:18
+#: ../../peps/peps/pep-0011.rst:18
 msgid ""
-"This PEP documents how an operating system (platform) becomes supported "
-"in CPython, what platforms are currently supported, and documents past "
-"support."
+"This PEP documents how an operating system (platform) becomes supported in "
+"CPython, what platforms are currently supported, and documents past support."
 msgstr ""
 
-#: ../../peps/pep-0011.rst:24
+#: ../../peps/peps/pep-0011.rst:24
 msgid "Rationale"
 msgstr ""
 
-#: ../../peps/pep-0011.rst:26
+#: ../../peps/peps/pep-0011.rst:26
 msgid ""
-"Over time, the CPython source code has collected various pieces of "
-"platform-specific code, which, at some point in time, was considered "
-"necessary to use CPython on a specific platform. Without access to this "
-"platform, it is not possible to determine whether this code is still "
-"needed.  As a result, this code may either break during CPython's "
-"evolution, or it may become unnecessary as the platforms evolve as well."
+"Over time, the CPython source code has collected various pieces of platform-"
+"specific code, which, at some point in time, was considered necessary to use "
+"CPython on a specific platform. Without access to this platform, it is not "
+"possible to determine whether this code is still needed.  As a result, this "
+"code may either break during CPython's evolution, or it may become "
+"unnecessary as the platforms evolve as well."
 msgstr ""
 
-#: ../../peps/pep-0011.rst:34
+#: ../../peps/peps/pep-0011.rst:34
 msgid ""
 "Allowing these fragments to grow poses the risk of unmaintainability: "
-"without having experts for a large number of platforms, it is not "
-"possible to determine whether a certain change to the CPython source code"
-" will work on all supported platforms."
+"without having experts for a large number of platforms, it is not possible "
+"to determine whether a certain change to the CPython source code will work "
+"on all supported platforms."
 msgstr ""
 
-#: ../../peps/pep-0011.rst:40
+#: ../../peps/peps/pep-0011.rst:40
 msgid ""
-"To reduce this risk, this PEP specifies what is required for a platform "
-"to be considered supported by CPython as well as providing a procedure to"
-" remove code for platforms with few or no CPython users."
+"To reduce this risk, this PEP specifies what is required for a platform to "
+"be considered supported by CPython as well as providing a procedure to "
+"remove code for platforms with few or no CPython users."
 msgstr ""
 
-#: ../../peps/pep-0011.rst:45
+#: ../../peps/peps/pep-0011.rst:45
 msgid ""
 "This PEP also lists what platforms *are* supported by the CPython "
-"interpreter. This lets people know what platforms are directly supported "
-"by the CPython development team."
+"interpreter. This lets people know what platforms are directly supported by "
+"the CPython development team."
 msgstr ""
 
-#: ../../peps/pep-0011.rst:51
+#: ../../peps/peps/pep-0011.rst:51
 msgid "Support tiers"
 msgstr ""
 
-#: ../../peps/pep-0011.rst:53
+#: ../../peps/peps/pep-0011.rst:53
 msgid ""
-"Platform support is broken down into *tiers*. Each tier comes with "
-"different requirements which lead to different promises being made about "
-"support."
+"Platform support is broken down into *tiers*. Each tier comes with different "
+"requirements which lead to different promises being made about support."
 msgstr ""
 
-#: ../../peps/pep-0011.rst:57
+#: ../../peps/peps/pep-0011.rst:57
 msgid ""
 "To be promoted to a tier, steering council support is required and is "
 "expected to be driven by team consensus. Demotion to a lower tier occurs "
-"when the requirements of the current tier are no longer met for a "
-"platform for an extended period of time based on the judgment of the "
-"release manager or steering council. For platforms which no longer meet "
-"the requirements of any tier by b1 of a new feature release, an "
-"announcement will be made to warn the community of the pending removal of"
-" support for the platform (e.g. in the b1 announcement). If the platform "
-"is not brought into line for at least one of the tiers by the first "
-"release candidate, it will be listed as unsupported in this PEP."
+"when the requirements of the current tier are no longer met for a platform "
+"for an extended period of time based on the judgment of the release manager "
+"or steering council. For platforms which no longer meet the requirements of "
+"any tier by b1 of a new feature release, an announcement will be made to "
+"warn the community of the pending removal of support for the platform (e.g. "
+"in the b1 announcement). If the platform is not brought into line for at "
+"least one of the tiers by the first release candidate, it will be listed as "
+"unsupported in this PEP."
 msgstr ""
 
-#: ../../peps/pep-0011.rst:69
+#: ../../peps/peps/pep-0011.rst:69
 msgid "Tier 1"
 msgstr ""
 
-#: ../../peps/pep-0011.rst:72
+#: ../../peps/peps/pep-0011.rst:72
 msgid ""
-"`STATUS "
-"<https://github.com/python/cpython/actions/workflows/build.yml?query=branch%3Amain+is%3Acompleted>`__"
+"`STATUS <https://github.com/python/cpython/actions/workflows/build.yml?"
+"query=branch%3Amain+is%3Acompleted>`__"
 msgstr ""
 
-#: ../../peps/pep-0011.rst:73
+#: ../../peps/peps/pep-0011.rst:73
 msgid "CI failures block releases."
 msgstr ""
 
-#: ../../peps/pep-0011.rst:74
+#: ../../peps/peps/pep-0011.rst:74
 msgid ""
-"Changes which would break the ``main`` branch are not allowed to be "
-"merged; any breakage should be fixed or reverted immediately."
+"Changes which would break the ``main`` branch are not allowed to be merged; "
+"any breakage should be fixed or reverted immediately."
 msgstr ""
 
-#: ../../peps/pep-0011.rst:76
+#: ../../peps/peps/pep-0011.rst:76
 msgid ""
 "All core developers are responsible to keep ``main``, and thus these "
 "platforms, working."
 msgstr ""
 
-#: ../../peps/pep-0011.rst:78 ../../peps/pep-0011.rst:98
+#: ../../peps/peps/pep-0011.rst:78 ../../peps/peps/pep-0011.rst:99
 msgid "Failures on these platforms **block a release**."
 msgstr ""
 
-#: ../../peps/pep-0011.rst:81 ../../peps/pep-0011.rst:101
-#: ../../peps/pep-0011.rst:122
+#: ../../peps/peps/pep-0011.rst:81 ../../peps/peps/pep-0011.rst:102
+#: ../../peps/peps/pep-0011.rst:122
 msgid "Target Triple"
 msgstr ""
 
-#: ../../peps/pep-0011.rst:81 ../../peps/pep-0011.rst:101
-#: ../../peps/pep-0011.rst:122 ../../peps/pep-0011.rst:150
+#: ../../peps/peps/pep-0011.rst:81 ../../peps/peps/pep-0011.rst:102
+#: ../../peps/peps/pep-0011.rst:122 ../../peps/peps/pep-0011.rst:152
 msgid "Notes"
 msgstr ""
 
-#: ../../peps/pep-0011.rst:83
+#: ../../peps/peps/pep-0011.rst:83
+msgid "aarch64-apple-darwin"
+msgstr ""
+
+#: ../../peps/peps/pep-0011.rst:83
+msgid "clang"
+msgstr ""
+
+#: ../../peps/peps/pep-0011.rst:84
 msgid "i686-pc-windows-msvc"
 msgstr ""
 
-#: ../../peps/pep-0011.rst:84
+#: ../../peps/peps/pep-0011.rst:85
 msgid "x86_64-pc-windows-msvc"
 msgstr ""
 
-#: ../../peps/pep-0011.rst:85
+#: ../../peps/peps/pep-0011.rst:86
 msgid "x86_64-apple-darwin"
 msgstr ""
 
-#: ../../peps/pep-0011.rst:85 ../../peps/pep-0011.rst:130
+#: ../../peps/peps/pep-0011.rst:86 ../../peps/peps/pep-0011.rst:132
 msgid "BSD libc, clang"
 msgstr ""
 
-#: ../../peps/pep-0011.rst:86 ../../peps/pep-0011.rst:108
+#: ../../peps/peps/pep-0011.rst:87 ../../peps/peps/pep-0011.rst:108
 msgid "x86_64-unknown-linux-gnu"
 msgstr ""
 
-#: ../../peps/pep-0011.rst:86 ../../peps/pep-0011.rst:104
-#: ../../peps/pep-0011.rst:107 ../../peps/pep-0011.rst:127
+#: ../../peps/peps/pep-0011.rst:87 ../../peps/peps/pep-0011.rst:104
+#: ../../peps/peps/pep-0011.rst:130 ../../peps/peps/pep-0011.rst:131
 msgid "glibc, gcc"
 msgstr ""
 
-#: ../../peps/pep-0011.rst:91
+#: ../../peps/peps/pep-0011.rst:92
 msgid "Tier 2"
 msgstr ""
 
-#: ../../peps/pep-0011.rst:93
+#: ../../peps/peps/pep-0011.rst:94
 msgid ""
-"`STATUS "
-"<https://buildbot.python.org/all/#/builders?tags=%2B3.x&tags=%2Btier-2>`__"
+"`STATUS <https://buildbot.python.org/all/#/builders?tags=%2B3."
+"x&tags=%2Btier-2>`__"
 msgstr ""
 
-#: ../../peps/pep-0011.rst:94 ../../peps/pep-0011.rst:116
+#: ../../peps/peps/pep-0011.rst:95 ../../peps/peps/pep-0011.rst:116
 msgid "Must have a reliable buildbot."
 msgstr ""
 
-#: ../../peps/pep-0011.rst:95
+#: ../../peps/peps/pep-0011.rst:96
 msgid "At least **two** core developers are signed up to support the platform."
 msgstr ""
 
-#: ../../peps/pep-0011.rst:96
+#: ../../peps/peps/pep-0011.rst:97
 msgid ""
 "Changes which break any of these platforms are to be **fixed or reverted "
 "within 24 hours**."
 msgstr ""
 
-#: ../../peps/pep-0011.rst:101 ../../peps/pep-0011.rst:122
+#: ../../peps/peps/pep-0011.rst:102 ../../peps/peps/pep-0011.rst:122
 msgid "Contacts"
 msgstr ""
 
-#: ../../peps/pep-0011.rst:103
-msgid "aarch64-apple-darwin"
-msgstr ""
-
-#: ../../peps/pep-0011.rst:103
-msgid "clang"
-msgstr ""
-
-#: ../../peps/pep-0011.rst:103
-msgid "Ned Deily, Ronald Oussoren, Dong-hee Na"
-msgstr ""
-
-#: ../../peps/pep-0011.rst:104
+#: ../../peps/peps/pep-0011.rst:104
 msgid "aarch64-unknown-linux-gnu"
 msgstr ""
 
-#: ../../peps/pep-0011.rst:106 ../../peps/pep-0011.rst:108
-#: ../../peps/pep-0011.rst:126
+#: ../../peps/peps/pep-0011.rst:106 ../../peps/peps/pep-0011.rst:108
+#: ../../peps/peps/pep-0011.rst:128
 msgid "glibc, clang"
 msgstr ""
 
-#: ../../peps/pep-0011.rst:104 ../../peps/pep-0011.rst:107
+#: ../../peps/peps/pep-0011.rst:104
 msgid "Petr Viktorin, Victor Stinner"
 msgstr ""
 
-#: ../../peps/pep-0011.rst:106 ../../peps/pep-0011.rst:108
+#: ../../peps/peps/pep-0011.rst:106 ../../peps/peps/pep-0011.rst:108
 msgid "Victor Stinner, Gregory P. Smith"
 msgstr ""
 
-#: ../../peps/pep-0011.rst:107 ../../peps/pep-0011.rst:126
-msgid "powerpc64le-unknown-linux-gnu"
-msgstr ""
-
-#: ../../peps/pep-0011.rst:113
-msgid "Tier 3"
-msgstr ""
-
-#: ../../peps/pep-0011.rst:115
-msgid ""
-"`STATUS "
-"<https://buildbot.python.org/all/#/builders?tags=%2B3.x&tags=%2Btier-3>`__"
-msgstr ""
-
-#: ../../peps/pep-0011.rst:117
-msgid "At least **one** core developer is signed up to support the platform."
-msgstr ""
-
-#: ../../peps/pep-0011.rst:118
-msgid "No response SLA to failures."
-msgstr ""
-
-#: ../../peps/pep-0011.rst:119
-msgid "Failures on these platforms do **not** block a release."
-msgstr ""
-
-#: ../../peps/pep-0011.rst:124
-msgid "aarch64-pc-windows-msvc"
-msgstr ""
-
-#: ../../peps/pep-0011.rst:124
-msgid "Steve Dower"
-msgstr ""
-
-#: ../../peps/pep-0011.rst:125
-msgid "armv7l-unknown-linux-gnueabihf"
-msgstr ""
-
-#: ../../peps/pep-0011.rst:125
-msgid "Raspberry Pi OS, glibc, gcc"
-msgstr ""
-
-#: ../../peps/pep-0011.rst:125
-msgid "Gregory P. Smith"
-msgstr ""
-
-#: ../../peps/pep-0011.rst:126 ../../peps/pep-0011.rst:127
-#: ../../peps/pep-0011.rst:130
-msgid "Victor Stinner"
-msgstr ""
-
-#: ../../peps/pep-0011.rst:127
-msgid "s390x-unknown-linux-gnu"
-msgstr ""
-
-#: ../../peps/pep-0011.rst:128
-msgid "wasm32-unknown-emscripten"
-msgstr ""
-
-#: ../../peps/pep-0011.rst:128 ../../peps/pep-0011.rst:129
-msgid "Christian Heimes, Brett Cannon"
-msgstr ""
-
-#: ../../peps/pep-0011.rst:129
+#: ../../peps/peps/pep-0011.rst:107
 msgid "wasm32-unknown-wasi"
 msgstr ""
 
-#: ../../peps/pep-0011.rst:130
+#: ../../peps/peps/pep-0011.rst:107
+msgid "WASI SDK, Wasmtime"
+msgstr ""
+
+#: ../../peps/peps/pep-0011.rst:107
+msgid "Brett Cannon, Eric Snow"
+msgstr ""
+
+#: ../../peps/peps/pep-0011.rst:113
+msgid "Tier 3"
+msgstr ""
+
+#: ../../peps/peps/pep-0011.rst:115
+msgid ""
+"`STATUS <https://buildbot.python.org/all/#/builders?tags=%2B3."
+"x&tags=%2Btier-3>`__"
+msgstr ""
+
+#: ../../peps/peps/pep-0011.rst:117
+msgid "At least **one** core developer is signed up to support the platform."
+msgstr ""
+
+#: ../../peps/peps/pep-0011.rst:118
+msgid "No response SLA to failures."
+msgstr ""
+
+#: ../../peps/peps/pep-0011.rst:119
+msgid "Failures on these platforms do **not** block a release."
+msgstr ""
+
+#: ../../peps/peps/pep-0011.rst:124
+msgid "aarch64-pc-windows-msvc"
+msgstr ""
+
+#: ../../peps/peps/pep-0011.rst:124
+msgid "Steve Dower"
+msgstr ""
+
+#: ../../peps/peps/pep-0011.rst:125
+msgid "arm64-apple-ios"
+msgstr ""
+
+#: ../../peps/peps/pep-0011.rst:125
+msgid "iOS on device"
+msgstr ""
+
+#: ../../peps/peps/pep-0011.rst:125 ../../peps/peps/pep-0011.rst:126
+msgid "Ned Deily"
+msgstr ""
+
+#: ../../peps/peps/pep-0011.rst:126
+msgid "arm64-apple-ios-simulator"
+msgstr ""
+
+#: ../../peps/peps/pep-0011.rst:126
+msgid "iOS on M1 macOS simulator"
+msgstr ""
+
+#: ../../peps/peps/pep-0011.rst:127
+msgid "armv7l-unknown-linux-gnueabihf"
+msgstr ""
+
+#: ../../peps/peps/pep-0011.rst:127
+msgid "Raspberry Pi OS, glibc, gcc"
+msgstr ""
+
+#: ../../peps/peps/pep-0011.rst:127
+msgid "Gregory P. Smith"
+msgstr ""
+
+#: ../../peps/peps/pep-0011.rst:128
+msgid "powerpc64le-unknown-linux-gnu"
+msgstr ""
+
+#: ../../peps/peps/pep-0011.rst:128 ../../peps/peps/pep-0011.rst:130
+#: ../../peps/peps/pep-0011.rst:131 ../../peps/peps/pep-0011.rst:132
+msgid "Victor Stinner"
+msgstr ""
+
+#: ../../peps/peps/pep-0011.rst:131
+msgid "s390x-unknown-linux-gnu"
+msgstr ""
+
+#: ../../peps/peps/pep-0011.rst:132
 msgid "x86_64-unknown-freebsd"
 msgstr ""
 
-#: ../../peps/pep-0011.rst:135
+#: ../../peps/peps/pep-0011.rst:137
 msgid "All other platforms"
 msgstr ""
 
-#: ../../peps/pep-0011.rst:137
+#: ../../peps/peps/pep-0011.rst:139
 msgid ""
 "Support for a platform may be partial within the code base, such as from "
-"active development around platform support or accidentally. Code changes "
-"to platforms not listed in the above tiers may be rejected or removed "
-"from the code base without a deprecation process if they cause a "
-"maintenance burden or obstruct general improvements."
+"active development around platform support or accidentally. Code changes to "
+"platforms not listed in the above tiers may be rejected or removed from the "
+"code base without a deprecation process if they cause a maintenance burden "
+"or obstruct general improvements."
 msgstr ""
 
-#: ../../peps/pep-0011.rst:143
+#: ../../peps/peps/pep-0011.rst:145
 msgid ""
-"Platforms not listed here may be supported by the wider Python community "
-"in some way. If your desired platform is not listed above, please perform"
-" a search online to see if someone is already providing support in some "
-"form."
+"Platforms not listed here may be supported by the wider Python community in "
+"some way. If your desired platform is not listed above, please perform a "
+"search online to see if someone is already providing support in some form."
 msgstr ""
 
-#: ../../peps/pep-0011.rst:153
+#: ../../peps/peps/pep-0011.rst:155
 msgid "Microsoft Windows"
 msgstr ""
 
-#: ../../peps/pep-0011.rst:155
+#: ../../peps/peps/pep-0011.rst:157
 msgid ""
 "Windows versions prior to Windows 10 follow Microsoft's `Fixed Lifecycle "
-"Policy <https://learn.microsoft.com/en-us/lifecycle/policies/fixed>`__, "
-"with a mainstream support phase for 5 years after release, where the "
-"product is generally commercially available, and an additional 5 year "
-"extended support phase, where paid support is still available and certain"
-" bug fixes are released. `Extended Security Updates (ESU) "
-"<https://learn.microsoft.com/en-us/lifecycle/faq/extended-security-"
-"updates>`_ is a paid program available to high-volume enterprise "
-"customers as a \"last resort\" option to receive certain security updates"
-" after extended support ends. ESU is considered a distinct phase that "
-"follows the expiration of extended support."
+"Policy <https://learn.microsoft.com/en-us/lifecycle/policies/fixed>`__, with "
+"a mainstream support phase for 5 years after release, where the product is "
+"generally commercially available, and an additional 5 year extended support "
+"phase, where paid support is still available and certain bug fixes are "
+"released. `Extended Security Updates (ESU) <https://learn.microsoft.com/en-"
+"us/lifecycle/faq/extended-security-updates>`_ is a paid program available to "
+"high-volume enterprise customers as a \"last resort\" option to receive "
+"certain security updates after extended support ends. ESU is considered a "
+"distinct phase that follows the expiration of extended support."
 msgstr ""
 
-#: ../../peps/pep-0011.rst:167
+#: ../../peps/peps/pep-0011.rst:169
 msgid ""
-"Windows 10 and later follow Microsoft's `Modern Lifecycle Policy "
-"<https://learn.microsoft.com/en-us/lifecycle/policies/modern>`__, which "
-"varies per-product, per-version, per-edition and per-channel. Generally, "
-"feature updates (1709, 22H2) occur every 6-12 months and are supported "
-"for 18-36 months; Server and IoT editions, and LTSC channel releases are "
-"supported for 5-10 years, and the latest feature release of a major "
-"version (Windows 10, Windows 11) generally receives new updates for at "
-"least 10 years following release. Microsoft's `Windows Lifecycle FAQ "
-"<https://learn.microsoft.com/en-us/lifecycle/faq/windows>`_ has more "
-"specific and up-to-date guidance."
+"Windows 10 and later follow Microsoft's `Modern Lifecycle Policy <https://"
+"learn.microsoft.com/en-us/lifecycle/policies/modern>`__, which varies per-"
+"product, per-version, per-edition and per-channel. Generally, feature "
+"updates (1709, 22H2) occur every 6-12 months and are supported for 18-36 "
+"months; Server and IoT editions, and LTSC channel releases are supported for "
+"5-10 years, and the latest feature release of a major version (Windows 10, "
+"Windows 11) generally receives new updates for at least 10 years following "
+"release. Microsoft's `Windows Lifecycle FAQ <https://learn.microsoft.com/en-"
+"us/lifecycle/faq/windows>`_ has more specific and up-to-date guidance."
 msgstr ""
 
-#: ../../peps/pep-0011.rst:179
+#: ../../peps/peps/pep-0011.rst:181
 msgid ""
-"CPython's Windows support currently follows Microsoft's lifecycles. A new"
-" feature release X.Y.0 will support all Windows versions whose *extended "
-"support* phase has not yet expired. Subsequent bug fix releases will "
-"support the same Windows versions as the original feature release, even "
-"if no longer supported by Microsoft. New versions of Windows released "
-"while CPython is in maintenance mode may be supported at the discretion "
-"of the core team and release manager."
+"CPython's Windows support currently follows Microsoft's lifecycles. A new "
+"feature release X.Y.0 will support all Windows versions whose *extended "
+"support* phase has not yet expired. Subsequent bug fix releases will support "
+"the same Windows versions as the original feature release, even if no longer "
+"supported by Microsoft. New versions of Windows released while CPython is in "
+"maintenance mode may be supported at the discretion of the core team and "
+"release manager."
 msgstr ""
 
-#: ../../peps/pep-0011.rst:187
+#: ../../peps/peps/pep-0011.rst:189
+msgid ""
+"As of 2024, our current interpretation of Microsoft's lifecycles is that "
+"Windows for IoT and embedded systems is out of scope for new CPython "
+"releases, as the intent of those is to avoid feature updates. Windows Server "
+"will usually be the oldest version still receiving free security fixes, and "
+"that will determine the earliest supported client release with equivalent "
+"API version (which will usually be past its end-of-life)."
+msgstr ""
+
+#: ../../peps/peps/pep-0011.rst:196
 msgid ""
 "Each feature release is built by a specific version of Microsoft Visual "
 "Studio. That version should have mainstream support when the release is "
-"made. Developers of extension modules will generally need to use the same"
-" Visual Studio release; they are concerned both with the availability of "
-"the versions they need to use, and with keeping the zoo of versions "
-"small. The CPython source tree will keep unmaintained build files for "
-"older Visual Studio releases, for which patches will be accepted. Such "
-"build files will be removed from the source tree 3 years after the "
-"extended support for the compiler has ended (but continue to remain "
-"available in revision control)."
+"made. Developers of extension modules will generally need to use the same "
+"Visual Studio release; they are concerned both with the availability of the "
+"versions they need to use, and with keeping the zoo of versions small. The "
+"CPython source tree will keep unmaintained build files for older Visual "
+"Studio releases, for which patches will be accepted. Such build files will "
+"be removed from the source tree 3 years after the extended support for the "
+"compiler has ended (but continue to remain available in revision control)."
 msgstr ""
 
-#: ../../peps/pep-0011.rst:200
+#: ../../peps/peps/pep-0011.rst:209
 msgid "Legacy C Locale"
 msgstr ""
 
-#: ../../peps/pep-0011.rst:202
+#: ../../peps/peps/pep-0011.rst:211
 msgid ""
 "Starting with CPython 3.7.0, \\*nix platforms are expected to provide at "
 "least one of ``C.UTF-8`` (full locale), ``C.utf8`` (full locale) or "
-"``UTF-8`` (``LC_CTYPE``-only locale) as an alternative to the legacy "
-"``C`` locale."
+"``UTF-8`` (``LC_CTYPE``-only locale) as an alternative to the legacy ``C`` "
+"locale."
 msgstr ""
 
-#: ../../peps/pep-0011.rst:207
+#: ../../peps/peps/pep-0011.rst:216
 msgid ""
-"Any Unicode-related integration problems that occur only in the legacy "
-"``C`` locale and cannot be reproduced in an appropriately configured non-"
-"ASCII locale will be closed as \"won't fix\"."
+"Any Unicode-related integration problems that occur only in the legacy ``C`` "
+"locale and cannot be reproduced in an appropriately configured non-ASCII "
+"locale will be closed as \"won't fix\"."
 msgstr ""
 
-#: ../../peps/pep-0011.rst:213
+#: ../../peps/peps/pep-0011.rst:222
 msgid "Unsupporting platforms"
 msgstr ""
 
-#: ../../peps/pep-0011.rst:215
+#: ../../peps/peps/pep-0011.rst:224
 msgid ""
-"If a platform drops out of tiered support, a note must be posted in this "
-"PEP that the platform is no longer actively supported.  This note must "
-"include:"
+"If a platform drops out of tiered support, a note must be posted in this PEP "
+"that the platform is no longer actively supported.  This note must include:"
 msgstr ""
 
-#: ../../peps/pep-0011.rst:219
-msgid "the name of the system"
+#: ../../peps/peps/pep-0011.rst:228
+msgid "The name of the system,"
 msgstr ""
 
-#: ../../peps/pep-0011.rst:220
-msgid "the first release number that does not support this platform anymore, and"
-msgstr ""
-
-#: ../../peps/pep-0011.rst:222
-msgid "the first release where the historical support code is actively removed"
-msgstr ""
-
-#: ../../peps/pep-0011.rst:225
+#: ../../peps/peps/pep-0011.rst:229
 msgid ""
-"In some cases, it is not possible to identify the specific list of "
-"systems for which some code is used (e.g. when autoconf tests for absence"
-" of some feature which is considered present on all supported systems).  "
-"In this case, the name will give the precise condition (usually a "
-"preprocessor symbol) that will become unsupported."
+"The first release number that does not support this platform anymore, and"
 msgstr ""
 
-#: ../../peps/pep-0011.rst:232
+#: ../../peps/peps/pep-0011.rst:231
 msgid ""
-"At the same time, the CPython source code must be changed to produce a "
-"build-time error if somebody tries to install CPython on this platform.  "
-"On platforms using autoconf, configure must fail. This gives potential "
-"users of the platform a chance to step forward and offer maintenance."
+"The first release where the historical support code is actively removed."
 msgstr ""
 
-#: ../../peps/pep-0011.rst:240
+#: ../../peps/peps/pep-0011.rst:234
+msgid ""
+"In some cases, it is not possible to identify the specific list of systems "
+"for which some code is used (e.g. when autoconf tests for absence of some "
+"feature which is considered present on all supported systems).  In this "
+"case, the name will give the precise condition (usually a preprocessor "
+"symbol) that will become unsupported."
+msgstr ""
+
+#: ../../peps/peps/pep-0011.rst:241
+msgid ""
+"At the same time, the CPython build must be changed to produce a warning if "
+"somebody tries to install CPython on this platform.  On platforms using "
+"autoconf, configure should also be made emit a warning about the unsupported "
+"platform."
+msgstr ""
+
+#: ../../peps/peps/pep-0011.rst:246
+msgid ""
+"This gives potential users of the platform a chance to step forward and "
+"offer maintenance.  We do not treat a platform that loses Tier 3 support any "
+"worse than a platform that was never supported."
+msgstr ""
+
+#: ../../peps/peps/pep-0011.rst:252
 msgid "No-longer-supported platforms"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Name:             MS-DOS, MS-Windows 3.x"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Unsupported in:   Python 2.0"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Code removed in:  Python 2.1"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Name:             SunOS 4"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Unsupported in:   Python 2.3"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Code removed in:  Python 2.4"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Name:             DYNIX"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Name:             dgux"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Name:             Minix"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Name:             Irix 4 and --with-sgi-dl"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Name:             Linux 1"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Name:             Systems defining __d6_pthread_create (configure.in)"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid ""
 "Name:             Systems defining PY_PTHREAD_D4, PY_PTHREAD_D6, or "
 "PY_PTHREAD_D7 in thread_pthread.h"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Name:             Systems using --with-dl-dld"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Name:             Systems using --without-universal-newlines,"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Name:             MacOS 9"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Unsupported in:   Python 2.4"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Name:             Systems using --with-wctype-functions"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Unsupported in:   Python 2.6"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Code removed in:  Python 2.6"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Name:             Win9x, WinME, NT4"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Unsupported in:   Python 2.6 (warning in 2.5 installer)"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Name:             AtheOS"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Unsupported in:   Python 2.6 (with \"AtheOS\" changed to \"Syllable\")"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Build broken in:  Python 2.7 (edit configure to re-enable)"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Code removed in:  Python 3.0"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Details:          http://www.syllable.org/discussion.php?id=2320"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Name:             BeOS"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Unsupported in:   Python 2.6 (warning in configure)"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Name:             Systems using Mach C Threads"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Unsupported in:   Python 3.2"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Code removed in:  Python 3.3"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Name:             SunOS lightweight processes (LWP)"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Name:             Systems using --with-pth (GNU pth threads)"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Name:             Systems using Irix threads"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Name:             OSF* systems (issue 8606)"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Name:             OS/2 (issue 16135)"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Unsupported in:   Python 3.3"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Code removed in:  Python 3.4"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Name:             VMS (issue 16136)"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Name:             Windows 2000"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Name:             Windows systems where COMSPEC points to command.com"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Name:             RISC OS"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Unsupported in:   Python 3.0 (some code actually removed)"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Name:             IRIX"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Unsupported in:   Python 3.7"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Code removed in:  Python 3.7"
 msgstr ""
 
-#: ../../peps/pep-0011.rst
+#: ../../peps/peps/pep-0011.rst
 msgid "Name:             Systems without multithreading support"
 msgstr ""
 
-#: ../../peps/pep-0011.rst:360
+#: ../../peps/peps/pep-0011.rst
+msgid "Name:             wasm32-unknown-emscripten"
+msgstr ""
+
+#: ../../peps/peps/pep-0011.rst
+msgid "Unsupported in:   Python 3.13"
+msgstr ""
+
+#: ../../peps/peps/pep-0011.rst
+msgid "Code removed in:  Unknown"
+msgstr ""
+
+#: ../../peps/peps/pep-0011.rst:376
 msgid "Discussions"
 msgstr ""
 
-#: ../../peps/pep-0011.rst:362
+#: ../../peps/peps/pep-0011.rst:378
 msgid ""
-"April 2022: `Consider adding a Tier 3 to tiered platform support "
-"<https://mail.python.org/archives/list/python-"
-"committers@python.org/thread/V3OZPJGA5VJFYM6XYGPZIVPOIYKX6KTD/>`_ (Victor"
-" Stinner)"
+"April 2022: `Consider adding a Tier 3 to tiered platform support <https://"
+"mail.python.org/archives/list/python-committers@python.org/thread/"
+"V3OZPJGA5VJFYM6XYGPZIVPOIYKX6KTD/>`_ (Victor Stinner)"
 msgstr ""
 
-#: ../../peps/pep-0011.rst:365
+#: ../../peps/peps/pep-0011.rst:381
 msgid ""
-"March 2022: `Proposed tiered platform support "
-"<https://mail.python.org/archives/list/python-"
-"committers@python.org/thread/K757345KX6W5ZLTWYBUXOXQTJJTL7GW5/>`_ (Brett "
-"Cannon)"
+"March 2022: `Proposed tiered platform support <https://mail.python.org/"
+"archives/list/python-committers@python.org/thread/"
+"K757345KX6W5ZLTWYBUXOXQTJJTL7GW5/>`_ (Brett Cannon)"
 msgstr ""
 
-#: ../../peps/pep-0011.rst:368
+#: ../../peps/peps/pep-0011.rst:384
 msgid ""
 "February 2015: `Update to PEP 11 to clarify garnering platform support "
-"<https://mail.python.org/archives/list/python-"
-"dev@python.org/thread/OEQHRR2COYZDL6LZ42RBZOMIUB32WI34/>`_ (Brett Cannon)"
+"<https://mail.python.org/archives/list/python-dev@python.org/thread/"
+"OEQHRR2COYZDL6LZ42RBZOMIUB32WI34/>`_ (Brett Cannon)"
 msgstr ""
 
-#: ../../peps/pep-0011.rst:371
+#: ../../peps/peps/pep-0011.rst:387
 msgid ""
 "May 2014: `Where is our official policy of what platforms we do support? "
-"<https://mail.python.org/archives/list/python-"
-"dev@python.org/thread/T7WTUJ6TD3IGYGWV3M4PHJWNLM2WPZAW/>`_ (Brett Cannon)"
+"<https://mail.python.org/archives/list/python-dev@python.org/thread/"
+"T7WTUJ6TD3IGYGWV3M4PHJWNLM2WPZAW/>`_ (Brett Cannon)"
 msgstr ""
 
-#: ../../peps/pep-0011.rst:374
+#: ../../peps/peps/pep-0011.rst:390
 msgid ""
 "August 2007: `PEP 11 update - Call for port maintainers to step forward "
-"<https://mail.python.org/archives/list/python-"
-"dev@python.org/thread/DSSGXU5LBCMKYMZBRVB6RF3YAB6ST5AV/>`_ (Skip "
-"Montanaro)"
+"<https://mail.python.org/archives/list/python-dev@python.org/thread/"
+"DSSGXU5LBCMKYMZBRVB6RF3YAB6ST5AV/>`_ (Skip Montanaro)"
 msgstr ""
 
-#: ../../peps/pep-0011.rst:380
+#: ../../peps/peps/pep-0011.rst:396
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../../peps/pep-0011.rst:382
+#: ../../peps/peps/pep-0011.rst:398
 msgid ""
-"This document is placed in the public domain or under the "
-"CC0-1.0-Universal license, whichever is more permissive."
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
 msgstr ""
-
-#~ msgid ""
-#~ "`18-Aug-2007 <https://mail.python.org/archives/list/python-"
-#~ "dev@python.org/thread/DSSGXU5LBCMKYMZBRVB6RF3YAB6ST5AV/>`__, "
-#~ "`14-May-2014 <https://mail.python.org/archives/list/python-"
-#~ "dev@python.org/thread/T7WTUJ6TD3IGYGWV3M4PHJWNLM2WPZAW/>`__, "
-#~ "`20-Feb-2015 <https://mail.python.org/archives/list/python-"
-#~ "dev@python.org/thread/OEQHRR2COYZDL6LZ42RBZOMIUB32WI34/#L3K7IKGVT4ND45SKAJPJ3Q2ADVK5KP52>`__,"
-#~ " `10-Mar-2022 <https://mail.python.org/archives/list"
-#~ "/python-"
-#~ "committers@python.org/thread/K757345KX6W5ZLTWYBUXOXQTJJTL7GW5/>`__,"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "This PEP also lists what plaforms "
-#~ "*are* supported by the CPython "
-#~ "interpreter. This lets people know what"
-#~ " platforms are directly supported by "
-#~ "the CPython development team."
-#~ msgstr ""
-

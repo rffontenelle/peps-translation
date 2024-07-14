@@ -6,66 +6,70 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PEPs\n"
+"Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 20:07+0000\n"
+"POT-Creation-Date: 2024-07-14 02:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.15.0\n"
 
-#: ../pep-0224.txt
+#: ../../peps/peps/pep-0224.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../pep-0224.txt:3
+#: ../../peps/peps/pep-0224.rst:3
 msgid "Marc-André Lemburg <mal@lemburg.com>"
 msgstr ""
 
-#: ../pep-0224.txt
+#: ../../peps/peps/pep-0224.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../pep-0224.txt:4
+#: ../../peps/peps/pep-0224.rst:4
 msgid "Rejected"
 msgstr ""
 
-#: ../pep-0224.txt
+#: ../../peps/peps/pep-0224.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../pep-0224.txt:5
+#: ../../peps/peps/pep-0224.rst:5
 msgid "Standards Track"
 msgstr ""
 
-#: ../pep-0224.txt
+#: ../../peps/peps/pep-0224.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../pep-0224.txt:7
+#: ../../peps/peps/pep-0224.rst:6
 msgid "23-Aug-2000"
 msgstr ""
 
-#: ../pep-0224.txt
+#: ../../peps/peps/pep-0224.rst
 msgid "Python-Version"
 msgstr ""
 
-#: ../pep-0224.txt:8
+#: ../../peps/peps/pep-0224.rst:7
 msgid "2.1"
 msgstr ""
 
-#: ../pep-0224.txt
+#: ../../peps/peps/pep-0224.rst
 msgid "Post-History"
 msgstr "Pós-história"
 
-#: ../pep-0224.txt:13
+#: ../../peps/peps/pep-0224.rst:12
+msgid "See :ref:`224-rejection` for more information."
+msgstr ""
+
+#: ../../peps/peps/pep-0224.rst:15
 msgid "Introduction"
 msgstr "Introdução"
 
-#: ../pep-0224.txt:15
+#: ../../peps/peps/pep-0224.rst:17
 msgid ""
 "This PEP describes the \"attribute docstring\" proposal for Python 2.0.  "
 "This PEP tracks the status and ownership of this feature. It contains a "
@@ -74,17 +78,17 @@ msgid ""
 "historical record."
 msgstr ""
 
-#: ../pep-0224.txt:23
+#: ../../peps/peps/pep-0224.rst:25
 msgid "Rationale"
 msgstr ""
 
-#: ../pep-0224.txt:25
+#: ../../peps/peps/pep-0224.rst:27
 msgid ""
 "This PEP proposes a small addition to the way Python currently handles "
 "docstrings embedded in Python code."
 msgstr ""
 
-#: ../pep-0224.txt:28
+#: ../../peps/peps/pep-0224.rst:30
 msgid ""
 "Python currently only handles the case of docstrings which appear directly "
 "after a class definition, a function definition or as first string literal "
@@ -94,31 +98,31 @@ msgid ""
 "documentation purposes."
 msgstr ""
 
-#: ../pep-0224.txt:36
+#: ../../peps/peps/pep-0224.rst:38
 msgid ""
 "Docstrings appearing in locations other than the ones mentioned are simply "
 "ignored and don't result in any code generation."
 msgstr ""
 
-#: ../pep-0224.txt:39
+#: ../../peps/peps/pep-0224.rst:41
 msgid "Here is an example::"
 msgstr ""
 
-#: ../pep-0224.txt:50
+#: ../../peps/peps/pep-0224.rst:52
 msgid ""
 "The docstrings (1) and (2) are currently being ignored by the Python byte "
 "code compiler, but could obviously be put to good use for documenting the "
 "named assignments that precede them."
 msgstr ""
 
-#: ../pep-0224.txt:54
+#: ../../peps/peps/pep-0224.rst:56
 msgid ""
 "This PEP proposes to also make use of these cases by proposing semantics for "
 "adding their content to the objects in which they appear under new generated "
 "attribute names."
 msgstr ""
 
-#: ../pep-0224.txt:58
+#: ../../peps/peps/pep-0224.rst:60
 msgid ""
 "The original idea behind this approach which also inspired the above example "
 "was to enable inline documentation of class attributes, which can currently "
@@ -126,18 +130,18 @@ msgid ""
 "available for introspection."
 msgstr ""
 
-#: ../pep-0224.txt:66
+#: ../../peps/peps/pep-0224.rst:68
 msgid "Implementation"
 msgstr ""
 
-#: ../pep-0224.txt:68
+#: ../../peps/peps/pep-0224.rst:70
 msgid ""
 "Docstrings are handled by the byte code compiler as expressions. The current "
 "implementation special cases the few locations mentioned above to make use "
 "of these expressions, but otherwise ignores the strings completely."
 msgstr ""
 
-#: ../pep-0224.txt:73
+#: ../../peps/peps/pep-0224.rst:75
 msgid ""
 "To enable use of these docstrings for documenting named assignments (which "
 "is the natural way of defining e.g. class attributes), the compiler will "
@@ -147,7 +151,7 @@ msgid ""
 "namespace during object construction time."
 msgstr ""
 
-#: ../pep-0224.txt:81
+#: ../../peps/peps/pep-0224.rst:83
 msgid ""
 "In order to preserve features like inheritance and hiding of Python's "
 "special attributes (ones with leading and trailing double underscores), a "
@@ -156,11 +160,11 @@ msgid ""
 "docstring later on by inspecting the namespace."
 msgstr ""
 
-#: ../pep-0224.txt:88
+#: ../../peps/peps/pep-0224.rst:90
 msgid "The following name mangling scheme achieves all of the above::"
 msgstr ""
 
-#: ../pep-0224.txt:92
+#: ../../peps/peps/pep-0224.rst:94
 msgid ""
 "To keep track of the last assigned name, the byte code compiler stores this "
 "name in a variable of the compiling structure.  This variable defaults to "
@@ -170,30 +174,30 @@ msgid ""
 "to avoid duplicate assignments."
 msgstr ""
 
-#: ../pep-0224.txt:100
+#: ../../peps/peps/pep-0224.rst:102
 msgid ""
 "If the variable does not point to a name (i.e. is NULL), no assignments are "
 "made.  These will continue to be ignored like before.  All classical "
 "docstrings fall under this case, so no duplicate assignments are done."
 msgstr ""
 
-#: ../pep-0224.txt:105
+#: ../../peps/peps/pep-0224.rst:107
 msgid ""
 "In the above example this would result in the following new class attributes "
 "to be created::"
 msgstr ""
 
-#: ../pep-0224.txt:111
+#: ../../peps/peps/pep-0224.rst:113
 msgid ""
 "A patch to the current CVS version of Python 2.0 which implements the above "
 "is available on SourceForge at [1]_."
 msgstr ""
 
-#: ../pep-0224.txt:116
+#: ../../peps/peps/pep-0224.rst:118
 msgid "Caveats of the Implementation"
 msgstr ""
 
-#: ../pep-0224.txt:118
+#: ../../peps/peps/pep-0224.rst:120
 msgid ""
 "Since the implementation does not reset the compiling structure variable "
 "when processing a non-expression, e.g. a function definition, the last "
@@ -201,42 +205,42 @@ msgid ""
 "occurrence of a docstring."
 msgstr ""
 
-#: ../pep-0224.txt:123
+#: ../../peps/peps/pep-0224.rst:125
 msgid ""
 "This can lead to cases where the docstring and assignment may be separated "
 "by other expressions::"
 msgstr ""
 
-#: ../pep-0224.txt:138
+#: ../../peps/peps/pep-0224.rst:140
 msgid ""
 "Since the definition of method \"x\" currently does not reset the used "
 "assignment name variable, it is still valid when the compiler reaches the "
 "docstring \"b's doc string\" and thus assigns the string to ``__doc_b__``."
 msgstr ""
 
-#: ../pep-0224.txt:143
+#: ../../peps/peps/pep-0224.rst:145
 msgid ""
 "A possible solution to this problem would be resetting the name variable for "
 "all non-expression nodes in the compiler."
 msgstr ""
 
-#: ../pep-0224.txt:148
+#: ../../peps/peps/pep-0224.rst:150
 msgid "Possible Problems"
 msgstr ""
 
-#: ../pep-0224.txt:150
+#: ../../peps/peps/pep-0224.rst:152
 msgid ""
 "Even though highly unlikely, attribute docstrings could get accidentally "
 "concatenated to the attribute's value::"
 msgstr ""
 
-#: ../pep-0224.txt:157
+#: ../../peps/peps/pep-0224.rst:159
 msgid ""
 "The trailing slash would cause the Python compiler to concatenate the "
 "attribute value and the docstring."
 msgstr ""
 
-#: ../pep-0224.txt:160
+#: ../../peps/peps/pep-0224.rst:162
 msgid ""
 "A modern syntax highlighting editor would easily make this accident visible, "
 "though, and by simply inserting empty lines between the attribute definition "
@@ -244,129 +248,129 @@ msgid ""
 "the problem is negligible."
 msgstr ""
 
-#: ../pep-0224.txt:166
+#: ../../peps/peps/pep-0224.rst:168
 msgid ""
 "Another possible problem is that of using triple quoted strings as a way to "
 "uncomment parts of your code."
 msgstr ""
 
-#: ../pep-0224.txt:169
+#: ../../peps/peps/pep-0224.rst:171
 msgid ""
 "If there happens to be an assignment just before the start of the comment "
 "string, then the compiler will treat the comment as docstring attribute and "
 "apply the above logic to it."
 msgstr ""
 
-#: ../pep-0224.txt:173
+#: ../../peps/peps/pep-0224.rst:175
 msgid ""
 "Besides generating a docstring for an otherwise undocumented attribute there "
 "is no breakage."
 msgstr ""
 
-#: ../pep-0224.txt:178
+#: ../../peps/peps/pep-0224.rst:181
 msgid "Comments from our BDFL"
 msgstr ""
 
-#: ../pep-0224.txt:180
+#: ../../peps/peps/pep-0224.rst:183
 msgid "Early comments on the PEP from Guido:"
 msgstr ""
 
-#: ../pep-0224.txt:182
+#: ../../peps/peps/pep-0224.rst:185
 msgid ""
 "I \"kinda\" like the idea of having attribute docstrings (meaning it's not "
 "of great importance to me) but there are two things I don't like in your "
 "current proposal:"
 msgstr ""
 
-#: ../pep-0224.txt:186
+#: ../../peps/peps/pep-0224.rst:189
 msgid ""
 "The syntax you propose is too ambiguous: as you say, stand-alone string "
 "literal are used for other purposes and could suddenly become attribute "
 "docstrings."
 msgstr ""
 
-#: ../pep-0224.txt:190
+#: ../../peps/peps/pep-0224.rst:193
 msgid "I don't like the access method either (``__doc_<attrname>__``)."
 msgstr ""
 
-#: ../pep-0224.txt:192
+#: ../../peps/peps/pep-0224.rst:195
 msgid "The author's reply:"
 msgstr ""
 
-#: ../pep-0224.txt:201
+#: ../../peps/peps/pep-0224.rst:204
 msgid ""
 "This can be fixed by introducing some extra checks in the compiler to reset "
 "the \"doc attribute\" flag in the compiler struct."
 msgstr ""
 
-#: ../pep-0224.txt:209
+#: ../../peps/peps/pep-0224.rst:212
 msgid "Any other name will do. It will only have to match these criteria:"
 msgstr ""
 
-#: ../pep-0224.txt:212
+#: ../../peps/peps/pep-0224.rst:215
 msgid "must start with two underscores (to match ``__doc__``)"
 msgstr ""
 
-#: ../pep-0224.txt:213
+#: ../../peps/peps/pep-0224.rst:216
 msgid ""
 "must be extractable using some form of inspection (e.g. by using a naming "
 "convention which includes some fixed name part)"
 msgstr ""
 
-#: ../pep-0224.txt:215
+#: ../../peps/peps/pep-0224.rst:218
 msgid ""
 "must be compatible with class inheritance (i.e. should be stored as "
 "attribute)"
 msgstr ""
 
-#: ../pep-0224.txt:218
+#: ../../peps/peps/pep-0224.rst:221
 msgid ""
 "Later on in March, Guido pronounced on this PEP in March 2001 (on python-"
 "dev). Here are his reasons for rejection mentioned in private mail to the "
 "author of this PEP:"
 msgstr ""
 
-#: ../pep-0224.txt:222 ../pep-0224.txt:235
+#: ../../peps/peps/pep-0224.rst:225 ../../peps/peps/pep-0224.rst:238
 msgid "..."
 msgstr ""
 
-#: ../pep-0224.txt:224
+#: ../../peps/peps/pep-0224.rst:227
 msgid "It might be useful, but I really hate the proposed syntax."
 msgstr ""
 
-#: ../pep-0224.txt:232
+#: ../../peps/peps/pep-0224.rst:235
 msgid ""
 "I really have no way to know whether \"foo bar\" is a docstring for a or for "
 "b."
 msgstr ""
 
-#: ../pep-0224.txt:237
+#: ../../peps/peps/pep-0224.rst:240
 msgid "You can use this convention::"
 msgstr ""
 
-#: ../pep-0224.txt:242
+#: ../../peps/peps/pep-0224.rst:245
 msgid "This makes it available at runtime."
 msgstr ""
 
-#: ../pep-0224.txt:252
+#: ../../peps/peps/pep-0224.rst:255
 msgid ""
 "It's not the implementation, it's the syntax.  It doesn't convey a clear "
 "enough coupling between the variable and the doc string."
 msgstr ""
 
-#: ../pep-0224.txt:258
+#: ../../peps/peps/pep-0224.rst:261
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../pep-0224.txt:260
+#: ../../peps/peps/pep-0224.rst:263
 msgid "This document has been placed in the Public Domain."
 msgstr ""
 
-#: ../pep-0224.txt:264
+#: ../../peps/peps/pep-0224.rst:267
 msgid "References"
 msgstr "Referências"
 
-#: ../pep-0224.txt:266
+#: ../../peps/peps/pep-0224.rst:269
 msgid ""
 "http://sourceforge.net/patch/?func=detailpatch&patch_id=101264&group_id=5470"
 msgstr ""

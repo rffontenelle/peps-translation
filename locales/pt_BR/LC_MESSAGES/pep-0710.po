@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PEPs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-20 10:43-0300\n"
+"POT-Creation-Date: 2024-07-14 02:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: pt_BR\n"
@@ -17,303 +17,307 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.13.1\n"
+"Generated-By: Babel 2.15.0\n"
 
-#: ../../peps/pep-0710.rst
+#: ../../peps/peps/pep-0710.rst
 msgid "Author"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:3
+#: ../../peps/peps/pep-0710.rst:3
 msgid "Fridolín Pokorný <fridolin.pokorny at gmail.com>"
 msgstr ""
 
-#: ../../peps/pep-0710.rst
+#: ../../peps/peps/pep-0710.rst
 msgid "Sponsor"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:4
+#: ../../peps/peps/pep-0710.rst:4
 msgid "Donald Stufft <donald@stufft.io>"
 msgstr ""
 
-#: ../../peps/pep-0710.rst
+#: ../../peps/peps/pep-0710.rst
 msgid "PEP-Delegate"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:5
+#: ../../peps/peps/pep-0710.rst:5
 msgid "Paul Moore <p.f.moore@gmail.com>"
 msgstr ""
 
-#: ../../peps/pep-0710.rst
+#: ../../peps/peps/pep-0710.rst
 msgid "Discussions-To"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:6
+#: ../../peps/peps/pep-0710.rst:6
 msgid ""
-"https://discuss.python.org/t/pep-710-recording-the-provenance-of-"
-"installed-packages/25428"
+"https://discuss.python.org/t/pep-710-recording-the-provenance-of-installed-"
+"packages/25428"
 msgstr ""
 
-#: ../../peps/pep-0710.rst
+#: ../../peps/peps/pep-0710.rst
 msgid "Status"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:7
+#: ../../peps/peps/pep-0710.rst:7
 msgid "Draft"
 msgstr ""
 
-#: ../../peps/pep-0710.rst
+#: ../../peps/peps/pep-0710.rst
 msgid "Type"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:8
+#: ../../peps/peps/pep-0710.rst:8
 msgid "Standards Track"
 msgstr ""
 
-#: ../../peps/pep-0710.rst
+#: ../../peps/peps/pep-0710.rst
 msgid "Topic"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:9
+#: ../../peps/peps/pep-0710.rst:9
 msgid "Packaging"
 msgstr ""
 
-#: ../../peps/pep-0710.rst
+#: ../../peps/peps/pep-0710.rst
 msgid "Created"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:11
+#: ../../peps/peps/pep-0710.rst:11
 msgid "27-Mar-2023"
 msgstr ""
 
-#: ../../peps/pep-0710.rst
+#: ../../peps/peps/pep-0710.rst
 msgid "Post-History"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:12
+#: ../../peps/peps/pep-0710.rst:12
 msgid ""
 "`03-Dec-2021 <https://discuss.python.org/t/pip-installation-"
 "reports/12316>`__, `30-Jan-2023 <https://discuss.python.org/t/pre-pep-"
-"recording-provenance-of-installed-packages/23340>`__, `14-Mar-2023 "
-"<https://discuss.python.org/t/draft-pep-recording-provenance-of-"
-"installed-packages/24838>`__, `03-Apr-2023 "
-"<https://discuss.python.org/t/pep-710-recording-the-provenance-of-"
-"installed-packages/25428>`__,"
+"recording-provenance-of-installed-packages/23340>`__, `14-Mar-2023 <https://"
+"discuss.python.org/t/draft-pep-recording-provenance-of-installed-"
+"packages/24838>`__, `03-Apr-2023 <https://discuss.python.org/t/pep-710-"
+"recording-the-provenance-of-installed-packages/25428>`__,"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:18
+#: ../../peps/peps/pep-0710.rst:18
 msgid "Abstract"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:20
+#: ../../peps/peps/pep-0710.rst:20
 msgid ""
 "This PEP describes a way to record the provenance of installed Python "
 "distributions. The record is created by an installer and is available to "
 "users in the form of a JSON file ``provenance_url.json`` in the ``.dist-"
-"info`` directory. The mentioned JSON file captures additional metadata to"
-" allow recording a URL to a :term:`distribution package` together with "
-"the installed distribution hash. This proposal is built on top of "
-":pep:`610` following :ref:`its corresponding canonical PyPA spec "
-"<packaging:direct-url>` and complements ``direct_url.json`` with "
-"``provenance_url.json`` for when packages are identified by a name, and "
-"optionally a version."
+"info`` directory. The mentioned JSON file captures additional metadata to "
+"allow recording a URL to a :term:`distribution package` together with the "
+"installed distribution hash. This proposal is built on top of :pep:`610` "
+"following :ref:`its corresponding canonical PyPA spec <packaging:direct-"
+"url>` and complements ``direct_url.json`` with ``provenance_url.json`` for "
+"when packages are identified by a name, and optionally a version."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:31
+#: ../../peps/peps/pep-0710.rst:31
 msgid "Motivation"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:33
+#: ../../peps/peps/pep-0710.rst:33
 msgid ""
-"Installing a Python :term:`Project` involves downloading a "
-":term:`Distribution Package` from a :term:`Package Index` and extracting "
-"its content to an appropriate place. After the installation process is "
-"done, information about the release artifact used as well as its source "
-"is generally lost. However, there are use cases for keeping records of "
+"Installing a Python :term:`Project` involves downloading a :term:"
+"`Distribution Package` from a :term:`Package Index` and extracting its "
+"content to an appropriate place. After the installation process is done, "
+"information about the release artifact used as well as its source is "
+"generally lost. However, there are use cases for keeping records of "
 "distributions used for installing packages and their provenance."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:40
+#: ../../peps/peps/pep-0710.rst:40
 msgid ""
 "Python wheels can be built with different compiler flags or supporting "
-"different wheel tags.  In both cases, users might get into a situation in"
-" which multiple wheels might be considered by installers (possibly from "
-"different package indexes) and immediately finding out which wheel file "
-"was actually used during the installation might be helpful. This way, "
-"developers can use information about wheels to debug issues making sure "
-"the desired wheel was actually installed. Another use case could be tools"
-" reporting software installed, such as tools reporting a SBOM (Software "
-"Bill of Materials), that might give more accurate reports. Yet another "
-"use case could be reconstruction of the Python environment by pinning "
-"each installed package to a specific distribution artifact consumed from "
-"a Python package index."
+"different wheel tags.  In both cases, users might get into a situation in "
+"which multiple wheels might be considered by installers (possibly from "
+"different package indexes) and immediately finding out which wheel file was "
+"actually used during the installation might be helpful. This way, developers "
+"can use information about wheels to debug issues making sure the desired "
+"wheel was actually installed. Another use case could be tools reporting "
+"software installed, such as tools reporting a SBOM (Software Bill of "
+"Materials), that might give more accurate reports. Yet another use case "
+"could be reconstruction of the Python environment by pinning each installed "
+"package to a specific distribution artifact consumed from a Python package "
+"index."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:53
+#: ../../peps/peps/pep-0710.rst:53
 msgid "Rationale"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:55
+#: ../../peps/peps/pep-0710.rst:55
 msgid ""
-"The motivation described in this PEP is an extension of that in "
-":pep:`610`. In addition to recording provenance information for packages "
-"installed using a direct URL, installers should also do so for packages "
-"installed by name (and optionally version) from Python package indexes."
+"The motivation described in this PEP is an extension of that in :pep:`610`. "
+"In addition to recording provenance information for packages installed using "
+"a direct URL, installers should also do so for packages installed by name "
+"(and optionally version) from Python package indexes."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:60
+#: ../../peps/peps/pep-0710.rst:60
 msgid ""
-"The idea described in this PEP originated in a tool called `micropipenv`_"
-" that is used to install :term:`distribution packages <Distribution "
-"Package>` in containerized environments (see the reported issue `thoth-"
-"station/micropipenv#206`_). Currently, the assembled containerized "
-"application does not implicitly carry information about the provenance of"
-" installed distribution packages (unless these are installed from full "
-"URLs and recorded via ``direct_url.json``). This requires container image"
-" suppliers to link container images with the corresponding build process,"
-" its configuration and the application source code for checking "
-"requirements files in cases when software present in containerized "
-"environments needs to be audited."
+"The idea described in this PEP originated in a tool called `micropipenv`_ "
+"that is used to install :term:`distribution packages <Distribution Package>` "
+"in containerized environments (see the reported issue `thoth-station/"
+"micropipenv#206`_). Currently, the assembled containerized application does "
+"not implicitly carry information about the provenance of installed "
+"distribution packages (unless these are installed from full URLs and "
+"recorded via ``direct_url.json``). This requires container image suppliers "
+"to link container images with the corresponding build process, its "
+"configuration and the application source code for checking requirements "
+"files in cases when software present in containerized environments needs to "
+"be audited."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:72
+#: ../../peps/peps/pep-0710.rst:72
 msgid ""
-"The `subsequent discussion in the Discourse thread "
-"<https://discuss.python.org/t/12316>`__ also brought up pip's new "
-"``--report`` option that can `generate a detailed JSON report "
-"<pip_installation_report_>`__ about the installation process. This option"
-" could help with the provenance problem this PEP approaches. "
-"Nevertheless, this option needs to be *explicitly* passed to pip to "
-"obtain the provenance information, and includes additional metadata that "
-"might not be necessary for checking the provenance (such as Python "
-"version requirements of each distribution package). Also, this option is "
-"specific to pip as of the writing of this PEP."
+"The `subsequent discussion in the Discourse thread <https://discuss.python."
+"org/t/12316>`__ also brought up pip's new ``--report`` option that can "
+"`generate a detailed JSON report <pip_installation_report_>`__ about the "
+"installation process. This option could help with the provenance problem "
+"this PEP approaches. Nevertheless, this option needs to be *explicitly* "
+"passed to pip to obtain the provenance information, and includes additional "
+"metadata that might not be necessary for checking the provenance (such as "
+"Python version requirements of each distribution package). Also, this option "
+"is specific to pip as of the writing of this PEP."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:83
+#: ../../peps/peps/pep-0710.rst:83
 msgid ""
-"Note the current :ref:`spec for recording installed packages <packaging"
-":recording-installed-packages>` defines a ``RECORD`` file that records "
-"installed files, but not the distribution artifact from which these files"
-" were obtained. Auditing installed artifacts can be performed based on "
-"matching the entries listed in the ``RECORD`` file. However, this "
-"technique requires a pre-computed database of files each artifact "
-"provides or a comparison with the actual artifact content. Both "
-"approaches are relatively expensive and time consuming operations which "
-"could be eliminated with the proposed ``provenance_url.json`` file."
+"Note the current :ref:`spec for recording installed packages <packaging:"
+"recording-installed-packages>` defines a ``RECORD`` file that records "
+"installed files, but not the distribution artifact from which these files "
+"were obtained. Auditing installed artifacts can be performed based on "
+"matching the entries listed in the ``RECORD`` file. However, this technique "
+"requires a pre-computed database of files each artifact provides or a "
+"comparison with the actual artifact content. Both approaches are relatively "
+"expensive and time consuming operations which could be eliminated with the "
+"proposed ``provenance_url.json`` file."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:93
+#: ../../peps/peps/pep-0710.rst:93
 msgid ""
-"Recording provenance information for installed distribution packages, "
-"both those obtained from direct URLs and by name/version from an index, "
-"can simplify auditing Python environments in general, beyond just the "
-"specific use case for containerized applications mentioned earlier. A "
-"community project `pip-audit <https://github.com/pypa/pip-audit>`__ "
-"raised their possible interest in `pypa/pip-audit#170`_."
+"Recording provenance information for installed distribution packages, both "
+"those obtained from direct URLs and by name/version from an index, can "
+"simplify auditing Python environments in general, beyond just the specific "
+"use case for containerized applications mentioned earlier. A community "
+"project `pip-audit <https://github.com/pypa/pip-audit>`__ raised their "
+"possible interest in `pypa/pip-audit#170`_."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:102
+#: ../../peps/peps/pep-0710.rst:102
 msgid "Specification"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:104
+#: ../../peps/peps/pep-0710.rst:104
 msgid ""
 "The keywords “MUST”, “MUST NOT”, “REQUIRED”, “SHOULD”, “SHOULD NOT”, "
-"“RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be "
-"interpreted as described in :rfc:`2119`."
+"“RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted "
+"as described in :rfc:`2119`."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:108
+#: ../../peps/peps/pep-0710.rst:108
 msgid ""
 "The ``provenance_url.json`` file SHOULD be created in the ``.dist-info`` "
 "directory by installers when installing a :term:`Distribution Package` "
 "specified by name (and optionally by :term:`Version Specifier`)."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:112
+#: ../../peps/peps/pep-0710.rst:112
 msgid ""
-"This file MUST NOT be created when installing a distribution package from"
-" a requirement specifying a direct URL reference (including a VCS URL)."
+"This file MUST NOT be created when installing a distribution package from a "
+"requirement specifying a direct URL reference (including a VCS URL)."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:115
+#: ../../peps/peps/pep-0710.rst:115
 msgid ""
-"Only one of the files ``provenance_url.json`` and ``direct_url.json`` "
-"(from :pep:`610`), may be present in a given ``.dist-info`` directory; "
-"installers MUST NOT add both."
+"Only one of the files ``provenance_url.json`` and ``direct_url.json`` (from :"
+"pep:`610`), may be present in a given ``.dist-info`` directory; installers "
+"MUST NOT add both."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:118
+#: ../../peps/peps/pep-0710.rst:118
 msgid ""
-"The ``provenance_url.json`` JSON file MUST be a dictionary, compliant "
-"with :rfc:`8259` and UTF-8 encoded."
+"The ``provenance_url.json`` JSON file MUST be a dictionary, compliant with :"
+"rfc:`8259` and UTF-8 encoded."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:121
+#: ../../peps/peps/pep-0710.rst:121
 msgid ""
-"If present, it MUST contain exactly two keys. The first one is ``url``, "
-"with type ``string``.  The second key MUST be ``archive_info`` with a "
-"value defined below."
+"If present, it MUST contain exactly three keys. The first MUST be ``url``, "
+"with type ``string``.  The second key MUST be ``archive_info`` with a value "
+"defined below. The third key MUST be ``index_url`` with type ``string``."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:125
+#: ../../peps/peps/pep-0710.rst:125
 msgid ""
 "The value of the ``url`` key MUST be the URL from which the distribution "
-"package was downloaded. If a wheel is built from a source distribution, "
-"the ``url`` value MUST be the URL from which the source distribution was "
+"package was downloaded. If a wheel is built from a source distribution, the "
+"``url`` value MUST be the URL from which the source distribution was "
 "downloaded. If a wheel is downloaded and installed directly, the ``url`` "
-"field MUST be the URL from which the wheel was downloaded. As in the "
-":ref:`direct URL origin specification<packaging:direct-url>`, the ``url``"
-" value MUST be stripped of any sensitive authentication information for "
-"security reasons."
+"field MUST be the URL from which the wheel was downloaded. As in the :ref:"
+"`direct URL origin specification<packaging:direct-url>`, the ``url`` value "
+"MUST be stripped of any sensitive authentication information for security "
+"reasons."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:132
+#: ../../peps/peps/pep-0710.rst:132
 msgid ""
-"The user:password section of the URL MAY however be composed of "
-"environment variables, matching the following regular expression:"
+"The user:password section of the URL MAY however be composed of environment "
+"variables, matching the following regular expression:"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:139
+#: ../../peps/peps/pep-0710.rst:139
 msgid ""
-"Additionally, the user:password section of the URL MAY be a well-known, "
-"non-security sensitive string. A typical example is ``git`` in the case "
-"of an URL such as ``ssh://git@gitlab.com``."
+"Additionally, the user:password section of the URL MAY be a well-known, non-"
+"security sensitive string. A typical example is ``git`` in the case of an "
+"URL such as ``ssh://git@gitlab.com``."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:143
+#: ../../peps/peps/pep-0710.rst:143
+msgid ""
+"The value of the ``index_url`` key MUST be a base URL of a :term:`Package "
+"Index` used to download the given distribution package, such as ``https://"
+"pypi.org/simple/``. The recorded URL SHOULD point to a repository compliant "
+"with :pep:`503`."
+msgstr ""
+
+#: ../../peps/peps/pep-0710.rst:148
 msgid ""
 "The value of ``archive_info`` MUST be a dictionary with a single key "
-"``hashes``.  The value of ``hashes`` is a dictionary mapping hash "
-"function names to a hex-encoded digest of the file referenced by the "
-"``url`` value. Multiple hashes can be included, and it is up to the "
-"consumer to decide what to do with multiple hashes (it may validate all "
-"of them or a subset of them, or nothing at all)."
+"``hashes``.  The value of ``hashes`` is a dictionary mapping hash function "
+"names to a hex-encoded digest of the file referenced by the ``url`` value. "
+"Multiple hashes can be included, and it is up to the consumer to decide what "
+"to do with multiple hashes (it may validate all of them or a subset of them, "
+"or nothing at all)."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:150
+#: ../../peps/peps/pep-0710.rst:155
 msgid ""
-"Each hash MUST be one of the single argument hashes provided by "
-":data:`py3.11:hashlib.algorithms_guaranteed`, excluding ``sha1`` and "
-"``md5`` which MUST NOT be used. As of Python 3.11, with ``shake_128`` and"
-" ``shake_256`` excluded for being multi-argument, the allowed set of "
-"hashes is:"
+"Each hash MUST be one of the single argument hashes provided by :data:"
+"`py3.11:hashlib.algorithms_guaranteed`, excluding ``sha1`` and ``md5`` which "
+"MUST NOT be used. As of Python 3.11, with ``shake_128`` and ``shake_256`` "
+"excluded for being multi-argument, the allowed set of hashes is:"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:161
+#: ../../peps/peps/pep-0710.rst:166
 msgid ""
-"Each hash MUST be referenced by the canonical name of the hash, always "
-"lower case."
+"Each hash MUST be referenced by the canonical name of the hash, always lower "
+"case."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:163
+#: ../../peps/peps/pep-0710.rst:168
 msgid ""
 "Hashes ``sha1`` and ``md5`` MUST NOT be present, due to the security "
-"limitations of these hash algorithms. Conversely, hash ``sha256`` SHOULD "
-"be included."
+"limitations of these hash algorithms. Conversely, hash ``sha256`` SHOULD be "
+"included."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:167
+#: ../../peps/peps/pep-0710.rst:172
 msgid ""
 "Installers that cache distribution packages from an index SHOULD keep "
 "information related to the cached distribution artifact, so that the "
@@ -321,150 +325,147 @@ msgid ""
 "distribution packages from the installer's cache."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:173
+#: ../../peps/peps/pep-0710.rst:178
 msgid "Backwards Compatibility"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:175
+#: ../../peps/peps/pep-0710.rst:180
 msgid ""
-"Following the :ref:`packaging:recording-installed-packages` "
-"specification, installers may keep additional installer-specific files in"
-" the ``.dist-info`` directory.  To make sure this PEP does not cause any "
-"backwards compatibility issues, a `comprehensive survey of installers and"
-" libraries <710-tool-survey_>`_ found no current tools that are using a "
-"similarly-named file, or other major feasibility concerns."
+"Following the :ref:`packaging:recording-installed-packages` specification, "
+"installers may keep additional installer-specific files in the ``.dist-"
+"info`` directory.  To make sure this PEP does not cause any backwards "
+"compatibility issues, a `comprehensive survey of installers and libraries "
+"<710-tool-survey_>`_ found no current tools that are using a similarly-named "
+"file, or other major feasibility concerns."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:182
+#: ../../peps/peps/pep-0710.rst:187
 msgid ""
-"The :ref:`Wheel specification <packaging:binary-distribution-format>` "
-"lists files that can be present in the ``.dist-info`` directory. None of "
-"these file names collide with the proposed ``provenance_url.json`` file "
-"from this PEP."
+"The :ref:`Wheel specification <packaging:binary-distribution-format>` lists "
+"files that can be present in the ``.dist-info`` directory. None of these "
+"file names collide with the proposed ``provenance_url.json`` file from this "
+"PEP."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:187
+#: ../../peps/peps/pep-0710.rst:192
 msgid "Presence of provenance_url.json in installers and libraries"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:189
+#: ../../peps/peps/pep-0710.rst:194
 msgid ""
-"A comprehensive survey of the existing installers, libraries, and "
-"dependency managers in the Python ecosystem analyzed the implications of "
-"adding support for ``provenance_url.json`` to each tool. In summary, no "
-"major backwards compatibility issues, conflicts or feasibility blockers "
-"were found as of the time of writing of this PEP. More details about the "
-"survey can be found in the `Appendix: Survey of installers and "
-"libraries`_ section."
+"A comprehensive survey of the existing installers, libraries, and dependency "
+"managers in the Python ecosystem analyzed the implications of adding support "
+"for ``provenance_url.json`` to each tool. In summary, no major backwards "
+"compatibility issues, conflicts or feasibility blockers were found as of the "
+"time of writing of this PEP. More details about the survey can be found in "
+"the `Appendix: Survey of installers and libraries`_ section."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:197
+#: ../../peps/peps/pep-0710.rst:202
 msgid "Compatibility with direct_url.json"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:199
+#: ../../peps/peps/pep-0710.rst:204
 msgid ""
 "This proposal does not make any changes to the ``direct_url.json`` file "
 "described in :pep:`610` and :ref:`its corresponding canonical PyPA spec "
 "<packaging:direct-url>`."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:203
+#: ../../peps/peps/pep-0710.rst:208
 msgid ""
 "The content of ``provenance_url.json`` file was designed in a way to "
-"eventually allow installers reuse some of the logic supporting "
-"``direct_url.json`` when a direct URL refers to a source archive or a "
-"wheel."
+"eventually allow installers reuse some of the logic supporting ``direct_url."
+"json`` when a direct URL refers to a source archive or a wheel."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:207
+#: ../../peps/peps/pep-0710.rst:212
 msgid ""
-"The main difference between the ``provenance_url.json`` and  "
-"``direct_url.json`` files are the mandatory keys and their values in the "
-"``provenance_url.json`` file. This helps make sure consumers of the "
-"``provenance_url.json`` file can rely on its content, if the file is "
-"present in the ``.dist-info`` directory."
+"The main difference between the ``provenance_url.json`` and  ``direct_url."
+"json`` files are the mandatory keys and their values in the ``provenance_url."
+"json`` file. This helps make sure consumers of the ``provenance_url.json`` "
+"file can rely on its content, if the file is present in the ``.dist-info`` "
+"directory."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:213
+#: ../../peps/peps/pep-0710.rst:218
 msgid "Security Implications"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:215
+#: ../../peps/peps/pep-0710.rst:220
 msgid ""
-"One of the main security features of the ``provenance_url.json`` file is "
-"the ability to audit installed artifacts in Python environments. Tools "
-"can check which Python package indexes were used to install Python "
-":term:`distribution packages <Distribution Package>` as well as the hash "
-"digests of their release artifacts."
+"One of the main security features of the ``provenance_url.json`` file is the "
+"ability to audit installed artifacts in Python environments. Tools can check "
+"which Python package indexes were used to install Python :term:`distribution "
+"packages <Distribution Package>` as well as the hash digests of their "
+"release artifacts."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:221
+#: ../../peps/peps/pep-0710.rst:226
 msgid ""
-"As an example, we can take the recent compromised dependency chain in "
-"`the PyTorch incident <https://pytorch.org/blog/compromised-nightly-"
-"dependency/>`__. The PyTorch index provided a package named "
-"``torchtriton``. An attacker published ``torchtriton`` on PyPI, which ran"
-" a malicious binary. By checking the URL of the installed Python "
-"distribution stated in the ``provenance_url.json`` file, tools can "
-"automatically check the source of the installed Python distribution. In "
-"case of the PyTorch incident, the URL of ``torchtriton`` should point to "
-"the PyTorch index, not PyPI. Tools can help identifying such malicious "
-"Python distributions installed by checking the installed Python "
-"distribution URL. A more exact check can include also the hash of the "
-"installed Python distribution stated in the ``provenance_url.json`` file."
-" Such checks on hashes can be helpful for mirrored Python package indexes"
-" where Python distributions are not distinguishable by their source URLs,"
-" making sure only desired Python package distributions are installed."
+"As an example, we can take the recent compromised dependency chain in `the "
+"PyTorch incident <https://pytorch.org/blog/compromised-nightly-dependency/"
+">`__. The PyTorch index provided a package named ``torchtriton``. An "
+"attacker published ``torchtriton`` on PyPI, which ran a malicious binary. By "
+"checking the URL of the installed Python distribution stated in the "
+"``provenance_url.json`` file, tools can automatically check the source of "
+"the installed Python distribution. In case of the PyTorch incident, the URL "
+"of ``torchtriton`` should point to the PyTorch index, not PyPI. Tools can "
+"help identifying such malicious Python distributions installed by checking "
+"the installed Python distribution URL. A more exact check can include also "
+"the hash of the installed Python distribution stated in the ``provenance_url."
+"json`` file. Such checks on hashes can be helpful for mirrored Python "
+"package indexes where Python distributions are not distinguishable by their "
+"source URLs, making sure only desired Python package distributions are "
+"installed."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:236
+#: ../../peps/peps/pep-0710.rst:241
 msgid ""
-"A malicious actor can intentionally adjust the content of "
-"``provenance_url.json`` to possibly hide provenance information of the "
-"installed Python distribution. A security check which would uncover such "
-"malicious activity is beyond scope of this PEP as it would require "
-"monitoring actions on the filesystem and eventually reviewing user or "
-"file permissions."
+"A malicious actor can intentionally adjust the content of ``provenance_url."
+"json`` to possibly hide provenance information of the installed Python "
+"distribution. A security check which would uncover such malicious activity "
+"is beyond scope of this PEP as it would require monitoring actions on the "
+"filesystem and eventually reviewing user or file permissions."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:243
+#: ../../peps/peps/pep-0710.rst:248
 msgid "How to Teach This"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:245
+#: ../../peps/peps/pep-0710.rst:250
 msgid ""
-"The ``provenance_url.json`` metadata file is intended for tools and is "
-"not directly visible to end users."
+"The ``provenance_url.json`` metadata file is intended for tools and is not "
+"directly visible to end users."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:249
+#: ../../peps/peps/pep-0710.rst:254
 msgid "Examples"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:252
+#: ../../peps/peps/pep-0710.rst:257
 msgid "Examples of a valid provenance_url.json"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:254
+#: ../../peps/peps/pep-0710.rst:259
 msgid "A valid ``provenance_url.json`` list multiple hashes:"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:270
+#: ../../peps/peps/pep-0710.rst:276
 msgid "A valid ``provenance_url.json`` listing a single hash entry:"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:283
+#: ../../peps/peps/pep-0710.rst:290
 msgid ""
-"A valid ``provenance_url.json`` listing a source distribution which was "
-"used to build and install a wheel:"
+"A valid ``provenance_url.json`` listing a source distribution which was used "
+"to build and install a wheel:"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:298
+#: ../../peps/peps/pep-0710.rst:306
 msgid "Examples of an invalid provenance_url.json"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:300
+#: ../../peps/peps/pep-0710.rst:308
 msgid ""
 "The following example includes a ``hash`` key in the ``archive_info`` "
 "dictionary as originally designed in :pep:`610` and the data structure "
@@ -473,453 +474,452 @@ msgid ""
 "additional checks that would be required to keep hash values in sync."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:319
+#: ../../peps/peps/pep-0710.rst:328
 msgid ""
-"Another example demonstrates an invalid hash name. The referenced hash "
-"name does not correspond to the canonical hash names described in this "
-"PEP and in the Python docs under :attr:`py3.11:hashlib.hash.name`."
+"Another example demonstrates an invalid hash name. The referenced hash name "
+"does not correspond to the canonical hash names described in this PEP and in "
+"the Python docs under :attr:`py3.11:hashlib.hash.name`."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:336
+#: ../../peps/peps/pep-0710.rst:346
 msgid ""
-"Example pip commands and their effect on provenance_url.json and "
-"direct_url.json"
+"Example pip commands and their effect on provenance_url.json and direct_url."
+"json"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:338
+#: ../../peps/peps/pep-0710.rst:348
 msgid ""
 "These commands generate a ``direct_url.json`` file but do not generate a "
-"``provenance_url.json`` file. These examples follow examples from "
-":pep:`610`:"
+"``provenance_url.json`` file. These examples follow examples from :pep:`610`:"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:341
+#: ../../peps/peps/pep-0710.rst:351
 msgid "``pip install https://example.com/app-1.0.tgz``"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:342
+#: ../../peps/peps/pep-0710.rst:352
 msgid "``pip install https://example.com/app-1.0.whl``"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:343
+#: ../../peps/peps/pep-0710.rst:353
 msgid ""
-"``pip install "
-"\"git+https://example.com/repo/app.git#egg=app&subdirectory=setup\"``"
+"``pip install \"git+https://example.com/repo/app."
+"git#egg=app&subdirectory=setup\"``"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:344
+#: ../../peps/peps/pep-0710.rst:354
 msgid "``pip install ./app``"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:345
+#: ../../peps/peps/pep-0710.rst:355
 msgid "``pip install file:///home/user/app``"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:346
+#: ../../peps/peps/pep-0710.rst:356
 msgid ""
-"``pip install --editable "
-"\"git+https://example.com/repo/app.git#egg=app&subdirectory=setup\"`` (in"
-" which case, ``url`` will be the local directory where the git repository"
-" has been cloned to, and ``dir_info`` will be present with "
-"``\"editable\": true`` and no ``vcs_info`` will be set)"
+"``pip install --editable \"git+https://example.com/repo/app."
+"git#egg=app&subdirectory=setup\"`` (in which case, ``url`` will be the local "
+"directory where the git repository has been cloned to, and ``dir_info`` will "
+"be present with ``\"editable\": true`` and no ``vcs_info`` will be set)"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:347
+#: ../../peps/peps/pep-0710.rst:357
 msgid "``pip install -e ./app``"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:349
+#: ../../peps/peps/pep-0710.rst:359
 msgid ""
-"Commands that generate a ``provenance_url.json`` file but do not generate"
-" a ``direct_url.json`` file:"
+"Commands that generate a ``provenance_url.json`` file but do not generate a "
+"``direct_url.json`` file:"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:352
+#: ../../peps/peps/pep-0710.rst:362
 msgid "``pip install app``"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:353
+#: ../../peps/peps/pep-0710.rst:363
 msgid "``pip install app~=2.2.0``"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:354
+#: ../../peps/peps/pep-0710.rst:364
 msgid "``pip install app --no-index --find-links \"https://example.com/\"``"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:356
+#: ../../peps/peps/pep-0710.rst:366
 msgid ""
 "This behaviour can be tested using changes to pip implemented in the PR "
 "`pypa/pip#11865`_."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:360
+#: ../../peps/peps/pep-0710.rst:370
 msgid "Reference Implementation"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:362
+#: ../../peps/peps/pep-0710.rst:372
 msgid ""
-"A proof-of-concept for creating the ``provenance_url.json`` metadata file"
-" when installing a Python :term:`Distribution Package` is available in "
-"the PR to pip `pypa/pip#11865`_. It reuses the already available "
-"implementation for the :ref:`direct URL data structure <packaging:direct-"
-"url-data-structure>` to provide the ``provenance_url.json`` metadata file"
-" for cases when ``direct_url.json`` is not created."
+"A proof-of-concept for creating the ``provenance_url.json`` metadata file "
+"when installing a Python :term:`Distribution Package` is available in the PR "
+"to pip `pypa/pip#11865`_. It reuses the already available implementation for "
+"the :ref:`direct URL data structure <packaging:direct-url-data-structure>` "
+"to provide the ``provenance_url.json`` metadata file for cases when "
+"``direct_url.json`` is not created."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:369
+#: ../../peps/peps/pep-0710.rst:379
 msgid ""
 "A prototype called `pip-preserve <pip_preserve_>`_ was developed to "
-"demonstrate creation of ``requirements.txt`` files considering "
-"``direct_url.json`` and ``provenance_url.json`` metadata files.  This "
-"tool mimics the ``pip freeze`` functionality, but the listing of "
-"installed packages also includes the hashes of the Python distribution "
-"artifacts."
+"demonstrate creation of ``requirements.txt`` files considering ``direct_url."
+"json`` and ``provenance_url.json`` metadata files.  This tool mimics the "
+"``pip freeze`` functionality, but the listing of installed packages also "
+"includes the hashes of the Python distribution artifacts."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:375
+#: ../../peps/peps/pep-0710.rst:385
 msgid ""
 "To further support this proposal, `pip-sbom <pip_sbom_>`_ demonstrates "
-"creation of SBOM in the SPDX format. The tool uses information stored in "
-"the ``provenance_url.json`` file."
+"creation of SBOM in the SPDX format. The tool uses information stored in the "
+"``provenance_url.json`` file."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:380
+#: ../../peps/peps/pep-0710.rst:390
 msgid "Rejected Ideas"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:383
+#: ../../peps/peps/pep-0710.rst:393
 msgid "Naming the file direct_url.json instead of provenance_url.json"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:385
+#: ../../peps/peps/pep-0710.rst:395
 msgid ""
 "To preserve backwards compatibility with the :ref:`Direct URL Origin "
-"specification <packaging:direct-url>`, the file cannot be named "
-"``direct_url.json``, as per the text of that specification:"
+"specification <packaging:direct-url>`, the file cannot be named ``direct_url."
+"json``, as per the text of that specification:"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:389
+#: ../../peps/peps/pep-0710.rst:399
 msgid ""
-"This file MUST NOT be created when installing a distribution from an "
-"other type of requirement (i.e. name plus version specifier)."
+"This file MUST NOT be created when installing a distribution from an other "
+"type of requirement (i.e. name plus version specifier)."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:392
+#: ../../peps/peps/pep-0710.rst:402
 msgid ""
-"Such a change might introduce backwards compatibility issues for "
-"consumers of ``direct_url.json`` who rely on its presence only when "
-"distributions are installed using a direct URL reference."
+"Such a change might introduce backwards compatibility issues for consumers "
+"of ``direct_url.json`` who rely on its presence only when distributions are "
+"installed using a direct URL reference."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:397
+#: ../../peps/peps/pep-0710.rst:407
 msgid "Deprecating direct_url.json and using only provenance_url.json"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:399
+#: ../../peps/peps/pep-0710.rst:409
 msgid ""
-"File ``direct_url.json`` is already well established with :pep:`610` "
-"being accepted and is already used by installers. For example, ``pip`` "
-"uses ``direct_url.json`` to report a direct URL reference on ``pip "
-"freeze``. Deprecating ``direct_url.json`` would require additional "
-"changes to the ``pip freeze`` implementation in pip (see PR "
-"`fridex/pip#2`_) and could introduce backwards compatibility issues for "
-"already existing ``direct_url.json`` consumers."
+"File ``direct_url.json`` is already well established with :pep:`610` being "
+"accepted and is already used by installers. For example, ``pip`` uses "
+"``direct_url.json`` to report a direct URL reference on ``pip freeze``. "
+"Deprecating ``direct_url.json`` would require additional changes to the "
+"``pip freeze`` implementation in pip (see PR `fridex/pip#2`_) and could "
+"introduce backwards compatibility issues for already existing ``direct_url."
+"json`` consumers."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:407
+#: ../../peps/peps/pep-0710.rst:417
 msgid "Keeping the hash key in the archive_info dictionary"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:409
+#: ../../peps/peps/pep-0710.rst:419
 msgid ""
-":pep:`610` and :ref:`its corresponding canonical PyPA spec <packaging"
-":direct-url>` discuss the possibility to include the ``hash`` key "
-"alongside the ``hashes`` key in the ``archive_info`` dictionary. This PEP"
-" explicitly does not include the ``hash`` key in the "
-"``provenance_url.json`` file and allows only the ``hashes`` key to be "
-"present. By doing so we eliminate possible redundancy in the file, "
-"possible confusion, and any additional checks that would need to be done "
-"to make sure the hashes are in sync."
+":pep:`610` and :ref:`its corresponding canonical PyPA spec <packaging:direct-"
+"url>` discuss the possibility to include the ``hash`` key alongside the "
+"``hashes`` key in the ``archive_info`` dictionary. This PEP explicitly does "
+"not include the ``hash`` key in the ``provenance_url.json`` file and allows "
+"only the ``hashes`` key to be present. By doing so we eliminate possible "
+"redundancy in the file, possible confusion, and any additional checks that "
+"would need to be done to make sure the hashes are in sync."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:418
+#: ../../peps/peps/pep-0710.rst:428
 msgid "Making the hashes key optional"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:420
+#: ../../peps/peps/pep-0710.rst:430
 msgid ""
-":pep:`610` and :ref:`its corresponding canonical PyPA spec <packaging"
-":direct-url>` recommend including the ``hashes`` key of the "
-"``archive_info`` in the ``direct_url.json`` file but it is not required "
-"(per the :rfc:`2119` language):"
+":pep:`610` and :ref:`its corresponding canonical PyPA spec <packaging:direct-"
+"url>` recommend including the ``hashes`` key of the ``archive_info`` in the "
+"``direct_url.json`` file but it is not required (per the :rfc:`2119` "
+"language):"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:424
+#: ../../peps/peps/pep-0710.rst:434
 msgid ""
-"A hashes key SHOULD be present as a dictionary mapping a hash name to a "
-"hex encoded digest of the file."
+"A hashes key SHOULD be present as a dictionary mapping a hash name to a hex "
+"encoded digest of the file."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:427
+#: ../../peps/peps/pep-0710.rst:437
 msgid ""
-"This PEP requires the ``hashes`` key be included in ``archive_info`` in "
-"the ``provenance_url.json`` file if that file is created; per this PEP:"
+"This PEP requires the ``hashes`` key be included in ``archive_info`` in the "
+"``provenance_url.json`` file if that file is created; per this PEP:"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:430
+#: ../../peps/peps/pep-0710.rst:440
 msgid ""
 "The value of ``archive_info`` MUST be a dictionary with a single key "
 "``hashes``."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:433
+#: ../../peps/peps/pep-0710.rst:443
 msgid ""
-"By doing so, consumers of ``provenance_url.json`` can check artifact "
-"digests when the ``provenance_url.json`` file is created by installers."
+"By doing so, consumers of ``provenance_url.json`` can check artifact digests "
+"when the ``provenance_url.json`` file is created by installers."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:437
+#: ../../peps/peps/pep-0710.rst:447
 msgid "Open Issues"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:440
+#: ../../peps/peps/pep-0710.rst:450
 msgid "Availability of the provenance_url.json file in Conda"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:442
+#: ../../peps/peps/pep-0710.rst:452
 msgid ""
-"We would like to get feedback on the ``provenance_url.json`` file from "
-"the Conda maintainers. It is not clear whether Conda would like to adopt "
-"the ``provenance_url.json`` file. Conda already stores provenance related"
-" information (similar to the provenance information proposed in this PEP)"
-" in JSON files located in the ``conda-meta`` directory `following its "
-"actions during installation <https://conda.io/projects/conda/en/latest"
-"/dev-guide/deep-dives/install.html>`__."
+"We would like to get feedback on the ``provenance_url.json`` file from the "
+"Conda maintainers. It is not clear whether Conda would like to adopt the "
+"``provenance_url.json`` file. Conda already stores provenance related "
+"information (similar to the provenance information proposed in this PEP) in "
+"JSON files located in the ``conda-meta`` directory `following its actions "
+"during installation <https://conda.io/projects/conda/en/latest/dev-guide/"
+"deep-dives/install.html>`__."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:451
+#: ../../peps/peps/pep-0710.rst:461
 msgid "Using provenance_url.json in downstream installers"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:453
+#: ../../peps/peps/pep-0710.rst:463
 msgid ""
-"The proposed ``provenance_url.json`` file was meant to be adopted "
-"primarily by Python installers. Other installers, such as APT or DNF, "
-"might record the provenance of the installed downstream Python "
-"distributions in their own way specific to downstream package management."
-" The proposed file is not expected to be created by these downstream "
-"package installers and thus they were intentionally left out of this PEP."
-" However, any input by developers or maintainers of these installers is "
-"valuable to possibly enrich the ``provenance_url.json`` file with "
-"information that would help in some way."
+"The proposed ``provenance_url.json`` file was meant to be adopted primarily "
+"by Python installers. Other installers, such as APT or DNF, might record the "
+"provenance of the installed downstream Python distributions in their own way "
+"specific to downstream package management. The proposed file is not expected "
+"to be created by these downstream package installers and thus they were "
+"intentionally left out of this PEP. However, any input by developers or "
+"maintainers of these installers is valuable to possibly enrich the "
+"``provenance_url.json`` file with information that would help in some way."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:465
+#: ../../peps/peps/pep-0710.rst:475
 msgid "Appendix: Survey of installers and libraries"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:468
+#: ../../peps/peps/pep-0710.rst:478
 msgid "pip"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:470
+#: ../../peps/peps/pep-0710.rst:480
 msgid ""
 "The function from pip's internal API responsible for installing wheels, "
-"named `_install_wheel "
-"<https://github.com/pypa/pip/blob/10d9cbc601e5cadc45163452b1bc463d8ad2c1f7/src/pip/_internal/operations/install/wheel.py#L432>`__,"
-" does not store any ``provenance_url.json`` file in the ``.dist-info`` "
-"directory. Additionally, a prototype introducing the mentioned file to "
-"pip in `pypa/pip#11865`_ demonstrates incorporating logic for handling "
-"the ``provenance_url.json`` file in pip's source code."
+"named `_install_wheel <https://github.com/pypa/pip/"
+"blob/10d9cbc601e5cadc45163452b1bc463d8ad2c1f7/src/pip/_internal/operations/"
+"install/wheel.py#L432>`__, does not store any ``provenance_url.json`` file "
+"in the ``.dist-info`` directory. Additionally, a prototype introducing the "
+"mentioned file to pip in `pypa/pip#11865`_ demonstrates incorporating logic "
+"for handling the ``provenance_url.json`` file in pip's source code."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:478
+#: ../../peps/peps/pep-0710.rst:488
 msgid ""
 "As pip is used by some of the tools mentioned below to install Python "
-"package distributions, findings for pip apply to these tools, as well as "
-"pip does not allow parametrizing creation of files in the ``.dist-info`` "
-"directory in its internal API. Most of the tools mentioned below that use"
-" pip invoke pip as a subprocess which has no effect on the eventual "
-"presence of the ``provenance_url.json`` file in the ``.dist-info`` "
-"directory."
+"package distributions, findings for pip apply to these tools, as well as pip "
+"does not allow parametrizing creation of files in the ``.dist-info`` "
+"directory in its internal API. Most of the tools mentioned below that use "
+"pip invoke pip as a subprocess which has no effect on the eventual presence "
+"of the ``provenance_url.json`` file in the ``.dist-info`` directory."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:486
+#: ../../peps/peps/pep-0710.rst:496
 msgid "distlib"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:488
+#: ../../peps/peps/pep-0710.rst:498
 msgid ""
 "`distlib`_ implements low-level functionality to manipulate the ``dist-"
-"info`` directory. The database of installed distributions does not use "
-"any file named ``provenance_url.json``, based on `the distlib's source "
-"code "
-"<https://github.com/pypa/distlib/blob/05375908c1b2d6b0e74bdeb574569d3609db9f56/distlib/database.py#L39-L40>`__."
+"info`` directory. The database of installed distributions does not use any "
+"file named ``provenance_url.json``, based on `the distlib's source code "
+"<https://github.com/pypa/distlib/"
+"blob/05375908c1b2d6b0e74bdeb574569d3609db9f56/distlib/database.py#L39-"
+"L40>`__."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:494
+#: ../../peps/peps/pep-0710.rst:504
 msgid "Pipenv"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:496
+#: ../../peps/peps/pep-0710.rst:506
 msgid ""
-"`Pipenv`_ uses pip `to install Python package distributions "
-"<https://github.com/pypa/pipenv/blob/babd428d8ee3c5caeb818d746f715c02f338839b/pipenv/routines/install.py#L262>`__."
-" There wasn't any additional identified logic that would cause backwards "
-"compatibility issues when introducing the ``provenance_url.json`` file in"
-" the ``.dist-info`` directory."
+"`Pipenv`_ uses pip `to install Python package distributions <https://github."
+"com/pypa/pipenv/blob/babd428d8ee3c5caeb818d746f715c02f338839b/pipenv/"
+"routines/install.py#L262>`__. There wasn't any additional identified logic "
+"that would cause backwards compatibility issues when introducing the "
+"``provenance_url.json`` file in the ``.dist-info`` directory."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:503
+#: ../../peps/peps/pep-0710.rst:513
 msgid "installer"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:505
+#: ../../peps/peps/pep-0710.rst:515
 msgid ""
 "`installer`_ does not create a ``provenance_url.json`` file explicitly. "
-"Nevertheless, as per the :ref:`Recording Installed Projects <packaging"
-":recording-installed-packages>` specification, installer allows passing "
-"the ``additional_metadata`` argument to create a file in the ``.dist-"
-"info`` directory - see `the source code "
-"<https://github.com/pypa/installer/blob/f89b5d93a643ef5e9858a6e3f450c83a57bbe1f1/src/installer/_core.py#L67>`__."
-" To avoid any backwards compatibility issues, any library or tool using "
-"installer must not request creating the ``provenance_url.json`` file "
-"using the mentioned ``additional_metadata`` argument."
+"Nevertheless, as per the :ref:`Recording Installed Projects <packaging:"
+"recording-installed-packages>` specification, installer allows passing the "
+"``additional_metadata`` argument to create a file in the ``.dist-info`` "
+"directory - see `the source code <https://github.com/pypa/installer/blob/"
+"f89b5d93a643ef5e9858a6e3f450c83a57bbe1f1/src/installer/_core.py#L67>`__. To "
+"avoid any backwards compatibility issues, any library or tool using "
+"installer must not request creating the ``provenance_url.json`` file using "
+"the mentioned ``additional_metadata`` argument."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:515
+#: ../../peps/peps/pep-0710.rst:525
 msgid "Poetry"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:517
+#: ../../peps/peps/pep-0710.rst:527
 msgid ""
 "The installation logic in `Poetry`_ depends on the ``installer.modern-"
-"installer`` configuration option (`see docs <https://python-"
-"poetry.org/docs/configuration#installermodern-installation>`__)."
+"installer`` configuration option (`see docs <https://python-poetry.org/docs/"
+"configuration#installermodern-installation>`__)."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:521
+#: ../../peps/peps/pep-0710.rst:531
 msgid ""
-"For cases when the ``installer.modern-installer`` configuration option is"
-" set to ``false``, Poetry uses `pip for installing Python package "
-"distributions <https://github.com/python-"
-"poetry/poetry/blob/2b15ce10f02b0c6347fe2f12ae902488edeaaf7c/src/poetry/installation/executor.py#L543-L544>`__."
+"For cases when the ``installer.modern-installer`` configuration option is "
+"set to ``false``, Poetry uses `pip for installing Python package "
+"distributions <https://github.com/python-poetry/poetry/"
+"blob/2b15ce10f02b0c6347fe2f12ae902488edeaaf7c/src/poetry/installation/"
+"executor.py#L543-L544>`__."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:525
+#: ../../peps/peps/pep-0710.rst:535
 msgid ""
-"On the other hand, when ``installer.modern-installer`` configuration "
-"option is set to ``true``, Poetry uses `installer to install Python "
-"package distributions <https://github.com/python-"
-"poetry/poetry/blob/2b15ce10f02b0c6347fe2f12ae902488edeaaf7c/src/poetry/installation/wheel_installer.py#L99-L109>`__."
-" As can be seen from the linked sources, there isn't passed any "
-"additional metadata file named ``provenance_url.json`` that would cause "
-"compatibility issues with this PEP."
+"On the other hand, when ``installer.modern-installer`` configuration option "
+"is set to ``true``, Poetry uses `installer to install Python package "
+"distributions <https://github.com/python-poetry/poetry/"
+"blob/2b15ce10f02b0c6347fe2f12ae902488edeaaf7c/src/poetry/installation/"
+"wheel_installer.py#L99-L109>`__. As can be seen from the linked sources, "
+"there isn't passed any additional metadata file named ``provenance_url."
+"json`` that would cause compatibility issues with this PEP."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:533
+#: ../../peps/peps/pep-0710.rst:543
 msgid "Conda"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:535
+#: ../../peps/peps/pep-0710.rst:545
 msgid ""
 "`Conda`_ does not create any ``provenance_url.json`` file `when Python "
-"package distributions are installed "
-"<https://github.com/conda/conda/blob/86e83925e17c68233ac659633bdc4d76b05a245a/conda/common/pkg_formats/python.py#L370-L390>`__."
+"package distributions are installed <https://github.com/conda/conda/"
+"blob/86e83925e17c68233ac659633bdc4d76b05a245a/conda/common/pkg_formats/"
+"python.py#L370-L390>`__."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:540
+#: ../../peps/peps/pep-0710.rst:550
 msgid "Hatch"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:542
+#: ../../peps/peps/pep-0710.rst:552
 msgid ""
-"`Hatch`_ uses pip `to install project dependencies "
-"<https://github.com/pypa/hatch/blob/dd6e9545a355a0b5b58e065b489c1ef087e3bcaf/src/hatch/env/system.py#L28-L29>`__."
+"`Hatch`_ uses pip `to install project dependencies <https://github.com/pypa/"
+"hatch/blob/dd6e9545a355a0b5b58e065b489c1ef087e3bcaf/src/hatch/env/system."
+"py#L28-L29>`__."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:546
+#: ../../peps/peps/pep-0710.rst:556
 msgid "micropipenv"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:548
+#: ../../peps/peps/pep-0710.rst:558
 msgid ""
-"As `micropipenv`_ is a wrapper on top of pip, it uses pip to install "
-"Python distributions, for both `lock files <https://github.com/thoth-"
-"station/micropipenv/blob/8176862ec96df23e152938659d6f45645246e398/micropipenv.py#L393>`__"
-" as well as `for requirements files <https://github.com/thoth-"
-"station/micropipenv/blob/8176862ec96df23e152938659d6f45645246e398/micropipenv.py#L977>`__."
+"As `micropipenv`_ is a wrapper on top of pip, it uses pip to install Python "
+"distributions, for both `lock files <https://github.com/thoth-station/"
+"micropipenv/blob/8176862ec96df23e152938659d6f45645246e398/micropipenv."
+"py#L393>`__ as well as `for requirements files <https://github.com/thoth-"
+"station/micropipenv/blob/8176862ec96df23e152938659d6f45645246e398/"
+"micropipenv.py#L977>`__."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:555
+#: ../../peps/peps/pep-0710.rst:565
 msgid "Thamos"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:557
+#: ../../peps/peps/pep-0710.rst:567
 msgid ""
-"`Thamos`_ uses micropipenv `to install Python package distributions "
-"<https://github.com/thoth-"
-"station/thamos/blob/234351025c77cfe28b0df07f7ee017469b57d3f4/thamos/lib.py#L1290>`__,"
-" hence any findings for micropipenv apply for Thamos."
+"`Thamos`_ uses micropipenv `to install Python package distributions <https://"
+"github.com/thoth-station/thamos/"
+"blob/234351025c77cfe28b0df07f7ee017469b57d3f4/thamos/lib.py#L1290>`__, hence "
+"any findings for micropipenv apply for Thamos."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:563
+#: ../../peps/peps/pep-0710.rst:573
 msgid "PDM"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:565
+#: ../../peps/peps/pep-0710.rst:575
 msgid ""
-"`PDM`_ uses installer `to install binary distributions "
-"<https://github.com/pdm-"
-"project/pdm/blob/d39a8e5b36c37093ea31e666d0e55fe21b38c16b/src/pdm/installers/installers.py#L241>`__."
-" The only additional metadata file it eventually creates in the ``.dist-"
-"info`` directory is `the REFER_TO file <https://github.com/pdm-"
-"project/pdm/blob/d39a8e5b36c37093ea31e666d0e55fe21b38c16b/src/pdm/installers/installers.py#L197>`__."
+"`PDM`_ uses installer `to install binary distributions <https://github.com/"
+"pdm-project/pdm/blob/d39a8e5b36c37093ea31e666d0e55fe21b38c16b/src/pdm/"
+"installers/installers.py#L241>`__. The only additional metadata file it "
+"eventually creates in the ``.dist-info`` directory is `the REFER_TO file "
+"<https://github.com/pdm-project/pdm/blob/"
+"d39a8e5b36c37093ea31e666d0e55fe21b38c16b/src/pdm/installers/installers."
+"py#L197>`__."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:607
+#: ../../peps/peps/pep-0710.rst:617
 msgid "Acknowledgements"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:609
+#: ../../peps/peps/pep-0710.rst:619
 msgid ""
 "Thanks to Dustin Ingram, Brett Cannon, and Paul Moore for the initial "
 "discussion in which this idea originated."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:612
+#: ../../peps/peps/pep-0710.rst:622
 msgid ""
-"Thanks to Donald Stufft, Ofek Lev, and Trishank Kuppusamy for early "
-"feedback and support to work on this PEP."
+"Thanks to Donald Stufft, Ofek Lev, and Trishank Kuppusamy for early feedback "
+"and support to work on this PEP."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:615
+#: ../../peps/peps/pep-0710.rst:625
 msgid ""
 "Thanks to Gregory P. Smith, Stéphane Bidoul, and C.A.M. Gerlach for "
 "reviewing this PEP and providing valuable suggestions."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:618
+#: ../../peps/peps/pep-0710.rst:628
 msgid ""
-"Thanks to Seth Michael Larson for providing valuable suggestions and for "
-"the proposed pip-sbom prototype."
+"Thanks to Seth Michael Larson for providing valuable suggestions and for the "
+"proposed pip-sbom prototype."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:621
+#: ../../peps/peps/pep-0710.rst:631
 msgid "Thanks to Stéphane Bidoul and Chris Jerdonek for :pep:`610`."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:623
+#: ../../peps/peps/pep-0710.rst:633
 msgid "Last, but not least, thanks to Donald Stufft for sponsoring this PEP."
 msgstr ""
 
-#: ../../peps/pep-0710.rst:626
+#: ../../peps/peps/pep-0710.rst:636
 msgid "Copyright"
 msgstr ""
 
-#: ../../peps/pep-0710.rst:628
+#: ../../peps/peps/pep-0710.rst:638
 msgid ""
-"This document is placed in the public domain or under the "
-"CC0-1.0-Universal license, whichever is more permissive."
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
 msgstr ""
-

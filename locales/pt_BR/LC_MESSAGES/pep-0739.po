@@ -1,0 +1,704 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the PEPs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PEPs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-14 02:33+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pt_BR\n"
+"Language-Team: pt_BR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../peps/peps/pep-0739.rst
+msgid "Author"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:3
+msgid "Filipe Laíns <lains@riseup.net>"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst
+msgid "PEP-Delegate"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:4
+msgid "Paul Moore <p.f.moore@gmail.com>"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst
+msgid "Discussions-To"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:5
+msgid ""
+"https://discuss.python.org/t/pep-739-static-description-file-for-build-"
+"details-of-python-installations/44572"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst
+msgid "Status"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:6
+msgid "Draft"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst ../../peps/peps/pep-0739.rst:59
+#: ../../peps/peps/pep-0739.rst:70 ../../peps/peps/pep-0739.rst:84
+#: ../../peps/peps/pep-0739.rst:102 ../../peps/peps/pep-0739.rst:118
+#: ../../peps/peps/pep-0739.rst:137 ../../peps/peps/pep-0739.rst:153
+#: ../../peps/peps/pep-0739.rst:172 ../../peps/peps/pep-0739.rst:187
+#: ../../peps/peps/pep-0739.rst:207 ../../peps/peps/pep-0739.rst:218
+#: ../../peps/peps/pep-0739.rst:229 ../../peps/peps/pep-0739.rst:240
+#: ../../peps/peps/pep-0739.rst:251 ../../peps/peps/pep-0739.rst:262
+#: ../../peps/peps/pep-0739.rst:280 ../../peps/peps/pep-0739.rst:298
+#: ../../peps/peps/pep-0739.rst:313 ../../peps/peps/pep-0739.rst:332
+#: ../../peps/peps/pep-0739.rst:349 ../../peps/peps/pep-0739.rst:364
+#: ../../peps/peps/pep-0739.rst:382 ../../peps/peps/pep-0739.rst:400
+#: ../../peps/peps/pep-0739.rst:422 ../../peps/peps/pep-0739.rst:444
+#: ../../peps/peps/pep-0739.rst:458 ../../peps/peps/pep-0739.rst:477
+#: ../../peps/peps/pep-0739.rst:495 ../../peps/peps/pep-0739.rst:514
+msgid "Type"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:7
+msgid "Standards Track"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst
+msgid "Topic"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:8
+msgid "Packaging"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst
+msgid "Created"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:9
+msgid "19-Dec-2023"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst
+msgid "Python-Version"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:10
+msgid "3.13"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:14
+msgid "Abstract"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:16
+msgid ""
+"Introduce a standard format for a static description file with build details "
+"of Python installations."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:21
+msgid "Rationale"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:23
+msgid ""
+"When introspecting a Python installation, running code is often undesirable "
+"or impossible. Having a static description file makes various of Python "
+"build details available without having to run the interpreter."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:27
+msgid ""
+"This is helpful for use-cases such as cross-compilation, Python launchers, "
+"etc."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:31
+msgid "Scope"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:33
+msgid ""
+"This PEP only defines a format. Python implementations may choose to include "
+"a build details file as part of their distribution, but they are not "
+"required to, and the specifics of how that may happen are out of scope for "
+"this PEP."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:39
+msgid "Specification"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:41
+msgid ""
+"The specification is defined by the JSON Schema definition provided below, "
+"which is rendered in an human-readable format here."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:52
+msgid "``$schema``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:53
+msgid "https://json-schema.org/draft/2020-12/schema"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:54
+msgid "``$id``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:55
+msgid ""
+"https://github.com/python/peps/blob/main/peps/pep-0739/python-build-info-v1."
+"schema.json"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:56
+msgid "Title"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:57
+msgid "Static description file for the build details of Python installations"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:60 ../../peps/peps/pep-0739.rst:119
+#: ../../peps/peps/pep-0739.rst:154 ../../peps/peps/pep-0739.rst:188
+#: ../../peps/peps/pep-0739.rst:263 ../../peps/peps/pep-0739.rst:299
+#: ../../peps/peps/pep-0739.rst:365 ../../peps/peps/pep-0739.rst:383
+#: ../../peps/peps/pep-0739.rst:459 ../../peps/peps/pep-0739.rst:515
+msgid "``object``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:61 ../../peps/peps/pep-0739.rst:128
+#: ../../peps/peps/pep-0739.rst:163 ../../peps/peps/pep-0739.rst:198
+#: ../../peps/peps/pep-0739.rst:271 ../../peps/peps/pep-0739.rst:304
+#: ../../peps/peps/pep-0739.rst:373 ../../peps/peps/pep-0739.rst:391
+#: ../../peps/peps/pep-0739.rst:468 ../../peps/peps/pep-0739.rst:523
+msgid "Additional properties"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:62 ../../peps/peps/pep-0739.rst:129
+#: ../../peps/peps/pep-0739.rst:199 ../../peps/peps/pep-0739.rst:272
+#: ../../peps/peps/pep-0739.rst:305 ../../peps/peps/pep-0739.rst:392
+#: ../../peps/peps/pep-0739.rst:469
+msgid "**Not allowed**"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:65
+msgid "``schema_version``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:71
+msgid "``string`` (constant — ``1``)"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:72 ../../peps/peps/pep-0739.rst:86
+#: ../../peps/peps/pep-0739.rst:104 ../../peps/peps/pep-0739.rst:120
+#: ../../peps/peps/pep-0739.rst:139 ../../peps/peps/pep-0739.rst:155
+#: ../../peps/peps/pep-0739.rst:174 ../../peps/peps/pep-0739.rst:189
+#: ../../peps/peps/pep-0739.rst:264 ../../peps/peps/pep-0739.rst:282
+#: ../../peps/peps/pep-0739.rst:300 ../../peps/peps/pep-0739.rst:315
+#: ../../peps/peps/pep-0739.rst:334 ../../peps/peps/pep-0739.rst:351
+#: ../../peps/peps/pep-0739.rst:366 ../../peps/peps/pep-0739.rst:384
+#: ../../peps/peps/pep-0739.rst:402 ../../peps/peps/pep-0739.rst:424
+#: ../../peps/peps/pep-0739.rst:446 ../../peps/peps/pep-0739.rst:460
+#: ../../peps/peps/pep-0739.rst:479 ../../peps/peps/pep-0739.rst:497
+#: ../../peps/peps/pep-0739.rst:516
+msgid "Description"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:73
+msgid ""
+"Schema version. This is a constant value and MUST be ``1``. Future "
+"iterations of this schema MUST update this value."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:75 ../../peps/peps/pep-0739.rst:93
+#: ../../peps/peps/pep-0739.rst:109 ../../peps/peps/pep-0739.rst:126
+#: ../../peps/peps/pep-0739.rst:144 ../../peps/peps/pep-0739.rst:161
+#: ../../peps/peps/pep-0739.rst:178 ../../peps/peps/pep-0739.rst:196
+#: ../../peps/peps/pep-0739.rst:209 ../../peps/peps/pep-0739.rst:220
+#: ../../peps/peps/pep-0739.rst:231 ../../peps/peps/pep-0739.rst:242
+#: ../../peps/peps/pep-0739.rst:253 ../../peps/peps/pep-0739.rst:269
+#: ../../peps/peps/pep-0739.rst:289 ../../peps/peps/pep-0739.rst:302
+#: ../../peps/peps/pep-0739.rst:323 ../../peps/peps/pep-0739.rst:340
+#: ../../peps/peps/pep-0739.rst:355 ../../peps/peps/pep-0739.rst:371
+#: ../../peps/peps/pep-0739.rst:389 ../../peps/peps/pep-0739.rst:413
+#: ../../peps/peps/pep-0739.rst:435 ../../peps/peps/pep-0739.rst:449
+#: ../../peps/peps/pep-0739.rst:466 ../../peps/peps/pep-0739.rst:486
+#: ../../peps/peps/pep-0739.rst:505 ../../peps/peps/pep-0739.rst:521
+msgid "Required"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:76 ../../peps/peps/pep-0739.rst:110
+#: ../../peps/peps/pep-0739.rst:127 ../../peps/peps/pep-0739.rst:145
+#: ../../peps/peps/pep-0739.rst:162 ../../peps/peps/pep-0739.rst:179
+#: ../../peps/peps/pep-0739.rst:197 ../../peps/peps/pep-0739.rst:210
+#: ../../peps/peps/pep-0739.rst:221 ../../peps/peps/pep-0739.rst:232
+#: ../../peps/peps/pep-0739.rst:243 ../../peps/peps/pep-0739.rst:254
+#: ../../peps/peps/pep-0739.rst:290 ../../peps/peps/pep-0739.rst:324
+#: ../../peps/peps/pep-0739.rst:341 ../../peps/peps/pep-0739.rst:487
+msgid "**True**"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:79
+msgid "``base_prefix``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:85 ../../peps/peps/pep-0739.rst:103
+#: ../../peps/peps/pep-0739.rst:138 ../../peps/peps/pep-0739.rst:173
+#: ../../peps/peps/pep-0739.rst:281 ../../peps/peps/pep-0739.rst:333
+#: ../../peps/peps/pep-0739.rst:350 ../../peps/peps/pep-0739.rst:401
+#: ../../peps/peps/pep-0739.rst:423 ../../peps/peps/pep-0739.rst:478
+#: ../../peps/peps/pep-0739.rst:496
+msgid "``string``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:87
+msgid "Base prefix of the Python installation."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:89
+msgid ""
+"Either an absolute path, or a relative path to directory where this file is "
+"contained."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:91 ../../peps/peps/pep-0739.rst:106
+#: ../../peps/peps/pep-0739.rst:142 ../../peps/peps/pep-0739.rst:176
+#: ../../peps/peps/pep-0739.rst:192 ../../peps/peps/pep-0739.rst:285
+#: ../../peps/peps/pep-0739.rst:321 ../../peps/peps/pep-0739.rst:337
+#: ../../peps/peps/pep-0739.rst:353 ../../peps/peps/pep-0739.rst:368
+#: ../../peps/peps/pep-0739.rst:409 ../../peps/peps/pep-0739.rst:431
+#: ../../peps/peps/pep-0739.rst:482 ../../peps/peps/pep-0739.rst:501
+msgid "Examples"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:92
+msgid "``/usr``, ``../..``, etc."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:94 ../../peps/peps/pep-0739.rst:270
+#: ../../peps/peps/pep-0739.rst:303 ../../peps/peps/pep-0739.rst:356
+#: ../../peps/peps/pep-0739.rst:372 ../../peps/peps/pep-0739.rst:390
+#: ../../peps/peps/pep-0739.rst:414 ../../peps/peps/pep-0739.rst:436
+#: ../../peps/peps/pep-0739.rst:450 ../../peps/peps/pep-0739.rst:467
+#: ../../peps/peps/pep-0739.rst:506 ../../peps/peps/pep-0739.rst:522
+msgid "**False**"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:97
+msgid "``platform``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:105
+msgid "System platform string."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:107
+msgid "``linux-x86_64``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:108 ../../peps/peps/pep-0739.rst:195
+#: ../../peps/peps/pep-0739.rst:288 ../../peps/peps/pep-0739.rst:339
+#: ../../peps/peps/pep-0739.rst:370 ../../peps/peps/pep-0739.rst:412
+#: ../../peps/peps/pep-0739.rst:434 ../../peps/peps/pep-0739.rst:485
+#: ../../peps/peps/pep-0739.rst:504
+msgid "etc."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:113
+msgid "``language``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:121
+msgid "Object containing details related to the Python language specification."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:124
+msgid ""
+"In addition to the required keys, implementations may choose to include "
+"extra keys with implementation-specific details."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:132
+msgid "``language.version``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:140
+msgid ""
+"String representation the Python language version — a version string "
+"consisting only of the *major* and *minor* components."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:143
+msgid "``3.13``, etc."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:148
+msgid "``implementation``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:156
+msgid "Object containing details related to Python implementation."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:158
+msgid ""
+"This section SHOULD be equivalent to :py:data:`sys.implementation`, but only "
+"the ``name`` and ``version`` keys are actually required to be present."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:164 ../../peps/peps/pep-0739.rst:374
+#: ../../peps/peps/pep-0739.rst:524
+msgid "**Allowed**"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:167
+msgid "``implementation.name``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:175
+msgid "Lower-case name of the Python implementation."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:177
+msgid "``cpython``, ``pypy``, etc."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:182
+msgid "``implementation.version``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:190
+msgid ""
+"Object in the format of :py:data:`sys.version_info`, containing the "
+"implementation version."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:193
+msgid ""
+"``{'major': 3, 'minor': 13, 'micro': 1, 'releaselevel': 'final', 'serial': 0}"
+"``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:194
+msgid ""
+"``{'major': 7, 'minor': 3, 'micro': 16, 'releaselevel': 'final', 'serial': 0}"
+"``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:202
+msgid "``implementation.version.major``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:208 ../../peps/peps/pep-0739.rst:219
+#: ../../peps/peps/pep-0739.rst:230 ../../peps/peps/pep-0739.rst:252
+msgid "``number``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:213
+msgid "``implementation.version.minor``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:224
+msgid "``implementation.version.micro``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:235
+msgid "``implementation.version.releaselevel``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:241
+msgid "``string`` (enum — ``alpha``, ``beta``, ``candidate``, ``final``)"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:246
+msgid "``implementation.version.serial``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:257
+msgid "``interpreter``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:265
+msgid "Object containing details Python interpreter."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:267
+msgid ""
+"If the Python installation does not provide an interpreter, this section "
+"will be missing."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:275
+msgid "``interpreter.path``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:283
+msgid ""
+"The path to the Python interprer. Either an absolute path, or a relative "
+"path to the path defined in the ``base`` key."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:286
+msgid "``/usr/bin/python``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:287
+msgid "``bin/python``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:293
+msgid "``abi``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:301
+msgid "Object containing details related to ABI."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:308
+msgid "``abi.flags``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:314
+msgid "``array``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:316
+msgid "Build configuration flags, used to calculate the extension suffix."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:319
+msgid ""
+"The flags MUST be defined in the order they appear on the extension suffix."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:322
+msgid "``['d', 't']``, etc."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:327
+msgid "``abi.extension_suffix``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:335
+msgid ""
+"Suffix used for extensions built against the current implementation version."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:338
+msgid "``.cpython-313-x86_64-linux-gnu.so``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:344
+msgid "``abi.stable_abi_suffix``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:352
+msgid "Suffix used for extensions built against the stable ABI."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:354
+msgid "``.abi3.so``, etc."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:359
+msgid "``suffixes``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:367
+msgid "Valid module suffixes grouped by type."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:369
+msgid ""
+"``{'source': ['.py'], 'bytecode': ['.pyc'], 'optimized_bytecode': ['.pyc'], "
+"'debug_bytecode': ['.pyc'], 'extensions': ['.cpython-313-x86_64-linux-gnu."
+"so', '.abi3.so', '.so']}``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:377
+msgid "``libpython``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:385
+msgid "Object containing details related to the ``libpython`` library."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:387
+msgid ""
+"If the Python installation does not provide a ``libpython`` library, this "
+"section will be missing."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:395
+msgid "``libpython.dynamic``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:403
+msgid "The path to the dynamic ``libpython`` library."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:405
+msgid ""
+"Either an absolute path, or a relative path to the path defined in the "
+"``base`` key.. If the Python installation does not provide a dynamic "
+"``libpython`` library, this entry will be missing."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:410
+msgid "``/usr/lib/libpython3.13.so.1.0``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:411
+msgid "``lib/libpython3.13.so.1.0``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:417
+msgid "``libpython.static``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:425
+msgid "The path to the static ``libpython`` library."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:427
+msgid ""
+"Either an absolute path, or a relative path to the path defined in the "
+"``base`` key.. If the Python installation does not provide a static "
+"``libpython`` library, this entry will be missing."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:432
+msgid "``/usr/lib/python3.13/config-3.13-x86_64-linux-gnu/libpython3.13.a``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:433
+msgid "``lib/python3.13/config-3.13-x86_64-linux-gnu/libpython3.13.a``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:439
+msgid "``libpython.link_to_libpython``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:445
+msgid "``boolean``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:447
+msgid "Should extensions built against a dynamic ``libpython`` link to it?"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:453
+msgid "``c_api``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:461
+msgid "Object containing details related to the Python C API, if available."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:464
+msgid ""
+"If the Python implementation does not provide a C API, this section will be "
+"missing."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:472
+msgid "``c_api.headers``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:480
+msgid ""
+"The path to the C API headers. Either an absolute path, or a relative path "
+"to the path defined in the ``base`` key.."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:483
+msgid "``/usr/include/python3.13``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:484
+msgid "``include/python3.13``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:490
+msgid "``c_api.pkgconfig_path``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:498
+msgid ""
+"The path to the pkg-config definition files. Either an absolute path, or a "
+"relative path to the path defined in the ``base`` key.."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:502
+msgid "``/usr/lib/pkgconfig``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:503
+msgid "``lib/pkgconfig``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:509
+msgid "``arbitrary_data``"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:517
+msgid "Object containing extra arbitrary data."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:519
+msgid ""
+"This is meant to be used as an escape-hatch, to include any relevant data "
+"that is not covered by this specification."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:531
+msgid "Example"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:540
+msgid "JSON Schema"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:548
+msgid "Rejected Ideas"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:551
+msgid "Having a larger scope"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:553
+msgid ""
+"One of the main requests in the discussion of this PEP was the inclusion of "
+"other kind of information, such as the ``site-packages`` path. It is the "
+"opinion of the PEP author that information regarding the Python environment "
+"should be provided by a separate file, creating the a clear separation "
+"between the build details, which should be immutable accross any interpreter "
+"instance, and details that can change, such as environment details."
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:562
+msgid "Copyright"
+msgstr ""
+
+#: ../../peps/peps/pep-0739.rst:564
+msgid ""
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
+msgstr ""

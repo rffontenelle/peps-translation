@@ -6,98 +6,98 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PEPs\n"
+"Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 20:07+0000\n"
+"POT-Creation-Date: 2024-07-14 02:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.15.0\n"
 
-#: ../pep-0612.rst
+#: ../../peps/peps/pep-0612.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../pep-0612.rst:3
+#: ../../peps/peps/pep-0612.rst:3
 msgid "Mark Mendoza <mendoza.mark.a@gmail.com>"
 msgstr ""
 
-#: ../pep-0612.rst
+#: ../../peps/peps/pep-0612.rst
 msgid "Sponsor"
 msgstr ""
 
-#: ../pep-0612.rst:4 ../pep-0612.rst:5
+#: ../../peps/peps/pep-0612.rst:4 ../../peps/peps/pep-0612.rst:5
 msgid "Guido van Rossum <guido@python.org>"
 msgstr ""
 
-#: ../pep-0612.rst
+#: ../../peps/peps/pep-0612.rst
 msgid "BDFL-Delegate"
 msgstr ""
 
-#: ../pep-0612.rst
+#: ../../peps/peps/pep-0612.rst
 msgid "Discussions-To"
 msgstr ""
 
-#: ../pep-0612.rst:6
+#: ../../peps/peps/pep-0612.rst:6
 msgid "typing-sig@python.org"
 msgstr ""
 
-#: ../pep-0612.rst
+#: ../../peps/peps/pep-0612.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../pep-0612.rst:7
-msgid "Accepted"
+#: ../../peps/peps/pep-0612.rst:7
+msgid "Final"
 msgstr ""
 
-#: ../pep-0612.rst
+#: ../../peps/peps/pep-0612.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../pep-0612.rst:8
+#: ../../peps/peps/pep-0612.rst:8
 msgid "Standards Track"
 msgstr ""
 
-#: ../pep-0612.rst
+#: ../../peps/peps/pep-0612.rst
 msgid "Topic"
 msgstr ""
 
-#: ../pep-0612.rst:9
+#: ../../peps/peps/pep-0612.rst:9
 msgid "Typing"
 msgstr ""
 
-#: ../pep-0612.rst
+#: ../../peps/peps/pep-0612.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../pep-0612.rst:11
+#: ../../peps/peps/pep-0612.rst:10
 msgid "18-Dec-2019"
 msgstr ""
 
-#: ../pep-0612.rst
+#: ../../peps/peps/pep-0612.rst
 msgid "Python-Version"
 msgstr ""
 
-#: ../pep-0612.rst:12
+#: ../../peps/peps/pep-0612.rst:11
 msgid "3.10"
 msgstr ""
 
-#: ../pep-0612.rst
+#: ../../peps/peps/pep-0612.rst
 msgid "Post-History"
 msgstr "Pós-história"
 
-#: ../pep-0612.rst:13
+#: ../../peps/peps/pep-0612.rst:12
 msgid "18-Dec-2019, 13-Jul-2020"
 msgstr ""
 
-#: ../pep-0612.rst:17
+#: ../../peps/peps/pep-0612.rst:18
 msgid "Abstract"
 msgstr ""
 
-#: ../pep-0612.rst:19
+#: ../../peps/peps/pep-0612.rst:20
 msgid ""
 "There currently are two ways to specify the type of a callable, the "
 "``Callable[[int, str], bool]`` syntax defined in  :pep:`484`, and callback "
@@ -108,17 +108,17 @@ msgid ""
 "expressing these kinds of relationships."
 msgstr ""
 
-#: ../pep-0612.rst:29
+#: ../../peps/peps/pep-0612.rst:30
 msgid "Motivation"
 msgstr ""
 
-#: ../pep-0612.rst:31
+#: ../../peps/peps/pep-0612.rst:32
 msgid ""
 "The existing standards for annotating higher order functions don’t give us "
 "the tools to annotate the following common decorator pattern satisfactorily:"
 msgstr ""
 
-#: ../pep-0612.rst:53
+#: ../../peps/peps/pep-0612.rst:54
 msgid ""
 "``add_logging``\\ , a decorator which logs before each entry into the "
 "decorated function, is an instance of the Python idiom of one function "
@@ -136,7 +136,7 @@ msgid ""
 "function."
 msgstr ""
 
-#: ../pep-0612.rst:68
+#: ../../peps/peps/pep-0612.rst:69
 msgid ""
 "Due to the limitations of the status quo, the ``add_logging`` example will "
 "type check but will fail at runtime. ``inner`` will pass the string “B” into "
@@ -147,7 +147,7 @@ msgid ""
 "validation on arguments)."
 msgstr ""
 
-#: ../pep-0612.rst:75
+#: ../../peps/peps/pep-0612.rst:76
 msgid ""
 "Without the ability to define dependencies between the parameters of "
 "different callable types, there is no way, at present, to make "
@@ -155,45 +155,45 @@ msgid ""
 "enforcement of the parameters of the decorated function."
 msgstr ""
 
-#: ../pep-0612.rst:80
+#: ../../peps/peps/pep-0612.rst:81
 msgid ""
 "With the addition of the ``ParamSpec`` variables proposed by this PEP, we "
 "can rewrite the previous example in a way that keeps the flexibility of the "
 "decorator and the parameter enforcement of the decorated function."
 msgstr ""
 
-#: ../pep-0612.rst:104
+#: ../../peps/peps/pep-0612.rst:105
 msgid ""
 "Another common decorator pattern that has previously been impossible to type "
 "is the practice of adding or removing arguments from the decorated "
 "function.  For example:"
 msgstr ""
 
-#: ../pep-0612.rst:127
+#: ../../peps/peps/pep-0612.rst:128
 msgid ""
 "With the addition of the ``Concatenate`` operator from this PEP, we can even "
 "type this more complex decorator."
 msgstr ""
 
-#: ../pep-0612.rst:149
+#: ../../peps/peps/pep-0612.rst:150
 msgid "Specification"
 msgstr ""
 
-#: ../pep-0612.rst:152
+#: ../../peps/peps/pep-0612.rst:153
 msgid "``ParamSpec`` Variables"
 msgstr ""
 
-#: ../pep-0612.rst:155
+#: ../../peps/peps/pep-0612.rst:156
 msgid "Declaration"
 msgstr ""
 
-#: ../pep-0612.rst:157
+#: ../../peps/peps/pep-0612.rst:158
 msgid ""
 "A parameter specification variable is defined in a similar manner to how a "
 "normal type variable is defined with ``typing.TypeVar``."
 msgstr ""
 
-#: ../pep-0612.rst:166
+#: ../../peps/peps/pep-0612.rst:167
 msgid ""
 "The runtime should accept ``bound``\\ s and ``covariant`` and "
 "``contravariant`` arguments in the declaration just as ``typing.TypeVar`` "
@@ -201,11 +201,11 @@ msgid ""
 "those options to a later PEP."
 msgstr ""
 
-#: ../pep-0612.rst:171 ../pep-0612.rst:382
+#: ../../peps/peps/pep-0612.rst:172 ../../peps/peps/pep-0612.rst:383
 msgid "Valid use locations"
 msgstr ""
 
-#: ../pep-0612.rst:173
+#: ../../peps/peps/pep-0612.rst:174
 msgid ""
 "Previously only a list of parameter arguments (``[A, B, C]``) or an ellipsis "
 "(signifying \"undefined parameters\") were acceptable as the first "
@@ -215,24 +215,24 @@ msgid ""
 "(``Callable[Concatenate[int, P], int]``\\ )."
 msgstr ""
 
-#: ../pep-0612.rst:192
+#: ../../peps/peps/pep-0612.rst:193
 msgid ""
 "where ``parameter_specification_variable`` is a ``typing.ParamSpec`` "
 "variable, declared in the manner as defined above, and ``concatenate`` is "
 "``typing.Concatenate``."
 msgstr ""
 
-#: ../pep-0612.rst:196
+#: ../../peps/peps/pep-0612.rst:197
 msgid ""
 "As before, ``parameters_expression``\\ s by themselves are not acceptable in "
 "places where a type is expected"
 msgstr ""
 
-#: ../pep-0612.rst:208
+#: ../../peps/peps/pep-0612.rst:209
 msgid "User-Defined Generic Classes"
 msgstr ""
 
-#: ../pep-0612.rst:210
+#: ../../peps/peps/pep-0612.rst:211
 msgid ""
 "Just as defining a class as inheriting from ``Generic[T]`` makes a class "
 "generic for a single parameter (when ``T`` is a ``TypeVar``\\ ), defining a "
@@ -240,25 +240,25 @@ msgid ""
 "``parameters_expression``\\ s (when ``P`` is a ``ParamSpec``)."
 msgstr ""
 
-#: ../pep-0612.rst:230
+#: ../../peps/peps/pep-0612.rst:231
 msgid ""
 "By the rules defined above, spelling a concrete instance of a class generic "
 "with respect to only a single ``ParamSpec`` would require unsightly double "
 "brackets.  For aesthetic purposes we allow these to be omitted."
 msgstr ""
 
-#: ../pep-0612.rst:247 ../pep-0612.rst:427
+#: ../../peps/peps/pep-0612.rst:248 ../../peps/peps/pep-0612.rst:428
 msgid "Semantics"
 msgstr ""
 
-#: ../pep-0612.rst:249
+#: ../../peps/peps/pep-0612.rst:250
 msgid ""
 "The inference rules for the return type of a function invocation whose "
 "signature contains a ``ParamSpec`` variable are analogous to those around "
 "evaluating ones with ``TypeVar``\\ s."
 msgstr ""
 
-#: ../pep-0612.rst:269
+#: ../../peps/peps/pep-0612.rst:270
 msgid ""
 "Just as with traditional ``TypeVars``\\ , a user may include the same "
 "``ParamSpec`` multiple times in the arguments of the same function, to "
@@ -268,13 +268,13 @@ msgid ""
 "subtypes), but is not obligated to do so."
 msgstr ""
 
-#: ../pep-0612.rst:296
+#: ../../peps/peps/pep-0612.rst:297
 msgid ""
 "The constructors of user-defined classes generic on ``ParamSpec``\\ s should "
 "be evaluated in the same way."
 msgstr ""
 
-#: ../pep-0612.rst:316
+#: ../../peps/peps/pep-0612.rst:317
 msgid ""
 "The semantics of ``Concatenate[X, Y, P]`` are that it represents the "
 "parameters represented by ``P`` with two positional-only parameters "
@@ -283,7 +283,7 @@ msgid ""
 "callable."
 msgstr ""
 
-#: ../pep-0612.rst:339
+#: ../../peps/peps/pep-0612.rst:340
 msgid ""
 "This also means that while any function that returns an ``R`` can satisfy "
 "``typing.Callable[P, R]``, only functions that can be called positionally in "
@@ -291,29 +291,29 @@ msgid ""
 "Callable[Concatenate[X, P], R]``."
 msgstr ""
 
-#: ../pep-0612.rst:360
+#: ../../peps/peps/pep-0612.rst:361
 msgid ""
 "There are still some classes of decorators still not supported with these "
 "features:"
 msgstr ""
 
-#: ../pep-0612.rst:363
+#: ../../peps/peps/pep-0612.rst:364
 msgid ""
 "those that add/remove/change a **variable** number of parameters (for "
 "example, ``functools.partial`` will remain untypable even after this PEP)"
 msgstr ""
 
-#: ../pep-0612.rst:365
+#: ../../peps/peps/pep-0612.rst:366
 msgid ""
 "those that add/remove/change keyword-only parameters (See `Concatenating "
 "Keyword Parameters`_ for more details)."
 msgstr ""
 
-#: ../pep-0612.rst:369
+#: ../../peps/peps/pep-0612.rst:370
 msgid "The components of a ``ParamSpec``"
 msgstr ""
 
-#: ../pep-0612.rst:371
+#: ../../peps/peps/pep-0612.rst:372
 msgid ""
 "A ``ParamSpec`` captures both positional and keyword accessible parameters, "
 "but there unfortunately is no object in the runtime that captures both of "
@@ -325,13 +325,13 @@ msgid ""
 "the corresponding ``Mapping`` of keywords to values."
 msgstr ""
 
-#: ../pep-0612.rst:384
+#: ../../peps/peps/pep-0612.rst:385
 msgid ""
 "These \"properties\" can only be used as the annotated types for ``*args`` "
 "and ``**kwargs``\\ , accessed from a ParamSpec already in scope."
 msgstr ""
 
-#: ../pep-0612.rst:404
+#: ../../peps/peps/pep-0612.rst:405
 msgid ""
 "Furthermore, because the default kind of parameter in Python (\\ ``(x: "
 "int)``\\ ) may be addressed both positionally and through its name, two "
@@ -342,27 +342,27 @@ msgid ""
 "partitions."
 msgstr ""
 
-#: ../pep-0612.rst:429
+#: ../../peps/peps/pep-0612.rst:430
 msgid ""
 "With those requirements met, we can now take advantage of the unique "
 "properties afforded to us by this set up:"
 msgstr ""
 
-#: ../pep-0612.rst:433
+#: ../../peps/peps/pep-0612.rst:434
 msgid ""
 "Inside the function, ``args`` has the type ``P.args``\\ , not ``Tuple[P."
 "args, ...]`` as would be with a normal annotation (and likewise with the "
 "``**kwargs``\\ )"
 msgstr ""
 
-#: ../pep-0612.rst:437
+#: ../../peps/peps/pep-0612.rst:438
 msgid ""
 "This special case is necessary to encapsulate the heterogeneous contents of "
 "the ``args``/``kwargs`` of a given call, which cannot be expressed by an "
 "indefinite tuple/dictionary type."
 msgstr ""
 
-#: ../pep-0612.rst:441
+#: ../../peps/peps/pep-0612.rst:442
 msgid ""
 "A function of type ``Callable[P, R]`` can be called with ``(*args, "
 "**kwargs)`` if and only if ``args`` has the type ``P.args`` and ``kwargs`` "
@@ -370,25 +370,25 @@ msgid ""
 "same function declaration."
 msgstr ""
 
-#: ../pep-0612.rst:445
+#: ../../peps/peps/pep-0612.rst:446
 msgid ""
 "A function declared as ``def inner(*args: P.args, **kwargs: P.kwargs) -> X`` "
 "has type ``Callable[P, X]``."
 msgstr ""
 
-#: ../pep-0612.rst:448
+#: ../../peps/peps/pep-0612.rst:449
 msgid ""
 "With these three properties, we now have the ability to fully type check "
 "parameter preserving decorators."
 msgstr ""
 
-#: ../pep-0612.rst:465
+#: ../../peps/peps/pep-0612.rst:466
 msgid ""
 "To extend this to include ``Concatenate``, we declare the following "
 "properties:"
 msgstr ""
 
-#: ../pep-0612.rst:467
+#: ../../peps/peps/pep-0612.rst:468
 msgid ""
 "A function of type ``Callable[Concatenate[A, B, P], R]`` can only be called "
 "with ``(a, b, *args, **kwargs)`` when ``args`` and ``kwargs`` are the "
@@ -396,28 +396,28 @@ msgid ""
 "``B``."
 msgstr ""
 
-#: ../pep-0612.rst:471
+#: ../../peps/peps/pep-0612.rst:472
 msgid ""
 "A function declared as ``def inner(a: A, b: B, *args: P.args, **kwargs: P."
 "kwargs) -> R`` has type ``Callable[Concatenate[A, B, P], R]``. Placing "
 "keyword-only parameters between the ``*args`` and ``**kwargs`` is forbidden."
 msgstr ""
 
-#: ../pep-0612.rst:500
+#: ../../peps/peps/pep-0612.rst:501
 msgid ""
 "Note that the names of the parameters preceding the ``ParamSpec`` components "
 "are not mentioned in the resulting ``Concatenate``.  This means that these "
 "parameters can not be addressed via a named argument:"
 msgstr ""
 
-#: ../pep-0612.rst:518
+#: ../../peps/peps/pep-0612.rst:519
 msgid ""
 "This is not an implementation convenience, but a soundness requirement.  If "
 "we were to allow that second calling style, then the following snippet would "
 "be problematic."
 msgstr ""
 
-#: ../pep-0612.rst:530
+#: ../../peps/peps/pep-0612.rst:531
 msgid ""
 "Inside of ``bar``, we would get ``TypeError: foo() got multiple values for "
 "argument 'x'``.  Requiring these concatenated arguments to be addressed "
@@ -427,7 +427,7 @@ msgid ""
 "`Concatenating Keyword Parameters`_ for more details)."
 msgstr ""
 
-#: ../pep-0612.rst:538
+#: ../../peps/peps/pep-0612.rst:539
 msgid ""
 "If one of these prepended positional parameters contains a free "
 "``ParamSpec``\\ , we consider that variable in scope for the purposes of "
@@ -435,18 +435,18 @@ msgid ""
 "things like this:"
 msgstr ""
 
-#: ../pep-0612.rst:547
+#: ../../peps/peps/pep-0612.rst:548
 msgid ""
 "The type of ``twice`` in the above example is "
 "``Callable[Concatenate[Callable[P, int], P], int]``, where ``P`` is bound by "
 "the outer ``Callable``.  This has the following semantics:"
 msgstr ""
 
-#: ../pep-0612.rst:564
+#: ../../peps/peps/pep-0612.rst:565
 msgid "Backwards Compatibility"
 msgstr ""
 
-#: ../pep-0612.rst:566
+#: ../../peps/peps/pep-0612.rst:567
 msgid ""
 "The only changes necessary to existing features in ``typing`` is allowing "
 "these ``ParamSpec`` and ``Concatenate`` objects to be the first parameter to "
@@ -456,11 +456,11 @@ msgid ""
 "reference the new interfaces will be unaffected."
 msgstr ""
 
-#: ../pep-0612.rst:574
+#: ../../peps/peps/pep-0612.rst:575
 msgid "Reference Implementation"
 msgstr ""
 
-#: ../pep-0612.rst:576
+#: ../../peps/peps/pep-0612.rst:577
 msgid ""
 "The `Pyre <https://pyre-check.org/>`_ type checker supports all of the "
 "behavior described above.  A reference implementation of the runtime "
@@ -469,29 +469,29 @@ msgid ""
 "github.com/python/cpython/pull/23702>`_."
 msgstr ""
 
-#: ../pep-0612.rst:583
+#: ../../peps/peps/pep-0612.rst:584
 msgid "Rejected Alternatives"
 msgstr ""
 
-#: ../pep-0612.rst:586
+#: ../../peps/peps/pep-0612.rst:587
 msgid "Using List Variadics and Map Variadics"
 msgstr ""
 
-#: ../pep-0612.rst:588
+#: ../../peps/peps/pep-0612.rst:589
 msgid ""
 "We considered just trying to make something like this with a callback "
 "protocol which was parameterized on a list-type variadic, and a map-type "
 "variadic like so:"
 msgstr ""
 
-#: ../pep-0612.rst:600
+#: ../../peps/peps/pep-0612.rst:601
 msgid ""
 "However, there are some problems with trying to come up with a consistent "
 "solution for those type variables for a given callable. This problem comes "
 "up with even the simplest of callables:"
 msgstr ""
 
-#: ../pep-0612.rst:611
+#: ../../peps/peps/pep-0612.rst:612
 msgid ""
 "Any time where a type can implement a protocol in more than one way that "
 "aren't mutually compatible, we can run into situations where we lose "
@@ -499,7 +499,7 @@ msgid ""
 "have to pick one calling convention to prefer."
 msgstr ""
 
-#: ../pep-0612.rst:635
+#: ../../peps/peps/pep-0612.rst:636
 msgid ""
 "The core problem here is that, by default, parameters in Python can either "
 "be called positionally or as a keyword argument. This means we really have "
@@ -511,11 +511,11 @@ msgid ""
 "capture all three, and then split them out afterward."
 msgstr ""
 
-#: ../pep-0612.rst:645
+#: ../../peps/peps/pep-0612.rst:646
 msgid "Defining ParametersOf"
 msgstr ""
 
-#: ../pep-0612.rst:647
+#: ../../peps/peps/pep-0612.rst:648
 msgid ""
 "Another proposal we considered was defining ``ParametersOf`` and "
 "``ReturnType`` operators which would operate on a domain of a newly defined "
@@ -525,27 +525,27 @@ msgid ""
 "features could express everything that we can express with ``ParamSpecs``."
 msgstr ""
 
-#: ../pep-0612.rst:685
+#: ../../peps/peps/pep-0612.rst:686
 msgid ""
 "We decided to go with ``ParamSpec``\\ s over this approach for several "
 "reasons:"
 msgstr ""
 
-#: ../pep-0612.rst:687
+#: ../../peps/peps/pep-0612.rst:688
 msgid ""
 "The footprint of this change would be larger, as we would need two new "
 "operators, and a new type, while ``ParamSpec`` just introduces a new "
 "variable."
 msgstr ""
 
-#: ../pep-0612.rst:689
+#: ../../peps/peps/pep-0612.rst:690
 msgid ""
 "Python typing has so far has avoided supporting operators, whether user-"
 "defined or built-in, in favor of destructuring.  Accordingly, ``ParamSpec`` "
 "based signatures look much more like existing Python."
 msgstr ""
 
-#: ../pep-0612.rst:692
+#: ../../peps/peps/pep-0612.rst:693
 msgid ""
 "The lack of user-defined operators makes common patterns hard to spell. "
 "``unwrapping`` is odd to read because ``F`` is not actually referring to any "
@@ -558,23 +558,23 @@ msgid ""
 "actually bind the return type."
 msgstr ""
 
-#: ../pep-0612.rst:702
+#: ../../peps/peps/pep-0612.rst:703
 msgid ""
 "In summary, between these two equivalently powerful syntaxes, ``ParamSpec`` "
 "fits much more naturally into the status quo."
 msgstr ""
 
-#: ../pep-0612.rst:708
+#: ../../peps/peps/pep-0612.rst:707
 msgid "Concatenating Keyword Parameters"
 msgstr ""
 
-#: ../pep-0612.rst:710
+#: ../../peps/peps/pep-0612.rst:709
 msgid ""
 "In principle the idea of concatenation as a means to modify a finite number "
 "of positional parameters could be expanded to include keyword parameters."
 msgstr ""
 
-#: ../pep-0612.rst:721
+#: ../../peps/peps/pep-0612.rst:720
 msgid ""
 "However, the key distinction is that while prepending positional-only "
 "parameters to a valid callable type always yields another valid callable "
@@ -584,28 +584,28 @@ msgid ""
 "already have a parameter named ``n``\\ ."
 msgstr ""
 
-#: ../pep-0612.rst:739
+#: ../../peps/peps/pep-0612.rst:738
 msgid ""
 "Calling ``problem(2)`` works fine, but calling ``problem(n=2)`` leads to a "
 "``TypeError: problem() got multiple values for argument 'n'`` from the call "
 "to ``added`` inside of ``innocent_wrapper``\\ ."
 msgstr ""
 
-#: ../pep-0612.rst:743
+#: ../../peps/peps/pep-0612.rst:742
 msgid ""
 "This kind of situation could be avoided, and this kind of decorator could be "
 "typed if we could reify the constraint that a set of parameters **not** "
 "contain a certain name, with something like:"
 msgstr ""
 
-#: ../pep-0612.rst:755
+#: ../../peps/peps/pep-0612.rst:754
 msgid ""
 "The call to ``add_n`` inside of ``innocent_wrapper`` could then be rejected "
 "since the callable was not guaranteed not to already have a parameter named "
 "``n``\\ ."
 msgstr ""
 
-#: ../pep-0612.rst:760
+#: ../../peps/peps/pep-0612.rst:759
 msgid ""
 "However, enforcing these constraints would require enough additional "
 "implementation work that we judged this extension to be out of scope of this "
@@ -613,21 +613,21 @@ msgid ""
 "return to this idea later if there is sufficient demand."
 msgstr ""
 
-#: ../pep-0612.rst:767
+#: ../../peps/peps/pep-0612.rst:766
 msgid "Naming this a ``ParameterSpecification``"
 msgstr ""
 
-#: ../pep-0612.rst:768
+#: ../../peps/peps/pep-0612.rst:767
 msgid ""
 "We decided that ParameterSpecification was a little too long-winded for use "
 "here, and that this style of abbreviated name made it look more like TypeVar."
 msgstr ""
 
-#: ../pep-0612.rst:772
+#: ../../peps/peps/pep-0612.rst:771
 msgid "Naming this an ``ArgSpec``"
 msgstr ""
 
-#: ../pep-0612.rst:774
+#: ../../peps/peps/pep-0612.rst:773
 msgid ""
 "We think that calling this a ParamSpec is more correct than referring to it "
 "as an ArgSpec, since callables have parameters, which are distinct from the "
@@ -635,28 +635,28 @@ msgid ""
 "for a ParamSpec is a set of function parameters, not a call-site’s arguments."
 msgstr ""
 
-#: ../pep-0612.rst:781
+#: ../../peps/peps/pep-0612.rst:780
 msgid "Acknowledgements"
 msgstr ""
 
-#: ../pep-0612.rst:783
+#: ../../peps/peps/pep-0612.rst:782
 msgid ""
 "Thanks to all of the members of the Pyre team for their comments on early "
 "drafts of this PEP, and for their help with the reference implementation."
 msgstr ""
 
-#: ../pep-0612.rst:786
+#: ../../peps/peps/pep-0612.rst:785
 msgid ""
 "Thanks are also due to the whole Python typing community for their early "
 "feedback on this idea at a Python typing meetup, leading directly to the "
 "much more compact ``.args``\\ /\\ ``.kwargs`` syntax."
 msgstr ""
 
-#: ../pep-0612.rst:791
+#: ../../peps/peps/pep-0612.rst:790
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../pep-0612.rst:793
+#: ../../peps/peps/pep-0612.rst:792
 msgid ""
 "This document is placed in the public domain or under the CC0-1.0-Universal "
 "license, whichever is more permissive."

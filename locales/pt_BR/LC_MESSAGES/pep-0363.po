@@ -6,77 +6,81 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PEPs\n"
+"Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 20:07+0000\n"
+"POT-Creation-Date: 2024-07-14 02:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.15.0\n"
 
-#: ../pep-0363.txt
+#: ../../peps/peps/pep-0363.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../pep-0363.txt:5
+#: ../../peps/peps/pep-0363.rst:3
 msgid "Ben North <ben@redfrontdoor.org>"
 msgstr ""
 
-#: ../pep-0363.txt
+#: ../../peps/peps/pep-0363.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../pep-0363.txt:6
+#: ../../peps/peps/pep-0363.rst:4
 msgid "Rejected"
 msgstr ""
 
-#: ../pep-0363.txt
+#: ../../peps/peps/pep-0363.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../pep-0363.txt:7
+#: ../../peps/peps/pep-0363.rst:5
 msgid "Standards Track"
 msgstr ""
 
-#: ../pep-0363.txt
+#: ../../peps/peps/pep-0363.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../pep-0363.txt:9
+#: ../../peps/peps/pep-0363.rst:6
 msgid "29-Jan-2007"
 msgstr ""
 
-#: ../pep-0363.txt
+#: ../../peps/peps/pep-0363.rst
 msgid "Post-History"
 msgstr "Pós-história"
 
-#: ../pep-0363.txt:10
+#: ../../peps/peps/pep-0363.rst:7
 msgid "12-Feb-2007"
 msgstr ""
 
-#: ../pep-0363.txt:14
+#: ../../peps/peps/pep-0363.rst:11
+msgid "See :ref:`363-rejection` for more information."
+msgstr ""
+
+#: ../../peps/peps/pep-0363.rst:14
 msgid "Abstract"
 msgstr ""
 
-#: ../pep-0363.txt:16
+#: ../../peps/peps/pep-0363.rst:16
 msgid ""
 "Dynamic attribute access is currently possible using the \"getattr\" and "
 "\"setattr\" builtins.  The present PEP suggests a new syntax to make such "
 "access easier, allowing the coder for example to write::"
 msgstr ""
 
-#: ../pep-0363.txt:24
+#: ../../peps/peps/pep-0363.rst:24
 msgid "instead of::"
 msgstr ""
 
-#: ../pep-0363.txt:33
+#: ../../peps/peps/pep-0363.rst:33
 msgid "Rationale"
 msgstr ""
 
-#: ../pep-0363.txt:35
+#: ../../peps/peps/pep-0363.rst:35
 msgid ""
 "Dictionary access and indexing both have a friendly invocation syntax: "
 "instead of ``x.__getitem__(12)`` the coder can write ``x[12]``. This also "
@@ -85,63 +89,63 @@ msgid ""
 "attribute access too."
 msgstr ""
 
-#: ../pep-0363.txt:41
+#: ../../peps/peps/pep-0363.rst:41
 msgid "Attribute access is currently possible in two ways:"
 msgstr ""
 
-#: ../pep-0363.txt:43
+#: ../../peps/peps/pep-0363.rst:43
 msgid ""
 "When the attribute name is known at code-writing time, the \".NAME\" trailer "
 "can be used, as in::"
 msgstr ""
 
-#: ../pep-0363.txt:49
+#: ../../peps/peps/pep-0363.rst:49
 msgid ""
 "When the attribute name is computed dynamically at run-time, the \"getattr\" "
 "and \"setattr\" builtins must be used::"
 msgstr ""
 
-#: ../pep-0363.txt:55
+#: ../../peps/peps/pep-0363.rst:55
 msgid ""
 "The \"getattr\" builtin also allows the coder to specify a default value to "
 "be returned in the event that the object does not have an attribute of the "
 "given name::"
 msgstr ""
 
-#: ../pep-0363.txt:61
+#: ../../peps/peps/pep-0363.rst:61
 msgid ""
 "This PEP describes a new syntax for dynamic attribute access --- \"x."
 "(expr)\" --- with examples given in the Abstract above."
 msgstr ""
 
-#: ../pep-0363.txt:64
+#: ../../peps/peps/pep-0363.rst:64
 msgid ""
 "(The new syntax could also allow the provision of a default value in the "
 "\"get\" case, as in::"
 msgstr ""
 
-#: ../pep-0363.txt:69
+#: ../../peps/peps/pep-0363.rst:69
 msgid ""
 "This 2-argument form of dynamic attribute access would not be permitted as "
 "the target of an (augmented or normal) assignment.  The \"Discussion\" "
 "section below includes opinions specifically on the 2-argument extension.)"
 msgstr ""
 
-#: ../pep-0363.txt:74
+#: ../../peps/peps/pep-0363.rst:74
 msgid "Finally, the new syntax can be used with the \"del\" statement, as in::"
 msgstr ""
 
-#: ../pep-0363.txt:80
+#: ../../peps/peps/pep-0363.rst:80
 msgid "Impact On Existing Code"
 msgstr ""
 
-#: ../pep-0363.txt:82
+#: ../../peps/peps/pep-0363.rst:82
 msgid ""
 "The proposed new syntax is not currently valid, so no existing well-formed "
 "programs have their meaning altered by this proposal."
 msgstr ""
 
-#: ../pep-0363.txt:85
+#: ../../peps/peps/pep-0363.rst:85
 msgid ""
 "Across all \"\\*.py\" files in the 2.5 distribution, there are around 600 "
 "uses of \"getattr\", \"setattr\" or \"delattr\".  They break down as follows "
@@ -149,27 +153,27 @@ msgid ""
 "manual inspection)::"
 msgstr ""
 
-#: ../pep-0363.txt:119
+#: ../../peps/peps/pep-0363.rst:119
 msgid "As examples, the line::"
 msgstr ""
 
-#: ../pep-0363.txt:123
+#: ../../peps/peps/pep-0363.rst:123
 msgid "from Lib/distutils/command/install.py could be rewritten::"
 msgstr ""
 
-#: ../pep-0363.txt:127
+#: ../../peps/peps/pep-0363.rst:127
 msgid "and the line::"
 msgstr ""
 
-#: ../pep-0363.txt:131
+#: ../../peps/peps/pep-0363.rst:131
 msgid "from Lib/distutils/dist.py could be rewritten::"
 msgstr ""
 
-#: ../pep-0363.txt:137
+#: ../../peps/peps/pep-0363.rst:137
 msgid "Performance Impact"
 msgstr ""
 
-#: ../pep-0363.txt:139
+#: ../../peps/peps/pep-0363.rst:139
 #, python-format
 msgid ""
 "Initial pystone measurements are inconclusive, but suggest there may be a "
@@ -178,32 +182,32 @@ msgid ""
 "ceval.c hurts the cache behaviour, but this has not been confirmed."
 msgstr ""
 
-#: ../pep-0363.txt:145
+#: ../../peps/peps/pep-0363.rst:145
 #, python-format
 msgid ""
 "On the other hand, measurements suggest a speed-up of around 40--45% for "
 "dynamic attribute access."
 msgstr ""
 
-#: ../pep-0363.txt:150
+#: ../../peps/peps/pep-0363.rst:150
 msgid "Error Cases"
 msgstr ""
 
-#: ../pep-0363.txt:152
+#: ../../peps/peps/pep-0363.rst:152
 msgid ""
 "Only strings are permitted as attribute names, so for instance the following "
 "error is produced::"
 msgstr ""
 
-#: ../pep-0363.txt:160
+#: ../../peps/peps/pep-0363.rst:160
 msgid "This is handled by the existing ``PyObject_GetAttr`` function."
 msgstr ""
 
-#: ../pep-0363.txt:164
+#: ../../peps/peps/pep-0363.rst:164
 msgid "Draft Implementation"
 msgstr ""
 
-#: ../pep-0363.txt:166
+#: ../../peps/peps/pep-0363.rst:166
 msgid ""
 "A draft implementation adds a new alternative to the \"trailer\" clause in "
 "Grammar/Grammar; a new AST type, \"DynamicAttribute\" in Python.asdl, with "
@@ -214,11 +218,11 @@ msgid ""
 "[1]_."
 msgstr ""
 
-#: ../pep-0363.txt:176
+#: ../../peps/peps/pep-0363.rst:178
 msgid "Mailing Lists Discussion"
 msgstr ""
 
-#: ../pep-0363.txt:178
+#: ../../peps/peps/pep-0363.rst:180
 msgid ""
 "Initial posting of this PEP in draft form was to python-ideas on 20070209 "
 "[2]_, and the response was generally positive.  The PEP was then posted to "
@@ -226,7 +230,7 @@ msgid ""
 "summary:"
 msgstr ""
 
-#: ../pep-0363.txt:183
+#: ../../peps/peps/pep-0363.rst:185
 msgid ""
 "Initially, there was reasonable (but not unanimous) support for the idea, "
 "although the precise choice of syntax had a more mixed reception.  Several "
@@ -235,14 +239,14 @@ msgid ""
 "alternative syntaxes were suggested::"
 msgstr ""
 
-#: ../pep-0363.txt:199
+#: ../../peps/peps/pep-0363.rst:201
 msgid ""
 "with \"obj.[foo]\" emerging as the preferred one.  In this initial "
 "discussion, the two-argument form was universally disliked, so it was to be "
 "taken out of the PEP."
 msgstr ""
 
-#: ../pep-0363.txt:203
+#: ../../peps/peps/pep-0363.rst:205
 msgid ""
 "Discussion then took a step back to whether this particular feature provided "
 "enough benefit to justify new syntax.  As well as requiring coders to become "
@@ -250,21 +254,21 @@ msgid ""
 "compatibility --- code using the new syntax would not run on older pythons."
 msgstr ""
 
-#: ../pep-0363.txt:209
+#: ../../peps/peps/pep-0363.rst:211
 msgid ""
 "Instead of new syntax, a new \"wrapper class\" was proposed, with the "
 "following specification / conceptual implementation suggested by Martin von "
 "Löwis::"
 msgstr ""
 
-#: ../pep-0363.txt:225
+#: ../../peps/peps/pep-0363.rst:227
 msgid ""
 "This was considered a cleaner and more elegant solution to the original "
 "problem.  (Another suggestion was a mixin class providing dictionary-style "
 "access to an object's attributes.)"
 msgstr ""
 
-#: ../pep-0363.txt:229
+#: ../../peps/peps/pep-0363.rst:231
 msgid ""
 "The decision was made that the present PEP did not meet the burden of proof "
 "for the introduction of new syntax, a view which had been put forward by "
@@ -272,32 +276,32 @@ msgid ""
 "open as a possibility for a future PEP."
 msgstr ""
 
-#: ../pep-0363.txt:236
+#: ../../peps/peps/pep-0363.rst:238
 msgid "References"
 msgstr "Referências"
 
-#: ../pep-0363.txt:238
+#: ../../peps/peps/pep-0363.rst:240
 msgid ""
 "Sourceforge patch #1657573 http://sourceforge.net/tracker/index.php?"
 "func=detail&aid=1657573&group_id=5470&atid=305470"
 msgstr ""
 
-#: ../pep-0363.txt:241
+#: ../../peps/peps/pep-0363.rst:243
 msgid ""
 "https://mail.python.org/pipermail/python-ideas/2007-February/000210.html and "
 "following posts"
 msgstr ""
 
-#: ../pep-0363.txt:244
+#: ../../peps/peps/pep-0363.rst:246
 msgid ""
 "https://mail.python.org/pipermail/python-dev/2007-February/070939.html and "
 "following posts"
 msgstr ""
 
-#: ../pep-0363.txt:249
+#: ../../peps/peps/pep-0363.rst:251
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../pep-0363.txt:251
+#: ../../peps/peps/pep-0363.rst:253
 msgid "This document has been placed in the public domain."
 msgstr "Este documento foi colocado em domínio público."

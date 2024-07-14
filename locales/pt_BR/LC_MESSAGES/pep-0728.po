@@ -1,0 +1,953 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the PEPs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PEPs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-14 02:33+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pt_BR\n"
+"Language-Team: pt_BR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../peps/peps/pep-0728.rst
+msgid "Author"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:3
+msgid "Zixuan James Li <p359101898@gmail.com>"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst
+msgid "Sponsor"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:4
+msgid "Jelle Zijlstra <jelle.zijlstra@gmail.com>"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst
+msgid "Discussions-To"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:5
+msgid ""
+"https://discuss.python.org/t/pep-728-typeddict-with-typed-extra-items/45443"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst
+msgid "Status"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:6
+msgid "Draft"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst
+msgid "Type"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:7
+msgid "Standards Track"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst
+msgid "Topic"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:8
+msgid "Typing"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst
+msgid "Created"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:10
+msgid "12-Sep-2023"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst
+msgid "Python-Version"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:11
+msgid "3.13"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst
+msgid "Post-History"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:12
+msgid ""
+"`09-Feb-2024 <https://discuss.python.org/t/pep-728-typeddict-with-typed-"
+"extra-items/45443>`__,"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:16
+msgid "Abstract"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:18
+msgid ""
+"This PEP proposes a way to limit extra items for :class:`~typing.TypedDict` "
+"using a ``closed`` argument and to type them with the special "
+"``__extra_items__`` key. This addresses the need to define closed TypedDict "
+"type or to type a subset of keys that might appear in a ``dict`` while "
+"permitting additional items of a specified type."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:25
+msgid "Motivation"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:27
+msgid ""
+"A :py:class:`typing.TypedDict` type can annotate the value type of each "
+"known item in a dictionary. However, due to structural subtyping, a "
+"TypedDict can have extra items that are not visible through its type. There "
+"is currently no way to restrict the types of items that might be present in "
+"the TypedDict type's structural subtypes."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:34
+msgid "Defining a Closed TypedDict Type"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:36
+msgid ""
+"The current behavior of TypedDict prevents users from defining a closed "
+"TypedDict type when it is expected that the type contains no additional "
+"items."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:39
+msgid ""
+"Due to the possible presence of extra items, type checkers cannot infer more "
+"precise return types for ``.items()`` and ``.values()`` on a TypedDict. This "
+"can also be resolved by `defining a closed TypedDict type <https://github."
+"com/python/mypy/issues/7981>`__."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:44
+msgid ""
+"Another possible use case for this is a sound way to `enable type narrowing "
+"<https://github.com/python/mypy/issues/9953>`__ with the ``in`` check::"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:60
+msgid ""
+"Nothing prevents a ``dict`` that is structurally compatible with ``Movie`` "
+"to have the ``author`` key, and under the current specification it would be "
+"incorrect for the type checker to narrow its type."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:65
+msgid "Allowing Extra Items of a Certain Type"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:67
+msgid ""
+"For supporting API interfaces or legacy codebase where only a subset of "
+"possible keys are known, it would be useful to explicitly expect additional "
+"keys of certain value types."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:71
+msgid ""
+"However, the typing spec is more restrictive on type checking the "
+"construction of a TypedDict, `preventing users <https://github.com/python/"
+"mypy/issues/4617>`__ from doing this::"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:85
+msgid ""
+"While the restriction is enforced when constructing a TypedDict, due to "
+"structural subtyping, the TypedDict may have extra items that are not "
+"visible through its type. For example::"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:95
+msgid ""
+"It is not possible to acknowledge the existence of the extra items through "
+"``in`` checks and access them without breaking type safety, even though they "
+"might exist from arbitrary structural subtypes of ``MovieBase``::"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:103
+msgid ""
+"Some workarounds have already been implemented in response to the need to "
+"allow extra keys, but none of them is ideal. For mypy, ``--disable-error-"
+"code=typeddict-unknown-key`` `suppresses type checking error <https://github."
+"com/python/mypy/pull/14225>`__ specifically for unknown keys on TypedDict. "
+"This sacrifices type safety over flexibility, and it does not offer a way to "
+"specify that the TypedDict type expects additional keys compatible with a "
+"certain type."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:112
+msgid "Support Additional Keys for ``Unpack``"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:114
+msgid ""
+":pep:`692` adds a way to precisely annotate the types of individual keyword "
+"arguments represented by ``**kwargs`` using TypedDict with ``Unpack``. "
+"However, because TypedDict cannot be defined to accept arbitrary extra "
+"items, it is not possible to `allow additional keyword arguments <https://"
+"discuss.python.org/t/pep-692-using-typeddict-for-more-precise-kwargs-"
+"typing/17314/87>`__ that are not known at the time the TypedDict is defined."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:121
+msgid ""
+"Given the usage of pre-:pep:`692` type annotation for ``**kwargs`` in "
+"existing codebases, it will be valuable to accept and type extra items on "
+"TypedDict so that the old typing behavior can be supported in combination "
+"with the new ``Unpack`` construct."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:127
+msgid "Rationale"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:129
+msgid ""
+"A type that allows extra items of type ``str`` on a TypedDict can be loosely "
+"described as the intersection between the TypedDict and ``Mapping[str, "
+"str]``."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:132
+msgid ""
+"`Index Signatures <https://www.typescriptlang.org/docs/handbook/2/objects."
+"html#index-signatures>`__ in TypeScript achieve this:"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:142
+msgid ""
+"This proposal aims to support a similar feature without introducing general "
+"intersection of types or syntax changes, offering a natural extension to the "
+"existing type consistency rules."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:146
+msgid ""
+"We propose that we add an argument ``closed`` to TypedDict. Similar to "
+"``total``, only a literal ``True`` or ``False`` value is allowed. When "
+"``closed=True`` is used in the TypedDict type definition, we give the dunder "
+"attribute ``__extra_items__`` a special meaning: extra items are allowed, "
+"and their types should be compatible with the value type of "
+"``__extra_items__``."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:152
+msgid ""
+"If ``closed=True`` is set, but there is no ``__extra_items__`` key, the "
+"TypedDict is treated as if it contained an item ``__extra_items__: Never``."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:155
+msgid ""
+"Note that ``__extra_items__`` on the same TypedDict type definition will "
+"remain as a regular item if ``closed=True`` is not used."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:158
+msgid ""
+"Different from index signatures, the types of the known items do not need to "
+"be consistent with the value type of ``__extra_items__``."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:161
+msgid "There are some advantages to this approach:"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:163
+msgid ""
+"Inheritance works naturally. ``__extra_items__`` defined on a TypedDict will "
+"also be available to its subclasses."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:166
+msgid ""
+"We can build on top of the `type consistency rules defined in the typing "
+"spec <https://typing.readthedocs.io/en/latest/spec/typeddict.html#type-"
+"consistency>`__. ``__extra_items__`` can be treated as a pseudo-item in "
+"terms of type consistency."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:171
+msgid ""
+"There is no need to introduce a grammar change to specify the type of the "
+"extra items."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:174
+msgid ""
+"We can precisely type the extra items without making ``__extra_items__`` the "
+"union of known items."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:177
+msgid ""
+"We do not lose backwards compatibility as ``__extra_items__`` still can be "
+"used as a regular key."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:181
+msgid "Specification"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:183
+msgid ""
+"This specification is structured to parallel :pep:`589` to highlight changes "
+"to the original TypedDict specification."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:186
+msgid ""
+"If ``closed=True`` is specified, extra items are treated as non-required "
+"items having the same type of ``__extra_items__`` whose keys are allowed "
+"when determining `supported and unsupported operations <https://typing."
+"readthedocs.io/en/latest/spec/typeddict.html#supported-and-unsupported-"
+"operations>`__."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:193
+msgid "Using TypedDict Types"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:195
+msgid "Assuming that ``closed=True`` is used in the TypedDict type definition."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:197
+msgid ""
+"For a TypedDict type that has the special ``__extra_items__`` key, during "
+"construction, the value type of each unknown item is expected to be non-"
+"required and compatible with the value type of ``__extra_items__``. For "
+"example::"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:211
+msgid ""
+"In this example, ``__extra_items__: bool`` does not mean that ``Movie`` has "
+"a required string key ``\"__extra_items__\"`` whose value type is ``bool``. "
+"Instead, it specifies that keys other than \"name\" have a value type of "
+"``bool`` and are non-required."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:216
+msgid "The alternative inline syntax is also supported::"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:220
+msgid ""
+"Accessing extra keys is allowed. Type checkers must infer its value type "
+"from the value type of ``__extra_items__``::"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:227
+msgid ""
+"When a TypedDict type defines ``__extra_items__`` without ``closed=True``, "
+"``closed`` defaults to ``False`` and the key is assumed to be a regular key::"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:240
+msgid ""
+"For such non-closed TypedDict types, it is assumed that they allow non-"
+"required extra items of value type ``ReadOnly[object]`` during inheritance "
+"or type consistency checks. However, extra keys found during construction "
+"should still be rejected by the type checker."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:245
+msgid "``closed`` is not inherited through subclassing::"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:261
+msgid ""
+"Here, ``\"__extra_items__\"`` in ``a`` is a regular key defined on ``Movie`` "
+"where its value type is narrowed from ``ReadOnly[str | None]`` to ``str``, "
+"``\"other_extra_key\"`` in ``b`` is an extra key whose value type must be "
+"consistent with the value type of ``\"__extra_items__\"`` defined on "
+"``MovieBase``."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:268
+msgid "Interaction with Totality"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:270
+msgid ""
+"It is an error to use ``Required[]`` or ``NotRequired[]`` with the special "
+"``__extra_items__`` item. ``total=False`` and ``total=True`` have no effect "
+"on ``__extra_items__`` itself."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:274
+msgid ""
+"The extra items are non-required, regardless of the totality of the "
+"TypedDict. Operations that are available to ``NotRequired`` items should "
+"also be available to the extra items::"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:287
+msgid "Interaction with ``Unpack``"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:289
+msgid ""
+"For type checking purposes, ``Unpack[TypedDict]`` with extra items should be "
+"treated as its equivalent in regular parameters, and the existing rules for "
+"function parameters still apply::"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:303
+msgid "Interaction with PEP 705"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:305
+msgid ""
+"When the special ``__extra_items__`` item is annotated with ``ReadOnly[]``, "
+"the extra items on the TypedDict have the properties of read-only items. "
+"This interacts with inheritance rules specified in :pep:`PEP 705 "
+"<705#Inheritance>`."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:309
+msgid ""
+"Notably, if the TypedDict type declares ``__extra_items__`` to be read-only, "
+"a subclass of the TypedDict type may redeclare ``__extra_items__``'s value "
+"type or additional non-extra items' value type."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:313
+msgid ""
+"Because a non-closed TypedDict type implicitly allows non-required extra "
+"items of value type ``ReadOnly[object]``, its subclass can override the "
+"special ``__extra_items__`` with more specific types."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:317
+msgid "More details are discussed in the later sections."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:320
+msgid "Inheritance"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:322
+msgid ""
+"When the TypedDict type is defined as ``closed=False`` (the default), "
+"``__extra_items__`` should behave and be inherited the same way a regular "
+"key would. A regular ``__extra_items__`` key can coexist with the special "
+"``__extra_items__`` and both should be inherited when subclassing."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:327
+msgid ""
+"We assume that ``closed=True`` whenever ``__extra_items__`` is mentioned for "
+"the rest of this section."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:330
+msgid ""
+"``__extra_items__`` is inherited the same way as a regular ``key: "
+"value_type`` item. As with the other keys, the same rules from `the typing "
+"spec <https://typing.readthedocs.io/en/latest/spec/typeddict."
+"html#inheritance>`__ and :pep:`PEP 705 <705#inheritance>` apply. We "
+"interpret the existing rules in the context of ``__extra_items__``."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:336
+msgid ""
+"We need to reinterpret the following rule to define how ``__extra_items__`` "
+"interacts with it:"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:339
+msgid ""
+"Changing a field type of a parent TypedDict class in a subclass is not "
+"allowed."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:341
+msgid ""
+"First, it is not allowed to change the value type of ``__extra_items__`` in "
+"a subclass unless it is declared to be ``ReadOnly`` in the superclass::"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:350
+msgid ""
+"Second, ``__extra_items__: T`` effectively defines the value type of any "
+"unnamed items accepted to the TypedDict and marks them as non-required. "
+"Thus, the above restriction applies to any additional items defined in a "
+"subclass. For each item added in a subclass, all of the following conditions "
+"should apply:"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:355 ../../peps/peps/pep-0728.rst:413
+msgid "If ``__extra_items__`` is read-only"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:357
+msgid "The item can be either required or non-required"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:359 ../../peps/peps/pep-0728.rst:365
+msgid "The item's value type is consistent with ``T``"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:361 ../../peps/peps/pep-0728.rst:419
+msgid "If ``__extra_items__`` is not read-only"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:363
+msgid "The item is non-required"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:367
+msgid "``T`` is consistent with the item's value type"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:369
+msgid ""
+"If ``__extra_items__`` is not redeclared, the subclass inherits it as-is."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:371 ../../peps/peps/pep-0728.rst:585
+#: ../../peps/peps/pep-0728.rst:623
+msgid "For example::"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:389
+msgid ""
+"Due to this nature, an important side effect allows us to define a TypedDict "
+"type that disallows additional items::"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:396
+msgid ""
+"Here, annotating ``__extra_items__`` with :class:`typing.Never` specifies "
+"that there can be no other keys in ``MovieFinal`` other than the known ones. "
+"Because of its potential common use, this is equivalent to::"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:403
+msgid ""
+"where we implicitly assume the ``__extra_items__: Never`` field by default "
+"if only ``closed=True`` is specified."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:407
+msgid "Type Consistency"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:409
+msgid ""
+"In addition to the set ``S`` of keys of the explicitly defined items, a "
+"TypedDict type that has the item ``__extra_items__: T`` is considered to "
+"have an infinite set of items that all satisfy the following conditions:"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:415 ../../peps/peps/pep-0728.rst:423
+msgid "The key's value type is consistent with ``T``"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:417 ../../peps/peps/pep-0728.rst:427
+msgid "The key is not in ``S``."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:421
+msgid "The key is non-required"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:425
+msgid "``T`` is consistent with the key's value type"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:429
+msgid ""
+"For type checking purposes, let ``__extra_items__`` be a non-required pseudo-"
+"item to be included whenever \"for each ... item/key\" is stated in :pep:"
+"`the existing type consistency rules from PEP 705 <705#type-consistency>`, "
+"and we modify it as follows:"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:434
+msgid ""
+"A TypedDict type ``A`` is consistent with TypedDict ``B`` if ``A`` is "
+"structurally compatible with ``B``. This is true if and only if all of the "
+"following are satisfied:"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:438
+msgid ""
+"For each item in ``B``, ``A`` has the corresponding key, unless the item in "
+"``B`` is read-only, not required, and of top value type "
+"(``ReadOnly[NotRequired[object]]``). **[Edit: Otherwise, if the "
+"corresponding key with the same name cannot be found in ``A``, "
+"\"__extra_items__\" is considered the corresponding key.]**"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:444
+msgid ""
+"For each item in ``B``, if ``A`` has the corresponding key **[Edit: or "
+"\"__extra_items__\"]**, the corresponding value type in ``A`` is consistent "
+"with the value type in ``B``."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:448
+msgid ""
+"For each non-read-only item in ``B``, its value type is consistent with the "
+"corresponding value type in ``A``. **[Edit: if the corresponding key with "
+"the same name cannot be found in ``A``, \"__extra_items__\" is considered "
+"the corresponding key.]**"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:453
+msgid ""
+"For each required key in ``B``, the corresponding key is required in ``A``. "
+"For each non-required key in ``B``, if the item is not read-only in ``B``, "
+"the corresponding key is not required in ``A``. **[Edit: if the "
+"corresponding key with the same name cannot be found in ``A``, "
+"\"__extra_items__\" is considered to be non-required as the corresponding "
+"key.]**"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:460
+msgid "The following examples illustrate these checks in action."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:462
+msgid ""
+"``__extra_items__`` puts various restrictions on additional items for type "
+"consistency checks::"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:487
+msgid ""
+"Because \"year\" is absent in ``Movie``, ``__extra_items__`` is considered "
+"the corresponding key. ``\"year\"`` being required violates the rule \"For "
+"each required key in ``B``, the corresponding key is required in ``A``\"."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:491
+msgid ""
+"When ``__extra_items__`` is defined to be read-only in a TypedDict type, it "
+"is possible for an item to have a narrower type than ``__extra_items__``'s "
+"value type::"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:506
+msgid ""
+"This behaves the same way as :pep:`705` specified if ``year: ReadOnly[str | "
+"int]`` is an item defined in ``Movie``."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:509
+msgid ""
+"``__extra_items__`` as a pseudo-item follows the same rules that other items "
+"have, so when both TypedDicts contain ``__extra_items__``, this check is "
+"naturally enforced::"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:525
+msgid ""
+"A non-closed TypedDict type implicitly allows non-required extra keys of "
+"value type ``ReadOnly[object]``. This allows to apply the type consistency "
+"rules between this type and a closed TypedDict type::"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:538
+msgid "Interaction with Constructors"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:540
+msgid ""
+"TypedDicts that allow extra items of type ``T`` also allow arbitrary keyword "
+"arguments of this type when constructed by calling the class object::"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:572
+msgid "Interaction with Mapping[KT, VT]"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:574
+msgid ""
+"A TypedDict type can be consistent with ``Mapping[KT, VT]`` types other than "
+"``Mapping[str, object]`` as long as the union of value types on the "
+"TypedDict type is consistent with ``VT``. It is an extension of this rule "
+"from the typing spec:"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:579
+msgid ""
+"A TypedDict with all ``int`` values is not consistent with ``Mapping[str, "
+"int]``, since there may be additional non-``int`` values not visible through "
+"the type, due to structural subtyping. These can be accessed using the "
+"``values()`` and ``items()`` methods in ``Mapping``"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:597
+msgid ""
+"Furthermore, type checkers should be able to infer the precise return types "
+"of ``values()`` and ``items()`` on such TypedDict types::"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:605
+msgid "Interaction with dict[KT, VT]"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:607
+msgid ""
+"Note that because the presence of ``__extra_items__`` on a closed TypedDict "
+"type prohibits additional required keys in its structural subtypes, we can "
+"determine if the TypedDict type and its structural subtypes will ever have "
+"any required key during static analysis."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:612
+msgid ""
+"The TypedDict type is consistent with ``dict[str, VT]`` if all items on the "
+"TypedDict type satisfy the following conditions:"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:615
+msgid "``VT`` is consistent with the value type of the item"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:617
+msgid "The value type of the item is consistent with ``VT``"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:619
+msgid "The item is not read-only."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:621
+msgid "The item is not required."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:639
+msgid ""
+"In this case, methods that are previously unavailable on a TypedDict are "
+"allowed::"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:645
+msgid ""
+"However, ``dict[str, VT]`` is not necessarily consistent with a TypedDict "
+"type, because such dict can be a subtype of dict::"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:655
+msgid "How to Teach This"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:657
+msgid ""
+"The choice of the spelling ``\"__extra_items__\"`` is intended to make this "
+"feature more understandable to new users compared to shorter alternatives "
+"like ``\"__extra__\"``."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:661
+msgid ""
+"Details of this should be documented in both the typing spec and the :mod:"
+"`typing` documentation."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:665
+msgid "Backwards Compatibility"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:667
+msgid ""
+"Because ``__extra_items__`` remains as a regular key if ``closed=True`` is "
+"not specified, no existing codebase will break due to this change."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:670
+msgid ""
+"If the proposal is accepted, none of ``__required_keys__``, "
+"``__optional_keys__``, ``__readonly_keys__`` and ``__mutable_keys__`` should "
+"include ``\"__extra_items__\"`` defined on the same TypedDict type when "
+"``closed=True`` is specified."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:675
+msgid ""
+"Note that ``closed`` as a keyword argument does not collide with the keyword "
+"arguments alternative to define keys with the functional syntax that allows "
+"things like ``TD = TypedDict(\"TD\", foo=str, bar=int)``, because it is "
+"scheduled to be removed in Python 3.13."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:680
+msgid ""
+"Because this is a type-checking feature, it can be made available to older "
+"versions as long as the type checker supports it."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:684
+msgid "Rejected Ideas"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:687
+msgid "Allowing Extra Items without Specifying the Type"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:689
+msgid ""
+"``extra=True`` was originally proposed for defining a TypedDict that accepts "
+"extra items regardless of the type, like how ``total=True`` works::"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:695
+msgid ""
+"Because it did not offer a way to specify the type of the extra items, the "
+"type checkers will need to assume that the type of the extra items is "
+"``Any``, which compromises type safety. Furthermore, the current behavior of "
+"TypedDict already allows untyped extra items to be present in runtime, due "
+"to structural subtyping. ``closed=True`` plays a similar role in the current "
+"proposal."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:702
+msgid "Supporting ``TypedDict(extra=type)``"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:704
+msgid ""
+"During the discussion of the PEP, there were strong objections against "
+"adding another place where types are passed as values instead of annotations "
+"from some authors of type checkers. While this design is potentially viable, "
+"there are also several partially addressable concerns to consider."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:709
+msgid ""
+"Usability of forward reference As in the functional syntax, using a quoted "
+"type or a type alias will be required when SomeType is a forward reference. "
+"This is already a requirement for the functional syntax, so implementations "
+"can potentially reuse that piece of logic, but this is still extra work that "
+"the ``closed=True`` proposal doesn't have."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:716
+msgid ""
+"Concerns about using type as a value Whatever is not allowed as the value "
+"type in the functional syntax should not be allowed as the argument for "
+"extra either. While type checkers might be able to reuse this check, it "
+"still needs to be somehow special-cased for the class-based syntax."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:722
+msgid ""
+"How to teach Notably, the ``extra=type`` often gets brought up due to it "
+"being an intuitive solution for the use case, so it is potentially simpler "
+"to learn than the less obvious solution. However, the more common used case "
+"only requires ``closed=True``, and the other drawbacks mentioned earlier "
+"outweigh what is need to teach the usage of the special key."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:730
+msgid "Support Extra Items with Intersection"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:732
+msgid ""
+"Supporting intersections in Python's type system requires a lot of careful "
+"consideration, and it can take a long time for the community to reach a "
+"consensus on a reasonable design."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:736
+msgid ""
+"Ideally, extra items in TypedDict should not be blocked by work on "
+"intersections, nor does it necessarily need to be supported through "
+"intersections."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:740
+msgid ""
+"Moreover, the intersection between ``Mapping[...]`` and ``TypedDict`` is not "
+"equivalent to a TypedDict type with the proposed ``__extra_items__`` special "
+"item, as the value type of all known items in ``TypedDict`` needs to satisfy "
+"the is-subtype-of relation with the value type of ``Mapping[...]``."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:746
+msgid ""
+"Requiring Type Compatibility of the Known Items with ``__extra_items__``"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:748
+msgid ""
+"``__extra_items__`` restricts the value type for keys that are *unknown* to "
+"the TypedDict type. So the value type of any *known* item is not necessarily "
+"consistent with ``__extra_items__``'s type, and ``__extra_items__``'s type "
+"is not necessarily consistent with the value types of all known items."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:753
+msgid ""
+"This differs from TypeScript's `Index Signatures <https://www.typescriptlang."
+"org/docs/handbook/2/objects.html#index-signatures>`__ syntax, which requires "
+"all properties' types to match the string index's type. For example:"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:770
+msgid ""
+"This is a known limitation discussed in `TypeScript's issue tracker <https://"
+"github.com/microsoft/TypeScript/issues/17867>`__, where it is suggested that "
+"there should be a way to exclude the defined keys from the index signature "
+"so that it is possible to define a type like ``MovieWithExtraNumber``."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:777
+msgid "Reference Implementation"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:779
+msgid ""
+"This proposal is supported in `pyright 1.1.352 <https://github.com/microsoft/"
+"pyright/releases/tag/1.1.352>`_, and `pyanalyze 0.12.0 <https://github.com/"
+"quora/pyanalyze/releases/tag/v0.12.0>`_."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:785
+msgid "Acknowledgments"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:787
+msgid ""
+"Thanks to Jelle Zijlstra for sponsoring this PEP and providing review "
+"feedback, Eric Traut who `proposed the original design <https://mail.python."
+"org/archives/list/typing-sig@python.org/"
+"message/3Z72OQWVTOVS6UYUUCCII2UZN56PV5II/>`__ this PEP iterates on, and "
+"Alice Purcell for offering their perspective as the author of :pep:`705`."
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:794
+msgid "Copyright"
+msgstr ""
+
+#: ../../peps/peps/pep-0728.rst:796
+msgid ""
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
+msgstr ""

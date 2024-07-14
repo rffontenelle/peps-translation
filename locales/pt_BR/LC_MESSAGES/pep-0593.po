@@ -6,104 +6,104 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PEPs\n"
+"Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 20:07+0000\n"
+"POT-Creation-Date: 2024-07-14 02:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.15.0\n"
 
-#: ../pep-0593.rst
+#: ../../peps/peps/pep-0593.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../pep-0593.rst:3
+#: ../../peps/peps/pep-0593.rst:3
 msgid "Till Varoquaux <till@fb.com>, Konstantin Kashin <kkashin@fb.com>"
 msgstr ""
 
-#: ../pep-0593.rst
+#: ../../peps/peps/pep-0593.rst
 msgid "Sponsor"
 msgstr ""
 
-#: ../pep-0593.rst:4
+#: ../../peps/peps/pep-0593.rst:4
 msgid "Ivan Levkivskyi <levkivskyi@gmail.com>"
 msgstr ""
 
-#: ../pep-0593.rst
+#: ../../peps/peps/pep-0593.rst
 msgid "Discussions-To"
 msgstr ""
 
-#: ../pep-0593.rst:5
+#: ../../peps/peps/pep-0593.rst:5
 msgid "typing-sig@python.org"
 msgstr ""
 
-#: ../pep-0593.rst
+#: ../../peps/peps/pep-0593.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../pep-0593.rst:6
-msgid "Accepted"
+#: ../../peps/peps/pep-0593.rst:6
+msgid "Final"
 msgstr ""
 
-#: ../pep-0593.rst
+#: ../../peps/peps/pep-0593.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../pep-0593.rst:7
+#: ../../peps/peps/pep-0593.rst:7
 msgid "Standards Track"
 msgstr ""
 
-#: ../pep-0593.rst
+#: ../../peps/peps/pep-0593.rst
 msgid "Topic"
 msgstr ""
 
-#: ../pep-0593.rst:8
+#: ../../peps/peps/pep-0593.rst:8
 msgid "Typing"
 msgstr ""
 
-#: ../pep-0593.rst
+#: ../../peps/peps/pep-0593.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../pep-0593.rst:10
+#: ../../peps/peps/pep-0593.rst:9
 msgid "26-Apr-2019"
 msgstr ""
 
-#: ../pep-0593.rst
+#: ../../peps/peps/pep-0593.rst
 msgid "Python-Version"
 msgstr ""
 
-#: ../pep-0593.rst:11
+#: ../../peps/peps/pep-0593.rst:10
 msgid "3.9"
 msgstr ""
 
-#: ../pep-0593.rst
+#: ../../peps/peps/pep-0593.rst
 msgid "Post-History"
 msgstr "Pós-história"
 
-#: ../pep-0593.rst:12
+#: ../../peps/peps/pep-0593.rst:11
 msgid "20-May-2019"
 msgstr ""
 
-#: ../pep-0593.rst:15
+#: ../../peps/peps/pep-0593.rst:17
 msgid "Abstract"
 msgstr ""
 
-#: ../pep-0593.rst:17
+#: ../../peps/peps/pep-0593.rst:19
 msgid ""
 "This PEP introduces a mechanism to extend the type annotations from PEP 484 "
 "with arbitrary metadata."
 msgstr ""
 
-#: ../pep-0593.rst:21
+#: ../../peps/peps/pep-0593.rst:23
 msgid "Motivation"
 msgstr ""
 
-#: ../pep-0593.rst:23
+#: ../../peps/peps/pep-0593.rst:25
 msgid ""
 ":pep:`484` provides a standard semantic for the annotations introduced in :"
 "pep:`3107`. :pep:`484` is prescriptive but it is the de facto standard for "
@@ -116,11 +116,11 @@ msgid ""
 "features only supported by specific type checkers."
 msgstr ""
 
-#: ../pep-0593.rst:35
+#: ../../peps/peps/pep-0593.rst:37
 msgid "Rationale"
 msgstr ""
 
-#: ../pep-0593.rst:37
+#: ../../peps/peps/pep-0593.rst:39
 msgid ""
 "This PEP adds an ``Annotated`` type to the typing module to decorate "
 "existing types with context-specific metadata. Specifically, a type ``T`` "
@@ -137,38 +137,38 @@ msgid ""
 "diverse set of use cases of interest to the broader Python community."
 msgstr ""
 
-#: ../pep-0593.rst:53
+#: ../../peps/peps/pep-0593.rst:55
 msgid ""
 "This was originally brought up as `issue 600 <issue-600_>`_ in the typing "
 "github and then discussed in `Python ideas <python-ideas_>`_."
 msgstr ""
 
-#: ../pep-0593.rst:57
+#: ../../peps/peps/pep-0593.rst:59
 msgid "Motivating examples"
 msgstr ""
 
-#: ../pep-0593.rst:60
+#: ../../peps/peps/pep-0593.rst:62
 msgid "Combining runtime and static uses of annotations"
 msgstr ""
 
-#: ../pep-0593.rst:62
+#: ../../peps/peps/pep-0593.rst:64
 msgid ""
 "There's an emerging trend of libraries leveraging the typing annotations at "
 "runtime (e.g.: dataclasses); having the ability to extend the typing "
 "annotations with external data would be a great boon for those libraries."
 msgstr ""
 
-#: ../pep-0593.rst:66
+#: ../../peps/peps/pep-0593.rst:68
 msgid ""
 "Here's an example of how a hypothetical module could leverage annotations to "
 "read c structs::"
 msgstr ""
 
-#: ../pep-0593.rst:83
+#: ../../peps/peps/pep-0593.rst:85
 msgid "Lowering barriers to developing new typing constructs"
 msgstr ""
 
-#: ../pep-0593.rst:85
+#: ../../peps/peps/pep-0593.rst:87
 msgid ""
 "Typically when adding a new type, a developer need to upstream that type to "
 "the typing module and change mypy, `PyCharm <pycharm_>`_, Pyre, `pytype "
@@ -182,7 +182,7 @@ msgid ""
 "to development and ensure some degree of backward compatibility."
 msgstr ""
 
-#: ../pep-0593.rst:97
+#: ../../peps/peps/pep-0593.rst:99
 msgid ""
 "For example, suppose that an author wanted to add support for `tagged unions "
 "<tagged-union_>`_ to Python. One way to accomplish would be to `annotate "
@@ -190,7 +190,7 @@ msgid ""
 "to be set::"
 msgstr ""
 
-#: ../pep-0593.rst:107
+#: ../../peps/peps/pep-0593.rst:109
 msgid ""
 "This is a somewhat cumbersome syntax but it allows us to iterate on this "
 "proof-of-concept and have people with type checkers (or other tools) that "
@@ -202,61 +202,61 @@ msgid ""
 "approximation (slightly less strict)."
 msgstr ""
 
-#: ../pep-0593.rst:116
+#: ../../peps/peps/pep-0593.rst:118
 msgid "Specification"
 msgstr ""
 
-#: ../pep-0593.rst:119
+#: ../../peps/peps/pep-0593.rst:121
 msgid "Syntax"
 msgstr ""
 
-#: ../pep-0593.rst:121
+#: ../../peps/peps/pep-0593.rst:123
 msgid ""
 "``Annotated`` is parameterized with a type and an arbitrary list of Python "
 "values that represent the annotations. Here are the specific details of the "
 "syntax:"
 msgstr ""
 
-#: ../pep-0593.rst:125
+#: ../../peps/peps/pep-0593.rst:127
 msgid "The first argument to ``Annotated`` must be a valid type"
 msgstr ""
 
-#: ../pep-0593.rst:127
+#: ../../peps/peps/pep-0593.rst:129
 msgid ""
 "Multiple type annotations are supported (``Annotated`` supports variadic "
 "arguments)::"
 msgstr ""
 
-#: ../pep-0593.rst:132
+#: ../../peps/peps/pep-0593.rst:134
 msgid ""
 "``Annotated`` must be called with at least two arguments "
 "( ``Annotated[int]`` is not valid)"
 msgstr ""
 
-#: ../pep-0593.rst:135
+#: ../../peps/peps/pep-0593.rst:137
 msgid ""
 "The order of the annotations is preserved and matters for equality checks::"
 msgstr ""
 
-#: ../pep-0593.rst:142
+#: ../../peps/peps/pep-0593.rst:144
 msgid ""
 "Nested ``Annotated`` types are flattened, with metadata ordered starting "
 "with the innermost annotation::"
 msgstr ""
 
-#: ../pep-0593.rst:149
+#: ../../peps/peps/pep-0593.rst:151
 msgid "Duplicated annotations are not removed::"
 msgstr ""
 
-#: ../pep-0593.rst:155
+#: ../../peps/peps/pep-0593.rst:157
 msgid "``Annotated`` can be used with nested and generic aliases::"
 msgstr ""
 
-#: ../pep-0593.rst:164
+#: ../../peps/peps/pep-0593.rst:166
 msgid "Consuming annotations"
 msgstr ""
 
-#: ../pep-0593.rst:166
+#: ../../peps/peps/pep-0593.rst:168
 msgid ""
 "Ultimately, the responsibility of how to interpret the annotations (if at "
 "all) is the responsibility of the tool or library encountering the "
@@ -265,7 +265,7 @@ msgid ""
 "using ``isinstance()``)."
 msgstr ""
 
-#: ../pep-0593.rst:172
+#: ../../peps/peps/pep-0593.rst:174
 msgid ""
 "**Unknown annotations:** When a tool or a library does not support "
 "annotations or encounters an unknown annotation it should just ignore it and "
@@ -275,20 +275,20 @@ msgid ""
 "ctype(\"<10s\")]``), the unpack method should ignore it."
 msgstr ""
 
-#: ../pep-0593.rst:179
+#: ../../peps/peps/pep-0593.rst:181
 msgid ""
 "**Namespacing annotations:** Namespaces are not needed for annotations since "
 "the class used by the annotations acts as a namespace."
 msgstr ""
 
-#: ../pep-0593.rst:182
+#: ../../peps/peps/pep-0593.rst:184
 msgid ""
 "**Multiple annotations:** It's up to the tool consuming the annotations to "
 "decide whether the client is allowed to have several annotations on one type "
 "and how to merge those annotations."
 msgstr ""
 
-#: ../pep-0593.rst:186
+#: ../../peps/peps/pep-0593.rst:188
 msgid ""
 "Since the ``Annotated`` type allows you to put several annotations of the "
 "same (or different) type(s) on any node, the tools or libraries consuming "
@@ -296,15 +296,15 @@ msgid ""
 "example, if you are doing value range analysis you might allow this::"
 msgstr ""
 
-#: ../pep-0593.rst:195
+#: ../../peps/peps/pep-0593.rst:197
 msgid "Flattening nested annotations, this translates to::"
 msgstr ""
 
-#: ../pep-0593.rst:200
+#: ../../peps/peps/pep-0593.rst:202
 msgid "Interaction with ``get_type_hints()``"
 msgstr ""
 
-#: ../pep-0593.rst:202
+#: ../../peps/peps/pep-0593.rst:204
 msgid ""
 "``typing.get_type_hints()`` will take a new argument ``include_extras`` that "
 "defaults to ``False`` to preserve backward compatibility. When "
@@ -313,29 +313,29 @@ msgid ""
 "unchanged::"
 msgstr ""
 
-#: ../pep-0593.rst:219
+#: ../../peps/peps/pep-0593.rst:221
 msgid "Aliases & Concerns over verbosity"
 msgstr ""
 
-#: ../pep-0593.rst:221
+#: ../../peps/peps/pep-0593.rst:223
 msgid ""
 "Writing ``typing.Annotated`` everywhere can be quite verbose; fortunately, "
 "the ability to alias annotations means that in practice we don't expect "
 "clients to have to write lots of boilerplate code::"
 msgstr ""
 
-#: ../pep-0593.rst:233
+#: ../../peps/peps/pep-0593.rst:235
 msgid "Rejected ideas"
 msgstr ""
 
-#: ../pep-0593.rst:235
+#: ../../peps/peps/pep-0593.rst:237
 msgid ""
 "Some of the proposed ideas were rejected from this PEP because they would "
 "cause ``Annotated`` to not integrate cleanly with the other typing "
 "annotations:"
 msgstr ""
 
-#: ../pep-0593.rst:238
+#: ../../peps/peps/pep-0593.rst:240
 msgid ""
 "``Annotated`` cannot infer the decorated type. You could imagine that "
 "``Annotated[..., Immutable]`` could be used to mark a value as immutable "
@@ -344,7 +344,7 @@ msgid ""
 "case."
 msgstr ""
 
-#: ../pep-0593.rst:244
+#: ../../peps/peps/pep-0593.rst:246
 msgid ""
 "Using ``(Type, Ann1, Ann2, ...)`` instead of ``Annotated[Type, Ann1, "
 "Ann2, ...]``. This would cause confusion when annotations appear in nested "
@@ -353,11 +353,11 @@ msgid ""
 "(``T(5) == C(5)`` when ``C = Annotation[T, Ann]``)."
 msgstr ""
 
-#: ../pep-0593.rst:250
+#: ../../peps/peps/pep-0593.rst:252
 msgid "This feature was left out to keep the design simple:"
 msgstr ""
 
-#: ../pep-0593.rst:252
+#: ../../peps/peps/pep-0593.rst:254
 msgid ""
 "``Annotated`` cannot be called with a single argument. Annotated could "
 "support returning the underlying value when called with a single argument (e."
@@ -365,10 +365,10 @@ msgid ""
 "little benefit."
 msgstr ""
 
-#: ../pep-0593.rst:289
+#: ../../peps/peps/pep-0593.rst:291
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../pep-0593.rst:291
+#: ../../peps/peps/pep-0593.rst:293
 msgid "This document has been placed in the public domain."
 msgstr "Este documento foi colocado em domínio público."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PEPs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-20 10:43-0300\n"
+"POT-Creation-Date: 2024-07-14 02:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: pt_BR\n"
@@ -17,249 +17,290 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.13.1\n"
+"Generated-By: Babel 2.15.0\n"
 
-#: ../../peps/pep-0731.rst
+#: ../../peps/peps/pep-0731.rst
 msgid "Author"
 msgstr ""
 
-#: ../../peps/pep-0731.rst:3
+#: ../../peps/peps/pep-0731.rst:3
 msgid ""
 "Guido van Rossum <guido@python.org>, Petr Viktorin <encukou@gmail.com>, "
-"Victor Stinner <vstinner@python.org>, Steve Dower "
-"<steve.dower@python.org>, Irit Katriel <irit@python.org>"
+"Victor Stinner <vstinner@python.org>, Steve Dower <steve.dower@python.org>, "
+"Irit Katriel <irit@python.org>"
 msgstr ""
 
-#: ../../peps/pep-0731.rst
+#: ../../peps/peps/pep-0731.rst
 msgid "Discussions-To"
 msgstr ""
 
-#: ../../peps/pep-0731.rst:8
+#: ../../peps/peps/pep-0731.rst:8
 msgid "https://discuss.python.org/t/pep-731-c-api-working-group-charter/36117"
 msgstr ""
 
-#: ../../peps/pep-0731.rst
+#: ../../peps/peps/pep-0731.rst
 msgid "Status"
 msgstr ""
 
-#: ../../peps/pep-0731.rst:9
-msgid "Draft"
+#: ../../peps/peps/pep-0731.rst:9
+msgid "Active"
 msgstr ""
 
-#: ../../peps/pep-0731.rst
+#: ../../peps/peps/pep-0731.rst
 msgid "Type"
 msgstr ""
 
-#: ../../peps/pep-0731.rst:10
+#: ../../peps/peps/pep-0731.rst:10
 msgid "Process"
 msgstr ""
 
-#: ../../peps/pep-0731.rst
+#: ../../peps/peps/pep-0731.rst
 msgid "Topic"
 msgstr ""
 
-#: ../../peps/pep-0731.rst:11
+#: ../../peps/peps/pep-0731.rst:11
 msgid "Governance"
 msgstr ""
 
-#: ../../peps/pep-0731.rst
+#: ../../peps/peps/pep-0731.rst
 msgid "Created"
 msgstr ""
 
-#: ../../peps/pep-0731.rst:12
+#: ../../peps/peps/pep-0731.rst:12
 msgid "11-Oct-2023"
 msgstr ""
 
-#: ../../peps/pep-0731.rst
+#: ../../peps/peps/pep-0731.rst
 msgid "Post-History"
 msgstr ""
 
-#: ../../peps/pep-0731.rst:13
+#: ../../peps/peps/pep-0731.rst:13
 msgid ""
 "`13-Oct-2023 <https://discuss.python.org/t/pep-731-c-api-working-group-"
-"charter/36117>`__"
+"charter/36117>`__, `23-May-2024 <https://discuss.python.org/t/c-api-working-"
+"group-vacancy/54015>`__, `19-Jun-2024 <https://discuss.python.org/t/c-api-"
+"working-group-vacancy-again/56167>`__"
 msgstr ""
 
-#: ../../peps/pep-0731.rst:16
+#: ../../peps/peps/pep-0731.rst
+msgid "Resolution"
+msgstr ""
+
+#: ../../peps/peps/pep-0731.rst:16
+msgid ""
+"https://discuss.python.org/t/pep-731-c-api-working-group-charter/36117/12"
+msgstr ""
+
+#: ../../peps/peps/pep-0731.rst:19
 msgid "Abstract"
 msgstr ""
 
-#: ../../peps/pep-0731.rst:18
+#: ../../peps/peps/pep-0731.rst:21
 msgid ""
-"This PEP proposes to establish the C API Working Group: a small committee"
-" of Python core developers responsible for overseeing and coordinating "
-"the development and maintenance of the Python C API."
+"This PEP proposes to establish the C API Working Group: a small committee of "
+"Python core developers responsible for overseeing and coordinating the "
+"development and maintenance of the Python C API."
 msgstr ""
 
-#: ../../peps/pep-0731.rst:22
+#: ../../peps/peps/pep-0731.rst:25
 msgid ""
 "The working group will maintain documentation, test suites and tooling "
-"related to Python's C API. As delegated by the Steering Council it is the"
-" deciding body for changes to the C API, from the addition or removal of "
-"individual API functions, types, etc., to the acceptance of new designs "
-"of a more or less radical nature."
+"related to Python's C API. As delegated by the Steering Council it is the "
+"deciding body for changes to the C API, from the addition or removal of "
+"individual API functions, types, etc., to the acceptance of new designs of a "
+"more or less radical nature."
 msgstr ""
 
-#: ../../peps/pep-0731.rst:29
+#: ../../peps/peps/pep-0731.rst:32
 msgid ""
 "The working group's mandate is to represent the interests of all Python "
 "users, but especially all maintainers of code that uses Python's C API, "
-"whether in the context of CPython, using an alternate Python "
-"implementation, or using a binding framework for other programming "
-"languages (such as C++ and Rust)."
+"whether in the context of CPython, using an alternate Python implementation, "
+"or using a binding framework for other programming languages (such as C++ "
+"and Rust)."
 msgstr ""
 
-#: ../../peps/pep-0731.rst:34
+#: ../../peps/peps/pep-0731.rst:37
 msgid ""
 "The working group serves at the pleasure of the Python Steering Council. "
-"The working group's members are the listed authors of this PEP. This "
-"document serves as the working group's charter."
+"This document serves as the working group's charter."
 msgstr ""
 
-#: ../../peps/pep-0731.rst:39
+#: ../../peps/peps/pep-0731.rst:41
 msgid "Epigraph"
 msgstr ""
 
-#: ../../peps/pep-0731.rst:41
+#: ../../peps/peps/pep-0731.rst:43
 msgid "KEEPER"
 msgstr ""
 
-#: ../../peps/pep-0731.rst:44
+#: ../../peps/peps/pep-0731.rst:46
 msgid ""
 "Stop! Who would cross the Bridge of Death must answer me these questions "
 "three, ere the other side he see."
 msgstr ""
 
-#: ../../peps/pep-0731.rst:46
+#: ../../peps/peps/pep-0731.rst:48
 msgid "What was Python named after?"
 msgstr ""
 
-#: ../../peps/pep-0731.rst:47
+#: ../../peps/peps/pep-0731.rst:49
 msgid "What was Python 2's EOL?"
 msgstr ""
 
-#: ../../peps/pep-0731.rst:48
+#: ../../peps/peps/pep-0731.rst:50
 msgid "What is the optimal strategy to evolve the CPython C API?"
 msgstr ""
 
-#: ../../peps/pep-0731.rst:50
+#: ../../peps/peps/pep-0731.rst:52
 msgid "LANCELOT"
 msgstr ""
 
-#: ../../peps/pep-0731.rst:51
+#: ../../peps/peps/pep-0731.rst:53
 msgid "Auuuuuuuugh!"
 msgstr ""
 
-#: ../../peps/pep-0731.rst:54
+#: ../../peps/peps/pep-0731.rst:56
 msgid "Motivation"
 msgstr ""
 
-#: ../../peps/pep-0731.rst:56
+#: ../../peps/peps/pep-0731.rst:58
 msgid ""
-"Despite many discussions and in-person meetings at core developer sprints"
-" and Language Summits, and a thorough inventory of the problems and "
+"Despite many discussions and in-person meetings at core developer sprints "
+"and Language Summits, and a thorough inventory of the problems and "
 "stakeholders of the C API, no consensus has been reached about many "
 "contentious issues, including, but not limited to:"
 msgstr ""
 
-#: ../../peps/pep-0731.rst:62
+#: ../../peps/peps/pep-0731.rst:64
 msgid "Conventions for designing new API functions;"
 msgstr ""
 
-#: ../../peps/pep-0731.rst:63
+#: ../../peps/peps/pep-0731.rst:65
 msgid "How to deal with compatibility;"
 msgstr ""
 
-#: ../../peps/pep-0731.rst:64
+#: ../../peps/peps/pep-0731.rst:66
 msgid "What's the best strategy for handling errors;"
 msgstr ""
 
-#: ../../peps/pep-0731.rst:65
+#: ../../peps/peps/pep-0731.rst:67
 msgid "The future of the Stable ABI and the Limited API;"
 msgstr ""
 
-#: ../../peps/pep-0731.rst:66
+#: ../../peps/peps/pep-0731.rst:68
 msgid "Whether to switch to a handle-based API convention (and how)."
 msgstr ""
 
-#: ../../peps/pep-0731.rst:68
+#: ../../peps/peps/pep-0731.rst:70
 msgid ""
 "The general feeling is that there are too many stakeholders, proposals, "
-"requirements, constraints, and conventions, to make progress without "
-"having a small trusted group of deciders."
+"requirements, constraints, and conventions, to make progress without having "
+"a small trusted group of deciders."
 msgstr ""
 
-#: ../../peps/pep-0731.rst:72
+#: ../../peps/peps/pep-0731.rst:74
 msgid ""
-"At the 2023 Language Summit in Salt Lake City it was decided to start "
-"work on an `inventory of problems <https://github.com/capi-working-"
-"group/problems>`__. At the 2023 core developer sprint in Brno this work "
-"is more or less finished and after a discussion it appeared that the next"
-" step is to establish a working group to ensure that we're not stymied "
-"forever."
+"At the 2023 Language Summit in Salt Lake City it was decided to start work "
+"on an `inventory of problems <https://github.com/capi-working-group/"
+"problems>`__. At the 2023 core developer sprint in Brno this work is more or "
+"less finished and after a discussion it appeared that the next step is to "
+"establish a working group to ensure that we're not stymied forever."
 msgstr ""
 
-#: ../../peps/pep-0731.rst:78
+#: ../../peps/peps/pep-0731.rst:80
 msgid ""
 "The Steering Council has `indicated <https://github.com/python/steering-"
 "council/issues/201#issuecomment-1648848155>`__ its desire to delegate "
-"decisions about the C API to such a working group, anticipating its "
-"formal establishment."
+"decisions about the C API to such a working group, anticipating its formal "
+"establishment."
 msgstr ""
 
-#: ../../peps/pep-0731.rst:84
+#: ../../peps/peps/pep-0731.rst:86
 msgid "Specification"
 msgstr ""
 
-#: ../../peps/pep-0731.rst:86
+#: ../../peps/peps/pep-0731.rst:88
 msgid ""
-"We propose the creation of a new group, the C API Working Group. This "
-"group will be responsible for overseeing and coordinating the development"
-" and maintenance of the Python C API. It will do this by establishing the"
-" principles underpinning the work and publishing guidelines that the core"
-" developers can refer to."
+"We propose the creation of a new group, the C API Working Group. This group "
+"will be responsible for overseeing and coordinating the development and "
+"maintenance of the Python C API. It will do this by establishing the "
+"principles underpinning the work and publishing guidelines that the core "
+"developers can refer to."
 msgstr ""
 
-#: ../../peps/pep-0731.rst:92
+#: ../../peps/peps/pep-0731.rst:94
 msgid ""
-"The \"operations and process\" section below describes how the working "
-"group operates and how it is governed."
+"The \"operations and process\" section below describes how the working group "
+"operates and how it is governed."
 msgstr ""
 
-#: ../../peps/pep-0731.rst:96
+#: ../../peps/peps/pep-0731.rst:98
+msgid "Members"
+msgstr ""
+
+#: ../../peps/peps/pep-0731.rst:100
+msgid "The members of the working group are:"
+msgstr ""
+
+#: ../../peps/peps/pep-0731.rst:102
+msgid "Erlend Aasland"
+msgstr ""
+
+#: ../../peps/peps/pep-0731.rst:103
+msgid "Michael Droettboom"
+msgstr ""
+
+#: ../../peps/peps/pep-0731.rst:104
+msgid "Petr Viktorin"
+msgstr ""
+
+#: ../../peps/peps/pep-0731.rst:105
+msgid "Serhiy Storchaka"
+msgstr ""
+
+#: ../../peps/peps/pep-0731.rst:106
+msgid "Steve Dower"
+msgstr ""
+
+#: ../../peps/peps/pep-0731.rst:107
+msgid "Victor Stinner"
+msgstr ""
+
+#: ../../peps/peps/pep-0731.rst:111
 msgid "Mandate"
 msgstr ""
 
-#: ../../peps/pep-0731.rst:98
+#: ../../peps/peps/pep-0731.rst:113
 msgid ""
-"The working group's mandate is to ensure that the Python C API is "
-"suitable for all users of and contributors to the API, without unduly "
-"preferencing one group over another. The working group will identify "
-"exemplar stakeholders, their needs and preferences, and will determine a "
-"plan for meeting these needs equitably and sustainably. It will oversee "
-"execution of the plan."
+"The working group's mandate is to ensure that the Python C API is suitable "
+"for all users of and contributors to the API, without unduly preferencing "
+"one group over another. The working group will identify exemplar "
+"stakeholders, their needs and preferences, and will determine a plan for "
+"meeting these needs equitably and sustainably. It will oversee execution of "
+"the plan."
 msgstr ""
 
-#: ../../peps/pep-0731.rst:107
+#: ../../peps/peps/pep-0731.rst:122
 msgid "Operations and process"
 msgstr ""
 
-#: ../../peps/pep-0731.rst:109
+#: ../../peps/peps/pep-0731.rst:124
 msgid ""
-"The working group has at least three members, comprised of prominent "
-"Python core developers. The members should consider the needs of the "
-"various stakeholders carefully."
+"The working group has at least three members, comprised of prominent Python "
+"core developers. The members should consider the needs of the various "
+"stakeholders carefully."
 msgstr ""
 
-#: ../../peps/pep-0731.rst:113
+#: ../../peps/peps/pep-0731.rst:128
 msgid ""
-"The Steering Council appoints the initial working group. There is no term"
-" limit for working group members. Working group members may resign their "
+"The Steering Council appoints the initial working group. There is no term "
+"limit for working group members. Working group members may resign their "
 "position at any time, for any reason. There is an expectation that the "
 "membership will change over time."
 msgstr ""
 
-#: ../../peps/pep-0731.rst:118
+#: ../../peps/peps/pep-0731.rst:133
 msgid ""
 "To determine replacements, nominations will be collected from the core "
 "developer community. Self-nominations are allowed. The existing working "
@@ -268,48 +309,47 @@ msgid ""
 "choose a replacement by any means they see fit, including a vote."
 msgstr ""
 
-#: ../../peps/pep-0731.rst:127
+#: ../../peps/peps/pep-0731.rst:142
 msgid ""
-"The working group remains accountable to the Steering Council. At any "
-"point, for any reason, the Steering Council could (publicly or privately)"
-" make a specific change or request a non-specific change to the "
-"composition of the working group."
+"The working group remains accountable to the Steering Council. At any point, "
+"for any reason, the Steering Council could (publicly or privately) make a "
+"specific change or request a non-specific change to the composition of the "
+"working group."
 msgstr ""
 
-#: ../../peps/pep-0731.rst:132
+#: ../../peps/peps/pep-0731.rst:147
 msgid ""
-"We acknowledge that this is not a particularly democratic structure and "
-"puts a lot of faith in the working group. However, the Python community "
-"has a long history of success with structures that are not fully "
-"democratic! We believe that self-governance, cycling of membership, and "
-"accountability to the Steering Council will be sufficient to ensure that "
-"the C API workgroup is meeting the needs of the community."
+"We acknowledge that this is not a particularly democratic structure and puts "
+"a lot of faith in the working group. However, the Python community has a "
+"long history of success with structures that are not fully democratic! We "
+"believe that self-governance, cycling of membership, and accountability to "
+"the Steering Council will be sufficient to ensure that the C API workgroup "
+"is meeting the needs of the community."
 msgstr ""
 
-#: ../../peps/pep-0731.rst:140
+#: ../../peps/peps/pep-0731.rst:155
 msgid ""
-"The working group may operate primarily through reviews of GitHub issues "
-"and PRs. Regular meetings are likely not necessary, but the working group"
-" may set up video calls, a private chat, or whatever other mechanism they"
-" decide upon internally."
+"The working group may operate primarily through reviews of GitHub issues and "
+"PRs. Regular meetings are likely not necessary, but the working group may "
+"set up video calls, a private chat, or whatever other mechanism they decide "
+"upon internally."
 msgstr ""
 
-#: ../../peps/pep-0731.rst:145
+#: ../../peps/peps/pep-0731.rst:160
 msgid ""
 "The working group should aim for transparency, posting all decisions "
 "publicly on `discuss.python.org <https://discuss.python.org>`__, with a "
-"rationale if possible. Before making a decision, the working group should"
-" give all interested community members (as examples of different "
-"categories of stakeholders) a chance to weigh in. There should be at "
-"least a week between the start of a discussion and the working group's "
-"decision."
+"rationale if possible. Before making a decision, the working group should "
+"give all interested community members (as examples of different categories "
+"of stakeholders) a chance to weigh in. There should be at least a week "
+"between the start of a discussion and the working group's decision."
 msgstr ""
 
-#: ../../peps/pep-0731.rst:157
+#: ../../peps/peps/pep-0731.rst:172
 msgid "Relationship with the Steering Council"
 msgstr ""
 
-#: ../../peps/pep-0731.rst:159
+#: ../../peps/peps/pep-0731.rst:174
 msgid ""
 "Just like today, the Python Steering Council remains responsible for the "
 "overall direction of the Python C API and continues to decide on PEPs "
@@ -318,32 +358,42 @@ msgid ""
 "recommendations to the Steering Council on PEPs related to the C API."
 msgstr ""
 
-#: ../../peps/pep-0731.rst:166
+#: ../../peps/peps/pep-0731.rst:181
 msgid ""
 "However, the working group can make smaller C API changes directly. The "
-"Steering Council may also choose to delegate decisions on some PEPs to "
-"the working group (exactly as any other PEP delegation)."
+"Steering Council may also choose to delegate decisions on some PEPs to the "
+"working group (exactly as any other PEP delegation)."
 msgstr ""
 
-#: ../../peps/pep-0731.rst:171
+#: ../../peps/peps/pep-0731.rst:186
 msgid "Amendments"
 msgstr ""
 
-#: ../../peps/pep-0731.rst:173
+#: ../../peps/peps/pep-0731.rst:188
 msgid ""
-"This PEP serves as a charter for the working group. Changes to its "
-"operation can be made either through a new PEP or through a change to "
-"this PEP. In either case, the change will be decided upon by the Steering"
-" Council after discussion in the community."
+"This PEP serves as a charter for the working group. Changes to its operation "
+"can be made either through a new PEP or through a change to this PEP. In "
+"either case, the change will be decided upon by the Steering Council after "
+"discussion in the community."
 msgstr ""
 
-#: ../../peps/pep-0731.rst:180
+#: ../../peps/peps/pep-0731.rst:195
+msgid "Contact"
+msgstr ""
+
+#: ../../peps/peps/pep-0731.rst:197
+msgid ""
+"To ask the C API Working Group for a decision, community members may open an "
+"issue in the `capi-workgroup/decisions <https://github.com/capi-workgroup/"
+"decisions/>`__ repository."
+msgstr ""
+
+#: ../../peps/peps/pep-0731.rst:203
 msgid "Copyright"
 msgstr ""
 
-#: ../../peps/pep-0731.rst:182
+#: ../../peps/peps/pep-0731.rst:205
 msgid ""
-"This document is placed in the public domain or under the "
-"CC0-1.0-Universal license, whichever is more permissive."
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
 msgstr ""
-

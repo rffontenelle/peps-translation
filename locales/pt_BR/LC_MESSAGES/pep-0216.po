@@ -6,81 +6,77 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PEPs\n"
+"Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 20:07+0000\n"
+"POT-Creation-Date: 2024-07-14 02:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.15.0\n"
 
-#: ../pep-0216.txt
+#: ../../peps/peps/pep-0216.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../pep-0216.txt:3
+#: ../../peps/peps/pep-0216.rst:3
 msgid "Moshe Zadka <moshez@zadka.site.co.il>"
 msgstr ""
 
-#: ../pep-0216.txt
+#: ../../peps/peps/pep-0216.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../pep-0216.txt:4
-msgid "Rejected"
+#: ../../peps/peps/pep-0216.rst:4
+msgid "Withdrawn"
 msgstr ""
 
-#: ../pep-0216.txt
+#: ../../peps/peps/pep-0216.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../pep-0216.txt:5
+#: ../../peps/peps/pep-0216.rst:5
 msgid "Informational"
 msgstr ""
 
-#: ../pep-0216.txt
+#: ../../peps/peps/pep-0216.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../pep-0216.txt:7
+#: ../../peps/peps/pep-0216.rst:6
 msgid "31-Jul-2000"
 msgstr ""
 
-#: ../pep-0216.txt
+#: ../../peps/peps/pep-0216.rst
 msgid "Post-History"
 msgstr "Pós-história"
 
-#: ../pep-0216.txt
+#: ../../peps/peps/pep-0216.rst
 msgid "Superseded-By"
 msgstr ""
 
-#: ../pep-0216.txt:9
+#: ../../peps/peps/pep-0216.rst:8
 msgid "287"
 msgstr ""
 
-#: ../pep-0216.txt:13
-msgid "Notice"
+#: ../../peps/peps/pep-0216.rst:13
+msgid "It has been superseded by :pep:`287`."
 msgstr ""
 
-#: ../pep-0216.txt:15
-msgid "This PEP is rejected by the author.  It has been superseded by PEP 287."
-msgstr ""
-
-#: ../pep-0216.txt:20
+#: ../../peps/peps/pep-0216.rst:17
 msgid "Abstract"
 msgstr ""
 
-#: ../pep-0216.txt:22
+#: ../../peps/peps/pep-0216.rst:19
 msgid ""
 "Named Python objects, such as modules, classes and functions, have a string "
 "attribute called ``__doc__``. If the first expression inside the definition "
 "is a literal string, that string is assigned to the ``__doc__`` attribute."
 msgstr ""
 
-#: ../pep-0216.txt:27
+#: ../../peps/peps/pep-0216.rst:24
 msgid ""
 "The ``__doc__`` attribute is called a documentation string, or docstring. It "
 "is often used to summarize the interface of the module, class or function. "
@@ -90,11 +86,11 @@ msgid ""
 "that do exist are for the most part unmaintained and unused."
 msgstr ""
 
-#: ../pep-0216.txt:37
+#: ../../peps/peps/pep-0216.rst:34
 msgid "Perl Documentation"
 msgstr ""
 
-#: ../pep-0216.txt:39
+#: ../../peps/peps/pep-0216.rst:36
 msgid ""
 "In Perl, most modules are documented in a format called POD -- Plain Old "
 "Documentation. This is an easy-to-type, very low level format which "
@@ -103,11 +99,11 @@ msgid ""
 "However, in Perl, the information is not available at run-time."
 msgstr ""
 
-#: ../pep-0216.txt:47
+#: ../../peps/peps/pep-0216.rst:44
 msgid "Java Documentation"
 msgstr ""
 
-#: ../pep-0216.txt:49
+#: ../../peps/peps/pep-0216.rst:46
 msgid ""
 "In Java, special comments before classes and functions function to document "
 "the code. A program to extract these, and turn them into HTML documentation "
@@ -116,11 +112,11 @@ msgid ""
 "intimate relationship with HTML."
 msgstr ""
 
-#: ../pep-0216.txt:57
+#: ../../peps/peps/pep-0216.rst:54
 msgid "Python Docstring Goals"
 msgstr ""
 
-#: ../pep-0216.txt:59
+#: ../../peps/peps/pep-0216.rst:56
 msgid ""
 "Python documentation string are easy to spot during parsing, and are also "
 "available to the runtime interpreter. This double purpose is a bit "
@@ -133,11 +129,11 @@ msgid ""
 "which is hard to parse."
 msgstr ""
 
-#: ../pep-0216.txt:71
+#: ../../peps/peps/pep-0216.rst:68
 msgid "High Level Solutions"
 msgstr ""
 
-#: ../pep-0216.txt:73
+#: ../../peps/peps/pep-0216.rst:70
 msgid ""
 "To counter the objection that the strings take up place in the running "
 "program, it is suggested that documentation extraction tools will "
@@ -146,71 +142,71 @@ msgid ""
 "interactive interpreter, so it should contain a few summary lines."
 msgstr ""
 
-#: ../pep-0216.txt:82
+#: ../../peps/peps/pep-0216.rst:79
 msgid "Docstring Format Goals"
 msgstr ""
 
-#: ../pep-0216.txt:84
+#: ../../peps/peps/pep-0216.rst:81
 msgid ""
 "These are the goals for the docstring format, as discussed ad nauseam in the "
 "doc-sig."
 msgstr ""
 
-#: ../pep-0216.txt:87
+#: ../../peps/peps/pep-0216.rst:84
 msgid "It must be easy to type with any standard text editor."
 msgstr ""
 
-#: ../pep-0216.txt:88
+#: ../../peps/peps/pep-0216.rst:85
 msgid "It must be readable to the casual observer."
 msgstr ""
 
-#: ../pep-0216.txt:89
+#: ../../peps/peps/pep-0216.rst:86
 msgid ""
 "It must not contain information which can be deduced from parsing the module."
 msgstr ""
 
-#: ../pep-0216.txt:91
+#: ../../peps/peps/pep-0216.rst:88
 msgid ""
 "It must contain sufficient information so it can be converted to any "
 "reasonable markup format."
 msgstr ""
 
-#: ../pep-0216.txt:93
+#: ../../peps/peps/pep-0216.rst:90
 msgid ""
 "It must be possible to write a module's entire documentation in docstrings, "
 "without feeling hampered by the markup language."
 msgstr ""
 
-#: ../pep-0216.txt:98
+#: ../../peps/peps/pep-0216.rst:95
 msgid "Docstring Contents"
 msgstr ""
 
-#: ../pep-0216.txt:100
+#: ../../peps/peps/pep-0216.rst:97
 msgid ""
 "For requirement 5. above, it is needed to specify what must be in docstrings."
 msgstr ""
 
-#: ../pep-0216.txt:103
+#: ../../peps/peps/pep-0216.rst:100
 msgid "At least the following must be available:"
 msgstr ""
 
-#: ../pep-0216.txt:105
+#: ../../peps/peps/pep-0216.rst:102
 msgid "A tag that means \"this is a Python *something*, guess what\""
 msgstr ""
 
-#: ../pep-0216.txt:107
+#: ../../peps/peps/pep-0216.rst:104
 msgid ""
 "Example: In the sentence \"The POP3 class\", we need to markup \"POP3\" so. "
 "The parser will be able to guess it is a class from the contents of the "
 "``poplib`` module, but we need to make it guess."
 msgstr ""
 
-#: ../pep-0216.txt:111
+#: ../../peps/peps/pep-0216.rst:108
 msgid ""
 "Tags that mean \"this is a Python class/module/class var/instance var...\""
 msgstr ""
 
-#: ../pep-0216.txt:113
+#: ../../peps/peps/pep-0216.rst:110
 msgid ""
 "Example: The usual Python idiom for singleton class ``A`` is to have ``_A`` "
 "as the class, and ``A`` a function which returns ``_A`` objects. It's usual "
@@ -219,23 +215,23 @@ msgid ""
 "as a class."
 msgstr ""
 
-#: ../pep-0216.txt:119
+#: ../../peps/peps/pep-0216.rst:116
 msgid "An easy way to include Python source code/Python interactive sessions"
 msgstr ""
 
-#: ../pep-0216.txt:121
+#: ../../peps/peps/pep-0216.rst:118
 msgid "Emphasis/bold"
 msgstr ""
 
-#: ../pep-0216.txt:123
+#: ../../peps/peps/pep-0216.rst:120
 msgid "List/tables"
 msgstr ""
 
-#: ../pep-0216.txt:127
+#: ../../peps/peps/pep-0216.rst:124
 msgid "Docstring Basic Structure"
 msgstr ""
 
-#: ../pep-0216.txt:129
+#: ../../peps/peps/pep-0216.rst:126
 msgid ""
 "The documentation strings will be in StructuredTextNG (http://www.zope.org/"
 "Members/jim/StructuredTextWiki/StructuredTextNG) Since StructuredText is not "
@@ -245,41 +241,41 @@ msgid ""
 "be made from the text."
 msgstr ""
 
-#: ../pep-0216.txt:139
+#: ../../peps/peps/pep-0216.rst:136
 msgid "Unresolved Issues"
 msgstr ""
 
-#: ../pep-0216.txt:141
+#: ../../peps/peps/pep-0216.rst:138
 msgid ""
 "Is there a way to escape characters in ST? If so, how? (example: * at the "
 "beginning of a line without being bullet symbol)"
 msgstr ""
 
-#: ../pep-0216.txt:144
+#: ../../peps/peps/pep-0216.rst:141
 msgid ""
 "Is my suggestion above for Python symbols compatible with ST-NG? How hard "
 "would it be to extend ST-NG to support it?"
 msgstr ""
 
-#: ../pep-0216.txt:147
+#: ../../peps/peps/pep-0216.rst:144
 msgid "How do we describe input and output types of functions?"
 msgstr ""
 
-#: ../pep-0216.txt:149
+#: ../../peps/peps/pep-0216.rst:146
 msgid ""
 "What additional constraint do we enforce on each docstring? (module/class/"
 "function)?"
 msgstr ""
 
-#: ../pep-0216.txt:152
+#: ../../peps/peps/pep-0216.rst:149
 msgid "What are the guesser rules?"
 msgstr ""
 
-#: ../pep-0216.txt:156
+#: ../../peps/peps/pep-0216.rst:153
 msgid "Rejected Suggestions"
 msgstr ""
 
-#: ../pep-0216.txt:158
+#: ../../peps/peps/pep-0216.rst:155
 msgid ""
 "XML -- it's very hard to type, and too cluttered to read it comfortably."
 msgstr ""

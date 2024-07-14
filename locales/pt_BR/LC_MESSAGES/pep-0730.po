@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PEPs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-20 10:43-0300\n"
+"POT-Creation-Date: 2024-07-14 02:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: pt_BR\n"
@@ -17,359 +17,366 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.13.1\n"
+"Generated-By: Babel 2.15.0\n"
 
-#: ../../peps/pep-0730.rst
+#: ../../peps/peps/pep-0730.rst
 msgid "Author"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:3
+#: ../../peps/peps/pep-0730.rst:3
 msgid "Russell Keith-Magee <russell@keith-magee.com>"
 msgstr ""
 
-#: ../../peps/pep-0730.rst
+#: ../../peps/peps/pep-0730.rst
 msgid "Sponsor"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:4
+#: ../../peps/peps/pep-0730.rst:4
 msgid "Ned Deily <nad@python.org>"
 msgstr ""
 
-#: ../../peps/pep-0730.rst
+#: ../../peps/peps/pep-0730.rst
 msgid "Discussions-To"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:5
+#: ../../peps/peps/pep-0730.rst:5
 msgid ""
-"https://discuss.python.org/t/pep730-adding-ios-as-a-supported-"
-"platform/35854"
+"https://discuss.python.org/t/pep730-adding-ios-as-a-supported-platform/35854"
 msgstr ""
 
-#: ../../peps/pep-0730.rst
+#: ../../peps/peps/pep-0730.rst
 msgid "Status"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:6
-msgid "Draft"
+#: ../../peps/peps/pep-0730.rst:6
+msgid "Final"
 msgstr ""
 
-#: ../../peps/pep-0730.rst
+#: ../../peps/peps/pep-0730.rst
 msgid "Type"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:7
+#: ../../peps/peps/pep-0730.rst:7
 msgid "Standards Track"
 msgstr ""
 
-#: ../../peps/pep-0730.rst
+#: ../../peps/peps/pep-0730.rst
 msgid "Created"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:9
+#: ../../peps/peps/pep-0730.rst:9
 msgid "09-Oct-2023"
 msgstr ""
 
-#: ../../peps/pep-0730.rst
+#: ../../peps/peps/pep-0730.rst
 msgid "Python-Version"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:10
+#: ../../peps/peps/pep-0730.rst:10
 msgid "3.13"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:13
+#: ../../peps/peps/pep-0730.rst
+msgid "Resolution"
+msgstr ""
+
+#: ../../peps/peps/pep-0730.rst:11
+msgid ""
+"https://discuss.python.org/t/pep-730-adding-ios-as-a-supported-"
+"platform/35854/66"
+msgstr ""
+
+#: ../../peps/peps/pep-0730.rst:14
 msgid "Abstract"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:15
+#: ../../peps/peps/pep-0730.rst:16
 msgid ""
-"This PEP proposes adding iOS as a supported platform in CPython. The "
-"initial goal is to achieve Tier 3 support for Python 3.13. This PEP "
-"describes the technical aspects of the changes that are required to "
-"support iOS. It also describes the project management concerns related to"
-" adoption of iOS as a Tier 3 platform."
+"This PEP proposes adding iOS as a supported platform in CPython. The initial "
+"goal is to achieve Tier 3 support for Python 3.13. This PEP describes the "
+"technical aspects of the changes that are required to support iOS. It also "
+"describes the project management concerns related to adoption of iOS as a "
+"Tier 3 platform."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:22
+#: ../../peps/peps/pep-0730.rst:23
 msgid "Motivation"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:24
+#: ../../peps/peps/pep-0730.rst:25
 msgid ""
-"Over the last 15 years, mobile platforms have become increasingly "
-"important parts of the computing landscape. iOS is one of two operating "
-"systems that control the vast majority of these devices. However, there "
-"is no official support for iOS in CPython."
+"Over the last 15 years, mobile platforms have become increasingly important "
+"parts of the computing landscape. iOS is one of two operating systems that "
+"control the vast majority of these devices. However, there is no official "
+"support for iOS in CPython."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:29
+#: ../../peps/peps/pep-0730.rst:30
 msgid ""
-"The `BeeWare Project <https://beeware.org>`__ and `Kivy "
-"<https://kivy.org>`__ have both supported iOS for almost 10 years. This "
-"support has been able to generate applications that have been accepted "
-"for publication in the iOS App Store. This demonstrates the technical "
-"feasibility of iOS support."
+"The `BeeWare Project <https://beeware.org>`__ and `Kivy <https://kivy."
+"org>`__ have both supported iOS for almost 10 years. This support has been "
+"able to generate applications that have been accepted for publication in the "
+"iOS App Store. This demonstrates the technical feasibility of iOS support."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:34
+#: ../../peps/peps/pep-0730.rst:35
 msgid ""
-"It is important for the future of Python as a language that it is able to"
-" be used on any hardware or OS that has widespread adoption. If Python "
-"cannot be used a on a platform that has widespread use, adoption of the "
-"language will be impacted as potential users will adopt other languages "
-"that *do* provide support for these platforms."
+"It is important for the future of Python as a language that it is able to be "
+"used on any hardware or OS that has widespread adoption. If Python cannot be "
+"used a on a platform that has widespread use, adoption of the language will "
+"be impacted as potential users will adopt other languages that *do* provide "
+"support for these platforms."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:41
+#: ../../peps/peps/pep-0730.rst:42
 msgid "Rationale"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:44
+#: ../../peps/peps/pep-0730.rst:45
 msgid "Development landscape"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:46
+#: ../../peps/peps/pep-0730.rst:47
 msgid ""
 "iOS provides a single API, but 2 distinct ABIs - ``iphoneos`` (physical "
 "devices), and ``iphonesimulator``. Each of these ABIs can be provided on "
-"multiple CPU architectures. At time of writing, Apple officially supports"
-" ``arm64`` on the device ABI, and ``arm64`` and ``x86_64`` are supported "
-"on the simulator ABI."
+"multiple CPU architectures. At time of writing, Apple officially supports "
+"``arm64`` on the device ABI, and ``arm64`` and ``x86_64`` are supported on "
+"the simulator ABI."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:52
+#: ../../peps/peps/pep-0730.rst:53
 msgid ""
-"As with macOS, iOS supports the creation of \"fat\" binaries that "
-"contains multiple CPU architectures. However, fat binaries *cannot* span "
-"ABIs. That is, it is possible to have a fat *simulator* binary, and a fat"
-" *device* binary, but it is not possible to create a single fat \"iOS\" "
-"binary that covers both simulator and device needs. To support "
-"distribution of a single development artefact, Apple uses an "
-"\"XCframework\" structure - a wrapper around multiple ABIs that implement"
-" a common API."
+"As with macOS, iOS supports the creation of \"fat\" binaries that contains "
+"multiple CPU architectures. However, fat binaries *cannot* span ABIs. That "
+"is, it is possible to have a fat *simulator* binary, and a fat *device* "
+"binary, but it is not possible to create a single fat \"iOS\" binary that "
+"covers both simulator and device needs. To support distribution of a single "
+"development artefact, Apple uses an \"XCframework\" structure - a wrapper "
+"around multiple ABIs that implement a common API."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:60
+#: ../../peps/peps/pep-0730.rst:61
 msgid ""
-"iOS runs on a Darwin kernel, similar to macOS. However, there is a need "
-"to differentiate between macOS and iOS at an implementation level, as "
-"there are significant platform differences between iOS and macOS."
+"iOS runs on a Darwin kernel, similar to macOS. However, there is a need to "
+"differentiate between macOS and iOS at an implementation level, as there are "
+"significant platform differences between iOS and macOS."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:64
+#: ../../peps/peps/pep-0730.rst:65
 msgid "iOS code is compiled for compatibility against a minimum iOS version."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:66
+#: ../../peps/peps/pep-0730.rst:67
 msgid ""
-"Apple frequently refers to \"iPadOS\" in their marketing material. "
-"However, from a development perspective, there is no discernable "
-"difference between iPadOS and iOS. A binary that has been compiled for "
-"the ``iphoneos`` or ``iphonesimulator`` ABIs can be deployed on iPad."
+"Apple frequently refers to \"iPadOS\" in their marketing material. However, "
+"from a development perspective, there is no discernable difference between "
+"iPadOS and iOS. A binary that has been compiled for the ``iphoneos`` or "
+"``iphonesimulator`` ABIs can be deployed on iPad."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:71
+#: ../../peps/peps/pep-0730.rst:72
 msgid ""
-"Other Apple platforms, such as tvOS, watchOS, and visionOS, use different"
-" ABIs, and are not covered by this PEP."
+"Other Apple platforms, such as tvOS, watchOS, and visionOS, use different "
+"ABIs, and are not covered by this PEP."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:75
+#: ../../peps/peps/pep-0730.rst:76
 msgid "POSIX compliance"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:77
+#: ../../peps/peps/pep-0730.rst:78
 msgid ""
-"iOS is broadly a POSIX platform. However, similar to WASI/Emscripten, "
-"there are POSIX APIs that exist on iOS, but cannot be used; and POSIX "
-"APIs that don't exist at all."
+"iOS is broadly a POSIX platform. However, similar to WASI/Emscripten, there "
+"are POSIX APIs that exist on iOS, but cannot be used; and POSIX APIs that "
+"don't exist at all."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:81
+#: ../../peps/peps/pep-0730.rst:82
 msgid ""
 "Most notable of these is the fact that iOS does not provide any form of "
-"multiprocess support. ``fork`` and ``spawn`` both *exist* in the iOS API;"
-" however, if they are invoked, the invoking iOS process stops, and the "
-"new process doesn't start."
+"multiprocess support. ``fork`` and ``spawn`` both *exist* in the iOS API; "
+"however, if they are invoked, the invoking iOS process stops, and the new "
+"process doesn't start."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:86
+#: ../../peps/peps/pep-0730.rst:87
 msgid "Unlike WASI/Emscripten, threading *is* supported on iOS."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:88
+#: ../../peps/peps/pep-0730.rst:89
 msgid ""
 "There are also significant limits to socket handling. Due to process "
 "sandboxing, there is no availability of interprocess communication via "
 "socket. However, sockets for network communication *are* available."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:93
+#: ../../peps/peps/pep-0730.rst:94
 msgid "Dynamic libraries"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:95
+#: ../../peps/peps/pep-0730.rst:96
 msgid ""
-"The iOS `App Store guidelines <https://developer.apple.com/app-"
-"store/review/guidelines>`__ allow apps to be written in languages other "
-"than Objective C or Swift. However, they have very strict guidelines "
-"about the structure of apps that are submitted for distribution."
+"The iOS `App Store guidelines <https://developer.apple.com/app-store/review/"
+"guidelines>`__ allow apps to be written in languages other than Objective C "
+"or Swift. However, they have very strict guidelines about the structure of "
+"apps that are submitted for distribution."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:101
+#: ../../peps/peps/pep-0730.rst:102
 msgid ""
 "iOS apps can use dynamically loaded libraries; however, there are very "
-"strict requirements on how dynamically loaded content is packaged for use"
-" on iOS:"
+"strict requirements on how dynamically loaded content is packaged for use on "
+"iOS:"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:104
+#: ../../peps/peps/pep-0730.rst:105
 msgid ""
 "Dynamic binary content must be compiled as dynamic libraries, not shared "
 "objects or binary bundles."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:107
+#: ../../peps/peps/pep-0730.rst:108
 msgid "They must be packaged in the app bundle as Frameworks."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:109
+#: ../../peps/peps/pep-0730.rst:110
 msgid "Each Framework can only contain a single dynamic library."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:111
-msgid "The Framework *must* be contained in the iOS App's ``Frameworks`` folder."
+#: ../../peps/peps/pep-0730.rst:112
+msgid ""
+"The Framework *must* be contained in the iOS App's ``Frameworks`` folder."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:113
+#: ../../peps/peps/pep-0730.rst:114
 msgid "A Framework may not contain any non-library content."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:115
+#: ../../peps/peps/pep-0730.rst:116
 msgid ""
 "This imposes some constraints on the operation of CPython. It is not "
 "possible store binary modules in the ``lib-dynload`` and/or ``site-"
-"packages`` folders; they must be stored in the app's Frameworks folder, "
-"with each module wrapped in a Framework. This also means that the common "
+"packages`` folders; they must be stored in the app's Frameworks folder, with "
+"each module wrapped in a Framework. This also means that the common "
 "assumption that a Python module can construct the location of a binary "
-"module by using the ``__file__`` attribute of the Python module no longer"
-" holds."
+"module by using the ``__file__`` attribute of the Python module no longer "
+"holds."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:122
+#: ../../peps/peps/pep-0730.rst:123
 msgid ""
 "As with macOS, compiling a binary module that is accessible from a "
 "statically-linked build of Python requires the use of the ``--undefined "
-"dynamic_lookup`` option to avoid linking ``libpython3.x`` into every "
-"binary module. However, on iOS, this compiler flag raises a deprecation "
-"warning when it is used. A warning from this flag has been observed on "
-"macOS as well - however, responses from Apple staff suggest that they `do"
-" not intend to break the CPython ecosystem by removing this option "
-"<https://github.com/python/cpython/issues/97524#issuecomment-1458855301>`__."
-" As Python does not currently have a notable presence on iOS, it is "
-"difficult to judge whether iOS usage of this flag would fall under the "
-"same umbrella."
+"dynamic_lookup`` option to avoid linking ``libpython3.x`` into every binary "
+"module. However, on iOS, this compiler flag raises a deprecation warning "
+"when it is used. A warning from this flag has been observed on macOS as well "
+"- however, responses from Apple staff suggest that they `do not intend to "
+"break the CPython ecosystem by removing this option <https://github.com/"
+"python/cpython/issues/97524#issuecomment-1458855301>`__. As Python does not "
+"currently have a notable presence on iOS, it is difficult to judge whether "
+"iOS usage of this flag would fall under the same umbrella."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:134
+#: ../../peps/peps/pep-0730.rst:135
 msgid "Console and interactive usage"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:136
+#: ../../peps/peps/pep-0730.rst:137
 msgid ""
 "Distribution of a traditional CPython REPL or interactive \"python.exe\" "
 "should not be considered a goal of this work."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:139
+#: ../../peps/peps/pep-0730.rst:140
 msgid ""
-"Mobile devices (including iOS) do not provide a TTY-style console. They "
-"do not provide ``stdin``, ``stdout`` or ``stderr``. iOS provides a system"
-" log, and it is possible to install a redirection so that all ``stdout`` "
-"and ``stderr`` content is redirected to the system log; but there is no "
-"analog for ``stdin``."
+"Mobile devices (including iOS) do not provide a TTY-style console. They do "
+"not provide ``stdin``, ``stdout`` or ``stderr``. iOS provides a system log, "
+"and it is possible to install a redirection so that all ``stdout`` and "
+"``stderr`` content is redirected to the system log; but there is no analog "
+"for ``stdin``."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:144
+#: ../../peps/peps/pep-0730.rst:145
 msgid ""
 "In addition, iOS places restrictions on downloading additional code at "
 "runtime (as this behavior would be functionally indistinguishable from "
-"trying to work around App Store review). As a result, a traditional "
-"\"create a virtual environment and pip install\" development experience "
-"will not be viable on iOS."
+"trying to work around App Store review). As a result, a traditional \"create "
+"a virtual environment and pip install\" development experience will not be "
+"viable on iOS."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:149
+#: ../../peps/peps/pep-0730.rst:150
 msgid ""
 "It is *possible* to build an native iOS application that provides a REPL "
-"interface. This would be closer to an IDLE-style user experience; "
-"however, Tkinter cannot be used on iOS, so any app would require a "
-"ground-up rewrite. The iOS app store already contains several examples of"
-" apps in this category (e.g., `Pythonista <http://www.omz-"
-"software.com/pythonista/>`__ and `Pyto "
+"interface. This would be closer to an IDLE-style user experience; however, "
+"Tkinter cannot be used on iOS, so any app would require a ground-up rewrite. "
+"The iOS app store already contains several examples of apps in this category "
+"(e.g., `Pythonista <http://www.omz-software.com/pythonista/>`__ and `Pyto "
 "<https://pyto.readthedocs.io/>`__). The focus of this work would be to "
 "provide an embedded distribution that IDE-style native interfaces could "
 "utilize, not a user-facing \"app\" interface to iOS on Python."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:159
+#: ../../peps/peps/pep-0730.rst:160
 msgid "Specification"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:162
+#: ../../peps/peps/pep-0730.rst:163
 msgid "Platform identification"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:165
+#: ../../peps/peps/pep-0730.rst:166
 msgid "``sys``"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:167
+#: ../../peps/peps/pep-0730.rst:168
 msgid ""
-"``sys.platform`` will identify as ``\"ios\"`` on both simulator and "
-"physical devices."
+"``sys.platform`` will identify as ``\"ios\"`` on both simulator and physical "
+"devices."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:170
+#: ../../peps/peps/pep-0730.rst:171
 msgid ""
-"``sys.implementation._multiarch`` will describe the ABI and CPU "
-"architecture:"
+"``sys.implementation._multiarch`` will describe the ABI and CPU architecture:"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:172
-msgid "``\"iphoneos-arm64\"`` for ARM64 devices"
+#: ../../peps/peps/pep-0730.rst:173
+msgid "``\"arm64-iphoneos\"`` for ARM64 devices"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:173
-msgid "``\"iphonesimulator-arm64\"`` for ARM64 simulators"
+#: ../../peps/peps/pep-0730.rst:174
+msgid "``\"arm64-iphonesimulator\"`` for ARM64 simulators"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:174
-msgid "``\"iphonesimulator-x86_64\"`` for x86_64 simulators"
+#: ../../peps/peps/pep-0730.rst:175
+msgid "``\"x86_64-iphonesimulator\"`` for x86_64 simulators"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:177
+#: ../../peps/peps/pep-0730.rst:178
 msgid "``platform``"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:179
+#: ../../peps/peps/pep-0730.rst:180
 msgid ""
 "``platform`` will be modified to support returning iOS-specific details. "
 "Most of the values returned by the ``platform`` module will match those "
 "returned by ``os.uname()``, with the exception of:"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:183
-msgid "``platform.system()`` - ``\"iOS\"``, instead of the default ``\"Darwin\"``"
+#: ../../peps/peps/pep-0730.rst:184
+msgid ""
+"``platform.system()`` - ``\"iOS\"`` or ``iPadOS`` (depending on the hardware "
+"in use), instead of ``\"Darwin\"``"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:185
+#: ../../peps/peps/pep-0730.rst:187
 msgid ""
 "``platform.release()`` - the iOS version number, as a string (e.g., "
 "``\"16.6.1\"``), instead of the Darwin kernel version."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:188
+#: ../../peps/peps/pep-0730.rst:190
 msgid ""
 "In addition, a ``platform.ios_ver()`` method will be added. This mirrors "
 "``platform.mac_ver()``, which can be used to provide macOS version "
@@ -377,623 +384,643 @@ msgid ""
 "following:"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:192
+#: ../../peps/peps/pep-0730.rst:194
+msgid "``system`` - the OS name (``iOS`` or ``iPadOS``, depending on hardware)"
+msgstr ""
+
+#: ../../peps/peps/pep-0730.rst:195
 msgid "``release`` - the iOS version, as a string (e.g., ``\"16.6.1\"``)."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:193
-msgid ""
-"``min_release`` - the minimum supported iOS version, as a string (e.g., "
-"``\"12.0\"``)"
-msgstr ""
-
-#: ../../peps/pep-0730.rst:195
+#: ../../peps/peps/pep-0730.rst:196
 msgid ""
 "``model`` - the model identifier of the device, as a string (e.g., "
-"``\"iPhone13,2\"``). On simulators, this will return "
-"``\"iPhoneSimulator\"``."
+"``\"iPhone13,2\"``). On simulators, this will return ``\"iPhone\"`` or "
+"``\"iPad\"``, depending on the simulator device."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:197
+#: ../../peps/peps/pep-0730.rst:199
 msgid "``is_simulator`` - a boolean indicating if the device is a simulator."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:200
+#: ../../peps/peps/pep-0730.rst:202
 msgid "``os``"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:202
+#: ../../peps/peps/pep-0730.rst:204
 msgid ""
-"``os.uname()`` will return the raw result of a POSIX ``uname()`` call. "
-"This will result in the following values:"
+"``os.uname()`` will return the raw result of a POSIX ``uname()`` call. This "
+"will result in the following values:"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:205
+#: ../../peps/peps/pep-0730.rst:207
 msgid "``sysname`` - ``\"Darwin\"``"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:207
+#: ../../peps/peps/pep-0730.rst:209
 msgid "``release`` - The Darwin kernel version (e.g., ``\"22.6.0\"``)"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:209
+#: ../../peps/peps/pep-0730.rst:211
 msgid ""
 "This approach treats the ``os`` module as a \"raw\" interface to system "
-"APIs, and ``platform`` as a higher-level API providing more generally "
-"useful values."
+"APIs, and ``platform`` as a higher-level API providing more generally useful "
+"values."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:213
+#: ../../peps/peps/pep-0730.rst:215
 msgid "``sysconfig``"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:215
+#: ../../peps/peps/pep-0730.rst:217
 msgid ""
 "The ``sysconfig`` module will use the minimum iOS version as part of "
-"``sysconfig.get_platform()`` (e.g., ``\"ios-12.0-iphoneos-arm64\"``). The"
-" ``sysconfigdata_name`` and Config makefile will follow the same patterns"
-" as existing platforms (using ``sys.platform``, "
-"``sys.implementation._multiarch`` etc.) to construct identifiers."
+"``sysconfig.get_platform()`` (e.g., ``\"ios-12.0-arm64-iphoneos\"``). The "
+"``sysconfigdata_name`` and Config makefile will follow the same patterns as "
+"existing platforms (using ``sys.platform``, ``sys.implementation."
+"_multiarch`` etc.) to construct identifiers."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:222
+#: ../../peps/peps/pep-0730.rst:224
 msgid "Subprocess support"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:224
+#: ../../peps/peps/pep-0730.rst:226
 msgid ""
-"iOS will leverage the pattern for disabling subprocesses established by "
-"WASI/Emscripten. The ``subprocess`` module will raise an exception if an "
-"attempt is made to start a subprocess, and ``os.fork`` and ``os.spawn`` "
-"calls will raise an ``OSError``."
+"iOS will leverage the pattern for disabling subprocesses established by WASI/"
+"Emscripten. The ``subprocess`` module will raise an exception if an attempt "
+"is made to start a subprocess, and ``os.fork`` and ``os.spawn`` calls will "
+"raise an ``OSError``."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:230
+#: ../../peps/peps/pep-0730.rst:232
 msgid "Dynamic module loading"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:232
+#: ../../peps/peps/pep-0730.rst:234
 msgid ""
 "To accommodate iOS dynamic loading, the ``importlib`` bootstrap will be "
-"extended to add a metapath finder that can convert a request for a Python"
-" binary module into a Framework location. This finder will only be "
-"installed if ``sys.platform == \"ios\"``."
+"extended to add a metapath finder that can convert a request for a Python "
+"binary module into a Framework location. This finder will only be installed "
+"if ``sys.platform == \"ios\"``."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:237
+#: ../../peps/peps/pep-0730.rst:239
 msgid ""
-"This finder will convert a Python module name (e.g., ``foo.bar._whiz``) "
-"into a unique Framework name by using the full module name as the "
-"framework name (i.e., ``foo.bar._whiz.framework``). A framework is a "
-"directory; the finder will look for ``_whiz.dylib`` in that directory."
+"This finder will convert a Python module name (e.g., ``foo.bar._whiz``) into "
+"a unique Framework name by using the full module name as the framework name "
+"(i.e., ``foo.bar._whiz.framework``). A framework is a directory; the finder "
+"will look for a binary named ``foo.bar._whiz`` in that directory."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:243
+#: ../../peps/peps/pep-0730.rst:245
 msgid "Compilation"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:245
+#: ../../peps/peps/pep-0730.rst:247
 msgid ""
 "The only binary format that will be supported is a dynamically-linkable "
 "``libpython3.x.dylib``, packaged in an iOS-compatible framework format. "
-"While the ``--undefined dynamic_lookup`` compiler option currently works,"
-" the long-term viability of the option cannot be guaranteed. Rather than "
-"rely on a compiler flag with an uncertain future, binary modules on iOS "
-"will be linked with ``libpython3.x.dylib``. This means iOS binary modules"
-" will not be loadable by an executable that has been statically linked "
-"against ``libpython3.x.a``. Therefore, a static ``libpython3.x.a`` iOS "
-"library will not be supported. This is the same pattern used by CPython "
-"on Windows."
+"While the ``--undefined dynamic_lookup`` compiler option currently works, "
+"the long-term viability of the option cannot be guaranteed. Rather than rely "
+"on a compiler flag with an uncertain future, binary modules on iOS will be "
+"linked with ``libpython3.x.dylib``. This means iOS binary modules will not "
+"be loadable by an executable that has been statically linked against "
+"``libpython3.x.a``. Therefore, a static ``libpython3.x.a`` iOS library will "
+"not be supported. This is the same pattern used by CPython on Windows."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:255
+#: ../../peps/peps/pep-0730.rst:257
 msgid ""
-"Building CPython for iOS requires the use of the cross-platform tooling "
-"in CPython's ``configure`` build system. A single "
-"``configure``/``make``/``make install`` pass will produce a "
-"``Python.framework`` artefact that can be used on a single ABI and "
-"architecture."
+"Building CPython for iOS requires the use of the cross-platform tooling in "
+"CPython's ``configure`` build system. A single ``configure``/``make``/``make "
+"install`` pass will produce a ``Python.framework`` artefact that can be used "
+"on a single ABI and architecture."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:260
+#: ../../peps/peps/pep-0730.rst:262
 msgid ""
-"Additional tooling will be required to merge the ``Python.framework`` "
-"builds for multiple architectures into a single \"fat\" library. Tooling "
-"will also be required to merge multiple ABIs into the ``XCframework`` "
-"format that Apple uses to distribute multiple frameworks for different "
-"ABIs in a single bundle."
+"Additional tooling will be required to merge the ``Python.framework`` builds "
+"for multiple architectures into a single \"fat\" library. Tooling will also "
+"be required to merge multiple ABIs into the ``XCframework`` format that "
+"Apple uses to distribute multiple frameworks for different ABIs in a single "
+"bundle."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:265
+#: ../../peps/peps/pep-0730.rst:267
 msgid ""
 "An Xcode project will be provided for the purpose of running the CPython "
-"test suite. Tooling will be provided to automate the process of compiling"
-" the test suite binary, start the simulator, install the test suite, and "
+"test suite. Tooling will be provided to automate the process of compiling "
+"the test suite binary, start the simulator, install the test suite, and "
 "execute it."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:270
+#: ../../peps/peps/pep-0730.rst:272
 msgid "Distribution"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:272
+#: ../../peps/peps/pep-0730.rst:274
 msgid ""
-"Adding iOS as a Tier 3 platform only requires adding support for "
-"compiling an iOS-compatible build from an unpatched CPython code "
-"checkout. It does not require production of officially distributed iOS "
-"artefacts for use by end-users."
+"Adding iOS as a Tier 3 platform only requires adding support for compiling "
+"an iOS-compatible build from an unpatched CPython code checkout. It does not "
+"require production of officially distributed iOS artefacts for use by end-"
+"users."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:276
+#: ../../peps/peps/pep-0730.rst:278
 msgid ""
-"If/when iOS is updated to Tier 2 or 1 support, the tooling used to "
-"generate an ``XCframework`` package could be used to produce an iOS "
-"distribution artefact. This could then be distributed as an \"embedded "
-"distribution\" analogous to the Windows embedded distribution, or as a "
-"CocoaPod or Swift package that could be added to an Xcode project."
+"If/when iOS is updated to Tier 2 or 1 support, the tooling used to generate "
+"an ``XCframework`` package could be used to produce an iOS distribution "
+"artefact. This could then be distributed as an \"embedded distribution\" "
+"analogous to the Windows embedded distribution, or as a CocoaPod or Swift "
+"package that could be added to an Xcode project."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:283
+#: ../../peps/peps/pep-0730.rst:285
 msgid "CI resources"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:285
+#: ../../peps/peps/pep-0730.rst:287
 msgid ""
-"`Anaconda <https://anaconda.com>`__ has offered to provide physical "
-"hardware to run iOS buildbots."
+"`Anaconda <https://anaconda.com>`__ has offered to provide physical hardware "
+"to run iOS buildbots."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:288
+#: ../../peps/peps/pep-0730.rst:290
 msgid ""
-"GitHub Actions is able to host iOS simulators on their macOS machines, "
-"and the iOS simulator can be controlled by scripting environments. The "
-"free tier currently only provides x86_64 macOS machines; however ARM64 "
-"runners `recently became available on paid plans <https://github.blog/ "
-"2023-10-02-introducing-the-new-apple-silicon-powered-m1-macos-larger-"
-"runner-for-github-actions/>`__. However, in order to avoid exhausting "
-"macOS runner resources, a GitHub Actions run for iOS will not be added as"
-" part of the standard CI configuration."
+"GitHub Actions is able to host iOS simulators on their macOS machines, and "
+"the iOS simulator can be controlled by scripting environments. The free tier "
+"currently only provides x86_64 macOS machines; however ARM64 runners "
+"`recently became available on paid plans <https://github.blog/ 2023-10-02-"
+"introducing-the-new-apple-silicon-powered-m1-macos-larger-runner-for-github-"
+"actions/>`__. However, in order to avoid exhausting macOS runner resources, "
+"a GitHub Actions run for iOS will not be added as part of the standard CI "
+"configuration."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:297
+#: ../../peps/peps/pep-0730.rst:299
 msgid "Packaging"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:299
+#: ../../peps/peps/pep-0730.rst:301
 msgid ""
-"iOS will not provide a \"universal\" wheel format. Instead, wheels will "
-"be provided for each ABI-arch combination."
+"iOS will not provide a \"universal\" wheel format. Instead, wheels will be "
+"provided for each ABI-arch combination."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:302
+#: ../../peps/peps/pep-0730.rst:304
 msgid "iOS wheels will use tags:"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:304
-msgid "``ios_12_0_iphoneos_arm64``"
+#: ../../peps/peps/pep-0730.rst:306
+msgid "``ios_12_0_arm64_iphoneos``"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:305
-msgid "``ios_12_0_iphonesimulator_arm64``"
+#: ../../peps/peps/pep-0730.rst:307
+msgid "``ios_12_0_arm64_iphonesimulator``"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:306
-msgid "``ios_12_0_iphonesimulator_x86_64``"
+#: ../../peps/peps/pep-0730.rst:308
+msgid "``ios_12_0_x86_64_iphonesimulator``"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:308
+#: ../../peps/peps/pep-0730.rst:310
 #, python-format
 msgid ""
-"In these tags, \"12.0\" is the minimum supported iOS version. As with "
-"macOS, the tag will incorporate the minimum iOS version that is selected "
-"when the wheel is compiled; a wheel compiled with a minimum iOS version "
-"of 15.0 would use the ``ios_15_0_iphone*`` tags. At time of writing, iOS "
-"12.0 exposes most significant iOS features, while reaching near 100% of "
-"devices; this will be used as a floor for iOS version matching."
+"In these tags, \"12.0\" is the minimum supported iOS version. As with macOS, "
+"the tag will incorporate the minimum iOS version that is selected when the "
+"wheel is compiled; a wheel compiled with a minimum iOS version of 15.0 would "
+"use the ``ios_15_0_*`` tags. At time of writing, iOS 12.0 exposes most "
+"significant iOS features, while reaching near 100% of devices; this will be "
+"used as a floor for iOS version matching."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:315
+#: ../../peps/peps/pep-0730.rst:317
 msgid ""
-"These wheels can include binary modules in-situ (i.e., co-located with "
-"the Python source, in the same way as wheels for a desktop platform); "
-"however, they will need to be post-processed as binary modules need to be"
-" moved into the \"Frameworks\" location for distribution. This can be "
-"automated with an Xcode build step."
+"These wheels can include binary modules in-situ (i.e., co-located with the "
+"Python source, in the same way as wheels for a desktop platform); however, "
+"they will need to be post-processed as binary modules need to be moved into "
+"the \"Frameworks\" location for distribution. This can be automated with an "
+"Xcode build step."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:322
+#: ../../peps/peps/pep-0730.rst:324
 msgid "PEP 11 Update"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:324
-msgid ":pep:`11` will be updated to include the three iOS ABIs:"
+#: ../../peps/peps/pep-0730.rst:326
+msgid ":pep:`11` will be updated to include two of the iOS ABIs:"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:326
-msgid "``aarch64-apple-ios``"
+#: ../../peps/peps/pep-0730.rst:328
+msgid "``arm64-apple-ios``"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:327
-msgid "``aarch64-apple-ios-simulator``"
+#: ../../peps/peps/pep-0730.rst:329
+msgid "``arm64-apple-ios-simulator``"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:328
-msgid "``x86_64-apple-ios-simulator``"
-msgstr ""
-
-#: ../../peps/pep-0730.rst:330
+#: ../../peps/peps/pep-0730.rst:331
 msgid "Ned Deily will serve as the initial core team contact for these ABIs."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:333
+#: ../../peps/peps/pep-0730.rst:333
+msgid ""
+"The ``x86_64-apple-ios-simulator`` target will be supported on a best-effort "
+"basis, but will not be targeted for tier 3 support. This is due to the "
+"impending deprecation of x86_64 as a simulation platform, combined with the "
+"difficulty of commissioning x86_64 macOS hardware at this time."
+msgstr ""
+
+#: ../../peps/peps/pep-0730.rst:339
 msgid "Backwards Compatibility"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:335
+#: ../../peps/peps/pep-0730.rst:341
 msgid ""
 "Adding a new platform does not introduce any backwards compatibility "
 "concerns to CPython itself."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:338
+#: ../../peps/peps/pep-0730.rst:344
 msgid ""
-"There may be some backwards compatibility implications on the projects "
-"that have historically provided CPython support (i.e., BeeWare and Kivy) "
-"if the final form of any CPython patches don't align with the patches "
-"they have historically used."
+"There may be some backwards compatibility implications on the projects that "
+"have historically provided CPython support (i.e., BeeWare and Kivy) if the "
+"final form of any CPython patches don't align with the patches they have "
+"historically used."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:342
+#: ../../peps/peps/pep-0730.rst:348
 msgid ""
-"Although not strictly a backwards compatibility issue, there *is* a "
-"platform adoption consideration. Although CPython itself may support iOS,"
-" if it is unclear how to produce iOS-compatible wheels, and prominent "
-"libraries like cryptography, Pillow, and NumPy don't provide iOS wheels, "
-"the ability of the community to adopt Python on iOS will be limited. "
-"Therefore, it will be necessary to clearly document how projects can add "
-"iOS builds to their CI and release tooling. Adding iOS support to tools "
-"like `crossenv <https://crossenv.readthedocs.io/>`__ and `cibuildwheel "
-"<https://cibuildwheel.readthedocs.io/>`__ may be one way to achieve this."
+"Although not strictly a backwards compatibility issue, there *is* a platform "
+"adoption consideration. Although CPython itself may support iOS, if it is "
+"unclear how to produce iOS-compatible wheels, and prominent libraries like "
+"cryptography, Pillow, and NumPy don't provide iOS wheels, the ability of the "
+"community to adopt Python on iOS will be limited. Therefore, it will be "
+"necessary to clearly document how projects can add iOS builds to their CI "
+"and release tooling. Adding iOS support to tools like `crossenv <https://"
+"crossenv.readthedocs.io/>`__ and `cibuildwheel <https://cibuildwheel."
+"readthedocs.io/>`__ may be one way to achieve this."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:353
+#: ../../peps/peps/pep-0730.rst:359
 msgid "Security Implications"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:355
+#: ../../peps/peps/pep-0730.rst:361
 msgid "Adding iOS as a new platform does not add any security implications."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:358
+#: ../../peps/peps/pep-0730.rst:364
 msgid "How to Teach This"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:360
+#: ../../peps/peps/pep-0730.rst:366
 msgid ""
-"The education needs related to this PEP mostly relate to how end-users "
-"can add iOS support to their own Xcode projects. This can be accomplished"
-" with documentation and tutorials on that process. The need for this "
-"documentation will increase if/when support raises from Tier 3 to Tier 2 "
-"or 1; however, this transition should also be accompanied with simplified"
-" deployment artefacts (such as a Cocoapod or Swift package) that are "
-"integrated with Xcode development."
+"The education needs related to this PEP mostly relate to how end-users can "
+"add iOS support to their own Xcode projects. This can be accomplished with "
+"documentation and tutorials on that process. The need for this documentation "
+"will increase if/when support raises from Tier 3 to Tier 2 or 1; however, "
+"this transition should also be accompanied with simplified deployment "
+"artefacts (such as a Cocoapod or Swift package) that are integrated with "
+"Xcode development."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:368
+#: ../../peps/peps/pep-0730.rst:374
 msgid "Reference Implementation"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:370
+#: ../../peps/peps/pep-0730.rst:376
 msgid ""
-"The BeeWare `Python-Apple-support <https://github.com/beeware/Python-"
-"Apple-support>`__ repository contains a reference patch and build tooling"
-" to compile a distributable artefact."
+"The BeeWare `Python-Apple-support <https://github.com/beeware/Python-Apple-"
+"support>`__ repository contains a reference patch and build tooling to "
+"compile a distributable artefact."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:374
+#: ../../peps/peps/pep-0730.rst:380
 msgid ""
 "`Briefcase <https://briefcase.readthedocs.org>`__ provides a reference "
-"implementation of code to execute test suites on iOS simulators. The "
-"`Toga Testbed <https://github.com/beeware/toga/tree/main/testbed>`__ is "
-"an example of a test suite that is executed on the iOS simulator using "
-"GitHub Actions."
+"implementation of code to execute test suites on iOS simulators. The `Toga "
+"Testbed <https://github.com/beeware/toga/tree/main/testbed>`__ is an example "
+"of a test suite that is executed on the iOS simulator using GitHub Actions."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:380
+#: ../../peps/peps/pep-0730.rst:386
 msgid "Rejected Ideas"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:383
+#: ../../peps/peps/pep-0730.rst:389
 msgid "Simulator identification"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:385
+#: ../../peps/peps/pep-0730.rst:391
 msgid ""
-"Earlier versions of this PEP suggested the inclusion of "
-"``sys.implementation._simulator`` attribute to identify when code is "
-"running on device, or on a simulator. This was rejected due to the use of"
-" a protected name for a public API, plus the pollution of the ``sys`` "
-"namespace with an iOS-specific detail."
+"Earlier versions of this PEP suggested the inclusion of ``sys.implementation."
+"_simulator`` attribute to identify when code is running on device, or on a "
+"simulator. This was rejected due to the use of a protected name for a public "
+"API, plus the pollution of the ``sys`` namespace with an iOS-specific detail."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:391
+#: ../../peps/peps/pep-0730.rst:397
 msgid ""
-"Another proposal during discussion was to include a generic "
-"``platform.is_emulator()`` API that could be implemented by any platform "
-"- for example to differentiate running on x86_64 code on ARM64 hardware, "
-"or when running in QEMU or other virtualization methods. This was "
-"rejected on the basis that it wasn't clear what a consistent "
-"interpretation of \"emulator\" would be, or how an emulator would be "
-"detected outside of the iOS case."
+"Another proposal during discussion was to include a generic ``platform."
+"is_emulator()`` API that could be implemented by any platform - for example "
+"to differentiate running on x86_64 code on ARM64 hardware, or when running "
+"in QEMU or other virtualization methods. This was rejected on the basis that "
+"it wasn't clear what a consistent interpretation of \"emulator\" would be, "
+"or how an emulator would be detected outside of the iOS case."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:398
+#: ../../peps/peps/pep-0730.rst:404
 msgid ""
-"The decision was made to keep this detail iOS-specific, and include it on"
-" the ``platform.ios_ver()`` API."
+"The decision was made to keep this detail iOS-specific, and include it on "
+"the ``platform.ios_ver()`` API."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:402
+#: ../../peps/peps/pep-0730.rst:408
 msgid "GNU compiler triples"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:404
+#: ../../peps/peps/pep-0730.rst:410
 msgid ""
-"``autoconf`` requires the use of a GNU compiler triple to identify build "
-"and host platforms. However, the ``autoconf`` toolchain doesn't provide "
-"native support for iOS simulators, so we are left with the task of "
-"working out how to squeeze iOS hardware into GNU's naming regimen."
+"``autoconf`` requires the use of a GNU compiler triple to identify build and "
+"host platforms. However, the ``autoconf`` toolchain doesn't provide native "
+"support for iOS simulators, so we are left with the task of working out how "
+"to squeeze iOS hardware into GNU's naming regimen."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:409
+#: ../../peps/peps/pep-0730.rst:415
 msgid ""
-"This can be done (with some patching of ``config.sub``), but it leads to "
-"2 major sources of naming inconsistency:"
+"This can be done (with some patching of ``config.sub``), but it leads to 2 "
+"major sources of naming inconsistency:"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:412
+#: ../../peps/peps/pep-0730.rst:418
 msgid "``arm64`` vs ``aarch64`` as an identifier of 64-bit ARM hardware; and"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:413
+#: ../../peps/peps/pep-0730.rst:419
 msgid "What identifier is used to represent simulators."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:415
+#: ../../peps/peps/pep-0730.rst:421
 msgid ""
 "Apple's own tools use ``arm64`` as the architecture, but appear to be "
-"tolerant of ``aarch64`` in some cases. The device platform is identified "
-"as ``iphoneos`` and ``iphonesimulator``."
+"tolerant of ``aarch64`` in some cases. The device platform is identified as "
+"``iphoneos`` and ``iphonesimulator``."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:419
+#: ../../peps/peps/pep-0730.rst:425
 msgid ""
-"Rust toolchains uses ``aarch64`` as the architecture, and use ``aarch64"
-"-apple-ios`` and ``aarch64-apple-ios-sim`` to identify the device "
-"platform; however, they use ``x86_64-apple-ios`` to represent iOS "
-"*simulators* on x86_64 hardware."
+"Rust toolchains uses ``aarch64`` as the architecture, and use ``aarch64-"
+"apple-ios`` and ``aarch64-apple-ios-sim`` to identify the device platform; "
+"however, they use ``x86_64-apple-ios`` to represent iOS *simulators* on "
+"x86_64 hardware."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:424
+#: ../../peps/peps/pep-0730.rst:430
 msgid ""
 "The decision was made to use ``arm64-apple-ios`` and ``arm64-apple-ios-"
 "simulator`` because:"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:427
+#: ../../peps/peps/pep-0730.rst:433
 msgid ""
 "The ``autoconf`` toolchain already contains support for ``ios`` as a "
 "platform in ``config.sub``; it's only the simulator that doesn't have a "
 "representation."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:429
+#: ../../peps/peps/pep-0730.rst:435
 msgid "The third part of the host triple is used as ``sys.platform``."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:430
+#: ../../peps/peps/pep-0730.rst:436
 msgid ""
-"When Apple's own tools reference CPU architecture, they use ``arm64``, "
-"and the GNU tooling usage of the architecture isn't visible outside the "
-"build process."
+"When Apple's own tools reference CPU architecture, they use ``arm64``, and "
+"the GNU tooling usage of the architecture isn't visible outside the build "
+"process."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:433
+#: ../../peps/peps/pep-0730.rst:439
 msgid ""
-"When Apple's own tools reference simulator status independent of the OS "
-"(e.g., in the naming of Swift submodules), they use a ``-simulator`` "
-"suffix."
+"When Apple's own tools reference simulator status independent of the OS (e."
+"g., in the naming of Swift submodules), they use a ``-simulator`` suffix."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:435
+#: ../../peps/peps/pep-0730.rst:441
 msgid ""
-"While *some* iOS packages will use Rust, *all* iOS packages will use "
-"Apple's tooling."
+"While *some* iOS packages will use Rust, *all* iOS packages will use Apple's "
+"tooling."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:439
+#: ../../peps/peps/pep-0730.rst:444
+msgid ""
+"The initially accepted version of this document used the ``aarch64`` form as "
+"the PEP 11 identifier; this was corrected during finalization."
+msgstr ""
+
+#: ../../peps/peps/pep-0730.rst:447
 msgid "\"Universal\" wheel format"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:441
+#: ../../peps/peps/pep-0730.rst:449
 msgid ""
 "macOS currently supports 2 CPU architectures. To aid the end-user "
-"development experience, Python defines a \"universal2\" wheel format that"
-" incorporates both x86_64 and ARM64 binaries."
+"development experience, Python defines a \"universal2\" wheel format that "
+"incorporates both x86_64 and ARM64 binaries."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:445
+#: ../../peps/peps/pep-0730.rst:453
 msgid ""
-"It would be conceptually possible to offer an analogous \"universal\" iOS"
-" wheel format. However, this PEP does not use this approach, for 2 "
-"reasons."
+"It would be conceptually possible to offer an analogous \"universal\" iOS "
+"wheel format. However, this PEP does not use this approach, for 2 reasons."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:448
+#: ../../peps/peps/pep-0730.rst:456
 msgid ""
 "Firstly, the experience on macOS, especially in the numerical Python "
-"ecosystem, has been that universal wheels can be exceedingly difficult to"
-" accommodate. While native macOS libraries maintain strong multi-platform"
-" support, and Python itself has been updated, the vast majority of "
-"upstream non-Python libraries do not provide multi-architecture build "
-"support. As a result, compiling universal wheels inevitably requires "
-"multiple compilation passes, and complex decisions over how to distribute"
-" header files for different architectures. As a result of this "
-"complexity, many popular projects (including NumPy and Pillow) do not "
-"provide universal wheels at all, instead providing separate ARM64 and "
-"x86_64 wheels."
+"ecosystem, has been that universal wheels can be exceedingly difficult to "
+"accommodate. While native macOS libraries maintain strong multi-platform "
+"support, and Python itself has been updated, the vast majority of upstream "
+"non-Python libraries do not provide multi-architecture build support. As a "
+"result, compiling universal wheels inevitably requires multiple compilation "
+"passes, and complex decisions over how to distribute header files for "
+"different architectures. As a result of this complexity, many popular "
+"projects (including NumPy and Pillow) do not provide universal wheels at "
+"all, instead providing separate ARM64 and x86_64 wheels."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:459
+#: ../../peps/peps/pep-0730.rst:467
 msgid ""
-"Secondly, historical experience is that iOS would require a much more "
-"fluid \"universal\" definition. In the last 10 years, there have been *at"
-" least* 5 different possible interpretations of \"universal\" that would "
-"apply to iOS, including various combinations of armv6, armv7, armv7s, "
-"arm64, x86 and x86_64 architectures, on device and simulator. If defined "
-"right now, \"universal-iOS\" would likely include x86_64 and arm64 on "
-"simulator, and arm64 on device; however, the pending deprecation of "
-"x86_64 hardware would add another interpretation; and there may be a need"
-" to add arm64e as a new device architecture in the future. Specifying iOS"
-" wheels as single-platform-only means the Python core team can avoid an "
-"ongoing standardization discussion about the updated \"universal\" "
-"formats."
+"Secondly, historical experience is that iOS would require a much more fluid "
+"\"universal\" definition. In the last 10 years, there have been *at least* 5 "
+"different possible interpretations of \"universal\" that would apply to iOS, "
+"including various combinations of armv6, armv7, armv7s, arm64, x86 and "
+"x86_64 architectures, on device and simulator. If defined right now, "
+"\"universal-iOS\" would likely include x86_64 and arm64 on simulator, and "
+"arm64 on device; however, the pending deprecation of x86_64 hardware would "
+"add another interpretation; and there may be a need to add arm64e as a new "
+"device architecture in the future. Specifying iOS wheels as single-platform-"
+"only means the Python core team can avoid an ongoing standardization "
+"discussion about the updated \"universal\" formats."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:471
+#: ../../peps/peps/pep-0730.rst:479
 msgid ""
-"It also means wheel publishers are able to make per-project decisions "
-"over which platforms are feasible to support. For example, a project may "
-"choose to drop x86_64 support, or adopt a new architecture earlier than "
-"other parts of the Python ecosystem. Using platform-specific wheels means"
-" this decision can be left to individual package publishers."
+"It also means wheel publishers are able to make per-project decisions over "
+"which platforms are feasible to support. For example, a project may choose "
+"to drop x86_64 support, or adopt a new architecture earlier than other parts "
+"of the Python ecosystem. Using platform-specific wheels means this decision "
+"can be left to individual package publishers."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:477
+#: ../../peps/peps/pep-0730.rst:485
 msgid ""
-"This decision comes at cost of making deployment more complicated. "
-"However, deployment on iOS is already a complicated process that is best "
-"aided by tools. At present, no binary merging is required, as there is "
-"only one on-device architecture, and simulator binaries are not "
-"considered to be distributable artefacts, so only one architecture is "
-"needed to build an app for a simulator."
+"This decision comes at cost of making deployment more complicated. However, "
+"deployment on iOS is already a complicated process that is best aided by "
+"tools. At present, no binary merging is required, as there is only one on-"
+"device architecture, and simulator binaries are not considered to be "
+"distributable artefacts, so only one architecture is needed to build an app "
+"for a simulator."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:484
+#: ../../peps/peps/pep-0730.rst:492
 msgid "Supporting static builds"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:486
+#: ../../peps/peps/pep-0730.rst:494
 msgid ""
-"While the long-term viability of the ``--undefined dynamic_lookup`` "
-"option cannot be guaranteed, the option does exist, and it works. One "
-"option would be to ignore the deprecation warning, and hope that Apple "
-"either reverses the deprecation decision, or never finalizes the "
-"deprecation."
+"While the long-term viability of the ``--undefined dynamic_lookup`` option "
+"cannot be guaranteed, the option does exist, and it works. One option would "
+"be to ignore the deprecation warning, and hope that Apple either reverses "
+"the deprecation decision, or never finalizes the deprecation."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:491
+#: ../../peps/peps/pep-0730.rst:499
 msgid ""
-"Given that Apple's decision-making process is entirely opaque, this would"
-" be, at best, a risky option. When combined with the fact that the "
-"broader iOS development ecosystem encourages the use of frameworks, there"
-" are no legacy uses of a static library to consider, and the only benefit"
-" to a statically-linked iOS ``libpython3.x.a`` is a very slightly reduced"
-" app startup time, omitting support for static builds of ``libpython3.x``"
-" seems a reasonable compromise."
+"Given that Apple's decision-making process is entirely opaque, this would "
+"be, at best, a risky option. When combined with the fact that the broader "
+"iOS development ecosystem encourages the use of frameworks, there are no "
+"legacy uses of a static library to consider, and the only benefit to a "
+"statically-linked iOS ``libpython3.x.a`` is a very slightly reduced app "
+"startup time, omitting support for static builds of ``libpython3.x`` seems a "
+"reasonable compromise."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:498
+#: ../../peps/peps/pep-0730.rst:506
 msgid ""
 "It is worth noting that there has been some discussion on `an alternate "
-"approach to linking on macOS "
-"<https://github.com/python/cpython/issues/103306>`__ that would remove "
-"the need for the ``--undefined dynamic_lookup`` option, although "
-"discussion on this approach appears to have stalled due to complications "
-"in implementation. If those complications were to be overcome, it is "
-"highly likely that the same approach *could* be used on iOS, which "
-"*would* make a statically linked ``libpython3.x.a`` plausible."
+"approach to linking on macOS <https://github.com/python/cpython/"
+"issues/103306>`__ that would remove the need for the ``--undefined "
+"dynamic_lookup`` option, although discussion on this approach appears to "
+"have stalled due to complications in implementation. If those complications "
+"were to be overcome, it is highly likely that the same approach *could* be "
+"used on iOS, which *would* make a statically linked ``libpython3.x.a`` "
+"plausible."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:506
+#: ../../peps/peps/pep-0730.rst:514
 msgid ""
 "The decision to link binary modules against ``libpython3.x.dylib`` would "
 "complicate the introduction of static ``libpython3.x.a`` builds in the "
 "future, as the process of moving to a different binary module linking "
-"approach would require a clear way to differentate \"dynamically-linked\""
-" iOS binary modules from \"static-compatible\" iOS binary modules. "
-"However, given the lack of tangible benefits of a static "
-"``libpython3.x.a``, it seems unlikely that there will be any requirement "
-"to make this change."
+"approach would require a clear way to differentate \"dynamically-linked\" "
+"iOS binary modules from \"static-compatible\" iOS binary modules. However, "
+"given the lack of tangible benefits of a static ``libpython3.x.a``, it seems "
+"unlikely that there will be any requirement to make this change."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:515
+#: ../../peps/peps/pep-0730.rst:523
 msgid "Interactive/REPL mode"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:517
+#: ../../peps/peps/pep-0730.rst:525
 msgid ""
-"A traditional ``python.exe`` command line experience isn't really viable "
-"on mobile devices, because mobile devices don't have a command line. iOS "
-"apps don't have a stdout, stderr or stdin; and while you can redirect "
-"stdout and stderr to the system log, there's no source for stdin that "
-"exists that doesn't also involve building a very specific user-facing app"
-" that would be closer to an IDLE-style IDE experience. Therefore, the "
-"decision was made to only focus on \"embedded mode\" as a target for "
-"mobile distribution."
+"A traditional ``python.exe`` command line experience isn't really viable on "
+"mobile devices, because mobile devices don't have a command line. iOS apps "
+"don't have a stdout, stderr or stdin; and while you can redirect stdout and "
+"stderr to the system log, there's no source for stdin that exists that "
+"doesn't also involve building a very specific user-facing app that would be "
+"closer to an IDLE-style IDE experience. Therefore, the decision was made to "
+"only focus on \"embedded mode\" as a target for mobile distribution."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:526
-msgid "Open Issues"
+#: ../../peps/peps/pep-0730.rst:534
+msgid "x86_64 simulator support"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:529
-msgid "x86_64 buildbot availability"
-msgstr ""
-
-#: ../../peps/pep-0730.rst:531
+#: ../../peps/peps/pep-0730.rst:536
 msgid ""
-"Apple no longer sells x86_64 hardware. As a result, commissioning an "
-"x86_64 buildbot may not be possible. It is possible to run macOS binaries"
-" in x86_64 compatibility mode on ARM64 hardware; however, this isn't "
-"ideal for testing purposes."
+"Apple no longer sells x86_64 hardware. As a result, commissioning an x86_64 "
+"buildbot can be difficult. It is possible to run macOS binaries in x86_64 "
+"compatibility mode on ARM64 hardware; however, this isn't ideal for testing "
+"purposes. Therefore, the x86_64 Simulator (``x86_64-apple-ios-simulator``) "
+"will not be added as a Tier 3 target. It is highly likely that iOS support "
+"will work on the x86_64 without any modification; this only impacts on the "
+"*official* Tier 3 status."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:536
-msgid ""
-"If native x86_64 Mac hardware cannot be sourced for buildbot purposes, it"
-" may be necessary to exclude the x86_64 simulator platform in Tier 3. "
-"Given the anticipated deprecation of x86_64 as a macOS development "
-"platform, this doesn't pose a significant impediment to adoption or long "
-"term maintenance."
-msgstr ""
-
-#: ../../peps/pep-0730.rst:542
+#: ../../peps/peps/pep-0730.rst:545
 msgid "On-device testing"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:544
+#: ../../peps/peps/pep-0730.rst:547
 msgid ""
-"CI testing on simulators can be accommodated reasonably easily. On-device"
-" testing is much harder, as availability of device farms that could be "
+"CI testing on simulators can be accommodated reasonably easily. On-device "
+"testing is much harder, as availability of device farms that could be "
 "configured to provide Buildbots or Github Actions runners is limited."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:548
+#: ../../peps/peps/pep-0730.rst:551
 msgid ""
-"However, on device testing may not be necessary. As a data point - "
-"Apple's Xcode Cloud solution doesn't provide on-device testing. They rely"
-" on the fact that the API is consistent between device and simulator, and"
-" ARM64 simulator testing is sufficient to reveal CPU-specific issues."
+"However, on device testing may not be necessary. As a data point - Apple's "
+"Xcode Cloud solution doesn't provide on-device testing. They rely on the "
+"fact that the API is consistent between device and simulator, and ARM64 "
+"simulator testing is sufficient to reveal CPU-specific issues."
 msgstr ""
 
-#: ../../peps/pep-0730.rst:554
+#: ../../peps/peps/pep-0730.rst:557
+msgid "Ordering of ``_multiarch`` tags"
+msgstr ""
+
+#: ../../peps/peps/pep-0730.rst:559
+msgid ""
+"The initially accepted version of this document used ``<platform>-<arch>`` "
+"ordering (e.g., ``iphoneos-arm64``) for ``sys.implementation._multiarch`` "
+"(and related values, such as wheel tags). The final merged version uses the "
+"``<arch>-<platform>`` ordering (e.g., ``arm64-iphoneos``). This is for "
+"consistency with compiler triples on other platforms (especially Linux), "
+"which specify the architecture before the operating system."
+msgstr ""
+
+#: ../../peps/peps/pep-0730.rst:567
+msgid "Values returned by ``platform.ios_ver()``"
+msgstr ""
+
+#: ../../peps/peps/pep-0730.rst:569
+msgid ""
+"The initially accepted version of this document didn't include a ``system`` "
+"identifier. This was added during the implementation phase to support the "
+"implementation of ``platform.system()``."
+msgstr ""
+
+#: ../../peps/peps/pep-0730.rst:572
+msgid ""
+"The initially accepted version of this document also described that "
+"``min_release`` would be returned in the ``ios_ver()`` result. The final "
+"version omits the ``min_release`` value, as it is not significant at "
+"runtime; it only impacts on binary compatibility. The minimum version *is* "
+"included in the value returned by ``sysconfig.get_platform()``, as this is "
+"used to define wheel (and other binary) compatibility."
+msgstr ""
+
+#: ../../peps/peps/pep-0730.rst:580
 msgid "Copyright"
 msgstr ""
 
-#: ../../peps/pep-0730.rst:556
+#: ../../peps/peps/pep-0730.rst:582
 msgid ""
-"This document is placed in the public domain or under the "
-"CC0-1.0-Universal license, whichever is more permissive."
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
 msgstr ""
-

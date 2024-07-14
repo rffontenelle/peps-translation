@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PEPs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-20 10:43-0300\n"
+"POT-Creation-Date: 2024-07-14 02:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: pt_BR\n"
@@ -17,281 +17,334 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.13.1\n"
+"Generated-By: Babel 2.15.0\n"
 
-#: ../../peps/pep-0718.rst
+#: ../../peps/peps/pep-0718.rst
 msgid "Author"
 msgstr ""
 
-#: ../../peps/pep-0718.rst:3
+#: ../../peps/peps/pep-0718.rst:3
 msgid "James Hilton-Balfe <gobot1234yt@gmail.com>"
 msgstr ""
 
-#: ../../peps/pep-0718.rst
+#: ../../peps/peps/pep-0718.rst
 msgid "Sponsor"
 msgstr ""
 
-#: ../../peps/pep-0718.rst:4
+#: ../../peps/peps/pep-0718.rst:4
 msgid "Guido van Rossum <guido@python.org>"
 msgstr ""
 
-#: ../../peps/pep-0718.rst
+#: ../../peps/peps/pep-0718.rst
 msgid "Discussions-To"
 msgstr ""
 
-#: ../../peps/pep-0718.rst:5
-msgid "https://discuss.python.org/t/26463/"
+#: ../../peps/peps/pep-0718.rst:5
+msgid "https://discuss.python.org/t/28457/"
 msgstr ""
 
-#: ../../peps/pep-0718.rst
+#: ../../peps/peps/pep-0718.rst
 msgid "Status"
 msgstr ""
 
-#: ../../peps/pep-0718.rst:6
+#: ../../peps/peps/pep-0718.rst:6
 msgid "Draft"
 msgstr ""
 
-#: ../../peps/pep-0718.rst
+#: ../../peps/peps/pep-0718.rst
 msgid "Type"
 msgstr ""
 
-#: ../../peps/pep-0718.rst:7
+#: ../../peps/peps/pep-0718.rst:7
 msgid "Standards Track"
 msgstr ""
 
-#: ../../peps/pep-0718.rst
+#: ../../peps/peps/pep-0718.rst
 msgid "Topic"
 msgstr ""
 
-#: ../../peps/pep-0718.rst:8
+#: ../../peps/peps/pep-0718.rst:8
 msgid "Typing"
 msgstr ""
 
-#: ../../peps/pep-0718.rst
+#: ../../peps/peps/pep-0718.rst
 msgid "Created"
 msgstr ""
 
-#: ../../peps/pep-0718.rst:10
+#: ../../peps/peps/pep-0718.rst:10
 msgid "23-Jun-2023"
 msgstr ""
 
-#: ../../peps/pep-0718.rst
+#: ../../peps/peps/pep-0718.rst
 msgid "Python-Version"
 msgstr ""
 
-#: ../../peps/pep-0718.rst:11
+#: ../../peps/peps/pep-0718.rst:11
 msgid "3.13"
 msgstr ""
 
-#: ../../peps/pep-0718.rst
+#: ../../peps/peps/pep-0718.rst
 msgid "Post-History"
 msgstr ""
 
-#: ../../peps/pep-0718.rst:12
+#: ../../peps/peps/pep-0718.rst:12
 msgid "`24-Jun-2023 <https://discuss.python.org/t/28457/>`__"
 msgstr ""
 
-#: ../../peps/pep-0718.rst:15
+#: ../../peps/peps/pep-0718.rst:15
 msgid "Abstract"
 msgstr ""
 
-#: ../../peps/pep-0718.rst:17
+#: ../../peps/peps/pep-0718.rst:17
 msgid ""
-"This PEP proposes making function objects subscriptable for typing "
-"purposes. Doing so gives developers explicit control over the types "
-"produced by the type checker where bi-directional inference (which allows"
-" for the types of parameters of anonymous functions to be inferred) and "
-"other methods than specialisation are insufficient."
+"This PEP proposes making function objects subscriptable for typing purposes. "
+"Doing so gives developers explicit control over the types produced by the "
+"type checker where bi-directional inference (which allows for the types of "
+"parameters of anonymous functions to be inferred) and other methods than "
+"specialisation are insufficient. It also brings functions in line with "
+"regular classes in their ability to be subscriptable."
 msgstr ""
 
-#: ../../peps/pep-0718.rst:23
+#: ../../peps/peps/pep-0718.rst:25
 msgid "Motivation"
 msgstr ""
 
-#: ../../peps/pep-0718.rst:25
+#: ../../peps/peps/pep-0718.rst:28
+msgid "Unknown Types"
+msgstr ""
+
+#: ../../peps/peps/pep-0718.rst:30
 msgid ""
 "Currently, it is not possible to infer the type parameters to generic "
 "functions in certain situations:"
 msgstr ""
 
-#: ../../peps/pep-0718.rst:33
+#: ../../peps/peps/pep-0718.rst:38
 msgid ""
 "Making instances of ``FunctionType`` subscriptable would allow for this "
 "constructor to be typed:"
 msgstr ""
 
-#: ../../peps/pep-0718.rst:40
+#: ../../peps/peps/pep-0718.rst:45
 msgid "Currently you have to use an assignment to provide a precise type:"
 msgstr ""
 
-#: ../../peps/pep-0718.rst:47
+#: ../../peps/peps/pep-0718.rst:52
 msgid ""
-"but this code is unnecessarily verbose taking up multiple lines for a "
-"simple function call."
+"but this code is unnecessarily verbose taking up multiple lines for a simple "
+"function call."
 msgstr ""
 
-#: ../../peps/pep-0718.rst:50
+#: ../../peps/peps/pep-0718.rst:55
 msgid ""
-"Similarly, ``T`` in this example cannot currently be meaningfully "
-"inferred, so ``x`` is untyped without an extra assignment:"
+"Similarly, ``T`` in this example cannot currently be meaningfully inferred, "
+"so ``x`` is untyped without an extra assignment:"
 msgstr ""
 
-#: ../../peps/pep-0718.rst:59
+#: ../../peps/peps/pep-0718.rst:64
 msgid ""
-"If function objects were subscriptable, however, a more specific type "
-"could be given:"
+"If function objects were subscriptable, however, a more specific type could "
+"be given:"
 msgstr ""
 
-#: ../../peps/pep-0718.rst:65
-msgid ""
-"Currently, with unspecialised literals, it is not possible to determine a"
-" type for situations similar to:"
+#: ../../peps/peps/pep-0718.rst:71
+msgid "Undecidable Inference"
 msgstr ""
 
-#: ../../peps/pep-0718.rst:77
+#: ../../peps/peps/pep-0718.rst:73
+msgid ""
+"There are even cases where subclass relations make type inference "
+"impossible. However, if you can specialise the function type checkers can "
+"infer a meaningful type."
+msgstr ""
+
+#: ../../peps/peps/pep-0718.rst:82
+msgid "Currently, type checkers do not consistently synthesise a type here."
+msgstr ""
+
+#: ../../peps/peps/pep-0718.rst:85
+msgid "Unsolvable Type Parameters"
+msgstr ""
+
+#: ../../peps/peps/pep-0718.rst:87
+msgid ""
+"Currently, with unspecialised literals, it is not possible to determine a "
+"type for situations similar to:"
+msgstr ""
+
+#: ../../peps/peps/pep-0718.rst:99
 msgid ""
 "It is also useful to be able to specify in cases in which a certain type "
 "must be passed to a function beforehand:"
 msgstr ""
 
-#: ../../peps/pep-0718.rst:85
+#: ../../peps/peps/pep-0718.rst:107
 msgid ""
-"Allowing subscription makes functions and methods consistent with generic"
-" classes where they weren't already. Whilst all of the proposed changes "
-"can be implemented using callable generic classes, syntactic sugar would "
-"be highly welcome."
+"Allowing subscription makes functions and methods consistent with generic "
+"classes where they weren't already. Whilst all of the proposed changes can "
+"be implemented using callable generic classes, syntactic sugar would be "
+"highly welcome."
 msgstr ""
 
-#: ../../peps/pep-0718.rst:89
+#: ../../peps/peps/pep-0718.rst:111
 msgid ""
-"Due to this, specialising the function and using it as a new factory is "
-"fine"
+"Due to this, specialising the function and using it as a new factory is fine"
 msgstr ""
 
-#: ../../peps/pep-0718.rst:96
-msgid ""
-"This proposal also opens the door to `monomorphisation "
-"<https://en.wikipedia.org/wiki/Monomorphization>`_ and `reified types "
-"<https://en.wikipedia.org/wiki/Reification_(computer_science)>`_"
+#: ../../peps/peps/pep-0718.rst:119
+msgid "Monomorphisation and Reification"
 msgstr ""
 
-#: ../../peps/pep-0718.rst:101
+#: ../../peps/peps/pep-0718.rst:121
+msgid ""
+"This proposal also opens the door to `monomorphisation <https://en.wikipedia."
+"org/wiki/Monomorphization>`_ and `reified types <https://en.wikipedia.org/"
+"wiki/Reification_(computer_science)>`_."
+msgstr ""
+
+#: ../../peps/peps/pep-0718.rst:125
+msgid ""
+"This would allow for a functionality which anecdotally has been requested "
+"many times."
+msgstr ""
+
+#: ../../peps/peps/pep-0718.rst:127
+msgid ""
+"*Please note this feature is not being proposed by the PEP, but may be "
+"implemented in the future.*"
+msgstr ""
+
+#: ../../peps/peps/pep-0718.rst:130
+msgid "The syntax for such a feature may look something like:"
+msgstr ""
+
+#: ../../peps/peps/pep-0718.rst:140
 msgid "Rationale"
 msgstr ""
 
-#: ../../peps/pep-0718.rst:103
+#: ../../peps/peps/pep-0718.rst:142
 msgid ""
 "Function objects in this PEP is used to refer to ``FunctionType``\\ , "
 "``MethodType``\\ , ``BuiltinFunctionType``\\ , ``BuiltinMethodType`` and "
 "``MethodWrapperType``\\ ."
 msgstr ""
 
-#: ../../peps/pep-0718.rst:106
+#: ../../peps/peps/pep-0718.rst:145
 msgid "For ``MethodType`` you should be able to write:"
 msgstr ""
 
-#: ../../peps/pep-0718.rst:115
+#: ../../peps/peps/pep-0718.rst:154
 msgid "and have it work similarly to a ``FunctionType``."
 msgstr ""
 
-#: ../../peps/pep-0718.rst:117
+#: ../../peps/peps/pep-0718.rst:156
 msgid ""
-"For ``BuiltinFunctionType``, so builtin generic functions (e.g. ``max`` "
-"and ``min``) work like ones defined in Python. Built-in functions should "
-"behave as much like functions implemented in Python as possible."
+"For ``BuiltinFunctionType``, so builtin generic functions (e.g. ``max`` and "
+"``min``) work like ones defined in Python. Built-in functions should behave "
+"as much like functions implemented in Python as possible."
 msgstr ""
 
-#: ../../peps/pep-0718.rst:121
+#: ../../peps/peps/pep-0718.rst:160
 msgid "``BuiltinMethodType`` is the same type as ``BuiltinFunctionType``."
 msgstr ""
 
-#: ../../peps/pep-0718.rst:123
+#: ../../peps/peps/pep-0718.rst:162
 msgid ""
-"``MethodWrapperType`` (e.g. the type of ``object().__str__``) is useful "
-"for generic magic methods."
+"``MethodWrapperType`` (e.g. the type of ``object().__str__``) is useful for "
+"generic magic methods."
 msgstr ""
 
-#: ../../peps/pep-0718.rst:127
+#: ../../peps/peps/pep-0718.rst:166
 msgid "Specification"
 msgstr ""
 
-#: ../../peps/pep-0718.rst:129
+#: ../../peps/peps/pep-0718.rst:168
 msgid ""
-"Function objects should implement ``__getitem__`` to allow for "
-"subscription at runtime and return an instance of ``types.GenericAlias`` "
-"with ``__origin__`` set as the callable and ``__args__`` as the types "
-"passed."
+"Function objects should implement ``__getitem__`` to allow for subscription "
+"at runtime and return an instance of ``types.GenericAlias`` with "
+"``__origin__`` set as the callable and ``__args__`` as the types passed."
 msgstr ""
 
-#: ../../peps/pep-0718.rst:133
+#: ../../peps/peps/pep-0718.rst:172
 msgid ""
-"Type checkers should support subscripting functions and understand that "
-"the parameters passed to the function subscription should follow the same"
-" rules as a generic callable class."
+"Type checkers should support subscripting functions and understand that the "
+"parameters passed to the function subscription should follow the same rules "
+"as a generic callable class."
 msgstr ""
 
-#: ../../peps/pep-0718.rst:138
+#: ../../peps/peps/pep-0718.rst:177
 msgid "Setting ``__orig_class__``"
 msgstr ""
 
-#: ../../peps/pep-0718.rst:140
+#: ../../peps/peps/pep-0718.rst:179
 msgid ""
-"Currently, ``__orig_class__`` is an attribute set in "
-"``GenericAlias.__call__`` to the instance of the ``GenericAlias`` that "
-"created the called class e.g."
+"Currently, ``__orig_class__`` is an attribute set in ``GenericAlias."
+"__call__`` to the instance of the ``GenericAlias`` that created the called "
+"class e.g."
 msgstr ""
 
-#: ../../peps/pep-0718.rst:149
+#: ../../peps/peps/pep-0718.rst:188
 msgid ""
 "Currently, ``__orig_class__`` is unconditionally set; however, to avoid "
-"potential erasure on any created instances, this attribute should not be "
-"set if ``__origin__`` is an instance of any function object."
+"potential erasure on any created instances, this attribute should not be set "
+"if ``__origin__`` is an instance of any function object."
 msgstr ""
 
-#: ../../peps/pep-0718.rst:153
+#: ../../peps/peps/pep-0718.rst:192
 msgid ""
 "The following code snippet would fail at runtime without this change as "
 "``__orig_class__`` would be ``bar[str]`` and not ``Foo[int]``."
 msgstr ""
 
-#: ../../peps/pep-0718.rst:164
+#: ../../peps/peps/pep-0718.rst:203
+msgid "Interactions with ``@typing.overload``"
+msgstr ""
+
+#: ../../peps/peps/pep-0718.rst:205
+msgid ""
+"Overloaded functions should work much the same as already, since they have "
+"no effect on the runtime type. The only change is that more situations will "
+"be decidable and the behaviour/overload can be specified by the developer "
+"rather than leaving it to ordering of overloads/unions."
+msgstr ""
+
+#: ../../peps/peps/pep-0718.rst:211
 msgid "Backwards Compatibility"
 msgstr ""
 
-#: ../../peps/pep-0718.rst:165
+#: ../../peps/peps/pep-0718.rst:212
 msgid ""
-"Currently these classes are not subclassable and so there are no "
-"backwards compatibility concerns with regards to classes already "
-"implementing ``__getitem__``."
+"Currently these classes are not subclassable and so there are no backwards "
+"compatibility concerns with regards to classes already implementing "
+"``__getitem__``."
 msgstr ""
 
-#: ../../peps/pep-0718.rst:170
+#: ../../peps/peps/pep-0718.rst:217
 msgid "Reference Implementation"
 msgstr ""
 
-#: ../../peps/pep-0718.rst:172
+#: ../../peps/peps/pep-0718.rst:219
 msgid ""
-"The runtime changes proposed can be found here "
-"https://github.com/Gobot1234/cpython/tree/function-subscript"
+"The runtime changes proposed can be found here https://github.com/Gobot1234/"
+"cpython/tree/function-subscript"
 msgstr ""
 
-#: ../../peps/pep-0718.rst:176
+#: ../../peps/peps/pep-0718.rst:223
 msgid "Acknowledgements"
 msgstr ""
 
-#: ../../peps/pep-0718.rst:178
+#: ../../peps/peps/pep-0718.rst:225
 msgid ""
-"Thank you to Alex Waygood and Jelle Zijlstra for their feedback on this "
-"PEP and Guido for some motivating examples."
+"Thank you to Alex Waygood and Jelle Zijlstra for their feedback on this PEP "
+"and Guido for some motivating examples."
 msgstr ""
 
-#: ../../peps/pep-0718.rst:182
+#: ../../peps/peps/pep-0718.rst:229
 msgid "Copyright"
 msgstr ""
 
-#: ../../peps/pep-0718.rst:184
+#: ../../peps/peps/pep-0718.rst:231
 msgid ""
-"This document is placed in the public domain or under the "
-"CC0-1.0-Universal license, whichever is more permissive."
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
 msgstr ""
-

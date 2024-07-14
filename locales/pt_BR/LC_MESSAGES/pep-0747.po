@@ -1,0 +1,1405 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the PEPs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PEPs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-14 02:33+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pt_BR\n"
+"Language-Team: pt_BR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../peps/peps/pep-0747.rst
+msgid "Author"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:3
+msgid "David Foster <david at dafoster.net>"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst
+msgid "Sponsor"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:4
+msgid "Jelle Zijlstra <jelle.zijlstra at gmail.com>"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst
+msgid "Discussions-To"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:5
+msgid ""
+"https://discuss.python.org/t/pep-747-typeexpr-type-hint-for-a-type-"
+"expression/55984"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst
+msgid "Status"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:6
+msgid "Draft"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst
+msgid "Type"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:7
+msgid "Standards Track"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst
+msgid "Topic"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:8
+msgid "Typing"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst
+msgid "Created"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:9
+msgid "27-May-2024"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst
+msgid "Python-Version"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:10
+msgid "3.14"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst
+msgid "Post-History"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:11
+msgid ""
+"`19-Apr-2024 <https://discuss.python.org/t/typeform-spelling-for-a-type-"
+"annotation-object-at-runtime/51435>`__, `04-May-2024 <https://discuss.python."
+"org/t/typeform-spelling-for-a-type-annotation-object-at-runtime/51435/7/"
+">`__, `17-Jun-2024 <https://discuss.python.org/t/pep-747-typeexpr-type-hint-"
+"for-a-type-expression/55984>`__"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:15
+msgid "Abstract"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:17
+msgid ""
+":pep:`484` defines the notation ``type[C]`` where ``C`` is a class, to refer "
+"to a class object that is a subtype of ``C``. It explicitly does not allow "
+"``type[C]`` to refer to arbitrary :ref:`type expression <typing:type-"
+"expression>` objects such as the runtime object ``str | None``, even if "
+"``C`` is an unbounded ``TypeVar``. [#type_c]_ In cases where that "
+"restriction is unwanted, this PEP proposes a new notation ``TypeExpr[T]`` "
+"where ``T`` is a type, to refer to a either a class object or some other "
+"type expression object that is a subtype of ``T``, allowing any kind of type "
+"to be referenced."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:27
+msgid ""
+"This PEP makes no Python grammar changes. Correct usage of ``TypeExpr[]`` is "
+"intended to be enforced only by static and runtime type checkers and need "
+"not be enforced by Python itself at runtime."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:35
+msgid "Motivation"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:37
+msgid ""
+"The introduction of ``TypeExpr`` allows new kinds of metaprogramming "
+"functions that operate on type expressions to be type-annotated and "
+"understood by type checkers."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:41
+msgid ""
+"For example, here is a function that checks whether a value is assignable to "
+"a variable of a particular type, and if so returns the original value:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:49
+msgid ""
+"The use of ``TypeExpr[]`` and the type variable ``T`` enables the return "
+"type of this function to be influenced by a ``typx`` value passed at "
+"runtime, which is quite powerful."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:53
+msgid ""
+"Here is another function that checks whether a value is assignable to a "
+"variable of a particular type, and if so returns ``True`` (as a special "
+"``TypeIs[]`` bool [#TypeIsPep]_):"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:61
+msgid ""
+"The use of ``TypeExpr[]`` and ``TypeIs[]`` together enables type checkers to "
+"narrow the return type appropriately depending on what type expression is "
+"passed in:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:71
+msgid ""
+"That ``isassignable`` function enables a kind of enhanced ``isinstance`` "
+"check which is useful for `checking whether a value decoded from JSON "
+"conforms to a particular structure`_ of nested ``TypedDict``\\ s, lists, "
+"unions, ``Literal``\\ s, and other types. This kind of check was alluded to "
+"in :pep:`PEP 589 <589#using-typeddict-types>` but could not be implemented "
+"at the time without a notation similar to ``TypeExpr[]``."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:83
+msgid "Why can’t ``type[]`` be used?"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:85
+msgid ""
+"One might think you could define the example functions above to take a "
+"``type[C]`` - which is syntax that already exists - rather than a "
+"``TypeExpr[T]``. However if you were to do that then certain type "
+"expressions like ``str | None`` - which are not class objects and therefore "
+"not ``type``\\ s at runtime - would be rejected:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:101
+msgid ""
+"To solve that problem, ``type[]`` could be widened to include the additional "
+"values allowed by ``TypeExpr``. However doing so would lose ``type[]``\\ ’s "
+"current ability to spell a class object which always supports instantiation "
+"and ``isinstance`` checks, unlike arbitrary type expression objects. "
+"Therefore ``TypeExpr`` is proposed as new notation instead."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:108
+msgid ""
+"For a longer explanation of why we don’t just widen ``type[T]`` to accept "
+"all type expressions, see :ref:"
+"`widen_type_C_to_support_all_type_expressions`."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:116
+msgid "Common kinds of functions that would benefit from TypeExpr"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:118
+msgid ""
+"`A survey of various Python libraries`_ revealed a few kinds of commonly "
+"defined functions which would benefit from ``TypeExpr[]``:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:123
+msgid "Assignability checkers:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:125
+msgid ""
+"Returns whether a value is assignable to a type expression. If so then also "
+"narrows the type of the value to match the type expression."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:128
+msgid ""
+"Pattern 1: ``def isassignable[T](value: object, typx: TypeExpr[T]) -> "
+"TypeIs[T]``"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:130
+msgid ""
+"Pattern 2: ``def ismatch[T](value: object, typx: TypeExpr[T]) -> "
+"TypeGuard[T]``"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:132
+msgid ""
+"Examples: beartype.\\ `is_bearable`_, trycast.\\ `isassignable`_, typeguard."
+"\\ `check_type`_, xdsl.\\ `isa`_"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:140
+msgid "Converters:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:142
+msgid ""
+"If a value is assignable to (or coercible to) a type expression, a "
+"*converter* returns the value narrowed to (or coerced to) that type "
+"expression. Otherwise, it raises an exception."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:145
+msgid "Pattern 1: ``def convert[T](value: object, typx: TypeExpr[T]) -> T``"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:148
+msgid ""
+"Examples: cattrs.BaseConverter.\\ `structure`_, trycast.\\ `checkcast`_, "
+"typedload.\\ `load`_"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:151
+msgid "Pattern 2:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:159
+msgid ""
+"Examples: pydantic.\\ `TypeAdapter(T).validate_python`_, mashumaro.\\ "
+"`JSONDecoder(T).decode`_"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:168
+msgid "Typed field definitions:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:170
+msgid "Pattern:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:177
+msgid ""
+"Examples: attrs.\\ `make_class`_, dataclasses.\\ `make_dataclass`_ "
+"[#DataclassInitVar]_, `openapify`_"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:184
+msgid ""
+"The survey also identified some introspection functions that take annotation "
+"expressions as input using plain ``object``\\ s which would *not* gain "
+"functionality by marking those inputs as ``TypeExpr[]``:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:188
+msgid "General introspection operations:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:190
+msgid "Pattern: ``def get_annotation_info(maybe_annx: object) -> object``"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:191
+msgid ""
+"Examples: typing.{`get_origin`_, `get_args`_}, `typing_inspect`_.{is_*_type, "
+"get_origin, get_parameters}"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:200
+msgid "Rationale"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:202
+msgid ""
+"Before this PEP existed there were already a few definitions in use to "
+"describe different kinds of type annotations:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:220
+msgid ""
+":ref:`Class objects <typing:type-brackets>`, spelled as ``type[C]``, support "
+"``isinstance`` checks and are callable."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:223
+msgid "Examples: ``int``, ``str``, ``MyClass``"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:225
+msgid ""
+":ref:`Type expressions <typing:type-expression>` include any type annotation "
+"which describes a type."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:228
+msgid ""
+"Examples: ``list[int]``, ``MyTypedDict``, ``int | str``, "
+"``Literal['square']``, any class object"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:231
+msgid ""
+":ref:`Annotation expressions <typing:annotation-expression>` include any "
+"type annotation, including those only valid in specific contexts."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:234
+msgid ""
+"Examples: ``Final[int]``, ``Required[str]``, ``ClassVar[str]``, any type "
+"expression"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:237
+msgid ""
+"``TypeExpr`` aligns with an existing definition from the above list - *type "
+"expression* - to avoid introducing yet another subset of type annotations "
+"that users of Python typing need to think about."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:241
+msgid ""
+"``TypeExpr`` aligns with *type expression* specifically because a type "
+"expression is already used to parameterize type variables, which are used in "
+"combination with ``TypeIs`` and ``TypeGuard`` to enable the compelling "
+"examples mentioned in :ref:`Motivation <motivation>`."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:246
+msgid ""
+"``TypeExpr`` does not align with *annotation expression* for reasons given "
+"in :ref:`Rejected Ideas » Accept arbitrary annotation expressions "
+"<accept_arbitrary_annotation_expressions>`."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:251
+msgid "Specification"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:253
+msgid ""
+"A ``TypeExpr`` value represents a :ref:`type expression <typing:type-"
+"expression>` such as ``str | None``, ``dict[str, int]``, or ``MyTypedDict``. "
+"A ``TypeExpr`` type is written as ``TypeExpr[T]`` where ``T`` is a type or a "
+"type variable. It can also be written without brackets as just ``TypeExpr``, "
+"which is treated the same as to ``TypeExpr[Any]``."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:262
+msgid "Using TypeExprs"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:264
+msgid ""
+"A ``TypeExpr`` is a new kind of type expression, usable in any context where "
+"a type expression is valid, as a function parameter type, a return type, or "
+"a variable type:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:281
+msgid ""
+"Note however that an *unannotated* variable assigned a type expression "
+"literal will not be inferred to be of ``TypeExpr`` type by type checkers "
+"because PEP 484 :pep:`reserves that syntax for defining type aliases "
+"<484#type-aliases>`:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:285 ../../peps/peps/pep-0747.rst:763
+#: ../../peps/peps/pep-0747.rst:792
+msgid "No:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:291
+msgid ""
+"If you want a type checker to recognize a type expression literal in a bare "
+"assignment you’ll need to explicitly declare the assignment-target as having "
+"``TypeExpr`` type:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:295 ../../peps/peps/pep-0747.rst:301
+#: ../../peps/peps/pep-0747.rst:756 ../../peps/peps/pep-0747.rst:783
+msgid "Yes:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:308
+msgid "Okay, but discouraged:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:314
+msgid ""
+"``TypeExpr`` values can be passed around and assigned just like normal "
+"values:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:338
+msgid "TypeExpr Values"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:340
+msgid ""
+"A variable of type ``TypeExpr[T]`` where ``T`` is a type, can hold any "
+"**type expression object** - the result of evaluating a :ref:`type "
+"expression <typing:type-expression>` at runtime - which is a subtype of "
+"``T``."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:345
+msgid ""
+"Incomplete expressions like a bare ``Optional`` or ``Union`` which do not "
+"spell a type are not ``TypeExpr`` values."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:348
+msgid "``TypeExpr[...]`` is itself a ``TypeExpr`` value:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:357
+msgid ""
+"``TypeExpr[]`` values include *all* type expressions including some **non-"
+"universal type expressions** which are not valid in all annotation contexts. "
+"In particular:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:361
+msgid "``Self`` (valid only in some contexts)"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:362
+msgid "``TypeGuard[...]`` (valid only in some contexts)"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:363
+msgid "``TypeIs[...]`` (valid only in some contexts)"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:367
+msgid "Explicit TypeExpr Values"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:369
+msgid ""
+"The syntax ``TypeExpr(T)`` (with parentheses) can be used to spell a "
+"``TypeExpr[T]`` value explicitly:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:378
+msgid ""
+"At runtime the ``TypeExpr(...)`` callable returns its single argument "
+"unchanged."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:384
+msgid "Implicit TypeExpr Values"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:386
+msgid ""
+"Historically static type checkers have only needed to recognize *type "
+"expressions* in contexts where a type expression was expected. Now *type "
+"expression objects* must also be recognized in contexts where a value "
+"expression is expected."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:391
+msgid "Static type checkers already recognize **class objects** (``type[C]``):"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:393
+msgid ""
+"As a value expression, ``C`` has type ``type[C]``, for each of the following "
+"values of C:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:396
+msgid ""
+"``name`` (where ``name`` must refer to a valid in-scope class, type alias, "
+"or TypeVar)"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:397
+msgid "``name '[' ... ']'``"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:398
+msgid "``<type> '[' ... ']'``"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:400
+msgid ""
+"The following **unparameterized type expressions** can be recognized "
+"unambiguously:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:402 ../../peps/peps/pep-0747.rst:419
+msgid ""
+"As a value expression, ``X`` has type ``TypeExpr[X]``, for each of the "
+"following values of X:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:405
+msgid "``<Any>``"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:406
+msgid "``<Self>``"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:407
+msgid "``<LiteralString>``"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:408
+msgid "``<NoReturn>``"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:409
+msgid "``<Never>``"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:411
+msgid ""
+"**None**: The type expression ``None`` (``NoneType``) is ambiguous with the "
+"value ``None``, so must use the explicit ``TypeExpr(...)`` syntax:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:414
+msgid "As a value expression, ``TypeExpr(None)`` has type ``TypeExpr[None]``."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:415
+msgid "As a value expression, ``None`` continues to have type ``None``."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:417
+msgid ""
+"The following **parameterized type expressions** can be recognized "
+"unambiguously:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:422
+msgid "``<Literal> '[' ... ']'``"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:423
+msgid "``<Optional> '[' ... ']'``"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:424
+msgid "``<Union> '[' ... ']'``"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:425
+msgid "``<Callable> '[' ... ']'``"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:426
+msgid "``<tuple> '[' ... ']'``"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:427
+msgid "``<TypeGuard> '[' ... ']'``"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:428
+msgid "``<TypeIs> '[' ... ']'``"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:432
+msgid ""
+"**Annotated**: The type expression ``Annotated[...]`` is ambiguous with the "
+"annotation expression ``Annotated[...]``, so must be disambiguated based on "
+"its argument type:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:436
+msgid ""
+"As a value expression, ``Annotated[x, ...]`` has type ``type[C]`` if ``x`` "
+"has type ``type[C]``."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:438
+msgid ""
+"As a value expression, ``Annotated[x, ...]`` has type ``TypeExpr[T]`` if "
+"``x`` has type ``TypeExpr[T]``."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:440
+msgid ""
+"As a value expression, ``Annotated[x, ...]`` has type ``object`` if ``x`` "
+"has a type that is not ``type[C]`` or ``TypeExpr[T]``."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:443
+msgid ""
+"**Union**: The type expression ``T1 | T2`` is ambiguous with the value "
+"``int1 | int2``, ``set1 | set2``, ``dict1 | dict2``, and more, so must be "
+"disambiguated based on its argument types:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:447
+msgid ""
+"As a value expression, ``x | y`` has type equal to the return type of "
+"``type(x).__or__`` if ``type(x)`` overrides the ``__or__`` method."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:450
+msgid ""
+"When ``x`` has type ``builtins.type``, ``types.GenericAlias``, or the "
+"internal type of a typing special form, ``type(x).__or__`` has a return type "
+"in the format ``TypeExpr[T1 | T2]``."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:454
+msgid ""
+"As a value expression, ``x | y`` has type equal to the return type of "
+"``type(y).__ror__`` if ``type(y)`` overrides the ``__ror__`` method."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:457
+msgid ""
+"When ``y`` has type ``builtins.type``, ``types.GenericAlias``, or the "
+"internal type of a typing special form, ``type(y).__ror__`` has a return "
+"type in the format ``TypeExpr[T1 | T2]``."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:461
+msgid ""
+"As a value expression, ``x | y`` has type ``UnionType`` in all other "
+"situations."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:464
+msgid ""
+"This rule is intended to be consistent with the preexisting fallback rule "
+"used by static type checkers."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:467
+msgid ""
+"The **stringified type expression** ``\"T\"`` is ambiguous with both the "
+"stringified annotation expression ``\"T\"`` and the string literal "
+"``\"T\"``, so must use the explicit ``TypeExpr(...)`` syntax:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:472
+msgid ""
+"As a value expression, ``TypeExpr(\"T\")`` has type ``TypeExpr[T]``, where "
+"``T`` is a valid type expression"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:474
+msgid ""
+"As a value expression, ``\"T\"`` continues to have type ``Literal[\"T\"]``."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:476
+msgid "No other kinds of type expressions currently exist."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:478
+msgid ""
+"New kinds of type expressions that are introduced should define how they "
+"will be recognized in a value expression context."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:483
+msgid "Literal[] TypeExprs"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:485
+msgid ""
+"A value of ``Literal[...]`` type is *not* considered assignable to a "
+"``TypeExpr`` variable even if all of its members spell valid types because "
+"dynamic values are not allowed in type expressions:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:494
+msgid "However ``Literal[...]`` itself is still a ``TypeExpr``:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:502
+msgid "Static vs. Runtime Representations of TypeExprs"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:504
+msgid ""
+"A ``TypeExpr`` value appearing statically in a source file may be normalized "
+"to a different representation at runtime. For example string-based forward "
+"references are normalized at runtime to be ``ForwardRef`` instances in some "
+"contexts: [#forward_ref_normalization]_"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:515
+msgid ""
+"The runtime representations of ``TypeExpr``\\ s are considered "
+"implementation details that may change over time and therefore static type "
+"checkers are not required to recognize them:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:523
+msgid ""
+"Runtime type checkers that wish to assign a runtime-only representation of a "
+"type expression to a ``TypeExpr[]`` variable must use ``cast()`` to avoid "
+"errors from static type checkers:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:533
+msgid "Subtyping"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:535
+msgid ""
+"Whether a ``TypeExpr`` value can be assigned from one variable to another is "
+"determined by the following rules:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:539
+msgid "Relationship with type"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:541
+msgid "``TypeExpr[]`` is covariant in its argument type, just like ``type[]``:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:543
+msgid ""
+"``TypeExpr[T1]`` is a subtype of ``TypeExpr[T2]`` iff ``T1`` is a subtype of "
+"``T2``."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:545
+msgid ""
+"``type[C1]`` is a subtype of ``TypeExpr[C2]`` iff ``C1`` is a subtype of "
+"``C2``."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:548
+msgid ""
+"An unparameterized ``type`` can be assigned to an unparameterized "
+"``TypeExpr`` but not the other way around:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:551
+msgid ""
+"``type[Any]`` is assignable to ``TypeExpr[Any]``. (But not the other way "
+"around.)"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:555
+msgid "Relationship with UnionType"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:557
+msgid ""
+"``TypeExpr[U]`` is a subtype of ``UnionType`` iff ``U`` is the type "
+"expression ``X | Y | ...``:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:560
+msgid "``TypeExpr[X | Y | ...]`` is a subtype of ``UnionType``."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:562
+msgid "``UnionType`` is assignable to ``TypeExpr[Any]``."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:565
+msgid "Relationship with object"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:567
+msgid "``TypeExpr[]`` is a kind of ``object``, just like ``type[]``:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:569
+msgid "``TypeExpr[T]`` for any ``T`` is a subtype of ``object``."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:571
+msgid ""
+"``TypeExpr[T]``, where ``T`` is a type variable, is assumed to have all the "
+"attributes and methods of ``object`` and is not callable."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:576
+msgid "Interactions with isinstance() and issubclass()"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:578
+msgid ""
+"The ``TypeExpr`` special form cannot be used as the ``type`` argument to "
+"``isinstance``:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:589
+msgid ""
+"The ``TypeExpr`` special form cannot be used as any argument to "
+"``issubclass``:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:602
+msgid "Affected signatures in the standard library"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:605
+msgid "Changed signatures"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:607
+msgid ""
+"The following signatures related to type expressions introduce ``TypeExpr`` "
+"where previously ``object`` or ``Any`` existed:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:610
+msgid "``typing.cast``"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:611
+msgid "``typing.assert_type``"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:613
+msgid ""
+"The following signatures transforming union type expressions introduce "
+"``TypeExpr`` where previously ``UnionType`` existed so that a more-precise "
+"``TypeExpr`` type can be inferred:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:617
+msgid "``builtins.type[T].__or__``"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:619
+msgid "Old: ``def __or__(self, value: Any, /) -> types.UnionType: ...``"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:620
+msgid ""
+"New: ``def __or__[T2](self, value: TypeExpr[T2], /) -> TypeExpr[T | T2]: ..."
+"``"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:622
+msgid "``builtins.type[T].__ror__``"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:624
+msgid "Old: ``def __ror__(self, value: Any, /) -> types.UnionType: ...``"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:625
+msgid ""
+"New: ``def __ror__[T1](self, value: TypeExpr[T1], /) -> TypeExpr[T1 | T]: ..."
+"``"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:627
+msgid "``types.GenericAlias.{__or__,__ror__}``"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:628
+msgid "«the internal type of a typing special form»``.{__or__,__ror__}``"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:630
+msgid ""
+"However the implementations of those methods continue to return "
+"``UnionType`` instances at runtime so that runtime ``isinstance`` checks "
+"like ``isinstance('42', int | str)`` and ``isinstance(int | str, "
+"UnionType)`` continue to work."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:637
+msgid "Unchanged signatures"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:639
+msgid ""
+"The following signatures related to annotation expressions continue to use "
+"``object`` and remain unchanged:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:642
+msgid "``typing.get_origin``"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:643
+msgid "``typing.get_args``"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:645
+msgid ""
+"The following signatures related to class objects continue to use ``type`` "
+"and remain unchanged:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:648 ../../peps/peps/pep-0747.rst:672
+msgid "``builtins.isinstance``"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:649 ../../peps/peps/pep-0747.rst:673
+msgid "``builtins.issubclass``"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:650
+msgid "``builtins.type``"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:652
+msgid ""
+"``typing.get_type_hints(..., include_extras=False)`` nearly returns only "
+"type expressions in Python 3.12, stripping out most type qualifiers "
+"(``Required, NotRequired, ReadOnly, Annotated``) but currently preserves a "
+"few type qualifiers which are only allowed in annotation expressions "
+"(``ClassVar, Final, InitVar, Unpack``). It may be desirable to alter the "
+"behavior of this function in the future to also strip out those qualifiers "
+"and actually return type expressions, although this PEP does not propose "
+"those changes now:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:661
+msgid "``typing.get_type_hints(..., include_extras=False)``"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:663
+msgid "Almost returns only type expressions, but not quite"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:665
+msgid "``typing.get_type_hints(..., include_extras=True)``"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:667
+msgid "Returns annotation expressions"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:669
+msgid ""
+"The following signatures accepting union type expressions continue to use "
+"``UnionType``:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:674
+msgid "``typing.get_origin`` (used in an ``@overload``)"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:676
+msgid ""
+"The following signatures transforming union type expressions continue to use "
+"``UnionType`` because it is not possible to infer a more-precise "
+"``TypeExpr`` type:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:680
+msgid "``types.UnionType.{__or__,__ror__}``"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:684
+msgid "Backwards Compatibility"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:686
+msgid ""
+"As a value expression, ``X | Y`` previously had type ``UnionType`` (via :pep:"
+"`604`) but this PEP gives it the more-precise static type ``TypeExpr[X | "
+"Y]`` (a subtype of ``UnionType``) while continuing to return a ``UnionType`` "
+"instance at runtime. Preserving compability with ``UnionType`` is important "
+"because ``UnionType`` supports ``isinstance`` checks, unlike ``TypeExpr``, "
+"and existing code relies on being able to perform those checks."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:693
+msgid ""
+"The rules for recognizing other kinds of type expression objects in a value "
+"expression context were not previously defined, so static type checkers "
+"`varied in what types were assigned <https://discuss.python.org/t/typeform-"
+"spelling-for-a-type-annotation-object-at-runtime/51435/34>`_ to such "
+"objects. Existing programs manipulating type expression objects were already "
+"limited in manipulating them as plain ``object`` values, and such programs "
+"should not break with :ref:`the newly-defined rules "
+"<implicit_typeexpr_values>`."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:703
+msgid "How to Teach This"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:705
+msgid ""
+"Normally when using type annotations in Python you're concerned with "
+"defining the shape of values allowed to be passed to a function parameter, "
+"returned by a function, or stored in a variable:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:722
+msgid ""
+"However type annotations themselves are valid values in Python and can be "
+"assigned to variables and manipulated like any other data in a program:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:735
+msgid ""
+"``TypeExpr[]`` is how you spell the type of a variable containing a type "
+"annotation object describing a type."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:738
+msgid ""
+"``TypeExpr[]`` is similar to ``type[]``, but ``type[]`` can only spell "
+"simple **class objects** like ``int``, ``str``, ``list``, or ``MyClass``. "
+"``TypeExpr[]`` by contrast can additionally spell more complex types, "
+"including those with brackets (like ``list[int]``) or pipes (like ``int | "
+"None``), and including special types like ``Any``, ``LiteralString``, or "
+"``Never``."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:744
+msgid ""
+"A ``TypeExpr`` variable looks similar to a ``TypeAlias`` definition, but can "
+"only be used where a dynamic value is expected. ``TypeAlias`` (and the "
+"``type`` statement) by contrast define a name that can be used where a fixed "
+"type is expected:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:749
+msgid "Okay, but discouraged in Python 3.12+:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:770
+msgid ""
+"It is uncommon for a programmer to define their *own* function which accepts "
+"a ``TypeExpr`` parameter or returns a ``TypeExpr`` value. Instead it is more "
+"common for a programmer to pass a literal type expression to an *existing* "
+"function accepting a ``TypeExpr`` input which was imported from a runtime "
+"type checker library."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:776
+msgid ""
+"For example the ``isassignable`` function from the ``trycast`` library can "
+"be used like Python's built-in ``isinstance`` function to check whether a "
+"value matches the shape of a particular type. ``isassignable`` will accept "
+"*any* kind of type as an input because its input is a ``TypeExpr``. By "
+"contrast ``isinstance`` only accepts a simple class object (a ``type[]``) as "
+"input:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:799
+msgid ""
+"There are :ref:`many other runtime type checkers "
+"<runtime_type_checkers_using_typeexpr>` providing useful functions that "
+"accept a ``TypeExpr``."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:806
+msgid "Advanced Examples"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:808
+msgid ""
+"If you want to write your own runtime type checker or some other kind of "
+"function that manipulates types as values at runtime, this section gives "
+"examples of how you might implement such a function using ``TypeExpr``."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:815
+msgid "Introspecting TypeExpr Values"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:817
+msgid ""
+"A ``TypeExpr`` is very similar to an ``object`` at runtime, with no "
+"additional attributes or methods defined."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:820
+msgid ""
+"You can use existing introspection functions like ``typing.get_origin`` and "
+"``typing.get_args`` to extract the components of a type expression that "
+"looks like ``Origin[Arg1, Arg2, ..., ArgN]``:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:833
+msgid ""
+"You can also use ``isinstance`` and ``is`` to distinguish one kind of type "
+"expression from another:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:852
+msgid "Combining with a type variable"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:854
+msgid ""
+"``TypeExpr[]`` can be parameterized by a type variable that is used "
+"elsewhere within the same function definition:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:864
+msgid "Combining with type[]"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:866
+msgid ""
+"Both ``TypeExpr[]`` and ``type[]`` can be parameterized by the same type "
+"variable within the same function definition:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:876
+msgid "Combining with TypeIs[] and TypeGuard[]"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:878
+msgid ""
+"A type variable parameterizing a ``TypeExpr[]`` can also be used by a "
+"``TypeIs[]`` within the same function definition:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:891
+msgid "or by a ``TypeGuard[]`` within the same function definition:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:910
+msgid "Challenges When Accepting All TypeExprs"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:912
+msgid ""
+"A function that takes an *arbitrary* ``TypeExpr`` as input must support a "
+"large variety of possible type expressions and is not easy to write. Some "
+"challenges faced by such a function include:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:916
+msgid ""
+"An ever-increasing number of typing special forms are introduced with each "
+"new Python version which must be recognized, with special handling required "
+"for each one."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:919
+msgid ""
+"Stringified type annotations [#strann_less_common]_ (like ``'list[str]'``) "
+"must be *parsed* (to something like ``typing.List[str]``) to be introspected."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:922
+msgid ""
+"In practice it is extremely difficult for stringified type annotations to be "
+"handled reliably at runtime, so runtime type checkers may opt to not support "
+"them at all."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:926
+msgid ""
+"Resolving string-based forward references inside type expressions to actual "
+"values must typically be done using ``eval()``, which is difficult/"
+"impossible to use in a safe way."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:929
+msgid ""
+"Recursive types like ``IntTree = list[typing.Union[int, 'IntTree']]`` are "
+"not possible to fully resolve."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:931
+msgid ""
+"Supporting user-defined generic types (like Django’s ``QuerySet[User]``) "
+"requires user-defined functions to recognize/parse, which a runtime type "
+"checker should provide a registration API for."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:938
+msgid "Reference Implementation"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:940
+msgid ""
+"The following will be true when `mypy#9773 <https://github.com/python/mypy/"
+"issues/9773>`__ is implemented:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:943
+msgid "The mypy type checker supports ``TypeExpr`` types."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:945
+msgid ""
+"A reference implementation of the runtime component is provided in the "
+"``typing_extensions`` module."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:950
+msgid "Rejected Ideas"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:955
+msgid "Widen type[C] to support all type expressions"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:957
+msgid ""
+"``type`` was `designed`_ to only be used to describe class objects. A class "
+"object can always be used as the second argument of ``isinstance()`` and can "
+"usually be instantiated by calling it."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:961
+msgid ""
+"``TypeExpr`` on the other hand is typically introspected by the user in some "
+"way, is not necessarily directly instantiable, and is not necessarily "
+"directly usable in a regular ``isinstance()`` check."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:965
+msgid ""
+"It would be possible to widen ``type`` to include the additional values "
+"allowed by ``TypeExpr`` but it would reduce clarity about the user’s "
+"intentions when working with a ``type``. Different concepts and usage "
+"patterns; different spellings."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:976
+msgid "Accept arbitrary annotation expressions"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:978
+msgid ""
+"Certain typing special forms can be used in *some* but not *all* annotation "
+"contexts:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:981
+msgid ""
+"For example ``Final[]`` can be used as a variable type but not as a "
+"parameter type or a return type:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:992
+msgid ""
+"``TypeExpr[T]`` does not allow matching such annotation expressions because "
+"it is not clear what it would mean for such an expression to parameterized "
+"by a type variable in position ``T``:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:1004
+msgid ""
+"Functions that wish to operate on *all* kinds of annotation expressions, "
+"including those that are not ``TypeExpr``\\ s, can continue to accept such "
+"inputs as ``object`` parameters, as they must do so today."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:1010
+msgid "Accept only universal type expressions"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:1012
+msgid ""
+"Earlier drafts of this PEP only allowed ``TypeExpr[]`` to match the subset "
+"of type expressions which are valid in *all* contexts, excluding :ref:`non-"
+"universal type expressions <non_universal_typeexpr>`. However doing that "
+"would effectively create a new subset of annotation expressions that Python "
+"typing users would have to understand, on top of all the existing "
+"distinctions between “class objects”, “type expressions”, and “annotation "
+"expressions”."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:1020
+msgid ""
+"To avoid introducing yet another concept that everyone has to learn, this "
+"proposal just rounds ``TypeExpr[]`` to exactly match the existing definition "
+"of a “type expression”."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:1026
+msgid "Support pattern matching on type expressions"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:1028
+msgid ""
+"It was asserted that some functions may wish to pattern match on the "
+"interior of type expressions in their signatures."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:1031
+msgid ""
+"One use case is to allow a function to explicitly enumerate all the "
+"*specific* kinds of type expressions it supports as input. Consider the "
+"following possible pattern matching syntax:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:1045
+msgid ""
+"All functions observed in the wild that conceptually take a ``TypeExpr[]`` "
+"generally try to support *all* kinds of type expressions, so it doesn’t seem "
+"valuable to enumerate a particular subset."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:1049
+msgid ""
+"Additionally the above syntax isn’t precise enough to fully describe the "
+"actual input constraints for a typical function in the wild. For example "
+"many functions recognize un-stringified type expressions like "
+"``list[Movie]`` but may not recognize type expressions with stringified "
+"subcomponents like ``list['Movie']``."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:1055
+msgid ""
+"A second use case for pattern matching on the interior of type expressions "
+"is to explicitly match an ``Annotated[]`` form to pull out the interior type "
+"argument and strip away the metadata:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:1066
+msgid ""
+"However ``Annotated[T, metadata]`` is already treated equivalent to ``T`` "
+"anyway. There’s no additional value in being explicit about this behavior. "
+"The example above could be more-straightforwardly written as the equivalent:"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:1076
+msgid "Footnotes"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:1079
+msgid ":pep:`Type[C] spells a class object <484#the-type-of-class-objects>`"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:1082
+msgid ":pep:`TypeIs[T] is similar to bool <742>`"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:1085
+msgid ""
+"``dataclass.make_dataclass`` accepts ``InitVar[...]`` as a special case in "
+"addition to type expressions. Therefore it may unfortunately be necessary to "
+"continue annotating its ``type`` parameter as ``object`` rather than "
+"``TypeExpr``."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:1091
+msgid ""
+"Special forms normalize string arguments to ``ForwardRef`` instances at "
+"runtime using internal helper functions in the ``typing`` module. Runtime "
+"type checkers may wish to implement similar functions when working with "
+"string-based forward references."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:1097
+msgid ""
+"Stringified type annotations are expected to become less common starting in "
+"Python 3.14 when :pep:`deferred annotations <649>` become available. However "
+"there is a large amount of existing code from earlier Python versions "
+"relying on stringified type annotations that will still need to be supported "
+"for several years."
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:1105
+msgid "Copyright"
+msgstr ""
+
+#: ../../peps/peps/pep-0747.rst:1107
+msgid ""
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
+msgstr ""

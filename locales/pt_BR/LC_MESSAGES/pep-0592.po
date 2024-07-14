@@ -6,88 +6,88 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PEPs\n"
+"Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 20:07+0000\n"
+"POT-Creation-Date: 2024-07-14 02:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.15.0\n"
 
-#: ../pep-0592.rst
+#: ../../peps/peps/pep-0592.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../pep-0592.rst:3
+#: ../../peps/peps/pep-0592.rst:3
 msgid "Donald Stufft <donald@stufft.io>"
 msgstr ""
 
-#: ../pep-0592.rst
+#: ../../peps/peps/pep-0592.rst
 msgid "BDFL-Delegate"
 msgstr ""
 
-#: ../pep-0592.rst:4
+#: ../../peps/peps/pep-0592.rst:4
 msgid "Paul Moore <p.f.moore@gmail.com>"
 msgstr ""
 
-#: ../pep-0592.rst
+#: ../../peps/peps/pep-0592.rst
 msgid "Discussions-To"
 msgstr ""
 
-#: ../pep-0592.rst:5
+#: ../../peps/peps/pep-0592.rst:5
 msgid "https://discuss.python.org/t/1629"
 msgstr ""
 
-#: ../pep-0592.rst
+#: ../../peps/peps/pep-0592.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../pep-0592.rst:6
+#: ../../peps/peps/pep-0592.rst:6
 msgid "Final"
 msgstr ""
 
-#: ../pep-0592.rst
+#: ../../peps/peps/pep-0592.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../pep-0592.rst:7
+#: ../../peps/peps/pep-0592.rst:7
 msgid "Standards Track"
 msgstr ""
 
-#: ../pep-0592.rst
+#: ../../peps/peps/pep-0592.rst
 msgid "Topic"
 msgstr ""
 
-#: ../pep-0592.rst:8
+#: ../../peps/peps/pep-0592.rst:8
 msgid "Packaging"
 msgstr ""
 
-#: ../pep-0592.rst
+#: ../../peps/peps/pep-0592.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../pep-0592.rst:10
+#: ../../peps/peps/pep-0592.rst:10
 msgid "07-May-2019"
 msgstr ""
 
-#: ../pep-0592.rst
+#: ../../peps/peps/pep-0592.rst
 msgid "Resolution"
 msgstr ""
 
-#: ../pep-0592.rst:11
+#: ../../peps/peps/pep-0592.rst:11
 msgid ""
 "https://discuss.python.org/t/pep-592-support-for-yanked-files-in-the-simple-"
 "repository-api/1629/30"
 msgstr ""
 
-#: ../pep-0592.rst:15
+#: ../../peps/peps/pep-0592.rst:15
 msgid "Abstract"
 msgstr ""
 
-#: ../pep-0592.rst:17
+#: ../../peps/peps/pep-0592.rst:17
 msgid ""
 "This PEP proposes adding the ability to mark a particular file download on a "
 "simple repository as \"yanked\". Yanking a file allows authors to "
@@ -95,17 +95,17 @@ msgid ""
 "pinned to exactly a specific version."
 msgstr ""
 
-#: ../pep-0592.rst:22
+#: ../../peps/peps/pep-0592.rst:22
 msgid ""
 "It also changes to the canonical source for the simple repository API to the "
 "`Simple Repository API`_ reference document."
 msgstr ""
 
-#: ../pep-0592.rst:27
+#: ../../peps/peps/pep-0592.rst:27
 msgid "Motivation"
 msgstr ""
 
-#: ../pep-0592.rst:29
+#: ../../peps/peps/pep-0592.rst:29
 msgid ""
 "Whenever a project detects that a particular release on PyPI might be "
 "broken, they oftentimes will want to prevent further users from "
@@ -114,14 +114,14 @@ msgid ""
 "practices and pinned to a specific version of the project."
 msgstr ""
 
-#: ../pep-0592.rst:35
+#: ../../peps/peps/pep-0592.rst:35
 msgid ""
 "This leaves projects in a catch-22 situation where new projects may be "
 "pulling down this known broken version, but if they do anything to prevent "
 "that they'll break projects that are already using it."
 msgstr ""
 
-#: ../pep-0592.rst:39
+#: ../../peps/peps/pep-0592.rst:39
 msgid ""
 "By allowing the ability to \"yank\" a file, but still make it available for "
 "users who are explicitly asking for it, this allows projects to mitigate the "
@@ -129,7 +129,7 @@ msgid ""
 "have otherwise worked around or didn't hit the underlying issues."
 msgstr ""
 
-#: ../pep-0592.rst:45
+#: ../../peps/peps/pep-0592.rst:45
 msgid ""
 "One of the main scenarios where this may happen, is when dropping support "
 "for a particular version of Python. The ``python-requires`` metadata allows "
@@ -139,37 +139,37 @@ msgid ""
 "been made, a project really only has three options:"
 msgstr ""
 
-#: ../pep-0592.rst:53
+#: ../../peps/peps/pep-0592.rst:53
 msgid ""
 "Prevent that version from being installed through some mechanism (currently, "
 "the only mechanism is by deleting the release entirely)."
 msgstr ""
 
-#: ../pep-0592.rst:55
+#: ../../peps/peps/pep-0592.rst:55
 msgid ""
 "Re-release the version that worked as a higher version number, and then re-"
 "release the version that dropped support as an even higher version number "
 "with the correct metadata."
 msgstr ""
 
-#: ../pep-0592.rst:58
+#: ../../peps/peps/pep-0592.rst:58
 msgid ""
 "Do nothing, and document that people using that older Python have to "
 "manually exclude that release."
 msgstr ""
 
-#: ../pep-0592.rst:61
+#: ../../peps/peps/pep-0592.rst:61
 msgid ""
 "With this PEP, projects can choose the first option, but with a mechanism "
 "that is less likely to break the world for people who are *currently* "
 "successfully using said project."
 msgstr ""
 
-#: ../pep-0592.rst:67
+#: ../../peps/peps/pep-0592.rst:67
 msgid "Specification"
 msgstr ""
 
-#: ../pep-0592.rst:69
+#: ../../peps/peps/pep-0592.rst:69
 msgid ""
 "Links in the simple repository **MAY** have a ``data-yanked`` attribute "
 "which may have no value, or may have an arbitrary string as a value. The "
@@ -179,7 +179,7 @@ msgid ""
 "under specific scenarios."
 msgstr ""
 
-#: ../pep-0592.rst:76
+#: ../../peps/peps/pep-0592.rst:76
 msgid ""
 "The value of the ``data-yanked`` attribute, if present, is an arbitrary "
 "string that represents the reason for why the file has been yanked. Tools "
@@ -187,7 +187,7 @@ msgid ""
 "users."
 msgstr ""
 
-#: ../pep-0592.rst:81
+#: ../../peps/peps/pep-0592.rst:81
 msgid ""
 "The yanked attribute is not immutable once set, and may be rescinded in the "
 "future (and once rescinded, may be reset as well). Thus API users **MUST** "
@@ -195,21 +195,21 @@ msgid ""
 "again)."
 msgstr ""
 
-#: ../pep-0592.rst:88
+#: ../../peps/peps/pep-0592.rst:88
 msgid "Installers"
 msgstr ""
 
-#: ../pep-0592.rst:90
+#: ../../peps/peps/pep-0592.rst:90
 msgid ""
 "The desirable experience for users is that once a file is yanked, when a "
 "human being is currently trying to directly install a yanked file, that it "
-"fails as if that file had been deleted. However, when a human did that "
-"awhile ago, and now a computer is just continuing to mechanically follow the "
+"fails as if that file had been deleted. However, when a human did that a "
+"while ago, and now a computer is just continuing to mechanically follow the "
 "original order to install the now yanked file, then it acts as if it had not "
 "been yanked."
 msgstr ""
 
-#: ../pep-0592.rst:97
+#: ../../peps/peps/pep-0592.rst:97
 msgid ""
 "An installer **MUST** ignore yanked releases, if the selection constraints "
 "can be satisfied with a non-yanked version, and **MAY** refuse to use a "
@@ -219,14 +219,14 @@ msgid ""
 "files."
 msgstr ""
 
-#: ../pep-0592.rst:104
+#: ../../peps/peps/pep-0592.rst:104
 msgid ""
 "What this means is left up to the specific installer, to decide how to best "
 "fit into the overall usage of their installer. However, there are two "
 "suggested approaches to take:"
 msgstr ""
 
-#: ../pep-0592.rst:108
+#: ../../peps/peps/pep-0592.rst:108
 msgid ""
 "Yanked files are always ignored, unless they are the only file that matches "
 "a version specifier that \"pins\" to an exact version using either ``==`` "
@@ -235,7 +235,7 @@ msgid ""
 "for things like local versions, zero padding, etc."
 msgstr ""
 
-#: ../pep-0592.rst:114
+#: ../../peps/peps/pep-0592.rst:114
 msgid ""
 "Yanked files are always ignored, unless they are the only file that matches "
 "what a lock file (such as ``Pipfile.lock`` or ``poetry.lock``) specifies to "
@@ -243,7 +243,7 @@ msgid ""
 "creating or updating a lock file from some input file or command."
 msgstr ""
 
-#: ../pep-0592.rst:120
+#: ../../peps/peps/pep-0592.rst:120
 msgid ""
 "Regardless of the specific strategy that an installer chooses for deciding "
 "when to install yanked files, an installer **SHOULD** emit a warning when it "
@@ -252,38 +252,38 @@ msgid ""
 "specific feedback to the user about why that file had been yanked."
 msgstr ""
 
-#: ../pep-0592.rst:128
+#: ../../peps/peps/pep-0592.rst:128
 msgid "Mirrors"
 msgstr ""
 
-#: ../pep-0592.rst:130
+#: ../../peps/peps/pep-0592.rst:130
 msgid "Mirrors can generally treat yanked files one of two ways:"
 msgstr ""
 
-#: ../pep-0592.rst:132
+#: ../../peps/peps/pep-0592.rst:132
 msgid ""
 "They may choose to omit them from their simple repository API completely, "
 "providing a view over the repository that shows only \"active\", unyanked "
 "files."
 msgstr ""
 
-#: ../pep-0592.rst:135
+#: ../../peps/peps/pep-0592.rst:135
 msgid ""
 "They may choose to include yanked files, and additionally mirror the ``data-"
 "yanked`` attribute as well."
 msgstr ""
 
-#: ../pep-0592.rst:138
+#: ../../peps/peps/pep-0592.rst:138
 msgid ""
 "Mirrors **MUST NOT** mirror a yanked file without also mirroring the ``data-"
 "yanked`` attribute for it."
 msgstr ""
 
-#: ../pep-0592.rst:143
+#: ../../peps/peps/pep-0592.rst:143
 msgid "Rejected Ideas"
 msgstr ""
 
-#: ../pep-0592.rst:145
+#: ../../peps/peps/pep-0592.rst:145
 msgid ""
 "A previous, undocumented, version of the simple repository API had version "
 "specific pages, like ``/simple/<project>/<version>/``. If we were to add "
@@ -293,7 +293,7 @@ msgid ""
 "out to handle all of the incoming traffic."
 msgstr ""
 
-#: ../pep-0592.rst:153
+#: ../../peps/peps/pep-0592.rst:153
 msgid ""
 "A previous iteration of this PEP had the ``data-yanked`` attribute act as a "
 "boolean value. However it was decided that allowing a string both simplified "
@@ -302,7 +302,7 @@ msgid ""
 "release."
 msgstr ""
 
-#: ../pep-0592.rst:159
+#: ../../peps/peps/pep-0592.rst:159
 msgid ""
 "Another suggestion was to reserve some syntax in the arbitrary string to "
 "allow us to evolve the standard in the future if we ever need to. However, "
@@ -311,18 +311,18 @@ msgid ""
 "arose."
 msgstr ""
 
-#: ../pep-0592.rst:167
+#: ../../peps/peps/pep-0592.rst:167
 msgid "Warehouse/PyPI Implementation Notes"
 msgstr ""
 
-#: ../pep-0592.rst:169
+#: ../../peps/peps/pep-0592.rst:169
 msgid ""
 "While this PEP implements yanking at the file level, that is largely due to "
 "the shape the simple repository API takes, not a specific decision made by "
 "this PEP."
 msgstr ""
 
-#: ../pep-0592.rst:173
+#: ../../peps/peps/pep-0592.rst:173
 msgid ""
 "In Warehouse, the user experience will be implemented in terms of yanking or "
 "unyanking an entire release, rather than as an operation on individual "
@@ -330,40 +330,40 @@ msgid ""
 "yanked."
 msgstr ""
 
-#: ../pep-0592.rst:178
+#: ../../peps/peps/pep-0592.rst:178
 msgid ""
 "Other repository implementations may choose to expose this capability in a "
 "different way, or not expose it at all."
 msgstr ""
 
-#: ../pep-0592.rst:183
+#: ../../peps/peps/pep-0592.rst:183
 msgid "Journal Handling"
 msgstr ""
 
-#: ../pep-0592.rst:185
+#: ../../peps/peps/pep-0592.rst:185
 msgid ""
 "Whenever a release has been yanked, an entry will be recorded in the journal "
 "using one of the following string patterns:"
 msgstr ""
 
-#: ../pep-0592.rst:188
+#: ../../peps/peps/pep-0592.rst:188
 msgid "``yank release``"
 msgstr ""
 
-#: ../pep-0592.rst:189
+#: ../../peps/peps/pep-0592.rst:189
 msgid "``unyank release``"
 msgstr ""
 
-#: ../pep-0592.rst:192
+#: ../../peps/peps/pep-0592.rst:192
 msgid ""
 "In both cases, the standard journal structure will indicate which release of "
 "which project has been yanked or unyanked."
 msgstr ""
 
-#: ../pep-0592.rst:201
+#: ../../peps/peps/pep-0592.rst:201
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../pep-0592.rst:203
+#: ../../peps/peps/pep-0592.rst:203
 msgid "This document has been placed in the public domain."
 msgstr "Este documento foi colocado em domínio público."

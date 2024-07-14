@@ -1,0 +1,1717 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the PEPs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PEPs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-14 02:33+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pt_BR\n"
+"Language-Team: pt_BR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../peps/peps/pep-0735.rst
+msgid "Author"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:3
+msgid "Stephen Rosen <sirosen0@gmail.com>"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst
+msgid "Sponsor"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:4
+msgid "Brett Cannon <brett@python.org>"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst
+msgid "PEP-Delegate"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:5
+msgid "Paul Moore <p.f.moore@gmail.com>"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst
+msgid "Discussions-To"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:6
+msgid "https://discuss.python.org/t/39233"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst
+msgid "Status"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:7
+msgid "Draft"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst
+msgid "Type"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:8
+msgid "Standards Track"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst
+msgid "Topic"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:9
+msgid "Packaging"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst
+msgid "Created"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:10
+msgid "20-Nov-2023"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst
+msgid "Post-History"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:11
+msgid ""
+"`14-Nov-2023 <https://discuss.python.org/t/29684>`__, `20-Nov-2023 <https://"
+"discuss.python.org/t/39233>`__"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:14
+msgid "Abstract"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:16
+msgid ""
+"This PEP specifies a mechanism for storing package requirements in "
+"``pyproject.toml`` files such that they are not included in any built "
+"distribution of the project."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:20
+msgid ""
+"This is suitable for creating named groups of dependencies, similar to "
+"``requirements.txt`` files, which launchers, IDEs, and other tools can find "
+"and identify by name."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:24
+msgid "The feature defined here is referred to as \"Dependency Groups\"."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:27
+msgid "Motivation"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:29
+msgid ""
+"There are two major use cases for which the Python community has no "
+"standardized answer:"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:32
+msgid "How should development dependencies be defined for packages?"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:34
+msgid ""
+"How should dependencies be defined for projects which do not build "
+"distributions (non-package projects)?"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:37
+msgid ""
+"In support of these two needs, there are two common solutions which are "
+"similar to this proposal:"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:40
+msgid "``requirements.txt`` files"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:42
+msgid ""
+"package `extras <https://packaging.python.org/en/latest/specifications/"
+"dependency-specifiers/#extras>`__"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:44
+msgid ""
+"Both ``requirements.txt`` files and ``extras`` have limitations which this "
+"standard seeks to overcome."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:47
+msgid ""
+"Note that the two use cases above describe two different types of projects "
+"which this PEP seeks to support:"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:50
+msgid "Python packages, such as libraries"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:52
+msgid "non-package projects, such as data science projects"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:55
+msgid "Limitations of ``requirements.txt`` files"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:57
+msgid ""
+"Many projects may define one or more ``requirements.txt`` iles, and may "
+"arrange them either at the project root (e.g. ``requirements.txt`` and "
+"``test-requirements.txt``) or else in a directory (e.g. ``requirements/base."
+"txt`` and ``requirements/test.txt``). However, there are major issues with "
+"the use of requirements files in this way:"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:63
+msgid ""
+"There is no standardized naming convention such that tools can discover or "
+"use these files by name."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:66
+msgid ""
+"``requirements.txt`` files are *not standardized*, but instead provide "
+"options to ``pip``."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:69
+msgid ""
+"As a result, it is difficult to define tool behaviors based on "
+"``requirements.txt`` files. They are not trivial to discover or identify by "
+"name, and their contents may contain a mix of package specifiers and "
+"additional ``pip`` options."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:74
+msgid ""
+"The lack of a standard for ``requirements.txt`` contents also means they are "
+"not portable to any alternative tools which wish to process them other than "
+"``pip``."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:78
+msgid ""
+"Additionally, ``requirements.txt`` files require a file per dependency list. "
+"For some use-cases, this makes the marginal cost of dependency groupings "
+"high, relative to their benefit. A terser declaration is beneficial to "
+"projects with a number of small groups of dependencies."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:84
+msgid ""
+"In contrast with this, Dependency Groups are defined at a well known "
+"location in ``pyproject.toml`` with fully standardized contents. Not only "
+"will they have immediate utility, but they will also serve as a starting "
+"point for future standards."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:90
+msgid "Limitations of ``extras``"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:92
+msgid ""
+"``extras`` are additional package metadata declared in the ``[project."
+"optional-dependencies]`` table. They provide names for lists of package "
+"specifiers which are published as part of a package's metadata, and which a "
+"user can request under that name, as in ``pip install 'foo[bar]'`` to "
+"install ``foo`` with the ``bar`` extra."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:98
+msgid ""
+"Because ``extras`` are package metadata, they are not usable when a project "
+"does not build a distribution (i.e., is not a package)."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:101
+msgid ""
+"For projects which are packages, ``extras`` are a common solution for "
+"defining development dependencies, but even under these circumstances they "
+"have downsides:"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:105
+msgid ""
+"Because an ``extra`` defines optional *additional* dependencies, it is not "
+"possible to install an ``extra`` without installing the current package and "
+"its dependencies."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:109
+msgid ""
+"Because they are user-installable, ``extras`` are part of the public "
+"interface for packages. Because ``extras`` are published, package developers "
+"often are concerned about ensuring that their development extras are not "
+"confused with user-facing extras."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:115
+msgid "Rationale"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:117
+msgid ""
+"This PEP defines the storage of requirements data in lists within a "
+"``[dependency-groups]`` table. This name was chosen to match the canonical "
+"name of the feature (\"Dependency Groups\")."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:122
+msgid ""
+"This format should be as simple and learnable as possible, having a format "
+"very similar to existing ``requirements.txt`` files for many cases. Each "
+"list in ``[dependency-groups]`` is defined as a list of package specifiers. "
+"For example:"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:132
+msgid ""
+"There are a number of use cases for ``requirements.txt`` files which require "
+"data which cannot be expressed in :pep:`508` dependency specifiers. Such "
+"fields are not valid in Dependency Groups. Including many of the data and "
+"fields which ``pip`` supports, such as index servers, hashes, and path "
+"dependencies, requires new standards. This standard leaves room for new "
+"standards and developments, but does not attempt to support all valid "
+"``requirements.txt`` contents."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:140
+msgid ""
+"The only exception to this is the ``-r`` flag which ``requirements.txt`` "
+"files use to include one file in another. Dependency Groups support an "
+"\"include\" mechanism which is similar in meaning, allowing one dependency "
+"group to extend another."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:145
+msgid ""
+"Dependency Groups have two additional features which are similar to "
+"``requirements.txt`` files:"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:148
+msgid "they are not published as part of any built distribution"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:150
+msgid ""
+"installation of a dependency group does not imply installation of a "
+"package's dependencies or the package itself"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:154
+msgid "Use Cases"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:156
+msgid ""
+"The following use cases are considered important targets for this PEP. They "
+"are defined in greater detail in the :ref:`Use Cases Appendix <use_cases>`."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:159
+msgid "Web Applications deployed via a non-python-packaging build process"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:160
+msgid "Libraries with unpublished dev dependency groups"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:161
+msgid "Data science projects with groups of dependencies but no core package"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:162
+msgid ""
+"*Input data* to lockfile generation (Dependency Groups should generally not "
+"be used as a location for locked dependency data)"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:164
+msgid "Input data to an environment manager, such as tox, Nox, or Hatch"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:165
+msgid "Configurable IDE discovery of test and linter requirements"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:168
+msgid "Regarding Poetry and PDM Dependency Groups"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:170
+msgid ""
+"The existing Poetry and PDM tools already offer a feature which each calls "
+"\"Dependency Groups\". However, absent any standard for specifying "
+"collections of dependencies, each tool defines these in a tool-specific way, "
+"in the relevant sections of the ``[tool]`` table."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:175
+msgid ""
+"(PDM also uses extras for some Dependency Groups, and overlaps the notion "
+"heavily with extras.)"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:178
+msgid ""
+"This PEP does not support all of the features of Poetry and PDM, which, like "
+"``requirements.txt`` files for ``pip``, support several non-standard "
+"extensions to common dependency specifiers."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:182
+msgid ""
+"It should be possible for such tools to use standardized Dependency Groups "
+"as extensions of their own Dependency Group mechanisms. However, defining a "
+"new data format which replaces the existing Poetry and PDM solutions is a "
+"non-goal. Doing so would require standardizing several additional features, "
+"such as path dependencies, which are supported by these tools."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:190
+msgid "Dependency Groups are not Hidden Extras"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:192
+msgid ""
+"Dependency Groups are very similar to extras which go unpublished. However, "
+"there are two major features which distinguish them from extras further:"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:196
+msgid "they support non-package projects"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:198
+msgid ""
+"installation of a Dependency Group does not imply installation of a "
+"package's dependencies (or the package itself)"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:202
+msgid "Future Compatibility & Invalid Data"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:204
+msgid ""
+"Dependency Groups are intended to be extensible in future PEPs. However, "
+"Dependency Groups should also be usable by multiple tools in a single Python "
+"project. With multiple tools using the same data, it is possible that one "
+"implements a future PEP which extends Dependency Groups, while another does "
+"not."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:210
+msgid ""
+"To support users in this case, this PEP defines and recommends validation "
+"behaviors in which tools only examine Dependency Groups which they are "
+"using. This allows multiple tools, using different versions of Dependency "
+"Groups data, to share a single table in ``pyproject.toml``."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:216
+msgid "Specification"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:218
+msgid ""
+"This PEP defines a new section (table) in ``pyproject.toml`` files named "
+"``dependency-groups``. The ``dependency-groups`` table contains an arbitrary "
+"number of user-defined keys, each of which has, as its value, a list of "
+"requirements (defined below). These keys must be `valid non-normalized names "
+"<https://packaging.python.org/en/latest/specifications/name-normalization/"
+"#valid-non-normalized-names>`__, and must be `normalized <https://packaging."
+"python.org/en/latest/specifications/name-normalization/#normalization>`__ "
+"before comparisons."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:227
+msgid ""
+"Tools SHOULD prefer to present the original, non-normalized name to users by "
+"default. If duplicate names, after normalization, are encountered, tools "
+"SHOULD emit an error."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:231
+msgid ""
+"Requirement lists under ``dependency-groups`` may contain strings, tables "
+"(\"dicts\" in Python), or a mix of strings and tables."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:234
+msgid ""
+"Strings in requirement lists must be valid `Dependency Specifiers <https://"
+"packaging.python.org/en/latest/specifications/dependency-specifiers/>`__, as "
+"defined in :pep:`508`."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:238
+msgid ""
+"Tables in requirement lists must be valid Dependency Object Specifiers, "
+"defined below."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:242
+msgid "Dependency Object Specifiers"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:244
+msgid ""
+"Dependency Object Specifiers are tables which define zero or more "
+"dependencies."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:246
+msgid ""
+"This PEP standardizes only one type of Dependency Object Specifier, a "
+"\"Dependency Group Include\". Other types may be added in future standards."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:250
+msgid "Dependency Group Include"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:252
+msgid ""
+"A Dependency Group Include includes the dependencies of another Dependency "
+"Group in the current Dependency Group."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:255
+msgid ""
+"An include is defined as a table with exactly one key, ``\"include-"
+"group\"``, whose value is a string, the name of another Dependency Group."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:258
+msgid ""
+"For example, ``{include-group = \"test\"}`` is an include which expands to "
+"the contents of the ``test`` Dependency Group."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:261
+msgid ""
+"Includes are defined to be exactly equivalent to the contents of the named "
+"Dependency Group, inserted into the current group at the location of the "
+"include. For example, if ``foo = [\"a\", \"b\"]`` is one group, and ``bar = "
+"[\"c\", {include-group = \"foo\"}, \"d\"]`` is another, then ``bar`` should "
+"evaluate to ``[\"c\", \"a\", \"b\", \"d\"]`` when Dependency Group Includes "
+"are expanded."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:267
+msgid ""
+"Dependency Group Includes may specify the same package multiple times. Tools "
+"SHOULD NOT deduplicate or otherwise alter the list contents produced by the "
+"include. For example, given the following table:"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:279
+msgid ""
+"The resolved value of ``all`` SHOULD be ``[\"foo\", \"foo\", \"foo>1.0\", "
+"\"foo<1.0\"]``. Tools should handle such a list exactly as they would handle "
+"any other case in which they are asked to process the same requirement "
+"multiple times with different version constraints."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:284
+msgid ""
+"Dependency Group Includes may include lists containing Dependency Group "
+"Includes, in which case those includes should be expanded as well. "
+"Dependency Group Includes MUST NOT include cycles, and tools SHOULD report "
+"an error if they detect a cycle."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:290
+msgid "Example Dependency Groups Table"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:292
+msgid ""
+"The following is an example of a partial ``pyproject.toml`` which uses this "
+"to define four Dependency Groups: ``test``, ``docs``, ``typing``, and "
+"``typing-test``:"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:304
+msgid ""
+"Note that none of these Dependency Group declarations implicitly install the "
+"current package, its dependencies, or any optional dependencies. Use of a "
+"Dependency Group like ``test`` to test a package requires that the user's "
+"configuration or toolchain also installs ``.``. For example,"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:314
+msgid ""
+"could be used (supposing ``$TOOL`` is a tool which supports installing "
+"Dependency Groups) to build a testing environment."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:317
+msgid ""
+"This also allows for the ``docs`` dependency group to be used without "
+"installing the project as a package:"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:325
+msgid "Package Building"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:327
+msgid ""
+"Build backends MUST NOT include Dependency Group data in built distributions "
+"as package metadata. This means that PKG-INFO in sdists and METADATA in "
+"wheels do not include any referencable fields containing Dependency Groups."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:331
+msgid ""
+"It is valid to use Dependency Groups in the evaluation of dynamic metadata, "
+"and ``pyproject.toml`` files included in sdists will naturally still contain "
+"the ``[dependency-groups]`` table. However, the table contents are not part "
+"of a published package's interfaces."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:337
+msgid "Installing Dependency Groups"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:339
+msgid ""
+"Tools which support Dependency Groups are expected to provide new options "
+"and interfaces to allow users to install from Dependency Groups."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:342
+msgid ""
+"No syntax is defined for expressing the Dependency Group of a package, for "
+"two reasons:"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:345
+msgid ""
+"it would not be valid to refer to the Dependency Groups of a third-party "
+"package from PyPI (because the data is defined to be unpublished)"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:348
+msgid ""
+"there is not guaranteed to be a current package for Dependency Groups -- "
+"part of their purpose is to support non-package projects"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:351
+msgid ""
+"For example, a possible pip interface for installing Dependency Groups would "
+"be:"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:358
+msgid ""
+"Note that this is only an example. This PEP does not declare any "
+"requirements for how tools support the installation of Dependency Groups."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:362
+msgid "Validation and Compatibility"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:364
+msgid ""
+"Tools supporting Dependency Groups may want to validate data before using "
+"it. However, tools implementing such validation behavior should be careful "
+"to allow for future expansions to this spec, so that they do not "
+"unnecessarily emit errors or warnings in the presence of new syntax."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:369
+msgid ""
+"Tools SHOULD error when evaluating or processing unrecognized data in "
+"Dependency Groups."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:372
+msgid ""
+"Tools SHOULD NOT eagerly validate the list contents of **all** Dependency "
+"Groups."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:375
+msgid ""
+"This means that in the presence of the following data, most tools will allow "
+"the ``foo`` group to be used, and will only error when the ``bar`` group is "
+"used:"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:386
+msgid "Reference Implementation"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:388
+msgid ""
+"The following Reference Implementation prints the contents of a Dependency "
+"Group to stdout, newline delimited. The output is therefore valid "
+"``requirements.txt`` data."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:479
+msgid "Backwards Compatibility"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:481
+msgid ""
+"At time of writing, the ``dependency-groups`` namespace within a ``pyproject."
+"toml`` file is unused. Since the top-level namespace is reserved for use "
+"only by standards specified at packaging.python.org, there should be no "
+"direct backwards compatibility concerns."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:487
+msgid "Security Implications"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:489
+msgid ""
+"This PEP introduces new syntaxes and data formats for specifying dependency "
+"information in projects. However, it does not introduce newly specified "
+"mechanisms for handling or resolving dependencies."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:493
+msgid ""
+"It therefore does not carry security concerns other than those inherent in "
+"any tools which may already be used to install dependencies -- i.e. "
+"malicious dependencies may be specified here, just as they may be specified "
+"in ``requirements.txt`` files."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:499
+msgid "How to Teach This"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:501
+msgid ""
+"This feature should be referred to by its canonical name, \"Dependency "
+"Groups\"."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:503
+msgid ""
+"The basic form of usage should be taught as a variant on typical "
+"``requirements.txt`` data. Standard dependency specifiers (:pep:`508`) can "
+"be added to a named list. Rather than asking pip to install from a "
+"``requirements.txt`` file, either pip or a relevant workflow tool will "
+"install from a named Dependency Group."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:509
+msgid ""
+"For new Python users, they may be taught directly to create a section in "
+"``pyproject.toml`` containing their Dependency Groups, similarly to how they "
+"are currently taught to use ``requirements.txt`` files. This also allows new "
+"Python users to learn about ``pyproject.toml`` files without needing to "
+"learn about package building. A ``pyproject.toml`` file with only "
+"``[dependency-groups]`` and no other tables is valid."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:517
+msgid ""
+"For both new and experienced users, the Dependency Group Includes will need "
+"to be explained. For users with experience using ``requirements.txt``, this "
+"can be described as an analogue for ``-r``. For new users, they should be "
+"taught that an include allows one Dependency Group to extend another. "
+"Similar configuration interfaces and the Python ``list.extend`` method may "
+"be used to explain the idea by analogy."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:525
+msgid "Rejected Ideas"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:528
+msgid "Why not define each Dependency Group as a table?"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:530
+msgid ""
+"If our goal is to allow for future expansion, then defining each Dependency "
+"Group as a subtable, thus enabling us to attach future keys to each group, "
+"allows for the greatest future flexibility."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:534
+msgid ""
+"However, it also makes the structure nested more deeply, and therefore "
+"harder to teach and learn. One of the goals of this PEP is to be an easy "
+"replacement for many ``requirements.txt`` use-cases."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:539
+msgid "Why not define a special string syntax to extend Dependency Specifiers?"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:541
+msgid ""
+"Earlier drafts of this specification defined syntactic forms for Dependency "
+"Group Includes and Path Dependencies."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:544
+msgid "However, there were three major issues with this approach:"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:546
+msgid "it complicates the string syntax which must be taught, beyond PEP 508"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:548
+msgid ""
+"the resulting strings would always need to be disambiguated from PEP 508 "
+"specifiers, complicating implementations"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:552
+msgid "Why not allow for more non-PEP 508 dependency specifiers?"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:554
+msgid ""
+"Several use cases surfaced during discussion which need more expressive "
+"specifiers than are possible with :pep:`508`."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:557
+msgid ""
+"\"Path Dependencies\", referring to local paths, and references to "
+"``[project.dependencies]`` were of particular interest."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:560
+msgid ""
+"However, there are no existing standards for these features (excepting the "
+"de-facto standard of ``pip``'s implementation details)."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:563
+msgid ""
+"As a result, attempting to include these features in this PEP results in a "
+"significant growth in scope, to attempt to standardize these various "
+"features and ``pip`` behaviors."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:567
+msgid ""
+"Special attention was devoted to attempting to standardize the expression of "
+"editable installations, as expressed by ``pip install -e`` and :pep:`660`. "
+"However, although the creation of editable installs is standardized for "
+"build backends, the behavior of editables is not standardized for "
+"installers. Inclusion of editables in this PEP requires that any supporting "
+"tool allows for the installation of editables."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:574
+msgid ""
+"Therefore, although Poetry and PDM provide syntaxes for some of these "
+"features, they are considered insufficiently standardized at present for "
+"inclusion in Dependency Groups."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:579
+msgid ""
+"Why is the table not named ``[run]``, ``[project.dependency-groups]``, ...?"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:581
+msgid ""
+"There are many possible names for this concept. It will have to live "
+"alongside the already existing ``[project.dependencies]`` and ``[project."
+"optional-dependencies]`` tables, and possibly a new ``[external]`` "
+"dependency table as well (at time of writing, :pep:`725`, which defines the "
+"``[external]`` table, is in progress)."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:587
+msgid ""
+"``[run]`` was a leading proposal in earlier discussions, but its proposed "
+"usage centered around a single set of runtime dependencies. This PEP "
+"explicitly outlines multiple groups of dependencies, which makes ``[run]`` a "
+"less appropriate fit -- this is not just dependency data for a specific "
+"runtime context, but for multiple contexts."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:593
+msgid ""
+"``[project.dependency-groups]`` would offer a nice parallel with ``[project."
+"dependencies]`` and ``[project.optional-dependencies]``, but has major "
+"downsides for non-package projects. ``[project]`` requires several keys to "
+"be defined, such as ``name`` and ``version``. Using this name would either "
+"require redefining the ``[project]`` table to allow for these keys to be "
+"absent, or else would impose a requirement on non-package projects to define "
+"and use these keys. By extension, it would effectively require any non-"
+"package project allow itself to be treated as a package."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:604
+msgid "Why is pip's planned implementation of ``--only-deps`` not sufficient?"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:606
+msgid ""
+"pip currently has a feature on the roadmap to add an `--only-deps flag "
+"<https://github.com/pypa/pip/issues/11440>`_. This flag is intended to allow "
+"users to install package dependencies and extras without installing the "
+"current package."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:611
+msgid ""
+"It does not address the needs of non-package projects, nor does it allow for "
+"the installation of an extra without the package dependencies."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:615
+msgid "Why isn't <environment manager> a solution?"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:617
+msgid ""
+"Existing environment managers like tox, Nox, and Hatch already have the "
+"ability to list inlined dependencies as part of their configuration data. "
+"This meets many development dependency needs, and clearly associates "
+"dependency groups with relevant tasks which can be run. These mechanisms are "
+"*good* but they are not *sufficient*."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:623
+msgid "First, they do not address the needs of non-package projects."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:625
+msgid ""
+"Second, there is no standard for other tools to use to access these data. "
+"This has impacts on high-level tools like IDEs and Dependabot, which cannot "
+"support deep integration with these Dependency Groups. (For example, at time "
+"of writing Dependabot will not flag dependencies which are pinned in ``tox."
+"ini`` files.)"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:631
+msgid "Open Issues"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:634
+msgid ""
+"Should it be possible for a Dependency Group to include ``[project."
+"dependencies]`` or vice-versa?"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:636
+msgid ""
+"A topic of debate is how -- or if -- Dependency Groups should interact with "
+"``[project.dependencies]`` and ``[project.optional-dependencies]``."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:639
+msgid ""
+"An additional Dependency Object Specifier could be added for including "
+"``[project.dependencies]`` or ``[project.optional-dependencies]`` data to a "
+"Dependency Group. However, it is a goal of this spec that Dependency Groups "
+"should always be resolvable to a list of packages without the use of a build "
+"backend. Therefore, an inclusion of ``[project.dependencies]`` or ``[project."
+"optional-dependencies]`` would need to be defined carefully with respect to "
+"dynamic dependencies."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:647
+msgid ""
+"The inclusion running in the opposite direction -- a ``[project."
+"dependencies]`` list containing a Dependency Group reference, possibly re-"
+"using Dependency Group Include objects as the mechanism -- is also possible "
+"but presents different challenges. Such an addition would introduce new "
+"syntax into the ``[project]`` table, which not all tools would support at "
+"first."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:656
+msgid "Appendix A: Prior Art in Non-Python Languages"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:658
+msgid ""
+"This section is primarily informational and serves to document how other "
+"language ecosystems solve similar problems."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:664
+msgid "JavaScript and ``package.json``"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:666
+msgid ""
+"In the JavaScript community, packages contain a canonical configuration and "
+"data file, similar in scope to ``pyproject.toml``, at ``package.json``."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:669
+msgid ""
+"Two keys in ``package.json`` control dependency data: ``\"dependencies\"`` "
+"and ``\"devDependencies\"``. The role of ``\"dependencies\"`` is effectively "
+"the same as that of ``[project.dependencies]`` in ``pyproject.toml``, "
+"declaring the direct dependencies of a package."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:675
+msgid "``\"dependencies\"`` data"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:677
+msgid ""
+"Dependency data is declared in ``package.json`` as a mapping from package "
+"names to version specifiers."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:680
+msgid ""
+"Version specifiers support a small grammar of possible versions, ranges, and "
+"other values, similar to Python's :pep:`440` version specifiers."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:683
+msgid ""
+"For example, here is a partial ``package.json`` file declaring a few "
+"dependencies:"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:696
+msgid ""
+"The use of the ``@`` symbol is a `scope <https://docs.npmjs.com/cli/v10/"
+"using-npm/scope>`__ which declares the package owner, for organizationally "
+"owned packages. ``\"@angular/compiler\"`` therefore declares a package named "
+"``compiler`` grouped under ``angular`` ownership."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:703
+msgid "Dependencies Referencing URLs and Local Paths"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:705
+msgid ""
+"Dependency specifiers support a syntax for URLs and Git repositories, "
+"similar to the provisions in Python packaging."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:708
+msgid ""
+"URLs may be used in lieu of version numbers. When used, they implicitly "
+"refer to tarballs of package source code."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:711
+msgid ""
+"Git repositories may be similarly used, including support for committish "
+"specifiers."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:714
+msgid ""
+"Unlike :pep:`440`, NPM allows for the use of local paths to package source "
+"code directories for dependencies. When these data are added to ``package."
+"json`` via the standard ``npm install --save`` command, the path is "
+"normalized to a relative path, from the directory containing ``package."
+"json``, and prefixed with ``file:``. For example, the following partial "
+"``package.json`` contains a reference to a sibling of the current directory:"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:729
+msgid ""
+"The `official NPM documentation <https://docs.npmjs.com/cli/v8/configuring-"
+"npm/package-json#local-paths>`__ states that local path dependencies "
+"\"should not\" be published to public package repositories, but makes no "
+"statement about the inherent validity or invalidity of such dependency data "
+"in published packages."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:736
+msgid "``\"devDependencies\"`` data"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:738
+msgid ""
+"``package.json`` is permitted to contain a second section named "
+"``\"devDependencies\"``, in the same format as ``\"dependencies\"``. The "
+"dependencies declared in ``\"devDependencies\"`` are not installed by "
+"default when a package is installed from the package repository (e.g. as "
+"part of a dependency being resolved) but are installed when ``npm install`` "
+"is run in the source tree containing ``package.json``."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:745
+msgid ""
+"Just as ``\"dependencies\"`` supports URLs and local paths, so does "
+"``\"devDependencies\"``."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:749
+msgid "``\"peerDependencies\"`` and ``\"optionalDependencies\"``"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:751
+msgid ""
+"There are two additional, related sections in ``package.json`` which have "
+"relevance."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:754
+msgid ""
+"``\"peerDependencies\"`` declares a list of dependencies in the same format "
+"as ``\"dependencies\"``, but with the meaning that these are a compatibility "
+"declaration. For example, the following data declares compatibility with "
+"package ``foo`` version 2:"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:768
+msgid ""
+"``\"optionalDependencies\"`` declares a list of dependencies which should be "
+"installed if possible, but which should not be treated as failures if they "
+"are unavailable. It also uses the same mapping format as "
+"``\"dependencies\"``."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:773
+msgid "``\"peerDependenciesMeta\"``"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:775
+msgid ""
+"``\"peerDependenciesMeta\"`` is a section which allows for additional "
+"control over how ``\"peerDependencies\"`` are treated."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:778
+msgid ""
+"Warnings about missing dependencies can be disabled by setting packages to "
+"``optional`` in this section, as in the following sample:"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:795
+msgid "``--omit`` and ``--include``"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:797
+msgid ""
+"The ``npm install`` command supports two options, ``--omit`` and ``--"
+"include``, which can control whether \"prod\", \"dev\", \"optional\", or "
+"\"peer\" dependencies are installed."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:800
+msgid ""
+"The \"prod\" name refers to dependencies listed under ``\"dependencies\"``."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:802
+msgid ""
+"By default, all four groups are installed when ``npm install`` is executed "
+"against a source tree, but these options can be used to control installation "
+"behavior more precisely. Furthermore, these values can be declared in ``."
+"npmrc`` files, allowing per-user and per-project configurations to control "
+"installation behaviors."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:811
+msgid "Ruby & Ruby Gems"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:813
+msgid ""
+"Ruby projects may or may not be intended to produce packages (\"gems\") in "
+"the Ruby ecosystem. In fact, the expectation is that most users of the "
+"language do not want to produce gems and have no interest in producing their "
+"own packages. Many tutorials do not touch on how to produce packages, and "
+"the toolchain never requires user code to be packaged for supported use-"
+"cases."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:819
+msgid "Ruby splits requirement specification into two separate files."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:821
+msgid ""
+"``Gemfile``: a dedicated file which only supports requirement data in the "
+"form of dependency groups"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:823
+msgid ""
+"``<package>.gemspec``: a dedicated file for declaring package (gem) metadata"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:825
+msgid ""
+"The ``bundler`` tool, providing the ``bundle`` command, is the primary "
+"interface for using ``Gemfile`` data."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:828
+msgid ""
+"The ``gem`` tool is responsible for building gems from ``.gemspec`` data, "
+"via the ``gem build`` command."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:832
+msgid "Gemfiles & bundle"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:834
+msgid ""
+"A `Gemfile <https://bundler.io/v1.12/man/gemfile.5.html>`__ is a Ruby file "
+"containing ``gem`` directives enclosed in any number of ``group`` "
+"declarations. ``gem`` directives may also be used outside of the ``group`` "
+"declaration, in which case they form an implicitly unnamed group of "
+"dependencies."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:839
+msgid ""
+"For example, the following ``Gemfile`` lists ``rails`` as a project "
+"dependency. All other dependencies are listed under groups:"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:861
+msgid ""
+"If a user executes ``bundle install`` with these data, all groups are "
+"installed. Users can deselect groups by creating or modifying a bundler "
+"config in ``.bundle/config``, either manually or via the CLI. For example, "
+"``bundle config set --local without 'lint:docs'``."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:866
+msgid ""
+"It is not possible, with the above data, to exclude the top-level use of the "
+"``'rails'`` gem or to refer to that implicit grouping by name."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:870
+msgid "gemspec and packaged dependency data"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:872
+msgid ""
+"A `gemspec file <https://guides.rubygems.org/specification-reference/>`__ is "
+"a ruby file containing a `Gem::Specification <https://ruby-doc.org/"
+"stdlib-3.0.1/libdoc/rubygems/rdoc/Gem/Specification.html>`__ instance "
+"declaration."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:877
+msgid ""
+"Only two fields in a ``Gem::Specification`` pertain to package dependency "
+"data. These are ``add_development_dependency`` and "
+"``add_runtime_dependency``. A ``Gem::Specification`` object also provides "
+"methods for adding dependencies dynamically, including ``add_dependency`` "
+"(which adds a runtime dependency)."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:882
+msgid ""
+"Here is a variant of the ``rails.gemspec`` file, with many fields removed or "
+"shortened to simplify:"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:908
+msgid ""
+"Note that there is no use of ``add_development_dependency``. Some other "
+"mainstream, major packages (e.g. ``rubocop``) do not use development "
+"dependencies in their gems."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:912
+msgid ""
+"Other projects *do* use this feature. For example, ``kramdown`` makes use of "
+"development dependencies, containing the following specification in its "
+"``Rakefile``:"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:923
+msgid ""
+"The purpose of development dependencies is only to declare an implicit "
+"group, as part of the ``.gemspec``, which can then be used by ``bundler``."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:926
+msgid ""
+"For full details, see the ``gemspec`` directive in ``bundler``\\'s "
+"`documentation on Gemfiles <https://bundler.io/v1.12/man/gemfile.5."
+"html#GEMSPEC-gemspec->`__. However, the integration between ``.gemspec`` "
+"development dependencies and ``Gemfile``/``bundle`` usage is best understood "
+"via an example."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:933
+msgid "gemspec development dependency example"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:935
+msgid ""
+"Consider the following simple project in the form of a ``Gemfile`` and ``."
+"gemspec``. The ``cool-gem.gemspec`` file:"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:953
+msgid "and the ``Gemfile``:"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:961
+msgid ""
+"The ``gemspec`` directive in ``Gemfile`` declares a dependency on the local "
+"package, ``cool-gem``, defined in the locally available ``cool-gem.gemspec`` "
+"file. It *also* implicitly adds all development dependencies to a dependency "
+"group named ``development``."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:966
+msgid ""
+"Therefore, in this case, the ``gemspec`` directive is equivalent to the "
+"following ``Gemfile`` content:"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:980
+msgid "Appendix B: Prior Art in Python"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:982
+msgid ""
+"In the absence of any prior standard for Dependency Groups, two known "
+"workflow tools, PDM and Poetry, have defined their own solutions."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:985
+msgid ""
+"This section will primarily focus on these two tools as cases of prior art "
+"regarding the definition and use of Dependency Groups in Python."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:989
+msgid "Projects are Packages"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:991
+msgid ""
+"Both PDM and Poetry treat the projects they support as packages. This allows "
+"them to use and interact with standard ``pyproject.toml`` metadata for some "
+"of their needs, and allows them to support installation of the \"current "
+"project\" by doing a build and install using their build backends."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:996
+msgid ""
+"Effectively, this means that neither Poetry nor PDM supports non-package "
+"projects."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:999
+msgid "Non-Standard Dependency Specifiers"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1001
+msgid ""
+"PDM and Poetry extend :pep:`508` dependency specifiers with additional "
+"features which are not part of any shared standard. The two tools use "
+"slightly different approaches to these problems, however."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1005
+msgid ""
+"PDM supports specifying local paths, and editable installs, via a syntax "
+"which looks like a set of arguments to ``pip install``. For example, the "
+"following dependency group includes a local package in editable mode:"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1014
+msgid ""
+"This declares a dependency group ``mygroup`` which includes a local editable "
+"install from the ``foo`` directory."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1017
+msgid ""
+"Poetry describes dependency groups as tables, mapping package names to "
+"specifiers. For example, the same configuration as the above ``mygroup`` "
+"example might appear as follows under Poetry:"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1026
+msgid ""
+"PDM restricts itself to a string syntax, and Poetry introduces tables which "
+"describe dependencies."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1030
+msgid "Installing and Referring to Dependency Groups"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1032
+msgid ""
+"Both PDM and Poetry have tool-specific support for installing dependency "
+"groups. Because both projects support their own lockfile formats, they also "
+"both have the capability to transparently use a dependency group name to "
+"refer to the *locked* dependency data for that group."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1037
+msgid ""
+"However, neither tool's dependency groups can be referenced natively from "
+"other tools like ``tox``, ``nox``, or ``pip``. Attempting to install a "
+"dependency group under ``tox``, for example, requires an explicit call to "
+"PDM or Poetry to parse their dependency data and do the relevant "
+"installation step."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1046
+msgid "Appendix C: Use Cases"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1049
+msgid "Web Applications"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1051
+msgid ""
+"A web application (e.g. a Django or Flask app) often does not need to build "
+"a distribution, but bundles and ships its source to a deployment toolchain."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1054
+msgid ""
+"For example, a source code repository may define Python packaging metadata "
+"as well as containerization or other build pipeline metadata "
+"(``Dockerfile``, etc). The Python application is built by copying the entire "
+"repository into a build context, installing dependencies, and bundling the "
+"result as a machine image or container."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1061
+msgid ""
+"Such applications have dependency groups for the build, but also for "
+"linting, testing, etc. In practice, today, these applications often define "
+"themselves as packages to be able to use packaging tools and mechanisms like "
+"``extras`` to manage their dependency groups. However, they are not "
+"conceptually packages, meant for distribution in sdist or wheel format."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1067
+msgid ""
+"Dependency Groups allow these applications to define their various "
+"dependencies without relying on packaging metadata, and without trying to "
+"express their needs in packaging terms."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1072
+msgid "Libraries"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1074
+msgid ""
+"Libraries are Python packages which build distributions (sdist and wheel) "
+"and publish them to PyPI."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1077
+msgid ""
+"For libraries, Dependency Groups represent an alternative to ``extras`` for "
+"defining groups of development dependencies, with the important advantages "
+"noted above."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1081
+msgid ""
+"A library may define groups for ``test`` and ``typing`` which allow testing "
+"and type-checking, and therefore rely on the library's own dependencies (as "
+"specified in ``[project.dependencies]``)."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1085
+msgid ""
+"Other development needs may not require installation of the package at all. "
+"For example, a ``lint`` Dependency Group may be valid and faster to install "
+"without the library, as it only installs tools like ``black``, ``ruff``, or "
+"``flake8``."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1089
+msgid ""
+"``lint`` and ``test`` environments may also be valuable locations to hook in "
+"IDE or editor support. See the case below for a fuller description of such "
+"usage."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1093
+msgid ""
+"Here's an example Dependency Groups table which might be suitable for a "
+"library:"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1104
+msgid ""
+"Note that none of these implicitly install the library itself. It is "
+"therefore the responsibility of any environment management toolchain to "
+"install the appropriate Dependency Groups along with the library when "
+"needed, as in the case of ``test``."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1110
+msgid "Data Science Projects"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1112
+msgid ""
+"Data Science Projects typically take the form of a logical collection of "
+"scripts and utilities for processing and analyzing data, using a common "
+"toolchain. Components may be defined in the Jupyter Notebook format (ipynb), "
+"but rely on the same common core set of utilities."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1117
+msgid ""
+"In such a project, there is no package to build or install. Therefore, "
+"``pyproject.toml`` currently does not offer any solution for dependency "
+"management or declaration."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1121
+msgid ""
+"It is valuable for such a project to be able to define at least one major "
+"grouping of dependencies. For example:"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1129
+msgid ""
+"However, it may also be necessary for various scripts to have additional "
+"supporting tools. Projects may even have conflicting or incompatible tools "
+"or tool versions for different components, as they evolve over time."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1133
+msgid "Consider the following more elaborate configuration:"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1142
+msgid ""
+"This defines ``scikit`` and ``scikit-old`` as two similar variants of the "
+"common suite of dependencies, pulling in different versions of ``scikit-"
+"learn`` to suit different scripts."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1146
+msgid ""
+"This PEP only defines these data. It does not formalize any mechanism for a "
+"Data Science Project (or any other type of project) to install the "
+"dependencies into known environments or associate those environments with "
+"the various scripts. Such combinations of data are left as a problem for "
+"tool authors to solve, and perhaps eventually standardize."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1153
+msgid "Lockfile Generation"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1155
+msgid ""
+"There are a number of tools which generate lockfiles in the Python ecosystem "
+"today. PDM and Poetry each use their own lockfile formats, and pip-tools "
+"generates ``requirements.txt`` files with version pins and hashes."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1159
+msgid ""
+"Dependency Groups are not an appropriate place to store lockfiles, as they "
+"lack many of the necessary features. Most notably, they cannot store hashes, "
+"which most lockfile users consider essential."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1163
+msgid ""
+"However, Dependency Groups are a valid input to tools which generate "
+"lockfiles. Furthermore, PDM and Poetry both allow a Dependency Group name "
+"(under their notions of Dependency Groups) to be used to refer to its locked "
+"variant."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1167
+msgid ""
+"Therefore, consider a tool which produces lockfiles, here called ``$TOOL``. "
+"It might be used as follows:"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1175
+msgid ""
+"All that such a tool needs to do is to ensure that its lockfile data records "
+"the name ``test`` in order to support such usage."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1178
+msgid ""
+"The mutual compatibility of Dependency Groups is not guaranteed. For "
+"example, the Data Science example above shows conflicting versions of "
+"``scikit-learn``. Therefore, installing multiple locked dependency groups in "
+"tandem may require that tools apply additional constraints or generate "
+"additional lockfile data. These problems are considered out of scope for "
+"this PEP."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1184
+msgid "As two examples of how combinations might be locked:"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1186
+msgid ""
+"A tool might require that lockfile data be explicitly generated for any "
+"combination to be considered valid"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1189
+msgid ""
+"Poetry implements the requirement that all Dependency Groups be mutually "
+"compatible, and generates only one locked version. (Meaning it finds a "
+"single solution, rather than a set or matrix of solutions.)"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1194
+msgid "Environment Manager Inputs"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1196
+msgid ""
+"A common usage in tox, Nox, and Hatch is to install a set of dependencies "
+"into a testing environment."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1199
+msgid ""
+"For example, under ``tox.ini``, type checking dependencies may be defined "
+"inline:"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1210
+msgid ""
+"This combination provides a desirable developer experience within a limited "
+"context. Under the relevant environment manager, the dependencies which are "
+"needed for the test environment are declared alongside the commands which "
+"need those dependencies. They are not published in package metadata, as "
+"``extras`` would be, and they are discoverable for the tool which needs them "
+"to build the relevant environment."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1217
+msgid ""
+"Dependency Groups apply to such usages by effectively \"lifting\" these "
+"requirements data from a tool-specific location into a more broadly "
+"available one. In the example above, only ``tox`` has access to the declared "
+"list of dependencies. Under an implementation supporting dependency groups, "
+"the same data might be available in a Dependency Group:"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1228
+msgid ""
+"The data can then be used under multiple tools. For example, ``tox`` might "
+"implement support as ``dependency_groups = typing``, replacing the ``deps`` "
+"usage above."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1232
+msgid ""
+"In order for Dependency Groups to be a viable alternative for users of "
+"environment managers, the environment managers will need to support "
+"processing Dependency Groups similarly to how they support inline dependency "
+"declaration."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1237
+msgid "IDE and Editor Use of Requirements Data"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1239
+msgid ""
+"IDE and editor integrations may benefit from conventional or configurable "
+"name definitions for Dependency Groups which are used for integrations."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1242
+msgid ""
+"There are at least two known scenarios in which it is valuable for an editor "
+"or IDE to be capable of discovering the non-published dependencies of a "
+"project:"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1245
+msgid ""
+"testing: IDEs such as VS Code support GUI interfaces for running particular "
+"tests"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1248
+msgid ""
+"linting: editors and IDEs often support linting and autoformatting "
+"integrations which highlight or autocorrect errors"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1251
+msgid ""
+"These cases could be handled by defining conventional group names like "
+"``test``, ``lint``, and ``fix``, or by defining configuration mechanisms "
+"which allow the selection of Dependency Groups."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1255
+msgid ""
+"For example, the following ``pyproject.toml`` declares the three "
+"aforementioned groups:"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1265
+msgid ""
+"This PEP makes no attempt to standardize such names or reserve them for such "
+"uses. IDEs may standardize or may allow users to configure the group names "
+"used for various purposes."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1269
+msgid ""
+"This declaration allows the project author's knowledge of the appropriate "
+"tools for the project to be shared with all editors of that project."
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1273
+msgid "Copyright"
+msgstr ""
+
+#: ../../peps/peps/pep-0735.rst:1275
+msgid ""
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
+msgstr ""
