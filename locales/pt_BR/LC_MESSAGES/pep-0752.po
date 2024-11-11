@@ -1,0 +1,950 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the PEPs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PEPs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-11 15:59+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pt_BR\n"
+"Language-Team: pt_BR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../peps/peps/pep-0752.rst
+msgid "Author"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:3
+msgid "Ofek Lev <ofekmeister@gmail.com>"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst
+msgid "Sponsor"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:4
+msgid "Barry Warsaw <barry@python.org>"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst
+msgid "PEP-Delegate"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:5
+msgid "Dustin Ingram <di@python.org>"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst
+msgid "Discussions-To"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:6
+msgid "https://discuss.python.org/t/63192"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst
+msgid "Status"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:7
+msgid "Draft"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst
+msgid "Type"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:8
+msgid "Standards Track"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst
+msgid "Topic"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:9
+msgid "Packaging"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst
+msgid "Created"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:10
+msgid "13-Aug-2024"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst
+msgid "Post-History"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:11
+msgid ""
+"`18-Aug-2024 <https://discuss.python.org/t/61227>`__, `07-Sep-2024 <https://"
+"discuss.python.org/t/63192>`__,"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:15
+msgid "Abstract"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:17
+msgid ""
+"This PEP specifies a way for organizations to reserve package name prefixes "
+"for future uploads."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:20
+msgid ""
+"\"Namespaces are one honking great idea -- let's do more of those!\" - :pep:"
+"`20`"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:24
+msgid "Motivation"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:26
+msgid ""
+"The current ecosystem lacks a way for projects with many packages to signal "
+"a verified pattern of ownership. Such projects fall into two categories."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:29
+msgid ""
+"The first category is projects [1]_ that want complete control over their "
+"namespace. A few examples:"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:32
+msgid ""
+"Major cloud providers like Amazon, Google and Microsoft have a common prefix "
+"for each feature's corresponding package [3]_. For example, most of Google's "
+"packages are prefixed by ``google-cloud-`` e.g. ``google-cloud-compute`` for "
+"`using virtual machines <https://cloud.google.com/products/compute>`__."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:36
+msgid ""
+"`OpenTelemetry <https://opentelemetry.io>`__ is an open standard for "
+"observability with `official packages`__ for the core APIs and SDK with "
+"`contrib packages`__ to collect data from various sources. All packages are "
+"prefixed by ``opentelemetry-`` with child prefixes in the form "
+"``opentelemetry-<component>-<name>-``. The contrib packages live in a "
+"central repository and they are the only ones with the ability to publish."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:46
+msgid ""
+"The second category is projects [2]_ that want to share their namespace such "
+"that some packages are officially maintained and third-party developers are "
+"encouraged to participate by publishing their own. Some examples:"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:50
+msgid ""
+"`Project Jupyter <https://jupyter.org>`__ is devoted to the development of "
+"tooling for sharing interactive documents. They support `extensions`__ which "
+"in most cases (and in all cases for officially maintained extensions) are "
+"prefixed by ``jupyter-``."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:54
+msgid ""
+"`Django <https://www.djangoproject.com>`__ is one of the most widely used "
+"web frameworks in existence. They have the concept of `reusable apps`__, "
+"which are commonly installed via `third-party packages <https://"
+"djangopackages.org>`__ that implement a subset of functionality to extend "
+"Django-based websites. These packages are by convention prefixed by ``django-"
+"`` or ``dj-``."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:64
+msgid ""
+"Such projects are uniquely vulnerable to name-squatting attacks which can "
+"ultimately result in `dependency confusion`__."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:69
+msgid ""
+"For example, say a new product is released for which monitoring would be "
+"valuable. It would be reasonable to assume that `Datadog <https://www."
+"datadoghq.com>`__ would eventually support it as an official integration. It "
+"takes a nontrivial amount of time to deliver such an integration due to "
+"roadmap prioritization and the time required for implementation. It would be "
+"impossible to reserve the name of every potential package so in the interim "
+"an attacker may create a package that appears legitimate which would execute "
+"malicious code at runtime. Not only are users more likely to install such "
+"packages but doing so taints the perception of the entire project."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:80
+msgid ""
+"Although :pep:`708` attempts to address this attack vector, it is "
+"specifically about the case of multiple repositories being considered during "
+"dependency resolution and does not offer any protection to the "
+"aforementioned use cases."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:84
+msgid ""
+"Namespacing also would drastically reduce the incidence of `typosquatting "
+"<https://en.wikipedia.org/wiki/Typosquatting>`__ because typos would have to "
+"be in the prefix itself which is `normalized <naming_>`_ and likely to be a "
+"short, well-known identifier like ``aws-``. In recent years, typosquatting "
+"has become a popular attack vector [4]_."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:91
+msgid ""
+"The `current protection`__ against typosquatting used by PyPI is to "
+"normalize similar characters but that is insufficient for these use cases."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:97
+msgid "Rationale"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:99
+msgid ""
+"Other package ecosystems have generally solved this problem by taking one of "
+"two approaches: either minimizing or maximizing backwards compatibility."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:102
+msgid ""
+"`NPM <https://www.npmjs.com>`__ has the concept of `scoped packages <https://"
+"docs.npmjs.com/about-scopes>`__ which were `introduced`__ primarily to "
+"combat there being a dearth of available good package names (whether a real "
+"or perceived phenomenon). When a user or organization signs up they are "
+"given a scope that matches their name. For example, the `package <https://"
+"www.npmjs.com/package/@google-cloud/storage>`__ for using Google Cloud "
+"Storage is ``@google-cloud/storage`` where ``@google-cloud/`` is the scope. "
+"Regular user accounts (non-organization) may publish `unscoped`__ packages "
+"for public use. This approach has the lowest amount of backwards "
+"compatibility because every installer and tool has to be modified to account "
+"for scopes."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:114
+msgid ""
+"`NuGet <https://www.nuget.org>`__ has the concept of `package ID prefix "
+"reservation`__ which was `introduced`__ primarily to satisfy users wishing "
+"to know where a package came from. A package name prefix may be reserved for "
+"use by one or more owners. Every reserved package has a special indication "
+"`on its page <https://www.nuget.org/packages/Google.Cloud.Storage.V1>`__ to "
+"communicate this. After reservation, any upload with a reserved prefix will "
+"fail if the user is not an owner of the prefix. Existing packages that have "
+"a prefix that is owned may continue to release as usual. This approach has "
+"the highest amount of backwards compatibility because only modifications to "
+"indices like PyPI are required and installers do not need to change."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:131
+msgid ""
+"This PEP specifies the NuGet approach of authorized reservation across a "
+"flat namespace. Any solution that requires new package syntax must be built "
+"atop the existing flat namespace and therefore implicit namespaces acquired "
+"via a reservation mechanism would be a prerequisite to such explicit "
+"namespaces."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:136
+msgid ""
+"Although existing packages matching a reserved namespace would be untouched, "
+"preventing future unauthorized uploads and strategically applying :pep:`541` "
+"takedown requests for malicious cases would reduce risks to users to a "
+"negligible level."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:142
+msgid "Terminology"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:144
+msgid ""
+"The key words \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL "
+"NOT\", \"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\", \"MAY\", and "
+"\"OPTIONAL\" in this document are to be interpreted as described in :rfc:"
+"`2119`."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:148
+msgid "Organization"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:149
+msgid ""
+"`Organizations <orgs_>`_ are entities that own projects and have various "
+"users associated with them."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:151
+msgid "Grant"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:152
+msgid "A grant is a reservation of a namespace for a package repository."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:153
+msgid "Open Namespace"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:154
+msgid ""
+"An `open <open-namespaces_>`_ namespace allows for uploads from any project "
+"owner."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:156
+msgid "Restricted Namespace"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:157
+msgid ""
+"A restricted namespace only allows uploads from an owner of the namespace."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:158
+msgid "Parent Namespace"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:159
+msgid ""
+"A namespace's parent refers to the namespace without the trailing hyphenated "
+"component e.g. the parent of ``foo-bar`` is ``foo``."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:161
+msgid "Child Namespace"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:162
+msgid ""
+"A namespace's child refers to the namespace with additional trailing "
+"hyphenated components e.g. ``foo-bar`` is a valid child of ``foo`` as is "
+"``foo-bar-baz``."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:167
+msgid "Specification"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:172
+msgid "Organizations"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:174
+msgid ""
+"Any package repository that allows for the creation of projects (e.g. non-"
+"mirrors) MAY offer the concept of `organizations`__. Organizations are "
+"entities that own projects and have various users associated with them."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:180
+msgid ""
+"Organizations MAY reserve one or more namespaces. Such reservations neither "
+"confer ownership nor grant special privileges to existing projects."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:186
+msgid "Naming"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:188
+msgid ""
+"A namespace MUST be a `valid`__ project name and `normalized`__ internally e."
+"g. ``foo.bar`` would become ``foo-bar``."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:195
+msgid "Semantics"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:197
+msgid "A namespace grant bestows ownership over the following:"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:199
+msgid ""
+"A project matching the namespace itself such as the placeholder package "
+"`microsoft <https://pypi.org/project/microsoft/>`__."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:201
+msgid ""
+"Projects that start with the namespace followed by a hyphen. For example, "
+"the namespace ``foo`` would match the normalized project name ``foo-bar`` "
+"but not the project name ``foobar``."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:205
+msgid "Package name matching acts upon the `normalized <naming_>`_ namespace."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:207
+msgid ""
+"Namespaces are per-package repository and SHALL NOT be shared between "
+"repositories. For example, if PyPI has a namespace ``microsoft`` that is "
+"owned by the company Microsoft, packages starting with ``microsoft-`` that "
+"come from other non-PyPI mirror repositories do not confer the same level of "
+"trust."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:212
+msgid ""
+"Grants MUST NOT overlap. For example, if there is an existing grant for "
+"``foo-bar`` then a new grant for ``foo`` would be forbidden. An overlap is "
+"determined by comparing the `normalized <naming_>`_ proposed namespace with "
+"the normalized namespace of every existing root grant. Every comparison must "
+"append a hyphen to the end of the proposed and existing namespace. An "
+"overlap is detected when any existing namespace starts with the proposed "
+"namespace."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:222
+msgid "Uploads"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:224
+msgid "If the following criteria are all true for a given upload:"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:226
+msgid "The project does not yet exist."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:227
+msgid "The name matches a reserved namespace."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:228
+msgid ""
+"The project is not owned by an organization with an active grant for the "
+"namespace."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:231
+msgid "Then the upload MUST fail with a 403 HTTP status code."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:236
+msgid "Open Namespaces"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:238
+msgid ""
+"The owner of a grant may choose to allow others the ability to release new "
+"projects with the associated namespace. Doing so MUST allow `uploads "
+"<uploads_>`_ for new projects matching the namespace from any user."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:242
+msgid ""
+"It is possible for the owner of a namespace to both make it open and allow "
+"other organizations to use the grant. In this case, the authorized "
+"organizations have no special permissions and are equivalent to an open "
+"grant without ownership."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:250
+msgid "Hidden Grants"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:252
+msgid ""
+"Repositories MAY create hidden grants that are not visible to the public "
+"which prevent their namespaces from being claimed by others. Such grants "
+"MUST NOT be `open <open-namespaces_>`_ and SHOULD NOT be exposed in the `API "
+"<repository-metadata_>`_."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:257
+msgid ""
+"Hidden grants are useful for repositories that wish to enforce upload "
+"restrictions without the need to expose the namespace to the public."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:263
+msgid "Repository Metadata"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:265
+msgid ""
+"The :pep:`JSON API <691>` version will be incremented from ``1.2`` to "
+"``1.3``. The following API changes MUST be implemented by repositories that "
+"support this PEP. Repositories that do not support this PEP MUST NOT "
+"implement these changes so that consumers of the API are able to determine "
+"whether the repository supports this PEP."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:274
+msgid "Project Detail"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:276
+msgid ""
+"The :pep:`project detail <691#project-detail>` response will be modified as "
+"follows."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:279
+msgid ""
+"The ``namespace`` key MUST be ``null`` if the project does not match an "
+"active namespace grant. If the project does match a namespace grant, the "
+"value MUST be a mapping with the following keys:"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:283
+msgid ""
+"``prefix``: This is the associated `normalized <naming_>`_ namespace e.g. "
+"``foo-bar``. If the owner of the project owns multiple matching grants then "
+"this MUST be the namespace with the most number of characters. For example, "
+"if the project name matched both ``foo-bar`` and ``foo-bar-baz`` then this "
+"key would be the latter."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:288
+msgid ""
+"``authorized``: This is a boolean and will be true if the project owner is "
+"an organization and is one of the current owners of the grant. This is "
+"useful for tools that wish to make a distinction between official and "
+"community packages."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:292 ../../peps/peps/pep-0752.rst:307
+msgid ""
+"``open``: This is a boolean indicating whether the namespace is `open <open-"
+"namespaces_>`_."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:296
+msgid "Namespace Detail"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:298
+msgid ""
+"The format of this URL is ``/namespace/<namespace>`` where ``<namespace>`` "
+"is the `normalized <naming_>`_ namespace. For example, the URL for the "
+"namespace ``foo.bar`` would be ``/namespace/foo-bar``."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:302
+msgid "The response will be a mapping with the following keys:"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:304
+msgid ""
+"``prefix``: This is the `normalized <naming_>`_ version of the namespace e."
+"g. ``foo-bar``."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:306
+msgid ""
+"``owner``: This is the organization that is responsible for the namespace."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:309
+msgid ""
+"``parent``: This is the parent namespace if it exists. For example, if the "
+"namespace is ``foo-bar`` and there is an active grant for ``foo``, then this "
+"would be ``\"foo\"``. If there is no parent then this key will be ``null``."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:312
+msgid ""
+"``children``: This is an array of any child namespaces. For example, if the "
+"namespace is ``foo`` and there are active grants for ``foo-bar`` and ``foo-"
+"bar-baz`` then this would be ``[\"foo-bar\", \"foo-bar-baz\"]``."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:317
+msgid "Grant Removal"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:319
+msgid ""
+"When a reserved namespace becomes unclaimed, repositories MUST set the "
+"``namespace`` key to ``null`` in the `API <project-detail_>`_."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:322
+msgid ""
+"Namespaces that were previously claimed but are now not SHOULD be eligible "
+"for claiming again by any organization."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:326
+msgid "Community Buy-in"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:328
+msgid ""
+"Representatives from the following organizations have expressed support for "
+"this PEP (with a link to the discussion):"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:331
+msgid ""
+"`Apache Airflow <https://github.com/apache/airflow/"
+"discussions/41657#discussioncomment-10412999>`__"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:332
+msgid "`Typeshed <https://discuss.python.org/t/1609/37>`__"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:333
+msgid ""
+"`Project Jupyter <https://discuss.python.org/t/61227/16>`__ (`expanded "
+"<https://discuss.python.org/t/61227/48>`__)"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:335
+msgid "`Microsoft <https://discuss.python.org/t/63191/40>`__"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:336
+msgid "`DataDog <https://discuss.python.org/t/63191/53>`__"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:339
+msgid "Backwards Compatibility"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:341
+msgid ""
+"There are no intrinsic concerns because there is still a flat namespace and "
+"installers need no modification. Additionally, many projects have already "
+"chosen to signal a shared purpose with a prefix like `typeshed has done`__."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:348
+msgid "Security Implications"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:350
+msgid ""
+"There is an opportunity to build on top of :pep:`740` and :pep:`480` so that "
+"one could prove cryptographically that a specific release came from an owner "
+"of the associated namespace. This PEP makes no effort to describe how this "
+"will happen other than that work is planned for the future."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:356
+msgid "How to Teach This"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:358
+msgid ""
+"For consumers of packages we will document how metadata is exposed in the "
+"`API <repository-metadata_>`_ and potentially in future note tooling that "
+"supports utilizing namespaces to provide extra security guarantees during "
+"installation."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:364
+msgid "Reference Implementation"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:366 ../../peps/peps/pep-0752.rst:471
+msgid "None at this time."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:369
+msgid "Rejected Ideas"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:372
+msgid "Organization Scoping"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:374
+msgid ""
+"The primary motivation for this PEP is to reduce dependency confusion "
+"attacks and NPM-style scoping with an allowance of the legacy flat namespace "
+"would increase the risk. If documentation instructed a user to install "
+"``bar`` in the namespace ``foo`` then the user must be careful to install "
+"``@foo/bar`` and not ``foo-bar``, or vice versa. The Python packaging "
+"ecosystem has normalization rules for names in order to maximize the ease of "
+"communication and this would be a regression."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:382
+msgid ""
+"The runtime environment of Python is also not conducive to scoping. Whereas "
+"multiple versions of the same JavaScript package may coexist, Python only "
+"allows a single global namespace. Barring major changes to the language "
+"itself, this is nearly impossible to change. Additionally, users have come "
+"to expect that the package name is usually the same as what they would "
+"import and eliminating the flat namespace would do away with that convention."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:389
+msgid ""
+"Scoping would be particularly affected by organization changes which are "
+"bound to happen over time. An organization may change their name due to "
+"internal shuffling, an acquisition, or any other reason. Whenever this "
+"happens every project they own would in effect be renamed which would cause "
+"unnecessary confusion for users, frequently."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:395
+msgid ""
+"Finally, the disruption to the community would be massive because it would "
+"require an update from every package manager, security scanner, IDE, etc. "
+"New packages released with the scoping would be incompatible with older "
+"tools and would cause confusion for users along with frustration from "
+"maintainers having to triage such complaints."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:402
+msgid "Encourage Dedicated Package Repositories"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:404
+msgid ""
+"Critically, this imposes a burden on projects to maintain their own infra. "
+"This is an unrealistic expectation for the vast majority of companies and a "
+"complete non-starter for community projects."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:408
+msgid ""
+"This does not help in most cases because the default behavior of most "
+"package managers is to use PyPI so users attempting to perform a simple "
+"``pip install`` would already be vulnerable to malicious packages."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:412
+msgid ""
+"In this theoretical future every project must document how to add their "
+"repository to dependency resolution, which would be different for each "
+"package manager. Few package managers are able to download specific "
+"dependencies from specific repositories and would require users to use "
+"verbose configuration in the common case."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:418
+msgid ""
+"The ones that do not support this would instead find a given package using "
+"an ordered enumeration of repositories, leading to dependency confusion. For "
+"example, say a user wants two packages from two custom repositories ``X`` "
+"and ``Y``. If each repository has both packages but one is malicious on "
+"``X`` and the other is malicious on ``Y`` then the user would be unable to "
+"satisfy their requirements without encountering a malicious package."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:426
+msgid "Use Fixed Prefixes"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:428
+msgid ""
+"The idea here would be to have one or more top-level fixed prefixes that are "
+"used for namespace reservations:"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:431
+msgid "``com-``: Reserved for corporate organizations."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:432
+msgid "``org-``: Reserved for community organizations."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:434
+msgid ""
+"Organizations would then apply for a namespace prefixed by the type of their "
+"organization."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:437
+msgid ""
+"This would cause perpetual disruption because when projects begin it is "
+"unknown whether a user base will be large enough to warrant a namespace "
+"reservation. Whenever that happens the project would have to be renamed "
+"which would put a high maintenance burden on the project maintainers and "
+"would cause confusion for users who have to learn a new way to reference the "
+"project's packages. The potential for this deterring projects from reserving "
+"namespaces at all is high."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:445
+msgid ""
+"Another issue with this approach is that projects often have branding in "
+"mind (`example`__) and would be reluctant to change their package names."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:450
+msgid ""
+"It's unrealistic to expect every company and project to voluntarily change "
+"their existing and future package names."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:454
+msgid "Use DNS"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:456
+msgid ""
+"The `idea <https://discuss.python.org/t/63455>`__ here is to add a new "
+"metadata field to projects in the API called ``domain-authority``. "
+"Repositories would support a new endpoint for verifying the domain via "
+"HTTPS. Clients would then support options to allow certain domains."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:461
+msgid ""
+"This does not solve the problem for the target audience who do not check "
+"where their packages are coming from and is more about checking for the "
+"integrity of uploads which is already supported in a more secure way by :pep:"
+"`740`."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:465
+msgid ""
+"Most projects do not have a domain and could not benefit from this, unfairly "
+"favoring organizations that have the financial means to acquire one."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:469
+msgid "Open Issues"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:474
+msgid "Footnotes"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:476
+msgid "Additional examples of projects with restricted namespaces:"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:478
+msgid ""
+"`Typeshed <https://github.com/python/typeshed>`__ is a community effort to "
+"maintain type stubs for various packages. The stub packages they maintain "
+"mirror the package name they target and are prefixed by ``types-``. For "
+"example, the package ``requests`` has a stub that users would depend on "
+"called ``types-requests``. Unofficial stubs are not supposed to use the "
+"``types-`` prefix and are expected to use a ``-stubs`` suffix instead."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:484
+msgid ""
+"`Sphinx <https://www.sphinx-doc.org>`__ is a documentation framework popular "
+"for large technical projects such as `Swift <https://www.swift.org>`__ and "
+"Python itself. They have the concept of `extensions`__ which are prefixed by "
+"``sphinxcontrib-``, many of which are maintained within a `dedicated "
+"organization <https://github.com/sphinx-contrib>`__."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:490
+msgid ""
+"`Apache Airflow <https://airflow.apache.org>`__ is a platform to "
+"programmatically orchestrate tasks as directed acyclic graphs (DAGs). They "
+"have the concept of `plugins`__, and also `providers`__ which are prefixed "
+"by ``apache-airflow-providers-``."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:495
+msgid "Additional examples of projects with open namespaces:"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:497
+msgid ""
+"`pytest <https://docs.pytest.org>`__ is Python's most popular testing "
+"framework. They have the concept of `plugins`__ which may be developed by "
+"anyone and by convention are prefixed by ``pytest-``."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:500
+msgid ""
+"`MkDocs <https://www.mkdocs.org>`__ is a documentation framework based on "
+"Markdown files. They also have the concept of `plugins <https://www.mkdocs."
+"org/dev-guide/plugins/>`__ which may be developed by anyone and are usually "
+"prefixed by ``mkdocs-``."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:504
+msgid ""
+"`Datadog <https://www.datadoghq.com>`__ offers observability as a service "
+"for organizations at any scale. The `Datadog Agent <https://docs.datadoghq."
+"com/agent/>`__ ships out-of-the-box with `official integrations <https://"
+"github.com/DataDog/integrations-core>`__ for many products, like various "
+"databases and web servers, which are distributed as Python packages that are "
+"prefixed by ``datadog-``. There is support for creating `third-party "
+"integrations`__ which customers may run."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:513
+msgid "The following shows the package prefixes for the major cloud providers:"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:515
+msgid "Amazon: `aws-cdk- <https://docs.aws.amazon.com/cdk/api/v2/python/>`__"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:516
+msgid ""
+"Google: `google-cloud- <https://github.com/googleapis/google-cloud-python/"
+"tree/main/packages>`__ and others based on ``google-``"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:518
+msgid ""
+"Microsoft: `azure- <https://github.com/Azure/azure-sdk-for-python/tree/main/"
+"sdk>`__"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:520
+msgid "Examples of typosquatting attacks targeting Python users:"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:522
+msgid ""
+"``django-`` namespace was squatted, among other packages, leading to a "
+"`postmortem <https://mail.python.org/pipermail/security-announce/2017-"
+"September/000000.html>`__ by PyPI."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:525
+msgid ""
+"``cupy-`` namespace was `squatted <https://github.com/cupy/cupy/"
+"issues/4787>`__ by a malicious actor thousands of times."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:528
+msgid ""
+"``scikit-`` namespace was `squatted <https://blog.phylum.io/a-pypi-"
+"typosquatting-campaign-post-mortem/>`__, among other packages. Notice how "
+"packages with a known prefix are much more prone to successful attacks."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:532
+msgid ""
+"``typing-`` namespace was `squatted <https://zero.checkmarx.com/malicious-"
+"pypi-user-strikes-again-with-typosquatting-starjacking-and-unpacks-tailor-"
+"made-malware-b12669cefaa5>`__ and this would be useful to prevent as a "
+"`hidden grant <hidden-grants_>`__."
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:543
+msgid "Copyright"
+msgstr ""
+
+#: ../../peps/peps/pep-0752.rst:545
+msgid ""
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
+msgstr ""

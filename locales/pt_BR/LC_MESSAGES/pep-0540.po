@@ -6,122 +6,122 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PEPs\n"
+"Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 20:07+0000\n"
+"POT-Creation-Date: 2024-11-11 15:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.16.0\n"
 
-#: ../pep-0540.txt
+#: ../../peps/peps/pep-0540.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../pep-0540.txt:5
+#: ../../peps/peps/pep-0540.rst:5
 msgid "Victor Stinner <vstinner@python.org>"
 msgstr ""
 
-#: ../pep-0540.txt
+#: ../../peps/peps/pep-0540.rst
 msgid "BDFL-Delegate"
 msgstr ""
 
-#: ../pep-0540.txt:6
+#: ../../peps/peps/pep-0540.rst:6
 msgid "INADA Naoki"
 msgstr ""
 
-#: ../pep-0540.txt
+#: ../../peps/peps/pep-0540.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../pep-0540.txt:7
+#: ../../peps/peps/pep-0540.rst:7
 msgid "Final"
 msgstr ""
 
-#: ../pep-0540.txt
+#: ../../peps/peps/pep-0540.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../pep-0540.txt:8
+#: ../../peps/peps/pep-0540.rst:8
 msgid "Standards Track"
 msgstr ""
 
-#: ../pep-0540.txt
+#: ../../peps/peps/pep-0540.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../pep-0540.txt:10
+#: ../../peps/peps/pep-0540.rst:10
 msgid "05-Jan-2016"
 msgstr ""
 
-#: ../pep-0540.txt
+#: ../../peps/peps/pep-0540.rst
 msgid "Python-Version"
 msgstr ""
 
-#: ../pep-0540.txt:11
+#: ../../peps/peps/pep-0540.rst:11
 msgid "3.7"
 msgstr ""
 
-#: ../pep-0540.txt
+#: ../../peps/peps/pep-0540.rst
 msgid "Resolution"
 msgstr ""
 
-#: ../pep-0540.txt:12
+#: ../../peps/peps/pep-0540.rst:12
 msgid "https://mail.python.org/pipermail/python-dev/2017-December/151173.html"
 msgstr ""
 
-#: ../pep-0540.txt:16
+#: ../../peps/peps/pep-0540.rst:16
 msgid "Abstract"
 msgstr ""
 
-#: ../pep-0540.txt:18
+#: ../../peps/peps/pep-0540.rst:18
 msgid ""
 "Add a new \"UTF-8 Mode\" to enhance Python's use of UTF-8.  When UTF-8 Mode "
 "is active, Python will:"
 msgstr ""
 
-#: ../pep-0540.txt:21
+#: ../../peps/peps/pep-0540.rst:21
 msgid ""
 "use the ``utf-8`` encoding, regardless of the locale currently set by the "
 "current platform, and"
 msgstr ""
 
-#: ../pep-0540.txt:23
+#: ../../peps/peps/pep-0540.rst:23
 msgid ""
 "change the ``stdin`` and ``stdout`` error handlers to ``surrogateescape``."
 msgstr ""
 
-#: ../pep-0540.txt:26
+#: ../../peps/peps/pep-0540.rst:26
 msgid ""
 "This mode is off by default, but is automatically activated when using the "
 "\"POSIX\" locale."
 msgstr ""
 
-#: ../pep-0540.txt:29
+#: ../../peps/peps/pep-0540.rst:29
 msgid ""
 "Add the ``-X utf8`` command line option and ``PYTHONUTF8`` environment "
 "variable to control UTF-8 Mode."
 msgstr ""
 
-#: ../pep-0540.txt:34
+#: ../../peps/peps/pep-0540.rst:34
 msgid "Rationale"
 msgstr ""
 
-#: ../pep-0540.txt:37
+#: ../../peps/peps/pep-0540.rst:37
 msgid "Locale encoding and UTF-8"
 msgstr ""
 
-#: ../pep-0540.txt:39
+#: ../../peps/peps/pep-0540.rst:39
 msgid ""
 "Python 3.6 uses the locale encoding for filenames, environment variables, "
 "standard streams, etc. The locale encoding is inherited from the locale; the "
 "encoding and the locale are tightly coupled."
 msgstr ""
 
-#: ../pep-0540.txt:43
+#: ../../peps/peps/pep-0540.rst:43
 msgid ""
 "Many users inherit the ASCII encoding from the POSIX locale, aka the \"C\" "
 "locale, but are unable change the locale for various reasons.  This encoding "
@@ -129,7 +129,7 @@ msgid ""
 "likely to cause trouble."
 msgstr ""
 
-#: ../pep-0540.txt:48
+#: ../../peps/peps/pep-0540.rst:48
 msgid ""
 "It isn't always easy to get an accurate locale.  Locales don't get the exact "
 "same name on different Linux distributions, FreeBSD, macOS, etc. And some "
@@ -139,7 +139,7 @@ msgid ""
 "encoding than the filesystem or local terminal encoding on the same machine."
 msgstr ""
 
-#: ../pep-0540.txt:56
+#: ../../peps/peps/pep-0540.rst:56
 msgid ""
 "On the flip side, Python 3.6 is already using UTF-8 by default on macOS, "
 "Android and Windows (:pep:`529`) for most functions -- although ``open()`` "
@@ -148,7 +148,7 @@ msgid ""
 "for all strings."
 msgstr ""
 
-#: ../pep-0540.txt:63
+#: ../../peps/peps/pep-0540.rst:63
 msgid ""
 "UTF-8 support is nearly ubiquitous for data read and written by modern "
 "platforms.  It also has excellent support in Python.  The problem is simply "
@@ -156,24 +156,24 @@ msgid ""
 "itself: ignore the locale encoding and use UTF-8."
 msgstr ""
 
-#: ../pep-0540.txt:70
-msgid "Passthough for undecodable bytes: surrogateescape"
+#: ../../peps/peps/pep-0540.rst:70
+msgid "Passthrough for undecodable bytes: surrogateescape"
 msgstr ""
 
-#: ../pep-0540.txt:72
+#: ../../peps/peps/pep-0540.rst:72
 msgid ""
 "When decoding bytes from UTF-8 using the default ``strict`` error handler, "
 "Python 3 raises a ``UnicodeDecodeError`` on the first undecodable byte."
 msgstr ""
 
-#: ../pep-0540.txt:76
+#: ../../peps/peps/pep-0540.rst:76
 msgid ""
 "Unix command line tools like ``cat`` or ``grep`` and most Python 2 "
 "applications simply do not have this class of bugs: they don't decode data, "
 "but process data as a raw bytes sequence."
 msgstr ""
 
-#: ../pep-0540.txt:80
+#: ../../peps/peps/pep-0540.rst:80
 msgid ""
 "Python 3 already has a solution to behave like Unix tools and Python 2: the "
 "``surrogateescape`` error handler (:pep:`383`). It allows processing data as "
@@ -181,14 +181,14 @@ msgid ""
 "as surrogate characters."
 msgstr ""
 
-#: ../pep-0540.txt:85
+#: ../../peps/peps/pep-0540.rst:85
 msgid ""
 "UTF-8 Mode sets the ``surrogateescape`` error handler for ``stdin`` and "
 "``stdout``, since these streams as commonly associated to Unix command line "
 "tools."
 msgstr ""
 
-#: ../pep-0540.txt:89
+#: ../../peps/peps/pep-0540.rst:89
 msgid ""
 "However, users have a different expectation on files. Files are expected to "
 "be properly encoded, and Python is expected to fail early when ``open()`` is "
@@ -196,17 +196,17 @@ msgid ""
 "``open()`` default error handler remains ``strict`` for these reasons."
 msgstr ""
 
-#: ../pep-0540.txt:97
+#: ../../peps/peps/pep-0540.rst:97
 msgid "No change by default for best backward compatibility"
 msgstr ""
 
-#: ../pep-0540.txt:99
+#: ../../peps/peps/pep-0540.rst:99
 msgid ""
 "While UTF-8 is perfect in most cases, sometimes the locale encoding is "
 "actually the best encoding."
 msgstr ""
 
-#: ../pep-0540.txt:102
+#: ../../peps/peps/pep-0540.rst:102
 msgid ""
 "This PEP changes the behaviour for the POSIX locale since this locale is "
 "usually equivalent to the ASCII encoding, whereas UTF-8 is a much better "
@@ -214,118 +214,118 @@ msgid ""
 "risk or regression."
 msgstr ""
 
-#: ../pep-0540.txt:107
+#: ../../peps/peps/pep-0540.rst:107
 msgid ""
 "As users are responsible to enable explicitly the new UTF-8 Mode for these "
 "other locales, they are responsible for any potential mojibake issues caused "
 "by UTF-8 Mode."
 msgstr ""
 
-#: ../pep-0540.txt:113
+#: ../../peps/peps/pep-0540.rst:113
 msgid "Proposal"
 msgstr ""
 
-#: ../pep-0540.txt:115
+#: ../../peps/peps/pep-0540.rst:115
 msgid ""
 "Add a new UTF-8 Mode to use the UTF-8 encoding, ignore the locale encoding, "
 "and change ``stdin`` and ``stdout`` error handlers to ``surrogateescape``."
 msgstr ""
 
-#: ../pep-0540.txt:119
+#: ../../peps/peps/pep-0540.rst:119
 msgid ""
 "Add the new ``-X utf8`` command line option and ``PYTHONUTF8`` environment "
 "variable.  Users can explicitly activate UTF-8 Mode with the command-line "
 "option ``-X utf8`` or by setting the environment variable ``PYTHONUTF8=1``."
 msgstr ""
 
-#: ../pep-0540.txt:124
+#: ../../peps/peps/pep-0540.rst:124
 msgid ""
 "This mode is disabled by default and enabled by the POSIX locale.  Users can "
 "explicitly disable UTF-8 Mode with the command-line option ``-X utf8=0`` or "
 "by setting the environment variable ``PYTHONUTF8=0``."
 msgstr ""
 
-#: ../pep-0540.txt:128
+#: ../../peps/peps/pep-0540.rst:128
 msgid ""
 "For standard streams, the ``PYTHONIOENCODING`` environment variable has "
 "priority over UTF-8 Mode."
 msgstr ""
 
-#: ../pep-0540.txt:131
+#: ../../peps/peps/pep-0540.rst:131
 msgid ""
 "On Windows, the ``PYTHONLEGACYWINDOWSFSENCODING`` environment variable (:pep:"
 "`529`) has the priority over UTF-8 Mode."
 msgstr ""
 
-#: ../pep-0540.txt:134
+#: ../../peps/peps/pep-0540.rst:134
 msgid "Effects of UTF-8 Mode:"
 msgstr ""
 
-#: ../pep-0540.txt:136
+#: ../../peps/peps/pep-0540.rst:136
 msgid "``sys.getfilesystemencoding()`` returns ``'UTF-8'``."
 msgstr ""
 
-#: ../pep-0540.txt:137
+#: ../../peps/peps/pep-0540.rst:137
 msgid ""
 "``locale.getpreferredencoding()`` returns ``UTF-8``; its *do_setlocale* "
 "argument, and the locale encoding, are ignored."
 msgstr ""
 
-#: ../pep-0540.txt:139
+#: ../../peps/peps/pep-0540.rst:139
 msgid ""
 "``sys.stdin`` and ``sys.stdout`` error handler is set to ``surrogateescape``."
 msgstr ""
 
-#: ../pep-0540.txt:142
+#: ../../peps/peps/pep-0540.rst:142
 msgid "Side effects:"
 msgstr ""
 
-#: ../pep-0540.txt:144
+#: ../../peps/peps/pep-0540.rst:144
 msgid ""
 "``open()`` uses the UTF-8 encoding by default.  However, it still uses the "
 "``strict`` error handler by default."
 msgstr ""
 
-#: ../pep-0540.txt:146
+#: ../../peps/peps/pep-0540.rst:146
 msgid "``os.fsdecode()`` and ``os.fsencode()`` use the UTF-8 encoding."
 msgstr ""
 
-#: ../pep-0540.txt:147
+#: ../../peps/peps/pep-0540.rst:147
 msgid ""
 "Command line arguments, environment variables and filenames use the UTF-8 "
 "encoding."
 msgstr ""
 
-#: ../pep-0540.txt:152
+#: ../../peps/peps/pep-0540.rst:152
 msgid "Relationship with the locale coercion (PEP 538)"
 msgstr ""
 
-#: ../pep-0540.txt:154
+#: ../../peps/peps/pep-0540.rst:154
 msgid ""
 "The POSIX locale enables the locale coercion (:pep:`538`) and the UTF-8 mode "
 "(:pep:`540`). When the locale coercion is enabled, enabling the UTF-8 mode "
 "has no additional effect."
 msgstr ""
 
-#: ../pep-0540.txt:158
+#: ../../peps/peps/pep-0540.rst:158
 msgid "The UTF-8 Mode has the same effect as locale coercion:"
 msgstr ""
 
-#: ../pep-0540.txt:160
+#: ../../peps/peps/pep-0540.rst:160
 msgid "``sys.getfilesystemencoding()`` returns ``'UTF-8'``,"
 msgstr ""
 
-#: ../pep-0540.txt:161
+#: ../../peps/peps/pep-0540.rst:161
 msgid "``locale.getpreferredencoding()`` returns ``UTF-8``, and"
 msgstr ""
 
-#: ../pep-0540.txt:162
+#: ../../peps/peps/pep-0540.rst:162
 msgid ""
 "the ``sys.stdin`` and ``sys.stdout`` error handlers are set to "
 "``surrogateescape``."
 msgstr ""
 
-#: ../pep-0540.txt:165
+#: ../../peps/peps/pep-0540.rst:165
 msgid ""
 "These changes only affect Python code. But the locale coercion has "
 "additional effects: the ``LC_CTYPE`` environment variable and the "
@@ -334,7 +334,7 @@ msgid ""
 "two PEPs are complementary."
 msgstr ""
 
-#: ../pep-0540.txt:171
+#: ../../peps/peps/pep-0540.rst:171
 msgid ""
 "On platforms like Centos 7 where locale coercion is not supported, the POSIX "
 "locale only enables UTF-8 Mode.  In this case, Python code uses the UTF-8 "
@@ -342,14 +342,14 @@ msgid ""
 "locale encoding, which is usually ASCII for the POSIX locale."
 msgstr ""
 
-#: ../pep-0540.txt:177
+#: ../../peps/peps/pep-0540.rst:177
 msgid ""
 "While the UTF-8 Mode is supported on all platforms and can be enabled with "
 "any locale, the locale coercion is not supported by all platforms and is "
 "restricted to the POSIX locale."
 msgstr ""
 
-#: ../pep-0540.txt:181
+#: ../../peps/peps/pep-0540.rst:181
 msgid ""
 "The UTF-8 Mode has only an impact on Python child processes when the "
 "``PYTHONUTF8`` environment variable is set to ``1``, whereas the locale "
@@ -357,7 +357,7 @@ msgid ""
 "processes."
 msgstr ""
 
-#: ../pep-0540.txt:186
+#: ../../peps/peps/pep-0540.rst:186
 msgid ""
 "The benefit of the locale coercion approach is that it helps ensure that "
 "encoding handling in binary extension modules and child processes is "
@@ -367,11 +367,11 @@ msgid ""
 "settings."
 msgstr ""
 
-#: ../pep-0540.txt:195
+#: ../../peps/peps/pep-0540.rst:195
 msgid "Backward Compatibility"
 msgstr ""
 
-#: ../pep-0540.txt:197
+#: ../../peps/peps/pep-0540.rst:197
 msgid ""
 "The only backward incompatible change is that the POSIX locale now enables "
 "the UTF-8 Mode by default: it will now use the UTF-8 encoding, ignore the "
@@ -379,207 +379,207 @@ msgid ""
 "``surrogateescape``."
 msgstr ""
 
-#: ../pep-0540.txt:204
+#: ../../peps/peps/pep-0540.rst:204
 msgid "Annex: Encodings And Error Handlers"
 msgstr ""
 
-#: ../pep-0540.txt:206
+#: ../../peps/peps/pep-0540.rst:206
 msgid ""
 "UTF-8 Mode changes the default encoding and error handler used by "
 "``open()``, ``os.fsdecode()``, ``os.fsencode()``, ``sys.stdin``, ``sys."
 "stdout`` and ``sys.stderr``."
 msgstr ""
 
-#: ../pep-0540.txt:211
+#: ../../peps/peps/pep-0540.rst:211
 msgid "Encoding and error handler"
 msgstr ""
 
-#: ../pep-0540.txt:214 ../pep-0540.txt:225 ../pep-0540.txt:239
-#: ../pep-0540.txt:250
+#: ../../peps/peps/pep-0540.rst:214 ../../peps/peps/pep-0540.rst:225
+#: ../../peps/peps/pep-0540.rst:239 ../../peps/peps/pep-0540.rst:250
 msgid "Function"
 msgstr ""
 
-#: ../pep-0540.txt:214 ../pep-0540.txt:225 ../pep-0540.txt:239
-#: ../pep-0540.txt:250
+#: ../../peps/peps/pep-0540.rst:214 ../../peps/peps/pep-0540.rst:225
+#: ../../peps/peps/pep-0540.rst:239 ../../peps/peps/pep-0540.rst:250
 msgid "Default"
 msgstr ""
 
-#: ../pep-0540.txt:214
+#: ../../peps/peps/pep-0540.rst:214
 msgid "UTF-8 Mode or POSIX locale"
 msgstr ""
 
-#: ../pep-0540.txt:216 ../pep-0540.txt:227 ../pep-0540.txt:241
-#: ../pep-0540.txt:252
+#: ../../peps/peps/pep-0540.rst:216 ../../peps/peps/pep-0540.rst:227
+#: ../../peps/peps/pep-0540.rst:241 ../../peps/peps/pep-0540.rst:252
 msgid "open()"
 msgstr ""
 
-#: ../pep-0540.txt:216 ../pep-0540.txt:218 ../pep-0540.txt:227
-#: ../pep-0540.txt:229
+#: ../../peps/peps/pep-0540.rst:216 ../../peps/peps/pep-0540.rst:218
+#: ../../peps/peps/pep-0540.rst:227 ../../peps/peps/pep-0540.rst:229
 msgid "locale/strict"
 msgstr ""
 
-#: ../pep-0540.txt:216 ../pep-0540.txt:241
+#: ../../peps/peps/pep-0540.rst:216 ../../peps/peps/pep-0540.rst:241
 msgid "**UTF-8**/strict"
 msgstr ""
 
-#: ../pep-0540.txt:217 ../pep-0540.txt:228 ../pep-0540.txt:242
-#: ../pep-0540.txt:253
+#: ../../peps/peps/pep-0540.rst:217 ../../peps/peps/pep-0540.rst:228
+#: ../../peps/peps/pep-0540.rst:242 ../../peps/peps/pep-0540.rst:253
 msgid "os.fsdecode(), os.fsencode()"
 msgstr ""
 
-#: ../pep-0540.txt:217 ../pep-0540.txt:228
+#: ../../peps/peps/pep-0540.rst:217 ../../peps/peps/pep-0540.rst:228
 msgid "locale/surrogateescape"
 msgstr ""
 
-#: ../pep-0540.txt:217
+#: ../../peps/peps/pep-0540.rst:217
 msgid "**UTF-8**/surrogateescape"
 msgstr ""
 
-#: ../pep-0540.txt:218 ../pep-0540.txt:229 ../pep-0540.txt:243
-#: ../pep-0540.txt:254
+#: ../../peps/peps/pep-0540.rst:218 ../../peps/peps/pep-0540.rst:229
+#: ../../peps/peps/pep-0540.rst:243 ../../peps/peps/pep-0540.rst:254
 msgid "sys.stdin, sys.stdout"
 msgstr ""
 
-#: ../pep-0540.txt:218
+#: ../../peps/peps/pep-0540.rst:218
 msgid "**UTF-8/surrogateescape**"
 msgstr ""
 
-#: ../pep-0540.txt:219 ../pep-0540.txt:230 ../pep-0540.txt:244
-#: ../pep-0540.txt:255
+#: ../../peps/peps/pep-0540.rst:219 ../../peps/peps/pep-0540.rst:230
+#: ../../peps/peps/pep-0540.rst:244 ../../peps/peps/pep-0540.rst:255
 msgid "sys.stderr"
 msgstr ""
 
-#: ../pep-0540.txt:219 ../pep-0540.txt:230
+#: ../../peps/peps/pep-0540.rst:219 ../../peps/peps/pep-0540.rst:230
 msgid "locale/backslashreplace"
 msgstr ""
 
-#: ../pep-0540.txt:219
+#: ../../peps/peps/pep-0540.rst:219
 msgid "**UTF-8**/backslashreplace"
 msgstr ""
 
-#: ../pep-0540.txt:222 ../pep-0540.txt:247
+#: ../../peps/peps/pep-0540.rst:222 ../../peps/peps/pep-0540.rst:247
 msgid "By comparison, Python 3.6 uses:"
 msgstr ""
 
-#: ../pep-0540.txt:225
+#: ../../peps/peps/pep-0540.rst:225
 msgid "POSIX locale"
 msgstr ""
 
-#: ../pep-0540.txt:229
+#: ../../peps/peps/pep-0540.rst:229
 msgid "locale/**surrogateescape**"
 msgstr ""
 
-#: ../pep-0540.txt:234
+#: ../../peps/peps/pep-0540.rst:234
 msgid "Encoding and error handler on Windows"
 msgstr ""
 
-#: ../pep-0540.txt:236
+#: ../../peps/peps/pep-0540.rst:236
 msgid "On Windows, the encodings and error handlers are different:"
 msgstr ""
 
-#: ../pep-0540.txt:239 ../pep-0540.txt:250
+#: ../../peps/peps/pep-0540.rst:239 ../../peps/peps/pep-0540.rst:250
 msgid "Legacy Windows FS encoding"
 msgstr ""
 
-#: ../pep-0540.txt:239
+#: ../../peps/peps/pep-0540.rst:239
 msgid "UTF-8 Mode"
 msgstr ""
 
-#: ../pep-0540.txt:241 ../pep-0540.txt:252
+#: ../../peps/peps/pep-0540.rst:241 ../../peps/peps/pep-0540.rst:252
 msgid "mbcs/strict"
 msgstr ""
 
-#: ../pep-0540.txt:242 ../pep-0540.txt:253
+#: ../../peps/peps/pep-0540.rst:242 ../../peps/peps/pep-0540.rst:253
 msgid "UTF-8/surrogatepass"
 msgstr ""
 
-#: ../pep-0540.txt:242 ../pep-0540.txt:253
+#: ../../peps/peps/pep-0540.rst:242 ../../peps/peps/pep-0540.rst:253
 msgid "**mbcs/replace**"
 msgstr ""
 
-#: ../pep-0540.txt:243 ../pep-0540.txt:254
+#: ../../peps/peps/pep-0540.rst:243 ../../peps/peps/pep-0540.rst:254
 msgid "UTF-8/surrogateescape"
 msgstr ""
 
-#: ../pep-0540.txt:244 ../pep-0540.txt:255
+#: ../../peps/peps/pep-0540.rst:244 ../../peps/peps/pep-0540.rst:255
 msgid "UTF-8/backslashreplace"
 msgstr ""
 
-#: ../pep-0540.txt:258
+#: ../../peps/peps/pep-0540.rst:258
 msgid ""
 "The \"Legacy Windows FS encoding\" is enabled by the "
 "``PYTHONLEGACYWINDOWSFSENCODING`` environment variable."
 msgstr ""
 
-#: ../pep-0540.txt:261
+#: ../../peps/peps/pep-0540.rst:261
 msgid ""
 "If stdin and/or stdout is redirected to a pipe, ``sys.stdin`` and/or ``sys."
 "output`` uses ``mbcs`` encoding by default rather than UTF-8. But in UTF-8 "
 "Mode, ``sys.stdin`` and ``sys.stdout`` always use the UTF-8 encoding."
 msgstr ""
 
-#: ../pep-0540.txt:267
+#: ../../peps/peps/pep-0540.rst:267
 msgid ""
 "There is no POSIX locale on Windows. The ANSI code page is used as the "
 "locale encoding, and this code page never uses the ASCII encoding."
 msgstr ""
 
-#: ../pep-0540.txt:273
+#: ../../peps/peps/pep-0540.rst:273
 msgid "Links"
 msgstr ""
 
-#: ../pep-0540.txt:275
+#: ../../peps/peps/pep-0540.rst:275
 msgid ""
 "`bpo-29240: Implementation of the PEP 540: Add a new UTF-8 Mode <http://bugs."
 "python.org/issue29240>`_"
 msgstr ""
 
-#: ../pep-0540.txt:277
+#: ../../peps/peps/pep-0540.rst:277
 msgid ":pep:`538`: \"Coercing the legacy C locale to C.UTF-8\""
 msgstr ""
 
-#: ../pep-0540.txt:279
+#: ../../peps/peps/pep-0540.rst:279
 msgid ":pep:`529`: \"Change Windows filesystem encoding to UTF-8\""
 msgstr ""
 
-#: ../pep-0540.txt:281
+#: ../../peps/peps/pep-0540.rst:281
 msgid ":pep:`528`: \"Change Windows console encoding to UTF-8\""
 msgstr ""
 
-#: ../pep-0540.txt:283
+#: ../../peps/peps/pep-0540.rst:283
 msgid ":pep:`383`: \"Non-decodable Bytes in System Character Interfaces\""
 msgstr ""
 
-#: ../pep-0540.txt:288
+#: ../../peps/peps/pep-0540.rst:288
 msgid "Post History"
 msgstr ""
 
-#: ../pep-0540.txt:290
+#: ../../peps/peps/pep-0540.rst:290
 msgid ""
 "2017-12: `[Python-Dev] PEP 540: Add a new UTF-8 Mode <https://mail.python."
 "org/pipermail/python-dev/2017-December/151054.html>`_"
 msgstr ""
 
-#: ../pep-0540.txt:292
+#: ../../peps/peps/pep-0540.rst:292
 msgid ""
 "2017-04: `[Python-Dev] Proposed BDFL Delegate update for PEPs 538 & 540 "
 "(assuming UTF-8 for *nix system boundaries) <https://mail.python.org/"
 "pipermail/python-dev/2017-April/147795.html>`_"
 msgstr ""
 
-#: ../pep-0540.txt:295
+#: ../../peps/peps/pep-0540.rst:295
 msgid ""
 "2017-01: `[Python-ideas] PEP 540: Add a new UTF-8 Mode <https://mail.python."
 "org/pipermail/python-ideas/2017-January/044089.html>`_"
 msgstr ""
 
-#: ../pep-0540.txt:297
+#: ../../peps/peps/pep-0540.rst:297
 msgid ""
 "2017-01: `bpo-28180: Implementation of the PEP 538: coerce C locale to C."
 "utf-8 (msg284764) <https://bugs.python.org/issue28180#msg284764>`_"
 msgstr ""
 
-#: ../pep-0540.txt:299
+#: ../../peps/peps/pep-0540.rst:299
 msgid ""
 "2016-08-17: `bpo-27781: Change sys.getfilesystemencoding() on Windows to "
 "UTF-8 (msg272916) <https://bugs.python.org/issue27781#msg272916>`_ -- Victor "
@@ -587,36 +587,36 @@ msgid ""
 "to UTF-8)"
 msgstr ""
 
-#: ../pep-0540.txt:306
+#: ../../peps/peps/pep-0540.rst:306
 msgid "Version History"
 msgstr ""
 
-#: ../pep-0540.txt:308
+#: ../../peps/peps/pep-0540.rst:308
 msgid ""
 "Version 4: ``locale.getpreferredencoding()`` now returns ``'UTF-8'`` in the "
 "UTF-8 Mode."
 msgstr ""
 
-#: ../pep-0540.txt:310
+#: ../../peps/peps/pep-0540.rst:310
 msgid ""
 "Version 3: The UTF-8 Mode does not change the ``open()`` default error "
 "handler (``strict``) anymore, and the Strict UTF-8 Mode has been removed."
 msgstr ""
 
-#: ../pep-0540.txt:313
+#: ../../peps/peps/pep-0540.rst:313
 msgid ""
 "Version 2: Rewrite the PEP from scratch to make it much shorter and easier "
 "to understand."
 msgstr ""
 
-#: ../pep-0540.txt:315
+#: ../../peps/peps/pep-0540.rst:315
 msgid "Version 1: First version posted to python-dev."
 msgstr ""
 
-#: ../pep-0540.txt:319
+#: ../../peps/peps/pep-0540.rst:319
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../pep-0540.txt:321
+#: ../../peps/peps/pep-0540.rst:321
 msgid "This document has been placed in the public domain."
 msgstr "Este documento foi colocado em domínio público."

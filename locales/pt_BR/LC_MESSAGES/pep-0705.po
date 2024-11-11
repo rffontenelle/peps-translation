@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PEPs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-14 02:33+0000\n"
+"POT-Creation-Date: 2024-11-11 15:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: pt_BR\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.15.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../../peps/peps/pep-0705.rst
 msgid "Author"
@@ -48,7 +48,7 @@ msgid "Status"
 msgstr ""
 
 #: ../../peps/peps/pep-0705.rst:6
-msgid "Accepted"
+msgid "Final"
 msgstr ""
 
 #: ../../peps/peps/pep-0705.rst
@@ -71,7 +71,7 @@ msgstr ""
 msgid "Created"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:10
+#: ../../peps/peps/pep-0705.rst:9
 msgid "07-Nov-2022"
 msgstr ""
 
@@ -79,7 +79,7 @@ msgstr ""
 msgid "Python-Version"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:11
+#: ../../peps/peps/pep-0705.rst:10
 msgid "3.13"
 msgstr ""
 
@@ -87,7 +87,7 @@ msgstr ""
 msgid "Post-History"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:12
+#: ../../peps/peps/pep-0705.rst:11
 msgid ""
 "`30-Sep-2022 <https://mail.python.org/archives/list/typing-sig@python.org/"
 "thread/6FR6RKNUZU4UY6B6RXC2H4IAHKBU3UKV/>`__, `02-Nov-2022 <https://mail."
@@ -103,15 +103,17 @@ msgstr ""
 msgid "Resolution"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:17
-msgid "https://discuss.python.org/t/pep-705-read-only-typeddict-items/37867/39"
+#: ../../peps/peps/pep-0705.rst:16
+msgid ""
+"`29-Feb-2024 <https://discuss.python.org/t/pep-705-read-only-typeddict-"
+"items/37867/39>`__"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:21
+#: ../../peps/peps/pep-0705.rst:22
 msgid "Abstract"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:23
+#: ../../peps/peps/pep-0705.rst:24
 msgid ""
 ":pep:`589` defines the structural type :class:`~typing.TypedDict` for "
 "dictionaries with a fixed set of keys. As ``TypedDict`` is a mutable type, "
@@ -119,7 +121,7 @@ msgid ""
 "parameters in a way that doesn't prevent valid inputs."
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:26
+#: ../../peps/peps/pep-0705.rst:27
 msgid ""
 "This PEP proposes a new type qualifier, ``typing.ReadOnly``, to support "
 "these usages. It makes no Python grammar changes. Correct usage of read-only "
@@ -127,11 +129,11 @@ msgid ""
 "and will not be enforced by Python itself at runtime."
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:29
+#: ../../peps/peps/pep-0705.rst:30
 msgid "Motivation"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:31
+#: ../../peps/peps/pep-0705.rst:32
 msgid ""
 "Representing structured data using (potentially nested) dictionaries with "
 "string keys is a common pattern in Python programs. :pep:`589` allows these "
@@ -143,29 +145,29 @@ msgid ""
 "need to modify their input."
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:34
+#: ../../peps/peps/pep-0705.rst:35
 msgid "Pure functions"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:36
+#: ../../peps/peps/pep-0705.rst:37
 msgid "Consider trying to add type hints to a function ``movie_string``::"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:44
+#: ../../peps/peps/pep-0705.rst:45
 msgid "We could define this ``Movie`` type using a ``TypedDict``::"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:52
+#: ../../peps/peps/pep-0705.rst:53
 msgid "But suppose we have another type where year is required::"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:58
+#: ../../peps/peps/pep-0705.rst:59
 msgid ""
 "Attempting to pass a ``MovieRecord`` into ``movie_string`` results in the "
 "error (using mypy):"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:64
+#: ../../peps/peps/pep-0705.rst:65
 msgid ""
 "This particular use case should be type-safe, but the type checker correctly "
 "stops the user from passing a ``MovieRecord`` into a ``Movie`` parameter in "
@@ -177,27 +179,27 @@ msgid ""
 "using a :pep:`544` :class:`~typing.Protocol`::"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:85
+#: ../../peps/peps/pep-0705.rst:86
 msgid ""
 "This is very repetitive, easy to get wrong, and is still missing important "
 "method definitions like ``__contains__()`` and ``keys()``."
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:88
+#: ../../peps/peps/pep-0705.rst:89
 msgid "Updating nested dicts"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:90
+#: ../../peps/peps/pep-0705.rst:91
 msgid ""
 "The structural typing of ``TypedDict`` is supposed to permit writing update "
 "functions that only constrain the types of items they modify::"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:106
+#: ../../peps/peps/pep-0705.rst:107
 msgid "However, this no longer works once you start nesting dictionaries::"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:122
+#: ../../peps/peps/pep-0705.rst:123
 msgid ""
 "This looks like an error, but is simply due to the (unwanted) ability to "
 "overwrite the ``metadata`` item held by the ``HasTimestampedMetadata`` "
@@ -205,17 +207,17 @@ msgid ""
 "``Logs`` instance."
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:124
+#: ../../peps/peps/pep-0705.rst:125
 msgid ""
 "It is possible to work around this issue with generics (as of Python 3.11), "
 "but it is very complicated, requiring a type parameter for every nested dict."
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:128
+#: ../../peps/peps/pep-0705.rst:129
 msgid "Rationale"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:130
+#: ../../peps/peps/pep-0705.rst:131
 msgid ""
 "These problems can be resolved by removing the ability to update one or more "
 "of the items in a ``TypedDict``. This does not mean the items are immutable: "
@@ -225,19 +227,19 @@ msgid ""
 "qualifier for this purpose."
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:132
+#: ../../peps/peps/pep-0705.rst:133
 msgid ""
 "The ``movie_string`` function in the first motivating example can then be "
 "typed as follows::"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:146
+#: ../../peps/peps/pep-0705.rst:147
 msgid ""
 "A mixture of read-only and non-read-only items is permitted, allowing the "
 "second motivating example to be correctly annotated::"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:168
+#: ../../peps/peps/pep-0705.rst:169
 msgid ""
 "In addition to these benefits, by flagging arguments of a function as read-"
 "only (by using a ``TypedDict`` like ``Movie`` with read-only items), it "
@@ -246,96 +248,96 @@ msgid ""
 "a function interface."
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:170
+#: ../../peps/peps/pep-0705.rst:171
 msgid ""
 "This PEP proposes making ``ReadOnly`` valid only in a ``TypedDict``. A "
 "possible future extension would be to support it in additional contexts, "
 "such as in protocols."
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:174
+#: ../../peps/peps/pep-0705.rst:175
 msgid "Specification"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:176
+#: ../../peps/peps/pep-0705.rst:177
 msgid "A new ``typing.ReadOnly`` type qualifier is added."
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:179
+#: ../../peps/peps/pep-0705.rst:180
 msgid "``typing.ReadOnly`` type qualifier"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:181
+#: ../../peps/peps/pep-0705.rst:182
 msgid ""
 "The ``typing.ReadOnly`` type qualifier is used to indicate that an item "
 "declared in a ``TypedDict`` definition may not be mutated (added, modified, "
 "or removed)::"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:195
+#: ../../peps/peps/pep-0705.rst:196
 msgid "Alternative functional syntax"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:197
+#: ../../peps/peps/pep-0705.rst:198
 msgid ""
 "The :pep:`alternative functional syntax <589#alternative-syntax>` for "
 "TypedDict also supports the new type qualifier::"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:202
+#: ../../peps/peps/pep-0705.rst:203
 msgid "Interaction with other special types"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:204
+#: ../../peps/peps/pep-0705.rst:205
 msgid ""
 "``ReadOnly[]`` can be used with ``Required[]``, ``NotRequired[]`` and "
 "``Annotated[]``, in any nesting order:"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:218
+#: ../../peps/peps/pep-0705.rst:219
 msgid "This is consistent with the behavior introduced in :pep:`655`."
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:221
+#: ../../peps/peps/pep-0705.rst:222
 msgid "Inheritance"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:223
+#: ../../peps/peps/pep-0705.rst:224
 msgid ""
 "Subclasses can redeclare read-only items as non-read-only, allowing them to "
 "be mutated::"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:236
+#: ../../peps/peps/pep-0705.rst:237
 msgid "If a read-only item is not redeclared, it remains read-only::"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:244
+#: ../../peps/peps/pep-0705.rst:245
 msgid "Subclasses can narrow value types of read-only items::"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:253
+#: ../../peps/peps/pep-0705.rst:254
 msgid ""
 "Subclasses can require items that are read-only but not required in the "
 "superclass::"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:263
+#: ../../peps/peps/pep-0705.rst:264
 msgid "Subclasses can combine these rules::"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:271
+#: ../../peps/peps/pep-0705.rst:272
 msgid ""
 "Note that these are just consequences of structural typing, but they are "
 "highlighted here as the behavior now differs from the rules specified in :"
 "pep:`589`."
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:274
+#: ../../peps/peps/pep-0705.rst:275
 msgid "Type consistency"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:276
+#: ../../peps/peps/pep-0705.rst:277
 msgid ""
 "*This section updates the type consistency rules introduced in* :pep:`589` "
 "*to cover the new feature in this PEP. In particular, any pair of types that "
@@ -343,61 +345,61 @@ msgid ""
 "only if) they were already consistent.*"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:278
+#: ../../peps/peps/pep-0705.rst:279
 msgid ""
 "A TypedDict type ``A`` is consistent with TypedDict ``B`` if ``A`` is "
 "structurally compatible with ``B``. This is true if and only if all of the "
 "following are satisfied:"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:280
+#: ../../peps/peps/pep-0705.rst:281
 msgid ""
 "For each item in ``B``, ``A`` has the corresponding key, unless the item in "
 "``B`` is read-only, not required, and of top value type "
 "(``ReadOnly[NotRequired[object]]``)."
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:281
+#: ../../peps/peps/pep-0705.rst:282
 msgid ""
 "For each item in ``B``, if ``A`` has the corresponding key, the "
 "corresponding value type in ``A`` is consistent with the value type in ``B``."
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:282
+#: ../../peps/peps/pep-0705.rst:283
 msgid ""
 "For each non-read-only item in ``B``, its value type is consistent with the "
 "corresponding value type in ``A``."
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:283
+#: ../../peps/peps/pep-0705.rst:284
 msgid ""
 "For each required key in ``B``, the corresponding key is required in ``A``."
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:284
+#: ../../peps/peps/pep-0705.rst:285
 msgid ""
 "For each non-required key in ``B``, if the item is not read-only in ``B``, "
 "the corresponding key is not required in ``A``."
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:286
+#: ../../peps/peps/pep-0705.rst:287
 msgid "Discussion:"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:288
+#: ../../peps/peps/pep-0705.rst:289
 msgid ""
 "All non-specified items in a TypedDict implicitly have value type "
 "``ReadOnly[NotRequired[object]]``."
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:290
+#: ../../peps/peps/pep-0705.rst:291
 msgid ""
 "Read-only items behave covariantly, as they cannot be mutated. This is "
 "similar to container types such as ``Sequence``, and different from non-read-"
 "only items, which behave invariantly. Example::"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:304
+#: ../../peps/peps/pep-0705.rst:305
 msgid ""
 "A TypedDict type ``A`` with no explicit key ``'x'`` is not consistent with a "
 "TypedDict type ``B`` with a non-required key ``'x'``, since at runtime the "
@@ -407,32 +409,32 @@ msgid ""
 "type (``object``). For example::"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:317
+#: ../../peps/peps/pep-0705.rst:318
 msgid "Update method"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:319
+#: ../../peps/peps/pep-0705.rst:320
 msgid ""
 "In addition to existing type checking rules, type checkers should error if a "
 "TypedDict with a read-only item is updated with another TypedDict that "
 "declares that key::"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:329
+#: ../../peps/peps/pep-0705.rst:330
 msgid "Unless the declared value is of bottom type (:data:`~typing.Never`)::"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:338
+#: ../../peps/peps/pep-0705.rst:339
 msgid ""
 "Note: Nothing will ever match the ``Never`` type, so an item annotated with "
 "it must be absent."
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:341
+#: ../../peps/peps/pep-0705.rst:342
 msgid "Keyword argument typing"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:343
+#: ../../peps/peps/pep-0705.rst:344
 msgid ""
 ":pep:`692` introduced ``Unpack`` to annotate ``**kwargs`` with a "
 "``TypedDict``. Marking one or more of the items of a ``TypedDict`` used in "
@@ -441,71 +443,71 @@ msgid ""
 "of the function::"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:362
+#: ../../peps/peps/pep-0705.rst:363
 msgid "Runtime behavior"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:364
+#: ../../peps/peps/pep-0705.rst:365
 msgid ""
 "``TypedDict`` types will gain two new attributes, ``__readonly_keys__`` and "
 "``__mutable_keys__``, which will be frozensets containing all read-only and "
 "non-read-only keys, respectively::"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:375
+#: ../../peps/peps/pep-0705.rst:376
 msgid ""
 "``typing.get_type_hints`` will strip out any ``ReadOnly`` type qualifiers, "
 "unless ``include_extras`` is ``True``::"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:380
+#: ../../peps/peps/pep-0705.rst:381
 msgid ""
 "``typing.get_origin`` and ``typing.get_args`` will be updated to recognize "
 "``ReadOnly``::"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:387
+#: ../../peps/peps/pep-0705.rst:388
 msgid "Backwards compatibility"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:389
+#: ../../peps/peps/pep-0705.rst:390
 msgid ""
 "This PEP adds a new feature to ``TypedDict``, so code that inspects "
 "``TypedDict`` types will have to change to support types using it. This is "
 "expected to mainly affect type-checkers."
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:392
+#: ../../peps/peps/pep-0705.rst:393
 msgid "Security implications"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:394
+#: ../../peps/peps/pep-0705.rst:395
 msgid "There are no known security consequences arising from this PEP."
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:397
+#: ../../peps/peps/pep-0705.rst:398
 msgid "How to teach this"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:399
+#: ../../peps/peps/pep-0705.rst:400
 msgid ""
 "Suggested changes to the :mod:`typing` module documentation, in line with "
 "current practice:"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:401
+#: ../../peps/peps/pep-0705.rst:402
 msgid "Add this PEP to the others listed."
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:402
+#: ../../peps/peps/pep-0705.rst:403
 msgid "Add ``typing.ReadOnly``, linked to TypedDict and this PEP."
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:403
+#: ../../peps/peps/pep-0705.rst:404
 msgid "Add the following text to the TypedDict entry:"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:405
+#: ../../peps/peps/pep-0705.rst:406
 msgid ""
 "The ``ReadOnly`` type qualifier indicates that an item declared in a "
 "``TypedDict`` definition may be read but not mutated (added, modified or "
@@ -513,25 +515,25 @@ msgid ""
 "and so modifying it would break structural subtypes. *insert example*"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:408
+#: ../../peps/peps/pep-0705.rst:409
 msgid "Reference implementation"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:410
+#: ../../peps/peps/pep-0705.rst:411
 msgid ""
 "`pyright 1.1.333 fully implements this proposal <https://github.com/"
 "microsoft/pyright/releases/tag/1.1.333>`_."
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:413
+#: ../../peps/peps/pep-0705.rst:414
 msgid "Rejected alternatives"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:416
+#: ../../peps/peps/pep-0705.rst:417
 msgid "A TypedMapping protocol type"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:418
+#: ../../peps/peps/pep-0705.rst:419
 msgid ""
 "An earlier version of this PEP proposed a ``TypedMapping`` protocol type, "
 "behaving much like a read-only TypedDict but without the constraint that the "
@@ -541,11 +543,11 @@ msgid ""
 "strong use-case motivating the additional complexity."
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:421
+#: ../../peps/peps/pep-0705.rst:422
 msgid "A higher-order ReadOnly type"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:423
+#: ../../peps/peps/pep-0705.rst:424
 msgid ""
 "A generalized higher-order type could be added that removes mutator methods "
 "from its parameter, e.g. ``ReadOnly[MovieRecord]``. For a TypedDict, this "
@@ -556,11 +558,11 @@ msgid ""
 "this PEP narrower."
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:426
+#: ../../peps/peps/pep-0705.rst:427
 msgid "Calling the type ``Readonly``"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:428
+#: ../../peps/peps/pep-0705.rst:429
 msgid ""
 "``Read-only`` is generally hyphenated, and it appears to be common "
 "convention to put initial caps onto words separated by a dash when "
@@ -571,11 +573,11 @@ msgid ""
 "appreciated."
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:431
+#: ../../peps/peps/pep-0705.rst:432
 msgid "Reusing the ``Final`` annotation"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:433
+#: ../../peps/peps/pep-0705.rst:434
 msgid ""
 "The :class:`~typing.Final` annotation prevents an attribute from being "
 "modified, like the proposed ``ReadOnly`` qualifier does for ``TypedDict`` "
@@ -583,34 +585,34 @@ msgid ""
 "subclasses too; from :pep:`591`:"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:435
+#: ../../peps/peps/pep-0705.rst:436
 msgid ""
 "The ``typing.Final`` type qualifier is used to indicate that a variable or "
 "attribute should not be reassigned, redefined, or overridden."
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:437
+#: ../../peps/peps/pep-0705.rst:438
 msgid ""
 "This does not fit with the intended use of ``ReadOnly``. Rather than "
 "introduce confusion by having ``Final`` behave differently in different "
 "contexts, we chose to introduce a new qualifier."
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:440
+#: ../../peps/peps/pep-0705.rst:441
 msgid "A readonly flag"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:442
+#: ../../peps/peps/pep-0705.rst:443
 msgid ""
 "Earlier versions of this PEP introduced a boolean flag that would ensure all "
 "items in a TypedDict were read-only::"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:451
+#: ../../peps/peps/pep-0705.rst:452
 msgid "However, this led to confusion when inheritance was introduced::"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:462
+#: ../../peps/peps/pep-0705.rst:463
 msgid ""
 "It would be reasonable for someone familiar with ``frozen`` (from :mod:"
 "`dataclasses`), on seeing just the definition of B, to assume that the whole "
@@ -619,32 +621,32 @@ msgid ""
 "type."
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:464
+#: ../../peps/peps/pep-0705.rst:465
 msgid ""
 "The original proposal attempted to eliminate this ambiguity by making it "
 "both a type check and a runtime error to define ``B`` in this way. This was "
 "still a source of surprise to people expecting it to work like ``total``."
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:466
+#: ../../peps/peps/pep-0705.rst:467
 msgid ""
 "Given that no extra types could be expressed with the ``readonly`` flag, it "
 "has been removed from the proposal to avoid ambiguity and surprise."
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:469
+#: ../../peps/peps/pep-0705.rst:470
 msgid ""
 "Supporting type-checked removal of read-only qualifier via copy and other "
 "methods"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:471
+#: ../../peps/peps/pep-0705.rst:472
 msgid ""
 "An earlier version of this PEP mandated that code like the following be "
 "supported by type-checkers::"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:494
+#: ../../peps/peps/pep-0705.rst:495
 msgid ""
 "However, there is currently no way to express this in the typeshed, meaning "
 "type-checkers would be forced to special-case these functions. There is "
@@ -652,7 +654,7 @@ msgid ""
 "though arguably this is less readable::"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:499
+#: ../../peps/peps/pep-0705.rst:500
 msgid ""
 "While not as flexible as would be ideal, the current typeshed stubs are "
 "sound, and remain so if this PEP is accepted. Updating the typeshed would "
@@ -664,19 +666,19 @@ msgid ""
 "valuable additions to the language, but are outside the scope of this PEP."
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:501
+#: ../../peps/peps/pep-0705.rst:502
 msgid "Given this, we have deferred any update of the typeshed stubs."
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:504
+#: ../../peps/peps/pep-0705.rst:505
 msgid "Preventing unspecified keys in TypedDicts"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:506
+#: ../../peps/peps/pep-0705.rst:507
 msgid "Consider the following \"type discrimination\" code::"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:520
+#: ../../peps/peps/pep-0705.rst:521
 msgid ""
 "This is a common idiom, and other languages like Typescript allow it. "
 "Technically, however, this code is unsound: ``B`` does not declare ``foo``, "
@@ -684,20 +686,20 @@ msgid ""
 "value may be of any type::"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:530
+#: ../../peps/peps/pep-0705.rst:531
 msgid ""
 "mypy rejects the definition of ``get_field`` on the marked line with the "
 "error ``TypedDict \"B\" has no key \"foo\"``, which is a rather confusing "
 "error message, but is caused by this unsoundness."
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:532
+#: ../../peps/peps/pep-0705.rst:533
 msgid ""
 "One option for correcting this would be to explicitly prevent ``B`` from "
 "holding a ``foo``::"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:540
+#: ../../peps/peps/pep-0705.rst:541
 msgid ""
 "However, this requires every possible key that might be used to discriminate "
 "on to be explicitly declared in every type, which is not generally feasible. "
@@ -706,7 +708,7 @@ msgid ""
 "decorator from :pep:`591`::"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:546
+#: ../../peps/peps/pep-0705.rst:547
 msgid ""
 "The reasoning here is that this prevents ``C`` or any other type from being "
 "considered a \"subclass\" of ``B``, so instances of ``B`` can now be relied "
@@ -714,31 +716,31 @@ msgid ""
 "to be of bottom type."
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:548
+#: ../../peps/peps/pep-0705.rst:549
 msgid ""
 "With the introduction of read-only items, however, this reasoning would "
 "imply type-checkers should ban the following::"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:561
+#: ../../peps/peps/pep-0705.rst:562
 msgid ""
 "The conceptual problem here is that TypedDicts are structural types: they "
 "cannot really be subclassed. As such, using ``@final`` on them is not well-"
 "defined; it is certainly not mentioned in :pep:`591`."
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:563
+#: ../../peps/peps/pep-0705.rst:564
 msgid ""
 "An earlier version of this PEP proposed resolving this by adding a new flag "
 "to ``TypedDict`` that would explicitly prevent other keys from being used, "
 "but not other kinds of structural compatibility::"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:570
+#: ../../peps/peps/pep-0705.rst:571
 msgid "However, during the process of drafting, the situation changed:"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:572
+#: ../../peps/peps/pep-0705.rst:573
 msgid ""
 "pyright, which previously worked similarly to mypy in this type "
 "discrimination case, `changed to allow the original example without error "
@@ -747,29 +749,29 @@ msgid ""
 "due to it being a common idiom"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:573
+#: ../../peps/peps/pep-0705.rst:574
 msgid ""
 "mypy has `an open issue <https://github.com/python/mypy/issues/15697>`_ to "
 "follow the lead of pyright and Typescript and permit the idiom as well"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:574
+#: ../../peps/peps/pep-0705.rst:575
 msgid ""
 "a `draft of PEP-728 <https://github.com/python/peps/pull/3441>`_ was created "
 "that is a superset of the ``other_keys`` functionality"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:576
+#: ../../peps/peps/pep-0705.rst:577
 msgid ""
 "As such, there is less urgency to address this issue in this PEP, and it has "
 "been deferred to PEP-728."
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:580
+#: ../../peps/peps/pep-0705.rst:581
 msgid "Copyright"
 msgstr ""
 
-#: ../../peps/peps/pep-0705.rst:581
+#: ../../peps/peps/pep-0705.rst:582
 msgid ""
 "This document is placed in the public domain or under the CC0-1.0-Universal "
 "license, whichever is more permissive."

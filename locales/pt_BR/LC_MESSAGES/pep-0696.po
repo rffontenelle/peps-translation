@@ -8,14 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-14 02:33+0000\n"
+"POT-Creation-Date: 2024-11-11 15:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.15.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../../peps/peps/pep-0696.rst
 msgid "Author"
@@ -47,9 +47,8 @@ msgid "Status"
 msgstr "Status"
 
 #: ../../peps/peps/pep-0696.rst:6
-#, fuzzy
-msgid "Accepted"
-msgstr "Criada em"
+msgid "Final"
+msgstr ""
 
 #: ../../peps/peps/pep-0696.rst
 msgid "Type"
@@ -71,7 +70,7 @@ msgstr ""
 msgid "Created"
 msgstr "Criada em"
 
-#: ../../peps/peps/pep-0696.rst:10
+#: ../../peps/peps/pep-0696.rst:9
 msgid "14-Jul-2022"
 msgstr ""
 
@@ -79,7 +78,7 @@ msgstr ""
 msgid "Python-Version"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:11
+#: ../../peps/peps/pep-0696.rst:10
 msgid "3.13"
 msgstr ""
 
@@ -87,7 +86,7 @@ msgstr ""
 msgid "Post-History"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:12
+#: ../../peps/peps/pep-0696.rst:11
 msgid ""
 "`22-Mar-2022 <https://mail.python.org/archives/list/typing-sig@python.org/"
 "thread/7VWBZWXTCX6RAJO6GG67BAXUPFZ24NTC/>`__, `08-Jan-2023 <https://discuss."
@@ -98,23 +97,23 @@ msgstr ""
 msgid "Resolution"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:14
+#: ../../peps/peps/pep-0696.rst:13
 msgid ""
 "https://discuss.python.org/t/pep-696-type-defaults-for-typevarlikes/22569/34"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:17
+#: ../../peps/peps/pep-0696.rst:19
 msgid "Abstract"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:19
+#: ../../peps/peps/pep-0696.rst:21
 msgid ""
 "This PEP introduces the concept of type defaults for type parameters, "
 "including ``TypeVar``, ``ParamSpec``, and ``TypeVarTuple``, which act as "
 "defaults for type parameters for which no type is specified."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:23
+#: ../../peps/peps/pep-0696.rst:25
 msgid ""
 "Default type argument support is available in some popular languages such as "
 "C++, TypeScript, and Rust. A survey of type parameter syntax in some common "
@@ -122,61 +121,61 @@ msgid ""
 "its :pep:`Appendix A <695#appendix-a-survey-of-type-parameter-syntax>`."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:31
+#: ../../peps/peps/pep-0696.rst:33
 msgid "Motivation"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:44
+#: ../../peps/peps/pep-0696.rst:46
 msgid ""
 "One place this `regularly comes up <https://github.com/python/typing/"
 "issues/975>`__ is ``Generator``. I propose changing the *stub definition* to "
 "something like::"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:56
+#: ../../peps/peps/pep-0696.rst:58
 msgid "This is also useful for a ``Generic`` that is commonly over one type."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:72
+#: ../../peps/peps/pep-0696.rst:74
 msgid ""
 "Not only does this improve typing for those who explicitly use it, it also "
 "helps non-typing users who rely on auto-complete to speed up their "
 "development."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:76
+#: ../../peps/peps/pep-0696.rst:78
 msgid "This design pattern is common in projects like:"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:78
+#: ../../peps/peps/pep-0696.rst:80
 msgid ""
 "`discord.py <https://github.com/Rapptz/discord.py>`__ — where the example "
 "above was taken from."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:80
+#: ../../peps/peps/pep-0696.rst:82
 msgid ""
 "`NumPy <https://github.com/numpy/numpy>`__ — the default for types like "
 "``ndarray``'s ``dtype`` would be ``float64``. Currently it's ``Unknown`` or "
 "``Any``."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:83
+#: ../../peps/peps/pep-0696.rst:85
 msgid ""
 "`TensorFlow <https://github.com/tensorflow/tensorflow>`__ — this could be "
 "used for Tensor similarly to ``numpy.ndarray`` and would be useful to "
 "simplify the definition of ``Layer``."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:89
+#: ../../peps/peps/pep-0696.rst:91
 msgid "Specification"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:92
+#: ../../peps/peps/pep-0696.rst:94
 msgid "Default Ordering and Subscription Rules"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:94
+#: ../../peps/peps/pep-0696.rst:96
 msgid ""
 "The order for defaults should follow the standard function parameter rules, "
 "so a type parameter with no ``default`` cannot follow one with a ``default`` "
@@ -185,121 +184,121 @@ msgid ""
 "as an error."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:139
+#: ../../peps/peps/pep-0696.rst:141
 msgid ""
 "With the new Python 3.12 syntax for generics (introduced by :pep:`695`), "
 "this can be enforced at compile time::"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:149
+#: ../../peps/peps/pep-0696.rst:151
 msgid "``ParamSpec`` Defaults"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:151
+#: ../../peps/peps/pep-0696.rst:153
 msgid ""
 "``ParamSpec`` defaults are defined using the same syntax as ``TypeVar`` \\ s "
 "but use a ``list`` of types or an ellipsis literal \"``...``\" or another in-"
 "scope ``ParamSpec`` (see `Scoping Rules`_)."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:166
+#: ../../peps/peps/pep-0696.rst:168
 msgid "``TypeVarTuple`` Defaults"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:168
+#: ../../peps/peps/pep-0696.rst:170
 msgid ""
 "``TypeVarTuple`` defaults are defined using the same syntax as ``TypeVar`` "
 "\\ s but use an unpacked tuple of types instead of a single type or another "
 "in-scope ``TypeVarTuple`` (see `Scoping Rules`_)."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:183
+#: ../../peps/peps/pep-0696.rst:185
 msgid "Using Another Type Parameter as ``default``"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:185
+#: ../../peps/peps/pep-0696.rst:187
 msgid ""
 "This allows for a value to be used again when the type parameter to a "
 "generic is missing but another type parameter is specified."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:188
+#: ../../peps/peps/pep-0696.rst:190
 msgid ""
 "To use another type parameter as a default the ``default`` and the type "
 "parameter must be the same type (a ``TypeVar``'s default must be a "
 "``TypeVar``, etc.)."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:192
+#: ../../peps/peps/pep-0696.rst:194
 msgid ""
 "`This could be used on builtins.slice <https://github.com/python/typing/"
 "issues/159>`__ where the ``start`` parameter should default to ``int``, "
 "``stop`` default to the type of ``start`` and step default to ``int | None``."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:218
+#: ../../peps/peps/pep-0696.rst:220
 msgid ""
 "When using a type parameter as the default to another type parameter, the "
 "following rules apply, where ``T1`` is the default for ``T2``."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:222
+#: ../../peps/peps/pep-0696.rst:224
 msgid "Scoping Rules"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:224
+#: ../../peps/peps/pep-0696.rst:226
 msgid "``T1`` must be used before ``T2`` in the parameter list of the generic."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:239
+#: ../../peps/peps/pep-0696.rst:241
 msgid ""
 "Using a type parameter from an outer scope as a default is not supported."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:242
+#: ../../peps/peps/pep-0696.rst:244
 msgid "Bound Rules"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:244
+#: ../../peps/peps/pep-0696.rst:246
 msgid "``T1``'s bound must be a subtype of ``T2``'s bound."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:254
+#: ../../peps/peps/pep-0696.rst:256
 msgid "Constraint Rules"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:256
+#: ../../peps/peps/pep-0696.rst:258
 msgid ""
 "The constraints of ``T2`` must be a superset of the constraints of ``T1``."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:269
+#: ../../peps/peps/pep-0696.rst:271
 msgid "Type Parameters as Parameters to Generics"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:271
+#: ../../peps/peps/pep-0696.rst:273
 msgid ""
 "Type parameters are valid as parameters to generics inside of a ``default`` "
 "when the first parameter is in scope as determined by the `previous section "
 "<scoping rules_>`_."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:290
+#: ../../peps/peps/pep-0696.rst:292
 msgid "Specialisation Rules"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:292
+#: ../../peps/peps/pep-0696.rst:294
 msgid ""
 "Type parameters currently cannot be further subscripted. This might change "
 "if `Higher Kinded TypeVars <https://github.com/python/typing/issues/548>`__ "
 "are implemented."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:298
+#: ../../peps/peps/pep-0696.rst:300
 msgid "``Generic`` ``TypeAlias``\\ es"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:300
+#: ../../peps/peps/pep-0696.rst:302
 msgid ""
 "``Generic`` ``TypeAlias``\\ es should be able to be further subscripted "
 "following normal subscription rules. If a type parameter has a default that "
@@ -307,11 +306,11 @@ msgid ""
 "``TypeAlias``. However, it can be specialised further down the line."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:317
+#: ../../peps/peps/pep-0696.rst:319
 msgid "Subclassing"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:319
+#: ../../peps/peps/pep-0696.rst:321
 msgid ""
 "Subclasses of ``Generic``\\ s with type parameters that have defaults behave "
 "similarly to ``Generic`` ``TypeAlias``\\ es. That is, subclasses can be "
@@ -320,32 +319,32 @@ msgid ""
 "can be further specialised down the line."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:347
+#: ../../peps/peps/pep-0696.rst:349
 msgid "Using ``bound`` and ``default``"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:349
+#: ../../peps/peps/pep-0696.rst:351
 msgid ""
 "If both ``bound`` and ``default`` are passed ``default`` must be a subtype "
 "of ``bound``. Otherwise the type checker should generate an error."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:359
+#: ../../peps/peps/pep-0696.rst:361
 msgid "Constraints"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:361
+#: ../../peps/peps/pep-0696.rst:363
 msgid ""
 "For constrained ``TypeVar``\\ s, the default needs to be one of the "
 "constraints. A type checker should generate an error even if it is a subtype "
 "of one of the constraints."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:373
+#: ../../peps/peps/pep-0696.rst:375
 msgid "Function Defaults"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:375
+#: ../../peps/peps/pep-0696.rst:377
 msgid ""
 "In generic functions, type checkers may use a type parameter's default when "
 "the type parameter cannot be solved to anything. We leave the semantics of "
@@ -355,88 +354,88 @@ msgid ""
 "with implementing support."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:389
+#: ../../peps/peps/pep-0696.rst:391
 msgid "Defaults following ``TypeVarTuple``"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:391
+#: ../../peps/peps/pep-0696.rst:393
 msgid ""
 "A ``TypeVar`` that immediately follows a ``TypeVarTuple`` is not allowed to "
 "have a default, because it would be ambiguous whether a type argument should "
 "be bound to the ``TypeVarTuple`` or the defaulted ``TypeVar``."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:406
+#: ../../peps/peps/pep-0696.rst:408
 msgid ""
 "With the Python 3.12 built-in generic syntax, this case should raise a "
 "SyntaxError."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:408
+#: ../../peps/peps/pep-0696.rst:410
 msgid ""
 "However, it is allowed to have a ``ParamSpec`` with a default following a "
 "``TypeVarTuple`` with a default, as there can be no ambiguity between a type "
 "argument for the ``ParamSpec`` and one for the ``TypeVarTuple``."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:423
+#: ../../peps/peps/pep-0696.rst:425
 msgid "Subtyping"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:425
+#: ../../peps/peps/pep-0696.rst:427
 msgid ""
 "Type parameter defaults do not affect the subtyping rules for generic "
 "classes. In particular, defaults can be ignored when considering whether a "
 "class is compatible with a generic protocol."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:430
+#: ../../peps/peps/pep-0696.rst:432
 msgid "``TypeVarTuple``\\ s as Defaults"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:432
+#: ../../peps/peps/pep-0696.rst:434
 msgid "Using a ``TypeVarTuple`` as a default is not supported because:"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:434
+#: ../../peps/peps/pep-0696.rst:436
 msgid ""
 "`Scoping Rules`_ does not allow usage of type parameters from outer scopes."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:436
+#: ../../peps/peps/pep-0696.rst:438
 msgid ""
 "Multiple ``TypeVarTuple``\\ s cannot appear in the type parameter list for a "
 "single object, as specified in :pep:`646#multiple-type-variable-tuples-not-"
 "allowed`."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:440
+#: ../../peps/peps/pep-0696.rst:442
 msgid ""
 "These reasons leave no current valid location where a ``TypeVarTuple`` could "
 "be used as the default of another ``TypeVarTuple``."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:444
+#: ../../peps/peps/pep-0696.rst:446
 msgid "Binding rules"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:446
+#: ../../peps/peps/pep-0696.rst:448
 msgid ""
 "Type parameter defaults should be bound by attribute access (including call "
 "and subscript)."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:459
+#: ../../peps/peps/pep-0696.rst:461
 msgid "Implementation"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:461
+#: ../../peps/peps/pep-0696.rst:463
 msgid ""
 "At runtime, this would involve the following changes to the ``typing`` "
 "module."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:464
+#: ../../peps/peps/pep-0696.rst:466
 msgid ""
 "The classes ``TypeVar``, ``ParamSpec``, and ``TypeVarTuple`` should expose "
 "the type passed to ``default``. This would be available as a ``__default__`` "
@@ -444,88 +443,88 @@ msgid ""
 "if ``default=None``."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:469
+#: ../../peps/peps/pep-0696.rst:471
 msgid "The following changes would be required to both ``GenericAlias``\\ es:"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:471
+#: ../../peps/peps/pep-0696.rst:473
 msgid "logic to determine the defaults required for a subscription."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:472
+#: ../../peps/peps/pep-0696.rst:474
 msgid ""
 "ideally, logic to determine if subscription (like ``Generic[T, DefaultT]``) "
 "would be valid."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:475
+#: ../../peps/peps/pep-0696.rst:477
 msgid ""
 "The grammar for type parameter lists would need to be updated to allow "
 "defaults; see below."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:478
+#: ../../peps/peps/pep-0696.rst:480
 msgid ""
 "A reference implementation of the runtime changes can be found at https://"
 "github.com/Gobot1234/cpython/tree/pep-696"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:481
+#: ../../peps/peps/pep-0696.rst:483
 msgid ""
 "A reference implementation of the type checker can be found at https://"
 "github.com/Gobot1234/mypy/tree/TypeVar-defaults"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:484
+#: ../../peps/peps/pep-0696.rst:486
 msgid "Pyright currently supports this functionality."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:488
+#: ../../peps/peps/pep-0696.rst:490
 msgid "Grammar changes"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:490
+#: ../../peps/peps/pep-0696.rst:492
 msgid ""
 "The syntax added in :pep:`695` will be extended to introduce a way to "
 "specify defaults for type parameters using the \"=\" operator inside of the "
 "square brackets like so:"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:511
+#: ../../peps/peps/pep-0696.rst:513
 msgid ""
 ":ref:`Similarly to the bound for a type parameter <695-scoping-behavior>`, "
 "defaults should be lazily evaluated, with the same scoping rules to avoid "
 "the unnecessary usage of quotes around them."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:515
+#: ../../peps/peps/pep-0696.rst:517
 msgid ""
 "This functionality was included in the initial draft of :pep:`695` but was "
 "removed due to scope creep."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:518
+#: ../../peps/peps/pep-0696.rst:520
 msgid "The following changes would be made to the grammar::"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:530
+#: ../../peps/peps/pep-0696.rst:532
 msgid ""
 "The compiler would enforce that type parameters without defaults cannot "
 "follow type parameters with defaults and that ``TypeVar``\\ s with defaults "
 "cannot immediately follow ``TypeVarTuple``\\ s."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:535
+#: ../../peps/peps/pep-0696.rst:537
 msgid "Rejected Alternatives"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:538
+#: ../../peps/peps/pep-0696.rst:540
 msgid ""
 "Allowing the Type Parameters Defaults to Be Passed to ``type.__new__``'s "
 "``**kwargs``"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:548
+#: ../../peps/peps/pep-0696.rst:550
 msgid ""
 "While this is much easier to read and follows a similar rationale to the "
 "``TypeVar`` `unary syntax <https://github.com/python/typing/issues/813>`__, "
@@ -534,16 +533,16 @@ msgid ""
 "runtime."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:555
+#: ../../peps/peps/pep-0696.rst:557
 msgid ""
 "Ideally, if :pep:`637` wasn't rejected, the following would be acceptable::"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:564
+#: ../../peps/peps/pep-0696.rst:566
 msgid "Allowing Non-defaults to Follow Defaults"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:576
+#: ../../peps/peps/pep-0696.rst:578
 msgid ""
 "Allowing non-defaults to follow defaults would alleviate the issues with "
 "returning types like ``Coroutine`` from functions where the most used type "
@@ -553,11 +552,11 @@ msgid ""
 "codebases. This is also solvable in most cases using a ``TypeAlias``."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:590
+#: ../../peps/peps/pep-0696.rst:592
 msgid "Having ``default`` Implicitly Be ``bound``"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:592
+#: ../../peps/peps/pep-0696.rst:594
 msgid ""
 "In an earlier version of this PEP, the ``default`` was implicitly set to "
 "``bound`` if no value was passed for ``default``. This while convenient, "
@@ -565,18 +564,18 @@ msgid ""
 "default. Consider:"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:613
+#: ../../peps/peps/pep-0696.rst:615
 msgid ""
 "This would have also been a breaking change for a small number of cases "
 "where the code relied on ``Any`` being the implicit default."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:617
+#: ../../peps/peps/pep-0696.rst:619
 msgid ""
 "Allowing Type Parameters With Defaults To Be Used in Function Signatures"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:619
+#: ../../peps/peps/pep-0696.rst:621
 msgid ""
 "A previous version of this PEP allowed ``TypeVarLike``\\s with defaults to "
 "be used in function signatures. This was removed for the reasons described "
@@ -584,36 +583,39 @@ msgid ""
 "to get the runtime value of a type parameter is added."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:625
+#: ../../peps/peps/pep-0696.rst:627
 msgid "Allowing Type Parameters from Outer Scopes in ``default``"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:627
+#: ../../peps/peps/pep-0696.rst:629
 msgid ""
 "This was deemed too niche a feature to be worth the added complexity. If any "
 "cases arise where this is needed, it can be added in a future PEP."
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:631
+#: ../../peps/peps/pep-0696.rst:633
 msgid "Acknowledgements"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:633
+#: ../../peps/peps/pep-0696.rst:635
 msgid "Thanks to the following people for their feedback on the PEP:"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:635
+#: ../../peps/peps/pep-0696.rst:637
 msgid ""
 "Eric Traut, Jelle Zijlstra, Joshua Butt, Danny Yamamoto, Kaylynn Morgan and "
 "Jakub Kuczys"
 msgstr ""
 
-#: ../../peps/peps/pep-0696.rst:640
+#: ../../peps/peps/pep-0696.rst:642
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../../peps/peps/pep-0696.rst:641
+#: ../../peps/peps/pep-0696.rst:643
 msgid ""
 "This document is placed in the public domain or under the CC0-1.0-Universal "
 "license, whichever is more permissive."
 msgstr ""
+
+#~ msgid "Accepted"
+#~ msgstr "Criada em"

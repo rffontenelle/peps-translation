@@ -1,0 +1,299 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the PEPs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PEPs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-11 15:59+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pt_BR\n"
+"Language-Team: pt_BR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../peps/peps/pep-0758.rst
+msgid "Author"
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:3
+msgid "Pablo Galindo <pablogsal@python.org>, Brett Cannon <brett@python.org>"
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst
+msgid "PEP-Delegate"
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:4
+msgid "TBD"
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst
+msgid "Status"
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:5
+msgid "Draft"
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst
+msgid "Type"
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:6
+msgid "Standards Track"
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst
+msgid "Created"
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:7
+msgid "30-Sep-2024"
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst
+msgid "Python-Version"
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:8
+msgid "3.14"
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst
+msgid "Post-History"
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:9
+msgid "`02-Oct-2024 <https://discuss.python.org/t/66453>`__"
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:12
+msgid "Abstract"
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:14
+msgid ""
+"This PEP [1]_ proposes to allow unparenthesized ``except`` and ``except*`` "
+"blocks in Python's exception handling syntax only when not using the ``as`` "
+"clause. Currently, when catching multiple exceptions, parentheses are "
+"required around the exception types. This was a Python 2 remnant. This PEP "
+"suggests allowing the omission of these parentheses, simplifying the syntax, "
+"making it more consistent with other parts of the syntax that make "
+"parentheses optional, and improving readability in certain cases."
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:23
+msgid "Motivation"
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:25
+msgid ""
+"The current syntax for catching multiple exceptions requires parentheses in "
+"the ``except`` expression (equivalently for the ``except*`` expression). For "
+"example:"
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:36
+msgid ""
+"While this syntax is clear and unambiguous, it can be seen as unnecessarily "
+"verbose in some cases, especially when catching a large number of "
+"exceptions. By allowing the omission of parentheses, we can simplify the "
+"syntax:"
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:47
+msgid ""
+"This change would bring the syntax more in line with other comma-separated "
+"lists in Python, such as function arguments, generator expressions inside of "
+"a function call, and tuple literals, where parentheses are optional."
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:51
+msgid "The same change would apply to ``except*`` expressions. For example:"
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:60
+msgid ""
+"When using the ``as`` clause to capture the exception instance paretheses "
+"must be used as before. Some users have expressed that they would find it "
+"confusing not to require parentheses as it would be unclear what exactly is "
+"being assigned to the target since in other parts of the language multiple "
+"``as`` clauses can be used in similar situations (like in imports and "
+"context managers). This means that if an ``as`` clause its being added to "
+"the previous example it must be done as:"
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:76
+msgid "Rationale"
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:78
+msgid ""
+"The decision to allow unparenthesized ``except`` blocks is based on the "
+"following considerations:"
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:81
+msgid ""
+"Simplicity: Removing the requirement for parentheses simplifies the syntax, "
+"making it more consistent with other parts of the language."
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:84
+msgid ""
+"Readability: In cases where many exceptions are being caught, the removal of "
+"parentheses can improve readability by reducing visual clutter."
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:87
+msgid ""
+"Consistency: This change makes the ``except`` clause more consistent with "
+"other parts of Python where unambiguous, comma-separated lists don't require "
+"parentheses."
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:92
+msgid "Specification"
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:94
+msgid ""
+"The syntax for the except clause will be modified to allow an "
+"unparenthesized list of exception types. The grammar will be updated as "
+"follows:"
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:108
+msgid ""
+"This allows both the current parenthesized syntax and the new "
+"unparenthesized syntax while requiring parentheses when the ``as`` keyword "
+"is used:"
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:122
+msgid ""
+"The semantics of exception handling remain unchanged. The interpreter will "
+"catch any of the listed exceptions, regardless of whether they are "
+"parenthesized or not."
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:128
+msgid "Backwards Compatibility"
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:130
+msgid ""
+"This change is fully backwards compatible. All existing code using "
+"parenthesized ``except`` and ``except*`` blocks will continue to work "
+"without modification. The new syntax is purely additive and does not break "
+"any existing code."
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:134
+msgid ""
+"It's worth noting that in Python 2 the unparenthesized syntax was allowed "
+"with two elements, but had different semantics, in which the first element "
+"of the list was used as the exception type and the second element as the "
+"capture variable. This change does not reintroduce the Python 2 semantics, "
+"and the unparenthesized syntax will behave identically to the parenthesized "
+"version."
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:142
+msgid "Security Implications"
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:144
+msgid ""
+"There are no known security implications for this change. The semantics of "
+"exception handling remain the same, and this is purely a syntactic change."
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:149
+msgid "How to Teach This"
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:151
+msgid ""
+"For new Python users, the unparenthesized syntax can be taught as the "
+"standard way to catch multiple exceptions:"
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:161
+msgid ""
+"For experienced users, it can be introduced as a new, optional syntax that "
+"can be used interchangeably with the parenthesized version. Documentation "
+"should note that both forms are equivalent:"
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:174
+msgid ""
+"It should be emphasized that this is purely a syntactic change and does not "
+"affect the behaviour of exception handling."
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:179
+msgid "Reference Implementation"
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:181
+msgid ""
+"A proof-of-concept implementation is available at https://github.com/"
+"pablogsal/cpython/commits/notuples/. This implementation modifies the Python "
+"parser to accept the new syntax and ensures that it behaves identically to "
+"the parenthesized version."
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:188
+msgid "Rejected Ideas"
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:190
+msgid "Allowing mixed parenthesized and unparenthesized syntax:"
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:199
+msgid ""
+"This was rejected due to the potential for confusion and to maintain a clear "
+"distinction between the two styles."
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:203
+msgid "Deferred Ideas"
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:205
+msgid ""
+"Allowing unparenthesized expressions when the ``as`` keyword is used. The "
+"reason we have decided to defer this particular form given that there isn't "
+"clear consensus either way and there are reasonable arguments for both "
+"positions, the safest approach is keeping the parentheses requirement since "
+"it can be removed later if users find the disconnect too acute, while taking "
+"it out and users deciding it was a bad idea doesn’t make it easy to put back."
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:213
+msgid "Footnotes"
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:215
+msgid "Originally named \"Parenthetically Speaking, We Don't Need 'Em\""
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:218
+msgid "Copyright"
+msgstr ""
+
+#: ../../peps/peps/pep-0758.rst:220
+msgid ""
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
+msgstr ""

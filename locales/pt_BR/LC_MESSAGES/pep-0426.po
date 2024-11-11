@@ -8,14 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-14 02:33+0000\n"
+"POT-Creation-Date: 2024-11-11 15:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.15.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../../peps/peps/pep-0426.rst
 msgid "Author"
@@ -101,7 +101,15 @@ msgstr ""
 msgid "345"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:20
+#: ../../peps/peps/pep-0426.rst
+msgid "Superseded-By"
+msgstr ""
+
+#: ../../peps/peps/pep-0426.rst:17
+msgid "566"
+msgstr ""
+
+#: ../../peps/peps/pep-0426.rst:23
 msgid ""
 "The ground-up metadata redesign proposed in this PEP has been withdrawn in "
 "favour of the more modest proposal in :pep:`566`, which retains the basic "
@@ -110,7 +118,7 @@ msgid ""
 "data structures."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:25
+#: ../../peps/peps/pep-0426.rst:28
 msgid ""
 "Some of the ideas in this PEP (or the related :pep:`459`) may still be "
 "considered as part of later proposals, but they will be handled in a more "
@@ -118,30 +126,30 @@ msgid ""
 "feasible migration plan."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:32
+#: ../../peps/peps/pep-0426.rst:35
 msgid "Abstract"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:34
+#: ../../peps/peps/pep-0426.rst:37
 msgid ""
 "This PEP describes a mechanism for publishing and exchanging metadata "
 "related to Python distributions. It includes specifics of the field names, "
 "and their semantics and usage."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:38
+#: ../../peps/peps/pep-0426.rst:41
 msgid ""
 "This document specifies the never released version 2.0 of the metadata "
 "format."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:40
+#: ../../peps/peps/pep-0426.rst:43
 msgid ""
 "Version 1.0 is specified in :pep:`241`. Version 1.1 is specified in :pep:"
 "`314`. Version 1.2 is specified in :pep:`345`."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:44
+#: ../../peps/peps/pep-0426.rst:47
 msgid ""
 "Version 2.0 of the metadata format proposed migrating from directly defining "
 "a custom key-value file format to instead defining a JSON-compatible in-"
@@ -149,74 +157,74 @@ msgid ""
 "other contexts (such as API and archive format definitions)."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:49
+#: ../../peps/peps/pep-0426.rst:52
 msgid ""
 "This version also defines a formal extension mechanism, allowing new fields "
 "to be added for particular purposes without requiring updates to the core "
 "metadata format."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:55
+#: ../../peps/peps/pep-0426.rst:58
 msgid "Note on PEP History"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:57
+#: ../../peps/peps/pep-0426.rst:60
 msgid ""
 "This PEP was initially deferred for an extended period, from December 2013 "
 "through to March 2017, as distutils-sig worked through a number of other "
 "changes. These changes included:"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:61
+#: ../../peps/peps/pep-0426.rst:64
 msgid "defining a binary compatibility tagging format in :pep:`425`"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:62
+#: ../../peps/peps/pep-0426.rst:65
 msgid "defining a binary archive format (``wheel``) in :pep:`427`"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:63
+#: ../../peps/peps/pep-0426.rst:66
 msgid "explicitly defining versioning and version comparison in :pep:`440`"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:64
+#: ../../peps/peps/pep-0426.rst:67
 msgid "explicitly defining the PyPI \"simple\" API in :pep:`503`"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:65
+#: ../../peps/peps/pep-0426.rst:68
 msgid ""
 "explicitly defining dependency specifiers and the extras system in :pep:`508`"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:66
+#: ../../peps/peps/pep-0426.rst:69
 msgid ""
 "declaring static build system dependencies (``pyproject.toml``) in :pep:`518`"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:67
+#: ../../peps/peps/pep-0426.rst:70
 msgid ""
 "migrating PyPI hosting to Rackspace, and placing it behind the Fastly CDN"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:68
+#: ../../peps/peps/pep-0426.rst:71
 msgid ""
 "shipping ``pip`` with CPython by default in :pep:`453`, and backporting that "
 "addition to Python 2.7 in :pep:`477`"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:70
+#: ../../peps/peps/pep-0426.rst:73
 msgid ""
 "establishing `packaging.python.org`_ as the common access point for Python "
 "packaging ecosystem documentation"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:72
+#: ../../peps/peps/pep-0426.rst:75
 msgid ""
 "migrating to using the `specifications`_ section of packaging.python.org as "
 "the central location for tracking packaging related PEPs"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:75
+#: ../../peps/peps/pep-0426.rst:78
 msgid ""
 "The time spent pursuing these changes provided additional perspective on "
 "which metadata format changes were genuinely desirable, and which could be "
@@ -224,7 +232,7 @@ msgid ""
 "sake\"."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:79
+#: ../../peps/peps/pep-0426.rst:82
 msgid ""
 "It also allowed a number of features that aren't critical to the core "
 "activity of publishing and distributing software to be moved out to :pep:"
@@ -232,36 +240,36 @@ msgid ""
 "provide additional optional information about a release."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:84
+#: ../../peps/peps/pep-0426.rst:87
 msgid ""
 "As of September 2017, it was deferred again, on the grounds that it doesn't "
 "actually help solve any particularly pressing problems:"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:87
+#: ../../peps/peps/pep-0426.rst:90
 msgid ""
 "JSON representation would be better handled through defining a "
 "transformation of the existing metadata 1.2 fields"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:89
+#: ../../peps/peps/pep-0426.rst:92
 msgid ""
 "clarification of the additional fields defined in the past few years and "
 "related changes to the spec management process would be better covered in a "
 "`minor spec version update`_"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:97
+#: ../../peps/peps/pep-0426.rst:100
 msgid ""
 "Finally, the PEP was withdrawn in February 2018 in favour of :pep:`566` "
 "(which pursues that more incremental strategy)."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:102
+#: ../../peps/peps/pep-0426.rst:105
 msgid "Purpose"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:104
+#: ../../peps/peps/pep-0426.rst:107
 msgid ""
 "The purpose of this PEP is to define a common metadata interchange format "
 "for communication between software publication tools and software "
@@ -275,7 +283,7 @@ msgid ""
 "transparent to end users."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:115
+#: ../../peps/peps/pep-0426.rst:118
 msgid ""
 "The design draws on the Python community's nearly 20 years of experience "
 "with distutils based software distribution, and incorporates ideas and "
@@ -284,25 +292,25 @@ msgid ""
 "and Linux packaging systems such as RPM and APT."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:121
+#: ../../peps/peps/pep-0426.rst:124
 msgid ""
 "While the specifics of this format are aimed at the Python ecosystem, some "
 "of the ideas may also be useful in the future evolution of other dependency "
 "management ecosystems."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:127
+#: ../../peps/peps/pep-0426.rst:130
 msgid "Development, Distribution and Deployment of Python Software"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:129
+#: ../../peps/peps/pep-0426.rst:132
 msgid ""
 "The metadata design in this PEP is based on a particular conceptual model of "
 "the software development and distribution process. This model consists of "
 "the following phases:"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:133
+#: ../../peps/peps/pep-0426.rst:136
 msgid ""
 "Software development: this phase involves working with a source checkout for "
 "a particular application to add features and fix bugs. It is expected that "
@@ -311,7 +319,7 @@ msgid ""
 "publish the software."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:139
+#: ../../peps/peps/pep-0426.rst:142
 msgid ""
 "Software publication: this phase involves taking the developed software and "
 "making it available for use by software integrators. This includes creating "
@@ -319,7 +327,7 @@ msgid ""
 "available (typically by uploading it to an index server)."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:144
+#: ../../peps/peps/pep-0426.rst:147
 msgid ""
 "Software integration: this phase involves taking published software "
 "components and combining them into a coherent, integrated system. This may "
@@ -328,14 +336,14 @@ msgid ""
 "packaging systems."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:150
+#: ../../peps/peps/pep-0426.rst:153
 msgid ""
 "Software deployment: this phase involves taking integrated software "
 "components and deploying them on to the target system where the software "
 "will actually execute."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:154
+#: ../../peps/peps/pep-0426.rst:157
 msgid ""
 "The publication and integration phases are collectively referred to as the "
 "distribution phase, and the individual software components distributed in "
@@ -345,7 +353,7 @@ msgid ""
 "package)."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:160
+#: ../../peps/peps/pep-0426.rst:163
 msgid ""
 "The exact details of these phases will vary greatly for particular use "
 "cases. Deploying a web application to a public Platform-as-a-Service "
@@ -355,18 +363,18 @@ msgid ""
 "be able to handle."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:167
+#: ../../peps/peps/pep-0426.rst:170
 msgid ""
 "The complexity of the metadata described in this PEP thus arises directly "
 "from the actual complexities associated with software development, "
 "distribution and deployment in a wide range of scenarios."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:173
+#: ../../peps/peps/pep-0426.rst:176
 msgid "Supporting definitions"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:175
+#: ../../peps/peps/pep-0426.rst:178
 msgid ""
 "The key words \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL "
 "NOT\", \"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\",  \"MAY\", and "
@@ -374,7 +382,7 @@ msgid ""
 "`2119`."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:179
+#: ../../peps/peps/pep-0426.rst:182
 msgid ""
 "\"Projects\" are software components that are made available for "
 "integration. Projects include Python libraries, frameworks, scripts, "
@@ -383,30 +391,30 @@ msgid ""
 "`Python Package Index`_."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:185
+#: ../../peps/peps/pep-0426.rst:188
 msgid "\"Releases\" are uniquely identified snapshots of a project."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:187
+#: ../../peps/peps/pep-0426.rst:190
 msgid ""
 "\"Distribution packages\" are the packaged files which are used to publish "
 "and distribute a release."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:190
+#: ../../peps/peps/pep-0426.rst:193
 msgid ""
 "Depending on context, \"package\" may refer to either a distribution, or to "
 "an importable Python module that has a ``__path__`` attribute and hence may "
 "also have importable submodules."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:194
+#: ../../peps/peps/pep-0426.rst:197
 msgid ""
 "\"Source archive\" and \"VCS checkout\" both refer to the raw source code "
 "for a release, prior to creation of an sdist or binary archive."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:197
+#: ../../peps/peps/pep-0426.rst:200
 msgid ""
 "An \"sdist\" is a publication format providing the distribution metadata and "
 "any source files that are essential to creating a binary archive for the "
@@ -414,7 +422,7 @@ msgid ""
 "appropriate build tools be available on the system."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:202
+#: ../../peps/peps/pep-0426.rst:205
 msgid ""
 "\"Binary archives\" only require that prebuilt files be moved to the correct "
 "location on the target system. As Python is a dynamically bound cross-"
@@ -422,26 +430,26 @@ msgid ""
 "Python source code."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:207
+#: ../../peps/peps/pep-0426.rst:210
 msgid ""
 "\"Contributors\" are individuals and organizations that work together to "
 "develop a software component."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:210
+#: ../../peps/peps/pep-0426.rst:213
 msgid ""
 "\"Publishers\" are individuals and organizations that make software "
 "components available for integration (typically by uploading distributions "
 "to an index server)"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:214
+#: ../../peps/peps/pep-0426.rst:217
 msgid ""
 "\"Integrators\" are individuals and organizations that incorporate published "
 "distributions as components of an application or larger system."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:217
+#: ../../peps/peps/pep-0426.rst:220
 msgid ""
 "\"Build tools\" are automated tools intended to run on development systems, "
 "producing source and binary distribution archives. Build tools may also be "
@@ -449,26 +457,26 @@ msgid ""
 "sdists rather than prebuilt binary archives."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:222
+#: ../../peps/peps/pep-0426.rst:225
 msgid ""
 "\"Index servers\" are active distribution registries which publish version "
 "and dependency metadata and place constraints on the permitted metadata."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:225
+#: ../../peps/peps/pep-0426.rst:228
 msgid ""
 "\"Public index servers\" are index servers which allow distribution uploads "
 "from untrusted third parties. The `Python Package Index`_ is a public index "
 "server."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:229
+#: ../../peps/peps/pep-0426.rst:232
 msgid ""
 "\"Publication tools\" are automated tools intended to run on development "
 "systems and upload source and binary distribution archives to index servers."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:232
+#: ../../peps/peps/pep-0426.rst:235
 msgid ""
 "\"Integration tools\" are automated tools that consume the metadata and "
 "distribution archives published by an index server or other designated "
@@ -476,7 +484,7 @@ msgid ""
 "converting them to a platform specific packaging format."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:237
+#: ../../peps/peps/pep-0426.rst:240
 msgid ""
 "\"Installation tools\" are integration tools specifically intended to run on "
 "deployment targets, consuming source and binary distribution archives from "
@@ -484,28 +492,28 @@ msgid ""
 "target system."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:242
+#: ../../peps/peps/pep-0426.rst:245
 msgid ""
 "\"Automated tools\" is a collective term covering build tools, index "
 "servers, publication tools, integration tools and any other software that "
 "produces or consumes distribution version and dependency metadata."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:246
+#: ../../peps/peps/pep-0426.rst:249
 msgid ""
 "\"Legacy metadata\" refers to earlier versions of this metadata "
 "specification, along with the supporting metadata file formats defined by "
 "the ``setuptools`` project."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:250
+#: ../../peps/peps/pep-0426.rst:253
 msgid ""
 "\"Distro\" is used as the preferred term for Linux distributions, to help "
 "avoid confusion with the Python-specific use of the term \"distribution "
 "package\"."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:254
+#: ../../peps/peps/pep-0426.rst:257
 msgid ""
 "\"Qualified name\" is a dotted Python identifier. For imported modules and "
 "packages, the qualified name is available as the ``__name__`` attribute, "
@@ -513,7 +521,7 @@ msgid ""
 "attribute."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:259
+#: ../../peps/peps/pep-0426.rst:262
 msgid ""
 "A \"fully qualified name\" uniquely locates an object in the Python module "
 "namespace. For imported modules and packages, it is the same as the "
@@ -523,29 +531,29 @@ msgid ""
 "package."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:266
+#: ../../peps/peps/pep-0426.rst:269
 msgid ""
 "A \"prefixed name\" starts with a qualified name, but is not necessarily a "
 "qualified name - it may contain additional dot separated segments which are "
 "not valid identifiers."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:272
+#: ../../peps/peps/pep-0426.rst:275
 msgid "Integration and deployment of distributions"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:274
+#: ../../peps/peps/pep-0426.rst:277
 msgid ""
 "The primary purpose of the distribution metadata is to support integration "
 "and deployment of distributions as part of larger applications and systems."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:277
+#: ../../peps/peps/pep-0426.rst:280
 msgid ""
 "Integration and deployment can in turn be broken down into further substeps."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:279
+#: ../../peps/peps/pep-0426.rst:282
 msgid ""
 "Build: the build step is the process of turning a VCS checkout, source "
 "archive or sdist into a binary archive. Dependencies must be available in "
@@ -553,7 +561,7 @@ msgid ""
 "any documentation that is installed on target systems)."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:284
+#: ../../peps/peps/pep-0426.rst:287
 msgid ""
 "Installation: the installation step involves getting the distribution and "
 "all of its runtime dependencies onto the target system. In this step, the "
@@ -561,13 +569,13 @@ msgid ""
 "or else it may be a completely new installation."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:289
+#: ../../peps/peps/pep-0426.rst:292
 msgid ""
 "Runtime: this is normal usage of a distribution after it has been installed "
 "on the target system."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:292
+#: ../../peps/peps/pep-0426.rst:295
 msgid ""
 "These three steps may all occur directly on the target system. Alternatively "
 "the build step may be separated out by using binary archives provided by the "
@@ -577,90 +585,90 @@ msgid ""
 "targets (as the build dependencies will be needed only on the build systems)."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:300
+#: ../../peps/peps/pep-0426.rst:303
 msgid ""
 "The published metadata for distribution packages SHOULD allow integrators, "
 "with the aid of build and integration tools, to:"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:303
+#: ../../peps/peps/pep-0426.rst:306
 msgid "obtain the original source code that was used to create a distribution"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:304
+#: ../../peps/peps/pep-0426.rst:307
 msgid ""
 "identify and retrieve the dependencies (if any) required to use a "
 "distribution"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:306
+#: ../../peps/peps/pep-0426.rst:309
 msgid ""
 "identify and retrieve the dependencies (if any) required to build a "
 "distribution from source"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:308
+#: ../../peps/peps/pep-0426.rst:311
 msgid ""
 "identify and retrieve the dependencies (if any) required to run a "
 "distribution's test suite"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:313
+#: ../../peps/peps/pep-0426.rst:316
 msgid "Development and publication of distributions"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:315
+#: ../../peps/peps/pep-0426.rst:318
 msgid ""
 "The secondary purpose of the distribution metadata is to support effective "
 "collaboration amongst software contributors and publishers during the "
 "development phase."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:319
+#: ../../peps/peps/pep-0426.rst:322
 msgid ""
 "The published metadata for distributions SHOULD allow contributors and "
 "publishers, with the aid of build and publication tools, to:"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:322
+#: ../../peps/peps/pep-0426.rst:325
 msgid ""
 "perform all the same activities needed to effectively integrate and deploy "
 "the distribution"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:324
+#: ../../peps/peps/pep-0426.rst:327
 msgid ""
 "identify and retrieve the additional dependencies needed to develop and "
 "publish the distribution"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:326
+#: ../../peps/peps/pep-0426.rst:329
 msgid "specify the dependencies (if any) required to use the distribution"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:327
+#: ../../peps/peps/pep-0426.rst:330
 msgid ""
 "specify the dependencies (if any) required to build the distribution from "
 "source"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:329
+#: ../../peps/peps/pep-0426.rst:332
 msgid ""
 "specify the dependencies (if any) required to run the distribution's test "
 "suite"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:331
+#: ../../peps/peps/pep-0426.rst:334
 msgid ""
 "specify the additional dependencies (if any) required to develop and publish "
 "the distribution"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:337
+#: ../../peps/peps/pep-0426.rst:340
 msgid "Metadata format"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:339
+#: ../../peps/peps/pep-0426.rst:342
 msgid ""
 "The format defined in this PEP is an in-memory representation of Python "
 "distribution metadata as a string-keyed dictionary. Permitted values for "
@@ -668,34 +676,34 @@ msgid ""
 "string-keyed dictionaries."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:344
+#: ../../peps/peps/pep-0426.rst:347
 msgid ""
 "Except where otherwise noted, dictionary keys in distribution metadata MUST "
 "be valid Python identifiers in order to support attribute based metadata "
 "access APIs."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:348
+#: ../../peps/peps/pep-0426.rst:351
 msgid ""
 "The individual field descriptions show examples of the key name and value as "
 "they would be serialised as part of a JSON mapping."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:351
+#: ../../peps/peps/pep-0426.rst:354
 msgid ""
 "Unless otherwise indicated, the fields identified as core metadata are "
 "required. Automated tools MUST NOT accept distributions with missing core "
 "metadata as valid Python distributions."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:355
+#: ../../peps/peps/pep-0426.rst:358
 msgid ""
 "All other fields are optional. Automated tools MUST operate correctly if a "
 "distribution does not provide them, except for those operations which "
 "specifically require the omitted fields."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:359
+#: ../../peps/peps/pep-0426.rst:362
 msgid ""
 "Automated tools MUST NOT insert dummy data for missing fields. If a valid "
 "value is not provided for a required field then the metadata and the "
@@ -705,7 +713,7 @@ msgid ""
 "sources (such as a version control system)."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:366
+#: ../../peps/peps/pep-0426.rst:369
 msgid ""
 "Automated tools, especially public index servers, MAY impose additional "
 "length restrictions on metadata beyond those enumerated in this PEP. Such "
@@ -714,17 +722,17 @@ msgid ""
 "judgment of reasonable metadata capacity requirements."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:374
+#: ../../peps/peps/pep-0426.rst:377
 msgid "Metadata files"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:376
+#: ../../peps/peps/pep-0426.rst:379
 msgid ""
 "The information defined in this PEP is serialised to ``pysdist.json`` files "
 "for some use cases. These are files containing UTF-8 encoded JSON metadata."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:380
+#: ../../peps/peps/pep-0426.rst:383
 msgid ""
 "Each metadata file consists of a single serialised mapping, with fields as "
 "described in this PEP. When serialising metadata, automated tools SHOULD "
@@ -732,30 +740,30 @@ msgid ""
 "any changes."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:385
+#: ../../peps/peps/pep-0426.rst:388
 msgid ""
 "There are expected to be three standard locations for these metadata files:"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:387
+#: ../../peps/peps/pep-0426.rst:390
 msgid ""
 "as a ``{distribution}-{version}.dist-info/pysdist.json`` file in an "
 "``sdist`` source distribution archive"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:389
+#: ../../peps/peps/pep-0426.rst:392
 msgid ""
 "as a ``{distribution}-{version}.dist-info/pysdist.json`` file in a ``wheel`` "
 "binary distribution archive"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:391
+#: ../../peps/peps/pep-0426.rst:394
 msgid ""
 "as a ``{distribution}-{version}.dist-info/pysdist.json`` file in a local "
 "Python installation database"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:394
+#: ../../peps/peps/pep-0426.rst:397
 msgid ""
 "This file is expected to be identical in all three locations - it is "
 "generated when creating a source archive or binary archive from a source "
@@ -763,7 +771,7 @@ msgid ""
 "binary archive from a source archive."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:401
+#: ../../peps/peps/pep-0426.rst:404
 msgid ""
 "These locations are to be confirmed, since they depend on the definition of "
 "sdist 2.0 and the revised installation database standard. There will also be "
@@ -771,7 +779,7 @@ msgid ""
 "of 2.0+ metadata."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:406
+#: ../../peps/peps/pep-0426.rst:409
 msgid ""
 "Note that these metadata files MAY be processed even if the version of the "
 "containing location is too low to indicate that they are valid. "
@@ -780,7 +788,7 @@ msgid ""
 "still provide ``pysdist.json`` files."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:414
+#: ../../peps/peps/pep-0426.rst:417
 msgid ""
 "Until this specification is formally marked as Active, it is recommended "
 "that tools following the draft format use an alternative filename like "
@@ -788,11 +796,11 @@ msgid ""
 "eventually standardised files."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:419
+#: ../../peps/peps/pep-0426.rst:422
 msgid "Other tools involved in Python distribution MAY also use this format."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:421
+#: ../../peps/peps/pep-0426.rst:424
 msgid ""
 "Note that these metadata files are generated by build tools based on other "
 "input formats (such as ``setup.py`` and ``pyproject.toml``) rather than "
@@ -801,49 +809,49 @@ msgid ""
 "(including the source URL and the version field itself)."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:427
+#: ../../peps/peps/pep-0426.rst:430
 msgid ""
 "For backwards compatibility with older installation tools, metadata 2.0 "
 "files MAY be distributed alongside legacy metadata."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:430
+#: ../../peps/peps/pep-0426.rst:433
 msgid ""
 "Index servers MAY allow distributions to be uploaded and installation tools "
 "MAY allow distributions to be installed with only legacy metadata."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:433
+#: ../../peps/peps/pep-0426.rst:436
 msgid ""
 "Automated tools MAY attempt to automatically translate legacy metadata to "
 "the format described in this PEP. Advice for doing so effectively is given "
 "in Appendix A."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:439
+#: ../../peps/peps/pep-0426.rst:442
 msgid "Metadata validation"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:441
+#: ../../peps/peps/pep-0426.rst:444
 msgid ""
 "A `jsonschema <https://pypi.org/project/jsonschema/>`__ description of the "
 "distribution metadata is `available <https://hg.python.org/peps/file/default/"
 "pep-0426/pydist-schema.json>`__."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:445
+#: ../../peps/peps/pep-0426.rst:448
 msgid ""
 "This schema does NOT currently handle validation of some of the more complex "
 "string fields (instead treating them as opaque strings)."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:448
+#: ../../peps/peps/pep-0426.rst:451
 msgid ""
 "Except where otherwise noted, all URL fields in the metadata MUST comply "
 "with :rfc:`3986`."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:453
+#: ../../peps/peps/pep-0426.rst:456
 msgid ""
 "The current version of the schema file covers the previous draft of the PEP, "
 "and has not yet been updated for the split into the essential dependency "
@@ -852,44 +860,44 @@ msgid ""
 "earlier drafts."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:461
+#: ../../peps/peps/pep-0426.rst:464
 msgid "Core metadata"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:463
+#: ../../peps/peps/pep-0426.rst:466
 msgid ""
 "This section specifies the core metadata fields that are required for every "
 "Python distribution."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:466
+#: ../../peps/peps/pep-0426.rst:469
 msgid ""
 "Publication tools MUST ensure at least these fields are present when "
 "publishing a distribution."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:469
+#: ../../peps/peps/pep-0426.rst:472
 msgid ""
 "Index servers MUST ensure at least these fields are present in the metadata "
 "when distributions are uploaded."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:472
+#: ../../peps/peps/pep-0426.rst:475
 msgid ""
 "Installation tools MUST refuse to install distributions with one or more of "
 "these fields missing by default, but MAY allow users to force such an "
 "installation to occur."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:478
+#: ../../peps/peps/pep-0426.rst:481
 msgid "Metadata version"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:480
+#: ../../peps/peps/pep-0426.rst:483
 msgid "Version of the file format; ``\"2.0\"`` is the only legal value."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:482
+#: ../../peps/peps/pep-0426.rst:485
 msgid ""
 "Automated tools consuming metadata SHOULD warn if ``metadata_version`` is "
 "greater than the highest version they support, and MUST fail if "
@@ -898,126 +906,126 @@ msgid ""
 "before the first dot)."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:488
+#: ../../peps/peps/pep-0426.rst:491
 msgid ""
 "For broader compatibility, build tools MAY choose to produce distribution "
 "metadata using the lowest metadata version that includes all of the needed "
 "fields."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:492 ../../peps/peps/pep-0426.rst:553
-#: ../../peps/peps/pep-0426.rst:573 ../../peps/peps/pep-0426.rst:592
-#: ../../peps/peps/pep-0426.rst:703 ../../peps/peps/pep-0426.rst:822
-#: ../../peps/peps/pep-0426.rst:835
+#: ../../peps/peps/pep-0426.rst:495 ../../peps/peps/pep-0426.rst:556
+#: ../../peps/peps/pep-0426.rst:576 ../../peps/peps/pep-0426.rst:595
+#: ../../peps/peps/pep-0426.rst:706 ../../peps/peps/pep-0426.rst:825
+#: ../../peps/peps/pep-0426.rst:838
 msgid "Example::"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:498
+#: ../../peps/peps/pep-0426.rst:501
 msgid "Generator"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:500
+#: ../../peps/peps/pep-0426.rst:503
 msgid ""
 "Name (and optional version) of the program that generated the file, if any.  "
 "A manually produced file would omit this field."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:503 ../../peps/peps/pep-0426.rst:639
+#: ../../peps/peps/pep-0426.rst:506 ../../peps/peps/pep-0426.rst:642
 msgid "Examples::"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:510
+#: ../../peps/peps/pep-0426.rst:513
 msgid "Name"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:512
+#: ../../peps/peps/pep-0426.rst:515
 msgid "The name of the distribution, as defined in :pep:`508`."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:514
+#: ../../peps/peps/pep-0426.rst:517
 msgid ""
 "As distribution names are used as part of URLs, filenames, command line "
 "parameters and must also interoperate with other packaging systems, the "
 "permitted characters are constrained to:"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:518
+#: ../../peps/peps/pep-0426.rst:521
 msgid "ASCII letters (``[a-zA-Z]``)"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:519 ../../peps/peps/pep-0426.rst:622
+#: ../../peps/peps/pep-0426.rst:522 ../../peps/peps/pep-0426.rst:625
 msgid "ASCII digits (``[0-9]``)"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:520 ../../peps/peps/pep-0426.rst:623
+#: ../../peps/peps/pep-0426.rst:523 ../../peps/peps/pep-0426.rst:626
 msgid "underscores (``_``)"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:521 ../../peps/peps/pep-0426.rst:624
+#: ../../peps/peps/pep-0426.rst:524 ../../peps/peps/pep-0426.rst:627
 msgid "hyphens (``-``)"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:522 ../../peps/peps/pep-0426.rst:625
+#: ../../peps/peps/pep-0426.rst:525 ../../peps/peps/pep-0426.rst:628
 msgid "periods (``.``)"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:524
+#: ../../peps/peps/pep-0426.rst:527
 msgid "Distribution names MUST start and end with an ASCII letter or digit."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:526
+#: ../../peps/peps/pep-0426.rst:529
 msgid ""
 "Automated tools MUST reject non-compliant names. A regular expression to "
 "enforce these constraints (when run with ``re.IGNORECASE``) is::"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:531
+#: ../../peps/peps/pep-0426.rst:534
 msgid ""
 "All comparisons of distribution names MUST be case insensitive, and MUST "
 "consider hyphens and underscores to be equivalent."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:534
+#: ../../peps/peps/pep-0426.rst:537
 msgid ""
 "Index servers MAY consider \"confusable\" characters (as defined by the "
 "Unicode Consortium in `TR39: Unicode Security Mechanisms <TR39_>`_) to be "
 "equivalent."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:538
+#: ../../peps/peps/pep-0426.rst:541
 msgid ""
 "Index servers that permit arbitrary distribution name registrations from "
 "untrusted sources SHOULD consider confusable characters to be equivalent "
 "when registering new distributions (and hence reject them as duplicates)."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:542
+#: ../../peps/peps/pep-0426.rst:545
 msgid ""
 "Integration tools MUST NOT silently accept a confusable alternate spelling "
 "as matching a requested distribution name."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:545
+#: ../../peps/peps/pep-0426.rst:548
 msgid ""
 "At time of writing, the characters in the ASCII subset designated as "
 "confusables by the Unicode Consortium are:"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:548
+#: ../../peps/peps/pep-0426.rst:551
 msgid ""
 "``1`` (DIGIT ONE), ``l`` (LATIN SMALL LETTER L), and ``I`` (LATIN CAPITAL "
 "LETTER I)"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:550
+#: ../../peps/peps/pep-0426.rst:553
 msgid "``0`` (DIGIT ZERO), and ``O`` (LATIN CAPITAL LETTER O)"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:559
+#: ../../peps/peps/pep-0426.rst:562
 msgid "Version"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:561
+#: ../../peps/peps/pep-0426.rst:564
 msgid ""
 "The distribution's public or local version identifier, as defined in :pep:"
 "`440`. Version identifiers are designed for consumption by automated tools "
@@ -1025,67 +1033,67 @@ msgid ""
 "`440` for details)."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:566
+#: ../../peps/peps/pep-0426.rst:569
 msgid "Version identifiers MUST comply with the format defined in :pep:`440`."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:568
+#: ../../peps/peps/pep-0426.rst:571
 msgid "Version identifiers MUST be unique within each project."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:570
+#: ../../peps/peps/pep-0426.rst:573
 msgid ""
 "Index servers MAY place restrictions on the use of local version identifiers "
 "as described in :pep:`440`."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:579
+#: ../../peps/peps/pep-0426.rst:582
 msgid "Summary"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:581
+#: ../../peps/peps/pep-0426.rst:584
 msgid "A short summary of what the distribution does."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:583
+#: ../../peps/peps/pep-0426.rst:586
 msgid ""
 "This field SHOULD contain fewer than 512 characters and MUST contain fewer "
 "than 2048."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:586
+#: ../../peps/peps/pep-0426.rst:589
 msgid "This field SHOULD NOT contain any line breaks."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:588
+#: ../../peps/peps/pep-0426.rst:591
 msgid ""
 "A more complete description SHOULD be included as a separate file in the "
 "sdist for the distribution. Refer to the ``python-details`` extension in :"
 "pep:`459` for more information."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:598
+#: ../../peps/peps/pep-0426.rst:601
 msgid "Source code metadata"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:600
+#: ../../peps/peps/pep-0426.rst:603
 msgid ""
 "This section specifies fields that provide identifying details for the "
 "source code used to produce this distribution."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:603
+#: ../../peps/peps/pep-0426.rst:606
 msgid ""
 "All of these fields are optional. Automated tools MUST operate correctly if "
 "a distribution does not provide them, including failing cleanly when an "
 "operation depending on one of these fields is requested."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:609 ../../peps/peps/pep-0426.rst:1232
+#: ../../peps/peps/pep-0426.rst:612 ../../peps/peps/pep-0426.rst:1235
 msgid "Source labels"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:611
+#: ../../peps/peps/pep-0426.rst:614
 msgid ""
 "Source labels are text strings with minimal defined semantics. They are "
 "intended to allow the original source code to be unambiguously identified, "
@@ -1093,7 +1101,7 @@ msgid ""
 "particular distribution."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:616
+#: ../../peps/peps/pep-0426.rst:619
 msgid ""
 "To ensure source labels can be readily incorporated as part of file names "
 "and URLs, and to avoid formatting inconsistencies in hexadecimal hash "
@@ -1101,42 +1109,42 @@ msgid ""
 "characters:"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:621
+#: ../../peps/peps/pep-0426.rst:624
 msgid "Lowercase ASCII letters (``[a-z]``)"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:626
+#: ../../peps/peps/pep-0426.rst:629
 msgid "plus signs (``+``)"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:628
+#: ../../peps/peps/pep-0426.rst:631
 msgid "Source labels MUST start and end with an ASCII letter or digit."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:630
+#: ../../peps/peps/pep-0426.rst:633
 msgid ""
 "A regular expression to rnforce these constraints (when run with ``re."
 "IGNORECASE``) is::"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:635
+#: ../../peps/peps/pep-0426.rst:638
 msgid ""
 "A source label for a project MUST NOT match any defined version for that "
 "project. This restriction ensures that there is no ambiguity between version "
 "identifiers and source labels."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:651
+#: ../../peps/peps/pep-0426.rst:654
 msgid "Source URL"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:653
+#: ../../peps/peps/pep-0426.rst:656
 msgid ""
 "A string containing a full URL where the source for this specific version of "
 "the distribution can be downloaded."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:656
+#: ../../peps/peps/pep-0426.rst:659
 msgid ""
 "Source URLs MUST be unique within each project. This means that the URL "
 "can't be something like ``\"https://github.com/pypa/pip/archive/main."
@@ -1144,7 +1152,7 @@ msgid ""
 "zip\"``."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:660
+#: ../../peps/peps/pep-0426.rst:663
 msgid ""
 "The source URL MUST reference either a source archive or a tag or specific "
 "commit in an online version control system that permits creation of a "
@@ -1152,7 +1160,7 @@ msgid ""
 "recreate the distribution from the original source form."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:665
+#: ../../peps/peps/pep-0426.rst:668
 msgid ""
 "All source URL references SHOULD specify a secure transport mechanism (such "
 "as ``https``) AND include an expected hash value in the URL for verification "
@@ -1164,21 +1172,21 @@ msgid ""
 "URL."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:674
+#: ../../peps/peps/pep-0426.rst:677
 msgid ""
 "For source archive references, an expected hash value may be specified by "
 "including a ``<hash-algorithm>=<expected-hash>`` entry as part of the URL "
 "fragment."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:678
+#: ../../peps/peps/pep-0426.rst:681
 msgid ""
 "As of 2017, it is RECOMMENDED that ``'sha256'`` hashes be used for source "
 "URLs, as this hash is not yet known to be vulnerable to generation of "
 "malicious collisions, while also being widely available on client systems."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:682
+#: ../../peps/peps/pep-0426.rst:685
 msgid ""
 "For version control references, the ``VCS+protocol`` scheme SHOULD be used "
 "to identify both the version control system and the secure transport, and a "
@@ -1187,7 +1195,7 @@ msgid ""
 "systems that do not provide hash based commit identifiers."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:688
+#: ../../peps/peps/pep-0426.rst:691
 msgid ""
 "To handle version control systems that do not support including commit or "
 "tag references directly in the URL, that information may be appended to the "
@@ -1195,7 +1203,7 @@ msgid ""
 "notation."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:695
+#: ../../peps/peps/pep-0426.rst:698
 msgid ""
 "This isn't *quite* the same as the existing VCS reference notation supported "
 "by pip. Firstly, the distribution name is a separate field rather than "
@@ -1206,18 +1214,18 @@ msgid ""
 "*hash*, less so)."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:711
+#: ../../peps/peps/pep-0426.rst:714
 msgid "Semantic dependencies"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:713
+#: ../../peps/peps/pep-0426.rst:716
 msgid ""
 "Dependency metadata allows published projects to make use of functionality "
 "provided by other published projects, without needing to bundle copies of "
 "particular releases of those projects."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:717
+#: ../../peps/peps/pep-0426.rst:720
 msgid ""
 "Semantic dependencies allow publishers to indicate not only which other "
 "projects are needed, but also *why* they're needed. This additional "
@@ -1227,40 +1235,40 @@ msgid ""
 "constraints)."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:724
+#: ../../peps/peps/pep-0426.rst:727
 msgid ""
 "By default, dependency declarations are assumed to be for \"runtime "
 "dependencies\": other releases that are needed to actually use the published "
 "release."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:728
+#: ../../peps/peps/pep-0426.rst:731
 msgid ""
 "There are also four different kinds of optional dependency that releases may "
 "declare:"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:731
+#: ../../peps/peps/pep-0426.rst:734
 msgid ""
 "``test`` dependencies: other releases that are needed to run the automated "
 "test suite for this release, but are not needed just to use it (e.g. "
 "``nose2`` or ``pytest``)"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:734
+#: ../../peps/peps/pep-0426.rst:737
 msgid ""
 "``build`` dependencies: other releases that are needed to build this a "
 "deployable binary version of this release from source (e.g. ``flit`` or "
 "``setuptools``)"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:737
+#: ../../peps/peps/pep-0426.rst:740
 msgid ""
 "``doc`` dependencies: other releases that are needed to build the "
 "documentation for this distribution (e.g. the ``sphinx`` build tool)"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:739
+#: ../../peps/peps/pep-0426.rst:742
 msgid ""
 "``dev`` dependencies: other releases that are needed when working on this "
 "distribution, but do not fit into exactly one of the other optional "
@@ -1269,201 +1277,201 @@ msgid ""
 "dependencies, without needing to be listed three times"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:745
+#: ../../peps/peps/pep-0426.rst:748
 msgid ""
 "These optional categories are known as `Extras <Extras (optional "
 "dependencies)_>`_. In addition to the four standard categories, projects may "
 "also declare their own custom categories in the `Extras`_ field."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:750
+#: ../../peps/peps/pep-0426.rst:753
 msgid ""
 "There are also two standard extra categories that imply dependencies on "
 "other extras:"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:753
+#: ../../peps/peps/pep-0426.rst:756
 msgid "``alldev``: implies the ``test``, ``build``, ``doc``, ``dev`` extras"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:754
+#: ../../peps/peps/pep-0426.rst:757
 msgid "``all``: if not otherwise defined, implies all declared extras"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:756
+#: ../../peps/peps/pep-0426.rst:759
 msgid ""
 "Dependency management is heavily dependent on the version identification and "
 "specification scheme defined in :pep:`440` and the dependency specification, "
 "extra, and environment marker schemes defined in :pep:`508`."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:760
+#: ../../peps/peps/pep-0426.rst:763
 msgid ""
 "All of these fields are optional. Automated tools MUST operate correctly if "
 "a distribution does not provide them, by assuming that a missing field "
 "indicates \"Not applicable for this distribution\"."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:766
+#: ../../peps/peps/pep-0426.rst:769
 msgid "Mapping dependencies to development and distribution activities"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:768
+#: ../../peps/peps/pep-0426.rst:771
 msgid ""
 "The different categories of dependency are based on the various distribution "
 "and development activities identified above, and govern which dependencies "
 "should be installed for the specified activities:"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:772
+#: ../../peps/peps/pep-0426.rst:775
 msgid "Required runtime dependencies:"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:774 ../../peps/peps/pep-0426.rst:785
+#: ../../peps/peps/pep-0426.rst:777 ../../peps/peps/pep-0426.rst:788
 msgid "unconditional dependencies"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:776
+#: ../../peps/peps/pep-0426.rst:779
 msgid "Required build dependencies:"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:778 ../../peps/peps/pep-0426.rst:787
+#: ../../peps/peps/pep-0426.rst:781 ../../peps/peps/pep-0426.rst:790
 msgid "the ``build`` extra"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:779 ../../peps/peps/pep-0426.rst:789
+#: ../../peps/peps/pep-0426.rst:782 ../../peps/peps/pep-0426.rst:792
 msgid "the ``dev`` extra"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:780
+#: ../../peps/peps/pep-0426.rst:783
 msgid ""
 "If running the distribution's test suite as part of the build process, also "
 "install the unconditional dependencies and ``test`` extra"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:783
+#: ../../peps/peps/pep-0426.rst:786
 msgid "Required development and publication dependencies:"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:786
+#: ../../peps/peps/pep-0426.rst:789
 msgid "the ``test`` extra"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:788
+#: ../../peps/peps/pep-0426.rst:791
 msgid "the ``doc`` extra"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:791
+#: ../../peps/peps/pep-0426.rst:794
 msgid ""
 "The notation described in `Extras (optional dependencies)`_ SHOULD be used "
 "to determine exactly what gets installed for various operations."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:794
+#: ../../peps/peps/pep-0426.rst:797
 msgid ""
 "Installation tools SHOULD report an error if dependencies cannot be "
 "satisfied, MUST at least emit a warning, and MAY allow the user to force the "
 "installation to proceed regardless."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:798
+#: ../../peps/peps/pep-0426.rst:801
 msgid ""
 "See Appendix B for an overview of mapping these dependencies to an RPM spec "
 "file."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:803
+#: ../../peps/peps/pep-0426.rst:806
 msgid "Extras"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:805
+#: ../../peps/peps/pep-0426.rst:808
 msgid ""
 "A list of optional sets of dependencies that may be used to define "
 "conditional dependencies in dependency fields. See `Extras (optional "
 "dependencies)`_ for details."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:809
+#: ../../peps/peps/pep-0426.rst:812
 msgid ""
 "The names of extras MUST abide by the same restrictions as those for "
 "distribution names."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:812
+#: ../../peps/peps/pep-0426.rst:815
 msgid ""
 "The following extra names are available by default and MUST NOT be declared "
 "explicitly in this field:"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:815
+#: ../../peps/peps/pep-0426.rst:818
 msgid "``all``"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:816
+#: ../../peps/peps/pep-0426.rst:819
 msgid "``alldev``"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:817
+#: ../../peps/peps/pep-0426.rst:820
 msgid "``build``"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:818
+#: ../../peps/peps/pep-0426.rst:821
 msgid "``dev``"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:819
+#: ../../peps/peps/pep-0426.rst:822
 msgid "``doc``"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:820
+#: ../../peps/peps/pep-0426.rst:823
 msgid "``test``"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:828
+#: ../../peps/peps/pep-0426.rst:831
 msgid "Dependencies"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:830
+#: ../../peps/peps/pep-0426.rst:833
 msgid "A list of release requirements needed to actually run this release."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:832
+#: ../../peps/peps/pep-0426.rst:835
 msgid ""
 "Public index servers MAY prohibit strict version matching clauses or direct "
 "references in this field."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:851
+#: ../../peps/peps/pep-0426.rst:854
 msgid ""
 "While many dependencies will be needed to use a project release at all, "
 "others are needed only on particular platforms or only when particular "
 "optional features of the release are needed."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:855
+#: ../../peps/peps/pep-0426.rst:858
 msgid ""
 "To handle this, release dependency specifiers are mappings with the "
 "following subfields:"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:858
+#: ../../peps/peps/pep-0426.rst:861
 msgid "``requires``: a list of requirements needed to satisfy the dependency"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:859
+#: ../../peps/peps/pep-0426.rst:862
 msgid ""
 "``extra``: the name of a set of optional dependencies that are requested and "
 "installed together. See `Extras (optional dependencies)`_ for details"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:861
+#: ../../peps/peps/pep-0426.rst:864
 msgid ""
 "``environment``: an environment marker defining the environment that needs "
 "these dependencies. The syntax and capabilities of environment markers are "
 "defined in :pep:`508`"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:865
+#: ../../peps/peps/pep-0426.rst:868
 msgid ""
 "Individual entries in the ``requires`` lists are strings using the "
 "dependency declaration format defined in :pep:`508`, with the exception that "
@@ -1471,27 +1479,27 @@ msgid ""
 "declarations, and are instead supplied in the separate ``environment`` field."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:870
+#: ../../peps/peps/pep-0426.rst:873
 msgid ""
 "``requires`` is the only required subfield. When it is the only subfield, "
 "the dependencies are said to be *unconditional*. If ``extra`` or "
 "``environment`` is specified, then the dependencies are *conditional*."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:874
+#: ../../peps/peps/pep-0426.rst:877
 msgid ""
 "All three fields may be supplied, indicating that the dependencies are "
 "needed only when the named extra is requested in a particular environment."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:877
+#: ../../peps/peps/pep-0426.rst:880
 msgid ""
 "Automated tools MUST combine related dependency specifiers (those with "
 "common values for ``extra`` and ``environment``) into a single specifier "
 "listing multiple requirements when serialising metadata."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:881
+#: ../../peps/peps/pep-0426.rst:884
 msgid ""
 "Despite this required normalisation, the same extra name or environment "
 "marker MAY appear in multiple conditional dependencies. This may happen, for "
@@ -1500,7 +1508,7 @@ msgid ""
 "that is required to be unique in a list of dependency specifiers."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:887
+#: ../../peps/peps/pep-0426.rst:890
 msgid ""
 "Aside from the six standard extra categories, any extras referenced from a "
 "dependency specifier MUST be named in the `Extras`_ field for this "
@@ -1509,7 +1517,7 @@ msgid ""
 "set of dependencies."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:892
+#: ../../peps/peps/pep-0426.rst:895
 msgid ""
 "To reuse an extra definition as part of another extra, project releases MAY "
 "declare dependencies on themselves. To avoid infinite recursion in these "
@@ -1517,44 +1525,44 @@ msgid ""
 "onto itself."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:898
+#: ../../peps/peps/pep-0426.rst:901
 msgid "Metadata Extensions"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:900
+#: ../../peps/peps/pep-0426.rst:903
 msgid ""
 "Extensions to the metadata MAY be present in a mapping under the "
 "``extensions`` key.  The keys MUST be valid prefixed names, while the values "
 "MUST themselves be nested mappings."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:904
+#: ../../peps/peps/pep-0426.rst:907
 msgid ""
 "Two key names are reserved and MUST NOT be used by extensions, except as "
 "described below:"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:907
+#: ../../peps/peps/pep-0426.rst:910
 msgid "``extension_version``"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:908
+#: ../../peps/peps/pep-0426.rst:911
 msgid "``installer_must_handle``"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:910
+#: ../../peps/peps/pep-0426.rst:913
 msgid ""
 "The following example shows the ``python.details`` and ``python.commands`` "
 "standard extensions from :pep:`459`::"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:937
+#: ../../peps/peps/pep-0426.rst:940
 msgid ""
 "Extension names are defined by distributions that will then make use of the "
 "additional published metadata in some way."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:940
+#: ../../peps/peps/pep-0426.rst:943
 msgid ""
 "To reduce the chance of name conflicts, extension names SHOULD use a prefix "
 "that corresponds to a module name in the distribution that defines the "
@@ -1562,24 +1570,24 @@ msgid ""
 "authoritative documentation for metadata extensions."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:945
+#: ../../peps/peps/pep-0426.rst:948
 msgid ""
 "Metadata extensions allow development tools to record information in the "
 "metadata that may be useful during later phases of distribution, but is not "
 "essential for dependency resolution or building the software."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:951
+#: ../../peps/peps/pep-0426.rst:954
 msgid "Extension versioning"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:953
+#: ../../peps/peps/pep-0426.rst:956
 msgid ""
 "Extensions MUST be versioned, using the ``extension_version`` key. However, "
 "if this key is omitted, then the implied version is ``1.0``."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:956
+#: ../../peps/peps/pep-0426.rst:959
 msgid ""
 "Automated tools consuming extension metadata SHOULD warn if "
 "``extension_version`` is greater than the highest version they support, and "
@@ -1588,18 +1596,18 @@ msgid ""
 "is the value before the first dot)."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:962
+#: ../../peps/peps/pep-0426.rst:965
 msgid ""
 "For broader compatibility, build tools MAY choose to produce extension "
 "metadata using the lowest metadata version that includes all of the needed "
 "fields."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:968
+#: ../../peps/peps/pep-0426.rst:971
 msgid "Required extension handling"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:970
+#: ../../peps/peps/pep-0426.rst:973
 msgid ""
 "A project may consider correct handling of some extensions to be essential "
 "to correct installation of the software. This is indicated by setting the "
@@ -1608,7 +1616,7 @@ msgid ""
 "installing the distribution is not considered mandatory by the developers."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:976
+#: ../../peps/peps/pep-0426.rst:979
 msgid ""
 "Installation tools MUST fail if ``installer_must_handle`` is set to ``true`` "
 "for an extension and the tool does not have any ability to process that "
@@ -1616,18 +1624,18 @@ msgid ""
 "system)."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:981
+#: ../../peps/peps/pep-0426.rst:984
 msgid ""
 "If an installation tool encounters a required extension it doesn't "
 "understand when attempting to install from a wheel archive, it MAY fall back "
 "on attempting to install from source rather than failing entirely."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:987
+#: ../../peps/peps/pep-0426.rst:990
 msgid "Extras (optional dependencies)"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:989
+#: ../../peps/peps/pep-0426.rst:992
 msgid ""
 "As defined in :pep:`508`, extras are additional dependencies that enable an "
 "optional aspect of a project release, often corresponding to a ``try: import "
@@ -1636,7 +1644,7 @@ msgid ""
 "as testing, building, or working on the component)."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:995
+#: ../../peps/peps/pep-0426.rst:998
 msgid ""
 "To support the use of the release with or without the optional dependencies, "
 "they are listed separately from the release's core runtime dependencies and "
@@ -1644,11 +1652,11 @@ msgid ""
 "another project, or else when issuing a command to an installation tool."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1000
+#: ../../peps/peps/pep-0426.rst:1003
 msgid "Example of a distribution with optional dependencies::"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1015
+#: ../../peps/peps/pep-0426.rst:1018
 msgid ""
 "Other distributions require the additional dependencies by placing the "
 "relevant extra names inside square brackets after the distribution name when "
@@ -1656,91 +1664,91 @@ msgid ""
 "requested by placing to"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1020
+#: ../../peps/peps/pep-0426.rst:1023
 msgid ""
 "If the standard ``all`` extra has no explicitly declared entries, then "
 "integration tools SHOULD implicitly define it as a dependency on all of the "
 "extras explicitly declared by the project."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1024
+#: ../../peps/peps/pep-0426.rst:1027
 msgid ""
 "If the standard ``alldev`` extra has no explicitly declared entries, then "
 "integration tools SHOULD implicitly define it as a dependency on the "
 "standard ``test``, ``build``, ``doc``, and ``dev`` extras."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1028
+#: ../../peps/peps/pep-0426.rst:1031
 msgid ""
 "The full set of dependency requirements is then based on the unconditional "
 "dependencies, along with those of any requested extras."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1031
+#: ../../peps/peps/pep-0426.rst:1034
 msgid "Dependency examples (showing just the ``requires`` subfield)::"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1045
+#: ../../peps/peps/pep-0426.rst:1048
 msgid "Updating the metadata specification"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1047
+#: ../../peps/peps/pep-0426.rst:1050
 msgid ""
 "The metadata specification may be updated with clarifications without "
 "requiring a new PEP or a change to the metadata version."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1050
+#: ../../peps/peps/pep-0426.rst:1053
 msgid ""
 "Changing the meaning of existing fields or adding new features (other than "
 "through the extension mechanism) requires a new metadata version defined in "
 "a new PEP."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1056
+#: ../../peps/peps/pep-0426.rst:1059
 msgid "Appendix A: Conversion notes for legacy metadata"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1058
+#: ../../peps/peps/pep-0426.rst:1061
 msgid ""
 "The reference implementations for converting from legacy metadata to "
 "metadata 2.0 are:"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1061
+#: ../../peps/peps/pep-0426.rst:1064
 msgid ""
 "the `wheel project <https://bitbucket.org/dholth/wheel/overview>`__, which "
 "adds the ``bdist_wheel`` command to ``setuptools``"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1063
+#: ../../peps/peps/pep-0426.rst:1066
 msgid ""
 "the `Warehouse project <https://github.com/dstufft/warehouse>`__, which will "
 "eventually be migrated to the Python Packaging Authority as the next "
 "generation Python Package Index implementation"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1066
+#: ../../peps/peps/pep-0426.rst:1069
 msgid ""
 "the `distlib project <https://bitbucket.org/pypa/distlib/>`__ which is "
 "derived from the core packaging infrastructure created for the "
 "``distutils2`` project"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1072
+#: ../../peps/peps/pep-0426.rst:1075
 msgid ""
 "These tools have yet to be updated for the switch to standard extensions for "
 "several fields."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1075
+#: ../../peps/peps/pep-0426.rst:1078
 msgid ""
 "While it is expected that there may be some edge cases where manual "
 "intervention is needed for clean conversion, the specification has been "
 "designed to allow fully automated conversion of almost all projects on PyPI."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1080
+#: ../../peps/peps/pep-0426.rst:1083
 msgid ""
 "Metadata conversion (especially on the part of the index server) is a "
 "necessary step to allow installation and analysis tools to start benefiting "
@@ -1748,18 +1756,18 @@ msgid ""
 "upgrade to newer build systems."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1087
+#: ../../peps/peps/pep-0426.rst:1090
 msgid "Appendix B: Mapping dependency declarations to an RPM SPEC file"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1089
+#: ../../peps/peps/pep-0426.rst:1092
 msgid ""
 "As an example of mapping this PEP to Linux distro packages, assume an "
 "example project without any extras defined is split into 2 RPMs in a SPEC "
 "file: ``example`` and ``example-devel``."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1093
+#: ../../peps/peps/pep-0426.rst:1096
 msgid ""
 "The unconditional dependencies would be mapped to the Requires dependencies "
 "for the \"example\" RPM (a mapping from environment markers relevant to "
@@ -1767,7 +1775,7 @@ msgid ""
 "correctly)."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1097
+#: ../../peps/peps/pep-0426.rst:1100
 #, python-format
 msgid ""
 "The ``build`` and ``dev`` extra dependencies would be mapped to the "
@@ -1776,14 +1784,14 @@ msgid ""
 "mapped to the BuildRequires declaration for the RPM."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1102
+#: ../../peps/peps/pep-0426.rst:1105
 msgid ""
 "All defined dependencies relevant to Linux in the ``dev``, ``test``, "
 "``build``, and ``doc`` extras would become Requires dependencies for the "
 "\"example-devel\" RPM."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1106
+#: ../../peps/peps/pep-0426.rst:1109
 msgid ""
 "A documentation toolchain dependency like Sphinx would either go in the "
 "``build`` extra (for example, if man pages were included in the built "
@@ -1793,7 +1801,7 @@ msgid ""
 "dependency in the spec file."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1113
+#: ../../peps/peps/pep-0426.rst:1116
 msgid ""
 "If the project did define any extras, those could be mapped to additional "
 "virtual RPMs with appropriate BuildRequires and Requires entries based on "
@@ -1801,7 +1809,7 @@ msgid ""
 "mapped to other system package manager features (such as weak dependencies)."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1118
+#: ../../peps/peps/pep-0426.rst:1121
 msgid ""
 "The metadata extension format should also provide a way for distribution "
 "specific hints to be included in the upstream project metadata without "
@@ -1809,88 +1817,88 @@ msgid ""
 "specific format."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1125
+#: ../../peps/peps/pep-0426.rst:1128
 msgid "Appendix C: Summary of differences from PEP 345"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1127
+#: ../../peps/peps/pep-0426.rst:1130
 msgid ""
 "Metadata-Version is now 2.0, with semantics specified for handling version "
 "changes"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1130
+#: ../../peps/peps/pep-0426.rst:1133
 msgid ""
 "The increasingly complex ad hoc \"Key: Value\" format has been replaced by a "
 "more structured JSON compatible format that is easily represented as Python "
 "dictionaries, strings, lists."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1134
+#: ../../peps/peps/pep-0426.rst:1137
 msgid ""
 "Most fields are now optional and filling in dummy data for omitted fields is "
 "explicitly disallowed"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1137
+#: ../../peps/peps/pep-0426.rst:1140
 msgid ""
 "Explicit permission for in-place clarifications without releasing a new "
 "version of the specification"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1140
+#: ../../peps/peps/pep-0426.rst:1143
 msgid ""
 "The PEP now attempts to provide more of an explanation of *why* the fields "
 "exist and how they are intended to be used, rather than being a simple "
 "description of the permitted contents"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1144
+#: ../../peps/peps/pep-0426.rst:1147
 msgid ""
 "Changed the version scheme to be based on :pep:`440` rather than :pep:`386`"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1146
+#: ../../peps/peps/pep-0426.rst:1149
 msgid "Added the source label mechanism as described in :pep:`440`"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1148
+#: ../../peps/peps/pep-0426.rst:1151
 msgid ""
 "Formally defined dependency declarations, extras, and environment markers "
 "in :pep:`508`"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1151
+#: ../../peps/peps/pep-0426.rst:1154
 msgid ""
 "Support for different kinds of dependencies through additional reserved "
 "extra names"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1154
+#: ../../peps/peps/pep-0426.rst:1157
 msgid "Updated obsolescence mechanism"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1156
+#: ../../peps/peps/pep-0426.rst:1159
 msgid ""
 "A well-defined metadata extension mechanism, and migration of any fields not "
 "needed for dependency resolution to standard extensions"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1159
+#: ../../peps/peps/pep-0426.rst:1162
 msgid ""
 "With all due respect to Charles Schulz and Peanuts, many of the examples "
 "have been updated to be more thematically appropriate for Python ;)"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1162
+#: ../../peps/peps/pep-0426.rst:1165
 msgid "The rationale for major changes is given in the following sections."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1166
+#: ../../peps/peps/pep-0426.rst:1169
 msgid "Metadata-Version semantics"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1168
+#: ../../peps/peps/pep-0426.rst:1171
 msgid ""
 "The semantics of major and minor version increments are now specified, and "
 "follow the same model as the format version semantics specified for the "
@@ -1900,14 +1908,14 @@ msgid ""
 "that are not compatible with existing tools."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1175
+#: ../../peps/peps/pep-0426.rst:1178
 msgid ""
 "The major version number of the specification has been incremented "
 "accordingly, as interpreting :pep:`426` metadata obviously cannot be "
 "interpreted in accordance with earlier metadata specifications."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1179
+#: ../../peps/peps/pep-0426.rst:1182
 msgid ""
 "Whenever the major version number of the specification is incremented, it is "
 "expected that deployment will take some time, as either metadata consuming "
@@ -1917,7 +1925,7 @@ msgid ""
 "multiple versions of the metadata in parallel."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1186
+#: ../../peps/peps/pep-0426.rst:1189
 msgid ""
 "Existing tools won't abide by this guideline until they're updated to "
 "support the new metadata standard, so the new semantics will first take "
@@ -1928,11 +1936,11 @@ msgid ""
 "format (including the formal extension mechanism)."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1196
+#: ../../peps/peps/pep-0426.rst:1199
 msgid "Switching to a JSON compatible format"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1198
+#: ../../peps/peps/pep-0426.rst:1201
 msgid ""
 "The old \"Key:Value\" format was becoming increasingly limiting, with "
 "various complexities like parsers needing to know which fields were "
@@ -1942,7 +1950,7 @@ msgid ""
 "particular subfields."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1205
+#: ../../peps/peps/pep-0426.rst:1208
 msgid ""
 "The old serialisation format also wasn't amenable to easy conversion to "
 "standard Python data structures for use in any new install hook APIs, or in "
@@ -1950,7 +1958,7 @@ msgid ""
 "information for inclusion in the installation database."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1210
+#: ../../peps/peps/pep-0426.rst:1213
 msgid ""
 "Accordingly, we've taken the step of switching to a JSON-compatible metadata "
 "format. This works better for APIs and is much easier for tools to parse and "
@@ -1959,7 +1967,7 @@ msgid ""
 "several aspects of the migration to the new metadata format."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1216
+#: ../../peps/peps/pep-0426.rst:1219
 msgid ""
 "The specific choice of ``pydist.json`` as the preferred file name relates to "
 "the fact that the metadata described in these files applies to the "
@@ -1969,17 +1977,17 @@ msgid ""
 "target environment."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1225
+#: ../../peps/peps/pep-0426.rst:1228
 msgid "Changing the version scheme"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1227
+#: ../../peps/peps/pep-0426.rst:1230
 msgid ""
 "See :pep:`440` for a detailed rationale for the various changes made to the "
 "versioning scheme."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1234
+#: ../../peps/peps/pep-0426.rst:1237
 msgid ""
 "The new source label support is intended to make it clearer that the "
 "constraints on public version identifiers are there primarily to aid in the "
@@ -1989,18 +1997,18 @@ msgid ""
 "understand."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1241
+#: ../../peps/peps/pep-0426.rst:1244
 msgid ""
 "Source labels also make it straightforward to record specific details of a "
 "version, like a hash or tag name that allows the release to be reconstructed "
 "from the project version control system."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1247
+#: ../../peps/peps/pep-0426.rst:1250
 msgid "Support for optional dependencies for distributions"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1249
+#: ../../peps/peps/pep-0426.rst:1252
 msgid ""
 "The new extras system allows distributions to declare optional behaviour, "
 "and to use the dependency fields to indicate when particular dependencies "
@@ -2010,7 +2018,7 @@ msgid ""
 "represented in the new metadata format."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1256
+#: ../../peps/peps/pep-0426.rst:1259
 msgid ""
 "The additions to the extras syntax relative to setuptools are defined to "
 "make it easier to express the various possible combinations of dependencies, "
@@ -2018,18 +2026,18 @@ msgid ""
 "running the test suite) and development systems."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1263
+#: ../../peps/peps/pep-0426.rst:1266
 msgid "Support for different kinds of semantic dependencies"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1265
+#: ../../peps/peps/pep-0426.rst:1268
 msgid ""
 "The separation of the five different kinds of dependency through the Extras "
 "system allows a project to optionally indicate whether a dependency is "
 "needed specifically to develop, build, test or use the distribution."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1269
+#: ../../peps/peps/pep-0426.rst:1272
 msgid ""
 "The advantage of having these distinctions supported in the upstream Python "
 "specific metadata is that even if a project doesn't care about these "
@@ -2039,11 +2047,11 @@ msgid ""
 "dependencies end up being installed."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1278
+#: ../../peps/peps/pep-0426.rst:1281
 msgid "Support for metadata extensions"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1280
+#: ../../peps/peps/pep-0426.rst:1283
 msgid ""
 "The new extension effectively allows sections of the metadata namespace to "
 "be delegated to other projects, while preserving a standard overall format "
@@ -2051,7 +2059,7 @@ msgid ""
 "support a particular extension."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1285
+#: ../../peps/peps/pep-0426.rst:1288
 msgid ""
 "It also works well in combination with the new ``build`` extra to allow a "
 "distribution to depend on tools which *do* know how to handle the chosen "
@@ -2059,13 +2067,13 @@ msgid ""
 "particular extensions to be provided as optional features."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1290
+#: ../../peps/peps/pep-0426.rst:1293
 msgid ""
 "Possible future uses for extensions include declaration of plugins for other "
 "projects and hints for automatic conversion to Linux system packages."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1294
+#: ../../peps/peps/pep-0426.rst:1297
 msgid ""
 "The ability to declare an extension as required is included primarily to "
 "allow the definition of the metadata hooks extension to be deferred until "
@@ -2076,11 +2084,11 @@ msgid ""
 "failing to run the expected postinstall hook."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1305
+#: ../../peps/peps/pep-0426.rst:1308
 msgid "Appendix D: Deferred features"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1307
+#: ../../peps/peps/pep-0426.rst:1310
 msgid ""
 "Several potentially useful features have been deliberately deferred in order "
 "to better prioritise our efforts in migrating to the new metadata standard. "
@@ -2089,7 +2097,7 @@ msgid ""
 "2.1 without breaking any use cases already supported by metadata 2.0."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1314
+#: ../../peps/peps/pep-0426.rst:1317
 msgid ""
 "Once the ``pypi``, ``setuptools``, ``pip``, ``wheel`` and ``distlib`` "
 "projects support creation and consumption of metadata 2.0, then we may "
@@ -2097,66 +2105,66 @@ msgid ""
 "features."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1321
+#: ../../peps/peps/pep-0426.rst:1324
 msgid "Standard extensions"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1323
+#: ../../peps/peps/pep-0426.rst:1326
 msgid ""
 "Some of the information provided by the legacy metadata system has been "
 "moved out to standard extensions defined in :pep:`459`."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1326
+#: ../../peps/peps/pep-0426.rst:1329
 msgid ""
 "This allows publication of the core dependency metadata in a more readily "
 "consumable format to proceed even before the full details of those "
 "extensions have been resolved."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1332
+#: ../../peps/peps/pep-0426.rst:1335
 msgid "Improved handling of project obsolescence, renames and mergers"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1334
+#: ../../peps/peps/pep-0426.rst:1337
 msgid ""
 "Earlier drafts of this PEP included new ``Provides`` and ``Obsoleted-By`` "
 "fields for more robust automated notifications and tracking of project "
 "obsolescence, renames and mergers."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1338
+#: ../../peps/peps/pep-0426.rst:1341
 msgid ""
 "This isn't an essential feature of a dependency management system, and has "
 "been deferred indefinitely as a possible future metadata extension."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1343
+#: ../../peps/peps/pep-0426.rst:1346
 msgid "MIME type registration"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1345
+#: ../../peps/peps/pep-0426.rst:1348
 msgid ""
 "At some point after acceptance of the PEP, we may submit the following MIME "
 "type registration request to IANA:"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1348
+#: ../../peps/peps/pep-0426.rst:1351
 msgid "``application/vnd.python.pydist+json``"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1350
+#: ../../peps/peps/pep-0426.rst:1353
 msgid ""
 "It's even possible we may be able to just register the ``vnd.python`` "
 "namespace under the banner of the PSF rather than having to register the "
 "individual subformats."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1356
+#: ../../peps/peps/pep-0426.rst:1359
 msgid "String methods in environment markers"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1358
+#: ../../peps/peps/pep-0426.rst:1361
 msgid ""
 "Supporting at least \".startswith\" and \".endswith\" string methods in "
 "environment markers would allow some conditions to be written more "
@@ -2166,22 +2174,22 @@ msgid ""
 "Windows still shows up as ``win32`` is more than a little strange."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1368
+#: ../../peps/peps/pep-0426.rst:1371
 msgid "Appendix E: Rejected features"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1370
+#: ../../peps/peps/pep-0426.rst:1373
 msgid ""
 "The following features have been explicitly considered and rejected as "
 "introducing too much additional complexity for too small a gain in "
 "expressiveness."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1376
+#: ../../peps/peps/pep-0426.rst:1379
 msgid "Separate lists for conditional and unconditional dependencies"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1378
+#: ../../peps/peps/pep-0426.rst:1381
 msgid ""
 "Earlier versions of this PEP used separate lists for conditional and "
 "unconditional dependencies. This turned out to be annoying to handle in "
@@ -2189,11 +2197,11 @@ msgid ""
 "substantially shorter, suggesting it was actually harder to explain as well."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1385
+#: ../../peps/peps/pep-0426.rst:1388
 msgid "Separate lists for semantic dependencies"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1387
+#: ../../peps/peps/pep-0426.rst:1390
 msgid ""
 "Earlier versions of this PEP used separate fields rather than the extras "
 "system for test, build, documentation, and development dependencies. This "
@@ -2202,11 +2210,11 @@ msgid ""
 "actually harder to explain as well."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1395
+#: ../../peps/peps/pep-0426.rst:1398
 msgid "Introducing friction for overly precise dependency declarations"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1397
+#: ../../peps/peps/pep-0426.rst:1400
 msgid ""
 "Earlier versions of this PEP attempted to introduce friction into the "
 "inappropriate use of overly strict dependency declarations in published "
@@ -2217,11 +2225,11 @@ msgid ""
 "Python Package Index."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1407
+#: ../../peps/peps/pep-0426.rst:1410
 msgid "Disallowing underscores in distribution names"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1409
+#: ../../peps/peps/pep-0426.rst:1412
 msgid ""
 "Debian doesn't actually permit underscores in names, but that seems unduly "
 "restrictive for this spec given the common practice of using valid Python "
@@ -2231,11 +2239,11 @@ msgid ""
 "won't introduce any name conflicts)."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1418
+#: ../../peps/peps/pep-0426.rst:1421
 msgid "Allowing the use of Unicode in distribution names"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1420
+#: ../../peps/peps/pep-0426.rst:1423
 msgid ""
 "This PEP deliberately avoids following Python 3 down the path of arbitrary "
 "Unicode identifiers, as the security implications of doing so are "
@@ -2243,14 +2251,14 @@ msgid ""
 "more interesting attack vectors than mere code obfuscation)."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1425
+#: ../../peps/peps/pep-0426.rst:1428
 msgid ""
 "In addition, the existing tools really only work properly if you restrict "
 "names to ASCII and changing that would require a *lot* of work for all the "
 "automated tools in the chain."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1429
+#: ../../peps/peps/pep-0426.rst:1432
 msgid ""
 "It may be reasonable to revisit this question at some point in the (distant) "
 "future, but setting up a more reliable software distribution system is "
@@ -2258,11 +2266,11 @@ msgid ""
 "into the mix."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1436
+#: ../../peps/peps/pep-0426.rst:1439
 msgid "Depending on source labels"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1438
+#: ../../peps/peps/pep-0426.rst:1441
 msgid ""
 "There is no mechanism to express a dependency on a source label - they are "
 "included in the metadata for internal project reference only. Instead, "
@@ -2270,29 +2278,29 @@ msgid ""
 "direct URL references."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1445
+#: ../../peps/peps/pep-0426.rst:1448
 msgid "Alternative dependencies"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1447
+#: ../../peps/peps/pep-0426.rst:1450
 msgid ""
 "An earlier draft of this PEP considered allowing lists in place of the usual "
 "strings in dependency specifications to indicate that there are multiple "
 "ways to satisfy a dependency."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1451
+#: ../../peps/peps/pep-0426.rst:1454
 msgid ""
 "If at least one of the individual dependencies was already available, then "
 "the entire dependency would be considered satisfied, otherwise the first "
 "entry would be added to the dependency set."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1455
+#: ../../peps/peps/pep-0426.rst:1458
 msgid "Alternative dependency specification example::"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1460
+#: ../../peps/peps/pep-0426.rst:1463
 msgid ""
 "However, neither of the given examples is particularly compelling, since "
 "Pillow/PIL style forks aren't common, and the database driver use case would "
@@ -2302,11 +2310,11 @@ msgid ""
 "compatibility by the upstream project."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1469
+#: ../../peps/peps/pep-0426.rst:1472
 msgid "Compatible release comparisons in environment markers"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1471
+#: ../../peps/peps/pep-0426.rst:1474
 msgid ""
 ":pep:`440` defines a rich syntax for version comparisons that could "
 "potentially be useful with ``python_version`` and ``python_full_version`` in "
@@ -2315,7 +2323,7 @@ msgid ""
 "of the comparisons would introduce yet another special case to handle."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1478
+#: ../../peps/peps/pep-0426.rst:1481
 msgid ""
 "Given that environment markers are only used in cases where a higher level "
 "\"or\" is implied by the metadata structure, it seems easier to require the "
@@ -2323,11 +2331,11 @@ msgid ""
 "cases where this would be useful."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1485
+#: ../../peps/peps/pep-0426.rst:1488
 msgid "Conditional provides"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1487
+#: ../../peps/peps/pep-0426.rst:1490
 msgid ""
 "Under the revised metadata design, conditional \"provides\" based on runtime "
 "features or the environment would go in a separate \"may_provide\" field. "
@@ -2336,31 +2344,31 @@ msgid ""
 "idea won't be reconsidered until metadata 2.1 at the earliest)."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1495
+#: ../../peps/peps/pep-0426.rst:1498
 msgid "References"
 msgstr "Referências"
 
-#: ../../peps/peps/pep-0426.rst:1497
+#: ../../peps/peps/pep-0426.rst:1500
 msgid ""
 "This document specifies version 2.0 of the metadata format. Version 1.0 is "
 "specified in :pep:`241`. Version 1.1 is specified in :pep:`314`. Version 1.2 "
 "is specified in :pep:`345`."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1502
+#: ../../peps/peps/pep-0426.rst:1505
 msgid ""
 "The initial attempt at a standardised version scheme, along with the "
 "justifications for needing such a standard can be found in :pep:`386`."
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1505
+#: ../../peps/peps/pep-0426.rst:1508
 msgid "`reStructuredText markup <https://docutils.sourceforge.io/>`__"
 msgstr ""
 
-#: ../../peps/peps/pep-0426.rst:1514
+#: ../../peps/peps/pep-0426.rst:1517
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../../peps/peps/pep-0426.rst:1516
+#: ../../peps/peps/pep-0426.rst:1519
 msgid "This document has been placed in the public domain."
 msgstr "Este documento foi colocado em domínio público."

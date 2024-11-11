@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PEPs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-14 02:33+0000\n"
+"POT-Creation-Date: 2024-11-11 15:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: pt_BR\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.15.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../../peps/peps/pep-0744.rst
 msgid "Author"
@@ -212,16 +212,18 @@ msgid ""
 "Since much of this data varies even between identical runs of a program and "
 "the existing optimization pipeline makes heavy use of runtime profiling "
 "information, it doesn't make much sense to compile these traces ahead of "
-"time. As has been demonstrated for many other dynamic languages (`and even "
-"Python itself <https://www.pypy.org>`__), the most promising approach is to "
-"compile the optimized micro-ops \"just in time\" for execution."
+"time and would be a substantial redesign of the existing specification and "
+"micro-op tracing infrastructure that has already been implemented. As has "
+"been demonstrated for many other dynamic languages (`and even Python itself "
+"<https://www.pypy.org>`__), the most promising approach is to compile the "
+"optimized micro-ops \"just in time\" for execution."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:108
+#: ../../peps/peps/pep-0744.rst:109
 msgid "Rationale"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:110
+#: ../../peps/peps/pep-0744.rst:111
 msgid ""
 "Despite their reputation, JIT compilers are not magic \"go faster\" "
 "machines. Developing and maintaining any sort of optimizing compiler for "
@@ -232,7 +234,7 @@ msgid ""
 "compilation overhead."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:117
+#: ../../peps/peps/pep-0744.rst:118
 msgid ""
 "It's clear that successfully compiling Python code at runtime requires not "
 "only high-quality Python-specific optimizations for the code being run, *but "
@@ -242,7 +244,7 @@ msgid ""
 "patch compilation provides an attractive solution for the latter."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:124
+#: ../../peps/peps/pep-0744.rst:125
 msgid ""
 "In a nutshell, copy-and-patch allows a high-quality template JIT compiler to "
 "be generated from the same DSL used to generate the rest of the interpreter. "
@@ -253,7 +255,7 @@ msgid ""
 "are being added, modified, or removed."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:132
+#: ../../peps/peps/pep-0744.rst:133
 msgid ""
 "Like the rest of the interpreter, the JIT compiler is generated at build "
 "time, and has no runtime dependencies. It supports a wide range of platforms "
@@ -262,27 +264,29 @@ msgid ""
 "build-time Python code and 500 lines of runtime C code."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:139
+#: ../../peps/peps/pep-0744.rst:140
 msgid "Specification"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:141
+#: ../../peps/peps/pep-0744.rst:142
 msgid ""
-"The JIT will become non-experimental once all of the following conditions "
-"are met:"
+"The JIT is currently not part of the default build configuration, and it is "
+"likely to remain that way for the foreseeable future (though official "
+"binaries may include it). That said, the JIT will become non-experimental "
+"once all of the following conditions are met:"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:144
+#: ../../peps/peps/pep-0744.rst:147
 msgid ""
 "It provides a meaningful performance improvement for at least one popular "
 "platform (realistically, on the order of 5%)."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:147
+#: ../../peps/peps/pep-0744.rst:150
 msgid "It can be built, distributed, and deployed with minimal disruption."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:149
+#: ../../peps/peps/pep-0744.rst:152
 msgid ""
 "The Steering Council, upon request, has determined that it would provide "
 "more value to the community if enabled than if disabled (considering "
@@ -290,7 +294,7 @@ msgid ""
 "alternate designs)."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:154
+#: ../../peps/peps/pep-0744.rst:157
 msgid ""
 "These criteria should be considered a starting point, and may be expanded "
 "over time. For example, discussion of this PEP may reveal that additional "
@@ -299,13 +303,13 @@ msgid ""
 "runtime option to disable the JIT) should be added to this list."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:160
+#: ../../peps/peps/pep-0744.rst:163
 msgid ""
 "Until the JIT is non-experimental, it should *not* be used in production, "
 "and may be broken or removed at any time without warning."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:163
+#: ../../peps/peps/pep-0744.rst:166
 msgid ""
 "Once the JIT is no longer experimental, it should be treated in much the "
 "same way as other build options such as ``--enable-optimizations`` or ``--"
@@ -314,11 +318,11 @@ msgid ""
 "releases."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:169
+#: ../../peps/peps/pep-0744.rst:172
 msgid "Support"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:171
+#: ../../peps/peps/pep-0744.rst:174
 msgid ""
 "The JIT has been developed for all of :pep:`11`'s current tier one "
 "platforms, most of its tier two platforms, and one of its tier three "
@@ -327,43 +331,43 @@ msgid ""
 "testing the JIT for both release and debug builds on:"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:177
+#: ../../peps/peps/pep-0744.rst:180
 msgid "``aarch64-apple-darwin/clang``"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:179
+#: ../../peps/peps/pep-0744.rst:182
 msgid "``aarch64-pc-windows/msvc`` [#untested]_"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:181
+#: ../../peps/peps/pep-0744.rst:184
 msgid "``aarch64-unknown-linux-gnu/clang`` [#emulated]_"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:183
+#: ../../peps/peps/pep-0744.rst:186
 msgid "``aarch64-unknown-linux-gnu/gcc`` [#emulated]_"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:185
+#: ../../peps/peps/pep-0744.rst:188
 msgid "``i686-pc-windows-msvc/msvc``"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:187
+#: ../../peps/peps/pep-0744.rst:190
 msgid "``x86_64-apple-darwin/clang``"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:189
+#: ../../peps/peps/pep-0744.rst:192
 msgid "``x86_64-pc-windows-msvc/msvc``"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:191
+#: ../../peps/peps/pep-0744.rst:194
 msgid "``x86_64-unknown-linux-gnu/clang``"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:193
+#: ../../peps/peps/pep-0744.rst:196
 msgid "``x86_64-unknown-linux-gnu/gcc``"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:195
+#: ../../peps/peps/pep-0744.rst:198
 msgid ""
 "It's worth noting that some platforms, even future tier one platforms, may "
 "never gain JIT support. This can be for a variety of reasons, including "
@@ -372,7 +376,7 @@ msgid ""
 "developer interest (``x86_64-unknown-freebsd/clang``)."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:201
+#: ../../peps/peps/pep-0744.rst:204
 msgid ""
 "Once JIT support for a platform is added (meaning, the JIT builds "
 "successfully without displaying warnings to the user), it should be treated "
@@ -384,7 +388,7 @@ msgid ""
 "python/cpython/blob/main/Tools/jit/README.md>`__."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:210
+#: ../../peps/peps/pep-0744.rst:213
 msgid ""
 "Since it should always be possible to build CPython without the JIT, "
 "removing JIT support for a platform should *not* be considered a backwards-"
@@ -392,17 +396,17 @@ msgid ""
 "deprecation process should be followed as outlined in :pep:`387`."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:215
+#: ../../peps/peps/pep-0744.rst:218
 msgid ""
 "The JIT's build-time dependencies may be changed between releases, within "
 "reason."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:219
+#: ../../peps/peps/pep-0744.rst:222
 msgid "Backwards Compatibility"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:221
+#: ../../peps/peps/pep-0744.rst:224
 msgid ""
 "Due to the fact that the current interpreter and the JIT backend are both "
 "generated from the same specification, the behavior of Python code should be "
@@ -412,11 +416,11 @@ msgid ""
 "patch step."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:229
+#: ../../peps/peps/pep-0744.rst:232
 msgid "Debugging"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:231
+#: ../../peps/peps/pep-0744.rst:234
 msgid ""
 "Tools that profile and debug Python code will continue to work fine. This "
 "includes in-process tools that use Python-provided functionality (like ``sys."
@@ -424,7 +428,7 @@ msgid ""
 "process tools that walk Python frames from the interpreter state."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:236
+#: ../../peps/peps/pep-0744.rst:239
 msgid ""
 "However, it appears that profilers and debuggers *for C code* are currently "
 "unable to trace back through JIT frames. Working with leaf frames is "
@@ -432,7 +436,7 @@ msgid ""
 "utility due to the absence of proper debugging information for JIT frames."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:241
+#: ../../peps/peps/pep-0744.rst:244
 msgid ""
 "Since the code templates emitted by the JIT are compiled by Clang, it *may* "
 "be possible to allow JIT frames to be traced through by simply modifying the "
@@ -441,7 +445,7 @@ msgid ""
 "these ideas have been explored very deeply."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:247
+#: ../../peps/peps/pep-0744.rst:250
 msgid ""
 "While this is an issue that *should* be fixed, fixing it is not a "
 "particularly high priority at this time. This is probably a problem best "
@@ -450,11 +454,11 @@ msgid ""
 "these tools."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:253
+#: ../../peps/peps/pep-0744.rst:256
 msgid "Security Implications"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:255
+#: ../../peps/peps/pep-0744.rst:258
 msgid ""
 "This JIT, like any JIT, produces large amounts of executable data at "
 "runtime. This introduces a potential new attack surface to CPython, since a "
@@ -464,7 +468,7 @@ msgid ""
 "time_compilation#Security>`__ of JIT compilers."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:262
+#: ../../peps/peps/pep-0744.rst:265
 msgid ""
 "In order to mitigate this risk, the JIT has been written with best practices "
 "in mind. In particular, the data in question is not exposed by the JIT "
@@ -472,7 +476,7 @@ msgid ""
 "*no* point is the data both |wx|_."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:272
+#: ../../peps/peps/pep-0744.rst:275
 msgid ""
 "The nature of template-based JITs also seriously limits the kinds of code "
 "that can be generated, further reducing the likelihood of a successful "
@@ -480,7 +484,7 @@ msgid ""
 "static, read-only memory."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:277
+#: ../../peps/peps/pep-0744.rst:280
 msgid ""
 "However, it would be naive to assume that no possible vulnerabilities exist "
 "in the JIT, especially at this early stage. The author is not a security "
@@ -488,11 +492,11 @@ msgid ""
 "Response Team to triage and fix security issues as they arise."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:283
+#: ../../peps/peps/pep-0744.rst:286
 msgid "Apple Silicon"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:285
+#: ../../peps/peps/pep-0744.rst:288
 msgid ""
 "Though difficult to test without actually signing and packaging a macOS "
 "release, it *appears* that macOS releases should `enable the JIT Entitlement "
@@ -501,25 +505,25 @@ msgid ""
 "Entitlement-for-the-Hardened-Runtime>`__."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:290
+#: ../../peps/peps/pep-0744.rst:293
 msgid ""
 "This shouldn't make *installing* Python any harder, but may add additional "
 "steps for release managers to perform."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:294
+#: ../../peps/peps/pep-0744.rst:297
 msgid "How to Teach This"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:296
+#: ../../peps/peps/pep-0744.rst:299
 msgid "Choose the sections that best describe you:"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:298
+#: ../../peps/peps/pep-0744.rst:301
 msgid "**If you are a Python programmer or end user...**"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:300
+#: ../../peps/peps/pep-0744.rst:303
 msgid ""
 "...nothing changes for you. Nobody should be distributing JIT-enabled "
 "CPython interpreters to you while it is still an experimental feature. Once "
@@ -528,11 +532,11 @@ msgid ""
 "changes."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:306
+#: ../../peps/peps/pep-0744.rst:309
 msgid "**If you maintain third-party packages...**"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:308
+#: ../../peps/peps/pep-0744.rst:311
 msgid ""
 "...nothing changes for you. There are no API or ABI changes, and the JIT is "
 "not exposed to third-party code. You shouldn't need to change your CI "
@@ -540,21 +544,21 @@ msgid ""
 "packages work when the JIT is enabled."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:313
+#: ../../peps/peps/pep-0744.rst:316
 msgid "**If you profile or debug Python code...**"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:315
+#: ../../peps/peps/pep-0744.rst:318
 msgid ""
 "...nothing changes for you. All Python profiling and tracing functionality "
 "remains."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:318
+#: ../../peps/peps/pep-0744.rst:321
 msgid "**If you profile or debug C code...**"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:320
+#: ../../peps/peps/pep-0744.rst:323
 msgid ""
 "...currently, the ability to trace *through* JIT frames is limited. This may "
 "cause issues if you need to observe the entire C call stack, rather than "
@@ -562,11 +566,11 @@ msgid ""
 "information."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:324
+#: ../../peps/peps/pep-0744.rst:327
 msgid "**If you compile your own Python interpreter....**"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:326
+#: ../../peps/peps/pep-0744.rst:329
 msgid ""
 "...if you don't wish to build the JIT, you can simply ignore it. Otherwise, "
 "you will need to `install a compatible version of LLVM <https://github.com/"
@@ -576,21 +580,21 @@ msgid ""
 "while it is still in the experimental phase."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:333
+#: ../../peps/peps/pep-0744.rst:336
 msgid "**If you're a maintainer of CPython (or a fork of CPython)...**"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:335
+#: ../../peps/peps/pep-0744.rst:338
 msgid ""
 "**...and you change the bytecode definitions or the main interpreter loop..."
 "**"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:338
+#: ../../peps/peps/pep-0744.rst:341
 msgid ""
 "...in general, the JIT shouldn't be much of an inconvenience to you "
 "(depending on what you're trying to do). The micro-op interpreter isn't "
-"going anywhere, and still offers a debugging experience similer to what the "
+"going anywhere, and still offers a debugging experience similar to what the "
 "main bytecode interpreter provides today. There is moderate likelihood that "
 "larger changes to the interpreter (such as adding new local variables, "
 "changing error handling and deoptimization logic, or changing the micro-op "
@@ -601,11 +605,11 @@ msgid ""
 "somebody more familiar with them (see below)."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:350
+#: ../../peps/peps/pep-0744.rst:353
 msgid "**...and you work on the JIT itself...**"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:352
+#: ../../peps/peps/pep-0744.rst:355
 msgid ""
 "...you hopefully already have a decent idea of what you're getting yourself "
 "into. You will be regularly modifying the Python build scripts, the C "
@@ -619,11 +623,11 @@ msgid ""
 "read a blog post or two about linkers."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:363
+#: ../../peps/peps/pep-0744.rst:366
 msgid "**...and you maintain other parts of CPython...**"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:365
+#: ../../peps/peps/pep-0744.rst:368
 msgid ""
 "...nothing changes for you. You shouldn't need to develop locally with JIT "
 "builds. If you choose to do so (for example, to help reproduce and triage "
@@ -631,43 +635,43 @@ msgid ""
 "relevant files are modified."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:371
+#: ../../peps/peps/pep-0744.rst:374
 msgid "Reference Implementation"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:373
+#: ../../peps/peps/pep-0744.rst:376
 msgid "Key parts of the implementation include:"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:375
+#: ../../peps/peps/pep-0744.rst:378
 msgid "|readme|_: Instructions for how to build the JIT."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:377
+#: ../../peps/peps/pep-0744.rst:380
 msgid "|jit|_: The entire runtime portion of the JIT compiler."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:379
+#: ../../peps/peps/pep-0744.rst:382
 msgid "|jit_stencils|_: An example of the JIT's generated templates."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:381
+#: ../../peps/peps/pep-0744.rst:384
 msgid "|template|_: The code which is compiled to produce the JIT's templates."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:383
+#: ../../peps/peps/pep-0744.rst:386
 msgid "|targets|_: The code to compile and parse the templates at build time."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:401
+#: ../../peps/peps/pep-0744.rst:404
 msgid "Rejected Ideas"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:404
+#: ../../peps/peps/pep-0744.rst:407
 msgid "Maintain it outside of CPython"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:406
+#: ../../peps/peps/pep-0744.rst:409
 msgid ""
 "While it is *probably* possible to maintain the JIT outside of CPython, its "
 "implementation is tied tightly enough to the rest of the interpreter that "
@@ -679,7 +683,7 @@ msgid ""
 "any proposed change)."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:414
+#: ../../peps/peps/pep-0744.rst:417
 msgid ""
 "Releases of the separate \"JIT\" project would probably also need to "
 "correspond to specific CPython pre-releases and patch releases, depending on "
@@ -689,7 +693,7 @@ msgid ""
 "upstream)."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:420
+#: ../../peps/peps/pep-0744.rst:423
 msgid ""
 "Since the JIT is already quite stable, and the ultimate goal is for it to be "
 "a non-experimental part of CPython, keeping it in ``main`` seems to be the "
@@ -698,17 +702,17 @@ msgid ""
 "goals."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:426
+#: ../../peps/peps/pep-0744.rst:429
 msgid "Turn it on by default"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:428
+#: ../../peps/peps/pep-0744.rst:431
 msgid ""
 "On the other hand, some have suggested that the JIT should be enabled by "
 "default in its current form."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:431
+#: ../../peps/peps/pep-0744.rst:434
 msgid ""
 "Again, it is important to remember that a JIT is not a magic \"go faster\" "
 "machine; currently, the JIT is about as fast as the existing specializing "
@@ -717,7 +721,7 @@ msgid ""
 "considered viable enough to be merged into ``main`` for further development."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:437
+#: ../../peps/peps/pep-0744.rst:440
 msgid ""
 "While the JIT provides significant gains over the existing micro-op "
 "interpreter, it isn't yet a clear win when always enabled (especially "
@@ -726,18 +730,18 @@ msgid ""
 "the objective criteria that should be met in order to \"flip the switch\"."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:443
+#: ../../peps/peps/pep-0744.rst:446
 msgid ""
 "At least for now, having this in ``main``, but off by default, seems to be a "
 "good compromise between always turning it on and not having it available at "
 "all."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:447
+#: ../../peps/peps/pep-0744.rst:450
 msgid "Support multiple compiler toolchains"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:449
+#: ../../peps/peps/pep-0744.rst:452
 msgid ""
 "Clang is specifically needed because it's the only C compiler with support "
 "for guaranteed tail calls (|musttail|_), which are required by CPython's "
@@ -747,7 +751,7 @@ msgid ""
 "growth (and eventual overflow)."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:459
+#: ../../peps/peps/pep-0744.rst:462
 msgid ""
 "Since LLVM also includes other functionalities required by the JIT build "
 "process (namely, utilities for object file parsing and disassembly), and "
@@ -756,18 +760,18 @@ msgid ""
 "time."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:465
+#: ../../peps/peps/pep-0744.rst:468
 msgid "Compile the base interpreter's bytecode"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:467
+#: ../../peps/peps/pep-0744.rst:470
 msgid ""
 "Most of the prior art for copy-and-patch uses it as a fast baseline JIT, "
 "whereas CPython's JIT is using the technique to compile optimized micro-op "
 "traces."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:470
+#: ../../peps/peps/pep-0744.rst:473
 msgid ""
 "In practice, the new JIT currently sits somewhere between the \"baseline\" "
 "and \"optimizing\" compiler tiers of other dynamic language runtimes. This "
@@ -777,7 +781,7 @@ msgid ""
 "a technique which is much more difficult to implement with a JIT compiler."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:477
+#: ../../peps/peps/pep-0744.rst:480
 msgid ""
 "While it's *possible* to compile normal bytecode using copy-and-patch (in "
 "fact, early prototypes predated the micro-op interpreter and did exactly "
@@ -785,18 +789,18 @@ msgid ""
 "more granular micro-op format."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:483
+#: ../../peps/peps/pep-0744.rst:486
 msgid "Add GPU support"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:485
+#: ../../peps/peps/pep-0744.rst:488
 msgid ""
 "The JIT is currently CPU-only. It does not, for example, offload NumPy array "
 "computations to CUDA GPUs, as JITs like `Numba <https://numba.pydata.org/"
 "numba-doc/latest/cuda/overview.html>`__ do."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:489
+#: ../../peps/peps/pep-0744.rst:492
 msgid ""
 "There is already a rich ecosystem of tools for accelerating these sorts of "
 "specialized tasks, and CPython's JIT is not intended to replace them. "
@@ -804,41 +808,41 @@ msgid ""
 "code, which is less likely to benefit from deeper GPU integration."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:495
+#: ../../peps/peps/pep-0744.rst:498
 msgid "Open Issues"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:498
+#: ../../peps/peps/pep-0744.rst:501
 msgid "Speed"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:500
+#: ../../peps/peps/pep-0744.rst:503
 msgid ""
 "Currently, the JIT is `about as fast as the existing specializing "
 "interpreter <https://github.com/faster-cpython/benchmarking-public/blob/main/"
-"configs.png>`__ on most platforms. Improving this is obviously a top "
+"configs.svg>`__ on most platforms. Improving this is obviously a top "
 "priority at this point, since providing a significant performance gain is "
 "the entire motivation for having a JIT at all. A number of proposed "
 "improvements are already underway, and this ongoing work is being tracked in "
 "`GH-115802 <https://github.com/python/cpython/issues/115802>`__."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:509
+#: ../../peps/peps/pep-0744.rst:512
 msgid "Memory"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:511
+#: ../../peps/peps/pep-0744.rst:514
 msgid ""
 "Because it allocates additional memory for executable machine code, the JIT "
 "does use more memory than the existing interpreter at runtime. According to "
 "the official benchmarks, the JIT currently uses about `10-20% more memory "
 "than the base interpreter <https://github.com/faster-cpython/benchmarking-"
-"public/blob/main/memory_configs.png>`__. The upper end of this range is due "
+"public/blob/main/memory_configs.svg>`__. The upper end of this range is due "
 "to ``aarch64-apple-darwin``, which has larger page sizes (and thus, a larger "
 "minimum allocation granularity)."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:519
+#: ../../peps/peps/pep-0744.rst:522
 msgid ""
 "However, these numbers should be taken with a grain of salt, as the "
 "benchmarks themselves don't actually have a very high baseline of memory "
@@ -847,15 +851,18 @@ msgid ""
 "memory pressure is more likely to be a real concern."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:525
+#: ../../peps/peps/pep-0744.rst:528
 msgid ""
 "Not much effort has been put into optimizing the JIT's memory usage yet, so "
 "these numbers likely represent a maximum that will be reduced over time. "
 "Improving this is a medium priority, and is being tracked in `GH-116017 "
-"<https://github.com/python/cpython/issues/116017>`__."
+"<https://github.com/python/cpython/issues/116017>`__. We may consider "
+"exposing configurable parameters for limiting memory consumption in the "
+"future, but no official APIs will be exposed until the JIT meets the "
+"requirements to be considered non-experimental."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:530
+#: ../../peps/peps/pep-0744.rst:536
 msgid ""
 "Earlier versions of the JIT had a more complicated memory allocation scheme "
 "which imposed a number of fragile limitations on the size and layout of the "
@@ -863,11 +870,11 @@ msgid ""
 "executable. These issues are no longer present in the current design."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:536
+#: ../../peps/peps/pep-0744.rst:542
 msgid "Dependencies"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:538
+#: ../../peps/peps/pep-0744.rst:544
 msgid ""
 "At the time of writing, the JIT has a build-time dependency on LLVM. LLVM is "
 "used to compile individual micro-op instructions into blobs of machine code, "
@@ -876,7 +883,7 @@ msgid ""
 "and is therefore not at all exposed as a dependency to end users."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:544
+#: ../../peps/peps/pep-0744.rst:550
 msgid ""
 "Building the JIT adds between 3 and 60 seconds to the build process, "
 "depending on platform. It is only rebuilt whenever the generated files "
@@ -884,7 +891,7 @@ msgid ""
 "interpreter loop will be rebuilding it with any frequency."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:549
+#: ../../peps/peps/pep-0744.rst:555
 msgid ""
 "Unlike many other generated files in CPython, the JIT's generated files are "
 "not tracked by Git. This is because they contain compiled binary code "
@@ -897,23 +904,23 @@ msgid ""
 "is not particularly time-consuming."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:558
+#: ../../peps/peps/pep-0744.rst:564
 msgid ""
 "Since some still remain interested in this possibility, discussion is being "
 "tracked in `GH-115869 <https://github.com/python/cpython/issues/115869>`__."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:562
+#: ../../peps/peps/pep-0744.rst:568
 msgid "Footnotes"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:564
+#: ../../peps/peps/pep-0744.rst:570
 msgid ""
 "Due to lack of available hardware, the JIT is built, but not tested, for "
 "this platform."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:567
+#: ../../peps/peps/pep-0744.rst:573
 msgid ""
 "Due to lack of available hardware, the JIT is built using cross-compilation "
 "and tested using hardware emulation for this platform. Some tests are "
@@ -921,11 +928,11 @@ msgid ""
 "successfully built and tested for this platform on non-emulated hardware."
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:574
+#: ../../peps/peps/pep-0744.rst:580
 msgid "Copyright"
 msgstr ""
 
-#: ../../peps/peps/pep-0744.rst:576
+#: ../../peps/peps/pep-0744.rst:582
 msgid ""
 "This document is placed in the public domain or under the CC0-1.0-Universal "
 "license, whichever is more permissive."

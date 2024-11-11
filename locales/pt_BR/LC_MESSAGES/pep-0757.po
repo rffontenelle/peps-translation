@@ -1,0 +1,704 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the PEPs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PEPs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-11 15:59+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pt_BR\n"
+"Language-Team: pt_BR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../peps/peps/pep-0757.rst
+msgid "Author"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:3
+msgid ""
+"Sergey B Kirpichev <skirpichev@gmail.com>, Victor Stinner <vstinner@python."
+"org>"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst
+msgid "PEP-Delegate"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:5
+msgid "C API Working Group"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst
+msgid "Discussions-To"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:6
+msgid "https://discuss.python.org/t/63895"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst
+msgid "Status"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:7
+msgid "Draft"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst
+msgid "Type"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:8
+msgid "Standards Track"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst
+msgid "Created"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:9
+msgid "13-Sep-2024"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst
+msgid "Python-Version"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:10
+msgid "3.14"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst
+msgid "Post-History"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:11
+msgid "`14-Sep-2024 <https://discuss.python.org/t/63895>`__"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:17
+msgid "Abstract"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:19
+msgid ""
+"Add a new C API to import and export Python integers, :class:`int` objects: "
+"especially :c:func:`PyLongWriter_Create()` and :c:func:`PyLong_Export()` "
+"functions."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:24
+msgid "Rationale"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:26
+msgid ""
+"Projects such as `gmpy2 <https://github.com/aleaxit/gmpy>`_, `SAGE <https://"
+"www.sagemath.org/>`_ and `Python-FLINT <https://github.com/flintlib/python-"
+"flint>`_ access directly Python \"internals\" (the :c:type:`PyLongObject` "
+"structure) or use an inefficient temporary format (hex strings for Python-"
+"FLINT) to import and export Python :class:`int` objects.  The Python :class:"
+"`int` implementation changed in Python 3.12 to add a tag and \"compact "
+"values\"."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:34
+msgid ""
+"In the 3.13 alpha 1 release, the private undocumented :c:func:`!"
+"_PyLong_New()` function had been removed, but it is being used by these "
+"projects to import Python integers. The private function has been restored "
+"in 3.13 alpha 2."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:39
+msgid ""
+"A public efficient abstraction is needed to interface Python with these "
+"projects without exposing implementation details. It would allow Python to "
+"change its internals without breaking these projects.  For example, "
+"implementation for gmpy2 was changed recently for CPython 3.9 and for "
+"CPython 3.12."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:47
+msgid "Specification"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:50
+msgid "Layout API"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:52
+msgid ""
+"Data needed by `GMP <https://gmplib.org/>`_-like `import <https://gmplib.org/"
+"manual/Integer-Import-and-Export#index-mpz_005fimport>`_-`export <https://"
+"gmplib.org/manual/Integer-Import-and-Export#index-mpz_005fexport>`_ "
+"functions."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:59
+msgid ""
+"Layout of an array of \"digits\" (\"limbs\" in the GMP terminology), used to "
+"represent absolute value for arbitrary precision integers."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:62
+msgid ""
+"Use :c:func:`PyLong_GetNativeLayout` to get the native layout of Python :"
+"class:`int` objects, used internally for integers with \"big enough\" "
+"absolute value."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:66
+msgid ""
+"See also :data:`sys.int_info` which exposes similar information to Python."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:70
+msgid "Bits per digit."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:74
+msgid "Digit size in bytes."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:78
+msgid "Digits order:"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:80
+msgid "``1`` for most significant digit first"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:81
+msgid "``-1`` for least significant digit first"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:85
+msgid "Digit endianness:"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:87
+msgid "``1`` for most significant byte first (big endian)"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:88
+msgid "``-1`` for least significant first (little endian)"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:93
+msgid "Get the native layout of Python :class:`int` objects."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:95
+msgid "See the :c:struct:`PyLongLayout` structure."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:97
+msgid ""
+"The function must not be called before Python initialization nor after "
+"Python finalization. The returned layout is valid until Python is finalized. "
+"The layout is the same for all Python sub-interpreters and so it can be "
+"cached."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:104
+msgid "Export API"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:108
+msgid "Export of a Python :class:`int` object."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:110
+msgid "There are two cases:"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:112
+msgid ""
+"If :c:member:`digits` is ``NULL``, only use the :c:member:`value` member. "
+"Calling :c:func:`PyLong_FreeExport` is optional in this case."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:114
+msgid ""
+"If :c:member:`digits` is not ``NULL``, use :c:member:`negative`, :c:member:"
+"`ndigits` and :c:member:`digits` members. Calling :c:func:"
+"`PyLong_FreeExport` is mandatory in this case."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:120
+msgid ""
+"The native integer value of the exported :class:`int` object. Only valid if :"
+"c:member:`digits` is ``NULL``."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:125
+msgid ""
+"1 if the number is negative, 0 otherwise. Only valid if :c:member:`digits` "
+"is not ``NULL``."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:130
+msgid ""
+"Number of digits in :c:member:`digits` array. Only valid if :c:member:"
+"`digits` is not ``NULL``."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:135
+msgid "Read-only array of unsigned digits. Can be ``NULL``."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:137
+msgid ""
+"If :c:member:`digits` not ``NULL``, a private field of the :c:struct:"
+"`PyLongExport` structure stores a strong reference to the Python :class:"
+"`int` object to make sure that that structure remains valid until :c:func:"
+"`PyLong_FreeExport()` is called."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:145
+msgid "Export a Python :class:`int` object."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:147
+msgid ""
+"On success, set *\\*export_long* and return 0. On error, set an exception "
+"and return -1."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:150
+msgid ""
+"If *export_long->digits* is not ``NULL``, :c:func:`PyLong_FreeExport` must "
+"be called when the export is no longer needed."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:154
+msgid ""
+"On CPython 3.14, no memory copy is needed in :c:func:`PyLong_Export`, it's "
+"just a thin wrapper to expose Python :class:`int` internal digits array."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:160
+msgid "Release the export *export_long* created by :c:func:`PyLong_Export`."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:164
+msgid "Import API"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:166
+msgid ""
+"The :c:type:`PyLongWriter` API can be used to import an integer: create a "
+"Python :class:`int` object from a digits array."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:171
+msgid "A Python :class:`int` writer instance."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:173
+msgid ""
+"The instance must be destroyed by :c:func:`PyLongWriter_Finish` or :c:func:"
+"`PyLongWriter_Discard`."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:179
+msgid "Create a :c:type:`PyLongWriter`."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:181
+msgid ""
+"On success, set *\\*digits* and return a writer. On error, set an exception "
+"and return ``NULL``."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:184
+msgid "*negative* is ``1`` if the number is negative, or ``0`` otherwise."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:186
+msgid ""
+"*ndigits* is the number of digits in the *digits* array. It must be greater "
+"than or equal to 0."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:189
+msgid ""
+"The caller can either initialize the array of digits *digits* and then call :"
+"c:func:`PyLongWriter_Finish` to get a Python :class:`int`, or call :c:func:"
+"`PyLongWriter_Discard` to destroy the writer instance.  Digits must be in "
+"the range [``0``; ``(1 << sys.int_info.bits_per_digit) - 1``].  Unused "
+"digits must be set to ``0``."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:196
+msgid ""
+"On CPython 3.14, the :c:func:`PyLongWriter_Create` implementation is a thin "
+"wrapper to the private :c:func:`!_PyLong_New()` function."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:202
+msgid ""
+"Finish a :c:type:`PyLongWriter` created by :c:func:`PyLongWriter_Create`."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:204
+msgid ""
+"On success, return a Python :class:`int` object. On error, set an exception "
+"and return ``NULL``."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:207
+msgid ""
+"The function takes care of normalizing the digits and converts the object to "
+"a compact integer if needed."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:213
+msgid ""
+"Discard a :c:type:`PyLongWriter` created by :c:func:`PyLongWriter_Create`."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:217
+msgid "Optimize import for small integers"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:219
+msgid ""
+"Proposed import API is efficient for large integers. Compared to accessing "
+"directly Python internals, the proposed import API can have a significant "
+"performance overhead on small integers."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:223
+msgid ""
+"For small integers of a few digits (for example, 1 or 2 digits), existing "
+"APIs can be used:"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:226
+msgid ":external+py3.14:c:func:`PyLong_FromUInt64()`;"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:227
+msgid ":c:func:`PyLong_FromLong()`;"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:228
+msgid ":c:func:`PyLong_FromNativeBytes()`."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:232
+msgid "Implementation"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:234
+msgid "CPython:"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:236
+msgid "https://github.com/python/cpython/pull/121339"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:237
+msgid "https://github.com/vstinner/cpython/pull/5"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:239
+msgid "gmpy:"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:241
+msgid "https://github.com/aleaxit/gmpy/pull/495"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:245
+msgid "Benchmarks"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:247 ../../peps/peps/pep-0757.rst:262
+#: ../../peps/peps/pep-0757.rst:338
+msgid "Code::"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:260
+msgid "Export: :c:func:`PyLong_Export()` with gmpy2"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:301
+msgid ""
+"Reference code: `mpz_set_PyLong() in the gmpy2 master for commit 9177648 "
+"<https://github.com/aleaxit/gmpy/"
+"blob/9177648c23f5c507e46b81c1eb7d527c79c96f00/src/gmpy2_convert_gmp.c#L42-"
+"L69>`_."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:304 ../../peps/peps/pep-0757.rst:365
+msgid "Benchmark:"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:317 ../../peps/peps/pep-0757.rst:378
+msgid ""
+"Results on Linux Fedora 40 with CPU isolation, Python built in release mode:"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:321 ../../peps/peps/pep-0757.rst:382
+msgid "Benchmark"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:321 ../../peps/peps/pep-0757.rst:382
+msgid "ref"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:321 ../../peps/peps/pep-0757.rst:382
+msgid "pep757"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:323 ../../peps/peps/pep-0757.rst:384
+msgid "1<<7"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:323
+msgid "91.3 ns"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:323
+msgid "89.9 ns: 1.02x faster"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:325
+msgid "1<<38"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:325
+msgid "120 ns"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:325
+msgid "94.9 ns: 1.27x faster"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:327 ../../peps/peps/pep-0757.rst:386
+msgid "1<<300"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:327
+msgid "196 ns"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:327
+msgid "203 ns: 1.04x slower"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:329
+msgid "1<<3000"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:329
+msgid "939 ns"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:329
+msgid "945 ns: 1.01x slower"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:331 ../../peps/peps/pep-0757.rst:388
+msgid "Geometric mean"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:331 ../../peps/peps/pep-0757.rst:388
+msgid "(ref)"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:331
+msgid "1.05x faster"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:336
+msgid "Import: :c:func:`PyLongWriter_Create()` with gmpy2"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:362
+msgid ""
+"Reference code: `GMPy_PyLong_From_MPZ() in the gmpy2 master for commit "
+"9177648 <https://github.com/aleaxit/gmpy/"
+"blob/9177648c23f5c507e46b81c1eb7d527c79c96f00/src/gmpy2_convert_gmp.c#L128-"
+"L156>`_."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:384
+msgid "56.7 ns"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:384
+msgid "56.2 ns: 1.01x faster"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:386
+msgid "191 ns"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:386
+msgid "213 ns: 1.12x slower"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:388
+msgid "1.03x slower"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:391
+msgid "Benchmark hidden because not significant (2): 1<<38, 1<<3000."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:395
+msgid "Backwards Compatibility"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:397
+msgid ""
+"There is no impact on the backward compatibility, only new APIs are added."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:402
+msgid "Rejected Ideas"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:405
+msgid "Support arbitrary layout"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:407
+msgid ""
+"It would be convenient to support arbitrary layout to import-export Python "
+"integers."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:410
+msgid ""
+"For example, it was proposed to add a *layout* parameter to :c:func:"
+"`PyLongWriter_Create()` and a *layout* member to the :c:struct:"
+"`PyLongExport` structure."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:414
+msgid ""
+"The problem is that it's more complex to implement and not really needed. "
+"What's strictly needed is only an API to import-export using the Python "
+"\"native\" layout."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:418
+msgid ""
+"If later there are use cases for arbitrary layouts, new APIs can be added."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:423
+msgid "Don't add :c:func:`PyLong_GetNativeLayout` function"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:425
+msgid ""
+"Currently, most required information for :class:`int` import/export is "
+"already available via :c:func:`PyLong_GetInfo()` (and :data:`sys."
+"int_info`).  We also can add more (like order of digits), this interface "
+"doesn't poses any constraints on future evolution of the :c:type:"
+"`PyLongObject`."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:430
+msgid ""
+"The problem is that the :c:func:`PyLong_GetInfo()` returns a Python object, :"
+"term:`named tuple`, not a convenient C structure and that might distract "
+"people from using it in favor e.g. of current semi-private macros like :c:"
+"macro:`!PyLong_SHIFT` and :c:macro:`!PyLong_BASE`."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:437
+msgid "Provide mpz_import/export-like API instead"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:439
+msgid ""
+"The other approach to import/export data from :class:`int` objects might be "
+"following: expect, that C extensions provide contiguous buffers that CPython "
+"then exports (or imports) the *absolute* value of an integer."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:443
+msgid "API example::"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:455
+msgid ""
+"This might work for the GMP, as this it has :c:func:`!mpz_limbs_read()` and :"
+"c:func:`!mpz_limbs_write()` functions, that can provide required \"buffers\"."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:458
+msgid ""
+"The major drawback of this approach is that it's much more complex on the "
+"CPython side (i.e. actual conversion between different layouts)."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:463
+msgid "Discussions"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:465
+msgid ""
+"Discourse: `PEP 757 – C API to import-export Python integers <https://"
+"discuss.python.org/t/63895>`_"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:467
+msgid ""
+"`C API Working Group decision issue #35 <https://github.com/capi-workgroup/"
+"decisions/issues/35>`_"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:469
+msgid "`Pull request #121339 <https://github.com/python/cpython/pull/121339>`_"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:471
+msgid ""
+"`Issue #102471 <https://github.com/python/cpython/issues/102471>`_: The C-"
+"API for Python to C integer conversion is, to be frank, a mess."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:474
+msgid ""
+"`Add public function PyLong_GetDigits() <https://github.com/capi-workgroup/"
+"decisions/issues/31>`_"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:476
+msgid ""
+"`Consider restoring _PyLong_New() function as public <https://github.com/"
+"python/cpython/issues/111415>`_"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:478
+msgid ""
+"`Pull request gh-106320 <https://github.com/python/cpython/pull/108604>`_: "
+"Remove private _PyLong_New() function."
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:484
+msgid "Copyright"
+msgstr ""
+
+#: ../../peps/peps/pep-0757.rst:486
+msgid ""
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
+msgstr ""

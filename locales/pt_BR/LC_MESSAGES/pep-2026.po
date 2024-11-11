@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PEPs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-14 02:33+0000\n"
+"POT-Creation-Date: 2024-11-11 15:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: pt_BR\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.15.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../../peps/peps/pep-2026.rst
 msgid "Author"
@@ -64,7 +64,7 @@ msgstr ""
 msgid "Python-Version"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:8 ../../peps/peps/pep-2026.rst:595
+#: ../../peps/peps/pep-2026.rst:8 ../../peps/peps/pep-2026.rst:611
 msgid "3.26"
 msgstr ""
 
@@ -289,7 +289,7 @@ msgstr ""
 msgid "YY.0M.micro"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:122 ../../peps/peps/pep-2026.rst:662
+#: ../../peps/peps/pep-2026.rst:122 ../../peps/peps/pep-2026.rst:678
 msgid "YY.MM.micro"
 msgstr ""
 
@@ -575,7 +575,7 @@ msgstr ""
 #: ../../peps/peps/pep-2026.rst:222
 msgid ""
 "However, once aware of CalVer, it is immediately obvious from the warning "
-"how long you have to to take action:"
+"how long you have to take action:"
 msgstr ""
 
 #: ../../peps/peps/pep-2026.rst:225
@@ -1090,9 +1090,8 @@ msgstr ""
 #: ../../peps/peps/pep-2026.rst:496
 msgid ""
 "Four years after Python 2.7's end-of-life, we could recommend ``python`` "
-"only maps to the the latest Python 3+ version. But what would ``python3`` "
-"map to when Python 26.0 is out? This would introduce additional complexity "
-"and cost."
+"only maps to the latest Python 3+ version. But what would ``python3`` map to "
+"when Python 26.0 is out? This would introduce additional complexity and cost."
 msgstr ""
 
 #: ../../peps/peps/pep-2026.rst:502
@@ -1173,20 +1172,44 @@ msgstr ""
 #: ../../peps/peps/pep-2026.rst:534
 msgid ""
 "It's clearer that the minor version is a year when using a four digits, and "
-"avoids confusion with Ubuntu versions which use YY.MM. However, this is "
-"rejected as changing from two to four digits would break more code than 3.YY "
-"versioning."
+"avoids confusion with Ubuntu versions which use YY.MM."
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:539
+#: ../../peps/peps/pep-2026.rst:538
+msgid "``PY_VERSION_HEX``"
+msgstr ""
+
+#: ../../peps/peps/pep-2026.rst:540
+msgid ""
+"CPython's C API :external+python:c:macro:`PY_VERSION_HEX` macro currently "
+"uses eight bits to encode the minor version, accommodating a maximum minor "
+"version of 255. To hold a four-digit year, it would need to be expanded to "
+"11 bits to fit 2047 or rather 12 bits for 4095."
+msgstr ""
+
+#: ../../peps/peps/pep-2026.rst:545
+msgid ""
+"This looks feasible, as it's intended for numeric comparisons, such as ``#if "
+"PY_VERSION_HEX >= ...``. In the `top 8,000 PyPI projects <https://dev.to/"
+"hugovk/how-to-search-5000-python-projects-31gk>`__ only one instance was "
+"found of bit shifting (``hexversion >> 16 != PY_VERSION_HEX >> 16``)."
+msgstr ""
+
+#: ../../peps/peps/pep-2026.rst:551
+msgid ""
+"However, 3.YYYY is rejected as changing from two to four digits would "
+"nevertheless need more work and break more code than simpler 3.YY versioning."
+msgstr ""
+
+#: ../../peps/peps/pep-2026.rst:555
 msgid "Editions"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:541
+#: ../../peps/peps/pep-2026.rst:557
 msgid "For example, Python 3.15 (2026 Edition) would be released in 2026."
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:543
+#: ../../peps/peps/pep-2026.rst:559
 msgid ""
 "The Rust language uses `\"Editions\" <https://doc.rust-lang.org/edition-"
 "guide/editions/>`__ to introduce breaking changes. Applying this to Python "
@@ -1194,49 +1217,49 @@ msgid ""
 "is out of scope for this PEP."
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:549
+#: ../../peps/peps/pep-2026.rst:565
 msgid ""
 "We could apply a year label to releases, such as \"Python 3.15 (2026 "
 "Edition)\", but this is rejected because we'd have to keep track of *two* "
 "numbers."
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:553
+#: ../../peps/peps/pep-2026.rst:569
 msgid "Adopt SemVer and skip 4"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:555
+#: ../../peps/peps/pep-2026.rst:571
 msgid ""
 "For example, Python 5.0 would be released in 2026, 6.0 in 2027, and so on."
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:557
+#: ../../peps/peps/pep-2026.rst:573
 msgid ""
 "We could skip the problematic 4.0 entirely and adopt SemVer. Because "
 "deprecations are removed in every feature release, we would get a new major "
 "bump every year."
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:561
+#: ../../peps/peps/pep-2026.rst:577
 msgid ""
 "This is rejected because we wouldn't get the benefit of calendar versioning, "
 "and moving away from 3.x would also `break code <PEP 2026 Ecosystem "
 "changes_>`_."
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:565
+#: ../../peps/peps/pep-2026.rst:581
 msgid "Change during 3.14 cycle"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:567
+#: ../../peps/peps/pep-2026.rst:583
 msgid "The Python 3.14 release must go ahead because: π."
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:570
+#: ../../peps/peps/pep-2026.rst:586
 msgid "Backwards compatibility"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:572
+#: ../../peps/peps/pep-2026.rst:588
 msgid ""
 "This version change is the safest of the CalVer options considered (see "
 "`rejected ideas <PEP 2026 rejected_>`_): we keep 3 as the major version, and "
@@ -1244,187 +1267,187 @@ msgid ""
 "three digits but this is predictable, a long way off and can be planned for."
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:578
+#: ../../peps/peps/pep-2026.rst:594
 msgid "We retain the ``python3`` executable."
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:581
+#: ../../peps/peps/pep-2026.rst:597
 msgid "Version mapping"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:583
+#: ../../peps/peps/pep-2026.rst:599
 msgid ""
 "Versions 3.15 to 3.25 inclusive will be skipped. Features, deprecations and "
 "removals planned for these will be remapped to the new version numbers."
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:587
+#: ../../peps/peps/pep-2026.rst:603
 msgid ""
 "For example, a deprecation initially planned for removal in 3.16 will "
 "instead be removed in 3.27."
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:591
+#: ../../peps/peps/pep-2026.rst:607
 msgid "Old version"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:591
+#: ../../peps/peps/pep-2026.rst:607
 msgid "New version"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:591
+#: ../../peps/peps/pep-2026.rst:607
 msgid "Initial release"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:593
+#: ../../peps/peps/pep-2026.rst:609
 msgid "3.14"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:593
+#: ../../peps/peps/pep-2026.rst:609
 msgid "3.14 (no change)"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:593
+#: ../../peps/peps/pep-2026.rst:609
 msgid "2025"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:595
+#: ../../peps/peps/pep-2026.rst:611
 msgid "3.15"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:595
+#: ../../peps/peps/pep-2026.rst:611
 msgid "2026"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:597
+#: ../../peps/peps/pep-2026.rst:613
 msgid "3.16"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:597
+#: ../../peps/peps/pep-2026.rst:613
 msgid "3.27"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:597
+#: ../../peps/peps/pep-2026.rst:613
 msgid "2027"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:599
+#: ../../peps/peps/pep-2026.rst:615
 msgid "3.17"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:599
+#: ../../peps/peps/pep-2026.rst:615
 msgid "3.28"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:599
+#: ../../peps/peps/pep-2026.rst:615
 msgid "2028"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:601
+#: ../../peps/peps/pep-2026.rst:617
 msgid "3.18"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:601
+#: ../../peps/peps/pep-2026.rst:617
 msgid "3.29"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:601
+#: ../../peps/peps/pep-2026.rst:617
 msgid "2029"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:603
+#: ../../peps/peps/pep-2026.rst:619
 msgid "3.19"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:603
+#: ../../peps/peps/pep-2026.rst:619
 msgid "3.30"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:603
+#: ../../peps/peps/pep-2026.rst:619
 msgid "2030"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:605
+#: ../../peps/peps/pep-2026.rst:621
 msgid "3.20"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:605
+#: ../../peps/peps/pep-2026.rst:621
 msgid "3.31"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:605
+#: ../../peps/peps/pep-2026.rst:621
 msgid "2031"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:607
+#: ../../peps/peps/pep-2026.rst:623
 msgid "3.21"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:607
+#: ../../peps/peps/pep-2026.rst:623
 msgid "3.32"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:607
+#: ../../peps/peps/pep-2026.rst:623
 msgid "2032"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:609
+#: ../../peps/peps/pep-2026.rst:625
 msgid "3.22"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:609
+#: ../../peps/peps/pep-2026.rst:625
 msgid "3.33"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:609
+#: ../../peps/peps/pep-2026.rst:625
 msgid "2033"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:611
+#: ../../peps/peps/pep-2026.rst:627
 msgid "3.23"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:611
+#: ../../peps/peps/pep-2026.rst:627
 msgid "3.34"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:611
+#: ../../peps/peps/pep-2026.rst:627
 msgid "2034"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:613
+#: ../../peps/peps/pep-2026.rst:629
 msgid "3.24"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:613
+#: ../../peps/peps/pep-2026.rst:629
 msgid "3.35"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:613
+#: ../../peps/peps/pep-2026.rst:629
 msgid "2035"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:615
+#: ../../peps/peps/pep-2026.rst:631
 msgid "3.25"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:615
+#: ../../peps/peps/pep-2026.rst:631
 msgid "3.36"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:615
+#: ../../peps/peps/pep-2026.rst:631
 msgid "2036"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:619
+#: ../../peps/peps/pep-2026.rst:635
 msgid "Forwards compatibility"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:622
+#: ../../peps/peps/pep-2026.rst:638
 msgid "Future change in cadence"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:624
+#: ../../peps/peps/pep-2026.rst:640
 msgid ""
 "This PEP proposes no change to the annual release cadence as defined in :pep:"
 "`602`, which lays out :pep:`many good reasons for annual releases "
@@ -1434,30 +1457,30 @@ msgid ""
 "not preclude doing so."
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:633
+#: ../../peps/peps/pep-2026.rst:649
 msgid "Less frequent"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:635
+#: ../../peps/peps/pep-2026.rst:651
 msgid ""
 "If we went to *fewer than one release per year*, the proposed CalVer scheme "
 "still works; indeed, it even helps people know in which year to expect the "
 "release. For example, if we released every second year starting in 2036:"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:639
+#: ../../peps/peps/pep-2026.rst:655
 msgid "3.36.0 would be released in 2036"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:640
+#: ../../peps/peps/pep-2026.rst:656
 msgid "3.38.0 would be released in 2038"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:641
+#: ../../peps/peps/pep-2026.rst:657
 msgid "and so on"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:643
+#: ../../peps/peps/pep-2026.rst:659
 msgid ""
 "Ecosystem changes depend in part on how the the hypothetical cadence-"
 "changing PEP updates :pep:`387` (Backwards Compatibility Policy). If, for "
@@ -1468,258 +1491,258 @@ msgid ""
 "years)."
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:653
+#: ../../peps/peps/pep-2026.rst:669
 msgid "More frequent"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:655
+#: ../../peps/peps/pep-2026.rst:671
 msgid ""
 "If we went to *more than one release per year*, here are some options. For "
 "example, if we released in April and October starting in 2036, the next four "
 "releases could be:"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:660
+#: ../../peps/peps/pep-2026.rst:676
 msgid "Scheme"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:660
+#: ../../peps/peps/pep-2026.rst:676
 msgid "Notes"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:660
+#: ../../peps/peps/pep-2026.rst:676
 msgid "2036 a"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:660
+#: ../../peps/peps/pep-2026.rst:676
 msgid "2036 b"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:660
+#: ../../peps/peps/pep-2026.rst:676
 msgid "2037 a"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:660
+#: ../../peps/peps/pep-2026.rst:676
 msgid "2037 b"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:662
+#: ../../peps/peps/pep-2026.rst:678
 msgid "Year as major, month as minor"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:662
+#: ../../peps/peps/pep-2026.rst:678
 msgid "36.04.0"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:662
+#: ../../peps/peps/pep-2026.rst:678
 msgid "36.10.0"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:662
+#: ../../peps/peps/pep-2026.rst:678
 msgid "37.04.0"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:662
+#: ../../peps/peps/pep-2026.rst:678
 msgid "37.10.0"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:664
+#: ../../peps/peps/pep-2026.rst:680
 msgid "YY.x.micro"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:664
+#: ../../peps/peps/pep-2026.rst:680
 msgid "Year as major, serial number as minor"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:664
+#: ../../peps/peps/pep-2026.rst:680
 msgid "36.1.0"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:664
+#: ../../peps/peps/pep-2026.rst:680
 msgid "36.2.0"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:664
+#: ../../peps/peps/pep-2026.rst:680
 msgid "37.1.0"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:664
+#: ../../peps/peps/pep-2026.rst:680
 msgid "37.2.0"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:667
+#: ../../peps/peps/pep-2026.rst:683
 msgid "3.YYMM.micro"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:667
+#: ../../peps/peps/pep-2026.rst:683
 msgid "Combine year and month as minor"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:667
+#: ../../peps/peps/pep-2026.rst:683
 msgid "3.3604.0"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:667
+#: ../../peps/peps/pep-2026.rst:683
 msgid "3.3610.0"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:667
+#: ../../peps/peps/pep-2026.rst:683
 msgid "3.3704.0"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:667
+#: ../../peps/peps/pep-2026.rst:683
 msgid "3.3710.0"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:670
+#: ../../peps/peps/pep-2026.rst:686
 msgid "3.YYx.micro"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:670
+#: ../../peps/peps/pep-2026.rst:686
 msgid "Combine year and serial number as minor"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:670
+#: ../../peps/peps/pep-2026.rst:686
 msgid "3.360.0"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:670
+#: ../../peps/peps/pep-2026.rst:686
 msgid "3.361.0"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:670
+#: ../../peps/peps/pep-2026.rst:686
 msgid "3.370.0"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:670
+#: ../../peps/peps/pep-2026.rst:686
 msgid "3.371.0"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:673
+#: ../../peps/peps/pep-2026.rst:689
 msgid "3.YY.MM.micro"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:673
+#: ../../peps/peps/pep-2026.rst:689
 msgid "Add an extra month segment"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:673
+#: ../../peps/peps/pep-2026.rst:689
 msgid "3.36.04.0"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:673
+#: ../../peps/peps/pep-2026.rst:689
 msgid "3.36.10.0"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:673
+#: ../../peps/peps/pep-2026.rst:689
 msgid "3.37.04.0"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:673
+#: ../../peps/peps/pep-2026.rst:689
 msgid "3.37.10.0"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:675
+#: ../../peps/peps/pep-2026.rst:691
 msgid "3.major.micro"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:675
+#: ../../peps/peps/pep-2026.rst:691
 msgid "No more CalVer: increment minor"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:675
+#: ../../peps/peps/pep-2026.rst:691
 msgid "3.36.0"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:675
+#: ../../peps/peps/pep-2026.rst:691
 msgid "3.37.0"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:675
+#: ../../peps/peps/pep-2026.rst:691
 msgid "3.38.0"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:675
+#: ../../peps/peps/pep-2026.rst:691
 msgid "3.39.0"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:677
+#: ../../peps/peps/pep-2026.rst:693
 msgid "3.50.0"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:677
+#: ../../peps/peps/pep-2026.rst:693
 msgid "3.51.0"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:677
+#: ../../peps/peps/pep-2026.rst:693
 msgid "3.52.0"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:677
+#: ../../peps/peps/pep-2026.rst:693
 msgid "3.53.0"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:679
+#: ../../peps/peps/pep-2026.rst:695
 msgid "3.100.0"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:679
+#: ../../peps/peps/pep-2026.rst:695
 msgid "3.101.0"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:679
+#: ../../peps/peps/pep-2026.rst:695
 msgid "3.102.0"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:679
+#: ../../peps/peps/pep-2026.rst:695
 msgid "3.103.0"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:681
+#: ../../peps/peps/pep-2026.rst:697
 msgid "4.major.micro"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:681
+#: ../../peps/peps/pep-2026.rst:697
 msgid "No more CalVer: increment major"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:681
+#: ../../peps/peps/pep-2026.rst:697
 msgid "4.0.0"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:681
+#: ../../peps/peps/pep-2026.rst:697
 msgid "4.1.0"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:681
+#: ../../peps/peps/pep-2026.rst:697
 msgid "4.2.0"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:681
+#: ../../peps/peps/pep-2026.rst:697
 msgid "4.3.0"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:683
+#: ../../peps/peps/pep-2026.rst:699
 msgid "5.major.micro"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:683
+#: ../../peps/peps/pep-2026.rst:699
 msgid "5.0.0"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:683
+#: ../../peps/peps/pep-2026.rst:699
 msgid "5.1.0"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:683
+#: ../../peps/peps/pep-2026.rst:699
 msgid "5.2.0"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:683
+#: ../../peps/peps/pep-2026.rst:699
 msgid "5.3.0"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:686
+#: ../../peps/peps/pep-2026.rst:702
 msgid ""
 "The YY options would require addressing issues around the `platform "
 "compatibility tags <PEP 2026 platform compatibility tags_>`__, the `python3 "
@@ -1727,30 +1750,30 @@ msgid ""
 "begins with 3 <PEP 2026 Ecosystem changes_>`__."
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:691
+#: ../../peps/peps/pep-2026.rst:707
 msgid ""
 "The options keeping major version 3 but changing the minor to three or four "
 "digits would also need to address code `assuming the version is always two "
 "digits <PEP 2026 Ecosystem changes_>`__."
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:695
+#: ../../peps/peps/pep-2026.rst:711
 msgid ""
 "The option adding an extra month segment is the biggest change as code would "
 "need to deal with a four-part version instead of three."
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:698
+#: ../../peps/peps/pep-2026.rst:714
 msgid ""
 "The options dropping CalVer would be the most conservative allowing the "
 "major and minor to be chosen freely."
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:702
+#: ../../peps/peps/pep-2026.rst:718
 msgid "No more CalVer"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:704
+#: ../../peps/peps/pep-2026.rst:720
 msgid ""
 "Adopting CalVer now does not preclude moving away CalVer in the future, for "
 "example, back to the original scheme, to SemVer or another scheme. Some "
@@ -1762,44 +1785,44 @@ msgid ""
 "#version-epochs>`__ could be considered."
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:715
+#: ../../peps/peps/pep-2026.rst:731
 msgid "Footnotes"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:717
+#: ../../peps/peps/pep-2026.rst:733
 msgid ""
 "The author proposed calendar versioning at the `Python Language Summit 2024 "
 "<https://us.pycon.org/2024/events/language-summit/>`__; this PEP is a result "
 "of discussions there and during PyCon US."
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:721
+#: ../../peps/peps/pep-2026.rst:737
 msgid ""
 "Read the `slides <https://hugovk.github.io/python-calver/>`__ and `blogpost "
 "<https://pyfound.blogspot.com/2024/06/python-language-summit-2024-should-"
 "python-adopt-calver.html>`__ of the summit talk."
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:727
+#: ../../peps/peps/pep-2026.rst:743
 msgid "Acknowledgements"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:729
+#: ../../peps/peps/pep-2026.rst:745
 msgid ""
 "Thanks to Seth Michael Larson for the Language Summit Q&A notes and "
 "blogpost, and to everyone who gave feedback at the summit and PyCon US."
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:732
+#: ../../peps/peps/pep-2026.rst:748
 msgid ""
 "Thank you to Łukasz Langa and Alex Waygood for reviewing a draft of this PEP."
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:735
+#: ../../peps/peps/pep-2026.rst:751
 msgid "Copyright"
 msgstr ""
 
-#: ../../peps/peps/pep-2026.rst:737
+#: ../../peps/peps/pep-2026.rst:753
 msgid ""
 "This document is placed in the public domain or under the CC0-1.0-Universal "
 "license, whichever is more permissive."

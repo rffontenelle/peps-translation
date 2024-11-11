@@ -8,14 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-14 02:33+0000\n"
+"POT-Creation-Date: 2024-11-11 15:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.15.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../../peps/peps/pep-0001.rst
 msgid "Author"
@@ -931,17 +931,20 @@ msgid "if the email address is included, and just:"
 msgstr ""
 
 #: ../../peps/peps/pep-0001.rst:640
-msgid "if the address is not given."
+msgid ""
+"if the address is not given. Most PEP authors use their real name, but if "
+"you prefer a different name and use it consistently in discussions related "
+"to the PEP, feel free to use it here."
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:642
+#: ../../peps/peps/pep-0001.rst:644
 msgid ""
 "If there are multiple authors, each should be on a separate line following :"
 "rfc:`2822` continuation line conventions.  Note that personal email "
 "addresses in PEPs will be obscured as a defense against spam harvesters."
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:647
+#: ../../peps/peps/pep-0001.rst:649
 msgid ""
 "The Sponsor field records which developer (core, or otherwise approved by "
 "the Steering Council) is sponsoring the PEP.  If one of the authors of the "
@@ -949,14 +952,14 @@ msgid ""
 "should be left out."
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:652
+#: ../../peps/peps/pep-0001.rst:654
 msgid ""
 "The PEP-Delegate field is used to record the individual appointed by the "
 "Steering Council to make the final decision on whether or not to approve or "
 "reject a PEP."
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:656
+#: ../../peps/peps/pep-0001.rst:658
 msgid ""
 "*Note: The Resolution header is required for Standards Track PEPs only.  It "
 "contains a URL that should point to an email message or other web resource "
@@ -964,7 +967,7 @@ msgid ""
 "made.*"
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:661
+#: ../../peps/peps/pep-0001.rst:663
 msgid ""
 "The Discussions-To header provides the URL to the current canonical "
 "discussion thread for the PEP. For email lists, this should be a direct link "
@@ -972,19 +975,19 @@ msgid ""
 "hyperlink to the list itself."
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:666
+#: ../../peps/peps/pep-0001.rst:668
 msgid ""
 "The Type header specifies the type of PEP: Standards Track, Informational, "
 "or Process."
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:669
+#: ../../peps/peps/pep-0001.rst:671
 msgid ""
 "The optional Topic header lists the special topic, if any, the PEP belongs "
 "under. See the :ref:`topic-index` for the existing topics."
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:673
+#: ../../peps/peps/pep-0001.rst:675
 msgid ""
 "The Created header records the date that the PEP was assigned a number, "
 "while Post-History is used to record the dates of and corresponding URLs to "
@@ -993,7 +996,7 @@ msgid ""
 "yyyy`` format, e.g. ``14-Aug-2001``."
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:679
+#: ../../peps/peps/pep-0001.rst:681
 msgid ""
 "Standards Track PEPs will typically have a Python-Version header which "
 "indicates the version of Python that the feature will be released with. "
@@ -1004,13 +1007,13 @@ msgid ""
 "a Python-Version header."
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:687
+#: ../../peps/peps/pep-0001.rst:689
 msgid ""
 "PEPs may have a Requires header, indicating the PEP numbers that this PEP "
 "depends on."
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:690
+#: ../../peps/peps/pep-0001.rst:692
 msgid ""
 "PEPs may also have a Superseded-By header indicating that a PEP has been "
 "rendered obsolete by a later document; the value is the number of the PEP "
@@ -1018,11 +1021,11 @@ msgid ""
 "header containing the number of the PEP that it rendered obsolete."
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:698
+#: ../../peps/peps/pep-0001.rst:700
 msgid "Auxiliary Files"
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:700
+#: ../../peps/peps/pep-0001.rst:702
 msgid ""
 "PEPs may include auxiliary files such as diagrams.  Such files should be "
 "named ``pep-XXXX-Y.ext``, where \"XXXX\" is the PEP number, \"Y\" is a "
@@ -1030,18 +1033,18 @@ msgid ""
 "extension (e.g. \"png\")."
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:705
+#: ../../peps/peps/pep-0001.rst:707
 msgid ""
 "Alternatively, all support files may be placed in a subdirectory called "
 "``pep-XXXX``, where \"XXXX\" is the PEP number. When using a subdirectory, "
 "there are no constraints on the names used in files."
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:711
+#: ../../peps/peps/pep-0001.rst:713
 msgid "Changing Existing PEPs"
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:713
+#: ../../peps/peps/pep-0001.rst:715
 msgid ""
 "Draft PEPs are freely open for discussion and proposed modification, at the "
 "discretion of the authors, until submitted to the Steering Council or PEP-"
@@ -1054,17 +1057,17 @@ msgid ""
 "other PEPs, consult the `PEP Maintenance`_ section."
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:723
+#: ../../peps/peps/pep-0001.rst:725
 msgid ""
 "See the `Contributing Guide`_ for additional details, and when in doubt, "
 "please check first with the PEP author and/or a PEP editor."
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:728
+#: ../../peps/peps/pep-0001.rst:730
 msgid "Transferring PEP Ownership"
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:730
+#: ../../peps/peps/pep-0001.rst:732
 msgid ""
 "It occasionally becomes necessary to transfer ownership of PEPs to a new "
 "champion.  In general, it is preferable to retain the original author as a "
@@ -1078,7 +1081,7 @@ msgid ""
 "possible, an author can always submit a competing PEP."
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:742
+#: ../../peps/peps/pep-0001.rst:744
 msgid ""
 "If you are interested in assuming ownership of a PEP, you can also do this "
 "via pull request.  Fork the `PEP repository`_, make your ownership "
@@ -1090,17 +1093,17 @@ msgid ""
 "reversed :)."
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:752
+#: ../../peps/peps/pep-0001.rst:754
 msgid "PEP Editor Responsibilities & Workflow"
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:754
+#: ../../peps/peps/pep-0001.rst:756
 msgid ""
 "A PEP editor must be added to the ``@python/pep-editors`` group on GitHub "
 "and must watch the `PEP repository`_."
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:757
+#: ../../peps/peps/pep-0001.rst:759
 msgid ""
 "Note that developers with write access to the `PEP repository`_ may handle "
 "the tasks that would normally be taken care of by the PEP editors. "
@@ -1108,38 +1111,38 @@ msgid ""
 "mentioning ``@python/pep-editors`` on GitHub."
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:762
+#: ../../peps/peps/pep-0001.rst:764
 msgid "For each new PEP that comes in an editor does the following:"
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:764
+#: ../../peps/peps/pep-0001.rst:766
 msgid ""
 "Make sure that the PEP is either co-authored by a core developer, has a core "
 "developer as a sponsor, or has a sponsor specifically approved for this PEP "
 "by the Steering Council."
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:768
+#: ../../peps/peps/pep-0001.rst:770
 msgid ""
 "Read the PEP to check if it is ready: sound and complete.  The ideas must "
 "make technical sense, even if they don't seem likely to be accepted."
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:772
+#: ../../peps/peps/pep-0001.rst:774
 msgid "The title should accurately describe the content."
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:774
+#: ../../peps/peps/pep-0001.rst:776
 msgid "The file name extension is correct (i.e. ``.rst``)."
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:776
+#: ../../peps/peps/pep-0001.rst:778
 msgid ""
 "Ensure that everyone listed as a sponsor or co-author of the PEP who has "
 "write access to the `PEP repository`_ is added to `.github/CODEOWNERS`_."
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:779
+#: ../../peps/peps/pep-0001.rst:781
 msgid ""
 "Skim the PEP for obvious defects in language (spelling, grammar, sentence "
 "structure, etc.), and code style (examples should conform to :pep:`7` & :pep:"
@@ -1147,7 +1150,7 @@ msgid ""
 "so (reStructuredText syntax is checked by the repo's CI)."
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:784
+#: ../../peps/peps/pep-0001.rst:786
 msgid ""
 "If a project is portrayed as benefiting from or supporting the PEP, make "
 "sure there is some direct indication from the project included to make the "
@@ -1155,92 +1158,92 @@ msgid ""
 "supporting a PEP when in fact the support is based on conjecture."
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:789
+#: ../../peps/peps/pep-0001.rst:791
 msgid ""
 "If the PEP isn't ready, an editor will send it back to the author for "
 "revision, with specific instructions.  If reST formatting is a problem, ask "
 "the author(s) to use :pep:`12` as a template and resubmit."
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:793
+#: ../../peps/peps/pep-0001.rst:795
 msgid "Once the PEP is ready for the repository, a PEP editor will:"
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:795
+#: ../../peps/peps/pep-0001.rst:797
 msgid ""
 "Check that the author has selected a valid PEP number or assign them a "
 "number if they have not (almost always just the next available number, but "
 "sometimes it's a special/joke number, like 666 or 3141)."
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:799
+#: ../../peps/peps/pep-0001.rst:801
 msgid "Remember that numbers below 100 are meta-PEPs."
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:801
+#: ../../peps/peps/pep-0001.rst:803
 msgid ""
 "Check that the author has correctly labeled the PEP's type (\"Standards "
 "Track\", \"Informational\", or \"Process\"), and marked its status as "
 "\"Draft\"."
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:805
+#: ../../peps/peps/pep-0001.rst:807
 msgid ""
 "Ensure all CI build and lint checks pass without errors, and there are no "
 "obvious issues in the rendered preview output."
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:808
+#: ../../peps/peps/pep-0001.rst:810
 msgid "Merge the new (or updated) PEP."
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:810
+#: ../../peps/peps/pep-0001.rst:812
 msgid ""
 "Inform the author of the next steps (open a discussion thread and update the "
 "PEP with it, post an announcement, etc)."
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:813
+#: ../../peps/peps/pep-0001.rst:815
 msgid ""
 "Updates to existing PEPs should be submitted as a `GitHub pull request`_."
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:815
+#: ../../peps/peps/pep-0001.rst:817
 msgid ""
 "Many PEPs are written and maintained by developers with write access to the "
 "Python codebase.  The PEP editors monitor the PEP repository for changes, "
 "and correct any structure, grammar, spelling, or markup mistakes they see."
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:820
+#: ../../peps/peps/pep-0001.rst:822
 msgid ""
 "PEP editors don't pass judgment on PEPs.  They merely do the administrative "
 "& editorial part (which is generally a low volume task)."
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:823
+#: ../../peps/peps/pep-0001.rst:825
 msgid "Resources:"
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:825
+#: ../../peps/peps/pep-0001.rst:827
 msgid "`Index of Python Enhancement Proposals <https://peps.python.org/>`_"
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:827
+#: ../../peps/peps/pep-0001.rst:829
 msgid ""
 "`Following Python's Development <https://devguide.python.org/communication/"
 ">`_"
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:830
+#: ../../peps/peps/pep-0001.rst:832
 msgid "`Python Developer's Guide <https://devguide.python.org/>`_"
 msgstr ""
 
-#: ../../peps/peps/pep-0001.rst:874
+#: ../../peps/peps/pep-0001.rst:876
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../../peps/peps/pep-0001.rst:876
+#: ../../peps/peps/pep-0001.rst:878
 msgid ""
 "This document is placed in the public domain or under the CC0-1.0-Universal "
 "license, whichever is more permissive."

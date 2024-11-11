@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PEPs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-14 02:33+0000\n"
+"POT-Creation-Date: 2024-11-11 15:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: pt_BR\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.15.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../../peps/peps/pep-0742.rst
 msgid "Author"
@@ -41,7 +41,7 @@ msgid "Status"
 msgstr ""
 
 #: ../../peps/peps/pep-0742.rst:5
-msgid "Accepted"
+msgid "Final"
 msgstr ""
 
 #: ../../peps/peps/pep-0742.rst
@@ -100,14 +100,15 @@ msgstr ""
 
 #: ../../peps/peps/pep-0742.rst:12
 msgid ""
-"https://discuss.python.org/t/pep-742-narrowing-types-with-typeis/45613/35"
-msgstr ""
-
-#: ../../peps/peps/pep-0742.rst:16
-msgid "Abstract"
+"`03-Apr-2024 <https://discuss.python.org/t/pep-742-narrowing-types-with-"
+"typeis/45613/35>`__"
 msgstr ""
 
 #: ../../peps/peps/pep-0742.rst:18
+msgid "Abstract"
+msgstr ""
+
+#: ../../peps/peps/pep-0742.rst:20
 msgid ""
 "This PEP proposes a new special form, ``TypeIs``, to allow annotating "
 "functions that can be used to narrow the type of a value, similar to the "
@@ -116,11 +117,11 @@ msgid ""
 "and ``else`` branches of a conditional."
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:25
+#: ../../peps/peps/pep-0742.rst:27
 msgid "Motivation"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:27
+#: ../../peps/peps/pep-0742.rst:29
 msgid ""
 "Typed Python code often requires users to narrow the type of a variable "
 "based on a conditional. For example, if a function accepts a union of two "
@@ -130,33 +131,33 @@ msgid ""
 "user-defined function to perform type narrowing."
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:33
+#: ../../peps/peps/pep-0742.rst:35
 msgid ""
 "To support such use cases, :pep:`647` introduced the :py:data:`typing."
 "TypeGuard` special form, which allows users to define type guards::"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:47
+#: ../../peps/peps/pep-0742.rst:49
 msgid ""
 "Unfortunately, the behavior of :py:data:`typing.TypeGuard` has some "
 "limitations that make it less useful for many common use cases, as explained "
 "also in the \"Motivation\" section of :pep:`724`. In particular:"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:51
+#: ../../peps/peps/pep-0742.rst:53
 msgid ""
 "Type checkers must use exactly the ``TypeGuard`` return type as the narrowed "
 "type if the type guard returns ``True``. They cannot use pre-existing "
 "knowledge about the type of the variable."
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:54
+#: ../../peps/peps/pep-0742.rst:56
 msgid ""
 "In the case where the type guard returns ``False``, the type checker cannot "
 "apply any additional narrowing."
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:57
+#: ../../peps/peps/pep-0742.rst:59
 msgid ""
 "The standard library function :py:func:`inspect.isawaitable` may serve as an "
 "example. It returns whether the argument is an awaitable object, and "
@@ -165,14 +166,14 @@ msgid ""
 "currently annotates it as::"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:64
+#: ../../peps/peps/pep-0742.rst:66
 msgid ""
 "A user `reported <https://github.com/python/mypy/issues/15520>`__ an issue "
 "to mypy about the behavior of this function. They observed the following "
 "behavior::"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:77
+#: ../../peps/peps/pep-0742.rst:79
 msgid ""
 "This behavior is consistent with :pep:`647`, but it did not match the user's "
 "expectations. Instead, they would expect the type of ``t`` to be narrowed to "
@@ -180,71 +181,71 @@ msgid ""
 "branch. This PEP proposes a new construct that does exactly that."
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:82
+#: ../../peps/peps/pep-0742.rst:84
 msgid ""
 "Other examples of issues that arose out of the current behavior of "
 "``TypeGuard`` include:"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:84
+#: ../../peps/peps/pep-0742.rst:86
 msgid ""
 "`Python typing issue <https://github.com/python/typing/issues/996>`__ "
 "(``numpy.isscalar``)"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:85
+#: ../../peps/peps/pep-0742.rst:87
 msgid ""
 "`Python typing issue <https://github.com/python/typing/issues/1351>`__ (:py:"
 "func:`dataclasses.is_dataclass`)"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:86
+#: ../../peps/peps/pep-0742.rst:88
 msgid ""
 "`Pyright issue <https://github.com/microsoft/pyright/issues/3450>`__ "
 "(expecting :py:data:`typing.TypeGuard` to work like :py:func:`isinstance`)"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:87
+#: ../../peps/peps/pep-0742.rst:89
 msgid ""
 "`Pyright issue <https://github.com/microsoft/pyright/issues/3466>`__ "
 "(expecting narrowing in the ``else`` branch)"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:88
+#: ../../peps/peps/pep-0742.rst:90
 msgid ""
 "`Mypy issue <https://github.com/python/mypy/issues/13957>`__ (expecting "
 "narrowing in the ``else`` branch)"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:89
+#: ../../peps/peps/pep-0742.rst:91
 msgid ""
 "`Mypy issue <https://github.com/python/mypy/issues/14434>`__ (combining "
 "multiple TypeGuards)"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:90
+#: ../../peps/peps/pep-0742.rst:92
 msgid ""
 "`Mypy issue <https://github.com/python/mypy/issues/15305>`__ (expecting "
 "narrowing in the ``else`` branch)"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:91
+#: ../../peps/peps/pep-0742.rst:93
 msgid ""
 "`Mypy issue <https://github.com/python/mypy/issues/11907>`__ (user-defined "
 "function similar to :py:func:`inspect.isawaitable`)"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:92
+#: ../../peps/peps/pep-0742.rst:94
 msgid ""
 "`Typeshed issue <https://github.com/python/typeshed/issues/8009>`__ "
 "(``asyncio.iscoroutinefunction``)"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:95
+#: ../../peps/peps/pep-0742.rst:97
 msgid "Rationale"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:97
+#: ../../peps/peps/pep-0742.rst:99
 msgid ""
 "The problems with the current behavior of :py:data:`typing.TypeGuard` compel "
 "us to improve the type system to allow a different type narrowing behavior. :"
@@ -254,7 +255,7 @@ msgid ""
 "Instead, we propose adding a new special form with the desired semantics."
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:103
+#: ../../peps/peps/pep-0742.rst:105
 msgid ""
 "We acknowledge that this leads to an unfortunate situation where there are "
 "two constructs with a similar purpose and similar semantics. We believe that "
@@ -267,18 +268,18 @@ msgid ""
 "its behavior is specifically desired."
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:113
+#: ../../peps/peps/pep-0742.rst:115
 msgid "Specification"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:115
+#: ../../peps/peps/pep-0742.rst:117
 msgid ""
 "A new special form, ``TypeIs``, is added to the :py:mod:`typing` module. Its "
 "usage, behavior, and runtime implementation are similar to those of :py:data:"
 "`typing.TypeGuard`."
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:119
+#: ../../peps/peps/pep-0742.rst:121
 msgid ""
 "It accepts a single argument and can be used as the return type of a "
 "function. A function annotated as returning a ``TypeIs`` is called a type "
@@ -286,7 +287,7 @@ msgid ""
 "and the type checker should verify that all return paths return ``bool``."
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:125
+#: ../../peps/peps/pep-0742.rst:127
 msgid ""
 "Type narrowing functions must accept at least one positional argument. The "
 "type narrowing behavior is applied to the first positional argument passed "
@@ -296,43 +297,43 @@ msgid ""
 "the second parameter (after ``self`` or ``cls``)."
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:133
+#: ../../peps/peps/pep-0742.rst:135
 msgid "Type narrowing behavior"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:135
+#: ../../peps/peps/pep-0742.rst:137
 msgid ""
 "To specify the behavior of ``TypeIs``, we use the following terminology:"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:137
+#: ../../peps/peps/pep-0742.rst:139
 msgid "I = ``TypeIs`` input type"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:138
+#: ../../peps/peps/pep-0742.rst:140
 msgid "R = ``TypeIs`` return type"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:139
+#: ../../peps/peps/pep-0742.rst:141
 msgid "A = Type of argument passed to type narrowing function (pre-narrowed)"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:140
+#: ../../peps/peps/pep-0742.rst:142
 msgid "NP = Narrowed type (positive; used when ``TypeIs`` returned ``True``)"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:141
+#: ../../peps/peps/pep-0742.rst:143
 msgid "NN = Narrowed type (negative; used when ``TypeIs`` returned ``False``)"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:153
+#: ../../peps/peps/pep-0742.rst:155
 msgid ""
 "The return type ``R`` must be :ref:`consistent with <pep-483-gradual-"
 "typing>` ``I``. The type checker should emit an error if this condition is "
 "not met."
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:156
+#: ../../peps/peps/pep-0742.rst:158
 msgid ""
 "Formally, type *NP* should be narrowed to :math:`A \\land R`, the "
 "intersection of *A* and *R*, and type *NN* should be narrowed to :math:`A "
@@ -346,31 +347,31 @@ msgid ""
 "future."
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:167
+#: ../../peps/peps/pep-0742.rst:169
 msgid "Examples"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:169
+#: ../../peps/peps/pep-0742.rst:171
 msgid "Type narrowing is applied in both the positive and negative case::"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:182
+#: ../../peps/peps/pep-0742.rst:184
 msgid ""
 "The final narrowed type may be narrower than **R**, due to the constraints "
 "of the argument's previously-known type::"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:200
+#: ../../peps/peps/pep-0742.rst:202
 msgid ""
 "It is an error to narrow to a type that is not consistent with the input "
 "type::"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:208
+#: ../../peps/peps/pep-0742.rst:210
 msgid "Subtyping"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:210
+#: ../../peps/peps/pep-0742.rst:212
 msgid ""
 "``TypeIs`` is also valid as the return type of a callable, for example in "
 "callback protocols and in the ``Callable`` special form. In these contexts, "
@@ -378,14 +379,14 @@ msgid ""
 "TypeIs[int]]`` is assignable to ``Callable[..., bool]``."
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:215
+#: ../../peps/peps/pep-0742.rst:217
 msgid ""
 "Unlike ``TypeGuard``, ``TypeIs`` is invariant in its argument type: "
 "``TypeIs[B]`` is not a subtype of ``TypeIs[A]``, even if ``B`` is a subtype "
 "of ``A``. To see why, consider the following example::"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:231
+#: ../../peps/peps/pep-0742.rst:233
 msgid ""
 "(Note that ``bool`` is a subtype of ``int``.) This code fails at runtime, "
 "because the narrower returns ``False`` (1 is not a ``bool``) and the "
@@ -394,29 +395,29 @@ msgid ""
 "detect this error."
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:238
+#: ../../peps/peps/pep-0742.rst:240
 msgid "Backwards Compatibility"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:240
+#: ../../peps/peps/pep-0742.rst:242
 msgid ""
 "As this PEP only proposes a new special form, there are no implications on "
 "backwards compatibility."
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:245
+#: ../../peps/peps/pep-0742.rst:247
 msgid "Security Implications"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:247
+#: ../../peps/peps/pep-0742.rst:249
 msgid "None known."
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:251
+#: ../../peps/peps/pep-0742.rst:253
 msgid "How to Teach This"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:253
+#: ../../peps/peps/pep-0742.rst:255
 msgid ""
 "Introductions to typing should cover ``TypeIs`` when discussing how to "
 "narrow types, along with discussion of other narrowing constructs such as :"
@@ -428,11 +429,11 @@ msgid ""
 "introductory user-facing documentation."
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:262
+#: ../../peps/peps/pep-0742.rst:264
 msgid "When to use ``TypeIs``"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:264
+#: ../../peps/peps/pep-0742.rst:266
 msgid ""
 "Python code often uses functions like ``isinstance()`` to distinguish "
 "between different possible types of a value. Type checkers understand "
@@ -443,7 +444,7 @@ msgid ""
 "the check and allow type checkers to use it to narrow the type of a variable."
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:272
+#: ../../peps/peps/pep-0742.rst:274
 msgid ""
 "A ``TypeIs`` function takes a single argument and is annotated as returning "
 "``TypeIs[T]``, where ``T`` is the type that you want to narrow to. The "
@@ -452,11 +453,11 @@ msgid ""
 "like you would use ``isinstance()``. For example::"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:292
+#: ../../peps/peps/pep-0742.rst:294
 msgid "Writing a safe ``TypeIs`` function"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:294
+#: ../../peps/peps/pep-0742.rst:296
 msgid ""
 "A ``TypeIs`` function allows you to override your type checker's type "
 "narrowing behavior. This is a powerful tool, but it can be dangerous because "
@@ -464,7 +465,7 @@ msgid ""
 "checking, and type checkers cannot detect such errors."
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:299
+#: ../../peps/peps/pep-0742.rst:301
 msgid ""
 "For a function returning ``TypeIs[T]`` to be safe, it must return ``True`` "
 "if and only if the argument is compatible with type ``T``, and ``False`` "
@@ -472,27 +473,27 @@ msgid ""
 "incorrect types."
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:303
+#: ../../peps/peps/pep-0742.rst:305
 msgid "Below are some examples of correct and incorrect ``TypeIs`` functions::"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:319
+#: ../../peps/peps/pep-0742.rst:321
 msgid ""
 "This function demonstrates some errors that can occur when using a poorly "
 "written ``TypeIs`` function. These errors are not detected by type checkers::"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:335
+#: ../../peps/peps/pep-0742.rst:337
 msgid ""
 "Here is an example of a correct ``TypeIs`` function for a more complicated "
 "type::"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:354
+#: ../../peps/peps/pep-0742.rst:356
 msgid "``TypeIs`` and ``TypeGuard``"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:356
+#: ../../peps/peps/pep-0742.rst:358
 msgid ""
 "``TypeIs`` and :py:data:`typing.TypeGuard` are both tools for narrowing the "
 "type of a variable based on a user-defined function. Both can be used to "
@@ -501,37 +502,37 @@ msgid ""
 "function can then be used in ``if`` checks to narrow the type of a variable."
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:362
+#: ../../peps/peps/pep-0742.rst:364
 msgid ""
 "``TypeIs`` usually has the most intuitive behavior, but it introduces more "
 "restrictions. ``TypeGuard`` is the right tool to use if:"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:365
+#: ../../peps/peps/pep-0742.rst:367
 msgid ""
 "You want to narrow to a type that is not compatible with the input type, for "
 "example from ``list[object]`` to ``list[int]``.  ``TypeIs`` only allows "
 "narrowing between compatible types."
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:368
+#: ../../peps/peps/pep-0742.rst:370
 msgid ""
 "Your function does not return ``True`` for all input values that are "
 "compatible with the narrowed type. For example, you could have a "
 "``TypeGuard[int]`` that returns ``True`` only for positive integers."
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:372
+#: ../../peps/peps/pep-0742.rst:374
 msgid "``TypeIs`` and ``TypeGuard`` differ in the following ways:"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:374
+#: ../../peps/peps/pep-0742.rst:376
 msgid ""
 "``TypeIs`` requires the narrowed type to be a subtype of the input type, "
 "while ``TypeGuard`` does not."
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:376
+#: ../../peps/peps/pep-0742.rst:378
 msgid ""
 "When a ``TypeGuard`` function returns ``True``, type checkers narrow the "
 "type of the variable to exactly the ``TypeGuard`` type. When a ``TypeIs`` "
@@ -540,7 +541,7 @@ msgid ""
 "type. (Technically, this is known as an intersection type.)"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:380
+#: ../../peps/peps/pep-0742.rst:382
 msgid ""
 "When a ``TypeGuard`` function returns ``False``, type checkers cannot narrow "
 "the type of the variable at all. When a ``TypeIs`` function returns "
@@ -548,49 +549,49 @@ msgid ""
 "``TypeIs`` type."
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:384
+#: ../../peps/peps/pep-0742.rst:386
 msgid "This behavior can be seen in the following example::"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:412
+#: ../../peps/peps/pep-0742.rst:414
 msgid "Reference Implementation"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:414
+#: ../../peps/peps/pep-0742.rst:416
 msgid ""
 "The ``TypeIs`` special form `has been implemented <https://github.com/python/"
 "typing_extensions/pull/330>`__ in the ``typing_extensions`` module and will "
 "be released in typing_extensions 4.10.0."
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:417
+#: ../../peps/peps/pep-0742.rst:419
 msgid "Implementations are available for several type checkers:"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:419
+#: ../../peps/peps/pep-0742.rst:421
 msgid "Mypy: `pull request open <https://github.com/python/mypy/pull/16898>`__"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:420
+#: ../../peps/peps/pep-0742.rst:422
 msgid ""
 "Pyanalyze: `pull request <https://github.com/quora/pyanalyze/pull/718>`__"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:421
+#: ../../peps/peps/pep-0742.rst:423
 msgid ""
 "Pyright: `added in version 1.1.351 <https://github.com/microsoft/pyright/"
 "releases/tag/1.1.351>`__"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:424
+#: ../../peps/peps/pep-0742.rst:426
 msgid "Rejected Ideas"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:429
+#: ../../peps/peps/pep-0742.rst:431
 msgid "Change the behavior of ``TypeGuard``"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:431
+#: ../../peps/peps/pep-0742.rst:433
 msgid ""
 ":pep:`724` previously proposed changing the specified behavior of :py:data:"
 "`typing.TypeGuard` so that if the return type of the guard is consistent "
@@ -600,7 +601,7 @@ msgid ""
 "for users to take advantage of the new, usually more intuitive behavior."
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:437
+#: ../../peps/peps/pep-0742.rst:439
 msgid ""
 "However, this approach has some major problems. Users who have written "
 "``TypeGuard`` functions expecting the existing semantics specified in :pep:"
@@ -612,11 +613,11 @@ msgid ""
 "this alternative PEP."
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:445
+#: ../../peps/peps/pep-0742.rst:447
 msgid "Do nothing"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:447
+#: ../../peps/peps/pep-0742.rst:449
 msgid ""
 "Both this PEP and the alternative proposed in :pep:`724` have shortcomings. "
 "The latter are discussed above. As for this PEP, it introduces two special "
@@ -625,7 +626,7 @@ msgid ""
 "off with different narrowing semantics."
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:452
+#: ../../peps/peps/pep-0742.rst:454
 msgid ""
 "One way forward, then, is to do nothing and live with the current "
 "limitations of the type system. However, we believe that the limitations of "
@@ -637,11 +638,11 @@ msgid ""
 "``inspect.isawaitable``."
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:460
+#: ../../peps/peps/pep-0742.rst:462
 msgid "Alternative names"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:462
+#: ../../peps/peps/pep-0742.rst:464
 msgid ""
 "This PEP currently proposes the name ``TypeIs``, emphasizing that the "
 "special form ``TypeIs[T]`` returns whether the argument is of type ``T``, "
@@ -650,54 +651,54 @@ msgid ""
 "considered, including in an earlier version of this PEP."
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:467
+#: ../../peps/peps/pep-0742.rst:469
 msgid "Options include:"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:469
+#: ../../peps/peps/pep-0742.rst:471
 msgid ""
 "``IsInstance`` (`post by Paul Moore <https://discuss.python.org/t/pep-724-"
 "stricter-type-guards/34124/60>`__): emphasizes that the new construct "
 "behaves similarly to the builtin :py:func:`isinstance`."
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:471
+#: ../../peps/peps/pep-0742.rst:473
 msgid ""
 "``Narrowed`` or ``NarrowedTo``: shorter than ``TypeNarrower`` but keeps the "
 "connection to \"type narrowing\" (suggested by Eric Traut)."
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:473
+#: ../../peps/peps/pep-0742.rst:475
 msgid ""
 "``Predicate`` or ``TypePredicate``: mirrors TypeScript's name for the "
 "feature, \"type predicates\"."
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:474
+#: ../../peps/peps/pep-0742.rst:476
 msgid ""
 "``StrictTypeGuard`` (earlier drafts of :pep:`724`): emphasizes that the new "
 "construct performs a stricter version of type narrowing than :py:data:"
 "`typing.TypeGuard`."
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:476
+#: ../../peps/peps/pep-0742.rst:478
 msgid ""
 "``TypeCheck`` (`post by Nicolas Tessore <https://discuss.python.org/t/"
 "pep-724-stricter-type-guards/34124/59>`__): emphasizes the binary nature of "
 "the check."
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:478
+#: ../../peps/peps/pep-0742.rst:480
 msgid ""
 "``TypeNarrower``: emphasizes that the function narrows its argument type. "
 "Used in an earlier version of this PEP."
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:481
+#: ../../peps/peps/pep-0742.rst:483
 msgid "Acknowledgments"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:483
+#: ../../peps/peps/pep-0742.rst:485
 msgid ""
 "Much of the motivation and specification for this PEP derives from :pep:"
 "`724`. While this PEP proposes a different solution for the problem at hand, "
@@ -706,11 +707,11 @@ msgid ""
 "possible without their work."
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:490
+#: ../../peps/peps/pep-0742.rst:492
 msgid "Copyright"
 msgstr ""
 
-#: ../../peps/peps/pep-0742.rst:492
+#: ../../peps/peps/pep-0742.rst:494
 msgid ""
 "This document is placed in the public domain or under the CC0-1.0-Universal "
 "license, whichever is more permissive."

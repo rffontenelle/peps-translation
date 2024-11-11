@@ -8,597 +8,710 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-20 10:43-0300\n"
+"POT-Creation-Date: 2024-11-11 15:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.13.1\n"
+"Generated-By: Babel 2.16.0\n"
 
-#: ../../peps/pep-0661.rst
+#: ../../peps/peps/pep-0661.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../../peps/pep-0661.rst:3
+#: ../../peps/peps/pep-0661.rst:3
 msgid "Tal Einat <tal@python.org>"
 msgstr ""
 
-#: ../../peps/pep-0661.rst
+#: ../../peps/peps/pep-0661.rst
 msgid "Discussions-To"
 msgstr ""
 
-#: ../../peps/pep-0661.rst:4
+#: ../../peps/peps/pep-0661.rst:4
 msgid "https://discuss.python.org/t/pep-661-sentinel-values/9126"
 msgstr ""
 
-#: ../../peps/pep-0661.rst
+#: ../../peps/peps/pep-0661.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../../peps/pep-0661.rst:5
+#: ../../peps/peps/pep-0661.rst:5
 msgid "Draft"
 msgstr ""
 
-#: ../../peps/pep-0661.rst
+#: ../../peps/peps/pep-0661.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../../peps/pep-0661.rst:6
+#: ../../peps/peps/pep-0661.rst:6
 msgid "Standards Track"
 msgstr ""
 
-#: ../../peps/pep-0661.rst
+#: ../../peps/peps/pep-0661.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../../peps/pep-0661.rst:8 ../../peps/pep-0661.rst:9
+#: ../../peps/peps/pep-0661.rst:8
 msgid "06-Jun-2021"
 msgstr ""
 
-#: ../../peps/pep-0661.rst
+#: ../../peps/peps/pep-0661.rst
 msgid "Post-History"
 msgstr "Pós-história"
 
-#: ../../peps/pep-0661.rst:12
+#: ../../peps/peps/pep-0661.rst:9
+msgid ""
+"`20-May-2021 <https://discuss.python.org/t/sentinel-values-in-the-"
+"stdlib/8810>`__, `06-Jun-2021 <https://discuss.python.org/t/pep-661-sentinel-"
+"values/9126>`__"
+msgstr ""
+
+#: ../../peps/peps/pep-0661.rst:12
 msgid "TL;DR: See the `Specification`_ and `Reference Implementation`_."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:16
+#: ../../peps/peps/pep-0661.rst:16
 msgid "Abstract"
 msgstr ""
 
-#: ../../peps/pep-0661.rst:18
+#: ../../peps/peps/pep-0661.rst:18
 msgid ""
-"Unique placeholder values, commonly known as \"sentinel values\", are "
-"common in programming.  They have many uses, such as for:"
+"Unique placeholder values, commonly known as \"sentinel values\", are common "
+"in programming.  They have many uses, such as for:"
 msgstr ""
 
-#: ../../peps/pep-0661.rst:21
+#: ../../peps/peps/pep-0661.rst:21
 msgid "Default values for function arguments, for when a value was not given::"
 msgstr ""
 
-#: ../../peps/pep-0661.rst:26
-msgid "Return values from functions when something is not found or unavailable::"
+#: ../../peps/peps/pep-0661.rst:26
+msgid ""
+"Return values from functions when something is not found or unavailable::"
 msgstr ""
 
-#: ../../peps/pep-0661.rst:31
+#: ../../peps/peps/pep-0661.rst:31
 msgid ""
 "Missing data, such as NULL in relational databases or \"N/A\" (\"not "
 "available\") in spreadsheets"
 msgstr ""
 
-#: ../../peps/pep-0661.rst:34
+#: ../../peps/peps/pep-0661.rst:34
 msgid ""
-"Python has the special value ``None``, which is intended to be used as "
-"such a sentinel value in most cases.  However, sometimes an alternative "
-"sentinel value is needed, usually when it needs to be distinct from "
-"``None``.  These cases are common enough that several idioms for "
-"implementing such sentinels have arisen over the years, but uncommon "
-"enough that there hasn't been a clear need for standardization.  However,"
-" the common implementations, including some in the stdlib, suffer from "
-"several significant drawbacks."
+"Python has the special value ``None``, which is intended to be used as such "
+"a sentinel value in most cases.  However, sometimes an alternative sentinel "
+"value is needed, usually when it needs to be distinct from ``None`` since "
+"``None`` is a valid value in that context.  Such cases are common enough "
+"that several idioms for implementing such sentinels have arisen over the "
+"years, but uncommon enough that there hasn't been a clear need for "
+"standardization. However, the common implementations, including some in the "
+"stdlib, suffer from several significant drawbacks."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:42
+#: ../../peps/peps/pep-0661.rst:43
 msgid ""
-"This PEP proposes adding a utility for defining sentinel values, to be "
-"used in the stdlib and made publicly available as part of the stdlib."
+"This PEP proposes adding a utility for defining sentinel values, to be used "
+"in the stdlib and made publicly available as part of the stdlib."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:45
+#: ../../peps/peps/pep-0661.rst:46
 msgid ""
-"Note: Changing all existing sentinels in the stdlib to be implemented "
-"this way is not deemed necessary, and whether to do so is left to the "
-"discretion of the maintainers."
+"Note: Changing all existing sentinels in the stdlib to be implemented this "
+"way is not deemed necessary, and whether to do so is left to the discretion "
+"of the maintainers."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:51
+#: ../../peps/peps/pep-0661.rst:52
 msgid "Motivation"
 msgstr ""
 
-#: ../../peps/pep-0661.rst:53
+#: ../../peps/peps/pep-0661.rst:54
 msgid ""
-"In May 2021, a question was brought up on the python-dev mailing list "
-"[1]_ about how to better implement a sentinel value for "
-"``traceback.print_exception``.  The existing implementation used the "
-"following common idiom::"
+"In May 2021, a question was brought up on the python-dev mailing list [1]_ "
+"about how to better implement a sentinel value for ``traceback."
+"print_exception``.  The existing implementation used the following common "
+"idiom::"
 msgstr ""
 
-#: ../../peps/pep-0661.rst:60
+#: ../../peps/peps/pep-0661.rst:61
 msgid ""
-"However, this object has an uninformative and overly verbose repr, "
-"causing the function's signature to be overly long and hard to read::"
+"However, this object has an uninformative and overly verbose repr, causing "
+"the function's signature to be overly long and hard to read::"
 msgstr ""
 
-#: ../../peps/pep-0661.rst:70
+#: ../../peps/peps/pep-0661.rst:71
 msgid ""
-"Additionally, two other drawbacks of many existing sentinels were brought"
-" up in the discussion:"
+"Additionally, two other drawbacks of many existing sentinels were brought up "
+"in the discussion:"
 msgstr ""
 
-#: ../../peps/pep-0661.rst:73
+#: ../../peps/peps/pep-0661.rst:74
 msgid ""
-"Not having a distinct type, hence it being impossible to define clear "
-"type signatures for functions with sentinels as default values"
+"Some do not have a distinct type, hence it is impossible to define clear "
+"type signatures for functions with such sentinels as default values."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:75
+#: ../../peps/peps/pep-0661.rst:76
 msgid ""
-"Incorrect behavior after being copied or unpickled, due to a separate "
-"instance being created and thus comparisons using ``is`` failing"
+"They behave unexpectedly after being copied or unpickled, due to a separate "
+"instance being created and thus comparisons using ``is`` failing."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:78
+#: ../../peps/peps/pep-0661.rst:79
 msgid ""
-"In the ensuing discussion, Victor Stinner supplied a list of currently "
-"used sentinel values in the Python standard library [2]_.  This showed "
-"that the need for sentinels is fairly common, that there are various "
-"implementation methods used even within the stdlib, and that many of "
-"these suffer from at least one of the three aforementioned drawbacks."
+"In the ensuing discussion, Victor Stinner supplied a list of currently used "
+"sentinel values in the Python standard library [2]_.  This showed that the "
+"need for sentinels is fairly common, that there are various implementation "
+"methods used even within the stdlib, and that many of these suffer from at "
+"least one of the three above drawbacks."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:84
+#: ../../peps/peps/pep-0661.rst:85
 msgid ""
 "The discussion did not lead to any clear consensus on whether a standard "
 "implementation method is needed or desirable, whether the drawbacks "
-"mentioned are significant, nor which kind of implementation would be "
-"good.  The author of this PEP created an issue on bugs.python.org [3]_ "
-"suggesting options for improvement, but that focused on only a single "
-"problematic aspect of a few cases, and failed to gather any support."
+"mentioned are significant, nor which kind of implementation would be good.  "
+"The author of this PEP created an issue on bugs.python.org (now a GitHub "
+"issue [3]_) suggesting options for improvement, but that focused on only a "
+"single problematic aspect of a few cases, and failed to gather any support."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:91
+#: ../../peps/peps/pep-0661.rst:92
 #, python-format
 msgid ""
-"A poll [4]_ was created on discuss.python.org to get a clearer sense of "
-"the community's opinions. The poll's results were not conclusive, with "
-"40% voting for \"The status-quo is fine / there’s no need for consistency"
-" in this\", but most voters voting for one or more standardized "
-"solutions. Specifically, 37% of the voters chose \"Consistent use of a "
-"new, dedicated sentinel factory / class / meta-class, also made publicly "
-"available in the stdlib\"."
+"A poll [4]_ was created on discuss.python.org to get a clearer sense of the "
+"community's opinions. After nearly two weeks, significant further, "
+"discussion, and 39 votes, the poll's results were not conclusive. 40% had "
+"voted for \"The status-quo is fine / there’s no need for consistency in "
+"this\", but most voters had voted for one or more standardized solutions. "
+"Specifically, 37% of the voters chose \"Consistent use of a new, dedicated "
+"sentinel factory / class / meta-class, also made publicly available in the "
+"stdlib\"."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:99
+#: ../../peps/peps/pep-0661.rst:101
 msgid ""
 "With such mixed opinions, this PEP was created to facilitate making a "
 "decision on the subject."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:102
+#: ../../peps/peps/pep-0661.rst:104
 msgid ""
-"While working on this PEP, iterating on various options and "
-"implementations and continuing discussions, the author has come to the "
-"opinion that a simple, good implementation available in the standard "
-"library would be worth having, both for use in the standard library "
-"itself and elsewhere."
+"While working on this PEP, iterating on various options and implementations "
+"and continuing discussions, the author has come to the opinion that a "
+"simple, good implementation available in the standard library would be worth "
+"having, both for use in the standard library itself and elsewhere."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:109
+#: ../../peps/peps/pep-0661.rst:111
 msgid "Rationale"
 msgstr ""
 
-#: ../../peps/pep-0661.rst:111
+#: ../../peps/peps/pep-0661.rst:113
 msgid "The criteria guiding the chosen implementation were:"
 msgstr ""
 
-#: ../../peps/pep-0661.rst:113
+#: ../../peps/peps/pep-0661.rst:115
 msgid ""
-"The sentinel objects should behave as expected by a sentinel object: When"
-" compared using the ``is`` operator, it should always be considered "
-"identical to itself but never to any other object."
+"The sentinel objects should behave as expected by a sentinel object: When "
+"compared using the ``is`` operator, it should always be considered identical "
+"to itself but never to any other object."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:116
-msgid "Creating a sentinel object should be a simple, straightforward one-liner."
+#: ../../peps/peps/pep-0661.rst:118
+msgid ""
+"Creating a sentinel object should be a simple, straightforward one-liner."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:117
-msgid "It should be simple to define as many distinct sentinel values as needed."
+#: ../../peps/peps/pep-0661.rst:119
+msgid ""
+"It should be simple to define as many distinct sentinel values as needed."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:118
+#: ../../peps/peps/pep-0661.rst:120
 msgid "The sentinel objects should have a clear and short repr."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:119
+#: ../../peps/peps/pep-0661.rst:121
 msgid "It should be possible to use clear type signatures for sentinels."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:120
+#: ../../peps/peps/pep-0661.rst:122
 msgid ""
-"The sentinel objects should behave correctly after copying and/or "
-"unpickling."
+"The sentinel objects should behave correctly after copying and/or unpickling."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:122
+#: ../../peps/peps/pep-0661.rst:124
 msgid ""
 "Such sentinels should work when using CPython 3.x and PyPy3, and ideally "
 "also with other implementations of Python."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:124
+#: ../../peps/peps/pep-0661.rst:126
 msgid ""
-"As simple and straightforward as possible, in implementation and "
-"especially in use.  Avoid this becoming one more special thing to learn "
-"when learning Python.  It should be easy to find and use when needed, and"
-" obvious enough when reading code that one would normally not feel a need"
-" to look up its documentation."
+"As simple and straightforward as possible, in implementation and especially "
+"in use.  Avoid this becoming one more special thing to learn when learning "
+"Python.  It should be easy to find and use when needed, and obvious enough "
+"when reading code that one would normally not feel a need to look up its "
+"documentation."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:130
+#: ../../peps/peps/pep-0661.rst:132
 msgid ""
-"With so many uses in the Python standard library [2]_, it would be useful"
-" to have an implementation in the standard library, since the stdlib "
-"cannot use implementations of sentinel objects available elsewhere (such "
-"as the ``sentinels`` [5]_ or ``sentinel`` [6]_ PyPI packages)."
+"With so many uses in the Python standard library [2]_, it would be useful to "
+"have an implementation in the standard library, since the stdlib cannot use "
+"implementations of sentinel objects available elsewhere (such as the "
+"``sentinels`` [5]_ or ``sentinel`` [6]_ PyPI packages)."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:135
+#: ../../peps/peps/pep-0661.rst:137
 msgid ""
 "After researching existing idioms and implementations, and going through "
-"many different possible implementations, an implementation was written "
-"which meets all of these criteria (see `Reference Implementation`_)."
+"many different possible implementations, an implementation was written which "
+"meets all of these criteria (see `Reference Implementation`_)."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:141
+#: ../../peps/peps/pep-0661.rst:143
 msgid "Specification"
 msgstr ""
 
-#: ../../peps/pep-0661.rst:143
+#: ../../peps/peps/pep-0661.rst:145
 msgid ""
-"A new ``Sentinel`` class will be added to a new ``sentinels`` module. Its"
-" initializer will accept a single required argument, the name of the "
-"sentinel object, and two optional arguments: the repr of the object, and "
-"the name of its module::"
+"A new ``Sentinel`` class will be added to a new ``sentinels`` module. Its "
+"initializer will accept a single required argument, the name of the sentinel "
+"object, and three optional arguments: the repr of the object, its boolean "
+"value, and the name of its module::"
 msgstr ""
 
-#: ../../peps/pep-0661.rst:158
+#: ../../peps/peps/pep-0661.rst:163
 msgid ""
 "Checking if a value is such a sentinel *should* be done using the ``is`` "
-"operator, as is recommended for ``None``.  Equality checks using ``==`` "
-"will also work as expected, returning ``True`` only when the object is "
-"compared with itself.  Identity checks such as ``if value is MISSING:`` "
-"should usually be used rather than boolean checks such as ``if value:`` "
-"or ``if not value:``. Sentinel instances are truthy by default."
+"operator, as is recommended for ``None``.  Equality checks using ``==`` will "
+"also work as expected, returning ``True`` only when the object is compared "
+"with itself.  Identity checks such as ``if value is MISSING:`` should "
+"usually be used rather than boolean checks such as ``if value:`` or ``if not "
+"value:``."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:165
+#: ../../peps/peps/pep-0661.rst:169
+msgid ""
+"Sentinel instances are truthy by default, unlike ``None``.  This parallels "
+"the default for arbitrary classes, as well as the boolean value of "
+"``Ellipsis``."
+msgstr ""
+
+#: ../../peps/peps/pep-0661.rst:172
 msgid ""
 "The names of sentinels are unique within each module.  When calling "
 "``Sentinel()`` in a module where a sentinel with that name was already "
-"defined, the existing sentinel with that name will be returned.  "
-"Sentinels with the same name in different modules will be distinct from "
-"each other."
+"defined, the existing sentinel with that name will be returned.  Sentinels "
+"with the same name in different modules will be distinct from each other."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:170
+#: ../../peps/peps/pep-0661.rst:177
 msgid ""
-"Creating a copy of a sentinel object, such as by using ``copy.copy()`` or"
-" by pickling and unpickling, will return the same object."
+"Creating a copy of a sentinel object, such as by using ``copy.copy()`` or by "
+"pickling and unpickling, will return the same object."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:173
-msgid ""
-"Type annotations for sentinel values should use ``Sentinel``.  For "
-"example::"
-msgstr ""
-
-#: ../../peps/pep-0661.rst:178
+#: ../../peps/peps/pep-0661.rst:180
 msgid ""
 "The ``module_name`` optional argument should normally not need to be "
-"supplied, as ``Sentinel()`` will usually be able to recognize the module "
-"in which it was called.  ``module_name`` should be supplied only in "
-"unusual cases when this automatic recognition does not work as intended, "
-"such as perhaps when using Jython or IronPython.  This parallels the "
-"designs of ``Enum`` and ``namedtuple``.  For more details, see "
-":pep:`435`."
+"supplied, as ``Sentinel()`` will usually be able to recognize the module in "
+"which it was called.  ``module_name`` should be supplied only in unusual "
+"cases when this automatic recognition does not work as intended, such as "
+"perhaps when using Jython or IronPython.  This parallels the designs of "
+"``Enum`` and ``namedtuple``.  For more details, see :pep:`435`."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:185
+#: ../../peps/peps/pep-0661.rst:187
 msgid ""
-"The ``Sentinel`` class may be sub-classed.  Instances of each sub-class "
-"will be unique, even if using the same name and module.  This allows for "
-"customizing the behavior of sentinels, such as controlling their "
-"truthiness."
+"The ``Sentinel`` class may not be sub-classed, to avoid overly-clever uses "
+"based on it, such as attempts to use it as a base for implementing "
+"singletons. It is considered important that the addition of Sentinel to the "
+"stdlib should add minimal complexity."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:191
+#: ../../peps/peps/pep-0661.rst:192
+msgid "Ordering comparisons are undefined for sentinel objects."
+msgstr ""
+
+#: ../../peps/peps/pep-0661.rst:195
+#, fuzzy
+msgid "Typing"
+msgstr "Tipo"
+
+#: ../../peps/peps/pep-0661.rst:197
+msgid ""
+"To make usage of sentinels clear and simple in typed Python code, we propose "
+"to amend the type system with a special case for sentinel objects."
+msgstr ""
+
+#: ../../peps/peps/pep-0661.rst:200
+msgid ""
+"Sentinel objects may be used in :term:`type expressions <typing:type "
+"expression>`, representing themselves. This is similar to how ``None`` is "
+"handled in the existing type system. For example::"
+msgstr ""
+
+#: ../../peps/peps/pep-0661.rst:212
+msgid ""
+"More formally, type checkers should recognize sentinel creations of the form "
+"``NAME = Sentinel('NAME')`` as creating a new sentinel object. If the name "
+"passed to the ``Sentinel`` constructor does not match the name the object is "
+"assigned to, type checkers should emit an error."
+msgstr ""
+
+#: ../../peps/peps/pep-0661.rst:217
+msgid ""
+"Sentinels defined using this syntax may be used in :term:`type expressions "
+"<typing:type expression>`. They represent a :term:`fully static type <typing:"
+"fully static type>` that has a single member, the sentinel object itself."
+msgstr ""
+
+#: ../../peps/peps/pep-0661.rst:222
+msgid ""
+"Type checkers should support narrowing union types involving sentinels using "
+"the ``is`` and ``is not`` operators::"
+msgstr ""
+
+#: ../../peps/peps/pep-0661.rst:236
+msgid ""
+"To support usage in type expressions, the runtime implementation of the "
+"``Sentinel`` class should have the ``__or__`` and ``__ror__`` methods, "
+"returning :py:class:`typing.Union` objects."
+msgstr ""
+
+#: ../../peps/peps/pep-0661.rst:241
+msgid "Backwards Compatibility"
+msgstr ""
+
+#: ../../peps/peps/pep-0661.rst:243
+msgid ""
+"While not breaking existing code, adding a new \"sentinels\" stdlib module "
+"could cause some confusion with regard to existing modules named "
+"\"sentinels\", and specifically with the \"sentinels\" package on PyPI."
+msgstr ""
+
+#: ../../peps/peps/pep-0661.rst:247
+msgid ""
+"The existing \"sentinels\" package on PyPI [10]_ appears to be abandoned, "
+"with the latest release being made on Aug. 2016.  Therefore, using this name "
+"for a new stdlib module seems reasonable."
+msgstr ""
+
+#: ../../peps/peps/pep-0661.rst:251
+msgid ""
+"If and when this PEP is accepted, it may be worth verifying if this has "
+"indeed been abandoned, and if so asking to transfer ownership to the CPython "
+"maintainers to reduce the potential for confusion with the new stdlib module."
+msgstr ""
+
+#: ../../peps/peps/pep-0661.rst:257
+msgid "How to Teach This"
+msgstr ""
+
+#: ../../peps/peps/pep-0661.rst:259
+msgid ""
+"The normal types of documentation of new stdlib modules and features, namely "
+"doc-strings, module docs and a section in \"What's New\", should suffice."
+msgstr ""
+
+#: ../../peps/peps/pep-0661.rst:264
+msgid "Security Implications"
+msgstr ""
+
+#: ../../peps/peps/pep-0661.rst:266
+msgid "This proposal should have no security implications."
+msgstr ""
+
+#: ../../peps/peps/pep-0661.rst:270
 msgid "Reference Implementation"
 msgstr ""
 
-#: ../../peps/pep-0661.rst:193
+#: ../../peps/peps/pep-0661.rst:272
 msgid ""
-"The reference implementation is found in a dedicated GitHub repo [7]_.  A"
-" simplified version follows::"
+"The reference implementation is found in a dedicated GitHub repo [7]_.  A "
+"simplified version follows::"
 msgstr ""
 
-#: ../../peps/pep-0661.rst:239
+#: ../../peps/peps/pep-0661.rst:323
 msgid "Rejected Ideas"
 msgstr ""
 
-#: ../../peps/pep-0661.rst:243
+#: ../../peps/peps/pep-0661.rst:327
 msgid "Use ``NotGiven = object()``"
 msgstr ""
 
-#: ../../peps/pep-0661.rst:245
+#: ../../peps/peps/pep-0661.rst:329
 msgid ""
-"This suffers from all of the drawbacks mentioned in the `Rationale`_ "
-"section."
+"This suffers from all of the drawbacks mentioned in the `Rationale`_ section."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:249
+#: ../../peps/peps/pep-0661.rst:333
 msgid "Add a single new sentinel value, such as ``MISSING`` or ``Sentinel``"
 msgstr ""
 
-#: ../../peps/pep-0661.rst:251
+#: ../../peps/peps/pep-0661.rst:335
 msgid ""
-"Since such a value could be used for various things in various places, "
-"one could not always be confident that it would never be a valid value in"
-" some use cases.  On the other hand, a dedicated and distinct sentinel "
-"value can be used with confidence without needing to consider potential "
-"edge-cases."
+"Since such a value could be used for various things in various places, one "
+"could not always be confident that it would never be a valid value in some "
+"use cases.  On the other hand, a dedicated and distinct sentinel value can "
+"be used with confidence without needing to consider potential edge-cases."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:256
+#: ../../peps/peps/pep-0661.rst:340
 msgid ""
-"Additionally, it is useful to be able to provide a meaningful name and "
-"repr for a sentinel value, specific to the context where it is used."
+"Additionally, it is useful to be able to provide a meaningful name and repr "
+"for a sentinel value, specific to the context where it is used."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:259
+#: ../../peps/peps/pep-0661.rst:343
 #, python-format
 msgid ""
-"Finally, this was a very unpopular option in the poll [4]_, with only 12%"
-" of the votes voting for it."
+"Finally, this was a very unpopular option in the poll [4]_, with only 12% of "
+"the votes voting for it."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:264
+#: ../../peps/peps/pep-0661.rst:348
 msgid "Use the existing ``Ellipsis`` sentinel value"
 msgstr ""
 
-#: ../../peps/pep-0661.rst:266
+#: ../../peps/peps/pep-0661.rst:350
 msgid ""
 "This is not the original intended use of Ellipsis, though it has become "
 "increasingly common to use it to define empty class or function blocks "
 "instead of using ``pass``."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:270
+#: ../../peps/peps/pep-0661.rst:354
 msgid ""
-"Also, similar to a potential new single sentinel value, ``Ellipsis`` "
-"can't be as confidently used in all cases, unlike a dedicated, distinct "
-"value."
+"Also, similar to a potential new single sentinel value, ``Ellipsis`` can't "
+"be as confidently used in all cases, unlike a dedicated, distinct value."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:275
+#: ../../peps/peps/pep-0661.rst:359
 msgid "Use a single-valued enum"
 msgstr ""
 
-#: ../../peps/pep-0661.rst:277 ../../peps/pep-0661.rst:294
+#: ../../peps/peps/pep-0661.rst:361 ../../peps/peps/pep-0661.rst:378
 msgid "The suggested idiom is::"
 msgstr ""
 
-#: ../../peps/pep-0661.rst:283
+#: ../../peps/peps/pep-0661.rst:367
 msgid ""
-"Besides the excessive repetition, the repr is overly long: "
-"``<NotGivenType.NotGiven: 'NotGiven'>``.  A shorter repr can be defined, "
-"at the expense of a bit more code and yet more repetition."
+"Besides the excessive repetition, the repr is overly long: ``<NotGivenType."
+"NotGiven: 'NotGiven'>``.  A shorter repr can be defined, at the expense of a "
+"bit more code and yet more repetition."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:287
+#: ../../peps/peps/pep-0661.rst:371
 msgid ""
 "Finally, this option was the least popular among the nine options in the "
 "poll [4]_, being the only option to receive no votes."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:292
+#: ../../peps/peps/pep-0661.rst:376
 msgid "A sentinel class decorator"
 msgstr ""
 
-#: ../../peps/pep-0661.rst:300
+#: ../../peps/peps/pep-0661.rst:384
 msgid ""
 "While this allows for a very simple and clear implementation of the "
-"decorator, the idiom is too verbose, repetitive, and difficult to "
-"remember."
+"decorator, the idiom is too verbose, repetitive, and difficult to remember."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:305
+#: ../../peps/peps/pep-0661.rst:389
 msgid "Using class objects"
 msgstr ""
 
-#: ../../peps/pep-0661.rst:307
+#: ../../peps/peps/pep-0661.rst:391
 msgid ""
-"Since classes are inherently singletons, using a class as a sentinel "
-"value makes sense and allows for a simple implementation."
+"Since classes are inherently singletons, using a class as a sentinel value "
+"makes sense and allows for a simple implementation."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:310
+#: ../../peps/peps/pep-0661.rst:394
 msgid "The simplest version of this is::"
 msgstr ""
 
-#: ../../peps/pep-0661.rst:314
+#: ../../peps/peps/pep-0661.rst:398
 msgid "To have a clear repr, one would need to use a meta-class::"
 msgstr ""
 
-#: ../../peps/pep-0661.rst:318
+#: ../../peps/peps/pep-0661.rst:402
 msgid "... or a class decorator::"
 msgstr ""
 
-#: ../../peps/pep-0661.rst:323
+#: ../../peps/peps/pep-0661.rst:407
 msgid ""
-"Using classes this way is unusual and could be confusing.  The intention "
-"of code would be hard to understand without comments.  It would also "
-"cause such sentinels to have some unexpected and undesirable behavior, "
-"such as being callable."
+"Using classes this way is unusual and could be confusing.  The intention of "
+"code would be hard to understand without comments.  It would also cause such "
+"sentinels to have some unexpected and undesirable behavior, such as being "
+"callable."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:330
+#: ../../peps/peps/pep-0661.rst:414
 msgid ""
-"Define a recommended \"standard\" idiom, without supplying an "
-"implementation"
+"Define a recommended \"standard\" idiom, without supplying an implementation"
 msgstr ""
 
-#: ../../peps/pep-0661.rst:332
+#: ../../peps/peps/pep-0661.rst:416
 msgid ""
-"Most common existing idioms have significant drawbacks.  So far, no idiom"
-" has been found that is clear and concise while avoiding these drawbacks."
+"Most common existing idioms have significant drawbacks.  So far, no idiom "
+"has been found that is clear and concise while avoiding these drawbacks."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:335
+#: ../../peps/peps/pep-0661.rst:419
 #, python-format
 msgid ""
 "Also, in the poll [4]_ on this subject, the options for recommending an "
-"idiom were unpopular, with the highest-voted option being voted for by "
-"only 25% of the voters."
+"idiom were unpopular, with the highest-voted option being voted for by only "
+"25% of the voters."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:341
-msgid "Specific type signatures for each sentinel value"
-msgstr ""
-
-#: ../../peps/pep-0661.rst:343
-msgid ""
-"For a long time, the author of this PEP strove to have type signatures "
-"for such sentinels that were specific to each value.  A leading proposal "
-"(supported by Guido and others) was to expand the use of ``Literal``, "
-"e.g. ``Literal[MISSING]``.  After much thought and discussion, especially"
-" on the typing-sig mailing list [8]_, it seems that all such solutions "
-"would require special-casing and/or added complexity in the "
-"implementations of static type checkers, while also constraining the "
-"implementation of sentinels."
-msgstr ""
-
-#: ../../peps/pep-0661.rst:351
-msgid ""
-"Therefore, this PEP no longer proposes such signatures.  Instead, this "
-"PEP suggests using ``Sentinel`` as the type signature for sentinel "
-"values."
-msgstr ""
-
-#: ../../peps/pep-0661.rst:354
-msgid ""
-"It is somewhat unfortunate that static type checkers will sometimes not "
-"be able to deduce more specific types due to this, such as inside a "
-"conditional block like ``if value is not MISSING: ...``.  However, this "
-"is a minor issue in practice, as type checkers can be easily made to "
-"understand these cases using ``typing.cast()``."
-msgstr ""
-
-#: ../../peps/pep-0661.rst:362
+#: ../../peps/peps/pep-0661.rst:425
 msgid "Additional Notes"
 msgstr ""
 
-#: ../../peps/pep-0661.rst:364
+#: ../../peps/peps/pep-0661.rst:427
 msgid ""
-"This PEP and the initial implementation are drafted in a dedicated GitHub"
-" repo [7]_."
+"This PEP and the initial implementation are drafted in a dedicated GitHub "
+"repo [7]_."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:367
+#: ../../peps/peps/pep-0661.rst:430
 msgid ""
-"For sentinels defined in a class scope, to avoid potential name clashes, "
-"one should use the fully-qualified name of the variable in the module.  "
-"Only the part of the name after the last period will be used for the "
-"default repr.  For example::"
+"For sentinels defined in a class scope, to avoid potential name clashes, one "
+"should use the fully-qualified name of the variable in the module.  Only the "
+"part of the name after the last period will be used for the default repr.  "
+"For example::"
 msgstr ""
 
-#: ../../peps/pep-0661.rst:377
+#: ../../peps/peps/pep-0661.rst:440
 msgid ""
-"One should be careful when creating sentinels in a function or method, "
-"since sentinels with the same name created by code in the same module "
-"will be identical.  If distinct sentinel objects are needed, make sure to"
-" use distinct names."
+"One should be careful when creating sentinels in a function or method, since "
+"sentinels with the same name created by code in the same module will be "
+"identical.  If distinct sentinel objects are needed, make sure to use "
+"distinct names."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:384
-msgid "References"
-msgstr "Referências"
-
-#: ../../peps/pep-0661.rst:386
+#: ../../peps/peps/pep-0661.rst:445
 msgid ""
-"Python-Dev mailing list: `The repr of a sentinel "
-"<https://mail.python.org/archives/list/python-"
-"dev@python.org/thread/ZLVPD2OISI7M4POMTR2FCQTE6TPMPTO3/>`_"
+"There is no single desirable value for the \"truthiness\" of sentinels, i.e. "
+"their boolean value.  It is sometimes useful for the boolean value to be "
+"``True``, and sometimes ``False``.  Of the built-in sentinels in Python, "
+"``None`` evaluates to ``False``, while ``Ellipsis`` (a.k.a. ``...``) "
+"evaluates to ``True``.  The desire for this to be set as needed came up in "
+"discussions as well."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:387
+#: ../../peps/peps/pep-0661.rst:452
 msgid ""
-"Python-Dev mailing list: `\"The stdlib contains tons of sentinels\" "
-"<https://mail.python.org/archives/list/python-"
-"dev@python.org/message/JBYXQH3NV3YBF7P2HLHB5CD6V3GVTY55/>`_"
+"The boolean value of ``NotImplemented`` is ``True``, but using this is "
+"deprecated since Python 3.9 (doing so generates a deprecation warning.) This "
+"deprecation is due to issues specific to ``NotImplemented``, as described in "
+"bpo-35712 [8]_."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:388
+#: ../../peps/peps/pep-0661.rst:457
 msgid ""
-"`bpo-44123: Make function parameter sentinel values true singletons "
-"<https://bugs.python.org/issue44123>`_"
+"To define multiple, related sentinel values, possibly with a defined "
+"ordering among them, one should instead use ``Enum`` or something similar."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:389
+#: ../../peps/peps/pep-0661.rst:460
 msgid ""
-"discuss.python.org Poll: `Sentinel Values in the Stdlib "
-"<https://discuss.python.org/t/sentinel-values-in-the-stdlib/8810/>`_"
+"There was a discussion on the typing-sig mailing list [9]_ about the typing "
+"for these sentinels, where different options were discussed."
 msgstr ""
 
-#: ../../peps/pep-0661.rst:390
-msgid "`The \"sentinels\" package on PyPI <https://pypi.org/project/sentinels/>`_"
+#: ../../peps/peps/pep-0661.rst:465
+msgid "Open Issues"
 msgstr ""
 
-#: ../../peps/pep-0661.rst:391
-msgid "`The \"sentinel\" package on PyPI <https://pypi.org/project/sentinel/>`_"
+#: ../../peps/peps/pep-0661.rst:467
+msgid ""
+"**Is adding a new stdlib module the right way to go?** I could not find any "
+"existing module which seems like a logical place for this.  However, adding "
+"new stdlib modules should be done judiciously, so perhaps choosing an "
+"existing module would be preferable even if it is not a perfect fit?"
 msgstr ""
 
-#: ../../peps/pep-0661.rst:392
+#: ../../peps/peps/pep-0661.rst:474
+msgid "Footnotes"
+msgstr ""
+
+#: ../../peps/peps/pep-0661.rst:476
+msgid ""
+"Python-Dev mailing list: `The repr of a sentinel <https://mail.python.org/"
+"archives/list/python-dev@python.org/thread/ZLVPD2OISI7M4POMTR2FCQTE6TPMPTO3/"
+">`_"
+msgstr ""
+
+#: ../../peps/peps/pep-0661.rst:477
+msgid ""
+"Python-Dev mailing list: `\"The stdlib contains tons of sentinels\" <https://"
+"mail.python.org/archives/list/python-dev@python.org/message/"
+"JBYXQH3NV3YBF7P2HLHB5CD6V3GVTY55/>`_"
+msgstr ""
+
+#: ../../peps/peps/pep-0661.rst:478
+msgid ""
+"`bpo-44123: Make function parameter sentinel values true singletons <https://"
+"github.com/python/cpython/issues/88289>`_"
+msgstr ""
+
+#: ../../peps/peps/pep-0661.rst:479
+msgid ""
+"discuss.python.org Poll: `Sentinel Values in the Stdlib <https://discuss."
+"python.org/t/sentinel-values-in-the-stdlib/8810/>`_"
+msgstr ""
+
+#: ../../peps/peps/pep-0661.rst:480
+msgid ""
+"`The \"sentinels\" package on PyPI <https://pypi.org/project/sentinels/>`_"
+msgstr ""
+
+#: ../../peps/peps/pep-0661.rst:481
+msgid ""
+"`The \"sentinel\" package on PyPI <https://pypi.org/project/sentinel/>`_"
+msgstr ""
+
+#: ../../peps/peps/pep-0661.rst:482
 msgid ""
 "`Reference implementation at the taleinat/python-stdlib-sentinels GitHub "
 "repo <https://github.com/taleinat/python-stdlib-sentinels>`_"
 msgstr ""
 
-#: ../../peps/pep-0661.rst:393
+#: ../../peps/peps/pep-0661.rst:483
 msgid ""
-"`Discussion thread about type signatures for these sentinels on the "
-"typing-sig mailing list <https://mail.python.org/archives/list/typing-"
-"sig@python.org/thread/NDEJ7UCDPINP634GXWDARVMTGDVSNBKV/#LVCPTY26JQJW7NKGKGAZXHQKWVW7GOGL>`_"
+"`bpo-35712: Make NotImplemented unusable in boolean context <https://github."
+"com/python/cpython/issues/79893>`_"
 msgstr ""
 
-#: ../../peps/pep-0661.rst:397
+#: ../../peps/peps/pep-0661.rst:484
+msgid ""
+"`Discussion thread about type signatures for these sentinels on the typing-"
+"sig mailing list <https://mail.python.org/archives/list/typing-sig@python."
+"org/thread/NDEJ7UCDPINP634GXWDARVMTGDVSNBKV/"
+"#LVCPTY26JQJW7NKGKGAZXHQKWVW7GOGL>`_"
+msgstr ""
+
+#: ../../peps/peps/pep-0661.rst:485
+msgid "`sentinels package on PyPI <https://pypi.org/project/sentinels/>`_"
+msgstr ""
+
+#: ../../peps/peps/pep-0661.rst:489
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../../peps/pep-0661.rst:399
+#: ../../peps/peps/pep-0661.rst:491
 msgid ""
-"This document is placed in the public domain or under the "
-"CC0-1.0-Universal license, whichever is more permissive."
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
 msgstr ""
 
-#~ msgid ""
-#~ "Most common exiting idioms have "
-#~ "significant drawbacks.  So far, no idiom"
-#~ " has been found that is clear "
-#~ "and concise while avoiding these "
-#~ "drawbacks."
-#~ msgstr ""
-
+#~ msgid "References"
+#~ msgstr "Referências"

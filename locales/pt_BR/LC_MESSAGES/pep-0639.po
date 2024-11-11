@@ -8,14 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-14 02:33+0000\n"
+"POT-Creation-Date: 2024-11-11 15:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.15.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../../peps/peps/pep-0639.rst
 msgid "Author"
@@ -48,7 +48,7 @@ msgid "Status"
 msgstr "Status"
 
 #: ../../peps/peps/pep-0639.rst:8
-msgid "Draft"
+msgid "Provisional"
 msgstr ""
 
 #: ../../peps/peps/pep-0639.rst
@@ -86,101 +86,127 @@ msgid ""
 "t/53020>`__,"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:20
+#: ../../peps/peps/pep-0639.rst
+msgid "Resolution"
+msgstr ""
+
+#: ../../peps/peps/pep-0639.rst:15
+msgid "https://discuss.python.org/t/53020/106"
+msgstr ""
+
+#: ../../peps/peps/pep-0639.rst:19
+msgid "Provisional Acceptance"
+msgstr ""
+
+#: ../../peps/peps/pep-0639.rst:21
+msgid ""
+"This PEP has been **provisionally accepted**, with the following required "
+"conditions before the PEP is made Final:"
+msgstr ""
+
+#: ../../peps/peps/pep-0639.rst:24
+msgid "An implementation of the PEP in two build back-ends."
+msgstr ""
+
+#: ../../peps/peps/pep-0639.rst:25
+msgid "An implementation of the PEP in PyPI."
+msgstr ""
+
+#: ../../peps/peps/pep-0639.rst:31
 msgid "Abstract"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:22
+#: ../../peps/peps/pep-0639.rst:33
 msgid ""
 "This PEP defines a specification how licenses are documented in the Python "
 "projects."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:25
+#: ../../peps/peps/pep-0639.rst:36
 msgid "To achieve that, it:"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:27
+#: ../../peps/peps/pep-0639.rst:38
 msgid ""
 "Adopts the `SPDX license expression syntax <639-spdx_>`__ as a means of "
 "expressing the license for a Python project."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:30
+#: ../../peps/peps/pep-0639.rst:41
 msgid ""
 "Defines how to include license files within the projects, source and built "
 "distributions."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:33
+#: ../../peps/peps/pep-0639.rst:44
 msgid ""
 "Specifies the necessary changes to :term:`Core Metadata` and the "
 "corresponding :term:`Pyproject Metadata key`\\s"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:36
+#: ../../peps/peps/pep-0639.rst:47
 msgid ""
 "Describes the necessary changes to the `source distribution (sdist) "
 "<sdistspec_>`__, `built distribution (wheel) <wheelspec_>`__ and `installed "
 "project <installedspec_>`__ standards."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:41
+#: ../../peps/peps/pep-0639.rst:52
 msgid ""
 "This will make license declaration simpler and less ambiguous for package "
 "authors to create, end users to understand, and tools to programmatically "
 "process."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:45
+#: ../../peps/peps/pep-0639.rst:56
 msgid ""
 "The changes will update the `Core Metadata specification "
 "<coremetadataspec_>`__ to version 2.4."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:51
+#: ../../peps/peps/pep-0639.rst:62
 msgid "Goals"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:53
+#: ../../peps/peps/pep-0639.rst:64
 msgid ""
 "This PEP's scope is limited to covering new mechanisms for documenting the "
 "license of a :term:`distribution package`, specifically defining:"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:56
+#: ../../peps/peps/pep-0639.rst:67
 msgid "A means of specifying a SPDX :term:`license expression`."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:57
+#: ../../peps/peps/pep-0639.rst:68
 msgid ""
 "A method of including license texts in :term:`distribution package`\\s and "
 "installed :term:`Project`\\s."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:60
+#: ../../peps/peps/pep-0639.rst:71
 msgid ""
 "The changes that this PEP requires have been designed to minimize impact and "
 "maximize backward compatibility."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:67
+#: ../../peps/peps/pep-0639.rst:78
 msgid "Non-Goals"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:69
+#: ../../peps/peps/pep-0639.rst:80
 msgid ""
 "This PEP doesn't recommend any particular license to be chosen by any "
 "particular package author."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:72
+#: ../../peps/peps/pep-0639.rst:83
 msgid ""
 "If projects decide not to use the new fields, no additional restrictions are "
 "imposed by this PEP when uploading to PyPI."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:75
+#: ../../peps/peps/pep-0639.rst:86
 msgid ""
 "This PEP also is not about license documentation for individual files, "
 "though this is a :ref:`surveyed topic <639-license-doc-source-files>` in an "
@@ -190,11 +216,11 @@ msgid ""
 "ideas-difference-license-source-binary>`."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:86
+#: ../../peps/peps/pep-0639.rst:97
 msgid "Motivation"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:88
+#: ../../peps/peps/pep-0639.rst:99
 msgid ""
 "Software must be licensed in order for anyone other than its creator to "
 "download, use, share and modify it. Today, there are multiple fields where "
@@ -203,7 +229,7 @@ msgid ""
 "for package authors and end users, including distribution re-packagers."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:96
+#: ../../peps/peps/pep-0639.rst:107
 msgid ""
 "This has triggered a number of license-related discussions and issues, "
 "including on `outdated and ambiguous PyPI classifiers <classifierissue_>`__, "
@@ -213,7 +239,7 @@ msgid ""
 "lack of precise license metadata <pepissue_>`__."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:103
+#: ../../peps/peps/pep-0639.rst:114
 msgid ""
 "As a result, on average, Python packages tend to have more ambiguous and "
 "missing license information than other common ecosystems. This is supported "
@@ -223,30 +249,30 @@ msgid ""
 "PyPI, Maven, npm and Rubygems."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:111
+#: ../../peps/peps/pep-0639.rst:122
 msgid ""
 "The current license classifiers could be extended to include the full range "
 "of the SPDX identifiers while deprecating the ambiguous classifiers (such as "
 "``License :: OSI Approved :: BSD License``)."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:115
+#: ../../peps/peps/pep-0639.rst:126
 msgid "However, there are multiple arguments against such an approach:"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:117
+#: ../../peps/peps/pep-0639.rst:128
 msgid ""
 "It requires a great effort to duplicate the SPDX license list and keep it in "
 "sync."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:120
+#: ../../peps/peps/pep-0639.rst:131
 msgid ""
 "It is a hard break in backward compatibility, forcing package authors to "
 "update to new classifiers immediately when PyPI deprecates the old ones."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:123
+#: ../../peps/peps/pep-0639.rst:134
 msgid ""
 "It only covers packages under a single license; it doesn't address projects "
 "that vendor dependencies (e.g. Setuptools), offer a choice of licenses (e.g. "
@@ -254,23 +280,23 @@ msgid ""
 "fonts, images, examples, binaries or other assets under other licenses."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:129
+#: ../../peps/peps/pep-0639.rst:140
 msgid ""
 "It requires both authors and tools understand and implement the PyPI-"
 "specific classifier system."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:132
+#: ../../peps/peps/pep-0639.rst:143
 msgid ""
 "It does not provide as clear an indicator that a package has adopted the new "
 "system, and should be treated accordingly."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:139
+#: ../../peps/peps/pep-0639.rst:150
 msgid "Rationale"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:141
+#: ../../peps/peps/pep-0639.rst:152
 msgid ""
 "A survey was conducted to map the existing license metadata definitions in "
 "the :ref:`Python ecosystem <639-license-doc-python>` and a :ref:`variety of "
@@ -278,35 +304,35 @@ msgid ""
 "applications <639-license-doc-other-projects>`."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:146
+#: ../../peps/peps/pep-0639.rst:157
 msgid ""
 "The takeaways from the survey have guided the recommendations of this PEP:"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:148
+#: ../../peps/peps/pep-0639.rst:159
 msgid ""
 "SPDX and SPDX-like syntaxes are the most popular :term:`license "
 "expression`\\s in many modern package systems."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:151
+#: ../../peps/peps/pep-0639.rst:162
 msgid ""
 "Most Free and Open Source Software licenses require package authors to "
 "include their full text in a :term:`Distribution Package`."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:154
+#: ../../peps/peps/pep-0639.rst:165
 msgid "Therefore, this PEP introduces two new Core Metadata fields:"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:156
+#: ../../peps/peps/pep-0639.rst:167
 msgid ""
 ":ref:`License-Expression <639-spec-field-license-expression>` that provides "
 "an unambiguous way to express the license of a package using SPDX license "
 "expressions."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:160
+#: ../../peps/peps/pep-0639.rst:171
 msgid ""
 ":ref:`License-File <639-spec-field-license-file>` that offers a standardized "
 "way to include the full text of the license(s) with the package when "
@@ -314,7 +340,7 @@ msgid ""
 "locate a :term:`distribution archive`'s license files."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:166
+#: ../../peps/peps/pep-0639.rst:177
 msgid ""
 "Furthermore, this specification builds upon existing practice in the "
 "`Setuptools <setuptoolsfiles_>`__ and `Wheel <wheelfiles_>`__ projects. An "
@@ -324,48 +350,48 @@ msgid ""
 "file>` is `implemented in Setuptools <setuptoolspep639_>`__."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:179
+#: ../../peps/peps/pep-0639.rst:190
 msgid "Terminology"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:181
+#: ../../peps/peps/pep-0639.rst:192
 msgid ""
 "The keywords \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHOULD\", \"SHOULD "
 "NOT\", \"RECOMMENDED\", \"MAY\", and \"OPTIONAL\" in this document are to be "
 "interpreted as described in :rfc:`2119`."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:189
+#: ../../peps/peps/pep-0639.rst:200
 msgid "License terms"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:191
+#: ../../peps/peps/pep-0639.rst:202
 msgid ""
 "The license-related terminology draws heavily from the `SPDX Project "
 "<spdx_>`__, particularly :term:`license identifier` and :term:`license "
 "expression`."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:195
+#: ../../peps/peps/pep-0639.rst:206
 msgid "license classifier"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:197
+#: ../../peps/peps/pep-0639.rst:208
 msgid ""
 "A `PyPI Trove classifier <classifiers_>`__ (as :ref:`described <packaging:"
 "core-metadata-classifier>` in the :term:`Core Metadata` specification) which "
 "begins with ``License ::``."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:201
+#: ../../peps/peps/pep-0639.rst:212
 msgid "license expression"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:202
+#: ../../peps/peps/pep-0639.rst:213
 msgid "SPDX expression"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:204
+#: ../../peps/peps/pep-0639.rst:215
 msgid ""
 "A string with valid `SPDX license expression syntax <spdxpression_>`__ "
 "including one or more SPDX :term:`license identifier`\\(s), which describes "
@@ -373,15 +399,15 @@ msgid ""
 "``GPL-3.0-or-later``, ``MIT AND (Apache-2.0 OR BSD-2-clause)``"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:211
+#: ../../peps/peps/pep-0639.rst:222
 msgid "license identifier"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:212
+#: ../../peps/peps/pep-0639.rst:223
 msgid "SPDX identifier"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:214
+#: ../../peps/peps/pep-0639.rst:225
 msgid ""
 "A valid `SPDX short-form license identifier <spdxid_>`__, as described in "
 "the :ref:`639-spec-field-license-expression` section of this PEP. This "
@@ -390,15 +416,15 @@ msgid ""
 "Examples: ``MIT``, ``GPL-3.0-only``, ``LicenseRef-My-Custom-License``"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:224
+#: ../../peps/peps/pep-0639.rst:235
 msgid "root license directory"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:225
+#: ../../peps/peps/pep-0639.rst:236
 msgid "license directory"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:227
+#: ../../peps/peps/pep-0639.rst:238
 msgid ""
 "The directory under which license files are stored in a :term:`project "
 "source tree`, :term:`distribution archive` or :term:`installed project`. "
@@ -411,63 +437,63 @@ msgid ""
 "`Built Distribution` or :term:`installed project`."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:245
+#: ../../peps/peps/pep-0639.rst:256
 msgid "Specification"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:247
+#: ../../peps/peps/pep-0639.rst:258
 msgid "The changes necessary to implement this PEP include:"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:249
+#: ../../peps/peps/pep-0639.rst:260
 msgid ""
 "additions to :ref:`Core Metadata <639-spec-core-metadata>`, as defined in "
 "the `specification <coremetadataspec_>`__."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:252
+#: ../../peps/peps/pep-0639.rst:263
 msgid ""
 "additions to the author-provided :ref:`project source metadata <639-spec-"
 "source-metadata>`, as defined in the `specification <pyprojecttoml_>`__."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:256
+#: ../../peps/peps/pep-0639.rst:267
 msgid ""
 ":ref:`additions <639-spec-project-formats>` to the source distribution "
 "(sdist), built distribution (wheel) and installed project specifications."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:260
+#: ../../peps/peps/pep-0639.rst:271
 msgid ""
 ":ref:`guide for tools <639-spec-converting-metadata>` handling and "
 "converting legacy license metadata to license expressions, to ensure the "
 "results are consistent and correct."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:264
+#: ../../peps/peps/pep-0639.rst:275
 msgid ""
 "Note that the guidance on errors and warnings is for tools' default "
 "behavior; they MAY operate more strictly if users explicitly configure them "
 "to do so, such as by a CLI flag or a configuration option."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:272
+#: ../../peps/peps/pep-0639.rst:283
 msgid "SPDX license expression syntax"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:274
+#: ../../peps/peps/pep-0639.rst:285
 msgid ""
 "This PEP adopts the SPDX license expression syntax as documented in the "
 "`SPDX specification <spdxpression_>`__, either Version 2.2 or a later "
 "compatible version."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:278
+#: ../../peps/peps/pep-0639.rst:289
 msgid ""
 "A license expression can use the following :term:`license identifier`\\s:"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:280
+#: ../../peps/peps/pep-0639.rst:291
 msgid ""
 "Any SPDX-listed license short-form identifiers that are published in the "
 "`SPDX License List <spdxlist_>`__, version 3.17 or any later compatible "
@@ -476,7 +502,7 @@ msgid ""
 "\"deprecated\"."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:285
+#: ../../peps/peps/pep-0639.rst:296
 msgid ""
 "The custom ``LicenseRef-[idstring]`` string(s), where ``[idstring]`` is a "
 "unique string containing letters, numbers, ``.`` and/or ``-``, to identify "
@@ -485,19 +511,19 @@ msgid ""
 "<spdxcustom_>`__ of the given specification version."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:292
+#: ../../peps/peps/pep-0639.rst:303
 msgid "Examples of valid SPDX expressions:"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:305
+#: ../../peps/peps/pep-0639.rst:316
 msgid "Examples of invalid SPDX expressions:"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:318
+#: ../../peps/peps/pep-0639.rst:329
 msgid "Core Metadata"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:320
+#: ../../peps/peps/pep-0639.rst:331
 msgid ""
 "The error and warning guidance in this section applies to build and "
 "publishing tools; end-user-facing install tools MAY be less strict than "
@@ -505,23 +531,23 @@ msgid ""
 "this specification."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:325
+#: ../../peps/peps/pep-0639.rst:336
 msgid ""
 "As it adds new fields, this PEP updates the Core Metadata version to 2.4."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:331
+#: ../../peps/peps/pep-0639.rst:342
 msgid "Add ``License-Expression`` field"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:333
+#: ../../peps/peps/pep-0639.rst:344
 msgid ""
 "The ``License-Expression`` optional :term:`Core Metadata field` is specified "
 "to contain a text string that is a valid SPDX :term:`license expression`, "
 "as :ref:`defined above <639-spdx>`."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:338
+#: ../../peps/peps/pep-0639.rst:349
 msgid ""
 "Build and publishing tools SHOULD check that the ``License-Expression`` "
 "field contains a valid SPDX expression, including the validity of the "
@@ -535,7 +561,7 @@ msgid ""
 "been marked as deprecated in the `SPDX License List <spdxlist_>`__."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:351
+#: ../../peps/peps/pep-0639.rst:362
 msgid ""
 "For all newly-uploaded :term:`distribution archive`\\s that include a "
 "``License-Expression`` field, the `Python Package Index (PyPI) <pypi_>`__ "
@@ -547,11 +573,11 @@ msgid ""
 "mentioned SPDX License List version."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:367
+#: ../../peps/peps/pep-0639.rst:378
 msgid "Add ``License-File`` field"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:369
+#: ../../peps/peps/pep-0639.rst:380
 msgid ""
 "``License-File`` is an optional :term:`Core Metadata field`. Each instance "
 "contains the string representation of the path of a license-related file. "
@@ -563,7 +589,7 @@ msgid ""
 "package."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:379
+#: ../../peps/peps/pep-0639.rst:390
 msgid ""
 "As :ref:`specified by this PEP <639-spec-project-formats>`, its value is "
 "also that file's path relative to the :term:`root license directory` in "
@@ -571,56 +597,56 @@ msgid ""
 "Package` types."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:384
+#: ../../peps/peps/pep-0639.rst:395
 msgid ""
 "If a ``License-File`` is listed in a :term:`Source Distribution <Source "
 "Distribution (or \"sdist\")>` or :term:`Built Distribution`'s Core Metadata:"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:388
+#: ../../peps/peps/pep-0639.rst:399
 msgid ""
 "That file MUST be included in the :term:`distribution archive` at the "
 "specified path relative to the root license directory."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:391
+#: ../../peps/peps/pep-0639.rst:402
 msgid ""
 "That file MUST be installed with the :term:`project` at that same relative "
 "path."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:394
+#: ../../peps/peps/pep-0639.rst:405
 msgid ""
 "The specified relative path MUST be consistent between project source trees, "
 "source distributions (sdists), built distributions (:term:`Wheel`\\s) and "
 "installed projects."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:398
+#: ../../peps/peps/pep-0639.rst:409
 msgid ""
 "Inside the root license directory, packaging tools MUST reproduce the "
 "directory structure under which the source license files are located "
 "relative to the project root."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:402
+#: ../../peps/peps/pep-0639.rst:413
 msgid ""
 "Path delimiters MUST be the forward slash character (``/``), and parent "
 "directory indicators (``..``) MUST NOT be used."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:405
+#: ../../peps/peps/pep-0639.rst:416
 msgid "License file content MUST be UTF-8 encoded text."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:407
+#: ../../peps/peps/pep-0639.rst:418
 msgid ""
 "Build tools MAY and publishing tools SHOULD produce an informative warning "
 "if a built distribution's metadata contains no ``License-File`` entries, and "
 "publishing tools MAY but build tools MUST NOT raise an error."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:411
+#: ../../peps/peps/pep-0639.rst:422
 msgid ""
 "For all newly-uploaded :term:`distribution archive`\\s that include one or "
 "more ``License-File`` fields in their Core Metadata and declare a ``Metadata-"
@@ -629,11 +655,11 @@ msgid ""
 "uploads that do not validate."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:422
+#: ../../peps/peps/pep-0639.rst:433
 msgid "Deprecate ``License`` field"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:424
+#: ../../peps/peps/pep-0639.rst:435
 msgid ""
 "The legacy unstructured-text ``License`` :term:`Core Metadata field` is "
 "deprecated and replaced by the new ``License-Expression`` field. The fields "
@@ -643,14 +669,14 @@ msgid ""
 "Expression`` and MUST disregard the value of the ``License`` field."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:432
+#: ../../peps/peps/pep-0639.rst:443
 msgid ""
 "If only the ``License`` field is present, tools MAY issue a warning "
 "informing users it is deprecated and recommending ``License-Expression`` "
 "instead."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:436
+#: ../../peps/peps/pep-0639.rst:447
 msgid ""
 "For all newly-uploaded :term:`distribution archive`\\s that include a "
 "``License-Expression`` field, the `Python Package Index (PyPI) <pypi_>`__ "
@@ -658,17 +684,17 @@ msgid ""
 "fields."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:440
+#: ../../peps/peps/pep-0639.rst:451
 msgid ""
 "The ``License`` field may be removed from a new version of the specification "
 "in a future PEP."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:447
+#: ../../peps/peps/pep-0639.rst:458
 msgid "Deprecate license classifiers"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:449
+#: ../../peps/peps/pep-0639.rst:460
 msgid ""
 "Using :term:`license classifier`\\s in the ``Classifier`` :term:`Core "
 "Metadata field` (`described in the Core Metadata specification "
@@ -676,32 +702,23 @@ msgid ""
 "precise ``License-Expression`` field."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:454
+#: ../../peps/peps/pep-0639.rst:465
 msgid ""
-"If the ``License-Expression`` field is present, build tools SHOULD and "
-"publishing tools MUST raise an error if one or more license classifiers is "
-"included in a ``Classifier`` field, and MUST NOT add such classifiers "
-"themselves."
-msgstr ""
-
-#: ../../peps/peps/pep-0639.rst:459
-msgid ""
-"Otherwise, if this field contains a license classifier, build tools MAY and "
-"publishing tools SHOULD issue a warning informing users such classifiers are "
-"deprecated, and recommending ``License-Expression`` instead. For "
-"compatibility with existing publishing and installation processes, the "
-"presence of license classifiers SHOULD NOT raise an error unless ``License-"
-"Expression`` is also provided."
-msgstr ""
-
-#: ../../peps/peps/pep-0639.rst:466
-msgid ""
-"For all newly-uploaded distributions that include a ``License-Expression`` "
-"field, the `Python Package Index (PyPI) <pypi_>`__ MUST reject any that also "
-"specify any license classifiers."
+"If the ``License-Expression`` field is present, build tools MAY raise an "
+"error if one or more license classifiers is included in a ``Classifier`` "
+"field, and MUST NOT add such classifiers themselves."
 msgstr ""
 
 #: ../../peps/peps/pep-0639.rst:470
+msgid ""
+"Otherwise, if this field contains a license classifier, tools MAY issue a "
+"warning informing users such classifiers are deprecated, and recommending "
+"``License-Expression`` instead. For compatibility with existing publishing "
+"and installation processes, the presence of license classifiers SHOULD NOT "
+"raise an error unless ``License-Expression`` is also provided."
+msgstr ""
+
+#: ../../peps/peps/pep-0639.rst:477
 msgid ""
 "New license classifiers MUST NOT be `added to PyPI <classifiersrepo_>`__; "
 "users needing them SHOULD use the ``License-Expression`` field instead. "
@@ -709,21 +726,21 @@ msgid ""
 "in a future PEP."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:479
+#: ../../peps/peps/pep-0639.rst:486
 msgid "Project source metadata"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:481
+#: ../../peps/peps/pep-0639.rst:488
 msgid ""
 "This PEP specifies changes to the project's source metadata under a "
 "``[project]`` table in the ``pyproject.toml`` file."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:488
+#: ../../peps/peps/pep-0639.rst:495
 msgid "Add string value to ``license`` key"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:490
+#: ../../peps/peps/pep-0639.rst:497
 msgid ""
 "``license`` key in the ``[project]`` table is defined to contain a top-level "
 "string value. It is a valid SPDX license expression as :ref:`defined in this "
@@ -731,22 +748,22 @@ msgid ""
 "core metadata."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:495
+#: ../../peps/peps/pep-0639.rst:502
 msgid ""
 "Build tools SHOULD validate and perform case normalization of the expression "
 "as described in the :ref:`639-spec-field-license-expression` section, "
 "outputting an error or warning as specified."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:500
+#: ../../peps/peps/pep-0639.rst:507
 msgid "Examples:"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:520
+#: ../../peps/peps/pep-0639.rst:527
 msgid "Add ``license-files`` key"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:522
+#: ../../peps/peps/pep-0639.rst:529
 msgid ""
 "A new ``license-files`` key is added to the ``[project]`` table for "
 "specifying paths in the project source tree relative to ``pyproject.toml`` "
@@ -755,149 +772,115 @@ msgid ""
 "Metadata."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:527
-msgid ""
-"Its value is a table, which if present MUST contain one of two optional, "
-"mutually exclusive subkeys, ``paths`` and ``globs``; if both are specified, "
-"tools MUST raise an error. Both are arrays of strings; the ``paths`` subkey "
-"contains verbatim file paths, and the ``globs`` subkey valid glob patterns, "
-"which MUST be parsable by the ``glob`` `module <globmodule_>`__ in the "
-"Python standard library."
-msgstr ""
-
 #: ../../peps/peps/pep-0639.rst:534
 msgid ""
-"Path delimiters MUST be the forward slash character (``/``), and parent "
-"directory indicators (``..``) MUST NOT be used. Tools MUST assume that "
-"license file content is valid UTF-8 encoded text, and SHOULD validate this "
-"and raise an error if it is not."
+"Its value is an array of strings which MUST contain valid glob patterns, as "
+"specified below:"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:539
-msgid "If the ``paths`` subkey is a non-empty array, build tools:"
-msgstr ""
-
-#: ../../peps/peps/pep-0639.rst:541
+#: ../../peps/peps/pep-0639.rst:537
 msgid ""
-"MUST treat each value as a verbatim, literal file path, and MUST NOT treat "
-"them as glob patterns."
+"Alphanumeric characters, underscores (``_``), hyphens (``-``) and dots (``."
+"``) MUST be matched verbatim."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:544
-msgid "MUST include each listed file in all distribution archives."
+#: ../../peps/peps/pep-0639.rst:540
+msgid ""
+"Special glob characters: ``*``, ``?``, ``**`` and character ranges: ``[]`` "
+"containing only the verbatim matched characters MUST be supported. Within "
+"``[...]``, the hyphen indicates a locale-agnostic range (e.g. ``a-z``, order "
+"based on Unicode code points). Hyphens at the start or end are matched "
+"literally."
 msgstr ""
 
 #: ../../peps/peps/pep-0639.rst:546
 msgid ""
-"MUST NOT match any additional license files beyond those explicitly "
-"statically specified by the user under the ``paths`` subkey."
+"Path delimiters MUST be the forward slash character (``/``). Patterns are "
+"relative to the directory containing ``pyproject.toml``, therefore the "
+"leading slash character MUST NOT be used."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:549
+#: ../../peps/peps/pep-0639.rst:550
+msgid "Parent directory indicators (``..``) MUST NOT be used."
+msgstr ""
+
+#: ../../peps/peps/pep-0639.rst:552
 msgid ""
-"MUST list each file path under a ``License-File`` field in the Core Metadata."
-msgstr ""
-
-#: ../../peps/peps/pep-0639.rst:551
-msgid ""
-"MUST raise an error if one or more paths do not correspond to a valid file "
-"in the project source that can be copied into the distribution archive."
-msgstr ""
-
-#: ../../peps/peps/pep-0639.rst:554
-msgid "If the ``globs`` subkey is a non-empty array, build tools:"
+"Any characters or character sequences not covered by this specification are "
+"invalid. Projects MUST NOT use such values. Tools consuming this field "
+"SHOULD reject invalid values with an error."
 msgstr ""
 
 #: ../../peps/peps/pep-0639.rst:556
+msgid ""
+"Tools MUST assume that license file content is valid UTF-8 encoded text, and "
+"SHOULD validate this and raise an error if it is not."
+msgstr ""
+
+#: ../../peps/peps/pep-0639.rst:559
+msgid ""
+"Literal paths (e.g. ``LICENSE``) are treated as valid globs which means they "
+"can also be defined."
+msgstr ""
+
+#: ../../peps/peps/pep-0639.rst:562
+msgid "Build tools:"
+msgstr ""
+
+#: ../../peps/peps/pep-0639.rst:564
 msgid ""
 "MUST treat each value as a glob pattern, and MUST raise an error if the "
 "pattern contains invalid glob syntax."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:559
+#: ../../peps/peps/pep-0639.rst:567
 msgid ""
-"MUST include all files matched by at least one listed pattern in all "
-"distribution archives."
+"MUST include all files matched by a listed pattern in all distribution "
+"archives."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:562
-msgid ""
-"MAY exclude files matched by glob patterns that can be unambiguously "
-"determined to be backup, temporary, hidden, OS-generated or VCS-ignored."
-msgstr ""
-
-#: ../../peps/peps/pep-0639.rst:565
+#: ../../peps/peps/pep-0639.rst:570
 msgid ""
 "MUST list each matched file path under a ``License-File`` field in the Core "
 "Metadata."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:568
-msgid "SHOULD issue a warning and MAY raise an error if no files are matched."
-msgstr ""
-
-#: ../../peps/peps/pep-0639.rst:570
+#: ../../peps/peps/pep-0639.rst:573
 msgid ""
-"MAY issue a warning if any individual user-specified pattern does not match "
+"MUST raise an error if any individual user-specified pattern does not match "
 "at least one file."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:573
+#: ../../peps/peps/pep-0639.rst:576
 msgid ""
-"If the ``license-files`` key is present, and the ``paths`` or ``globs`` "
-"subkey is set to a value of an empty array, then tools MUST NOT include any "
-"license files and MUST NOT raise an error."
+"If the ``license-files`` key is present and is set to a value of an empty "
+"array, then tools MUST NOT include any license files and MUST NOT raise an "
+"error."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:579
-msgid ""
-"If the ``license-files`` key is not present and not explicitly marked as "
-"``dynamic``, tools MUST assume a default value of the following:"
-msgstr ""
-
-#: ../../peps/peps/pep-0639.rst:586
-msgid ""
-"In this case, tools MAY issue a warning if no license files are matched, but "
-"MUST NOT raise an error."
-msgstr ""
-
-#: ../../peps/peps/pep-0639.rst:589
-msgid ""
-"If the ``license-files`` key is marked as ``dynamic`` (and not present), to "
-"preserve consistent behavior with current tools and help ensure the packages "
-"they create are legally distributable, build tools SHOULD default to "
-"including at least the license files matching the above patterns, unless the "
-"user has explicitly specified their own."
-msgstr ""
-
-#: ../../peps/peps/pep-0639.rst:595
+#: ../../peps/peps/pep-0639.rst:580
 msgid "Examples of valid license files declaration:"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:611
+#: ../../peps/peps/pep-0639.rst:596
 msgid "Examples of invalid license files declaration:"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:619
-msgid ""
-"Reason: license-files.paths and license-files.globs are mutually exclusive."
-msgstr ""
-
-#: ../../peps/peps/pep-0639.rst:626
+#: ../../peps/peps/pep-0639.rst:603
 msgid ""
 "Reason: ``..`` must not be used. ``\\`` is an invalid path delimiter, ``/`` "
 "must be used."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:635
+#: ../../peps/peps/pep-0639.rst:612
 msgid "Reason: \"LICEN{CSE*\" is not a valid glob."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:641
+#: ../../peps/peps/pep-0639.rst:618
 msgid "Deprecate ``license`` key table subkeys"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:643
+#: ../../peps/peps/pep-0639.rst:620
 msgid ""
 "Table values for the ``license`` key in the ``[project]`` table, including "
 "the ``text`` and ``file`` table subkeys, are now deprecated. If the new "
@@ -906,7 +889,7 @@ msgid ""
 "string."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:649
+#: ../../peps/peps/pep-0639.rst:626
 msgid ""
 "If the new ``license-files`` key is not present and the ``text`` subkey is "
 "present in a ``license`` table, tools SHOULD issue a warning informing users "
@@ -914,7 +897,7 @@ msgid ""
 "key instead."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:654
+#: ../../peps/peps/pep-0639.rst:631
 msgid ""
 "Likewise, if the new ``license-files`` key is not present and the ``file`` "
 "subkey is present in the ``license`` table, tools SHOULD issue a warning "
@@ -922,38 +905,34 @@ msgid ""
 "instead."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:659
+#: ../../peps/peps/pep-0639.rst:636
 msgid ""
 "If the specified license ``file`` is present in the source tree, build tools "
 "SHOULD use it to fill the ``License-File`` field in the core metadata, and "
-"MUST include the specified file as if it were specified in a ``license-file."
-"paths`` field. If the file does not exist at the specified path, tools MUST "
-"raise an informative error as previously specified. However, tools MUST also "
-"still assume the :ref:`specified default value <639-default-patterns>` for "
-"the ``license-files`` key and also include, in addition to a license file "
-"specified under the ``license.file`` subkey, any license files that match "
-"the specified list of patterns."
+"MUST include the specified file as if it were specified in a ``license-"
+"file`` field. If the file does not exist at the specified path, tools MUST "
+"raise an informative error as previously specified."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:671
+#: ../../peps/peps/pep-0639.rst:643
 msgid ""
 "Table values for the ``license`` key MAY be removed from a new version of "
 "the specification in a future PEP."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:678
+#: ../../peps/peps/pep-0639.rst:650
 msgid "License files in project formats"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:680
+#: ../../peps/peps/pep-0639.rst:652
 msgid "A few additions will be made to the existing specifications."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:682
+#: ../../peps/peps/pep-0639.rst:654
 msgid ":term:`Project source tree`\\s"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:683
+#: ../../peps/peps/pep-0639.rst:655
 msgid ""
 "Per :ref:`639-spec-source-metadata` section, the `Declaring Project Metadata "
 "specification <pyprojecttoml_>`__ will be updated to reflect that license "
@@ -962,12 +941,12 @@ msgid ""
 "project configuration, e.g. ``setup.py``, ``setup.cfg``, etc)."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:690
+#: ../../peps/peps/pep-0639.rst:662
 msgid ""
 ":term:`Source distributions (sdists) <Source Distribution (or \"sdist\")>`"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:691
+#: ../../peps/peps/pep-0639.rst:663
 msgid ""
 "The `sdist specification <sdistspec_>`__ will be updated to reflect that if "
 "the ``Metadata-Version`` is ``2.4`` or greater, the sdist MUST contain any "
@@ -977,11 +956,11 @@ msgid ""
 "Core Metadata)."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:699
+#: ../../peps/peps/pep-0639.rst:671
 msgid ":term:`Built distribution`\\s (:term:`wheel`\\s)"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:700
+#: ../../peps/peps/pep-0639.rst:672
 msgid ""
 "The `Wheel specification <wheelspec_>`__ will be updated to reflect that if "
 "the ``Metadata-Version`` is ``2.4`` or greater and one or more ``License-"
@@ -991,11 +970,11 @@ msgid ""
 "relative to the ``licenses`` directory."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:707
+#: ../../peps/peps/pep-0639.rst:679
 msgid ":term:`Installed project`\\s"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:708
+#: ../../peps/peps/pep-0639.rst:680
 msgid ""
 "The `Recording Installed Projects specification <installedspec_>`__ will be "
 "updated to reflect that if the ``Metadata-Version`` is ``2.4`` or greater "
@@ -1006,11 +985,11 @@ msgid ""
 "files in this directory MUST be copied from wheels by install tools."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:721
+#: ../../peps/peps/pep-0639.rst:693
 msgid "Converting legacy metadata"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:723
+#: ../../peps/peps/pep-0639.rst:695
 msgid ""
 "Tools MUST NOT use the contents of the ``license.text`` ``[project]`` key "
 "(or equivalent tool-specific format), license classifiers or the value of "
@@ -1021,18 +1000,18 @@ msgid ""
 "proceeding."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:731
+#: ../../peps/peps/pep-0639.rst:703
 msgid ""
 "Tool authors, who need to automatically convert license classifiers to SPDX "
 "identifiers, can use the :ref:`recommendation <639-spec-mapping-classifiers-"
 "identifiers>` prepared by the PEP authors."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:740
+#: ../../peps/peps/pep-0639.rst:712
 msgid "Backwards Compatibility"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:742
+#: ../../peps/peps/pep-0639.rst:714
 msgid ""
 "Adding a new ``License-Expression`` Core Metadata field and a top-level "
 "string value for the ``license`` key in the ``pyproject.toml`` ``[project]`` "
@@ -1041,7 +1020,7 @@ msgid ""
 "free-form license description or vice versa."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:748
+#: ../../peps/peps/pep-0639.rst:720
 msgid ""
 "The legacy deprecated Core Metadata ``License`` field, ``license`` key table "
 "subkeys (``text`` and ``file``) in the ``pyproject.toml`` ``[project]`` "
@@ -1049,16 +1028,16 @@ msgid ""
 "left to a future PEP and a new version of the Core Metadata specification."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:753
+#: ../../peps/peps/pep-0639.rst:725
 msgid ""
 "Specification of the new ``License-File`` Core Metadata field and adding the "
-"files in the distribution codifies the existing practices of many packaging "
-"tools. It is designed to be largely backwards-compatible with their existing "
-"use of that field. The new ``license-files`` key in the ``[project]`` table "
-"of ``pyproject.toml`` will only have an effect once users and tools adopt it."
+"files in the distribution is designed to be largely backwards-compatible "
+"with the existing use of that field in many packaging tools. The new "
+"``license-files`` key in the ``[project]`` table of ``pyproject.toml`` will "
+"only have an effect once users and tools adopt it."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:759
+#: ../../peps/peps/pep-0639.rst:731
 msgid ""
 "This PEP specifies that license files should be placed in a dedicated "
 "``licenses`` subdir of ``.dist-info`` directory. This is new and ensures "
@@ -1067,7 +1046,7 @@ msgid ""
 "This is further supported by a new metadata version."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:765
+#: ../../peps/peps/pep-0639.rst:737
 msgid ""
 "This also resolves current issues where license files are accidentally "
 "replaced if they have the same names in different places, making wheels "
@@ -1075,7 +1054,7 @@ msgid ""
 "metadata files in the same directory."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:770
+#: ../../peps/peps/pep-0639.rst:742
 msgid ""
 "The additions will be made to the source distribution (sdist), built "
 "distribution (wheel) and installed project specifications. They document "
@@ -1083,7 +1062,7 @@ msgid ""
 "the new metadata version."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:775
+#: ../../peps/peps/pep-0639.rst:747
 msgid ""
 "This PEP proposes PyPI implement validation of the new ``License-"
 "Expression`` and ``License-File`` fields, which has no effect on new and "
@@ -1094,28 +1073,28 @@ msgid ""
 "fields conform to the specification."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:787
+#: ../../peps/peps/pep-0639.rst:759
 msgid "Security Implications"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:789
+#: ../../peps/peps/pep-0639.rst:761
 msgid ""
 "This PEP has no foreseen security implications: the ``License-Expression`` "
 "field is a plain string and the ``License-File`` fields are file paths. "
 "Neither introduces any known new security concerns."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:797
+#: ../../peps/peps/pep-0639.rst:769
 msgid "How to Teach This"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:799
+#: ../../peps/peps/pep-0639.rst:771
 msgid ""
 "A majority of packages use a single license which makes the case simple: a "
 "single license identifier is a valid license expression."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:802
+#: ../../peps/peps/pep-0639.rst:774
 msgid ""
 "Users of packaging tools will learn the valid license expression of their "
 "package through the messages issued by the tools when they detect invalid "
@@ -1123,7 +1102,7 @@ msgid ""
 "used."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:806
+#: ../../peps/peps/pep-0639.rst:778
 msgid ""
 "If an invalid ``License-Expression`` is used, the users will not be able to "
 "publish their package to PyPI and an error message will help them understand "
@@ -1135,31 +1114,31 @@ msgid ""
 "Expression``."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:815
+#: ../../peps/peps/pep-0639.rst:788
 msgid ""
 "Tools may also help with the conversion and suggest a license expression in "
 "many common cases:"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:818
+#: ../../peps/peps/pep-0639.rst:791
 msgid ""
 "The appendix :ref:`639-spec-mapping-classifiers-identifiers` provides tool "
 "authors with recommendation on how to suggest a license expression produced "
 "from legacy classifiers."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:822
+#: ../../peps/peps/pep-0639.rst:795
 msgid ""
 "Tools may be able to suggest how to update an existing ``License`` value in "
 "project source metadata and convert that to a license expression, as also :"
 "ref:`specified in this PEP <639-spec-converting-metadata>`."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:829
+#: ../../peps/peps/pep-0639.rst:802
 msgid "Reference Implementation"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:831
+#: ../../peps/peps/pep-0639.rst:804
 msgid ""
 "Tools will need to support parsing and validating license expressions in the "
 "``License-Expression`` field if they decide to implement this part of the "
@@ -1171,98 +1150,98 @@ msgid ""
 "their projects."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:844
+#: ../../peps/peps/pep-0639.rst:817
 msgid "Rejected Ideas"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:846
+#: ../../peps/peps/pep-0639.rst:819
 msgid ""
 "Many alternative ideas were proposed and after a careful consideration, "
 "rejected. The exhaustive list including the rationale for rejecting can be "
 "found in a :ref:`separate page <639-rejected-ideas-details>`."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:852
+#: ../../peps/peps/pep-0639.rst:825
 msgid "Appendices"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:854
-msgid "A list of auxilliary documents is provided:"
+#: ../../peps/peps/pep-0639.rst:827
+msgid "A list of auxiliary documents is provided:"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:856
+#: ../../peps/peps/pep-0639.rst:829
 msgid "Detailed :ref:`Licensing Examples <639-examples>`,"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:857
+#: ../../peps/peps/pep-0639.rst:830
 msgid ":ref:`User Scenarios <639-user-scenarios>`,"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:858
+#: ../../peps/peps/pep-0639.rst:831
 msgid ""
 ":ref:`License Documentation in Python and Other Projects <639-license-doc-"
 "python>`,"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:859
+#: ../../peps/peps/pep-0639.rst:832
 msgid ""
 ":ref:`Mapping License Classifiers to SPDX Identifiers <639-spec-mapping-"
 "classifiers-identifiers>`,"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:860
+#: ../../peps/peps/pep-0639.rst:833
 msgid ":ref:`Rejected Ideas <639-rejected-ideas-details>` in detail."
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:905
+#: ../../peps/peps/pep-0639.rst:878
 msgid "Acknowledgments"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:907
+#: ../../peps/peps/pep-0639.rst:880
 msgid "Alyssa Coghlan"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:908
+#: ../../peps/peps/pep-0639.rst:881
 msgid "Kevin P. Fleming"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:909
+#: ../../peps/peps/pep-0639.rst:882
 msgid "Pradyun Gedam"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:910
+#: ../../peps/peps/pep-0639.rst:883
 msgid "Oleg Grenrus"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:911
+#: ../../peps/peps/pep-0639.rst:884
 msgid "Dustin Ingram"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:912
+#: ../../peps/peps/pep-0639.rst:885
 msgid "Chris Jerdonek"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:913
+#: ../../peps/peps/pep-0639.rst:886
 msgid "Cyril Roelandt"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:914
+#: ../../peps/peps/pep-0639.rst:887
 msgid "Luis Villa"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:915
+#: ../../peps/peps/pep-0639.rst:888
 msgid "Seth M. Larson"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:916
+#: ../../peps/peps/pep-0639.rst:889
 msgid "Ofek Lev"
 msgstr ""
 
-#: ../../peps/peps/pep-0639.rst:920
+#: ../../peps/peps/pep-0639.rst:893
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../../peps/peps/pep-0639.rst:922
+#: ../../peps/peps/pep-0639.rst:895
 msgid ""
 "This document is placed in the public domain or under the `CC0-1.0-Universal "
 "license <cc0_>`__, whichever is more permissive."

@@ -8,14 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-14 02:33+0000\n"
+"POT-Creation-Date: 2024-11-11 15:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.15.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../../peps/peps/pep-0007.rst
 msgid "Author"
@@ -222,52 +222,59 @@ msgstr ""
 
 #: ../../peps/peps/pep-0007.rst:143
 msgid ""
-"When you break a long expression at a binary operator, the operator goes at "
-"the end of the previous line, and braces should be formatted as shown.  E.g.:"
+"When you break a long expression at a binary operator, braces should be "
+"formatted as shown:"
 msgstr ""
 
 #: ../../peps/peps/pep-0007.rst:157
+msgid ""
+"It's OK to put operators at ends of lines, especially to be consistent with "
+"surrounding code. (See :ref:`PEP 8 <pep8-operator-linebreak>` for a longer "
+"discussion.)"
+msgstr ""
+
+#: ../../peps/peps/pep-0007.rst:161
 msgid "Vertically align line continuation characters in multi-line macros."
 msgstr ""
 
-#: ../../peps/peps/pep-0007.rst:159
+#: ../../peps/peps/pep-0007.rst:163
 msgid ""
 "Macros intended to be used as a statement should use the ``do { ... } while "
 "(0)`` macro idiom, without a final semicolon. Example:"
 msgstr ""
 
-#: ../../peps/peps/pep-0007.rst:177
+#: ../../peps/peps/pep-0007.rst:181
 msgid "``#undef`` file local macros after use."
 msgstr ""
 
-#: ../../peps/peps/pep-0007.rst:179
+#: ../../peps/peps/pep-0007.rst:183
 msgid ""
 "Put blank lines around functions, structure definitions, and major sections "
 "inside functions."
 msgstr ""
 
-#: ../../peps/peps/pep-0007.rst:182
+#: ../../peps/peps/pep-0007.rst:186
 msgid "Comments go before the code they describe."
 msgstr ""
 
-#: ../../peps/peps/pep-0007.rst:184
+#: ../../peps/peps/pep-0007.rst:188
 msgid ""
 "All functions and global variables should be declared static unless they are "
 "to be part of a published interface."
 msgstr ""
 
-#: ../../peps/peps/pep-0007.rst:187
+#: ../../peps/peps/pep-0007.rst:191
 msgid ""
 "For external functions and variables, we always have a declaration in an "
 "appropriate header file in the \"Include\" directory, which uses the "
 "``PyAPI_FUNC()`` macro and ``PyAPI_DATA()`` macro, like this:"
 msgstr ""
 
-#: ../../peps/peps/pep-0007.rst:200
+#: ../../peps/peps/pep-0007.rst:204
 msgid "Naming conventions"
 msgstr ""
 
-#: ../../peps/peps/pep-0007.rst:202
+#: ../../peps/peps/pep-0007.rst:206
 msgid ""
 "Use a ``Py`` prefix for public functions; never for static functions.  The "
 "``Py_`` prefix is reserved for global service routines like "
@@ -275,77 +282,77 @@ msgid ""
 "APIs) use a longer prefix, e.g. ``PyString_`` for string functions."
 msgstr ""
 
-#: ../../peps/peps/pep-0007.rst:208
+#: ../../peps/peps/pep-0007.rst:212
 msgid ""
 "Public functions and variables use MixedCase with underscores, like this: "
 "``PyObject_GetAttr``, ``Py_BuildValue``, ``PyExc_TypeError``."
 msgstr ""
 
-#: ../../peps/peps/pep-0007.rst:211
+#: ../../peps/peps/pep-0007.rst:215
 msgid ""
 "Occasionally an \"internal\" function has to be visible to the loader; we "
 "use the ``_Py`` prefix for this, e.g.: ``_PyObject_Dump``."
 msgstr ""
 
-#: ../../peps/peps/pep-0007.rst:214
+#: ../../peps/peps/pep-0007.rst:218
 msgid ""
 "Macros should have a MixedCase prefix and then use upper case, for example: "
 "``PyString_AS_STRING``, ``Py_PRINT_RAW``."
 msgstr ""
 
-#: ../../peps/peps/pep-0007.rst:217
+#: ../../peps/peps/pep-0007.rst:221
 msgid ""
 "Macro parameters should use ``ALL_CAPS`` style, so they are easily "
 "distinguishable from C variables and struct members."
 msgstr ""
 
-#: ../../peps/peps/pep-0007.rst:222
+#: ../../peps/peps/pep-0007.rst:226
 msgid "Documentation Strings"
 msgstr "Strings de documentação"
 
-#: ../../peps/peps/pep-0007.rst:224
+#: ../../peps/peps/pep-0007.rst:228
 msgid ""
 "Use the ``PyDoc_STR()`` or ``PyDoc_STRVAR()`` macro for docstrings to "
 "support building Python without docstrings (``./configure --without-doc-"
 "strings``)."
 msgstr ""
 
-#: ../../peps/peps/pep-0007.rst:228
+#: ../../peps/peps/pep-0007.rst:232
 msgid ""
 "The first line of each function docstring should be a \"signature line\" "
 "that gives a brief synopsis of the arguments and return value. For example:"
 msgstr ""
 
-#: ../../peps/peps/pep-0007.rst:239
+#: ../../peps/peps/pep-0007.rst:243
 msgid ""
 "Always include a blank line between the signature line and the text of the "
 "description."
 msgstr ""
 
-#: ../../peps/peps/pep-0007.rst:242
+#: ../../peps/peps/pep-0007.rst:246
 msgid ""
 "If the return value for the function is always ``None`` (because there is no "
 "meaningful return value), do not include the indication of the return type."
 msgstr ""
 
-#: ../../peps/peps/pep-0007.rst:246
+#: ../../peps/peps/pep-0007.rst:250
 msgid ""
 "When writing multi-line docstrings, be sure to always use backslash "
 "continuations, as in the example above, or string literal concatenation:"
 msgstr ""
 
-#: ../../peps/peps/pep-0007.rst:257
+#: ../../peps/peps/pep-0007.rst:261
 msgid "Though some C compilers accept string literals without either:"
 msgstr ""
 
-#: ../../peps/peps/pep-0007.rst:267
+#: ../../peps/peps/pep-0007.rst:271
 msgid "not all do; the MSVC compiler is known to complain about this."
 msgstr ""
 
-#: ../../peps/peps/pep-0007.rst:271
+#: ../../peps/peps/pep-0007.rst:275
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../../peps/peps/pep-0007.rst:273
+#: ../../peps/peps/pep-0007.rst:277
 msgid "This document has been placed in the public domain."
 msgstr "Este documento foi colocado em domínio público."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PEPs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-14 02:33+0000\n"
+"POT-Creation-Date: 2024-11-11 15:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: pt_BR\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.15.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../../peps/peps/pep-0746.rst
 msgid "Author"
@@ -97,8 +97,8 @@ msgstr ""
 msgid ""
 "This PEP proposes a mechanism for type checking metadata that uses the :py:"
 "data:`typing.Annotated` type. Metadata objects that implement the new "
-"``__supports_type__`` protocol will be type checked by static type checkers "
-"to ensure that the metadata is valid for the given type."
+"``__supports_annotated_base__`` protocol will be type checked by static type "
+"checkers to ensure that the metadata is valid for the given type."
 msgstr ""
 
 #: ../../peps/peps/pep-0746.rst:22
@@ -131,90 +131,60 @@ msgstr ""
 
 #: ../../peps/peps/pep-0746.rst:41
 msgid ""
-"This use case comes up in libraries like :pypi:`pydantic`, which use "
-"``Annotated`` to attach validation and conversion information to fields."
+"This use case comes up in libraries like :pypi:`pydantic` and :pypi:"
+"`msgspec`, which use ``Annotated`` to attach validation and conversion "
+"information to fields or :pypi:`fastapi`, which uses ``Annotated`` to mark "
+"parameters as extracted from headers, query strings or dependency injection."
 msgstr ""
 
-#: ../../peps/peps/pep-0746.rst:45
+#: ../../peps/peps/pep-0746.rst:47
 msgid "Specification"
 msgstr ""
 
-#: ../../peps/peps/pep-0746.rst:46
+#: ../../peps/peps/pep-0746.rst:48
 msgid ""
 "This PEP introduces a protocol that can be used by static and runtime type "
 "checkers to validate the consistency between ``Annotated`` metadata and a "
-"given type. Objects that implement this protocol have a method named "
-"``__supports_type__`` that takes a single positional argument and returns "
-"``bool``::"
+"given type. Objects that implement this protocol have an attribute called "
+"``__supports_annotated_base__`` that specifies whether the metadata is valid "
+"for a given type::"
 msgstr ""
 
-#: ../../peps/peps/pep-0746.rst:55
+#: ../../peps/peps/pep-0746.rst:56
 msgid ""
-"The protocol being introduced would be defined as follows if it were to be "
-"defined in code form::"
+"The attribute may also be marked as a ``ClassVar`` to avoid interaction with "
+"dataclasses::"
 msgstr ""
 
-#: ../../peps/peps/pep-0746.rst:63
+#: ../../peps/peps/pep-0746.rst:66
 msgid ""
 "When a static type checker encounters a type expression of the form "
 "``Annotated[T, M1, M2, ...]``, it should enforce that for each metadata "
 "element in ``M1, M2, ...``, one of the following is true:"
 msgstr ""
 
-#: ../../peps/peps/pep-0746.rst:66
+#: ../../peps/peps/pep-0746.rst:69
 msgid ""
 "The metadata element evaluates to an object that does not have a "
-"``__supports_type__`` attribute; or"
+"``__supports_annotated_base__`` attribute; or"
 msgstr ""
 
-#: ../../peps/peps/pep-0746.rst:67
+#: ../../peps/peps/pep-0746.rst:70
 msgid ""
-"The metadata element evaluates to an object ``M`` that implements the "
-"``SupportsType`` protocol; and, with ``T`` instantiated to a value ``v``, a "
-"call to ``M.__supports_type__(v)`` type checks without errors; and that call "
-"does not evaluate to ``Literal[False]``."
+"The metadata element evaluates to an object ``M`` that has a "
+"``__supports_annotated_base__`` attribute; and ``T`` is assignable to the "
+"type of ``M.__supports_annotated_base__``."
 msgstr ""
 
-#: ../../peps/peps/pep-0746.rst:71
-msgid ""
-"The body of the ``__supports_type__`` method is not used to check the "
-"validity of the metadata and static type checkers can ignore it. However, "
-"tools that use the annotation at runtime may call the method to check that a "
-"particular value is valid."
+#: ../../peps/peps/pep-0746.rst:73
+msgid "To support generic ``Gt`` metadata, one might write::"
 msgstr ""
 
-#: ../../peps/peps/pep-0746.rst:75
-msgid "For example, to support a generic ``Gt`` metadata, one might write::"
-msgstr ""
-
-#: ../../peps/peps/pep-0746.rst:94
-msgid ""
-"Implementations may be generic and may use overloads that return "
-"``Literal[True]`` or ``Literal[False]`` to indicate if the metadata is valid "
-"for the given type."
-msgstr ""
-
-#: ../../peps/peps/pep-0746.rst:97
-msgid ""
-"Implementations may raise a NotImplementedError if they cannot determine if "
-"the metadata is valid for the given type. Tools calling "
-"``__supports_type__`` at runtime should catch this exception and treat it as "
-"if ``__supports_type__`` was not present; they should not take this as an "
-"indication that the metadata is invalid for the type."
-msgstr ""
-
-#: ../../peps/peps/pep-0746.rst:101
-msgid ""
-"Tools that use the metadata at runtime may choose to ignore the "
-"implementation of ``__supports_type__``; this PEP does not specify how the "
-"method should be used at runtime, only that it may be available for use."
-msgstr ""
-
-#: ../../peps/peps/pep-0746.rst:105
+#: ../../peps/peps/pep-0746.rst:92
 msgid "Backwards Compatibility"
 msgstr ""
 
-#: ../../peps/peps/pep-0746.rst:107
+#: ../../peps/peps/pep-0746.rst:94
 msgid ""
 "Metadata that does not implement the protocol will be considered valid for "
 "all types, so no breaking changes are introduced for existing code. The new "
@@ -222,19 +192,19 @@ msgid ""
 "specified by this PEP."
 msgstr ""
 
-#: ../../peps/peps/pep-0746.rst:112
+#: ../../peps/peps/pep-0746.rst:99
 msgid "Security Implications"
 msgstr ""
 
-#: ../../peps/peps/pep-0746.rst:114
+#: ../../peps/peps/pep-0746.rst:101
 msgid "None."
 msgstr ""
 
-#: ../../peps/peps/pep-0746.rst:117
+#: ../../peps/peps/pep-0746.rst:104
 msgid "How to Teach This"
 msgstr ""
 
-#: ../../peps/peps/pep-0746.rst:119
+#: ../../peps/peps/pep-0746.rst:106
 msgid ""
 "This protocol is intended mostly for libraries that provide ``Annotated`` "
 "metadata; end users of those libraries are unlikely to need to implement the "
@@ -242,23 +212,23 @@ msgid ""
 "for :py:data:`typing.Annotated` and in the typing specification."
 msgstr ""
 
-#: ../../peps/peps/pep-0746.rst:125
+#: ../../peps/peps/pep-0746.rst:112
 msgid "Reference Implementation"
 msgstr ""
 
-#: ../../peps/peps/pep-0746.rst:127
+#: ../../peps/peps/pep-0746.rst:114
 msgid "None yet."
 msgstr ""
 
-#: ../../peps/peps/pep-0746.rst:130
+#: ../../peps/peps/pep-0746.rst:117
 msgid "Rejected ideas"
 msgstr ""
 
-#: ../../peps/peps/pep-0746.rst:133
+#: ../../peps/peps/pep-0746.rst:120
 msgid "Introducing a type variable instead of a generic class"
 msgstr ""
 
-#: ../../peps/peps/pep-0746.rst:135
+#: ../../peps/peps/pep-0746.rst:122
 msgid ""
 "We considered using a special type variable, ``AnnotatedT = "
 "TypeVar(\"AnnotatedT\")``, to represent the type ``T`` of the inner type in "
@@ -269,13 +239,13 @@ msgid ""
 "system."
 msgstr ""
 
-#: ../../peps/peps/pep-0746.rst:143
+#: ../../peps/peps/pep-0746.rst:130
 msgid ""
 "Introducing a new type to ``typing.py`` that all metadata objects should "
 "subclass"
 msgstr ""
 
-#: ../../peps/peps/pep-0746.rst:145
+#: ../../peps/peps/pep-0746.rst:132
 msgid ""
 "A previous version of this PEP suggested adding a new generic base class, "
 "``TypedMetadata[U]``, that metadata objects would subclass. If a metadata "
@@ -288,18 +258,36 @@ msgid ""
 "runtime implementation more complex."
 msgstr ""
 
-#: ../../peps/peps/pep-0746.rst:154
+#: ../../peps/peps/pep-0746.rst:141
+msgid ""
+"Using a method instead of an attribute for ``__supports_annotated_base__``"
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:143
+msgid ""
+"We considered using a method instead of an attribute for the protocol, so "
+"that this method can be used at runtime to check the validity of the "
+"metadata and to support overloads or returning boolean literals. However, "
+"using a method adds boilerplate to the implementation and the value of the "
+"runtime use cases or more complex scenarios involving overloads and "
+"returning boolean literals was not clear."
+msgstr ""
+
+#: ../../peps/peps/pep-0746.rst:149
 msgid "Acknowledgments"
 msgstr ""
 
-#: ../../peps/peps/pep-0746.rst:156
-msgid "We thank Eric Traut for suggesting the idea of using a protocol."
+#: ../../peps/peps/pep-0746.rst:151
+msgid ""
+"We thank Eric Traut for suggesting the idea of using a protocol and "
+"implementing provisional support in Pyright. Thank you to Jelle Zijlstra for "
+"sponsoring this PEP."
 msgstr ""
 
-#: ../../peps/peps/pep-0746.rst:159
+#: ../../peps/peps/pep-0746.rst:155
 msgid "Copyright"
 msgstr ""
 
-#: ../../peps/peps/pep-0746.rst:161
+#: ../../peps/peps/pep-0746.rst:157
 msgid "This document has been placed in the public domain."
 msgstr ""

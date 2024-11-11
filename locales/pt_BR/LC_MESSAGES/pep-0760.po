@@ -1,0 +1,361 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the PEPs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PEPs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-11 15:59+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pt_BR\n"
+"Language-Team: pt_BR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../peps/peps/pep-0760.rst
+msgid "Author"
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:3
+msgid "Pablo Galindo <pablogsal@python.org>, Brett Cannon <brett@python.org>"
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst
+msgid "Status"
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:4
+msgid "Withdrawn"
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst
+msgid "Type"
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:5
+msgid "Standards Track"
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst
+msgid "Created"
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:6
+msgid "02-Oct-2024"
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst
+msgid "Python-Version"
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:7
+msgid "3.14"
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst
+msgid "Post-History"
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:8
+msgid ""
+"`09-Oct-2024 <https://discuss.python.org/t/pep-760-no-more-bare-"
+"excepts/67182>`__"
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:12
+msgid "Abstract"
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:14
+msgid ""
+"This PEP proposes disallowing bare ``except:`` clauses in Python's exception-"
+"handling syntax. Currently, Python allows catching all exceptions with a "
+"bare ``except:`` clause, which can lead to overly broad exception handling "
+"and mask important errors. This PEP suggests requiring explicit exception "
+"types in all except clauses, promoting more precise and intentional error "
+"handling."
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:22
+msgid "Motivation"
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:24
+msgid ""
+"The current syntax allows for catching all exceptions with a bare ``except:"
+"`` clause:"
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:33
+msgid ""
+"While this syntax can be convenient for a \"catch all\" handler, it often "
+"leads to poor coding practices:"
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:36
+msgid "It can mask important errors that should be propagated."
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:37
+msgid ""
+"It makes debugging more difficult by catching and potentially hiding "
+"unexpected exceptions."
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:39
+msgid "It goes against the Python principle of explicit over implicit."
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:41
+msgid ""
+"Various linters [1]_ [2]_ [3]_ and style guides (including :pep:`8`) [4]_ "
+"[5]_ [6]_ [7]_ discourage bare ``except`` clauses."
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:44
+msgid ""
+"By requiring explicit exception types, we can encourage more thoughtful and "
+"precise error handling:"
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:54
+msgid ""
+"Another view of this problem is that bare except handlers are ambiguous "
+"regarding the intended handling of terminating exceptions, as the intention "
+"could have been either:"
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:58
+msgid ""
+"Only catch non-terminating exceptions (``except Exception:``). If this was "
+"the intention, using a bare ``except:`` is an outright bug, since that isn't "
+"what it means."
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:61
+msgid ""
+"Catch all exceptions, including terminating ones (``except BaseException:"
+"``). using bare ``except:`` here it is at least correct, but readers need to "
+"check to be sure it isn't an instance of the first case."
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:65
+msgid ""
+"Since both possible intentions have available unambiguous spellings, the "
+"ambiguous form is redundant and that's why we propose to disallow it."
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:69
+msgid "Rationale"
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:71
+msgid ""
+"The decision to disallow bare except clauses is based on the following "
+"considerations:"
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:74
+msgid ""
+"Requiring specific exception types makes the programmer's intentions clear "
+"and encourages thinking about what exceptions might occur."
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:77
+msgid ""
+"Catching only specific exceptions makes identifying and debugging unexpected "
+"errors easier."
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:80
+msgid ""
+"Preventing overly broad exception handling reduces the risk of silently "
+"ignoring critical errors."
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:83
+msgid ""
+"Many style guides and linters already discourage the use of bare except "
+"clauses."
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:88
+msgid "Specification"
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:90
+msgid ""
+"The syntax for the except clause will be modified to require an exception "
+"type. The grammar will be updated to remove the possibility of adding an "
+"empty expression in except clauses."
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:94
+msgid ""
+"This change disallows the bare ``except:`` syntax. All except clauses must "
+"specify at least one exception type:"
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:108
+msgid ""
+"The semantics of exception handling remain unchanged, except that it will no "
+"longer be possible to catch all exceptions without explicitly specifying "
+"``BaseException`` or a similarly broad exception type."
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:114
+msgid "Backwards Compatibility"
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:116
+msgid ""
+"This change is not backwards compatible. Existing code that uses bare "
+"``except:`` clauses will need to be modified. To ease the transition:"
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:119
+msgid ""
+"A deprecation warning will be issued for bare except clauses in Python 3.14."
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:120
+msgid "The syntax will be fully disallowed in Python 3.17."
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:121
+msgid ""
+"A ``from __future__ import strict_excepts`` will be provided to invalidate "
+"bare except handlers in earlier versions of Python."
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:124
+msgid ""
+"A tool will be provided to automatically update code to replace bare "
+"``except:`` with ``except BaseException:``."
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:129
+msgid "Security Implications"
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:131
+msgid "This change has no security implications."
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:135
+msgid "How to Teach This"
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:137
+msgid ""
+"For new Python users, exception handling should be taught with explicit "
+"exception types from the start:"
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:151
+msgid ""
+"For experienced users, the change can be introduced as a best practice that "
+"is now enforced by the language. The following points should be emphasized:"
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:154
+msgid "Always catch specific exceptions when possible."
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:155
+msgid "Use ``except Exception:`` as a last resort for truly unexpected errors."
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:156
+msgid "Never silence exceptions without careful consideration."
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:158
+msgid ""
+"Documentation should guide common exception hierarchies and how to choose "
+"appropriate exception types to catch."
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:162
+msgid "Rejected ideas"
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:164
+msgid ""
+"There are genuine cases where the use of bare ``except:`` handlers are "
+"correct. one of the examples that have been raised from Mailman [8]_ "
+"involves handling transactions in the face of any exception:"
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:181
+msgid ""
+"This code guarantees that no matter what exception occurs, any open "
+"transaction will be aborted, while in the successful condition, the "
+"transaction will be committed."
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:185
+msgid ""
+"We do believe that although there are cases such like this one where bare "
+"``except:`` handlers are correct, it would be better to actually be explicit "
+"and use ``except BaseException:`` for the reasons indicated in the "
+"\"Motivation\" section."
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:192
+msgid "Copyright"
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:194
+msgid ""
+"This document is placed in the public domain or under the CC0-1.0-Universal "
+"license, whichever is more permissive."
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:197
+msgid ""
+"https://pylint.pycqa.org/en/latest/user_guide/messages/warning/bare-except."
+"html"
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:198
+msgid "https://www.flake8rules.com/rules/E722.html"
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:199
+msgid "https://docs.astral.sh/ruff/rules/bare-except/"
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:200
+msgid "https://google.github.io/styleguide/pyguide.html#24-exceptions"
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:201
+msgid ""
+"https://chromium.googlesource.com/chromiumos/platform/factory/+/HEAD/"
+"CODING_STYLE.md#Avoid-bare_except"
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:202
+msgid ""
+"https://4.docs.plone.org/develop/plone-coredev/style.html#concrete-rules"
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:203
+msgid ""
+"https://docs.openedx.org/en/latest/developers/references/developer_guide/"
+"style_guides/python-guidelines.html"
+msgstr ""
+
+#: ../../peps/peps/pep-0760.rst:204
+msgid ""
+"https://gitlab.com/mailman/mailman/-/blob/master/src/mailman/database/"
+"transaction.py#L27"
+msgstr ""

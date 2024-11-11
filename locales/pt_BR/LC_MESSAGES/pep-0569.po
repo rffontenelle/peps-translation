@@ -8,14 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-14 02:33+0000\n"
+"POT-Creation-Date: 2024-11-11 15:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.15.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../../peps/peps/pep-0569.rst
 msgid "Author"
@@ -30,8 +30,8 @@ msgid "Status"
 msgstr "Status"
 
 #: ../../peps/peps/pep-0569.rst:4
-msgid "Active"
-msgstr "Ativa"
+msgid "Final"
+msgstr ""
 
 #: ../../peps/peps/pep-0569.rst
 msgid "Type"
@@ -103,279 +103,295 @@ msgstr ""
 msgid ""
 "3.8 will receive bugfix updates approximately every 2 months for "
 "approximately 18 months.  Some time after the release of 3.9.0 final, the "
-"ninth and final 3.8 bugfix update will be released.  After that, it is "
-"expected that security updates (source only) will be released until 5 years "
-"after the release of 3.8 final, so until approximately October 2024."
+"ninth and final 3.8 bugfix update was released.  After that, security "
+"updates (source only) were released for 5 years until the release of Python "
+"3.13.0 final."
 msgstr ""
 
-#: ../../peps/peps/pep-0569.rst:44
-msgid "Release Schedule"
-msgstr ""
-
-#: ../../peps/peps/pep-0569.rst:47
-msgid "3.8.0 schedule"
+#: ../../peps/peps/pep-0569.rst:41
+msgid ""
+"As of 2024-10-07, 3.8 has reached the `end-of-life phase <https://devguide."
+"python.org/devcycle/#end-of-life-branches>`_ of its release cycle. 3.8.20 "
+"was the final security release. The codebase for 3.8 is now frozen and no "
+"further updates will be provided nor issues of any kind will be accepted on "
+"the bug tracker."
 msgstr ""
 
 #: ../../peps/peps/pep-0569.rst:49
-msgid "3.8 development begins: Monday, 2018-01-29"
-msgstr ""
-
-#: ../../peps/peps/pep-0569.rst:50
-msgid "3.8.0 alpha 1: Sunday, 2019-02-03"
-msgstr ""
-
-#: ../../peps/peps/pep-0569.rst:51
-msgid "3.8.0 alpha 2: Monday, 2019-02-25"
+msgid "Release Schedule"
 msgstr ""
 
 #: ../../peps/peps/pep-0569.rst:52
-msgid "3.8.0 alpha 3: Monday, 2019-03-25"
-msgstr ""
-
-#: ../../peps/peps/pep-0569.rst:53
-msgid "3.8.0 alpha 4: Monday, 2019-05-06"
+msgid "3.8.0 schedule"
 msgstr ""
 
 #: ../../peps/peps/pep-0569.rst:54
-msgid "3.8.0 beta 1: Tuesday, 2019-06-04 (No new features beyond this point.)"
+msgid "3.8 development begins: Monday, 2018-01-29"
+msgstr ""
+
+#: ../../peps/peps/pep-0569.rst:55
+msgid "3.8.0 alpha 1: Sunday, 2019-02-03"
+msgstr ""
+
+#: ../../peps/peps/pep-0569.rst:56
+msgid "3.8.0 alpha 2: Monday, 2019-02-25"
 msgstr ""
 
 #: ../../peps/peps/pep-0569.rst:57
-msgid "3.8.0 beta 2: Thursday, 2019-07-04"
+msgid "3.8.0 alpha 3: Monday, 2019-03-25"
 msgstr ""
 
 #: ../../peps/peps/pep-0569.rst:58
-msgid "3.8.0 beta 3: Monday, 2019-07-29"
+msgid "3.8.0 alpha 4: Monday, 2019-05-06"
 msgstr ""
 
 #: ../../peps/peps/pep-0569.rst:59
-msgid "3.8.0 beta 4: Friday, 2019-08-30"
+msgid "3.8.0 beta 1: Tuesday, 2019-06-04 (No new features beyond this point.)"
 msgstr ""
 
-#: ../../peps/peps/pep-0569.rst:60
-msgid "3.8.0 candidate 1: Tuesday, 2019-10-01"
+#: ../../peps/peps/pep-0569.rst:62
+msgid "3.8.0 beta 2: Thursday, 2019-07-04"
 msgstr ""
 
-#: ../../peps/peps/pep-0569.rst:61
-msgid "3.8.0 final: Monday, 2019-10-14"
+#: ../../peps/peps/pep-0569.rst:63
+msgid "3.8.0 beta 3: Monday, 2019-07-29"
 msgstr ""
 
 #: ../../peps/peps/pep-0569.rst:64
-msgid "Bugfix releases"
+msgid "3.8.0 beta 4: Friday, 2019-08-30"
+msgstr ""
+
+#: ../../peps/peps/pep-0569.rst:65
+msgid "3.8.0 candidate 1: Tuesday, 2019-10-01"
 msgstr ""
 
 #: ../../peps/peps/pep-0569.rst:66
-msgid "3.8.1rc1: Tuesday, 2019-12-10"
-msgstr ""
-
-#: ../../peps/peps/pep-0569.rst:67
-msgid "3.8.1: Wednesday, 2019-12-18"
-msgstr ""
-
-#: ../../peps/peps/pep-0569.rst:68
-msgid "3.8.2rc1: Monday, 2020-02-10"
+msgid "3.8.0 final: Monday, 2019-10-14"
 msgstr ""
 
 #: ../../peps/peps/pep-0569.rst:69
-msgid "3.8.2rc2: Monday, 2020-02-17"
-msgstr ""
-
-#: ../../peps/peps/pep-0569.rst:70
-msgid "3.8.2: Monday, 2020-02-24"
+msgid "Bugfix releases"
 msgstr ""
 
 #: ../../peps/peps/pep-0569.rst:71
-msgid "3.8.3rc1: Wednesday, 2020-04-29"
+msgid "3.8.1rc1: Tuesday, 2019-12-10"
 msgstr ""
 
 #: ../../peps/peps/pep-0569.rst:72
-msgid "3.8.3: Wednesday, 2020-05-13"
+msgid "3.8.1: Wednesday, 2019-12-18"
 msgstr ""
 
 #: ../../peps/peps/pep-0569.rst:73
-msgid "3.8.4rc1: Tuesday, 2020-06-30"
+msgid "3.8.2rc1: Monday, 2020-02-10"
 msgstr ""
 
 #: ../../peps/peps/pep-0569.rst:74
-msgid "3.8.4: Monday, 2020-07-13"
+msgid "3.8.2rc2: Monday, 2020-02-17"
 msgstr ""
 
 #: ../../peps/peps/pep-0569.rst:75
-msgid "3.8.5: Monday, 2020-07-20 (security hotfix)"
+msgid "3.8.2: Monday, 2020-02-24"
 msgstr ""
 
 #: ../../peps/peps/pep-0569.rst:76
-msgid "3.8.6rc1: Tuesday, 2020-09-08"
+msgid "3.8.3rc1: Wednesday, 2020-04-29"
 msgstr ""
 
 #: ../../peps/peps/pep-0569.rst:77
-msgid "3.8.6: Thursday, 2020-09-24"
+msgid "3.8.3: Wednesday, 2020-05-13"
 msgstr ""
 
 #: ../../peps/peps/pep-0569.rst:78
-msgid "3.8.7rc1: Monday, 2020-12-07"
+msgid "3.8.4rc1: Tuesday, 2020-06-30"
 msgstr ""
 
 #: ../../peps/peps/pep-0569.rst:79
-msgid "3.8.7: Monday, 2020-12-21"
+msgid "3.8.4: Monday, 2020-07-13"
 msgstr ""
 
 #: ../../peps/peps/pep-0569.rst:80
-msgid "3.8.8rc1: Tuesday, 2021-02-16"
+msgid "3.8.5: Monday, 2020-07-20 (security hotfix)"
 msgstr ""
 
 #: ../../peps/peps/pep-0569.rst:81
-msgid "3.8.8: Friday, 2021-02-19"
+msgid "3.8.6rc1: Tuesday, 2020-09-08"
 msgstr ""
 
 #: ../../peps/peps/pep-0569.rst:82
-msgid "3.8.9: Friday, 2021-04-02 (security hotfix)"
+msgid "3.8.6: Thursday, 2020-09-24"
 msgstr ""
 
 #: ../../peps/peps/pep-0569.rst:83
+msgid "3.8.7rc1: Monday, 2020-12-07"
+msgstr ""
+
+#: ../../peps/peps/pep-0569.rst:84
+msgid "3.8.7: Monday, 2020-12-21"
+msgstr ""
+
+#: ../../peps/peps/pep-0569.rst:85
+msgid "3.8.8rc1: Tuesday, 2021-02-16"
+msgstr ""
+
+#: ../../peps/peps/pep-0569.rst:86
+msgid "3.8.8: Friday, 2021-02-19"
+msgstr ""
+
+#: ../../peps/peps/pep-0569.rst:87
+msgid "3.8.9: Friday, 2021-04-02 (security hotfix)"
+msgstr ""
+
+#: ../../peps/peps/pep-0569.rst:88
 msgid ""
 "3.8.10: Monday, 2021-05-03 (final regular bugfix release with binary "
 "installers)"
 msgstr ""
 
-#: ../../peps/peps/pep-0569.rst:87
+#: ../../peps/peps/pep-0569.rst:92
 msgid "Source-only security fix releases"
 msgstr ""
 
-#: ../../peps/peps/pep-0569.rst:89
-msgid "Provided irregularly on an \"as-needed\" basis until October 2024."
-msgstr ""
-
-#: ../../peps/peps/pep-0569.rst:91
-msgid "3.8.11: Monday, 2021-06-28"
-msgstr ""
-
-#: ../../peps/peps/pep-0569.rst:92
-msgid "3.8.12: Monday, 2021-08-30"
-msgstr ""
-
-#: ../../peps/peps/pep-0569.rst:93
-msgid "3.8.13: Wednesday, 2022-03-16"
-msgstr ""
-
 #: ../../peps/peps/pep-0569.rst:94
-msgid "3.8.14: Tuesday, 2022-09-06"
-msgstr ""
-
-#: ../../peps/peps/pep-0569.rst:95
-msgid "3.8.15: Tuesday, 2022-10-11"
+msgid "Provided irregularly on an \"as-needed\" basis until October 7th 2024."
 msgstr ""
 
 #: ../../peps/peps/pep-0569.rst:96
-msgid "3.8.16: Tuesday, 2022-12-06"
+msgid "3.8.11: Monday, 2021-06-28"
 msgstr ""
 
 #: ../../peps/peps/pep-0569.rst:97
-msgid "3.8.17: Tuesday, 2023-06-06"
+msgid "3.8.12: Monday, 2021-08-30"
 msgstr ""
 
 #: ../../peps/peps/pep-0569.rst:98
-msgid "3.8.18: Thursday, 2023-08-24"
+msgid "3.8.13: Wednesday, 2022-03-16"
 msgstr ""
 
 #: ../../peps/peps/pep-0569.rst:99
-msgid "3.8.19: Tuesday, 2024-03-19"
+msgid "3.8.14: Tuesday, 2022-09-06"
+msgstr ""
+
+#: ../../peps/peps/pep-0569.rst:100
+msgid "3.8.15: Tuesday, 2022-10-11"
+msgstr ""
+
+#: ../../peps/peps/pep-0569.rst:101
+msgid "3.8.16: Tuesday, 2022-12-06"
+msgstr ""
+
+#: ../../peps/peps/pep-0569.rst:102
+msgid "3.8.17: Tuesday, 2023-06-06"
 msgstr ""
 
 #: ../../peps/peps/pep-0569.rst:103
-msgid "Features for 3.8"
+msgid "3.8.18: Thursday, 2023-08-24"
+msgstr ""
+
+#: ../../peps/peps/pep-0569.rst:104
+msgid "3.8.19: Tuesday, 2024-03-19"
 msgstr ""
 
 #: ../../peps/peps/pep-0569.rst:105
-msgid "Some of the notable features of Python 3.8 include:"
-msgstr ""
-
-#: ../../peps/peps/pep-0569.rst:107
-msgid ":pep:`570`, Positional-only arguments"
-msgstr ""
-
-#: ../../peps/peps/pep-0569.rst:108
-msgid ":pep:`572`, Assignment Expressions"
+msgid "3.8.20: Friday, 2024-09-06 (final security release)"
 msgstr ""
 
 #: ../../peps/peps/pep-0569.rst:109
-msgid ":pep:`574`, Pickle protocol 5 with out-of-band data"
-msgstr ""
-
-#: ../../peps/peps/pep-0569.rst:110
-msgid ":pep:`578`, Runtime audit hooks"
+msgid "Features for 3.8"
 msgstr ""
 
 #: ../../peps/peps/pep-0569.rst:111
-msgid ":pep:`587`, Python Initialization Configuration"
-msgstr ""
-
-#: ../../peps/peps/pep-0569.rst:112
-msgid ":pep:`590`, Vectorcall: a fast calling protocol for CPython"
+msgid "Some of the notable features of Python 3.8 include:"
 msgstr ""
 
 #: ../../peps/peps/pep-0569.rst:113
+msgid ":pep:`570`, Positional-only arguments"
+msgstr ""
+
+#: ../../peps/peps/pep-0569.rst:114
+msgid ":pep:`572`, Assignment Expressions"
+msgstr ""
+
+#: ../../peps/peps/pep-0569.rst:115
+msgid ":pep:`574`, Pickle protocol 5 with out-of-band data"
+msgstr ""
+
+#: ../../peps/peps/pep-0569.rst:116
+msgid ":pep:`578`, Runtime audit hooks"
+msgstr ""
+
+#: ../../peps/peps/pep-0569.rst:117
+msgid ":pep:`587`, Python Initialization Configuration"
+msgstr ""
+
+#: ../../peps/peps/pep-0569.rst:118
+msgid ":pep:`590`, Vectorcall: a fast calling protocol for CPython"
+msgstr ""
+
+#: ../../peps/peps/pep-0569.rst:119
 msgid ""
 "Typing-related: :pep:`591` (Final qualifier), :pep:`586` (Literal types), "
 "and :pep:`589` (TypedDict)"
 msgstr ""
 
-#: ../../peps/peps/pep-0569.rst:115
+#: ../../peps/peps/pep-0569.rst:121
 msgid "Parallel filesystem cache for compiled bytecode"
 msgstr ""
 
-#: ../../peps/peps/pep-0569.rst:116
+#: ../../peps/peps/pep-0569.rst:122
 msgid "Debug builds share ABI as release builds"
 msgstr ""
 
-#: ../../peps/peps/pep-0569.rst:117
+#: ../../peps/peps/pep-0569.rst:123
 msgid "f-strings support a handy ``=`` specifier for debugging"
 msgstr ""
 
-#: ../../peps/peps/pep-0569.rst:118
+#: ../../peps/peps/pep-0569.rst:124
 msgid "``continue`` is now legal in ``finally:`` blocks"
 msgstr ""
 
-#: ../../peps/peps/pep-0569.rst:119
+#: ../../peps/peps/pep-0569.rst:125
 msgid ""
 "on Windows, the default ``asyncio`` event loop is now ``ProactorEventLoop``"
 msgstr ""
 
-#: ../../peps/peps/pep-0569.rst:121
+#: ../../peps/peps/pep-0569.rst:127
 msgid ""
 "on macOS, the *spawn* start method is now used by default in "
 "``multiprocessing``"
 msgstr ""
 
-#: ../../peps/peps/pep-0569.rst:123
+#: ../../peps/peps/pep-0569.rst:129
 msgid ""
 "``multiprocessing`` can now use shared memory segments to avoid pickling "
 "costs between processes"
 msgstr ""
 
-#: ../../peps/peps/pep-0569.rst:125
+#: ../../peps/peps/pep-0569.rst:131
 msgid "``typed_ast`` is merged back to CPython"
 msgstr ""
 
-#: ../../peps/peps/pep-0569.rst:126
+#: ../../peps/peps/pep-0569.rst:132
 #, python-format
 msgid "``LOAD_GLOBAL`` is now 40% faster"
 msgstr ""
 
-#: ../../peps/peps/pep-0569.rst:127
+#: ../../peps/peps/pep-0569.rst:133
 msgid "``pickle`` now uses Protocol 4 by default, improving performance"
 msgstr ""
 
-#: ../../peps/peps/pep-0569.rst:129
+#: ../../peps/peps/pep-0569.rst:135
 msgid ""
 "There are many other interesting changes, please consult the \"What's New\" "
 "page in the documentation for a full list."
 msgstr ""
 
-#: ../../peps/peps/pep-0569.rst:134
+#: ../../peps/peps/pep-0569.rst:140
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../../peps/peps/pep-0569.rst:136
+#: ../../peps/peps/pep-0569.rst:142
 msgid "This document has been placed in the public domain."
 msgstr "Este documento foi colocado em domínio público."
+
+#~ msgid "Active"
+#~ msgstr "Ativa"

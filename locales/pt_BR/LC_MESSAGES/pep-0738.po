@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PEPs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-14 02:33+0000\n"
+"POT-Creation-Date: 2024-11-11 15:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: pt_BR\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.15.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../../peps/peps/pep-0738.rst
 msgid "Author"
@@ -50,7 +50,7 @@ msgid "Status"
 msgstr ""
 
 #: ../../peps/peps/pep-0738.rst:6
-msgid "Accepted"
+msgid "Final"
 msgstr ""
 
 #: ../../peps/peps/pep-0738.rst
@@ -87,28 +87,28 @@ msgid ""
 "platform/40975/23"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:14
+#: ../../peps/peps/pep-0738.rst:16
 msgid "Abstract"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:16
+#: ../../peps/peps/pep-0738.rst:18
 msgid ""
 "This PEP proposes adding Android as a supported platform in CPython. The "
 "initial goal is for Android to achieve Tier 3 support in Python 3.13."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:19
+#: ../../peps/peps/pep-0738.rst:21
 msgid ""
 "This PEP is based on :pep:`730` – \"Adding iOS as a supported platform\" by "
 "Russell Keith-Magee, and covers many of the same issues. Notable differences "
 "between the two platforms can be found by searching for the word \"iOS\"."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:25
+#: ../../peps/peps/pep-0738.rst:27
 msgid "Motivation"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:27
+#: ../../peps/peps/pep-0738.rst:29
 #, python-format
 msgid ""
 "Over the last 15 years, mobile platforms have become increasingly important "
@@ -118,7 +118,7 @@ msgid ""
 "CPython."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:33
+#: ../../peps/peps/pep-0738.rst:35
 msgid ""
 "The `Chaquopy <https://chaquo.com/chaquopy/>`__, `BeeWare <https://beeware."
 "org>`__ and `Kivy <https://kivy.org>`__ projects have all supported Android "
@@ -127,7 +127,7 @@ msgid ""
 "demonstrates the technical feasibility of Android support."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:39
+#: ../../peps/peps/pep-0738.rst:41
 msgid ""
 "It is important for the future of Python as a language that it is able to be "
 "used on any platform that has widespread adoption. Otherwise, potential "
@@ -137,15 +137,15 @@ msgid ""
 "platforms than desktop ones."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:47
+#: ../../peps/peps/pep-0738.rst:49
 msgid "Rationale"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:50
+#: ../../peps/peps/pep-0738.rst:52
 msgid "General"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:52
+#: ../../peps/peps/pep-0738.rst:54
 msgid ""
 "Android is broadly a POSIX platform, based on a Linux kernel and the ELF "
 "binary format. It does not use glibc, instead providing its own C library "
@@ -155,7 +155,7 @@ msgid ""
 "other Unix."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:59
+#: ../../peps/peps/pep-0738.rst:61
 msgid ""
 "However, Android's source-compatibility with Linux is quite good. In its "
 "early years, the C library was very incomplete, but most of the gaps were "
@@ -164,47 +164,47 @@ msgid ""
 "hardware devices or operating system services."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:65
+#: ../../peps/peps/pep-0738.rst:67
 msgid ""
 "This is also true of CPython. Although it has never officially supported "
 "Android, recent versions (since 3.6) can already be compiled for Android "
 "with minimal patching."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:72
+#: ../../peps/peps/pep-0738.rst:74
 msgid "OS versions"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:74
+#: ../../peps/peps/pep-0738.rst:76
 msgid "Each Android version can be identified in three ways:"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:76
+#: ../../peps/peps/pep-0738.rst:78
 msgid ""
 "A conventional dotted version number (though recent versions have all used "
 "whole numbers)"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:78
+#: ../../peps/peps/pep-0738.rst:80
 msgid ""
 "A sequential integer \"API level\" (the most common form in developer "
 "documentation)"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:80
+#: ../../peps/peps/pep-0738.rst:82
 msgid ""
 "An alphabetic confectionery-themed code name (no longer used for marketing, "
 "but still appears in developer documentation)"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:83
+#: ../../peps/peps/pep-0738.rst:85
 msgid ""
 "There is no consistent pattern to link one of these to another; they must be "
 "looked up in `a table <https://en.wikipedia.org/wiki/"
 "Android_version_history>`__."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:86
+#: ../../peps/peps/pep-0738.rst:88
 #, python-format
 msgid ""
 "A new major Android version is released each year, but the updates available "
@@ -217,7 +217,7 @@ msgid ""
 "version or newer."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:95
+#: ../../peps/peps/pep-0738.rst:97
 #, python-format
 msgid ""
 "For Python 3.13 we therefore propose the minimum Android version to be 5.0 "
@@ -225,24 +225,24 @@ msgid ""
 "above, this would cover 99% of active devices."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:101
+#: ../../peps/peps/pep-0738.rst:103
 msgid "Development tools"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:103
+#: ../../peps/peps/pep-0738.rst:105
 msgid ""
 "The Android development tools are equally supported on Linux (x86_64), "
 "Windows (x86_64) and macOS (x86_64 and ARM64). For CPython, the most "
 "important tools are:"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:107
+#: ../../peps/peps/pep-0738.rst:109
 msgid ""
 "The NDK (native development kit) contains a C and C++ compiler (clang), "
 "linker (lld), and headers for all the system libraries."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:110
+#: ../../peps/peps/pep-0738.rst:112
 msgid ""
 "Binary compatibility between libraries compiled with different versions of "
 "the NDK is generally very good, but for reproducibility it would be best for "
@@ -250,7 +250,7 @@ msgid ""
 "Python 3.13, this would be the current NDK long-term support version, r26."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:115
+#: ../../peps/peps/pep-0738.rst:117
 msgid ""
 "Each NDK version can be set to target any of a wide range of Android "
 "versions. For example, NDK r26 supports :ref:`API levels <738-os-versions>` "
@@ -259,75 +259,75 @@ msgid ""
 "rule are only made for security reasons."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:121
+#: ../../peps/peps/pep-0738.rst:123
 msgid "Gradle is the tool used to build complete, deployable apps."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:123
+#: ../../peps/peps/pep-0738.rst:125
 msgid ""
 "The emulator, based on QEMU, is a simulated Android device running on a "
 "development machine. Unlike on iOS, an emulator uses the same ABI as a real "
 "device of the same architecture, and can run the same binaries."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:127
+#: ../../peps/peps/pep-0738.rst:129
 msgid ""
 "These tools may all be used either from the command line, or through the "
 "Android Studio IDE, which is based on IntelliJ IDEA."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:132
+#: ../../peps/peps/pep-0738.rst:134
 msgid "Architectures"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:134
+#: ../../peps/peps/pep-0738.rst:136
 msgid ""
 "Android currently supports 4 architectures. Their names as used by the "
 "Android tools are:"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:137
+#: ../../peps/peps/pep-0738.rst:139
 msgid "``armeabi-v7a``"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:138
+#: ../../peps/peps/pep-0738.rst:140
 msgid "``arm64-v8a``"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:139
+#: ../../peps/peps/pep-0738.rst:141
 msgid "``x86``"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:140
+#: ../../peps/peps/pep-0738.rst:142
 msgid "``x86_64``"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:142
+#: ../../peps/peps/pep-0738.rst:144
 msgid ""
 "Virtually all current physical devices use one of the ARM architectures. "
 "``x86`` and ``x86_64`` are supported for use in the emulator."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:145
+#: ../../peps/peps/pep-0738.rst:147
 msgid ""
 "For Python 3.13 we propose that Tier 3 support will only cover the 64-bit "
 "platforms (``arm64-v8a`` and ``x86_64``):"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:148
+#: ../../peps/peps/pep-0738.rst:150
 msgid ""
 "``x86`` has not been supported as a development platform since 2020, and no "
 "new emulator images have been released since then."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:151
+#: ../../peps/peps/pep-0738.rst:153
 msgid ""
 "``armeabi-v7a``'s proportion of active devices is now `less than 10% and "
 "steadily falling <https://github.com/chaquo/chaquopy/"
 "issues/709#issuecomment-1744541892>`__."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:155
+#: ../../peps/peps/pep-0738.rst:157
 msgid ""
 "It would also be more difficult to cover with a reliable buildbot, since "
 "there are no native hosts available for the emulator (ARM64 Macs don't have "
@@ -336,24 +336,24 @@ msgid ""
 "``armeabi-v7a`` emulator images have not been updated since 2016."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:161
+#: ../../peps/peps/pep-0738.rst:163
 msgid ""
 "However, it continues to be used for watches and ultra-low-cost phones. If "
 "this persists, we may need to consider adding it in a future Python version."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:164
+#: ../../peps/peps/pep-0738.rst:166
 msgid ""
 "Even if 32-bit architectures are not officially supported, no changes should "
 "be made which would impede any downstream projects which still wish to build "
 "them."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:169
+#: ../../peps/peps/pep-0738.rst:171
 msgid "App lifecycle"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:171
+#: ../../peps/peps/pep-0738.rst:173
 msgid ""
 "The primary programming language in Android apps is Java, or its modern "
 "descendant Kotlin. As such, an app does not provide its own executable file. "
@@ -363,7 +363,7 @@ msgid ""
 "JNI."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:177
+#: ../../peps/peps/pep-0738.rst:179
 msgid ""
 "Unlike iOS, creating subprocesses *is* supported on Android. However apps "
 "may only run executables in `certain locations <https://issuetracker.google."
@@ -373,28 +373,28 @@ msgid ""
 "supported in future Android versions."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:184
+#: ../../peps/peps/pep-0738.rst:186
 msgid ""
 "Android does provide a command-line shell, but this is intended only for use "
 "by developers, and is not available to the typical end user."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:187
+#: ../../peps/peps/pep-0738.rst:189
 msgid ""
 "For these reasons, the recommended way of running Python on Android will be "
 "by loading ``libpython3.x.so`` into the main app process. A ``python3.x`` "
 "executable will not be officially supported on this platform."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:193
+#: ../../peps/peps/pep-0738.rst:195
 msgid "Specification"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:196
+#: ../../peps/peps/pep-0738.rst:198
 msgid "Scope of work"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:198
+#: ../../peps/peps/pep-0738.rst:200
 msgid ""
 "The focus of this work will be to produce an Android equivalent to the "
 "existing `Windows embeddable package <https://docs.python.org/3/using/"
@@ -402,7 +402,7 @@ msgid ""
 "which developers can add to their apps. No installer will be required."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:204
+#: ../../peps/peps/pep-0738.rst:206
 msgid ""
 "Adding Android as a Tier 3 platform only requires adding support for "
 "compiling an Android-compatible build from the unpatched CPython source "
@@ -410,14 +410,14 @@ msgid ""
 "Android artifacts on python.org, although these could be added in the future."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:209
+#: ../../peps/peps/pep-0738.rst:211
 msgid ""
 "Android will be built using the same configure and Makefile system as other "
 "POSIX platforms, and must therefore be built *on* a POSIX platform. Both "
 "Linux and macOS will be supported."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:213
+#: ../../peps/peps/pep-0738.rst:215
 msgid ""
 "A Gradle project will be provided for the purpose of running the CPython "
 "test suite. Tooling will be provided to automate the process of building the "
@@ -425,18 +425,18 @@ msgid ""
 "executing it."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:220
+#: ../../peps/peps/pep-0738.rst:222
 msgid "Linkage"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:222
+#: ../../peps/peps/pep-0738.rst:224
 msgid ""
 "For the reasons discussed in `App lifecycle`_, Python will be included in "
 "the app as a dynamic ``libpython3.x.so`` library which can be loaded into an "
 "app using ``dlopen``."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:226
+#: ../../peps/peps/pep-0738.rst:228
 msgid ""
 "Unlike Linux, Android does not implicitly use a dlopened library to resolve "
 "relocations in subsequently-loaded libraries, `even if RTLD_GLOBAL is used "
@@ -445,7 +445,7 @@ msgid ""
 "``libpython3.x.so`` when building for Android."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:232
+#: ../../peps/peps/pep-0738.rst:234
 msgid ""
 "An extension module linked against ``libpython3.x.so`` cannot be loaded by "
 "an executable that has been statically linked against ``libpython3.x.a``. "
@@ -453,70 +453,70 @@ msgid ""
 "Android. This is the same pattern used by CPython on Windows."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:237
+#: ../../peps/peps/pep-0738.rst:239
 msgid ""
 "This approach also allows using the ``-Wl,--no-undefined`` option to detect "
 "missing symbols at build time, which can be a significant time-saver."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:240
+#: ../../peps/peps/pep-0738.rst:242
 msgid ""
 "Unlike iOS, Android allows dynamic libraries to be loaded from any location, "
 "so a directory tree containing co-located .py, .pyc and .so files can be "
 "handled by Python's standard importer."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:246
+#: ../../peps/peps/pep-0738.rst:248
 msgid "Standard library"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:249
+#: ../../peps/peps/pep-0738.rst:251
 msgid "Unsupported modules"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:251
+#: ../../peps/peps/pep-0738.rst:253
 msgid ""
 "A number of standard library modules will not be supported on Android "
 "because the underlying C APIs are not available:"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:254
+#: ../../peps/peps/pep-0738.rst:256
 msgid "``curses`` and ``readline``"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:255
+#: ../../peps/peps/pep-0738.rst:257
 msgid "``dbm.gnu`` and ``dbm.ndbm``"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:256
+#: ../../peps/peps/pep-0738.rst:258
 msgid "``grp``"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:257
+#: ../../peps/peps/pep-0738.rst:259
 msgid ""
 "``multiprocessing`` – although subprocesses in general are allowed (see `App "
 "lifecycle`_), Android does not support any part of the `System V IPC API "
 "<https://man7.org/linux/man-pages/man7/sysvipc.7.html>`__."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:260
+#: ../../peps/peps/pep-0738.rst:262
 msgid ""
 "``tkinter`` and ``turtle`` – these would require an Android build of Tk "
 "itself, which is not officially supported."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:264
+#: ../../peps/peps/pep-0738.rst:266
 msgid "``sys``"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:266
+#: ../../peps/peps/pep-0738.rst:268
 msgid ""
 "``sys.platform`` will return ``\"android\"``. Although Android is based on "
 "Linux, it differs in enough significant ways that a separate name is "
 "justified."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:269
+#: ../../peps/peps/pep-0738.rst:271
 msgid ""
 "When embedded in an Android app, the C-level stdio streams are not connected "
 "to anything. So in this mode, ``sys.stdout`` and ``sys.stderr`` will be "
@@ -525,48 +525,42 @@ msgid ""
 "stdin`` will always return EOF."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:276
+#: ../../peps/peps/pep-0738.rst:278
 msgid "``platform``"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:278
+#: ../../peps/peps/pep-0738.rst:280
 msgid ""
 "Most of the values returned by the ``platform`` module will match those "
 "returned by ``os.uname()``, with the exception of:"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:281
+#: ../../peps/peps/pep-0738.rst:283
 msgid ""
 "``platform.system()`` - ``\"Android\"``, instead of the default ``\"Linux\"``"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:283
+#: ../../peps/peps/pep-0738.rst:285
 msgid ""
 "``platform.release()`` - Android version number, as a string (e.g. "
 "``\"14\"``), instead of the Linux kernel version"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:286
+#: ../../peps/peps/pep-0738.rst:288
 msgid ""
 "In addition, a ``platform.android_ver()`` method will be added, which "
 "returns a namedtuple containing the following:"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:289
+#: ../../peps/peps/pep-0738.rst:291
 msgid ""
 "``release`` - Android version of the device, as a string (e.g. ``\"14\"``)"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:290
+#: ../../peps/peps/pep-0738.rst:292
 msgid ""
 "``api_level`` - :ref:`API level <738-os-versions>` of the device, as an "
 "integer (e.g. ``34``)"
-msgstr ""
-
-#: ../../peps/peps/pep-0738.rst:292
-msgid ""
-"``min_api_level`` - Minimum API level this build of Python can run on, as an "
-"integer (e.g. ``23``). This is the same as ``sys.getandroidapilevel``."
 msgstr ""
 
 #: ../../peps/peps/pep-0738.rst:294
@@ -588,45 +582,51 @@ msgid ""
 "os/Build#DEVICE>`__ of the device, as a string (e.g. ``\"panther\"``)"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:304
+#: ../../peps/peps/pep-0738.rst:303
+msgid ""
+"``is_emulator`` - ``True`` if the device is an emulator; ``False`` if it’s a "
+"physical device."
+msgstr ""
+
+#: ../../peps/peps/pep-0738.rst:306
 msgid ""
 "Which one of ``model`` and ``device`` is more likely to be unique, and which "
 "one is more likely to resemble the marketing name, varies between different "
 "manufacturers."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:309
+#: ../../peps/peps/pep-0738.rst:311
 msgid "``os``"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:311
+#: ../../peps/peps/pep-0738.rst:313
 msgid ""
 "``os.uname()`` will return the raw result of a POSIX ``uname()`` call. This "
 "will result in the following values:"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:314
+#: ../../peps/peps/pep-0738.rst:316
 msgid "``sysname`` - ``\"Linux\"``"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:316
+#: ../../peps/peps/pep-0738.rst:318
 msgid ""
 "``release`` - The Linux kernel version (e.g. ``\"5.10.157-android13-4-00003-"
 "gdfb1120f912b-ab10994928\"``)"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:319
+#: ../../peps/peps/pep-0738.rst:321
 msgid ""
 "This approach treats the ``os`` module as a \"raw\" interface to system "
 "APIs, and ``platform`` as a higher-level API providing more generally useful "
 "values."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:324
+#: ../../peps/peps/pep-0738.rst:326
 msgid "CI resources"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:326
+#: ../../peps/peps/pep-0738.rst:328
 msgid ""
 "Since Android emulators and physical devices use the same ABI, and come with "
 "identical or very similar operating system binaries, testing on emulators "
@@ -634,7 +634,7 @@ msgid ""
 "but ARM64 emulators are only supported on ARM64 Macs."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:331
+#: ../../peps/peps/pep-0738.rst:333
 msgid ""
 "Anaconda `has offered <https://discuss.python.org/t/pep-738-adding-android-"
 "as-a-supported-platform/40975/20>`__ to provide physical hardware to run "
@@ -643,7 +643,7 @@ msgid ""
 "supported build platforms."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:337
+#: ../../peps/peps/pep-0738.rst:339
 msgid ""
 "CPython does not currently test Tier 3 platforms on GitHub Actions, but if "
 "this ever changes, their Linux and macOS runners are also able to host "
@@ -653,25 +653,25 @@ msgid ""
 ">`__."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:345
+#: ../../peps/peps/pep-0738.rst:347
 msgid "Packaging"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:347
+#: ../../peps/peps/pep-0738.rst:349
 msgid ""
 "Android wheels will use tags in the format ``android_<api-level>_<abi>``. "
 "For example:"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:350
+#: ../../peps/peps/pep-0738.rst:352
 msgid "``android_21_arm64_v8a``"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:351
+#: ../../peps/peps/pep-0738.rst:353
 msgid "``android_21_x86_64``"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:353
+#: ../../peps/peps/pep-0738.rst:355
 msgid ""
 "For the meaning of ``<api-level>``, see `OS versions`_. In the context of "
 "the wheel tag, it indicates the minimum Android version that was selected "
@@ -680,14 +680,14 @@ msgid ""
 "API level of N can incorporate wheels tagged with API level N or older."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:359
+#: ../../peps/peps/pep-0738.rst:361
 msgid ""
 "This format originates from the Chaquopy project, which currently maintains "
 "a `wheel repository <https://chaquo.com/pypi-13.1/>`__ with tags varying "
 "between API levels 16 and 21."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:363
+#: ../../peps/peps/pep-0738.rst:365
 msgid ""
 "However, relying on a small group of Android enthusiasts to build the whole "
 "Python ecosystem is not a scalable solution. Until prominent libraries "
@@ -695,7 +695,7 @@ msgid ""
 "adopt Python on Android will be limited."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:368
+#: ../../peps/peps/pep-0738.rst:370
 msgid ""
 "Therefore, it will be necessary to clearly document how projects can add "
 "Android builds to their CI and release tooling. Adding Android support to "
@@ -703,40 +703,40 @@ msgid ""
 "<https://cibuildwheel.readthedocs.io/>`__ may be one way to achieve this."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:373
+#: ../../peps/peps/pep-0738.rst:375
 msgid ""
 "The Android wheel tag format should also be added to the list of tags "
 "accepted by PyPI."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:378
+#: ../../peps/peps/pep-0738.rst:380
 msgid "PEP 11 Update"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:380
+#: ../../peps/peps/pep-0738.rst:382
 msgid ""
 ":pep:`11` will be updated to include the two supported Android ABIs. "
 "Autoconf already identifies them with the following triplets:"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:383
+#: ../../peps/peps/pep-0738.rst:385
 msgid "``aarch64-linux-android``"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:384
+#: ../../peps/peps/pep-0738.rst:386
 msgid "``x86_64-linux-android``"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:386
+#: ../../peps/peps/pep-0738.rst:388
 msgid ""
 "Petr Viktorin will serve as the initial core team contact for these ABIs."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:390
+#: ../../peps/peps/pep-0738.rst:392
 msgid "Backwards Compatibility"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:392
+#: ../../peps/peps/pep-0738.rst:394
 msgid ""
 "Adding a new platform does not introduce any backwards compatibility "
 "concerns to CPython itself. However, there may be some backwards "
@@ -745,24 +745,24 @@ msgid ""
 "patches don't align with the patches they have historically used."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:400
+#: ../../peps/peps/pep-0738.rst:402
 msgid "Security Implications"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:402
+#: ../../peps/peps/pep-0738.rst:404
 msgid "Adding a new platform does not add any new security implications."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:406
+#: ../../peps/peps/pep-0738.rst:408
 msgid "How to Teach This"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:408
+#: ../../peps/peps/pep-0738.rst:410
 msgid ""
 "The education needs related to this PEP relate to two groups of developers."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:410
+#: ../../peps/peps/pep-0738.rst:412
 msgid ""
 "First, developers of *apps* need to know how to build Python into an Android "
 "app, along with their own Python code and any supporting packages, and how "
@@ -775,17 +775,17 @@ msgid ""
 ">`__, all of which already have comprehensive documentation."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:421
+#: ../../peps/peps/pep-0738.rst:423
 msgid ""
 "Second, developers of *packages* with binary components need to know how to "
 "build and release them for Android (see `Packaging`_)."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:426
+#: ../../peps/peps/pep-0738.rst:428
 msgid "Reference Implementation"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:428
+#: ../../peps/peps/pep-0738.rst:430
 msgid ""
 "The `Chaquopy repository <https://github.com/chaquo/chaquopy/tree/master/"
 "target>`__ contains a reference patch and build scripts. These will have to "
@@ -793,7 +793,7 @@ msgid ""
 "upstreamed."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:433
+#: ../../peps/peps/pep-0738.rst:435
 msgid ""
 "`Briefcase <https://briefcase.readthedocs.org>`__ provides a reference "
 "implementation of code to execute test suites on Android devices and "
@@ -802,11 +802,34 @@ msgid ""
 "emulator using GitHub Actions."
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:441
+#: ../../peps/peps/pep-0738.rst:443
+msgid "Rejected Ideas"
+msgstr ""
+
+#: ../../peps/peps/pep-0738.rst:445
+msgid ""
+"The following changes were made to the original specification of ``platform."
+"android_ver()``:"
+msgstr ""
+
+#: ../../peps/peps/pep-0738.rst:448
+msgid ""
+"The ``min_api_level`` field was removed, because unlike all the other "
+"fields, it isn't a property of the current device. This information is still "
+"available from the pre-existing function ``sys.getandroidapilevel()``."
+msgstr ""
+
+#: ../../peps/peps/pep-0738.rst:452
+msgid ""
+"The ``is_emulator`` field was added, since experience during testing showed "
+"that some issues were emulator-specific."
+msgstr ""
+
+#: ../../peps/peps/pep-0738.rst:457
 msgid "Copyright"
 msgstr ""
 
-#: ../../peps/peps/pep-0738.rst:443
+#: ../../peps/peps/pep-0738.rst:459
 msgid ""
 "This document is placed in the public domain or under the CC0-1.0-Universal "
 "license, whichever is more permissive."

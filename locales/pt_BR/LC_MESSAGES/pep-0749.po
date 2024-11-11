@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PEPs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-14 02:33+0000\n"
+"POT-Creation-Date: 2024-11-11 15:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: pt_BR\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.15.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../../peps/peps/pep-0749.rst
 msgid "Author"
@@ -133,16 +133,18 @@ msgstr ""
 #: ../../peps/peps/pep-0749.rst:29
 msgid ""
 "There will not be a code flag for marking ``__annotate__`` functions that "
-"can be run in a \"fake globals\" environment."
+"can be run in a \"fake globals\" environment. Instead, we add a fourth "
+"format, ``VALUE_WITH_FAKE_GLOBALS``, to allow third-party implementors of "
+"annotate functions to indicate what formats they support."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:31
+#: ../../peps/peps/pep-0749.rst:33
 msgid ""
-"Setting the ``__annotations__`` attribute directly will not affect the "
-"``__annotate__`` attribute."
+"Deleting the ``__annotations__`` attribute directly will also clear "
+"``__annotate__``."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:32
+#: ../../peps/peps/pep-0749.rst:34
 msgid ""
 "We add functionality to allow evaluating type alias values and type "
 "parameter bounds and defaults (which were added by :pep:`695` and :pep:"
@@ -150,10 +152,16 @@ msgid ""
 msgstr ""
 
 #: ../../peps/peps/pep-0749.rst:36
+msgid ""
+"The ``SOURCE`` format is renamed to ``STRING`` to improve clarity and reduce "
+"the risk of user confusion."
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:40
 msgid "Motivation"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:38
+#: ../../peps/peps/pep-0749.rst:42
 msgid ""
 ":pep:`649` provides an excellent framework for creating better semantics for "
 "annotations in Python. It solves a common pain point for users of "
@@ -164,7 +172,7 @@ msgid ""
 "PEP is expected to be implemented in Python 3.14."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:46
+#: ../../peps/peps/pep-0749.rst:50
 msgid ""
 "I have started working on the implementation of the PEP in CPython. I found "
 "that the PEP leaves some areas underspecified, and some of its decisions in "
@@ -172,34 +180,34 @@ msgid ""
 "additions to the specification to address these issues."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:51
+#: ../../peps/peps/pep-0749.rst:55
 msgid ""
 "This PEP supplements rather than supersedes PEP 649. The changes proposed "
 "here should make the overall user experience better, but they do not change "
 "the general framework of the earlier PEP."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:57
+#: ../../peps/peps/pep-0749.rst:61
 msgid "The future of ``from __future__ import annotations``"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:59
+#: ../../peps/peps/pep-0749.rst:63
 msgid ""
 ":pep:`563` previously introduced the future import ``from __future__ import "
 "annotations``, which changes all annotations to strings. :pep:`649` proposes "
 "an alternative approach that does not require this future import, and states:"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:63
+#: ../../peps/peps/pep-0749.rst:67
 msgid ""
 "If this PEP is accepted, PEP 563 will be deprecated and eventually removed."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:65
+#: ../../peps/peps/pep-0749.rst:69
 msgid "However, the PEP does not provide a detailed plan for this deprecation."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:67
+#: ../../peps/peps/pep-0749.rst:71
 msgid ""
 "There is some previous discussion of this topic `on Discourse <https://"
 "discuss.python.org/t/pep-649-deferred-evaluation-of-annotations-tentatively-"
@@ -207,24 +215,32 @@ msgid ""
 "different from what is proposed here)."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:71 ../../peps/peps/pep-0749.rst:174
-#: ../../peps/peps/pep-0749.rst:320 ../../peps/peps/pep-0749.rst:367
-#: ../../peps/peps/pep-0749.rst:426 ../../peps/peps/pep-0749.rst:457
-#: ../../peps/peps/pep-0749.rst:482
+#: ../../peps/peps/pep-0749.rst:75 ../../peps/peps/pep-0749.rst:183
+#: ../../peps/peps/pep-0749.rst:347 ../../peps/peps/pep-0749.rst:394
+#: ../../peps/peps/pep-0749.rst:511 ../../peps/peps/pep-0749.rst:614
+#: ../../peps/peps/pep-0749.rst:647 ../../peps/peps/pep-0749.rst:673
+#: ../../peps/peps/pep-0749.rst:745
 msgid "Specification"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:73
+#: ../../peps/peps/pep-0749.rst:77
 msgid "We suggest the following deprecation plan:"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:75
+#: ../../peps/peps/pep-0749.rst:79
 msgid ""
 "In Python 3.14, ``from __future__ import annotations`` will continue to work "
 "as it did before, converting annotations into strings."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:77
+#: ../../peps/peps/pep-0749.rst:82
+msgid ""
+"If the future import is active, the ``__annotate__`` function of objects "
+"with annotations will return the annotations as strings when called with the "
+"``VALUE`` format, reflecting the behavior of ``__annotations__``."
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:86
 msgid ""
 "Sometime after the last release that did not support :pep:`649` semantics "
 "(expected to be 3.13) reaches its end-of-life, ``from __future__ import "
@@ -234,7 +250,7 @@ msgid ""
 "community may decide to wait longer."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:82
+#: ../../peps/peps/pep-0749.rst:91
 msgid ""
 "After at least two releases, the future import is removed, and annotations "
 "are always evaluated as per :pep:`649`. Code that continues to use the "
@@ -242,11 +258,12 @@ msgid ""
 "undefined future import."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:87 ../../peps/peps/pep-0749.rst:253
+#: ../../peps/peps/pep-0749.rst:96 ../../peps/peps/pep-0749.rst:280
+#: ../../peps/peps/pep-0749.rst:528
 msgid "Rejected alternatives"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:89
+#: ../../peps/peps/pep-0749.rst:98
 msgid ""
 "*Immediately make the future import a no-op*: We considered applying :pep:"
 "`649` semantics to all code in Python 3.14, making the future import a no-"
@@ -254,35 +271,35 @@ msgid ""
 "set of conditions:"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:93
+#: ../../peps/peps/pep-0749.rst:102
 msgid "``__future__ import annotations`` is active"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:94
+#: ../../peps/peps/pep-0749.rst:103
 msgid "There are annotations that rely on forward references"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:95
+#: ../../peps/peps/pep-0749.rst:104
 msgid ""
 "Annotations are eagerly evaluated at import time, for example by a metaclass "
 "or class or function decorator. For example, this currently applies to the "
 "released version of ``typing_extensions.TypedDict``."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:99
+#: ../../peps/peps/pep-0749.rst:108
 msgid ""
 "This is expected to be a common pattern, so we cannot afford to break such "
 "code during the upgrade from 3.13 to 3.14."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:102
+#: ../../peps/peps/pep-0749.rst:111
 msgid ""
 "Such code would still break when the future import is eventually removed. "
 "However, this is many years in the future, giving affected decorators plenty "
 "of time to update their code."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:105
+#: ../../peps/peps/pep-0749.rst:114
 msgid ""
 "*Immediately deprecate the future import*: Instead of waiting until Python "
 "3.13 reaches its end-of-life, we could immediately start emitting warnings "
@@ -299,7 +316,7 @@ msgid ""
 "import.)"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:116
+#: ../../peps/peps/pep-0749.rst:125
 msgid ""
 "*Keep the future import around forever*: We could also decide to keep the "
 "future import indefinitely. However, this would permanently bifurcate the "
@@ -307,7 +324,7 @@ msgid ""
 "have only a single set of semantics, not two permanently different modes."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:121
+#: ../../peps/peps/pep-0749.rst:130
 msgid ""
 "*Make the future import a no-op in the future*: Instead of eventually making "
 "``from __future__ import annotations`` a ``SyntaxError``, we could make it "
@@ -319,11 +336,11 @@ msgid ""
 "annotations."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:130
+#: ../../peps/peps/pep-0749.rst:139
 msgid "New ``annotationlib`` module"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:132
+#: ../../peps/peps/pep-0749.rst:141
 msgid ""
 ":pep:`649` proposes to add tooling related to annotations to the :py:mod:"
 "`inspect` module. However, that module is rather large, has direct or "
@@ -334,18 +351,18 @@ msgid ""
 "``FORWARDREF``, and ``SOURCE`` formats."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:139
+#: ../../peps/peps/pep-0749.rst:148
 msgid ""
 "A new standard library module provides a logical home for this functionality "
 "and also enables us to add more tooling that is useful for consumers of "
 "annotations."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:143
+#: ../../peps/peps/pep-0749.rst:152
 msgid "Rationale"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:145
+#: ../../peps/peps/pep-0749.rst:154
 msgid ""
 ":pep:`649` indicates that :py:class:`!typing.ForwardRef` should be used to "
 "implement the ``FORWARDREF`` format in :py:func:`inspect.get_annotations`. "
@@ -368,7 +385,7 @@ msgid ""
 "py#L509>`__ use the ``__forward_arg__`` attribute."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:158
+#: ../../peps/peps/pep-0749.rst:167
 msgid ""
 "We replace the existing but poorly specified :py:class:`!typing.ForwardRef` "
 "with a new class, ``annotationlib.ForwardRef``. It is designed to be mostly "
@@ -380,7 +397,7 @@ msgid ""
 "evaluate forward references in a way that is specific to type hints."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:166
+#: ../../peps/peps/pep-0749.rst:175
 msgid ""
 "We add a function ``annotationlib.call_annotate_function`` as a helper for "
 "calling ``__annotate__`` functions. This is a useful building block when "
@@ -391,13 +408,13 @@ msgid ""
 "because the annotations determine what fields exist on the namedtuple."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:176
+#: ../../peps/peps/pep-0749.rst:185
 msgid ""
 "A new module, ``annotationlib``, is added to the standard library. Its aim "
 "is to provide tooling for introspecting and wrapping annotations."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:179
+#: ../../peps/peps/pep-0749.rst:188
 msgid ""
 "The exact contents of the module are not yet specified. We will add support "
 "for :pep:`649` semantics to standard library functionality that uses "
@@ -405,11 +422,11 @@ msgid ""
 "and use the experience to inform the design of the new module."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:184
+#: ../../peps/peps/pep-0749.rst:193
 msgid "The module will contain the following functionality:"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:186
+#: ../../peps/peps/pep-0749.rst:195
 msgid ""
 "``get_annotations()``: A function that returns the annotations of a "
 "function, module, or class. This will replace :py:func:`inspect."
@@ -418,15 +435,24 @@ msgid ""
 "immediate deprecation."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:190
+#: ../../peps/peps/pep-0749.rst:199
+msgid ""
+"``get_annotate_function()``: A function that returns the ``__annotate__`` "
+"function of an object, if it has one, or ``None`` if it does not. This is "
+"usually equivalent to accessing the ``.__annotate__`` attribute, except in "
+"the presence of metaclasses (see :ref:`below <pep749-metaclasses>`)."
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:203
 msgid ""
 "``Format``: an enum that contains the possible formats of annotations. This "
 "will replace the ``VALUE``, ``FORWARDREF``, and ``SOURCE`` formats in :pep:"
 "`649`. PEP 649 proposed to make these values global members of the :py:mod:"
-"`inspect` module; we prefer to place them within an enum."
+"`inspect` module; we prefer to place them within an enum. We propose to add "
+"a fourth format, ``VALUE_WITH_FAKE_GLOBALS`` (see below)."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:194
+#: ../../peps/peps/pep-0749.rst:208
 msgid ""
 "``ForwardRef``: a class representing a forward reference; it may be returned "
 "by ``get_annotations()`` when the format is ``FORWARDREF``. The existing "
@@ -434,11 +460,11 @@ msgid ""
 "members include:"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:198
+#: ../../peps/peps/pep-0749.rst:212
 msgid "``__forward_arg__``: the string argument of the forward reference"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:199
+#: ../../peps/peps/pep-0749.rst:213
 msgid ""
 "``evaluate(globals=None, locals=None, type_params=None, owner=None)``: a "
 "method that attempts to evaluate the forward reference. The ``ForwardRef`` "
@@ -449,14 +475,14 @@ msgid ""
 "used to extract the globals and locals namespaces if these are not provided."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:206
+#: ../../peps/peps/pep-0749.rst:220
 msgid ""
 "``_evaluate()``, with the same interface as the existing ``ForwardRef."
 "_evaluate`` method. It will be undocumented and immediately deprecated. It "
 "is provided for compatibility with existing users of ``typing.ForwardRef``."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:210
+#: ../../peps/peps/pep-0749.rst:224
 msgid ""
 "``call_annotate_function(func: Callable, format: Format)``: a helper for "
 "calling an ``__annotate__`` function with a given format. If the function "
@@ -465,7 +491,7 @@ msgid ""
 "environment to return the desired annotations format."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:215
+#: ../../peps/peps/pep-0749.rst:229
 msgid ""
 "``call_evaluate_function(func: Callable | None, format: Format)``: similar "
 "to ``call_annotate_function``, but does not rely on the function returning "
@@ -475,7 +501,25 @@ msgid ""
 "function also returns ``None``."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:221
+#: ../../peps/peps/pep-0749.rst:234
+msgid ""
+"``annotations_to_string(annotations: dict[str, object]) -> dict[str, str]``: "
+"a function that converts each value in an annotations dictionary to a string "
+"representation. This is useful for implementing the ``SOURCE`` format in "
+"cases where the original source is not available, such as in the functional "
+"syntax for :py:class:`typing.TypedDict`."
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:239
+msgid ""
+"``value_to_string(value: object) -> str``: a function that converts a single "
+"value to a string representation. This is used by ``annotations_to_string``. "
+"It uses ``repr()`` for most values, but for types it returns the fully "
+"qualified name. It is also useful as a helper for the ``repr()`` of a number "
+"of objects in the :py:mod:`typing` and :py:mod:`collections.abc` modules."
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:245
 msgid ""
 "A new function is also added to the :py:mod:`!typing` module, ``typing."
 "evaluate_forward_ref``. This function is a wrapper around the ``ForwardRef."
@@ -484,7 +528,7 @@ msgid ""
 "forward references within these types."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:226
+#: ../../peps/peps/pep-0749.rst:250
 msgid ""
 "Contrary to :pep:`649`, the annotation formats (``VALUE``, ``FORWARDREF``, "
 "and ``SOURCE``) will not be added as global members of the :py:mod:`inspect` "
@@ -492,15 +536,15 @@ msgid ""
 "``annotationlib.Format.VALUE``."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:231
+#: ../../peps/peps/pep-0749.rst:255
 msgid "Open issues"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:233
+#: ../../peps/peps/pep-0749.rst:257
 msgid "What should this module be called? Some ideas:"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:235
+#: ../../peps/peps/pep-0749.rst:259
 msgid ""
 "``annotations``: The most obvious name, but it may cause confusion with the "
 "existing ``from __future__ import annotations``, because users may have both "
@@ -510,46 +554,53 @@ msgid ""
 "had only a single release in 2015 and looks abandoned."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:240
+#: ../../peps/peps/pep-0749.rst:264
+msgid ""
+"``annotation`` (in the singular): Similar, but does not cause confusion with "
+"the future import. There is an abandoned PyPI package :pypi:`annotation`, "
+"but it apparently never released any artifacts."
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:267
 msgid ""
 "``annotools``: Analogous to :py:mod:`itertools` and :py:mod:`functools`, but "
 "\"anno\" is a less obvious abbreviation than \"iter\" or \"func\". As of "
 "this writing, there is no PyPI package with this name."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:243
+#: ../../peps/peps/pep-0749.rst:270
 msgid ""
 "``annotationtools``: A more explicit version. There is a PyPI package :pypi:"
 "`annotationtools`, which had a release in 2023."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:245
+#: ../../peps/peps/pep-0749.rst:272
 msgid ""
 "``annotation_tools``: A variation of the above but without a PyPI conflict. "
 "However, no other public standard library module has an underscore in its "
 "name."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:247
+#: ../../peps/peps/pep-0749.rst:274
 msgid ""
 "``annotationslib``: Analogous to :py:mod:`tomllib`, :py:mod:`pathlib`, and :"
 "py:mod:`importlib`. There is no PyPI package with this name."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:249
+#: ../../peps/peps/pep-0749.rst:276
 msgid ""
 "``annotationlib``: Similar to the above, but one character shorter and "
 "subjectively reads better. Also not taken on PyPI."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:255
+#: ../../peps/peps/pep-0749.rst:282
 msgid ""
 "*Add the functionality to the inspect module*: As described above, the :py:"
 "mod:`inspect` module is already quite large, and its import time is "
 "prohibitive for some use cases."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:259
+#: ../../peps/peps/pep-0749.rst:286
 msgid ""
 "*Add the functionality to the typing module*: While annotations are mostly "
 "used for typing, they may also be used for other purposes. We prefer to keep "
@@ -557,14 +608,14 @@ msgid ""
 "functionality that is exclusively meant for type hints."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:264
+#: ../../peps/peps/pep-0749.rst:291
 msgid ""
 "*Add the functionality to the types module*: The :py:mod:`types` module is "
 "meant for functionality related to *types*, and annotations can exist on "
 "functions and modules, not only on types."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:268
+#: ../../peps/peps/pep-0749.rst:295
 msgid ""
 "*Develop this functionality in a third-party package*: The functionality in "
 "this new module will be pure Python code, and it is possible to implement a "
@@ -576,7 +627,7 @@ msgid ""
 "include it in the standard library."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:276
+#: ../../peps/peps/pep-0749.rst:303
 msgid ""
 "*Add this functionality to a private module*: It would be possible to "
 "initially develop the module in a private standard library module (e.g., "
@@ -591,15 +642,15 @@ msgid ""
 "the standard library, ensuring that it covers a reasonable set of use cases."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:288
+#: ../../peps/peps/pep-0749.rst:315
 msgid "Behavior of the REPL"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:290
+#: ../../peps/peps/pep-0749.rst:317
 msgid ":pep:`649` specifies the following behavior of the interactive REPL:"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:292
+#: ../../peps/peps/pep-0749.rst:319
 msgid ""
 "For the sake of simplicity, in this case we forego delayed evaluation. "
 "Module-level annotations in the REPL shell will continue to work exactly as "
@@ -607,14 +658,14 @@ msgid ""
 "result directly inside the ``__annotations__`` dict."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:297
+#: ../../peps/peps/pep-0749.rst:324
 msgid ""
 "There are several problems with this proposed behavior. It makes the REPL "
 "the only context where annotations are still evaluated immediately, which is "
 "confusing for users and complicates the language."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:301
+#: ../../peps/peps/pep-0749.rst:328
 msgid ""
 "It also makes the implementation of the REPL more complex, as it needs to "
 "ensure that all statements are compiled in \"interactive\" mode, even if "
@@ -622,13 +673,13 @@ msgid ""
 "multiple statements in a single line evaluated by the REPL.)"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:306
+#: ../../peps/peps/pep-0749.rst:333
 msgid ""
 "Most importantly, this breaks some plausible use cases that inexperienced "
 "users could run into. A user might write the following in a file::"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:312
+#: ../../peps/peps/pep-0749.rst:339
 msgid ""
 "Under :pep:`649` this would work fine: ``X`` is not yet defined when it is "
 "used in the annotation for ``a``, but the annotation is lazily evaluated. "
@@ -637,20 +688,20 @@ msgid ""
 "yet defined."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:317
+#: ../../peps/peps/pep-0749.rst:344
 msgid ""
 "This topic was previously discussed `on Discourse <https://discuss.python."
 "org/t/pep-649-behavior-of-the-repl/54109>`__."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:322
+#: ../../peps/peps/pep-0749.rst:349
 msgid ""
 "We propose to treat the interactive console like any other module-level "
 "code, and make annotations lazily evaluated. This makes the language more "
 "consistent and avoids subtle behavior changes between modules and the REPL."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:326
+#: ../../peps/peps/pep-0749.rst:353
 msgid ""
 "Because the REPL is evaluated line by line, we would generate a new "
 "``__annotate__`` function for every evaluated statement in the global scope "
@@ -658,7 +709,7 @@ msgid ""
 "evaluated, the previous ``__annotate__`` function is lost:"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:350
+#: ../../peps/peps/pep-0749.rst:377
 msgid ""
 "There will be no ``__annotations__`` key in the global namespace of the "
 "REPL. In module namespaces, this key is created lazily when the "
@@ -666,7 +717,7 @@ msgid ""
 "REPL there is no such module object."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:355
+#: ../../peps/peps/pep-0749.rst:382
 msgid ""
 "Classes and functions defined within the REPL will also work like any other "
 "classes, so evaluation of their annotations will be deferred. It is possible "
@@ -674,47 +725,47 @@ msgid ""
 "``annotationlib`` module to introspect the annotations."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:361
+#: ../../peps/peps/pep-0749.rst:388
 msgid "Wrappers that provide ``__annotations__``"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:363
+#: ../../peps/peps/pep-0749.rst:390
 msgid ""
 "Several objects in the standard library and elsewhere provide annotations "
 "for their wrapped object. :pep:`649` does not specify how such wrappers "
 "should behave."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:369
+#: ../../peps/peps/pep-0749.rst:396
 msgid ""
 "Wrappers that provide annotations should be designed with the following "
 "goals in mind:"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:372
+#: ../../peps/peps/pep-0749.rst:399
 msgid ""
 "Evaluation of ``__annotations__`` should be deferred for as long as "
 "possible, consistent with the behavior of built-in functions, classes, and "
 "modules."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:374
+#: ../../peps/peps/pep-0749.rst:401
 msgid ""
 "Backward compatibility with the behavior prior to the implementation of :pep:"
 "`649` should be preserved."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:376
+#: ../../peps/peps/pep-0749.rst:403
 msgid ""
 "The ``__annotate__`` and ``__annotations__`` attributes should both be "
 "supplied with semantics consistent to those of the wrapped object."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:379
+#: ../../peps/peps/pep-0749.rst:406
 msgid "More specifically:"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:381
+#: ../../peps/peps/pep-0749.rst:408
 msgid ""
 ":py:func:`functools.update_wrapper` (and therefore :py:func:`functools."
 "wraps`) will copy only the ``__annotate__`` attribute from the wrapped "
@@ -722,7 +773,7 @@ msgid ""
 "function will use the copied ``__annotate__``."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:385
+#: ../../peps/peps/pep-0749.rst:412
 msgid ""
 "The constructors for :py:func:`classmethod` and :py:func:`staticmethod` "
 "currently copy the ``__annotations__`` attribute from the wrapped object to "
@@ -733,16 +784,220 @@ msgid ""
 "``__dict__``, without affecting the wrapped callable."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:394
-msgid "Remove code flag for marking ``__annotate__`` functions"
+#: ../../peps/peps/pep-0749.rst:423
+msgid "Annotations and metaclasses"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:396 ../../peps/peps/pep-0749.rst:440
-#: ../../peps/peps/pep-0749.rst:520
+#: ../../peps/peps/pep-0749.rst:425
+msgid ""
+"Testing of the initial implementation of this PEP revealed serious problems "
+"with the interaction between metaclasses and class annotations."
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:429
+msgid "Pre-existing bugs"
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:431
+msgid ""
+"We found several bugs in the existing behavior of ``__annotations__`` on "
+"classes while investigating the behaviors to be specified in this PEP. "
+"Fixing these bugs on Python 3.13 and earlier is outside the scope of this "
+"PEP, but they are noted here to explain the corner cases that need to be "
+"dealt with."
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:436
+msgid ""
+"For context, on Python 3.10 through 3.13 the ``__annotations__`` dictionary "
+"is placed in the class namespace if the class has any annotations. If it "
+"does not, there is no ``__annotations__`` class dictionary key when the "
+"class is created, but accessing ``cls.__annotations__`` invokes a descriptor "
+"defined on ``type`` that returns an empty dictionary and stores it in the "
+"class dictionary. :py:ref:`Static types <static-types>` are an exception: "
+"they never have annotations, and accessing ``.__annotations__`` raises :py:"
+"exc:`AttributeError`. On Python 3.9 and earlier, the behavior was different; "
+"see `gh-88067 <https://github.com/python/cpython/issues/88067>`__."
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:446
+msgid "The following code fails identically on Python 3.10 through 3.13::"
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:458
+msgid ""
+"If the annotations on the metaclass ``Meta`` are accessed before the "
+"annotations on ``Y``, then the annotations for the base class ``X`` are "
+"leaked to ``Y``. However, if the metaclass's annotations are *not* accessed "
+"(i.e., the line ``Meta.__annotations__`` above is removed), then the "
+"annotations for ``Y`` are correctly empty."
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:463
+msgid ""
+"Similarly, annotations from annotated metaclasses leak to unannotated "
+"classes that are instances of the metaclass::"
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:474
+msgid ""
+"The reason for these behaviors is that if the metaclass contains an "
+"``__annotations__`` entry in its class dictionary, this prevents instances "
+"of the metaclass from using the ``__annotations__`` data descriptor on the "
+"base :py:class:`type` class. In the first case, accessing ``Meta."
+"__annotations__`` sets ``Meta.__dict__[\"__annotations__\"] = {}`` as a side "
+"effect. Then, looking up the ``__annotations__`` attribute on ``Y`` first "
+"sees the metaclass attribute, but skips it because it is a data descriptor. "
+"Next, it looks in the class dictionaries of the classes in its method "
+"resolution order (MRO), finds ``X.__annotations__``, and returns it. In the "
+"second example, there are no annotations anywhere in the MRO, so ``type."
+"__getattribute__`` falls back to returning the metaclass attribute."
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:487
+msgid "Metaclass behavior with PEP 649"
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:489
+msgid ""
+"With :pep:`649`, the behavior of accessing the ``.__annotations__`` "
+"attribute on classes when metaclasses are involved becomes even more "
+"erratic, because now ``__annotations__`` is only lazily added to the class "
+"dictionary even for classes with annotations. The new ``__annotate__`` "
+"attribute is also lazily created on classes without annotations, which "
+"causes further misbehaviors when metaclasses are involved."
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:496
+msgid ""
+"The cause of these problems is that we set the ``__annotate__`` and "
+"``__annotations__`` class dictionary entries only under some circumstances, "
+"and rely on descriptors defined on :py:class:`type` to fill them in if they "
+"are not set. When normal attribute lookup is used, this approach breaks down "
+"in the presence of metaclasses, because entries in the metaclass's own class "
+"dictionary can render the descriptors invisible."
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:503
+msgid ""
+"While we considered several approaches that would allow ``cls."
+"__annotations__`` and ``cls.__annotate__`` to work reliably when ``cls`` is "
+"a type with a custom metaclass, any such approach would expose significant "
+"complexity to advanced users. Instead, we recommend a simpler approach that "
+"confines the complexity to the ``annotationlib`` module: in ``annotationlib."
+"get_annotations``, we bypass normal attribute lookup by using the ``type."
+"__annotations__`` descriptor directly."
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:513
+msgid ""
+"Users should always use ``annotationlib.get_annotations`` to access the "
+"annotations of a class object, and ``annotationlib.get_annotate_function`` "
+"to access the ``__annotate__`` function. These functions will return only "
+"the class's own annotations, even when metaclasses are involved."
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:518
+msgid ""
+"The behavior of accessing the ``__annotations__`` and ``__annotate__`` "
+"attributes on classes with a metaclass other than ``builtins.type`` is "
+"unspecified. The documentation should warn against direct use of these "
+"attributes and recommend using the ``annotationlib`` module instead."
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:523
+msgid ""
+"Similarly, the presence of ``__annotations__`` and ``__annotate__`` keys in "
+"the class dictionary is an implementation detail and should not be relied "
+"upon."
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:530
+msgid ""
+"We considered two broad approaches for dealing with the behavior of the "
+"``__annotations__`` and ``__annotate__`` entries in classes:"
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:533
+msgid ""
+"Ensure that the entry is *always* present in the class dictionary, even if "
+"it is empty or has not yet been evaluated. This means we do not have to rely "
+"on the descriptors defined on :py:class:`type` to fill in the field, and "
+"therefore the metaclass's attributes will not interfere. (Prototype in "
+"`gh-120719 <https://github.com/python/cpython/pull/120719>`__.)"
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:538
+msgid ""
+"Ensure that the entry is *never* present in the class dictionary, or at "
+"least never added by logic in the language core. This means that the "
+"descriptors on :py:class:`type` will always be used, without interference "
+"from the metaclass. (Prototype in `gh-120816 <https://github.com/python/"
+"cpython/pull/120816>`__.)"
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:543
+msgid ""
+"Alex Waygood suggested an implementation using the first approach. When a "
+"heap type (such as a class created through the ``class`` statement) is "
+"created, ``cls.__dict__[\"__annotations__\"]`` is set to a special "
+"descriptor. On ``__get__``, the descriptor evaluates the annotations by "
+"calling ``__annotate__`` and returning the result. The annotations "
+"dictionary is cached within the descriptor instance. The descriptor also "
+"behaves like a mapping, so that code that uses ``cls."
+"__dict__[\"__annotations__\"]`` will still usually work: treating the object "
+"as a mapping will evaluate the annotations and behave as if the descriptor "
+"itself was the annotations dictionary. (Code that assumes that ``cls."
+"__dict__[\"__annotations__\"]`` is specifically an instance of ``dict`` may "
+"break, however.)"
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:555
+msgid ""
+"This approach is also straightforward to implement for ``__annotate__``: "
+"this attribute is already always set for classes with annotations, and we "
+"can set it explicitly to ``None`` for classes without annotations."
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:559
+msgid ""
+"While this approach would fix the known edge cases with metaclasses, it "
+"introduces significant complexity to all classes, including a new built-in "
+"type (for the annotations descriptor) with unusual behavior."
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:563
+msgid ""
+"The alternative approach would be to never set "
+"``__dict__[\"__annotations__\"]`` and use some other storage to store the "
+"cached annotations. This behavior change would have to apply even to classes "
+"defined under ``from __future__ import annotations``, because otherwise "
+"there could be buggy behavior if a class is defined without ``from "
+"__future__ import annotations`` but its metaclass does have the future "
+"enabled. As :pep:`649` previously noted, removing ``__annotations__`` from "
+"class dictionaries also has backwards compatibility implications: ``cls."
+"__dict__.get(\"__annotations__\")`` is a common idiom to retrieve "
+"annotations."
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:573
+msgid ""
+"This approach would also mean that accessing ``.__annotations__`` on an "
+"instance of an annotated class no longer works. While this behavior is not "
+"documented, it is a long-standing feature of Python and is relied upon by "
+"some users."
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:578
+msgid "Adding the ``VALUE_WITH_FAKE_GLOBALS`` format"
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:580 ../../peps/peps/pep-0749.rst:637
+#: ../../peps/peps/pep-0749.rst:774
 msgid ":pep:`649` specifies:"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:398
+#: ../../peps/peps/pep-0749.rst:582
 msgid ""
 "This PEP assumes that third-party libraries may implement their own "
 "``__annotate__`` methods, and those functions would almost certainly work "
@@ -754,104 +1009,116 @@ msgid ""
 "compiler will set it."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:409
+#: ../../peps/peps/pep-0749.rst:593
 msgid ""
-"We have not found a need for this mechanism during our work to add :pep:"
-"`649` support to the standard library. While it is true that custom "
-"``__annotate__`` functions may not work well with the \"fake globals\" "
-"environment, this technique is used only when the ``__annotate__`` function "
-"raises :py:exc:`NotImplementedError` to signal that it does not support the "
-"requested format. However, manually implemented ``__annotate__`` functions "
-"are likely to support all three annotation formats; often, they will consist "
-"of a call to ``annotationlib.call_annotate_function`` plus some "
-"transformation of the result."
+"However, this mechanism couples the implementation with low-level details of "
+"the code object. The code object flags are CPython-specific and the "
+"documentation :py:ref:`explicitly warns <inspect-module-co-flags>` against "
+"relying on the values."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:420
+#: ../../peps/peps/pep-0749.rst:598
 msgid ""
-"In addition, the proposed mechanism couples the implementation with low-"
-"level details of the code object. The code object flags are CPython-specific "
-"and the documentation :py:ref:`explicitly warns <inspect-module-co-flags>` "
-"against relying on the values."
+"Larry Hastings suggested an alternative approach that does not rely on code "
+"flags: a fourth format, ``VALUE_WITH_FAKE_GLOBALS``. Compiler-generated "
+"annotate functions would support only the ``VALUE`` and "
+"``VALUE_WITH_FAKE_GLOBALS`` formats, both of which are implemented "
+"identically. The standard library would use the ``VALUE_WITH_FAKE_GLOBALS`` "
+"format when invoking an annotate function in one of the special \"fake "
+"globals\" environments."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:428
+#: ../../peps/peps/pep-0749.rst:606
 msgid ""
-"The standard library will use the \"fake globals\" technique on any "
-"``__annotate__`` function that raises :py:exc:`NotImplementedError` when the "
-"requested format is not supported."
+"This approach is useful as a forward-compatible mechanism for adding new "
+"annotation formats in the future. Users who manually write annotate "
+"functions should raise ``NotImplementedError`` if the "
+"``VALUE_WITH_FAKE_GLOBALS`` format is requested, so the standard library "
+"will not call the manually written annotate function with \"fake globals\", "
+"which could have unpredictable results."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:432
+#: ../../peps/peps/pep-0749.rst:616
 msgid ""
-"Third-party code that implements ``__annotate__`` functions should either "
-"support all three annotation formats, or be prepared to handle the \"fake "
-"globals\" environment. This should be mentioned in the data model "
-"documentation for ``__annotate__``."
+"An additional format, ``FAKE_GLOBALS_VALUE``, is added to the ``Format`` "
+"enum in the ``annotationlib`` module, with value equal to 2. (As a result, "
+"the values of the other formats will shift relative to PEP 649: "
+"``FORWARDREF`` will be 3 and ``SOURCE`` will be 4.)"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:438
-msgid "Effect of setting ``__annotations__``"
+#: ../../peps/peps/pep-0749.rst:621
+msgid ""
+"Compiler-generated annotate functions will support this format and return "
+"the same value as they would return for the ``VALUE`` format. The standard "
+"library will pass this format to the ``__annotate__`` function when it is "
+"called in a \"fake globals\" environment, as used to implement the "
+"``FORWARDREF`` and ``SOURCE`` formats. All public functions in the "
+"``annotationlib`` module that accept a format argument will raise :py:exc:"
+"`NotImplementedError` if the format is ``FAKE_GLOBALS_VALUE``."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:442
+#: ../../peps/peps/pep-0749.rst:629
+msgid ""
+"Third-party code that implements ``__annotate__`` functions should raise :py:"
+"exc:`NotImplementedError` if the ``FAKE_GLOBALS_VALUE`` format is passed and "
+"the function is not prepared to be run in a \"fake globals\" environment. "
+"This should be mentioned in the data model documentation for "
+"``__annotate__``."
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:635
+msgid "Effect of deleting ``__annotations__``"
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:639
 msgid ""
 "Setting ``o.__annotations__`` to a legal value automatically sets ``o."
 "__annotate__`` to ``None``."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:445
+#: ../../peps/peps/pep-0749.rst:642
 msgid ""
-"We would prefer to keep ``__annotate__`` unchanged when ``__annotations__`` "
-"is written to. Conceptually, ``__annotate__`` provides the ground truth and "
-"``__annotations__`` is merely a cache, and we shouldn't throw away the "
-"ground truth if the cache is modified."
+"However, the PEP does not say what happens if the ``__annotations__`` "
+"attribute is deleted (using ``del``). It seems most consistent that deleting "
+"the attribute will also delete ``__annotate__``."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:450
+#: ../../peps/peps/pep-0749.rst:649
 msgid ""
-"The motivation for :pep:`649`'s behavior is to keep the two attributes in "
-"sync. However, this is impossible in general; if the ``__annotations__`` "
-"dictionary is modified in place, this will not be reflected in the "
-"``__annotate__`` attribute. The overall mental model for this area will be "
-"simpler if setting ``__annotations__`` has no effect on ``__annotate__``."
+"Deleting the ``__annotations__`` attribute on functions, modules, and "
+"classes results in setting ``__annotate__`` to None."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:459
-msgid ""
-"The value of ``__annotate__`` is not changed when ``__annotations__`` is set."
-msgstr ""
-
-#: ../../peps/peps/pep-0749.rst:462
+#: ../../peps/peps/pep-0749.rst:653
 msgid "Deferred evaluation of PEP 695 and 696 objects"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:464
+#: ../../peps/peps/pep-0749.rst:655
 msgid ""
 "Since :pep:`649` was written, Python 3.12 and 3.13 gained support for "
 "several new features that also use deferred evaluation, similar to the "
 "behavior this PEP proposes for annotations:"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:468
+#: ../../peps/peps/pep-0749.rst:659
 msgid ""
 "The value of type aliases created through the :py:keyword:`type` statement (:"
 "pep:`695`)"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:470
+#: ../../peps/peps/pep-0749.rst:661
 msgid ""
 "The bound and constraints of :py:class:`typing.TypeVar` objects created "
 "through the syntax for generics (:pep:`695`)"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:472
+#: ../../peps/peps/pep-0749.rst:663
 msgid ""
 "The default value of :py:class:`typing.TypeVar`, :py:class:`ParamSpec`, and :"
 "py:class:`typing.TypeVarTuple` objects (:pep:`696`)"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:475
+#: ../../peps/peps/pep-0749.rst:666
 msgid ""
 "Currently, these objects use deferred evaluation, but there is no direct "
 "access to the function object used for deferred evaluation. To enable the "
@@ -860,29 +1127,29 @@ msgid ""
 "using the FORWARDREF and SOURCE formats."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:484
+#: ../../peps/peps/pep-0749.rst:675
 msgid "We will add the following new attributes:"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:486
+#: ../../peps/peps/pep-0749.rst:677
 msgid "``evaluate_value`` on :py:class:`typing.TypeAliasType`"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:487
+#: ../../peps/peps/pep-0749.rst:678
 msgid ""
 "``evaluate_bound``, ``evaluate_constraints``, and ``evaluate_default`` on :"
 "py:class:`typing.TypeVar`"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:488
+#: ../../peps/peps/pep-0749.rst:679
 msgid "``evaluate_default`` on :py:class:`typing.ParamSpec`"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:489
+#: ../../peps/peps/pep-0749.rst:680
 msgid "``evaluate_default`` on :py:class:`typing.TypeVarTuple`"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:491
+#: ../../peps/peps/pep-0749.rst:682
 msgid ""
 "Except for ``evaluate_value``, these attributes may be ``None`` if the "
 "object does not have a bound, constraints, or default. Otherwise, the "
@@ -892,7 +1159,7 @@ msgid ""
 "dictionary of annotations. These attributes are read-only."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:498
+#: ../../peps/peps/pep-0749.rst:689
 msgid ""
 "Usually, users would use these attributes in combinations with "
 "``annotationlib.call_evaluate_function``. For example, to get a "
@@ -900,11 +1167,102 @@ msgid ""
 "call_evaluate_function(T.evaluate_bound, annotationlib.Format.SOURCE)``."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:504
+#: ../../peps/peps/pep-0749.rst:695
+msgid "Behavior of dataclass field types"
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:697
+msgid ""
+"One consequence of the deferred evaluation of annotations is that "
+"dataclasses can use forward references in their annotations:"
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:708
+msgid ""
+"However, the ``FORWARDREF`` format leaks into the field types of the "
+"dataclass:"
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:715
+msgid ""
+"We considered a change where the ``.type`` attribute of a field object would "
+"trigger evaluation of annotations, so that the field type could contain "
+"actual values in the case of forward references that were defined after the "
+"dataclass itself was created, but before the field type is accessed. "
+"However, this would also mean that accessing ``.type`` could now run "
+"arbitrary code in the annotation, and potentially throws errors such as :py:"
+"exc:`NameError`."
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:722
+msgid ""
+"Therefore, we consider it more user-friendly to keep the ``ForwardRef`` "
+"object in the type, and document that users who want to resolve forward "
+"references can use the ``ForwardRef.evaluate`` method."
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:726
+msgid ""
+"If use cases come up in the future, we could add additional functionality, "
+"such as a new method that re-evaluates the annotation from scratch."
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:730
+msgid "Renaming ``SOURCE`` to ``STRING``"
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:732
+msgid ""
+"The ``SOURCE`` format is meant for tools that need to show a human-readable "
+"format that is close to the original source code. However, we cannot "
+"retrieve the original source in ``__annotate__`` functions, and in some "
+"cases, we have ``__annotate__`` functions in Python code that do not have "
+"access to the original code. For example, this applies to :py:func:"
+"`dataclasses.make_dataclass` and the call-based syntax for :py:class:`typing."
+"TypedDict`."
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:739
+msgid ""
+"This makes the name ``SOURCE`` a bit of a misnomer. The goal of the format "
+"should indeed be to recreate the source, but the name is likely to mislead "
+"users in practice. A more neutral name would emphasize that the format "
+"returns an annotation dictionary with only strings. We suggest ``STRING``."
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:747
+msgid ""
+"The ``SOURCE`` format is renamed to ``STRING``. To reiterate the changes in "
+"this PEP, the four supported formats are now:"
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:750
+msgid ""
+"``VALUE``: the default format, which evaluates the annotations and returns "
+"the resulting values."
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:752
+msgid ""
+"``VALUE_WITH_FAKE_GLOBALS``: for internal use; should be handled like "
+"``VALUE`` by annotate functions that support execution with fake globals."
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:754
+msgid "``FORWARDREF``: replaces undefined names with ``ForwardRef`` objects."
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:755
+msgid ""
+"``STRING``: returns strings, attempts to recreate code close to the original "
+"source."
+msgstr ""
+
+#: ../../peps/peps/pep-0749.rst:758
 msgid "Miscellaneous implementation details"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:506
+#: ../../peps/peps/pep-0749.rst:760
 msgid ""
 ":pep:`649` goes into considerable detail on some aspects of the "
 "implementation. To avoid confusion, we describe a few aspects where the "
@@ -914,11 +1272,11 @@ msgid ""
 "reference."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:513
+#: ../../peps/peps/pep-0749.rst:767
 msgid "Supported operations on ``ForwardRef`` objects"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:515
+#: ../../peps/peps/pep-0749.rst:769
 msgid ""
 "The ``SOURCE`` format is implemented by the \"stringizer\" technique, where "
 "the globals dictionary of a function is augmented so that every lookup "
@@ -926,7 +1284,7 @@ msgid ""
 "that are performed on the object."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:522
+#: ../../peps/peps/pep-0749.rst:776
 msgid ""
 "In practice, the \"stringizer\" functionality will be implemented in the "
 "``ForwardRef`` object currently defined in the ``typing`` module.  "
@@ -935,7 +1293,7 @@ msgid ""
 "produce the real value (assuming all symbols referenced are defined)."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:530
+#: ../../peps/peps/pep-0749.rst:784
 msgid ""
 "However, this is likely to lead to confusion in practice. An object that "
 "implements stringizer functionality must implement almost all special "
@@ -945,7 +1303,7 @@ msgid ""
 "expects."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:537
+#: ../../peps/peps/pep-0749.rst:791
 msgid ""
 "The current implementation instead implements only a few useful methods on "
 "the ``ForwardRef`` class. During the evaluation of annotations, an instance "
@@ -954,48 +1312,48 @@ msgid ""
 "these internal objects into ``ForwardRef`` objects."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:544
+#: ../../peps/peps/pep-0749.rst:798
 msgid "Signature of ``__annotate__`` functions"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:546
+#: ../../peps/peps/pep-0749.rst:800
 msgid ":pep:`649` specifies the signature of ``__annotate__`` functions as:"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:548
+#: ../../peps/peps/pep-0749.rst:802
 msgid "``__annotate__(format: int) -> dict``"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:550
+#: ../../peps/peps/pep-0749.rst:804
 msgid ""
 "However, using ``format`` as a parameter name could lead to collisions if an "
-"annotation uses a class named ``format``. The parameter should be positional-"
-"only and have a name that cannot be a legal identifier in order to avoid "
-"this problem."
+"annotation uses a symbol named ``format``. The parameter should be "
+"positional-only and have a name that cannot be a legal identifier in order "
+"to avoid this problem."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:555
+#: ../../peps/peps/pep-0749.rst:809
 msgid ""
 "The current implementation uses the name ``.format`` with a leading dot, but "
 "the exact name should be considered an implementation detail and cannot be "
 "relied upon."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:559
+#: ../../peps/peps/pep-0749.rst:813
 msgid "The documentation may still use the name ``format`` for simplicity."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:562
+#: ../../peps/peps/pep-0749.rst:816
 msgid "Backwards Compatibility"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:564
+#: ../../peps/peps/pep-0749.rst:818
 msgid ""
 ":pep:`649` provides a thorough discussion of the backwards compatibility "
 "implications on existing code that uses either stock or :pep:`563` semantics."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:567
+#: ../../peps/peps/pep-0749.rst:821
 msgid ""
 "However, there is another set of compatibility problems: new code that is "
 "written assuming :pep:`649` semantics, but uses existing tools that eagerly "
@@ -1005,17 +1363,17 @@ msgid ""
 "py:func:`inspect.get_annotations`."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:573
+#: ../../peps/peps/pep-0749.rst:827
 msgid "Once :pep:`649` is implemented, code like this will work fine::"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:580
+#: ../../peps/peps/pep-0749.rst:834
 msgid ""
 "But this will not, unless ``@annotator`` is changed to use the new "
 "``FORWARDREF`` format::"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:589
+#: ../../peps/peps/pep-0749.rst:843
 msgid ""
 "This is not strictly a backwards compatibility issue, since no previously "
 "working code would break; before :pep:`649`, this code would have raised "
@@ -1027,26 +1385,26 @@ msgid ""
 "way."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:596
+#: ../../peps/peps/pep-0749.rst:850
 msgid ""
 "We will update those parts of the standard library that are affected by this "
 "problem, and we propose to add commonly useful functionality to the new "
 "``annotationlib`` module, so third-party tools can use the same set of tools."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:602
+#: ../../peps/peps/pep-0749.rst:856
 msgid "Security Implications"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:604
+#: ../../peps/peps/pep-0749.rst:858
 msgid "None."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:608
+#: ../../peps/peps/pep-0749.rst:862
 msgid "How to Teach This"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:610
+#: ../../peps/peps/pep-0749.rst:864
 msgid ""
 "The semantics of :pep:`649`, as modified by this PEP, should largely be "
 "intuitive for users who add annotations to their code. We eliminate the need "
@@ -1054,7 +1412,7 @@ msgid ""
 "references, a major source of confusion for users."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:615
+#: ../../peps/peps/pep-0749.rst:869
 msgid ""
 "For advanced users who need to introspect annotations, the story becomes "
 "more complex. The documentation of the new ``annotationlib`` module will "
@@ -1062,21 +1420,21 @@ msgid ""
 "annotations."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:621
+#: ../../peps/peps/pep-0749.rst:875
 msgid "Reference Implementation"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:623
+#: ../../peps/peps/pep-0749.rst:877
 msgid ""
 "The in-progress PR `#119891 <https://github.com/python/cpython/"
 "pull/119891>`__ implements much of this PEP."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:627
+#: ../../peps/peps/pep-0749.rst:881
 msgid "Open Issues"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:629
+#: ../../peps/peps/pep-0749.rst:883
 msgid ""
 "We may discover additional areas where :pep:`649` needs clarification or "
 "amendment as we make progress on implementing it. Readers are encouraged to "
@@ -1086,69 +1444,34 @@ msgid ""
 "of this PEP."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:636
-msgid "Should dataclass field types use deferred evaluation?"
-msgstr ""
-
-#: ../../peps/peps/pep-0749.rst:638
-msgid ""
-"The current draft implementation already supports deferred evaluation in "
-"dataclasses, so this works:"
-msgstr ""
-
-#: ../../peps/peps/pep-0749.rst:649
-msgid ""
-"However, the ``FORWARDREF`` format leaks into the field types of the "
-"dataclass:"
-msgstr ""
-
-#: ../../peps/peps/pep-0749.rst:656
-msgid ""
-"We could instead add deferred evaluation for the field type, similar to that "
-"outlined above for type alias values."
-msgstr ""
-
-#: ../../peps/peps/pep-0749.rst:659
-msgid "Accessing ``.type`` might throw an error:"
-msgstr ""
-
-#: ../../peps/peps/pep-0749.rst:679
-msgid ""
-"But users could use ``annotationlib.call_evaluate_function`` to get the type "
-"in other formats:"
-msgstr ""
-
-#: ../../peps/peps/pep-0749.rst:688
-msgid ""
-"Other variations are possible. For example, we could leave the ``type`` "
-"attribute unchanged, and only add the ``evaluate_type`` method. This avoids "
-"unpleasant surprises where accessing ``.type`` may throw an exception."
-msgstr ""
-
-#: ../../peps/peps/pep-0749.rst:693
+#: ../../peps/peps/pep-0749.rst:890
 msgid "Acknowledgments"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:695
+#: ../../peps/peps/pep-0749.rst:892
 msgid ""
 "First of all, I thank Larry Hastings for writing :pep:`649`. This PEP "
 "modifies some of his initial decisions, but the overall design is still his."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:698
+#: ../../peps/peps/pep-0749.rst:895
 msgid ""
-"I thank Carl Meyer and Alex Waygood for feedback on early drafts of this PEP."
+"I thank Carl Meyer and Alex Waygood for feedback on early drafts of this "
+"PEP. Alex Waygood, Alyssa Coghlan, and David Ellis provided insightful "
+"feedback and suggestions on the interaction between metaclasses and "
+"``__annotations__``. Larry Hastings also provided useful feedback on this "
+"PEP."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:701
+#: ../../peps/peps/pep-0749.rst:901
 msgid "Appendix"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:704
+#: ../../peps/peps/pep-0749.rst:904
 msgid "Which expressions can be stringified?"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:706
+#: ../../peps/peps/pep-0749.rst:906
 msgid ""
 ":pep:`649` acknowledges that the stringifier cannot handle all expressions. "
 "Now that we have a draft implementation, we can be more precise about the "
@@ -1158,14 +1481,14 @@ msgid ""
 "documentation, but creating it is a useful exercise."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:712
+#: ../../peps/peps/pep-0749.rst:912
 msgid ""
 "First, the stringifier of course cannot recover any information that is not "
 "present in the compiled code, including comments, whitespace, "
 "parenthesization, and operations that get simplified by the AST optimizer."
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:716
+#: ../../peps/peps/pep-0749.rst:916
 msgid ""
 "Second, the stringifier can intercept almost all operations that involve "
 "names looked up in some scope, but it cannot intercept operations that "
@@ -1175,172 +1498,172 @@ msgid ""
 "access to any globals or builtins. For example:"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:730
+#: ../../peps/peps/pep-0749.rst:930
 msgid ""
 "(This particular example worked for me on the current implementation of a "
 "draft of this PEP; the exact code may not keep working in the future.)"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:733
+#: ../../peps/peps/pep-0749.rst:933
 msgid "The following are supported (sometimes with caveats):"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:735
+#: ../../peps/peps/pep-0749.rst:935
 msgid "``BinOp``"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:736
+#: ../../peps/peps/pep-0749.rst:936
 msgid "``UnaryOp``"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:738
+#: ../../peps/peps/pep-0749.rst:938
 msgid ""
 "``Invert`` (``~``), ``UAdd`` (``+``), and ``USub`` (``-``) are supported"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:739
+#: ../../peps/peps/pep-0749.rst:939
 msgid "``Not`` (``not``) is not supported"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:741
+#: ../../peps/peps/pep-0749.rst:941
 msgid "``Dict`` (except when using ``**`` unpacking)"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:742
+#: ../../peps/peps/pep-0749.rst:942
 msgid "``Set``"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:743
+#: ../../peps/peps/pep-0749.rst:943
 msgid "``Compare``"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:745
+#: ../../peps/peps/pep-0749.rst:945
 msgid "``Eq`` and ``NotEq`` are supported"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:746
+#: ../../peps/peps/pep-0749.rst:946
 msgid ""
 "``Lt``, ``LtE``, ``Gt``, and ``GtE`` are supported, but the operand may be "
 "flipped"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:747
+#: ../../peps/peps/pep-0749.rst:947
 msgid "``Is``, ``IsNot``, ``In``, and ``NotIn`` are not supported"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:749
+#: ../../peps/peps/pep-0749.rst:949
 msgid "``Call`` (except when using ``**`` unpacking)"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:750
+#: ../../peps/peps/pep-0749.rst:950
 msgid ""
 "``Constant`` (though not the exact representation of the constant; for "
 "example, escape sequences in strings are lost; hexadecimal numbers are "
 "converted to decimal)"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:752
+#: ../../peps/peps/pep-0749.rst:952
 msgid "``Attribute`` (assuming the value is not a constant)"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:753
+#: ../../peps/peps/pep-0749.rst:953
 msgid "``Subscript`` (assuming the value is not a constant)"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:754
+#: ../../peps/peps/pep-0749.rst:954
 msgid "``Starred`` (``*`` unpacking)"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:755
+#: ../../peps/peps/pep-0749.rst:955
 msgid "``Name``"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:756
+#: ../../peps/peps/pep-0749.rst:956
 msgid "``List``"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:757
+#: ../../peps/peps/pep-0749.rst:957
 msgid "``Tuple``"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:758
+#: ../../peps/peps/pep-0749.rst:958
 msgid "``Slice``"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:760
+#: ../../peps/peps/pep-0749.rst:960
 msgid ""
 "The following are unsupported, but throw an informative error when "
 "encountered by the stringifier:"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:763
+#: ../../peps/peps/pep-0749.rst:963
 msgid ""
 "``FormattedValue`` (f-strings; error is not detected if conversion "
 "specifiers like ``!r`` are used)"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:765
+#: ../../peps/peps/pep-0749.rst:965
 msgid "``JoinedStr`` (f-strings)"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:767
+#: ../../peps/peps/pep-0749.rst:967
 msgid "The following are unsupported and result in incorrect output:"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:769
+#: ../../peps/peps/pep-0749.rst:969
 msgid "``BoolOp`` (``and`` and ``or``)"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:770
+#: ../../peps/peps/pep-0749.rst:970
 msgid "``IfExp``"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:771
+#: ../../peps/peps/pep-0749.rst:971
 msgid "``Lambda``"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:772
+#: ../../peps/peps/pep-0749.rst:972
 msgid "``ListComp``"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:773
+#: ../../peps/peps/pep-0749.rst:973
 msgid "``SetComp``"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:774
+#: ../../peps/peps/pep-0749.rst:974
 msgid "``DictComp``"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:775
+#: ../../peps/peps/pep-0749.rst:975
 msgid "``GeneratorExp``"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:777
+#: ../../peps/peps/pep-0749.rst:977
 msgid ""
 "The following are disallowed in annotation scopes and therefore not relevant:"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:779
+#: ../../peps/peps/pep-0749.rst:979
 msgid "``NamedExpr`` (``:=``)"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:780
+#: ../../peps/peps/pep-0749.rst:980
 msgid "``Await``"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:781
+#: ../../peps/peps/pep-0749.rst:981
 msgid "``Yield``"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:782
+#: ../../peps/peps/pep-0749.rst:982
 msgid "``YieldFrom``"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:786
+#: ../../peps/peps/pep-0749.rst:986
 msgid "Copyright"
 msgstr ""
 
-#: ../../peps/peps/pep-0749.rst:788
+#: ../../peps/peps/pep-0749.rst:988
 msgid ""
 "This document is placed in the public domain or under the CC0-1.0-Universal "
 "license, whichever is more permissive."

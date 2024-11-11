@@ -6,70 +6,79 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PEPs\n"
+"Project-Id-Version:  PEPs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 20:07+0000\n"
+"POT-Creation-Date: 2024-11-11 15:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.16.0\n"
 
-#: ../pep-0396.txt
+#: ../../peps/peps/pep-0396.rst
 msgid "Author"
 msgstr "Autor"
 
-#: ../pep-0396.txt:5
+#: ../../peps/peps/pep-0396.rst:3
 msgid "Barry Warsaw <barry@python.org>"
 msgstr ""
 
-#: ../pep-0396.txt
+#: ../../peps/peps/pep-0396.rst
 msgid "Status"
 msgstr "Status"
 
-#: ../pep-0396.txt:6
-msgid "Rejected"
+#: ../../peps/peps/pep-0396.rst:4
+msgid "Withdrawn"
 msgstr ""
 
-#: ../pep-0396.txt
+#: ../../peps/peps/pep-0396.rst
 msgid "Type"
 msgstr "Tipo"
 
-#: ../pep-0396.txt:7
+#: ../../peps/peps/pep-0396.rst:5
 msgid "Informational"
 msgstr ""
 
-#: ../pep-0396.txt
+#: ../../peps/peps/pep-0396.rst
 msgid "Topic"
 msgstr ""
 
-#: ../pep-0396.txt:8
+#: ../../peps/peps/pep-0396.rst:6
 msgid "Packaging"
 msgstr ""
 
-#: ../pep-0396.txt
+#: ../../peps/peps/pep-0396.rst
 msgid "Created"
 msgstr "Criada em"
 
-#: ../pep-0396.txt:10
+#: ../../peps/peps/pep-0396.rst:7
 msgid "16-Mar-2011"
 msgstr ""
 
-#: ../pep-0396.txt
+#: ../../peps/peps/pep-0396.rst
 msgid "Post-History"
 msgstr "Pós-história"
 
-#: ../pep-0396.txt:11
+#: ../../peps/peps/pep-0396.rst:8
 msgid "05-Apr-2011"
 msgstr ""
 
-#: ../pep-0396.txt:15
+#: ../../peps/peps/pep-0396.rst:12
+msgid ""
+"Refer to :ref:`packaging:runtime-version-access` and :ref:`packaging:single-"
+"source-version` in the Python Packaging User Guide for up to date "
+"recommendations on accessing package version information at runtime, and on "
+"defining runtime ``__version__`` attributes which are automatically kept "
+"consistent with package distribution metadata"
+msgstr ""
+
+#: ../../peps/peps/pep-0396.rst:21
 msgid "Abstract"
 msgstr ""
 
-#: ../pep-0396.txt:17
+#: ../../peps/peps/pep-0396.rst:23
 msgid ""
 "Given that it is useful and common to specify version numbers for Python "
 "modules, and given that different ways of doing this have grown organically "
@@ -79,17 +88,17 @@ msgid ""
 "version number of their Python module."
 msgstr ""
 
-#: ../pep-0396.txt:24
+#: ../../peps/peps/pep-0396.rst:30
 msgid ""
 "Conformance with this PEP is optional, however other Python tools (such as "
 "``distutils2`` [1]_) may be adapted to use the conventions defined here."
 msgstr ""
 
-#: ../pep-0396.txt:29
-msgid "PEP Rejection"
+#: ../../peps/peps/pep-0396.rst:36
+msgid "PEP Rejection/Withdrawal"
 msgstr ""
 
-#: ../pep-0396.txt:31
+#: ../../peps/peps/pep-0396.rst:38
 msgid ""
 "This PEP was formally rejected on 2021-04-14.  The packaging ecosystem has "
 "changed significantly in the intervening years since this PEP was first "
@@ -97,11 +106,29 @@ msgid ""
 "a much better experience."
 msgstr ""
 
-#: ../pep-0396.txt:37
+#: ../../peps/peps/pep-0396.rst:43
+msgid ""
+"This rejection was reclassified as a withdrawal on 2024-10-21, as the "
+"previous state was being misinterpreted [12]_ as suggesting that *no* "
+"modules should be defining ``__version__`` attributes, which definitely "
+"isn't the case."
+msgstr ""
+
+#: ../../peps/peps/pep-0396.rst:48
+msgid ""
+"Modules are still free to define ``__version__`` if they choose to. However, "
+"choosing *not* to do so won't interfere with looking up the version "
+"information for installed distribution packages, so an Informational PEP "
+"isn't the right tool to document community conventions around the use of "
+"module ``__version__`` attributes (they're better covered as part of the "
+"Python Packaging User Guide)."
+msgstr ""
+
+#: ../../peps/peps/pep-0396.rst:57
 msgid "User Stories"
 msgstr ""
 
-#: ../pep-0396.txt:39
+#: ../../peps/peps/pep-0396.rst:59
 msgid ""
 "Alice is writing a new module, called ``alice``, which she wants to share "
 "with other Python developers.  ``alice`` is a simple module and lives in one "
@@ -110,7 +137,7 @@ msgid ""
 "entirely in one file, she wants to add the version number to that file."
 msgstr ""
 
-#: ../pep-0396.txt:46
+#: ../../peps/peps/pep-0396.rst:66
 msgid ""
 "Bob has written a module called ``bob`` which he has shared with many "
 "users.  ``bob.py`` contains a version number for the convenience of his "
@@ -121,7 +148,7 @@ msgid ""
 "even though his users now get it from the Cheeseshop."
 msgstr ""
 
-#: ../pep-0396.txt:55
+#: ../../peps/peps/pep-0396.rst:75
 msgid ""
 "Carol maintains several namespace packages, each of which are independently "
 "developed and distributed.  In order for her users to properly specify "
@@ -132,7 +159,7 @@ msgid ""
 "version number when she builds the *sdist* archive."
 msgstr ""
 
-#: ../pep-0396.txt:64
+#: ../../peps/peps/pep-0396.rst:84
 msgid ""
 "David maintains a package in the standard library, and also produces "
 "standalone versions for other versions of Python.  The standard library copy "
@@ -140,11 +167,11 @@ msgid ""
 "used for the standalone distributions as well."
 msgstr ""
 
-#: ../pep-0396.txt:71
+#: ../../peps/peps/pep-0396.rst:91
 msgid "Rationale"
 msgstr ""
 
-#: ../pep-0396.txt:73
+#: ../../peps/peps/pep-0396.rst:93
 msgid ""
 "Python modules, both in the standard library and available from third "
 "parties, have long included version numbers.  There are established de facto "
@@ -160,7 +187,7 @@ msgid ""
 "developers dates back to 1995."
 msgstr ""
 
-#: ../pep-0396.txt:87
+#: ../../peps/peps/pep-0396.rst:107
 msgid ""
 "Another example of version information is the sqlite3 [5]_ module with its "
 "``sqlite_version_info``, ``version``, and ``version_info`` attributes.  It "
@@ -169,7 +196,7 @@ msgid ""
 "library."
 msgstr ""
 
-#: ../pep-0396.txt:93
+#: ../../peps/peps/pep-0396.rst:113
 msgid ""
 "This informational PEP codifies established practice, and recommends "
 "standard ways of describing module version numbers, along with some use "
@@ -179,18 +206,18 @@ msgid ""
 "in the Python universe may comply as well."
 msgstr ""
 
-#: ../pep-0396.txt:102
+#: ../../peps/peps/pep-0396.rst:122
 msgid "Specification"
 msgstr ""
 
-#: ../pep-0396.txt:104
+#: ../../peps/peps/pep-0396.rst:124
 msgid ""
 "In general, modules in the standard library SHOULD NOT have version "
 "numbers.  They implicitly carry the version number of the Python release "
 "they are included in."
 msgstr ""
 
-#: ../pep-0396.txt:108
+#: ../../peps/peps/pep-0396.rst:128
 msgid ""
 "On a case-by-case basis, standard library modules which are also released in "
 "standalone form for other Python versions MAY include a module version "
@@ -198,66 +225,66 @@ msgid ""
 "number when packaged separately."
 msgstr ""
 
-#: ../pep-0396.txt:113
+#: ../../peps/peps/pep-0396.rst:133
 msgid ""
 "When a module (or package) includes a version number, the version SHOULD be "
 "available in the ``__version__`` attribute."
 msgstr ""
 
-#: ../pep-0396.txt:116
+#: ../../peps/peps/pep-0396.rst:136
 msgid ""
 "For modules which live inside a namespace package, the module SHOULD include "
 "the ``__version__`` attribute.  The namespace package itself SHOULD NOT "
 "include its own ``__version__`` attribute."
 msgstr ""
 
-#: ../pep-0396.txt:121
+#: ../../peps/peps/pep-0396.rst:141
 msgid "The ``__version__`` attribute's value SHOULD be a string."
 msgstr ""
 
-#: ../pep-0396.txt:123
+#: ../../peps/peps/pep-0396.rst:143
 msgid ""
 "Module version numbers SHOULD conform to the normalized version format "
 "specified in :pep:`386`."
 msgstr ""
 
-#: ../pep-0396.txt:126
+#: ../../peps/peps/pep-0396.rst:146
 msgid ""
 "Module version numbers SHOULD NOT contain version control system supplied "
 "revision numbers, or any other semantically different version numbers (e.g. "
 "underlying library version number)."
 msgstr ""
 
-#: ../pep-0396.txt:130
+#: ../../peps/peps/pep-0396.rst:150
 msgid ""
 "The ``version`` attribute in a classic distutils ``setup.py`` file, or the :"
 "pep:`345` ``Version`` metadata field SHOULD be derived from the "
 "``__version__`` field, or vice versa."
 msgstr ""
 
-#: ../pep-0396.txt:136
+#: ../../peps/peps/pep-0396.rst:156
 msgid "Examples"
 msgstr ""
 
-#: ../pep-0396.txt:138
+#: ../../peps/peps/pep-0396.rst:158
 msgid "Retrieving the version number from a third party package::"
 msgstr ""
 
-#: ../pep-0396.txt:144
+#: ../../peps/peps/pep-0396.rst:164
 msgid ""
 "Retrieving the version number from a standard library package that is also "
 "distributed as a standalone module::"
 msgstr ""
 
-#: ../pep-0396.txt:151
+#: ../../peps/peps/pep-0396.rst:171
 msgid "Version numbers for namespace packages::"
 msgstr ""
 
-#: ../pep-0396.txt:173
+#: ../../peps/peps/pep-0396.rst:193
 msgid "Deriving"
 msgstr ""
 
-#: ../pep-0396.txt:175
+#: ../../peps/peps/pep-0396.rst:195
 msgid ""
 "Module version numbers can appear in at least two places, and sometimes "
 "more.  For example, in accordance with this PEP, they are available "
@@ -270,7 +297,7 @@ msgid ""
 "from this single definition."
 msgstr ""
 
-#: ../pep-0396.txt:186
+#: ../../peps/peps/pep-0396.rst:206
 msgid ""
 "This could be done in any number of ways, a few of which are outlined "
 "below.  These are included for illustrative purposes only and are not "
@@ -279,21 +306,21 @@ msgid ""
 "their use in some situations."
 msgstr ""
 
-#: ../pep-0396.txt:192
+#: ../../peps/peps/pep-0396.rst:212
 msgid "Let's say Elle adds this attribute to her module file ``elle.py``::"
 msgstr ""
 
-#: ../pep-0396.txt:198
+#: ../../peps/peps/pep-0396.rst:218
 msgid "Classic distutils"
 msgstr ""
 
-#: ../pep-0396.txt:200
+#: ../../peps/peps/pep-0396.rst:220
 msgid ""
 "In classic distutils, the simplest way to add the version string to the "
 "``setup()`` function in ``setup.py`` is to do something like this::"
 msgstr ""
 
-#: ../pep-0396.txt:207
+#: ../../peps/peps/pep-0396.rst:227
 msgid ""
 "In the PEP author's experience however, this can fail in some cases, such as "
 "when the module uses automatic Python 3 conversion via the ``2to3`` program "
@@ -301,7 +328,7 @@ msgid ""
 "been converted)."
 msgstr ""
 
-#: ../pep-0396.txt:212
+#: ../../peps/peps/pep-0396.rst:232
 msgid ""
 "In that case, it's not much more difficult to write a little code to parse "
 "the ``__version__`` from the file rather than importing it. Without "
@@ -309,18 +336,18 @@ msgid ""
 "will provide a way to parse version strings from files. E.g.::"
 msgstr ""
 
-#: ../pep-0396.txt:223
+#: ../../peps/peps/pep-0396.rst:243
 msgid "Distutils2"
 msgstr ""
 
-#: ../pep-0396.txt:225
+#: ../../peps/peps/pep-0396.rst:245
 msgid ""
 "Because the distutils2 style ``setup.cfg`` is declarative, we can't run any "
 "code to extract the ``__version__`` attribute, either via import or via "
 "parsing."
 msgstr ""
 
-#: ../pep-0396.txt:229
+#: ../../peps/peps/pep-0396.rst:249
 msgid ""
 "In consultation with the distutils-sig [9]_, two options are proposed.  Both "
 "entail containing the version number in a file, and declaring that file in "
@@ -328,32 +355,32 @@ msgid ""
 "version number, the ``version-file`` key will be used::"
 msgstr ""
 
-#: ../pep-0396.txt:238
+#: ../../peps/peps/pep-0396.rst:258
 msgid ""
 "When the version number is contained within a larger file, e.g. of Python "
 "code, such that the file must be parsed to extract the version, the key "
 "``version-from-file`` will be used::"
 msgstr ""
 
-#: ../pep-0396.txt:245
+#: ../../peps/peps/pep-0396.rst:265
 msgid ""
 "A parsing method similar to that described above will be performed on the "
 "file named after the colon.  The exact recipe for doing this will be "
 "discussed in the appropriate distutils2 development forum."
 msgstr ""
 
-#: ../pep-0396.txt:249
+#: ../../peps/peps/pep-0396.rst:269
 msgid ""
 "An alternative is to only define the version number in ``setup.cfg`` and use "
 "the ``pkgutil`` module [8]_ to make it available programmatically.  E.g. in "
 "``elle.py``::"
 msgstr ""
 
-#: ../pep-0396.txt:258
+#: ../../peps/peps/pep-0396.rst:278
 msgid "PEP 376 metadata"
 msgstr ""
 
-#: ../pep-0396.txt:260
+#: ../../peps/peps/pep-0396.rst:280
 msgid ""
 ":pep:`376` defines a standard for static metadata, but doesn't describe the "
 "process by which this metadata gets created.  It is highly desirable for the "
@@ -362,47 +389,53 @@ msgid ""
 "will be available for introspection even when the code is not installed."
 msgstr ""
 
-#: ../pep-0396.txt:269
+#: ../../peps/peps/pep-0396.rst:289
 msgid "References"
 msgstr "Referências"
 
-#: ../pep-0396.txt:271
+#: ../../peps/peps/pep-0396.rst:291
 msgid "Distutils2 documentation (http://distutils2.notmyidea.org/)"
 msgstr ""
 
-#: ../pep-0396.txt:274
+#: ../../peps/peps/pep-0396.rst:294
 msgid "The Cheeseshop (Python Package Index) (http://pypi.python.org)"
 msgstr ""
 
-#: ../pep-0396.txt:277
+#: ../../peps/peps/pep-0396.rst:297
 msgid "http://docs.python.org/distutils/setupscript.html"
 msgstr ""
 
-#: ../pep-0396.txt:279
+#: ../../peps/peps/pep-0396.rst:299
 msgid ""
 "sqlite3 module documentation (http://docs.python.org/library/sqlite3.html)"
 msgstr ""
 
-#: ../pep-0396.txt:282
+#: ../../peps/peps/pep-0396.rst:302
 msgid ""
 "pkgutil - Package utilities (http://distutils2.notmyidea.org/library/pkgutil."
 "html)"
 msgstr ""
 
-#: ../pep-0396.txt:285
+#: ../../peps/peps/pep-0396.rst:305
 msgid "https://mail.python.org/pipermail/distutils-sig/2011-June/017862.html"
 msgstr ""
 
-#: ../pep-0396.txt:287
+#: ../../peps/peps/pep-0396.rst:307
 msgid ""
 "importlib.metadata (https://docs.python.org/3/library/importlib.metadata."
 "html#distribution-versions)"
 msgstr ""
 
-#: ../pep-0396.txt:292
+#: ../../peps/peps/pep-0396.rst:310
+msgid ""
+"Misinterpreting the significance of this PEP's rejection (https://discuss."
+"python.org/t/please-make-package-version-go-away/58501)"
+msgstr ""
+
+#: ../../peps/peps/pep-0396.rst:315
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../pep-0396.txt:294
+#: ../../peps/peps/pep-0396.rst:317
 msgid "This document has been placed in the public domain."
 msgstr "Este documento foi colocado em domínio público."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PEPs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-14 02:33+0000\n"
+"POT-Creation-Date: 2024-11-11 15:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: pt_BR\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.15.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../../peps/peps/pep-0741.rst
 msgid "Author"
@@ -42,11 +42,11 @@ msgid "Status"
 msgstr ""
 
 #: ../../peps/peps/pep-0741.rst:5
-msgid "Draft"
+msgid "Final"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst ../../peps/peps/pep-0741.rst:272
-#: ../../peps/peps/pep-0741.rst:366
+#: ../../peps/peps/pep-0741.rst ../../peps/peps/pep-0741.rst:270
+#: ../../peps/peps/pep-0741.rst:364
 msgid "Type"
 msgstr ""
 
@@ -81,30 +81,40 @@ msgid ""
 "configuration-c-api-second-version/45403>`__,"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:13
+#: ../../peps/peps/pep-0741.rst
+msgid "Resolution"
+msgstr ""
+
+#: ../../peps/peps/pep-0741.rst:11
+msgid ""
+"https://discuss.python.org/t/pep-741-python-configuration-c-api-second-"
+"version/45403/88"
+msgstr ""
+
+#: ../../peps/peps/pep-0741.rst:14
 msgid "Abstract"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:15
+#: ../../peps/peps/pep-0741.rst:16
 msgid ""
 "Add a C API to configure the Python initialization without relying on C "
 "structures and the ability to make ABI-compatible changes in the future."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:18
+#: ../../peps/peps/pep-0741.rst:19
 msgid ""
 "Complete :pep:`587` API by adding ``PyInitConfig_AddModule()`` which can be "
 "used to add a built-in extension module; feature previously referred to as "
 "the \"inittab\"."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:22
+#: ../../peps/peps/pep-0741.rst:23
 msgid ""
 "Add ``PyConfig_Get()`` and ``PyConfig_Set()`` functions to get and set the "
 "current runtime configuration."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:25
+#: ../../peps/peps/pep-0741.rst:26
 msgid ""
 ":pep:`587` \"Python Initialization Configuration\" unified all the ways to "
 "configure the Python **initialization**. This PEP unifies also the "
@@ -114,13 +124,7 @@ msgid ""
 "\"Isolated\" choices (:pep:`587`), to simplify the API further."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:32
-msgid ""
-"This new API replaces the deprecated and incomplete legacy API which is "
-"scheduled for removal between Python 3.13 and Python 3.15."
-msgstr ""
-
-#: ../../peps/peps/pep-0741.rst:35
+#: ../../peps/peps/pep-0741.rst:33
 msgid ""
 "The lower level :pep:`587` ``PyConfig`` API remains available for use cases "
 "with an intentionally higher level of coupling to CPython implementation "
@@ -128,21 +132,21 @@ msgid ""
 "including its configuration mechanisms)."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:42
+#: ../../peps/peps/pep-0741.rst:40
 msgid "Rationale"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:45
+#: ../../peps/peps/pep-0741.rst:43
 msgid "Get the runtime configuration"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:47
+#: ../../peps/peps/pep-0741.rst:45
 msgid ""
 ":pep:`587` has no API to **get** the **current** runtime configuration, only "
 "to **configure** the Python **initialization**."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:50
+#: ../../peps/peps/pep-0741.rst:48
 msgid ""
 "For example, the global configuration variable ``Py_UnbufferedStdioFlag`` "
 "was deprecated in Python 3.12 and using ``PyConfig.buffered_stdio`` is "
@@ -150,19 +154,19 @@ msgid ""
 "API to get ``PyConfig.buffered_stdio``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:56
+#: ../../peps/peps/pep-0741.rst:54
 msgid ""
 "Users of the limited C API are asking for a public API to get the current "
 "runtime configuration."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:59
+#: ../../peps/peps/pep-0741.rst:57
 msgid ""
 "Cython needs to get the ``optimization_level`` configuration option: `issue "
 "<https://github.com/python/cpython/issues/99872>`_."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:62
+#: ../../peps/peps/pep-0741.rst:60
 msgid ""
 "When global configuration variables were deprecated in 2022, `Marc-André "
 "Lemburg requested <https://github.com/python/cpython/"
@@ -170,19 +174,19 @@ msgid ""
 "configuration variables at runtime (not only during Python initialization)."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:70
+#: ../../peps/peps/pep-0741.rst:68
 msgid "Security fix"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:72
+#: ../../peps/peps/pep-0741.rst:70
 msgid ""
 "To fix `CVE-2020-10735 <https://cve.mitre.org/cgi-bin/cvename.cgi?"
-"name=CVE-2020-10735>`_, a denial-of-service when converting very a large "
+"name=CVE-2020-10735>`_, a denial-of-service when converting a very large "
 "string to an integer (in base 10), it was discussed to add a new "
 "``PyConfig`` member to stable branches which affects the ABI."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:78
+#: ../../peps/peps/pep-0741.rst:76
 msgid ""
 "Gregory P. Smith proposed a different API using text based configuration "
 "file to not be limited by ``PyConfig`` members: `FR: Allow private runtime "
@@ -191,7 +195,7 @@ msgid ""
 "without-breaking-the-pyconfig-abi/18004>`__ (August 2022)."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:84
+#: ../../peps/peps/pep-0741.rst:82
 msgid ""
 "In the end, it was decided to not add a new ``PyConfig`` member to stable "
 "branches, but only add a new ``PyConfig.int_max_str_digits`` member to the "
@@ -199,11 +203,11 @@ msgid ""
 "variable (unrelated to ``PyConfig``) is used in stable branches."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:92
+#: ../../peps/peps/pep-0741.rst:90
 msgid "Redundancy between PyPreConfig and PyConfig"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:94
+#: ../../peps/peps/pep-0741.rst:92
 msgid ""
 "The Python preinitialization uses the ``PyPreConfig`` structure and the "
 "Python initialization uses the ``PyConfig`` structure. Both structures have "
@@ -211,53 +215,53 @@ msgid ""
 "``use_environment``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:99
+#: ../../peps/peps/pep-0741.rst:97
 msgid ""
 "The redundancy is caused by the fact that the two structures are separated, "
 "whereas some ``PyConfig`` members are needed by the preinitialization."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:105
+#: ../../peps/peps/pep-0741.rst:103
 msgid "Embedding Python"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:108
+#: ../../peps/peps/pep-0741.rst:106
 msgid "Applications embedding Python"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:110 ../../peps/peps/pep-0741.rst:138
+#: ../../peps/peps/pep-0741.rst:108 ../../peps/peps/pep-0741.rst:136
 msgid "Examples:"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:112
+#: ../../peps/peps/pep-0741.rst:110
 msgid "`Blender 3D graphics <https://www.blender.org/>`_."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:113
+#: ../../peps/peps/pep-0741.rst:111
 msgid "`fontforge <https://fontforge.org/>`_ font editor."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:114
+#: ../../peps/peps/pep-0741.rst:112
 msgid "`Gimp <https://www.gimp.org/>`_."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:115
+#: ../../peps/peps/pep-0741.rst:113
 msgid "`LibreOffice <https://www.libreoffice.org/>`_."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:116
+#: ../../peps/peps/pep-0741.rst:114
 msgid "`OBS Studio <https://obsproject.com/>`_."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:117
+#: ../../peps/peps/pep-0741.rst:115
 msgid "`Tiled <https://www.mapeditor.org/>`_."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:118
+#: ../../peps/peps/pep-0741.rst:116
 msgid "`vim <https://www.vim.org/>`_ text editor."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:120
+#: ../../peps/peps/pep-0741.rst:118
 msgid ""
 "On Linux, FreeBSD and macOS, applications are usually either statically "
 "linked to a ``libpython``, or load dynamically a ``libpython`` . The "
@@ -265,14 +269,14 @@ msgid ""
 "Python 3.12 on Linux."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:125
+#: ../../peps/peps/pep-0741.rst:123
 msgid ""
 "The vim project can target the stable ABI. Usually, the \"system Python\" "
 "version is used. It's not currently possible to select which Python version "
 "to use. Users would like the ability to select a newer Python on demand."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:130
+#: ../../peps/peps/pep-0741.rst:128
 msgid ""
 "On Linux, another approach to deploy an application embedding Python, such "
 "as GIMP, is to include Python in Flatpack, AppImage or Snap \"container\". "
@@ -280,11 +284,11 @@ msgid ""
 "container."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:136
+#: ../../peps/peps/pep-0741.rst:134
 msgid "Libraries embedding Python"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:140
+#: ../../peps/peps/pep-0741.rst:138
 msgid ""
 "`Apache mod_wsgi <https://modwsgi.readthedocs.io/>`_ (`source <https://"
 "github.com/GrahamDumpleton/mod_wsgi/blob/"
@@ -292,49 +296,49 @@ msgid ""
 "L2404>`__)."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:142
+#: ../../peps/peps/pep-0741.rst:140
 msgid "`nimpy <https://github.com/yglukhov/nimpy>`_: Nim - Python bridge."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:144
+#: ../../peps/peps/pep-0741.rst:142
 msgid ""
 "`PyO3 <https://github.com/PyO3/pyo3>`__: Rust bindings for the Python "
 "interpreter."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:148
+#: ../../peps/peps/pep-0741.rst:146
 msgid "Utilities creating standalone applications"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:150
+#: ../../peps/peps/pep-0741.rst:148
 msgid "`py2app <https://py2app.readthedocs.io/>`_ for macOS."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:151
+#: ../../peps/peps/pep-0741.rst:149
 msgid "`py2exe <http://www.py2exe.org/>`_ for Windows."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:152
+#: ../../peps/peps/pep-0741.rst:150
 msgid "`pyinstaller <https://pyinstaller.org/>`_."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:153
+#: ../../peps/peps/pep-0741.rst:151
 msgid ""
 "`PyOxidizer <https://github.com/indygreg/PyOxidizer>`_: it uses the PEP 587 "
 "PyConfig API."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:156
+#: ../../peps/peps/pep-0741.rst:154
 msgid ""
 "These utilities create standalone applications, they are not linked to "
 "libpython."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:160
+#: ../../peps/peps/pep-0741.rst:158
 msgid "Set the runtime configuration"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:162
+#: ../../peps/peps/pep-0741.rst:160
 msgid ""
 "`Marc-André Lemburg requested <https://discuss.python.org/t/fr-allow-private-"
 "runtime-config-to-enable-extending-without-breaking-the-pyconfig-"
@@ -342,213 +346,213 @@ msgid ""
 "at runtime:"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:166 ../../peps/peps/pep-0741.rst:309
+#: ../../peps/peps/pep-0741.rst:164 ../../peps/peps/pep-0741.rst:307
 msgid "``optimization_level``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:167 ../../peps/peps/pep-0741.rst:333
+#: ../../peps/peps/pep-0741.rst:165 ../../peps/peps/pep-0741.rst:331
 msgid "``verbose``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:168 ../../peps/peps/pep-0741.rst:312
+#: ../../peps/peps/pep-0741.rst:166 ../../peps/peps/pep-0741.rst:310
 msgid "``parser_debug``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:169 ../../peps/peps/pep-0741.rst:295
+#: ../../peps/peps/pep-0741.rst:167 ../../peps/peps/pep-0741.rst:293
 msgid "``inspect``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:170 ../../peps/peps/pep-0741.rst:339
+#: ../../peps/peps/pep-0741.rst:168 ../../peps/peps/pep-0741.rst:337
 msgid "``write_bytecode``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:172
+#: ../../peps/peps/pep-0741.rst:170
 msgid ""
 "Previously, it was possible to set directly global configuration variables:"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:175
+#: ../../peps/peps/pep-0741.rst:173
 msgid "``Py_OptimizeFlag``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:176
+#: ../../peps/peps/pep-0741.rst:174
 msgid "``Py_VerboseFlag``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:177
+#: ../../peps/peps/pep-0741.rst:175
 msgid "``Py_DebugFlag``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:178
+#: ../../peps/peps/pep-0741.rst:176
 msgid "``Py_InspectFlag``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:179
+#: ../../peps/peps/pep-0741.rst:177
 msgid "``Py_DontWriteBytecodeFlag``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:181
+#: ../../peps/peps/pep-0741.rst:179
 msgid ""
 "But these configuration flags were deprecated in Python 3.12 and are "
 "scheduled for removal in Python 3.14."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:186
+#: ../../peps/peps/pep-0741.rst:184
 msgid "Specification"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:188
+#: ../../peps/peps/pep-0741.rst:186
 msgid ""
 "Add C API functions and structure to configure the Python initialization:"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:191
+#: ../../peps/peps/pep-0741.rst:189
 msgid "Create config:"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:193
+#: ../../peps/peps/pep-0741.rst:191
 msgid "``PyInitConfig`` opaque structure."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:194
+#: ../../peps/peps/pep-0741.rst:192
 msgid "``PyInitConfig_Create()``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:195
+#: ../../peps/peps/pep-0741.rst:193
 msgid "``PyInitConfig_Free(config)``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:197
+#: ../../peps/peps/pep-0741.rst:195
 msgid "Get options:"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:199
+#: ../../peps/peps/pep-0741.rst:197
 msgid "``PyInitConfig_HasOption(config, name)``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:200
+#: ../../peps/peps/pep-0741.rst:198
 msgid "``PyInitConfig_GetInt(config, name, &value)``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:201
+#: ../../peps/peps/pep-0741.rst:199
 msgid "``PyInitConfig_GetStr(config, name, &value)``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:202
+#: ../../peps/peps/pep-0741.rst:200
 msgid "``PyInitConfig_GetStrList(config, name, &length, &items)``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:203
+#: ../../peps/peps/pep-0741.rst:201
 msgid "``PyInitConfig_FreeStrList()``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:205
+#: ../../peps/peps/pep-0741.rst:203
 msgid "Set options:"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:207
+#: ../../peps/peps/pep-0741.rst:205
 msgid "``PyInitConfig_SetInt(config, name, value)``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:208
+#: ../../peps/peps/pep-0741.rst:206
 msgid "``PyInitConfig_SetStr(config, name, value)``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:209
+#: ../../peps/peps/pep-0741.rst:207
 msgid "``PyInitConfig_SetStrList(config, name, length, items)``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:210
+#: ../../peps/peps/pep-0741.rst:208
 msgid "``PyInitConfig_AddModule(config, name, initfunc)``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:212
+#: ../../peps/peps/pep-0741.rst:210
 msgid "Initialize:"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:214
+#: ../../peps/peps/pep-0741.rst:212
 msgid "``Py_InitializeFromInitConfig(config)``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:216
+#: ../../peps/peps/pep-0741.rst:214
 msgid "Error handling:"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:218
+#: ../../peps/peps/pep-0741.rst:216
 msgid "``PyInitConfig_GetError(config, &err_msg)``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:219
+#: ../../peps/peps/pep-0741.rst:217
 msgid "``PyInitConfig_GetExitcode(config, &exitcode)``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:221
+#: ../../peps/peps/pep-0741.rst:219
 msgid "Add C API functions to get and set the current runtime configuration:"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:223
+#: ../../peps/peps/pep-0741.rst:221
 msgid "``PyConfig_Get(name)``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:224
+#: ../../peps/peps/pep-0741.rst:222
 msgid "``PyConfig_GetInt(name, &value)``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:225
+#: ../../peps/peps/pep-0741.rst:223
 msgid "``PyConfig_Set(name)``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:226
+#: ../../peps/peps/pep-0741.rst:224
 msgid "``PyConfig_Names()``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:228
+#: ../../peps/peps/pep-0741.rst:226
 msgid ""
 "The C API uses null-terminated UTF-8 encoded strings to refer to a "
 "configuration option name."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:231
+#: ../../peps/peps/pep-0741.rst:229
 msgid "These C API functions are excluded from the limited C API."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:234
+#: ../../peps/peps/pep-0741.rst:232
 msgid "PyInitConfig structure"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:236
+#: ../../peps/peps/pep-0741.rst:234
 msgid ""
-"The ``PyInitConfig`` structure is implemented by combining the four "
+"The ``PyInitConfig`` structure is implemented by combining the three "
 "structures of the ``PyConfig`` API and has an ``inittab`` member as well:"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:240
+#: ../../peps/peps/pep-0741.rst:238
 msgid "``PyPreConfig preconfig``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:241
+#: ../../peps/peps/pep-0741.rst:239
 msgid "``PyConfig config``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:242
+#: ../../peps/peps/pep-0741.rst:240
 msgid "``PyStatus status``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:243
+#: ../../peps/peps/pep-0741.rst:241
 msgid "``struct _inittab *inittab`` for ``PyInitConfig_AddModule()``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:245
+#: ../../peps/peps/pep-0741.rst:243
 msgid ""
 "The ``PyStatus`` status is no longer separated, but part of the unified "
 "``PyInitConfig`` structure, which makes the API easier to use."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:250
+#: ../../peps/peps/pep-0741.rst:248
 msgid "Configuration Options"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:252
+#: ../../peps/peps/pep-0741.rst:250
 msgid ""
 "Configuration options are named after ``PyPreConfig`` and ``PyConfig`` "
 "structure members. See the `PyPreConfig documentation <https://docs.python."
@@ -557,252 +561,252 @@ msgid ""
 "html#pyconfig>`_."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:258
+#: ../../peps/peps/pep-0741.rst:256
 msgid ""
 "Deprecating and removing configuration options is out of the scope of the "
 "PEP and should be discussed on a case by case basis."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:262
+#: ../../peps/peps/pep-0741.rst:260
 msgid "Public configuration options"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:264
+#: ../../peps/peps/pep-0741.rst:262
 msgid ""
 "Following options can be get by ``PyConfig_Get()`` and set and "
 "``PyConfig_Set()``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:271 ../../peps/peps/pep-0741.rst:365
+#: ../../peps/peps/pep-0741.rst:269 ../../peps/peps/pep-0741.rst:363
 msgid "Option"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:273 ../../peps/peps/pep-0741.rst:367
+#: ../../peps/peps/pep-0741.rst:271 ../../peps/peps/pep-0741.rst:365
 msgid "Comment"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:274
+#: ../../peps/peps/pep-0741.rst:272
 msgid "``argv``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:275 ../../peps/peps/pep-0741.rst:307
-#: ../../peps/peps/pep-0741.rst:337 ../../peps/peps/pep-0741.rst:441
+#: ../../peps/peps/pep-0741.rst:273 ../../peps/peps/pep-0741.rst:305
+#: ../../peps/peps/pep-0741.rst:335 ../../peps/peps/pep-0741.rst:436
 msgid "``list[str]``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:276
+#: ../../peps/peps/pep-0741.rst:274
 msgid "API: ``sys.argv``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:277
+#: ../../peps/peps/pep-0741.rst:275
 msgid "``base_exec_prefix``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:278 ../../peps/peps/pep-0741.rst:281
-#: ../../peps/peps/pep-0741.rst:284 ../../peps/peps/pep-0741.rst:290
-#: ../../peps/peps/pep-0741.rst:293 ../../peps/peps/pep-0741.rst:316
-#: ../../peps/peps/pep-0741.rst:319 ../../peps/peps/pep-0741.rst:322
-#: ../../peps/peps/pep-0741.rst:328 ../../peps/peps/pep-0741.rst:375
-#: ../../peps/peps/pep-0741.rst:402 ../../peps/peps/pep-0741.rst:408
-#: ../../peps/peps/pep-0741.rst:411 ../../peps/peps/pep-0741.rst:417
-#: ../../peps/peps/pep-0741.rst:453 ../../peps/peps/pep-0741.rst:456
-#: ../../peps/peps/pep-0741.rst:459 ../../peps/peps/pep-0741.rst:462
-#: ../../peps/peps/pep-0741.rst:465 ../../peps/peps/pep-0741.rst:468
-#: ../../peps/peps/pep-0741.rst:483 ../../peps/peps/pep-0741.rst:487
-#: ../../peps/peps/pep-0741.rst:491
+#: ../../peps/peps/pep-0741.rst:276 ../../peps/peps/pep-0741.rst:279
+#: ../../peps/peps/pep-0741.rst:282 ../../peps/peps/pep-0741.rst:288
+#: ../../peps/peps/pep-0741.rst:291 ../../peps/peps/pep-0741.rst:314
+#: ../../peps/peps/pep-0741.rst:317 ../../peps/peps/pep-0741.rst:320
+#: ../../peps/peps/pep-0741.rst:326 ../../peps/peps/pep-0741.rst:373
+#: ../../peps/peps/pep-0741.rst:400 ../../peps/peps/pep-0741.rst:406
+#: ../../peps/peps/pep-0741.rst:409 ../../peps/peps/pep-0741.rst:415
+#: ../../peps/peps/pep-0741.rst:448 ../../peps/peps/pep-0741.rst:451
+#: ../../peps/peps/pep-0741.rst:454 ../../peps/peps/pep-0741.rst:457
+#: ../../peps/peps/pep-0741.rst:460 ../../peps/peps/pep-0741.rst:475
+#: ../../peps/peps/pep-0741.rst:479
 msgid "``str``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:279
+#: ../../peps/peps/pep-0741.rst:277
 msgid "API: ``sys.base_exec_prefix``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:280
+#: ../../peps/peps/pep-0741.rst:278
 msgid "``base_executable``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:282
-msgid "API: ``sys.base_executable``."
+#: ../../peps/peps/pep-0741.rst:280
+msgid "API: ``sys._base_executable``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:283
+#: ../../peps/peps/pep-0741.rst:281
 msgid "``base_prefix``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:285 ../../peps/peps/pep-0741.rst:291
-#: ../../peps/peps/pep-0741.rst:320
+#: ../../peps/peps/pep-0741.rst:283 ../../peps/peps/pep-0741.rst:318
 msgid "API: ``sys.base_prefix``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:286
+#: ../../peps/peps/pep-0741.rst:284
 msgid "``bytes_warning``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:287 ../../peps/peps/pep-0741.rst:299
-#: ../../peps/peps/pep-0741.rst:310 ../../peps/peps/pep-0741.rst:334
-#: ../../peps/peps/pep-0741.rst:369 ../../peps/peps/pep-0741.rst:393
-#: ../../peps/peps/pep-0741.rst:414 ../../peps/peps/pep-0741.rst:494
+#: ../../peps/peps/pep-0741.rst:285 ../../peps/peps/pep-0741.rst:297
+#: ../../peps/peps/pep-0741.rst:308 ../../peps/peps/pep-0741.rst:332
+#: ../../peps/peps/pep-0741.rst:367 ../../peps/peps/pep-0741.rst:391
+#: ../../peps/peps/pep-0741.rst:412 ../../peps/peps/pep-0741.rst:483
 msgid "``int``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:288
+#: ../../peps/peps/pep-0741.rst:286
 msgid "API: ``sys.flags.bytes_warning``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:289
+#: ../../peps/peps/pep-0741.rst:287
 msgid "``exec_prefix``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:292
+#: ../../peps/peps/pep-0741.rst:289
+msgid "API: ``sys.exec_prefix``."
+msgstr ""
+
+#: ../../peps/peps/pep-0741.rst:290
 msgid "``executable``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:294
+#: ../../peps/peps/pep-0741.rst:292
 msgid "API: ``sys.executable``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:296 ../../peps/peps/pep-0741.rst:304
-#: ../../peps/peps/pep-0741.rst:313 ../../peps/peps/pep-0741.rst:325
-#: ../../peps/peps/pep-0741.rst:331 ../../peps/peps/pep-0741.rst:340
-#: ../../peps/peps/pep-0741.rst:372 ../../peps/peps/pep-0741.rst:378
-#: ../../peps/peps/pep-0741.rst:381 ../../peps/peps/pep-0741.rst:384
-#: ../../peps/peps/pep-0741.rst:387 ../../peps/peps/pep-0741.rst:390
-#: ../../peps/peps/pep-0741.rst:396 ../../peps/peps/pep-0741.rst:399
-#: ../../peps/peps/pep-0741.rst:405 ../../peps/peps/pep-0741.rst:420
-#: ../../peps/peps/pep-0741.rst:423 ../../peps/peps/pep-0741.rst:426
-#: ../../peps/peps/pep-0741.rst:429 ../../peps/peps/pep-0741.rst:432
-#: ../../peps/peps/pep-0741.rst:435 ../../peps/peps/pep-0741.rst:438
-#: ../../peps/peps/pep-0741.rst:444 ../../peps/peps/pep-0741.rst:447
-#: ../../peps/peps/pep-0741.rst:450 ../../peps/peps/pep-0741.rst:471
-#: ../../peps/peps/pep-0741.rst:474 ../../peps/peps/pep-0741.rst:477
-#: ../../peps/peps/pep-0741.rst:480 ../../peps/peps/pep-0741.rst:497
-#: ../../peps/peps/pep-0741.rst:500 ../../peps/peps/pep-0741.rst:503
-#: ../../peps/peps/pep-0741.rst:506 ../../peps/peps/pep-0741.rst:509
-#: ../../peps/peps/pep-0741.rst:512 ../../peps/peps/pep-0741.rst:515
-#: ../../peps/peps/pep-0741.rst:518 ../../peps/peps/pep-0741.rst:521
+#: ../../peps/peps/pep-0741.rst:294 ../../peps/peps/pep-0741.rst:302
+#: ../../peps/peps/pep-0741.rst:311 ../../peps/peps/pep-0741.rst:323
+#: ../../peps/peps/pep-0741.rst:329 ../../peps/peps/pep-0741.rst:338
+#: ../../peps/peps/pep-0741.rst:370 ../../peps/peps/pep-0741.rst:376
+#: ../../peps/peps/pep-0741.rst:379 ../../peps/peps/pep-0741.rst:382
+#: ../../peps/peps/pep-0741.rst:385 ../../peps/peps/pep-0741.rst:388
+#: ../../peps/peps/pep-0741.rst:394 ../../peps/peps/pep-0741.rst:397
+#: ../../peps/peps/pep-0741.rst:403 ../../peps/peps/pep-0741.rst:418
+#: ../../peps/peps/pep-0741.rst:421 ../../peps/peps/pep-0741.rst:424
+#: ../../peps/peps/pep-0741.rst:427 ../../peps/peps/pep-0741.rst:430
+#: ../../peps/peps/pep-0741.rst:433 ../../peps/peps/pep-0741.rst:439
+#: ../../peps/peps/pep-0741.rst:442 ../../peps/peps/pep-0741.rst:445
+#: ../../peps/peps/pep-0741.rst:463 ../../peps/peps/pep-0741.rst:466
+#: ../../peps/peps/pep-0741.rst:469 ../../peps/peps/pep-0741.rst:472
+#: ../../peps/peps/pep-0741.rst:486 ../../peps/peps/pep-0741.rst:489
+#: ../../peps/peps/pep-0741.rst:492 ../../peps/peps/pep-0741.rst:495
+#: ../../peps/peps/pep-0741.rst:498 ../../peps/peps/pep-0741.rst:501
 msgid "``bool``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:297
+#: ../../peps/peps/pep-0741.rst:295
 msgid "API: ``sys.flags.inspect`` (``int``)."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:298
+#: ../../peps/peps/pep-0741.rst:296
 msgid "``int_max_str_digits``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:300
+#: ../../peps/peps/pep-0741.rst:298
 msgid ""
 "API: ``sys.flags.int_max_str_digits``, ``sys.get_int_max_str_digits()`` and "
 "``sys.set_int_max_str_digits()``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:303
+#: ../../peps/peps/pep-0741.rst:301
 msgid "``interactive``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:305
+#: ../../peps/peps/pep-0741.rst:303
 msgid "API: ``sys.flags.interactive``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:306
+#: ../../peps/peps/pep-0741.rst:304
 msgid "``module_search_paths``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:308
+#: ../../peps/peps/pep-0741.rst:306
 msgid "API: ``sys.path``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:311
+#: ../../peps/peps/pep-0741.rst:309
 msgid "API: ``sys.flags.optimize``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:314
+#: ../../peps/peps/pep-0741.rst:312
 msgid "API: ``sys.flags.debug`` (``int``)."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:315
+#: ../../peps/peps/pep-0741.rst:313
 msgid "``platlibdir``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:317
+#: ../../peps/peps/pep-0741.rst:315
 msgid "API: ``sys.platlibdir``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:318
+#: ../../peps/peps/pep-0741.rst:316
 msgid "``prefix``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:321
+#: ../../peps/peps/pep-0741.rst:319
 msgid "``pycache_prefix``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:323
+#: ../../peps/peps/pep-0741.rst:321
 msgid "API: ``sys.pycache_prefix``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:324
+#: ../../peps/peps/pep-0741.rst:322
 msgid "``quiet``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:326
+#: ../../peps/peps/pep-0741.rst:324
 msgid "API: ``sys.flags.quiet`` (``int``)."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:327
+#: ../../peps/peps/pep-0741.rst:325
 msgid "``stdlib_dir``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:329
+#: ../../peps/peps/pep-0741.rst:327
 msgid "API: ``sys._stdlib_dir``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:330
+#: ../../peps/peps/pep-0741.rst:328
 msgid "``use_environment``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:332
+#: ../../peps/peps/pep-0741.rst:330
 msgid "API: ``sys.flags.ignore_environment`` (``int``)."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:335
+#: ../../peps/peps/pep-0741.rst:333
 msgid "API: ``sys.flags.verbose``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:336
+#: ../../peps/peps/pep-0741.rst:334
 msgid "``warnoptions``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:338
+#: ../../peps/peps/pep-0741.rst:336
 msgid "API: ``sys.warnoptions``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:341
+#: ../../peps/peps/pep-0741.rst:339
 msgid ""
 "API: ``sys.flags.dont_write_bytecode`` (``int``) and ``sys."
 "dont_write_bytecode`` (``bool``)."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:342
+#: ../../peps/peps/pep-0741.rst:340
 msgid "``xoptions``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:343
+#: ../../peps/peps/pep-0741.rst:341
 msgid "``dict[str, str]``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:344
+#: ../../peps/peps/pep-0741.rst:342
 msgid "API: ``sys._xoptions``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:346
+#: ../../peps/peps/pep-0741.rst:344
 msgid ""
 "Some option names are different than ``sys`` attributes, such as "
 "``optimization_level`` option and ``sys.flags.optimize`` attribute. "
 "``PyConfig_Set()`` sets the corresponding ``sys`` attribute."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:350
+#: ../../peps/peps/pep-0741.rst:348
 msgid ""
 "The ``xoptions`` is a list of strings in ``PyInitConfig`` where each string "
 "has the format ``key`` (*value* is ``True`` implicitly) or ``key=value``. In "
@@ -810,427 +814,399 @@ msgid ""
 "``value: str | True``)."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:356
+#: ../../peps/peps/pep-0741.rst:354
 msgid "Read-only configuration options"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:358
+#: ../../peps/peps/pep-0741.rst:356
 msgid ""
-"Following options can be get ``PyConfig_Get()``, but cannot be set by "
+"Following options can be get by ``PyConfig_Get()``, but cannot be set by "
 "``PyConfig_Set()``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:368
+#: ../../peps/peps/pep-0741.rst:366
 msgid "``allocator``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:371
+#: ../../peps/peps/pep-0741.rst:369
 msgid "``buffered_stdio``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:374
+#: ../../peps/peps/pep-0741.rst:372
 msgid "``check_hash_pycs_mode``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:376
-msgid "API: ``imp.check_hash_pycs_mode``."
-msgstr ""
-
-#: ../../peps/peps/pep-0741.rst:377
+#: ../../peps/peps/pep-0741.rst:375
 msgid "``code_debug_ranges``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:380
+#: ../../peps/peps/pep-0741.rst:378
 msgid "``coerce_c_locale``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:383
+#: ../../peps/peps/pep-0741.rst:381
 msgid "``coerce_c_locale_warn``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:386
+#: ../../peps/peps/pep-0741.rst:384
 msgid "``configure_c_stdio``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:389
+#: ../../peps/peps/pep-0741.rst:387
 msgid "``configure_locale``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:392
+#: ../../peps/peps/pep-0741.rst:390
 msgid "``cpu_count``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:394
+#: ../../peps/peps/pep-0741.rst:392
 msgid "API: ``os.cpu_count()`` (``int | None``)."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:395
+#: ../../peps/peps/pep-0741.rst:393
 msgid "``dev_mode``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:397
+#: ../../peps/peps/pep-0741.rst:395
 msgid "API: ``sys.flags.dev_mode``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:398
+#: ../../peps/peps/pep-0741.rst:396
 msgid "``dump_refs``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:401
+#: ../../peps/peps/pep-0741.rst:399
 msgid "``dump_refs_file``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:404
+#: ../../peps/peps/pep-0741.rst:402
 msgid "``faulthandler``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:406
+#: ../../peps/peps/pep-0741.rst:404
 msgid "API: ``faulthandler.is_enabled()``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:407
+#: ../../peps/peps/pep-0741.rst:405
 msgid "``filesystem_encoding``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:409
+#: ../../peps/peps/pep-0741.rst:407
 msgid "API: ``sys.getfilesystemencoding()``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:410
+#: ../../peps/peps/pep-0741.rst:408
 msgid "``filesystem_errors``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:412
+#: ../../peps/peps/pep-0741.rst:410
 msgid "API: ``sys.getfilesystemencodeerrors()``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:413
+#: ../../peps/peps/pep-0741.rst:411
 msgid "``hash_seed``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:416
+#: ../../peps/peps/pep-0741.rst:414
 msgid "``home``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:419
+#: ../../peps/peps/pep-0741.rst:417
 msgid "``import_time``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:422
+#: ../../peps/peps/pep-0741.rst:420
 msgid "``install_signal_handlers``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:425
+#: ../../peps/peps/pep-0741.rst:423
 msgid "``isolated``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:427
+#: ../../peps/peps/pep-0741.rst:425
 msgid "API: ``sys.flags.isolated`` (``int``)."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:428
+#: ../../peps/peps/pep-0741.rst:426
 msgid "``legacy_windows_fs_encoding``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:431
+#: ../../peps/peps/pep-0741.rst:428 ../../peps/peps/pep-0741.rst:431
+msgid "Windows only."
+msgstr ""
+
+#: ../../peps/peps/pep-0741.rst:429
 msgid "``legacy_windows_stdio``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:433
-msgid "Windows only"
-msgstr ""
-
-#: ../../peps/peps/pep-0741.rst:434
+#: ../../peps/peps/pep-0741.rst:432
 msgid "``malloc_stats``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:437
-msgid "``module_search_paths_set``"
-msgstr ""
-
-#: ../../peps/peps/pep-0741.rst:440
+#: ../../peps/peps/pep-0741.rst:435
 msgid "``orig_argv``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:442
+#: ../../peps/peps/pep-0741.rst:437
 msgid "API: ``sys.orig_argv``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:443
-msgid "``pathconfig_warnings``"
-msgstr ""
-
-#: ../../peps/peps/pep-0741.rst:446
+#: ../../peps/peps/pep-0741.rst:438
 msgid "``parse_argv``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:449
+#: ../../peps/peps/pep-0741.rst:441
+msgid "``pathconfig_warnings``"
+msgstr ""
+
+#: ../../peps/peps/pep-0741.rst:444
 msgid "``perf_profiling``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:451
+#: ../../peps/peps/pep-0741.rst:446
 msgid "API: ``sys.is_stack_trampoline_active()``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:452
+#: ../../peps/peps/pep-0741.rst:447
 msgid "``program_name``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:455
-msgid "``pythonpath_env``"
-msgstr ""
-
-#: ../../peps/peps/pep-0741.rst:458
+#: ../../peps/peps/pep-0741.rst:450
 msgid "``run_command``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:461
+#: ../../peps/peps/pep-0741.rst:453
 msgid "``run_filename``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:464
+#: ../../peps/peps/pep-0741.rst:456
 msgid "``run_module``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:467
+#: ../../peps/peps/pep-0741.rst:459
 msgid "``run_presite``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:469
+#: ../../peps/peps/pep-0741.rst:461
 msgid "need a debug build."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:470
+#: ../../peps/peps/pep-0741.rst:462
 msgid "``safe_path``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:473
+#: ../../peps/peps/pep-0741.rst:465
 msgid "``show_ref_count``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:476
+#: ../../peps/peps/pep-0741.rst:468
 msgid "``site_import``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:478
+#: ../../peps/peps/pep-0741.rst:470
 msgid "API: ``sys.flags.no_site`` (``int``)."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:479
+#: ../../peps/peps/pep-0741.rst:471
 msgid "``skip_source_first_line``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:482
+#: ../../peps/peps/pep-0741.rst:474
 msgid "``stdio_encoding``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:484
+#: ../../peps/peps/pep-0741.rst:476
 msgid ""
 "API: ``sys.stdin.encoding``, ``sys.stdout.encoding`` and ``sys.stderr."
 "encoding``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:486
+#: ../../peps/peps/pep-0741.rst:478
 msgid "``stdio_errors``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:488
+#: ../../peps/peps/pep-0741.rst:480
 msgid ""
 "API: ``sys.stdin.errors``, ``sys.stdout.errors`` and ``sys.stderr.errors``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:490
-msgid "``sys_path_0``"
-msgstr ""
-
-#: ../../peps/peps/pep-0741.rst:493
+#: ../../peps/peps/pep-0741.rst:482
 msgid "``tracemalloc``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:495
+#: ../../peps/peps/pep-0741.rst:484
 msgid "API: ``tracemalloc.is_tracing()`` (``bool``)."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:496
+#: ../../peps/peps/pep-0741.rst:485
 msgid "``use_frozen_modules``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:499
+#: ../../peps/peps/pep-0741.rst:488
 msgid "``use_hash_seed``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:502
-msgid "``utf8_mode``"
-msgstr ""
-
-#: ../../peps/peps/pep-0741.rst:505
+#: ../../peps/peps/pep-0741.rst:491
 msgid "``user_site_directory``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:507
+#: ../../peps/peps/pep-0741.rst:493
 msgid "API: ``sys.flags.no_user_site`` (``int``)."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:508
+#: ../../peps/peps/pep-0741.rst:494
+msgid "``utf8_mode``"
+msgstr ""
+
+#: ../../peps/peps/pep-0741.rst:497
 msgid "``warn_default_encoding``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:511
-msgid "``_install_importlib``"
-msgstr ""
-
-#: ../../peps/peps/pep-0741.rst:514
-msgid "``_init_main``"
-msgstr ""
-
-#: ../../peps/peps/pep-0741.rst:517
-msgid "``_is_python_build``"
-msgstr ""
-
-#: ../../peps/peps/pep-0741.rst:520
+#: ../../peps/peps/pep-0741.rst:500
 msgid "``_pystats``"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:522
+#: ../../peps/peps/pep-0741.rst:502
 msgid ""
 "API: ``sys._stats_on()``, ``sys._stats_off()``. Need a ``Py_STATS`` build."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:527
+#: ../../peps/peps/pep-0741.rst:507
 msgid "Create Config"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:529
+#: ../../peps/peps/pep-0741.rst:509
 msgid "``PyInitConfig`` structure:"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:530
+#: ../../peps/peps/pep-0741.rst:510
 msgid ""
 "Opaque structure to configure the Python preinitialization and the Python "
 "initialization."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:533
+#: ../../peps/peps/pep-0741.rst:513
 msgid "``PyInitConfig* PyInitConfig_Create(void)``:"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:534
+#: ../../peps/peps/pep-0741.rst:514
 msgid ""
 "Create a new initialization configuration using default values of the "
 "`Isolated Configuration <https://docs.python.org/dev/c-api/init_config."
 "html#isolated-configuration>`_."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:538
+#: ../../peps/peps/pep-0741.rst:518
 msgid "It must be freed with ``PyInitConfig_Free()``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:540
+#: ../../peps/peps/pep-0741.rst:520
 msgid "Return ``NULL`` on memory allocation failure."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:542
+#: ../../peps/peps/pep-0741.rst:522
 msgid "``void PyInitConfig_Free(PyInitConfig *config)``:"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:543
+#: ../../peps/peps/pep-0741.rst:523
 msgid "Free memory of an initialization configuration."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:546
+#: ../../peps/peps/pep-0741.rst:526
 msgid "Get Options"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:548 ../../peps/peps/pep-0741.rst:589
-#: ../../peps/peps/pep-0741.rst:685
+#: ../../peps/peps/pep-0741.rst:528 ../../peps/peps/pep-0741.rst:569
+#: ../../peps/peps/pep-0741.rst:663
 msgid ""
 "The configuration option *name* parameter must be a non-NULL null-terminated "
 "UTF-8 encoded string."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:551
+#: ../../peps/peps/pep-0741.rst:531
 msgid "``int PyInitConfig_HasOption(PyInitConfig *config, const char *name)``:"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:552
+#: ../../peps/peps/pep-0741.rst:532
 msgid "Test if the configuration has an option called *name*."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:554
+#: ../../peps/peps/pep-0741.rst:534
 msgid "Return ``1`` if the option exists, or return ``0`` otherwise."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:556
+#: ../../peps/peps/pep-0741.rst:536
 msgid ""
 "``int PyInitConfig_GetInt(PyInitConfig *config, const char *name, int64_t "
 "*value)``:"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:557
+#: ../../peps/peps/pep-0741.rst:537
 msgid "Get an integer configuration option."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:559 ../../peps/peps/pep-0741.rst:566
+#: ../../peps/peps/pep-0741.rst:539 ../../peps/peps/pep-0741.rst:546
 msgid "Set *\\*value*, and return ``0`` on success."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:560 ../../peps/peps/pep-0741.rst:567
-#: ../../peps/peps/pep-0741.rst:576 ../../peps/peps/pep-0741.rst:601
-#: ../../peps/peps/pep-0741.rst:608 ../../peps/peps/pep-0741.rst:615
-#: ../../peps/peps/pep-0741.rst:625 ../../peps/peps/pep-0741.rst:641
+#: ../../peps/peps/pep-0741.rst:540 ../../peps/peps/pep-0741.rst:547
+#: ../../peps/peps/pep-0741.rst:556 ../../peps/peps/pep-0741.rst:581
+#: ../../peps/peps/pep-0741.rst:588 ../../peps/peps/pep-0741.rst:595
+#: ../../peps/peps/pep-0741.rst:605 ../../peps/peps/pep-0741.rst:621
 msgid "Set an error in *config* and return ``-1`` on error."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:562
+#: ../../peps/peps/pep-0741.rst:542
 msgid ""
 "``int PyInitConfig_GetStr(PyInitConfig *config, const char *name, char "
 "**value)``:"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:563
+#: ../../peps/peps/pep-0741.rst:543
 msgid ""
 "Get a string configuration option as a null-terminated UTF-8 encoded string."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:569
+#: ../../peps/peps/pep-0741.rst:549
 msgid "On success, the string must be released with ``free(value)``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:571
+#: ../../peps/peps/pep-0741.rst:551
 msgid ""
 "``int PyInitConfig_GetStrList(PyInitConfig *config, const char *name, size_t "
 "*length, char ***items)``:"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:572
+#: ../../peps/peps/pep-0741.rst:552
 msgid ""
 "Get a string list configuration option as an array of null-terminated UTF-8 "
 "encoded strings."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:575
+#: ../../peps/peps/pep-0741.rst:555
 msgid "Set *\\*length* and *\\*value*, and return ``0`` on success."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:578
+#: ../../peps/peps/pep-0741.rst:558
 msgid ""
 "On success, the string list must be released with "
 "``PyInitConfig_FreeStrList(length, items)``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:581
+#: ../../peps/peps/pep-0741.rst:561
 msgid "``void PyInitConfig_FreeStrList(size_t length, char **items)``:"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:582
+#: ../../peps/peps/pep-0741.rst:562
 msgid "Free memory of a string list created by ``PyInitConfig_GetStrList()``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:587
+#: ../../peps/peps/pep-0741.rst:567
 msgid "Set Options"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:592
+#: ../../peps/peps/pep-0741.rst:572
 msgid ""
 "Some configuration options have side effects on other options. This logic is "
 "only implemented when ``Py_InitializeFromInitConfig()`` is called, not by "
@@ -1238,274 +1214,272 @@ msgid ""
 "not set ``faulthandler`` to ``1``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:597
+#: ../../peps/peps/pep-0741.rst:577
 msgid ""
 "``int PyInitConfig_SetInt(PyInitConfig *config, const char *name, int64_t "
 "value)``:"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:598
+#: ../../peps/peps/pep-0741.rst:578
 msgid "Set an integer configuration option."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:600 ../../peps/peps/pep-0741.rst:607
-#: ../../peps/peps/pep-0741.rst:614 ../../peps/peps/pep-0741.rst:624
-#: ../../peps/peps/pep-0741.rst:640
+#: ../../peps/peps/pep-0741.rst:580 ../../peps/peps/pep-0741.rst:587
+#: ../../peps/peps/pep-0741.rst:594 ../../peps/peps/pep-0741.rst:604
+#: ../../peps/peps/pep-0741.rst:620
 msgid "Return ``0`` on success."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:603
+#: ../../peps/peps/pep-0741.rst:583
 msgid ""
 "``int PyInitConfig_SetStr(PyInitConfig *config, const char *name, const char "
 "*value)``:"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:604
+#: ../../peps/peps/pep-0741.rst:584
 msgid ""
 "Set a string configuration option from a null-terminated UTF-8 encoded "
 "string. The string is copied."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:610
+#: ../../peps/peps/pep-0741.rst:590
 msgid ""
 "``int PyInitConfig_SetStrList(PyInitConfig *config, const char *name, size_t "
 "length, char * const *items)``:"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:611
+#: ../../peps/peps/pep-0741.rst:591
 msgid ""
 "Set a string list configuration option from an array of null-terminated "
 "UTF-8 encoded strings. The string list is copied."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:617
+#: ../../peps/peps/pep-0741.rst:597
 msgid ""
 "``int PyInitConfig_AddModule(PyInitConfig *config, const char *name, "
 "PyObject* (*initfunc)(void))``:"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:618
+#: ../../peps/peps/pep-0741.rst:598
 msgid "Add a built-in extension module to the table of built-in modules."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:620
+#: ../../peps/peps/pep-0741.rst:600
 msgid ""
 "The new module can be imported by the name *name*, and uses the function "
 "*initfunc* as the initialization function called on the first attempted "
 "import."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:627
+#: ../../peps/peps/pep-0741.rst:607
 msgid ""
 "If Python is initialized multiple times, ``PyInitConfig_AddModule()`` must "
 "be called at each Python initialization."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:631
+#: ../../peps/peps/pep-0741.rst:611
 msgid "Similar to the ``PyImport_AppendInittab()`` function."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:635 ../../peps/peps/pep-0741.rst:762
+#: ../../peps/peps/pep-0741.rst:615 ../../peps/peps/pep-0741.rst:740
 msgid "Initialize Python"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:637
+#: ../../peps/peps/pep-0741.rst:617
 msgid "``int Py_InitializeFromInitConfig(PyInitConfig *config)``:"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:638
+#: ../../peps/peps/pep-0741.rst:618
 msgid "Initialize Python from the initialization configuration."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:642
+#: ../../peps/peps/pep-0741.rst:622
 msgid "Set an exit code in *config* and return ``-1`` if Python wants to exit."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:645
+#: ../../peps/peps/pep-0741.rst:625
 msgid "See ``PyInitConfig_GetExitcode()`` for the exitcode case."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:649
+#: ../../peps/peps/pep-0741.rst:629
 msgid "Error Handling"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:651
+#: ../../peps/peps/pep-0741.rst:631
 msgid ""
 "``int PyInitConfig_GetError(PyInitConfig* config, const char **err_msg)``:"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:652
+#: ../../peps/peps/pep-0741.rst:632
 msgid "Get the *config* error message."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:654
+#: ../../peps/peps/pep-0741.rst:634
 msgid "Set *\\*err_msg* and return ``1`` if an error is set."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:655
+#: ../../peps/peps/pep-0741.rst:635
 msgid "Set *\\*err_msg* to ``NULL`` and return ``0`` otherwise."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:657
+#: ../../peps/peps/pep-0741.rst:637
 msgid "An error message is an UTF-8 encoded string."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:659
+#: ../../peps/peps/pep-0741.rst:639
 msgid "If *config* has an exit code, format the exit code as an error message."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:662
+#: ../../peps/peps/pep-0741.rst:642
 msgid ""
 "The error message remains valid until another ``PyInitConfig`` function is "
 "called with *config*. The caller doesn't have to free the error message."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:666
+#: ../../peps/peps/pep-0741.rst:646
 msgid "``int PyInitConfig_GetExitcode(PyInitConfig* config, int *exitcode)``:"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:667
+#: ../../peps/peps/pep-0741.rst:647
 msgid "Get the *config* exit code."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:669
+#: ../../peps/peps/pep-0741.rst:649
 msgid "Set *\\*exitcode* and return ``1`` if Python wants to exit."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:670
+#: ../../peps/peps/pep-0741.rst:650
 msgid "Return ``0`` if *config* has no exit code set."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:672
+#: ../../peps/peps/pep-0741.rst:652
 msgid ""
 "Only the ``Py_InitializeFromInitConfig()`` function can set an exit code if "
-"the ``parse_argv`` option is non-zero. For example, an isolated "
-"configuration cannot set an exit code by default, since ``parse_argv`` is "
-"zero by default."
+"the ``parse_argv`` option is non-zero."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:677
+#: ../../peps/peps/pep-0741.rst:655
 msgid ""
 "An exit code can be set when parsing the command line failed (exit code 2) "
 "or when a command line option asks to display the command line help (exit "
 "code 0)."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:683
+#: ../../peps/peps/pep-0741.rst:661
 msgid "Get and Set the Runtime Configuration"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:688
+#: ../../peps/peps/pep-0741.rst:666
 msgid "``PyObject* PyConfig_Get(const char *name)``:"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:689
+#: ../../peps/peps/pep-0741.rst:667
 msgid ""
 "Get the current runtime value of a configuration option as a Python object."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:692
+#: ../../peps/peps/pep-0741.rst:670
 msgid "Return a new reference on success."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:693 ../../peps/peps/pep-0741.rst:712
+#: ../../peps/peps/pep-0741.rst:671 ../../peps/peps/pep-0741.rst:690
 msgid "Set an exception and return ``NULL`` on error."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:695
+#: ../../peps/peps/pep-0741.rst:673
 msgid ""
 "The object type depends on the option: see `Configuration Options`_ tables."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:698
+#: ../../peps/peps/pep-0741.rst:676
 msgid ""
 "Other options are get from internal ``PyPreConfig`` and ``PyConfig`` "
 "structures."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:700 ../../peps/peps/pep-0741.rst:726
+#: ../../peps/peps/pep-0741.rst:678 ../../peps/peps/pep-0741.rst:704
 msgid ""
 "The caller must hold the GIL. The function cannot be called before Python "
 "initialization nor after Python finalization."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:703
+#: ../../peps/peps/pep-0741.rst:681
 msgid "``int PyConfig_GetInt(const char *name, int *value)``:"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:704
+#: ../../peps/peps/pep-0741.rst:682
 msgid "Similar to ``PyConfig_Get()``, but get the value as an integer."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:706
+#: ../../peps/peps/pep-0741.rst:684
 msgid "Set ``*value`` and return ``0`` success."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:707
+#: ../../peps/peps/pep-0741.rst:685
 msgid "Set an exception and return ``-1`` on error."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:709
+#: ../../peps/peps/pep-0741.rst:687
 msgid "``PyObject* PyConfig_Names(void)``:"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:710
+#: ../../peps/peps/pep-0741.rst:688
 msgid "Get all configuration option names as a ``frozenset``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:714
+#: ../../peps/peps/pep-0741.rst:692
 msgid "The caller must hold the GIL."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:716
+#: ../../peps/peps/pep-0741.rst:694
 msgid "``PyObject* PyConfig_Set(const char *name, PyObject *value)``:"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:717
+#: ../../peps/peps/pep-0741.rst:695
 msgid "Set the current runtime value of a configuration option."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:719
+#: ../../peps/peps/pep-0741.rst:697
 msgid "Raise a ``ValueError`` if there is no option *name*."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:720
+#: ../../peps/peps/pep-0741.rst:698
 msgid "Raise a ``ValueError`` if *value* is an invalid value."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:721
+#: ../../peps/peps/pep-0741.rst:699
 msgid "Raise a ``ValueError`` if the option is read-only: cannot be set."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:722
+#: ../../peps/peps/pep-0741.rst:700
 msgid "Raise a ``TypeError`` if *value* has not the proper type."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:724
+#: ../../peps/peps/pep-0741.rst:702
 msgid "`Read-only configuration options`_ cannot be set."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:731
+#: ../../peps/peps/pep-0741.rst:709
 msgid "Stability"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:733
+#: ../../peps/peps/pep-0741.rst:711
 msgid ""
 "The behavior of options, the default option values, and the Python behavior "
 "can change at each Python version: they are not \"stable\"."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:736
+#: ../../peps/peps/pep-0741.rst:714
 msgid ""
 "Moreover, configuration options can be added, deprecated and removed "
 "following the usual :pep:`387` deprecation process."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:741
+#: ../../peps/peps/pep-0741.rst:719
 msgid "Interaction with the PyPreConfig and PyConfig APIs"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:743
+#: ../../peps/peps/pep-0741.rst:721
 msgid ""
 "The lower level :pep:`587` ``PyPreConfig`` and ``PyConfig`` APIs  remain "
 "available and fully supported. As noted in the Abstract, they remain the "
@@ -1514,7 +1488,7 @@ msgid ""
 "Python runtime available as part of a larger application."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:749
+#: ../../peps/peps/pep-0741.rst:727
 msgid ""
 "The ``PyPreConfig`` APIs may be used in combination with the initialization "
 "API in this PEP. In such cases, the read-only vs read/write restrictions for "
@@ -1524,113 +1498,113 @@ msgid ""
 "other preconfiguration variables will report an error)."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:759
+#: ../../peps/peps/pep-0741.rst:737
 msgid "Examples"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:764
+#: ../../peps/peps/pep-0741.rst:742
 msgid ""
-"Example initializing Python, set configuration options of different types, "
-"return -1 on error:"
+"Example initializing Python, set configuration options of various types, "
+"return ``-1`` on error:"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:821
+#: ../../peps/peps/pep-0741.rst:791
 msgid "Increase initialization bytes_warning option"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:823
+#: ../../peps/peps/pep-0741.rst:793
 msgid ""
 "Example increasing the ``bytes_warning`` option of an initialization "
 "configuration:"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:843
+#: ../../peps/peps/pep-0741.rst:813
 msgid "Get the runtime verbose option"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:845
+#: ../../peps/peps/pep-0741.rst:815
 msgid ""
 "Example getting the current runtime value of the configuration option "
 "``verbose``:"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:861
+#: ../../peps/peps/pep-0741.rst:831
 msgid ""
 "On error, the function silently ignores the error and returns ``-1``. In "
 "practice, getting the ``verbose`` option cannot fail, unless a future Python "
 "version removes the option."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:867
+#: ../../peps/peps/pep-0741.rst:837
 msgid "Implementation"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:869
+#: ../../peps/peps/pep-0741.rst:839
 msgid ""
-"Issue: `No limited C API to customize Python initialization <https://github."
-"com/python/cpython/issues/107954>`_"
+"Issue: `[C API] PEP 741: Add PyInitConfig C API to customize the Python "
+"initialization <https://github.com/python/cpython/issues/107954>`_"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:871
-msgid ""
-"PR: `Add PyInitConfig C API <https://github.com/python/cpython/pull/110176>`_"
-msgstr ""
-
-#: ../../peps/peps/pep-0741.rst:873
+#: ../../peps/peps/pep-0741.rst:842
 msgid ""
 "PR: `Add PyConfig_Get() function <https://github.com/python/cpython/"
-"pull/112609>`_"
+"pull/123472>`_"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:878
+#: ../../peps/peps/pep-0741.rst:844
+msgid ""
+"PR: `Add PyInitConfig C API <https://github.com/python/cpython/pull/123502>`_"
+msgstr ""
+
+#: ../../peps/peps/pep-0741.rst:849
 msgid "Backwards Compatibility"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:880
+#: ../../peps/peps/pep-0741.rst:851
 msgid "Changes are fully backward compatible. Only new APIs are added."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:882
+#: ../../peps/peps/pep-0741.rst:853
 msgid ""
 "Existing API such as the ``PyConfig`` C API (PEP 587) are left unchanged."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:887
+#: ../../peps/peps/pep-0741.rst:858
 msgid "Rejected Ideas"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:890
+#: ../../peps/peps/pep-0741.rst:861
 msgid "Configuration as text"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:892
+#: ../../peps/peps/pep-0741.rst:863
 msgid ""
 "It was proposed to provide the configuration as text to make the API "
 "compatible with the stable ABI and to allow custom options."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:895
+#: ../../peps/peps/pep-0741.rst:866
 msgid "Example::"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:906
+#: ../../peps/peps/pep-0741.rst:877
 msgid ""
 "The API would take the configuration as a string, not as a file. Example "
 "with a hypothetical ``PyInit_SetConfig()`` function:"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:923
+#: ../../peps/peps/pep-0741.rst:894
 msgid "The example ignores error handling to make it easier to read."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:925
+#: ../../peps/peps/pep-0741.rst:896
 msgid ""
 "The problem is that generating such configuration text requires adding "
 "quotes to strings and to escape quotes in strings. Formatting an array of "
 "strings becomes non-trivial."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:929
+#: ../../peps/peps/pep-0741.rst:900
 msgid ""
 "Providing an API to format a string or an array of strings is not really "
 "worth it, whereas Python can provide directly an API to set a configuration "
@@ -1639,55 +1613,55 @@ msgid ""
 "newline characters, which would have to be escaped."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:937
+#: ../../peps/peps/pep-0741.rst:908
 msgid "Refer to an option with an integer"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:939
+#: ../../peps/peps/pep-0741.rst:910
 msgid ""
 "Using strings to refer to a configuration option requires comparing strings "
 "which can be slower than comparing integers."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:942
+#: ../../peps/peps/pep-0741.rst:913
 msgid ""
 "Use integers, similar to type \"slots\" such as ``Py_tp_doc``, to refer to a "
 "configuration option. The ``const char *name`` parameter is replaced with "
 "``int option``."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:946
+#: ../../peps/peps/pep-0741.rst:917
 msgid ""
 "Accepting custom options is more likely to cause conflicts when using "
 "integers, since it's harder to maintain \"namespaces\" (ranges) for integer "
 "options. Using strings, a simple prefix with a colon separator can be used."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:951
+#: ../../peps/peps/pep-0741.rst:922
 msgid ""
 "Integers also requires maintaining a list of integer constants and so make "
 "the C API and the Python API larger."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:954
+#: ../../peps/peps/pep-0741.rst:925
 msgid ""
 "Python 3.13 only has around 62 configuration options, and so performance is "
 "not really a blocker issue. If better performance is needed later, a hash "
 "table can be used to get an option by its name."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:958
+#: ../../peps/peps/pep-0741.rst:929
 msgid ""
 "If getting a configuration option is used in hot code, the value can be read "
 "once and cached. By the way, most configuration options cannot be changed at "
 "runtime."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:964
+#: ../../peps/peps/pep-0741.rst:935
 msgid "Multi-phase initialization (similar to PEP 432)"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:966
+#: ../../peps/peps/pep-0741.rst:937
 msgid ""
 "`Eric Snow expressed concerns <https://discuss.python.org/t/pep-741-python-"
 "configuration-c-api-second-version/45403/27>`_ that this proposal might "
@@ -1699,7 +1673,7 @@ msgid ""
 "similarities with :pep:`432` and :pep:`587`."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:975
+#: ../../peps/peps/pep-0741.rst:946
 msgid ""
 "Another of Eric's key points relevant to this PEP was that, ideally, the "
 "config passed to ``Py_InitializeFromConfig()`` should be complete before "
@@ -1707,24 +1681,24 @@ msgid ""
 "the config."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:980
+#: ../../peps/peps/pep-0741.rst:951
 msgid ""
 "While Eric wasn't necessarily suggesting an alternative to PEP 741, any "
 "proposal to add a granular initialization API around phases is effectively "
 "the opposite of what this PEP is trying to accomplish. Such API is more "
 "complicated, it requires adding new public structures and new public "
 "functions. It makes the Python initialization more complicated, rather than "
-"this PEP tries to unifiy existing APIs and make them simpler (the opposite). "
+"this PEP tries to unify existing APIs and make them simpler (the opposite). "
 "Having multiple structures for similar purpose can lead to duplicate "
 "members, similar issue than duplicated members between existing "
 "``PyPreConfig`` and ``PyConfig`` structures."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:992
+#: ../../peps/peps/pep-0741.rst:963
 msgid "Locale encoding and wide strings"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:994
+#: ../../peps/peps/pep-0741.rst:965
 msgid ""
 "Accepting strings encoded to the locale encoding and accepting wide strings "
 "(``wchar_t*``) in the ``PyInitConfig`` API was deferred to keep the "
@@ -1734,24 +1708,24 @@ msgid ""
 "`587` API."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:1003
+#: ../../peps/peps/pep-0741.rst:974
 msgid "Discussions"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:1005
+#: ../../peps/peps/pep-0741.rst:976
 msgid ""
 "`PEP 741: Python Configuration C API (second version) <https://discuss."
 "python.org/t/pep-741-python-configuration-c-api-second-version/45403>`_ "
 "(February 2024)."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:1008
+#: ../../peps/peps/pep-0741.rst:979
 msgid ""
 "`PEP 741: Python Configuration C API <https://discuss.python.org/t/pep-741-"
 "python-configuration-c-api/43637>`_ (January 2024)."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:1011
+#: ../../peps/peps/pep-0741.rst:982
 msgid ""
 "`FR: Allow private runtime config to enable extending without breaking the "
 "PyConfig ABI <https://discuss.python.org/t/fr-allow-private-runtime-config-"
@@ -1759,11 +1733,11 @@ msgid ""
 "2022)."
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:1018
+#: ../../peps/peps/pep-0741.rst:989
 msgid "Copyright"
 msgstr ""
 
-#: ../../peps/peps/pep-0741.rst:1020
+#: ../../peps/peps/pep-0741.rst:991
 msgid ""
 "This document is placed in the public domain or under the CC0-1.0-Universal "
 "license, whichever is more permissive."
